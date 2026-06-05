@@ -310,10 +310,12 @@ function initTabs() {
 }
 
 /* ---------- live prices (Finnhub, browser-side) ---------- */
-const LIVE_INTERVAL_MS = 20000;
+const LIVE_INTERVAL_MS = 30000; // 17 holdings / 30s ≈ 34 calls/min, under Finnhub's 60/min free cap
 const FINNHUB_URL = "https://finnhub.io/api/v1/quote";
 let liveTimer = null;
 let lastAccount = null;
+let lastGoodTs = 0;
+let lastGoodClock = "";
 
 function nyParts() {
   return new Intl.DateTimeFormat("en-US", {
@@ -379,9 +381,14 @@ async function liveTick() {
     t.gain_pct = +((t.gain / t.cost) * 100).toFixed(2);
     renderPortfolio();      // re-renders the KPI strip (inside this panel) + donut + table
     flashAccount(t.account);
+    lastGoodTs = Date.now();
+    lastGoodClock = nyClock();
+    setLivePill("live", `LIVE · ${lastGoodClock}`);
+  } else if (lastGoodTs && Date.now() - lastGoodTs < 90000) {
+    setLivePill("live", `LIVE · ${lastGoodClock}`); // brief miss (e.g. rate-limit blip) — stay calm
+  } else {
+    setLivePill("stale", "Reconnecting…");
   }
-  if (fail && !ok) setLivePill("stale", "Delayed");
-  else setLivePill("live", `LIVE · ${nyClock()}`);
 }
 function flashAccount(account) {
   if (lastAccount != null && account !== lastAccount) {
