@@ -2,6 +2,7 @@
 # Only payload.enc (ciphertext) + the static assets should ever reach a host.
 data.json
 .site_password
+.finnhub_key
 
 # internal project notes — not part of the published site
 BRIEF.md

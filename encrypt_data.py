@@ -59,9 +59,29 @@ def get_password() -> str:
     return pw
 
 
+def load_finnhub_key() -> str:
+    """Finnhub API key for live in-browser quotes. Read from a local secret so
+    it travels INSIDE the encrypted payload (never in a public file)."""
+    env = os.environ.get("FINNHUB_KEY")
+    if env:
+        return env.strip()
+    p = os.path.join(HERE, ".finnhub_key")
+    if os.path.exists(p):
+        with open(p) as f:
+            return f.read().strip()
+    return ""
+
+
 def main() -> None:
-    with open(DATA, "rb") as f:
-        plaintext = f.read()
+    with open(DATA) as f:
+        data = json.load(f)
+
+    # Inject the Finnhub key into the data BEFORE encryption, so only someone
+    # who unlocks the site with the password can read it (keeps it off GitHub).
+    fk = load_finnhub_key()
+    if fk:
+        data.setdefault("meta", {})["finnhub_key"] = fk
+    plaintext = json.dumps(data, separators=(",", ":")).encode("utf-8")
 
     password = get_password().encode("utf-8")
     salt = os.urandom(16)
@@ -81,20 +101,14 @@ def main() -> None:
         "iv": base64.b64encode(iv).decode(),
         "ct": base64.b64encode(ciphertext).decode(),
         # plaintext metadata is safe to expose and lets the gate show a date
-        # without decrypting; do NOT put holdings here.
-        "date": _safe_date(plaintext),
+        # without decrypting; do NOT put holdings or the API key here.
+        "date": data.get("meta", {}).get("date", ""),
     }
     with open(OUT, "w") as f:
         json.dump(payload, f)
 
-    print(f"Wrote {OUT}  ({len(ciphertext)} bytes ciphertext, {ITERATIONS} PBKDF2 iters)")
-
-
-def _safe_date(plaintext: bytes) -> str:
-    try:
-        return json.loads(plaintext).get("meta", {}).get("date", "")
-    except Exception:
-        return ""
+    print(f"Wrote {OUT}  ({len(ciphertext)} bytes ciphertext, {ITERATIONS} PBKDF2 iters"
+          f"{', +finnhub key' if fk else ''})")
 
 
 if __name__ == "__main__":
