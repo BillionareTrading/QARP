@@ -113,7 +113,7 @@ function renderOverview() {
         <td class="left tick">${x.ticker}<span class="name">${x.name}</span></td>
         <td class="qarp-cell">${fmtNum(x.qarp, 1)}</td>
         <td>${fmtNum(x.dcf, 1)}</td>
-        <td>${fmtUSD(x.price, 2)}</td>
+        <td><span class="cell-px">${fmtUSD(x.price, 2)}</span></td>
         <td class="left">${verdictBadge(x.verdict)}</td>
       </tr>`).join("")}
     </tbody></table></div>`;
@@ -126,8 +126,8 @@ const U_COLS = [
   { key: "rank", label: "#", align: "left", fmt: (x) => `<span class="muted">${x.rank}</span>` },
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
   { key: "sector", label: "Sector", align: "left", fmt: (x) => `<span class="muted">${x.sector}</span>` },
-  { key: "price", label: "Price", fmt: (x) => fmtUSD(x.price, 2) },
-  { key: "day_pct", label: "Day", fmt: (x) => `<span class="${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
+  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
   { key: "qarp", label: "QARP", fmt: (x) => `<span class="qarp-cell">${fmtNum(x.qarp, 1)}</span>` },
   { key: "dcf", label: "DCF", fmt: (x) => fmtNum(x.dcf, 1) },
   { key: "mech", label: "Q /105", fmt: (x) => x.mech },
@@ -186,8 +186,8 @@ function renderUniverseTable() {
 /* ---------- render: Portfolio ---------- */
 const P_COLS = [
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
-  { key: "price", label: "Price", fmt: (x) => fmtUSD(x.price, 2) },
-  { key: "day_pct", label: "Day", fmt: (x) => `<span class="${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
+  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
   { key: "shares", label: "Shares", fmt: (x) => fmtNum(x.shares, 2) },
   { key: "value", label: "Value", fmt: (x) => fmtUSD(x.value, 0) },
   { key: "gain", label: "Gain $", fmt: (x) => `<span class="${signClass(x.gain)}">${fmtUSD(x.gain, 0)}</span>` },
@@ -380,6 +380,7 @@ async function liveTick() {
     t.gain = +(positions - t.cost).toFixed(2);
     t.gain_pct = +((t.gain / t.cost) * 100).toFixed(2);
     renderPortfolio();      // re-renders the KPI strip (inside this panel) + donut + table
+    patchLivePrices();      // reflect holdings' live price/day in the Universe + Overview tabs
     flashAccount(t.account);
     lastGoodTs = Date.now();
     lastGoodClock = nyClock();
@@ -390,6 +391,20 @@ async function liveTick() {
     setLivePill("stale", "Reconnecting…");
   }
 }
+function patchLivePrices() {
+  // Holdings are the only live-quoted names. Update their price/day cells in the
+  // Universe table and Overview top-list IN PLACE (so sort/scroll/filter aren't reset).
+  DATA.portfolio.forEach((h) => {
+    document.querySelectorAll(
+      `#u-table tr[data-ticker="${h.ticker}"] .cell-px, #top-names tr[data-ticker="${h.ticker}"] .cell-px`
+    ).forEach((el) => { el.textContent = fmtUSD(h.price, 2); });
+    document.querySelectorAll(`#u-table tr[data-ticker="${h.ticker}"] .cell-day`).forEach((el) => {
+      el.textContent = fmtPct(h.day_pct);
+      el.className = "cell-day " + signClass(h.day_pct);
+    });
+  });
+}
+
 function flashAccount(account) {
   if (lastAccount != null && account !== lastAccount) {
     const el = document.querySelector("#kpis .kpi .value");
