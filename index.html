@@ -44,9 +44,6 @@
       </div>
     </header>
 
-    <!-- KPI strip -->
-    <section id="kpis" class="kpis"></section>
-
     <!-- Tabs -->
     <nav class="tabs">
       <button class="tab active" data-tab="overview">Overview</button>
@@ -95,15 +92,11 @@
 
     <!-- Portfolio -->
     <section id="tab-portfolio" class="tabpanel">
-      <div class="grid-2">
-        <div class="card">
-          <h3>Holdings</h3>
-          <div id="p-totals" class="p-totals"></div>
-        </div>
-        <div class="card">
-          <h3>Allocation</h3>
-          <div id="p-sector-chart" class="chart-row"></div>
-        </div>
+      <!-- KPI strip — only shown here, on the Portfolio page -->
+      <section id="kpis" class="kpis"></section>
+      <div class="card">
+        <h3>Allocation</h3>
+        <div id="p-sector-chart" class="chart-row"></div>
       </div>
       <div class="table-wrap">
         <table id="p-table">

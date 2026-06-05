@@ -7,7 +7,7 @@ let DATA = null;
 
 /* ---------- formatting helpers ---------- */
 const fmtUSD = (n, dp = 0) =>
-  n == null ? "—" : "$" + Number(n).toLocaleString("en-US", { minimumFractionDigits: dp, maximumFractionDigits: dp });
+  n == null ? "—" : (n < 0 ? "-" : "") + "$" + Math.abs(Number(n)).toLocaleString("en-US", { minimumFractionDigits: dp, maximumFractionDigits: dp });
 const fmtNum = (n, dp = 2) => (n == null ? "—" : Number(n).toLocaleString("en-US", { minimumFractionDigits: dp, maximumFractionDigits: dp }));
 const fmtPct = (n, dp = 1) => (n == null ? "—" : (n >= 0 ? "+" : "") + Number(n).toFixed(dp) + "%");
 const signClass = (n) => (n == null ? "" : n > 0 ? "pos" : n < 0 ? "neg" : "muted");
@@ -63,15 +63,20 @@ function legend(items) {
 /* ---------- render: KPIs ---------- */
 function renderKpis() {
   const t = DATA.meta.portfolio_totals;
-  const u = DATA.universe;
-  const strongBuys = u.filter((x) => x.verdict === "STRONG BUY" || x.verdict === "STRONGEST").length;
-  const buys = u.filter((x) => x.verdict === "BUY").length;
+  // portfolio day change, derived from each holding's day_pct
+  let dayPrev = 0, dayNow = 0;
+  DATA.portfolio.forEach((h) => {
+    const dp = typeof h.day_pct === "number" ? h.day_pct : 0;
+    dayPrev += h.value / (1 + dp / 100);
+    dayNow += h.value;
+  });
+  const dayChg = dayNow - dayPrev;
+  const dayPct = dayPrev ? (dayChg / dayPrev) * 100 : 0;
   const cards = [
     { label: "Account Value", value: fmtUSD(t.account, 0), delta: `${fmtUSD(t.cash, 2)} cash`, dClass: "muted" },
+    { label: "Today", value: fmtUSD(dayChg, 0), delta: fmtPct(dayPct), dClass: signClass(dayChg) },
     { label: "Total Gain", value: fmtUSD(t.gain, 0), delta: fmtPct(t.gain_pct), dClass: signClass(t.gain) },
     { label: "Cost Basis", value: fmtUSD(t.cost, 0), delta: `${DATA.portfolio.length} holdings`, dClass: "muted" },
-    { label: "Halal Universe", value: String(DATA.meta.universe_count), delta: "scored names", dClass: "muted" },
-    { label: "Strong Buy +", value: String(strongBuys), delta: `${buys} more BUY`, dClass: "muted" },
   ];
   document.getElementById("kpis").innerHTML = cards.map((c) => `
     <div class="kpi">
@@ -93,7 +98,7 @@ function renderOverview() {
   const counts = {};
   DATA.universe.forEach((x) => (counts[x.verdict] = (counts[x.verdict] || 0) + 1));
   const max = Math.max(...Object.values(counts));
-  document.getElementById("verdict-chart").innerHTML = `<div class="vbar">${VERDICT_ORDER
+  document.getElementById("verdict-chart").innerHTML = `<p class="card-note" style="margin:-6px 0 12px">${DATA.universe.length} halal names scored</p><div class="vbar">${VERDICT_ORDER
     .filter((v) => counts[v])
     .map((v) => `
       <div class="vbar-row">
@@ -200,14 +205,7 @@ const P_COLS = [
 let pSort = { key: "value", dir: -1 };
 
 function renderPortfolio() {
-  const t = DATA.meta.portfolio_totals;
-  document.getElementById("p-totals").innerHTML = [
-    ["Account", fmtUSD(t.account, 0)],
-    ["Positions", fmtUSD(t.positions, 0)],
-    ["Total Gain", `<span class="${signClass(t.gain)}">${fmtUSD(t.gain, 0)} (${fmtPct(t.gain_pct)})</span>`],
-    ["Cash", fmtUSD(t.cash, 2)],
-  ].map(([l, v]) => `<div class="pt"><div class="l">${l}</div><div class="v">${v}</div></div>`).join("");
-
+  renderKpis(); // KPI strip lives inside this panel now
   // allocation donut by holding weight
   const holds = [...DATA.portfolio].sort((a, b) => b.value - a.value)
     .map((h, i) => ({ ...h, color: SECTOR_COLORS[i % SECTOR_COLORS.length] }));
@@ -378,11 +376,11 @@ async function liveTick() {
     t.account = +(positions + t.cash).toFixed(2);
     t.gain = +(positions - t.cost).toFixed(2);
     t.gain_pct = +((t.gain / t.cost) * 100).toFixed(2);
-    renderKpis();
+    renderPortfolio();      // re-renders the KPI strip (inside this panel) + donut + table
     flashAccount(t.account);
-    renderPortfolio();
   }
-  setLivePill(fail && !ok ? "stale" : "live", `LIVE · ${nyClock()}`);
+  if (fail && !ok) setLivePill("stale", "Delayed");
+  else setLivePill("live", `LIVE · ${nyClock()}`);
 }
 function flashAccount(account) {
   if (lastAccount != null && account !== lastAccount) {
@@ -403,7 +401,6 @@ function startLive() {
 /* ---------- boot ---------- */
 function renderAll() {
   document.getElementById("asof-date").textContent = DATA.meta.date;
-  renderKpis();
   renderOverview();
   renderUniverseControls();
   renderUniverseTable();

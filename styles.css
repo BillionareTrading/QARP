@@ -127,8 +127,7 @@ button { font-family: inherit; cursor: pointer; }
 .kpis {
   display: grid; gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  padding: 18px clamp(14px, 4vw, 32px) 4px;
-  max-width: 1200px; margin: 0 auto;
+  margin-bottom: 16px;
 }
 .kpi {
   background: var(--surface); border: 1px solid var(--line);
