@@ -310,9 +310,14 @@ function initTabs() {
 }
 
 /* ---------- live prices (Finnhub, browser-side) ---------- */
-const LIVE_INTERVAL_MS = 30000; // 17 holdings / 30s ≈ 34 calls/min, under Finnhub's 60/min free cap
+const LIVE_INTERVAL_MS = 60000;  // holdings refresh ~every 60s (≈17 calls/min)
+const UNIVERSE_PUMP_MS = 2000;   // 1 universe name per 2s (≈30/min); full pass of ~190 names ≈ 6 min
 const FINNHUB_URL = "https://finnhub.io/api/v1/quote";
+// Combined budget ≈ 17 + 30 = 47 calls/min — safely under Finnhub's free 60/min cap.
 let liveTimer = null;
+let uniTimer = null;
+let uniQueue = [];
+let uniIdx = 0;
 let lastAccount = null;
 let lastGoodTs = 0;
 let lastGoodClock = "";
@@ -391,18 +396,37 @@ async function liveTick() {
     setLivePill("stale", "Reconnecting…");
   }
 }
-function patchLivePrices() {
-  // Holdings are the only live-quoted names. Update their price/day cells in the
-  // Universe table and Overview top-list IN PLACE (so sort/scroll/filter aren't reset).
-  DATA.portfolio.forEach((h) => {
-    document.querySelectorAll(
-      `#u-table tr[data-ticker="${h.ticker}"] .cell-px, #top-names tr[data-ticker="${h.ticker}"] .cell-px`
-    ).forEach((el) => { el.textContent = fmtUSD(h.price, 2); });
-    document.querySelectorAll(`#u-table tr[data-ticker="${h.ticker}"] .cell-day`).forEach((el) => {
-      el.textContent = fmtPct(h.day_pct);
-      el.className = "cell-day " + signClass(h.day_pct);
+function patchTickerCells(ticker, price, dp) {
+  // Update a single ticker's price/day cells in the Universe table + Overview list,
+  // in place (no re-render → sort/scroll/filter preserved).
+  document.querySelectorAll(
+    `#u-table tr[data-ticker="${ticker}"] .cell-px, #top-names tr[data-ticker="${ticker}"] .cell-px`
+  ).forEach((el) => { el.textContent = fmtUSD(price, 2); });
+  if (typeof dp === "number") {
+    document.querySelectorAll(`#u-table tr[data-ticker="${ticker}"] .cell-day`).forEach((el) => {
+      el.textContent = fmtPct(dp);
+      el.className = "cell-day " + signClass(dp);
     });
-  });
+  }
+}
+function patchLivePrices() {
+  // reflect each holding's live price/day in the Universe + Overview tabs
+  DATA.portfolio.forEach((h) => patchTickerCells(h.ticker, h.price, h.day_pct));
+}
+function universeTick() {
+  // Throttled cycler: quote ONE non-held universe name per pump, patch its cells.
+  if (!(DATA.meta && DATA.meta.finnhub_key) || !uniQueue.length) return;
+  if (!marketOpenNow()) return; // pill state is owned by the holdings tick
+  const ticker = uniQueue[uniIdx % uniQueue.length];
+  uniIdx++;
+  fetchQuote(ticker, DATA.meta.finnhub_key).then((q) => {
+    if (q && typeof q.c === "number" && q.c > 0) {
+      const u = DATA.universe.find((x) => x.ticker === ticker);
+      if (u) { u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2); }
+      patchTickerCells(ticker, q.c, q.dp);
+      lastGoodTs = Date.now();
+    }
+  }).catch(() => {});
 }
 
 function flashAccount(account) {
@@ -415,10 +439,16 @@ function flashAccount(account) {
 }
 function startLive() {
   if (liveTimer) clearInterval(liveTimer);
+  if (uniTimer) clearInterval(uniTimer);
   if (!(DATA.meta && DATA.meta.finnhub_key)) return; // no key -> stay on daily snapshot
   lastAccount = DATA.meta.portfolio_totals.account;
+  // universe cycler quotes every NON-held universe name (held names refresh via the holdings tick)
+  const held = new Set(DATA.portfolio.map((h) => h.ticker));
+  uniQueue = DATA.universe.map((x) => x.ticker).filter((t) => !held.has(t));
+  uniIdx = 0;
   liveTick();
-  liveTimer = setInterval(liveTick, LIVE_INTERVAL_MS);
+  liveTimer = setInterval(liveTick, LIVE_INTERVAL_MS);     // holdings every 60s
+  uniTimer = setInterval(universeTick, UNIVERSE_PUMP_MS);  // 1 universe name every 2s
 }
 
 /* ---------- boot ---------- */
