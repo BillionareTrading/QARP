@@ -1,0 +1,11 @@
+# NEVER deploy these — they contain plaintext holdings / the password.
+# Only payload.enc (ciphertext) + the static assets should ever reach a host.
+data.json
+.site_password
+
+# internal project notes — not part of the published site
+BRIEF.md
+
+# local cruft
+.DS_Store
+__pycache__/

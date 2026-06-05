@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0b1120" />
+  <title>Jaleel Capital — QARP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Password gate ===== -->
+  <div id="gate">
+    <form id="gate-form" class="gate-card" autocomplete="off">
+      <div class="gate-brand">
+        <span class="mark">JC</span>
+        <div>
+          <h1>Jaleel Capital</h1>
+          <p class="sub">QARP Halal Equity Dashboard</p>
+        </div>
+      </div>
+      <input id="gate-pw" type="password" placeholder="Password" autocomplete="current-password" autofocus />
+      <button id="gate-btn" type="submit">Unlock</button>
+      <p id="gate-err" class="gate-err" hidden></p>
+      <p class="gate-meta">Data as of <span id="gate-date">—</span> · Encrypted at rest</p>
+    </form>
+  </div>
+
+  <!-- ===== App (hidden until unlocked) ===== -->
+  <div id="app" hidden>
+    <header class="topbar">
+      <div class="brand">
+        <span class="mark sm">JC</span>
+        <div>
+          <strong>Jaleel Capital</strong>
+          <span class="brand-sub">QARP Dashboard</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <span class="asof">as of <span id="asof-date">—</span></span>
+        <button id="lock-btn" title="Lock">Lock</button>
+      </div>
+    </header>
+
+    <!-- KPI strip -->
+    <section id="kpis" class="kpis"></section>
+
+    <!-- Tabs -->
+    <nav class="tabs">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="universe">Halal Universe</button>
+      <button class="tab" data-tab="portfolio">Portfolio</button>
+    </nav>
+
+    <!-- Overview -->
+    <section id="tab-overview" class="tabpanel active">
+      <div class="grid-2">
+        <div class="card">
+          <h3>Portfolio by sector</h3>
+          <div id="sector-chart" class="chart-row"></div>
+        </div>
+        <div class="card">
+          <h3>Universe by verdict</h3>
+          <div id="verdict-chart"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Top of the universe</h3>
+        <p class="card-note">Highest-QARP halal names. Full list under <b>Halal Universe</b>.</p>
+        <div id="top-names" class="mini-table"></div>
+      </div>
+    </section>
+
+    <!-- Universe -->
+    <section id="tab-universe" class="tabpanel">
+      <div class="controls">
+        <input id="u-search" type="search" placeholder="Search ticker or name…" />
+        <select id="u-verdict">
+          <option value="">All verdicts</option>
+        </select>
+        <select id="u-sector">
+          <option value="">All sectors</option>
+        </select>
+        <span id="u-count" class="count"></span>
+      </div>
+      <div class="table-wrap">
+        <table id="u-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="tab-portfolio" class="tabpanel">
+      <div class="grid-2">
+        <div class="card">
+          <h3>Holdings</h3>
+          <div id="p-totals" class="p-totals"></div>
+        </div>
+        <div class="card">
+          <h3>Allocation</h3>
+          <div id="p-sector-chart" class="chart-row"></div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="p-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p><b>Not investment advice.</b> Informational QARP analysis for personal use. Shariah verdicts are Musaffa-primary (AAOIFI); scores are a snapshot at the stated price and date. Prices may be delayed.</p>
+    </footer>
+  </div>
+
+  <!-- Row detail drawer -->
+  <div id="drawer" class="drawer" hidden>
+    <div class="drawer-bg"></div>
+    <div class="drawer-panel" id="drawer-panel"></div>
+  </div>
+
+  <script src="crypto.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
