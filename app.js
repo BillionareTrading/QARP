@@ -310,6 +310,96 @@ function initTabs() {
     }));
 }
 
+/* ---------- live prices (Finnhub, browser-side) ---------- */
+const LIVE_INTERVAL_MS = 20000;
+const FINNHUB_URL = "https://finnhub.io/api/v1/quote";
+let liveTimer = null;
+let lastAccount = null;
+
+function nyParts() {
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York", weekday: "short",
+    hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false,
+  }).formatToParts(new Date()).reduce((o, p) => ((o[p.type] = p.value), o), {});
+}
+function marketOpenNow() {
+  const p = nyParts();
+  if (p.weekday === "Sat" || p.weekday === "Sun") return false;
+  let h = parseInt(p.hour, 10); if (h === 24) h = 0;
+  const mins = h * 60 + parseInt(p.minute, 10);
+  return mins >= 570 && mins < 960; // 9:30 .. 16:00 ET
+}
+function nyClock() {
+  const p = nyParts(); let h = parseInt(p.hour, 10); if (h === 24) h = 0;
+  const ap = h >= 12 ? "PM" : "AM"; const h12 = ((h + 11) % 12) + 1;
+  return `${h12}:${p.minute}:${p.second} ${ap} ET`;
+}
+function setLivePill(state, text) {
+  const pill = document.getElementById("live-pill");
+  if (!pill) return;
+  pill.hidden = false;
+  pill.classList.remove("closed", "stale");
+  if (state === "closed") pill.classList.add("closed");
+  if (state === "stale") pill.classList.add("stale");
+  document.getElementById("live-text").textContent = text;
+}
+async function fetchQuote(ticker, key) {
+  const res = await fetch(`${FINNHUB_URL}?symbol=${encodeURIComponent(ticker)}&token=${key}`, { cache: "no-store" });
+  if (!res.ok) throw new Error("HTTP " + res.status);
+  return res.json(); // { c, d, dp, h, l, o, pc, t }
+}
+async function liveTick() {
+  const key = DATA.meta && DATA.meta.finnhub_key;
+  if (!key) return;
+  if (!marketOpenNow()) { setLivePill("closed", "Market closed"); return; }
+
+  let ok = 0, fail = 0;
+  await Promise.all(DATA.portfolio.map(async (h) => {
+    try {
+      const q = await fetchQuote(h.ticker, key);
+      if (q && typeof q.c === "number" && q.c > 0) {
+        h.price = q.c;
+        if (typeof q.dp === "number") h.day_pct = +q.dp.toFixed(2);
+        h.value = +(h.shares * q.c).toFixed(2);
+        h.gain = +(h.value - h.cost).toFixed(2);
+        h.gain_pct = +((h.gain / h.cost) * 100).toFixed(2);
+        const u = DATA.universe.find((x) => x.ticker === h.ticker); // keep universe consistent (silent)
+        if (u) { u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2); }
+        ok++;
+      } else fail++;
+    } catch (e) { fail++; }
+  }));
+
+  if (ok > 0) {
+    const positions = DATA.portfolio.reduce((s, h) => s + h.value, 0);
+    DATA.portfolio.forEach((h) => (h.weight_pct = +(h.value / positions * 100).toFixed(1)));
+    const t = DATA.meta.portfolio_totals;
+    t.positions = +positions.toFixed(2);
+    t.account = +(positions + t.cash).toFixed(2);
+    t.gain = +(positions - t.cost).toFixed(2);
+    t.gain_pct = +((t.gain / t.cost) * 100).toFixed(2);
+    renderKpis();
+    flashAccount(t.account);
+    renderPortfolio();
+  }
+  setLivePill(fail && !ok ? "stale" : "live", `LIVE · ${nyClock()}`);
+}
+function flashAccount(account) {
+  if (lastAccount != null && account !== lastAccount) {
+    const el = document.querySelector("#kpis .kpi .value");
+    if (el) { el.classList.remove("flash-up", "flash-down"); void el.offsetWidth;
+      el.classList.add(account > lastAccount ? "flash-up" : "flash-down"); }
+  }
+  lastAccount = account;
+}
+function startLive() {
+  if (liveTimer) clearInterval(liveTimer);
+  if (!(DATA.meta && DATA.meta.finnhub_key)) return; // no key -> stay on daily snapshot
+  lastAccount = DATA.meta.portfolio_totals.account;
+  liveTick();
+  liveTimer = setInterval(liveTick, LIVE_INTERVAL_MS);
+}
+
 /* ---------- boot ---------- */
 function renderAll() {
   document.getElementById("asof-date").textContent = DATA.meta.date;
@@ -319,6 +409,7 @@ function renderAll() {
   renderUniverseTable();
   renderPortfolio();
   initTabs();
+  startLive();
 }
 
 async function boot() {

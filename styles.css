@@ -106,6 +106,17 @@ button { font-family: inherit; cursor: pointer; }
 .brand-sub { color: var(--ink-3); font-size: 12px; }
 .topbar-right { display: flex; align-items: center; gap: 12px; }
 .asof { color: var(--ink-3); font-size: 12.5px; }
+.live-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .04em;
+  padding: 4px 9px; border-radius: 999px; background: var(--pos-bg); color: var(--pos); border: 1px solid #cdebd8; }
+.live-pill.closed { background: #eef1f7; color: var(--ink-3); border-color: var(--line); }
+.live-pill.stale { background: var(--neg-bg); color: var(--neg); border-color: #f6cdd7; }
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.live-pill:not(.closed):not(.stale) .live-dot { animation: livepulse 1.6s ease-in-out infinite; }
+@keyframes livepulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.8); } }
+.flash-up { animation: flashup .8s ease; }
+.flash-down { animation: flashdown .8s ease; }
+@keyframes flashup { 0% { background: rgba(21,128,61,.18); } 100% { background: transparent; } }
+@keyframes flashdown { 0% { background: rgba(190,18,60,.16); } 100% { background: transparent; } }
 #lock-btn {
   border: 1px solid var(--line); background: var(--surface);
   color: var(--ink-2); padding: 7px 13px; border-radius: 8px; font-size: 12.5px; font-weight: 600;

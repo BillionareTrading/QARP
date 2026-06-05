@@ -24,5 +24,5 @@ echo "refresh_site: payload.enc regenerated."
 if [ "$PUSH" = "1" ] && [ -d .git ]; then
   git add payload.enc
   git commit -m "data refresh $(cat payload.enc | python3 -c 'import sys,json;print(json.load(sys.stdin)["date"])')" --quiet || true
-  git push --quiet && echo "refresh_site: pushed to remote."
+  git push --quiet origin main && echo "refresh_site: pushed to remote."
 fi
