@@ -88,12 +88,6 @@ function renderKpis() {
 
 /* ---------- render: Overview ---------- */
 function renderOverview() {
-  // sector donut
-  const secs = DATA.sectors.map((s, i) => ({ ...s, color: SECTOR_COLORS[i % SECTOR_COLORS.length] }));
-  const secItems = secs.map((s) => ({ value: s.value, color: s.color }));
-  const secLegend = secs.map((s) => ({ label: s.sector, right: s.weight_pct + "%", color: s.color }));
-  document.getElementById("sector-chart").innerHTML = donut(secItems) + legend(secLegend);
-
   // verdict distribution bars
   const counts = {};
   DATA.universe.forEach((x) => (counts[x.verdict] = (counts[x.verdict] || 0) + 1));
@@ -206,12 +200,19 @@ let pSort = { key: "value", dir: -1 };
 
 function renderPortfolio() {
   renderKpis(); // KPI strip lives inside this panel now
-  // allocation donut by holding weight
+
+  // allocation donut by individual holding
   const holds = [...DATA.portfolio].sort((a, b) => b.value - a.value)
     .map((h, i) => ({ ...h, color: SECTOR_COLORS[i % SECTOR_COLORS.length] }));
   document.getElementById("p-sector-chart").innerHTML =
     donut(holds.map((h) => ({ value: h.value, color: h.color }))) +
     legend(holds.slice(0, 8).map((h) => ({ label: h.ticker, right: h.weight_pct + "%", color: h.color })));
+
+  // allocation donut by broad sector (from the daily snapshot)
+  const secs = DATA.sectors.map((s, i) => ({ ...s, color: SECTOR_COLORS[i % SECTOR_COLORS.length] }));
+  document.getElementById("sector-chart").innerHTML =
+    donut(secs.map((s) => ({ value: s.value, color: s.color }))) +
+    legend(secs.map((s) => ({ label: s.sector, right: s.weight_pct + "%", color: s.color })));
 
   renderPortfolioTable();
 }

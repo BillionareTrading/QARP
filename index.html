@@ -53,15 +53,9 @@
 
     <!-- Overview -->
     <section id="tab-overview" class="tabpanel active">
-      <div class="grid-2">
-        <div class="card">
-          <h3>Portfolio by sector</h3>
-          <div id="sector-chart" class="chart-row"></div>
-        </div>
-        <div class="card">
-          <h3>Universe by verdict</h3>
-          <div id="verdict-chart"></div>
-        </div>
+      <div class="card">
+        <h3>Universe by verdict</h3>
+        <div id="verdict-chart"></div>
       </div>
       <div class="card">
         <h3>Top of the universe</h3>
@@ -94,9 +88,15 @@
     <section id="tab-portfolio" class="tabpanel">
       <!-- KPI strip — only shown here, on the Portfolio page -->
       <section id="kpis" class="kpis"></section>
-      <div class="card">
-        <h3>Allocation</h3>
-        <div id="p-sector-chart" class="chart-row"></div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Allocation by holding</h3>
+          <div id="p-sector-chart" class="chart-row"></div>
+        </div>
+        <div class="card">
+          <h3>Allocation by sector</h3>
+          <div id="sector-chart" class="chart-row"></div>
+        </div>
       </div>
       <div class="table-wrap">
         <table id="p-table">
