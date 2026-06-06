@@ -548,29 +548,29 @@ function renderNewsFilters() {
     c.addEventListener("click", () => loadNews(c.dataset.news)));
 }
 
-function newsItemHtml(it) {
+// Finnhub returns the SOURCE LOGO (…/logo/reuters_logo.jpeg) when there's no real photo.
+function hasPhoto(it) {
+  const img = safeUrl(it.image);
+  return img !== "#" && !/logo/i.test(img);
+}
+// stories WITH a real photo -> image card
+function photoCardHtml(it) {
   const url = safeUrl(it.url), img = safeUrl(it.image);
-  // Finnhub often returns the SOURCE LOGO (…/logo/reuters_logo.jpeg) instead of a real
-  // photo. Real photos -> full cover image; logos -> small, centered, subtle brand mark.
-  const isLogo = img !== "#" && /logo/i.test(img);
-  const hasPhoto = img !== "#" && !isLogo;
-  let media;
-  if (hasPhoto) {
-    media = `<div class="news-card-media"><img class="news-cover" src="${esc(img)}" alt="" loading="lazy" onerror="this.style.display='none'"></div>`;
-  } else if (isLogo) {
-    media = `<div class="news-card-media news-card-logo"><img class="news-logo" src="${esc(img)}" alt="${esc(it.source || "")}" loading="lazy" onerror="this.style.display='none'"></div>`;
-  } else {
-    media = `<div class="news-card-media news-card-logo"><span class="news-logo-fallback">${esc(it.source || "News")}</span></div>`;
-  }
   return `<a class="news-card" href="${esc(url)}" target="_blank" rel="noopener noreferrer">
-    ${media}
+    <div class="news-card-media"><img class="news-cover" src="${esc(img)}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
     <div class="news-card-body">
       <div class="news-card-title">${esc(it.headline)}</div>
-      <div class="news-card-foot">
-        <span class="news-src">${esc(it.source || "—")}</span>
-        <span class="news-time">${relTime(it.datetime)}</span>
-      </div>
+      <div class="news-card-foot"><span class="news-src">${esc(it.source || "—")}</span><span class="news-time">${relTime(it.datetime)}</span></div>
     </div>
+  </a>`;
+}
+// stories WITHOUT a photo -> slim headline row (agency name + time, no image box)
+function newsRowHtml(it) {
+  const url = safeUrl(it.url);
+  return `<a class="news-row" href="${esc(url)}" target="_blank" rel="noopener noreferrer">
+    <span class="news-row-dot"></span>
+    <span class="news-row-title">${esc(it.headline)}</span>
+    <span class="news-row-right"><span class="news-src">${esc(it.source || "—")}</span><span class="news-time">${relTime(it.datetime)}</span></span>
   </a>`;
 }
 
@@ -597,7 +597,12 @@ async function loadNews(filterName) {
     let items = await res.json();
     if (!Array.isArray(items)) throw new Error("bad response");
     items = items.filter((it) => it && it.headline && it.url).slice(0, 30);
-    list.innerHTML = items.length ? items.map(newsItemHtml).join("") : `<p class="muted">No recent headlines for ${esc(newsFilter)}.</p>`;
+    if (!items.length) { list.innerHTML = `<p class="muted">No recent headlines for ${esc(newsFilter)}.</p>`; return; }
+    const photos = items.filter(hasPhoto);
+    const rows = items.filter((it) => !hasPhoto(it));
+    list.innerHTML =
+      (photos.length ? `<div class="news-grid">${photos.map(photoCardHtml).join("")}</div>` : "") +
+      (rows.length ? `<div class="news-rows">${rows.map(newsRowHtml).join("")}</div>` : "");
   } catch (e) {
     list.innerHTML = `<p class="muted">Couldn't load news right now — try Refresh.</p>`;
   }
