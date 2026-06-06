@@ -127,18 +127,22 @@ function renderKpis() {
 
 /* ---------- render: Overview ---------- */
 function renderVerdictSummary() {
-  // verdict distribution bars — sits at the top of the Shariah-Compliant tab
+  // verdict distribution — stacked proportion bar + count tiles (top of Shariah-Compliant tab)
   const counts = {};
   DATA.universe.forEach((x) => (counts[x.verdict] = (counts[x.verdict] || 0) + 1));
-  const max = Math.max(...Object.values(counts));
-  document.getElementById("verdict-chart").innerHTML = `<p class="card-note" style="margin:-6px 0 12px">${DATA.universe.length} Shariah-compliant names scored</p><div class="vbar">${VERDICT_ORDER
-    .filter((v) => counts[v])
-    .map((v) => `
-      <div class="vbar-row">
-        <span>${verdictBadge(v)}</span>
-        <span class="vbar-track"><span class="vbar-fill" style="width:${(counts[v] / max * 100).toFixed(0)}%;background:${VERDICT_COLOR[v]}"></span></span>
-        <span class="vbar-n">${counts[v]}</span>
-      </div>`).join("")}</div>`;
+  const total = DATA.universe.length || 1;
+  const order = VERDICT_ORDER.filter((v) => counts[v]);
+  const bar = order.map((v) =>
+    `<span style="width:${(counts[v] / total * 100).toFixed(2)}%;background:${VERDICT_COLOR[v]}" title="${v}: ${counts[v]}"></span>`).join("");
+  const tiles = order.map((v) => `
+    <div class="vstat">
+      <div class="vstat-num" style="color:${VERDICT_COLOR[v]}">${counts[v]}</div>
+      ${verdictBadge(v)}
+    </div>`).join("");
+  document.getElementById("verdict-chart").innerHTML =
+    `<p class="card-note" style="margin:-6px 0 14px">${DATA.universe.length} Shariah-compliant names scored</p>
+     <div class="vbar-stack">${bar}</div>
+     <div class="vstats">${tiles}</div>`;
 }
 
 /* ---------- render: Universe table ---------- */

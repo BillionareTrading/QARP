@@ -173,7 +173,14 @@ button { font-family: inherit; cursor: pointer; }
 .legend-name { color: var(--ink-2); flex: 1; }
 .legend-val { font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 600; }
 
-/* ===== Verdict bars ===== */
+/* ===== Verdict distribution: stacked bar + tiles ===== */
+.vbar-stack { display: flex; height: 11px; border-radius: 6px; overflow: hidden; margin-bottom: 16px; background: var(--line-2); }
+.vbar-stack span { display: block; min-width: 2px; }
+.vstats { display: grid; grid-template-columns: repeat(auto-fit, minmax(108px, 1fr)); gap: 10px; }
+.vstat { background: var(--surface-2); border: 1px solid var(--line); border-radius: 11px; padding: 13px 8px 12px; text-align: center; }
+.vstat-num { font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1; margin-bottom: 9px; }
+
+/* ===== Verdict bars (legacy) ===== */
 .vbar { display: flex; flex-direction: column; gap: 9px; }
 .vbar-row { display: grid; grid-template-columns: 92px 1fr 34px; align-items: center; gap: 10px; font-size: 12.5px; }
 .vbar-track { background: var(--line-2); border-radius: 6px; height: 9px; overflow: hidden; }
