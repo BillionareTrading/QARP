@@ -111,18 +111,24 @@ function renderKpis() {
   });
   const dayChg = dayNow - dayPrev;
   const dayPct = dayPrev ? (dayChg / dayPrev) * 100 : 0;
+  // clarify "Today": it's live during market hours, otherwise it's the last close
+  const todayNote = marketOpenNow() ? "live" : `at ${dayName(DATA.meta.date)} close`;
   const cards = [
     { label: "Account Value", value: fmtUSD(t.account, 0), delta: `${fmtUSD(t.cash, 2)} cash`, dClass: "muted" },
-    { label: "Today", value: fmtUSD(dayChg, 0), delta: fmtPct(dayPct), dClass: signClass(dayChg) },
+    { label: "Today", note: todayNote, value: fmtUSD(dayChg, 0), delta: fmtPct(dayPct), dClass: signClass(dayChg) },
     { label: "Total Gain", value: fmtUSD(t.gain, 0), delta: fmtPct(t.gain_pct), dClass: signClass(t.gain) },
     { label: "Cost Basis", value: fmtUSD(t.cost, 0), delta: `${DATA.portfolio.length} holdings`, dClass: "muted" },
   ];
   document.getElementById("kpis").innerHTML = cards.map((c) => `
     <div class="kpi">
-      <div class="label">${c.label}</div>
+      <div class="label">${c.label}${c.note ? ` <span class="kpi-note">· ${c.note}</span>` : ""}</div>
       <div class="value">${c.value}</div>
       <div class="delta ${c.dClass}">${c.delta}</div>
     </div>`).join("");
+}
+
+function dayName(iso) {
+  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(iso + "T12:00:00").getDay()];
 }
 
 /* ---------- render: Overview ---------- */
