@@ -49,6 +49,7 @@
       <button class="tab active" data-tab="overview">Overview</button>
       <button class="tab" data-tab="universe">Shariah-Compliant</button>
       <button class="tab" data-tab="portfolio">Portfolio</button>
+      <button class="tab" data-tab="framework">Framework</button>
     </nav>
 
     <!-- Overview -->
@@ -104,6 +105,71 @@
           <tbody></tbody>
         </table>
       </div>
+    </section>
+
+    <!-- Framework / methodology -->
+    <section id="tab-framework" class="tabpanel">
+      <div class="card">
+        <h3>How the QARP framework works</h3>
+        <p class="card-note">Every stock clears two gates — first a Shariah screen (pass/fail), then a quality-and-value score. Here's what the numbers mean.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>QARP <span class="fw-sub">Quality At a Reasonable Price</span></h3>
+          <p class="fw-p">A single <b>0–100</b> score that blends how good a business is with how reasonably it's priced — <b>60% quality, 40% value</b>. Higher is better.</p>
+          <div class="fw-formula">QARP = 60% × <span class="fw-q">Quality</span> + 40% × <span class="fw-v">DCF value</span></div>
+        </div>
+        <div class="card">
+          <h3>DCF score <span class="fw-sub">1 – 5</span></h3>
+          <p class="fw-p">How cheap a stock looks versus an estimate of its fair value (triangulated from several models). <b>5 = deep bargain, 1 = expensive.</b></p>
+          <table class="fw-scale">
+            <tr><td>5</td><td>Deep value</td><td>&gt; +30% upside</td></tr>
+            <tr><td>4</td><td>Undervalued</td><td>+15% to +30%</td></tr>
+            <tr><td>3</td><td>Fairly priced</td><td>−10% to +15%</td></tr>
+            <tr><td>2</td><td>Overvalued</td><td>10–30% rich</td></tr>
+            <tr><td>1</td><td>Expensive</td><td>&gt; 30% rich</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Quality score <span class="fw-sub">out of 105</span></h3>
+        <p class="fw-p">Five dimensions, scored from current fundamentals:</p>
+        <div class="fw-dims">
+          <div class="fw-dim"><span class="fw-pts">25</span><div><b>Valuation</b><span>Multiples vs. own history &amp; sector</span></div></div>
+          <div class="fw-dim"><span class="fw-pts">20</span><div><b>Growth</b><span>Revenue &amp; earnings trajectory</span></div></div>
+          <div class="fw-dim"><span class="fw-pts">20</span><div><b>Quality</b><span>Margins, returns on capital, moat</span></div></div>
+          <div class="fw-dim"><span class="fw-pts">20</span><div><b>Balance Sheet</b><span>Debt, cash, financial strength</span></div></div>
+          <div class="fw-dim"><span class="fw-pts">20</span><div><b>Capital Allocation</b><span>Buybacks, dividends, insider buying, M&amp;A</span></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Verdict bands</h3>
+        <p class="fw-p">Your QARP score maps to a verdict:</p>
+        <div class="fw-bands">
+          <div class="band-row"><span class="badge v-strongest">STRONGEST</span><span>QARP ≥ 85</span></div>
+          <div class="band-row"><span class="badge v-strongbuy">STRONG BUY</span><span>≥ 72</span></div>
+          <div class="band-row"><span class="badge v-buy">BUY</span><span>≥ 66</span></div>
+          <div class="band-row"><span class="badge v-holdqual">HOLD-QUAL</span><span>≥ 60 — quality, but little margin of safety</span></div>
+          <div class="band-row"><span class="badge v-avoid">AVOID</span><span>35 – 59</span></div>
+          <div class="band-row"><span class="badge v-strongavoid">STRONG AVOID</span><span>&lt; 35</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>The Shariah screen <span class="fw-sub">the first gate</span></h3>
+        <p class="fw-p">Every name must pass an <b>AAOIFI-standard</b> screen before it's ever scored — verified primarily via <b>Musaffa</b> and confirmed by <b>Muslim Xchange</b>. If they disagree, the stricter verdict wins. A non-compliant company gets <b>no QARP score</b> and is excluded.</p>
+        <ul class="fw-list">
+          <li>Permissible core business (no interest/lending, alcohol, tobacco, pork, gambling, adult content, weapons)</li>
+          <li>Impermissible income &lt; 5% of revenue</li>
+          <li>Interest-bearing debt &lt; 30% of market cap</li>
+          <li>Interest-bearing cash &amp; securities &lt; 30% of market cap</li>
+        </ul>
+      </div>
+
+      <p class="fw-foot">Informational analysis, not investment advice. Scores are a snapshot at the stated date and price — a name can be a buy when cheap and an avoid after it runs up.</p>
     </section>
 
     <footer class="foot">
