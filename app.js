@@ -551,11 +551,17 @@ function renderNewsFilters() {
 function newsItemHtml(it) {
   const url = safeUrl(it.url), img = safeUrl(it.image);
   // Finnhub often returns the SOURCE LOGO (…/logo/reuters_logo.jpeg) instead of a real
-  // photo — treat those as "no image" and show a clean placeholder instead.
-  const hasImg = img !== "#" && !/logo/i.test(img);
-  const media = hasImg
-    ? `<div class="news-card-media"><img src="${esc(img)}" alt="" loading="lazy" onerror="this.remove();this.parentElement.classList.add('news-card-ph')"></div>`
-    : `<div class="news-card-media news-card-ph"></div>`;
+  // photo. Real photos -> full cover image; logos -> small, centered, subtle brand mark.
+  const isLogo = img !== "#" && /logo/i.test(img);
+  const hasPhoto = img !== "#" && !isLogo;
+  let media;
+  if (hasPhoto) {
+    media = `<div class="news-card-media"><img class="news-cover" src="${esc(img)}" alt="" loading="lazy" onerror="this.style.display='none'"></div>`;
+  } else if (isLogo) {
+    media = `<div class="news-card-media news-card-logo"><img class="news-logo" src="${esc(img)}" alt="${esc(it.source || "")}" loading="lazy" onerror="this.style.display='none'"></div>`;
+  } else {
+    media = `<div class="news-card-media news-card-logo"><span class="news-logo-fallback">${esc(it.source || "News")}</span></div>`;
+  }
   return `<a class="news-card" href="${esc(url)}" target="_blank" rel="noopener noreferrer">
     ${media}
     <div class="news-card-body">
