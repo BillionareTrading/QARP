@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0b1120" />
   <title>Jaleel Capital — QARP</title>
-  <link rel="stylesheet" href="styles.css?v=eec9e59f" />
+  <link rel="stylesheet" href="styles.css?v=2e3549a9" />
 </head>
 <body>
 
@@ -47,6 +47,7 @@
     <!-- Tabs -->
     <nav class="tabs">
       <button class="tab active" data-tab="framework">Approach</button>
+      <button class="tab" data-tab="informed">Stay Informed</button>
       <button class="tab" data-tab="universe">Shariah-Compliant</button>
       <button class="tab" data-tab="portfolio">Portfolio</button>
     </nav>
@@ -96,6 +97,18 @@
           <tbody></tbody>
         </table>
       </div>
+    </section>
+
+    <!-- Stay Informed: live market snapshot + news -->
+    <section id="tab-informed" class="tabpanel">
+      <p class="tab-intro">A live market snapshot and the headlines moving it — overall and by sector.</p>
+      <div class="idx-row" id="idx-row"></div>
+      <div class="news-bar">
+        <h3 class="news-h">Headlines</h3>
+        <button id="news-refresh" class="news-refresh" type="button" aria-label="Refresh">↻ Refresh</button>
+      </div>
+      <div class="news-filters" id="news-filters"></div>
+      <div class="news-list" id="news-list"></div>
     </section>
 
     <!-- Approach: goal + framework -->
@@ -187,7 +200,7 @@
     <div class="drawer-panel" id="drawer-panel"></div>
   </div>
 
-  <script src="crypto.js?v=eec9e59f"></script>
-  <script src="app.js?v=eec9e59f"></script>
+  <script src="crypto.js?v=2e3549a9"></script>
+  <script src="app.js?v=2e3549a9"></script>
 </body>
 </html>

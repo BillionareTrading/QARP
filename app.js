@@ -339,6 +339,7 @@ function initTabs() {
       document.querySelectorAll(".tabpanel").forEach((x) => x.classList.remove("active"));
       t.classList.add("active");
       document.getElementById("tab-" + t.dataset.tab).classList.add("active");
+      if (t.dataset.tab === "informed") enterInformed(); else leaveInformed();
     }));
 }
 
@@ -484,6 +485,127 @@ function startLive() {
   uniTimer = setInterval(universeTick, UNIVERSE_PUMP_MS);  // 1 universe name every 2s
 }
 
+/* ---------- Stay Informed: market snapshot + news ---------- */
+const INDEXES = [
+  { label: "S&P 500", sub: "via SPY", sym: "SPY" },
+  { label: "Nasdaq 100", sub: "via QQQ", sym: "QQQ" },
+];
+const NEWS_FILTERS = [
+  { name: "Market", cat: "general" },
+  { name: "Technology", sym: "MSFT" },
+  { name: "Semiconductors", sym: "NVDA" },
+  { name: "Healthcare", sym: "LLY" },
+  { name: "Financials", sym: "JPM" },
+  { name: "Energy", sym: "XOM" },
+  { name: "Consumer", sym: "AMZN" },
+  { name: "Industrials", sym: "CAT" },
+];
+let newsFilter = "Market";
+let informedTimer = null;
+let informedLoaded = false;
+
+// external/news content is DATA — always escape it before inserting as HTML
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : "#"; }
+function relTime(sec) {
+  const diff = Math.max(0, Date.now() / 1000 - sec);
+  if (diff < 3600) return Math.max(1, Math.floor(diff / 60)) + "m ago";
+  if (diff < 86400) return Math.floor(diff / 3600) + "h ago";
+  return Math.floor(diff / 86400) + "d ago";
+}
+
+async function renderIndexes() {
+  const key = DATA.meta && DATA.meta.finnhub_key;
+  const row = document.getElementById("idx-row");
+  if (!row) return;
+  if (!key) { row.innerHTML = `<div class="idx-card"><span class="muted">Live market data needs the API key.</span></div>`; return; }
+  const cards = await Promise.all(INDEXES.map(async (ix) => {
+    try {
+      const q = await fetchQuote(ix.sym, key);
+      if (!q || typeof q.c !== "number" || !q.c) throw new Error("no data");
+      const up = (q.d || 0) >= 0;
+      return `<div class="idx-card ${up ? "up" : "down"}">
+        <div class="idx-top"><span class="idx-name">${esc(ix.label)}</span><span class="idx-sub">${esc(ix.sub)}</span></div>
+        <div class="idx-level">${fmtNum(q.c, 2)}</div>
+        <div class="idx-chg ${up ? "pos" : "neg"}">${up ? "▲" : "▼"} ${fmtNum(Math.abs(q.d), 2)} (${fmtPct(q.dp)})</div>
+      </div>`;
+    } catch (e) {
+      return `<div class="idx-card"><div class="idx-top"><span class="idx-name">${esc(ix.label)}</span></div><div class="idx-level muted">—</div></div>`;
+    }
+  }));
+  row.innerHTML = cards.join("");
+}
+
+function renderNewsFilters() {
+  const el = document.getElementById("news-filters");
+  if (!el) return;
+  el.innerHTML = NEWS_FILTERS.map((f) =>
+    `<button class="news-chip ${f.name === newsFilter ? "active" : ""}" type="button" data-news="${esc(f.name)}">${esc(f.name)}</button>`).join("");
+  el.querySelectorAll(".news-chip").forEach((c) =>
+    c.addEventListener("click", () => loadNews(c.dataset.news)));
+}
+
+function newsItemHtml(it) {
+  const url = safeUrl(it.url), img = safeUrl(it.image);
+  const thumb = img !== "#"
+    ? `<img class="news-thumb" src="${esc(img)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`
+    : `<div class="news-thumb"></div>`;
+  return `<a class="news-item" href="${esc(url)}" target="_blank" rel="noopener noreferrer">
+    ${thumb}
+    <div class="news-body">
+      <div class="news-title">${esc(it.headline)}</div>
+      <div class="news-meta">${esc(it.source || "")} · ${relTime(it.datetime)}</div>
+    </div>
+  </a>`;
+}
+
+async function loadNews(filterName) {
+  newsFilter = filterName || newsFilter;
+  renderNewsFilters();
+  const list = document.getElementById("news-list");
+  const key = DATA.meta && DATA.meta.finnhub_key;
+  if (!list) return;
+  if (!key) { list.innerHTML = `<p class="muted">Live news needs the API key.</p>`; return; }
+  list.innerHTML = `<p class="news-loading">Loading headlines…</p>`;
+  const f = NEWS_FILTERS.find((x) => x.name === newsFilter) || NEWS_FILTERS[0];
+  let url;
+  if (f.cat) {
+    url = `https://finnhub.io/api/v1/news?category=${f.cat}&token=${key}`;
+  } else {
+    const now = new Date();
+    const to = now.toISOString().slice(0, 10);
+    const from = new Date(now.getTime() - 7 * 86400000).toISOString().slice(0, 10);
+    url = `https://finnhub.io/api/v1/company-news?symbol=${f.sym}&from=${from}&to=${to}&token=${key}`;
+  }
+  try {
+    const res = await fetch(url, { cache: "no-store" });
+    let items = await res.json();
+    if (!Array.isArray(items)) throw new Error("bad response");
+    items = items.filter((it) => it && it.headline && it.url).slice(0, 30);
+    list.innerHTML = items.length ? items.map(newsItemHtml).join("") : `<p class="muted">No recent headlines for ${esc(newsFilter)}.</p>`;
+  } catch (e) {
+    list.innerHTML = `<p class="muted">Couldn't load news right now — try Refresh.</p>`;
+  }
+}
+
+function enterInformed() {
+  if (!informedLoaded) { renderNewsFilters(); loadNews("Market"); informedLoaded = true; }
+  renderIndexes();
+  if (informedTimer) clearInterval(informedTimer);
+  informedTimer = setInterval(renderIndexes, 60000); // refresh the index screens while viewing
+}
+function leaveInformed() {
+  if (informedTimer) { clearInterval(informedTimer); informedTimer = null; }
+}
+function initInformed() {
+  renderNewsFilters();
+  const rb = document.getElementById("news-refresh");
+  if (rb) rb.addEventListener("click", () => { renderIndexes(); loadNews(newsFilter); });
+}
+
 /* ---------- boot ---------- */
 function renderAll() {
   document.getElementById("asof-date").textContent = DATA.meta.date;
@@ -574,4 +696,5 @@ function initFrameworkCalc() {
 
 initTips();
 initFrameworkCalc();
+initInformed();
 boot();
