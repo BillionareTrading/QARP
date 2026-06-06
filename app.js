@@ -550,14 +550,20 @@ function renderNewsFilters() {
 
 function newsItemHtml(it) {
   const url = safeUrl(it.url), img = safeUrl(it.image);
-  const thumb = img !== "#"
-    ? `<img class="news-thumb" src="${esc(img)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`
-    : `<div class="news-thumb"></div>`;
-  return `<a class="news-item" href="${esc(url)}" target="_blank" rel="noopener noreferrer">
-    ${thumb}
-    <div class="news-body">
-      <div class="news-title">${esc(it.headline)}</div>
-      <div class="news-meta">${esc(it.source || "")} · ${relTime(it.datetime)}</div>
+  // Finnhub often returns the SOURCE LOGO (…/logo/reuters_logo.jpeg) instead of a real
+  // photo — treat those as "no image" and show a clean placeholder instead.
+  const hasImg = img !== "#" && !/logo/i.test(img);
+  const media = hasImg
+    ? `<div class="news-card-media"><img src="${esc(img)}" alt="" loading="lazy" onerror="this.remove();this.parentElement.classList.add('news-card-ph')"></div>`
+    : `<div class="news-card-media news-card-ph"></div>`;
+  return `<a class="news-card" href="${esc(url)}" target="_blank" rel="noopener noreferrer">
+    ${media}
+    <div class="news-card-body">
+      <div class="news-card-title">${esc(it.headline)}</div>
+      <div class="news-card-foot">
+        <span class="news-src">${esc(it.source || "—")}</span>
+        <span class="news-time">${relTime(it.datetime)}</span>
+      </div>
     </div>
   </a>`;
 }
