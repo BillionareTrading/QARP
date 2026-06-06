@@ -548,11 +548,6 @@ function renderNewsFilters() {
     c.addEventListener("click", () => loadNews(c.dataset.news)));
 }
 
-// Finnhub returns the SOURCE LOGO (…/logo/reuters_logo.jpeg) when there's no real photo.
-function hasPhoto(it) {
-  const img = safeUrl(it.image);
-  return img !== "#" && !/logo/i.test(img);
-}
 // stories WITH a real photo -> image card
 function photoCardHtml(it) {
   const url = safeUrl(it.url), img = safeUrl(it.image);
@@ -598,8 +593,16 @@ async function loadNews(filterName) {
     if (!Array.isArray(items)) throw new Error("bad response");
     items = items.filter((it) => it && it.headline && it.url).slice(0, 30);
     if (!items.length) { list.innerHTML = `<p class="muted">No recent headlines for ${esc(newsFilter)}.</p>`; return; }
-    const photos = items.filter(hasPhoto);
-    const rows = items.filter((it) => !hasPhoto(it));
+    // An image that repeats across many items is branding/placeholder (a Reuters or Yahoo
+    // graphic), not a real article photo — route those to slim headline rows instead.
+    const freq = {};
+    items.forEach((it) => { const im = safeUrl(it.image); if (im !== "#") freq[im] = (freq[im] || 0) + 1; });
+    const isRealPhoto = (it) => {
+      const im = safeUrl(it.image);
+      return im !== "#" && !/logo/i.test(im) && (freq[im] || 0) <= 2;
+    };
+    const photos = items.filter(isRealPhoto);
+    const rows = items.filter((it) => !isRealPhoto(it));
     list.innerHTML =
       (photos.length ? `<div class="news-grid">${photos.map(photoCardHtml).join("")}</div>` : "") +
       (rows.length ? `<div class="news-rows">${rows.map(newsRowHtml).join("")}</div>` : "");
