@@ -22,6 +22,42 @@ function verdictBadge(v) {
   return `<span class="badge ${verdictSlug(v)}">${v}</span>`;
 }
 
+/* ---------- header tooltips (tap the ⓘ) ---------- */
+const TIPS = {
+  qarp: { t: "QARP", d: "Quality At a Reasonable Price — a 0–100 score blending business quality (60%) with value/DCF (40%). Higher is better; 72+ is a Strong Buy. See the Framework tab for the full method." },
+  dcf: { t: "DCF score (1–5)", d: "How cheap the stock is vs. an estimate of its fair value. 5 = deep value (>30% upside), 3 = fairly priced, 1 = expensive." },
+  mech: { t: "Quality (out of 105)", d: "The quality half of QARP — the sum of five dimensions: Valuation, Growth, Quality, Balance Sheet, and Capital Allocation." },
+  verdict: { t: "Verdict", d: "The QARP score turned into a call: ≥85 Strongest, ≥72 Strong Buy, ≥66 Buy, ≥60 Hold-Qual, 35–59 Avoid, <35 Strong Avoid." },
+};
+function infoBtn(key) {
+  return TIPS[key] ? `<button class="info-btn" type="button" data-tip="${key}" aria-label="What is ${TIPS[key].t}?">i</button>` : "";
+}
+function initTips() {
+  let tip = document.getElementById("tip");
+  if (!tip) { tip = document.createElement("div"); tip.id = "tip"; tip.hidden = true; document.body.appendChild(tip); }
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".info-btn");
+    if (btn) {
+      e.preventDefault(); e.stopPropagation();
+      const info = TIPS[btn.dataset.tip];
+      if (!info) return;
+      tip.innerHTML = `<span class="tip-title">${info.t}</span>${info.d}`;
+      const tw = Math.min(250, window.innerWidth - 20);
+      tip.style.width = tw + "px";
+      tip.hidden = false;
+      const r = btn.getBoundingClientRect();
+      let left = Math.max(10, Math.min(r.left + r.width / 2 - tw / 2, window.innerWidth - tw - 10));
+      tip.style.left = left + "px";
+      tip.style.top = (r.bottom + 8) + "px";
+      const th = tip.getBoundingClientRect().height;
+      if (r.bottom + 8 + th > window.innerHeight - 8) tip.style.top = Math.max(8, r.top - th - 8) + "px";
+      return;
+    }
+    if (!tip.hidden && !e.target.closest("#tip")) tip.hidden = true;
+  });
+  window.addEventListener("scroll", () => { tip.hidden = true; }, true);
+}
+
 const SECTOR_COLORS = [
   "#2563eb", "#0891b2", "#16a34a", "#b45309", "#7c3aed",
   "#db2777", "#0e7a4f", "#64748b", "#ca8a04", "#e11d48",
@@ -109,7 +145,7 @@ function renderOverview() {
   document.getElementById("top-names").innerHTML = `
     <div class="table-wrap" style="border:0;box-shadow:none">
     <table><thead><tr>
-      <th class="left">#</th><th class="left">Name</th><th>QARP</th><th>DCF</th><th>Price</th><th class="left">Verdict</th>
+      <th class="left">#</th><th class="left">Name</th><th>QARP${infoBtn("qarp")}</th><th>DCF${infoBtn("dcf")}</th><th>Price</th><th class="left">Verdict</th>
     </tr></thead><tbody>
       ${top.map((x) => `<tr data-ticker="${x.ticker}">
         <td class="left muted">${x.rank}</td>
@@ -167,7 +203,7 @@ function renderUniverseTable() {
 
   document.querySelector("#u-table thead").innerHTML = `<tr>${U_COLS.map((c) => {
     const arrow = uSort.key === c.key ? `<span class="arrow">${uSort.dir > 0 ? "▲" : "▼"}</span>` : "";
-    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}</th>`;
+    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}${infoBtn(c.key)}</th>`;
   }).join("")}</tr>`;
   document.querySelector("#u-table tbody").innerHTML = rows.map((x) => `
     <tr data-ticker="${x.ticker}">${U_COLS.map((c) =>
@@ -175,7 +211,8 @@ function renderUniverseTable() {
 
   document.getElementById("u-count").textContent = `${rows.length} of ${DATA.universe.length}`;
   document.querySelectorAll("#u-table thead th").forEach((th) =>
-    th.addEventListener("click", () => {
+    th.addEventListener("click", (e) => {
+      if (e.target.closest(".info-btn")) return; // tapping the ⓘ shouldn't sort
       const k = th.dataset.key;
       // numeric columns default to descending on first click; rank/text ascending
       if (uSort.key === k) uSort.dir *= -1;
@@ -231,13 +268,14 @@ function renderPortfolioTable() {
   });
   document.querySelector("#p-table thead").innerHTML = `<tr>${P_COLS.map((c) => {
     const arrow = pSort.key === c.key ? `<span class="arrow">${pSort.dir > 0 ? "▲" : "▼"}</span>` : "";
-    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}</th>`;
+    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}${infoBtn(c.key)}</th>`;
   }).join("")}</tr>`;
   document.querySelector("#p-table tbody").innerHTML = rows.map((x) => `
     <tr data-ticker="${x.ticker}">${P_COLS.map((c) =>
       `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
   document.querySelectorAll("#p-table thead th").forEach((th) =>
-    th.addEventListener("click", () => {
+    th.addEventListener("click", (e) => {
+      if (e.target.closest(".info-btn")) return; // tapping the ⓘ shouldn't sort
       const k = th.dataset.key;
       if (pSort.key === k) pSort.dir *= -1;
       else pSort = { key: k, dir: k === "ticker" ? 1 : -1 };
@@ -518,4 +556,5 @@ async function boot() {
 function showErr(msg) { const e = document.getElementById("gate-err"); e.textContent = msg; e.hidden = false; }
 function hideErr() { document.getElementById("gate-err").hidden = true; }
 
+initTips();
 boot();
