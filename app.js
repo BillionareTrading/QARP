@@ -524,15 +524,22 @@ function relTime(sec) {
   return Math.floor(diff / 86400) + "d ago";
 }
 
+function asOfLabel(tsSec) {
+  try {
+    return new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }).format(new Date(tsSec * 1000)) + " ET";
+  } catch (e) { return ""; }
+}
 async function renderIndexes() {
   const key = DATA.meta && DATA.meta.finnhub_key;
   const row = document.getElementById("idx-row");
   if (!row) return;
   if (!key) { row.innerHTML = `<div class="idx-card"><span class="muted">Live market data needs the API key.</span></div>`; return; }
+  let latestT = 0;
   const cards = await Promise.all(INDEXES.map(async (ix) => {
     try {
       const q = await fetchQuote(ix.sym, key);
       if (!q || typeof q.c !== "number" || !q.c) throw new Error("no data");
+      if (q.t && q.t > latestT) latestT = q.t;
       const up = (q.d || 0) >= 0;
       return `<div class="idx-card ${up ? "up" : "down"}">
         <div class="idx-name">${esc(ix.label)} <span class="idx-tick">· ${esc(ix.sym)} ETF</span></div>
@@ -544,6 +551,8 @@ async function renderIndexes() {
     }
   }));
   row.innerHTML = cards.join("");
+  const asof = document.getElementById("idx-asof");
+  if (asof) asof.textContent = latestT ? "as of " + asOfLabel(latestT) : "";
 }
 
 function renderNewsFilters() {
