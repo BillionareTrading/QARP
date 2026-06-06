@@ -46,27 +46,17 @@
 
     <!-- Tabs -->
     <nav class="tabs">
-      <button class="tab active" data-tab="overview">Overview</button>
-      <button class="tab" data-tab="universe">Shariah-Compliant</button>
-      <button class="tab" data-tab="portfolio">Portfolio</button>
+      <button class="tab active" data-tab="universe">Shariah-Compliant</button>
       <button class="tab" data-tab="framework">Framework</button>
+      <button class="tab" data-tab="portfolio">Portfolio</button>
     </nav>
 
-    <!-- Overview -->
-    <section id="tab-overview" class="tabpanel active">
+    <!-- Shariah-Compliant universe -->
+    <section id="tab-universe" class="tabpanel active">
       <div class="card">
         <h3>Universe by verdict</h3>
         <div id="verdict-chart"></div>
       </div>
-      <div class="card">
-        <h3>Top of the universe</h3>
-        <p class="card-note">Highest-QARP Shariah-compliant names. Full list under <b>Shariah-Compliant</b>.</p>
-        <div id="top-names" class="mini-table"></div>
-      </div>
-    </section>
-
-    <!-- Universe -->
-    <section id="tab-universe" class="tabpanel">
       <div class="controls">
         <input id="u-search" type="search" placeholder="Search ticker or name…" />
         <select id="u-verdict">
@@ -109,20 +99,33 @@
 
     <!-- Framework / methodology -->
     <section id="tab-framework" class="tabpanel">
-      <div class="card">
-        <h3>How the QARP framework works</h3>
-        <p class="card-note">Every stock clears two gates — first a Shariah screen (pass/fail), then a quality-and-value score. Here's what the numbers mean.</p>
+      <!-- Hero: QARP + interactive calculator -->
+      <div class="card fw-hero">
+        <h3>QARP <span class="fw-sub">Quality At a Reasonable Price</span></h3>
+        <p class="fw-p">Every stock first passes a <b>Shariah screen</b> (pass/fail), then gets one <b>0–100</b> score that combines <b class="fw-q">how good the business is</b> (60%) with <b class="fw-v">how reasonably it's priced</b> (40%). Higher is better.</p>
+        <div class="fw-formula">QARP&nbsp;=&nbsp;60% × <span class="fw-q">Quality</span> &nbsp;+&nbsp; 40% × <span class="fw-v">DCF value</span></div>
+
+        <div class="fw-calc">
+          <div class="fw-calc-title">Try it — drag the sliders</div>
+          <div class="fw-slider">
+            <div class="fw-slider-top"><span class="fw-q">Quality</span><span><b id="calc-qval">80</b> <span class="muted">/ 105</span></span></div>
+            <input id="calc-quality" class="range-q" type="range" min="0" max="105" value="80" />
+          </div>
+          <div class="fw-slider">
+            <div class="fw-slider-top"><span class="fw-v">DCF value</span><span><b id="calc-dval">3.0</b> <span class="muted">/ 5</span></span></div>
+            <input id="calc-dcf" class="range-v" type="range" min="1" max="5" step="0.1" value="3" />
+          </div>
+          <div class="fw-calc-out">
+            <div><span class="fw-calc-cap">Resulting QARP</span><span id="calc-qarp" class="fw-calc-num">76.2</span></div>
+            <span id="calc-verdict" class="badge v-strongbuy">STRONG BUY</span>
+          </div>
+        </div>
       </div>
 
       <div class="grid-2">
         <div class="card">
-          <h3>QARP <span class="fw-sub">Quality At a Reasonable Price</span></h3>
-          <p class="fw-p">A single <b>0–100</b> score that blends how good a business is with how reasonably it's priced — <b>60% quality, 40% value</b>. Higher is better.</p>
-          <div class="fw-formula">QARP = 60% × <span class="fw-q">Quality</span> + 40% × <span class="fw-v">DCF value</span></div>
-        </div>
-        <div class="card">
-          <h3>DCF score <span class="fw-sub">1 – 5</span></h3>
-          <p class="fw-p">How cheap a stock looks versus an estimate of its fair value (triangulated from several models). <b>5 = deep bargain, 1 = expensive.</b></p>
+          <h3>DCF value <span class="fw-sub">the price score · 1–5</span></h3>
+          <p class="fw-p">How cheap a stock is versus an estimate of its fair value. <b>5 = deep bargain, 1 = expensive.</b></p>
           <table class="fw-scale">
             <tr><td>5</td><td>Deep value</td><td>&gt; +30% upside</td></tr>
             <tr><td>4</td><td>Undervalued</td><td>+15% to +30%</td></tr>
@@ -131,36 +134,35 @@
             <tr><td>1</td><td>Expensive</td><td>&gt; 30% rich</td></tr>
           </table>
         </div>
+        <div class="card">
+          <h3>Verdict bands <span class="fw-sub">what the score means</span></h3>
+          <div class="fw-bands">
+            <div class="band-row"><span class="badge v-strongest">STRONGEST</span><span>QARP ≥ 85</span></div>
+            <div class="band-row"><span class="badge v-strongbuy">STRONG BUY</span><span>≥ 72</span></div>
+            <div class="band-row"><span class="badge v-buy">BUY</span><span>≥ 66</span></div>
+            <div class="band-row"><span class="badge v-holdqual">HOLD-QUAL</span><span>≥ 60</span></div>
+            <div class="band-row"><span class="badge v-avoid">AVOID</span><span>35 – 59</span></div>
+            <div class="band-row"><span class="badge v-strongavoid">STRONG AVOID</span><span>&lt; 35</span></div>
+          </div>
+        </div>
       </div>
 
       <div class="card">
-        <h3>Quality score <span class="fw-sub">out of 105</span></h3>
-        <p class="fw-p">Five dimensions, scored from current fundamentals:</p>
+        <h3>What goes into "Quality" <span class="fw-sub">the 60% half · scored out of 105</span></h3>
+        <p class="fw-p">The Quality number is itself <b>five sub-scores added together</b> — each measures a different strength of the business:</p>
         <div class="fw-dims">
           <div class="fw-dim"><span class="fw-pts">25</span><div><b>Valuation</b><span>Multiples vs. own history &amp; sector</span></div></div>
           <div class="fw-dim"><span class="fw-pts">20</span><div><b>Growth</b><span>Revenue &amp; earnings trajectory</span></div></div>
           <div class="fw-dim"><span class="fw-pts">20</span><div><b>Quality</b><span>Margins, returns on capital, moat</span></div></div>
           <div class="fw-dim"><span class="fw-pts">20</span><div><b>Balance Sheet</b><span>Debt, cash, financial strength</span></div></div>
-          <div class="fw-dim"><span class="fw-pts">20</span><div><b>Capital Allocation</b><span>Buybacks, dividends, insider buying, M&amp;A</span></div></div>
+          <div class="fw-dim"><span class="fw-pts">20</span><div><b>Capital Allocation</b><span>Buybacks, dividends, insider buying</span></div></div>
+          <div class="fw-dim fw-dim-total"><span class="fw-pts">105</span><div><b>Total Quality</b><span>The sum — the 60% half of QARP</span></div></div>
         </div>
       </div>
 
       <div class="card">
-        <h3>Verdict bands</h3>
-        <p class="fw-p">Your QARP score maps to a verdict:</p>
-        <div class="fw-bands">
-          <div class="band-row"><span class="badge v-strongest">STRONGEST</span><span>QARP ≥ 85</span></div>
-          <div class="band-row"><span class="badge v-strongbuy">STRONG BUY</span><span>≥ 72</span></div>
-          <div class="band-row"><span class="badge v-buy">BUY</span><span>≥ 66</span></div>
-          <div class="band-row"><span class="badge v-holdqual">HOLD-QUAL</span><span>≥ 60 — quality, but little margin of safety</span></div>
-          <div class="band-row"><span class="badge v-avoid">AVOID</span><span>35 – 59</span></div>
-          <div class="band-row"><span class="badge v-strongavoid">STRONG AVOID</span><span>&lt; 35</span></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>The Shariah screen <span class="fw-sub">the first gate</span></h3>
-        <p class="fw-p">Every name must pass an <b>AAOIFI-standard</b> screen before it's ever scored — verified primarily via <b>Musaffa</b> and confirmed by <b>Muslim Xchange</b>. If they disagree, the stricter verdict wins. A non-compliant company gets <b>no QARP score</b> and is excluded.</p>
+        <h3>The Shariah screen <span class="fw-sub">the first gate · pass / fail</span></h3>
+        <p class="fw-p">Every name must pass an <b>AAOIFI-standard</b> screen before it's ever scored — verified via <b>Musaffa</b> and confirmed by <b>Muslim Xchange</b> (the stricter view wins). A non-compliant company gets <b>no QARP score</b> and is excluded.</p>
         <ul class="fw-list">
           <li>Permissible core business (no interest/lending, alcohol, tobacco, pork, gambling, adult content, weapons)</li>
           <li>Impermissible income &lt; 5% of revenue</li>

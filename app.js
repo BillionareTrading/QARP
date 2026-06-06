@@ -126,8 +126,8 @@ function renderKpis() {
 }
 
 /* ---------- render: Overview ---------- */
-function renderOverview() {
-  // verdict distribution bars
+function renderVerdictSummary() {
+  // verdict distribution bars — sits at the top of the Shariah-Compliant tab
   const counts = {};
   DATA.universe.forEach((x) => (counts[x.verdict] = (counts[x.verdict] || 0) + 1));
   const max = Math.max(...Object.values(counts));
@@ -139,25 +139,6 @@ function renderOverview() {
         <span class="vbar-track"><span class="vbar-fill" style="width:${(counts[v] / max * 100).toFixed(0)}%;background:${VERDICT_COLOR[v]}"></span></span>
         <span class="vbar-n">${counts[v]}</span>
       </div>`).join("")}</div>`;
-
-  // top names mini table
-  const top = DATA.universe.slice(0, 10);
-  document.getElementById("top-names").innerHTML = `
-    <div class="table-wrap" style="border:0;box-shadow:none">
-    <table><thead><tr>
-      <th class="left">#</th><th class="left">Name</th><th>QARP${infoBtn("qarp")}</th><th>DCF${infoBtn("dcf")}</th><th>Price</th><th class="left">Verdict</th>
-    </tr></thead><tbody>
-      ${top.map((x) => `<tr data-ticker="${x.ticker}">
-        <td class="left muted">${x.rank}</td>
-        <td class="left tick">${x.ticker}<span class="name">${x.name}</span></td>
-        <td class="qarp-cell">${fmtNum(x.qarp, 1)}</td>
-        <td>${fmtNum(x.dcf, 1)}</td>
-        <td><span class="cell-px">${fmtUSD(x.price, 2)}</span></td>
-        <td class="left">${verdictBadge(x.verdict)}</td>
-      </tr>`).join("")}
-    </tbody></table></div>`;
-  document.querySelectorAll("#top-names tr[data-ticker]").forEach((tr) =>
-    tr.addEventListener("click", () => openDrawer(tr.dataset.ticker)));
 }
 
 /* ---------- render: Universe table ---------- */
@@ -496,7 +477,7 @@ function startLive() {
 /* ---------- boot ---------- */
 function renderAll() {
   document.getElementById("asof-date").textContent = DATA.meta.date;
-  renderOverview();
+  renderVerdictSummary();
   renderUniverseControls();
   renderUniverseTable();
   renderPortfolio();
@@ -556,5 +537,31 @@ async function boot() {
 function showErr(msg) { const e = document.getElementById("gate-err"); e.textContent = msg; e.hidden = false; }
 function hideErr() { document.getElementById("gate-err").hidden = true; }
 
+/* ---------- Framework: interactive QARP calculator ---------- */
+function verdictForScore(q) {
+  return q >= 85 ? "STRONGEST" : q >= 72 ? "STRONG BUY" : q >= 66 ? "BUY"
+    : q >= 60 ? "HOLD-QUAL" : q >= 35 ? "AVOID" : "STRONG AVOID";
+}
+function initFrameworkCalc() {
+  const q = document.getElementById("calc-quality");
+  const d = document.getElementById("calc-dcf");
+  if (!q || !d) return;
+  const update = () => {
+    const quality = +q.value, dcf = +d.value;
+    document.getElementById("calc-qval").textContent = quality;
+    document.getElementById("calc-dval").textContent = dcf.toFixed(1);
+    const qarp = 0.6 * (quality / 105 * 100) + 0.4 * (dcf / 5 * 100);
+    document.getElementById("calc-qarp").textContent = qarp.toFixed(1);
+    const v = verdictForScore(qarp);
+    const vb = document.getElementById("calc-verdict");
+    vb.textContent = v;
+    vb.className = "badge " + verdictSlug(v);
+  };
+  q.addEventListener("input", update);
+  d.addEventListener("input", update);
+  update();
+}
+
 initTips();
+initFrameworkCalc();
 boot();
