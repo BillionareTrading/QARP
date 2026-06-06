@@ -690,11 +690,9 @@ async function loadPortfolioDates() {
     } catch (e) { return null; }
   }));
   const events = results.filter(Boolean).sort((a, b) => a.date.localeCompare(b.date));
-  el.innerHTML =
-    (events.length
-      ? `<div class="dates-card"><h4 class="dates-h">Upcoming earnings</h4><div class="dates-rows">${events.map(pDateRowHtml).join("")}</div></div>`
-      : `<p class="muted">No upcoming earnings dates found.</p>`) +
-    `<p class="dates-note"><b>Dividend ex-dates and catalysts</b> aren't available on the free data tier yet — we can add them with a paid feed, or hand-enter catalysts you care about. Coming next.</p>`;
+  el.innerHTML = events.length
+    ? `<div class="dates-card"><h4 class="dates-h">Upcoming earnings</h4><div class="dates-rows">${events.map(pDateRowHtml).join("")}</div></div>`
+    : `<p class="muted">No upcoming earnings dates found.</p>`;
 }
 
 function initPortfolioSubtabs() {
