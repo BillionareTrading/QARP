@@ -157,6 +157,8 @@ button { font-family: inherit; cursor: pointer; }
 .tab-intro b { color: var(--ink); }
 
 /* ===== Stay Informed: index screens + news ===== */
+.idx-bar { display: flex; justify-content: flex-end; min-height: 16px; margin-bottom: 8px; }
+.idx-asof { font-size: 12px; color: var(--ink-3); }
 .idx-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 22px; }
 .idx-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
 .idx-card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--ink-3); }
