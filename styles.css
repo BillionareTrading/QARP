@@ -200,6 +200,30 @@ button { font-family: inherit; cursor: pointer; }
 
 .news-src { font-size: 11px; font-weight: 700; color: var(--ink-2); background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 6px; padding: 3px 8px; max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .news-time { font-size: 11.5px; color: var(--ink-3); white-space: nowrap; }
+.news-foot-l { display: flex; align-items: center; gap: 7px; min-width: 0; }
+.news-tk { font-size: 11px; font-weight: 800; color: var(--brand); background: #eef4ff; border: 1px solid #dbe7ff; border-radius: 6px; padding: 2px 7px; white-space: nowrap; flex: none; }
+
+/* ===== Portfolio sub-tabs ===== */
+.subtabs { display: flex; gap: 4px; margin-bottom: 18px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.subtab { border: 0; background: transparent; color: var(--ink-2); padding: 9px 14px; font-size: 13px; font-weight: 600; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; }
+.subtab:hover { color: var(--ink); }
+.subtab.active { color: var(--brand); border-bottom-color: var(--brand); }
+.psub { display: none; }
+.psub.active { display: block; }
+
+/* ===== Key Dates ===== */
+.dates-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 16px 18px; }
+.dates-h { font-size: 14px; margin-bottom: 8px; }
+.date-row { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line-2); }
+.date-row:last-child { border-bottom: 0; }
+.date-when { display: flex; flex-direction: column; min-width: 72px; flex: none; }
+.date-day { font-weight: 800; font-size: 15px; letter-spacing: -.01em; }
+.date-wd { font-size: 11px; color: var(--ink-3); }
+.date-main { flex: 1; min-width: 0; }
+.date-label { color: var(--ink-2); font-size: 13px; }
+.date-extra { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+.dates-note { font-size: 12.5px; color: var(--ink-3); line-height: 1.5; margin: 14px 2px 0; }
+.dates-note b { color: var(--ink-2); }
 .tabpanel.active { display: block; }
 .card {
   background: var(--surface); border: 1px solid var(--line);

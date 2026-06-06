@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0b1120" />
   <title>Jaleel Capital — QARP</title>
-  <link rel="stylesheet" href="styles.css?v=ce8215e1" />
+  <link rel="stylesheet" href="styles.css?v=7973d5ac" />
 </head>
 <body>
 
@@ -79,23 +79,43 @@
 
     <!-- Portfolio -->
     <section id="tab-portfolio" class="tabpanel">
-      <!-- KPI strip — only shown here, on the Portfolio page -->
-      <section id="kpis" class="kpis"></section>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Allocation by holding</h3>
-          <div id="p-sector-chart" class="chart-row"></div>
+      <nav class="subtabs" id="p-subtabs">
+        <button class="subtab active" type="button" data-psub="holdings">Holdings</button>
+        <button class="subtab" type="button" data-psub="news">News</button>
+        <button class="subtab" type="button" data-psub="dates">Key Dates</button>
+      </nav>
+
+      <!-- Holdings -->
+      <div id="psub-holdings" class="psub active">
+        <section id="kpis" class="kpis"></section>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Allocation by holding</h3>
+            <div id="p-sector-chart" class="chart-row"></div>
+          </div>
+          <div class="card">
+            <h3>Allocation by sector</h3>
+            <div id="sector-chart" class="chart-row"></div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Allocation by sector</h3>
-          <div id="sector-chart" class="chart-row"></div>
+        <div class="table-wrap">
+          <table id="p-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
         </div>
       </div>
-      <div class="table-wrap">
-        <table id="p-table">
-          <thead></thead>
-          <tbody></tbody>
-        </table>
+
+      <!-- Holdings news -->
+      <div id="psub-news" class="psub">
+        <p class="tab-intro">The latest headlines for the names you actually own.</p>
+        <div class="news-feed" id="pnews-list"></div>
+      </div>
+
+      <!-- Key dates -->
+      <div id="psub-dates" class="psub">
+        <p class="tab-intro">Upcoming dates that move your holdings.</p>
+        <div id="pdates-list"></div>
       </div>
     </section>
 
@@ -200,7 +220,7 @@
     <div class="drawer-panel" id="drawer-panel"></div>
   </div>
 
-  <script src="crypto.js?v=ce8215e1"></script>
-  <script src="app.js?v=ce8215e1"></script>
+  <script src="crypto.js?v=7973d5ac"></script>
+  <script src="app.js?v=7973d5ac"></script>
 </body>
 </html>

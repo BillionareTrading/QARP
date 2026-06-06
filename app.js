@@ -340,6 +340,7 @@ function initTabs() {
       t.classList.add("active");
       document.getElementById("tab-" + t.dataset.tab).classList.add("active");
       if (t.dataset.tab === "informed") enterInformed(); else leaveInformed();
+      if (t.dataset.tab === "universe") resumeUniverseCycler(); else pauseUniverseCycler();
     }));
 }
 
@@ -473,7 +474,7 @@ function flashAccount(account) {
 }
 function startLive() {
   if (liveTimer) clearInterval(liveTimer);
-  if (uniTimer) clearInterval(uniTimer);
+  pauseUniverseCycler();
   if (!(DATA.meta && DATA.meta.finnhub_key)) return; // no key -> stay on daily snapshot
   lastAccount = DATA.meta.portfolio_totals.account;
   // universe cycler quotes every NON-held universe name (held names refresh via the holdings tick)
@@ -481,8 +482,14 @@ function startLive() {
   uniQueue = DATA.universe.map((x) => x.ticker).filter((t) => !held.has(t));
   uniIdx = 0;
   liveTick();
-  liveTimer = setInterval(liveTick, LIVE_INTERVAL_MS);     // holdings every 60s
-  uniTimer = setInterval(universeTick, UNIVERSE_PUMP_MS);  // 1 universe name every 2s
+  liveTimer = setInterval(liveTick, LIVE_INTERVAL_MS);     // holdings every 60s (always)
+  // the universe cycler runs ONLY while the Shariah-Compliant tab is open (saves API budget)
+}
+function pauseUniverseCycler() { if (uniTimer) { clearInterval(uniTimer); uniTimer = null; } }
+function resumeUniverseCycler() {
+  if (!uniTimer && DATA && DATA.meta && DATA.meta.finnhub_key && uniQueue.length) {
+    uniTimer = setInterval(universeTick, UNIVERSE_PUMP_MS); // 1 universe name every 2s
+  }
 }
 
 /* ---------- Stay Informed: market snapshot + news ---------- */
@@ -555,18 +562,32 @@ function photoCardHtml(it) {
     <div class="news-card-media"><img class="news-cover" src="${esc(img)}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
     <div class="news-card-body">
       <div class="news-card-title">${esc(it.headline)}</div>
-      <div class="news-card-foot"><span class="news-src">${esc(it.source || "—")}</span><span class="news-time">${relTime(it.datetime)}</span></div>
+      <div class="news-card-foot"><span class="news-foot-l">${it._tk ? `<span class="news-tk">${esc(it._tk)}</span>` : ""}<span class="news-src">${esc(it.source || "—")}</span></span><span class="news-time">${relTime(it.datetime)}</span></div>
     </div>
   </a>`;
 }
 // stories WITHOUT a photo -> slim headline row (agency name + time, no image box)
 function newsRowHtml(it) {
   const url = safeUrl(it.url);
+  const lead = it._tk ? `<span class="news-tk">${esc(it._tk)}</span>` : `<span class="news-row-dot"></span>`;
   return `<a class="news-row" href="${esc(url)}" target="_blank" rel="noopener noreferrer">
-    <span class="news-row-dot"></span>
+    ${lead}
     <span class="news-row-title">${esc(it.headline)}</span>
     <span class="news-row-right"><span class="news-src">${esc(it.source || "—")}</span><span class="news-time">${relTime(it.datetime)}</span></span>
   </a>`;
+}
+// split items into photo cards + headline rows (shared by Stay Informed and Portfolio news)
+function renderNewsFeed(container, items, emptyLabel) {
+  items = items.filter((it) => it && it.headline && it.url);
+  if (!items.length) { container.innerHTML = `<p class="muted">${esc(emptyLabel || "No recent headlines.")}</p>`; return; }
+  const freq = {};
+  items.forEach((it) => { const im = safeUrl(it.image); if (im !== "#") freq[im] = (freq[im] || 0) + 1; });
+  const isRealPhoto = (it) => { const im = safeUrl(it.image); return im !== "#" && !/logo/i.test(im) && (freq[im] || 0) <= 2; };
+  const photos = items.filter(isRealPhoto);
+  const rows = items.filter((it) => !isRealPhoto(it));
+  container.innerHTML =
+    (photos.length ? `<div class="news-grid">${photos.map(photoCardHtml).join("")}</div>` : "") +
+    (rows.length ? `<div class="news-rows">${rows.map(newsRowHtml).join("")}</div>` : "");
 }
 
 async function loadNews(filterName) {
@@ -592,20 +613,7 @@ async function loadNews(filterName) {
     let items = await res.json();
     if (!Array.isArray(items)) throw new Error("bad response");
     items = items.filter((it) => it && it.headline && it.url).slice(0, 30);
-    if (!items.length) { list.innerHTML = `<p class="muted">No recent headlines for ${esc(newsFilter)}.</p>`; return; }
-    // An image that repeats across many items is branding/placeholder (a Reuters or Yahoo
-    // graphic), not a real article photo — route those to slim headline rows instead.
-    const freq = {};
-    items.forEach((it) => { const im = safeUrl(it.image); if (im !== "#") freq[im] = (freq[im] || 0) + 1; });
-    const isRealPhoto = (it) => {
-      const im = safeUrl(it.image);
-      return im !== "#" && !/logo/i.test(im) && (freq[im] || 0) <= 2;
-    };
-    const photos = items.filter(isRealPhoto);
-    const rows = items.filter((it) => !isRealPhoto(it));
-    list.innerHTML =
-      (photos.length ? `<div class="news-grid">${photos.map(photoCardHtml).join("")}</div>` : "") +
-      (rows.length ? `<div class="news-rows">${rows.map(newsRowHtml).join("")}</div>` : "");
+    renderNewsFeed(list, items, `No recent headlines for ${newsFilter}.`);
   } catch (e) {
     list.innerHTML = `<p class="muted">Couldn't load news right now — try Refresh.</p>`;
   }
@@ -624,6 +632,81 @@ function initInformed() {
   renderNewsFilters();
   const rb = document.getElementById("news-refresh");
   if (rb) rb.addEventListener("click", () => { renderIndexes(); loadNews(newsFilter); });
+}
+
+/* ---------- Portfolio sub-tabs: News + Key Dates ---------- */
+let pNewsLoaded = false, pDatesLoaded = false;
+
+async function loadPortfolioNews() {
+  const key = DATA.meta && DATA.meta.finnhub_key;
+  const list = document.getElementById("pnews-list");
+  if (!list) return;
+  if (!key) { list.innerHTML = `<p class="muted">Live news needs the API key.</p>`; return; }
+  list.innerHTML = `<p class="news-loading">Loading your holdings' news…</p>`;
+  const now = new Date();
+  const to = now.toISOString().slice(0, 10);
+  const from = new Date(now.getTime() - 10 * 86400000).toISOString().slice(0, 10);
+  const results = await Promise.all(DATA.portfolio.map(async (h) => {
+    try {
+      const res = await fetch(`https://finnhub.io/api/v1/company-news?symbol=${h.ticker}&from=${from}&to=${to}&token=${key}`, { cache: "no-store" });
+      const arr = await res.json();
+      return Array.isArray(arr) ? arr.slice(0, 4).map((it) => ({ ...it, _tk: h.ticker })) : [];
+    } catch (e) { return []; }
+  }));
+  const seen = new Set();
+  let merged = results.flat().filter((it) => { if (!it || !it.url || seen.has(it.url)) return false; seen.add(it.url); return true; });
+  merged.sort((a, b) => (b.datetime || 0) - (a.datetime || 0));
+  renderNewsFeed(list, merged.slice(0, 42), "No recent news for your holdings.");
+}
+
+function pDateRowHtml(e) {
+  const d = new Date(e.date + "T12:00:00");
+  const mon = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][d.getMonth()];
+  const wd = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][d.getDay()];
+  const daysOut = Math.round((d - new Date()) / 86400000);
+  const hour = e.hour === "bmo" ? "before open" : e.hour === "amc" ? "after close" : "";
+  return `<div class="date-row">
+    <div class="date-when"><span class="date-day">${mon} ${d.getDate()}</span><span class="date-wd">${wd}${daysOut >= 0 ? ` · ${daysOut}d` : ""}</span></div>
+    <div class="date-main"><span class="news-tk">${esc(e.tk)}</span> <span class="date-label">Earnings${hour ? ` · ${hour}` : ""}</span></div>
+    ${e.epsEst != null ? `<span class="date-extra">est. EPS ${fmtNum(e.epsEst, 2)}</span>` : ""}
+  </div>`;
+}
+
+async function loadPortfolioDates() {
+  const key = DATA.meta && DATA.meta.finnhub_key;
+  const el = document.getElementById("pdates-list");
+  if (!el) return;
+  if (!key) { el.innerHTML = `<p class="muted">Live calendar needs the API key.</p>`; return; }
+  el.innerHTML = `<p class="news-loading">Loading earnings dates…</p>`;
+  const now = new Date();
+  const from = now.toISOString().slice(0, 10);
+  const to = new Date(now.getTime() + 130 * 86400000).toISOString().slice(0, 10);
+  const results = await Promise.all(DATA.portfolio.map(async (h) => {
+    try {
+      const res = await fetch(`https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&symbol=${h.ticker}&token=${key}`, { cache: "no-store" });
+      const j = await res.json();
+      const ev = (j.earningsCalendar || [])[0];
+      return (ev && ev.date) ? { tk: h.ticker, date: ev.date, hour: ev.hour, epsEst: ev.epsEstimate } : null;
+    } catch (e) { return null; }
+  }));
+  const events = results.filter(Boolean).sort((a, b) => a.date.localeCompare(b.date));
+  el.innerHTML =
+    (events.length
+      ? `<div class="dates-card"><h4 class="dates-h">Upcoming earnings</h4><div class="dates-rows">${events.map(pDateRowHtml).join("")}</div></div>`
+      : `<p class="muted">No upcoming earnings dates found.</p>`) +
+    `<p class="dates-note"><b>Dividend ex-dates and catalysts</b> aren't available on the free data tier yet — we can add them with a paid feed, or hand-enter catalysts you care about. Coming next.</p>`;
+}
+
+function initPortfolioSubtabs() {
+  document.querySelectorAll("#p-subtabs .subtab").forEach((b) =>
+    b.addEventListener("click", () => {
+      document.querySelectorAll("#p-subtabs .subtab").forEach((x) => x.classList.remove("active"));
+      document.querySelectorAll("#tab-portfolio .psub").forEach((x) => x.classList.remove("active"));
+      b.classList.add("active");
+      document.getElementById("psub-" + b.dataset.psub).classList.add("active");
+      if (b.dataset.psub === "news" && !pNewsLoaded) { pNewsLoaded = true; loadPortfolioNews(); }
+      if (b.dataset.psub === "dates" && !pDatesLoaded) { pDatesLoaded = true; loadPortfolioDates(); }
+    }));
 }
 
 /* ---------- boot ---------- */
@@ -717,4 +800,5 @@ function initFrameworkCalc() {
 initTips();
 initFrameworkCalc();
 initInformed();
+initPortfolioSubtabs();
 boot();
