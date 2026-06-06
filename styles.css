@@ -190,6 +190,8 @@ button { font-family: inherit; cursor: pointer; }
 .badge.v-holdqual { background: var(--v-hold); }
 .badge.v-avoid { background: var(--v-avoid); }
 .badge.v-strongavoid { background: var(--v-strongavoid); }
+/* non-compliant / unscored: outlined neutral, visually distinct from the scored verdicts */
+.badge.v-noncompliant { background: #f1f5f9; color: #64748b; border: 1px solid #cbd5e1; }
 
 /* ===== Controls ===== */
 .controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
