@@ -498,7 +498,7 @@ const INDEXES = [
   { label: "Nasdaq 100", sub: "via QQQ", sym: "QQQ" },
 ];
 const NEWS_FILTERS = [
-  { name: "Market", cat: "general" },
+  { name: "Top Stories", cat: "general" },
   { name: "Technology", sym: "MSFT" },
   { name: "Semiconductors", sym: "NVDA" },
   { name: "Healthcare", sym: "LLY" },
@@ -507,7 +507,7 @@ const NEWS_FILTERS = [
   { name: "Consumer", sym: "AMZN" },
   { name: "Industrials", sym: "CAT" },
 ];
-let newsFilter = "Market";
+let newsFilter = "Top Stories";
 let informedTimer = null;
 let informedLoaded = false;
 
@@ -558,8 +558,12 @@ async function renderIndexes() {
 function renderNewsFilters() {
   const el = document.getElementById("news-filters");
   if (!el) return;
-  el.innerHTML = NEWS_FILTERS.map((f) =>
-    `<button class="news-chip ${f.name === newsFilter ? "active" : ""}" type="button" data-news="${esc(f.name)}">${esc(f.name)}</button>`).join("");
+  el.innerHTML = NEWS_FILTERS.map((f, i) => {
+    const chip = `<button class="news-chip ${f.name === newsFilter ? "active" : ""}" type="button" data-news="${esc(f.name)}">${esc(f.name)}</button>`;
+    // divider after the overall feed, before the sector chips
+    const div = (f.cat && NEWS_FILTERS[i + 1] && !NEWS_FILTERS[i + 1].cat) ? `<span class="news-div"></span>` : "";
+    return chip + div;
+  }).join("");
   el.querySelectorAll(".news-chip").forEach((c) =>
     c.addEventListener("click", () => loadNews(c.dataset.news)));
 }
@@ -629,7 +633,7 @@ async function loadNews(filterName) {
 }
 
 function enterInformed() {
-  if (!informedLoaded) { renderNewsFilters(); loadNews("Market"); informedLoaded = true; }
+  if (!informedLoaded) { renderNewsFilters(); loadNews("Top Stories"); informedLoaded = true; }
   renderIndexes();
   if (informedTimer) clearInterval(informedTimer);
   informedTimer = setInterval(renderIndexes, 60000); // refresh the index screens while viewing
