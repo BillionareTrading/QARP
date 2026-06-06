@@ -146,7 +146,7 @@ function renderVerdictSummary() {
       ${verdictBadge(v)}
     </div>`).join("");
   document.getElementById("verdict-chart").innerHTML =
-    `<p class="card-note" style="margin:-6px 0 14px">${DATA.universe.length} Shariah-compliant names scored</p>
+    `<p class="card-note" style="margin:6px 0 16px">${DATA.universe.length} Shariah-compliant names scored</p>
      <div class="vbar-stack">${bar}</div>
      <div class="vstats">${tiles}</div>`;
 }
