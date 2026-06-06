@@ -528,9 +528,9 @@ async function renderIndexes() {
       if (!q || typeof q.c !== "number" || !q.c) throw new Error("no data");
       const up = (q.d || 0) >= 0;
       return `<div class="idx-card ${up ? "up" : "down"}">
-        <div class="idx-top"><span class="idx-name">${esc(ix.label)}</span><span class="idx-sub">${esc(ix.sub)}</span></div>
-        <div class="idx-level">${fmtNum(q.c, 2)}</div>
-        <div class="idx-chg ${up ? "pos" : "neg"}">${up ? "▲" : "▼"} ${fmtNum(Math.abs(q.d), 2)} (${fmtPct(q.dp)})</div>
+        <div class="idx-name">${esc(ix.label)} <span class="idx-tick">· ${esc(ix.sym)} ETF</span></div>
+        <div class="idx-pct ${up ? "pos" : "neg"}">${up ? "▲" : "▼"} ${Math.abs(q.dp).toFixed(2)}%</div>
+        <div class="idx-price">$${fmtNum(q.c, 2)} <span class="${up ? "pos" : "neg"}">${q.d >= 0 ? "+" : "−"}$${fmtNum(Math.abs(q.d), 2)}</span></div>
       </div>`;
     } catch (e) {
       return `<div class="idx-card"><div class="idx-top"><span class="idx-name">${esc(ix.label)}</span></div><div class="idx-level muted">—</div></div>`;
