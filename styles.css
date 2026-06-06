@@ -152,6 +152,8 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ===== Panels & cards ===== */
 .tabpanel { display: none; max-width: 1200px; margin: 0 auto; padding: 14px clamp(14px, 4vw, 32px) 40px; }
+.tab-intro { margin: 2px 0 16px; font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
+.tab-intro b { color: var(--ink); }
 .tabpanel.active { display: block; }
 .card {
   background: var(--surface); border: 1px solid var(--line);
