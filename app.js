@@ -16,6 +16,9 @@ function verdictSlug(v) {
   return "v-" + String(v).toLowerCase().replace(/[^a-z]+/g, "");
 }
 function verdictBadge(v) {
+  // Non-compliant / unscored holdings (e.g. V, RKLB) get a neutral outlined badge
+  // instead of an empty cell — they're excluded from QARP on Shariah grounds.
+  if (!v || v === "NOT SCORED") return `<span class="badge v-noncompliant">NON-COMPLIANT</span>`;
   return `<span class="badge ${verdictSlug(v)}">${v}</span>`;
 }
 
