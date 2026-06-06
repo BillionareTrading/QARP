@@ -327,6 +327,16 @@ tbody tr:hover { background: var(--surface-2); }
 .fw-calc-num { font-size: 32px; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1; }
 .fw-calc-out .badge { font-size: 13px; padding: 6px 14px; }
 
+/* goal / mission card */
+.fw-goal { border-left: 3px solid var(--brand); background: linear-gradient(180deg, #fbfcff, #fff); }
+.fw-lead { font-size: 15px; line-height: 1.6; color: var(--ink); margin: 6px 0 0; }
+.fw-dims-1 { grid-template-columns: 1fr; }
+
+/* compact verdict legend (bottom of Approach tab) */
+.fw-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; max-width: 1200px; margin: 2px auto 6px; padding: 4px clamp(14px,4vw,32px); }
+.fw-legend-label { font-size: 11.5px; font-weight: 700; color: var(--ink-2); text-transform: uppercase; letter-spacing: .04em; margin-right: 4px; }
+.fw-legend .badge { font-size: 11px; }
+
 @media (max-width: 560px) { .fw-dims { grid-template-columns: 1fr; } }
 
 .foot { max-width: 1200px; margin: 0 auto; padding: 8px clamp(14px,4vw,32px) 40px; }
