@@ -107,17 +107,16 @@
       <!-- Hero: QARP + interactive calculator -->
       <div class="card fw-hero">
         <h3>QARP <span class="fw-sub">Quality At a Reasonable Price</span></h3>
-        <p class="fw-p">One <b>0–100</b> score that combines <b class="fw-q">how good the business is</b> (60%) with <b class="fw-v">how reasonably it's priced</b> (40%). Higher is better.</p>
+        <p class="fw-p">One <b>0–100</b> score from two inputs: <b class="fw-q">Quality</b> — how strong the business is, out of 105 — counts <b>60%</b>; <b class="fw-v">DCF value</b> — how cheap it is vs. fair value, 1 to 5 — counts <b>40%</b>. Higher is better. <span class="muted">Drag the sliders to see how they combine.</span></p>
         <div class="fw-formula">QARP&nbsp;=&nbsp;60% × <span class="fw-q">Quality</span> &nbsp;+&nbsp; 40% × <span class="fw-v">DCF value</span></div>
 
         <div class="fw-calc">
-          <div class="fw-calc-title">Try it — drag the sliders</div>
           <div class="fw-slider">
-            <div class="fw-slider-top"><span class="fw-q">Quality</span><span><b id="calc-qval">80</b> <span class="muted">/ 105</span></span></div>
+            <div class="fw-slider-top"><span><span class="fw-q">Quality</span> <span class="fw-hint">business strength</span></span><span><b id="calc-qval">80</b> <span class="muted">/ 105</span></span></div>
             <input id="calc-quality" class="range-q" type="range" min="0" max="105" value="80" />
           </div>
           <div class="fw-slider">
-            <div class="fw-slider-top"><span class="fw-v">DCF value</span><span><b id="calc-dval">3.0</b> <span class="muted">/ 5</span></span></div>
+            <div class="fw-slider-top"><span><span class="fw-v">DCF value</span> <span class="fw-hint">cheap vs. fair value</span></span><span><b id="calc-dval">3.0</b> <span class="muted">/ 5</span></span></div>
             <input id="calc-dcf" class="range-v" type="range" min="1" max="5" step="0.1" value="3" />
           </div>
           <div class="fw-calc-out">
@@ -140,15 +139,15 @@
           </div>
         </div>
         <div class="card">
-          <h3><span class="fw-v">DCF value</span> <span class="fw-sub">the 40% half · 1–5</span></h3>
-          <p class="fw-p">How cheap a stock is versus an estimate of its fair value:</p>
-          <table class="fw-scale">
-            <tr><td>5</td><td>Deep value</td><td>&gt; +30% upside</td></tr>
-            <tr><td>4</td><td>Undervalued</td><td>+15% to +30%</td></tr>
-            <tr><td>3</td><td>Fairly priced</td><td>−10% to +15%</td></tr>
-            <tr><td>2</td><td>Overvalued</td><td>10–30% rich</td></tr>
-            <tr><td>1</td><td>Expensive</td><td>&gt; 30% rich</td></tr>
-          </table>
+          <h3><span class="fw-v">DCF value</span> <span class="fw-sub">the 40% half · price score</span></h3>
+          <p class="fw-p">How cheap a stock is vs. an estimate of its fair value:</p>
+          <div class="fw-dims fw-dims-1">
+            <div class="fw-dim"><span class="fw-pts fw-dcf5">5</span><div><b>Deep value</b><span>&gt; 30% upside</span></div></div>
+            <div class="fw-dim"><span class="fw-pts fw-dcf4">4</span><div><b>Undervalued</b><span>+15% to +30%</span></div></div>
+            <div class="fw-dim"><span class="fw-pts fw-dcf3">3</span><div><b>Fairly priced</b><span>−10% to +15%</span></div></div>
+            <div class="fw-dim"><span class="fw-pts fw-dcf2">2</span><div><b>Overvalued</b><span>10–30% rich</span></div></div>
+            <div class="fw-dim"><span class="fw-pts fw-dcf1">1</span><div><b>Expensive</b><span>&gt; 30% rich</span></div></div>
+          </div>
         </div>
       </div>
 
