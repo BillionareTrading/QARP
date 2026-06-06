@@ -92,7 +92,7 @@ function renderOverview() {
   const counts = {};
   DATA.universe.forEach((x) => (counts[x.verdict] = (counts[x.verdict] || 0) + 1));
   const max = Math.max(...Object.values(counts));
-  document.getElementById("verdict-chart").innerHTML = `<p class="card-note" style="margin:-6px 0 12px">${DATA.universe.length} halal names scored</p><div class="vbar">${VERDICT_ORDER
+  document.getElementById("verdict-chart").innerHTML = `<p class="card-note" style="margin:-6px 0 12px">${DATA.universe.length} Shariah-compliant names scored</p><div class="vbar">${VERDICT_ORDER
     .filter((v) => counts[v])
     .map((v) => `
       <div class="vbar-row">
