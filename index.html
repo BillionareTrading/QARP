@@ -46,13 +46,13 @@
 
     <!-- Tabs -->
     <nav class="tabs">
-      <button class="tab active" data-tab="universe">Shariah-Compliant</button>
-      <button class="tab" data-tab="framework">Framework</button>
+      <button class="tab active" data-tab="framework">Approach</button>
+      <button class="tab" data-tab="universe">Shariah-Compliant</button>
       <button class="tab" data-tab="portfolio">Portfolio</button>
     </nav>
 
     <!-- Shariah-Compliant universe -->
-    <section id="tab-universe" class="tabpanel active">
+    <section id="tab-universe" class="tabpanel">
       <div class="card">
         <h3>Universe by verdict</h3>
         <div id="verdict-chart"></div>
@@ -97,12 +97,17 @@
       </div>
     </section>
 
-    <!-- Framework / methodology -->
-    <section id="tab-framework" class="tabpanel">
+    <!-- Approach: goal + framework -->
+    <section id="tab-framework" class="tabpanel active">
+      <div class="card fw-goal">
+        <h3>The goal</h3>
+        <p class="fw-lead">To navigate the US stock market with <b>knowledge instead of guesswork</b> — staying deeply informed, sidestepping overpriced names, and putting <b>capital preservation first</b>. Every stock is screened for Shariah compliance, then scored on its <b class="fw-q">quality</b> and its <b class="fw-v">price</b>. Below is the framework that turns that discipline into a single number.</p>
+      </div>
+
       <!-- Hero: QARP + interactive calculator -->
       <div class="card fw-hero">
         <h3>QARP <span class="fw-sub">Quality At a Reasonable Price</span></h3>
-        <p class="fw-p">Every stock first passes a <b>Shariah screen</b> (pass/fail), then gets one <b>0–100</b> score that combines <b class="fw-q">how good the business is</b> (60%) with <b class="fw-v">how reasonably it's priced</b> (40%). Higher is better.</p>
+        <p class="fw-p">One <b>0–100</b> score that combines <b class="fw-q">how good the business is</b> (60%) with <b class="fw-v">how reasonably it's priced</b> (40%). Higher is better.</p>
         <div class="fw-formula">QARP&nbsp;=&nbsp;60% × <span class="fw-q">Quality</span> &nbsp;+&nbsp; 40% × <span class="fw-v">DCF value</span></div>
 
         <div class="fw-calc">
@@ -124,8 +129,19 @@
 
       <div class="grid-2">
         <div class="card">
-          <h3>DCF value <span class="fw-sub">the price score · 1–5</span></h3>
-          <p class="fw-p">How cheap a stock is versus an estimate of its fair value. <b>5 = deep bargain, 1 = expensive.</b></p>
+          <h3><span class="fw-q">Quality</span> <span class="fw-sub">the 60% half · out of 105</span></h3>
+          <p class="fw-p">Five sub-scores of the business, added together:</p>
+          <div class="fw-dims fw-dims-1">
+            <div class="fw-dim"><span class="fw-pts">25</span><div><b>Valuation</b><span>Multiples vs. own history &amp; sector</span></div></div>
+            <div class="fw-dim"><span class="fw-pts">20</span><div><b>Growth</b><span>Revenue &amp; earnings trajectory</span></div></div>
+            <div class="fw-dim"><span class="fw-pts">20</span><div><b>Quality</b><span>Margins, returns on capital, moat</span></div></div>
+            <div class="fw-dim"><span class="fw-pts">20</span><div><b>Balance Sheet</b><span>Debt, cash, financial strength</span></div></div>
+            <div class="fw-dim"><span class="fw-pts">20</span><div><b>Capital Allocation</b><span>Buybacks, dividends, insider buying</span></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3><span class="fw-v">DCF value</span> <span class="fw-sub">the 40% half · 1–5</span></h3>
+          <p class="fw-p">How cheap a stock is versus an estimate of its fair value:</p>
           <table class="fw-scale">
             <tr><td>5</td><td>Deep value</td><td>&gt; +30% upside</td></tr>
             <tr><td>4</td><td>Undervalued</td><td>+15% to +30%</td></tr>
@@ -133,30 +149,6 @@
             <tr><td>2</td><td>Overvalued</td><td>10–30% rich</td></tr>
             <tr><td>1</td><td>Expensive</td><td>&gt; 30% rich</td></tr>
           </table>
-        </div>
-        <div class="card">
-          <h3>Verdict bands <span class="fw-sub">what the score means</span></h3>
-          <div class="fw-bands">
-            <div class="band-row"><span class="badge v-strongest">STRONGEST</span><span>QARP ≥ 85</span></div>
-            <div class="band-row"><span class="badge v-strongbuy">STRONG BUY</span><span>≥ 72</span></div>
-            <div class="band-row"><span class="badge v-buy">BUY</span><span>≥ 66</span></div>
-            <div class="band-row"><span class="badge v-holdqual">HOLD-QUAL</span><span>≥ 60</span></div>
-            <div class="band-row"><span class="badge v-avoid">AVOID</span><span>35 – 59</span></div>
-            <div class="band-row"><span class="badge v-strongavoid">STRONG AVOID</span><span>&lt; 35</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>What goes into "Quality" <span class="fw-sub">the 60% half · scored out of 105</span></h3>
-        <p class="fw-p">The Quality number is itself <b>five sub-scores added together</b> — each measures a different strength of the business:</p>
-        <div class="fw-dims">
-          <div class="fw-dim"><span class="fw-pts">25</span><div><b>Valuation</b><span>Multiples vs. own history &amp; sector</span></div></div>
-          <div class="fw-dim"><span class="fw-pts">20</span><div><b>Growth</b><span>Revenue &amp; earnings trajectory</span></div></div>
-          <div class="fw-dim"><span class="fw-pts">20</span><div><b>Quality</b><span>Margins, returns on capital, moat</span></div></div>
-          <div class="fw-dim"><span class="fw-pts">20</span><div><b>Balance Sheet</b><span>Debt, cash, financial strength</span></div></div>
-          <div class="fw-dim"><span class="fw-pts">20</span><div><b>Capital Allocation</b><span>Buybacks, dividends, insider buying</span></div></div>
-          <div class="fw-dim fw-dim-total"><span class="fw-pts">105</span><div><b>Total Quality</b><span>The sum — the 60% half of QARP</span></div></div>
         </div>
       </div>
 
@@ -169,6 +161,16 @@
           <li>Interest-bearing debt &lt; 30% of market cap</li>
           <li>Interest-bearing cash &amp; securities &lt; 30% of market cap</li>
         </ul>
+      </div>
+
+      <div class="fw-legend">
+        <span class="fw-legend-label">Verdict bands</span>
+        <span class="badge v-strongest">STRONGEST ≥85</span>
+        <span class="badge v-strongbuy">STRONG BUY ≥72</span>
+        <span class="badge v-buy">BUY ≥66</span>
+        <span class="badge v-holdqual">HOLD-QUAL ≥60</span>
+        <span class="badge v-avoid">AVOID 35–59</span>
+        <span class="badge v-strongavoid">STRONG AVOID &lt;35</span>
       </div>
 
       <p class="fw-foot">Informational analysis, not investment advice. Scores are a snapshot at the stated date and price — a name can be a buy when cheap and an avoid after it runs up.</p>
