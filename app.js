@@ -242,20 +242,18 @@ function renderTopHoldings() {
   if (!el) return;
   const holds = [...DATA.portfolio].sort((a, b) => b.value - a.value);
   const total = holds.reduce((s, h) => s + h.value, 0) || 1;
-  const TOP = 8;
-  const shown = holds.slice(0, TOP);
-  const rest = holds.slice(TOP);
-  const shownW = shown.map((h) => h.value / total * 100);
-  const restW = rest.length ? rest.reduce((s, h) => s + h.value, 0) / total * 100 : 0;
-  const maxW = Math.max(...shownW, restW, 1);
-  const bar = (label, w, color, extra = "") =>
-    `<div class="hbar-row ${extra}"><span class="hbar-tk">${esc(label)}</span><span class="hbar-track"><span class="hbar-fill" style="width:${Math.max(3, w / maxW * 100).toFixed(1)}%;background:${color}"></span></span><span class="hbar-pct">${w.toFixed(1)}%</span></div>`;
-  let html = shown.map((h, i) => bar(h.ticker, shownW[i], SECTOR_COLORS[i % SECTOR_COLORS.length])).join("");
-  if (rest.length) html += bar(`Others (${rest.length})`, restW, "var(--ink-3)", "hbar-other");
-  // faded company logos of the shown holdings along the bottom (built straight from the ticker)
-  html += `<div class="hbar-logos">${shown.map((h) =>
-    `<img class="hbar-logo" src="https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/${encodeURIComponent(h.ticker)}.png" alt="" loading="lazy" onerror="this.remove()">`).join("")}</div>`;
-  el.innerHTML = html;
+  const shown = holds.slice(0, 6);
+  const ws = shown.map((h) => h.value / total * 100);
+  const maxW = Math.max(...ws, 1);                 // biggest holding fills the bar; rest scale down
+  const bars = shown.map((h, i) =>
+    `<div class="hbar-row"><span class="hbar-tk">${esc(h.ticker)}</span><span class="hbar-track"><span class="hbar-fill" style="width:${Math.max(4, ws[i] / maxW * 100).toFixed(1)}%;background:${SECTOR_COLORS[i % SECTOR_COLORS.length]}"></span></span><span class="hbar-pct">${ws[i].toFixed(1)}%</span></div>`
+  ).join("");
+  // scattered logo cluster (varying tilt/opacity → "messy", wraps to a few lines)
+  const tilt = [-8, 6, -4, 9, -6, 4, -7, 5];
+  const logos = shown.map((h, i) =>
+    `<img class="hbar-logo" style="transform:rotate(${tilt[i % tilt.length]}deg);opacity:${(0.3 + (i % 3) * 0.06).toFixed(2)}" src="https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/${encodeURIComponent(h.ticker)}.png" alt="" loading="lazy" onerror="this.remove()">`
+  ).join("");
+  el.innerHTML = `<div class="hbar-list">${bars}</div><div class="hbar-logos">${logos}</div>`;
 }
 
 function renderPortfolio() {
