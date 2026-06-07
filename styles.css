@@ -311,20 +311,21 @@ tbody tr:hover { background: var(--surface-2); }
 /* mini table (overview top names) */
 .mini-table table { font-size: 13px; }
 
-/* ===== Top holdings bar list ===== */
-.hbars { display: flex; flex-direction: column; gap: 13px; padding: 2px 0; }
-.hbar-row { display: grid; grid-template-columns: 56px 1fr 44px; align-items: center; gap: 11px; }
+/* ===== Top holdings (proportional bars + messy logo cluster) ===== */
+.hbars { flex: 1; display: flex; flex-direction: column; }
+.hbar-list { display: flex; flex-direction: column; gap: 12px; }
+.hbar-row { display: grid; grid-template-columns: 54px 1fr 44px; align-items: center; gap: 11px; }
 .hbar-tk { font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.hbar-track { height: 8px; background: var(--line-2); border-radius: 5px; overflow: hidden; }
-.hbar-fill { height: 100%; background: var(--brand); border-radius: 5px; }
+.hbar-track { height: 9px; background: var(--line-2); border-radius: 5px; overflow: hidden; }
+.hbar-fill { height: 100%; border-radius: 5px; background: var(--brand); }
 .hbar-pct { font-size: 12.5px; font-weight: 600; text-align: right; color: var(--ink-2); font-variant-numeric: tabular-nums; }
-.hbar-other .hbar-tk { color: var(--ink-3); font-weight: 600; }
-.hbar-other .hbar-fill { opacity: .5; }
-.hbar-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 18px; padding-top: 15px; border-top: 1px solid var(--line-2); }
-.hbar-logo { height: 20px; width: auto; max-width: 44px; object-fit: contain; opacity: .38; filter: grayscale(35%); }
+.hbar-logos { flex: 1; display: flex; flex-wrap: wrap; align-content: space-evenly; justify-content: center; gap: 14px 30px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line-2); max-width: 230px; margin-left: auto; margin-right: auto; }
+.hbar-logo { height: 46px; width: auto; max-width: 88px; object-fit: contain; opacity: .38; filter: grayscale(20%); }
 
-/* portfolio allocation cards: natural height (don't stretch the shorter one -> no empty box) */
-.p-alloc { align-items: start; }
+/* the two allocation cards become equal-height flex columns; their content fills/centers
+   so the shorter one never shows an empty box */
+.p-alloc > .card { display: flex; flex-direction: column; }
+#sector-chart { flex: 1; }
 
 /* ===== Portfolio totals ===== */
 .p-totals { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
