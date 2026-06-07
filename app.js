@@ -112,7 +112,7 @@ function renderKpis() {
   const dayChg = dayNow - dayPrev;
   const dayPct = dayPrev ? (dayChg / dayPrev) * 100 : 0;
   // clarify "Today": it's live during market hours, otherwise it's the last close
-  const todayNote = marketOpenNow() ? "live" : `at ${dayName(DATA.meta.date)} close`;
+  const todayNote = marketOpenNow() ? "live" : `at ${lastCloseName(DATA.meta.date)} close`;
   const cards = [
     { label: "Account Value", value: fmtUSD(t.account, 0), delta: `${fmtUSD(t.cash, 2)} cash`, dClass: "muted" },
     { label: "Today", note: todayNote, value: fmtUSD(dayChg, 0), delta: fmtPct(dayPct), dClass: signClass(dayChg) },
@@ -127,8 +127,13 @@ function renderKpis() {
     </div>`).join("");
 }
 
-function dayName(iso) {
-  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(iso + "T12:00:00").getDay()];
+function lastCloseName(iso) {
+  // markets close Fri and reopen Mon — roll any weekend date back to Friday
+  const d = new Date(iso + "T12:00:00");
+  const g = d.getDay();                          // 0=Sun .. 6=Sat
+  if (g === 6) d.setDate(d.getDate() - 1);       // Sat -> Fri
+  else if (g === 0) d.setDate(d.getDate() - 2);  // Sun -> Fri
+  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][d.getDay()];
 }
 
 /* ---------- render: Overview ---------- */
