@@ -60,7 +60,7 @@ function initTips() {
 
 const SECTOR_COLORS = [
   "#2563eb", "#0891b2", "#16a34a", "#b45309", "#7c3aed",
-  "#db2777", "#0e7a4f", "#64748b", "#ca8a04", "#e11d48",
+  "#db2777", "#ea580c", "#64748b", "#ca8a04", "#e11d48",
   "#0d9488", "#4f46e5",
 ];
 const VERDICT_ORDER = ["STRONGEST", "STRONG BUY", "BUY", "HOLD-QUAL", "AVOID", "STRONG AVOID"];
@@ -75,11 +75,13 @@ function donut(items, size = 132, thickness = 22) {
   const r = (size - thickness) / 2;
   const c = size / 2;
   const circ = 2 * Math.PI * r;
+  const gap = items.length > 1 ? 2 : 0; // thin white gap so segments never look merged
   let offset = 0;
   const segs = items.map((it, i) => {
     const frac = it.value / total;
     const len = frac * circ;
-    const dash = `${len} ${circ - len}`;
+    const dashLen = Math.max(0.5, len - gap);
+    const dash = `${dashLen} ${circ - dashLen}`;
     const seg = `<circle cx="${c}" cy="${c}" r="${r}" fill="none" stroke="${it.color || SECTOR_COLORS[i % SECTOR_COLORS.length]}"
       stroke-width="${thickness}" stroke-dasharray="${dash}" stroke-dashoffset="${-offset}"
       transform="rotate(-90 ${c} ${c})" />`;
