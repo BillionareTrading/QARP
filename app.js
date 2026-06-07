@@ -248,10 +248,9 @@ function renderTopHoldings() {
   const bars = shown.map((h, i) =>
     `<div class="hbar-row"><span class="hbar-tk">${esc(h.ticker)}</span><span class="hbar-track"><span class="hbar-fill" style="width:${Math.max(4, ws[i] / maxW * 100).toFixed(1)}%;background:${SECTOR_COLORS[i % SECTOR_COLORS.length]}"></span></span><span class="hbar-pct">${ws[i].toFixed(1)}%</span></div>`
   ).join("");
-  // scattered logo cluster (varying tilt/opacity → "messy", wraps to a few lines)
-  const tilt = [-8, 6, -4, 9, -6, 4, -7, 5];
-  const logos = shown.map((h, i) =>
-    `<img class="hbar-logo" style="transform:rotate(${tilt[i % tilt.length]}deg);opacity:${(0.3 + (i % 3) * 0.06).toFixed(2)}" src="https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/${encodeURIComponent(h.ticker)}.png" alt="" loading="lazy" onerror="this.remove()">`
+  // faded company logos in two straight, evenly-spread rows
+  const logos = shown.map((h) =>
+    `<img class="hbar-logo" src="https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/${encodeURIComponent(h.ticker)}.png" alt="" loading="lazy" onerror="this.remove()">`
   ).join("");
   el.innerHTML = `<div class="hbar-list">${bars}</div><div class="hbar-logos">${logos}</div>`;
 }
