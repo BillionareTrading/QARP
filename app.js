@@ -245,14 +245,16 @@ function renderTopHoldings() {
   const TOP = 8;
   const shown = holds.slice(0, TOP);
   const rest = holds.slice(TOP);
-  const maxW = shown.length ? (shown[0].value / total * 100) : 1;
-  const bar = (label, w, extra = "") =>
-    `<div class="hbar-row ${extra}"><span class="hbar-tk">${esc(label)}</span><span class="hbar-track"><span class="hbar-fill" style="width:${Math.max(3, w / maxW * 100).toFixed(1)}%"></span></span><span class="hbar-pct">${w.toFixed(1)}%</span></div>`;
-  let html = shown.map((h) => bar(h.ticker, h.value / total * 100)).join("");
-  if (rest.length) {
-    const restW = rest.reduce((s, h) => s + h.value, 0) / total * 100;
-    html += bar(`Others (${rest.length})`, restW, "hbar-other");
-  }
+  const shownW = shown.map((h) => h.value / total * 100);
+  const restW = rest.length ? rest.reduce((s, h) => s + h.value, 0) / total * 100 : 0;
+  const maxW = Math.max(...shownW, restW, 1);
+  const bar = (label, w, color, extra = "") =>
+    `<div class="hbar-row ${extra}"><span class="hbar-tk">${esc(label)}</span><span class="hbar-track"><span class="hbar-fill" style="width:${Math.max(3, w / maxW * 100).toFixed(1)}%;background:${color}"></span></span><span class="hbar-pct">${w.toFixed(1)}%</span></div>`;
+  let html = shown.map((h, i) => bar(h.ticker, shownW[i], SECTOR_COLORS[i % SECTOR_COLORS.length])).join("");
+  if (rest.length) html += bar(`Others (${rest.length})`, restW, "var(--ink-3)", "hbar-other");
+  // faded company logos of the shown holdings along the bottom (built straight from the ticker)
+  html += `<div class="hbar-logos">${shown.map((h) =>
+    `<img class="hbar-logo" src="https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/${encodeURIComponent(h.ticker)}.png" alt="" loading="lazy" onerror="this.remove()">`).join("")}</div>`;
   el.innerHTML = html;
 }
 

@@ -319,7 +319,12 @@ tbody tr:hover { background: var(--surface-2); }
 .hbar-fill { height: 100%; background: var(--brand); border-radius: 5px; }
 .hbar-pct { font-size: 12.5px; font-weight: 600; text-align: right; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .hbar-other .hbar-tk { color: var(--ink-3); font-weight: 600; }
-.hbar-other .hbar-fill { background: var(--ink-3); opacity: .45; }
+.hbar-other .hbar-fill { opacity: .5; }
+.hbar-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 18px; padding-top: 15px; border-top: 1px solid var(--line-2); }
+.hbar-logo { height: 20px; width: auto; max-width: 44px; object-fit: contain; opacity: .38; filter: grayscale(35%); }
+
+/* portfolio allocation cards: natural height (don't stretch the shorter one -> no empty box) */
+.p-alloc { align-items: start; }
 
 /* ===== Portfolio totals ===== */
 .p-totals { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
