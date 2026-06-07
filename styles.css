@@ -324,6 +324,7 @@ tbody tr:hover { background: var(--surface-2); }
 
 /* the two allocation cards become equal-height flex columns; their content fills/centers
    so the shorter one never shows an empty box */
+.p-alloc { margin-bottom: 18px; }
 .p-alloc > .card { display: flex; flex-direction: column; }
 #sector-chart { flex: 1; }
 
