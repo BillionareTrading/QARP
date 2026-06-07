@@ -237,15 +237,28 @@ const P_COLS = [
 ];
 let pSort = { key: "value", dir: -1 };
 
+function renderTopHoldings() {
+  const el = document.getElementById("p-holdings-bars");
+  if (!el) return;
+  const holds = [...DATA.portfolio].sort((a, b) => b.value - a.value);
+  const total = holds.reduce((s, h) => s + h.value, 0) || 1;
+  const TOP = 8;
+  const shown = holds.slice(0, TOP);
+  const rest = holds.slice(TOP);
+  const maxW = shown.length ? (shown[0].value / total * 100) : 1;
+  const bar = (label, w, extra = "") =>
+    `<div class="hbar-row ${extra}"><span class="hbar-tk">${esc(label)}</span><span class="hbar-track"><span class="hbar-fill" style="width:${Math.max(3, w / maxW * 100).toFixed(1)}%"></span></span><span class="hbar-pct">${w.toFixed(1)}%</span></div>`;
+  let html = shown.map((h) => bar(h.ticker, h.value / total * 100)).join("");
+  if (rest.length) {
+    const restW = rest.reduce((s, h) => s + h.value, 0) / total * 100;
+    html += bar(`Others (${rest.length})`, restW, "hbar-other");
+  }
+  el.innerHTML = html;
+}
+
 function renderPortfolio() {
   renderKpis(); // KPI strip lives inside this panel now
-
-  // allocation donut by individual holding
-  const holds = [...DATA.portfolio].sort((a, b) => b.value - a.value)
-    .map((h, i) => ({ ...h, color: SECTOR_COLORS[i % SECTOR_COLORS.length] }));
-  document.getElementById("p-sector-chart").innerHTML =
-    donut(holds.map((h) => ({ value: h.value, color: h.color }))) +
-    legend(holds.slice(0, 8).map((h) => ({ label: h.ticker, right: h.weight_pct + "%", color: h.color })));
+  renderTopHoldings();
 
   // allocation donut by broad sector (from the daily snapshot)
   const secs = DATA.sectors.map((s, i) => ({ ...s, color: SECTOR_COLORS[i % SECTOR_COLORS.length] }));

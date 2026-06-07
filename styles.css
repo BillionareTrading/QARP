@@ -311,6 +311,16 @@ tbody tr:hover { background: var(--surface-2); }
 /* mini table (overview top names) */
 .mini-table table { font-size: 13px; }
 
+/* ===== Top holdings bar list ===== */
+.hbars { display: flex; flex-direction: column; gap: 13px; padding: 2px 0; }
+.hbar-row { display: grid; grid-template-columns: 56px 1fr 44px; align-items: center; gap: 11px; }
+.hbar-tk { font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hbar-track { height: 8px; background: var(--line-2); border-radius: 5px; overflow: hidden; }
+.hbar-fill { height: 100%; background: var(--brand); border-radius: 5px; }
+.hbar-pct { font-size: 12.5px; font-weight: 600; text-align: right; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.hbar-other .hbar-tk { color: var(--ink-3); font-weight: 600; }
+.hbar-other .hbar-fill { background: var(--ink-3); opacity: .45; }
+
 /* ===== Portfolio totals ===== */
 .p-totals { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .p-totals .pt { background: var(--surface-2); border-radius: 10px; padding: 12px 14px; }
