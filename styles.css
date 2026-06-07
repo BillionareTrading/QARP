@@ -316,11 +316,11 @@ tbody tr:hover { background: var(--surface-2); }
 .hbar-list { display: flex; flex-direction: column; gap: 12px; }
 .hbar-row { display: grid; grid-template-columns: 54px 1fr 44px; align-items: center; gap: 11px; }
 .hbar-tk { font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.hbar-track { height: 9px; background: var(--line-2); border-radius: 5px; overflow: hidden; }
-.hbar-fill { height: 100%; border-radius: 5px; background: var(--brand); }
+.hbar-track { height: 11px; border-radius: 6px; overflow: hidden; }
+.hbar-fill { display: block; height: 100%; border-radius: 6px; background: var(--brand); }
 .hbar-pct { font-size: 12.5px; font-weight: 600; text-align: right; color: var(--ink-2); font-variant-numeric: tabular-nums; }
-.hbar-logos { flex: 1; display: flex; flex-wrap: wrap; align-content: space-evenly; justify-content: center; gap: 14px 30px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line-2); max-width: 230px; margin-left: auto; margin-right: auto; }
-.hbar-logo { height: 46px; width: auto; max-width: 88px; object-fit: contain; opacity: .38; filter: grayscale(20%); }
+.hbar-logos { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); align-content: space-evenly; align-items: center; justify-items: center; gap: 14px 14px; margin-top: 16px; padding-top: 18px; border-top: 1px solid var(--line-2); }
+.hbar-logo { height: 40px; width: auto; max-width: 78px; object-fit: contain; opacity: .42; filter: grayscale(15%); }
 
 /* the two allocation cards become equal-height flex columns; their content fills/centers
    so the shorter one never shows an empty box */
