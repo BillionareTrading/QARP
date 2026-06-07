@@ -312,7 +312,7 @@ tbody tr:hover { background: var(--surface-2); }
 .mini-table table { font-size: 13px; }
 
 /* ===== Top holdings (proportional bars + messy logo cluster) ===== */
-.hbars { flex: 1; display: flex; flex-direction: column; }
+.hbars { flex: 1; display: flex; flex-direction: column; margin-top: 14px; }
 .hbar-list { display: flex; flex-direction: column; gap: 12px; }
 .hbar-row { display: grid; grid-template-columns: 54px 1fr 44px; align-items: center; gap: 11px; }
 .hbar-tk { font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
