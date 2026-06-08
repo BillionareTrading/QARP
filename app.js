@@ -28,6 +28,8 @@ const TIPS = {
   dcf: { t: "DCF score (1–5)", d: "How cheap the stock is vs. an estimate of its fair value. 5 = deep value (>30% upside), 3 = fairly priced, 1 = expensive." },
   mech: { t: "Quality (out of 105)", d: "The quality half of QARP — the sum of five dimensions: Valuation, Growth, Quality, Balance Sheet, and Capital Allocation." },
   verdict: { t: "Verdict", d: "The QARP score turned into a call: ≥85 Strongest, ≥72 Strong Buy, ≥66 Buy, ≥60 Hold-Qual, 35–59 Avoid, <35 Strong Avoid." },
+  since: { t: "Since ranked", d: "Price change since this stock was first ranked (the genesis date shown beneath the %). Green = up, red = down — the actual outcome of the call so far." },
+  vtrend: { t: "Verdict trend", d: "How the verdict has moved from first ranking to now. 'held' = unchanged; otherwise e.g. 'S.BUY → BUY'. Colour shows direction (upgrade/downgrade) — note a downgrade can still be a winning call if the price rose. Hover/tap for the full dated path." },
 };
 function infoBtn(key) {
   return TIPS[key] ? `<button class="info-btn" type="button" data-tip="${key}" aria-label="What is ${TIPS[key].t}?">i</button>` : "";
@@ -68,6 +70,27 @@ const VERDICT_COLOR = {
   "STRONGEST": "#0e7a4f", "STRONG BUY": "#16a34a", "BUY": "#0891b2",
   "HOLD-QUAL": "#b45309", "AVOID": "#64748b", "STRONG AVOID": "#be123c",
 };
+const VERDICT_ABBR = {
+  "STRONGEST": "BEST", "STRONG BUY": "S.BUY", "BUY": "BUY",
+  "HOLD-QUAL": "HOLD", "AVOID": "AVOID", "STRONG AVOID": "S.AVOID",
+};
+const vAbbr = (v) => VERDICT_ABBR[v] || v || "?";
+// Verdict-trend cell: "held", or "S.BUY → BUY" colored by DIRECTION (upgrade green /
+// downgrade amber) with the full dated path on hover. Direction is informational, not
+// a value judgment — a downgrade can be a winning call (the Since % column shows outcome).
+function verdictTrend(x) {
+  if (!x.first_verdict) return `<span class="muted">—</span>`;
+  if (!x.verdict_changed)
+    return `<span class="vt-held" title="Ranked ${x.first_date}: ${x.first_verdict} — unchanged">held</span>`;
+  const fi = VERDICT_ORDER.indexOf(x.first_verdict), ci = VERDICT_ORDER.indexOf(x.verdict);
+  const dir = ci < fi ? "up" : "down";   // lower index = better verdict
+  const path = (x.verdict_path && x.verdict_path.length ? x.verdict_path : [x.first_verdict, x.verdict]);
+  return `<span class="vt-${dir}" title="Ranked ${x.first_date}: ${path.join(" → ")}">${vAbbr(x.first_verdict)} → ${vAbbr(x.verdict)}</span>`;
+}
+function verdictTrendSort(x) {   // + = upgraded, - = downgraded, 0 = held/none
+  if (!x.first_verdict || !x.verdict_changed) return 0;
+  return VERDICT_ORDER.indexOf(x.first_verdict) - VERDICT_ORDER.indexOf(x.verdict);
+}
 
 /* ---------- SVG donut ---------- */
 function donut(items, size = 132, thickness = 22) {
@@ -186,6 +209,11 @@ const U_COLS = [
   { key: "dcf", label: "DCF", fmt: (x) => fmtNum(x.dcf, 1) },
   { key: "mech", label: "Q /105", fmt: (x) => x.mech },
   { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
+  { key: "since", label: "Since", fmt: (x) => x.since_pct == null
+      ? `<span class="muted">—</span>`
+      : `<span class="cell-since ${signClass(x.since_pct)}">${fmtPct(x.since_pct)}</span><span class="since-date">${x.first_date ? x.first_date.slice(5) : ""}</span>`,
+    sortVal: (x) => (x.since_pct == null ? -1e9 : x.since_pct) },
+  { key: "vtrend", label: "Verdict △", align: "left", fmt: (x) => verdictTrend(x), sortVal: verdictTrendSort },
 ];
 let uSort = { key: "rank", dir: 1 };
 
