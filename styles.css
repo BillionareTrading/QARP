@@ -308,6 +308,13 @@ tbody tr:hover { background: var(--surface-2); }
 .muted { color: var(--ink-3); }
 .qarp-cell { font-weight: 700; }
 
+/* verdict track record: Since ranked + Verdict trend columns */
+.cell-since { font-weight: 700; }
+.since-date { display: block; font-size: 10px; color: var(--ink-3); margin-top: 1px; letter-spacing: .2px; }
+.vt-held { color: var(--ink-3); font-size: 12px; }
+.vt-up { color: var(--pos); font-weight: 700; font-size: 12px; white-space: nowrap; }
+.vt-down { color: #b45309; font-weight: 700; font-size: 12px; white-space: nowrap; }
+
 /* mini table (overview top names) */
 .mini-table table { font-size: 13px; }
 
