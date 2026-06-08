@@ -130,12 +130,15 @@ function renderKpis() {
 }
 
 function lastCloseName(iso) {
+  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(lastTradingDate(iso) + "T12:00:00").getDay()];
+}
+function lastTradingDate(iso) {
   // markets close Fri and reopen Mon — roll any weekend date back to Friday
   const d = new Date(iso + "T12:00:00");
   const g = d.getDay();                          // 0=Sun .. 6=Sat
   if (g === 6) d.setDate(d.getDate() - 1);       // Sat -> Fri
   else if (g === 0) d.setDate(d.getDate() - 2);  // Sun -> Fri
-  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][d.getDay()];
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
 /* ---------- render: Overview ---------- */
@@ -741,7 +744,7 @@ function initPortfolioSubtabs() {
 
 /* ---------- boot ---------- */
 function renderAll() {
-  document.getElementById("asof-date").textContent = DATA.meta.date;
+  document.getElementById("asof-date").textContent = lastTradingDate(DATA.meta.date);
   renderVerdictSummary();
   renderUniverseControls();
   renderUniverseTable();
@@ -755,7 +758,7 @@ async function boot() {
   try {
     const res = await fetch("payload.enc", { cache: "no-store" });
     payload = await res.json();
-    if (payload.date) document.getElementById("gate-date").textContent = payload.date;
+    if (payload.date) document.getElementById("gate-date").textContent = lastTradingDate(payload.date);
   } catch (e) {
     showErr("Could not load encrypted data. Is payload.enc present?");
     return;
