@@ -129,16 +129,30 @@ function renderKpis() {
     </div>`).join("");
 }
 
+function isoOf(d) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; }
 function lastCloseName(iso) {
-  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(lastTradingDate(iso) + "T12:00:00").getDay()];
+  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(asOfDate(iso) + "T12:00:00").getDay()];
 }
 function lastTradingDate(iso) {
-  // markets close Fri and reopen Mon — roll any weekend date back to Friday
+  // roll a weekend date back to Friday
   const d = new Date(iso + "T12:00:00");
-  const g = d.getDay();                          // 0=Sun .. 6=Sat
-  if (g === 6) d.setDate(d.getDate() - 1);       // Sat -> Fri
-  else if (g === 0) d.setDate(d.getDate() - 2);  // Sun -> Fri
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  if (d.getDay() === 6) d.setDate(d.getDate() - 1);
+  else if (d.getDay() === 0) d.setDate(d.getDate() - 2);
+  return isoOf(d);
+}
+function lastSessionDate() {
+  // most recent COMPLETED US session relative to ET now (weekday before 9:30 -> prior trading day)
+  const etDate = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  const d = new Date(etDate + "T12:00:00");
+  const p = nyParts(); let h = parseInt(p.hour, 10); if (h === 24) h = 0;
+  if (h * 60 + parseInt(p.minute, 10) < 570) d.setDate(d.getDate() - 1); // before 9:30 ET -> yesterday's session
+  while (d.getDay() === 0 || d.getDay() === 6) d.setDate(d.getDate() - 1); // skip weekends
+  return isoOf(d);
+}
+function asOfDate(iso) {
+  // the data is at most as fresh as its stamp AND as the last real session — show the earlier
+  const a = lastTradingDate(iso), b = lastSessionDate();
+  return a < b ? a : b;
 }
 
 /* ---------- render: Overview ---------- */
@@ -744,7 +758,7 @@ function initPortfolioSubtabs() {
 
 /* ---------- boot ---------- */
 function renderAll() {
-  document.getElementById("asof-date").textContent = lastTradingDate(DATA.meta.date);
+  document.getElementById("asof-date").textContent = asOfDate(DATA.meta.date);
   renderVerdictSummary();
   renderUniverseControls();
   renderUniverseTable();
@@ -758,7 +772,7 @@ async function boot() {
   try {
     const res = await fetch("payload.enc", { cache: "no-store" });
     payload = await res.json();
-    if (payload.date) document.getElementById("gate-date").textContent = lastTradingDate(payload.date);
+    if (payload.date) document.getElementById("gate-date").textContent = asOfDate(payload.date);
   } catch (e) {
     showErr("Could not load encrypted data. Is payload.enc present?");
     return;
