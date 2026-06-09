@@ -767,7 +767,7 @@ async function loadNews(filterName) {
   newsFilter = filterName || newsFilter;
   renderNewsFilters();
   const list = document.getElementById("news-list");
-  const key = DATA.meta && DATA.meta.quote_proxy;
+  const key = DATA.meta && DATA.meta.finnhub_key;   // news calls Finnhub directly (not the quote Worker)
   if (!list) return;
   if (!key) { list.innerHTML = `<p class="muted">Live news needs the API key.</p>`; return; }
   list.innerHTML = `<p class="news-loading">Loading headlines…</p>`;
@@ -811,7 +811,7 @@ function initInformed() {
 let pNewsLoaded = false, pDatesLoaded = false;
 
 async function loadPortfolioNews() {
-  const key = DATA.meta && DATA.meta.quote_proxy;
+  const key = DATA.meta && DATA.meta.finnhub_key;   // company-news calls Finnhub directly
   const list = document.getElementById("pnews-list");
   if (!list) return;
   if (!key) { list.innerHTML = `<p class="muted">Live news needs the API key.</p>`; return; }
@@ -846,7 +846,7 @@ function pDateRowHtml(e) {
 }
 
 async function loadPortfolioDates() {
-  const key = DATA.meta && DATA.meta.quote_proxy;
+  const key = DATA.meta && DATA.meta.finnhub_key;   // earnings calendar calls Finnhub directly
   const el = document.getElementById("pdates-list");
   if (!el) return;
   if (!key) { el.innerHTML = `<p class="muted">Live calendar needs the API key.</p>`; return; }

@@ -76,10 +76,13 @@ def main() -> None:
     with open(DATA) as f:
         data = json.load(f)
 
-    # NOTE: the Finnhub key is NO LONGER injected here. Live quotes now go through a
-    # Cloudflare Worker (meta.quote_proxy) that holds the key server-side, so the key
-    # never travels to the browser at all — not even inside the encrypted payload.
-    fk = ""
+    # Live QUOTES go through the Cloudflare Worker (meta.quote_proxy) — key hidden there.
+    # But the low-frequency News + Earnings-calendar features still call Finnhub directly,
+    # so the key travels INSIDE the encrypted payload (readable only after unlocking with
+    # the password — never in a public file). (Could move those to the Worker later too.)
+    fk = load_finnhub_key()
+    if fk:
+        data.setdefault("meta", {})["finnhub_key"] = fk
     plaintext = json.dumps(data, separators=(",", ":")).encode("utf-8")
 
     password = get_password().encode("utf-8")
