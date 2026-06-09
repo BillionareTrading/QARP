@@ -76,11 +76,10 @@ def main() -> None:
     with open(DATA) as f:
         data = json.load(f)
 
-    # Inject the Finnhub key into the data BEFORE encryption, so only someone
-    # who unlocks the site with the password can read it (keeps it off GitHub).
-    fk = load_finnhub_key()
-    if fk:
-        data.setdefault("meta", {})["finnhub_key"] = fk
+    # NOTE: the Finnhub key is NO LONGER injected here. Live quotes now go through a
+    # Cloudflare Worker (meta.quote_proxy) that holds the key server-side, so the key
+    # never travels to the browser at all — not even inside the encrypted payload.
+    fk = ""
     plaintext = json.dumps(data, separators=(",", ":")).encode("utf-8")
 
     password = get_password().encode("utf-8")
