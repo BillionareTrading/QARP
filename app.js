@@ -493,9 +493,10 @@ function initTabs() {
 
 /* ---------- live prices (Finnhub, browser-side) ---------- */
 const LIVE_INTERVAL_MS = 60000;  // holdings refresh ~every 60s (≈17 calls/min)
-const UNIVERSE_PUMP_MS = 2000;   // 1 universe name per 2s (≈30/min); full pass of ~190 names ≈ 6 min
+const UNIVERSE_PUMP_MS = 5000;   // 1 universe name per 5s (≈12/min); full ~190 sweep ≈ 16 min
 const FINNHUB_URL = "https://finnhub.io/api/v1/quote";
-// Combined budget ≈ 17 + 30 = 47 calls/min — safely under Finnhub's free 60/min cap.
+const THROTTLE_MS = 45000;       // on a 429, pause all polling this long (free tier = 60 calls/min)
+// Combined budget ≈ 17 + 12 = 29 calls/min — comfortable headroom under the free 60/min cap.
 let liveTimer = null;
 let uniTimer = null;
 let uniQueue = [];
@@ -503,6 +504,7 @@ let uniIdx = 0;
 let lastAccount = null;
 let lastGoodTs = 0;
 let lastGoodClock = "";
+let throttleUntil = 0;           // when >now, we're backing off after a rate-limit (429)
 
 function nyParts() {
   return new Intl.DateTimeFormat("en-US", {
@@ -526,13 +528,15 @@ function setLivePill(state, text) {
   const pill = document.getElementById("live-pill");
   if (!pill) return;
   pill.hidden = false;
-  pill.classList.remove("closed", "stale");
+  pill.classList.remove("closed", "stale", "delayed");
   if (state === "closed") pill.classList.add("closed");
   if (state === "stale") pill.classList.add("stale");
+  if (state === "delayed") pill.classList.add("delayed");
   document.getElementById("live-text").textContent = text;
 }
 async function fetchQuote(ticker, key) {
   const res = await fetch(`${FINNHUB_URL}?symbol=${encodeURIComponent(ticker)}&token=${key}`, { cache: "no-store" });
+  if (res.status === 429) { throttleUntil = Date.now() + THROTTLE_MS; throw new Error("429"); } // rate-limited -> back off
   if (!res.ok) throw new Error("HTTP " + res.status);
   return res.json(); // { c, d, dp, h, l, o, pc, t }
 }
@@ -540,6 +544,10 @@ async function liveTick() {
   const key = DATA.meta && DATA.meta.finnhub_key;
   if (!key) return;
   if (!marketOpenNow()) { setLivePill("closed", "Market closed"); return; }
+  if (Date.now() < throttleUntil) {   // backing off after a 429 — keep last prices, stay calm
+    setLivePill("delayed", `LIVE · ${lastGoodClock || nyClock()} · catching up`);
+    return;
+  }
 
   let ok = 0, fail = 0;
   await Promise.all(DATA.portfolio.map(async (h) => {
@@ -572,8 +580,10 @@ async function liveTick() {
     lastGoodTs = Date.now();
     lastGoodClock = nyClock();
     setLivePill("live", `LIVE · ${lastGoodClock}`);
-  } else if (lastGoodTs && Date.now() - lastGoodTs < 90000) {
-    setLivePill("live", `LIVE · ${lastGoodClock}`); // brief miss (e.g. rate-limit blip) — stay calm
+  } else if (Date.now() < throttleUntil) {
+    setLivePill("delayed", `LIVE · ${lastGoodClock || nyClock()} · catching up`); // rate-limited, not down
+  } else if (lastGoodTs && Date.now() - lastGoodTs < 120000) {
+    setLivePill("live", `LIVE · ${lastGoodClock}`); // brief miss — stay calm
   } else {
     setLivePill("stale", "Reconnecting…");
   }
@@ -599,6 +609,7 @@ function universeTick() {
   // Throttled cycler: quote ONE non-held universe name per pump, patch its cells.
   if (!(DATA.meta && DATA.meta.finnhub_key) || !uniQueue.length) return;
   if (!marketOpenNow()) return; // pill state is owned by the holdings tick
+  if (Date.now() < throttleUntil) return; // backing off after a 429
   const ticker = uniQueue[uniIdx % uniQueue.length];
   uniIdx++;
   fetchQuote(ticker, DATA.meta.finnhub_key).then((q) => {
@@ -874,6 +885,8 @@ function initUniverseSubtabs() {
       document.querySelectorAll("#tab-universe .usub").forEach((x) => x.classList.remove("active"));
       b.classList.add("active");
       document.getElementById("usub-" + b.dataset.usub).classList.add("active");
+      // the universe price-cycler only needs to run while the Universe table is showing
+      if (b.dataset.usub === "universe") resumeUniverseCycler(); else pauseUniverseCycler();
     }));
 }
 
