@@ -833,6 +833,16 @@ function initPortfolioSubtabs() {
     }));
 }
 
+function initUniverseSubtabs() {
+  document.querySelectorAll("#u-subtabs .subtab").forEach((b) =>
+    b.addEventListener("click", () => {
+      document.querySelectorAll("#u-subtabs .subtab").forEach((x) => x.classList.remove("active"));
+      document.querySelectorAll("#tab-universe .usub").forEach((x) => x.classList.remove("active"));
+      b.classList.add("active");
+      document.getElementById("usub-" + b.dataset.usub).classList.add("active");
+    }));
+}
+
 /* ---------- boot ---------- */
 function renderAll() {
   document.getElementById("asof-date").textContent = asOfDate(DATA.meta.date);
@@ -926,4 +936,5 @@ initTips();
 initFrameworkCalc();
 initInformed();
 initPortfolioSubtabs();
+initUniverseSubtabs();
 boot();

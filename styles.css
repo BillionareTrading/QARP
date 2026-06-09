@@ -213,6 +213,8 @@ button { font-family: inherit; cursor: pointer; }
 .subtab.active { color: var(--brand); border-bottom-color: var(--brand); }
 .psub { display: none; }
 .psub.active { display: block; }
+.usub { display: none; }
+.usub.active { display: block; }
 
 /* ===== Key Dates ===== */
 .dates-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 16px 18px; }
