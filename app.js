@@ -80,18 +80,21 @@ const vAbbr = (v) => VERDICT_ABBR[v] || v || "?";
 // Verdict-trend cell: "held", or "S.BUY → BUY" colored by DIRECTION (upgrade green /
 // downgrade amber) with the full dated path on hover. Direction is informational, not
 // a value judgment — a downgrade can be a winning call (the Since % column shows outcome).
+// Trend = the sequence of DELIBERATE call verdicts (changes only on a re-score, never on
+// the daily price re-rank). "held" = one call, never re-scored.
 function verdictTrend(x) {
-  if (!x.first_verdict) return `<span class="muted">—</span>`;
+  const path = x.verdict_path || [];
+  if (!path.length) return `<span class="muted">—</span>`;
   if (!x.verdict_changed)
-    return `<span class="vt-held" title="Ranked ${x.first_date}: ${x.first_verdict} — unchanged">held</span>`;
-  const fi = VERDICT_ORDER.indexOf(x.first_verdict), ci = VERDICT_ORDER.indexOf(x.verdict);
-  const dir = ci < fi ? "up" : "down";   // lower index = better verdict
-  const path = (x.verdict_path && x.verdict_path.length ? x.verdict_path : [x.first_verdict, x.verdict]);
-  return `<span class="vt-${dir}" title="Ranked ${x.first_date}: ${path.join(" → ")}">${vAbbr(x.first_verdict)} → ${vAbbr(x.verdict)}</span>`;
+    return `<span class="vt-held" title="Called ${x.first_date}: ${path[0]} — not re-scored">held</span>`;
+  const a = path[0], b = path[path.length - 1];
+  const dir = VERDICT_ORDER.indexOf(b) < VERDICT_ORDER.indexOf(a) ? "up" : "down";
+  return `<span class="vt-${dir}" title="Called ${x.first_date}: ${path.join(" → ")}">${vAbbr(a)} → ${vAbbr(b)}</span>`;
 }
 function verdictTrendSort(x) {   // + = upgraded, - = downgraded, 0 = held/none
-  if (!x.first_verdict || !x.verdict_changed) return 0;
-  return VERDICT_ORDER.indexOf(x.first_verdict) - VERDICT_ORDER.indexOf(x.verdict);
+  const path = x.verdict_path || [];
+  if (!x.verdict_changed || path.length < 2) return 0;
+  return VERDICT_ORDER.indexOf(path[0]) - VERDICT_ORDER.indexOf(path[path.length - 1]);
 }
 
 /* ---------- SVG donut ---------- */
@@ -425,6 +428,36 @@ function renderTrend(hist) {
   </div>`;
 }
 
+let callsFilter = "ALL";
+const tierFold = (v) => ({ "STRONGEST": "STRONG BUY", "STRONG AVOID": "AVOID" }[v] || v);
+// The calls log: every verdict ever issued, as a locked trade with entry price + return.
+function renderCallsLog() {
+  const calls = DATA.calls || [];
+  if (!calls.length) return "";
+  const tiers = ["ALL", "STRONG BUY", "BUY", "HOLD-QUAL", "AVOID"];
+  const shown = calls.filter((c) => callsFilter === "ALL" || tierFold(c.verdict) === callsFilter);
+  const chips = tiers.map((t) =>
+    `<button class="call-chip ${t === callsFilter ? "active" : ""}" type="button" data-callf="${t}">${t === "ALL" ? "All" : vAbbr(t)}</button>`).join("");
+  const rows = shown.map((c) => `<tr>
+      <td class="left"><span class="tick">${c.ticker}</span></td>
+      <td class="left"><span class="badge sm ${verdictSlug(c.verdict)}">${vAbbr(c.verdict)}</span></td>
+      <td>${c.start_date ? c.start_date.slice(5) : ""}</td>
+      <td>${fmtUSD(c.start_price, 2)}</td>
+      <td>${fmtUSD(c.exit_price, 2)}</td>
+      <td class="${signClass(c.return_pct)}"><b>${fmtPct(c.return_pct, 1)}</b></td>
+      <td class="${signClass(c.alpha_pct)}">${c.alpha_pct == null ? "—" : fmtPct(c.alpha_pct, 1)}</td>
+      <td>${c.open ? `<span class="call-open">open</span>` : `<span class="muted">closed</span>`}</td>
+    </tr>`).join("");
+  return `<div class="card calls-card">
+    <div class="calls-h">Every call <span class="muted">— ${calls.length} total · each locked at its entry; return marks to current price</span></div>
+    <div class="call-chips">${chips}</div>
+    <div class="table-wrap calls-scroll"><table class="calls-table">
+      <thead><tr><th class="left">Ticker</th><th class="left">Verdict</th><th>Called</th><th>Entry</th><th>Now</th><th>Return</th><th>vs S&amp;P</th><th></th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>
+  </div>`;
+}
+
 function renderScorecard() {
   const host = document.getElementById("scorecard");
   if (!host) return;
@@ -449,11 +482,12 @@ function renderScorecard() {
   }).join("");
   const cards = tiers.map((t) => {
     const hitLabel = t.tier === "AVOID" ? "% fell" : t.tier === "HOLD-QUAL" ? "% flat (±2%)" : "% rose";
+    const oc = t.closed ? `${t.open} open · ${t.closed} closed` : `all open`;
     return `<div class="sc-card">
       <span class="badge ${verdictSlug(t.tier)}">${t.tier}</span>
-      <div class="sc-n">${t.n} names · since ${sc.since ? sc.since.slice(5) : ""}</div>
+      <div class="sc-n">${t.n} call${t.n === 1 ? "" : "s"} · ${oc}</div>
       <div class="sc-main ${signClass(t.avg_since)}">${fmtPct(t.avg_since, 2)}</div>
-      <div class="sc-main-sub">avg return since verdict</div>
+      <div class="sc-main-sub">avg return since called</div>
       <div class="sc-row"><span>vs S&amp;P (alpha)</span><b class="${signClass(t.avg_alpha)}">${t.avg_alpha == null ? "—" : fmtPct(t.avg_alpha, 2)}</b></div>
       <div class="sc-row"><span>${hitLabel}</span><b>${t.hit_rate == null ? "—" : t.hit_rate + "%"}</b></div>
       <div class="sc-row"><span>Best</span><b class="pos">${t.best.ticker} ${fmtPct(t.best.since, 0)}</b></div>
@@ -472,10 +506,13 @@ function renderScorecard() {
       ${spreadTxt}
       <div class="sc-meta">${icTxt}${matTxt}</div>
       <div class="sc-bars">${bars}</div>
-      <div class="sc-note">Equal-weighted avg price change since each name's first verdict (${sc.since || ""}) · ${total} names. Too small a sample to conclude yet — watch the IC and spread trend as it matures.</div>
+      <div class="sc-note">Each <b>call</b> is a verdict locked at its entry price — it stays put until the name is re-scored (not on daily price moves). Return marks to current price. ${total} calls since ${sc.since || ""}. Early sample — watch the IC + spread trend as it matures.</div>
     </div>
     ${renderTrend(sc.history)}
-    <div class="sc-grid">${cards}</div>`;
+    <div class="sc-grid">${cards}</div>
+    ${renderCallsLog()}`;
+  host.querySelectorAll(".call-chip").forEach((b) =>
+    b.addEventListener("click", () => { callsFilter = b.dataset.callf; renderScorecard(); }));
 }
 
 /* ---------- tabs ---------- */

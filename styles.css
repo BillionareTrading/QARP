@@ -346,6 +346,22 @@ tbody tr:hover { background: var(--surface-2); }
 .sc-trend-dot { fill: var(--brand, #2563eb); }
 .sc-trend-zero { stroke: #cbd5e1; stroke-width: 1; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
 .sc-trend-x { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--ink-3); margin-top: 4px; }
+
+/* Calls log */
+.calls-card { margin-top: 14px; }
+.calls-h { font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+.calls-h .muted { font-weight: 400; font-size: 12px; }
+.call-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.call-chip { border: 1px solid var(--line); background: #fff; color: var(--ink-2); padding: 4px 11px; border-radius: 999px; font-size: 12px; font-weight: 600; cursor: pointer; }
+.call-chip:hover { border-color: var(--brand); }
+.call-chip.active { background: var(--brand); color: #fff; border-color: var(--brand); }
+.calls-scroll { max-height: 460px; overflow-y: auto; }
+.calls-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.calls-table th { position: sticky; top: 0; background: #f8fafc; text-align: right; padding: 7px 8px; font-size: 10.5px; text-transform: uppercase; letter-spacing: .03em; color: var(--ink-3); border-bottom: 1px solid var(--line); }
+.calls-table th.left, .calls-table td.left { text-align: left; }
+.calls-table td { text-align: right; padding: 7px 8px; border-bottom: 1px solid #f1f5f9; white-space: nowrap; }
+.badge.sm { font-size: 9.5px; padding: 1px 6px; }
+.call-open { color: var(--pos); font-weight: 700; font-size: 11px; }
 .sc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 @media (min-width: 760px) { .sc-grid { grid-template-columns: repeat(4, 1fr); } }
 .sc-card { background: #fff; border: 1px solid var(--line, #e8edf3); border-radius: 12px; padding: 14px; }
