@@ -320,8 +320,12 @@ tbody tr:hover { background: var(--surface-2); }
 /* Track Record / Verdict Scorecard */
 .sc-headline { margin-bottom: 14px; }
 .sc-q { font-size: 18px; font-weight: 800; letter-spacing: -.01em; display: flex; align-items: center; gap: 4px; }
-.sc-spread { margin: 6px 0 14px; color: var(--ink-2, #475569); font-size: 14px; }
+.sc-spread { margin: 6px 0 8px; color: var(--ink-2, #475569); font-size: 14px; }
 .sc-spread b { font-size: 15px; }
+.sc-meta { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-bottom: 14px; font-size: 12.5px; color: var(--ink-2, #475569); }
+.sc-ic { display: inline-flex; align-items: center; gap: 3px; }
+.sc-ic b { font-size: 13.5px; }
+.sc-mat { color: var(--ink-3); background: #f1f5f9; padding: 2px 9px; border-radius: 999px; font-size: 11.5px; font-weight: 600; }
 .sc-bars { display: flex; flex-direction: column; gap: 9px; }
 .sc-bar-row { display: flex; align-items: center; gap: 10px; }
 .sc-bar-label { flex: 0 0 56px; font-size: 11.5px; font-weight: 700; color: var(--ink-2, #475569); text-align: right; }
