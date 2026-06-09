@@ -315,6 +315,31 @@ tbody tr:hover { background: var(--surface-2); }
 .vt-up { color: var(--pos); font-weight: 700; font-size: 12px; white-space: nowrap; }
 .vt-down { color: #b45309; font-weight: 700; font-size: 12px; white-space: nowrap; }
 
+/* Track Record / Verdict Scorecard */
+.sc-headline { margin-bottom: 14px; }
+.sc-q { font-size: 18px; font-weight: 800; letter-spacing: -.01em; display: flex; align-items: center; gap: 4px; }
+.sc-spread { margin: 6px 0 14px; color: var(--ink-2, #475569); font-size: 14px; }
+.sc-spread b { font-size: 15px; }
+.sc-bars { display: flex; flex-direction: column; gap: 9px; }
+.sc-bar-row { display: flex; align-items: center; gap: 10px; }
+.sc-bar-label { flex: 0 0 56px; font-size: 11.5px; font-weight: 700; color: var(--ink-2, #475569); text-align: right; }
+.sc-bar-track { position: relative; flex: 1; height: 16px; background: #f1f5f9; border-radius: 4px; }
+.sc-bar-zero { position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: #cbd5e1; }
+.sc-bar-fill { position: absolute; top: 0; bottom: 0; border-radius: 4px; transition: width .4s ease; }
+.sc-bar-fill.pos { background: var(--pos); }
+.sc-bar-fill.neg { background: var(--neg); }
+.sc-bar-val { flex: 0 0 52px; font-size: 12.5px; font-weight: 700; text-align: left; }
+.sc-note { margin-top: 12px; font-size: 11.5px; color: var(--ink-3); line-height: 1.4; }
+.sc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+@media (min-width: 760px) { .sc-grid { grid-template-columns: repeat(4, 1fr); } }
+.sc-card { background: #fff; border: 1px solid var(--line, #e8edf3); border-radius: 12px; padding: 14px; }
+.sc-n { margin: 8px 0 4px; font-size: 11px; color: var(--ink-3); }
+.sc-main { font-size: 24px; font-weight: 800; letter-spacing: -.02em; }
+.sc-main-sub { font-size: 10.5px; color: var(--ink-3); margin-bottom: 10px; }
+.sc-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; padding: 3px 0; border-top: 1px solid #f1f5f9; }
+.sc-row span { color: var(--ink-3); }
+.sc-row b { font-weight: 700; }
+
 /* mini table (overview top names) */
 .mini-table table { font-size: 13px; }
 
