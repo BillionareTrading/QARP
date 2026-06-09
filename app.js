@@ -584,7 +584,7 @@ async function liveTick() {
   if (!key) return;
   if (!marketOpenNow()) { setLivePill("closed", "Market closed"); return; }
   if (Date.now() < throttleUntil) {   // backing off after a 429 — keep last prices, stay calm
-    setLivePill("delayed", `LIVE · ${lastGoodClock || nyClock()} · catching up`);
+    if (lastGoodTs) setLivePill("live", `LIVE · ${lastGoodClock}`);
     return;
   }
 
@@ -619,12 +619,14 @@ async function liveTick() {
     lastGoodTs = Date.now();
     lastGoodClock = nyClock();
     setLivePill("live", `LIVE · ${lastGoodClock}`);
-  } else if (Date.now() < throttleUntil) {
-    setLivePill("delayed", `LIVE · ${lastGoodClock || nyClock()} · catching up`); // rate-limited, not down
-  } else if (lastGoodTs && Date.now() - lastGoodTs < 120000) {
-    setLivePill("live", `LIVE · ${lastGoodClock}`); // brief miss — stay calm
+  } else if (lastGoodTs) {
+    // Couldn't refresh this tick — just keep showing the last good time. The timestamp is
+    // the honesty signal (it stops advancing if data stalls). Only after a long gap add a
+    // quiet "· delayed"; NEVER flip to an alarming "Reconnecting" state.
+    const stale = Date.now() - lastGoodTs > 300000; // 5 min
+    setLivePill("live", `LIVE · ${lastGoodClock}${stale ? " · delayed" : ""}`);
   } else {
-    setLivePill("stale", "Reconnecting…");
+    setLivePill("live", "LIVE · connecting…");
   }
 }
 function patchTickerCells(ticker, price, dp) {
@@ -672,22 +674,18 @@ function flashAccount(account) {
 function startLive() {
   if (liveTimer) clearInterval(liveTimer);
   pauseUniverseCycler();
-  if (!(DATA.meta && DATA.meta.quote_proxy)) return; // no key -> stay on daily snapshot
+  if (!(DATA.meta && DATA.meta.quote_proxy)) return; // no proxy -> stay on daily snapshot
   lastAccount = DATA.meta.portfolio_totals.account;
-  // universe cycler quotes every NON-held universe name (held names refresh via the holdings tick)
-  const held = new Set(DATA.portfolio.map((h) => h.ticker));
-  uniQueue = DATA.universe.map((x) => x.ticker).filter((t) => !held.has(t));
-  uniIdx = 0;
+  // Only live-poll the HOLDINGS (17 names / 60s) — that's your money and stays well under the
+  // rate limit. The ~190 universe names keep their daily-build snapshot prices; live-cycling
+  // them was the main cause of rate-limit thrashing and isn't worth it.
   liveTick();
-  liveTimer = setInterval(liveTick, LIVE_INTERVAL_MS);     // holdings every 60s (always)
-  // the universe cycler runs ONLY while the Shariah-Compliant tab is open (saves API budget)
+  liveTimer = setInterval(liveTick, LIVE_INTERVAL_MS);
 }
+// Universe live-cycler is retired (see startLive). These stay as no-ops so existing callers
+// (tab/sub-tab handlers) don't error.
 function pauseUniverseCycler() { if (uniTimer) { clearInterval(uniTimer); uniTimer = null; } }
-function resumeUniverseCycler() {
-  if (!uniTimer && DATA && DATA.meta && DATA.meta.quote_proxy && uniQueue.length) {
-    uniTimer = setInterval(universeTick, UNIVERSE_PUMP_MS); // 1 universe name every 2s
-  }
-}
+function resumeUniverseCycler() { /* retired: universe shows daily-build prices */ }
 
 /* ---------- Stay Informed: market snapshot + news ---------- */
 const INDEXES = [
