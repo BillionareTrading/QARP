@@ -31,7 +31,7 @@ const TIPS = {
   since: { t: "Since ranked", d: "Price change since this stock was first ranked (the genesis date shown beneath the %). Green = up, red = down — the actual outcome of the call so far." },
   vtrend: { t: "Verdict trend", d: "How the verdict has moved from first ranking to now. 'held' = unchanged; otherwise e.g. 'S.BUY → BUY'. Colour shows direction (upgrade/downgrade) — note a downgrade can still be a winning call if the price rose. Hover/tap for the full dated path." },
   scorecard: { t: "Track record", d: "Each name is grouped by the verdict it FIRST received, then we measure its price change since that date. If the framework works, returns should step down from Strong Buy to Avoid. Alpha = that return minus the S&P over the same window, isolating skill from market drift." },
-  ic: { t: "Information Coefficient", d: "Rank correlation between each name's first verdict and its return since. +1 = perfect ordering, 0 = no signal, negative = backwards. A consistently positive IC (≈0.05+) means the verdicts carry real predictive information. Tiny samples are noisy — watch the trend, not one day." },
+  ic: { t: "Information Coefficient", d: "Spearman rank correlation between each name's first verdict and its return since. Method: rank all names by verdict, rank them again by return, then correlate the two rank-lists — ρ = cov(rank_verdict, rank_return) / (σ_v · σ_r). With no ties this equals 1 − 6·Σd² / [n(n²−1)], where d is each name's rank difference. Scale −1…+1: +1 = perfect ordering, 0 = no signal, negative = backwards. Real factor ICs are small (+0.05–0.10 is good) — read the trend over many days, not one." },
 };
 function infoBtn(key) {
   return TIPS[key] ? `<button class="info-btn" type="button" data-tip="${key}" aria-label="What is ${TIPS[key].t}?">i</button>` : "";
@@ -398,6 +398,33 @@ function closeDrawer() { document.getElementById("drawer").hidden = true; }
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
 
 /* ---------- Track Record / Verdict Scorecard ---------- */
+// IC-over-time sparkline. Shows a placeholder until there are >=3 logged days,
+// then auto-draws the line (the daily build appends to scorecard.history).
+function renderTrend(hist) {
+  const pts = (hist || []).filter((h) => h.ic != null);
+  if (pts.length < 3) {
+    return `<div class="card sc-trend">
+      <div class="sc-trend-h">Signal over time${infoBtn("ic")}</div>
+      <div class="sc-trend-empty">The IC line appears here once there are a few days to plot — <b>${pts.length} point${pts.length === 1 ? "" : "s"}</b> so far. It logs one per trading day automatically.</div>
+    </div>`;
+  }
+  const ics = pts.map((p) => p.ic);
+  let lo = Math.min(...ics, 0), hi = Math.max(...ics, 0);
+  const pad = (hi - lo) * 0.15 || 0.1; lo -= pad; hi += pad;
+  const W = 300, H = 70;
+  const x = (i) => (i / (pts.length - 1)) * W;
+  const y = (v) => H - ((v - lo) / (hi - lo)) * H;
+  const line = pts.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(p.ic).toFixed(1)}`).join(" ");
+  const dots = pts.map((p, i) => `<circle cx="${x(i).toFixed(1)}" cy="${y(p.ic).toFixed(1)}" r="2.5" class="sc-trend-dot"/>`).join("");
+  const zero = (lo < 0 && hi > 0) ? `<line x1="0" y1="${y(0).toFixed(1)}" x2="${W}" y2="${y(0).toFixed(1)}" class="sc-trend-zero"/>` : "";
+  const last = pts[pts.length - 1];
+  return `<div class="card sc-trend">
+    <div class="sc-trend-h">Signal over time <span class="sc-trend-cur ${signClass(last.ic)}">IC ${last.ic > 0 ? "+" : ""}${last.ic.toFixed(2)}</span>${infoBtn("ic")}</div>
+    <svg class="sc-trend-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${zero}<path d="${line}" class="sc-trend-line"/>${dots}</svg>
+    <div class="sc-trend-x"><span>${pts[0].date.slice(5)}</span><span>${last.date.slice(5)}</span></div>
+  </div>`;
+}
+
 function renderScorecard() {
   const host = document.getElementById("scorecard");
   if (!host) return;
@@ -447,6 +474,7 @@ function renderScorecard() {
       <div class="sc-bars">${bars}</div>
       <div class="sc-note">Equal-weighted avg price change since each name's first verdict (${sc.since || ""}) · ${total} names. Too small a sample to conclude yet — watch the IC and spread trend as it matures.</div>
     </div>
+    ${renderTrend(sc.history)}
     <div class="sc-grid">${cards}</div>`;
 }
 

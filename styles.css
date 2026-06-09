@@ -336,6 +336,15 @@ tbody tr:hover { background: var(--surface-2); }
 .sc-bar-fill.neg { background: var(--neg); }
 .sc-bar-val { flex: 0 0 52px; font-size: 12.5px; font-weight: 700; text-align: left; }
 .sc-note { margin-top: 12px; font-size: 11.5px; color: var(--ink-3); line-height: 1.4; }
+.sc-trend { margin-bottom: 14px; }
+.sc-trend-h { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; }
+.sc-trend-cur { font-size: 12.5px; font-weight: 800; }
+.sc-trend-empty { margin-top: 8px; font-size: 12px; color: var(--ink-3); line-height: 1.45; }
+.sc-trend-svg { width: 100%; height: 70px; margin-top: 10px; overflow: visible; }
+.sc-trend-line { fill: none; stroke: var(--brand, #2563eb); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.sc-trend-dot { fill: var(--brand, #2563eb); }
+.sc-trend-zero { stroke: #cbd5e1; stroke-width: 1; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
+.sc-trend-x { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--ink-3); margin-top: 4px; }
 .sc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 @media (min-width: 760px) { .sc-grid { grid-template-columns: repeat(4, 1fr); } }
 .sc-card { background: #fff; border: 1px solid var(--line, #e8edf3); border-radius: 12px; padding: 14px; }
