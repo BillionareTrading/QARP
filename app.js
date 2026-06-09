@@ -31,6 +31,7 @@ const TIPS = {
   since: { t: "Since ranked", d: "Price change since this stock was first ranked (the genesis date shown beneath the %). Green = up, red = down — the actual outcome of the call so far." },
   vtrend: { t: "Verdict trend", d: "How the verdict has moved from first ranking to now. 'held' = unchanged; otherwise e.g. 'S.BUY → BUY'. Colour shows direction (upgrade/downgrade) — note a downgrade can still be a winning call if the price rose. Hover/tap for the full dated path." },
   scorecard: { t: "Track record", d: "Each name is grouped by the verdict it FIRST received, then we measure its price change since that date. If the framework works, returns should step down from Strong Buy to Avoid. Alpha = that return minus the S&P over the same window, isolating skill from market drift." },
+  ic: { t: "Information Coefficient", d: "Rank correlation between each name's first verdict and its return since. +1 = perfect ordering, 0 = no signal, negative = backwards. A consistently positive IC (≈0.05+) means the verdicts carry real predictive information. Tiny samples are noisy — watch the trend, not one day." },
 };
 function infoBtn(key) {
   return TIPS[key] ? `<button class="info-btn" type="button" data-tip="${key}" aria-label="What is ${TIPS[key].t}?">i</button>` : "";
@@ -434,12 +435,17 @@ function renderScorecard() {
   }).join("");
   const spreadTxt = sc.spread == null ? "" :
     `<div class="sc-spread">Strong&nbsp;Buy beats Avoid by <b class="${signClass(sc.spread)}">${fmtPct(sc.spread, 1).replace("%", " pts")}</b></div>`;
+  const icTxt = sc.ic == null ? "" :
+    `<span class="sc-ic">Rank signal (IC) <b class="${signClass(sc.ic)}">${sc.ic > 0 ? "+" : ""}${sc.ic.toFixed(2)}</b>${infoBtn("ic")}</span>`;
+  const matTxt = sc.days_tracked == null ? "" :
+    `<span class="sc-mat">Day ${sc.days_tracked} of ~${sc.target_days || 20} — early read</span>`;
   host.innerHTML = `
     <div class="card sc-headline">
       <div class="sc-q">Does the ranking rank?${infoBtn("scorecard")}</div>
       ${spreadTxt}
+      <div class="sc-meta">${icTxt}${matTxt}</div>
       <div class="sc-bars">${bars}</div>
-      <div class="sc-note">Equal-weighted avg price change since each name's first verdict (${sc.since || ""}) · ${total} names. Early sample — the signal firms up over time.</div>
+      <div class="sc-note">Equal-weighted avg price change since each name's first verdict (${sc.since || ""}) · ${total} names. Too small a sample to conclude yet — watch the IC and spread trend as it matures.</div>
     </div>
     <div class="sc-grid">${cards}</div>`;
 }
