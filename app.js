@@ -30,6 +30,7 @@ const TIPS = {
   verdict: { t: "Verdict", d: "The QARP score turned into a call: ≥85 Strongest, ≥72 Strong Buy, ≥66 Buy, ≥60 Hold-Qual, 35–59 Avoid, <35 Strong Avoid." },
   since: { t: "Since ranked", d: "Price change since this stock was first ranked (the genesis date shown beneath the %). Green = up, red = down — the actual outcome of the call so far." },
   vtrend: { t: "Verdict trend", d: "How the verdict has moved from first ranking to now. 'held' = unchanged; otherwise e.g. 'S.BUY → BUY'. Colour shows direction (upgrade/downgrade) — note a downgrade can still be a winning call if the price rose. Hover/tap for the full dated path." },
+  scorecard: { t: "Track record", d: "Each name is grouped by the verdict it FIRST received, then we measure its price change since that date. If the framework works, returns should step down from Strong Buy to Avoid. Alpha = that return minus the S&P over the same window, isolating skill from market drift." },
 };
 function infoBtn(key) {
   return TIPS[key] ? `<button class="info-btn" type="button" data-tip="${key}" aria-label="What is ${TIPS[key].t}?">i</button>` : "";
@@ -394,6 +395,54 @@ function openDrawer(ticker) {
 }
 function closeDrawer() { document.getElementById("drawer").hidden = true; }
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
+
+/* ---------- Track Record / Verdict Scorecard ---------- */
+function renderScorecard() {
+  const host = document.getElementById("scorecard");
+  if (!host) return;
+  const sc = DATA.scorecard;
+  if (!sc || !sc.tiers || !sc.tiers.length) {
+    host.innerHTML = `<div class="card"><p class="muted">Track record builds as verdicts age — check back soon.</p></div>`;
+    return;
+  }
+  const tiers = sc.tiers;
+  const total = tiers.reduce((s, t) => s + t.n, 0);
+  const maxAbs = Math.max(...tiers.map((t) => Math.abs(t.avg_since)), 0.1);
+  // diverging bar chart: avg return by tier, zero-centered
+  const bars = tiers.map((t) => {
+    const w = Math.abs(t.avg_since) / maxAbs * 50;
+    const pos = t.avg_since >= 0;
+    const style = pos ? `left:50%;width:${w}%` : `left:${50 - w}%;width:${w}%`;
+    return `<div class="sc-bar-row">
+      <div class="sc-bar-label">${vAbbr(t.tier)}</div>
+      <div class="sc-bar-track"><div class="sc-bar-zero"></div><div class="sc-bar-fill ${pos ? "pos" : "neg"}" style="${style}"></div></div>
+      <div class="sc-bar-val ${signClass(t.avg_since)}">${fmtPct(t.avg_since, 1)}</div>
+    </div>`;
+  }).join("");
+  const cards = tiers.map((t) => {
+    const hitLabel = t.tier === "AVOID" ? "% fell" : t.tier === "HOLD-QUAL" ? "% flat (±2%)" : "% rose";
+    return `<div class="sc-card">
+      <span class="badge ${verdictSlug(t.tier)}">${t.tier}</span>
+      <div class="sc-n">${t.n} names · since ${sc.since ? sc.since.slice(5) : ""}</div>
+      <div class="sc-main ${signClass(t.avg_since)}">${fmtPct(t.avg_since, 2)}</div>
+      <div class="sc-main-sub">avg return since verdict</div>
+      <div class="sc-row"><span>vs S&amp;P (alpha)</span><b class="${signClass(t.avg_alpha)}">${t.avg_alpha == null ? "—" : fmtPct(t.avg_alpha, 2)}</b></div>
+      <div class="sc-row"><span>${hitLabel}</span><b>${t.hit_rate == null ? "—" : t.hit_rate + "%"}</b></div>
+      <div class="sc-row"><span>Best</span><b class="pos">${t.best.ticker} ${fmtPct(t.best.since, 0)}</b></div>
+      <div class="sc-row"><span>Worst</span><b class="neg">${t.worst.ticker} ${fmtPct(t.worst.since, 0)}</b></div>
+    </div>`;
+  }).join("");
+  const spreadTxt = sc.spread == null ? "" :
+    `<div class="sc-spread">Strong&nbsp;Buy beats Avoid by <b class="${signClass(sc.spread)}">${fmtPct(sc.spread, 1).replace("%", " pts")}</b></div>`;
+  host.innerHTML = `
+    <div class="card sc-headline">
+      <div class="sc-q">Does the ranking rank?${infoBtn("scorecard")}</div>
+      ${spreadTxt}
+      <div class="sc-bars">${bars}</div>
+      <div class="sc-note">Equal-weighted avg price change since each name's first verdict (${sc.since || ""}) · ${total} names. Early sample — the signal firms up over time.</div>
+    </div>
+    <div class="sc-grid">${cards}</div>`;
+}
 
 /* ---------- tabs ---------- */
 function initTabs() {
@@ -790,6 +839,7 @@ function renderAll() {
   renderVerdictSummary();
   renderUniverseControls();
   renderUniverseTable();
+  renderScorecard();
   renderPortfolio();
   initTabs();
   startLive();
