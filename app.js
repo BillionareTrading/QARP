@@ -494,7 +494,8 @@ function initTabs() {
 /* ---------- live prices (Finnhub, browser-side) ---------- */
 const LIVE_INTERVAL_MS = 60000;  // holdings refresh ~every 60s (≈17 calls/min)
 const UNIVERSE_PUMP_MS = 5000;   // 1 universe name per 5s (≈12/min); full ~190 sweep ≈ 16 min
-const FINNHUB_URL = "https://finnhub.io/api/v1/quote";
+// Live quotes go through our Cloudflare Worker (DATA.meta.quote_proxy) — it holds the
+// Finnhub key server-side and caches/dedupes, so the key never reaches the browser.
 const THROTTLE_MS = 45000;       // on a 429, pause all polling this long (free tier = 60 calls/min)
 // Combined budget ≈ 17 + 12 = 29 calls/min — comfortable headroom under the free 60/min cap.
 let liveTimer = null;
@@ -534,14 +535,15 @@ function setLivePill(state, text) {
   if (state === "delayed") pill.classList.add("delayed");
   document.getElementById("live-text").textContent = text;
 }
-async function fetchQuote(ticker, key) {
-  const res = await fetch(`${FINNHUB_URL}?symbol=${encodeURIComponent(ticker)}&token=${key}`, { cache: "no-store" });
+async function fetchQuote(ticker) {
+  const base = DATA.meta && DATA.meta.quote_proxy;
+  const res = await fetch(`${base}/quote?symbol=${encodeURIComponent(ticker)}`, { cache: "no-store" });
   if (res.status === 429) { throttleUntil = Date.now() + THROTTLE_MS; throw new Error("429"); } // rate-limited -> back off
   if (!res.ok) throw new Error("HTTP " + res.status);
-  return res.json(); // { c, d, dp, h, l, o, pc, t }
+  return res.json(); // { c, d, dp, h, l, o, pc, t }  (Worker passes Finnhub's shape through)
 }
 async function liveTick() {
-  const key = DATA.meta && DATA.meta.finnhub_key;
+  const key = DATA.meta && DATA.meta.quote_proxy;
   if (!key) return;
   if (!marketOpenNow()) { setLivePill("closed", "Market closed"); return; }
   if (Date.now() < throttleUntil) {   // backing off after a 429 — keep last prices, stay calm
@@ -607,12 +609,12 @@ function patchLivePrices() {
 }
 function universeTick() {
   // Throttled cycler: quote ONE non-held universe name per pump, patch its cells.
-  if (!(DATA.meta && DATA.meta.finnhub_key) || !uniQueue.length) return;
+  if (!(DATA.meta && DATA.meta.quote_proxy) || !uniQueue.length) return;
   if (!marketOpenNow()) return; // pill state is owned by the holdings tick
   if (Date.now() < throttleUntil) return; // backing off after a 429
   const ticker = uniQueue[uniIdx % uniQueue.length];
   uniIdx++;
-  fetchQuote(ticker, DATA.meta.finnhub_key).then((q) => {
+  fetchQuote(ticker, DATA.meta.quote_proxy).then((q) => {
     if (q && typeof q.c === "number" && q.c > 0) {
       const u = DATA.universe.find((x) => x.ticker === ticker);
       if (u) { u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2); }
@@ -633,7 +635,7 @@ function flashAccount(account) {
 function startLive() {
   if (liveTimer) clearInterval(liveTimer);
   pauseUniverseCycler();
-  if (!(DATA.meta && DATA.meta.finnhub_key)) return; // no key -> stay on daily snapshot
+  if (!(DATA.meta && DATA.meta.quote_proxy)) return; // no key -> stay on daily snapshot
   lastAccount = DATA.meta.portfolio_totals.account;
   // universe cycler quotes every NON-held universe name (held names refresh via the holdings tick)
   const held = new Set(DATA.portfolio.map((h) => h.ticker));
@@ -645,7 +647,7 @@ function startLive() {
 }
 function pauseUniverseCycler() { if (uniTimer) { clearInterval(uniTimer); uniTimer = null; } }
 function resumeUniverseCycler() {
-  if (!uniTimer && DATA && DATA.meta && DATA.meta.finnhub_key && uniQueue.length) {
+  if (!uniTimer && DATA && DATA.meta && DATA.meta.quote_proxy && uniQueue.length) {
     uniTimer = setInterval(universeTick, UNIVERSE_PUMP_MS); // 1 universe name every 2s
   }
 }
@@ -688,7 +690,7 @@ function asOfLabel(tsSec) {
   } catch (e) { return ""; }
 }
 async function renderIndexes() {
-  const key = DATA.meta && DATA.meta.finnhub_key;
+  const key = DATA.meta && DATA.meta.quote_proxy;
   const row = document.getElementById("idx-row");
   if (!row) return;
   if (!key) { row.innerHTML = `<div class="idx-card"><span class="muted">Live market data needs the API key.</span></div>`; return; }
@@ -765,7 +767,7 @@ async function loadNews(filterName) {
   newsFilter = filterName || newsFilter;
   renderNewsFilters();
   const list = document.getElementById("news-list");
-  const key = DATA.meta && DATA.meta.finnhub_key;
+  const key = DATA.meta && DATA.meta.quote_proxy;
   if (!list) return;
   if (!key) { list.innerHTML = `<p class="muted">Live news needs the API key.</p>`; return; }
   list.innerHTML = `<p class="news-loading">Loading headlines…</p>`;
@@ -809,7 +811,7 @@ function initInformed() {
 let pNewsLoaded = false, pDatesLoaded = false;
 
 async function loadPortfolioNews() {
-  const key = DATA.meta && DATA.meta.finnhub_key;
+  const key = DATA.meta && DATA.meta.quote_proxy;
   const list = document.getElementById("pnews-list");
   if (!list) return;
   if (!key) { list.innerHTML = `<p class="muted">Live news needs the API key.</p>`; return; }
@@ -844,7 +846,7 @@ function pDateRowHtml(e) {
 }
 
 async function loadPortfolioDates() {
-  const key = DATA.meta && DATA.meta.finnhub_key;
+  const key = DATA.meta && DATA.meta.quote_proxy;
   const el = document.getElementById("pdates-list");
   if (!el) return;
   if (!key) { el.innerHTML = `<p class="muted">Live calendar needs the API key.</p>`; return; }
