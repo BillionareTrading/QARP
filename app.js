@@ -530,7 +530,7 @@ function initTabs() {
 
 /* ---------- live prices (Finnhub, browser-side) ---------- */
 const LIVE_INTERVAL_MS = 60000;  // holdings refresh ~every 60s (≈17 calls/min)
-const UNIVERSE_PUMP_MS = 5000;   // 1 universe name per 5s (≈12/min); full ~190 sweep ≈ 16 min
+const UNIVERSE_PUMP_MS = 2000;   // 1 universe name per 2s (≈30/min); cycles the universe live
 // Live quotes go through our Cloudflare Worker (DATA.meta.quote_proxy) — it holds the
 // Finnhub key server-side and caches/dedupes, so the key never reaches the browser.
 const THROTTLE_MS = 45000;       // on a 429, pause all polling this long (free tier = 60 calls/min)
@@ -583,10 +583,6 @@ async function liveTick() {
   const key = DATA.meta && DATA.meta.quote_proxy;
   if (!key) return;
   if (!marketOpenNow()) { setLivePill("closed", "Market closed"); return; }
-  if (Date.now() < throttleUntil) {   // backing off after a 429 — keep last prices, stay calm
-    if (lastGoodTs) setLivePill("live", `LIVE · ${lastGoodClock}`);
-    return;
-  }
 
   let ok = 0, fail = 0;
   await Promise.all(DATA.portfolio.map(async (h) => {
@@ -647,10 +643,10 @@ function patchLivePrices() {
   DATA.portfolio.forEach((h) => patchTickerCells(h.ticker, h.price, h.day_pct));
 }
 function universeTick() {
-  // Throttled cycler: quote ONE non-held universe name per pump, patch its cells.
+  // Cycler: quote ONE non-held universe name per pump, patch its cells. A rate-limited name
+  // just fails silently and we move on next pump — no global pause, so updates keep flowing.
   if (!(DATA.meta && DATA.meta.quote_proxy) || !uniQueue.length) return;
   if (!marketOpenNow()) return; // pill state is owned by the holdings tick
-  if (Date.now() < throttleUntil) return; // backing off after a 429
   const ticker = uniQueue[uniIdx % uniQueue.length];
   uniIdx++;
   fetchQuote(ticker, DATA.meta.quote_proxy).then((q) => {
@@ -676,16 +672,21 @@ function startLive() {
   pauseUniverseCycler();
   if (!(DATA.meta && DATA.meta.quote_proxy)) return; // no proxy -> stay on daily snapshot
   lastAccount = DATA.meta.portfolio_totals.account;
-  // Only live-poll the HOLDINGS (17 names / 60s) — that's your money and stays well under the
-  // rate limit. The ~190 universe names keep their daily-build snapshot prices; live-cycling
-  // them was the main cause of rate-limit thrashing and isn't worth it.
+  // Holdings poll every 60s; the universe cycler streams the rest one-by-one (runs only while
+  // the Shariah-Compliant tab is open). On a rate-limit, individual fetches just skip — the
+  // pill never alarms — so live updates keep flowing as fast as the free key allows.
+  const held = new Set(DATA.portfolio.map((h) => h.ticker));
+  uniQueue = DATA.universe.map((x) => x.ticker).filter((t) => !held.has(t));
+  uniIdx = 0;
   liveTick();
   liveTimer = setInterval(liveTick, LIVE_INTERVAL_MS);
 }
-// Universe live-cycler is retired (see startLive). These stay as no-ops so existing callers
-// (tab/sub-tab handlers) don't error.
 function pauseUniverseCycler() { if (uniTimer) { clearInterval(uniTimer); uniTimer = null; } }
-function resumeUniverseCycler() { /* retired: universe shows daily-build prices */ }
+function resumeUniverseCycler() {
+  if (!uniTimer && DATA && DATA.meta && DATA.meta.quote_proxy && uniQueue.length) {
+    uniTimer = setInterval(universeTick, UNIVERSE_PUMP_MS);
+  }
+}
 
 /* ---------- Stay Informed: market snapshot + news ---------- */
 const INDEXES = [
