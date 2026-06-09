@@ -49,39 +49,46 @@
       <button class="tab active" data-tab="framework">Approach</button>
       <button class="tab" data-tab="informed">Stay Informed</button>
       <button class="tab" data-tab="universe">Shariah-Compliant</button>
-      <button class="tab" data-tab="record">Track Record</button>
       <button class="tab" data-tab="portfolio">Portfolio</button>
     </nav>
 
     <!-- Shariah-Compliant universe -->
     <section id="tab-universe" class="tabpanel">
-      <p class="tab-intro">Every <b>S&amp;P 500</b> company was screened for Shariah compliance — the ones that pass are scored on <b>QARP</b> (quality + value) and ranked below. Sort, filter, or tap any name for its full breakdown.</p>
-      <div class="card">
-        <h3>Universe by verdict</h3>
-        <div id="verdict-chart"></div>
-      </div>
-      <div class="controls">
-        <input id="u-search" type="search" placeholder="Search ticker or name…" />
-        <select id="u-verdict">
-          <option value="">All verdicts</option>
-        </select>
-        <select id="u-sector">
-          <option value="">All sectors</option>
-        </select>
-        <span id="u-count" class="count"></span>
-      </div>
-      <div class="table-wrap">
-        <table id="u-table">
-          <thead></thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </section>
+      <nav class="subtabs" id="u-subtabs">
+        <button class="subtab active" type="button" data-usub="universe">Universe</button>
+        <button class="subtab" type="button" data-usub="record">Track Record</button>
+      </nav>
 
-    <!-- Verdict Track Record / Scorecard -->
-    <section id="tab-record" class="tabpanel">
-      <p class="tab-intro">Every verdict, held accountable. How each call has performed <b>since it was first issued</b> — and whether the ranking actually predicts returns. <b>Alpha</b> = return vs. the S&amp;P over the same window, which strips out market drift.</p>
-      <div id="scorecard"></div>
+      <!-- Universe table -->
+      <div id="usub-universe" class="usub active">
+        <p class="tab-intro">Every <b>S&amp;P 500</b> company was screened for Shariah compliance — the ones that pass are scored on <b>QARP</b> (quality + value) and ranked below. Sort, filter, or tap any name for its full breakdown.</p>
+        <div class="card">
+          <h3>Universe by verdict</h3>
+          <div id="verdict-chart"></div>
+        </div>
+        <div class="controls">
+          <input id="u-search" type="search" placeholder="Search ticker or name…" />
+          <select id="u-verdict">
+            <option value="">All verdicts</option>
+          </select>
+          <select id="u-sector">
+            <option value="">All sectors</option>
+          </select>
+          <span id="u-count" class="count"></span>
+        </div>
+        <div class="table-wrap">
+          <table id="u-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Verdict Track Record / Scorecard -->
+      <div id="usub-record" class="usub">
+        <p class="tab-intro">Every verdict, held accountable. How each call has performed <b>since it was first issued</b> — and whether the ranking actually predicts returns. <b>Alpha</b> = return vs. the S&amp;P over the same window, which strips out market drift.</p>
+        <div id="scorecard"></div>
+      </div>
     </section>
 
     <!-- Portfolio -->
