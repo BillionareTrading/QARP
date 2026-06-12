@@ -317,6 +317,11 @@ tbody tr:hover { background: var(--surface-2); }
 .vt-held { color: var(--ink-3); font-size: 12px; }
 .vt-up { color: var(--pos); font-weight: 700; font-size: 12px; white-space: nowrap; }
 .vt-down { color: #b45309; font-weight: 700; font-size: 12px; white-space: nowrap; }
+/* momentum gate chips */
+.mg { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 10.5px; font-weight: 800; letter-spacing: .03em; }
+.mg-go { background: var(--pos-bg); color: var(--pos); }
+.mg-turn { background: #fff4e0; color: #b45309; }
+.mg-wait { background: var(--neg-bg); color: var(--neg); }
 
 /* Track Record / Verdict Scorecard */
 .sc-headline { margin-bottom: 14px; }

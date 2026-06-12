@@ -28,6 +28,7 @@ const TIPS = {
   dcf: { t: "DCF score (1–5)", d: "How cheap the stock is vs. an estimate of its fair value. 5 = deep value (>30% upside), 3 = fairly priced, 1 = expensive." },
   mech: { t: "Quality (out of 105)", d: "The quality half of QARP — the sum of five dimensions: Valuation, Growth, Quality, Balance Sheet, and Capital Allocation." },
   verdict: { t: "Verdict", d: "The QARP score turned into a call: ≥85 Strongest, ≥72 Strong Buy, ≥66 Buy, ≥60 Hold-Qual, 35–59 Avoid, <35 Strong Avoid." },
+  gate: { t: "Momentum gate", d: "Value decides WHAT to buy; the tape decides WHEN. GO = price above its 50-day average (uptrend — a Buy verdict is actionable). TURN = reclaimed the 20-day but still under the 50-day (bottoming attempt, early). WAIT = below both — the knife is still falling; the verdict stands but acting on it means fighting the tape. Kept beside QARP, never mixed into the score." },
   since: { t: "Since ranked", d: "Price change since this stock was first ranked (the genesis date shown beneath the %). Green = up, red = down — the actual outcome of the call so far." },
   vtrend: { t: "Verdict trend", d: "How the verdict has moved from first ranking to now. 'held' = unchanged; otherwise e.g. 'S.BUY → BUY'. Colour shows direction (upgrade/downgrade) — note a downgrade can still be a winning call if the price rose. Hover/tap for the full dated path." },
   scorecard: { t: "Track record", d: "Each name is grouped by the verdict it FIRST received, then we measure its price change since that date. If the framework works, returns should step down from Strong Buy to Avoid. Alpha = that return minus the S&P over the same window, isolating skill from market drift." },
@@ -95,6 +96,14 @@ function verdictTrendSort(x) {   // + = upgraded, - = downgraded, 0 = held/none
   const path = x.verdict_path || [];
   if (!x.verdict_changed || path.length < 2) return 0;
   return VERDICT_ORDER.indexOf(path[0]) - VERDICT_ORDER.indexOf(path[path.length - 1]);
+}
+// Momentum gate (overlay — beside QARP, never inside it). Value decides WHAT, the
+// tape decides WHEN: GO = above 50DMA, TURN = reclaimed 20DMA, WAIT = knife falling.
+function momGate(x) {
+  const m = x.mom;
+  if (!m) return `<span class="muted">—</span>`;
+  const t = { GO: "tape confirms — actionable", TURN: "bottoming attempt — early", WAIT: "below 20 & 50-day — knife still falling" }[m.state];
+  return `<span class="mg mg-${m.state.toLowerCase()}" title="${t} (${m.vs50 >= 0 ? "+" : ""}${m.vs50}% vs 50-day avg)">${m.state}</span>`;
 }
 
 /* ---------- SVG donut ---------- */
@@ -214,6 +223,8 @@ const U_COLS = [
   { key: "dcf", label: "DCF", fmt: (x) => fmtNum(x.dcf, 1) },
   { key: "mech", label: "Q /105", fmt: (x) => x.mech },
   { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
+  { key: "gate", label: "Gate", fmt: (x) => momGate(x),
+    sortVal: (x) => (x.mom ? { GO: 2, TURN: 1, WAIT: 0 }[x.mom.state] : -1) },
   { key: "since", label: "Since", fmt: (x) => x.since_pct == null
       ? `<span class="muted">—</span>`
       : `<span class="cell-since ${signClass(x.since_pct)}">${fmtPct(x.since_pct)}</span><span class="since-date">${x.first_date ? x.first_date.slice(5) : ""}</span>`,
