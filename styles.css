@@ -358,6 +358,10 @@ tbody tr:hover { background: var(--surface-2); }
 .call-line.closed { opacity: .72; }
 .call-when { color: var(--ink-3); font-size: 10.5px; letter-spacing: .02em; }
 .call-lock { font-size: 9px; }
+/* dividends */
+.div-rate { font-weight: 600; white-space: nowrap; }
+.div-unit { color: var(--ink-3); font-size: 10px; font-weight: 400; }
+.div-yld { display: block; font-size: 10.5px; color: var(--ink-3); margin-top: 1px; }
 .sc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 @media (min-width: 760px) { .sc-grid { grid-template-columns: repeat(4, 1fr); } }
 .sc-card { background: #fff; border: 1px solid var(--line, #e8edf3); border-radius: 12px; padding: 14px; }
