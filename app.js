@@ -29,8 +29,7 @@ const TIPS = {
   mech: { t: "Quality (out of 105)", d: "The quality half of QARP — the sum of five dimensions: Valuation, Growth, Quality, Balance Sheet, and Capital Allocation." },
   verdict: { t: "Verdict", d: "The QARP score turned into a call: ≥85 Strongest, ≥72 Strong Buy, ≥66 Buy, ≥60 Hold-Qual, 35–59 Avoid, <35 Strong Avoid." },
   gate: { t: "Momentum gate", d: "Value decides WHAT to buy; the tape decides WHEN. GO = price above its 50-day average (uptrend — a Buy verdict is actionable). TURN = reclaimed the 20-day but still under the 50-day (bottoming attempt, early). WAIT = below both — the knife is still falling; the verdict stands but acting on it means fighting the tape. Kept beside QARP, never mixed into the score." },
-  since: { t: "Since ranked", d: "Price change since this stock was first ranked (the genesis date shown beneath the %). Green = up, red = down — the actual outcome of the call so far." },
-  vtrend: { t: "Verdict trend", d: "How the verdict has moved from first ranking to now. 'held' = unchanged; otherwise e.g. 'S.BUY → BUY'. Colour shows direction (upgrade/downgrade) — note a downgrade can still be a winning call if the price rose. Hover/tap for the full dated path." },
+  calls: { t: "Calls", d: "Every verdict this name has received, as dated calls. Each call locks its entry price when issued: closed calls (🔒) show the return locked when the verdict changed on a re-score; the open call (→) marks to the live price. Daily price moves never change a call — only deliberate re-scores do." },
   scorecard: { t: "Track record", d: "Each name is grouped by the verdict it FIRST received, then we measure its price change since that date. If the framework works, returns should step down from Strong Buy to Avoid. Alpha = that return minus the S&P over the same window, isolating skill from market drift." },
   ic: { t: "Information Coefficient", d: "Spearman rank correlation between each name's first verdict and its return since. Method: rank all names by verdict, rank them again by return, then correlate the two rank-lists — ρ = cov(rank_verdict, rank_return) / (σ_v · σ_r). With no ties this equals 1 − 6·Σd² / [n(n²−1)], where d is each name's rank difference. Scale −1…+1: +1 = perfect ordering, 0 = no signal, negative = backwards. Real factor ICs are small (+0.05–0.10 is good) — read the trend over many days, not one." },
 };
@@ -81,29 +80,60 @@ const vAbbr = (v) => VERDICT_ABBR[v] || v || "?";
 // Verdict-trend cell: "held", or "S.BUY → BUY" colored by DIRECTION (upgrade green /
 // downgrade amber) with the full dated path on hover. Direction is informational, not
 // a value judgment — a downgrade can be a winning call (the Since % column shows outcome).
-// Trend = the sequence of DELIBERATE call verdicts (changes only on a re-score, never on
-// the daily price re-rank). "held" = one call, never re-scored.
-function verdictTrend(x) {
-  const path = x.verdict_path || [];
-  if (!path.length) return `<span class="muted">—</span>`;
-  if (!x.verdict_changed)
-    return `<span class="vt-held" title="Called ${x.first_date}: ${path[0]} — not re-scored">held</span>`;
-  const a = path[0], b = path[path.length - 1];
-  const dir = VERDICT_ORDER.indexOf(b) < VERDICT_ORDER.indexOf(a) ? "up" : "down";
-  return `<span class="vt-${dir}" title="Called ${x.first_date}: ${path.join(" → ")}">${vAbbr(a)} → ${vAbbr(b)}</span>`;
+// Calls column: every deliberate verdict (a "call"), dated, with its return — closed
+// calls show the LOCKED return (entry -> re-score price); the open call marks to the
+// live price. Built from DATA.calls grouped by ticker (lazy, cached).
+let _callsByTk = null;
+function callsFor(tk) {
+  if (!_callsByTk) {
+    _callsByTk = {};
+    (DATA.calls || []).forEach((c) => (_callsByTk[c.ticker] = _callsByTk[c.ticker] || []).push(c));
+    Object.values(_callsByTk).forEach((l) => l.sort((a, b) => (a.start_date || "").localeCompare(b.start_date || "")));
+  }
+  return _callsByTk[tk] || [];
 }
-function verdictTrendSort(x) {   // + = upgraded, - = downgraded, 0 = held/none
-  const path = x.verdict_path || [];
-  if (!x.verdict_changed || path.length < 2) return 0;
-  return VERDICT_ORDER.indexOf(path[0]) - VERDICT_ORDER.indexOf(path[path.length - 1]);
+function openCallReturn(tk, livePx) {
+  const open = callsFor(tk).find((c) => c.open);
+  if (!open || !open.start_price) return -1e9;
+  return ((livePx || open.exit_price) / open.start_price - 1) * 100;
+}
+function callsCell(tk, livePx) {
+  const list = callsFor(tk);
+  if (!list.length) return `<span class="muted">—</span>`;
+  return list.map((c) => {
+    const ret = c.open && livePx && c.start_price ? (livePx / c.start_price - 1) * 100 : c.return_pct;
+    const when = c.open
+      ? `${(c.start_date || "").slice(5)} →`
+      : `${(c.start_date || "").slice(5)}–${(c.end_date || "").slice(5)}`;
+    return `<div class="call-line ${c.open ? "open" : "closed"}" title="${c.verdict} called ${c.start_date} @ $${c.start_price}${c.open ? " — open, marks to current price" : ` — closed ${c.end_date} @ $${c.exit_price} (locked)`}">
+      <span class="badge sm ${verdictSlug(c.verdict)}">${vAbbr(c.verdict)}</span>
+      <span class="call-when">${when}</span>
+      <b class="${signClass(ret)}">${fmtPct(ret, 1)}</b>${c.open ? "" : `<span class="call-lock">🔒</span>`}
+    </div>`;
+  }).join("");
 }
 // Momentum gate (overlay — beside QARP, never inside it). Value decides WHAT, the
 // tape decides WHEN: GO = above 50DMA, TURN = reclaimed 20DMA, WAIT = knife falling.
-function momGate(x) {
+// LIVE: state recomputes from the current price against the day's MA levels on every
+// price tick (the averages only move once a day, so this is the correct intraday gate).
+function gateNow(x) {
   const m = x.mom;
+  if (!m) return null;
+  if (m.ma50 && m.ma20 && x.price > 0) {
+    const state = x.price >= m.ma50 ? "GO" : x.price >= m.ma20 ? "TURN" : "WAIT";
+    return { state, vs50: +((x.price / m.ma50 - 1) * 100).toFixed(1) };
+  }
+  return m; // old payloads without MA levels: fall back to build-time state
+}
+function momGate(x) {
+  const m = gateNow(x);
   if (!m) return `<span class="muted">—</span>`;
   const t = { GO: "tape confirms — actionable", TURN: "bottoming attempt — early", WAIT: "below 20 & 50-day — knife still falling" }[m.state];
-  return `<span class="mg mg-${m.state.toLowerCase()}" title="${t} (${m.vs50 >= 0 ? "+" : ""}${m.vs50}% vs 50-day avg)">${m.state}</span>`;
+  return `<span class="mg mg-${m.state.toLowerCase()}" title="${t} (${m.vs50 >= 0 ? "+" : ""}${m.vs50}% vs 50-day avg — live)">${m.state}</span>`;
+}
+function patchGateCells(ticker, u) {
+  document.querySelectorAll(`#u-table tr[data-ticker="${ticker}"] .mg, #p-table tr[data-ticker="${ticker}"] .mg`)
+    .forEach((el) => { el.outerHTML = momGate(u); });
 }
 
 /* ---------- SVG donut ---------- */
@@ -224,12 +254,9 @@ const U_COLS = [
   { key: "mech", label: "Q /105", fmt: (x) => x.mech },
   { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
   { key: "gate", label: "Gate", fmt: (x) => momGate(x),
-    sortVal: (x) => (x.mom ? { GO: 2, TURN: 1, WAIT: 0 }[x.mom.state] : -1) },
-  { key: "since", label: "Since", fmt: (x) => x.since_pct == null
-      ? `<span class="muted">—</span>`
-      : `<span class="cell-since ${signClass(x.since_pct)}">${fmtPct(x.since_pct)}</span><span class="since-date">${x.first_date ? x.first_date.slice(5) : ""}</span>`,
-    sortVal: (x) => (x.since_pct == null ? -1e9 : x.since_pct) },
-  { key: "vtrend", label: "Verdict △", align: "left", fmt: (x) => verdictTrend(x), sortVal: verdictTrendSort },
+    sortVal: (x) => { const m = gateNow(x); return m ? { GO: 2, TURN: 1, WAIT: 0 }[m.state] : -1; } },
+  { key: "calls", label: "Calls", align: "left", fmt: (x) => callsCell(x.ticker, x.price),
+    sortVal: (x) => openCallReturn(x.ticker, x.price) },
 ];
 let uSort = { key: "rank", dir: 1 };
 
@@ -295,6 +322,8 @@ const P_COLS = [
   { key: "weight_pct", label: "Weight", fmt: (x) => fmtNum(x.weight_pct, 1) + "%" },
   { key: "qarp", label: "QARP", fmt: (x) => `<span class="qarp-cell">${fmtNum(x.qarp, 1)}</span>` },
   { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
+  { key: "calls", label: "Calls", align: "left", fmt: (x) => callsCell(x.ticker, x.price),
+    sortVal: (x) => openCallReturn(x.ticker, x.price) },
 ];
 let pSort = { key: "value", dir: -1 };
 
@@ -439,35 +468,8 @@ function renderTrend(hist) {
   </div>`;
 }
 
-let callsFilter = "ALL";
-const tierFold = (v) => ({ "STRONGEST": "STRONG BUY", "STRONG AVOID": "AVOID" }[v] || v);
-// The calls log: every verdict ever issued, as a locked trade with entry price + return.
-function renderCallsLog() {
-  const calls = DATA.calls || [];
-  if (!calls.length) return "";
-  const tiers = ["ALL", "STRONG BUY", "BUY", "HOLD-QUAL", "AVOID"];
-  const shown = calls.filter((c) => callsFilter === "ALL" || tierFold(c.verdict) === callsFilter);
-  const chips = tiers.map((t) =>
-    `<button class="call-chip ${t === callsFilter ? "active" : ""}" type="button" data-callf="${t}">${t === "ALL" ? "All" : vAbbr(t)}</button>`).join("");
-  const rows = shown.map((c) => `<tr>
-      <td class="left"><span class="tick">${c.ticker}</span></td>
-      <td class="left"><span class="badge sm ${verdictSlug(c.verdict)}">${vAbbr(c.verdict)}</span></td>
-      <td>${c.start_date ? c.start_date.slice(5) : ""}</td>
-      <td>${fmtUSD(c.start_price, 2)}</td>
-      <td>${fmtUSD(c.exit_price, 2)}</td>
-      <td class="${signClass(c.return_pct)}"><b>${fmtPct(c.return_pct, 1)}</b></td>
-      <td class="${signClass(c.alpha_pct)}">${c.alpha_pct == null ? "—" : fmtPct(c.alpha_pct, 1)}</td>
-      <td>${c.open ? `<span class="call-open">open</span>` : `<span class="muted">closed</span>`}</td>
-    </tr>`).join("");
-  return `<div class="card calls-card">
-    <div class="calls-h">Every call <span class="muted">— ${calls.length} total · each locked at its entry; return marks to current price</span></div>
-    <div class="call-chips">${chips}</div>
-    <div class="table-wrap calls-scroll"><table class="calls-table">
-      <thead><tr><th class="left">Ticker</th><th class="left">Verdict</th><th>Called</th><th>Entry</th><th>Now</th><th>Return</th><th>vs S&amp;P</th><th></th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table></div>
-  </div>`;
-}
+// (The standalone calls-log table was removed — per-name call history now lives in the
+// "Calls" column on the Universe and Portfolio tables.)
 
 function renderScorecard() {
   const host = document.getElementById("scorecard");
@@ -520,10 +522,7 @@ function renderScorecard() {
       <div class="sc-note">Each <b>call</b> is a verdict locked at its entry price — it stays put until the name is re-scored (not on daily price moves). Return marks to current price. ${total} calls since ${sc.since || ""}. Early sample — watch the IC + spread trend as it matures.</div>
     </div>
     ${renderTrend(sc.history)}
-    <div class="sc-grid">${cards}</div>
-    ${renderCallsLog()}`;
-  host.querySelectorAll(".call-chip").forEach((b) =>
-    b.addEventListener("click", () => { callsFilter = b.dataset.callf; renderScorecard(); }));
+    <div class="sc-grid">${cards}</div>`;
 }
 
 /* ---------- tabs ---------- */
@@ -606,7 +605,10 @@ async function liveTick() {
         h.gain = +(h.value - h.cost).toFixed(2);
         h.gain_pct = +((h.gain / h.cost) * 100).toFixed(2);
         const u = DATA.universe.find((x) => x.ticker === h.ticker); // keep universe consistent (silent)
-        if (u) { u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2); }
+        if (u) {
+          u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2);
+          if (u.mom) patchGateCells(h.ticker, u);   // gate re-evaluates on the live price
+        }
         ok++;
       } else fail++;
     } catch (e) { fail++; }
@@ -663,7 +665,10 @@ function universeTick() {
   fetchQuote(ticker, DATA.meta.quote_proxy).then((q) => {
     if (q && typeof q.c === "number" && q.c > 0) {
       const u = DATA.universe.find((x) => x.ticker === ticker);
-      if (u) { u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2); }
+      if (u) {
+        u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2);
+        if (u.mom) patchGateCells(ticker, u);   // live gate re-check on every sweep
+      }
       patchTickerCells(ticker, q.c, q.dp);
       lastGoodTs = Date.now();
     }
