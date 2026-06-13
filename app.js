@@ -32,6 +32,8 @@ const TIPS = {
   calls: { t: "Calls", d: "Every verdict this name has received, as dated calls. Each call locks its entry price when issued: closed calls (🔒) show the return locked when the verdict changed on a re-score; the open call (→) marks to the live price. Daily price moves never change a call — only deliberate re-scores do." },
   div: { t: "Dividends", d: "Forward annual dividend per share, with the yield (rate ÷ current price) beneath. N/A = the company pays no dividend. Refreshed in the daily build." },
   div_income: { t: "Dividend income", d: "What YOUR position pays per year: shares × annual dividend rate. N/A = non-payer. The KPI strip shows the portfolio total." },
+  gain: { t: "Unrealized P/L", d: "Paper profit/loss on positions you still hold (current value minus cost basis). It is NOT money in the bank — it changes with every tick and excludes anything already sold. Realized profits from completed sells will be tracked separately." },
+  gain_pct: { t: "Unrealized P/L %", d: "The same unrealized paper profit/loss, as a percent of what you paid for the position." },
   scorecard: { t: "Track record", d: "Each name is grouped by the verdict it FIRST received, then we measure its price change since that date. If the framework works, returns should step down from Strong Buy to Avoid. Alpha = that return minus the S&P over the same window, isolating skill from market drift." },
   ic: { t: "Information Coefficient", d: "Spearman rank correlation between each name's first verdict and its return since. Method: rank all names by verdict, rank them again by return, then correlate the two rank-lists — ρ = cov(rank_verdict, rank_return) / (σ_v · σ_r). With no ties this equals 1 − 6·Σd² / [n(n²−1)], where d is each name's rank difference. Scale −1…+1: +1 = perfect ordering, 0 = no signal, negative = backwards. Real factor ICs are small (+0.05–0.10 is good) — read the trend over many days, not one." },
 };
@@ -187,7 +189,7 @@ function renderKpis() {
   const cards = [
     { label: "Account Value", value: fmtUSD(t.account, 0), delta: `${fmtUSD(t.cash, 2)} cash`, dClass: "muted" },
     { label: "Today", note: todayNote, value: fmtUSD(dayChg, 0), delta: fmtPct(dayPct), dClass: signClass(dayChg) },
-    { label: "Total Gain", value: fmtUSD(t.gain, 0), delta: fmtPct(t.gain_pct), dClass: signClass(t.gain) },
+    { label: "Unrealized P/L", note: "open holdings only", value: fmtUSD(t.gain, 0), delta: fmtPct(t.gain_pct), dClass: signClass(t.gain) },
     { label: "Cost Basis", value: fmtUSD(t.cost, 0), delta: `${DATA.portfolio.length} holdings`, dClass: "muted" },
   ];
   if (t.div_income_yr) cards.push({ label: "Dividends", note: "annual", value: fmtUSD(t.div_income_yr, 0) + "/yr",
@@ -325,8 +327,8 @@ const P_COLS = [
   { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
   { key: "shares", label: "Shares", fmt: (x) => fmtNum(x.shares, 2) },
   { key: "value", label: "Value", fmt: (x) => fmtUSD(x.value, 0) },
-  { key: "gain", label: "Gain $", fmt: (x) => `<span class="${signClass(x.gain)}">${fmtUSD(x.gain, 0)}</span>` },
-  { key: "gain_pct", label: "Gain %", fmt: (x) => `<span class="${signClass(x.gain_pct)}">${fmtPct(x.gain_pct)}</span>` },
+  { key: "gain", label: "Unrlzd $", fmt: (x) => `<span class="${signClass(x.gain)}">${fmtUSD(x.gain, 0)}</span>` },
+  { key: "gain_pct", label: "Unrlzd %", fmt: (x) => `<span class="${signClass(x.gain_pct)}">${fmtPct(x.gain_pct)}</span>` },
   { key: "weight_pct", label: "Weight", fmt: (x) => fmtNum(x.weight_pct, 1) + "%" },
   { key: "div_income", label: "Div /yr", fmt: (x) => x.div_income
       ? `<span class="div-rate">${fmtUSD(x.div_income, 2)}</span>`
