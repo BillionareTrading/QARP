@@ -26,7 +26,7 @@ function verdictBadge(v) {
 const TIPS = {
   qarp: { t: "QARP", d: "Quality At a Reasonable Price — a 0–100 score blending business quality (60%) with value/DCF (40%). Higher is better; 72+ is a Strong Buy. See the Framework tab for the full method." },
   dcf: { t: "DCF score (1–5)", d: "How cheap the stock is vs. an estimate of its fair value. 5 = deep value (>30% upside), 3 = fairly priced, 1 = expensive." },
-  mech: { t: "Quality (out of 105)", d: "The quality half of QARP — the sum of five dimensions: Valuation, Growth, Quality, Balance Sheet, and Capital Allocation." },
+  mech: { t: "Quality (out of 105)", d: "The quality half of QARP — the sum of five dimensions: Valuation, Growth, Moat & Returns, Balance Sheet, and Capital Allocation." },
   verdict: { t: "Verdict", d: "The QARP score turned into a call: ≥85 Strongest, ≥72 Strong Buy, ≥66 Buy, ≥60 Hold-Qual, 35–59 Avoid, <35 Strong Avoid." },
   gate: { t: "Momentum gate", d: "Value decides WHAT to buy; the tape decides WHEN. GO = price above its 50-day average (uptrend — a Buy verdict is actionable). TURN = reclaimed the 20-day but still under the 50-day (bottoming attempt, early). WAIT = below both — the knife is still falling; the verdict stands but acting on it means fighting the tape. Kept beside QARP, never mixed into the score." },
   calls: { t: "Calls", d: "Every verdict this name has received, as dated calls. Each call locks its entry price when issued: closed calls (🔒) show the return locked when the verdict changed on a re-score; the open call (→) marks to the live price. Daily price moves never change a call — only deliberate re-scores do." },
@@ -406,7 +406,7 @@ function openDrawer(ticker) {
   if (!x && !p) return;
   const d = x || {};
   const dims = [
-    ["Valuation", d.val, 25], ["Growth", d.grw, 20], ["Quality", d.qual, 20],
+    ["Valuation", d.val, 25], ["Growth", d.grw, 20], ["Moat & Returns", d.qual, 20],
     ["Balance Sheet", d.bs, 20], ["Capital Alloc", d.cap, 20],
   ];
   const has = (v) => v != null && v !== "";
