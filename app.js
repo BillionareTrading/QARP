@@ -248,11 +248,33 @@ function renderVerdictSummary() {
      <div class="vstats">${tiles}</div>`;
 }
 
+/* ---------- sector grouping: collapse the ~120 granular industries into a
+   handful of macro buckets so the Sector column/filter is usable (a lot of
+   names per group). First matching keyword wins; order resolves overlaps
+   (Semis before Tech, Beauty before Retail, consumer Internet before generic). */
+const MACRO_SECTOR_RULES = [
+  [["semi"], "Semiconductors"],
+  [["beauty"], "Consumer Staples"],
+  [["internet-delivery", "internet-gaming", "internet-mobility", "restaurant", "apparel", "homebuild", "retail", "auto-auction", "consumer-products", "footwear", "luxury"], "Consumer Disc."],
+  [["staples", "beverage", "consumer-health", "consumer health"], "Consumer Staples"],
+  [["pharma", "biotech", "healthcare", "health-", "life-sciences", "diagnostic", "medtech", "animal-health", "lab-instrument", "medical"], "Healthcare"],
+  [["software", "internet", "cyber", "network", "iot", "datactr", "data-ctr", "storage", "tech-hardware", "electronics", "comms-equipment", "it-reseller", "auto-tech", "semis-ip"], "Technology"],
+  [["energy", "solar", "fuelcell"], "Energy"],
+  [["financial"], "Financials"],
+  [["chemical", "steel", "metal", "agricultur", "packaging", "glass", "lithium", "aggregate", "material", "industrial-gas", "timber"], "Materials"],
+  [["industrial", "construction", "rail", "logistic", "truck", "waste", "business-services", "electrical", "distribution", "hvac", "infra", "safety", "warehouse", "testing", "certification", "water", "aerospace", "machinery", "elevator", "bearing", "automation", "power", "diversified", "test-measurement", "instruments"], "Industrials"],
+];
+function sectorGroup(s) {
+  const sl = (s || "").toLowerCase();
+  for (const [kws, g] of MACRO_SECTOR_RULES) if (kws.some((k) => sl.includes(k))) return g;
+  return s || "—"; // fallback: show the raw sector if a future build adds one we don't map yet
+}
+
 /* ---------- render: Universe table ---------- */
 const U_COLS = [
   { key: "rank", label: "#", align: "left", fmt: (x) => `<span class="muted">${x.rank}</span>` },
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
-  { key: "sector", label: "Sector", align: "left", fmt: (x) => `<span class="muted">${x.sector}</span>` },
+  { key: "sector", label: "Sector", align: "left", fmt: (x) => `<span class="muted">${sectorGroup(x.sector)}</span>`, sortVal: (x) => sectorGroup(x.sector) },
   { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
   { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
   { key: "div", label: "Dividends", fmt: (x) => x.div_rate
@@ -275,8 +297,10 @@ function renderUniverseControls() {
   VERDICT_ORDER.filter((v) => DATA.universe.some((x) => x.verdict === v))
     .forEach((v) => verdSel.add(new Option(v, v)));
   const secSel = document.getElementById("u-sector");
-  [...new Set(DATA.universe.map((x) => x.sector))].sort()
-    .forEach((s) => secSel.add(new Option(s, s)));
+  const secCounts = {};
+  DATA.universe.forEach((x) => { const g = sectorGroup(x.sector); secCounts[g] = (secCounts[g] || 0) + 1; });
+  Object.entries(secCounts).sort((a, b) => b[1] - a[1])
+    .forEach(([g, n]) => secSel.add(new Option(`${g} (${n})`, g)));
   ["u-search", "u-verdict", "u-sector"].forEach((id) =>
     document.getElementById(id).addEventListener("input", renderUniverseTable));
 }
@@ -287,7 +311,7 @@ function renderUniverseTable() {
   const fs = document.getElementById("u-sector").value;
   let rows = DATA.universe.filter((x) =>
     (!q || x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q)) &&
-    (!fv || x.verdict === fv) && (!fs || x.sector === fs));
+    (!fv || x.verdict === fv) && (!fs || sectorGroup(x.sector) === fs));
 
   const col = U_COLS.find((c) => c.key === uSort.key);
   const val = col.sortVal || ((x) => x[uSort.key]);
