@@ -998,6 +998,10 @@ function initUniverseSubtabs() {
       if (u === "record") {
         document.getElementById("usub-record").classList.add("active");
         pauseUniverseCycler();
+      } else if (u === "etfs") {
+        document.getElementById("usub-etfs").classList.add("active");
+        renderEtfs();
+        pauseUniverseCycler();
       } else {
         // S&P 500 and Global share the universe table, filtered by the index tag
         uIndex = (u === "global") ? "Global" : "S&P 500";
