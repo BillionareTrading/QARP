@@ -228,12 +228,17 @@ function asOfDate(iso) {
   return a < b ? a : b;
 }
 
+/* ---------- which index list is showing (S&P 500 | Global) ---------- */
+let uIndex = "S&P 500";
+const uList = () => DATA.universe.filter((x) => (x.index || "S&P 500") === uIndex);
+
 /* ---------- render: Overview ---------- */
 function renderVerdictSummary() {
   // verdict distribution — stacked proportion bar + count tiles (top of Shariah-Compliant tab)
+  const list = uList();
   const counts = {};
-  DATA.universe.forEach((x) => (counts[x.verdict] = (counts[x.verdict] || 0) + 1));
-  const total = DATA.universe.length || 1;
+  list.forEach((x) => (counts[x.verdict] = (counts[x.verdict] || 0) + 1));
+  const total = list.length || 1;
   const order = VERDICT_ORDER.filter((v) => counts[v]);
   const bar = order.map((v) =>
     `<span style="width:${(counts[v] / total * 100).toFixed(2)}%;background:${VERDICT_COLOR[v]}" title="${v}: ${counts[v]}"></span>`).join("");
@@ -243,7 +248,7 @@ function renderVerdictSummary() {
       ${verdictBadge(v)}
     </div>`).join("");
   document.getElementById("verdict-chart").innerHTML =
-    `<p class="card-note" style="margin:6px 0 16px">${DATA.universe.length} Shariah-compliant names scored</p>
+    `<p class="card-note" style="margin:6px 0 16px">${list.length} ${uIndex} Shariah-compliant names scored</p>
      <div class="vbar-stack">${bar}</div>
      <div class="vstats">${tiles}</div>`;
 }
@@ -293,23 +298,36 @@ const U_COLS = [
 let uSort = { key: "rank", dir: 1 };
 
 function renderUniverseControls() {
+  const list = uList();
+  // intro copy reflects the active list (S&P 500 vs Global)
+  const intro = document.getElementById("u-intro");
+  if (intro) intro.innerHTML = uIndex === "Global"
+    ? `<b>Global</b> names outside the S&amp;P 500, screened for Shariah compliance — the compliant ones are scored on <b>QARP</b> (quality + value) and ranked below. This list grows as we add more global companies.`
+    : `Every <b>S&amp;P 500</b> company was screened for Shariah compliance — the ones that pass are scored on <b>QARP</b> (quality + value) and ranked below. Sort, filter, or tap any name for its full breakdown.`;
+  // repopulate filters for THIS list (idempotent — keep each select's first "All" option)
   const verdSel = document.getElementById("u-verdict");
-  VERDICT_ORDER.filter((v) => DATA.universe.some((x) => x.verdict === v))
-    .forEach((v) => verdSel.add(new Option(v, v)));
   const secSel = document.getElementById("u-sector");
+  verdSel.length = 1; secSel.length = 1;
+  document.getElementById("u-search").value = "";
+  VERDICT_ORDER.filter((v) => list.some((x) => x.verdict === v))
+    .forEach((v) => verdSel.add(new Option(v, v)));
   const secCounts = {};
-  DATA.universe.forEach((x) => { const g = sectorGroup(x.sector); secCounts[g] = (secCounts[g] || 0) + 1; });
+  list.forEach((x) => { const g = sectorGroup(x.sector); secCounts[g] = (secCounts[g] || 0) + 1; });
   Object.entries(secCounts).sort((a, b) => b[1] - a[1])
     .forEach(([g, n]) => secSel.add(new Option(`${g} (${n})`, g)));
-  ["u-search", "u-verdict", "u-sector"].forEach((id) =>
-    document.getElementById(id).addEventListener("input", renderUniverseTable));
+  if (!renderUniverseControls._wired) {
+    ["u-search", "u-verdict", "u-sector"].forEach((id) =>
+      document.getElementById(id).addEventListener("input", renderUniverseTable));
+    renderUniverseControls._wired = true;
+  }
 }
 
 function renderUniverseTable() {
   const q = document.getElementById("u-search").value.trim().toLowerCase();
   const fv = document.getElementById("u-verdict").value;
   const fs = document.getElementById("u-sector").value;
-  let rows = DATA.universe.filter((x) =>
+  const list = uList();
+  let rows = list.filter((x) =>
     (!q || x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q)) &&
     (!fv || x.verdict === fv) && (!fs || sectorGroup(x.sector) === fs));
 
@@ -329,7 +347,7 @@ function renderUniverseTable() {
     <tr data-ticker="${x.ticker}">${U_COLS.map((c) =>
       `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
 
-  document.getElementById("u-count").textContent = `${rows.length} of ${DATA.universe.length}`;
+  document.getElementById("u-count").textContent = `${rows.length} of ${list.length}`;
   document.querySelectorAll("#u-table thead th").forEach((th) =>
     th.addEventListener("click", (e) => {
       if (e.target.closest(".info-btn")) return; // tapping the ⓘ shouldn't sort
@@ -973,12 +991,22 @@ function initPortfolioSubtabs() {
 function initUniverseSubtabs() {
   document.querySelectorAll("#u-subtabs .subtab").forEach((b) =>
     b.addEventListener("click", () => {
+      const u = b.dataset.usub;
       document.querySelectorAll("#u-subtabs .subtab").forEach((x) => x.classList.remove("active"));
       document.querySelectorAll("#tab-universe .usub").forEach((x) => x.classList.remove("active"));
       b.classList.add("active");
-      document.getElementById("usub-" + b.dataset.usub).classList.add("active");
-      // the universe price-cycler only needs to run while the Universe table is showing
-      if (b.dataset.usub === "universe") resumeUniverseCycler(); else pauseUniverseCycler();
+      if (u === "record") {
+        document.getElementById("usub-record").classList.add("active");
+        pauseUniverseCycler();
+      } else {
+        // S&P 500 and Global share the universe table, filtered by the index tag
+        uIndex = (u === "global") ? "Global" : "S&P 500";
+        document.getElementById("usub-universe").classList.add("active");
+        renderVerdictSummary();
+        renderUniverseControls();
+        renderUniverseTable();
+        resumeUniverseCycler();
+      }
     }));
 }
 
