@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0b1120" />
   <title>Jaleel Capital — QARP</title>
-  <link rel="stylesheet" href="styles.css?v=323d11e5" />
+  <link rel="stylesheet" href="styles.css?v=6720e654" />
 </head>
 <body>
 
@@ -49,6 +49,7 @@
       <button class="tab active" data-tab="framework">Approach</button>
       <button class="tab" data-tab="informed">Stay Informed</button>
       <button class="tab" data-tab="universe">Shariah-Compliant</button>
+      <button class="tab" data-tab="etfs">ETFs</button>
       <button class="tab" data-tab="portfolio">Portfolio</button>
     </nav>
 
@@ -89,6 +90,24 @@
       <div id="usub-record" class="usub">
         <p class="tab-intro">Every verdict, held accountable. How each call has performed <b>since it was first issued</b> — and whether the ranking actually predicts returns. <b>Alpha</b> = return vs. the S&amp;P over the same window, which strips out market drift.</p>
         <div id="scorecard"></div>
+      </div>
+    </section>
+
+    <!-- ETFs: Shariah-compliant ETF directory -->
+    <section id="tab-etfs" class="tabpanel">
+      <p class="tab-intro">Shariah-compliant <b>ETFs</b> — pre-screened baskets, each tracking a Shariah index (that index <i>is</i> the fund's Gate-1 screen, so individual holdings aren't re-screened). Not QARP-scored: this is a directory of cost, size, yield and performance. Tap any column to sort.</p>
+      <div class="controls">
+        <input id="etf-search" type="search" placeholder="Search ticker or name…" />
+        <select id="etf-class">
+          <option value="">All asset classes</option>
+        </select>
+        <span id="etf-count" class="count"></span>
+      </div>
+      <div class="table-wrap">
+        <table id="etf-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
       </div>
     </section>
 
@@ -236,7 +255,7 @@
     <div class="drawer-panel" id="drawer-panel"></div>
   </div>
 
-  <script src="crypto.js?v=323d11e5"></script>
-  <script src="app.js?v=323d11e5"></script>
+  <script src="crypto.js?v=6720e654"></script>
+  <script src="app.js?v=6720e654"></script>
 </body>
 </html>
