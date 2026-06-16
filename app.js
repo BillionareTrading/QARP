@@ -1002,6 +1002,10 @@ function initUniverseSubtabs() {
         document.getElementById("usub-etfs").classList.add("active");
         renderEtfs();
         pauseUniverseCycler();
+      } else if (u === "venture") {
+        document.getElementById("usub-venture").classList.add("active");
+        renderVenture();
+        pauseUniverseCycler();
       } else {
         // S&P 500 and Global share the universe table, filtered by the index tag
         uIndex = (u === "global") ? "Global" : "S&P 500";
@@ -1066,6 +1070,52 @@ function renderEtfs() {
     }));
 }
 
+/* ---------- render: Venture directory (Musaffa-HALAL high-risk small-caps, NOT QARP-scored) ---------- */
+const VEN_COLS = [
+  { key: "ticker", label: "Company", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name} · ${x.desc}</span></span>` },
+  { key: "grade", label: "Musaffa", align: "left", fmt: (x) => `<span class="chip" style="font-size:11px">${x.grade || "—"}</span>` },
+  { key: "mc", label: "Mkt Cap", fmt: (x) => x.mc != null ? "$" + x.mc.toFixed(1) + "B" : "—" },
+  { key: "rg", label: "Rev g", fmt: (x) => `<span class="${signClass(x.rg)}">${x.rg != null ? (x.rg > 0 ? "+" : "") + Math.round(x.rg) + "%" : "—"}</span>`, sortVal: (x) => x.rg ?? -999 },
+  { key: "gm", label: "Gross M", fmt: (x) => x.gm != null ? Math.round(x.gm) + "%" : "—" },
+  { key: "prof", label: "Profit", fmt: (x) => x.prof ? `<span class="pos">✓</span>` : `<span class="muted">—</span>`, sortVal: (x) => x.prof ? 1 : 0 },
+  { key: "moat", label: "Moat", fmt: (x) => `${x.moat}/5`, sortVal: (x) => x.moat ?? 0 },
+  { key: "vscore", label: "Venture Score", fmt: (x) => `<span class="qarp-cell">${fmtNum(x.vscore, 1)}</span>` },
+  { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
+  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+];
+let venSort = { key: "vscore", dir: -1 };
+
+function renderVenture() {
+  const data = DATA.venture || [];
+  if (!renderVenture._wired) {
+    document.getElementById("ven-search").addEventListener("input", renderVenture);
+    renderVenture._wired = true;
+  }
+  const q = document.getElementById("ven-search").value.trim().toLowerCase();
+  let rows = data.filter((x) => !q || x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q));
+  const col = VEN_COLS.find((c) => c.key === venSort.key);
+  const val = col.sortVal || ((x) => x[venSort.key]);
+  rows.sort((a, b) => {
+    const va = val(a), vb = val(b);
+    if (typeof va === "string") return venSort.dir * va.localeCompare(vb);
+    return venSort.dir * ((va ?? 0) - (vb ?? 0));
+  });
+  document.querySelector("#ven-table thead").innerHTML = `<tr>${VEN_COLS.map((c) => {
+    const arrow = venSort.key === c.key ? `<span class="arrow">${venSort.dir > 0 ? "▲" : "▼"}</span>` : "";
+    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}</th>`;
+  }).join("")}</tr>`;
+  document.querySelector("#ven-table tbody").innerHTML = rows.map((x) =>
+    `<tr>${VEN_COLS.map((c) => `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
+  document.getElementById("ven-count").textContent = `${rows.length} name${rows.length === 1 ? "" : "s"}`;
+  document.querySelectorAll("#ven-table thead th").forEach((th) =>
+    th.addEventListener("click", () => {
+      const k = th.dataset.key;
+      if (venSort.key === k) venSort.dir *= -1;
+      else venSort = { key: k, dir: ["ticker", "grade"].includes(k) ? 1 : -1 };
+      renderVenture();
+    }));
+}
+
 function renderAll() {
   document.getElementById("asof-date").textContent = asOfDate(DATA.meta.date);
   renderVerdictSummary();
@@ -1073,6 +1123,7 @@ function renderAll() {
   renderUniverseTable();
   renderScorecard();
   renderEtfs();
+  renderVenture();
   renderPortfolio();
   initTabs();
   startLive();

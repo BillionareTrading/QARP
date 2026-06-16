@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0b1120" />
   <title>Jaleel Capital — QARP</title>
-  <link rel="stylesheet" href="styles.css?v=fa4d9750" />
+  <link rel="stylesheet" href="styles.css?v=41ac0945" />
 </head>
 <body>
 
@@ -58,6 +58,7 @@
         <button class="subtab active" type="button" data-usub="sp500">S&amp;P 500</button>
         <button class="subtab" type="button" data-usub="global">Global</button>
         <button class="subtab" type="button" data-usub="etfs">ETFs</button>
+        <button class="subtab" type="button" data-usub="venture">Venture</button>
         <button class="subtab" type="button" data-usub="record">Track Record</button>
       </nav>
 
@@ -104,6 +105,21 @@
         </div>
         <div class="table-wrap">
           <table id="etf-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Venture sub-tab: Musaffa-HALAL high-risk small-cap growth -->
+      <div id="usub-venture" class="usub">
+        <p class="tab-intro" id="ven-intro"><b style="color:#e74c3c">⚠ HIGH RISK — speculative small-caps.</b> A separate <b>venture</b> track from the QARP universe: Musaffa-screened <b>HALAL</b> small-cap growth names, scored on a <b>Venture rubric</b> (growth · unit economics · cash runway · moat) — <b>NOT</b> QARP, and <b>NOT</b> capital-preservation. Treat as a <b>small, diversified basket</b> — most will lag, a few may win big. Shariah via Musaffa (AAOIFI); Muslim-Xchange cross-check pending. Tap any column to sort.</p>
+        <div class="controls">
+          <input id="ven-search" type="search" placeholder="Search ticker or name…" />
+          <span id="ven-count" class="count"></span>
+        </div>
+        <div class="table-wrap">
+          <table id="ven-table">
             <thead></thead>
             <tbody></tbody>
           </table>
@@ -255,7 +271,7 @@
     <div class="drawer-panel" id="drawer-panel"></div>
   </div>
 
-  <script src="crypto.js?v=fa4d9750"></script>
-  <script src="app.js?v=fa4d9750"></script>
+  <script src="crypto.js?v=41ac0945"></script>
+  <script src="app.js?v=41ac0945"></script>
 </body>
 </html>
