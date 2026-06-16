@@ -988,17 +988,34 @@ function initPortfolioSubtabs() {
     }));
 }
 
+// Secondary views shown ONLY under S&P 500: Universe table vs Track Record scorecard.
+function setSpView(view) {
+  document.querySelectorAll("#sp-views .subtab").forEach((x) =>
+    x.classList.toggle("active", x.dataset.spview === view));
+  document.getElementById("usub-universe").classList.toggle("active", view === "universe");
+  document.getElementById("usub-record").classList.toggle("active", view === "record");
+  if (view === "record") {
+    renderScorecard();
+    pauseUniverseCycler();
+  } else {
+    uIndex = "S&P 500";
+    renderVerdictSummary();
+    renderUniverseControls();
+    renderUniverseTable();
+    resumeUniverseCycler();
+  }
+}
+
 function initUniverseSubtabs() {
+  const spViews = document.getElementById("sp-views");
   document.querySelectorAll("#u-subtabs .subtab").forEach((b) =>
     b.addEventListener("click", () => {
       const u = b.dataset.usub;
       document.querySelectorAll("#u-subtabs .subtab").forEach((x) => x.classList.remove("active"));
       document.querySelectorAll("#tab-universe .usub").forEach((x) => x.classList.remove("active"));
       b.classList.add("active");
-      if (u === "record") {
-        document.getElementById("usub-record").classList.add("active");
-        pauseUniverseCycler();
-      } else if (u === "etfs") {
+      spViews.hidden = (u !== "sp500");   // the Universe/Track-Record row belongs to S&P 500 only
+      if (u === "etfs") {
         document.getElementById("usub-etfs").classList.add("active");
         renderEtfs();
         pauseUniverseCycler();
@@ -1006,16 +1023,19 @@ function initUniverseSubtabs() {
         document.getElementById("usub-venture").classList.add("active");
         renderVenture();
         pauseUniverseCycler();
-      } else {
-        // S&P 500 and Global share the universe table, filtered by the index tag
-        uIndex = (u === "global") ? "Global" : "S&P 500";
+      } else if (u === "global") {
+        uIndex = "Global";
         document.getElementById("usub-universe").classList.add("active");
         renderVerdictSummary();
         renderUniverseControls();
         renderUniverseTable();
         resumeUniverseCycler();
+      } else {                            // sp500 -> show the secondary nav, default to Universe
+        setSpView("universe");
       }
     }));
+  document.querySelectorAll("#sp-views .subtab").forEach((b) =>
+    b.addEventListener("click", () => setSpView(b.dataset.spview)));
 }
 
 /* ---------- boot ---------- */
