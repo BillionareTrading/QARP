@@ -1011,12 +1011,64 @@ function initUniverseSubtabs() {
 }
 
 /* ---------- boot ---------- */
+/* ---------- render: Shariah-compliant ETF directory (baskets, not QARP-scored) ---------- */
+const fmtAUM = (v) => v == null ? "—" : (v >= 1e9 ? "$" + (v / 1e9).toFixed(2) + "B" : "$" + Math.round(v / 1e6) + "M");
+const ETF_COLS = [
+  { key: "ticker", label: "Fund", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
+  { key: "issuer", label: "Issuer", align: "left", fmt: (x) => `<span class="muted">${x.issuer}</span>` },
+  { key: "asset_class", label: "Class", align: "left", fmt: (x) => `<span class="muted">${x.asset_class}</span>` },
+  { key: "methodology", label: "Methodology", align: "left", fmt: (x) => `<span class="muted" style="font-size:12px">${x.methodology}</span>` },
+  { key: "expense", label: "Expense", fmt: (x) => x.expense != null ? x.expense.toFixed(2) + "%" : "—" },
+  { key: "aum", label: "AUM", fmt: (x) => fmtAUM(x.aum) },
+  { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
+  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "yield", label: "Yield", fmt: (x) => x.yield != null ? x.yield.toFixed(2) + "%" : "—", sortVal: (x) => x.yield ?? -1 },
+  { key: "ytd", label: "YTD", fmt: (x) => `<span class="${signClass(x.ytd)}">${x.ytd != null ? (x.ytd > 0 ? "+" : "") + x.ytd.toFixed(1) + "%" : "—"}</span>`, sortVal: (x) => x.ytd ?? -999 },
+];
+let etfSort = { key: "aum", dir: -1 };  // default: biggest funds first
+
+function renderEtfs() {
+  const data = DATA.etfs || [];
+  const sel = document.getElementById("etf-class");
+  if (sel && sel.length <= 1) [...new Set(data.map((x) => x.asset_class))].forEach((c) => sel.add(new Option(c, c)));
+  if (!renderEtfs._wired) {
+    ["etf-search", "etf-class"].forEach((id) => document.getElementById(id).addEventListener("input", renderEtfs));
+    renderEtfs._wired = true;
+  }
+  const q = document.getElementById("etf-search").value.trim().toLowerCase();
+  const fc = document.getElementById("etf-class").value;
+  let rows = data.filter((x) =>
+    (!q || x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q)) && (!fc || x.asset_class === fc));
+  const col = ETF_COLS.find((c) => c.key === etfSort.key);
+  const val = col.sortVal || ((x) => x[etfSort.key]);
+  rows.sort((a, b) => {
+    const va = val(a), vb = val(b);
+    if (typeof va === "string") return etfSort.dir * va.localeCompare(vb);
+    return etfSort.dir * ((va ?? 0) - (vb ?? 0));
+  });
+  document.querySelector("#etf-table thead").innerHTML = `<tr>${ETF_COLS.map((c) => {
+    const arrow = etfSort.key === c.key ? `<span class="arrow">${etfSort.dir > 0 ? "▲" : "▼"}</span>` : "";
+    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}</th>`;
+  }).join("")}</tr>`;
+  document.querySelector("#etf-table tbody").innerHTML = rows.map((x) =>
+    `<tr>${ETF_COLS.map((c) => `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
+  document.getElementById("etf-count").textContent = `${rows.length} ETF${rows.length === 1 ? "" : "s"}`;
+  document.querySelectorAll("#etf-table thead th").forEach((th) =>
+    th.addEventListener("click", () => {
+      const k = th.dataset.key;
+      if (etfSort.key === k) etfSort.dir *= -1;
+      else etfSort = { key: k, dir: ["ticker", "issuer", "asset_class", "methodology"].includes(k) ? 1 : -1 };
+      renderEtfs();
+    }));
+}
+
 function renderAll() {
   document.getElementById("asof-date").textContent = asOfDate(DATA.meta.date);
   renderVerdictSummary();
   renderUniverseControls();
   renderUniverseTable();
   renderScorecard();
+  renderEtfs();
   renderPortfolio();
   initTabs();
   startLive();
