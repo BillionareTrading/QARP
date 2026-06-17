@@ -857,9 +857,33 @@ function newsRowHtml(it) {
     <span class="news-row-right"><span class="news-src">${esc(it.source || "—")}</span><span class="news-time">${relTime(it.datetime)}</span></span>
   </a>`;
 }
+// Only surface news from trusted, freely-accessible financial sources — no paywalls / sign-up walls
+// (Bloomberg, WSJ, FT, Barron's, Seeking Alpha are excluded; they gate articles behind a login).
+// Two checks because Finnhub gives DIRECT urls for general news but finnhub.io REDIRECTS for
+// company news (real publisher only in the `source` field) — so we match domain OR source name.
+const TRUSTED_NEWS_DOMAINS = [
+  "reuters.com", "apnews.com", "cnbc.com", "yahoo.com", "marketwatch.com", "fool.com",
+  "investing.com", "benzinga.com", "forbes.com", "nasdaq.com", "zacks.com", "kiplinger.com",
+  "thestreet.com", "barchart.com", "prnewswire.com", "globenewswire.com", "businesswire.com",
+];
+const TRUSTED_NEWS_SOURCES = [
+  "reuters", "associated press", "cnbc", "yahoo", "marketwatch", "motley fool", "fool",
+  "investing.com", "benzinga", "forbes", "nasdaq", "zacks", "kiplinger", "thestreet",
+  "barchart", "chartmill", "pr newswire", "prnewswire", "globenewswire", "business wire", "businesswire",
+];
+function newsDomain(u) {
+  try { return new URL(u).hostname.replace(/^www\./, "").toLowerCase(); } catch (e) { return ""; }
+}
+function isTrustedSource(it) {
+  const d = newsDomain(it.url);
+  if (TRUSTED_NEWS_DOMAINS.some((t) => d === t || d.endsWith("." + t))) return true;
+  const s = (it.source || "").toLowerCase();
+  return TRUSTED_NEWS_SOURCES.some((t) => s.includes(t));
+}
+
 // split items into photo cards + headline rows (shared by Stay Informed and Portfolio news)
 function renderNewsFeed(container, items, emptyLabel) {
-  items = items.filter((it) => it && it.headline && it.url);
+  items = items.filter((it) => it && it.headline && it.url && isTrustedSource(it));
   if (!items.length) { container.innerHTML = `<p class="muted">${esc(emptyLabel || "No recent headlines.")}</p>`; return; }
   const freq = {};
   items.forEach((it) => { const im = safeUrl(it.image); if (im !== "#") freq[im] = (freq[im] || 0) + 1; });
