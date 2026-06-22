@@ -30,6 +30,7 @@ const TIPS = {
   verdict: { t: "Verdict", d: "The QARP score turned into a call: ≥85 Strongest, ≥72 Strong Buy, ≥66 Buy, ≥60 Hold-Qual, 35–59 Avoid, <35 Strong Avoid." },
   gate: { t: "Momentum gate", d: "Value decides WHAT to buy; the tape decides WHEN. GO = price above its 50-day average (uptrend — a Buy verdict is actionable). TURN = reclaimed the 20-day but still under the 50-day (bottoming attempt, early). WAIT = below both — the knife is still falling; the verdict stands but acting on it means fighting the tape. Kept beside QARP, never mixed into the score." },
   calls: { t: "Calls", d: "Every verdict this name has received, as dated calls. Each call locks its entry price when issued: closed calls (🔒) show the return locked when the verdict changed on a re-score; the open call (→) marks to the live price. Daily price moves never change a call — only deliberate re-scores do." },
+  catalyst: { t: "Catalyst (PREVIEW — not in QARP yet)", d: "Does the cheapness have a near-term path to close, or is it a value trap? SET = strong catalyst (insider cluster/CEO buying, tape confirming). WATCH = developing. WEAK = cheap but no specific driver. NONE = no catalyst and insiders leaving — value-trap risk. ⚠ = under the proposed rule this name's 'cheap' score would be capped (cheap with no catalyst). SHADOW MODE: shown for evaluation, does NOT affect the live QARP/verdict until the Day-20 review. See CATALYST_FACTOR_PROPOSAL.md." },
   div: { t: "Dividends", d: "Forward annual dividend per share, with the yield (rate ÷ current price) beneath. N/A = the company pays no dividend. Refreshed in the daily build." },
   div_income: { t: "Dividend income", d: "What YOUR position pays per year: shares × annual dividend rate. N/A = non-payer. The KPI strip shows the portfolio total." },
   gain: { t: "Unrealized P/L", d: "Paper profit/loss on positions you still hold (current value minus cost basis). It is NOT money in the bank — it changes with every tick and excludes anything already sold. Realized profits from completed sells will be tracked separately." },
@@ -138,6 +139,15 @@ function momGate(x) {
 function patchGateCells(ticker, u) {
   document.querySelectorAll(`#u-table tr[data-ticker="${ticker}"] .mg, #p-table tr[data-ticker="${ticker}"] .mg`)
     .forEach((el) => { el.outerHTML = momGate(u); });
+}
+// Catalyst tag (PREVIEW / shadow — does not affect QARP yet). Colour by strength; ⚠ = the
+// proposed DCF cap would downgrade this name's "cheap" score (cheap with no catalyst = value trap).
+function catalystCell(x) {
+  const c = x.catalyst;
+  if (!c) return `<span class="muted">—</span>`;
+  const cls = { SET: "cat-set", WATCH: "cat-watch", WEAK: "cat-weak", NONE: "cat-none" }[c.label] || "cat-weak";
+  const warn = c.would_cut ? `<span class="cat-warn" title="cheap, but no catalyst — under the proposed rule the value score would be capped (shadow only)">⚠</span>` : "";
+  return `<span class="cat ${cls}" title="catalyst ${c.label} (${c.score}/3) — PREVIEW, not in the live QARP yet">${c.label}</span>${warn}`;
 }
 
 /* ---------- SVG donut ---------- */
@@ -292,6 +302,7 @@ const U_COLS = [
   { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
   { key: "gate", label: "Gate", fmt: (x) => momGate(x),
     sortVal: (x) => { const m = gateNow(x); return m ? { GO: 2, TURN: 1, WAIT: 0 }[m.state] : -1; } },
+  { key: "catalyst", label: "Catalyst", fmt: (x) => catalystCell(x), sortVal: (x) => (x.catalyst ? x.catalyst.score : -1) },
   { key: "calls", label: "Calls", align: "left", fmt: (x) => callsCell(x.ticker, x.price),
     sortVal: (x) => openCallReturn(x.ticker, x.price) },
 ];

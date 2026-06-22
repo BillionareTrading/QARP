@@ -326,6 +326,13 @@ tbody tr:hover { background: var(--surface-2); }
 .mg-go { background: var(--pos-bg); color: var(--pos); }
 .mg-turn { background: #fff4e0; color: #b45309; }
 .mg-wait { background: var(--neg-bg); color: var(--neg); }
+/* Catalyst preview pills (shadow factor — not in live QARP yet) */
+.cat { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 10.5px; font-weight: 800; letter-spacing: .03em; }
+.cat-set { background: var(--pos-bg); color: var(--pos); }
+.cat-watch { background: #fff4e0; color: #b45309; }
+.cat-weak { background: var(--line); color: var(--ink-2); }
+.cat-none { background: var(--neg-bg); color: var(--neg); }
+.cat-warn { color: #b45309; font-weight: 800; margin-left: 3px; cursor: help; }
 
 /* Track Record / Verdict Scorecard */
 .sc-headline { margin-bottom: 14px; }
