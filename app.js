@@ -469,7 +469,7 @@ function openDrawer(ticker) {
   if (has(d.mktcap_b)) kv.push(["Market cap", "$" + fmtNum(d.mktcap_b, 1) + "B"]);
   if (has(d.shariah_grade)) kv.push(["Shariah (Musaffa)", d.shariah_grade]);
   if (has(d.confidence)) kv.push(["Confidence", d.confidence]);
-  if (d.catalyst) kv.push(["Catalyst (preview)", `<b>${d.catalyst.label}</b> — ${esc(d.catalyst.note || "").replace(/^[A-Z]+ \(\d\/3\) — /, "").replace(/ PREVIEW.*$/, "")}`]);
+  if (d.catalyst) kv.push(["Catalyst (preview)", `<b>${d.catalyst.label}</b> — ${esc(d.catalyst.note || "")}`]);
   if (has(d.insider)) kv.push(["Insider", d.insider]);
   if (has(d.buzz)) kv.push(["Buzz", `${d.buzz} — ${d.buzz_signal || ""}`]);
   if (p) {
