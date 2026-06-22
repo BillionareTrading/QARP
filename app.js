@@ -146,8 +146,9 @@ function catalystCell(x) {
   const c = x.catalyst;
   if (!c) return `<span class="muted">—</span>`;
   const cls = { SET: "cat-set", WATCH: "cat-watch", WEAK: "cat-weak", NONE: "cat-none" }[c.label] || "cat-weak";
-  const warn = c.would_cut ? `<span class="cat-warn" title="cheap, but no catalyst — under the proposed rule the value score would be capped (shadow only)">⚠</span>` : "";
-  return `<span class="cat ${cls}" title="catalyst ${c.label} (${c.score}/3) — PREVIEW, not in the live QARP yet">${c.label}</span>${warn}`;
+  const note = esc(c.note || `Catalyst ${c.label}`);   // per-company explanation on hover
+  const warn = c.would_cut ? `<span class="cat-warn" title="${note}">⚠</span>` : "";
+  return `<span class="cat ${cls}" title="${note}">${c.label}</span>${warn}`;
 }
 
 /* ---------- SVG donut ---------- */
@@ -468,6 +469,7 @@ function openDrawer(ticker) {
   if (has(d.mktcap_b)) kv.push(["Market cap", "$" + fmtNum(d.mktcap_b, 1) + "B"]);
   if (has(d.shariah_grade)) kv.push(["Shariah (Musaffa)", d.shariah_grade]);
   if (has(d.confidence)) kv.push(["Confidence", d.confidence]);
+  if (d.catalyst) kv.push(["Catalyst (preview)", `<b>${d.catalyst.label}</b> — ${esc(d.catalyst.note || "").replace(/^[A-Z]+ \(\d\/3\) — /, "").replace(/ PREVIEW.*$/, "")}`]);
   if (has(d.insider)) kv.push(["Insider", d.insider]);
   if (has(d.buzz)) kv.push(["Buzz", `${d.buzz} — ${d.buzz_signal || ""}`]);
   if (p) {
