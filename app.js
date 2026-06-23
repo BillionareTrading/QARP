@@ -689,6 +689,33 @@ function renderDaily() {
   }
   renderDailyTicker();
   renderDailyWire();
+  loadLeadArticle();
+}
+
+// Replace the templated lead with the AI-written market column when one exists for today.
+// daily_brief.json is non-sensitive market commentary (no holdings) — published as a plain file.
+async function loadLeadArticle() {
+  try {
+    const res = await fetch(`daily_brief.json?cb=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) return;
+    const b = await res.json();
+    if (!b || !b.body_html || !b.date || b.date < (DATA.meta && DATA.meta.date)) return; // stale -> keep templated
+    const el = document.getElementById("paper-lead");
+    if (!el) return;
+    el.innerHTML = `<div class="lead-kicker">${esc(b.kicker || "The Market Today")}</div>`
+      + `<h2 class="lead-head">${esc(b.headline || "")}</h2>`
+      + `<div class="lead-body">${b.body_html}</div>`
+      + `<div class="lead-byline">${esc(b.byline || "Jaleel Capital Daily · market desk")}${b.generated_at ? " · " + esc(b.generated_at) : ""}</div>`;
+  } catch (e) { /* keep the templated lead */ }
+}
+
+// markets-only: keep wire items that are actually about markets/finance (drops sports / pure geopolitics)
+const MARKET_RE = /\b(stocks?|shares?|markets?|earnings|profit|revenue|guidance|dividend|nasdaq|dow|s&p|treasur|bond|yield|fed|federal reserve|rate cut|rate hike|inflation|econom|gdp|ipo|merger|acquisition|buyback|quarter|fiscal|wall street|index|etf|equit|investor|trading|tariff|oil|crude|gold|crypto|bitcoin|dollar|currenc|recession|rally|sell-?off|valuation|analyst|upgrade|downgrade|price target|billion|trillion|nyse|bank|hedge fund)\b/i;
+// drop lifestyle / self-help / sports / entertainment that the general feed mixes in
+const MARKET_NEG_RE = /\b(luckier|happier|happiness|productivity|self-?help|recipe|workout|fitness|diet|relationship|parenting|celebrity|royal|sports?|nfl|nba|mlb|nhl|golf|soccer|tennis|olympic|habits|morning routine|successful people|life lessons|millionaire mindset|gift guide|travel deal)\b/i;
+function isMarketRelevant(it) {
+  const t = (it.headline || "") + " " + (it.summary || "");
+  return !MARKET_NEG_RE.test(t) && MARKET_RE.test(t);
 }
 
 async function renderDailyTicker() {
@@ -715,8 +742,8 @@ async function renderDailyWire() {
   try {
     const res = await fetch(`https://finnhub.io/api/v1/news?category=general&token=${key}`, { cache: "no-store" });
     let items = await res.json();
-    items = (Array.isArray(items) ? items : []).filter((it) => it && it.headline && it.url && isTrustedSource(it)).slice(0, 6);
-    if (!items.length) { el.innerHTML = `<div class="wire-head">On the Wire</div><p class="muted">No trusted-source headlines right now.</p>`; return; }
+    items = (Array.isArray(items) ? items : []).filter((it) => it && it.headline && it.url && isTrustedSource(it) && isMarketRelevant(it)).slice(0, 6);
+    if (!items.length) { el.innerHTML = `<div class="wire-head">On the Wire</div><p class="muted">No market headlines right now.</p>`; return; }
     el.innerHTML = `<div class="wire-head">On the Wire</div>` + items.map((it) => `
       <article class="wire-item">
         <h4 class="wire-h">${esc(it.headline)}</h4>
