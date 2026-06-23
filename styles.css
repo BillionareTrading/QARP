@@ -341,13 +341,6 @@ tbody tr:hover { background: var(--surface-2); }
 .sp-fill { display: block; height: 100%; border-radius: 999px; }
 .sp-fill.pos { background: var(--pos); } .sp-fill.neg { background: var(--neg); }
 .sp-val { flex: 0 0 52px; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
-.fit-svg { width: 100%; height: auto; display: block; }
-.fit-line { stroke: var(--brand); stroke-width: 1.5; stroke-dasharray: 4 3; opacity: .8; }
-.fit-axis { stroke: var(--line); stroke-width: 1; }
-.fit-ax-lbl { fill: var(--ink-2); font-size: 8px; }
-.fit-txt { fill: var(--ink-2); font-size: 8px; }
-.fit-dot.pos { fill: var(--pos); } .fit-dot.neg { fill: var(--neg); }
-.fit-note { font-size: 12px; margin: 6px 0 0; line-height: 1.5; }
 
 /* Track Record / Verdict Scorecard */
 .sc-headline { margin-bottom: 14px; }
@@ -414,7 +407,7 @@ tbody tr:hover { background: var(--surface-2); }
 
 /* the two allocation cards become equal-height flex columns; their content fills/centers
    so the shorter one never shows an empty box */
-.p-alloc { margin-bottom: 18px; }
+.p-alloc { margin-bottom: 18px; align-items: start; }   /* cards hug their content — no stretch/dead space */
 .p-alloc > .card { display: flex; flex-direction: column; }
 #sector-chart { flex: 1; }
 
