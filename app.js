@@ -423,7 +423,53 @@ function renderPortfolio() {
     donut(secs.map((s) => ({ value: s.value, color: s.color }))) +
     legend(secs.map((s) => ({ label: s.sector, right: s.weight_pct + "%", color: s.color })));
 
+  renderSectorPerformance();
   renderPortfolioTable();
+}
+
+// Performance by sector + an allocation-vs-performance scatter with a least-squares fit:
+// are your bigger bets in your winning sectors, or your losing ones?
+function renderSectorPerformance() {
+  const perfEl = document.getElementById("sector-perf"), fitEl = document.getElementById("sector-fit");
+  if (!perfEl || !fitEl) return;
+  const secs = (DATA.sectors || []).filter((s) => s.gain_pct != null && s.cost);
+  if (!secs.length) { perfEl.innerHTML = `<p class="muted">No sector performance yet.</p>`; fitEl.innerHTML = ""; return; }
+
+  // performance bars, best -> worst
+  const perf = [...secs].sort((a, b) => b.gain_pct - a.gain_pct);
+  const maxAbs = Math.max(1, ...perf.map((s) => Math.abs(s.gain_pct)));
+  perfEl.innerHTML = perf.map((s) => {
+    const pos = s.gain_pct >= 0, w = (Math.abs(s.gain_pct) / maxAbs * 100).toFixed(0);
+    return `<div class="sp-row"><span class="sp-lbl">${s.sector}</span>`
+      + `<span class="sp-track"><span class="sp-fill ${pos ? "pos" : "neg"}" style="width:${w}%"></span></span>`
+      + `<span class="sp-val ${signClass(s.gain_pct)}">${fmtPct(s.gain_pct)}</span></div>`;
+  }).join("");
+
+  if (secs.length < 2) { fitEl.innerHTML = `<p class="muted">Need 2+ sectors to compare allocation vs. performance.</p>`; return; }
+  // least-squares fit of gain% (y) on weight% (x)
+  const pts = secs.map((s) => ({ x: s.weight_pct, y: s.gain_pct, label: s.sector }));
+  const n = pts.length, mx = pts.reduce((a, p) => a + p.x, 0) / n, my = pts.reduce((a, p) => a + p.y, 0) / n;
+  let sxy = 0, sxx = 0, syy = 0;
+  pts.forEach((p) => { sxy += (p.x - mx) * (p.y - my); sxx += (p.x - mx) ** 2; syy += (p.y - my) ** 2; });
+  const slope = sxx ? sxy / sxx : 0, intercept = my - slope * mx, r = (sxx && syy) ? sxy / Math.sqrt(sxx * syy) : 0;
+  // svg scatter
+  const W = 340, H = 200, L = 40, Rm = 14, T = 14, Bm = 26;
+  const xmax = Math.max(...pts.map((p) => p.x)) * 1.1 || 1;
+  let ymin = Math.min(0, ...pts.map((p) => p.y)), ymax = Math.max(0, ...pts.map((p) => p.y));
+  const pd = (ymax - ymin || 2) * 0.18; ymin -= pd; ymax += pd;
+  const X = (v) => L + v / xmax * (W - L - Rm), Y = (v) => T + (ymax - v) / (ymax - ymin) * (H - T - Bm);
+  const reg = `<line x1="${X(0).toFixed(1)}" y1="${Y(intercept).toFixed(1)}" x2="${X(xmax).toFixed(1)}" y2="${Y(intercept + slope * xmax).toFixed(1)}" class="fit-line"/>`;
+  const dots = pts.map((p) => `<circle cx="${X(p.x).toFixed(1)}" cy="${Y(p.y).toFixed(1)}" r="4" class="fit-dot ${p.y >= 0 ? "pos" : "neg"}"><title>${esc(p.label)}: ${p.x}% weight, ${fmtPct(p.y)}</title></circle>`
+    + `<text x="${(X(p.x) + 6).toFixed(1)}" y="${(Y(p.y) + 3).toFixed(1)}" class="fit-txt">${esc(p.label.split("/")[0].slice(0, 8))}</text>`).join("");
+  const svg = `<svg viewBox="0 0 ${W} ${H}" class="fit-svg" preserveAspectRatio="xMidYMid meet">`
+    + `<line x1="${L}" y1="${Y(0).toFixed(1)}" x2="${W - Rm}" y2="${Y(0).toFixed(1)}" class="fit-axis"/>`
+    + `<text x="${W - Rm}" y="${(Y(0) - 4).toFixed(1)}" class="fit-ax-lbl" text-anchor="end">weight →</text>`
+    + `<text x="4" y="${T + 2}" class="fit-ax-lbl">gain%</text>${reg}${dots}</svg>`;
+  const dir = slope > 0.03 ? "pos" : slope < -0.03 ? "neg" : "flat";
+  const verdict = dir === "pos" ? `<b class="pos">Tilted toward winners</b> — your bigger sector bets are the better performers.`
+    : dir === "neg" ? `<b class="neg">Concentrated in laggards</b> — your biggest allocations are your weaker sectors, a concentration risk worth watching.`
+    : `<b>No clear tilt</b> — allocation and performance look roughly unrelated.`;
+  fitEl.innerHTML = svg + `<p class="fit-note">${verdict} <span class="muted">(slope ${slope >= 0 ? "+" : ""}${slope.toFixed(2)}% gain per +1% weight · r ${r >= 0 ? "+" : ""}${r.toFixed(2)} · ${n} sectors — directional, not statistical.)</span></p>`;
 }
 
 function renderPortfolioTable() {
