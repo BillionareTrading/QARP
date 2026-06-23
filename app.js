@@ -630,7 +630,7 @@ let dailyTimer = null;
 function enterDaily() {
   renderDaily();
   if (dailyTimer) clearInterval(dailyTimer);
-  dailyTimer = setInterval(() => { renderDailyTicker(); renderDailyWire(); }, 5 * 60000); // refresh live bits
+  dailyTimer = setInterval(() => { renderDailyTicker(); loadDailyBrief(); }, 5 * 60000); // refresh ticker + re-pull the brief
 }
 function leaveDaily() { if (dailyTimer) { clearInterval(dailyTimer); dailyTimer = null; } }
 
@@ -688,34 +688,39 @@ function renderDaily() {
       + `<div><div class="mv-lbl neg">Decliners</div><ul class="mv-list">${sorted.slice(-4).reverse().map(row).join("")}</ul></div></div>`;
   }
   renderDailyTicker();
-  renderDailyWire();
-  loadLeadArticle();
+  loadDailyBrief();    // original lead column + briefs from daily_brief.json (NO external links)
 }
 
-// Replace the templated lead with the AI-written market column when one exists for today.
-// daily_brief.json is non-sensitive market commentary (no holdings) — published as a plain file.
-async function loadLeadArticle() {
+// The Daily page's written content comes from daily_brief.json — an original market column plus
+// short original briefs. Everything is readable on the page; there are no links to click out to.
+// (Non-sensitive market commentary — no holdings or dollar figures.)
+async function loadDailyBrief() {
+  let b = null;
   try {
     const res = await fetch(`daily_brief.json?cb=${Date.now()}`, { cache: "no-store" });
-    if (!res.ok) return;
-    const b = await res.json();
-    if (!b || !b.body_html || !b.date || b.date < (DATA.meta && DATA.meta.date)) return; // stale -> keep templated
+    if (res.ok) b = await res.json();
+  } catch (e) { /* fall back gracefully */ }
+  const fresh = !!(b && b.date && DATA.meta && b.date >= DATA.meta.date);
+  if (fresh && b.body_html) {
     const el = document.getElementById("paper-lead");
-    if (!el) return;
-    el.innerHTML = `<div class="lead-kicker">${esc(b.kicker || "The Market Today")}</div>`
+    if (el) el.innerHTML = `<div class="lead-kicker">${esc(b.kicker || "The Market Today")}</div>`
       + `<h2 class="lead-head">${esc(b.headline || "")}</h2>`
       + `<div class="lead-body">${b.body_html}</div>`
       + `<div class="lead-byline">${esc(b.byline || "Jaleel Capital Daily · market desk")}${b.generated_at ? " · " + esc(b.generated_at) : ""}</div>`;
-  } catch (e) { /* keep the templated lead */ }
+  }
+  renderBriefs(fresh && Array.isArray(b.briefs) ? b.briefs : null);
 }
 
-// markets-only: keep wire items that are actually about markets/finance (drops sports / pure geopolitics)
-const MARKET_RE = /\b(stocks?|shares?|markets?|earnings|profit|revenue|guidance|dividend|nasdaq|dow|s&p|treasur|bond|yield|fed|federal reserve|rate cut|rate hike|inflation|econom|gdp|ipo|merger|acquisition|buyback|quarter|fiscal|wall street|index|etf|equit|investor|trading|tariff|oil|crude|gold|crypto|bitcoin|dollar|currenc|recession|rally|sell-?off|valuation|analyst|upgrade|downgrade|price target|billion|trillion|nyse|bank|hedge fund)\b/i;
-// drop lifestyle / self-help / sports / entertainment that the general feed mixes in
-const MARKET_NEG_RE = /\b(luckier|happier|happiness|productivity|self-?help|recipe|workout|fitness|diet|relationship|parenting|celebrity|royal|sports?|nfl|nba|mlb|nhl|golf|soccer|tennis|olympic|habits|morning routine|successful people|life lessons|millionaire mindset|gift guide|travel deal)\b/i;
-function isMarketRelevant(it) {
-  const t = (it.headline || "") + " " + (it.summary || "");
-  return !MARKET_NEG_RE.test(t) && MARKET_RE.test(t);
+// Original written briefs — the content is on the page, no links to follow.
+function renderBriefs(briefs) {
+  const el = document.getElementById("paper-wire");
+  if (!el) return;
+  if (!Array.isArray(briefs) || !briefs.length) {
+    el.innerHTML = `<div class="wire-head">Market Briefs</div><p class="muted">Today's briefs are written each session — check back shortly.</p>`;
+    return;
+  }
+  el.innerHTML = `<div class="wire-head">Market Briefs</div>` + briefs.map((br) =>
+    `<article class="wire-item"><h4 class="wire-h">${esc(br.headline || "")}</h4><p class="wire-sum">${esc(br.body || "")}</p></article>`).join("");
 }
 
 async function renderDailyTicker() {
@@ -733,25 +738,6 @@ async function renderDailyTicker() {
   el.innerHTML = cards.join("");
 }
 
-async function renderDailyWire() {
-  const el = document.getElementById("paper-wire");
-  if (!el) return;
-  const key = DATA.meta && DATA.meta.finnhub_key;
-  if (!key) { el.innerHTML = `<div class="wire-head">On the Wire</div><p class="muted">Headlines need the API key.</p>`; return; }
-  el.innerHTML = `<div class="wire-head">On the Wire</div><p class="news-loading">Loading headlines…</p>`;
-  try {
-    const res = await fetch(`https://finnhub.io/api/v1/news?category=general&token=${key}`, { cache: "no-store" });
-    let items = await res.json();
-    items = (Array.isArray(items) ? items : []).filter((it) => it && it.headline && it.url && isTrustedSource(it) && isMarketRelevant(it)).slice(0, 6);
-    if (!items.length) { el.innerHTML = `<div class="wire-head">On the Wire</div><p class="muted">No market headlines right now.</p>`; return; }
-    el.innerHTML = `<div class="wire-head">On the Wire</div>` + items.map((it) => `
-      <article class="wire-item">
-        <h4 class="wire-h">${esc(it.headline)}</h4>
-        ${it.summary ? `<p class="wire-sum">${esc(String(it.summary).slice(0, 280))}${String(it.summary).length > 280 ? "…" : ""}</p>` : ""}
-        <div class="wire-meta"><span class="news-src">${esc(it.source || "—")}</span> · ${relTime(it.datetime)} · <a href="${safeUrl(it.url)}" target="_blank" rel="noopener noreferrer">source ↗</a></div>
-      </article>`).join("");
-  } catch (e) { el.innerHTML = `<div class="wire-head">On the Wire</div><p class="muted">Couldn't load headlines — try again shortly.</p>`; }
-}
 
 /* ---------- live prices (Finnhub, browser-side) ---------- */
 const LIVE_INTERVAL_MS = 60000;  // holdings refresh ~every 60s (≈17 calls/min)
