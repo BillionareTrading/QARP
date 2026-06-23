@@ -407,7 +407,7 @@ tbody tr:hover { background: var(--surface-2); }
 
 /* the two allocation cards become equal-height flex columns; their content fills/centers
    so the shorter one never shows an empty box */
-.p-alloc { margin-bottom: 18px; align-items: start; }   /* cards hug their content — no stretch/dead space */
+.p-alloc { margin-bottom: 18px; align-items: stretch; }   /* both cards equal height — bottoms flush */
 .p-alloc > .card { display: flex; flex-direction: column; }
 #sector-chart { flex: 1; }
 
