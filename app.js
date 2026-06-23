@@ -719,8 +719,8 @@ function renderBriefs(briefs) {
     el.innerHTML = `<div class="wire-head">Market Briefs</div><p class="muted">Today's briefs are written each session — check back shortly.</p>`;
     return;
   }
-  el.innerHTML = `<div class="wire-head">Market Briefs</div>` + briefs.map((br) =>
-    `<article class="wire-item"><h4 class="wire-h">${esc(br.headline || "")}</h4><p class="wire-sum">${esc(br.body || "")}</p></article>`).join("");
+  el.innerHTML = `<div class="wire-head">Market Briefs</div><div class="wire-grid">` + briefs.map((br) =>
+    `<article class="wire-item"><h4 class="wire-h">${esc(br.headline || "")}</h4><p class="wire-sum">${esc(br.body || "")}</p></article>`).join("") + `</div>`;
 }
 
 async function renderDailyTicker() {
