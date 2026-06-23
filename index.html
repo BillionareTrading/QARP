@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0b1120" />
   <title>Jaleel Capital — QARP</title>
-  <link rel="stylesheet" href="styles.css?v=e6f1e7be" />
+  <link rel="stylesheet" href="styles.css?v=f2cc521e" />
 </head>
 <body>
 
@@ -46,11 +46,35 @@
 
     <!-- Tabs -->
     <nav class="tabs">
-      <button class="tab active" data-tab="framework">Approach</button>
+      <button class="tab active" data-tab="daily">Daily</button>
       <button class="tab" data-tab="informed">Stay Informed</button>
       <button class="tab" data-tab="universe">Shariah-Compliant</button>
       <button class="tab" data-tab="portfolio">Portfolio</button>
+      <button class="tab" data-tab="framework">Method</button>
     </nav>
+
+    <!-- Daily: newspaper-style market front page -->
+    <section id="tab-daily" class="tabpanel active">
+      <div class="paper">
+        <header class="paper-masthead">
+          <div class="paper-name">Jaleel Capital Daily</div>
+          <div class="paper-meta"><span id="paper-date">—</span> · Market Edition · <span id="paper-asof">—</span></div>
+        </header>
+        <div id="paper-ticker" class="paper-ticker"></div>
+        <div class="paper-body">
+          <div class="paper-main">
+            <article id="paper-lead" class="paper-lead"></article>
+            <section id="paper-wire" class="paper-wire"></section>
+          </div>
+          <aside class="paper-side">
+            <section id="paper-portfolio"></section>
+            <section id="paper-sectors"></section>
+            <section id="paper-movers"></section>
+          </aside>
+        </div>
+        <p class="paper-foot">Original market summary generated from live data — not reprinted from any publisher. Headlines link to their source. Informational only · not investment advice.</p>
+      </div>
+    </section>
 
     <!-- Shariah-Compliant universe -->
     <section id="tab-universe" class="tabpanel">
@@ -188,8 +212,8 @@
       <div class="news-feed" id="news-list"></div>
     </section>
 
-    <!-- Approach: goal + framework -->
-    <section id="tab-framework" class="tabpanel active">
+    <!-- Method: goal + framework (moved off the landing page) -->
+    <section id="tab-framework" class="tabpanel">
       <div class="card fw-goal">
         <h3>The goal</h3>
         <p class="fw-lead">To navigate the US stock market with <b>knowledge instead of guesswork</b> — staying deeply informed, sidestepping overpriced names, and putting <b>capital preservation first</b>. Every stock is screened for Shariah compliance, then scored on its <b class="fw-q">quality</b> and its <b class="fw-v">price</b>. Below is the framework that turns that discipline into a single number.</p>
@@ -277,7 +301,7 @@
     <div class="drawer-panel" id="drawer-panel"></div>
   </div>
 
-  <script src="crypto.js?v=e6f1e7be"></script>
-  <script src="app.js?v=e6f1e7be"></script>
+  <script src="crypto.js?v=f2cc521e"></script>
+  <script src="app.js?v=f2cc521e"></script>
 </body>
 </html>
