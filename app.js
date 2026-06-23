@@ -620,8 +620,110 @@ function initTabs() {
       t.classList.add("active");
       document.getElementById("tab-" + t.dataset.tab).classList.add("active");
       if (t.dataset.tab === "informed") enterInformed(); else leaveInformed();
+      if (t.dataset.tab === "daily") enterDaily(); else leaveDaily();
       if (t.dataset.tab === "universe") resumeUniverseCycler(); else pauseUniverseCycler();
     }));
+}
+
+/* ---------- Daily: newspaper-style market front page (data-driven v1) ---------- */
+let dailyTimer = null;
+function enterDaily() {
+  renderDaily();
+  if (dailyTimer) clearInterval(dailyTimer);
+  dailyTimer = setInterval(() => { renderDailyTicker(); renderDailyWire(); }, 5 * 60000); // refresh live bits
+}
+function leaveDaily() { if (dailyTimer) { clearInterval(dailyTimer); dailyTimer = null; } }
+
+function renderDaily() {
+  const dEl = document.getElementById("paper-date");
+  if (!dEl) return;
+  dEl.textContent = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", year: "numeric" }).format(new Date());
+  const aoEl = document.getElementById("paper-asof");
+  if (aoEl) aoEl.textContent = "as of " + (document.getElementById("asof-date")?.textContent || (DATA.meta && DATA.meta.date) || "");
+
+  const uni = (DATA.universe || []).filter((x) => x.day_pct != null);
+  const port = (DATA.portfolio || []).filter((h) => h.day_pct != null);
+  const secMoves = () => {
+    const by = {};
+    uni.forEach((x) => { const s = sectorGroup(x.sector); (by[s] = by[s] || []).push(x.day_pct); });
+    return Object.entries(by).map(([s, a]) => ({ s, avg: a.reduce((p, q) => p + q, 0) / a.length })).sort((a, b) => b.avg - a.avg);
+  };
+
+  // Lead — The Market Today
+  if (uni.length) {
+    const ups = uni.filter((x) => x.day_pct > 0).length, downs = uni.filter((x) => x.day_pct < 0).length;
+    const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct), g = sorted[0], l = sorted[sorted.length - 1];
+    const sm = secMoves(), best = sm[0], worst = sm[sm.length - 1];
+    const tone = ups > downs * 1.3 ? "broadly higher" : downs > ups * 1.3 ? "broadly lower" : "mixed";
+    document.getElementById("paper-lead").innerHTML =
+      `<div class="lead-kicker">The Market Today</div>`
+      + `<h2 class="lead-head">Shariah universe trades ${tone}; ${esc(best.s)} leads, ${esc(worst.s)} lags</h2>`
+      + `<p class="lead-body">The ${uni.length}-name Shariah-compliant universe traded <b>${tone}</b> today — <b class="pos">${ups} advancing</b>, <b class="neg">${downs} declining</b>. <b>${esc(best.s)}</b> was the strongest sector on average (<span class="${signClass(best.avg)}">${fmtPct(best.avg)}</span>), while <b>${esc(worst.s)}</b> was the weakest (<span class="${signClass(worst.avg)}">${fmtPct(worst.avg)}</span>). ${esc(g.name || g.ticker)} (${esc(g.ticker)}) led all names at <span class="pos">${fmtPct(g.day_pct)}</span>; ${esc(l.name || l.ticker)} (${esc(l.ticker)}) fell <span class="neg">${fmtPct(l.day_pct)}</span>. QARP rankings re-rate on these price moves; the hand-scored verdicts change only on a fundamentals re-score.</p>`;
+  }
+  // Your Portfolio Today
+  if (port.length) {
+    const todayUsd = port.reduce((a, h) => a + (h.value || 0) * (h.day_pct || 0) / 100, 0);
+    const acct = (DATA.meta.portfolio_totals || {}).account || 0, todayPct = acct ? todayUsd / acct * 100 : 0;
+    const pUp = port.filter((h) => h.day_pct > 0).length, pDown = port.filter((h) => h.day_pct < 0).length;
+    const ps = [...port].sort((a, b) => b.day_pct - a.day_pct);
+    const mv = (h) => `<li><span class="mv-tk">${esc(h.ticker)}</span><span class="${signClass(h.day_pct)}">${fmtPct(h.day_pct)}</span></li>`;
+    document.getElementById("paper-portfolio").innerHTML =
+      `<div class="side-head">Your Portfolio Today</div>`
+      + `<p class="side-body">Your book is <b class="${signClass(todayPct)}">${todayPct >= 0 ? "up" : "down"} ${fmtPct(Math.abs(todayPct))}</b> (${todayUsd >= 0 ? "+" : "−"}${fmtUSD(Math.abs(todayUsd), 0)}) on the day — ${pUp} green, ${pDown} red.</p>`
+      + `<ul class="mv-list">${ps.slice(0, 3).map(mv).join("")}${ps.slice(-2).reverse().map(mv).join("")}</ul>`;
+  }
+  // Sector Watch
+  if (uni.length) {
+    document.getElementById("paper-sectors").innerHTML =
+      `<div class="side-head">Sector Watch <span class="side-sub">today</span></div>`
+      + `<ul class="mv-list">${secMoves().map((m) => `<li><span class="mv-tk">${esc(m.s)}</span><span class="${signClass(m.avg)}">${fmtPct(m.avg)}</span></li>`).join("")}</ul>`;
+  }
+  // Movers
+  if (uni.length) {
+    const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct);
+    const row = (x) => `<li><span class="mv-tk">${esc(x.ticker)}</span><span class="${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span></li>`;
+    document.getElementById("paper-movers").innerHTML =
+      `<div class="side-head">Movers</div>`
+      + `<div class="mv-cols"><div><div class="mv-lbl pos">Gainers</div><ul class="mv-list">${sorted.slice(0, 4).map(row).join("")}</ul></div>`
+      + `<div><div class="mv-lbl neg">Decliners</div><ul class="mv-list">${sorted.slice(-4).reverse().map(row).join("")}</ul></div></div>`;
+  }
+  renderDailyTicker();
+  renderDailyWire();
+}
+
+async function renderDailyTicker() {
+  const el = document.getElementById("paper-ticker");
+  if (!el || !(DATA.meta && DATA.meta.quote_proxy)) return;
+  const syms = [{ l: "S&P 500", s: "SPY" }, { l: "Nasdaq", s: "QQQ" }, { l: "Dow", s: "DIA" }];
+  const cards = await Promise.all(syms.map(async (ix) => {
+    try {
+      const q = await fetchQuote(ix.s);
+      if (!q || typeof q.dp !== "number") throw 0;
+      const up = (q.d || 0) >= 0;
+      return `<span class="pt-item"><b>${esc(ix.l)}</b> <span class="${up ? "pos" : "neg"}">${up ? "▲" : "▼"} ${Math.abs(q.dp).toFixed(2)}%</span></span>`;
+    } catch (e) { return `<span class="pt-item"><b>${esc(ix.l)}</b> <span class="muted">—</span></span>`; }
+  }));
+  el.innerHTML = cards.join("");
+}
+
+async function renderDailyWire() {
+  const el = document.getElementById("paper-wire");
+  if (!el) return;
+  const key = DATA.meta && DATA.meta.finnhub_key;
+  if (!key) { el.innerHTML = `<div class="wire-head">On the Wire</div><p class="muted">Headlines need the API key.</p>`; return; }
+  el.innerHTML = `<div class="wire-head">On the Wire</div><p class="news-loading">Loading headlines…</p>`;
+  try {
+    const res = await fetch(`https://finnhub.io/api/v1/news?category=general&token=${key}`, { cache: "no-store" });
+    let items = await res.json();
+    items = (Array.isArray(items) ? items : []).filter((it) => it && it.headline && it.url && isTrustedSource(it)).slice(0, 6);
+    if (!items.length) { el.innerHTML = `<div class="wire-head">On the Wire</div><p class="muted">No trusted-source headlines right now.</p>`; return; }
+    el.innerHTML = `<div class="wire-head">On the Wire</div>` + items.map((it) => `
+      <article class="wire-item">
+        <h4 class="wire-h">${esc(it.headline)}</h4>
+        ${it.summary ? `<p class="wire-sum">${esc(String(it.summary).slice(0, 280))}${String(it.summary).length > 280 ? "…" : ""}</p>` : ""}
+        <div class="wire-meta"><span class="news-src">${esc(it.source || "—")}</span> · ${relTime(it.datetime)} · <a href="${safeUrl(it.url)}" target="_blank" rel="noopener noreferrer">source ↗</a></div>
+      </article>`).join("");
+  } catch (e) { el.innerHTML = `<div class="wire-head">On the Wire</div><p class="muted">Couldn't load headlines — try again shortly.</p>`; }
 }
 
 /* ---------- live prices (Finnhub, browser-side) ---------- */
@@ -1200,6 +1302,7 @@ function renderAll() {
   renderEtfs();
   renderVenture();
   renderPortfolio();
+  enterDaily();          // Daily is the landing tab — render it + start its refresh
   initTabs();
   startLive();
 }
