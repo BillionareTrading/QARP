@@ -609,7 +609,8 @@ function initTabs() {
 
 /* ---------- live prices (Finnhub, browser-side) ---------- */
 const LIVE_INTERVAL_MS = 60000;  // holdings refresh ~every 60s (≈17 calls/min)
-const UNIVERSE_PUMP_MS = 2000;   // 1 universe name per 2s (≈30/min); cycles the universe live
+const UNIVERSE_PUMP_MS = 1200;   // 1 universe name per 1.2s (≈50/min); cycles in rank order, so
+                                 // the top names you're looking at go live first (~4min full pass)
 // Live quotes go through our Cloudflare Worker (DATA.meta.quote_proxy) — it holds the
 // Finnhub key server-side and caches/dedupes, so the key never reaches the browser.
 const THROTTLE_MS = 45000;       // on a 429, pause all polling this long (free tier = 60 calls/min)
