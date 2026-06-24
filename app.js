@@ -690,6 +690,7 @@ function renderDaily() {
   }
   renderDailyTicker();
   loadDailyBrief();    // original lead column + briefs from daily_brief.json (NO external links)
+  renderSectorSignals(); // sector-level event-driven signals (uses cached SIGNALS)
 }
 
 // The Daily page's written content comes from daily_brief.json — an original market column plus
@@ -724,30 +725,23 @@ function renderBriefs(briefs) {
     `<article class="wire-item"><h4 class="wire-h">${esc(br.headline || "")}</h4><p class="wire-sum">${esc(br.body || "")}</p></article>`).join("") + `</div>`;
 }
 
-/* ---------- Signals · Risk Radar + Trade Triggers (Portfolio tab) ---------- */
-// Content (macro + risk[] + triggers[]) comes from signals.json — fetched plaintext,
-// same pattern as daily_brief.json (no holdings dollar figures live in that file).
-// Risk rows are news-driven monitoring; triggers fire live against the quote proxy.
+/* ---------- Signals — event-driven (news / geopolitics), no price triggers ---------- */
+// Content comes from signals.json (fetched plaintext, like daily_brief.json). Every signal
+// is justified by a real news event or geopolitical factor — the WHEN is when the event lands,
+// the WHY is the event itself. No price levels, no buy/sell instructions. Portfolio tab gets
+// macro + per-holding risk + upcoming catalysts; the Daily page gets the sector signals.
 let SIGNALS = null;
 const SEV_LABEL = { elevated: "Elevated", watch: "Watch", policy: "Policy", mild: "Mild" };
-const ACT_LABEL = { buy: "Buy", add: "Add", trim: "Trim" };
+const DIR_ICON = { up: "ti-trending-up", down: "ti-trending-down", "two-sided": "ti-arrows-up-down", mixed: "ti-arrows-up-down" };
+const DIR_LABEL = { up: "Tailwind", down: "Headwind", "two-sided": "Two-sided", mixed: "Mixed" };
 
 async function loadSignals() {
   try {
     const res = await fetch(`signals.json?cb=${Date.now()}`, { cache: "no-store" });
     if (res.ok) SIGNALS = await res.json();
   } catch (e) { /* fall back gracefully */ }
-  // best-effort live price per trigger ticker (held names reuse the portfolio price)
-  if (SIGNALS && Array.isArray(SIGNALS.triggers) && DATA && DATA.meta && DATA.meta.quote_proxy && marketOpenNow()) {
-    await Promise.all(SIGNALS.triggers.map(async (t) => {
-      const h = DATA.portfolio.find((p) => p.ticker === t.ticker);
-      if (h && h.price) { t._px = h.price; return; }
-      try { const q = await fetchQuote(t.ticker); if (q && typeof q.c === "number" && q.c > 0) t._px = q.c; } catch (e) { /* leave _px undefined */ }
-    }));
-  } else if (SIGNALS && Array.isArray(SIGNALS.triggers)) {
-    SIGNALS.triggers.forEach((t) => { const h = DATA.portfolio.find((p) => p.ticker === t.ticker); if (h && h.price) t._px = h.price; });
-  }
   renderSignals();
+  renderSectorSignals();
 }
 
 function renderSignals() {
@@ -756,19 +750,19 @@ function renderSignals() {
   if (!SIGNALS) { el.innerHTML = `<div class="muted sig-empty">Signals load with the Portfolio tab — check back shortly.</div>`; return; }
   const s = SIGNALS;
   const riskRows = (s.risk || []).map(sigRiskRow).join("");
-  const trigRows = (s.triggers || []).map(sigTriggerRow).join("");
+  const catRows = (s.catalysts || []).map(sigCatalystRow).join("");
   el.innerHTML = `
     <div class="sig-head">
-      <div class="sig-kicker">Signals · Risk Radar</div>
-      <div class="sig-asof">${esc(s.generated_at || asOfDate(s.date))} · watch-only</div>
+      <div class="sig-kicker">Signals</div>
+      <div class="sig-asof">${esc(s.generated_at || asOfDate(s.date))} · news-driven</div>
     </div>
-    <div class="sig-title">What could move — and what to buy if it does</div>
+    <div class="sig-title">What's moving your book — and the events that decide it</div>
     ${s.macro ? `<div class="sig-macro"><i class="ti ti-broadcast" aria-hidden="true"></i><div><b>Macro:</b> ${s.macro.body || esc(s.macro.headline || "")}</div></div>` : ""}
     <div class="sig-sec-label"><i class="ti ti-alert-triangle" aria-hidden="true"></i> Risk radar — your holdings</div>
     <div class="sig-rows">${riskRows || `<div class="muted sig-empty">No risk flags.</div>`}</div>
-    <div class="sig-sec-label up"><i class="ti ti-target" aria-hidden="true"></i> Trade triggers — deploy cash on a dip</div>
-    <div class="sig-rows">${trigRows || `<div class="muted sig-empty">No armed triggers.</div>`}</div>
-    <div class="sig-foot"><i class="ti ti-info-circle" aria-hidden="true"></i> Pattern-watch from public news + your own set levels — not predictions or advice. Edit levels in signals.json. Dates approximate.</div>`;
+    <div class="sig-sec-label up"><i class="ti ti-calendar-event" aria-hidden="true"></i> Catalysts ahead — the news that could move it</div>
+    <div class="sig-rows">${catRows || `<div class="muted sig-empty">No catalysts queued.</div>`}</div>
+    <div class="sig-foot"><i class="ti ti-info-circle" aria-hidden="true"></i> Every signal is tied to a real news event or geopolitical factor — informational, not predictions or advice. No price targets.</div>`;
 }
 
 function sigRiskRow(r) {
@@ -784,29 +778,34 @@ function sigRiskRow(r) {
   </div>`;
 }
 
-function sigTriggerRow(t) {
-  const px = t._px;
-  const fired = px != null && (t.op === "below" ? px <= t.level : px >= t.level);
-  const dist = px != null && t.level ? (px - t.level) / t.level * 100 : null;
-  const u = DATA.universe.find((x) => x.ticker === t.ticker) || DATA.portfolio.find((h) => h.ticker === t.ticker);
-  const verdict = u && u.verdict;
-  const status = px == null
-    ? `<span class="trig-stat na">no live px</span>`
-    : fired ? `<span class="trig-stat fired"><i class="ti ti-circle-filled" aria-hidden="true"></i> fired</span>`
-            : `<span class="trig-stat armed"><i class="ti ti-circle" aria-hidden="true"></i> armed</span>`;
-  return `<div class="sig-row trig${fired ? " is-fired" : ""}">
-    <div class="sig-tk"><span class="tk">${esc(t.ticker)}</span><span class="sig-sh">${t.held ? "held" : "watch"}</span></div>
+// A catalyst = a dated/identified news or geopolitical event + its read-through. No price levels.
+function sigCatalystRow(c) {
+  const dir = c.dir || "two-sided";
+  return `<div class="sig-row cat dir-${dir}">
+    <div class="sig-when"><i class="ti ${DIR_ICON[dir] || "ti-arrows-up-down"}" aria-hidden="true"></i><span class="cat-when">${esc(c.when || "")}</span></div>
     <div class="sig-mid">
-      <div class="sig-l1">
-        <span class="trig-act a-${t.action}">${ACT_LABEL[t.action] || t.action} ${t.op === "below" ? "≤" : "≥"} ${fmtUSD(t.level, 2)}</span>
-        ${status}
-        ${px != null ? `<span class="trig-px">now ${fmtUSD(px, 2)}${dist != null ? ` · <span class="${signClass(dist)}">${dist >= 0 ? "+" : ""}${dist.toFixed(0)}%</span>` : ""}</span>` : ""}
-        ${verdict ? `<span class="trig-verdict">model: ${esc(verdict)}</span>` : ""}
-      </div>
-      <div class="sig-detail">${esc(t.note || "")}</div>
+      <div class="sig-l1"><span class="cat-what">${esc(c.what || "")}</span>${c.affects ? `<span class="cat-affects">${esc(c.affects)}</span>` : ""}<span class="cat-dir d-${dir}">${DIR_LABEL[dir] || dir}</span></div>
+      <div class="sig-detail">${esc(c.why || "")}</div>
     </div>
-    <div class="sig-next"></div>
   </div>`;
+}
+
+// Daily page: sector-level signals, each driven by a news / geopolitical factor.
+function renderSectorSignals() {
+  const el = document.getElementById("paper-signals");
+  if (!el) return;
+  const secs = (SIGNALS && SIGNALS.sectors) || [];
+  if (!secs.length) { el.innerHTML = ""; return; }
+  const cards = secs.map((s) => {
+    const dir = s.dir || "mixed";
+    return `<article class="ssig-card dir-${dir}">
+      <div class="ssig-top"><i class="ti ${DIR_ICON[dir] || "ti-arrows-up-down"}" aria-hidden="true"></i><span class="ssig-name">${esc(s.sector || "")}</span><span class="ssig-dir d-${dir}">${DIR_LABEL[dir] || dir}</span></div>
+      <div class="ssig-driver">${esc(s.driver || "")}</div>
+      <p class="ssig-note">${esc(s.note || "")}</p>
+    </article>`;
+  }).join("");
+  el.innerHTML = `<div class="side-head">Sector Signals <span class="side-sub">why, not just how much</span></div>`
+    + `<div class="ssig-grid">${cards}</div>`;
 }
 
 async function renderDailyTicker() {
