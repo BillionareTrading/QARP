@@ -631,3 +631,47 @@ tbody tr:hover { background: var(--surface-2); }
   .sig-next { min-width: 48px; }
   .sig-detail { font-size: 12px; }
 }
+
+/* ===== Catalyst rows (event-driven, Portfolio Signals card) ===== */
+.sig-row.cat { border-left-color: var(--ink-3); }
+.sig-row.cat.dir-up { border-left-color: var(--pos); }
+.sig-row.cat.dir-down { border-left-color: var(--neg); }
+.sig-row.cat.dir-two-sided { border-left-color: var(--v-hold); }
+.sig-row.cat.dir-mixed { border-left-color: var(--v-avoid); }
+.sig-when { min-width: 76px; flex: none; display: flex; flex-direction: column; gap: 3px; }
+.sig-when i { font-size: 16px; color: var(--ink-3); }
+.dir-up .sig-when i { color: var(--pos); }
+.dir-down .sig-when i { color: var(--neg); }
+.dir-two-sided .sig-when i { color: var(--v-hold); }
+.dir-mixed .sig-when i { color: var(--v-avoid); }
+.cat-when { font-size: 11px; font-weight: 700; color: var(--ink-2); line-height: 1.25; }
+.cat-what { font-size: 13px; font-weight: 700; color: var(--ink); }
+.cat-affects { font-size: 10.5px; font-weight: 600; color: var(--ink-2); background: var(--surface-2); border: 1px solid var(--line); border-radius: 5px; padding: 2px 7px; }
+.cat-dir { font-size: 9.5px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; padding: 2px 7px; border-radius: 5px; margin-left: auto; }
+.cat-dir.d-up { color: #15803d; background: var(--pos-bg); }
+.cat-dir.d-down { color: #be123c; background: var(--neg-bg); }
+.cat-dir.d-two-sided { color: #854f0b; background: #faeeda; }
+.cat-dir.d-mixed { color: #334155; background: var(--line-2); }
+
+/* ===== Sector Signals (Daily page) ===== */
+.paper-signals { font-family: system-ui, sans-serif; margin: 22px 0 6px; }
+.ssig-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.ssig-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--ink-3); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 12px 14px; }
+.ssig-card.dir-up { border-left-color: var(--pos); }
+.ssig-card.dir-down { border-left-color: var(--neg); }
+.ssig-card.dir-two-sided { border-left-color: var(--v-hold); }
+.ssig-card.dir-mixed { border-left-color: var(--v-avoid); }
+.ssig-top { display: flex; align-items: center; gap: 7px; }
+.ssig-top i { font-size: 17px; color: var(--ink-3); }
+.dir-up .ssig-top i { color: var(--pos); }
+.dir-down .ssig-top i { color: var(--neg); }
+.dir-two-sided .ssig-top i { color: var(--v-hold); }
+.dir-mixed .ssig-top i { color: var(--v-avoid); }
+.ssig-name { font-size: 13px; font-weight: 800; color: var(--ink); flex: 1; min-width: 0; }
+.ssig-dir { font-size: 9px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; padding: 2px 6px; border-radius: 5px; }
+.ssig-dir.d-up { color: #15803d; background: var(--pos-bg); }
+.ssig-dir.d-down { color: #be123c; background: var(--neg-bg); }
+.ssig-dir.d-two-sided { color: #854f0b; background: #faeeda; }
+.ssig-dir.d-mixed { color: #334155; background: var(--line-2); }
+.ssig-driver { font-size: 11.5px; font-weight: 700; color: var(--ink-2); margin: 8px 0 5px; }
+.ssig-note { font-size: 12px; color: var(--ink-2); line-height: 1.5; margin: 0; }

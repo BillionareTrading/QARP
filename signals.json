@@ -7,17 +7,27 @@
     "body": "New Fed Chair Warsh scrapped forward guidance; the dot plot now points to 1–2 rate <b>hikes</b> in 2026, not cuts. With the Iran-war energy shock keeping inflation sticky, long-duration high-multiple growth de-rates first — and the book is tilted there (NOW, ADBE, NVDA, IOT)."
   },
   "risk": [
-    {"ticker": "LULU", "sev": "elevated", "tag": "Falling knife · −46% YTD", "detail": "FY guide <b>cut</b> (Jun 4): Americas comps −5% (5th straight), tariffs gutted margins, China stalled. No catalyst until Q2.", "next": "~Sep 4"},
-    {"ticker": "BSX", "sev": "elevated", "tag": "Guide slashed · −50% YTD", "detail": "FY26 growth cut 10.5→7–8.5%; Watchman/EP/urology soft; mgmt guides <b>flat through Q3</b>. Q2 print is the next risk.", "next": "~Jul 23"},
-    {"ticker": "ADBE", "sev": "watch", "tag": "Value trap · no catalyst", "detail": "Beat & raised (Jun 11) but sold off; −30% YTD on AI-moat fear (Claude Design), CFO exit, ARR de-emphasis. Narrative, not numbers, drives it.", "next": "~Sep 11"},
-    {"ticker": "NVDA", "sev": "watch", "tag": "Headline risk · semis at peak", "detail": "China export-license tightening + Senate scrutiny. Fundamentals strong (+85% rev) — risk is policy air-pockets, not the business.", "next": "Export news"},
-    {"ticker": "NOW", "sev": "watch", "tag": "Concentration · macro beta", "detail": "No bad news — strong Q1 (+22%), IBM AI deal. But it's your biggest weight + high multiple; leads the drawdown if software de-rates.", "next": "~Jul 23"},
-    {"ticker": "GILD·NVS", "sev": "policy", "sub": "+ NBIX, VRTX", "tag": "Drug-pricing overhang", "detail": "Trump MFN pricing deals + import tariffs; Gilead & Novartis signed (90% Epclusa cut via TrumpRx). Pressure weighs on the whole pharma cluster.", "next": "Ongoing"},
-    {"ticker": "ABT", "sev": "mild", "tag": "EPS outlook trimmed", "detail": "FY EPS guide cut ($4.56→$4.07) on deal financing + weak flu season; revenue raised. Defensive — yellow flag, not red.", "next": "~Jul 17"}
+    {"ticker": "LULU", "sev": "elevated", "tag": "Guidance cut", "detail": "FY guide <b>cut</b> (Jun 4): Americas comps −5% (5th straight), tariffs gutted margins, China stalled. No earnings catalyst until Q2.", "next": "~Sep 4"},
+    {"ticker": "BSX", "sev": "elevated", "tag": "Guidance slashed", "detail": "FY26 growth cut 10.5→7–8.5%; Watchman/EP/urology soft; mgmt guides <b>flat through Q3</b>. The Q2 print is the next test.", "next": "~Jul 23"},
+    {"ticker": "ADBE", "sev": "watch", "tag": "AI-disruption fear", "detail": "Beat & raised (Jun 11) yet sold off; AI-moat fear (Claude Design), CFO exit, ARR de-emphasis. The narrative, not the numbers, drives it.", "next": "~Sep 11"},
+    {"ticker": "NVDA", "sev": "watch", "tag": "Export controls + AI-capex doubt", "detail": "China export-license tightening + Senate scrutiny; today's AI-spending skepticism is hitting the whole memory/chip complex. Micron's print tonight is a read-through.", "next": "Export news"},
+    {"ticker": "NOW", "sev": "watch", "tag": "Concentration + macro beta", "detail": "No bad news — strong Q1, IBM AI deal. But it's the biggest weight + a high multiple; in a hawkish-Fed software de-rate it leads the drawdown.", "next": "~Jul 23"},
+    {"ticker": "GILD·NVS", "sev": "policy", "sub": "+ NBIX, VRTX", "tag": "Drug-pricing policy", "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.", "next": "Ongoing"},
+    {"ticker": "ABT", "sev": "mild", "tag": "EPS outlook trimmed", "detail": "FY EPS guide cut on deal financing + a weak flu season; revenue raised. Defensive — a yellow flag, not a red one.", "next": "~Jul 17"}
   ],
-  "triggers": [
-    {"ticker": "BB", "name": "BlackBerry", "action": "buy", "op": "below", "level": 5.75, "held": false, "note": "Shariah-clean (MX, Jun 19). QNX auto-OS turnaround — but already re-rated to ~13× sales. Only a buy on an auto-cycle scare back to the mid-$5s."},
-    {"ticker": "ADBE", "name": "Adobe", "action": "add", "op": "below", "level": 175, "held": true, "note": "Model says STRONG BUY, but the news flags a value trap (no catalyst). Conflict → only add on a deeper flush that widens the margin of safety AND a sign the AI-moat fear is overdone."},
-    {"ticker": "NVDA", "name": "Nvidia", "action": "add", "op": "below", "level": 175, "held": true, "note": "Quality at a cyclical peak. Worth adding into a policy/export-headline air-pocket, not at the highs."}
+  "catalysts": [
+    {"when": "Tonight", "what": "Micron Q3 earnings (after close)", "why": "First big memory read-through since AI-capex doubts flared. A soft outlook would harden the bear case on the whole semiconductor / AI-hardware complex.", "affects": "Semis · NVDA", "dir": "down"},
+    {"when": "Live geopolitical risk", "what": "Iran conflict & the energy shock", "why": "An oil spike feeds inflation, keeps the Fed hawkish, and pressures long-duration growth; de-escalation does the reverse. The market's biggest swing factor.", "affects": "Energy · high-multiple growth", "dir": "two-sided"},
+    {"when": "Data-dependent", "what": "Fed path & Treasury yields", "why": "Yields back below 4.5% relieve long-duration growth; a hawkish surprise from Chair Warsh (who scrapped guidance) hits them. The next CPI / jobs prints set the tone.", "affects": "Growth · rate-sensitives", "dir": "two-sided"},
+    {"when": "Ongoing", "what": "MFN drug-pricing rollout + pharma tariffs", "why": "Most-favored-nation deals (Gilead, Novartis signed) plus import tariffs keep a pricing-pressure overhang on the drug group — a policy story, not a fundamentals one.", "affects": "Pharma cluster", "dir": "down"},
+    {"when": "~Jul 17–23", "what": "Q2 earnings season — ABT, NOW, BSX", "why": "Guidance is the catalyst: BSX already pre-cut, ABT trimmed EPS, and NOW's read on AI-software demand will set the tape for the high-multiple names.", "affects": "Healthcare · Software", "dir": "two-sided"}
+  ],
+  "sectors": [
+    {"sector": "Homebuilders & rate-sensitives", "dir": "up", "driver": "Housing bill + yields < 4.5%", "note": "A bipartisan housing package and falling Treasury yields (oil easing) sent builders sharply higher — the market repricing the prospect of mortgage relief."},
+    {"sector": "Semiconductors / AI hardware", "dir": "down", "driver": "AI-capex skepticism · Micron tonight", "note": "Memory and chip names sold off on doubts that hyperscalers' vast AI budgets will earn their keep. Micron's after-close print is the next read."},
+    {"sector": "Healthcare & biotech", "dir": "up", "driver": "Defensive bid as yields fall", "note": "Diagnostics and life-sciences led gainers as money rotated toward steadier growth — though MFN drug-pricing stays a policy overhang for pharma."},
+    {"sector": "Energy", "dir": "down", "driver": "Oil sliding — Iran is the tail", "note": "Crude pulled back, dragging energy and helping yields lower. The Iran conflict is the two-sided wildcard: any supply scare flips this fast."},
+    {"sector": "Software", "dir": "mixed", "driver": "Hawkish Fed + AI-disruption fear", "note": "High-multiple software is squeezed between a higher-for-longer rate path and AI tools encroaching on incumbents' moats."},
+    {"sector": "Financials", "dir": "mixed", "driver": "Rate-path sensitive", "note": "Banks lean on the yield curve and the Fed's next move; the repricing from cuts toward possible hikes cuts both ways."}
   ]
 }
