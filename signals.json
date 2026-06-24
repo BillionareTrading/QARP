@@ -1,0 +1,23 @@
+{
+  "date": "2026-06-24",
+  "generated_at": "Jun 24, 2026 · market desk",
+  "macro": {
+    "tone": "caution",
+    "headline": "Hawkish Fed, sticky energy inflation",
+    "body": "New Fed Chair Warsh scrapped forward guidance; the dot plot now points to 1–2 rate <b>hikes</b> in 2026, not cuts. With the Iran-war energy shock keeping inflation sticky, long-duration high-multiple growth de-rates first — and the book is tilted there (NOW, ADBE, NVDA, IOT)."
+  },
+  "risk": [
+    {"ticker": "LULU", "sev": "elevated", "tag": "Falling knife · −46% YTD", "detail": "FY guide <b>cut</b> (Jun 4): Americas comps −5% (5th straight), tariffs gutted margins, China stalled. No catalyst until Q2.", "next": "~Sep 4"},
+    {"ticker": "BSX", "sev": "elevated", "tag": "Guide slashed · −50% YTD", "detail": "FY26 growth cut 10.5→7–8.5%; Watchman/EP/urology soft; mgmt guides <b>flat through Q3</b>. Q2 print is the next risk.", "next": "~Jul 23"},
+    {"ticker": "ADBE", "sev": "watch", "tag": "Value trap · no catalyst", "detail": "Beat & raised (Jun 11) but sold off; −30% YTD on AI-moat fear (Claude Design), CFO exit, ARR de-emphasis. Narrative, not numbers, drives it.", "next": "~Sep 11"},
+    {"ticker": "NVDA", "sev": "watch", "tag": "Headline risk · semis at peak", "detail": "China export-license tightening + Senate scrutiny. Fundamentals strong (+85% rev) — risk is policy air-pockets, not the business.", "next": "Export news"},
+    {"ticker": "NOW", "sev": "watch", "tag": "Concentration · macro beta", "detail": "No bad news — strong Q1 (+22%), IBM AI deal. But it's your biggest weight + high multiple; leads the drawdown if software de-rates.", "next": "~Jul 23"},
+    {"ticker": "GILD·NVS", "sev": "policy", "sub": "+ NBIX, VRTX", "tag": "Drug-pricing overhang", "detail": "Trump MFN pricing deals + import tariffs; Gilead & Novartis signed (90% Epclusa cut via TrumpRx). Pressure weighs on the whole pharma cluster.", "next": "Ongoing"},
+    {"ticker": "ABT", "sev": "mild", "tag": "EPS outlook trimmed", "detail": "FY EPS guide cut ($4.56→$4.07) on deal financing + weak flu season; revenue raised. Defensive — yellow flag, not red.", "next": "~Jul 17"}
+  ],
+  "triggers": [
+    {"ticker": "BB", "name": "BlackBerry", "action": "buy", "op": "below", "level": 5.75, "held": false, "note": "Shariah-clean (MX, Jun 19). QNX auto-OS turnaround — but already re-rated to ~13× sales. Only a buy on an auto-cycle scare back to the mid-$5s."},
+    {"ticker": "ADBE", "name": "Adobe", "action": "add", "op": "below", "level": 175, "held": true, "note": "Model says STRONG BUY, but the news flags a value trap (no catalyst). Conflict → only add on a deeper flush that widens the margin of safety AND a sign the AI-moat fear is overdone."},
+    {"ticker": "NVDA", "name": "Nvidia", "action": "add", "op": "below", "level": 175, "held": true, "note": "Quality at a cyclical peak. Worth adding into a policy/export-headline air-pocket, not at the highs."}
+  ]
+}

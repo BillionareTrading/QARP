@@ -577,3 +577,57 @@ tbody tr:hover { background: var(--surface-2); }
   .kpi .value { font-size: 19px; }
   .tick .name { max-width: 120px; }
 }
+
+/* ===== Signals · Risk Radar + Trade Triggers (Portfolio tab) ===== */
+.signals-card { margin-top: 18px; padding: 0; overflow: hidden; }
+.sig-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px; padding: 16px 18px 0; }
+.sig-kicker { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 800; color: var(--ink); }
+.sig-asof { font-size: 11px; color: var(--ink-3); letter-spacing: .04em; }
+.sig-title { font-family: Georgia, "Times New Roman", serif; font-size: 18px; color: var(--ink); padding: 8px 18px 14px; line-height: 1.3; }
+.sig-macro { display: flex; gap: 10px; align-items: flex-start; background: #faeeda; border-left: 3px solid var(--v-hold); padding: 11px 16px; font-size: 12.5px; color: #633806; line-height: 1.5; }
+.sig-macro i { color: #854f0b; font-size: 16px; margin-top: 1px; flex: none; }
+.sig-macro b { color: #412402; }
+.sig-sec-label { display: flex; align-items: center; gap: 7px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; font-weight: 800; color: var(--ink-2); padding: 14px 18px 7px; border-bottom: 1px solid var(--line); margin-bottom: 2px; }
+.sig-sec-label i { font-size: 14px; color: var(--neg); }
+.sig-sec-label.up i { color: var(--pos); }
+.sig-rows { display: block; }
+.sig-row { display: flex; gap: 13px; padding: 12px 18px; border-left: 4px solid var(--ink-3); }
+.sig-row + .sig-row { border-top: 1px solid var(--line-2); }
+.sig-row.sev-elevated { border-left-color: var(--neg); }
+.sig-row.sev-watch { border-left-color: var(--v-hold); }
+.sig-row.sev-policy, .sig-row.sev-mild { border-left-color: var(--v-avoid); }
+.sig-row.trig { border-left-color: var(--ink-3); }
+.sig-row.trig.is-fired { border-left-color: var(--pos); background: var(--pos-bg); }
+.sig-tk { min-width: 58px; flex: none; }
+.sig-tk .tk { display: block; font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--ink); }
+.sig-sh { display: block; font-size: 10.5px; color: var(--ink-3); margin-top: 1px; }
+.sig-mid { flex: 1; min-width: 0; }
+.sig-l1 { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.sig-tag { font-size: 9.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px; border-radius: 5px; }
+.sig-tag.t-elevated { color: #791f1f; background: var(--neg-bg); }
+.sig-tag.t-watch { color: #854f0b; background: #faeeda; }
+.sig-tag.t-policy, .sig-tag.t-mild { color: #334155; background: var(--line-2); }
+.sig-flag { font-size: 11px; font-weight: 700; color: var(--ink-2); }
+.sev-elevated .sig-flag { color: var(--neg); }
+.sev-watch .sig-flag { color: var(--v-hold); }
+.sig-detail { font-size: 12.5px; color: var(--ink-2); line-height: 1.5; margin-top: 4px; }
+.sig-detail b { color: var(--ink); }
+.sig-next { text-align: right; min-width: 60px; flex: none; }
+.sig-next .nlbl { display: block; font-size: 9.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; }
+.sig-next .nval { display: block; font-size: 12px; color: var(--ink); font-weight: 600; margin-top: 1px; }
+.trig-act { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); padding: 2px 8px; border-radius: 6px; }
+.trig-act.a-buy { color: var(--pos); border-color: #cfe8d9; background: var(--pos-bg); }
+.trig-stat { font-size: 10.5px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 3px; }
+.trig-stat i { font-size: 9px; }
+.trig-stat.armed { color: var(--ink-3); }
+.trig-stat.fired { color: var(--pos); }
+.trig-stat.na { color: var(--ink-3); font-weight: 600; text-transform: none; }
+.trig-px { font-size: 11px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.trig-verdict { font-size: 10px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .04em; }
+.sig-foot { display: flex; gap: 7px; align-items: flex-start; padding: 11px 18px; border-top: 1px solid var(--line); background: var(--surface-2); font-size: 10.5px; color: var(--ink-3); line-height: 1.5; }
+.sig-foot i { font-size: 12px; margin-top: 1px; }
+.sig-empty { padding: 12px 18px; font-size: 12.5px; }
+@media (max-width: 560px) {
+  .sig-next { min-width: 48px; }
+  .sig-detail { font-size: 12px; }
+}
