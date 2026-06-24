@@ -425,6 +425,7 @@ function renderPortfolio() {
 
   renderSectorPerformance();
   renderPortfolioTable();
+  renderSignals(); // Risk Radar + Trade Triggers card below the table (uses cached SIGNALS)
 }
 
 // Performance by sector — per-sector gain% bars, best -> worst.
@@ -630,7 +631,7 @@ let dailyTimer = null;
 function enterDaily() {
   renderDaily();
   if (dailyTimer) clearInterval(dailyTimer);
-  dailyTimer = setInterval(() => { renderDailyTicker(); loadDailyBrief(); }, 5 * 60000); // refresh ticker + re-pull the brief
+  dailyTimer = setInterval(() => { renderDailyTicker(); loadDailyBrief(); loadSignals(); }, 5 * 60000); // refresh ticker + re-pull the brief + signals
 }
 function leaveDaily() { if (dailyTimer) { clearInterval(dailyTimer); dailyTimer = null; } }
 
@@ -721,6 +722,91 @@ function renderBriefs(briefs) {
   }
   el.innerHTML = `<div class="wire-head">Market Briefs</div><div class="wire-grid">` + briefs.map((br) =>
     `<article class="wire-item"><h4 class="wire-h">${esc(br.headline || "")}</h4><p class="wire-sum">${esc(br.body || "")}</p></article>`).join("") + `</div>`;
+}
+
+/* ---------- Signals · Risk Radar + Trade Triggers (Portfolio tab) ---------- */
+// Content (macro + risk[] + triggers[]) comes from signals.json — fetched plaintext,
+// same pattern as daily_brief.json (no holdings dollar figures live in that file).
+// Risk rows are news-driven monitoring; triggers fire live against the quote proxy.
+let SIGNALS = null;
+const SEV_LABEL = { elevated: "Elevated", watch: "Watch", policy: "Policy", mild: "Mild" };
+const ACT_LABEL = { buy: "Buy", add: "Add", trim: "Trim" };
+
+async function loadSignals() {
+  try {
+    const res = await fetch(`signals.json?cb=${Date.now()}`, { cache: "no-store" });
+    if (res.ok) SIGNALS = await res.json();
+  } catch (e) { /* fall back gracefully */ }
+  // best-effort live price per trigger ticker (held names reuse the portfolio price)
+  if (SIGNALS && Array.isArray(SIGNALS.triggers) && DATA && DATA.meta && DATA.meta.quote_proxy && marketOpenNow()) {
+    await Promise.all(SIGNALS.triggers.map(async (t) => {
+      const h = DATA.portfolio.find((p) => p.ticker === t.ticker);
+      if (h && h.price) { t._px = h.price; return; }
+      try { const q = await fetchQuote(t.ticker); if (q && typeof q.c === "number" && q.c > 0) t._px = q.c; } catch (e) { /* leave _px undefined */ }
+    }));
+  } else if (SIGNALS && Array.isArray(SIGNALS.triggers)) {
+    SIGNALS.triggers.forEach((t) => { const h = DATA.portfolio.find((p) => p.ticker === t.ticker); if (h && h.price) t._px = h.price; });
+  }
+  renderSignals();
+}
+
+function renderSignals() {
+  const el = document.getElementById("signals-card");
+  if (!el) return;
+  if (!SIGNALS) { el.innerHTML = `<div class="muted sig-empty">Signals load with the Portfolio tab — check back shortly.</div>`; return; }
+  const s = SIGNALS;
+  const riskRows = (s.risk || []).map(sigRiskRow).join("");
+  const trigRows = (s.triggers || []).map(sigTriggerRow).join("");
+  el.innerHTML = `
+    <div class="sig-head">
+      <div class="sig-kicker">Signals · Risk Radar</div>
+      <div class="sig-asof">${esc(s.generated_at || asOfDate(s.date))} · watch-only</div>
+    </div>
+    <div class="sig-title">What could move — and what to buy if it does</div>
+    ${s.macro ? `<div class="sig-macro"><i class="ti ti-broadcast" aria-hidden="true"></i><div><b>Macro:</b> ${s.macro.body || esc(s.macro.headline || "")}</div></div>` : ""}
+    <div class="sig-sec-label"><i class="ti ti-alert-triangle" aria-hidden="true"></i> Risk radar — your holdings</div>
+    <div class="sig-rows">${riskRows || `<div class="muted sig-empty">No risk flags.</div>`}</div>
+    <div class="sig-sec-label up"><i class="ti ti-target" aria-hidden="true"></i> Trade triggers — deploy cash on a dip</div>
+    <div class="sig-rows">${trigRows || `<div class="muted sig-empty">No armed triggers.</div>`}</div>
+    <div class="sig-foot"><i class="ti ti-info-circle" aria-hidden="true"></i> Pattern-watch from public news + your own set levels — not predictions or advice. Edit levels in signals.json. Dates approximate.</div>`;
+}
+
+function sigRiskRow(r) {
+  const held = DATA.portfolio.find((h) => h.ticker === r.ticker);
+  const sub = held ? `${fmtNum(held.shares, 2)} sh` : (r.sub || "cluster");
+  return `<div class="sig-row sev-${r.sev}">
+    <div class="sig-tk"><span class="tk">${esc(r.ticker)}</span><span class="sig-sh">${esc(sub)}</span></div>
+    <div class="sig-mid">
+      <div class="sig-l1"><span class="sig-tag t-${r.sev}">${SEV_LABEL[r.sev] || r.sev}</span><span class="sig-flag">${esc(r.tag || "")}</span></div>
+      <div class="sig-detail">${r.detail || ""}</div>
+    </div>
+    <div class="sig-next"><span class="nlbl">Next</span><span class="nval">${esc(r.next || "—")}</span></div>
+  </div>`;
+}
+
+function sigTriggerRow(t) {
+  const px = t._px;
+  const fired = px != null && (t.op === "below" ? px <= t.level : px >= t.level);
+  const dist = px != null && t.level ? (px - t.level) / t.level * 100 : null;
+  const u = DATA.universe.find((x) => x.ticker === t.ticker) || DATA.portfolio.find((h) => h.ticker === t.ticker);
+  const verdict = u && u.verdict;
+  const status = px == null
+    ? `<span class="trig-stat na">no live px</span>`
+    : fired ? `<span class="trig-stat fired"><i class="ti ti-circle-filled" aria-hidden="true"></i> fired</span>`
+            : `<span class="trig-stat armed"><i class="ti ti-circle" aria-hidden="true"></i> armed</span>`;
+  return `<div class="sig-row trig${fired ? " is-fired" : ""}">
+    <div class="sig-tk"><span class="tk">${esc(t.ticker)}</span><span class="sig-sh">${t.held ? "held" : "watch"}</span></div>
+    <div class="sig-mid">
+      <div class="sig-l1">
+        <span class="trig-act a-${t.action}">${ACT_LABEL[t.action] || t.action} ${t.op === "below" ? "≤" : "≥"} ${fmtUSD(t.level, 2)}</span>
+        ${status}
+        ${px != null ? `<span class="trig-px">now ${fmtUSD(px, 2)}${dist != null ? ` · <span class="${signClass(dist)}">${dist >= 0 ? "+" : ""}${dist.toFixed(0)}%</span>` : ""}</span>` : ""}
+        ${verdict ? `<span class="trig-verdict">model: ${esc(verdict)}</span>` : ""}
+      </div>
+      <div class="sig-detail">${esc(t.note || "")}</div>
+    </div>
+    <div class="sig-next"></div>
+  </div>`;
 }
 
 async function renderDailyTicker() {
@@ -1315,6 +1401,7 @@ function renderAll() {
   renderEtfs();
   renderVenture();
   renderPortfolio();
+  loadSignals();         // fetch signals.json + live trigger prices, then render the Signals card
   enterDaily();          // Daily is the landing tab — render it + start its refresh
   initTabs();
   startLive();
