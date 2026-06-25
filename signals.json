@@ -1,6 +1,6 @@
 {
   "date": "2026-06-25",
-  "generated_at": "Jun 25, 5:08am ET",
+  "generated_at": "Jun 25, 5:40am ET",
   "sources": "Benzinga (WIIM, ratings, earnings) + live universe prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -140,144 +140,18 @@
   },
   "ratings": [
     {
-      "date": "2026-06-24",
-      "ticker": "DOW",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Buy",
-      "pt": "$35",
-      "held": false,
-      "uni": false
-    },
-    {
-      "date": "2026-06-24",
-      "ticker": "MRK",
-      "firm": "CICC",
-      "action": "Initiates Coverage On",
-      "rating": "Outperform",
-      "pt": "$138",
-      "held": false,
-      "uni": true
-    },
-    {
-      "date": "2026-06-24",
-      "ticker": "UNH",
+      "date": "2026-06-18",
+      "ticker": "AAPL",
       "firm": "B of A Securities",
-      "action": "Maintains",
-      "rating": "Buy",
-      "pt": "$475",
-      "held": false,
-      "uni": false
-    },
-    {
-      "date": "2026-06-24",
-      "ticker": "AXP",
-      "firm": "Truist Securities",
-      "action": "Maintains",
-      "rating": "Buy",
-      "pt": "$375",
-      "held": false,
-      "uni": false
-    },
-    {
-      "date": "2026-06-24",
-      "ticker": "GS",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "pt": "$1195",
-      "held": false,
-      "uni": false
-    },
-    {
-      "date": "2026-06-23",
-      "ticker": "NKE",
-      "firm": "BNP Paribas",
       "action": "Reiterates",
-      "rating": "Underperform",
-      "pt": "$23",
-      "held": false,
-      "uni": true
-    },
-    {
-      "date": "2026-06-23",
-      "ticker": "IBM",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Equal-Weight",
-      "pt": "$267",
-      "held": false,
-      "uni": false
-    },
-    {
-      "date": "2026-06-23",
-      "ticker": "HD",
-      "firm": "Wolfe Research",
-      "action": "Downgrades",
-      "rating": "Peer Perform",
-      "pt": "",
-      "held": false,
-      "uni": true
-    },
-    {
-      "date": "2026-06-23",
-      "ticker": "GS",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "pt": "$1100",
-      "held": false,
-      "uni": false
-    },
-    {
-      "date": "2026-06-23",
-      "ticker": "NKE",
-      "firm": "Goldman Sachs",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "pt": "$46",
-      "held": false,
-      "uni": true
-    },
-    {
-      "date": "2026-06-23",
-      "ticker": "CAT",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "pt": "$1155",
-      "held": false,
-      "uni": false
-    },
-    {
-      "date": "2026-06-23",
-      "ticker": "NKE",
-      "firm": "Evercore ISI Group",
-      "action": "Downgrades",
-      "rating": "In-Line",
-      "pt": "$46",
-      "held": false,
-      "uni": true
-    },
-    {
-      "date": "2026-06-23",
-      "ticker": "INTC",
-      "firm": "B of A Securities",
-      "action": "Maintains",
       "rating": "Buy",
-      "pt": "$160",
+      "stance": "bullish",
+      "pt": "$380",
+      "price": 293.35,
+      "upside": 29.5,
       "held": false,
-      "uni": false
-    },
-    {
-      "date": "2026-06-23",
-      "ticker": "IBM",
-      "firm": "JP Morgan",
-      "action": "Upgrades",
-      "rating": "Overweight",
-      "pt": "$291",
-      "held": false,
-      "uni": false
+      "uni": true,
+      "qarp": "AVOID"
     },
     {
       "date": "2026-06-22",
@@ -285,22 +159,97 @@
       "firm": "KGI Securities",
       "action": "Downgrades",
       "rating": "Hold",
+      "stance": "neutral",
       "pt": "$315",
+      "price": 293.35,
+      "upside": 7.4,
       "held": false,
-      "uni": true
+      "uni": true,
+      "qarp": "AVOID"
     },
     {
-      "date": "2026-06-18",
-      "ticker": "AAPL",
-      "firm": "B of A Securities",
+      "date": "2026-06-23",
+      "ticker": "NKE",
+      "firm": "BNP Paribas",
       "action": "Reiterates",
-      "rating": "Buy",
-      "pt": "$380",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$23",
+      "price": 41.83,
+      "upside": -45.0,
       "held": false,
-      "uni": true
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-06-23",
+      "ticker": "HD",
+      "firm": "Wolfe Research",
+      "action": "Downgrades",
+      "rating": "Peer Perform",
+      "stance": "neutral",
+      "pt": "",
+      "price": 341.94,
+      "upside": null,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-06-23",
+      "ticker": "NKE",
+      "firm": "Goldman Sachs",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$46",
+      "price": 41.83,
+      "upside": 10.0,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-06-23",
+      "ticker": "NKE",
+      "firm": "Evercore ISI Group",
+      "action": "Downgrades",
+      "rating": "In-Line",
+      "stance": "neutral",
+      "pt": "$46",
+      "price": 41.83,
+      "upside": 10.0,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-06-24",
+      "ticker": "MRK",
+      "firm": "CICC",
+      "action": "Initiates Coverage On",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$138",
+      "price": 120.76,
+      "upside": 14.3,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "bz_news": [
+    {
+      "title": "Goldman Sachs Initiates Coverage On Intel with Neutral Rating, Announces Price Target of $150",
+      "url": "https://www.benzinga.com/news/26/06/60090582/goldman-sachs-initiates-coverage-intel-neutral-rating-announces-price-target-150",
+      "ts": 1782379309,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false
+    },
     {
       "title": "Johnson & Johnson Announced Commercial Launch Of Dual Energy THERMOCOOL SMARTTOUCH SF Platform In Europe",
       "url": "https://www.benzinga.com/quote/JNJ",
@@ -599,20 +548,6 @@
       ],
       "source": "Benzinga",
       "wiim": true,
-      "rel": true
-    },
-    {
-      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/06/60079333/10-industrials-stocks-whale-activity-today-s-session",
-      "ts": 1782322528,
-      "tickers": [
-        "AMPX",
-        "RKLB",
-        "AAL",
-        "MOD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
       "rel": true
     },
     {
