@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0b1120" />
   <title>Jaleel Capital — QARP</title>
-  <link rel="stylesheet" href="styles.css?v=58065616" />
+  <link rel="stylesheet" href="styles.css?v=ea399411" />
 </head>
 <body>
 
@@ -156,6 +156,7 @@
     <section id="tab-portfolio" class="tabpanel">
       <nav class="subtabs" id="p-subtabs">
         <button class="subtab active" type="button" data-psub="holdings">Holdings</button>
+        <button class="subtab" type="button" data-psub="signals">Signals</button>
         <button class="subtab" type="button" data-psub="briefing">Briefing</button>
         <button class="subtab" type="button" data-psub="earnings">Earnings</button>
         <button class="subtab" type="button" data-psub="news">News</button>
@@ -184,6 +185,12 @@
             <tbody></tbody>
           </table>
         </div>
+      </div>
+
+      <!-- Signals: simple Add/Hold/Trim per holding, then the detail (risk + catalysts) -->
+      <div id="psub-signals" class="psub">
+        <p class="tab-intro"><b>The daily call</b> on each holding — <b>Add · Hold · Trim</b> — combining three independent inputs: this site's <b>QARP verdict</b> (quality + value), <b>analyst consensus</b>, and any <b>news risk flag</b>. It's a transparent rule, not anyone's opinion. <b>Not financial advice.</b></p>
+        <div id="calls-list" class="calls-list"></div>
         <section id="signals-card" class="card signals-card"></section>
       </div>
 
@@ -332,7 +339,7 @@
     <div class="drawer-panel" id="drawer-panel"></div>
   </div>
 
-  <script src="crypto.js?v=58065616"></script>
-  <script src="app.js?v=58065616"></script>
+  <script src="crypto.js?v=ea399411"></script>
+  <script src="app.js?v=ea399411"></script>
 </body>
 </html>

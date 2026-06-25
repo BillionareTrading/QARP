@@ -425,7 +425,6 @@ function renderPortfolio() {
 
   renderSectorPerformance();
   renderPortfolioTable();
-  renderSignals(); // Risk Radar + Trade Triggers card below the table (uses cached SIGNALS)
 }
 
 // Performance by sector — per-sector gain% bars, best -> worst.
@@ -774,6 +773,7 @@ async function loadSignals() {
   renderRatings();
   renderBriefing();
   renderEarnings();
+  renderCalls();
 }
 
 function renderSignals() {
@@ -952,6 +952,55 @@ function renderGurus() {
 }
 function quarterOf(period) {
   try { const m = +period.slice(5, 7); return Math.ceil(m / 3); } catch (e) { return "?"; }
+}
+
+// ---- Daily call: Add / Hold / Trim per holding (transparent rule, not opinion) ----
+// Combines three independent inputs already on the site: QARP verdict + analyst consensus
+// (Finnhub) + any news risk flag. Scored, thresholded — every input is shown in the reason.
+function riskSevFor(tk) {
+  for (const r of ((SIGNALS && SIGNALS.risk) || [])) {
+    const tks = (r.ticker || "").split("·").map((x) => x.trim());
+    const subTks = (r.sub || "").match(/[A-Z]{2,5}/g) || [];
+    if (tks.includes(tk) || subTks.includes(tk)) return r.sev;
+  }
+  return null;
+}
+function holdingCall(tk) {
+  const pb = (SIGNALS && SIGNALS.portfolio_brief && SIGNALS.portfolio_brief[tk]) || {};
+  const qarp = pb.qarp || (DATA.portfolio.find((h) => h.ticker === tk) || {}).verdict || "";
+  const cons = pb.consensus || null;
+  const sev = riskSevFor(tk);
+  const Q = { STRONGEST: 2, "STRONG BUY": 2, BUY: 1, "HOLD-QUAL": 0, AVOID: -2, "STRONG AVOID": -3 };
+  const C = { "Strong Buy": 1, Buy: 0.5, Hold: 0, Sell: -1, "Strong Sell": -1.5 };
+  const R = { elevated: -1.5, watch: -0.5, policy: -0.5, mild: -0.25 };
+  const score = (Q[qarp] ?? 0) + (C[cons && cons.label] ?? 0) + (R[sev] ?? 0);
+  let call = score >= 1.5 ? "ADD" : score <= -1.0 ? "TRIM" : "HOLD";
+  // conservative override: don't ADD into an elevated news flag or an AVOID, even if cheap
+  let capped = false;
+  if (call === "ADD" && (sev === "elevated" || qarp === "AVOID" || qarp === "STRONG AVOID")) { call = "HOLD"; capped = true; }
+  const bits = [];
+  if (qarp) bits.push(`QARP ${qarp}`);
+  if (cons && cons.label) bits.push(`analysts ${cons.label}`);
+  bits.push(sev ? `${sev} risk flag` : "no risk flags");
+  let reason = bits.join(" · ") + ".";
+  if (capped) reason += " The news flag caps it at Hold despite the cheap score.";
+  return { call, reason, qarp, sev };
+}
+function renderCalls() {
+  const el = document.getElementById("calls-list");
+  if (!el) return;
+  const pb = (SIGNALS && SIGNALS.portfolio_brief) || {};
+  const holds = [...DATA.portfolio].sort((a, b) => (b.value || 0) - (a.value || 0));
+  el.innerHTML = holds.map((h) => {
+    const c = holdingCall(h.ticker);
+    const name = (pb[h.ticker] || {}).name || h.name || h.ticker;
+    const cl = c.call.toLowerCase();
+    return `<div class="call-row ${cl}">
+      <div class="call-tk"><span class="ctk">${esc(h.ticker)}</span><span class="cnm">${esc(name)}</span></div>
+      <span class="call-badge ${cl}">${c.call}</span>
+      <div class="call-reason">${esc(c.reason)}</div>
+    </div>`;
+  }).join("");
 }
 
 // Per-holding latest reported financials (SEC EDGAR XBRL — official as-filed GAAP numbers).
@@ -1454,6 +1503,7 @@ function initPortfolioSubtabs() {
       document.querySelectorAll("#tab-portfolio .psub").forEach((x) => x.classList.remove("active"));
       b.classList.add("active");
       document.getElementById("psub-" + b.dataset.psub).classList.add("active");
+      if (b.dataset.psub === "signals") { renderCalls(); renderSignals(); }
       if (b.dataset.psub === "briefing") renderBriefing();
       if (b.dataset.psub === "earnings") renderEarnings();
       if (b.dataset.psub === "gurus") renderGurus();
