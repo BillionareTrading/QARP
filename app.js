@@ -888,6 +888,44 @@ function renderBriefing() {
   }).join("");
 }
 
+// Smart Money — notable investors' latest 13F holdings (SEC EDGAR), fetched like signals.json.
+let GURUS = null;
+async function loadGurus() {
+  try {
+    const res = await fetch(`gurus.json?cb=${Date.now()}`, { cache: "no-store" });
+    if (res.ok) GURUS = await res.json();
+  } catch (e) { /* graceful */ }
+  renderGurus();
+}
+function renderGurus() {
+  const el = document.getElementById("gurus-list");
+  if (!el) return;
+  if (!GURUS || !(GURUS.funds || []).length) { el.innerHTML = `<p class="muted">Smart-money holdings load shortly — refreshed weekly from SEC 13F filings.</p>`; return; }
+  const fdate = (d) => { try { return new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); } catch (e) { return d; } };
+  const banner = `<div class="gu-caveat"><i class="ti ti-alert-triangle" aria-hidden="true"></i><div><b>Read this first:</b> ${esc(GURUS.disclaimer || "")}</div></div>`;
+  const cards = GURUS.funds.map((f) => {
+    const rows = (f.holdings || []).map((h) => `<div class="gu-row">
+      <div class="gu-bar"><span style="width:${Math.min(100, h.pct)}%"></span></div>
+      <div class="gu-nm"><span class="gu-nmtxt">${esc(h.name)}</span>${h.overlap ? `<span class="gu-own">you own ${esc(h.overlap)}</span>` : ""}</div>
+      <div class="gu-pct">${h.pct}%</div>
+      <div class="gu-val">${esc(h.value)}</div>
+    </div>`).join("");
+    return `<article class="gu-card">
+      <div class="gu-head">
+        <div><span class="gu-mgr">${esc(f.manager)}</span><span class="gu-fund">${esc(f.fund)}</span></div>
+        <a class="gu-link" href="${esc(safeUrl(f.url))}" target="_blank" rel="noopener noreferrer">13F <i class="ti ti-external-link" aria-hidden="true"></i></a>
+      </div>
+      ${f.blurb ? `<p class="gu-blurb">${esc(f.blurb)}</p>` : ""}
+      <div class="gu-meta"><span class="gu-period">Q${esc(quarterOf(f.period))} · ${esc(f.period)}</span><span class="gu-lag">filed ${esc(fdate(f.filed))}</span><span>${f.positions} positions</span><span>${esc(f.total)} disclosed</span></div>
+      <div class="gu-holdings">${rows}</div>
+    </article>`;
+  }).join("");
+  el.innerHTML = banner + `<div class="gu-grid">${cards}</div>`;
+}
+function quarterOf(period) {
+  try { const m = +period.slice(5, 7); return Math.ceil(m / 3); } catch (e) { return "?"; }
+}
+
 // Per-holding latest reported financials (SEC EDGAR XBRL — official as-filed GAAP numbers).
 function renderEarnings() {
   const el = document.getElementById("earnings-list");
@@ -1390,6 +1428,7 @@ function initPortfolioSubtabs() {
       document.getElementById("psub-" + b.dataset.psub).classList.add("active");
       if (b.dataset.psub === "briefing") renderBriefing();
       if (b.dataset.psub === "earnings") renderEarnings();
+      if (b.dataset.psub === "gurus") renderGurus();
       if (b.dataset.psub === "news" && !pNewsLoaded) { pNewsLoaded = true; loadPortfolioNews(); }
       if (b.dataset.psub === "dates" && !pDatesLoaded) { pDatesLoaded = true; loadPortfolioDates(); }
     }));
@@ -1553,6 +1592,7 @@ function renderAll() {
   renderVenture();
   renderPortfolio();
   loadSignals();         // fetch signals.json + live trigger prices, then render the Signals card
+  loadGurus();           // fetch gurus.json (13F holdings) for the Smart Money subtab
   enterDaily();          // Daily is the landing tab — render it + start its refresh
   initTabs();
   startLive();
