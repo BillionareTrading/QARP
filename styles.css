@@ -675,3 +675,10 @@ tbody tr:hover { background: var(--surface-2); }
 .ssig-dir.d-mixed { color: #334155; background: var(--line-2); }
 .ssig-driver { font-size: 11.5px; font-weight: 700; color: var(--ink-2); margin: 8px 0 5px; }
 .ssig-note { font-size: 12px; color: var(--ink-2); line-height: 1.5; margin: 0; }
+
+/* ===== Signal source / triangulation tags ===== */
+.ssig-src { display: flex; align-items: center; gap: 5px; margin-top: 9px; padding-top: 8px; border-top: 1px dotted var(--line); font-size: 10px; font-weight: 600; color: var(--ink-3); letter-spacing: .01em; }
+.ssig-src i { font-size: 12px; color: var(--ink-3); }
+.dir-up .ssig-src i, .dir-down .ssig-src i { color: inherit; }
+.ssig-foot { margin-top: 12px; font-size: 11px; color: var(--ink-3); font-style: italic; line-height: 1.45; }
+.sig-src { color: var(--ink-3); }

@@ -762,7 +762,7 @@ function renderSignals() {
     <div class="sig-rows">${riskRows || `<div class="muted sig-empty">No risk flags.</div>`}</div>
     <div class="sig-sec-label up"><i class="ti ti-calendar-event" aria-hidden="true"></i> Catalysts ahead — the news that could move it</div>
     <div class="sig-rows">${catRows || `<div class="muted sig-empty">No catalysts queued.</div>`}</div>
-    <div class="sig-foot"><i class="ti ti-info-circle" aria-hidden="true"></i> Every signal is tied to a real news event or geopolitical factor — informational, not predictions or advice. No price targets.</div>`;
+    <div class="sig-foot"><i class="ti ti-info-circle" aria-hidden="true"></i> Every signal is tied to a real news event or geopolitical factor — informational, not predictions or advice. No price targets.${s.sources ? ` <span class="sig-src">Sources: ${esc(s.sources)}.</span>` : ""}</div>`;
 }
 
 function sigRiskRow(r) {
@@ -802,10 +802,12 @@ function renderSectorSignals() {
       <div class="ssig-top"><i class="ti ${DIR_ICON[dir] || "ti-arrows-up-down"}" aria-hidden="true"></i><span class="ssig-name">${esc(s.sector || "")}</span><span class="ssig-dir d-${dir}">${DIR_LABEL[dir] || dir}</span></div>
       <div class="ssig-driver">${esc(s.driver || "")}</div>
       <p class="ssig-note">${esc(s.note || "")}</p>
+      ${s.src ? `<div class="ssig-src"><i class="ti ti-circle-check" aria-hidden="true"></i>${esc(s.src)}</div>` : ""}
     </article>`;
   }).join("");
+  const src = (SIGNALS && SIGNALS.sources) ? `<div class="ssig-foot">${esc(SIGNALS.sources)}</div>` : "";
   el.innerHTML = `<div class="side-head">Sector Signals <span class="side-sub">why, not just how much</span></div>`
-    + `<div class="ssig-grid">${cards}</div>`;
+    + `<div class="ssig-grid">${cards}</div>${src}`;
 }
 
 async function renderDailyTicker() {
