@@ -838,19 +838,27 @@ function mergeNews(primary, extra) {
 }
 
 // Analyst-Ratings feed (Stay Informed subtab) — Benzinga, your holdings/universe flagged.
+const STANCE_TXT = { bullish: "Bullish", neutral: "Neutral", bearish: "Bearish" };
 function renderRatings() {
   const el = document.getElementById("ratings-list");
   if (!el) return;
   const rows = (SIGNALS && SIGNALS.ratings) || [];
-  if (!rows.length) { el.innerHTML = `<p class="muted">No recent analyst actions — refreshes with the daily signals run.</p>`; return; }
+  if (!rows.length) { el.innerHTML = `<p class="muted">No recent analyst calls on your holdings or universe names — this refreshes with the daily signals run.</p>`; return; }
   const fmtDate = (d) => { try { const x = new Date(d + "T12:00:00"); return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][x.getMonth()] + " " + x.getDate(); } catch (e) { return d; } };
   el.innerHTML = rows.map((r) => {
-    const tag = r.held ? `<span class="rt-own held">HELD</span>` : r.uni ? `<span class="rt-own uni">universe</span>` : "";
-    return `<div class="rt-row${r.held ? " is-held" : ""}">
-      <div class="rt-date">${fmtDate(r.date)}</div>
-      <div class="rt-tk">${esc(r.ticker)}${tag}</div>
-      <div class="rt-mid"><span class="rt-act">${esc(r.action || "")}</span> <span class="rt-firm">${esc(r.firm || "")}</span></div>
-      <div class="rt-right">${r.rating ? `<span class="rt-rating">${esc(r.rating)}</span>` : ""}${r.pt ? `<span class="rt-pt">${esc(r.pt)}</span>` : ""}</div>
+    const up = r.upside;
+    const sign = up == null ? "flat" : up > 3 ? "pos" : up < -3 ? "neg" : "flat";
+    const upTxt = up == null ? "no price target" : `sees ${up >= 0 ? "+" : ""}${up}% from here`;
+    const own = r.held ? `<span class="rt-own held">YOU OWN</span>` : r.uni ? `<span class="rt-own uni">universe</span>` : "";
+    const pt = r.pt ? `target ${esc(r.pt)} vs ${fmtUSD(r.price, 0)} today` : "";
+    return `<div class="rt-row sign-${sign}">
+      <div class="rt-head"><span class="rt-tk">${esc(r.ticker)}</span>${own}<span class="rt-date">${fmtDate(r.date)} · ${esc(r.firm || "")} ${esc((r.action || "").toLowerCase())}</span></div>
+      <div class="rt-read">
+        <span class="rt-stance s-${r.stance}">${STANCE_TXT[r.stance] || r.stance}</span>
+        <span class="rt-up ${sign}">${upTxt}</span>
+        ${pt ? `<span class="rt-ptline">${pt}</span>` : ""}
+      </div>
+      ${r.qarp ? `<div class="rt-ours"><span class="rt-ours-l">This site's own view:</span> ${verdictBadge(r.qarp)}</div>` : ""}
     </div>`;
   }).join("");
 }
