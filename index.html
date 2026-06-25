@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0b1120" />
   <title>Jaleel Capital — QARP</title>
-  <link rel="stylesheet" href="styles.css?v=aabb2bd9" />
+  <link rel="stylesheet" href="styles.css?v=3fbf997a" />
 </head>
 <body>
 
@@ -156,6 +156,7 @@
     <section id="tab-portfolio" class="tabpanel">
       <nav class="subtabs" id="p-subtabs">
         <button class="subtab active" type="button" data-psub="holdings">Holdings</button>
+        <button class="subtab" type="button" data-psub="briefing">Briefing</button>
         <button class="subtab" type="button" data-psub="news">News</button>
         <button class="subtab" type="button" data-psub="dates">Key Dates</button>
       </nav>
@@ -182,6 +183,12 @@
           </table>
         </div>
         <section id="signals-card" class="card signals-card"></section>
+      </div>
+
+      <!-- Briefing: per-holding triangulated card -->
+      <div id="psub-briefing" class="psub">
+        <p class="tab-intro">One card per holding, triangulating three independent sources: <b>analyst consensus</b> (Finnhub — every analyst's rating), the company's own <b>SEC filings</b> (EDGAR — the primary facts), and the <b>latest news</b> (Benzinga) — each next to <b>this site's own QARP verdict</b> and a plain-English read. Not advice.</p>
+        <div id="briefing-list" class="briefing-list"></div>
       </div>
 
       <!-- Holdings news -->
@@ -311,7 +318,7 @@
     <div class="drawer-panel" id="drawer-panel"></div>
   </div>
 
-  <script src="crypto.js?v=aabb2bd9"></script>
-  <script src="app.js?v=aabb2bd9"></script>
+  <script src="crypto.js?v=3fbf997a"></script>
+  <script src="app.js?v=3fbf997a"></script>
 </body>
 </html>
