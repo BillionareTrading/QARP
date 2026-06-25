@@ -1,7 +1,7 @@
 {
   "date": "2026-06-25",
-  "generated_at": "Jun 25, 5:40am ET",
-  "sources": "Benzinga (WIIM, ratings, earnings) + live universe prices + Jaleel Capital framework",
+  "generated_at": "Jun 25, 5:53am ET",
+  "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
     "headline": "Hawkish Fed, energy & geopolitics in the driver's seat",
@@ -561,5 +561,516 @@
       "wiim": false,
       "rel": true
     }
-  ]
+  ],
+  "portfolio_brief": {
+    "ADBE": {
+      "name": "Adobe",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 10,
+        "buy": 9,
+        "hold": 22,
+        "sell": 4,
+        "strongSell": 0,
+        "total": 45,
+        "bullish": 19,
+        "bearish": 4,
+        "label": "Buy",
+        "score": 0.56,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000109/adbe-20260608.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000112/adbe-20260529.htm"
+        },
+        "insider30d": 3
+      },
+      "explain": "45 analysts cover it — 19 bullish, 22 hold, 4 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "NOW": {
+      "name": "ServiceNow",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 15,
+        "buy": 33,
+        "hold": 5,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 54,
+        "bullish": 48,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.15,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000065/now-20260521.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
+        },
+        "insider30d": 9
+      },
+      "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "ZTS": {
+      "name": "Zoetis",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 6,
+        "buy": 8,
+        "hold": 10,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 24,
+        "bullish": 14,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.83,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000029/zts-20260520.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm"
+        },
+        "insider30d": 3
+      },
+      "explain": "24 analysts cover it — 14 bullish, 10 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "ABT": {
+      "name": "Abbott Laboratories",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 10,
+        "buy": 14,
+        "hold": 10,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 24,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.0,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-04-27",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000110465926049434/tm2612318d1_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "34 analysts cover it — 24 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "DHR": {
+      "name": "Danaher",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 16,
+        "hold": 3,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 30,
+        "bullish": 27,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.27,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000119312526255555/d63873d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000107/dhr-20260327.htm"
+        },
+        "insider30d": 0
+      },
+      "explain": "30 analysts cover it — 27 bullish, 3 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "NVDA": {
+      "name": "NVIDIA",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 24,
+        "buy": 39,
+        "hold": 4,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 68,
+        "bullish": 63,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.26,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-18",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119312526275783/d48176d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
+        },
+        "insider30d": 11
+      },
+      "explain": "68 analysts cover it — 63 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "BSX": {
+      "name": "Boston Scientific",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 12,
+        "buy": 20,
+        "hold": 8,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 40,
+        "bullish": 32,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-18",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000042/bsx-20260518.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "40 analysts cover it — 32 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "LULU": {
+      "name": "Lululemon",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 4,
+        "buy": 4,
+        "hold": 30,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 39,
+        "bullish": 8,
+        "bearish": 1,
+        "label": "Hold",
+        "score": 0.28,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000077/lulu-20260604.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm"
+        },
+        "insider30d": 4
+      },
+      "explain": "39 analysts cover it — 8 bullish, 30 hold, 1 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
+    },
+    "RKLB": {
+      "name": "Rocket Lab",
+      "qarp": "AVOID",
+      "consensus": {
+        "strongBuy": 7,
+        "buy": 15,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 27,
+        "bullish": 22,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.07,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000056/rklb-20260603.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm"
+        },
+        "insider30d": 15
+      },
+      "explain": "27 analysts cover it — 22 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+    },
+    "UBER": {
+      "name": "Uber",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 17,
+        "buy": 35,
+        "hold": 8,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 61,
+        "bullish": 52,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.11,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000320/e26247_uber-8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm"
+        },
+        "insider30d": 6
+      },
+      "explain": "61 analysts cover it — 52 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "IOT": {
+      "name": "Samsara",
+      "qarp": "AVOID",
+      "consensus": {
+        "strongBuy": 5,
+        "buy": 16,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 27,
+        "bullish": 21,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.96,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026040788/iot-20260604.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026041893/iot-20260502.htm"
+        },
+        "insider30d": 16
+      },
+      "explain": "27 analysts cover it — 21 bullish, 6 hold, 0 bearish (consensus <b>Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+    },
+    "GILD": {
+      "name": "Gilead Sciences",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 21,
+        "hold": 7,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 39,
+        "bullish": 32,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000110465926064518/tm2615045d1_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm"
+        },
+        "insider30d": 9
+      },
+      "explain": "39 analysts cover it — 32 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "NVS": {
+      "name": "Novartis",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 6,
+        "buy": 11,
+        "hold": 14,
+        "sell": 3,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 17,
+        "bearish": 3,
+        "label": "Buy",
+        "score": 0.59,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 0
+      },
+      "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "NBIX": {
+      "name": "Neurocrine Biosciences",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 14,
+        "buy": 17,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 36,
+        "bullish": 31,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.25,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000029/nbix-20260527.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm"
+        },
+        "insider30d": 19
+      },
+      "explain": "36 analysts cover it — 31 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "VRTX": {
+      "name": "Vertex Pharma",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 13,
+        "buy": 20,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 1,
+        "total": 40,
+        "bullish": 33,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-13",
+          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000204/vrtx-20260513.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm"
+        },
+        "insider30d": 5
+      },
+      "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "KO": {
+      "name": "Coca-Cola",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 8,
+        "buy": 20,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 28,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.06,
+        "period": "2026-06-01"
+      },
+      "news": {
+        "title": "Coca-Cola Takes IRS Fight To Appeals Court This Week With $20 Billion Tax Bill At Stake: Here's What To Know",
+        "ts": 1782216054,
+        "url": "https://www.benzinga.com/news/legal/26/06/60038197/coca-cola-takes-irs-fight-to-appeals-court-this-week-with-20-billion-tax-bill-at-stake-heres-what-to-know",
+        "wiim": false
+      },
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026029230/ko-20260429.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026028802/ko-20260403.htm"
+        },
+        "insider30d": 5
+      },
+      "explain": "34 analysts cover it — 28 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    }
+  }
 }

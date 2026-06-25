@@ -744,6 +744,7 @@ async function loadSignals() {
   renderSignals();
   renderSectorSignals();
   renderRatings();
+  renderBriefing();
 }
 
 function renderSignals() {
@@ -838,6 +839,54 @@ function mergeNews(primary, extra) {
 }
 
 // Analyst-Ratings feed (Stay Informed subtab) — Benzinga, your holdings/universe flagged.
+// Per-holding Briefing: analyst consensus (Finnhub) + SEC filings (EDGAR) + news (Benzinga) + QARP.
+function consClass(label) {
+  const l = (label || "").toLowerCase();
+  return l.includes("sell") ? "bear" : l.includes("buy") ? "bull" : "neutral";
+}
+function renderBriefing() {
+  const el = document.getElementById("briefing-list");
+  if (!el) return;
+  const pb = (SIGNALS && SIGNALS.portfolio_brief) || {};
+  if (!Object.keys(pb).length) { el.innerHTML = `<p class="muted">The briefing loads with the daily signals run — check back shortly.</p>`; return; }
+  const holds = [...DATA.portfolio].sort((a, b) => (b.value || 0) - (a.value || 0));
+  const filLink = (x, label) => x ? `<a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer" class="bf-fil">${esc(label)} <span class="bf-fdate">${esc(x.date)}</span></a>` : "";
+  el.innerHTML = holds.map((h) => {
+    const b = pb[h.ticker];
+    if (!b) return "";
+    const c = b.consensus, f = b.filings;
+    let bar = "";
+    if (c && c.total) {
+      const w = (n) => (n / c.total * 100).toFixed(1);
+      bar = `<div class="bf-bar" title="${c.bullish} bullish · ${c.hold} hold · ${c.bearish} bearish">
+        ${c.bullish ? `<span class="bf-b" style="width:${w(c.bullish)}%"></span>` : ""}
+        ${c.hold ? `<span class="bf-h" style="width:${w(c.hold)}%"></span>` : ""}
+        ${c.bearish ? `<span class="bf-n" style="width:${w(c.bearish)}%"></span>` : ""}</div>`;
+    }
+    const news = b.news && b.news.title
+      ? `<a class="bf-news" href="${esc(safeUrl(b.news.url))}" target="_blank" rel="noopener noreferrer">${b.news.wiim ? `<span class="bz-wiim">Why it's moving</span> ` : ""}${esc(b.news.title)} <span class="bz-time">${relTime(b.news.ts)}</span></a>`
+      : "";
+    const hasFil = f && (f.periodic || f.latest8k || f.insider30d);
+    return `<article class="bf-card">
+      <div class="bf-head">
+        <span class="bf-tk">${esc(h.ticker)}</span>
+        <span class="bf-name">${esc(b.name || "")}</span>
+        ${b.qarp ? verdictBadge(b.qarp) : ""}
+        <span class="bf-day ${signClass(h.day_pct)}">${fmtPct(h.day_pct)}</span>
+      </div>
+      ${c ? `<div class="bf-cons">
+        <div class="bf-cons-top"><span class="bf-clabel ${consClass(c.label)}">Analysts: ${esc(c.label)}</span>
+        <span class="bf-ccount"><b class="pos">${c.bullish}</b> bullish · ${c.hold} hold · <b class="neg">${c.bearish}</b> bearish <span class="muted">of ${c.total}</span></span></div>
+        ${bar}</div>` : `<div class="bf-cons muted">No analyst-consensus data.</div>`}
+      ${hasFil ? `<div class="bf-sec"><span class="bf-sec-l"><i class="ti ti-file-text" aria-hidden="true"></i> SEC filings</span>
+        ${filLink(f.periodic, f.periodic ? f.periodic.form : "")}${filLink(f.latest8k, "8-K")}
+        ${f.insider30d ? `<span class="bf-insider" title="Form 4 insider transactions, last 30 days">${f.insider30d} insider filings (30d)</span>` : ""}</div>` : ""}
+      ${news ? `<div class="bf-newswrap">${news}</div>` : ""}
+      ${b.explain ? `<p class="bf-explain">${b.explain}</p>` : ""}
+    </article>`;
+  }).join("");
+}
+
 const STANCE_TXT = { bullish: "Bullish", neutral: "Neutral", bearish: "Bearish" };
 function renderRatings() {
   const el = document.getElementById("ratings-list");
@@ -1305,6 +1354,7 @@ function initPortfolioSubtabs() {
       document.querySelectorAll("#tab-portfolio .psub").forEach((x) => x.classList.remove("active"));
       b.classList.add("active");
       document.getElementById("psub-" + b.dataset.psub).classList.add("active");
+      if (b.dataset.psub === "briefing") renderBriefing();
       if (b.dataset.psub === "news" && !pNewsLoaded) { pNewsLoaded = true; loadPortfolioNews(); }
       if (b.dataset.psub === "dates" && !pDatesLoaded) { pDatesLoaded = true; loadPortfolioDates(); }
     }));
