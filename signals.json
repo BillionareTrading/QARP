@@ -1,33 +1,133 @@
 {
-  "date": "2026-06-24",
-  "generated_at": "Jun 24, 2026 · market desk",
+  "date": "2026-06-25",
+  "generated_at": "Jun 25, 4:49am ET",
+  "sources": "Benzinga (WIIM, ratings, earnings) + live universe prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
-    "headline": "Hawkish Fed, sticky energy inflation",
-    "body": "New Fed Chair Warsh scrapped forward guidance; the dot plot now points to 1–2 rate <b>hikes</b> in 2026, not cuts. With the Iran-war energy shock keeping inflation sticky, long-duration high-multiple growth de-rates first — and the book is tilted there (NOW, ADBE, NVDA, IOT)."
+    "headline": "Hawkish Fed, energy & geopolitics in the driver's seat",
+    "body": "Fed Chair Warsh scrapped forward guidance and the dot plot leans toward <b>hikes, not cuts</b>, so long-duration high-multiple growth (NOW, ADBE, NVDA, IOT) stays rate-sensitive. Energy and the Strait of Hormuz headlines are the live swing factor on inflation."
   },
   "risk": [
-    {"ticker": "LULU", "sev": "elevated", "tag": "Guidance cut", "detail": "FY guide <b>cut</b> (Jun 4): Americas comps −5% (5th straight), tariffs gutted margins, China stalled. No earnings catalyst until Q2.", "next": "~Sep 4"},
-    {"ticker": "BSX", "sev": "elevated", "tag": "Guidance slashed", "detail": "FY26 growth cut 10.5→7–8.5%; Watchman/EP/urology soft; mgmt guides <b>flat through Q3</b>. The Q2 print is the next test.", "next": "~Jul 23"},
-    {"ticker": "ADBE", "sev": "watch", "tag": "AI-disruption fear", "detail": "Beat & raised (Jun 11) yet sold off; AI-moat fear (Claude Design), CFO exit, ARR de-emphasis. The narrative, not the numbers, drives it.", "next": "~Sep 11"},
-    {"ticker": "NVDA", "sev": "watch", "tag": "Export controls + AI-capex doubt", "detail": "China export-license tightening + Senate scrutiny; today's AI-spending skepticism is hitting the whole memory/chip complex. Micron's print tonight is a read-through.", "next": "Export news"},
-    {"ticker": "NOW", "sev": "watch", "tag": "Concentration + macro beta", "detail": "No bad news — strong Q1, IBM AI deal. But it's the biggest weight + a high multiple; in a hawkish-Fed software de-rate it leads the drawdown.", "next": "~Jul 23"},
-    {"ticker": "GILD·NVS", "sev": "policy", "sub": "+ NBIX, VRTX", "tag": "Drug-pricing policy", "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.", "next": "Ongoing"},
-    {"ticker": "ABT", "sev": "mild", "tag": "EPS outlook trimmed", "detail": "FY EPS guide cut on deal financing + a weak flu season; revenue raised. Defensive — a yellow flag, not a red one.", "next": "~Jul 17"}
+    {
+      "ticker": "LULU",
+      "sev": "elevated",
+      "tag": "Guidance cut",
+      "detail": "FY guide <b>cut</b> (Jun 4): Americas comps −5% (5th straight), tariffs gutted margins, China stalled.",
+      "next": "~Sep 4"
+    },
+    {
+      "ticker": "BSX",
+      "sev": "elevated",
+      "tag": "Guidance slashed",
+      "detail": "FY26 growth cut 10.5→7–8.5%; Watchman/EP/urology soft; mgmt guides <b>flat through Q3</b>.",
+      "next": "~Jul 23"
+    },
+    {
+      "ticker": "ADBE",
+      "sev": "watch",
+      "tag": "AI-disruption fear",
+      "detail": "Beat & raised (Jun 11) yet sold off; AI-moat fear (Claude Design), CFO exit, ARR de-emphasis — the narrative, not the numbers, drives it.",
+      "next": "~Sep 11"
+    },
+    {
+      "ticker": "NVDA",
+      "sev": "watch",
+      "tag": "Export controls + AI-capex doubt",
+      "detail": "China export-license tightening + Senate scrutiny; the memory/chip complex swings on AI-spending sentiment.",
+      "next": "~Aug 27"
+    },
+    {
+      "ticker": "NOW",
+      "sev": "watch",
+      "tag": "Concentration + macro beta",
+      "detail": "No bad news — strong Q1, IBM AI deal. But it's the biggest weight + a high multiple; in a hawkish-Fed software de-rate it leads the drawdown.",
+      "next": "~Jul 23"
+    },
+    {
+      "ticker": "GILD·NVS",
+      "sev": "policy",
+      "sub": "+ NBIX, VRTX",
+      "tag": "Drug-pricing policy",
+      "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.",
+      "next": "Ongoing"
+    },
+    {
+      "ticker": "ABT",
+      "sev": "mild",
+      "tag": "EPS outlook trimmed",
+      "detail": "FY EPS guide cut on deal financing + a weak flu season; revenue raised. Defensive — a yellow flag, not a red one.",
+      "next": "~Jul 17"
+    }
   ],
   "catalysts": [
-    {"when": "Tonight", "what": "Micron Q3 earnings (after close)", "why": "First big memory read-through since AI-capex doubts flared. A soft outlook would harden the bear case on the whole semiconductor / AI-hardware complex.", "affects": "Semis · NVDA", "dir": "down"},
-    {"when": "Live geopolitical risk", "what": "Iran conflict & the energy shock", "why": "An oil spike feeds inflation, keeps the Fed hawkish, and pressures long-duration growth; de-escalation does the reverse. The market's biggest swing factor.", "affects": "Energy · high-multiple growth", "dir": "two-sided"},
-    {"when": "Data-dependent", "what": "Fed path & Treasury yields", "why": "Yields back below 4.5% relieve long-duration growth; a hawkish surprise from Chair Warsh (who scrapped guidance) hits them. The next CPI / jobs prints set the tone.", "affects": "Growth · rate-sensitives", "dir": "two-sided"},
-    {"when": "Ongoing", "what": "MFN drug-pricing rollout + pharma tariffs", "why": "Most-favored-nation deals (Gilead, Novartis signed) plus import tariffs keep a pricing-pressure overhang on the drug group — a policy story, not a fundamentals one.", "affects": "Pharma cluster", "dir": "down"},
-    {"when": "~Jul 17–23", "what": "Q2 earnings season — ABT, NOW, BSX", "why": "Guidance is the catalyst: BSX already pre-cut, ABT trimmed EPS, and NOW's read on AI-software demand will set the tape for the high-multiple names.", "affects": "Healthcare · Software", "dir": "two-sided"}
+    {
+      "when": "Jul 21",
+      "what": "KO earnings",
+      "affects": "KO",
+      "dir": "two-sided",
+      "why": "Q-results for Coca-Cola — guidance is the catalyst.",
+      "src": "Benzinga earnings calendar"
+    },
+    {
+      "when": "Jun 12",
+      "what": "KO — Bernstein initiates coverage",
+      "affects": "KO",
+      "dir": "two-sided",
+      "why": "Now rated <b>Market Perform</b>, PT $84.",
+      "src": "Benzinga ratings"
+    },
+    {
+      "when": "Live geopolitical",
+      "what": "Energy & the Strait of Hormuz",
+      "why": "As vessels transit the Strait of Hormuz under a UN evacuation program. Also, President Trump said he has ordered a DOJ investigation into retail fuel price gouging, which may lead to lower margins going forward.",
+      "affects": "Energy · growth",
+      "dir": "two-sided",
+      "src": "Benzinga WIIM + framework"
+    },
+    {
+      "when": "Data-dependent",
+      "what": "Fed path & Treasury yields",
+      "why": "Yields easing relieve long-duration growth; a hawkish surprise from Chair Warsh hits them. CPI/jobs prints set the tone.",
+      "affects": "Growth · rate-sensitives",
+      "dir": "two-sided",
+      "src": "framework"
+    }
   ],
   "sectors": [
-    {"sector": "Homebuilders & rate-sensitives", "dir": "up", "driver": "Housing bill + yields < 4.5%", "note": "A bipartisan housing package and falling Treasury yields (oil easing) sent builders sharply higher — the market repricing the prospect of mortgage relief."},
-    {"sector": "Semiconductors / AI hardware", "dir": "down", "driver": "AI-capex skepticism · Micron tonight", "note": "Memory and chip names sold off on doubts that hyperscalers' vast AI budgets will earn their keep. Micron's after-close print is the next read."},
-    {"sector": "Healthcare & biotech", "dir": "up", "driver": "Defensive bid as yields fall", "note": "Diagnostics and life-sciences led gainers as money rotated toward steadier growth — though MFN drug-pricing stays a policy overhang for pharma."},
-    {"sector": "Energy", "dir": "down", "driver": "Oil sliding — Iran is the tail", "note": "Crude pulled back, dragging energy and helping yields lower. The Iran conflict is the two-sided wildcard: any supply scare flips this fast."},
-    {"sector": "Software", "dir": "mixed", "driver": "Hawkish Fed + AI-disruption fear", "note": "High-multiple software is squeezed between a higher-for-longer rate path and AI tools encroaching on incumbents' moats."},
-    {"sector": "Financials", "dir": "mixed", "driver": "Rate-path sensitive", "note": "Banks lean on the yield curve and the Fed's next move; the repricing from cuts toward possible hikes cuts both ways."}
+    {
+      "sector": "Semiconductor & Chip",
+      "dir": "mixed",
+      "driver": "Micron Technology reported strong Q3 financial results",
+      "note": "After Micron Technology reported strong Q3 financial results. Also, the industry may be rallying alongside Qualcomm after the company provided new guidance up to FY29.",
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
+    },
+    {
+      "sector": "Homebuilding & Housing",
+      "dir": "up",
+      "driver": "The House and Senate sent a bipartisan housing bill designed to lower ho…",
+      "note": "After the House and Senate sent a bipartisan housing bill designed to lower housing costs for President Trump's signature. Sentiment was further boosted by KB Home’s better-than-expected second-quarter sales results.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Oil & Gas",
+      "dir": "down",
+      "driver": "Vessels transit the Strait of Hormuz under a UN evacuation program",
+      "note": "As vessels transit the Strait of Hormuz under a UN evacuation program. Also, President Trump said he has ordered a DOJ investigation into retail fuel price gouging, which may lead to lower margins going forward.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Software & AI Cloud",
+      "dir": "down",
+      "driver": "Possible sympathy with Oracle after the company reported Q4 financial re…",
+      "note": "Amid possible sympathy with Oracle after the company reported Q4 financial results and announced a $40 billion financing plan for FY27. The financing needs to fund aggressive capex spending may be giving investors pause.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Specialty Retail",
+      "dir": "up",
+      "driver": "Oil prices and bond yields retreat amid optimism for a lasting U.S.-Iran…",
+      "note": "As oil prices and bond yields retreat amid optimism for a lasting U.S.-Iran peace agreement, which may lead to cheaper borrowing for consumers.",
+      "src": "Benzinga WIIM · price-confirmed"
+    }
   ]
 }
