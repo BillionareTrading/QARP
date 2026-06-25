@@ -1753,9 +1753,105 @@ function initFrameworkCalc() {
   update();
 }
 
+/* ---------- Ask-the-bot chat (Claude via the Cloudflare Worker proxy) ---------- */
+// Set BOT_PROXY to your deployed Worker URL (see qarp-bot-worker.js). The browser
+// builds a compact context from the live data and sends {system, messages}; the
+// Worker adds the API key and streams Claude's reply. Until BOT_PROXY is set, the
+// widget explains how to connect it.
+const BOT_PROXY = "https://YOUR-WORKER.workers.dev";   // <-- paste your Worker URL after deploying
+let botHistory = [];
+
+function buildBotContext() {
+  const t = (DATA.meta && DATA.meta.portfolio_totals) || {};
+  const holds = (DATA.portfolio || []).map((h) => `${h.ticker} ${fmtNum(h.shares, 2)}sh ${fmtPct(h.gain_pct)} (QARP ${h.verdict || "?"})`).join("; ");
+  const calls = (DATA.portfolio || []).map((h) => { try { return `${h.ticker}:${holdingCall(h.ticker).call}`; } catch (e) { return ""; } }).filter(Boolean).join(", ");
+  const top = [...(DATA.universe || [])].filter((u) => u.qarp != null).sort((a, b) => b.qarp - a.qarp).slice(0, 12).map((u) => `${u.ticker} ${fmtNum(u.qarp, 0)} ${u.verdict}`).join("; ");
+  const S = (typeof SIGNALS !== "undefined" && SIGNALS) || {};
+  const risk = (S.risk || []).map((r) => `${r.ticker} (${r.tag})`).join(", ");
+  const sectors = (S.sectors || []).map((s) => `${s.sector} ${s.dir}`).join(", ");
+  return [
+    "You are the assistant for the Jaleel Capital QARP dashboard — a Shariah-compliant equity tool. Answer the user's questions about THEIR portfolio, the market, the holdings, the QARP framework, and investing generally. Be concise, direct, and honest. Informational only — NOT financial advice. Never fabricate a price, a Shariah verdict, or a figure; if it isn't in the context below, say you don't have it. When asked about a holding, use its QARP verdict + daily call + any risk flag.",
+    "QARP = 0.6×(Quality/105×100) + 0.4×(DCF/5×100). Bands: ≥85 STRONGEST, ≥72 STRONG BUY, ≥66 BUY, ≥60 HOLD-QUAL, 35–59 AVOID, <35 STRONG AVOID. Gate 1 = Shariah (AAOIFI, via Musaffa). Default stance: conservative / capital-preservation.",
+    `Data as of ${DATA.meta && DATA.meta.date}. Account ≈ ${fmtUSD(t.account, 0)}, cash ${fmtUSD(t.cash, 2)}, unrealized P/L ${fmtUSD(t.gain, 0)} (${fmtPct(t.gain_pct)}).`,
+    `Holdings: ${holds}.`,
+    `Daily calls (Add/Hold/Trim): ${calls}.`,
+    `Top universe by QARP: ${top}.`,
+    `Signals — macro: ${(S.macro && S.macro.headline) || "n/a"}. Risk flags: ${risk || "none"}. Sectors: ${sectors || "n/a"}.`,
+  ].join("\n\n");
+}
+
+function botAppend(role, text) {
+  const log = document.getElementById("bot-log");
+  const row = document.createElement("div");
+  row.className = "bot-msg " + role;
+  row.textContent = text;
+  log.appendChild(row);
+  log.scrollTop = log.scrollHeight;
+  return row;
+}
+
+async function botSend(text) {
+  botAppend("user", text);
+  if (!BOT_PROXY || BOT_PROXY.includes("YOUR-WORKER")) {
+    botAppend("assistant", "The bot isn't connected yet. Deploy the Cloudflare Worker (qarp-bot-worker.js), add your ANTHROPIC_API_KEY secret, then paste its URL into BOT_PROXY in app.js.");
+    return;
+  }
+  botHistory.push({ role: "user", content: text });
+  if (botHistory.length > 16) botHistory = botHistory.slice(-16);
+  const bubble = botAppend("assistant", "…");
+  try {
+    const res = await fetch(BOT_PROXY, {
+      method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ system: buildBotContext(), messages: botHistory }),
+    });
+    if (!res.ok || !res.body) { bubble.textContent = `Bot error (${res.status}). Check the Worker + API key.`; return; }
+    const reader = res.body.getReader(), dec = new TextDecoder();
+    let buf = "", acc = "";
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, { stream: true });
+      const lines = buf.split("\n"); buf = lines.pop();
+      for (const line of lines) {
+        if (!line.startsWith("data:")) continue;
+        const d = line.slice(5).trim();
+        if (!d || d === "[DONE]") continue;
+        try {
+          const ev = JSON.parse(d);
+          if (ev.type === "content_block_delta" && ev.delta && ev.delta.type === "text_delta") {
+            acc += ev.delta.text; bubble.textContent = acc;
+            document.getElementById("bot-log").scrollTop = 1e9;
+          } else if (ev.type === "error") {
+            bubble.textContent = "Bot error: " + (ev.error && ev.error.message || "unknown");
+          }
+        } catch (e) { /* ignore keep-alives */ }
+      }
+    }
+    if (acc) botHistory.push({ role: "assistant", content: acc });
+    else if (bubble.textContent === "…") bubble.textContent = "(no response)";
+  } catch (e) {
+    bubble.textContent = "Couldn't reach the bot — is the Worker URL right?";
+  }
+}
+
+function initBot() {
+  const fab = document.getElementById("bot-fab"), panel = document.getElementById("bot-panel");
+  if (!fab || !panel) return;
+  const open = () => { panel.hidden = false; fab.hidden = true; setTimeout(() => document.getElementById("bot-input").focus(), 50);
+    if (!document.getElementById("bot-log").children.length) botAppend("assistant", "Hi — ask me about your holdings, a QARP verdict, the signals, or the market. e.g. \"Why is LULU a hold?\" or \"What should I watch this week?\""); };
+  fab.addEventListener("click", open);
+  document.getElementById("bot-close").addEventListener("click", () => { panel.hidden = true; fab.hidden = false; });
+  document.getElementById("bot-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const inp = document.getElementById("bot-input"); const v = inp.value.trim();
+    if (!v) return; inp.value = ""; botSend(v);
+  });
+}
+
 initTips();
 initFrameworkCalc();
 initInformed();
 initPortfolioSubtabs();
 initUniverseSubtabs();
+initBot();
 boot();

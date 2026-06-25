@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0b1120" />
   <title>Jaleel Capital — QARP</title>
-  <link rel="stylesheet" href="styles.css?v=ea399411" />
+  <link rel="stylesheet" href="styles.css?v=7b221a02" />
 </head>
 <body>
 
@@ -339,7 +339,22 @@
     <div class="drawer-panel" id="drawer-panel"></div>
   </div>
 
-  <script src="crypto.js?v=ea399411"></script>
-  <script src="app.js?v=ea399411"></script>
+  <!-- Ask-the-bot chat widget -->
+  <button id="bot-fab" type="button" aria-label="Ask the dashboard">💬 Ask</button>
+  <div id="bot-panel" hidden>
+    <div class="bot-head">
+      <div><strong>Ask Jaleel Capital</strong><span class="bot-sub">your portfolio · the market · the framework</span></div>
+      <button id="bot-close" class="bot-close" aria-label="Close">×</button>
+    </div>
+    <div id="bot-log" class="bot-log"></div>
+    <form id="bot-form" class="bot-form">
+      <input id="bot-input" type="text" placeholder="Ask anything…" autocomplete="off" />
+      <button type="submit" class="bot-send" aria-label="Send">↑</button>
+    </form>
+    <div class="bot-foot">Informational only — not financial advice.</div>
+  </div>
+
+  <script src="crypto.js?v=7b221a02"></script>
+  <script src="app.js?v=7b221a02"></script>
 </body>
 </html>
