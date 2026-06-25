@@ -797,3 +797,6 @@ tbody tr:hover { background: var(--surface-2); }
 .gu-own { flex: none; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .03em; color: #0c447c; background: #e6f1fb; border-radius: 4px; padding: 1px 5px; }
 .gu-pct { font-size: 12px; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
 .gu-val { font-size: 11.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; min-width: 48px; text-align: right; }
+
+/* live-data tag on auto-generated market briefs */
+.wire-auto { font-family: system-ui, sans-serif; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--pos); background: var(--pos-bg); border-radius: 4px; padding: 2px 6px; vertical-align: 2px; }

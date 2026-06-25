@@ -714,15 +714,43 @@ async function loadDailyBrief() {
   renderBriefs(fresh && Array.isArray(b.briefs) ? b.briefs : null);
 }
 
-// Original written briefs — the content is on the page, no links to follow.
+// Always-fresh briefs built from live data (sector signals + universe breadth/movers + catalysts),
+// used whenever the routine-written briefs aren't current — so the section is NEVER empty/stale.
+function autoBriefs() {
+  const strip = (s) => (s || "").replace(/<[^>]+>/g, "");
+  const out = [];
+  const S = (typeof SIGNALS !== "undefined" && SIGNALS) ? SIGNALS : null;
+  if (S && Array.isArray(S.sectors)) {
+    S.sectors.slice(0, 3).forEach((s) => {
+      const tone = s.dir === "up" ? "trading higher" : s.dir === "down" ? "trading lower" : "mixed";
+      out.push({ headline: `${s.sector} ${tone}`, body: strip(s.note) || strip(s.driver) });
+    });
+  }
+  const uni = (DATA.universe || []).filter((x) => x.day_pct != null);
+  if (uni.length) {
+    const ups = uni.filter((x) => x.day_pct > 0).length, downs = uni.filter((x) => x.day_pct < 0).length;
+    const by = {};
+    uni.forEach((x) => { const g = sectorGroup(x.sector); (by[g] = by[g] || []).push(x.day_pct); });
+    const sm = Object.entries(by).map(([s, a]) => ({ s, avg: a.reduce((p, q) => p + q, 0) / a.length })).sort((a, b) => b.avg - a.avg);
+    if (sm.length) out.push({ headline: `Breadth: ${ups} up, ${downs} down`, body: `Across the ${uni.length}-name Shariah universe, ${sm[0].s} led on average (${fmtPct(sm[0].avg)}) while ${sm[sm.length - 1].s} lagged (${fmtPct(sm[sm.length - 1].avg)}).` });
+    const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct), g = sorted[0], l = sorted[sorted.length - 1];
+    out.push({ headline: `${g.ticker} ${fmtPct(g.day_pct)} · ${l.ticker} ${fmtPct(l.day_pct)}`, body: `${g.name || g.ticker} led the board; ${l.name || l.ticker} was the weakest name on the day.` });
+  }
+  if (S && Array.isArray(S.catalysts) && S.catalysts.length) {
+    const c = S.catalysts[0];
+    out.push({ headline: `On the radar: ${c.what}`, body: strip(c.why) });
+  }
+  return out.filter((b) => b.headline && b.body);
+}
+
+// Briefs: routine-written when fresh, else auto-built from live data (never the stale placeholder).
 function renderBriefs(briefs) {
   const el = document.getElementById("paper-wire");
   if (!el) return;
-  if (!Array.isArray(briefs) || !briefs.length) {
-    el.innerHTML = `<div class="wire-head">Market Briefs</div><p class="muted">Today's briefs are written each session — check back shortly.</p>`;
-    return;
-  }
-  el.innerHTML = `<div class="wire-head">Market Briefs</div><div class="wire-grid">` + briefs.map((br) =>
+  let auto = false;
+  if (!Array.isArray(briefs) || !briefs.length) { briefs = autoBriefs(); auto = true; }
+  if (!briefs.length) { el.innerHTML = `<div class="wire-head">Market Briefs</div><p class="muted">Live market briefs update through the session.</p>`; return; }
+  el.innerHTML = `<div class="wire-head">Market Briefs${auto ? ` <span class="wire-auto">live data</span>` : ""}</div><div class="wire-grid">` + briefs.map((br) =>
     `<article class="wire-item"><h4 class="wire-h">${esc(br.headline || "")}</h4><p class="wire-sum">${esc(br.body || "")}</p></article>`).join("") + `</div>`;
 }
 
