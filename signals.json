@@ -1,6 +1,6 @@
 {
   "date": "2026-06-25",
-  "generated_at": "Jun 25, 5:53am ET",
+  "generated_at": "Jun 25, 6:14am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -236,9 +236,68 @@
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-06-25",
+      "ticker": "NKE",
+      "firm": "BTIG",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$55",
+      "price": 41.83,
+      "upside": 31.5,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "bz_news": [
+    {
+      "title": "Merck To Acquire Bio-Techne For $73 Per Share In Cash At EV Of $11.3B; Deal Expected To Be Immediately Accretive To Sales Growth And EBITDA Pre Margin And EPS Pre Accretive By Year 3 Post-Closing",
+      "url": "https://www.benzinga.com/news/26/06/60091512/merck-acquire-bio-techne-73-share-cash-ev-11-3b-deal-expected-be-immediately-accretive-sales-growth-",
+      "ts": 1782382453,
+      "tickers": [
+        "TECH",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true
+    },
+    {
+      "title": "BTIG Maintains Buy on Nike, Lowers Price Target to $55",
+      "url": "https://www.benzinga.com/news/26/06/60091373/btig-maintains-buy-nike-lowers-price-target-55",
+      "ts": 1782382089,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true
+    },
+    {
+      "title": "IBM Introduces World's First Sub-1 Nanometer Chip Technology, Including Transistor Architecture At The 0.7 nm Or 7 Angstrom Node",
+      "url": "https://www.benzinga.com/news/26/06/60091183/ibm-introduces-world-s-first-sub-1-nanometer-chip-technology-including-transistor-architecture-0-7-n",
+      "ts": 1782381794,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false
+    },
+    {
+      "title": "Exploring The Competitive Space: Microsoft Versus Industry Peers In Software",
+      "url": "https://www.benzinga.com/news/26/06/60091018/exploring-competitive-space-microsoft-versus-industry-peers-software",
+      "ts": 1782381521,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false
+    },
     {
       "title": "Goldman Sachs Initiates Coverage On Intel with Neutral Rating, Announces Price Target of $150",
       "url": "https://www.benzinga.com/news/26/06/60090582/goldman-sachs-initiates-coverage-intel-neutral-rating-announces-price-target-150",
@@ -496,59 +555,6 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false
-    },
-    {
-      "title": "Why OpenAI's Jalapeño Is Really A Broadcom Story",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/06/60080364/why-openais-jalapeno-is-really-a-broadcom-story",
-      "ts": 1782324551,
-      "tickers": [
-        "AVGO",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true
-    },
-    {
-      "title": "OpenAI Posts On X \"We have a new version of GPT-5.5 Instant for you, and it's much more fun to talk to. Our most-used model is now better at understanding the intent behind a question and adapting its response accordingly. It also handles complex constraints more reliably and makes shopping and local recommendations more useful and cohesive. Rolling out today to paid users, tomorrow to free users.\"",
-      "url": "https://www.benzinga.com/news/26/06/60080342/openai-posts-x-we-have-new-version-gpt-5-5-instant-you-and-it-s-much-more-fun-talk-our-most-used-mod",
-      "ts": 1782324531,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false
-    },
-    {
-      "title": "Chamath Says Alphabet, Meta and Microsoft Aren’t Bleeding Cash — They’re Building Moats",
-      "url": "https://www.benzinga.com/markets/tech/26/06/60080275/chamath-says-alphabet-meta-and-microsoft-arent-bleeding-cash-theyre-building-moats",
-      "ts": 1782324462,
-      "tickers": [
-        "AMZN",
-        "META",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true
-    },
-    {
-      "title": "Shares of homebuilding and housing-related companies are trading higher after the House and Senate sent a bipartisan housing bill designed to lower housing costs for President Trump's signature. Sentiment was further boosted by KB Home’s better-than-expected second-quarter sales results.",
-      "url": "https://www.benzinga.com/quote/NAIL",
-      "ts": 1782323941,
-      "tickers": [
-        "LOW",
-        "HD",
-        "LEN",
-        "CCS"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true
     },
     {
       "title": "Coca-Cola Takes IRS Fight To Appeals Court This Week With $20 Billion Tax Bill At Stake: Here's What To Know",
@@ -1071,6 +1077,294 @@
         "insider30d": 5
       },
       "explain": "34 analysts cover it — 28 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    }
+  },
+  "financials": {
+    "ADBE": {
+      "period": "Q2 FY2026",
+      "filed": "2026-06-15",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000112/adbe-20260529.htm",
+      "revenue": {
+        "fmt": "$6.6B",
+        "yoy": 12.7
+      },
+      "eps": {
+        "val": 4.25,
+        "yoy": 7.9
+      },
+      "net_income": {
+        "fmt": "$1.7B"
+      },
+      "margin": 25.9,
+      "summary": "Q2 FY2026 — revenue $6.6B (+12.7% YoY), diluted EPS $4.25 (+7.9% YoY), net margin 26%. (as reported, GAAP)"
+    },
+    "NOW": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-23",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm",
+      "revenue": {
+        "fmt": "$3.8B",
+        "yoy": 22.1
+      },
+      "eps": {
+        "val": 0.45,
+        "yoy": 2.3
+      },
+      "net_income": {
+        "fmt": "$469M"
+      },
+      "margin": 12.4,
+      "summary": "Q1 FY2026 — revenue $3.8B (+22.1% YoY), diluted EPS $0.45 (+2.3% YoY), net margin 12%. (as reported, GAAP)"
+    },
+    "ZTS": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm",
+      "revenue": {
+        "fmt": "$2.3B",
+        "yoy": 2.9
+      },
+      "eps": {
+        "val": 1.42,
+        "yoy": 6.0
+      },
+      "net_income": {
+        "fmt": "$601M"
+      },
+      "margin": 26.6,
+      "summary": "Q1 FY2026 — revenue $2.3B (+2.9% YoY), diluted EPS $1.42 (+6.0% YoY), net margin 27%. (as reported, GAAP)"
+    },
+    "ABT": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-29",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm",
+      "revenue": {
+        "fmt": "$11.2B",
+        "yoy": 7.8
+      },
+      "eps": {
+        "val": 0.61,
+        "yoy": -19.7
+      },
+      "net_income": {
+        "fmt": "$1.1B"
+      },
+      "margin": 9.6,
+      "summary": "Q1 FY2026 — revenue $11.2B (+7.8% YoY), diluted EPS $0.61 (-19.7% YoY), net margin 10%. (as reported, GAAP)"
+    },
+    "DHR": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-21",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000107/dhr-20260327.htm",
+      "revenue": {
+        "fmt": "$6.0B",
+        "yoy": 3.7
+      },
+      "eps": {
+        "val": 1.45,
+        "yoy": 9.8
+      },
+      "net_income": {
+        "fmt": "$1.0B"
+      },
+      "margin": 17.3,
+      "summary": "Q1 FY2026 — revenue $6.0B (+3.7% YoY), diluted EPS $1.45 (+9.8% YoY), net margin 17%. (as reported, GAAP)"
+    },
+    "NVDA": {
+      "period": "Q1 FY2027",
+      "filed": "2026-05-20",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
+      "revenue": {
+        "fmt": "$81.6B",
+        "yoy": 85.2
+      },
+      "eps": {
+        "val": 2.39,
+        "yoy": 214.5
+      },
+      "net_income": {
+        "fmt": "$58.3B"
+      },
+      "margin": 71.5,
+      "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
+    },
+    "BSX": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-01",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm",
+      "revenue": {
+        "fmt": "$5.2B",
+        "yoy": 11.6
+      },
+      "eps": {
+        "val": 0.9,
+        "yoy": 100.0
+      },
+      "net_income": {
+        "fmt": "$190M"
+      },
+      "margin": null,
+      "summary": "Q1 FY2026 — revenue $5.2B (+11.6% YoY), diluted EPS $0.90 (+100.0% YoY). (as reported, GAAP)"
+    },
+    "LULU": {
+      "period": "Q1 FY2026",
+      "filed": "2026-06-04",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm",
+      "revenue": {
+        "fmt": "$2.5B",
+        "yoy": 4.3
+      },
+      "eps": {
+        "val": 1.69,
+        "yoy": -35.0
+      },
+      "net_income": {
+        "fmt": "$195M"
+      },
+      "margin": 7.9,
+      "summary": "Q1 FY2026 — revenue $2.5B (+4.3% YoY), diluted EPS $1.69 (-35.0% YoY), net margin 8%. (as reported, GAAP)"
+    },
+    "RKLB": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm",
+      "revenue": {
+        "fmt": "$200M",
+        "yoy": 63.5
+      },
+      "eps": {
+        "val": -0.07,
+        "yoy": 41.7
+      },
+      "net_income": {
+        "fmt": "$-45M"
+      },
+      "margin": -22.5,
+      "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
+    },
+    "UBER": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-06",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm",
+      "revenue": {
+        "fmt": "$13.2B",
+        "yoy": 14.5
+      },
+      "eps": {
+        "val": 0.13,
+        "yoy": -84.3
+      },
+      "net_income": {
+        "fmt": "$263M"
+      },
+      "margin": 2.0,
+      "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
+    },
+    "IOT": {
+      "period": "Q1 FY2027",
+      "filed": "2026-06-09",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026041893/iot-20260502.htm",
+      "revenue": {
+        "fmt": "$479M",
+        "yoy": 30.5
+      },
+      "eps": {
+        "val": 0.08,
+        "yoy": 300.0
+      },
+      "net_income": {
+        "fmt": "$45M"
+      },
+      "margin": 9.3,
+      "summary": "Q1 FY2027 — revenue $479M (+30.5% YoY), diluted EPS $0.08 (+300.0% YoY), net margin 9%. (as reported, GAAP)"
+    },
+    "GILD": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm",
+      "revenue": {
+        "fmt": "$7.0B",
+        "yoy": 4.4
+      },
+      "eps": {
+        "val": 1.61,
+        "yoy": 54.8
+      },
+      "net_income": {
+        "fmt": "$2.0B"
+      },
+      "margin": 29.0,
+      "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
+    },
+    "NVS": null,
+    "NBIX": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-05",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm",
+      "revenue": {
+        "fmt": "$814M",
+        "yoy": 42.2
+      },
+      "eps": {
+        "val": 1.91,
+        "yoy": 2287.5
+      },
+      "net_income": {
+        "fmt": "$198M"
+      },
+      "margin": 24.3,
+      "summary": "Q1 FY2026 — revenue $814M (+42.2% YoY), diluted EPS $1.91 (+2287.5% YoY), net margin 24%. (as reported, GAAP)"
+    },
+    "VRTX": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-05",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm",
+      "revenue": {
+        "fmt": "$3.0B",
+        "yoy": 7.8
+      },
+      "eps": {
+        "val": 4.02,
+        "yoy": 61.4
+      },
+      "net_income": {
+        "fmt": "$1.0B"
+      },
+      "margin": 34.5,
+      "summary": "Q1 FY2026 — revenue $3.0B (+7.8% YoY), diluted EPS $4.02 (+61.4% YoY), net margin 34%. (as reported, GAAP)"
+    },
+    "KO": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-30",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026028802/ko-20260403.htm",
+      "revenue": {
+        "fmt": "$12.5B",
+        "yoy": 12.1
+      },
+      "eps": {
+        "val": 0.91,
+        "yoy": 18.2
+      },
+      "net_income": {
+        "fmt": "$3.9B"
+      },
+      "margin": 31.5,
+      "summary": "Q1 FY2026 — revenue $12.5B (+12.1% YoY), diluted EPS $0.91 (+18.2% YoY), net margin 32%. (as reported, GAAP)"
     }
   }
 }

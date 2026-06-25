@@ -745,6 +745,7 @@ async function loadSignals() {
   renderSectorSignals();
   renderRatings();
   renderBriefing();
+  renderEarnings();
 }
 
 function renderSignals() {
@@ -883,6 +884,39 @@ function renderBriefing() {
         ${f.insider30d ? `<span class="bf-insider" title="Form 4 insider transactions, last 30 days">${f.insider30d} insider filings (30d)</span>` : ""}</div>` : ""}
       ${news ? `<div class="bf-newswrap">${news}</div>` : ""}
       ${b.explain ? `<p class="bf-explain">${b.explain}</p>` : ""}
+    </article>`;
+  }).join("");
+}
+
+// Per-holding latest reported financials (SEC EDGAR XBRL — official as-filed GAAP numbers).
+function renderEarnings() {
+  const el = document.getElementById("earnings-list");
+  if (!el) return;
+  const fn = (SIGNALS && SIGNALS.financials) || {};
+  const pb = (SIGNALS && SIGNALS.portfolio_brief) || {};
+  if (!Object.keys(fn).length) { el.innerHTML = `<p class="muted">The latest filings load with the daily signals run — check back shortly.</p>`; return; }
+  const holds = [...DATA.portfolio].sort((a, b) => (b.value || 0) - (a.value || 0));
+  const yoy = (y) => (y == null ? "" : `<span class="er-yoy ${y >= 0 ? "pos" : "neg"}">${y >= 0 ? "+" : ""}${y}% YoY</span>`);
+  const stat = (label, val, y) => `<div class="er-stat"><div class="er-l">${label}</div><div class="er-v">${val} ${yoy(y)}</div></div>`;
+  const fdate = (d) => { try { return new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); } catch (e) { return d; } };
+  el.innerHTML = holds.map((h) => {
+    const f = fn[h.ticker];
+    const name = (pb[h.ticker] || {}).name || h.ticker;
+    if (!f) {
+      return `<article class="er-row na"><div class="er-head"><span class="er-tk">${esc(h.ticker)}</span><span class="er-name">${esc(name)}</span></div><div class="er-na">Not available via SEC EDGAR (foreign filer — files 20-F/6-K).</div></article>`;
+    }
+    const link = f.url
+      ? `<a href="${esc(safeUrl(f.url))}" target="_blank" rel="noopener noreferrer" class="er-link">${esc(f.form)} · filed ${esc(fdate(f.filed))} <i class="ti ti-external-link" aria-hidden="true"></i></a>`
+      : `<span class="er-link plain">${esc(f.form)} · filed ${esc(fdate(f.filed))}</span>`;
+    return `<article class="er-row">
+      <div class="er-head"><span class="er-tk">${esc(h.ticker)}</span><span class="er-name">${esc(name)}</span><span class="er-period">${esc(f.period)}</span><span class="er-filed">${link}</span></div>
+      <div class="er-stats">
+        ${f.revenue ? stat("Revenue", esc(f.revenue.fmt), f.revenue.yoy) : ""}
+        ${f.eps ? stat("Diluted EPS", (f.eps.val < 0 ? "−$" + Math.abs(f.eps.val) : "$" + f.eps.val), f.eps.yoy) : ""}
+        ${f.net_income ? stat("Net income", esc(f.net_income.fmt), null) : ""}
+        ${f.margin != null ? stat("Net margin", f.margin + "%", null) : ""}
+      </div>
+      <div class="er-note">As reported (GAAP) — may differ from the “adjusted” figures quoted in headlines.</div>
     </article>`;
   }).join("");
 }
@@ -1355,6 +1389,7 @@ function initPortfolioSubtabs() {
       b.classList.add("active");
       document.getElementById("psub-" + b.dataset.psub).classList.add("active");
       if (b.dataset.psub === "briefing") renderBriefing();
+      if (b.dataset.psub === "earnings") renderEarnings();
       if (b.dataset.psub === "news" && !pNewsLoaded) { pNewsLoaded = true; loadPortfolioNews(); }
       if (b.dataset.psub === "dates" && !pDatesLoaded) { pDatesLoaded = true; loadPortfolioDates(); }
     }));
