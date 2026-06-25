@@ -682,3 +682,35 @@ tbody tr:hover { background: var(--surface-2); }
 .dir-up .ssig-src i, .dir-down .ssig-src i { color: inherit; }
 .ssig-foot { margin-top: 12px; font-size: 11px; color: var(--ink-3); font-style: italic; line-height: 1.45; }
 .sig-src { color: var(--ink-3); }
+
+/* ===== Stay Informed subtabs (Headlines / Ratings) ===== */
+.isub { display: none; }
+.isub.active { display: block; }
+
+/* ===== Drawer: Benzinga latest headline ===== */
+.bz-tag { font-size: 9.5px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #854f0b; background: #faeeda; border-radius: 5px; padding: 2px 6px; margin-left: 6px; vertical-align: 1px; }
+.bz-news { display: block; font-size: 12.5px; line-height: 1.5; color: var(--ink-2); text-decoration: none; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 9px 11px; }
+.bz-news:hover { background: var(--surface-2); }
+.bz-wiim { font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--brand); background: #e8eefc; border-radius: 4px; padding: 1px 6px; }
+.bz-time { color: var(--ink-3); font-size: 11px; white-space: nowrap; }
+
+/* ===== Analyst-Ratings feed ===== */
+.ratings-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; }
+.rt-row { display: grid; grid-template-columns: 56px 130px 1fr auto; gap: 12px; align-items: center; padding: 11px 14px; font-size: 13px; }
+.rt-row + .rt-row { border-top: 1px solid var(--line-2); }
+.rt-row.is-held { background: #f3f8ff; }
+.rt-date { font-size: 11px; color: var(--ink-3); font-weight: 600; white-space: nowrap; }
+.rt-tk { font-family: var(--mono); font-weight: 700; color: var(--ink); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.rt-own { font-family: var(--sans); font-size: 8.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; padding: 1px 5px; border-radius: 4px; }
+.rt-own.held { color: #0c447c; background: #e6f1fb; }
+.rt-own.uni { color: var(--ink-3); background: var(--line-2); }
+.rt-mid { color: var(--ink-2); min-width: 0; }
+.rt-act { font-weight: 600; color: var(--ink); }
+.rt-firm { color: var(--ink-3); }
+.rt-right { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.rt-rating { font-size: 12px; font-weight: 700; color: var(--ink); }
+.rt-pt { font-family: var(--mono); font-size: 12px; color: var(--pos); font-weight: 700; }
+@media (max-width: 560px) {
+  .rt-row { grid-template-columns: 48px 1fr auto; }
+  .rt-mid { grid-column: 2 / -1; }
+}
