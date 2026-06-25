@@ -39,7 +39,9 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
   line-height: 1.45;
+  overflow-x: hidden;
 }
+#app { min-height: 100vh; }
 h1, h2, h3 { margin: 0; font-weight: 650; letter-spacing: -0.01em; }
 button { font-family: inherit; cursor: pointer; }
 [hidden] { display: none !important; }
@@ -58,13 +60,14 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ===== Password gate ===== */
 #gate {
-  position: fixed; inset: 0;
-  display: grid; place-items: center;
+  position: fixed; inset: 0; overflow-y: auto;
+  display: flex; align-items: center; justify-content: center;
   background:
     radial-gradient(1200px 600px at 50% -10%, #1e2a52, transparent),
     linear-gradient(160deg, #0b1120, #131c33);
   padding: 24px;
 }
+.gate-card { margin: auto; }
 .gate-card {
   width: 100%; max-width: 360px;
   background: var(--surface);
@@ -97,8 +100,7 @@ button { font-family: inherit; cursor: pointer; }
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; justify-content: space-between;
   padding: 12px clamp(14px, 4vw, 32px);
-  background: rgba(255,255,255,.85);
-  backdrop-filter: saturate(1.4) blur(10px);
+  background: var(--surface);
   border-bottom: 1px solid var(--line);
 }
 .brand { display: flex; align-items: center; gap: 11px; }
