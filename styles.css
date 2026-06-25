@@ -805,3 +805,22 @@ tbody tr:hover { background: var(--surface-2); }
 
 /* live-data tag on auto-generated market briefs */
 .wire-auto { font-family: system-ui, sans-serif; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--pos); background: var(--pos-bg); border-radius: 4px; padding: 2px 6px; vertical-align: 2px; }
+
+/* ===== Daily call: Add / Hold / Trim per holding ===== */
+.calls-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+.call-row { display: grid; grid-template-columns: minmax(120px, 1.2fr) auto 2.4fr; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--ink-3); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 11px 14px; box-shadow: var(--shadow-sm); }
+.call-row.add { border-left-color: var(--pos); }
+.call-row.trim { border-left-color: var(--neg); }
+.call-row.hold { border-left-color: var(--v-hold); }
+.call-tk { min-width: 0; }
+.call-tk .ctk { font-family: var(--mono); font-size: 15px; font-weight: 700; color: var(--ink); }
+.call-tk .cnm { display: block; font-size: 11.5px; color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.call-badge { font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: 4px 12px; border-radius: 7px; text-align: center; justify-self: start; }
+.call-badge.add { color: #15803d; background: var(--pos-bg); }
+.call-badge.trim { color: #be123c; background: var(--neg-bg); }
+.call-badge.hold { color: #854f0b; background: #faeeda; }
+.call-reason { font-size: 12.5px; color: var(--ink-2); line-height: 1.5; }
+@media (max-width: 620px) {
+  .call-row { grid-template-columns: 1fr auto; row-gap: 7px; }
+  .call-reason { grid-column: 1 / -1; }
+}
