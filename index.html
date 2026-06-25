@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0b1120" />
   <title>Jaleel Capital — QARP</title>
-  <link rel="stylesheet" href="styles.css?v=ebacc0bc" />
+  <link rel="stylesheet" href="styles.css?v=c3180be5" />
 </head>
 <body>
 
@@ -199,15 +199,27 @@
 
     <!-- Stay Informed: live market snapshot + news -->
     <section id="tab-informed" class="tabpanel">
-      <p class="tab-intro">A live market snapshot and the headlines moving it — overall and by sector. Curated to <b>trusted, freely-accessible</b> financial sources (Reuters, AP, CNBC, Yahoo Finance, MarketWatch, Motley Fool…) — <b>no paywalls or sign-up walls</b>.</p>
-      <div class="idx-bar"><span class="idx-asof" id="idx-asof"></span></div>
-      <div class="idx-row" id="idx-row"></div>
-      <div class="news-bar">
-        <h3 class="news-h">Headlines</h3>
-        <button id="news-refresh" class="news-refresh" type="button" aria-label="Refresh">↻ Refresh</button>
+      <nav class="subtabs" id="i-subtabs">
+        <button class="subtab active" type="button" data-isub="news">Headlines</button>
+        <button class="subtab" type="button" data-isub="ratings">Analyst Ratings</button>
+      </nav>
+
+      <div id="isub-news" class="isub active">
+        <p class="tab-intro">A live market snapshot and the headlines moving it — overall and by sector. <b>Multi-source</b>: trusted, freely-accessible publishers (Reuters, AP, CNBC, Yahoo Finance, MarketWatch, Motley Fool) blended with <b>Benzinga</b> — <b>no paywalls or sign-up walls</b>.</p>
+        <div class="idx-bar"><span class="idx-asof" id="idx-asof"></span></div>
+        <div class="idx-row" id="idx-row"></div>
+        <div class="news-bar">
+          <h3 class="news-h">Headlines</h3>
+          <button id="news-refresh" class="news-refresh" type="button" aria-label="Refresh">↻ Refresh</button>
+        </div>
+        <div class="news-filters" id="news-filters"></div>
+        <div class="news-feed" id="news-list"></div>
       </div>
-      <div class="news-filters" id="news-filters"></div>
-      <div class="news-feed" id="news-list"></div>
+
+      <div id="isub-ratings" class="isub">
+        <p class="tab-intro">Recent <b>analyst rating actions</b> — upgrades, downgrades, initiations and price-target changes (via Benzinga). Your <b>holdings</b> and <b>universe</b> names are flagged. Refreshes with the daily signals run.</p>
+        <div id="ratings-list" class="ratings-list"></div>
+      </div>
     </section>
 
     <!-- Method: goal + framework (moved off the landing page) -->
@@ -299,7 +311,7 @@
     <div class="drawer-panel" id="drawer-panel"></div>
   </div>
 
-  <script src="crypto.js?v=ebacc0bc"></script>
-  <script src="app.js?v=ebacc0bc"></script>
+  <script src="crypto.js?v=c3180be5"></script>
+  <script src="app.js?v=c3180be5"></script>
 </body>
 </html>

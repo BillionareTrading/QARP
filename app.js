@@ -517,7 +517,8 @@ function openDrawer(ticker) {
       <div class="dim"><div class="dl">${l}</div><div class="dv">${has(v) ? v : "—"}<span class="muted" style="font-size:12px;font-weight:500"> /${m}</span></div>
       <div class="dbar"><div class="dfill" style="width:${has(v) ? (v / m * 100).toFixed(0) : 0}%"></div></div></div>`).join("")}</div>` : ""}
     ${kv.length ? `<div class="kv">${kv.map(([k, v]) => `<span class="k">${k}</span><span class="vv">${v}</span>`).join("")}</div>` : ""}
-    ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${d.dcf_note}</div>` : ""}`;
+    ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${d.dcf_note}</div>` : ""}
+    ${bzHoldingNewsHtml(ticker)}`;
 
   const drawer = document.getElementById("drawer");
   drawer.hidden = false;
@@ -742,6 +743,7 @@ async function loadSignals() {
   } catch (e) { /* fall back gracefully */ }
   renderSignals();
   renderSectorSignals();
+  renderRatings();
 }
 
 function renderSignals() {
@@ -808,6 +810,49 @@ function renderSectorSignals() {
   const src = (SIGNALS && SIGNALS.sources) ? `<div class="ssig-foot">${esc(SIGNALS.sources)}</div>` : "";
   el.innerHTML = `<div class="side-head">Sector Signals <span class="side-sub">why, not just how much</span></div>`
     + `<div class="ssig-grid">${cards}</div>${src}`;
+}
+
+// Drawer: latest Benzinga "why is it moving" / news for a held name (server-baked, fresh only).
+function bzHoldingNewsHtml(ticker) {
+  const hn = SIGNALS && SIGNALS.holding_news && SIGNALS.holding_news[ticker];
+  if (!hn || !hn.title) return "";
+  return `<h4>Latest headline <span class="bz-tag">Benzinga</span></h4>`
+    + `<a class="bz-news" href="${esc(safeUrl(hn.url))}" target="_blank" rel="noopener noreferrer">`
+    + `${hn.wiim ? `<span class="bz-wiim">Why it's moving</span> ` : ""}${esc(hn.title)} `
+    + `<span class="bz-time">${relTime(hn.ts)}</span></a>`;
+}
+
+// Benzinga news (server-baked) mapped into the shared news-feed shape, for multi-source merge.
+function bzFeed({ tickers = null, relOnly = false } = {}) {
+  const arr = (SIGNALS && SIGNALS.bz_news) || [];
+  return arr
+    .filter((n) => n.title && n.url && (!relOnly || n.rel) && (!tickers || (n.tickers || []).some((t) => tickers.has(t))))
+    .map((n) => ({ headline: n.title, url: n.url, source: "Benzinga", datetime: n.ts, image: "",
+                   _tk: tickers ? (n.tickers || []).find((t) => tickers.has(t)) : null }));
+}
+function mergeNews(primary, extra) {
+  const seen = new Set();
+  const all = [...primary, ...extra].filter((it) => it && it.url && !seen.has(it.url) && seen.add(it.url));
+  all.sort((a, b) => (b.datetime || 0) - (a.datetime || 0));
+  return all;
+}
+
+// Analyst-Ratings feed (Stay Informed subtab) — Benzinga, your holdings/universe flagged.
+function renderRatings() {
+  const el = document.getElementById("ratings-list");
+  if (!el) return;
+  const rows = (SIGNALS && SIGNALS.ratings) || [];
+  if (!rows.length) { el.innerHTML = `<p class="muted">No recent analyst actions — refreshes with the daily signals run.</p>`; return; }
+  const fmtDate = (d) => { try { const x = new Date(d + "T12:00:00"); return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][x.getMonth()] + " " + x.getDate(); } catch (e) { return d; } };
+  el.innerHTML = rows.map((r) => {
+    const tag = r.held ? `<span class="rt-own held">HELD</span>` : r.uni ? `<span class="rt-own uni">universe</span>` : "";
+    return `<div class="rt-row${r.held ? " is-held" : ""}">
+      <div class="rt-date">${fmtDate(r.date)}</div>
+      <div class="rt-tk">${esc(r.ticker)}${tag}</div>
+      <div class="rt-mid"><span class="rt-act">${esc(r.action || "")}</span> <span class="rt-firm">${esc(r.firm || "")}</span></div>
+      <div class="rt-right">${r.rating ? `<span class="rt-rating">${esc(r.rating)}</span>` : ""}${r.pt ? `<span class="rt-pt">${esc(r.pt)}</span>` : ""}</div>
+    </div>`;
+  }).join("");
 }
 
 async function renderDailyTicker() {
@@ -1151,7 +1196,9 @@ async function loadNews(filterName) {
     let items = await res.json();
     if (!Array.isArray(items)) throw new Error("bad response");
     items = items.filter((it) => it && it.headline && it.url).slice(0, 30);
-    renderNewsFeed(list, items, `No recent headlines for ${newsFilter}.`);
+    // multi-source: blend in Benzinga (server-baked) — universe-relevant items, or the filter's symbol
+    const bz = f.sym ? bzFeed({ tickers: new Set([f.sym]) }) : bzFeed({ relOnly: true }).slice(0, 14);
+    renderNewsFeed(list, mergeNews(items, bz), `No recent headlines for ${newsFilter}.`);
   } catch (e) {
     list.innerHTML = `<p class="muted">Couldn't load news right now — try Refresh.</p>`;
   }
@@ -1170,6 +1217,14 @@ function initInformed() {
   renderNewsFilters();
   const rb = document.getElementById("news-refresh");
   if (rb) rb.addEventListener("click", () => { renderIndexes(); loadNews(newsFilter); });
+  document.querySelectorAll("#i-subtabs .subtab").forEach((b) =>
+    b.addEventListener("click", () => {
+      document.querySelectorAll("#i-subtabs .subtab").forEach((x) => x.classList.remove("active"));
+      document.querySelectorAll("#tab-informed .isub").forEach((x) => x.classList.remove("active"));
+      b.classList.add("active");
+      document.getElementById("isub-" + b.dataset.isub).classList.add("active");
+      if (b.dataset.isub === "ratings") renderRatings();
+    }));
 }
 
 /* ---------- Portfolio sub-tabs: News + Key Dates ---------- */
@@ -1193,8 +1248,10 @@ async function loadPortfolioNews() {
   }));
   const seen = new Set();
   let merged = results.flat().filter((it) => { if (!it || !it.url || seen.has(it.url)) return false; seen.add(it.url); return true; });
-  merged.sort((a, b) => (b.datetime || 0) - (a.datetime || 0));
-  renderNewsFeed(list, merged.slice(0, 42), "No recent news for your holdings.");
+  // multi-source: blend in Benzinga items tagged to a holding
+  const bz = bzFeed({ tickers: new Set(DATA.portfolio.map((h) => h.ticker)) });
+  merged = mergeNews(merged, bz);
+  renderNewsFeed(list, merged.slice(0, 48), "No recent news for your holdings.");
 }
 
 function pDateRowHtml(e) {
