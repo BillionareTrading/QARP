@@ -425,6 +425,7 @@ function renderPortfolio() {
 
   renderSectorPerformance();
   renderPortfolioTable();
+  renderPerfChart();
 }
 
 // Performance by sector — per-sector gain% bars, best -> worst.
@@ -1782,6 +1783,306 @@ function initFrameworkCalc() {
   q.addEventListener("input", update);
   d.addEventListener("input", update);
   update();
+}
+
+/* ---------- Portfolio performance chart (REAL price history + forward account curve) ----------
+   Two honest views, no fabrication:
+   • "Holdings"  — each holding's REAL close-price history (DATA.holdings_perf), normalized to
+                   0% at the start of the selected range. These are the tickers' market prices,
+                   NOT a reconstructed account P/L.
+   • "Account"   — the REAL account-value curve we accrue from today forward
+                   (DATA.portfolio_history). Starts near-empty and fills in over time.
+   Ranges with too little real data are disabled / shown as a clean in-chart message.        */
+const PERF_RANGES = [
+  { key: "1W", days: 7 }, { key: "1M", days: 31 }, { key: "3M", days: 92 },
+  { key: "6M", days: 183 }, { key: "YTD", days: null }, { key: "1Y", days: 366 },
+  { key: "ALL", days: null },
+];
+const PERF_LINE_COLORS = [
+  "#2563eb", "#16a34a", "#db2777", "#ea580c", "#7c3aed", "#0891b2", "#ca8a04", "#e11d48",
+  "#0d9488", "#4f46e5", "#9333ea", "#15803d", "#b45309", "#0369a1", "#be123c", "#334155",
+];
+const PERF = { range: "3M", view: "holdings", active: null, _ctx: null };
+
+function perfColorMap() {
+  const tks = (DATA.portfolio || []).map((h) => h.ticker).slice().sort();
+  const m = {};
+  tks.forEach((t, i) => (m[t] = PERF_LINE_COLORS[i % PERF_LINE_COLORS.length]));
+  m.SPY = "#64748b"; m.QQQ = "#9aa6b8";
+  return m;
+}
+const perfDays = (k) => (PERF_RANGES.find((r) => r.key === k) || {}).days;
+function perfRangeStart(rangeKey, lastISO, firstISO) {
+  if (!lastISO) return null;
+  if (rangeKey === "ALL") return firstISO || lastISO;
+  if (rangeKey === "YTD") return lastISO.slice(0, 4) + "-01-01";
+  const d = new Date(lastISO + "T00:00:00");
+  d.setDate(d.getDate() - perfDays(rangeKey));
+  return d.toISOString().slice(0, 10);
+}
+
+// All series available for the current view, as {key,label,color,points:[{date,close}],benchmark}
+function perfSeriesPool() {
+  const colors = perfColorMap();
+  if (PERF.view === "account") {
+    const ph = DATA.portfolio_history || [];
+    return [{ key: "ACCOUNT", label: "Account value", color: "#15803d",
+              points: ph.map((h) => ({ date: h.date, close: h.total })), benchmark: false }];
+  }
+  const hp = DATA.holdings_perf || {};
+  const ordered = [...(DATA.portfolio || [])].sort((a, b) => (b.value || 0) - (a.value || 0));
+  const out = [];
+  ordered.forEach((h) => { if (hp[h.ticker] && hp[h.ticker].length)
+    out.push({ key: h.ticker, label: h.ticker, color: colors[h.ticker], points: hp[h.ticker], benchmark: false }); });
+  ["SPY", "QQQ"].forEach((b) => { if (hp[b] && hp[b].length)
+    out.push({ key: b, label: b, color: colors[b], points: hp[b], benchmark: true }); });
+  return out;
+}
+
+function perfDefaultActive(pool) {
+  // default: top 6 holdings by weight (benchmarks off)
+  return new Set(pool.filter((s) => !s.benchmark).slice(0, 6).map((s) => s.key));
+}
+
+function renderPerfChart() {
+  const el = document.getElementById("perf-chart");
+  if (!el) return;
+  const t = (DATA.meta && DATA.meta.portfolio_totals) || {};
+  const hp = DATA.holdings_perf || {};
+  const haveHoldings = Object.keys(hp).length > 0;
+  const haveAccount = (DATA.portfolio_history || []).length > 0;
+  if (!haveHoldings && !haveAccount) {
+    el.innerHTML = `<h3>Performance</h3><div class="perf-empty"><div class="perf-empty-i">📈</div>`
+      + `<p>Performance history will appear after the next data refresh.</p></div>`;
+    return;
+  }
+  el.innerHTML = `
+    <div class="perf-head">
+      <h3>Performance <span class="fw-sub" id="perf-subtitle"></span></h3>
+      <div class="perf-views" id="perf-views">
+        <button type="button" class="perf-view ${PERF.view === "holdings" ? "active" : ""}" data-view="holdings">Holdings</button>
+        <button type="button" class="perf-view ${PERF.view === "account" ? "active" : ""}" data-view="account">Account value</button>
+      </div>
+    </div>
+    <div class="perf-hero">
+      <div class="perf-hero-main"><span class="perf-hero-val">${fmtUSD(t.account, 0)}</span>
+        <span class="perf-hero-lbl">total value · as of ${esc((DATA.meta && DATA.meta.date) || "")}</span></div>
+      <div class="perf-hero-pl"><span class="${signClass(t.gain)}">${fmtUSD(t.gain, 0)} (${fmtPct(t.gain_pct)})</span>
+        <span class="perf-hero-lbl">unrealized P/L</span></div>
+    </div>
+    <div class="perf-pills" id="perf-pills">${PERF_RANGES.map((r) =>
+      `<button type="button" class="perf-pill ${PERF.range === r.key ? "active" : ""}" data-range="${r.key}">${r.key}</button>`).join("")}</div>
+    <div class="perf-plot-wrap" id="perf-plot-wrap">
+      <svg id="perf-svg" viewBox="0 0 960 340" role="img" aria-label="Performance chart"></svg>
+      <div class="perf-empty-overlay" id="perf-empty" hidden></div>
+      <div class="perf-tip" id="perf-tip" hidden></div>
+    </div>
+    <div class="perf-legend" id="perf-legend"></div>
+    <div class="perf-contrib" id="perf-contrib"></div>
+    <div class="perf-foot">Source: yfinance daily closes${PERF.view === "account" ? " · account snapshots recorded daily" : ""} · live prices via the Finnhub Worker. Informational only — not investment advice.</div>`;
+
+  el.querySelector("#perf-views").addEventListener("click", (e) => {
+    const b = e.target.closest(".perf-view"); if (!b) return;
+    if (PERF.view === b.dataset.view) return;
+    PERF.view = b.dataset.view; PERF.active = null; renderPerfChart();
+  });
+  el.querySelector("#perf-pills").addEventListener("click", (e) => {
+    const b = e.target.closest(".perf-pill"); if (!b || b.disabled) return;
+    PERF.range = b.dataset.range; perfRedraw();
+  });
+  el.querySelector("#perf-legend").addEventListener("click", (e) => {
+    const b = e.target.closest(".perf-chip"); if (!b) return;
+    const k = b.dataset.key;
+    if (PERF.active.has(k)) PERF.active.delete(k); else PERF.active.add(k);
+    perfRedraw();
+  });
+  const wrap = el.querySelector("#perf-plot-wrap");
+  wrap.addEventListener("mousemove", perfHover);
+  wrap.addEventListener("mouseleave", () => {
+    const tip = document.getElementById("perf-tip"); if (tip) tip.hidden = true;
+    const g = document.getElementById("perf-cross"); if (g) g.innerHTML = "";
+  });
+  renderPerfContrib();
+  perfRedraw();
+}
+
+function renderPerfContrib() {
+  const c = document.getElementById("perf-contrib"); if (!c) return;
+  const colors = perfColorMap();
+  const holds = [...(DATA.portfolio || [])].sort((a, b) => (b.value || 0) - (a.value || 0));
+  const maxW = Math.max(1, ...holds.map((h) => h.weight_pct || 0));
+  c.innerHTML = `<div class="perf-contrib-h">Each holding — value · weight · unrealized %</div>`
+    + holds.map((h) => `
+      <div class="perf-contrib-row">
+        <span class="perf-dot" style="background:${colors[h.ticker]}"></span>
+        <span class="perf-c-tk">${esc(h.ticker)}</span>
+        <span class="perf-c-bar"><span style="width:${((h.weight_pct || 0) / maxW * 100).toFixed(0)}%;background:${colors[h.ticker]}"></span></span>
+        <span class="perf-c-wt">${fmtNum(h.weight_pct, 1)}%</span>
+        <span class="perf-c-val">${fmtUSD(h.value, 0)}</span>
+        <span class="perf-c-g ${signClass(h.gain_pct)}">${fmtPct(h.gain_pct)}</span>
+      </div>`).join("");
+}
+
+function perfRedraw() {
+  const pool = perfSeriesPool();
+  if (PERF.active === null) PERF.active = perfDefaultActive(pool);
+  // pills row active state
+  document.querySelectorAll("#perf-pills .perf-pill").forEach((p) =>
+    p.classList.toggle("active", p.dataset.range === PERF.range));
+  // legend (skip for single-series account view)
+  const legend = document.getElementById("perf-legend");
+  if (PERF.view === "account") legend.innerHTML = "";
+  else legend.innerHTML = pool.map((s) => {
+    const on = PERF.active.has(s.key);
+    return `<button type="button" class="perf-chip ${on ? "on" : ""} ${s.benchmark ? "bench" : ""}" data-key="${s.key}"
+      style="--c:${s.color}"><span class="perf-chip-dot"></span>${esc(s.label)}<span class="perf-chip-d" data-d="${s.key}"></span></button>`;
+  }).join("");
+
+  const subtitle = document.getElementById("perf-subtitle");
+  if (subtitle) subtitle.textContent = PERF.view === "account"
+    ? "your real account value over time" : "price performance of your holdings";
+
+  // pill applicability for the current view
+  const allPts = pool.flatMap((s) => s.points);
+  const firstISO = allPts.length ? allPts.reduce((m, p) => p.date < m ? p.date : m, allPts[0].date) : null;
+  const lastISO = allPts.length ? allPts.reduce((m, p) => p.date > m ? p.date : m, allPts[0].date) : null;
+  const drawn = PERF.view === "account" ? pool : pool.filter((s) => PERF.active.has(s.key));
+  document.querySelectorAll("#perf-pills .perf-pill").forEach((p) => {
+    const rs = perfRangeStart(p.dataset.range, lastISO, firstISO);
+    const ok = drawn.some((s) => s.points.filter((pt) => pt.date >= rs).length >= 2);
+    p.disabled = !ok;
+    p.title = ok ? "" : (PERF.view === "account"
+      ? "Not enough account history yet for this range" : "Not enough price history for this range");
+  });
+  perfDrawPlot(drawn, lastISO, firstISO);
+}
+
+function perfDrawPlot(drawn, lastISO, firstISO) {
+  const svg = document.getElementById("perf-svg");
+  const empty = document.getElementById("perf-empty");
+  if (!svg) return;
+  const VW = 960, VH = 340, ML = 46, MR = 14, MT = 14, MB = 30;
+  const PW = VW - ML - MR, PH = VH - MT - MB;
+  const showEmpty = (msg) => {
+    svg.innerHTML = "";
+    empty.hidden = false;
+    empty.innerHTML = `<div class="perf-empty-i">🕰️</div><p>${msg}</p>`;
+    PERF._ctx = null;
+  };
+  if (!drawn.length) return showEmpty(PERF.view === "account"
+    ? "Switch on the Account view once history accrues." : "Select a holding from the legend below to plot it.");
+
+  const rs = perfRangeStart(PERF.range, lastISO, firstISO);
+  // build normalized series (rebased to 0% at each series' first in-range point)
+  const series = [];
+  drawn.forEach((s) => {
+    const pts = s.points.filter((p) => p.date >= rs);
+    if (pts.length < 2) return;
+    const base = pts[0].close;
+    series.push({ key: s.key, label: s.label, color: s.color, benchmark: s.benchmark,
+      first: pts[0].date, pts: pts.map((p) => ({ t: +new Date(p.date + "T00:00:00"), date: p.date, v: (p.close / base - 1) * 100 })) });
+  });
+  if (!series.length) return showEmpty(PERF.view === "account"
+    ? `Not enough history yet — tracking your account value since ${esc(((DATA.portfolio_history || [])[0] || {}).date || "today")}. This range fills in as data accrues.`
+    : "Not enough price history for this range yet.");
+  empty.hidden = true;
+
+  const tAll = series.flatMap((s) => s.pts.map((p) => p.t));
+  const vAll = series.flatMap((s) => s.pts.map((p) => p.v)).concat([0]);
+  let t0 = Math.min(...tAll), t1 = Math.max(...tAll);
+  if (t1 === t0) t1 = t0 + 1;
+  let yMin = Math.min(...vAll), yMax = Math.max(...vAll);
+  const pad = Math.max(1, (yMax - yMin) * 0.08); yMin -= pad; yMax += pad;
+  const xFor = (t) => ML + (t - t0) / (t1 - t0) * PW;
+  const yFor = (v) => MT + (1 - (v - yMin) / (yMax - yMin)) * PH;
+
+  // y gridlines (nice steps) + x date ticks
+  const span = yMax - yMin;
+  const step = span >= 80 ? 20 : span >= 40 ? 10 : span >= 16 ? 5 : span >= 8 ? 2 : 1;
+  let grid = "", ylab = "";
+  for (let g = Math.ceil(yMin / step) * step; g <= yMax; g += step) {
+    const y = yFor(g).toFixed(1);
+    const zero = Math.abs(g) < 1e-9;
+    grid += `<line x1="${ML}" y1="${y}" x2="${VW - MR}" y2="${y}" class="perf-grid ${zero ? "zero" : ""}"/>`;
+    ylab += `<text x="${ML - 6}" y="${(+y + 3).toFixed(1)}" class="perf-axt" text-anchor="end">${g > 0 ? "+" : ""}${g}%</text>`;
+  }
+  const nTicks = 5; let xlab = "";
+  for (let i = 0; i <= nTicks; i++) {
+    const tt = t0 + (t1 - t0) * i / nTicks;
+    const dt = new Date(tt);
+    const lab = (t1 - t0) > 1000 * 3600 * 24 * 300
+      ? dt.toLocaleDateString("en-US", { month: "short", year: "2-digit" })
+      : dt.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+    xlab += `<text x="${xFor(tt).toFixed(1)}" y="${VH - 10}" class="perf-axt" text-anchor="middle">${lab}</text>`;
+  }
+
+  const paths = series.map((s) => {
+    const d = s.pts.map((p, i) => `${i ? "L" : "M"}${xFor(p.t).toFixed(1)} ${yFor(p.v).toFixed(1)}`).join(" ");
+    return `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="${s.benchmark ? 1.4 : 2}"
+      stroke-dasharray="${s.benchmark ? "5 4" : ""}" stroke-linejoin="round" stroke-linecap="round" opacity="${s.benchmark ? .8 : 1}"/>`;
+  }).join("");
+
+  svg.innerHTML = grid + ylab + xlab + paths + `<g id="perf-cross"></g>`;
+  PERF._ctx = { svg, series, t0, t1, yMin, yMax, ML, MR, MT, MB, PW, PH, VW, VH, xFor, yFor };
+
+  // legend: per-series final % + alpha vs SPY (when SPY drawn), and short-history note
+  if (PERF.view !== "account") {
+    const spy = series.find((s) => s.key === "SPY");
+    const spyEnd = spy ? spy.pts[spy.pts.length - 1].v : null;
+    series.forEach((s) => {
+      const chip = document.querySelector(`.perf-chip[data-key="${s.key}"] .perf-chip-d`);
+      if (!chip) return;
+      const end = s.pts[s.pts.length - 1].v;
+      let txt = `${end >= 0 ? "+" : ""}${end.toFixed(1)}%`;
+      if (spyEnd != null && !s.benchmark) {
+        const a = end - spyEnd;
+        txt += ` · ${a >= 0 ? "+" : ""}${a.toFixed(1)} vs SPY`;
+      }
+      chip.textContent = txt;
+      chip.className = "perf-chip-d " + signClass(end);
+    });
+    // short-history note for series whose data starts after the range start
+    document.querySelectorAll(".perf-chip").forEach((c) => c.classList.remove("clipped"));
+    series.forEach((s) => {
+      if (s.first > rs) {
+        const c = document.querySelector(`.perf-chip[data-key="${s.key}"]`);
+        if (c) { c.classList.add("clipped"); c.title = `${s.label} history starts ${s.first} — earlier part of this range n/a`; }
+      }
+    });
+  }
+}
+
+function perfHover(e) {
+  const ctx = PERF._ctx; const tip = document.getElementById("perf-tip");
+  const wrap = document.getElementById("perf-plot-wrap");
+  if (!ctx || !tip || !wrap) return;
+  const rect = wrap.getBoundingClientRect();
+  const plotL = rect.left + (ctx.ML / ctx.VW) * rect.width;
+  const plotW = (ctx.PW / ctx.VW) * rect.width;
+  let f = (e.clientX - plotL) / plotW;
+  if (f < 0 || f > 1) { tip.hidden = true; const g = document.getElementById("perf-cross"); if (g) g.innerHTML = ""; return; }
+  const t = ctx.t0 + f * (ctx.t1 - ctx.t0);
+  const rows = ctx.series.map((s) => {
+    let best = s.pts[0];
+    for (const p of s.pts) if (Math.abs(p.t - t) < Math.abs(best.t - t)) best = p;
+    return { s, p: best };
+  });
+  const cx = ctx.xFor(rows[0] ? rows[0].p.t : t);
+  // find the nearest actual date for the crosshair x (use the longest series)
+  let anchor = rows.reduce((a, r) => (r.s.pts.length > a.s.pts.length ? r : a), rows[0]);
+  const ax = ctx.xFor(anchor.p.t);
+  const g = document.getElementById("perf-cross");
+  g.innerHTML = `<line x1="${ax.toFixed(1)}" y1="${ctx.MT}" x2="${ax.toFixed(1)}" y2="${ctx.MT + ctx.PH}" class="perf-cross-l"/>`
+    + rows.map((r) => `<circle cx="${ctx.xFor(r.p.t).toFixed(1)}" cy="${ctx.yFor(r.p.v).toFixed(1)}" r="3.2" fill="${r.s.color}" stroke="#fff" stroke-width="1.2"/>`).join("");
+  const dt = new Date(anchor.p.t).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+  tip.innerHTML = `<div class="perf-tip-d">${dt}</div>`
+    + rows.sort((a, b) => b.p.v - a.p.v).map((r) =>
+      `<div class="perf-tip-r"><span class="perf-dot" style="background:${r.s.color}"></span>${esc(r.s.label)}
+        <b class="${signClass(r.p.v)}">${r.p.v >= 0 ? "+" : ""}${r.p.v.toFixed(1)}%</b></div>`).join("");
+  tip.hidden = false;
+  const tx = e.clientX - rect.left + 14, flip = tx + 170 > rect.width;
+  tip.style.left = (flip ? e.clientX - rect.left - 14 - 160 : tx) + "px";
+  tip.style.top = "10px";
 }
 
 /* ---------- Ask-the-bot chat (Claude via the Cloudflare Worker proxy) ---------- */
