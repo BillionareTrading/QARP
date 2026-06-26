@@ -1789,7 +1789,7 @@ function initFrameworkCalc() {
 // builds a compact context from the live data and sends {system, messages}; the
 // Worker adds the API key and streams Claude's reply. Until BOT_PROXY is set, the
 // widget explains how to connect it.
-const BOT_PROXY = "https://YOUR-WORKER.workers.dev";   // <-- paste your Worker URL after deploying
+const BOT_PROXY = "https://qarp-bot.murshidjaleel-990.workers.dev";   // deployed Cloudflare Worker (proxies to Anthropic; key server-side)
 let botHistory = [];
 
 function buildBotContext() {
