@@ -76,6 +76,18 @@ def main() -> None:
     with open(DATA) as f:
         data = json.load(f)
 
+    # ---- PUBLISH SAFETY GUARD (added after the 2026-06-26 stale-price incident) ----
+    # A build run WITHOUT --fetch writes the script's hardcoded fallback prices. Shipping that
+    # corrupts every price/value on the site. build_master_sheet.py sets meta.prices_live=True
+    # only after a healthy live fetch; refuse to encrypt anything else. (Flag absent => older
+    # build, allowed for back-compat. Use --allow-stale to override on purpose.)
+    _live = data.get("meta", {}).get("prices_live")
+    if _live is False and "--allow-stale" not in sys.argv:
+        sys.exit("REFUSING TO PUBLISH: data.json has prices_live=false — it was built without a "
+                 "live --fetch, so its prices are stale fallbacks. Rebuild with "
+                 "'build_master_sheet.py --fetch --live --json', then re-encrypt. "
+                 "(Pass --allow-stale only if you deliberately want non-live data.)")
+
     # Live QUOTES go through the Cloudflare Worker (meta.quote_proxy) — key hidden there.
     # But the low-frequency News + Earnings-calendar features still call Finnhub directly,
     # so the key travels INSIDE the encrypted payload (readable only after unlocking with
