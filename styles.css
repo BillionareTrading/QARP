@@ -368,15 +368,26 @@ tbody tr:hover { background: var(--surface-2); }
 .folio-idx { display: flex; gap: 16px; flex-wrap: wrap; font-weight: 700; letter-spacing: .04em; }
 .folio-idx .pt-item b { font-weight: 700; }
 
-/* main: lead + right rail with a hairline column rule */
+/* main: lead column + right rail with a hairline column rule */
 .paper-main { display: grid; grid-template-columns: minmax(0, 2.45fr) minmax(0, 1fr); }
-.paper-lead { padding-right: clamp(18px, 2.4vw, 34px); border-right: 1px solid var(--news-rule); }
+.paper-leadcol { padding-right: clamp(18px, 2.4vw, 34px); border-right: 1px solid var(--news-rule); min-width: 0; }
 .paper-rail { padding-left: clamp(16px, 2vw, 26px); min-width: 0; }
 @media (max-width: 840px) {
   .paper-main { grid-template-columns: 1fr; }
-  .paper-lead { border-right: 0; padding-right: 0; padding-bottom: 16px; border-bottom: 1px solid var(--news-ink); margin-bottom: 16px; }
+  .paper-leadcol { border-right: 0; padding-right: 0; padding-bottom: 16px; border-bottom: 1px solid var(--news-ink); margin-bottom: 16px; }
   .paper-rail { padding-left: 0; }
 }
+/* "Across the Market" — secondary news under the lead, fills the column */
+.lead-more { margin-top: 18px; }
+.lm-rule { border-top: 3px double var(--news-ink); margin: 0 0 12px; }
+.lm-head { font-family: "Playfair Display", Georgia, serif; font-size: 15px; font-weight: 800; color: var(--news-ink);
+  border-bottom: 2px solid var(--news-ink); padding-bottom: 5px; margin-bottom: 11px; }
+.lm-grid { column-count: 2; column-gap: 26px; column-rule: 1px solid var(--news-rule); }
+@media (max-width: 600px) { .lm-grid { column-count: 1; } }
+.lm-grid .lm-item { break-inside: avoid; -webkit-column-break-inside: avoid; margin-bottom: 13px; padding-bottom: 11px; border-bottom: 1px solid var(--news-rule); }
+.lm-h { font-family: "Playfair Display", Georgia, serif; font-size: 15px; line-height: 1.2; font-weight: 700; margin: 0 0 4px; color: var(--news-ink); }
+.lm-body { font-size: 13px; line-height: 1.5; margin: 0; color: #221f18; text-align: justify; hyphens: auto; }
+.lm-meta { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--news-ink-2); margin-top: 4px; font-style: italic; }
 
 .lead-kicker { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--news-ink);
   display: inline-block; border-bottom: 1px solid var(--news-ink); padding-bottom: 2px; margin-bottom: 8px; }

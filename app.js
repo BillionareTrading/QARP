@@ -703,6 +703,24 @@ function renderDaily() {
   renderDailyTicker();
   loadDailyBrief();    // original lead column + briefs from daily_brief.json (NO external links)
   renderSectorSignals(); // sector-level event-driven signals (uses cached SIGNALS)
+  renderLeadMore();    // fills the space under the lead with more market news (catalysts + risk)
+}
+
+// "Across the Market" — secondary news column under the lead, built from the live
+// event-driven signals (catalysts + risk flags). Self-contained, no external links.
+function renderLeadMore() {
+  const el = document.getElementById("paper-lead-more");
+  if (!el) return;
+  const S = (typeof SIGNALS !== "undefined" && SIGNALS) || null;
+  const strip = (s) => String(s || "").replace(/<[^>]+>/g, "");
+  const items = [];
+  ((S && S.catalysts) || []).forEach((c) => items.push({ h: c.what, b: strip(c.why), meta: [c.when, c.affects].filter(Boolean).join(" · ") }));
+  ((S && S.risk) || []).forEach((r) => items.push({ h: `${r.ticker} — ${r.tag}`, b: strip(r.detail), meta: r.next ? "Next: " + r.next : "" }));
+  const list = items.filter((x) => x.h && x.b).slice(0, 8);
+  if (!list.length) { el.innerHTML = ""; return; }
+  el.innerHTML = `<div class="lm-rule"></div><div class="lm-head">Across the Market</div><div class="lm-grid">`
+    + list.map((it) => `<article class="lm-item"><h3 class="lm-h">${esc(it.h)}</h3><p class="lm-body">${esc(it.b)}</p>${it.meta ? `<div class="lm-meta">${esc(it.meta)}</div>` : ""}</article>`).join("")
+    + `</div>`;
 }
 
 // The Daily page's written content comes from daily_brief.json — an original market column plus
@@ -786,6 +804,7 @@ async function loadSignals() {
   renderBriefing();
   renderEarnings();
   renderCalls();
+  renderLeadMore();
 }
 
 function renderSignals() {
