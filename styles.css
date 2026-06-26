@@ -344,50 +344,107 @@ tbody tr:hover { background: var(--surface-2); }
 .sp-fill.pos { background: var(--pos); } .sp-fill.neg { background: var(--neg); }
 .sp-val { flex: 0 0 52px; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
 
-/* ===== Daily — newspaper front page ===== */
-.paper { max-width: 1600px; margin: 0 auto; font-family: Georgia, "Times New Roman", serif; color: var(--ink); }
-.paper-masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 10px; }
-.paper-name { font-size: 42px; font-weight: 800; letter-spacing: .5px; line-height: 1.05; }
-.paper-meta { font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin-top: 7px; }
-.paper-ticker { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; font-family: system-ui, sans-serif; font-size: 12.5px; border-bottom: 1px solid var(--line); padding: 9px 0 13px; margin-bottom: 20px; }
-@media (max-width: 820px) { .paper-name { font-size: 30px; } }
-/* lead spans full width; the body flows in newspaper columns to fill the page */
-.paper-lead { border-bottom: 2px solid var(--ink); padding-bottom: 18px; margin-bottom: 20px; }
-.lead-kicker { font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--brand); font-weight: 700; }
-.lead-head { font-size: 30px; line-height: 1.13; font-weight: 800; margin: 6px 0 14px; }
-.lead-body { font-size: 15.5px; line-height: 1.66; column-count: 2; column-gap: 34px; }
-@media (max-width: 700px) { .lead-body { column-count: 1; } }
-@media (min-width: 1200px) { .lead-body { column-count: 3; } }
-@media (min-width: 1560px) { .lead-body { column-count: 4; } }
-.lead-body::first-letter { font-size: 3.1em; font-weight: 800; float: left; line-height: .82; padding: 4px 9px 0 0; }
-.lead-body p { margin: 0 0 12px; }
-.lead-byline { font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: .04em; color: var(--ink-2); margin-top: 12px; font-style: italic; column-span: all; }
-/* market briefs — laid out in columns so news fills the width */
-.paper-wire { margin-bottom: 22px; }
-.wire-grid { column-count: 3; column-gap: 30px; }
-@media (max-width: 960px) { .wire-grid { column-count: 2; } }
-@media (max-width: 620px) { .wire-grid { column-count: 1; } }
-@media (min-width: 1400px) { .wire-grid { column-count: 4; } }
-.wire-grid .wire-item { break-inside: avoid; -webkit-column-break-inside: avoid; }
-/* bottom strip: Sector Watch · Movers · Your Portfolio (portfolio sits bottom-right) */
-.paper-bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; border-top: 2px solid var(--ink); padding-top: 18px; }
-@media (max-width: 720px) { .paper-bottom { grid-template-columns: 1fr; gap: 18px; } }
-.paper-bottom > section { min-width: 0; }
-.wire-head, .side-head { font-family: system-ui, sans-serif; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 800; border-bottom: 1px solid var(--line); padding-bottom: 6px; margin-bottom: 13px; }
-.side-sub { font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--ink-2); }
-.wire-item { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
-.wire-h { font-size: 17px; line-height: 1.25; margin: 0 0 6px; font-weight: 800; }
-.wire-sum { font-size: 14px; line-height: 1.55; margin: 0 0 6px; }
-.wire-meta { font-family: system-ui, sans-serif; font-size: 11.5px; color: var(--ink-2); }
-.wire-meta a { color: var(--brand); text-decoration: none; }
-.paper-side > section { margin-bottom: 24px; }
-.side-body { font-size: 14px; line-height: 1.55; margin: 0 0 10px; }
-.mv-list { list-style: none; margin: 0; padding: 0; font-family: system-ui, sans-serif; font-size: 13px; }
-.mv-list li { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px dotted var(--line); }
+/* ===== The Jaleel Times — NYT-style front page ===== */
+:root { --news-ink: #14110c; --news-ink-2: #3a352c; --news-rule: #cdc7b6; --news-page: #fbfbf7; }
+#tab-daily { background: var(--bg); }
+.paper { max-width: 1240px; margin: 0 auto; background: var(--news-page); color: var(--news-ink);
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  padding: 24px clamp(14px, 3.2vw, 48px) 30px; border: 1px solid #e4dfd0; box-shadow: 0 14px 40px rgba(20,17,12,.08); }
+.paper .pos { color: #1a6b39; } .paper .neg { color: #a82e1e; } .paper .muted { color: var(--news-ink-2); }
+
+/* masthead / nameplate */
+.paper-masthead { text-align: center; }
+.masthead-rule-top { border-top: 1px solid var(--news-ink); }
+.paper-name { font-family: "UnifrakturCook", "Old English Text MT", Georgia, serif; font-weight: 700;
+  font-size: clamp(42px, 8.5vw, 92px); line-height: 1.02; margin: 8px 0 2px; color: var(--news-ink); }
+.paper-motto { font-style: italic; font-size: 12.5px; color: var(--news-ink-2); }
+.masthead-rule-bot { border-top: 3px solid var(--news-ink); border-bottom: 1px solid var(--news-ink); height: 3px; margin-top: 10px; }
+
+/* folio line: date/edition left, indexes right */
+.paper-folio { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 18px; flex-wrap: wrap;
+  font-size: 10.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--news-ink-2);
+  border-bottom: 1px solid var(--news-ink); padding: 7px 0 9px; margin-bottom: 18px; }
+.folio-meta { flex: 1; min-width: 0; }
+.folio-idx { display: flex; gap: 16px; flex-wrap: wrap; font-weight: 700; letter-spacing: .04em; }
+.folio-idx .pt-item b { font-weight: 700; }
+
+/* main: lead + right rail with a hairline column rule */
+.paper-main { display: grid; grid-template-columns: minmax(0, 2.45fr) minmax(0, 1fr); }
+.paper-lead { padding-right: clamp(18px, 2.4vw, 34px); border-right: 1px solid var(--news-rule); }
+.paper-rail { padding-left: clamp(16px, 2vw, 26px); min-width: 0; }
+@media (max-width: 840px) {
+  .paper-main { grid-template-columns: 1fr; }
+  .paper-lead { border-right: 0; padding-right: 0; padding-bottom: 16px; border-bottom: 1px solid var(--news-ink); margin-bottom: 16px; }
+  .paper-rail { padding-left: 0; }
+}
+
+.lead-kicker { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--news-ink);
+  display: inline-block; border-bottom: 1px solid var(--news-ink); padding-bottom: 2px; margin-bottom: 8px; }
+.lead-head { font-family: "Playfair Display", Georgia, serif; font-weight: 800; letter-spacing: -.01em;
+  font-size: clamp(30px, 4.4vw, 50px); line-height: 1.04; margin: 4px 0 6px; color: var(--news-ink); }
+.lead-byline { font-style: italic; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--news-ink-2); margin: 6px 0 13px; padding-bottom: 11px; border-bottom: 1px solid var(--news-rule); }
+.lead-body { font-size: 15px; line-height: 1.62; column-count: 2; column-gap: 28px; column-rule: 1px solid var(--news-rule);
+  color: #221f18; text-align: justify; hyphens: auto; }
+@media (max-width: 600px) { .lead-body { column-count: 1; } }
+@media (min-width: 1080px) { .lead-body { column-count: 3; } }
+.lead-body::first-letter { font-family: "Playfair Display", Georgia, serif; font-size: 3.5em; font-weight: 900;
+  float: left; line-height: .76; padding: 6px 8px 0 0; }
+.lead-body p { margin: 0 0 11px; }
+
+/* shared section heads (newspaper) */
+.wire-head, .side-head, .paper-signals .side-head { font-family: "Playfair Display", Georgia, serif;
+  font-size: 15px; font-weight: 800; letter-spacing: 0; text-transform: none; color: var(--news-ink);
+  border-bottom: 2px solid var(--news-ink); padding-bottom: 5px; margin-bottom: 11px; }
+.side-sub { font-family: "PT Serif", serif; font-weight: 400; font-style: italic; font-size: 12px; text-transform: none; letter-spacing: 0; color: var(--news-ink-2); }
+.rail-dinkus { text-align: center; color: var(--news-ink-2); font-size: 13px; margin: 14px 0; letter-spacing: .3em; }
+
+/* Number of the Day box */
+.paper-numday { border: 1px solid var(--news-ink); background: #f4efe0; padding: 13px 15px; }
+.numday-label { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; font-weight: 700;
+  border-bottom: 1px solid var(--news-ink); padding-bottom: 5px; margin-bottom: 9px; }
+.numday-fig { font-family: "Playfair Display", Georgia, serif; font-size: 34px; font-weight: 900; line-height: 1; }
+.numday-cap { font-size: 12.5px; line-height: 1.5; margin-top: 8px; color: var(--news-ink-2); }
+.numday-cap b { color: var(--news-ink); }
+
+/* wire (briefs) — multi-column with rules */
+.paper-wire { border-top: 3px double var(--news-ink); margin-top: 24px; padding-top: 15px; }
+.wire-grid { column-count: 3; column-gap: 26px; column-rule: 1px solid var(--news-rule); }
+@media (max-width: 900px) { .wire-grid { column-count: 2; } }
+@media (max-width: 560px) { .wire-grid { column-count: 1; } }
+.wire-grid .wire-item { break-inside: avoid; -webkit-column-break-inside: avoid; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--news-rule); }
+.wire-h { font-family: "Playfair Display", Georgia, serif; font-size: 16.5px; line-height: 1.2; margin: 0 0 5px; font-weight: 700; }
+.wire-sum { font-size: 13.5px; line-height: 1.5; margin: 0; color: #221f18; text-align: justify; hyphens: auto; }
+.wire-meta { font-size: 11.5px; color: var(--news-ink-2); }
+
+/* bottom strip: Sector Watch · Movers · Your Portfolio */
+.paper-bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; border-top: 3px double var(--news-ink); padding-top: 16px; margin-top: 6px; }
+.paper-bottom > section { min-width: 0; padding: 0 20px; border-right: 1px solid var(--news-rule); }
+.paper-bottom > section:first-child { padding-left: 0; }
+.paper-bottom > section:last-child { padding-right: 0; border-right: 0; }
+@media (max-width: 720px) { .paper-bottom { grid-template-columns: 1fr; }
+  .paper-bottom > section { padding: 13px 0; border-right: 0; border-bottom: 1px solid var(--news-rule); } }
+.side-body { font-size: 13.5px; line-height: 1.55; margin: 0 0 10px; }
+.mv-list { list-style: none; margin: 0; padding: 0; font-size: 13px; }
+.mv-list li { display: flex; justify-content: space-between; gap: 8px; padding: 5px 0; border-bottom: 1px dotted var(--news-rule); }
 .mv-tk { font-weight: 700; }
-.mv-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.mv-lbl { font-family: system-ui, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; margin-bottom: 5px; }
-.paper-foot { text-align: center; font-family: system-ui, sans-serif; font-size: 11px; color: var(--ink-2); border-top: 1px solid var(--line); margin-top: 26px; padding-top: 13px; }
+.mv-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.mv-lbl { font-size: 10.5px; text-transform: uppercase; letter-spacing: .07em; font-weight: 700; margin-bottom: 5px; }
+.paper-foot { text-align: center; font-style: italic; font-size: 11px; color: var(--news-ink-2); border-top: 1px solid var(--news-ink); margin-top: 24px; padding-top: 12px; }
+
+/* sector-signals box restyled for the newspaper rail (monochrome, ruled list) */
+.paper-rail .paper-signals { font-family: "PT Serif", Georgia, serif; margin: 0; }
+.paper-rail .ssig-grid { grid-template-columns: 1fr; gap: 0; }
+.paper-rail .ssig-card { background: transparent; border: 0; border-bottom: 1px solid var(--news-rule); border-radius: 0; padding: 9px 0; }
+.paper-rail .ssig-card:last-child { border-bottom: 0; }
+.paper-rail .ssig-top { gap: 6px; }
+.paper-rail .ssig-top i { display: none; }
+.paper-rail .ssig-name { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 14px; color: var(--news-ink); }
+.paper-rail .ssig-dir { font-size: 9px; font-weight: 700; color: var(--news-ink-2) !important; background: transparent !important; border: 1px solid var(--news-rule); padding: 1px 5px; }
+.paper-rail .ssig-driver { font-size: 11.5px; color: var(--news-ink); font-weight: 700; margin: 5px 0 3px; }
+.paper-rail .ssig-note { font-size: 12px; color: var(--news-ink-2); line-height: 1.45; }
+.paper-rail .ssig-src { display: none; }
+.paper-rail .ssig-foot { font-size: 10px; color: var(--news-ink-2); margin-top: 8px; font-style: italic; }
 
 /* Track Record / Verdict Scorecard */
 .sc-headline { margin-bottom: 14px; }

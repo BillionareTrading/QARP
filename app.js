@@ -636,11 +636,12 @@ function enterDaily() {
 function leaveDaily() { if (dailyTimer) { clearInterval(dailyTimer); dailyTimer = null; } }
 
 function renderDaily() {
-  const dEl = document.getElementById("paper-date");
-  if (!dEl) return;
-  dEl.textContent = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", year: "numeric" }).format(new Date());
-  const aoEl = document.getElementById("paper-asof");
-  if (aoEl) aoEl.textContent = "as of " + (document.getElementById("asof-date")?.textContent || (DATA.meta && DATA.meta.date) || "");
+  const fEl = document.getElementById("paper-folio-meta");
+  if (!fEl) return;
+  const now = new Date();
+  const fullDate = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", year: "numeric" }).format(now).toUpperCase();
+  const doy = Math.ceil((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
+  fEl.textContent = `VOL. I · No. ${doy} · NEW YORK, ${fullDate} (ET) · LATE MARKET EDITION`;
 
   const uni = (DATA.universe || []).filter((x) => x.day_pct != null);
   const port = (DATA.portfolio || []).filter((h) => h.day_pct != null);
@@ -659,6 +660,7 @@ function renderDaily() {
     document.getElementById("paper-lead").innerHTML =
       `<div class="lead-kicker">The Market Today</div>`
       + `<h2 class="lead-head">Shariah universe trades ${tone}; ${esc(best.s)} leads, ${esc(worst.s)} lags</h2>`
+      + `<div class="lead-byline">By The Market Desk · live data</div>`
       + `<p class="lead-body">The ${uni.length}-name Shariah-compliant universe traded <b>${tone}</b> today — <b class="pos">${ups} advancing</b>, <b class="neg">${downs} declining</b>. <b>${esc(best.s)}</b> was the strongest sector on average (<span class="${signClass(best.avg)}">${fmtPct(best.avg)}</span>), while <b>${esc(worst.s)}</b> was the weakest (<span class="${signClass(worst.avg)}">${fmtPct(worst.avg)}</span>). ${esc(g.name || g.ticker)} (${esc(g.ticker)}) led all names at <span class="pos">${fmtPct(g.day_pct)}</span>; ${esc(l.name || l.ticker)} (${esc(l.ticker)}) fell <span class="neg">${fmtPct(l.day_pct)}</span>. QARP rankings re-rate on these price moves; the hand-scored verdicts change only on a fundamentals re-score.</p>`;
   }
   // Your Portfolio Today
@@ -688,6 +690,16 @@ function renderDaily() {
       + `<div class="mv-cols"><div><div class="mv-lbl pos">Gainers</div><ul class="mv-list">${sorted.slice(0, 4).map(row).join("")}</ul></div>`
       + `<div><div class="mv-lbl neg">Decliners</div><ul class="mv-list">${sorted.slice(-4).reverse().map(row).join("")}</ul></div></div>`;
   }
+  // Number of the Day — NYT-style boxed stat pulled from live data
+  const ndEl = document.getElementById("paper-numday");
+  if (ndEl && uni.length) {
+    const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct);
+    const g = sorted[0];
+    const ups = uni.filter((x) => x.day_pct > 0).length, downs = uni.filter((x) => x.day_pct < 0).length;
+    ndEl.innerHTML = `<div class="numday-label">Number of the Day</div>`
+      + `<div class="numday-fig ${signClass(g.day_pct)}">${fmtPct(g.day_pct)}</div>`
+      + `<div class="numday-cap">${esc(g.name || g.ticker)} (${esc(g.ticker)}) led the Shariah universe. Breadth ran <b>${ups}</b> advancing to <b>${downs}</b> declining across ${uni.length} names.</div>`;
+  }
   renderDailyTicker();
   loadDailyBrief();    // original lead column + briefs from daily_brief.json (NO external links)
   renderSectorSignals(); // sector-level event-driven signals (uses cached SIGNALS)
@@ -707,8 +719,8 @@ async function loadDailyBrief() {
     const el = document.getElementById("paper-lead");
     if (el) el.innerHTML = `<div class="lead-kicker">${esc(b.kicker || "The Market Today")}</div>`
       + `<h2 class="lead-head">${esc(b.headline || "")}</h2>`
-      + `<div class="lead-body">${b.body_html}</div>`
-      + `<div class="lead-byline">${esc(b.byline || "Jaleel Capital Daily · market desk")}${b.generated_at ? " · " + esc(b.generated_at) : ""}</div>`;
+      + `<div class="lead-byline">By The Market Desk${b.generated_at ? " · " + esc(b.generated_at) : ""}</div>`
+      + `<div class="lead-body">${b.body_html}</div>`;
   }
   renderBriefs(fresh && Array.isArray(b.briefs) ? b.briefs : null);
 }
