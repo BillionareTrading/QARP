@@ -948,3 +948,23 @@ tbody tr:hover { background: var(--surface-2); }
 .cread-blk.bear .cread-lbl { color: var(--neg); }
 .cread-blk.chg .cread-lbl { color: var(--ink-2); }
 .cread-blk p { margin: 0; font-size: 13px; line-height: 1.55; color: var(--ink); }
+
+/* ---------- "Your book" daily read + attention digest (Portfolio) ---------- */
+.book-brief { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 16px 18px; margin-bottom: 16px; }
+.book-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 9px; }
+.book-head h3 { margin: 0; font-size: 16px; }
+.book-when { font-size: 11px; color: var(--ink-3); white-space: nowrap; }
+.book-body { font-size: 13.5px; line-height: 1.62; color: var(--ink); }
+.book-body p { margin: 0 0 10px; } .book-body p:last-child { margin-bottom: 0; }
+.book-att { margin-top: 13px; border-top: 1px solid var(--line); padding-top: 12px; }
+.book-att-h { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-3); font-weight: 700; margin-bottom: 7px; }
+.book-att-row { display: flex; align-items: flex-start; gap: 10px; width: 100%; text-align: left; background: none; border: 0; border-radius: 8px; padding: 7px 8px; cursor: pointer; }
+.book-att-row:hover { background: var(--surface-2); }
+.book-sev { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; flex: none; margin-top: 1px; }
+.book-sev.act { color: #fff; background: var(--neg); }
+.book-sev.watch { color: var(--v-hold); background: color-mix(in srgb, var(--v-hold) 15%, var(--surface)); }
+.book-sev.note { color: var(--ink-2); background: var(--surface-2); }
+.book-att-tk { font-family: var(--mono); font-weight: 700; font-size: 13px; color: var(--ink); flex: none; width: 46px; margin-top: 1px; }
+.book-att-txt { font-size: 12.5px; color: var(--ink-2); line-height: 1.5; }
+.book-att-txt b { color: var(--ink); font-weight: 600; }
+.book-foot { font-size: 11px; color: var(--ink-3); margin-top: 12px; }
