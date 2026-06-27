@@ -913,3 +913,29 @@ tbody tr:hover { background: var(--surface-2); }
 .bot-send:hover { filter: brightness(1.08); }
 .bot-foot { font-size: 10px; color: var(--ink-3); text-align: center; padding: 0 0 9px; }
 @media (max-width: 560px) { #bot-panel { right: 10px; bottom: 10px; height: min(70vh, calc(100vh - 80px)); } }
+
+/* ---------- Social Pulse (drawer, live X via Grok, on-demand) ---------- */
+.drawer-pulse { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 14px; }
+.pulse-h { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 0 0 10px; font-size: 14px; }
+.pulse-sub { font-size: 11px; font-weight: 500; color: var(--ink-3); text-transform: uppercase; letter-spacing: .04em; }
+.pulse-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--brand); color: #fff; border: 0; border-radius: var(--radius-sm); padding: 9px 16px; font: 600 13px var(--sans); cursor: pointer; }
+.pulse-btn:hover { filter: brightness(1.08); }
+.pulse-note { font-size: 11px; color: var(--ink-3); margin-top: 7px; line-height: 1.5; }
+.pulse-loading { display: flex; align-items: center; font-size: 13px; color: var(--ink-2); padding: 6px 0; }
+.pulse-spin { width: 13px; height: 13px; border: 2px solid var(--line); border-top-color: var(--brand); border-radius: 50%; display: inline-block; margin-right: 9px; animation: pulse-spin .7s linear infinite; }
+@keyframes pulse-spin { to { transform: rotate(360deg); } }
+.pulse-err { font-size: 12.5px; color: var(--ink-2); }
+.pulse-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.pulse-score { font-weight: 700; font-size: 15px; }
+.pulse-buzz { font-size: 12px; color: var(--ink-2); }
+.pulse-bar { height: 6px; background: var(--surface-2); border-radius: 3px; margin: 9px 0 11px; overflow: hidden; }
+.pulse-fill { height: 100%; border-radius: 3px; }
+.pulse-fill.pos { background: var(--pos); } .pulse-fill.neg { background: var(--neg); } .pulse-fill.muted { background: var(--ink-3); }
+.pulse-theme { font-size: 13px; color: var(--ink); line-height: 1.55; margin-bottom: 11px; }
+.pulse-posts { display: flex; flex-direction: column; gap: 7px; }
+.pulse-post { font-size: 12.5px; color: var(--ink-2); line-height: 1.5; }
+.pulse-handle { color: var(--brand); font-weight: 600; }
+.pulse-quiet { font-size: 12.5px; color: var(--ink-3); font-style: italic; }
+.pulse-foot { font-size: 11px; color: var(--ink-3); margin-top: 11px; line-height: 1.5; }
+.pulse-link { background: none; border: 0; color: var(--brand); cursor: pointer; font-size: inherit; padding: 0; }
+.pulse-link:hover { text-decoration: underline; }
