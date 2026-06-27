@@ -517,8 +517,10 @@ function openDrawer(ticker) {
       <div class="dbar"><div class="dfill" style="width:${has(v) ? (v / m * 100).toFixed(0) : 0}%"></div></div></div>`).join("")}</div>` : ""}
     ${kv.length ? `<div class="kv">${kv.map(([k, v]) => `<span class="k">${k}</span><span class="vv">${v}</span>`).join("")}</div>` : ""}
     ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${d.dcf_note}</div>` : ""}
-    ${bzHoldingNewsHtml(ticker)}`;
+    ${bzHoldingNewsHtml(ticker)}
+    <section id="drawer-pulse" class="drawer-pulse"></section>`;
 
+  renderDrawerPulse(ticker, d.name || (p && p.name) || ticker);
   const drawer = document.getElementById("drawer");
   drawer.hidden = false;
   document.querySelector(".drawer-close").addEventListener("click", closeDrawer);
@@ -526,6 +528,72 @@ function openDrawer(ticker) {
 }
 function closeDrawer() { document.getElementById("drawer").hidden = true; }
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
+
+/* ---------- Social Pulse — live X read via the Grok Worker, ON-DEMAND in the drawer ----------
+   A fetch costs a few cents, so it only runs when YOU press the button — never automatically.
+   Results are cached for the browser session, so re-opening the same stock is free.            */
+const GROK_PROXY = "https://qarp-grok.murshidjaleel-990.workers.dev";
+const PULSE_CACHE = {};
+const PULSE_HEAD = `<h4 class="pulse-h">Social pulse<span class="pulse-sub">live · X via Grok</span></h4>`;
+
+function renderDrawerPulse(ticker, name) {
+  const el = document.getElementById("drawer-pulse");
+  if (!el) return;
+  const cached = PULSE_CACHE[ticker];
+  if (cached) { el.innerHTML = PULSE_HEAD + pulseBodyHtml(cached.data, cached.ts); }
+  else {
+    el.innerHTML = PULSE_HEAD
+      + `<button type="button" class="pulse-btn" data-act="get">Get live read from X</button>`
+      + `<div class="pulse-note">Reads X right now via Grok · a few cents per read · social signal, not advice</div>`;
+  }
+  wirePulse(ticker, name);
+}
+
+function wirePulse(ticker, name) {
+  const el = document.getElementById("drawer-pulse");
+  if (el) el.querySelectorAll("[data-act='get']").forEach((b) =>
+    b.addEventListener("click", () => fetchPulse(ticker, name)));
+}
+
+async function fetchPulse(ticker, name) {
+  const el = document.getElementById("drawer-pulse");
+  if (!el) return;
+  el.innerHTML = PULSE_HEAD + `<div class="pulse-loading"><span class="pulse-spin"></span>Reading X…</div>`;
+  const fail = () => { el.innerHTML = PULSE_HEAD + `<div class="pulse-err">Couldn't reach X right now. <button type="button" class="pulse-link" data-act="get">Try again</button></div>`; wirePulse(ticker, name); };
+  try {
+    const res = await fetch(GROK_PROXY, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ symbol: ticker, name }) });
+    const j = await res.json().catch(() => ({}));
+    if (!res.ok || !j || j.error || !j.pulse) return fail();
+    PULSE_CACHE[ticker] = { data: j.pulse, ts: Date.now() };
+    el.innerHTML = PULSE_HEAD + pulseBodyHtml(j.pulse, Date.now());
+    wirePulse(ticker, name);
+  } catch (e) { fail(); }
+}
+
+function pulseBodyHtml(p, ts) {
+  const lbl = p.sentiment_label || "Neutral";
+  const cls = /bull/i.test(lbl) ? "pos" : /bear/i.test(lbl) ? "neg" : "muted";
+  const score = p.sentiment_score != null ? Math.max(0, Math.min(100, Math.round(p.sentiment_score))) : 50;
+  const vol = p.posts_24h != null ? ` · ${fmtNum(p.posts_24h, 0)} posts/24h` : "";
+  const posts = (Array.isArray(p.posts) ? p.posts : []).filter((x) => x && x.handle).slice(0, 3);
+  const postsHtml = posts.length
+    ? posts.map((x) => `<div class="pulse-post"><span class="pulse-handle">${esc(x.handle)}</span> ${esc(x.text || "")}</div>`).join("")
+    : `<div class="pulse-quiet">X is quiet on this name right now.</div>`;
+  return `
+    <div class="pulse-top">
+      <span class="pulse-score ${cls}">${esc(lbl)} · ${score}</span>
+      <span class="pulse-buzz">${esc(p.buzz || "")}${vol}</span>
+    </div>
+    <div class="pulse-bar"><div class="pulse-fill ${cls}" style="width:${score}%"></div></div>
+    ${p.theme ? `<div class="pulse-theme">${esc(p.theme)}</div>` : ""}
+    <div class="pulse-posts">${postsHtml}</div>
+    <div class="pulse-foot">Fetched ${pulseAgo(ts)} · social signal, not advice · <button type="button" class="pulse-link" data-act="get">refresh</button></div>`;
+}
+
+function pulseAgo(ts) {
+  const m = Math.round((Date.now() - ts) / 60000);
+  return m <= 0 ? "just now" : m === 1 ? "1 min ago" : `${m} min ago`;
+}
 
 /* ---------- Track Record / Verdict Scorecard ---------- */
 // IC-over-time sparkline. Shows a placeholder until there are >=3 logged days,
