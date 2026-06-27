@@ -1888,52 +1888,46 @@ function renderAll() {
 }
 
 async function boot() {
-  let payload;
-  try {
-    const res = await fetch("payload.enc", { cache: "no-store" });
-    payload = await res.json();
-    if (payload.date) document.getElementById("gate-date").textContent = asOfDate(payload.date);
-  } catch (e) {
-    showErr("Could not load encrypted data. Is payload.enc present?");
-    return;
-  }
+  const gate = document.getElementById("gate"), app = document.getElementById("app");
+  const form = document.getElementById("gate-form"), btn = document.getElementById("gate-btn");
+  const pwEl = document.getElementById("gate-pw");
 
-  const form = document.getElementById("gate-form");
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const btn = document.getElementById("gate-btn");
-    const pw = document.getElementById("gate-pw").value;
+  // Kick off the (large, ~0.4MB) encrypted-data download as a PROMISE — but do NOT block wiring
+  // up the form on it. Previously the submit handler was attached only after this await, so a
+  // password typed during the ~2s cold download triggered the form's DEFAULT submit and reloaded
+  // the page (looping "stuck, won't open"). Now the form is wired immediately and unlock() waits.
+  let payload = null, payloadErr = null;
+  const payloadReady = fetch("payload.enc", { cache: "no-store" })
+    .then((r) => r.json())
+    .then((p) => { payload = p; if (p && p.date) document.getElementById("gate-date").textContent = asOfDate(p.date); })
+    .catch((e) => { payloadErr = e; });
+
+  async function unlock(pw, fromSaved) {
     if (!pw) return;
-    btn.disabled = true; btn.textContent = "Unlocking…";
-    hideErr();
+    btn.disabled = true; btn.textContent = "Unlocking…"; hideErr();
+    await payloadReady;                      // wait for the data if it's still downloading
+    if (payloadErr || !payload) {
+      showErr("Couldn't load data — check your connection and try again.");
+      btn.disabled = false; btn.textContent = "Unlock"; return;
+    }
     try {
       DATA = await decryptPayload(payload, pw);
-      document.getElementById("gate").hidden = true;
-      document.getElementById("app").hidden = false;
-      sessionStorage.setItem("jc_pw", pw); // remember within this tab session only
+      gate.hidden = true; app.hidden = false;
+      sessionStorage.setItem("jc_pw", pw);   // remember within this tab session only
       renderAll();
     } catch (err) {
-      showErr("Wrong password.");
-      btn.disabled = false; btn.textContent = "Unlock";
-      document.getElementById("gate-pw").select();
+      if (fromSaved) { sessionStorage.removeItem("jc_pw"); btn.disabled = false; btn.textContent = "Unlock"; }
+      else { showErr("Wrong password."); btn.disabled = false; btn.textContent = "Unlock"; pwEl.select(); }
     }
-  });
-
-  // auto-unlock within the same browser tab session
-  const saved = sessionStorage.getItem("jc_pw");
-  if (saved) {
-    try {
-      DATA = await decryptPayload(payload, saved);
-      document.getElementById("gate").hidden = true;
-      document.getElementById("app").hidden = false;
-      renderAll();
-    } catch (e) { sessionStorage.removeItem("jc_pw"); }
   }
 
-  document.getElementById("lock-btn").addEventListener("click", () => {
-    sessionStorage.removeItem("jc_pw");
-    location.reload();
-  });
+  // Wire the form IMMEDIATELY so an early Enter/click can never reload the page mid-download.
+  form.addEventListener("submit", (e) => { e.preventDefault(); unlock(pwEl.value, false); });
+  document.getElementById("lock-btn").addEventListener("click", () => { sessionStorage.removeItem("jc_pw"); location.reload(); });
+
+  // auto-unlock within the same tab session (also waits for the payload via unlock())
+  const saved = sessionStorage.getItem("jc_pw");
+  if (saved) unlock(saved, true);
 }
 
 function showErr(msg) { const e = document.getElementById("gate-err"); e.textContent = msg; e.hidden = false; }
