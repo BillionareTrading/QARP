@@ -1841,6 +1841,35 @@ function renderVenture() {
     }));
 }
 
+/* ---------- "Your book" daily read + "Needs your attention" digest (Claude, cloud-written) ---------- */
+async function loadBookBrief() {
+  const el = document.getElementById("book-brief");
+  if (!el) return;
+  try {
+    const res = await fetch(`book_brief.json?cb=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) { el.hidden = true; return; }
+    renderBookBrief(el, await res.json());
+  } catch (e) { el.hidden = true; }
+}
+function renderBookBrief(el, b) {
+  if (!b || !b.your_book) { el.hidden = true; return; }
+  const att = (b.attention || []).filter((a) => a && a.ticker);
+  const SEV = { act: "Act", watch: "Watch", note: "Note" };
+  const attHtml = att.length ? `<div class="book-att"><div class="book-att-h">Needs your attention</div>`
+    + att.map((a) => {
+      const s = (a.severity || "note").toLowerCase();
+      return `<button type="button" class="book-att-row" data-tk="${esc(a.ticker)}">`
+        + `<span class="book-sev ${SEV[s] ? s : "note"}">${SEV[s] || "Note"}</span>`
+        + `<span class="book-att-tk">${esc(a.ticker)}</span>`
+        + `<span class="book-att-txt"><b>${esc(a.headline || "")}</b> ${esc(a.note || "")}</span></button>`;
+    }).join("") + `</div>` : "";
+  el.innerHTML = `<div class="book-head"><h3>Your book today</h3><span class="book-when">${esc(b.generated_at || "")}</span></div>`
+    + `<div class="book-body">${b.your_book}</div>${attHtml}`
+    + `<div class="book-foot">Written by Claude from your live data · informational only, not advice</div>`;
+  el.hidden = false;
+  el.querySelectorAll(".book-att-row").forEach((r) => r.addEventListener("click", () => openDrawer(r.dataset.tk)));
+}
+
 function renderAll() {
   document.getElementById("asof-date").textContent = asOfDate(DATA.meta.date);
   renderVerdictSummary();
@@ -1852,6 +1881,7 @@ function renderAll() {
   renderPortfolio();
   loadSignals();         // fetch signals.json + live trigger prices, then render the Signals card
   loadGurus();           // fetch gurus.json (13F holdings) for the Smart Money subtab
+  loadBookBrief();       // fetch book_brief.json — Claude's daily "your book" read + attention digest
   enterDaily();          // Daily is the landing tab — render it + start its refresh
   initTabs();
   startLive();
