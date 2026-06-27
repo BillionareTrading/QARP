@@ -22,7 +22,8 @@ PY="/opt/anaconda3/bin/python3"
 echo "refresh_site: payload.enc regenerated."
 
 if [ "$PUSH" = "1" ] && [ -d .git ]; then
-  git add payload.enc
+  # ciphertext payload + the plaintext news feeds (signals/briefing, 13F, daily brief)
+  git add payload.enc signals.json gurus.json daily_brief.json 2>/dev/null
   git commit -m "data refresh $(cat payload.enc | python3 -c 'import sys,json;print(json.load(sys.stdin)["date"])')" --quiet || true
   git push --quiet origin main && echo "refresh_site: pushed to remote."
 fi
