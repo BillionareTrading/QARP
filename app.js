@@ -1546,6 +1546,18 @@ function isTrustedSource(it) {
   return TRUSTED_NEWS_SOURCES.some((t) => s.includes(t));
 }
 
+// RELEVANCE gate for the broad "general" feed (it mixes in lifestyle/culture stories that have
+// nothing to do with markets). Keep ONLY items that carry a real market/finance/economics signal,
+// and hard-drop a few unambiguous non-finance topics. Company-news (per-ticker) skips this — it's
+// already relevant by definition.
+const NEWS_OFFTOPIC = /\b(romance novel|gay romance|love stor|horoscope|astrology|zodiac|recipe|celebrity|kardashian|royal wedding|dating app|skincare|makeup|fashion week|red carpet|box office|gift guide)\b/i;
+const NEWS_FINANCE = /(\bstocks?\b|\bshares?\b|\bmarket|nasdaq|dow jones|s&p|\bindex(es)?\b|earnings|revenue|profit|guidance|dividend|\bipo\b|merger|acquisition|buyout|federal reserve|\bfed\b|interest rate|rate (cut|hike)|inflation|\bcpi\b|\bppi\b|\bgdp\b|jobs report|payrolls?|unemployment|tariff|crude|oil price|\bbond|\byield|treasury|\bdollar\b|\bcrypto|bitcoin|analyst|upgrade|downgrade|price target|quarterly|sec filing|buyback|layoffs?|valuation|hedge fund|\betf\b|wall street|econom(y|ic|ics)|recession|stimulus|deficit|billion|trillion|\$[0-9]|\b[0-9]+%)/i;
+function isMarketRelevant(it) {
+  const t = ((it.headline || "") + " " + (it.summary || "")).toLowerCase();
+  if (NEWS_OFFTOPIC.test(t)) return false;
+  return NEWS_FINANCE.test(t);
+}
+
 // split items into photo cards + headline rows (shared by Stay Informed and Portfolio news)
 function renderNewsFeed(container, items, emptyLabel) {
   items = items.filter((it) => it && it.headline && it.url && isTrustedSource(it));
@@ -1582,7 +1594,9 @@ async function loadNews(filterName) {
     const res = await fetch(url, { cache: "no-store" });
     let items = await res.json();
     if (!Array.isArray(items)) throw new Error("bad response");
-    items = items.filter((it) => it && it.headline && it.url).slice(0, 30);
+    items = items.filter((it) => it && it.headline && it.url);
+    if (f.cat) items = items.filter(isMarketRelevant);   // general/sector feeds carry lifestyle noise
+    items = items.slice(0, 30);
     // multi-source: blend in Benzinga (server-baked) — universe-relevant items, or the filter's symbol
     const bz = f.sym ? bzFeed({ tickers: new Set([f.sym]) }) : bzFeed({ relOnly: true }).slice(0, 14);
     renderNewsFeed(list, mergeNews(items, bz), `No recent headlines for ${newsFilter}.`);
