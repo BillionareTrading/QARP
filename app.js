@@ -518,9 +518,11 @@ function openDrawer(ticker) {
     ${kv.length ? `<div class="kv">${kv.map(([k, v]) => `<span class="k">${k}</span><span class="vv">${v}</span>`).join("")}</div>` : ""}
     ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${d.dcf_note}</div>` : ""}
     ${bzHoldingNewsHtml(ticker)}
-    <section id="drawer-pulse" class="drawer-pulse"></section>`;
+    <section id="drawer-pulse" class="drawer-pulse"></section>
+    <section id="drawer-cread" class="drawer-pulse"></section>`;
 
   renderDrawerPulse(ticker, d.name || (p && p.name) || ticker);
+  renderClaudeRead(ticker);
   const drawer = document.getElementById("drawer");
   drawer.hidden = false;
   document.querySelector(".drawer-close").addEventListener("click", closeDrawer);
@@ -593,6 +595,86 @@ function pulseBodyHtml(p, ts) {
 function pulseAgo(ts) {
   const m = Math.round((Date.now() - ts) / 60000);
   return m <= 0 ? "just now" : m === 1 ? "1 min ago" : `${m} min ago`;
+}
+
+/* ---------- Claude's read — on-demand bull / bear / what-would-change-it in the drawer ----------
+   Reuses the qarp-bot Worker (Anthropic). Button-gated, session-cached, grounded ONLY in this
+   page's data. If the Grok social pulse was already fetched for this name, it's folded in.        */
+const CREAD_CACHE = {};
+const CREAD_HEAD = `<h4 class="pulse-h">Claude's read<span class="pulse-sub">bull · bear · what changes it</span></h4>`;
+
+function renderClaudeRead(ticker) {
+  const el = document.getElementById("drawer-cread");
+  if (!el) return;
+  const cached = CREAD_CACHE[ticker];
+  if (cached) el.innerHTML = CREAD_HEAD + creadBodyHtml(cached.data, cached.ts);
+  else el.innerHTML = CREAD_HEAD
+    + `<button type="button" class="pulse-btn cread-btn" data-cact="get">Get Claude's read</button>`
+    + `<div class="pulse-note">Bull case · bear case · what would change the call — grounded in this page's data</div>`;
+  wireCread(ticker);
+}
+function wireCread(ticker) {
+  const el = document.getElementById("drawer-cread");
+  if (el) el.querySelectorAll("[data-cact='get']").forEach((b) => b.addEventListener("click", () => fetchClaudeRead(ticker)));
+}
+function buildCreadContext(ticker) {
+  const u = (DATA.universe || []).find((x) => x.ticker === ticker) || {};
+  const p = (DATA.portfolio || []).find((x) => x.ticker === ticker);
+  const S = (typeof SIGNALS !== "undefined" && SIGNALS) || {};
+  const news = S.holding_news && S.holding_news[ticker];
+  const pulse = PULSE_CACHE[ticker] && PULSE_CACHE[ticker].data;
+  return [
+    `${ticker} — ${u.name || (p && p.name) || ""}${u.sector ? " · " + u.sector : ""}`,
+    `QARP ${fmtNum(u.qarp, 1)} (${u.verdict || "n/a"}); Quality ${u.mech || "?"}/105 [Valuation ${u.val}/25 · Growth ${u.grw}/20 · Moat&Returns ${u.qual}/20 · BalanceSheet ${u.bs}/20 · CapitalAlloc ${u.cap}/20]; DCF ${u.dcf}/5 (5=cheap).`,
+    u.gf_value != null ? `GuruFocus fair value ${fmtUSD(u.gf_value, 2)} vs price ${fmtUSD(u.price, 2)}${u.day_pct != null ? ` (${fmtPct(u.day_pct)} today)` : ""}.` : (u.price != null ? `Price ${fmtUSD(u.price, 2)}.` : ""),
+    u.dcf_note ? `Valuation/thesis note: ${String(u.dcf_note).replace(/<[^>]+>/g, "")}` : "",
+    u.shariah_grade ? `Shariah (Musaffa): ${u.shariah_grade}.` : "",
+    u.catalyst ? `Catalyst (shadow factor): ${u.catalyst.label} — ${u.catalyst.note || ""}` : "",
+    u.insider ? `Insider activity: ${u.insider}.` : "",
+    u.mktcap_b != null ? `Market cap ~$${fmtNum(u.mktcap_b, 1)}B.` : "",
+    news && news.title ? `Latest headline (Benzinga): ${news.title}` : "",
+    p ? `User OWNS this: ${fmtNum(p.shares, 2)} sh, ${fmtPct(p.gain_pct)} unrealized.` : "Not currently held.",
+    pulse ? `Live X social pulse: ${pulse.sentiment_label} ${pulse.sentiment_score}/100, buzz ${pulse.buzz}. ${pulse.theme || ""}` : "",
+  ].filter(Boolean).join("\n");
+}
+async function fetchClaudeRead(ticker) {
+  const el = document.getElementById("drawer-cread");
+  if (!el) return;
+  el.innerHTML = CREAD_HEAD + `<div class="pulse-loading"><span class="pulse-spin"></span>Claude is reading…</div>`;
+  const fail = () => { el.innerHTML = CREAD_HEAD + `<div class="pulse-err">Couldn't get the read right now. <button type="button" class="pulse-link" data-cact="get">Try again</button></div>`; wireCread(ticker); };
+  if (!BOT_PROXY || BOT_PROXY.includes("YOUR-WORKER")) return fail();
+  const system = "You are a sharp, skeptical equity analyst for an informed investor whose rule is to challenge the consensus and triangulate sources. Using ONLY the data provided, write a tight read: a BULL case, a BEAR case, and the SINGLE most important thing that would change the call. 2-3 sentences each, concrete and grounded — NEVER invent a number, fact, or event not in the data. Translate scores into plain investment reasoning; no jargon dumps. Informational only, not advice. Return ONLY a JSON object, no prose or code fences: {\"bull\":\"\",\"bear\":\"\",\"change\":\"\"}.";
+  const user = `Write the read for ${ticker}.\n\nDATA:\n${buildCreadContext(ticker)}`;
+  try {
+    const res = await fetch(BOT_PROXY, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ system, messages: [{ role: "user", content: user }] }) });
+    if (!res.ok || !res.body) return fail();
+    const reader = res.body.getReader(), dec = new TextDecoder();
+    let buf = "", acc = "";
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, { stream: true });
+      const lines = buf.split("\n"); buf = lines.pop();
+      for (const line of lines) {
+        if (!line.startsWith("data:")) continue;
+        const dts = line.slice(5).trim();
+        if (!dts || dts === "[DONE]") continue;
+        try { const ev = JSON.parse(dts); if (ev.type === "content_block_delta" && ev.delta && ev.delta.type === "text_delta") acc += ev.delta.text; } catch (e) {}
+      }
+    }
+    const a = acc.indexOf("{"), b = acc.lastIndexOf("}");
+    if (a < 0 || b <= a) return fail();
+    const data = JSON.parse(acc.slice(a, b + 1));
+    if (!data.bull && !data.bear) return fail();
+    CREAD_CACHE[ticker] = { data, ts: Date.now() };
+    el.innerHTML = CREAD_HEAD + creadBodyHtml(data, Date.now());
+    wireCread(ticker);
+  } catch (e) { fail(); }
+}
+function creadBodyHtml(d, ts) {
+  const blk = (lbl, txt, cls) => txt ? `<div class="cread-blk ${cls}"><span class="cread-lbl">${lbl}</span><p>${esc(txt)}</p></div>` : "";
+  return blk("Bull case", d.bull, "bull") + blk("Bear case", d.bear, "bear") + blk("What would change it", d.change, "chg")
+    + `<div class="pulse-foot">Claude · grounded in this page's data · not advice · <button type="button" class="pulse-link" data-cact="get">refresh</button></div>`;
 }
 
 /* ---------- Track Record / Verdict Scorecard ---------- */

@@ -939,3 +939,12 @@ tbody tr:hover { background: var(--surface-2); }
 .pulse-foot { font-size: 11px; color: var(--ink-3); margin-top: 11px; line-height: 1.5; }
 .pulse-link { background: none; border: 0; color: var(--brand); cursor: pointer; font-size: inherit; padding: 0; }
 .pulse-link:hover { text-decoration: underline; }
+
+/* ---------- Claude's read (drawer) ---------- */
+.cread-btn { background: var(--brand-ink); }
+.cread-blk { margin-bottom: 11px; }
+.cread-lbl { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; font-weight: 700; margin-bottom: 3px; }
+.cread-blk.bull .cread-lbl { color: var(--pos); }
+.cread-blk.bear .cread-lbl { color: var(--neg); }
+.cread-blk.chg .cread-lbl { color: var(--ink-2); }
+.cread-blk p { margin: 0; font-size: 13px; line-height: 1.55; color: var(--ink); }
