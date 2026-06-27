@@ -1576,33 +1576,35 @@ async function loadNews(filterName) {
   newsFilter = filterName || newsFilter;
   renderNewsFilters();
   const list = document.getElementById("news-list");
-  const key = DATA.meta && DATA.meta.finnhub_key;   // news calls Finnhub directly (not the quote Worker)
   if (!list) return;
-  if (!key) { list.innerHTML = `<p class="muted">Live news needs the API key.</p>`; return; }
   list.innerHTML = `<p class="news-loading">Loading headlines…</p>`;
   const f = NEWS_FILTERS.find((x) => x.name === newsFilter) || NEWS_FILTERS[0];
-  let url;
-  if (f.cat) {
-    url = `https://finnhub.io/api/v1/news?category=${f.cat}&token=${key}`;
-  } else {
-    const now = new Date();
-    const to = now.toISOString().slice(0, 10);
-    const from = new Date(now.getTime() - 7 * 86400000).toISOString().slice(0, 10);
-    url = `https://finnhub.io/api/v1/company-news?symbol=${f.sym}&from=${from}&to=${to}&token=${key}`;
+
+  // BACKBONE: Benzinga is finance-only and server-baked — no key, never blanks the feed.
+  const bz = f.sym ? bzFeed({ tickers: new Set([f.sym]) }) : bzFeed({}).slice(0, 50);
+
+  // BREADTH (best-effort): Finnhub adds Reuters/AP/etc. General/sector feeds are relevance-gated;
+  // company-news is already on-ticker. A Finnhub failure must NOT hide the Benzinga backbone.
+  let items = [];
+  const key = DATA.meta && DATA.meta.finnhub_key;
+  if (key) {
+    let url;
+    if (f.cat) url = `https://finnhub.io/api/v1/news?category=${f.cat}&token=${key}`;
+    else {
+      const now = new Date(), to = now.toISOString().slice(0, 10);
+      const from = new Date(now.getTime() - 7 * 86400000).toISOString().slice(0, 10);
+      url = `https://finnhub.io/api/v1/company-news?symbol=${f.sym}&from=${from}&to=${to}&token=${key}`;
+    }
+    try {
+      const raw = await fetch(url, { cache: "no-store" }).then((r) => r.json());
+      if (Array.isArray(raw)) {
+        items = raw.filter((it) => it && it.headline && it.url);
+        if (f.cat) items = items.filter(isMarketRelevant);   // drop the general feed's lifestyle noise
+        items = items.slice(0, 30);
+      }
+    } catch (e) { /* keep the Benzinga backbone */ }
   }
-  try {
-    const res = await fetch(url, { cache: "no-store" });
-    let items = await res.json();
-    if (!Array.isArray(items)) throw new Error("bad response");
-    items = items.filter((it) => it && it.headline && it.url);
-    if (f.cat) items = items.filter(isMarketRelevant);   // general/sector feeds carry lifestyle noise
-    items = items.slice(0, 30);
-    // multi-source: blend in Benzinga (server-baked) — universe-relevant items, or the filter's symbol
-    const bz = f.sym ? bzFeed({ tickers: new Set([f.sym]) }) : bzFeed({ relOnly: true }).slice(0, 14);
-    renderNewsFeed(list, mergeNews(items, bz), `No recent headlines for ${newsFilter}.`);
-  } catch (e) {
-    list.innerHTML = `<p class="muted">Couldn't load news right now — try Refresh.</p>`;
-  }
+  renderNewsFeed(list, mergeNews(bz, items), `No recent headlines for ${newsFilter}.`);
 }
 
 function enterInformed() {
