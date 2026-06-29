@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=1f869ac7" />
+  <link rel="stylesheet" href="styles.css?v=d48b903e" />
 </head>
 <body>
 
@@ -50,6 +50,7 @@
     <!-- Tabs -->
     <nav class="tabs">
       <button class="tab active" data-tab="daily">The Times</button>
+      <button class="tab" data-tab="guide">Guide</button>
       <button class="tab" data-tab="informed">Stay Informed</button>
       <button class="tab" data-tab="universe">Shariah-Compliant</button>
       <button class="tab" data-tab="portfolio">Portfolio</button>
@@ -87,6 +88,53 @@
           <section id="paper-portfolio"></section>
         </div>
         <p class="paper-foot">Original market commentary written from live data — not reprinted from any publisher, and self-contained. Informational only · not investment advice.</p>
+      </div>
+    </section>
+
+
+    <!-- Reader's guide -->
+    <section id="tab-guide" class="tabpanel">
+      <div class="guide">
+        <div class="guide-head">
+          <h2>Reader's guide</h2>
+          <p>How to navigate the dashboard and get the most from it.</p>
+        </div>
+        <p class="guide-intro">A live, Shariah-compliant equity dashboard built on <b>QARP</b> — <i>Quality At a Reasonable Price</i>, a single score that blends a company's business quality with how cheap or expensive the stock is. Everything here is informational, not investment advice.</p>
+
+        <h3 class="guide-label">The tabs</h3>
+        <div class="guide-tabs">
+          <div class="guide-trow"><span class="guide-tname">The Times</span><span class="guide-tdesc">The market's front page — an original column plus briefs, refreshed before the open, midday, and after the close.</span></div>
+          <div class="guide-trow"><span class="guide-tname">Stay Informed</span><span class="guide-tdesc">Finance-only headlines plus the latest analyst ratings on Jaleel's holdings.</span></div>
+          <div class="guide-trow"><span class="guide-tname">Shariah-Compliant</span><span class="guide-tdesc">Every screened name ranked by QARP (<i>Quality At a Reasonable Price</i> — one score blending business quality with valuation), plus the track record of past calls, ETFs, and venture ideas.</span></div>
+          <div class="guide-trow"><span class="guide-tname">Portfolio</span><span class="guide-tdesc">Jaleel's holdings, the daily Add/Hold/Trim call on each, a triangulated briefing, earnings, key dates, and 13F smart money.</span></div>
+          <div class="guide-trow"><span class="guide-tname">Method</span><span class="guide-tdesc">How the QARP score is built, end to end.</span></div>
+        </div>
+
+        <h3 class="guide-label">Open any stock</h3>
+        <p class="guide-p">Tap any ticker, anywhere, to open its panel — the QARP breakdown, its Shariah grade, and two on-demand reads:</p>
+        <ul class="guide-list">
+          <li><b>QARP breakdown</b> — quality, value, and the verdict.</li>
+          <li><b>Social pulse</b> — live X (Twitter) sentiment, on tap, via Grok.</li>
+          <li><b>Claude's read</b> — the bull case, the bear case, and what would change it.</li>
+        </ul>
+
+        <div class="guide-cards">
+          <div class="guide-card"><h4>Live or last close</h4><p>Prices tick live during market hours. When the market is closed, everything reads &ldquo;as of&rdquo; the last trading day until it reopens.</p></div>
+          <div class="guide-card"><h4>Runs on its own</h4><p>The data, news, column, and daily book read refresh automatically every day.</p></div>
+        </div>
+
+        <h3 class="guide-label">Reading the calls</h3>
+        <div class="guide-bands">
+          <span class="gb gb-best">Strongest &ge;85</span>
+          <span class="gb gb-sbuy">Strong buy &ge;72</span>
+          <span class="gb gb-buy">Buy &ge;66</span>
+          <span class="gb gb-hold">Hold-quality &ge;60</span>
+          <span class="gb gb-avoid">Avoid 35&ndash;59</span>
+          <span class="gb gb-savoid">Strong avoid &lt;35</span>
+        </div>
+        <p class="guide-p">The daily <b>Add / Hold / Trim</b> call blends the QARP verdict, analyst consensus, and any news-risk flag &mdash; a transparent rule, not an opinion.</p>
+
+        <p class="guide-foot">Gate 1 is Shariah compliance (AAOIFI, via Musaffa). Informational only &mdash; not investment advice.</p>
       </div>
     </section>
 
@@ -232,13 +280,13 @@
 
       <!-- Key dates -->
       <div id="psub-dates" class="psub">
-        <p class="tab-intro">Upcoming dates that move your holdings.</p>
+        <p class="tab-intro">Upcoming dates that move Jaleel's holdings.</p>
         <div id="pdates-list"></div>
       </div>
 
       <!-- Smart Money: notable investors' latest 13F holdings (SEC EDGAR) -->
       <div id="psub-gurus" class="psub">
-        <p class="tab-intro">What notable investors hold, from their latest <b>SEC 13F filing</b> — Michael Burry, Leopold Aschenbrenner, Cathie Wood, Warren Buffett. Where a name overlaps <b>your</b> book, it's flagged.</p>
+        <p class="tab-intro">What notable investors hold, from their latest <b>SEC 13F filing</b> — Michael Burry, Leopold Aschenbrenner, Cathie Wood, Warren Buffett. Where a name overlaps <b>Jaleel's</b> book, it's flagged.</p>
         <div id="gurus-list" class="gurus-list"></div>
       </div>
     </section>
@@ -263,7 +311,7 @@
       </div>
 
       <div id="isub-ratings" class="isub">
-        <p class="tab-intro">What <b>outside Wall-Street analysts</b> think your names are worth in ~12 months, vs. today's price. <b><span style="color:#15803d">Green = the analyst sees it higher</span></b>, <b><span style="color:#be123c">red = lower</span></b> — the % is how far. Each call sits next to <b>this site's own QARP verdict</b> so you see both views. These are opinions (and analysts lean optimistic) — <b>not advice, and not a buy/sell instruction.</b></p>
+        <p class="tab-intro">What <b>outside Wall-Street analysts</b> think Jaleel's names are worth in ~12 months, vs. today's price. <b><span style="color:#15803d">Green = the analyst sees it higher</span></b>, <b><span style="color:#be123c">red = lower</span></b> — the % is how far. Each call sits next to <b>this site's own QARP verdict</b> so you see both views. These are opinions (and analysts lean optimistic) — <b>not advice, and not a buy/sell instruction.</b></p>
         <div id="ratings-list" class="ratings-list"></div>
       </div>
     </section>
@@ -361,7 +409,7 @@
   <button id="bot-fab" type="button" aria-label="Ask the dashboard">💬 Ask</button>
   <div id="bot-panel" hidden>
     <div class="bot-head">
-      <div><strong>Ask Jaleel Capital</strong><span class="bot-sub">your portfolio · the market · the framework</span></div>
+      <div><strong>Ask Jaleel Capital</strong><span class="bot-sub">Jaleel's portfolio · the market · the framework</span></div>
       <button id="bot-close" class="bot-close" aria-label="Close">×</button>
     </div>
     <div id="bot-log" class="bot-log"></div>
@@ -372,7 +420,7 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=1f869ac7"></script>
-  <script src="app.js?v=1f869ac7"></script>
+  <script src="crypto.js?v=d48b903e"></script>
+  <script src="app.js?v=d48b903e"></script>
 </body>
 </html>

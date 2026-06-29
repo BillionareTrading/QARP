@@ -968,3 +968,32 @@ tbody tr:hover { background: var(--surface-2); }
 .book-att-txt { font-size: 12.5px; color: var(--ink-2); line-height: 1.5; }
 .book-att-txt b { color: var(--ink); font-weight: 600; }
 .book-foot { font-size: 11px; color: var(--ink-3); margin-top: 12px; }
+
+/* ---------- Reader's guide ---------- */
+.guide { max-width: 760px; margin: 0 auto; }
+.guide-head h2 { margin: 0 0 4px; font-size: 22px; }
+.guide-head p { margin: 0; color: var(--ink-2); font-size: 14px; }
+.guide-intro { font-size: 14px; line-height: 1.65; color: var(--ink); margin: 16px 0 4px; }
+.guide-label { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); font-weight: 700; margin: 24px 0 11px; }
+.guide-tabs { display: flex; flex-direction: column; gap: 11px; }
+.guide-trow { display: flex; gap: 14px; align-items: flex-start; }
+.guide-tname { font-weight: 700; color: var(--ink); width: 150px; flex: none; font-size: 14px; }
+.guide-tdesc { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; }
+.guide-p { font-size: 13.5px; color: var(--ink-2); line-height: 1.6; margin: 0 0 12px; }
+.guide-list { margin: 0 0 8px; padding-left: 18px; }
+.guide-list li { font-size: 13.5px; color: var(--ink); line-height: 1.7; }
+.guide-list b { color: var(--ink); }
+.guide-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 8px 0 4px; }
+.guide-card { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+.guide-card h4 { margin: 0 0 5px; font-size: 14px; }
+.guide-card p { margin: 0; font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+.guide-bands { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
+.gb { font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 999px; }
+.gb-best { color: var(--v-strongest); background: #e8f5ed; }
+.gb-sbuy { color: var(--v-strongbuy); background: #e8f5ed; }
+.gb-buy { color: var(--v-buy); background: #e4f4f8; }
+.gb-hold { color: var(--v-hold); background: #fbf0dd; }
+.gb-avoid { color: var(--v-avoid); background: var(--surface-2); }
+.gb-savoid { color: var(--v-strongavoid); background: #fdeaef; }
+.guide-foot { font-size: 11.5px; color: var(--ink-3); border-top: 1px solid var(--line); padding-top: 12px; margin-top: 22px; line-height: 1.5; }
+@media (max-width: 640px) { .guide-cards { grid-template-columns: 1fr; } .guide-trow { flex-direction: column; gap: 2px; } .guide-tname { width: auto; } }
