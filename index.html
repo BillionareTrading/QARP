@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=5f3c86da" />
+  <link rel="stylesheet" href="styles.css?v=6137d3df" />
 </head>
 <body>
 
@@ -95,47 +95,97 @@
     <!-- Reader's guide -->
     <section id="tab-guide" class="tabpanel">
       <div class="guide">
-        <div class="guide-head">
-          <h2>Reader's guide</h2>
-          <p>How to navigate the dashboard and get the most from it.</p>
+
+        <header class="rg-head">
+          <div class="rg-kicker">Reader&rsquo;s Guide</div>
+          <h2 class="rg-title">How to read the dashboard</h2>
+          <p class="rg-deck">A live, Shariah-compliant equity desk &mdash; built on a single idea.</p>
+        </header>
+
+        <p class="rg-lede"><span class="rg-dropcap">E</span>very screened company earns one number: <b>QARP</b> &mdash; <i>Quality At a Reasonable Price</i> &mdash; a score that blends how good the business is with how cheap or expensive the stock is. The sections below turn that into a daily, transparent read on the market and Jaleel&rsquo;s book. Everything here is informational, not investment advice.</p>
+
+        <div class="rg-sec">
+          <h3 class="rg-sec-h"><span class="rg-sec-no">I</span>The five sections<span class="rg-sec-cue">tap to jump</span></h3>
+          <div class="rg-rows">
+            <button type="button" class="rg-row" data-goto="daily">
+              <span class="rg-row-name">The Times</span>
+              <span class="rg-row-desc">The market&rsquo;s front page &mdash; an original column and briefs, refreshed before the open, midday, and after the close.</span>
+              <svg class="rg-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+            <button type="button" class="rg-row" data-goto="informed">
+              <span class="rg-row-name">Stay Informed</span>
+              <span class="rg-row-desc">Finance-only headlines plus the latest analyst ratings on Jaleel&rsquo;s holdings.</span>
+              <svg class="rg-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+            <button type="button" class="rg-row" data-goto="universe">
+              <span class="rg-row-name">Shariah-Compliant</span>
+              <span class="rg-row-desc">Every screened name ranked by QARP, plus the track record of past calls, ETFs, and venture ideas.</span>
+              <svg class="rg-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+            <button type="button" class="rg-row" data-goto="portfolio">
+              <span class="rg-row-name">Portfolio</span>
+              <span class="rg-row-desc">Jaleel&rsquo;s holdings, the daily Add/Hold/Trim call on each, a triangulated briefing, earnings, key dates, and 13F smart money.</span>
+              <svg class="rg-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+            <button type="button" class="rg-row" data-goto="framework">
+              <span class="rg-row-name">Method</span>
+              <span class="rg-row-desc">How the QARP score is built, end to end.</span>
+              <svg class="rg-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
         </div>
-        <p class="guide-intro">A live, Shariah-compliant equity dashboard built on <b>QARP</b> &mdash; <i>Quality At a Reasonable Price</i>, a single score that blends a company's business quality with how cheap or expensive the stock is. Everything here is informational, not investment advice.</p>
 
-        <h3 class="guide-label">The tabs <span class="guide-hint">&mdash; tap to jump</span></h3>
-        <div class="guide-tabs">
-          <button type="button" class="guide-trow" data-goto="daily"><span class="guide-tname">The Times</span><span class="guide-tdesc">The market's front page &mdash; an original column plus briefs, refreshed before the open, midday, and after the close.</span><span class="guide-chev">&rsaquo;</span></button>
-          <button type="button" class="guide-trow" data-goto="informed"><span class="guide-tname">Stay Informed</span><span class="guide-tdesc">Finance-only headlines plus the latest analyst ratings on Jaleel's holdings.</span><span class="guide-chev">&rsaquo;</span></button>
-          <button type="button" class="guide-trow" data-goto="universe"><span class="guide-tname">Shariah-Compliant</span><span class="guide-tdesc">Every screened name ranked by QARP (<i>Quality At a Reasonable Price</i> &mdash; one score blending business quality with valuation), plus the track record of past calls, ETFs, and venture ideas.</span><span class="guide-chev">&rsaquo;</span></button>
-          <button type="button" class="guide-trow" data-goto="portfolio"><span class="guide-tname">Portfolio</span><span class="guide-tdesc">Jaleel's holdings, the daily Add/Hold/Trim call on each, a triangulated briefing, earnings, key dates, and 13F smart money.</span><span class="guide-chev">&rsaquo;</span></button>
-          <button type="button" class="guide-trow" data-goto="framework"><span class="guide-tname">Method</span><span class="guide-tdesc">How the QARP score is built, end to end.</span><span class="guide-chev">&rsaquo;</span></button>
+        <div class="rg-sec">
+          <h3 class="rg-sec-h"><span class="rg-sec-no">II</span>Open any stock</h3>
+          <p class="rg-body">Tap any ticker, anywhere, to open its panel &mdash; the QARP breakdown, its Shariah grade, and two reads you can pull on demand.</p>
+          <div class="rg-feats">
+            <div class="rg-feat">
+              <svg class="rg-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M6 20V11M12 20V5M18 20v-6"/></svg>
+              <div><b>QARP breakdown</b><span>Quality, value, and the verdict.</span></div>
+            </div>
+            <div class="rg-feat">
+              <svg class="rg-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2.5 7 4-15 2.5 8H21"/></svg>
+              <div><b>Social pulse</b><span>Live X (Twitter) sentiment, on tap, via Grok.</span></div>
+            </div>
+            <div class="rg-feat">
+              <svg class="rg-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7z"/></svg>
+              <div><b>Claude&rsquo;s read</b><span>The bull case, the bear case, and what would change it.</span></div>
+            </div>
+          </div>
+          <button type="button" class="rg-cta" id="guide-try-stock">See an example<svg class="rg-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
         </div>
 
-        <h3 class="guide-label">Open any stock</h3>
-        <p class="guide-p">Tap any ticker, anywhere, to open its panel &mdash; the QARP breakdown, its Shariah grade, and two on-demand reads:</p>
-        <ul class="guide-list">
-          <li><b>QARP breakdown</b> &mdash; quality, value, and the verdict.</li>
-          <li><b>Social pulse</b> &mdash; live X (Twitter) sentiment, on tap, via Grok.</li>
-          <li><b>Claude's read</b> &mdash; the bull case, the bear case, and what would change it.</li>
-        </ul>
-        <button type="button" class="guide-try" id="guide-try-stock">See an example &rarr;</button>
-
-        <div class="guide-cards">
-          <div class="guide-card"><h4>Live or last close</h4><p>Prices tick live during market hours. When the market is closed, everything reads &ldquo;as of&rdquo; the last trading day until it reopens.</p></div>
-          <div class="guide-card"><h4>Runs on its own</h4><p>The data, news, column, and daily book read refresh automatically every day.</p></div>
+        <div class="rg-sec">
+          <h3 class="rg-sec-h"><span class="rg-sec-no">III</span>Live, and self-running</h3>
+          <div class="rg-cards">
+            <div class="rg-card">
+              <svg class="rg-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2"/></svg>
+              <h4>Live, or last close</h4>
+              <p>Prices tick live during market hours. When the market&rsquo;s closed, everything reads &ldquo;as of&rdquo; the last trading day until it reopens.</p>
+            </div>
+            <div class="rg-card">
+              <svg class="rg-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4"/></svg>
+              <h4>Runs on its own</h4>
+              <p>The data, news, column, and daily book read refresh automatically, every day.</p>
+            </div>
+          </div>
         </div>
 
-        <h3 class="guide-label">Reading the calls</h3>
-        <div class="guide-bands">
-          <span class="gb gb-best">Strongest &ge;85</span>
-          <span class="gb gb-sbuy">Strong buy &ge;72</span>
-          <span class="gb gb-buy">Buy &ge;66</span>
-          <span class="gb gb-hold">Hold-quality &ge;60</span>
-          <span class="gb gb-avoid">Avoid 35&ndash;59</span>
-          <span class="gb gb-savoid">Strong avoid &lt;35</span>
+        <div class="rg-sec">
+          <h3 class="rg-sec-h"><span class="rg-sec-no">IV</span>Reading the calls</h3>
+          <p class="rg-body">Every name carries a QARP verdict on one scale:</p>
+          <div class="rg-bands">
+            <span class="gb gb-best">Strongest &ge;85</span>
+            <span class="gb gb-sbuy">Strong buy &ge;72</span>
+            <span class="gb gb-buy">Buy &ge;66</span>
+            <span class="gb gb-hold">Hold-quality &ge;60</span>
+            <span class="gb gb-avoid">Avoid 35&ndash;59</span>
+            <span class="gb gb-savoid">Strong avoid &lt;35</span>
+          </div>
+          <p class="rg-body">The daily <b>Add / Hold / Trim</b> call blends that verdict with analyst consensus and any news-risk flag &mdash; a transparent rule, not an opinion. <button type="button" class="rg-link" data-goto="framework">See how the score is built<svg class="rg-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></p>
         </div>
-        <p class="guide-p">The daily <b>Add / Hold / Trim</b> call blends the QARP verdict, analyst consensus, and any news-risk flag &mdash; a transparent rule, not an opinion. <button type="button" class="guide-more" data-goto="framework">See how the score is built &rarr;</button></p>
 
-        <p class="guide-foot">Gate 1 is Shariah compliance (AAOIFI, via Musaffa). Informational only &mdash; not investment advice.</p>
+        <p class="rg-foot">Gate 1 is Shariah compliance (AAOIFI, via Musaffa). Informational only &mdash; not investment advice.</p>
       </div>
     </section>
 
@@ -421,7 +471,7 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=5f3c86da"></script>
-  <script src="app.js?v=5f3c86da"></script>
+  <script src="crypto.js?v=6137d3df"></script>
+  <script src="app.js?v=6137d3df"></script>
 </body>
 </html>
