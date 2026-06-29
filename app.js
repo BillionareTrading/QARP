@@ -217,6 +217,16 @@ function isoOf(d) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padSta
 function lastCloseName(iso) {
   return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(asOfDate(iso) + "T12:00:00").getDay()];
 }
+function fullDayName(iso) {
+  return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][new Date(asOfDate(iso) + "T12:00:00").getDay()];
+}
+// Sidebar qualifier for the front page: "today" while the session is live, else a highlighted
+// "as of <Weekday>'s close" so a glance never mistakes the last close for the current day.
+function sessionSub() {
+  return marketOpenNow()
+    ? `<span class="side-sub">today</span>`
+    : `<span class="side-sub closed">as of ${fullDayName(DATA.meta.date)}'s close</span>`;
+}
 // US market holidays (NYSE) — kept in sync with daily_update.sh. A "trading day" is a
 // weekday that is NOT one of these, so the price "as of" rolls back over holidays too.
 const NYSE_HOLIDAYS = new Set([
@@ -846,14 +856,14 @@ function renderDaily() {
     const ps = [...port].sort((a, b) => b.day_pct - a.day_pct);
     const mv = (h) => `<li><span class="mv-tk">${esc(h.ticker)}</span><span class="${signClass(h.day_pct)}">${fmtPct(h.day_pct)}</span></li>`;
     document.getElementById("paper-portfolio").innerHTML =
-      `<div class="side-head">Jaleel's Portfolio Today</div>`
+      `<div class="side-head">Jaleel's Portfolio ${sessionSub()}</div>`
       + `<p class="side-body">Jaleel's book is <b class="${signClass(todayPct)}">${todayPct >= 0 ? "up" : "down"} ${fmtPct(Math.abs(todayPct))}</b> (${todayUsd >= 0 ? "+" : "−"}${fmtUSD(Math.abs(todayUsd), 0)}) on the day — ${pUp} green, ${pDown} red.</p>`
       + `<ul class="mv-list">${ps.slice(0, 3).map(mv).join("")}${ps.slice(-2).reverse().map(mv).join("")}</ul>`;
   }
   // Sector Watch
   if (uni.length) {
     document.getElementById("paper-sectors").innerHTML =
-      `<div class="side-head">Sector Watch <span class="side-sub">today</span></div>`
+      `<div class="side-head">Sector Watch ${sessionSub()}</div>`
       + `<ul class="mv-list">${secMoves().map((m) => `<li><span class="mv-tk">${esc(m.s)}</span><span class="${signClass(m.avg)}">${fmtPct(m.avg)}</span></li>`).join("")}</ul>`;
   }
   // Movers
@@ -861,7 +871,7 @@ function renderDaily() {
     const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct);
     const row = (x) => `<li><span class="mv-tk">${esc(x.ticker)}</span><span class="${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span></li>`;
     document.getElementById("paper-movers").innerHTML =
-      `<div class="side-head">Movers</div>`
+      `<div class="side-head">Movers ${sessionSub()}</div>`
       + `<div class="mv-cols"><div><div class="mv-lbl pos">Gainers</div><ul class="mv-list">${sorted.slice(0, 4).map(row).join("")}</ul></div>`
       + `<div><div class="mv-lbl neg">Decliners</div><ul class="mv-list">${sorted.slice(-4).reverse().map(row).join("")}</ul></div></div>`;
   }
