@@ -846,8 +846,13 @@ function renderDaily() {
     return Object.entries(by).map(([s, a]) => ({ s, avg: a.reduce((p, q) => p + q, 0) / a.length })).sort((a, b) => b.avg - a.avg);
   };
 
-  // Lead — The Market Today
-  if (uni.length) {
+  // Lead — The Market Today. On reload, paint the last cached column INSTANTLY (no fallback flash);
+  // loadDailyBrief refreshes it below. Only show the data-driven fallback when there's no fresh cache.
+  let _cl = null;
+  try { _cl = JSON.parse(sessionStorage.getItem("jc_lead") || "null"); } catch (e) {}
+  if (_cl && _cl.html && DATA.meta && _cl.date >= DATA.meta.date) {
+    document.getElementById("paper-lead").innerHTML = _cl.html;
+  } else if (uni.length) {
     const ups = uni.filter((x) => x.day_pct > 0).length, downs = uni.filter((x) => x.day_pct < 0).length;
     const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct), g = sorted[0], l = sorted[sorted.length - 1];
     const sm = secMoves(), best = sm[0], worst = sm[sm.length - 1];
@@ -930,10 +935,13 @@ async function loadDailyBrief() {
   const fresh = !!(b && b.date && DATA.meta && b.date >= DATA.meta.date);
   if (fresh && b.body_html) {
     const el = document.getElementById("paper-lead");
-    if (el) el.innerHTML = `<div class="lead-kicker">${esc(b.kicker || "The Market Today")}</div>`
-      + `<h2 class="lead-head">${esc(b.headline || "")}</h2>`
-      + `<div class="lead-byline">By The Market Desk${b.generated_at ? " · " + esc(b.generated_at) : ""}</div>`
-      + `<div class="lead-body">${b.body_html}</div>`;
+    if (el) {
+      el.innerHTML = `<div class="lead-kicker">${esc(b.kicker || "The Market Today")}</div>`
+        + `<h2 class="lead-head">${esc(b.headline || "")}</h2>`
+        + `<div class="lead-byline">By The Market Desk${b.generated_at ? " · " + esc(b.generated_at) : ""}</div>`
+        + `<div class="lead-body">${b.body_html}</div>`;
+      try { sessionStorage.setItem("jc_lead", JSON.stringify({ date: b.date, html: el.innerHTML })); } catch (e) {}
+    }
   }
   renderBriefs(fresh && Array.isArray(b.briefs) ? b.briefs : null);
 }
