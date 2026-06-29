@@ -195,11 +195,13 @@ function renderKpis() {
   });
   const dayChg = dayNow - dayPrev;
   const dayPct = dayPrev ? (dayChg / dayPrev) * 100 : 0;
-  // clarify "Today": it's live during market hours, otherwise it's the last close
-  const todayNote = marketOpenNow() ? "live" : `at ${lastCloseName(DATA.meta.date)} close`;
+  // "Today · live" during the session; after the bell the card itself switches to the prior close
+  const sessionLive = marketOpenNow() && asOfDate(DATA.meta.date) === lastSessionDate();
+  const todayLabel = sessionLive ? "Today" : `${lastCloseName(DATA.meta.date)} close`;
+  const todayNote = sessionLive ? "live" : "";
   const cards = [
     { label: "Account Value", value: fmtUSD(t.account, 0), delta: `${fmtUSD(t.cash, 2)} cash`, dClass: "muted" },
-    { label: "Today", note: todayNote, value: fmtUSD(dayChg, 0), delta: fmtPct(dayPct), dClass: signClass(dayChg) },
+    { label: todayLabel, note: todayNote, value: fmtUSD(dayChg, 0), delta: fmtPct(dayPct), dClass: signClass(dayChg) },
     { label: "Unrealized P/L", note: "open holdings only", value: fmtUSD(t.gain, 0), delta: fmtPct(t.gain_pct), dClass: signClass(t.gain) },
     { label: "Cost Basis", value: fmtUSD(t.cost, 0), delta: `${DATA.portfolio.length} holdings`, dClass: "muted" },
   ];
@@ -229,6 +231,11 @@ function sessionSub() {
   return (marketOpenNow() && dataIsCurrent)
     ? `<span class="side-sub">today</span>`
     : `<span class="side-sub closed">as of ${fullDayName(DATA.meta.date)}'s close</span>`;
+}
+// Plain-text version: "today" while live + current, else the prior session's weekday ("Friday").
+function sessionWord() {
+  const dataIsCurrent = asOfDate(DATA.meta.date) === lastSessionDate();
+  return (marketOpenNow() && dataIsCurrent) ? "today" : fullDayName(DATA.meta.date);
 }
 // US market holidays (NYSE) — kept in sync with daily_update.sh. A "trading day" is a
 // weekday that is NOT one of these, so the price "as of" rolls back over holidays too.
@@ -649,7 +656,7 @@ function buildCreadContext(ticker) {
   return [
     `${ticker} — ${u.name || (p && p.name) || ""}${u.sector ? " · " + u.sector : ""}`,
     `QARP ${fmtNum(u.qarp, 1)} (${u.verdict || "n/a"}); Quality ${u.mech || "?"}/105 [Valuation ${u.val}/25 · Growth ${u.grw}/20 · Moat&Returns ${u.qual}/20 · BalanceSheet ${u.bs}/20 · CapitalAlloc ${u.cap}/20]; DCF ${u.dcf}/5 (5=cheap).`,
-    u.gf_value != null ? `GuruFocus fair value ${fmtUSD(u.gf_value, 2)} vs price ${fmtUSD(u.price, 2)}${u.day_pct != null ? ` (${fmtPct(u.day_pct)} today)` : ""}.` : (u.price != null ? `Price ${fmtUSD(u.price, 2)}.` : ""),
+    u.gf_value != null ? `GuruFocus fair value ${fmtUSD(u.gf_value, 2)} vs price ${fmtUSD(u.price, 2)}${u.day_pct != null ? ` (${fmtPct(u.day_pct)} ${sessionWord()})` : ""}.` : (u.price != null ? `Price ${fmtUSD(u.price, 2)}.` : ""),
     u.dcf_note ? `Valuation/thesis note: ${String(u.dcf_note).replace(/<[^>]+>/g, "")}` : "",
     u.shariah_grade ? `Shariah (Musaffa): ${u.shariah_grade}.` : "",
     u.catalyst ? `Catalyst (shadow factor): ${u.catalyst.label} — ${u.catalyst.note || ""}` : "",
@@ -1267,7 +1274,7 @@ function renderRatings() {
     const sign = up == null ? "flat" : up > 3 ? "pos" : up < -3 ? "neg" : "flat";
     const upTxt = up == null ? "no price target" : `sees ${up >= 0 ? "+" : ""}${up}% from here`;
     const own = r.held ? `<span class="rt-own held">YOU OWN</span>` : r.uni ? `<span class="rt-own uni">universe</span>` : "";
-    const pt = r.pt ? `target ${esc(r.pt)} vs ${fmtUSD(r.price, 0)} today` : "";
+    const pt = r.pt ? `target ${esc(r.pt)} vs ${fmtUSD(r.price, 0)} ${sessionWord()}` : "";
     return `<div class="rt-row sign-${sign}">
       <div class="rt-head"><span class="rt-tk">${esc(r.ticker)}</span>${own}<span class="rt-date">${fmtDate(r.date)} · ${esc(r.firm || "")} ${esc((r.action || "").toLowerCase())}</span></div>
       <div class="rt-read">
@@ -1292,7 +1299,8 @@ async function renderDailyTicker() {
       return `<span class="pt-item"><b>${esc(ix.l)}</b> <span class="${up ? "pos" : "neg"}">${up ? "▲" : "▼"} ${Math.abs(q.dp).toFixed(2)}%</span></span>`;
     } catch (e) { return `<span class="pt-item"><b>${esc(ix.l)}</b> <span class="muted">—</span></span>`; }
   }));
-  el.innerHTML = cards.join("");
+  const asof = marketOpenNow() ? "" : `<span class="pt-item pt-asof">as of ${fullDayName(DATA.meta.date)}'s close</span>`;
+  el.innerHTML = cards.join("") + asof;
 }
 
 
@@ -1917,7 +1925,7 @@ function renderBookBrief(el, b) {
         + `<span class="book-att-tk">${esc(a.ticker)}</span>`
         + `<span class="book-att-txt"><b>${esc(a.headline || "")}</b> ${esc(a.note || "")}</span></button>`;
     }).join("") + `</div>` : "";
-  el.innerHTML = `<div class="book-head"><h3>Jaleel's book today</h3><span class="book-when">${esc(b.generated_at || "")}</span></div>`
+  el.innerHTML = `<div class="book-head"><h3>Jaleel's book ${sessionSub()}</h3><span class="book-when">${esc(b.generated_at || "")}</span></div>`
     + `<div class="book-body">${b.your_book}</div>${attHtml}`
     + `<div class="book-foot">Written by Claude from Jaleel's live data · informational only, not advice</div>`;
   el.hidden = false;
