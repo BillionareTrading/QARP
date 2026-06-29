@@ -884,7 +884,7 @@ function renderDaily() {
     const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct);
     const g = sorted[0];
     const ups = uni.filter((x) => x.day_pct > 0).length, downs = uni.filter((x) => x.day_pct < 0).length;
-    ndEl.innerHTML = `<div class="numday-label">Number of the Day</div>`
+    ndEl.innerHTML = `<div class="numday-label">Number of the Day ${sessionSub()}</div>`
       + `<div class="numday-fig ${signClass(g.day_pct)}">${fmtPct(g.day_pct)}</div>`
       + `<div class="numday-cap">${esc(g.name || g.ticker)} (${esc(g.ticker)}) led the Shariah universe. Breadth ran <b>${ups}</b> advancing to <b>${downs}</b> declining across ${uni.length} names.</div>`;
   }
