@@ -1914,6 +1914,9 @@ async function loadBookBrief() {
   } catch (e) { el.hidden = true; }
 }
 function renderBookBrief(el, b) {
+  // The book read is a POST-CLOSE reflection — irrelevant during the live session, so show it
+  // only when the market is closed (after the close, overnight, pre-open, weekends/holidays).
+  if (marketOpenNow()) { el.hidden = true; return; }
   if (!b || !b.your_book) { el.hidden = true; return; }
   const att = (b.attention || []).filter((a) => a && a.ticker);
   const SEV = { act: "Act", watch: "Watch", note: "Note" };
