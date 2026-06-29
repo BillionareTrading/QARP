@@ -217,11 +217,21 @@ function isoOf(d) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padSta
 function lastCloseName(iso) {
   return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(asOfDate(iso) + "T12:00:00").getDay()];
 }
+// US market holidays (NYSE) — kept in sync with daily_update.sh. A "trading day" is a
+// weekday that is NOT one of these, so the price "as of" rolls back over holidays too.
+const NYSE_HOLIDAYS = new Set([
+  "2026-01-01", "2026-01-19", "2026-02-16", "2026-04-03", "2026-05-25", "2026-06-19",
+  "2026-07-03", "2026-09-07", "2026-11-26", "2026-12-25",
+  "2027-01-01", "2027-01-18", "2027-02-15", "2027-03-26", "2027-05-31", "2027-06-18",
+  "2027-07-05", "2027-09-06", "2027-11-25", "2027-12-24",
+]);
+function isClosedDay(d) {
+  const dow = d.getDay();
+  return dow === 0 || dow === 6 || NYSE_HOLIDAYS.has(isoOf(d));
+}
 function lastTradingDate(iso) {
-  // roll a weekend date back to Friday
   const d = new Date(iso + "T12:00:00");
-  if (d.getDay() === 6) d.setDate(d.getDate() - 1);
-  else if (d.getDay() === 0) d.setDate(d.getDate() - 2);
+  while (isClosedDay(d)) d.setDate(d.getDate() - 1);   // roll weekends/holidays back to the prior session
   return isoOf(d);
 }
 function lastSessionDate() {
@@ -230,7 +240,7 @@ function lastSessionDate() {
   const d = new Date(etDate + "T12:00:00");
   const p = nyParts(); let h = parseInt(p.hour, 10); if (h === 24) h = 0;
   if (h * 60 + parseInt(p.minute, 10) < 570) d.setDate(d.getDate() - 1); // before 9:30 ET -> yesterday's session
-  while (d.getDay() === 0 || d.getDay() === 6) d.setDate(d.getDate() - 1); // skip weekends
+  while (isClosedDay(d)) d.setDate(d.getDate() - 1);   // skip weekends + market holidays
   return isoOf(d);
 }
 function asOfDate(iso) {
