@@ -976,7 +976,12 @@ tbody tr:hover { background: var(--surface-2); }
 .guide-intro { font-size: 14px; line-height: 1.65; color: var(--ink); margin: 16px 0 4px; }
 .guide-label { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); font-weight: 700; margin: 24px 0 11px; }
 .guide-tabs { display: flex; flex-direction: column; gap: 11px; }
-.guide-trow { display: flex; gap: 14px; align-items: flex-start; }
+.guide-trow { display: flex; gap: 14px; align-items: flex-start; width: 100%; text-align: left; background: none; border: 0; padding: 9px 10px; border-radius: 9px; cursor: pointer; font: inherit; transition: background .12s; }
+.guide-trow:hover { background: var(--surface-2); }
+.guide-chev { margin-left: auto; align-self: center; flex: none; color: var(--ink-3); font-size: 20px; line-height: 1; }
+.guide-hint { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--ink-3); }
+.guide-try, .guide-more { background: none; border: 0; color: var(--brand); cursor: pointer; font-weight: 600; font-size: 13px; padding: 0; }
+.guide-try { margin: 4px 0 4px; } .guide-try:hover, .guide-more:hover { text-decoration: underline; }
 .guide-tname { font-weight: 700; color: var(--ink); width: 150px; flex: none; font-size: 14px; }
 .guide-tdesc { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; }
 .guide-p { font-size: 13.5px; color: var(--ink-2); line-height: 1.6; margin: 0 0 12px; }

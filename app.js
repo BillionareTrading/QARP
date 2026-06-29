@@ -786,6 +786,21 @@ function initTabs() {
     }));
 }
 
+function initGuide() {
+  const g = document.getElementById("tab-guide");
+  if (!g || g._wired) return;
+  g._wired = true;
+  g.querySelectorAll("[data-goto]").forEach((el) => el.addEventListener("click", () => {
+    const b = document.querySelector('.tab[data-tab="' + el.dataset.goto + '"]');
+    if (b) { b.click(); window.scrollTo(0, 0); }
+  }));
+  const tryBtn = g.querySelector("#guide-try-stock");
+  if (tryBtn) tryBtn.addEventListener("click", () => {
+    const h = [...(DATA.portfolio || [])].sort((x, y) => (y.value || 0) - (x.value || 0))[0] || (DATA.universe || [])[0];
+    if (h) openDrawer(h.ticker);
+  });
+}
+
 /* ---------- Daily: newspaper-style market front page (data-driven v1) ---------- */
 let dailyTimer = null;
 function enterDaily() {
@@ -1910,6 +1925,7 @@ function renderAll() {
   loadBookBrief();       // fetch book_brief.json — Claude's daily "your book" read + attention digest
   enterDaily();          // Daily is the landing tab — render it + start its refresh
   initTabs();
+  initGuide();
   startLive();
 }
 
