@@ -1089,16 +1089,37 @@ function bzHoldingNewsHtml(ticker) {
 // Benzinga news (server-baked) mapped into the shared news-feed shape, for multi-source merge.
 function bzFeed({ tickers = null, relOnly = false } = {}) {
   const arr = (SIGNALS && SIGNALS.bz_news) || [];
+  const held = new Set((typeof DATA !== "undefined" && DATA.portfolio) ? DATA.portfolio.map((h) => h.ticker) : []);
   return arr
     .filter((n) => n.title && n.url && (!relOnly || n.rel) && (!tickers || (n.tickers || []).some((t) => tickers.has(t))))
     .map((n) => ({ headline: n.title, url: n.url, source: "Benzinga", datetime: n.ts, image: "",
-                   _tk: tickers ? (n.tickers || []).find((t) => tickers.has(t)) : null }));
+                   _rel: typeof n.relevance === "number" ? n.relevance : null,   // embedding relevance score
+                   _hold: !!n.rel,                                               // mentions a holding/universe name
+                   _tk: tickers ? (n.tickers || []).find((t) => tickers.has(t))
+                                : ((n.tickers || []).find((t) => held.has(t)) || null) }));
 }
-function mergeNews(primary, extra) {
+function mergeNews(primary, extra, sortBy) {
   const seen = new Set();
   const all = [...primary, ...extra].filter((it) => it && it.url && !seen.has(it.url) && seen.add(it.url));
-  all.sort((a, b) => (b.datetime || 0) - (a.datetime || 0));
+  if (sortBy === "relevance") {
+    const rk = (x) => (x._rel == null ? -1 : x._rel);   // unscored (Finnhub) items sink below scored ones
+    all.sort((a, b) => (rk(b) - rk(a)) || ((b.datetime || 0) - (a.datetime || 0)));
+  } else {
+    all.sort((a, b) => (b.datetime || 0) - (a.datetime || 0));
+  }
   return all;
+}
+
+// Caption + Latest/Most-relevant toggle — makes the embedding dedup + scoring visible & usable.
+function renderNewsSort() {
+  const el = document.getElementById("news-sort");
+  if (!el) return;
+  const opt = (v, label) => `<button type="button" class="news-sort-btn ${newsSort === v ? "active" : ""}" data-sort="${v}">${label}</button>`;
+  el.innerHTML = `<span class="news-sort-cap">Finance-only &middot; duplicates removed &middot; scored for relevance</span>`
+    + `<span class="news-sort-btns">${opt("latest", "Latest")}${opt("relevance", "Most relevant")}</span>`;
+  el.querySelectorAll(".news-sort-btn").forEach((b) => b.addEventListener("click", () => {
+    if (newsSort !== b.dataset.sort) { newsSort = b.dataset.sort; loadNews(); }
+  }));
 }
 
 // Analyst-Ratings feed (Stay Informed subtab) — Benzinga, your holdings/universe flagged.
@@ -1495,6 +1516,7 @@ const NEWS_FILTERS = [
   { name: "Industrials", sym: "CAT" },
 ];
 let newsFilter = "Top Stories";
+let newsSort = "latest";   // "latest" (chronological) | "relevance" (embedding score)
 let informedTimer = null;
 let informedLoaded = false;
 
@@ -1569,7 +1591,7 @@ function photoCardHtml(it) {
 // stories WITHOUT a photo -> slim headline row (agency name + time, no image box)
 function newsRowHtml(it) {
   const url = safeUrl(it.url);
-  const lead = it._tk ? `<span class="news-tk">${esc(it._tk)}</span>` : `<span class="news-row-dot"></span>`;
+  const lead = it._tk ? `<span class="news-tk">${esc(it._tk)}</span>` : `<span class="news-row-dot${it._relHi ? " hi" : ""}"></span>`;
   return `<a class="news-row" href="${esc(url)}" target="_blank" rel="noopener noreferrer">
     ${lead}
     <span class="news-row-title">${esc(it.headline)}</span>
@@ -1613,9 +1635,17 @@ function isMarketRelevant(it) {
 }
 
 // split items into photo cards + headline rows (shared by Stay Informed and Portfolio news)
-function renderNewsFeed(container, items, emptyLabel) {
+function renderNewsFeed(container, items, emptyLabel, sortBy) {
   items = items.filter((it) => it && it.headline && it.url && isTrustedSource(it));
   if (!items.length) { container.innerHTML = `<p class="muted">${esc(emptyLabel || "No recent headlines.")}</p>`; return; }
+  // mark the top tercile of scored stories so the embedding relevance is visible at a glance
+  const scored = items.map((it) => it._rel).filter((r) => typeof r === "number").sort((x, y) => y - x);
+  const relHi = scored.length >= 4 ? scored[Math.floor(scored.length / 3)] : Infinity;
+  items.forEach((it) => { it._relHi = typeof it._rel === "number" && it._rel >= relHi; });
+  if (sortBy === "relevance") {   // ranked list: most-relevant first, no photo-cards-on-top split
+    container.innerHTML = `<div class="news-rows">${items.map(newsRowHtml).join("")}</div>`;
+    return;
+  }
   const freq = {};
   items.forEach((it) => { const im = safeUrl(it.image); if (im !== "#") freq[im] = (freq[im] || 0) + 1; });
   const isRealPhoto = (it) => { const im = safeUrl(it.image); return im !== "#" && !/logo/i.test(im) && (freq[im] || 0) <= 2; };
@@ -1629,6 +1659,7 @@ function renderNewsFeed(container, items, emptyLabel) {
 async function loadNews(filterName) {
   newsFilter = filterName || newsFilter;
   renderNewsFilters();
+  renderNewsSort();
   const list = document.getElementById("news-list");
   if (!list) return;
   list.innerHTML = `<p class="news-loading">Loading headlines…</p>`;
@@ -1658,7 +1689,7 @@ async function loadNews(filterName) {
       }
     } catch (e) { /* keep the Benzinga backbone */ }
   }
-  renderNewsFeed(list, mergeNews(bz, items), `No recent headlines for ${newsFilter}.`);
+  renderNewsFeed(list, mergeNews(bz, items, newsSort), `No recent headlines for ${newsFilter}.`, newsSort);
 }
 
 function enterInformed() {
