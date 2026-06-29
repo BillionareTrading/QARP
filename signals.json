@@ -1,6 +1,6 @@
 {
   "date": "2026-06-29",
-  "generated_at": "Jun 29, 10:32am ET",
+  "generated_at": "Jun 29, 11:02am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,7 +61,7 @@
   ],
   "catalysts": [
     {
-      "when": "Jul 21",
+      "when": "Jul 28",
       "what": "KO earnings",
       "affects": "KO",
       "dir": "two-sided",
@@ -96,10 +96,10 @@
   "sectors": [
     {
       "sector": "Semiconductor & Chip",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Reports suggested that OpenAI may delay its IPO until next year. Investo…",
       "note": "After reports suggested that OpenAI may delay its IPO until next year.  Investors may anticipate the industry to face a weakening demand after notes raised concerns about a slowdown in the AI company's infrastructure spending.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Homebuilding & Housing",
@@ -147,8 +147,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$315",
-      "price": 280.81,
-      "upside": 12.2,
+      "price": 282.03,
+      "upside": 11.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -161,8 +161,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$23",
-      "price": 41.1,
-      "upside": -44.0,
+      "price": 43.62,
+      "upside": -47.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -175,7 +175,7 @@
       "rating": "Peer Perform",
       "stance": "neutral",
       "pt": "",
-      "price": 346.69,
+      "price": 347.89,
       "upside": null,
       "held": false,
       "uni": true,
@@ -189,8 +189,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$46",
-      "price": 41.1,
-      "upside": 11.9,
+      "price": 43.62,
+      "upside": 5.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -203,8 +203,8 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$46",
-      "price": 41.1,
-      "upside": 11.9,
+      "price": 43.62,
+      "upside": 5.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -217,8 +217,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$138",
-      "price": 127.77,
-      "upside": 8.0,
+      "price": 128.92,
+      "upside": 7.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -231,8 +231,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$365",
-      "price": 280.81,
-      "upside": 30.0,
+      "price": 282.03,
+      "upside": 29.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -245,8 +245,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$130",
-      "price": 116.12,
-      "upside": 12.0,
+      "price": 116.85,
+      "upside": 11.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -259,8 +259,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 41.1,
-      "upside": 33.8,
+      "price": 43.62,
+      "upside": 26.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -273,8 +273,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$43",
-      "price": 41.1,
-      "upside": 4.6,
+      "price": 43.62,
+      "upside": -1.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -287,8 +287,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 255.07,
-      "upside": 5.9,
+      "price": 255.92,
+      "upside": 5.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -301,8 +301,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$60",
-      "price": 41.1,
-      "upside": 46.0,
+      "price": 43.62,
+      "upside": 37.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -315,7 +315,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 41.1,
+      "price": 43.62,
       "upside": null,
       "held": false,
       "uni": true,
@@ -323,6 +323,29 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "'Design Platform Minted Is Exploring A Sale; Minted Working With JP Morgan On Sale That Could Value It At $1B' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/06/60160926/design-platform-minted-exploring-sale-minted-working-jp-morgan-sale-could-value-it-1b-reuters-exclus",
+      "ts": 1782745236,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false
+    },
+    {
+      "title": "Rep. Cleo Fields Has Bought Up to $60K Worth Of Alphabet Stock: Here’s What You Should Know",
+      "url": "https://www.benzinga.com/government/26/06/60160921/rep-cleo-fields-has-bought-60k-worth-alphabet-stock-here-s-what-you-should-know",
+      "ts": 1782745228,
+      "tickers": [
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false
+    },
     {
       "title": "Alphabet Stock Jumps 3%: Google Parent Replaces Verizon in Historic Dow Jones Milestone",
       "url": "https://www.benzinga.com/markets/tech/26/06/60158940/alphabet-stock-jumps-3-google-parent-replaces-verizon-in-historic-dow-jones-milestone",
@@ -600,32 +623,6 @@
         "SPY",
         "INTC",
         "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true
-    },
-    {
-      "title": "BT Group And Verizon To Combine International Enterprise Operations In 50:50 Joint Venture With $4B Combined Annual Revenue",
-      "url": "https://www.benzinga.com/news/26/06/60148382/bt-group-and-verizon-combine-international-enterprise-operations-50-50-joint-venture-4b-combined-ann",
-      "ts": 1782714328,
-      "tickers": [
-        "VZ",
-        "BTGOF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up Or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/06/60148258/stock-market-will-sp-500-open-up-or-down-today-5",
-      "ts": 1782712127,
-      "tickers": [
-        "$POL",
-        "AAPL",
-        "MSFT",
-        "NKE"
       ],
       "source": "Benzinga",
       "wiim": false,
@@ -935,223 +932,63 @@
     "UBER": {
       "name": "Uber",
       "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 17,
-        "buy": 35,
-        "hold": 8,
-        "sell": 1,
-        "strongSell": 0,
-        "total": 61,
-        "bullish": 52,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.11,
-        "period": "2026-06-01"
-      },
+      "consensus": null,
       "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-11",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000320/e26247_uber-8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm"
-        },
-        "insider30d": 6
-      },
-      "explain": "61 analysts cover it — 52 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "filings": null,
+      "explain": "No analyst-consensus data; our QARP view: BUY."
     },
     "IOT": {
       "name": "Samsara",
       "qarp": "AVOID",
-      "consensus": {
-        "strongBuy": 5,
-        "buy": 16,
-        "hold": 6,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 27,
-        "bullish": 21,
-        "bearish": 0,
-        "label": "Buy",
-        "score": 0.96,
-        "period": "2026-06-01"
-      },
+      "consensus": null,
       "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-06-04",
-          "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026040788/iot-20260604.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-06-09",
-          "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026041893/iot-20260502.htm"
-        },
-        "insider30d": 14
-      },
-      "explain": "27 analysts cover it — 21 bullish, 6 hold, 0 bearish (consensus <b>Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+      "filings": null,
+      "explain": "No analyst-consensus data; our QARP view: AVOID."
     },
     "GILD": {
       "name": "Gilead Sciences",
       "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 21,
-        "hold": 7,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 39,
-        "bullish": 32,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-06-01"
-      },
+      "consensus": null,
       "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-20",
-          "url": "https://www.sec.gov/Archives/edgar/data/882095/000110465926064518/tm2615045d1_8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm"
-        },
-        "insider30d": 8
-      },
-      "explain": "39 analysts cover it — 32 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "filings": null,
+      "explain": "No analyst-consensus data; our QARP view: HOLD-QUAL."
     },
     "NVS": {
       "name": "Novartis",
       "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 6,
-        "buy": 11,
-        "hold": 14,
-        "sell": 3,
-        "strongSell": 0,
-        "total": 34,
-        "bullish": 17,
-        "bearish": 3,
-        "label": "Buy",
-        "score": 0.59,
-        "period": "2026-06-01"
-      },
+      "consensus": null,
       "news": null,
-      "filings": {
-        "latest8k": null,
-        "periodic": null,
-        "insider30d": 0
-      },
-      "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "filings": null,
+      "explain": "No analyst-consensus data; our QARP view: HOLD-QUAL."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
       "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 14,
-        "buy": 17,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 36,
-        "bullish": 31,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.25,
-        "period": "2026-06-01"
-      },
+      "consensus": null,
       "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000029/nbix-20260527.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-05",
-          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm"
-        },
-        "insider30d": 7
-      },
-      "explain": "36 analysts cover it — 31 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "filings": null,
+      "explain": "No analyst-consensus data; our QARP view: STRONG BUY."
     },
     "VRTX": {
       "name": "Vertex Pharma",
       "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 13,
-        "buy": 20,
-        "hold": 6,
-        "sell": 0,
-        "strongSell": 1,
-        "total": 40,
-        "bullish": 33,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-06-01"
-      },
+      "consensus": null,
       "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-13",
-          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000204/vrtx-20260513.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-05",
-          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm"
-        },
-        "insider30d": 5
-      },
-      "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "filings": null,
+      "explain": "No analyst-consensus data; our QARP view: BUY."
     },
     "KO": {
       "name": "Coca-Cola",
       "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 8,
-        "buy": 20,
-        "hold": 6,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 34,
-        "bullish": 28,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.06,
-        "period": "2026-06-01"
-      },
+      "consensus": null,
       "news": {
         "title": "Coca-Cola Takes IRS Fight To Appeals Court This Week With $20 Billion Tax Bill At Stake: Here's What To Know",
         "ts": 1782216054,
         "url": "https://www.benzinga.com/news/legal/26/06/60038197/coca-cola-takes-irs-fight-to-appeals-court-this-week-with-20-billion-tax-bill-at-stake-heres-what-to-know",
         "wiim": false
       },
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-06-25",
-          "url": "https://www.sec.gov/Archives/edgar/data/21344/000155278126000366/e26287_ko-8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-04-30",
-          "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026028802/ko-20260403.htm"
-        },
-        "insider30d": 5
-      },
-      "explain": "34 analysts cover it — 28 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "filings": null,
+      "explain": "No analyst-consensus data; our QARP view: HOLD-QUAL."
     }
   },
   "financials": {
@@ -1316,130 +1153,17 @@
         "fmt": "$2.5B",
         "yoy": 4.3
       },
-      "eps": {
-        "val": 1.69,
-        "yoy": -35.0
-      },
-      "net_income": {
-        "fmt": "$195M"
-      },
-      "margin": 7.9,
-      "summary": "Q1 FY2026 — revenue $2.5B (+4.3% YoY), diluted EPS $1.69 (-35.0% YoY), net margin 8%. (as reported, GAAP)"
+      "eps": null,
+      "net_income": null,
+      "margin": null,
+      "summary": "Q1 FY2026 — revenue $2.5B (+4.3% YoY). (as reported, GAAP)"
     },
-    "UBER": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-06",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm",
-      "revenue": {
-        "fmt": "$13.2B",
-        "yoy": 14.5
-      },
-      "eps": {
-        "val": 0.13,
-        "yoy": -84.3
-      },
-      "net_income": {
-        "fmt": "$263M"
-      },
-      "margin": 2.0,
-      "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
-    },
-    "IOT": {
-      "period": "Q1 FY2027",
-      "filed": "2026-06-09",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026041893/iot-20260502.htm",
-      "revenue": {
-        "fmt": "$479M",
-        "yoy": 30.5
-      },
-      "eps": {
-        "val": 0.08,
-        "yoy": 300.0
-      },
-      "net_income": {
-        "fmt": "$45M"
-      },
-      "margin": 9.3,
-      "summary": "Q1 FY2027 — revenue $479M (+30.5% YoY), diluted EPS $0.08 (+300.0% YoY), net margin 9%. (as reported, GAAP)"
-    },
-    "GILD": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-07",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm",
-      "revenue": {
-        "fmt": "$7.0B",
-        "yoy": 4.4
-      },
-      "eps": {
-        "val": 1.61,
-        "yoy": 54.8
-      },
-      "net_income": {
-        "fmt": "$2.0B"
-      },
-      "margin": 29.0,
-      "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
-    },
+    "UBER": null,
+    "IOT": null,
+    "GILD": null,
     "NVS": null,
-    "NBIX": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-05",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm",
-      "revenue": {
-        "fmt": "$814M",
-        "yoy": 42.2
-      },
-      "eps": {
-        "val": 1.91,
-        "yoy": 2287.5
-      },
-      "net_income": {
-        "fmt": "$198M"
-      },
-      "margin": 24.3,
-      "summary": "Q1 FY2026 — revenue $814M (+42.2% YoY), diluted EPS $1.91 (+2287.5% YoY), net margin 24%. (as reported, GAAP)"
-    },
-    "VRTX": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-05",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm",
-      "revenue": {
-        "fmt": "$3.0B",
-        "yoy": 7.8
-      },
-      "eps": {
-        "val": 4.02,
-        "yoy": 61.4
-      },
-      "net_income": {
-        "fmt": "$1.0B"
-      },
-      "margin": 34.5,
-      "summary": "Q1 FY2026 — revenue $3.0B (+7.8% YoY), diluted EPS $4.02 (+61.4% YoY), net margin 34%. (as reported, GAAP)"
-    },
-    "KO": {
-      "period": "Q1 FY2026",
-      "filed": "2026-04-30",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026028802/ko-20260403.htm",
-      "revenue": {
-        "fmt": "$12.5B",
-        "yoy": 12.1
-      },
-      "eps": {
-        "val": 0.91,
-        "yoy": 18.2
-      },
-      "net_income": {
-        "fmt": "$3.9B"
-      },
-      "margin": 31.5,
-      "summary": "Q1 FY2026 — revenue $12.5B (+12.1% YoY), diluted EPS $0.91 (+18.2% YoY), net margin 32%. (as reported, GAAP)"
-    }
+    "NBIX": null,
+    "VRTX": null,
+    "KO": null
   }
 }
