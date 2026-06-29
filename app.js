@@ -183,18 +183,24 @@ function legend(items) {
     </div>`).join("")}</div>`;
 }
 
+// Single source of truth for the portfolio's day P&L. EXACT: each holding's day change is today's
+// value minus yesterday's (value / (1 + day%/100)) — NOT value*day%, which OVERSTATES when a holding
+// has a big % move (RKLB +16% made the front page read +$139 vs the true +$103). Used everywhere.
+function portfolioDayPnl() {
+  let prev = 0, now = 0;
+  (DATA.portfolio || []).forEach((h) => {
+    if (typeof h.day_pct !== "number") return;
+    prev += h.value / (1 + h.day_pct / 100);
+    now += h.value;
+  });
+  const usd = now - prev;
+  return { usd, pct: prev ? (usd / prev) * 100 : 0 };
+}
+
 /* ---------- render: KPIs ---------- */
 function renderKpis() {
   const t = DATA.meta.portfolio_totals;
-  // portfolio day change, derived from each holding's day_pct
-  let dayPrev = 0, dayNow = 0;
-  DATA.portfolio.forEach((h) => {
-    const dp = typeof h.day_pct === "number" ? h.day_pct : 0;
-    dayPrev += h.value / (1 + dp / 100);
-    dayNow += h.value;
-  });
-  const dayChg = dayNow - dayPrev;
-  const dayPct = dayPrev ? (dayChg / dayPrev) * 100 : 0;
+  const { usd: dayChg, pct: dayPct } = portfolioDayPnl();   // exact, shared with the front page
   // "Today · live" during the session; after the bell the card itself switches to the prior close
   const sessionLive = marketOpenNow() && asOfDate(DATA.meta.date) === lastSessionDate();
   const todayLabel = sessionLive ? "Today" : `${lastCloseName(DATA.meta.date)} close`;
@@ -865,8 +871,7 @@ function renderDaily() {
   }
   // Your Portfolio Today
   if (port.length) {
-    const todayUsd = port.reduce((a, h) => a + (h.value || 0) * (h.day_pct || 0) / 100, 0);
-    const acct = (DATA.meta.portfolio_totals || {}).account || 0, todayPct = acct ? todayUsd / acct * 100 : 0;
+    const { usd: todayUsd, pct: todayPct } = portfolioDayPnl();   // exact, shared with the KPI strip
     const pUp = port.filter((h) => h.day_pct > 0).length, pDown = port.filter((h) => h.day_pct < 0).length;
     const ps = [...port].sort((a, b) => b.day_pct - a.day_pct);
     const mv = (h) => `<li><span class="mv-tk">${esc(h.ticker)}</span><span class="${signClass(h.day_pct)}">${fmtPct(h.day_pct)}</span></li>`;
