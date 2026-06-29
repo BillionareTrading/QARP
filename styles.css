@@ -1004,3 +1004,5 @@ tbody tr:hover { background: var(--surface-2); }
 @media (max-width: 640px) { .guide-cards { grid-template-columns: 1fr; } .guide-trow { flex-direction: column; gap: 2px; } .guide-tname { width: auto; } }
 
 .side-sub.closed { color: #b45309; font-weight: 600; }
+
+.numday-label .side-sub { text-transform: none; letter-spacing: 0; font-size: 11px; margin-left: 5px; }
