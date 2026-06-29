@@ -1925,9 +1925,13 @@ function renderBookBrief(el, b) {
         + `<span class="book-att-tk">${esc(a.ticker)}</span>`
         + `<span class="book-att-txt"><b>${esc(a.headline || "")}</b> ${esc(a.note || "")}</span></button>`;
     }).join("") + `</div>` : "";
-  el.innerHTML = `<div class="book-head"><h3>Jaleel's book ${sessionSub()}</h3><span class="book-when">${esc(b.generated_at || "")}</span></div>`
+  // The book read is a POST-CLOSE reflection of the session b.date — label it by ITS OWN date,
+  // not the live price payload, so during the next session it stays "as of <that day>'s close"
+  // instead of mislabeling the prior-close write-up as "today".
+  const asOf = b.date ? `<span class="side-sub closed">as of ${fullDayName(b.date)}'s close</span>` : sessionSub();
+  el.innerHTML = `<div class="book-head"><h3>Jaleel's book ${asOf}</h3><span class="book-when">${esc(b.generated_at || "")}</span></div>`
     + `<div class="book-body">${b.your_book}</div>${attHtml}`
-    + `<div class="book-foot">Written by Claude from Jaleel's live data · informational only, not advice</div>`;
+    + `<div class="book-foot">Written by Claude &middot; informational only, not advice</div>`;
   el.hidden = false;
   el.querySelectorAll(".book-att-row").forEach((r) => r.addEventListener("click", () => openDrawer(r.dataset.tk)));
 }
