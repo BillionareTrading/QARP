@@ -22,8 +22,13 @@ PY="/opt/anaconda3/bin/python3"
 echo "refresh_site: payload.enc regenerated."
 
 if [ "$PUSH" = "1" ] && [ -d .git ]; then
-  # ciphertext payload + the plaintext news feeds (signals/briefing, 13F, daily brief)
-  git add payload.enc signals.json gurus.json daily_brief.json 2>/dev/null
-  git commit -m "data refresh $(cat payload.enc | python3 -c 'import sys,json;print(json.load(sys.stdin)["date"])')" --quiet || true
+  # DEVICE-FREE FEEDS: the cloud (GitHub Actions) owns news/signals, 13F, the column and the book
+  # read — and enriches signals with OpenAI embeddings. This machine must NEVER publish those, or it
+  # overwrites the enriched feed with a keyless one. Drop any local drift on them, sync, then push
+  # ONLY the encrypted price payload.
+  git checkout -- signals.json gurus.json daily_brief.json book_brief.json 2>/dev/null || true
+  git pull --rebase --quiet origin main 2>/dev/null || true
+  git add payload.enc 2>/dev/null
+  git commit -m "price refresh $(cat payload.enc | python3 -c 'import sys,json;print(json.load(sys.stdin)["date"])')" --quiet || true
   git push --quiet origin main && echo "refresh_site: pushed to remote."
 fi
