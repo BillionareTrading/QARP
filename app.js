@@ -32,7 +32,7 @@ const TIPS = {
   calls: { t: "Calls", d: "Every verdict this name has received, as dated calls. Each call locks its entry price when issued: closed calls (🔒) show the return locked when the verdict changed on a re-score; the open call (→) marks to the live price. Daily price moves never change a call — only deliberate re-scores do." },
   catalyst: { t: "Catalyst (PREVIEW — not in QARP yet)", d: "Does the cheapness have a near-term path to close, or is it a value trap? SET = strong catalyst (insider cluster/CEO buying, tape confirming). WATCH = developing. WEAK = cheap but no specific driver. NONE = no catalyst and insiders leaving — value-trap risk. ⚠ = under the proposed rule this name's 'cheap' score would be capped (cheap with no catalyst). SHADOW MODE: shown for evaluation, does NOT affect the live QARP/verdict until the Day-20 review. See CATALYST_FACTOR_PROPOSAL.md." },
   div: { t: "Dividends", d: "Forward annual dividend per share, with the yield (rate ÷ current price) beneath. N/A = the company pays no dividend. Refreshed in the daily build." },
-  div_income: { t: "Dividend income", d: "What YOUR position pays per year: shares × annual dividend rate. N/A = non-payer. The KPI strip shows the portfolio total." },
+  div_income: { t: "Dividend income", d: "What Jaleel's position pays per year: shares × annual dividend rate. N/A = non-payer. The KPI strip shows the portfolio total." },
   gain: { t: "Unrealized P/L", d: "Paper profit/loss on positions you still hold (current value minus cost basis). It is NOT money in the bank — it changes with every tick and excludes anything already sold. Realized profits from completed sells will be tracked separately." },
   gain_pct: { t: "Unrealized P/L %", d: "The same unrealized paper profit/loss, as a percent of what you paid for the position." },
   scorecard: { t: "Track record", d: "Each name is grouped by the verdict it FIRST received, then we measure its price change since that date. If the framework works, returns should step down from Strong Buy to Avoid. Alpha = that return minus the S&P over the same window, isolating skill from market drift." },
@@ -500,8 +500,8 @@ function openDrawer(ticker) {
   if (has(d.insider)) kv.push(["Insider", d.insider]);
   if (has(d.buzz)) kv.push(["Buzz", `${d.buzz} — ${d.buzz_signal || ""}`]);
   if (p) {
-    kv.push(["Your position", `${fmtNum(p.shares, 2)} sh · ${fmtUSD(p.value, 0)}`]);
-    kv.push(["Your gain", `${fmtUSD(p.gain, 0)} (${fmtPct(p.gain_pct)})`]);
+    kv.push(["Jaleel's position", `${fmtNum(p.shares, 2)} sh · ${fmtUSD(p.value, 0)}`]);
+    kv.push(["Jaleel's gain", `${fmtUSD(p.gain, 0)} (${fmtPct(p.gain_pct)})`]);
     kv.push(["Weight", fmtNum(p.weight_pct, 1) + "%"]);
   }
 
@@ -831,8 +831,8 @@ function renderDaily() {
     const ps = [...port].sort((a, b) => b.day_pct - a.day_pct);
     const mv = (h) => `<li><span class="mv-tk">${esc(h.ticker)}</span><span class="${signClass(h.day_pct)}">${fmtPct(h.day_pct)}</span></li>`;
     document.getElementById("paper-portfolio").innerHTML =
-      `<div class="side-head">Your Portfolio Today</div>`
-      + `<p class="side-body">Your book is <b class="${signClass(todayPct)}">${todayPct >= 0 ? "up" : "down"} ${fmtPct(Math.abs(todayPct))}</b> (${todayUsd >= 0 ? "+" : "−"}${fmtUSD(Math.abs(todayUsd), 0)}) on the day — ${pUp} green, ${pDown} red.</p>`
+      `<div class="side-head">Jaleel's Portfolio Today</div>`
+      + `<p class="side-body">Jaleel's book is <b class="${signClass(todayPct)}">${todayPct >= 0 ? "up" : "down"} ${fmtPct(Math.abs(todayPct))}</b> (${todayUsd >= 0 ? "+" : "−"}${fmtUSD(Math.abs(todayUsd), 0)}) on the day — ${pUp} green, ${pDown} red.</p>`
       + `<ul class="mv-list">${ps.slice(0, 3).map(mv).join("")}${ps.slice(-2).reverse().map(mv).join("")}</ul>`;
   }
   // Sector Watch
@@ -979,9 +979,9 @@ function renderSignals() {
       <div class="sig-kicker">Signals</div>
       <div class="sig-asof">${esc(s.generated_at || asOfDate(s.date))} · news-driven</div>
     </div>
-    <div class="sig-title">What's moving your book — and the events that decide it</div>
+    <div class="sig-title">What's moving Jaleel's book — and the events that decide it</div>
     ${s.macro ? `<div class="sig-macro"><i class="ti ti-broadcast" aria-hidden="true"></i><div><b>Macro:</b> ${s.macro.body || esc(s.macro.headline || "")}</div></div>` : ""}
-    <div class="sig-sec-label"><i class="ti ti-alert-triangle" aria-hidden="true"></i> Risk radar — your holdings</div>
+    <div class="sig-sec-label"><i class="ti ti-alert-triangle" aria-hidden="true"></i> Risk radar — Jaleel's holdings</div>
     <div class="sig-rows">${riskRows || `<div class="muted sig-empty">No risk flags.</div>`}</div>
     <div class="sig-sec-label up"><i class="ti ti-calendar-event" aria-hidden="true"></i> Catalysts ahead — the news that could move it</div>
     <div class="sig-rows">${catRows || `<div class="muted sig-empty">No catalysts queued.</div>`}</div>
@@ -1232,7 +1232,7 @@ function renderRatings() {
   const el = document.getElementById("ratings-list");
   if (!el) return;
   const rows = (SIGNALS && SIGNALS.ratings) || [];
-  if (!rows.length) { el.innerHTML = `<p class="muted">No recent analyst calls on your holdings or universe names — this refreshes with the daily signals run.</p>`; return; }
+  if (!rows.length) { el.innerHTML = `<p class="muted">No recent analyst calls on Jaleel's holdings or universe names — this refreshes with the daily signals run.</p>`; return; }
   const fmtDate = (d) => { try { const x = new Date(d + "T12:00:00"); return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][x.getMonth()] + " " + x.getDate(); } catch (e) { return d; } };
   el.innerHTML = rows.map((r) => {
     const up = r.upside;
@@ -1648,7 +1648,7 @@ async function loadPortfolioNews() {
   const list = document.getElementById("pnews-list");
   if (!list) return;
   if (!key) { list.innerHTML = `<p class="muted">Live news needs the API key.</p>`; return; }
-  list.innerHTML = `<p class="news-loading">Loading your holdings' news…</p>`;
+  list.innerHTML = `<p class="news-loading">Loading Jaleel's holdings' news…</p>`;
   const now = new Date();
   const to = now.toISOString().slice(0, 10);
   const from = new Date(now.getTime() - 10 * 86400000).toISOString().slice(0, 10);
@@ -1664,7 +1664,7 @@ async function loadPortfolioNews() {
   // multi-source: blend in Benzinga items tagged to a holding
   const bz = bzFeed({ tickers: new Set(DATA.portfolio.map((h) => h.ticker)) });
   merged = mergeNews(merged, bz);
-  renderNewsFeed(list, merged.slice(0, 48), "No recent news for your holdings.");
+  renderNewsFeed(list, merged.slice(0, 48), "No recent news for Jaleel's holdings.");
 }
 
 function pDateRowHtml(e) {
@@ -1881,7 +1881,7 @@ function renderBookBrief(el, b) {
   if (!b || !b.your_book) { el.hidden = true; return; }
   const att = (b.attention || []).filter((a) => a && a.ticker);
   const SEV = { act: "Act", watch: "Watch", note: "Note" };
-  const attHtml = att.length ? `<div class="book-att"><div class="book-att-h">Needs your attention</div>`
+  const attHtml = att.length ? `<div class="book-att"><div class="book-att-h">Needs attention</div>`
     + att.map((a) => {
       const s = (a.severity || "note").toLowerCase();
       return `<button type="button" class="book-att-row" data-tk="${esc(a.ticker)}">`
@@ -1889,9 +1889,9 @@ function renderBookBrief(el, b) {
         + `<span class="book-att-tk">${esc(a.ticker)}</span>`
         + `<span class="book-att-txt"><b>${esc(a.headline || "")}</b> ${esc(a.note || "")}</span></button>`;
     }).join("") + `</div>` : "";
-  el.innerHTML = `<div class="book-head"><h3>Your book today</h3><span class="book-when">${esc(b.generated_at || "")}</span></div>`
+  el.innerHTML = `<div class="book-head"><h3>Jaleel's book today</h3><span class="book-when">${esc(b.generated_at || "")}</span></div>`
     + `<div class="book-body">${b.your_book}</div>${attHtml}`
-    + `<div class="book-foot">Written by Claude from your live data · informational only, not advice</div>`;
+    + `<div class="book-foot">Written by Claude from Jaleel's live data · informational only, not advice</div>`;
   el.hidden = false;
   el.querySelectorAll(".book-att-row").forEach((r) => r.addEventListener("click", () => openDrawer(r.dataset.tk)));
 }
@@ -2001,7 +2001,7 @@ function buildBotContext() {
   const risk = (S.risk || []).map((r) => `${r.ticker} (${r.tag})`).join(", ");
   const sectors = (S.sectors || []).map((s) => `${s.sector} ${s.dir}`).join(", ");
   return [
-    "You are the assistant for the Jaleel Capital QARP dashboard — a Shariah-compliant equity tool. Answer the user's questions about THEIR portfolio, the market, the holdings, the QARP framework, and investing generally. Be concise, direct, and honest. Informational only — NOT financial advice. Never fabricate a price, a Shariah verdict, or a figure; if it isn't in the context below, say you don't have it. When asked about a holding, use its QARP verdict + daily call + any risk flag.",
+    "You are the assistant for the Jaleel Capital QARP dashboard — a Shariah-compliant equity tool. Answer questions about Jaleel's portfolio, the market, the holdings, the QARP framework, and investing generally. Be concise, direct, and honest. Informational only — NOT financial advice. Never fabricate a price, a Shariah verdict, or a figure; if it isn't in the context below, say you don't have it. When asked about a holding, use its QARP verdict + daily call + any risk flag.",
     "QARP = 0.6×(Quality/105×100) + 0.4×(DCF/5×100). Bands: ≥85 STRONGEST, ≥72 STRONG BUY, ≥66 BUY, ≥60 HOLD-QUAL, 35–59 AVOID, <35 STRONG AVOID. Gate 1 = Shariah (AAOIFI, via Musaffa). Default stance: conservative / capital-preservation.",
     `Data as of ${DATA.meta && DATA.meta.date}. Account ≈ ${fmtUSD(t.account, 0)}, cash ${fmtUSD(t.cash, 2)}, unrealized P/L ${fmtUSD(t.gain, 0)} (${fmtPct(t.gain_pct)}).`,
     `Holdings: ${holds}.`,
@@ -2069,7 +2069,7 @@ function initBot() {
   const fab = document.getElementById("bot-fab"), panel = document.getElementById("bot-panel");
   if (!fab || !panel) return;
   const open = () => { panel.hidden = false; fab.hidden = true; setTimeout(() => document.getElementById("bot-input").focus(), 50);
-    if (!document.getElementById("bot-log").children.length) botAppend("assistant", "Hi — ask me about your holdings, a QARP verdict, the signals, or the market. e.g. \"Why is LULU a hold?\" or \"What should I watch this week?\""); };
+    if (!document.getElementById("bot-log").children.length) botAppend("assistant", "Hi — ask me about Jaleel's holdings, a QARP verdict, the signals, or the market. e.g. \"Why is LULU a hold?\" or \"What should I watch this week?\""); };
   fab.addEventListener("click", open);
   document.getElementById("bot-close").addEventListener("click", () => { panel.hidden = true; fab.hidden = false; });
   document.getElementById("bot-form").addEventListener("submit", (e) => {
