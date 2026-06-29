@@ -1,6 +1,6 @@
 {
   "date": "2026-06-29",
-  "generated_at": "Jun 29, 12:20pm ET",
+  "generated_at": "Jun 29, 12:47pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -147,8 +147,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$315",
-      "price": 280.7,
-      "upside": 12.2,
+      "price": 280.21,
+      "upside": 12.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -161,8 +161,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$23",
-      "price": 41.21,
-      "upside": -44.2,
+      "price": 41.12,
+      "upside": -44.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -175,7 +175,7 @@
       "rating": "Peer Perform",
       "stance": "neutral",
       "pt": "",
-      "price": 348.31,
+      "price": 348.69,
       "upside": null,
       "held": false,
       "uni": true,
@@ -189,8 +189,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$46",
-      "price": 41.21,
-      "upside": 11.6,
+      "price": 41.12,
+      "upside": 11.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -203,8 +203,8 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$46",
-      "price": 41.21,
-      "upside": 11.6,
+      "price": 41.12,
+      "upside": 11.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -217,8 +217,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$138",
-      "price": 128.81,
-      "upside": 7.1,
+      "price": 128.93,
+      "upside": 7.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -231,8 +231,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$365",
-      "price": 280.7,
-      "upside": 30.0,
+      "price": 280.21,
+      "upside": 30.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -245,7 +245,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$130",
-      "price": 117.86,
+      "price": 117.81,
       "upside": 10.3,
       "held": false,
       "uni": true,
@@ -259,8 +259,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 41.21,
-      "upside": 33.5,
+      "price": 41.12,
+      "upside": 33.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -273,8 +273,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$43",
-      "price": 41.21,
-      "upside": 4.3,
+      "price": 41.12,
+      "upside": 4.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -287,8 +287,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 256.22,
-      "upside": 5.4,
+      "price": 256.96,
+      "upside": 5.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -301,8 +301,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$60",
-      "price": 41.21,
-      "upside": 45.6,
+      "price": 41.12,
+      "upside": 45.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -315,7 +315,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 41.21,
+      "price": 41.12,
       "upside": null,
       "held": false,
       "uni": true,
@@ -329,14 +329,42 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$47",
-      "price": 41.21,
-      "upside": 14.0,
+      "price": 41.12,
+      "upside": 14.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     }
   ],
   "bz_news": [
+    {
+      "title": "Amazon Stock Surges 4%: Record $26.4 Billion Prime Day Blowout Crushes Wall Street Estimates",
+      "url": "https://www.benzinga.com/markets/large-cap/26/06/60165094/amazon-stock-surges-4-record-26-4-billion-prime-day-blowout-crushes-wall-street-estimates",
+      "ts": 1782751348,
+      "tickers": [
+        "AMZN",
+        "WMT",
+        "TGT",
+        "PNQI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false
+    },
+    {
+      "title": "Small Caps Are Beating S&P 500 By The Widest Margin Since 2003: Here’s Why",
+      "url": "https://www.benzinga.com/markets/equities/26/06/60164532/small-caps-versus-large-cap-2026-performance-russell-2000-sp500",
+      "ts": 1782750467,
+      "tickers": [
+        "CRDO",
+        "IWM",
+        "BE",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true
+    },
     {
       "title": "Nike Q4 Preview: Stock At 11‑Year Lows, Expert Warns The Worst Isn’t Over — ‘May Have To Wait Much Longer’",
       "url": "https://www.benzinga.com/trading-ideas/previews/26/06/60164037/nike-q4-preview-stock-11-year-lows-market-expert-more-pain-ahead-wait-much-longer",
@@ -614,29 +642,6 @@
       "tickers": [
         "BAH",
         "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false
-    },
-    {
-      "title": "Merck Agrees With ADAP Crisis Task Force To Help State AIDS Drug Assistance Programs Provide Access To Once-Daily HIV Treatment, IDVYNSO",
-      "url": "https://www.benzinga.com/news/26/06/60151053/merck-agrees-adap-crisis-task-force-help-state-aids-drug-assistance-programs-provide-access-once-dai",
-      "ts": 1782730064,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true
-    },
-    {
-      "title": "Honeywell Technologies Completes Previously Announced Spin-Off Of Honeywell Aerospace Unit",
-      "url": "https://www.benzinga.com/news/26/06/60150802/honeywell-technologies-completes-previously-announced-spin-honeywell-aerospace-unit",
-      "ts": 1782729187,
-      "tickers": [
-        "HONAV",
-        "HON"
       ],
       "source": "Benzinga",
       "wiim": false,
