@@ -223,7 +223,10 @@ function fullDayName(iso) {
 // Sidebar qualifier for the front page: "today" while the session is live, else a highlighted
 // "as of <Weekday>'s close" so a glance never mistakes the last close for the current day.
 function sessionSub() {
-  return marketOpenNow()
+  // Say "today" only while the session is live AND the loaded build is actually the current session.
+  // Before the post-open cloud rebuild lands, the data is still the prior close — label it honestly.
+  const dataIsCurrent = asOfDate(DATA.meta.date) === lastSessionDate();
+  return (marketOpenNow() && dataIsCurrent)
     ? `<span class="side-sub">today</span>`
     : `<span class="side-sub closed">as of ${fullDayName(DATA.meta.date)}'s close</span>`;
 }
@@ -1937,6 +1940,43 @@ function renderAll() {
   initTabs();
   initGuide();
   startLive();
+  startAutoRefresh();
+}
+
+let refreshTimer = null, lastPayloadIv = null;
+const REFRESH_INTERVAL_MS = 7 * 60000;   // mid-session poll: pull the cloud's freshest build into an open tab
+function startAutoRefresh() {
+  if (refreshTimer) clearInterval(refreshTimer);
+  refreshTimer = setInterval(softRefresh, REFRESH_INTERVAL_MS);
+}
+// Re-render every payload-driven view from the current DATA, WITHOUT re-binding tab/guide handlers
+// or restarting the live ticker — those are wired once at unlock.
+function rerenderFromData() {
+  document.getElementById("asof-date").textContent = asOfDate(DATA.meta.date);
+  renderVerdictSummary();
+  renderUniverseControls();
+  renderUniverseTable();
+  renderScorecard();
+  renderEtfs();
+  renderVenture();
+  renderPortfolio();
+  loadSignals();
+  loadBookBrief();
+  enterDaily();   // re-renders the front page (sidebars + the as-of label) and resets its own timer
+}
+// While the market is open, re-pull payload.enc; if the cloud has published a newer build (new IV),
+// swap it in and re-render so an already-open tab updates within minutes — no manual reload needed.
+async function softRefresh() {
+  if (!marketOpenNow()) return;
+  const pw = sessionStorage.getItem("jc_pw");
+  if (!pw) return;
+  try {
+    const p = await (await fetch("payload.enc", { cache: "no-store" })).json();
+    if (p && p.iv && p.iv === lastPayloadIv) return;   // identical ciphertext -> no new build, skip
+    const fresh = await decryptPayload(p, pw);
+    DATA = fresh; lastPayloadIv = p.iv;
+    rerenderFromData();
+  } catch (e) { /* transient (offline / mid-publish) — keep showing the current data */ }
 }
 
 async function boot() {
@@ -1964,6 +2004,7 @@ async function boot() {
     }
     try {
       DATA = await decryptPayload(payload, pw);
+      lastPayloadIv = payload.iv;
       gate.hidden = true; app.hidden = false;
       sessionStorage.setItem("jc_pw", pw);   // remember within this tab session only
       renderAll();
