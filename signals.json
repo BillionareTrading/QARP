@@ -1,6 +1,6 @@
 {
   "date": "2026-06-29",
-  "generated_at": "Jun 29, 9:33am ET",
+  "generated_at": "Jun 29, 10:03am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -96,10 +96,10 @@
   "sectors": [
     {
       "sector": "Semiconductor & Chip",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Reports suggested that OpenAI may delay its IPO until next year. Investo…",
       "note": "After reports suggested that OpenAI may delay its IPO until next year.  Investors may anticipate the industry to face a weakening demand after notes raised concerns about a slowdown in the AI company's infrastructure spending.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Homebuilding & Housing",
@@ -147,8 +147,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$315",
-      "price": 286.84,
-      "upside": 9.8,
+      "price": 283.58,
+      "upside": 11.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -161,8 +161,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$23",
-      "price": 41.38,
-      "upside": -44.4,
+      "price": 40.87,
+      "upside": -43.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -175,7 +175,7 @@
       "rating": "Peer Perform",
       "stance": "neutral",
       "pt": "",
-      "price": 347.22,
+      "price": 346.47,
       "upside": null,
       "held": false,
       "uni": true,
@@ -189,8 +189,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$46",
-      "price": 41.38,
-      "upside": 11.2,
+      "price": 40.87,
+      "upside": 12.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -203,8 +203,8 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$46",
-      "price": 41.38,
-      "upside": 11.2,
+      "price": 40.87,
+      "upside": 12.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -217,8 +217,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$138",
-      "price": 128.66,
-      "upside": 7.3,
+      "price": 127.42,
+      "upside": 8.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -231,8 +231,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$365",
-      "price": 286.84,
-      "upside": 27.2,
+      "price": 283.58,
+      "upside": 28.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -245,8 +245,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$130",
-      "price": 115.06,
-      "upside": 13.0,
+      "price": 116.26,
+      "upside": 11.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -259,8 +259,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 41.38,
-      "upside": 32.9,
+      "price": 40.87,
+      "upside": 34.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -273,8 +273,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$43",
-      "price": 41.38,
-      "upside": 3.9,
+      "price": 40.87,
+      "upside": 5.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -287,8 +287,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 253.15,
-      "upside": 6.7,
+      "price": 255.25,
+      "upside": 5.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -301,8 +301,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$60",
-      "price": 41.38,
-      "upside": 45.0,
+      "price": 40.87,
+      "upside": 46.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -315,7 +315,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 41.38,
+      "price": 40.87,
       "upside": null,
       "held": false,
       "uni": true,
@@ -323,6 +323,42 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "Honeywell Technologies shares are trading lower after the company completed the spin-off of its Honeywell Aerospace unit as a separately traded entity.",
+      "url": "https://www.benzinga.com/quote/HON",
+      "ts": 1782741640,
+      "tickers": [
+        "HON"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false
+    },
+    {
+      "title": "Trump Bought Up To $5 Million In Axon Stock Weeks Before ICE Sought $220 Million Taser Contract: Report",
+      "url": "https://www.benzinga.com/news/politics/26/06/60157208/trump-bought-up-to-5-million-in-axon-stock-weeks-before-ice-sought-220-million-taser-contract-report",
+      "ts": 1782741490,
+      "tickers": [
+        "AXON",
+        "IBM",
+        "DELL",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true
+    },
+    {
+      "title": "Apple Tests Pricing Power As Component Costs Quadruple: Where Is AAPL Stock Headed?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60156830/apple-tests-pricing-power-as-component-costs-quadruple-where-is-aapl-stock-headed",
+      "ts": 1782741090,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true
+    },
     {
       "title": "Viridian Secures First FDA Approval, Sets Up Challenge To Amgen's Tepezza For Thyroid Eye Disease",
       "url": "https://www.benzinga.com/news/fda/26/06/60155440/viridian-secures-first-fda-approval-sets-up-challenge-to-amgens-tepezza-for-thyroid-eye-disease",
@@ -591,43 +627,6 @@
         "AAPL",
         "DIS",
         "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true
-    },
-    {
-      "title": "Apple's Push For Chinese Memory Chips Isn't The Micron Threat Investors Think It Is, Analyst Says: 5 Reasons Why",
-      "url": "https://www.benzinga.com/markets/tech/26/06/60146621/apples-push-for-chinese-memory-chips-isnt-the-micron-threat-investors-think-it-is-analyst-says-5-reasons-why",
-      "ts": 1782631755,
-      "tickers": [
-        "MU",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true
-    },
-    {
-      "title": "NHTSA Closes Tesla Power Steering Probe After Recall Fix",
-      "url": "https://www.benzinga.com/markets/tech/26/06/60146582/nhtsa-closes-tesla-power-steering-probe-after-recall-fix",
-      "ts": 1782629477,
-      "tickers": [
-        "TSLA",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true
-    },
-    {
-      "title": "Apple Vision Pro Hardware Chief Reportedly Jumps To OpenAI As Sam Altman's AI Device Ambitions Gather Momentum",
-      "url": "https://www.benzinga.com/markets/tech/26/06/60144464/apple-vision-pro-hardware-chief-reportedly-jumps-to-openai-as-sam-altmans-ai-device-ambitions-gather-momentum",
-      "ts": 1782532703,
-      "tickers": [
-        "AAPL",
-        "META",
-        "NFLX"
       ],
       "source": "Benzinga",
       "wiim": false,
