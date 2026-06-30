@@ -1970,6 +1970,9 @@ async function loadBookBrief() {
   } catch (e) { el.hidden = true; }
 }
 function renderBookBrief(el, b) {
+  // DISABLED 2026-07-01 per user: the book brief was persistently inaccurate. Kept hidden.
+  // To re-enable, delete the next line.
+  el.hidden = true; return;
   // The book read is a POST-CLOSE reflection — irrelevant during the live session, so show it
   // only when the market is closed (after the close, overnight, pre-open, weekends/holidays).
   if (marketOpenNow()) { el.hidden = true; return; }
