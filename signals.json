@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-29",
-  "generated_at": "Jun 29, 6:44pm ET",
+  "date": "2026-06-30",
+  "generated_at": "Jun 30, 3:26pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -96,10 +96,10 @@
   "sectors": [
     {
       "sector": "Semiconductor & Chip",
-      "dir": "mixed",
-      "driver": "Reports suggested that OpenAI may delay its IPO until next year. Investo…",
-      "note": "After reports suggested that OpenAI may delay its IPO until next year.  Investors may anticipate the industry to face a weakening demand after notes raised concerns about a slowdown in the AI company's infrastructure spending.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "dir": "up",
+      "driver": "Continued strength as the sector extends yesterday's rally",
+      "note": "Amid continued strength as the sector extends yesterday's rally. The sector may be experiencing a lift in response to Susquehanna raising its forecast for wafer fab equipment spending.",
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Homebuilding & Housing",
@@ -123,36 +123,22 @@
       "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
-      "sector": "In The Broader Industrial Sector",
+      "sector": "Power Delivery & Hvac",
       "dir": "up",
-      "driver": "Easing US-Iran peace framework drove oil prices sharply lower",
-      "note": "As easing US-Iran peace framework drove oil prices sharply lower, lifting sentiment across industrial names.",
+      "driver": "The Heat Dome enveloping the Continental U.S. underscores the need for e…",
+      "note": "As the Heat Dome enveloping the Continental U.S. underscores the need for electricity reliability to meet civilian, commercial and data center demand that may reach new records.",
       "src": "Benzinga WIIM · market-wide"
     }
   ],
   "holding_news": {
     "KO": {
-      "title": "Coca-Cola Takes IRS Fight To Appeals Court This Week With $20 Billion Tax Bill At Stake: Here's What To Know",
-      "ts": 1782216054,
-      "url": "https://www.benzinga.com/news/legal/26/06/60038197/coca-cola-takes-irs-fight-to-appeals-court-this-week-with-20-billion-tax-bill-at-stake-heres-what-to-know",
+      "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
+      "ts": 1782832328,
+      "url": "https://www.benzinga.com/quote/KO",
       "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-06-22",
-      "ticker": "AAPL",
-      "firm": "KGI Securities",
-      "action": "Downgrades",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$315",
-      "price": 281.74,
-      "upside": 11.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-06-23",
       "ticker": "NKE",
@@ -161,8 +147,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$23",
-      "price": 41.48,
-      "upside": -44.6,
+      "price": 41.3,
+      "upside": -44.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -175,7 +161,7 @@
       "rating": "Peer Perform",
       "stance": "neutral",
       "pt": "",
-      "price": 350.81,
+      "price": 353.11,
       "upside": null,
       "held": false,
       "uni": true,
@@ -189,8 +175,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$46",
-      "price": 41.48,
-      "upside": 10.9,
+      "price": 41.3,
+      "upside": 11.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -203,8 +189,8 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$46",
-      "price": 41.48,
-      "upside": 10.9,
+      "price": 41.3,
+      "upside": 11.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -217,8 +203,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$138",
-      "price": 129.38,
-      "upside": 6.7,
+      "price": 128.39,
+      "upside": 7.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -231,8 +217,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$365",
-      "price": 281.74,
-      "upside": 29.6,
+      "price": 287.66,
+      "upside": 26.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -245,8 +231,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$130",
-      "price": 117.7,
-      "upside": 10.5,
+      "price": 117.58,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -259,8 +245,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 41.48,
-      "upside": 32.6,
+      "price": 41.3,
+      "upside": 33.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -273,8 +259,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$43",
-      "price": 41.48,
-      "upside": 3.7,
+      "price": 41.3,
+      "upside": 4.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -287,8 +273,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 258.51,
-      "upside": 4.4,
+      "price": 255.79,
+      "upside": 5.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -301,8 +287,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$60",
-      "price": 41.48,
-      "upside": 44.6,
+      "price": 41.3,
+      "upside": 45.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -315,7 +301,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 41.48,
+      "price": 41.3,
       "upside": null,
       "held": false,
       "uni": true,
@@ -329,8 +315,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$210",
-      "price": 168.47,
-      "upside": 24.7,
+      "price": 166.62,
+      "upside": 26.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -343,8 +329,36 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$47",
-      "price": 41.48,
-      "upside": 13.3,
+      "price": 41.3,
+      "upside": 13.8,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-06-30",
+      "ticker": "MRK",
+      "firm": "B of A Securities",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$141",
+      "price": 128.39,
+      "upside": 9.8,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-06-30",
+      "ticker": "MRK",
+      "firm": "Scotiabank",
+      "action": "Maintains",
+      "rating": "Sector Outperform",
+      "stance": "bullish",
+      "pt": "$155",
+      "price": 128.39,
+      "upside": 20.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -352,231 +366,162 @@
   ],
   "bz_news": [
     {
-      "title": "Congressman Who Buys Magnificent Seven Stocks With Size Made New Quantum Bet",
-      "url": "https://www.benzinga.com/news/politics/26/06/60175899/congressman-who-buys-magnificent-seven-stocks-with-size-made-new-quantum-bet",
-      "ts": 1782770572,
+      "title": "Chamath Palihapitiya Announces $135 Million Funding, Rare CEO Title For 8090: ‘AI Can Be The Grand Equalizer’",
+      "url": "https://www.benzinga.com/markets/tech/26/06/60201055/chamath-palihapitiya-announces-135-million-funding-rare-ceo-title-for-8090-ai-can-be-the-grand-equalizer",
+      "ts": 1782847306,
       "tickers": [
-        "GOOG",
-        "MSFT",
-        "QNT",
-        "IREN"
+        "CRM"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false,
-      "relevance": 0.313
+      "rel": true,
+      "relevance": 0.346
     },
     {
-      "title": "Comcast Stock Soars On Split News, Does Disney Need To Make A Similar Move?",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/06/60175253/comcast-stock-soars-on-split-news-does-disney-need-to-make-a-similar-move",
-      "ts": 1782767590,
+      "title": "Epic Games, Apple Clash Reaches Supreme Court In Battle Over App Store Payment Rules",
+      "url": "https://www.benzinga.com/markets/private-markets/26/06/60200726/epic-games-apple-clash-reaches-supreme-court-in-battle-over-app-store-payment-rules",
+      "ts": 1782846657,
       "tickers": [
-        "DIS",
-        "WBD",
-        "CMCSA",
-        "PSKY"
+        "AAPL"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false,
-      "relevance": 0.354
+      "rel": true,
+      "relevance": 0.228
     },
     {
-      "title": "Here's How Much $1000 Invested In Walmart 15 Years Ago Would Be Worth Today",
-      "url": "https://www.benzinga.com/news/26/06/60174775/here-s-how-much-1000-invested-walmart-15-years-ago-would-be-worth-today",
-      "ts": 1782766866,
+      "title": "Shares of power delivery and HVAC companies are trading higher as the Heat Dome enveloping the Continental U.S. underscores the need for electricity reliability to meet civilian, commercial and data center demand that may reach new records.",
+      "url": "https://www.benzinga.com/quote/VICR",
+      "ts": 1782846182,
       "tickers": [
-        "WMT"
+        "JCI",
+        "BE",
+        "VRT",
+        "ROK"
       ],
       "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.234
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.35
     },
     {
-      "title": "Microsoft, OpenAI Face Copyright Lawsuit From Nearly 400 Newspaper Publishers",
-      "url": "https://www.benzinga.com/markets/private-markets/26/06/60174128/microsoft-openai-training-400-newspapers-lawsuit",
-      "ts": 1782765283,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.286
-    },
-    {
-      "title": "Bitcoin's Next Buyer Is Not Human Says Animoca's Yat Siu: How AI Will Influence Crypto",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/60173949/bitcoins-next-buyer-is-not-human-says-animocas-yat-siu-how-ai-will-influence-crypto",
-      "ts": 1782765124,
-      "tickers": [
-        "$BTC",
-        "$ETH",
-        "MA",
-        "$SOL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.334
-    },
-    {
-      "title": "Telecom Stocks Face Heavy Selling Pressure Monday: Here's Why",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60172872/telecom-stocks-face-heavy-selling-pressure-monday-heres-why",
-      "ts": 1782763371,
+      "title": "Shares of telecommunications companies are trading lower amid concerns over possible threats from low-earth-orbit satellite-based connectivity providers, aided by reports suggesting that Spacex and Charter may partner to offer mobile phone services.",
+      "url": "https://www.benzinga.com/quote/LBRDA",
+      "ts": 1782844157,
       "tickers": [
         "T",
         "VZ",
         "TMUS",
-        "ASTS"
+        "AMX"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.317
+    },
+    {
+      "title": "Stripe, Visa, BlackRock Back New Open USD Stablecoin In Bid To Challenge Tether, Circle",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/60199038/stripe-visa-blackrock-back-new-open-usd-stablecoin-in-bid-to-challenge-tether-circle",
+      "ts": 1782843503,
+      "tickers": [
+        "CRCL",
+        "GOOGL",
+        "COIN",
+        "BLK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.323
+    },
+    {
+      "title": "B of A Securities Maintains Underperform on Dow, Lowers Price Target to $29",
+      "url": "https://www.benzinga.com/news/26/06/60197544/b-securities-maintains-underperform-dow-lowers-price-target-29",
+      "ts": 1782841313,
+      "tickers": [
+        "DOW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.507
+    },
+    {
+      "title": "B of A Securities Maintains Buy on Merck & Co, Raises Price Target to $141",
+      "url": "https://www.benzinga.com/news/26/06/60197472/b-securities-maintains-buy-merck-co-raises-price-target-141",
+      "ts": 1782841195,
+      "tickers": [
+        "MRK"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.382
+      "relevance": 0.474
     },
     {
-      "title": "Files On Unreleased iPhone 18 Pro Posted On Dark Web After Apple Supplier Tata Electronics Hack-Documents; List Of Suppliers, Parts, Photos Of iPhone 18 Pro Are Part Of Tata Electronics Data Breach; Apple Is Concerned About Leak Of iPhone 18 Pro Documents On Dark Web",
-      "url": "https://www.benzinga.com/news/26/06/60169633/files-unreleased-iphone-18-pro-posted-dark-web-after-apple-supplier-tata-electronics-hack-documents-",
-      "ts": 1782757618,
+      "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/06/60197278/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
+      "ts": 1782840936,
       "tickers": [
-        "AAPL"
+        "TSLA",
+        "CZR",
+        "RIVN",
+        "NCLH"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.208
+      "relevance": 0.363
     },
     {
-      "title": "Apple Introduces iOS 26.6 Beta 3",
-      "url": "https://www.benzinga.com/news/26/06/60169146/apple-introduces-ios-26-6-beta-3",
-      "ts": 1782756703,
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/06/60197276/10-information-technology-stocks-whale-activity-today-s-session",
+      "ts": 1782840935,
       "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.295
-    },
-    {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/06/60167718/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1782754522,
-      "tickers": [
-        "NVDA",
-        "INTC",
+        "MU",
         "MSTR",
-        "MU"
+        "AMD",
+        "IREN"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.375
+      "relevance": 0.394
     },
     {
-      "title": "What's Going On With Palo Alto Networks Stock Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60167268/whats-going-on-with-palo-alto-networks-stock-monday-2",
-      "ts": 1782754085,
+      "title": "SPEEA Aims To Negotiate 2 Collective Bargaining Agreements With Boeing, One For Some 13,000 Engineers, Another For Some 4,000 Technical Workers; Negotiators For Speea Will Begin Formal Contract Talks With Boeing On July 1",
+      "url": "https://www.benzinga.com/news/26/06/60197257/speea-aims-negotiate-2-collective-bargaining-agreements-boeing-one-some-13-000-engineers-another-som",
+      "ts": 1782840918,
       "tickers": [
-        "PANW",
-        "IBM"
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.238
+    },
+    {
+      "title": "Why Is Credo Stock Surging On Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60197241/why-is-credo-stock-surging-on-tuesday",
+      "ts": 1782840883,
+      "tickers": [
+        "CRDO",
+        "INTC"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.386
+      "relevance": 0.343
     },
     {
-      "title": "Morgan Stanley Maintains Equal-Weight on JPMorgan Chase, Raises Price Target to $362",
-      "url": "https://www.benzinga.com/news/26/06/60167248/morgan-stanley-maintains-equal-weight-jpmorgan-chase-raises-price-target-362",
-      "ts": 1782754065,
+      "title": "AI Chips Power Wall Street Higher, Dow Eyes Records: Stock Market Today",
+      "url": "https://www.benzinga.com/markets/equities/26/06/60196958/ai-chip-rally-nasdaq-100-dow-jones-markets-tuesday-wall-street-news-today",
+      "ts": 1782840366,
       "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.482
-    },
-    {
-      "title": "Morgan Stanley Maintains Equal-Weight on Honeywell Intl, Raises Price Target to $490",
-      "url": "https://www.benzinga.com/news/26/06/60167152/morgan-stanley-maintains-equal-weight-honeywell-intl-raises-price-target-490",
-      "ts": 1782753958,
-      "tickers": [
-        "HON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.481
-    },
-    {
-      "title": "Morgan Stanley Maintains Equal-Weight on Goldman Sachs Group, Raises Price Target to $1099",
-      "url": "https://www.benzinga.com/news/26/06/60167136/morgan-stanley-maintains-equal-weight-goldman-sachs-group-raises-price-target-1099",
-      "ts": 1782753907,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.5
-    },
-    {
-      "title": "Nasdaq 100 Soars As Semis Rebound, Tesla Jumps: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/06/60166806/stock-market-today-nasdaq-100-semis-rebound-tesla-monday",
-      "ts": 1782753573,
-      "tickers": [
-        "TSLA",
+        "AVAV",
         "$BTC",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.486
-    },
-    {
-      "title": "Hedge Funds Cut Magnificent Seven Exposure—Which ETFs Are Most At Risk?",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/06/60166681/hedge-funds-cut-magnificent-seven-exposure-which-etfs-are-most-at-risk",
-      "ts": 1782753423,
-      "tickers": [
-        "QQQ",
-        "TSLA",
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.352
-    },
-    {
-      "title": "'I Don't Think The CLARITY Act Is Going To Do It': Bitcoin Needs Stronger Tailwinds, Expert Says",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/60166437/i-dont-think-the-clarity-act-is-going-to-do-it-bitcoin-needs-stronger-tailwinds-expert-says",
-      "ts": 1782753140,
-      "tickers": [
-        "$BTC",
-        "JPM",
-        "BLK",
-        "MS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.254
-    },
-    {
-      "title": "AI Stocks Are On Sale — Dan Ives Calls It Another 'Gut Check' For Tech Investors",
-      "url": "https://www.benzinga.com/markets/tech/26/06/60166403/ai-stocks-on-sale-dan-ives-gut-check-tech-investors",
-      "ts": 1782753067,
-      "tickers": [
-        "META",
-        "MSFT",
-        "ORCL",
-        "AMZN"
+        "MSTR",
+        "COIN"
       ],
       "source": "Benzinga",
       "wiim": false,
@@ -584,113 +529,175 @@
       "relevance": 0.412
     },
     {
-      "title": "Honeywell Completes Aerospace Spin-Off And Reverse Split: What Shareholders Need To Know",
-      "url": "https://www.benzinga.com/markets/stock-split/26/06/60166310/honeywell-completes-aerospace-spin-off-and-reverse-split-what-shareholders-need-to-know",
-      "ts": 1782752908,
+      "title": "Shares of semiconductor and chip stocks are trading higher amid continued strength as the sector extends yesterday's rally. The sector may be experiencing a lift in response to Susquehanna raising its forecast for wafer fab equipment spending.",
+      "url": "https://www.benzinga.com/quote/MPWR",
+      "ts": 1782839847,
       "tickers": [
-        "HON",
-        "HONA",
-        "PPA",
-        "DVAL"
+        "AMBA",
+        "GCTS",
+        "WOLF",
+        "INDI"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.47
+    },
+    {
+      "title": "Deutsche Bank Maintains Buy on Honeywell Intl, Raises Price Target to $263",
+      "url": "https://www.benzinga.com/news/26/06/60196406/deutsche-bank-maintains-buy-honeywell-intl-raises-price-target-263",
+      "ts": 1782839467,
+      "tickers": [
+        "HON"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.392
+      "relevance": 0.412
     },
     {
-      "title": "CNBC Halftime Report Final Trades: Corning, IBM, Vertex Pharmaceuticals, Verizon Communications",
-      "url": "https://www.benzinga.com/quote/VRTX",
-      "ts": 1782752451,
+      "title": "Apple Says Creator Studio Gets Smarter, Faster, And More Connected; Updates Bring New Integrations With Pixelmator Pro Across Final Cut Pro, Keynote, Pages, And Numbers; Even More Intelligent Tools In Final Cut Pro; The Ability To Generate Shapes To Further Customize A Project; And A New Producer Project In Logic Pro",
+      "url": "https://www.benzinga.com/news/26/06/60196151/apple-says-creator-studio-gets-smarter-faster-and-more-connected-updates-bring-new-integrations-pixe",
+      "ts": 1782839086,
       "tickers": [
-        "VZ",
-        "IBM",
-        "GLW",
-        "VRTX"
+        "AAPL"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.522
+      "relevance": 0.369
     },
     {
-      "title": "Morgan Stanley Maintains Overweight on Chevron, Lowers Price Target to $210",
-      "url": "https://www.benzinga.com/news/26/06/60165376/morgan-stanley-maintains-overweight-chevron-lowers-price-target-210",
-      "ts": 1782751749,
+      "title": "CNBC Halftime Report Final Trades: Apple, Amgen, Micron Technology, Palo Alto Networks",
+      "url": "https://www.benzinga.com/quote/PANW",
+      "ts": 1782838833,
       "tickers": [
+        "AAPL",
+        "AMGN",
+        "MU",
+        "PANW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.43
+    },
+    {
+      "title": "What's Going On With Apple Stock Tuesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/06/60195702/apple-stock-jumps-2-why-wall-street-insiders-are-urging-investors-to-buy-the-dip-now",
+      "ts": 1782838358,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.422
+    },
+    {
+      "title": "Live On CNBC, Josh Brown Hosts Segment Titled \"Josh's Best Stocks Update: AT&T; CBRE Group; Chevron\"",
+      "url": "https://www.benzinga.com/quote/CVX",
+      "ts": 1782837656,
+      "tickers": [
+        "T",
+        "CBRE",
         "CVX"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.464
+      "relevance": 0.352
     },
     {
-      "title": "Amazon Stock Surges 4%: Record $26.4 Billion Prime Day Blowout Crushes Wall Street Estimates",
-      "url": "https://www.benzinga.com/markets/large-cap/26/06/60165094/amazon-stock-surges-4-record-26-4-billion-prime-day-blowout-crushes-wall-street-estimates",
-      "ts": 1782751348,
+      "title": "$1000 Invested In Caterpillar 15 Years Ago Would Be Worth This Much Today",
+      "url": "https://www.benzinga.com/news/26/06/60194892/1000-invested-caterpillar-15-years-ago-would-be-worth-much-today",
+      "ts": 1782837037,
       "tickers": [
-        "AMZN",
-        "WMT",
-        "TGT",
-        "PNQI"
+        "CAT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.375
+      "relevance": 0.217
     },
     {
-      "title": "Small Caps Are Beating S&P 500 By The Widest Margin Since 2003: Here’s Why",
-      "url": "https://www.benzinga.com/markets/equities/26/06/60164532/small-caps-versus-large-cap-2026-performance-russell-2000-sp500",
-      "ts": 1782750467,
+      "title": "Why Is Verizon Stock Falling Tuesday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/06/60194840/why-is-verizon-stock-falling-tuesday",
+      "ts": 1782836975,
       "tickers": [
-        "CRDO",
-        "IWM",
-        "BE",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.401
-    },
-    {
-      "title": "Nike Q4 Preview: Stock At 11‑Year Lows, Expert Warns The Worst Isn’t Over — ‘May Have To Wait Much Longer’",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/06/60164037/nike-q4-preview-stock-11-year-lows-market-expert-more-pain-ahead-wait-much-longer",
-      "ts": 1782749634,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.339
-    },
-    {
-      "title": "Apollo To Drive Quantinuum Revenue Growth Of 128% Until 2031, Say Bullish Analysts",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/06/60163281/apollo-to-drive-quantinuum-revenue-growth-of-128-until-2031-say-bullish-analysts",
-      "ts": 1782748625,
-      "tickers": [
-        "QNT",
-        "AMGN"
+        "VZ",
+        "GOOGL",
+        "BTGOF"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.41
+      "relevance": 0.402
     },
     {
-      "title": "JP Morgan Maintains Neutral on Nike, Lowers Price Target to $47",
-      "url": "https://www.benzinga.com/news/26/06/60163268/jp-morgan-maintains-neutral-nike-lowers-price-target-47",
-      "ts": 1782748611,
+      "title": "U.S. Supreme Court Agrees To Hear Apple Appeal Of Contempt Order In Epic Games Lawsuit Over App Store Fees",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/06/60194015/u-s-supreme-court-agrees-hear-apple-appeal-contempt-order-epic-games-lawsuit-over-app-store-fees",
+      "ts": 1782835526,
       "tickers": [
-        "NKE"
+        "AAPL",
+        "SPY"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.431
+      "relevance": 0.215
+    },
+    {
+      "title": "This Analyst Raises Price Target For American Express And This Banking Stock Ahead Of Q2 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/06/60192952/this-analyst-raises-price-target-for-american-express-and-this-banking-stock-ahead-of-q2-earnings",
+      "ts": 1782834261,
+      "tickers": [
+        "AXP",
+        "COF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.45
+    },
+    {
+      "title": "Elon Musk's X Money — New Details On Bank Killer Super App",
+      "url": "https://www.benzinga.com/markets/tech/26/06/60192677/elon-musks-x-money-new-details-on-bank-killer-super-app",
+      "ts": 1782833887,
+      "tickers": [
+        "TSLA",
+        "JPM",
+        "HOOD",
+        "SOFI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.285
+    },
+    {
+      "title": "JP Morgan Maintains Overweight on Walt Disney, Raises Price Target to $140",
+      "url": "https://www.benzinga.com/news/26/06/60192647/jp-morgan-maintains-overweight-walt-disney-raises-price-target-140",
+      "ts": 1782833856,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.402
+    },
+    {
+      "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
+      "url": "https://www.benzinga.com/quote/KO",
+      "ts": 1782832328,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.534
     },
     {
       "title": "Coca-Cola Takes IRS Fight To Appeals Court This Week With $20 Billion Tax Bill At Stake: Here's What To Know",
@@ -996,7 +1003,7 @@
     },
     "UBER": {
       "name": "Uber",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 17,
         "buy": 35,
@@ -1195,9 +1202,9 @@
         "period": "2026-06-01"
       },
       "news": {
-        "title": "Coca-Cola Takes IRS Fight To Appeals Court This Week With $20 Billion Tax Bill At Stake: Here's What To Know",
-        "ts": 1782216054,
-        "url": "https://www.benzinga.com/news/legal/26/06/60038197/coca-cola-takes-irs-fight-to-appeals-court-this-week-with-20-billion-tax-bill-at-stake-heres-what-to-know",
+        "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
+        "ts": 1782832328,
+        "url": "https://www.benzinga.com/quote/KO",
         "wiim": false
       },
       "filings": {
