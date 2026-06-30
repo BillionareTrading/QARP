@@ -28,6 +28,12 @@ if [ "$PUSH" = "1" ] && [ -d .git ]; then
   # ONLY the encrypted price payload.
   git checkout -- signals.json gurus.json daily_brief.json book_brief.json 2>/dev/null || true
   git pull --rebase --quiet origin main 2>/dev/null || true
+  # PRE-PUBLISH GATE: stamp consistency + the payload must not outrun the (about-to-be-live) feeds
+  # beyond the render tolerance, or the Times front page drops to the generic fallback. Abort if so.
+  if ! "$PY" verify_publish.py; then
+    echo "refresh_site: PRE-PUBLISH GATE FAILED — not pushing. Regenerate today's column or hold." >&2
+    exit 1
+  fi
   git add payload.enc 2>/dev/null
   git commit -m "price refresh $(cat payload.enc | python3 -c 'import sys,json;print(json.load(sys.stdin)["date"])')" --quiet || true
   git push --quiet origin main && echo "refresh_site: pushed to remote."
