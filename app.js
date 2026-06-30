@@ -275,9 +275,9 @@ function asOfDate(iso) {
   return a < b ? a : b;
 }
 
-/* ---------- which index list is showing (S&P 500 | Global) ---------- */
-let uIndex = "S&P 500";
-const uList = () => DATA.universe.filter((x) => (x.index || "S&P 500") === uIndex);
+/* ---------- which index list is showing (US Equities | Global) ---------- */
+let uIndex = "US Equities";
+const uList = () => DATA.universe.filter((x) => (x.index || "US Equities") === uIndex);
 
 /* ---------- render: Overview ---------- */
 function renderVerdictSummary() {
@@ -347,11 +347,11 @@ let uSort = { key: "rank", dir: 1 };
 
 function renderUniverseControls() {
   const list = uList();
-  // intro copy reflects the active list (S&P 500 vs Global)
+  // intro copy reflects the active list (US Equities vs Global)
   const intro = document.getElementById("u-intro");
   if (intro) intro.innerHTML = uIndex === "Global"
-    ? `<b>Global</b> names outside the S&amp;P 500, screened for Shariah compliance — the compliant ones are scored on <b>QARP</b> (quality + value) and ranked below. This list grows as we add more global companies.`
-    : `Every <b>S&amp;P 500</b> company was screened for Shariah compliance — the ones that pass are scored on <b>QARP</b> (quality + value) and ranked below. Sort, filter, or tap any name for its full breakdown.`;
+    ? `<b>Global</b> names outside the S&amp;P 1500, screened for Shariah compliance — the compliant ones are scored on <b>QARP</b> (quality + value) and ranked below. This list grows as we add more global companies.`
+    : `Every company in the <b>S&amp;P 1500</b> (large, mid &amp; small cap) was screened for Shariah compliance — the ones that pass are scored on <b>QARP</b> (quality + value) and ranked below. Sort, filter, or tap any name for its full breakdown.`;
   // repopulate filters for THIS list (idempotent — keep each select's first "All" option)
   const verdSel = document.getElementById("u-verdict");
   const secSel = document.getElementById("u-sector");
@@ -1809,7 +1809,7 @@ function setSpView(view) {
     renderScorecard();
     pauseUniverseCycler();
   } else {
-    uIndex = "S&P 500";
+    uIndex = "US Equities";
     renderVerdictSummary();
     renderUniverseControls();
     renderUniverseTable();
