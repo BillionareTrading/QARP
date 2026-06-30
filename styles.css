@@ -1075,3 +1075,14 @@ tbody tr:hover { background: var(--surface-2); }
 .news-sort-btn.active { background: var(--brand); color: #fff; }
 .news-sort-btn:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
 .news-row-dot.hi { background: #b45309; box-shadow: 0 0 0 3px rgba(180,83,9,.12); }
+
+/* Method: cap-conditional weight — by-size table + calculator size picker */
+.fw-bycap .fw-captable{width:100%;border-collapse:collapse;margin:14px 0 4px;font-size:.92rem}
+.fw-bycap .fw-captable th,.fw-bycap .fw-captable td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line,#e5e7eb)}
+.fw-bycap .fw-captable th{font-weight:700;color:var(--muted,#6b7280);font-size:.74rem;text-transform:uppercase;letter-spacing:.04em}
+.fw-bycap .fw-captable tr:last-child td{border-bottom:none}
+.fw-bycap .fw-captable td:nth-child(3),.fw-bycap .fw-captable td:nth-child(4){font-variant-numeric:tabular-nums;font-weight:700}
+.fw-byex{margin-top:10px}
+.fw-sizepick{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.fw-sizelab{font-weight:600}
+.fw-size{padding:7px 10px;border:1px solid var(--line,#d1d5db);border-radius:8px;background:var(--card-bg,#fff);color:inherit;font:inherit;cursor:pointer;max-width:100%}

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=397a87d2" />
+  <link rel="stylesheet" href="styles.css?v=3ea69b75" />
 </head>
 <body>
 
@@ -378,10 +378,19 @@
       <!-- Hero: QARP + interactive calculator -->
       <div class="card fw-hero">
         <h3>QARP <span class="fw-sub">Quality At a Reasonable Price</span></h3>
-        <p class="fw-p">One <b>0–100</b> score from two inputs: <b class="fw-q">Quality</b> — how strong the business is, out of 105 — counts <b>60%</b>; <b class="fw-v">DCF value</b> — how cheap it is vs. fair value, 1 to 5 — counts <b>40%</b>. Higher is better. <span class="muted">Drag the sliders to see how they combine.</span></p>
-        <div class="fw-formula">QARP&nbsp;=&nbsp;60% × <span class="fw-q">Quality</span> &nbsp;+&nbsp; 40% × <span class="fw-v">DCF value</span></div>
+        <p class="fw-p">One <b>0–100</b> score from two inputs — <b class="fw-q">Quality</b> (how strong the business is, out of 105) and <b class="fw-v">DCF value</b> (how cheap it is vs. fair value, 1–5). Higher is better. <b>The blend isn&rsquo;t fixed — it depends on company size:</b> big companies split <b>60 / 40</b>, and the smaller a company gets, the more weight shifts onto Quality, up to <b>75 / 25</b> (the next card explains why). <span class="muted">Pick a size and drag the sliders — the same numbers score differently.</span></p>
+        <div class="fw-formula">QARP&nbsp;=&nbsp;<span id="calc-wq" class="fw-q">60%</span> × <span class="fw-q">Quality</span> &nbsp;+&nbsp; <span id="calc-wd" class="fw-v">40%</span> × <span class="fw-v">DCF value</span></div>
 
         <div class="fw-calc">
+          <div class="fw-sizepick">
+            <span class="fw-sizelab">Company size <span class="fw-hint">sets the blend</span></span>
+            <select id="calc-size" class="fw-size">
+              <option value="0.60">Large-cap · ≥ $15B · 60 / 40</option>
+              <option value="0.65">Mid-cap · $2–15B · ~65 / 35</option>
+              <option value="0.70">Small-cap · $300M–2B · ~70 / 30</option>
+              <option value="0.75">Micro-cap · &lt; $300M · 75 / 25</option>
+            </select>
+          </div>
           <div class="fw-slider">
             <div class="fw-slider-top"><span><span class="fw-q">Quality</span> <span class="fw-hint">business strength</span></span><span><b id="calc-qval">80</b> <span class="muted">/ 105</span></span></div>
             <input id="calc-quality" class="range-q" type="range" min="0" max="105" value="80" />
@@ -397,9 +406,24 @@
         </div>
       </div>
 
+      <div class="card fw-bycap">
+        <h3>How the blend changes by company size <span class="fw-sub">why a small-cap is judged differently</span></h3>
+        <p class="fw-p">Big companies are heavily analyzed, so their <b class="fw-v">DCF value</b> read is reliable and earns the full <b>40%</b>. Smaller companies are systematically lower-quality and their cash-flow forecasts are far noisier — so the weight slides toward <b class="fw-q">business quality &amp; balance-sheet strength</b> and away from the standalone value estimate. It&rsquo;s grounded in the research on size, profitability, and DCF reliability: down the size scale, <b>surviving and compounding</b> beats chasing a cheap-looking price.</p>
+        <table class="fw-captable">
+          <thead><tr><th>Company size</th><th>Market cap</th><th><span class="fw-q">Quality</span></th><th><span class="fw-v">Value</span></th></tr></thead>
+          <tbody>
+            <tr><td>Large-cap</td><td>≥ $15B</td><td>60%</td><td>40%</td></tr>
+            <tr><td>Mid-cap</td><td>$2–15B</td><td>~63–68%</td><td>~32–37%</td></tr>
+            <tr><td>Small-cap</td><td>$300M–2B</td><td>~70%</td><td>~30%</td></tr>
+            <tr><td>Micro-cap</td><td>&lt; $300M</td><td>75%</td><td>25%</td></tr>
+          </tbody>
+        </table>
+        <p class="fw-p fw-byex"><b>Same business, different score.</b> A name with Quality 78 and Value 3 scores <b>~69 (BUY)</b> as a large-cap but <b>~70</b> as a small-cap — the small-cap is rewarded more for its quality. Flip it: a cheap-but-fragile name (low quality, high value score) <b>loses ground</b> as it shrinks, because a low price no longer rescues a weak balance sheet. <span class="muted">The weight slides continuously with size; the bands here are illustrative, and large caps are unchanged from the original 60 / 40.</span></p>
+      </div>
+
       <div class="grid-2">
         <div class="card">
-          <h3><span class="fw-q">Quality</span> <span class="fw-sub">the 60% half · out of 105</span></h3>
+          <h3><span class="fw-q">Quality</span> <span class="fw-sub">the business half · 60–75%</span></h3>
           <p class="fw-p">Five sub-scores of the business, added together:</p>
           <div class="fw-dims fw-dims-1">
             <div class="fw-dim"><span class="fw-pts">25</span><div><b>Valuation</b><span>Multiples vs. own history &amp; sector</span></div></div>
@@ -410,7 +434,7 @@
           </div>
         </div>
         <div class="card">
-          <h3><span class="fw-v">DCF value</span> <span class="fw-sub">the 40% half · price score</span></h3>
+          <h3><span class="fw-v">DCF value</span> <span class="fw-sub">the price half · 25–40%</span></h3>
           <p class="fw-p">How cheap a stock is vs. an estimate of its fair value:</p>
           <div class="fw-dims fw-dims-1">
             <div class="fw-dim"><span class="fw-pts fw-dcf5">5</span><div><b>Deep value</b><span>&gt; 30% upside</span></div></div>
@@ -472,7 +496,7 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=397a87d2"></script>
-  <script src="app.js?v=397a87d2"></script>
+  <script src="crypto.js?v=3ea69b75"></script>
+  <script src="app.js?v=3ea69b75"></script>
 </body>
 </html>
