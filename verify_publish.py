@@ -18,7 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = ["styles.css", "crypto.js", "app.js"]
 SITE = "https://billionaretrading.github.io/QARP"
 UA = {"User-Agent": "Mozilla/5.0 (verify_publish)"}
-POLL_TRIES, POLL_GAP = 6, 15   # up to ~90s for Pages to propagate
+POLL_TRIES, POLL_GAP = 12, 20   # up to ~240s for Pages to propagate (avoid false FAILs on slow rebuilds)
 
 
 def _read(p):
@@ -96,6 +96,25 @@ def main():
     # 1) LOCAL: stamp must match current asset content (catches an un-re-stamped / reverted index)
     if loc != exp:
         fails.append("LOCAL stamp stale: index.html says v=%s but assets hash to v=%s -> run stamp_assets.py" % (loc, exp))
+
+    # 1b) PRE-PUBLISH GATE: the payload must not outrun the local feeds beyond the render tolerance
+    # (4 days) — catches the date-desync that drops the Times page to the generic fallback BEFORE
+    # the push, not after. refresh_site.sh runs this and aborts the publish if it fails.
+    try:
+        from datetime import date as _date
+        md = json.loads(open(os.path.join(HERE, "data.json")).read()).get("meta", {}).get("date", "")
+        bj = json.loads(open(os.path.join(HERE, "daily_brief.json")).read())
+        bd = bj.get("date", "")
+        if not (bj.get("headline") and bj.get("body_html")):
+            fails.append("LOCAL daily_brief.json missing headline/body — Times page would fall back")
+        if md and bd:
+            lag = (_date.fromisoformat(md) - _date.fromisoformat(bd)).days
+            if lag > 4:
+                fails.append("LOCAL Times column lags the payload by %dd (column %s vs payload %s) -> would show the fallback; regenerate today's column or hold the publish" % (lag, bd, md))
+    except FileNotFoundError:
+        pass
+    except Exception as e:
+        fails.append("LOCAL daily_brief.json check failed: %s" % str(e)[:60])
 
     # 2) LIVE: poll until the served site matches local, tolerating propagation lag
     if "--live" in sys.argv and not fails:
