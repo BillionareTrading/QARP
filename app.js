@@ -856,7 +856,7 @@ function renderDaily() {
   // loadDailyBrief refreshes it below. Only show the data-driven fallback when there's no fresh cache.
   let _cl = null;
   try { _cl = JSON.parse(sessionStorage.getItem("jc_lead") || "null"); } catch (e) {}
-  if (_cl && _cl.html && DATA.meta && _cl.date >= DATA.meta.date) {
+  if (_cl && _cl.html && DATA.meta && _cl.date >= asOfDate(DATA.meta.date)) {
     document.getElementById("paper-lead").innerHTML = _cl.html;
   } else if (uni.length) {
     const ups = uni.filter((x) => x.day_pct > 0).length, downs = uni.filter((x) => x.day_pct < 0).length;
@@ -937,7 +937,7 @@ async function loadDailyBrief() {
     const res = await fetch(`daily_brief.json?cb=${Date.now()}`, { cache: "no-store" });
     if (res.ok) b = await res.json();
   } catch (e) { /* fall back gracefully */ }
-  const fresh = !!(b && b.date && DATA.meta && b.date >= DATA.meta.date);
+  const fresh = !!(b && b.date && DATA.meta && b.date >= asOfDate(DATA.meta.date));
   if (fresh && b.body_html) {
     const el = document.getElementById("paper-lead");
     if (el) {
