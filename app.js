@@ -275,6 +275,17 @@ function asOfDate(iso) {
   return a < b ? a : b;
 }
 
+// Is a cloud-written column/brief recent enough to SHOW (vs the generic data-driven fallback)?
+// The cloud feeds (column, briefs, signals) can trail a freshly-priced payload by a session —
+// early in a trading day before the cloud has rewritten today's column, or across a weekend.
+// A real, dated column from yesterday beats the generic fallback every time, so tolerate up to
+// 4 calendar days of lag and label it by its own date; only fall back if it's absent or ancient.
+function leadFresh(d) {
+  if (!d || !DATA.meta) return false;
+  const lag = (new Date(asOfDate(DATA.meta.date) + "T12:00:00") - new Date(d + "T12:00:00")) / 86400000;
+  return lag <= 4;   // column at most ~4 days behind the displayed session
+}
+
 /* ---------- which index list is showing (US Equities | Global) ---------- */
 let uIndex = "US Equities";
 const uList = () => DATA.universe.filter((x) => (x.index || "US Equities") === uIndex);
@@ -856,7 +867,7 @@ function renderDaily() {
   // loadDailyBrief refreshes it below. Only show the data-driven fallback when there's no fresh cache.
   let _cl = null;
   try { _cl = JSON.parse(sessionStorage.getItem("jc_lead") || "null"); } catch (e) {}
-  if (_cl && _cl.html && DATA.meta && _cl.date >= asOfDate(DATA.meta.date)) {
+  if (_cl && _cl.html && leadFresh(_cl.date)) {
     document.getElementById("paper-lead").innerHTML = _cl.html;
   } else if (uni.length) {
     const ups = uni.filter((x) => x.day_pct > 0).length, downs = uni.filter((x) => x.day_pct < 0).length;
@@ -937,13 +948,14 @@ async function loadDailyBrief() {
     const res = await fetch(`daily_brief.json?cb=${Date.now()}`, { cache: "no-store" });
     if (res.ok) b = await res.json();
   } catch (e) { /* fall back gracefully */ }
-  const fresh = !!(b && b.date && DATA.meta && b.date >= asOfDate(DATA.meta.date));
+  const fresh = !!(b && b.date && b.body_html && leadFresh(b.date));
   if (fresh && b.body_html) {
     const el = document.getElementById("paper-lead");
     if (el) {
+      const laggy = DATA.meta && b.date < asOfDate(DATA.meta.date);   // a real column, but trailing the live session
       el.innerHTML = `<div class="lead-kicker">${esc(b.kicker || "The Market Today")}</div>`
         + `<h2 class="lead-head">${esc(b.headline || "")}</h2>`
-        + `<div class="lead-byline">By The Market Desk${b.generated_at ? " · " + esc(b.generated_at) : ""}</div>`
+        + `<div class="lead-byline">By The Market Desk${laggy ? ` · as of ${fullDayName(b.date)}’s close` : (b.generated_at ? " · " + esc(b.generated_at) : "")}</div>`
         + `<div class="lead-body">${b.body_html}</div>`;
       try { sessionStorage.setItem("jc_lead", JSON.stringify({ date: b.date, html: el.innerHTML })); } catch (e) {}
     }
