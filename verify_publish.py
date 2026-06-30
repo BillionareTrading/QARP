@@ -65,6 +65,26 @@ def _check_live(local_ver):
             fails.append("LIVE signals.json has NO relevance scores (news enrichment lost)")
     except Exception:
         pass
+    # THE TIMES front page: the daily column must be present + non-empty, and must not lag the
+    # payload beyond app.js's render tolerance (4 calendar days). If it does, the front page
+    # silently drops to the generic "Shariah universe trades mixed…" fallback — the exact
+    # regression this guard now exists to catch. Mirrors leadFresh() in app.js.
+    try:
+        from datetime import date as _date
+        try:
+            meta_date = json.loads(open(os.path.join(HERE, "data.json")).read()).get("meta", {}).get("date", "")
+        except Exception:
+            meta_date = ""
+        bj = json.loads(_fetch("daily_brief.json?cb=%d" % int(time.time())))
+        if not (bj.get("headline") and bj.get("body_html")):
+            fails.append("LIVE daily_brief.json missing headline/body — Times page falls back to the generic auto-headline")
+        bd = bj.get("date", "")
+        if meta_date and bd:
+            lag = (_date.fromisoformat(meta_date) - _date.fromisoformat(bd)).days
+            if lag > 4:
+                fails.append("LIVE Times column lags the payload by %dd (column %s vs payload %s) -> front page shows the generic fallback" % (lag, bd, meta_date))
+    except Exception as e:
+        fails.append("LIVE daily_brief.json fetch/parse failed: %s" % str(e)[:60])
     return fails
 
 
