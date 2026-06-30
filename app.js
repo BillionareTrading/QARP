@@ -2212,3 +2212,5 @@ initPortfolioSubtabs();
 initUniverseSubtabs();
 initBot();
 boot();
+
+// asset-version bump 2026-06-30: force browser refetch (Stay Informed relevance UI was cache-stale)
