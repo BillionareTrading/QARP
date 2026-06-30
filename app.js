@@ -2106,11 +2106,16 @@ function initFrameworkCalc() {
   const q = document.getElementById("calc-quality");
   const d = document.getElementById("calc-dcf");
   if (!q || !d) return;
+  const sizeEl = document.getElementById("calc-size");   // company-size -> Quality weight (60%..75%)
   const update = () => {
     const quality = +q.value, dcf = +d.value;
+    const w = sizeEl ? +sizeEl.value : 0.6;              // the cap-conditional blend, live in the calc
     document.getElementById("calc-qval").textContent = quality;
     document.getElementById("calc-dval").textContent = dcf.toFixed(1);
-    const qarp = 0.6 * (quality / 105 * 100) + 0.4 * (dcf / 5 * 100);
+    const wq = document.getElementById("calc-wq"), wd = document.getElementById("calc-wd");
+    if (wq) wq.textContent = Math.round(w * 100) + "%";
+    if (wd) wd.textContent = Math.round((1 - w) * 100) + "%";
+    const qarp = w * (quality / 105 * 100) + (1 - w) * (dcf / 5 * 100);
     document.getElementById("calc-qarp").textContent = qarp.toFixed(1);
     const v = verdictForScore(qarp);
     const vb = document.getElementById("calc-verdict");
@@ -2119,6 +2124,7 @@ function initFrameworkCalc() {
   };
   q.addEventListener("input", update);
   d.addEventListener("input", update);
+  if (sizeEl) sizeEl.addEventListener("change", update);
   update();
 }
 
