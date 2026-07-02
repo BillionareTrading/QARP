@@ -496,6 +496,12 @@ tbody tr:hover { background: var(--surface-2); }
 .div-rate { font-weight: 600; white-space: nowrap; }
 .div-unit { color: var(--ink-3); font-size: 10px; font-weight: 400; }
 .div-yld { display: block; font-size: 10.5px; color: var(--ink-3); margin-top: 1px; }
+/* trailing → forward P/E cell (auditability of the cyclical trailing/fwd distortion) */
+.pe-cell { font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pe-arrow { color: var(--ink-3); font-weight: 400; margin: 0 3px; }
+.pe-cell.pe-cheapen { color: var(--pos); }   /* forward much cheaper — earnings surge (trough) */
+.pe-cell.pe-richen { color: var(--neg); }    /* forward richer — earnings expected to fall (peak) */
+.pe-cyc { color: var(--brand); font-size: 11px; cursor: help; }
 .sc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 @media (min-width: 760px) { .sc-grid { grid-template-columns: repeat(4, 1fr); } }
 .sc-card { background: #fff; border: 1px solid var(--line, #e8edf3); border-radius: 12px; padding: 14px; }

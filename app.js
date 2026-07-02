@@ -26,6 +26,7 @@ function verdictBadge(v) {
 const TIPS = {
   qarp: { t: "QARP", d: "Quality At a Reasonable Price — a 0–100 score blending business quality (60%) with value/DCF (40%). Higher is better; 72+ is a Strong Buy. See the Framework tab for the full method." },
   dcf: { t: "DCF score (1–5)", d: "How cheap the stock is vs. an estimate of its fair value. 5 = deep value (>30% upside), 3 = fairly priced, 1 = expensive." },
+  pe: { t: "P/E — trailing → forward", d: "Price ÷ earnings on the last 12 months (trailing) vs. the next 12 months' estimate (forward). Shown side by side so the trailing-vs-forward gap is visible at a glance. A big drop (e.g. 23 → 7) means earnings are expected to surge — trailing understates how cheap it is; a rise means earnings are expected to fall. ↻ marks a CYCLICAL: for those, the DCF is anchored on forward / through-cycle earnings, not the distorted trailing number. N/A = no positive earnings on that basis (a loss). Not part of the QARP score — a read-through for auditing the valuation." },
   mech: { t: "Quality (out of 105)", d: "The quality half of QARP — the sum of five dimensions: Valuation, Growth, Moat & Returns, Balance Sheet, and Capital Allocation." },
   verdict: { t: "Verdict", d: "The QARP score turned into a call: ≥85 Strongest, ≥72 Strong Buy, ≥66 Buy, ≥60 Hold-Qual, 35–59 Avoid, <35 Strong Avoid." },
   gate: { t: "Momentum gate", d: "Value decides WHAT to buy; the tape decides WHEN. GO = price above its 50-day average (uptrend — a Buy verdict is actionable). TURN = reclaimed the 20-day but still under the 50-day (bottoming attempt, early). WAIT = below both — the knife is still falling; the verdict stands but acting on it means fighting the tape. Kept beside QARP, never mixed into the score." },
@@ -333,6 +334,22 @@ function sectorGroup(s) {
   return s || "—"; // fallback: show the raw sector if a future build adds one we don't map yet
 }
 
+/* ---------- P/E cell: trailing → forward, with the distortion flagged ---------- */
+function peCell(x) {
+  const t = x.trailing_pe, f = x.forward_pe;
+  if (t == null && f == null) return `<span class="muted">N/A</span>`;
+  const tStr = t != null ? fmtNum(t, 1) : "—";
+  const fStr = f != null ? fmtNum(f, 1) : "—";
+  let cls = "";
+  if (t != null && f != null) {
+    if (f < t * 0.7) cls = "pe-cheapen";      // forward much cheaper — earnings surge (e.g. MU 23→7)
+    else if (f > t * 1.3) cls = "pe-richen";  // forward richer — earnings expected to fall (peak risk)
+  }
+  const cyc = x.cyclical
+    ? ` <span class="pe-cyc" title="Cyclical — DCF anchored on forward, not trailing">↻</span>` : "";
+  return `<span class="pe-cell ${cls}">${tStr}<span class="pe-arrow">→</span>${fStr}</span>${cyc}`;
+}
+
 /* ---------- render: Universe table ---------- */
 const U_COLS = [
   { key: "rank", label: "#", align: "left", fmt: (x) => `<span class="muted">${x.rank}</span>` },
@@ -346,6 +363,8 @@ const U_COLS = [
     sortVal: (x) => x.div_yield || 0 },
   { key: "qarp", label: "QARP", fmt: (x) => `<span class="qarp-cell">${fmtNum(x.qarp, 1)}</span>` },
   { key: "dcf", label: "DCF", fmt: (x) => fmtNum(x.dcf, 1) },
+  { key: "pe", label: "P/E t→f", align: "left", fmt: (x) => peCell(x),
+    sortVal: (x) => (x.forward_pe != null ? x.forward_pe : (x.trailing_pe != null ? x.trailing_pe : 1e6)) },
   { key: "mech", label: "Q /105", fmt: (x) => x.mech },
   { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
   { key: "gate", label: "Gate", fmt: (x) => momGate(x),
@@ -530,6 +549,12 @@ function openDrawer(ticker) {
   const has = (v) => v != null && v !== "";
   const kv = [];
   if (has(d.gf_value)) kv.push(["GF Value", fmtUSD(d.gf_value, 2)]);
+  if (has(d.trailing_pe) || has(d.forward_pe)) {
+    const t = has(d.trailing_pe) ? fmtNum(d.trailing_pe, 1) : "—";
+    const f = has(d.forward_pe) ? fmtNum(d.forward_pe, 1) : "—";
+    const tag = d.cyclical ? ` <span class="pe-cyc" title="Cyclical — DCF anchored on forward earnings, not trailing">↻ cyclical</span>` : "";
+    kv.push(["P/E (trailing → forward)", `${t} → ${f}${tag}`]);
+  }
   if (has(d.mktcap_b)) kv.push(["Market cap", "$" + fmtNum(d.mktcap_b, 1) + "B"]);
   if (has(d.shariah_grade)) kv.push(["Shariah (Musaffa)", d.shariah_grade]);
   if (has(d.confidence)) kv.push(["Confidence", d.confidence]);
