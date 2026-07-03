@@ -1401,6 +1401,12 @@ function nyParts() {
 function marketOpenNow() {
   const p = nyParts();
   if (p.weekday === "Sat" || p.weekday === "Sun") return false;
+  // NYSE holiday (full close) — reuse the same set that rolls the "as of" date back. Without
+  // this, a WEEKDAY holiday during market hours (e.g. Fri Jul 3 2026, observed Independence Day)
+  // reads as "live". Compute today's ET date and check it against the holiday calendar.
+  const etIso = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York",
+    year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  if (NYSE_HOLIDAYS.has(etIso)) return false;
   let h = parseInt(p.hour, 10); if (h === 24) h = 0;
   const mins = h * 60 + parseInt(p.minute, 10);
   return mins >= 570 && mins < 960; // 9:30 .. 16:00 ET
