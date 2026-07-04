@@ -2137,29 +2137,43 @@ function verdictForScore(q) {
     : q >= 60 ? "HOLD-QUAL" : q >= 35 ? "AVOID" : "STRONG AVOID";
 }
 function initFrameworkCalc() {
-  const q = document.getElementById("calc-quality");
-  const d = document.getElementById("calc-dcf");
-  if (!q || !d) return;
-  const sizeEl = document.getElementById("calc-size");   // company-size -> Quality weight (60%..75%)
+  const size = document.getElementById("c-size");
+  const qual = document.getElementById("c-qual");
+  const dcf = document.getElementById("c-dcf");
+  if (!qual || !dcf) return;
+  const qv = document.getElementById("c-qv"), dv = document.getElementById("c-dv");
+  const out = document.getElementById("c-out"), vb = document.getElementById("c-vb");
+  // verdict bands with their live badge colours (match the site's verdict palette)
+  const BANDS = [[85, "STRONGEST", "#0e7a4f"], [72, "STRONG BUY", "#16a34a"], [66, "BUY", "#0891b2"],
+                 [60, "HOLD-QUAL", "#b45309"], [35, "AVOID", "#64748b"], [0, "STRONG AVOID", "#be123c"]];
   const update = () => {
-    const quality = +q.value, dcf = +d.value;
-    const w = sizeEl ? +sizeEl.value : 0.6;              // the cap-conditional blend, live in the calc
-    document.getElementById("calc-qval").textContent = quality;
-    document.getElementById("calc-dval").textContent = dcf.toFixed(1);
-    const wq = document.getElementById("calc-wq"), wd = document.getElementById("calc-wd");
-    if (wq) wq.textContent = Math.round(w * 100) + "%";
-    if (wd) wd.textContent = Math.round((1 - w) * 100) + "%";
-    const qarp = w * (quality / 105 * 100) + (1 - w) * (dcf / 5 * 100);
-    document.getElementById("calc-qarp").textContent = qarp.toFixed(1);
-    const v = verdictForScore(qarp);
-    const vb = document.getElementById("calc-verdict");
-    vb.textContent = v;
-    vb.className = "badge " + verdictSlug(v);
+    const Q = +qual.value, D = +dcf.value, w = size ? +size.value : 0.6;  // cap-conditional blend
+    qv.textContent = Q; dv.textContent = D.toFixed(1);
+    const qarp = w * (Q / 105 * 100) + (1 - w) * (D / 5 * 100);
+    out.textContent = qarp.toFixed(1);
+    const b = BANDS.find((x) => qarp >= x[0]) || BANDS[BANDS.length - 1];
+    vb.textContent = b[1]; vb.style.background = b[2];
   };
-  q.addEventListener("input", update);
-  d.addEventListener("input", update);
-  if (sizeEl) sizeEl.addEventListener("change", update);
+  qual.addEventListener("input", update);
+  dcf.addEventListener("input", update);
+  if (size) size.addEventListener("change", update);
   update();
+
+  // Scroll-reveal for the report sections. IntersectionObserver handles the on-scroll
+  // stagger; a tab-open fallback force-reveals everything so the panel can NEVER render
+  // blank if the observer misses (e.g. elements were display:none while the tab was hidden).
+  const els = document.querySelectorAll(".qm .reveal");
+  const revealAll = () => els.forEach((el) => el.classList.add("in"));
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    els.forEach((el) => io.observe(el));
+    const tabBtn = document.querySelector('[data-tab="framework"]');
+    if (tabBtn) tabBtn.addEventListener("click", () => setTimeout(revealAll, 80));
+  } else {
+    revealAll();
+  }
 }
 
 /* ---------- Ask-the-bot chat (Claude via the Cloudflare Worker proxy) ---------- */
