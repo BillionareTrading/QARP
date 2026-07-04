@@ -24,6 +24,7 @@ Run after every data.json refresh:  python3 encrypt_data.py
 
 import base64
 import getpass
+import gzip
 import json
 import os
 import sys
@@ -95,7 +96,11 @@ def main() -> None:
     fk = load_finnhub_key()
     if fk:
         data.setdefault("meta", {})["finnhub_key"] = fk
-    plaintext = json.dumps(data, separators=(",", ":")).encode("utf-8")
+    # v2: gzip before encrypting — the payload carries full company profiles now, and
+    # compressed JSON is ~3-4x smaller. crypto.js auto-detects: decrypted bytes starting
+    # with the gzip magic (0x1f 0x8b) are inflated first; old v1 payloads (raw JSON,
+    # starts with '{') still parse, so the transition is backward-compatible.
+    plaintext = gzip.compress(json.dumps(data, separators=(",", ":")).encode("utf-8"), 6)
 
     password = get_password().encode("utf-8")
     salt = os.urandom(16)
@@ -107,7 +112,7 @@ def main() -> None:
     ciphertext = AESGCM(key).encrypt(iv, plaintext, None)  # returns ct||tag
 
     payload = {
-        "v": 1,
+        "v": 2,   # v2 = plaintext is gzipped JSON (crypto.js sniffs the gzip magic)
         "kdf": "PBKDF2-SHA256",
         "iterations": ITERATIONS,
         "cipher": "AES-256-GCM",

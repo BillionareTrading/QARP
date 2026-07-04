@@ -40,5 +40,12 @@ async function decryptPayload(payload, password) {
 
   // Throws OperationError if the auth tag fails (wrong password / tampered data).
   const plainBuf = await crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, key, ct);
+  const u8 = new Uint8Array(plainBuf);
+  // v2 payloads are gzipped JSON (encrypt_data.py compresses before encrypting).
+  // Sniff the gzip magic bytes so v1 (raw JSON, starts with '{') keeps working.
+  if (u8[0] === 0x1f && u8[1] === 0x8b) {
+    const stream = new Blob([u8]).stream().pipeThrough(new DecompressionStream("gzip"));
+    return JSON.parse(await new Response(stream).text());
+  }
   return JSON.parse(new TextDecoder().decode(plainBuf));
 }
