@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-03",
-  "generated_at": "Jul 3, 6:19pm ET",
+  "date": "2026-07-04",
+  "generated_at": "Jul 4, 4:15am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -69,14 +69,6 @@
       "src": "Benzinga earnings calendar"
     },
     {
-      "when": "Jun 12",
-      "what": "KO — Bernstein initiates coverage",
-      "affects": "KO",
-      "dir": "two-sided",
-      "why": "Now rated <b>Market Perform</b>, PT $84.",
-      "src": "Benzinga ratings"
-    },
-    {
       "when": "Live geopolitical",
       "what": "Energy & the Strait of Hormuz",
       "why": "As vessels transit the Strait of Hormuz under a UN evacuation program. Also, President Trump said he has ordered a DOJ investigation into retail fuel price gouging, which may lead to lower margins going forward.",
@@ -139,62 +131,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-06-26",
-      "ticker": "NKE",
-      "firm": "Deutsche Bank",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$43",
-      "price": 44.09,
-      "upside": -2.5,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-06-26",
-      "ticker": "JNJ",
-      "firm": "Guggenheim",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$270",
-      "price": 263.04,
-      "upside": 2.6,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-06-26",
-      "ticker": "NKE",
-      "firm": "Oppenheimer",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$60",
-      "price": 44.09,
-      "upside": 36.1,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-06-26",
-      "ticker": "NKE",
-      "firm": "Keybanc",
-      "action": "Downgrades",
-      "rating": "Sector Weight",
-      "stance": "neutral",
-      "pt": "",
-      "price": 44.09,
-      "upside": null,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
     {
       "date": "2026-06-29",
       "ticker": "CVX",
@@ -477,6 +413,33 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "Trump Administration Ramps Up Pressure on Oil Industry As Federal Agencies Push States to Investigate Elevated Gas Prices",
+      "url": "https://www.benzinga.com/news/politics/26/07/60268134/trump-administration-ramps-up-pressure-on-oil-industry-as-federal-agencies-push-states-to-investigate-elevated-gas-prices",
+      "ts": 1783137939,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.323
+    },
+    {
+      "title": "Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom 250 Initiative",
+      "url": "https://www.benzinga.com/news/politics/26/07/60268100/trump-faces-new-questions-as-report-says-boeing-lockheed-palantir-and-other-federal-contractors-supported-both-america250-and-his-freedom-250-initiative",
+      "ts": 1783132685,
+      "tickers": [
+        "LMT",
+        "PLTR",
+        "RTX",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.237
+    },
     {
       "title": "$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today",
       "url": "https://www.benzinga.com/news/26/07/60267783/100-invested-mcdonald-s-20-years-ago-would-be-worth-much-today",
@@ -779,32 +742,6 @@
       "wiim": true,
       "rel": false,
       "relevance": 0.368
-    },
-    {
-      "title": "'JPMorgan Loses Battle Over Charlie Javice’s Legal Expenses' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60257739/jpmorgan-loses-battle-over-charlie-javice-s-legal-expenses-bloomberg",
-      "ts": 1783020065,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.23
-    },
-    {
-      "title": "Blue Owl Records $4.7 Billion In Redemption Requests As Private Credit Pressure Lingers",
-      "url": "https://www.benzinga.com/markets/private-markets/26/07/60256219/blue-owl-records-4-7-billion-in-redemption-requests-as-private-credit-pressure-lingers",
-      "ts": 1783017167,
-      "tickers": [
-        "OWL",
-        "GS",
-        "APO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.298
     },
     {
       "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
@@ -1315,7 +1252,7 @@
           "date": "2026-05-05",
           "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm"
         },
-        "insider30d": 5
+        "insider30d": 4
       },
       "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
