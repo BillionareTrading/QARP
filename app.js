@@ -548,6 +548,10 @@ function openDrawer(ticker) {
   ];
   const has = (v) => v != null && v !== "";
   const kv = [];
+  const ab = d.about || (p && p.about) || null;   // sourced company profile (build-time, Yahoo)
+  if (ab && has(ab.industry)) kv.push(["Industry", esc(ab.industry)]);
+  if (ab && has(ab.emp)) kv.push(["Employees", Number(ab.emp).toLocaleString("en-US")]);
+  if (ab && has(ab.web)) kv.push(["Website", `<a href="${safeUrl(ab.web)}" target="_blank" rel="noopener">${esc(String(ab.web).replace(/^https?:\/\//, ""))}</a>`]);
   if (has(d.gf_value)) kv.push(["GF Value", fmtUSD(d.gf_value, 2)]);
   if (has(d.trailing_pe) || has(d.forward_pe)) {
     const t = has(d.trailing_pe) ? fmtNum(d.trailing_pe, 1) : "—";
@@ -588,6 +592,7 @@ function openDrawer(ticker) {
       <div class="dim"><div class="dl">${l}</div><div class="dv">${has(v) ? v : "—"}<span class="muted" style="font-size:12px;font-weight:500"> /${m}</span></div>
       <div class="dbar"><div class="dfill" style="width:${has(v) ? (v / m * 100).toFixed(0) : 0}%"></div></div></div>`).join("")}</div>` : ""}
     ${kv.length ? `<div class="kv">${kv.map(([k, v]) => `<span class="k">${k}</span><span class="vv">${v}</span>`).join("")}</div>` : ""}
+    ${ab && ab.desc ? `<h4>What the company does</h4><div class="dcf-note">${esc(ab.desc)}</div>` : ""}
     ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${d.dcf_note}</div>` : ""}
     ${bzHoldingNewsHtml(ticker)}
     <section id="drawer-pulse" class="drawer-pulse"></section>
