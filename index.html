@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=ea0aa2d2" />
+  <link rel="stylesheet" href="styles.css?v=f06b4275" />
 </head>
 <body>
 
@@ -370,104 +370,266 @@
 
     <!-- Method: goal + framework (moved off the landing page) -->
     <section id="tab-framework" class="tabpanel">
-      <div class="card fw-goal">
-        <h3>The goal</h3>
-        <p class="fw-lead">To navigate the US stock market with <b>knowledge instead of guesswork</b> — staying deeply informed, sidestepping overpriced names, and putting <b>capital preservation first</b>. Every stock is screened for Shariah compliance, then scored on its <b class="fw-q">quality</b> and its <b class="fw-v">price</b>. Below is the framework that turns that discipline into a single number.</p>
+<div class="qm">
+<article class="sheet">
+
+  <!-- ===== MASTHEAD ===== -->
+  <div class="eyebrow">Jaleel Capital · A Special Report</div>
+  <div class="mast-rule"></div>
+  <h1 class="nameplate">The <em>QARP</em> Method</h1>
+  <p class="motto">Quality At a Reasonable Price — how a Shariah-compliant equity desk turns judgment into a single, honest number.</p>
+  <div class="mast-double"></div>
+  <div class="folio">
+    <span>Method Edition</span>
+    <span class="mid">A plain-language guide to everything under the score</span>
+    <span>Capital Preservation First</span>
+  </div>
+
+  <!-- ===== LEDE ===== -->
+  <section class="lede reveal">
+    <h2 class="lede-h">One number, two questions: is the business good, and is the price fair?</h2>
+    <div class="lede-body">
+      <p>Every company we follow runs the same gauntlet. First a hard gate — is it permissible to own at all? Then two independent readings: how <b>strong</b> the business is, and how <b>cheap</b> it trades against what it is worth. QARP fuses those two into a 0–100 score and a plain verdict, from <b>Strongest</b> to <b>Strong Avoid</b>.</p>
+      <p>The discipline is deliberately conservative. A great company at a punchy price is not a buy; a mediocre one at a giveaway price rarely is either. We would rather miss a winner than lose capital on a value trap — so the method is built to be <b>harder to please than the crowd</b>, and to say exactly why on every name.</p>
+    </div>
+  </section>
+
+  <!-- ===== EQUATION + CALCULATOR ===== -->
+  <section class="sec reveal">
+    <div class="kicker">The whole method, in one line</div>
+    <h2>QARP <span class="v">=</span> weighted blend of <span class="q">Quality</span> and <span class="v">Price</span></h2>
+    <div class="equation">
+      QARP = <span class="w">w</span> · <span class="q">Quality</span> <span style="color:var(--ink-3)">(/105 → %)</span> &nbsp;+&nbsp; <span class="w wv">1−w</span> · <span class="v">DCF value</span> <span style="color:var(--ink-3)">(/5 → %)</span>
+    </div>
+    <p class="dek" style="margin-left:auto;margin-right:auto;text-align:center;">The weight <b>w</b> isn't fixed — it depends on company size (big caps 60/40, sliding to 75/25 for the smallest). Set a size and drag the two sliders; the same business scores differently.</p>
+
+    <div class="calc">
+      <div class="calc-row">
+        <label>Company size <span class="hint">sets the blend, w</span></label>
+        <select id="c-size">
+          <option value="0.60">Large-cap · ≥ $15B · 60 / 40</option>
+          <option value="0.65">Mid-cap · $2–15B · ~65 / 35</option>
+          <option value="0.70">Small-cap · $300M–2B · ~70 / 30</option>
+          <option value="0.75">Micro-cap · &lt; $300M · 75 / 25</option>
+        </select>
       </div>
-
-      <!-- Hero: QARP + interactive calculator -->
-      <div class="card fw-hero">
-        <h3>QARP <span class="fw-sub">Quality At a Reasonable Price</span></h3>
-        <p class="fw-p">One <b>0–100</b> score from two inputs — <b class="fw-q">Quality</b> (how strong the business is, out of 105) and <b class="fw-v">DCF value</b> (how cheap it is vs. fair value, 1–5). Higher is better. <b>The blend isn&rsquo;t fixed — it depends on company size:</b> big companies split <b>60 / 40</b>, and the smaller a company gets, the more weight shifts onto Quality, up to <b>75 / 25</b> (the next card explains why). <span class="muted">Pick a size and drag the sliders — the same numbers score differently.</span></p>
-        <div class="fw-formula">QARP&nbsp;=&nbsp;<span id="calc-wq" class="fw-q">60%</span> × <span class="fw-q">Quality</span> &nbsp;+&nbsp; <span id="calc-wd" class="fw-v">40%</span> × <span class="fw-v">DCF value</span></div>
-
-        <div class="fw-calc">
-          <div class="fw-sizepick">
-            <span class="fw-sizelab">Company size <span class="fw-hint">sets the blend</span></span>
-            <select id="calc-size" class="fw-size">
-              <option value="0.60">Large-cap · ≥ $15B · 60 / 40</option>
-              <option value="0.65">Mid-cap · $2–15B · ~65 / 35</option>
-              <option value="0.70">Small-cap · $300M–2B · ~70 / 30</option>
-              <option value="0.75">Micro-cap · &lt; $300M · 75 / 25</option>
-            </select>
-          </div>
-          <div class="fw-slider">
-            <div class="fw-slider-top"><span><span class="fw-q">Quality</span> <span class="fw-hint">business strength</span></span><span><b id="calc-qval">80</b> <span class="muted">/ 105</span></span></div>
-            <input id="calc-quality" class="range-q" type="range" min="0" max="105" value="80" />
-          </div>
-          <div class="fw-slider">
-            <div class="fw-slider-top"><span><span class="fw-v">DCF value</span> <span class="fw-hint">cheap vs. fair value</span></span><span><b id="calc-dval">3.0</b> <span class="muted">/ 5</span></span></div>
-            <input id="calc-dcf" class="range-v" type="range" min="1" max="5" step="0.1" value="3" />
-          </div>
-          <div class="fw-calc-out">
-            <div><span class="fw-calc-cap">Resulting QARP</span><span id="calc-qarp" class="fw-calc-num">76.2</span></div>
-            <span id="calc-verdict" class="badge v-strongbuy">STRONG BUY</span>
-          </div>
-        </div>
+      <div class="calc-row">
+        <label><span>Quality <span class="hint">business strength</span></span><span class="val"><b id="c-qv">80</b> / 105</span></label>
+        <input id="c-qual" type="range" min="0" max="105" value="80">
       </div>
-
-      <div class="card fw-bycap">
-        <h3>How the blend changes by company size <span class="fw-sub">why a small-cap is judged differently</span></h3>
-        <p class="fw-p">Big companies are heavily analyzed, so their <b class="fw-v">DCF value</b> read is reliable and earns the full <b>40%</b>. Smaller companies are systematically lower-quality and their cash-flow forecasts are far noisier — so the weight slides toward <b class="fw-q">business quality &amp; balance-sheet strength</b> and away from the standalone value estimate. It&rsquo;s grounded in the research on size, profitability, and DCF reliability: down the size scale, <b>surviving and compounding</b> beats chasing a cheap-looking price.</p>
-        <table class="fw-captable">
-          <thead><tr><th>Company size</th><th>Market cap</th><th><span class="fw-q">Quality</span></th><th><span class="fw-v">Value</span></th></tr></thead>
-          <tbody>
-            <tr><td>Large-cap</td><td>≥ $15B</td><td>60%</td><td>40%</td></tr>
-            <tr><td>Mid-cap</td><td>$2–15B</td><td>~63–68%</td><td>~32–37%</td></tr>
-            <tr><td>Small-cap</td><td>$300M–2B</td><td>~70%</td><td>~30%</td></tr>
-            <tr><td>Micro-cap</td><td>&lt; $300M</td><td>75%</td><td>25%</td></tr>
-          </tbody>
-        </table>
-        <p class="fw-p fw-byex"><b>Same business, different score.</b> A name with Quality 78 and Value 3 scores <b>~69 (BUY)</b> as a large-cap but <b>~70</b> as a small-cap — the small-cap is rewarded more for its quality. Flip it: a cheap-but-fragile name (low quality, high value score) <b>loses ground</b> as it shrinks, because a low price no longer rescues a weak balance sheet. <span class="muted">The weight slides continuously with size; the bands here are illustrative, and large caps are unchanged from the original 60 / 40.</span></p>
+      <div class="calc-row">
+        <label><span>DCF value <span class="hint">cheap vs. fair value</span></span><span class="val"><b id="c-dv">3.0</b> / 5</span></label>
+        <input id="c-dcf" type="range" min="1" max="5" step="0.1" value="3">
       </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3><span class="fw-q">Quality</span> <span class="fw-sub">the business half · 60–75%</span></h3>
-          <p class="fw-p">Five sub-scores of the business, added together:</p>
-          <div class="fw-dims fw-dims-1">
-            <div class="fw-dim"><span class="fw-pts">25</span><div><b>Valuation</b><span>Multiples vs. own history &amp; sector</span></div></div>
-            <div class="fw-dim"><span class="fw-pts">20</span><div><b>Growth</b><span>Revenue &amp; earnings trajectory</span></div></div>
-            <div class="fw-dim"><span class="fw-pts">20</span><div><b>Moat &amp; Returns</b><span>Margins, returns on capital, moat</span></div></div>
-            <div class="fw-dim"><span class="fw-pts">20</span><div><b>Balance Sheet</b><span>Debt, cash, financial strength</span></div></div>
-            <div class="fw-dim"><span class="fw-pts">20</span><div><b>Capital Allocation</b><span>Buybacks, dividends, insider buying</span></div></div>
-          </div>
-        </div>
-        <div class="card">
-          <h3><span class="fw-v">DCF value</span> <span class="fw-sub">the price half · 25–40%</span></h3>
-          <p class="fw-p">How cheap a stock is vs. an estimate of its fair value:</p>
-          <div class="fw-dims fw-dims-1">
-            <div class="fw-dim"><span class="fw-pts fw-dcf5">5</span><div><b>Deep value</b><span>&gt; 30% upside</span></div></div>
-            <div class="fw-dim"><span class="fw-pts fw-dcf4">4</span><div><b>Undervalued</b><span>+15% to +30%</span></div></div>
-            <div class="fw-dim"><span class="fw-pts fw-dcf3">3</span><div><b>Fairly priced</b><span>−10% to +15%</span></div></div>
-            <div class="fw-dim"><span class="fw-pts fw-dcf2">2</span><div><b>Overvalued</b><span>10–30% rich</span></div></div>
-            <div class="fw-dim"><span class="fw-pts fw-dcf1">1</span><div><b>Expensive</b><span>&gt; 30% rich</span></div></div>
-          </div>
-        </div>
+      <div class="calc-out">
+        <div><div class="lab">Resulting QARP</div><span class="num" id="c-out">76.2</span></div>
+        <span class="vbadge" id="c-vb">STRONG BUY</span>
       </div>
+    </div>
+  </section>
 
-      <div class="card">
-        <h3>The Shariah screen <span class="fw-sub">the first gate · pass / fail</span></h3>
-        <p class="fw-p">Every name must pass an <b>AAOIFI-standard</b> screen before it's ever scored — verified via <b>Musaffa</b> and confirmed by <b>Muslim Xchange</b> (the stricter view wins). A non-compliant company gets <b>no QARP score</b> and is excluded.</p>
-        <ul class="fw-list">
-          <li>Permissible core business (no interest/lending, alcohol, tobacco, pork, gambling, adult content, weapons)</li>
-          <li>Impermissible income &lt; 5% of revenue</li>
-          <li>Interest-bearing debt &lt; 30% of market cap</li>
-          <li>Interest-bearing cash &amp; securities &lt; 30% of market cap</li>
+  <!-- ===== PIPELINE ===== -->
+  <section class="sec reveal">
+    <div class="kicker">How a stock moves through the desk</div>
+    <h2>The pipeline, end to end</h2>
+    <div class="pipe">
+      <div class="step"><div class="rn">I</div><div class="st-h">The Screen</div><div class="st-p">Shariah gate — pass or fail. Fail and it's excluded, unscored.</div></div>
+      <div class="step"><div class="rn">II</div><div class="st-h">Quality</div><div class="st-p">Five pillars of business strength, summed to 105.</div></div>
+      <div class="step"><div class="rn">III</div><div class="st-h">Price</div><div class="st-p">A 1–5 DCF value score — cheap or dear vs. fair value.</div></div>
+      <div class="step"><div class="rn">IV</div><div class="st-h">The Blend</div><div class="st-p">Weighted by size into one 0–100 number.</div></div>
+      <div class="step"><div class="rn">V</div><div class="st-h">The Verdict</div><div class="st-p">Strongest → Strong Avoid, re-checked daily on price.</div></div>
+    </div>
+  </section>
+
+  <!-- ===== I. SHARIAH ===== -->
+  <section class="sec reveal">
+    <div class="sec-head"><span class="numeral">I</span><div><div class="kicker">The first gate · pass / fail</div><h2>The Shariah screen</h2></div></div>
+    <div class="cols">
+      <div class="lead-in">
+        <p class="dek">Before a company is ever scored, it must clear an <b>AAOIFI-standard</b> screen — verified through <b>Musaffa</b> and cross-checked against <b>Muslim Xchange</b>, with the <b>stricter view winning</b> any disagreement. A name that fails gets no QARP score and never enters the ranking. This gate is absolute: no quality or price can buy a way past it.</p>
+        <p class="dek">A handful of names are held to a stricter standard than the screeners themselves, by house policy — permanently excluded even where a provider would pass them.</p>
+      </div>
+      <div class="panel">
+        <h4>The four tests</h4>
+        <ul class="crit">
+          <li>Permissible core business — no interest/lending, alcohol, tobacco, pork, gambling, adult content, or weapons</li>
+          <li>Impermissible income under <b>5%</b> of revenue</li>
+          <li>Interest-bearing debt under <b>30%</b> of market cap</li>
+          <li>Interest-bearing cash &amp; securities under <b>30%</b> of market cap</li>
         </ul>
       </div>
+    </div>
+  </section>
 
-      <div class="fw-legend">
-        <span class="fw-legend-label">Verdict bands</span>
-        <span class="badge v-strongest">STRONGEST ≥85</span>
-        <span class="badge v-strongbuy">STRONG BUY ≥72</span>
-        <span class="badge v-buy">BUY ≥66</span>
-        <span class="badge v-holdqual">HOLD-QUAL ≥60</span>
-        <span class="badge v-avoid">AVOID 35–59</span>
-        <span class="badge v-strongavoid">STRONG AVOID &lt;35</span>
+  <!-- ===== II. QUALITY ===== -->
+  <section class="sec reveal">
+    <div class="sec-head"><span class="numeral">II</span><div><div class="kicker">The business half · 60–75% of the score</div><h2><span class="q">Quality</span> — how strong the business is</h2></div></div>
+    <p class="dek">Five sub-scores, hand-assigned and summed to <b>105</b>. This is the half that <i>doesn't</i> move with the daily price — it's a read on the enterprise itself: what it earns, how well it's defended, and how honestly it's run.</p>
+    <div class="pillars">
+      <div class="pillar" style="flex:25;background:#16244e"><span class="pts">25</span><span class="pn">Valuation</span></div>
+      <div class="pillar" style="flex:20;background:#22356b"><span class="pts">20</span><span class="pn">Growth</span></div>
+      <div class="pillar" style="flex:20;background:#2c3f77"><span class="pts">20</span><span class="pn">Moat &amp; Returns</span></div>
+      <div class="pillar" style="flex:20;background:#374a84"><span class="pts">20</span><span class="pn">Balance Sheet</span></div>
+      <div class="pillar" style="flex:20;background:#445591"><span class="pts">20</span><span class="pn">Capital Alloc.</span></div>
+    </div>
+    <div class="pdesc">
+      <div><b>Valuation (25)</b> — multiples vs. the company's own history and its sector</div>
+      <div><b>Growth (20)</b> — the revenue and earnings trajectory</div>
+      <div><b>Moat &amp; Returns (20)</b> — margins, returns on capital, durability of the edge</div>
+      <div><b>Balance Sheet (20)</b> — debt, cash, financial resilience</div>
+      <div><b>Capital Allocation (20)</b> — buybacks, dividends, and insider buying</div>
+    </div>
+  </section>
+
+  <!-- ===== III. PRICE / DCF ===== -->
+  <section class="sec reveal">
+    <div class="sec-head"><span class="numeral">III</span><div><div class="kicker">The price half · 25–40% of the score</div><h2><span class="v">Price</span> — the DCF value score, 1 to 5</h2></div></div>
+    <p class="dek">One number for a single question: how cheap is the stock against an estimate of its <b>fair value</b>? We don't trust any one model. We <b>triangulate three</b> — an intrinsic DCF (AlphaSpread), the analyst consensus target, and a fair-value cross-check (GuruFocus) — and let the <b>most conservative leg win</b>. A first-time score is capped at 4, never 5.</p>
+
+    <div class="cols">
+      <table class="dt">
+        <thead><tr><th>Score</th><th>Reads as</th><th>Upside vs. fair value</th></tr></thead>
+        <tbody>
+          <tr><td><span class="dot" style="background:var(--vg)"></span><b>5</b></td><td>Deep value</td><td class="num">&gt; +30%</td></tr>
+          <tr><td><span class="dot" style="background:var(--vb)"></span><b>4</b></td><td>Undervalued</td><td class="num">+15% … +30%</td></tr>
+          <tr><td><span class="dot" style="background:var(--va)"></span><b>3</b></td><td>Fairly priced</td><td class="num">−10% … +15%</td></tr>
+          <tr><td><span class="dot" style="background:var(--vn)"></span><b>2</b></td><td>Overvalued</td><td class="num">−10% … −30%</td></tr>
+          <tr><td><span class="dot" style="background:var(--vr)"></span><b>1</b></td><td>Expensive</td><td class="num">&gt; −30%</td></tr>
+        </tbody>
+      </table>
+      <div class="panel">
+        <h4>Why three sources, not one</h4>
+        <p style="font-size:13px;color:var(--ink-2);line-height:1.55;margin:0;">A DCF is only as good as its assumptions. An intrinsic model can miss a re-rating; an analyst can be a cheerleader; a fair-value engine can anchor on a lost multiple. Reading all three and <b style="color:var(--ink)">taking the stricter answer</b> is how the score stays honest when they disagree — which is exactly when a single model is most dangerous.</p>
       </div>
+    </div>
 
-      <p class="fw-foot">Informational analysis, not investment advice. Scores are a snapshot at the stated date and price — a name can be a buy when cheap and an avoid after it runs up.</p>
+    <div class="kicker" style="margin-top:24px">New this edition · the two-P/E lens</div>
+    <h3 style="font-family:var(--serif);font-weight:700;font-size:20px;color:var(--ink);margin:4px 0 6px;">A single P/E lies about a cyclical</h3>
+    <p class="dek">A trailing P/E is history; a forward P/E is the estimate. When they diverge, the gap <i>is</i> the story — so we now show <b>both, on every name</b>. When earnings are about to surge, the trailing number makes a cheap stock look expensive.</p>
+    <div class="pe">
+      <span class="tk">MU</span>
+      <span><span class="num t">23.4</span> <span class="arw">→</span> <span class="num f">6.9</span></span>
+      <span class="say"><b>Micron.</b> Trailing 23× looks dear; forward <b style="color:var(--vg)">7×</b> is dirt cheap — the memory super-cycle in two numbers. Anchor on the trailing figure and you'd wrongly call it expensive.</span>
+    </div>
+  </section>
+
+  <!-- ===== HOUSE RULES ===== -->
+  <section class="sec reveal">
+    <div class="kicker">The rules of the house · where a naïve model goes wrong</div>
+    <h2>Two blind spots we correct for — every time</h2>
+    <div class="rulebox">
+      <div class="rb-top">Standing corrections · coded into the build, audited on every rebuild</div>
+      <div class="rb-body">
+        <div>
+          <span class="tag">CYCLICAL → FORWARD-ANCHOR</span>
+          <h5>Cyclicals are judged on forward earnings</h5>
+          <p>Trailing-earnings models distort any cyclical — at a <b>trough</b> they look expensive when they're cheap; at a <b>peak</b>, cheap when they're dear. So for every cyclical cohort (energy, chemicals, materials, homebuilders, autos, semis…) we anchor the DCF on <b>forward earnings + analyst</b>, not the trailing figure. A build-time audit flags any cyclical that slips through on a trailing anchor, so nothing drifts.</p>
+        </div>
+        <div>
+          <span class="tag">AI-SOFTWARE → CAPPED AT 4</span>
+          <h5>Disruption risk can't be priced as cheapness</h5>
+          <p>Fair-value engines read an AI-disruption discount as a bargain. It isn't — a moat under threat is a risk, not a sale. So software exposed to that risk is <b>capped at DCF 4</b>: it can be a Strong Buy, but never rated deep-value on a triangulation the market may be right to discount.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DAILY RE-RANK / CASE STUDY ===== -->
+  <section class="sec reveal">
+    <div class="kicker">The score is a snapshot — and the snapshot moves</div>
+    <h2>How a price drop re-rates a stock, live</h2>
+    <p class="dek">A DCF score is a judgment made at a <b>known price</b>. We hold the <b>fair value fixed</b> from that moment, then re-band it against the live price every day — so as a stock gets cheaper, its value score rises on its own, no re-scoring required. Here is the exact path Micron walked.</p>
+    <div class="case">
+      <div class="case-h"><span class="ttl">Case study — Micron (MU)</span><span class="sub">AVOID → BUY → STRONG BUY, without changing our view of the business</span></div>
+      <div class="track">
+        <div class="stage">
+          <div class="step-n">Start · trailing model</div>
+          <div class="qv">46.3</div>
+          <span class="vb" style="background:var(--vr)">AVOID</span>
+          <p class="why">The intrinsic DCF, built on trough earnings, says −56%. Score: DCF 1.</p>
+        </div>
+        <div class="stage">
+          <div class="step-n">Re-anchor · forward earnings</div>
+          <div class="qv">70.3</div>
+          <span class="vb" style="background:var(--vb)">BUY</span>
+          <p class="why">Forward P/E 7.7 and an analyst target above price. The cyclical rule lifts it to DCF 4.</p>
+        </div>
+        <div class="stage">
+          <div class="step-n">Price falls 10.6% · daily re-rank</div>
+          <div class="qv">75.7</div>
+          <span class="vb" style="background:var(--vg)">STRONG BUY</span>
+          <p class="why">Cheaper against the same fixed fair value → the value leg floats up to 4.7. No re-scoring — just arithmetic.</p>
+        </div>
+      </div>
+    </div>
+    <p class="dek" style="margin-top:12px;font-size:13.5px;color:var(--ink-3);">A daily price move re-ranks a name; only a deliberate <b>re-score</b> — on news or fundamentals — resets the fair-value anchor.</p>
+  </section>
+
+  <!-- ===== IV. THE BLEND ===== -->
+  <section class="sec reveal">
+    <div class="sec-head"><span class="numeral">IV</span><div><div class="kicker">Why size changes the mix</div><h2>The blend slides with company size</h2></div></div>
+    <div class="cols">
+      <div class="lead-in">
+        <p class="dek">Big companies are heavily analyzed, so their value read is reliable and earns the full <b>40%</b>. Smaller companies are systematically lower-quality, and their cash-flow forecasts are far noisier — so the weight slides toward <b class="q">business quality and balance-sheet strength</b> and away from a fragile price estimate. Down the size scale, <b>surviving and compounding</b> beats chasing a cheap-looking number.</p>
+        <p class="dek" style="font-size:13.5px;"><b>Same business, different score:</b> a cheap-but-fragile micro-cap <i>loses</i> ground versus its large-cap twin, because a low price no longer rescues a weak balance sheet.</p>
+      </div>
+      <table class="dt">
+        <thead><tr><th>Size</th><th>Market cap</th><th class="num">Quality</th><th class="num">Value</th></tr></thead>
+        <tbody>
+          <tr><td>Large-cap</td><td>≥ $15B</td><td class="num">60%</td><td class="num">40%</td></tr>
+          <tr><td>Mid-cap</td><td>$2–15B</td><td class="num">~65%</td><td class="num">~35%</td></tr>
+          <tr><td>Small-cap</td><td>$300M–2B</td><td class="num">~70%</td><td class="num">~30%</td></tr>
+          <tr><td>Micro-cap</td><td>&lt; $300M</td><td class="num">75%</td><td class="num">25%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="pull reveal">Quality is what you own; price is what you pay. QARP refuses to forget either.</div>
+
+  <!-- ===== V. VERDICT ===== -->
+  <section class="sec reveal">
+    <div class="sec-head"><span class="numeral">V</span><div><div class="kicker">The score becomes a call</div><h2>Verdict bands</h2></div></div>
+    <div class="ladder">
+      <div class="rung"><span class="band" style="background:var(--vstrong)">STRONGEST</span><span class="thr">≥ 85</span><span class="mean">Best-in-class quality trading at a genuine discount</span></div>
+      <div class="rung"><span class="band" style="background:var(--vg)">STRONG BUY</span><span class="thr">≥ 72</span><span class="mean">High conviction — strong business, fair-to-cheap price</span></div>
+      <div class="rung"><span class="band" style="background:var(--vb)">BUY</span><span class="thr">≥ 66</span><span class="mean">Attractive on the blend of quality and value</span></div>
+      <div class="rung"><span class="band" style="background:var(--va)">HOLD-QUAL</span><span class="thr">≥ 60</span><span class="mean">Quality carries it; price offers little margin</span></div>
+      <div class="rung"><span class="band" style="background:var(--vn)">AVOID</span><span class="thr">35–59</span><span class="mean">Too dear, too weak, or both — sit it out</span></div>
+      <div class="rung"><span class="band" style="background:var(--vr)">STRONG AVOID</span><span class="thr">&lt; 35</span><span class="mean">No margin of safety on either half</span></div>
+    </div>
+  </section>
+
+  <!-- ===== MOMENTUM GATE ===== -->
+  <section class="sec reveal">
+    <div class="kicker">Kept beside the score — never mixed into it</div>
+    <h2>The momentum gate: value decides <i>what</i>, the tape decides <i>when</i></h2>
+    <p class="dek">A cheap stock can stay cheap. The gate reads the price trend so a Buy is actionable <b>when the tape agrees</b> — but it never touches the QARP number. Judgment and timing stay separate on purpose.</p>
+    <div class="gates">
+      <div class="gate go"><span class="g">GO</span><p>Price above its 50-day average — the trend confirms; a Buy is actionable.</p></div>
+      <div class="gate turn"><span class="g">TURN</span><p>Reclaimed the 20-day but under the 50 — a bottoming attempt, still early.</p></div>
+      <div class="gate wait"><span class="g">WAIT</span><p>Below both averages — the knife is still falling; the verdict stands, but acting fights the tape.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== TRACK RECORD ===== -->
+  <section class="sec reveal" style="border-bottom:0;">
+    <div class="kicker">Keeping ourselves honest</div>
+    <h2>We grade the grader</h2>
+    <p class="dek">Every verdict is logged at its entry price and tracked. If the framework works, <b>Strong Buys should out-return Avoids</b> over time. We measure that with an <b>information coefficient</b> — the rank correlation between a name's first verdict and its return since. Positive and rising means the ordering carries real signal; flat or negative is a warning we act on. Real factor ICs are small by nature: a steady <b>+0.05 to +0.10</b> is a good result, read as a trend, not a single day.</p>
+  </section>
+
+  <!-- ===== COLOPHON ===== -->
+  <div class="colophon reveal">
+    <div class="mast-double" style="margin-bottom:18px"></div>
+    <p class="src"><b>Sources.</b> Shariah — Musaffa (AAOIFI), cross-checked with Muslim Xchange. Value — AlphaSpread intrinsic DCF, analyst consensus, GuruFocus fair value. Fundamentals &amp; prices — public market data, refreshed each trading day.</p>
+    <p class="adv">Informational analysis, not investment advice. Every score is a snapshot at the stated price and date — a name can be a buy when cheap and an avoid once it has run.</p>
+    <div class="end">◆ ◆ ◆</div>
+  </div>
+
+</article>
+</div>
+
     </section>
 
     <footer class="foot">
@@ -496,7 +658,7 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=ea0aa2d2"></script>
-  <script src="app.js?v=ea0aa2d2"></script>
+  <script src="crypto.js?v=f06b4275"></script>
+  <script src="app.js?v=f06b4275"></script>
 </body>
 </html>
