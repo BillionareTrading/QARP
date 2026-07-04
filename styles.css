@@ -1,25 +1,29 @@
 /* ===== Jaleel Capital QARP — clean dashboard theme ===== */
 :root {
-  --bg: #f4f6fb;
-  --surface: #ffffff;
-  --surface-2: #f8fafc;
-  --ink: #0f172a;
-  --ink-2: #475569;
-  --ink-3: #94a3b8;
-  --line: #e6eaf2;
-  --line-2: #eef1f7;
-  --brand: #1d4ed8;
+  /* Unified editorial-newsprint theme (2026-07-04): warm paper ground, navy brand,
+     brass detail — the Times/Method identity applied site-wide. Data stays sans/mono. */
+  --bg: #f0eee6;
+  --surface: #fdfdfa;
+  --surface-2: #f5f3ea;
+  --ink: #15181f;
+  --ink-2: #454b57;
+  --ink-3: #8b8e97;
+  --line: #e2ddcf;
+  --line-2: #eae6da;
+  --brand: #1a2a55;
   --brand-ink: #0b1120;
+  --brass: #9a6b25;
   --pos: #15803d;
   --pos-bg: #e8f5ed;
   --neg: #be123c;
   --neg-bg: #fdeaef;
-  --radius: 14px;
-  --radius-sm: 9px;
-  --shadow: 0 1px 2px rgba(15,23,42,.04), 0 8px 24px rgba(15,23,42,.05);
-  --shadow-sm: 0 1px 2px rgba(15,23,42,.06);
+  --radius: 8px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 2px rgba(20,17,12,.04), 0 8px 24px rgba(20,17,12,.05);
+  --shadow-sm: 0 1px 2px rgba(20,17,12,.06);
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, system-ui, sans-serif;
+  --serif: Georgia, "Iowan Old Style", "Times New Roman", Times, serif;
 
   /* verdict palette */
   --v-strongest: #0e7a4f;
@@ -51,10 +55,10 @@ button { font-family: inherit; cursor: pointer; }
   display: grid; place-items: center;
   width: 46px; height: 46px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  background: linear-gradient(135deg, #111c3d, #2c3f77);
   color: #fff; font-weight: 800; letter-spacing: .02em;
   font-size: 17px; flex: none;
-  box-shadow: 0 4px 12px rgba(37,99,235,.28);
+  box-shadow: 0 4px 12px rgba(26,42,85,.28);
 }
 .mark.sm { width: 34px; height: 34px; border-radius: 9px; font-size: 13px; }
 
@@ -110,7 +114,7 @@ button { font-family: inherit; cursor: pointer; }
 .asof { color: var(--ink-3); font-size: 12.5px; }
 .live-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .04em;
   padding: 4px 9px; border-radius: 999px; background: var(--pos-bg); color: var(--pos); border: 1px solid #cdebd8; }
-.live-pill.closed { background: #eef1f7; color: var(--ink-3); border-color: var(--line); }
+.live-pill.closed { background: #ece8dc; color: var(--ink-3); border-color: var(--line); }
 .live-pill.stale { background: var(--neg-bg); color: var(--neg); border-color: #f6cdd7; }
 .live-pill.delayed { background: #fff4e0; color: #b45309; border-color: #f3dcb3; }
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
@@ -481,8 +485,8 @@ tbody tr:hover { background: var(--surface-2); }
 .sc-trend-cur { font-size: 12.5px; font-weight: 800; }
 .sc-trend-empty { margin-top: 8px; font-size: 12px; color: var(--ink-3); line-height: 1.45; }
 .sc-trend-svg { width: 100%; height: 70px; margin-top: 10px; overflow: visible; }
-.sc-trend-line { fill: none; stroke: var(--brand, #2563eb); stroke-width: 2; vector-effect: non-scaling-stroke; }
-.sc-trend-dot { fill: var(--brand, #2563eb); }
+.sc-trend-line { fill: none; stroke: var(--brand, #1a2a55); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.sc-trend-dot { fill: var(--brand, #1a2a55); }
 .sc-trend-zero { stroke: #cbd5e1; stroke-width: 1; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
 .sc-trend-x { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--ink-3); margin-top: 4px; }
 
@@ -902,7 +906,7 @@ tbody tr:hover { background: var(--surface-2); }
 /* ===== Ask-the-bot chat widget ===== */
 #bot-fab { position: fixed; right: 18px; bottom: 18px; z-index: 60; border: 0; border-radius: 999px; background: var(--brand); color: #fff; font-size: 14px; font-weight: 700; padding: 11px 18px; box-shadow: 0 8px 24px rgba(29,78,216,.38); cursor: pointer; }
 #bot-fab:hover { filter: brightness(1.08); }
-#bot-panel { position: fixed; right: 18px; bottom: 18px; z-index: 61; width: min(380px, calc(100vw - 36px)); height: min(560px, calc(100vh - 100px)); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 24px 60px rgba(15,23,42,.28); display: flex; flex-direction: column; overflow: hidden; }
+#bot-panel { position: fixed; right: 18px; bottom: 18px; z-index: 61; width: min(380px, calc(100vw - 36px)); height: min(560px, calc(100vh - 100px)); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 24px 60px rgba(20,17,12,.28); display: flex; flex-direction: column; overflow: hidden; }
 .bot-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 13px 15px; border-bottom: 1px solid var(--line); background: var(--surface-2); }
 .bot-head strong { font-size: 14px; color: var(--ink); display: block; }
 .bot-sub { font-size: 11px; color: var(--ink-3); }
@@ -1041,7 +1045,7 @@ tbody tr:hover { background: var(--surface-2); }
 .gb-sbuy { color: var(--v-strongbuy); background: #e8f5ed; }
 .gb-buy { color: var(--v-buy); background: #e4f4f8; }
 .gb-hold { color: var(--v-hold); background: #fbf0dd; }
-.gb-avoid { color: #475569; background: #eef1f7; }
+.gb-avoid { color: var(--ink-2); background: #ece8dc; }
 .gb-savoid { color: var(--v-strongavoid); background: #fdeaef; }
 
 .rg-link { display: inline-flex; align-items: center; gap: 3px; vertical-align: baseline; background: none; border: 0; padding: 0; font: inherit; font-weight: 700; color: var(--brand); cursor: pointer; }
@@ -1256,4 +1260,23 @@ tbody tr:hover { background: var(--surface-2); }
 .qm .reveal.in{opacity:1; transform:none;}
 @media(prefers-reduced-motion:reduce){
   .qm .reveal{opacity:1; transform:none; transition:none;}
+}
+
+/* ===== Unified editorial theme: dashboard tabs sit on the same paper sheet ===== */
+#tab-universe, #tab-portfolio, #tab-informed {
+  max-width: 1240px; margin: 14px auto 44px;
+  background: var(--news-page); border: 1px solid #e4dfd0;
+  box-shadow: 0 14px 40px rgba(20,17,12,.08);
+  padding: clamp(18px, 3.5vw, 38px) clamp(14px, 3.2vw, 42px) 44px;
+}
+#tab-universe.active, #tab-portfolio.active, #tab-informed.active { display: block; }
+/* serif headlines + kickers on the data pages (FT-style: editorial frame, functional guts) */
+#tab-universe .card > h3, #tab-portfolio .card > h3, #tab-informed .card > h3 {
+  font-family: var(--serif); font-size: 17px; font-weight: 700; letter-spacing: 0;
+}
+.tab-intro { font-family: var(--serif); font-style: italic; font-size: 14px; }
+/* cards read as ruled panels on the paper, not floating chips */
+#tab-universe .card, #tab-portfolio .card, #tab-informed .card,
+#tab-universe .table-wrap, #tab-portfolio .table-wrap, #tab-informed .table-wrap {
+  box-shadow: none; border-color: var(--line);
 }
