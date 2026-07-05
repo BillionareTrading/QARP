@@ -1917,25 +1917,42 @@ function pDateRowHtml(e) {
 }
 
 async function loadPortfolioDates() {
-  const key = DATA.meta && DATA.meta.finnhub_key;   // earnings calendar calls Finnhub directly
   const el = document.getElementById("pdates-list");
   if (!el) return;
-  if (!key) { el.innerHTML = `<p class="muted">Live calendar needs the API key.</p>`; return; }
   el.innerHTML = `<p class="news-loading">Loading earnings dates…</p>`;
   const now = new Date();
   const from = now.toISOString().slice(0, 10);
   const to = new Date(now.getTime() + 130 * 86400000).toISOString().slice(0, 10);
-  const results = await Promise.all(DATA.portfolio.map(async (h) => {
-    try {
-      const res = await fetch(`https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&symbol=${h.ticker}&token=${key}`, { cache: "no-store" });
-      const j = await res.json();
-      const ev = (j.earningsCalendar || [])[0];
-      return (ev && ev.date) ? { tk: h.ticker, date: ev.date, hour: ev.hour, epsEst: ev.epsEstimate } : null;
-    } catch (e) { return null; }
-  }));
-  const events = results.filter(Boolean).sort((a, b) => a.date.localeCompare(b.date));
+  // PRIMARY: the server-computed map (Benzinga ∪ Finnhub, refreshed every signals run) —
+  // the old all-at-once browser fetch tripped rate limits (silent gaps) and took Finnhub's
+  // first row instead of the NEAREST date (wrong quarter when two were in the window).
+  const srv = (typeof SIGNALS !== "undefined" && SIGNALS && SIGNALS.earnings_next) || {};
+  const events = [];
+  const missing = [];
+  for (const h of (DATA.portfolio || [])) {
+    const d = srv[h.ticker];
+    if (d && d >= from) events.push({ tk: h.ticker, date: d, src: "srv" });
+    else missing.push(h.ticker);
+  }
+  // FALLBACK: live Finnhub for names the server map lacks — SEQUENTIAL + paced (no burst),
+  // and always the MINIMUM future date, never [0]
+  const key = DATA.meta && DATA.meta.finnhub_key;
+  if (key) {
+    for (const tk of missing) {
+      try {
+        const res = await fetch(`https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&symbol=${tk}&token=${key}`, { cache: "no-store" });
+        const j = await res.json();
+        const ds = (j.earningsCalendar || []).map((e) => e.date).filter((d) => d && d >= from).sort();
+        if (ds.length) events.push({ tk, date: ds[0], src: "live" });
+        await new Promise((r) => setTimeout(r, 250));
+      } catch (e) { /* leave missing */ }
+    }
+  }
+  events.sort((a, b) => a.date.localeCompare(b.date));
+  const still = (DATA.portfolio || []).map((h) => h.ticker).filter((t) => !events.some((e) => e.tk === t));
   el.innerHTML = events.length
-    ? `<div class="dates-card"><h4 class="dates-h">Upcoming earnings</h4><div class="dates-rows">${events.map(pDateRowHtml).join("")}</div></div>`
+    ? `<div class="dates-card"><h4 class="dates-h">Upcoming earnings</h4><div class="dates-rows">${events.map(pDateRowHtml).join("")}</div>
+       ${still.length ? `<p class="muted" style="font-size:11.5px;margin:8px 0 0">No confirmed date yet: ${still.join(", ")} (calendars fill in as companies announce).</p>` : ""}</div>`
     : `<p class="muted">No upcoming earnings dates found.</p>`;
 }
 
@@ -1951,7 +1968,7 @@ function initPortfolioSubtabs() {
       if (b.dataset.psub === "earnings") renderEarnings();
       if (b.dataset.psub === "gurus") renderGurus();
       if (b.dataset.psub === "news" && !pNewsLoaded) { pNewsLoaded = true; loadPortfolioNews(); }
-      if (b.dataset.psub === "dates" && !pDatesLoaded) { pDatesLoaded = true; loadPortfolioDates(); }
+      if (b.dataset.psub === "dates") loadPortfolioDates();
     }));
 }
 
