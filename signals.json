@@ -1,1599 +1,1600 @@
 {
- "date": "2026-07-05",
- "generated_at": "Jul 5, 4:27am ET",
- "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
- "macro": {
-  "tone": "caution",
-  "headline": "Hawkish Fed, energy & geopolitics in the driver's seat",
-  "body": "Fed Chair Warsh scrapped forward guidance and the dot plot leans toward <b>hikes, not cuts</b>, so long-duration high-multiple growth (NOW, ADBE, NVDA, IOT) stays rate-sensitive. Energy and the Strait of Hormuz headlines are the live swing factor on inflation."
- },
- "risk": [
-  {
-   "ticker": "LULU",
-   "sev": "elevated",
-   "tag": "Guidance cut",
-   "detail": "FY guide <b>cut</b> (Jun 4): Americas comps −5% (5th straight), tariffs gutted margins, China stalled.",
-   "next": "~Sep 4"
+  "date": "2026-07-05",
+  "generated_at": "Jul 5, 12:43pm ET",
+  "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
+  "macro": {
+    "tone": "caution",
+    "headline": "Hawkish Fed, energy & geopolitics in the driver's seat",
+    "body": "Fed Chair Warsh scrapped forward guidance and the dot plot leans toward <b>hikes, not cuts</b>, so long-duration high-multiple growth (NOW, ADBE, NVDA, IOT) stays rate-sensitive. Energy and the Strait of Hormuz headlines are the live swing factor on inflation."
   },
-  {
-   "ticker": "BSX",
-   "sev": "elevated",
-   "tag": "Guidance slashed",
-   "detail": "FY26 growth cut 10.5→7–8.5%; Watchman/EP/urology soft; mgmt guides <b>flat through Q3</b>.",
-   "next": "~Jul 23"
+  "risk": [
+    {
+      "ticker": "LULU",
+      "sev": "elevated",
+      "tag": "Guidance cut",
+      "detail": "FY guide <b>cut</b> (Jun 4): Americas comps −5% (5th straight), tariffs gutted margins, China stalled.",
+      "next": "~Sep 4"
+    },
+    {
+      "ticker": "BSX",
+      "sev": "elevated",
+      "tag": "Guidance slashed",
+      "detail": "FY26 growth cut 10.5→7–8.5%; Watchman/EP/urology soft; mgmt guides <b>flat through Q3</b>.",
+      "next": "Jul 29"
+    },
+    {
+      "ticker": "ADBE",
+      "sev": "watch",
+      "tag": "AI-disruption fear",
+      "detail": "Beat & raised (Jun 11) yet sold off; AI-moat fear (Claude Design), CFO exit, ARR de-emphasis — the narrative, not the numbers, drives it.",
+      "next": "Sep 10"
+    },
+    {
+      "ticker": "NVDA",
+      "sev": "watch",
+      "tag": "Export controls + AI-capex doubt",
+      "detail": "China export-license tightening + Senate scrutiny; the memory/chip complex swings on AI-spending sentiment.",
+      "next": "Aug 25"
+    },
+    {
+      "ticker": "NOW",
+      "sev": "watch",
+      "tag": "Concentration + macro beta",
+      "detail": "No bad news — strong Q1, IBM AI deal. But it's the biggest weight + a high multiple; in a hawkish-Fed software de-rate it leads the drawdown.",
+      "next": "Jul 22"
+    },
+    {
+      "ticker": "GILD·NVS",
+      "sev": "policy",
+      "sub": "+ NBIX, VRTX",
+      "tag": "Drug-pricing policy",
+      "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.",
+      "next": "Jul 30"
+    },
+    {
+      "ticker": "ABT",
+      "sev": "mild",
+      "tag": "EPS outlook trimmed",
+      "detail": "FY EPS guide cut on deal financing + a weak flu season; revenue raised. Defensive — a yellow flag, not a red one.",
+      "next": "Jul 15"
+    }
+  ],
+  "catalysts": [
+    {
+      "when": "Jul 15",
+      "what": "ABT earnings",
+      "affects": "ABT",
+      "dir": "two-sided",
+      "why": "Q-results for Abbott Laboratories — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Jul 21",
+      "what": "DHR earnings",
+      "affects": "DHR",
+      "dir": "two-sided",
+      "why": "Q-results for Danaher — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Jul 21",
+      "what": "NVS earnings",
+      "affects": "NVS",
+      "dir": "two-sided",
+      "why": "Q-results for Novartis — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Jul 22",
+      "what": "NOW earnings",
+      "affects": "NOW",
+      "dir": "two-sided",
+      "why": "Q-results for ServiceNow — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Jul 5",
+      "what": "Energy & geopolitics — today's read",
+      "why": "As vessels transit the Strait of Hormuz under a UN evacuation program. Also, President Trump said he has ordered a DOJ investigation into retail fuel price gouging, which may lead to lower margins going forward.",
+      "affects": "Energy · growth",
+      "dir": "two-sided",
+      "src": "Benzinga WIIM (live)"
+    }
+  ],
+  "risk_asof": "2026-07-05",
+  "sectors": [
+    {
+      "sector": "Grocery Retailers",
+      "dir": "up",
+      "driver": "Ahead of the 4th of July holiday weekend",
+      "note": "Ahead of the 4th of July holiday weekend.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
+      "dir": "down",
+      "driver": "Continued weakness after recent reports suggested that Meta will open a …",
+      "note": "Amid continued weakness after recent reports suggested that Meta will open a cloud business to sell excess AI compute. Also, weakness may reflect profit-taking following the industry-wide rally in H1 2026.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Software",
+      "dir": "up",
+      "driver": "A Guggenheim report suggested that AI concerns may be overblown",
+      "note": "After a Guggenheim report suggested that AI concerns may be overblown.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Homebuilding & Housing",
+      "dir": "up",
+      "driver": "The House and Senate sent a bipartisan housing bill designed to lower ho…",
+      "note": "After the House and Senate sent a bipartisan housing bill designed to lower housing costs for President Trump's signature. Sentiment was further boosted by KB Home’s better-than-expected second-quarter sales results.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Oil & Gas",
+      "dir": "mixed",
+      "driver": "Vessels transit the Strait of Hormuz under a UN evacuation program",
+      "note": "As vessels transit the Strait of Hormuz under a UN evacuation program. Also, President Trump said he has ordered a DOJ investigation into retail fuel price gouging, which may lead to lower margins going forward.",
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
+    }
+  ],
+  "holding_news": {
+    "KO": {
+      "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
+      "ts": 1782832328,
+      "url": "https://www.benzinga.com/quote/KO",
+      "wiim": false
+    }
   },
-  {
-   "ticker": "ADBE",
-   "sev": "watch",
-   "tag": "AI-disruption fear",
-   "detail": "Beat & raised (Jun 11) yet sold off; AI-moat fear (Claude Design), CFO exit, ARR de-emphasis — the narrative, not the numbers, drives it.",
-   "next": "~Sep 11"
+  "ratings": [
+    {
+      "date": "2026-06-29",
+      "ticker": "CVX",
+      "firm": "Morgan Stanley",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$210",
+      "price": 169.2,
+      "upside": 24.1,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-06-29",
+      "ticker": "NKE",
+      "firm": "JP Morgan",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$47",
+      "price": 44.09,
+      "upside": 6.6,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-06-30",
+      "ticker": "MRK",
+      "firm": "B of A Securities",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$141",
+      "price": 129.56,
+      "upside": 8.8,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-06-30",
+      "ticker": "MRK",
+      "firm": "Scotiabank",
+      "action": "Maintains",
+      "rating": "Sector Outperform",
+      "stance": "bullish",
+      "pt": "$155",
+      "price": 129.56,
+      "upside": 19.6,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "Jefferies",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$75",
+      "price": 44.09,
+      "upside": 70.1,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "UBS",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$48",
+      "price": 44.09,
+      "upside": 8.9,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "Telsey Advisory Group",
+      "action": "Maintains",
+      "rating": "Market Perform",
+      "stance": "neutral",
+      "pt": "$47",
+      "price": 44.09,
+      "upside": 6.6,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "Baird",
+      "action": "Reiterates",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$70",
+      "price": 44.09,
+      "upside": 58.8,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "BNP Paribas",
+      "action": "Reiterates",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$23",
+      "price": 44.09,
+      "upside": -47.8,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "Bernstein",
+      "action": "Maintains",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$72",
+      "price": 44.09,
+      "upside": 63.3,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$45",
+      "price": 44.09,
+      "upside": 2.1,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "Piper Sandler",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$45",
+      "price": 44.09,
+      "upside": 2.1,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "Guggenheim",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$60",
+      "price": 44.09,
+      "upside": 36.1,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "CRM",
+      "firm": "Guggenheim",
+      "action": "Upgrades",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$228",
+      "price": 166.11,
+      "upside": 37.3,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "Stifel",
+      "action": "Maintains",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$45",
+      "price": 44.09,
+      "upside": 2.1,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "BTIG",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$55",
+      "price": 44.09,
+      "upside": 24.7,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$52",
+      "price": 44.09,
+      "upside": 17.9,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "B of A Securities",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$47",
+      "price": 44.09,
+      "upside": 6.6,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-01",
+      "ticker": "NKE",
+      "firm": "Wells Fargo",
+      "action": "Maintains",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$40",
+      "price": 44.09,
+      "upside": -9.3,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-02",
+      "ticker": "CVX",
+      "firm": "Wolfe Research",
+      "action": "Upgrades",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$210",
+      "price": 169.2,
+      "upside": 24.1,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    }
+  ],
+  "bz_news": [
+    {
+      "title": "Consumer Tech (June 29-July 2): Microsoft Announces Layoffs, Meta & Google Sued In Several States & More",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60269593/consumer-tech-june-29-july-2-microsoft-announces-layoffs-meta-google-sued-in-several-states-more",
+      "ts": 1783259148,
+      "tickers": [
+        "META",
+        "GOOGL",
+        "GOOG",
+        "MU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.404
+    },
+    {
+      "title": "Meta Platforms, SpaceX, Micron Technology and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60269449/meta-platforms-spacex-micron-technology-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
+      "ts": 1783252907,
+      "tickers": [
+        "META",
+        "AAPL",
+        "PLTR",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.371
+    },
+    {
+      "title": "Apple's Hardware Price Hikes, Elon Musk's SpaceX Denial, Epic Games Vs. Apple and More: This Week In Appleverse",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60269396/apples-hardware-price-hikes-elon-musks-spacex-denial-epic-games-vs-apple-and-more-this-week-in-appleverse",
+      "ts": 1783249377,
+      "tickers": [
+        "AAPL",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.314
+    },
+    {
+      "title": "Data Center Leases Top $850 Billion as Meta, Microsoft, Oracle Lead Record AI Infrastructure Spending",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60269156/data-center-leases-top-850-billion-as-meta-microsoft-oracle-lead-record-ai-infrastructure-spending",
+      "ts": 1783224803,
+      "tickers": [
+        "MSFT",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.547
+    },
+    {
+      "title": "Forrest Gump Invested in a 'Fruit Company' — Here's What That Apple Bet Would Be Worth Today",
+      "url": "https://www.benzinga.com/news/education/26/07/60268915/forrest-gump-invested-in-a-fruit-company-heres-what-that-apple-bet-would-be-worth-today",
+      "ts": 1783195290,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.288
+    },
+    {
+      "title": "Salesforce CEO Marc Benioff Ignored 53 Emails Before This VC Founder Finally Got a Reply— Now He Says the Strategy is ‘Super Learnable’",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60268803/salesforce-ceo-marc-benioff-ignored-53-emails-before-this-vc-founder-finally-got-a-reply-now-he-says-the-strategy-is-super-learnable",
+      "ts": 1783185566,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.253
+    },
+    {
+      "title": "A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called...'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60268681/a-former-uber-engineer-visited-nvidias-headquarters-and-couldnt-believe-what-employees-actually-pay-for-at-work-we-use-this-thing-called",
+      "ts": 1783179112,
+      "tickers": [
+        "TSLA",
+        "META",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.422
+    },
+    {
+      "title": "Trump Administration Ramps Up Pressure on Oil Industry As Federal Agencies Push States to Investigate Elevated Gas Prices",
+      "url": "https://www.benzinga.com/news/politics/26/07/60268134/trump-administration-ramps-up-pressure-on-oil-industry-as-federal-agencies-push-states-to-investigate-elevated-gas-prices",
+      "ts": 1783137939,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.323
+    },
+    {
+      "title": "Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom 250 Initiative",
+      "url": "https://www.benzinga.com/news/politics/26/07/60268100/trump-faces-new-questions-as-report-says-boeing-lockheed-palantir-and-other-federal-contractors-supported-both-america250-and-his-freedom-250-initiative",
+      "ts": 1783132685,
+      "tickers": [
+        "LMT",
+        "PLTR",
+        "RTX",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.237
+    },
+    {
+      "title": "$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today",
+      "url": "https://www.benzinga.com/news/26/07/60267783/100-invested-mcdonald-s-20-years-ago-would-be-worth-much-today",
+      "ts": 1783115136,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.255
+    },
+    {
+      "title": "$1000 Invested In Salesforce 20 Years Ago Would Be Worth This Much Today",
+      "url": "https://www.benzinga.com/news/26/07/60266933/1000-invested-salesforce-20-years-ago-would-be-worth-much-today",
+      "ts": 1783111531,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.306
+    },
+    {
+      "title": "EXCLUSIVE: Top 12 Most-Searched Tickers For First Half of 2026 - Where Do Micron, Nvidia, Tesla, SanDisk Rank?",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60266829/exclusive-top-12-most-searched-tickers-for-first-half-of-2026-where-do-micron-nvidia-tesla-sandisk-rank",
+      "ts": 1783107090,
+      "tickers": [
+        "TSLA",
+        "AAPL",
+        "META",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.462
+    },
+    {
+      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60266615/10-industrials-stocks-whale-activity-today-s-session",
+      "ts": 1783100124,
+      "tickers": [
+        "UBER",
+        "RKLB",
+        "BA",
+        "FCEL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.415
+    },
+    {
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60266614/10-information-technology-stocks-whale-activity-today-s-session",
+      "ts": 1783100124,
+      "tickers": [
+        "AAPL",
+        "MSTR",
+        "NBIS",
+        "MU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.394
+    },
+    {
+      "title": "This AI Stock Beat Nvidia by 200%—Then Zuckerberg Sparked a 17% Sell-Off",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60266223/this-ai-stock-beat-nvidia-by-200-then-zuckerberg-sparked-a-17-sell-off",
+      "ts": 1783092668,
+      "tickers": [
+        "AAOI",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.566
+    },
+    {
+      "title": "XRP Crashed 70% in 1 Year While Ripple Was Doing Everything Right: What Happened?",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60266116/xrp-crashed-70-in-1-year-while-ripple-was-doing-everything-right-what-happened",
+      "ts": 1783090868,
+      "tickers": [
+        "$XRP",
+        "$BTC",
+        "$ETH",
+        "MA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.316
+    },
+    {
+      "title": "Here’s How Much You Would Have Made Owning Cisco Systems Stock In The Last 10 Years",
+      "url": "https://www.benzinga.com/news/26/07/60266007/here-s-how-much-you-would-have-made-owning-cisco-systems-stock-last-10-years",
+      "ts": 1783089050,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.29
+    },
+    {
+      "title": "Here's How Much $1000 Invested In Goldman Sachs Group 5 Years Ago Would Be Worth Today",
+      "url": "https://www.benzinga.com/news/26/07/60265925/here-s-how-much-1000-invested-goldman-sachs-group-5-years-ago-would-be-worth-today",
+      "ts": 1783087266,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.298
+    },
+    {
+      "title": "Software Legend Kent Beck Says AI is Turning Coding Careers Into a ‘Cosmic Practical Joke’ as Soft Skills Become Critical",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60265259/software-legend-kent-beck-says-ai-is-turning-coding-careers-into-a-cosmic-practical-joke-as-soft-skills-become-critical",
+      "ts": 1783074653,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.304
+    },
+    {
+      "title": "Market Analysis: Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/07/60265069/market-analysis-apple-and-competitors-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1783072722,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.422
+    },
+    {
+      "title": "Comparing Microsoft With Industry Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/07/60265067/comparing-microsoft-industry-competitors-software-industry",
+      "ts": 1783072714,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.328
+    },
+    {
+      "title": "Michael Burry's Bearish Bet On Caterpillar Sparks Debate— Analyst Says the 'Big Short' Investor is Missing the 'Structural Theme'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60264966/michael-burrys-bearish-bet-on-caterpillar-sparks-debate-analyst-says-the-big-short-investor-is-missing-the-structural-theme",
+      "ts": 1783069617,
+      "tickers": [
+        "TSLA",
+        "NVDA",
+        "SOXX",
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.313
+    },
+    {
+      "title": "Stock Market Open on July 3? What US Investors Need to Know About NYSE, Nasdaq and Bank Holiday Hours for the Fourth of July Weekend",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60264249/stock-market-open-on-july-3-what-us-investors-need-to-know-about-nyse-nasdaq-and-bank-holiday-hours-for-the-fourth-of-july-weekend",
+      "ts": 1783058768,
+      "tickers": [
+        "FDX",
+        "WMT",
+        "COST",
+        "UPS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.442
+    },
+    {
+      "title": "Why Is Avis Budget Group (CAR) Stock Trending Overnight? (CORRECTED)",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60263990/why-is-avis-budget-group-car-stock-trending-overnight",
+      "ts": 1783053297,
+      "tickers": [
+        "JPM",
+        "WFC",
+        "MS",
+        "CAR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.376
+    },
+    {
+      "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60245112/reported-earlier-coca-cola-said-seek-bankers-1-billion-india-bottler-ipo-bloomberg",
+      "ts": 1783000583,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.513
+    },
+    {
+      "title": "Trump's America250 Celebrations to Close Reagan National Airport for Nearly 15 Hours (UPDATED)",
+      "url": "https://www.benzinga.com/news/politics/26/07/60238040/trumps-america250-celebrations-to-close-reagan-national-airport-for-nearly-15-hours",
+      "ts": 1782993862,
+      "tickers": [
+        "AAL",
+        "BA",
+        "DAL",
+        "JBLU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.18
+    },
+    {
+      "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
+      "url": "https://www.benzinga.com/quote/KO",
+      "ts": 1782832328,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.534
+    }
+  ],
+  "portfolio_brief": {
+    "ADBE": {
+      "name": "Adobe",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 10,
+        "buy": 9,
+        "hold": 22,
+        "sell": 4,
+        "strongSell": 0,
+        "total": 45,
+        "bullish": 19,
+        "bearish": 4,
+        "label": "Buy",
+        "score": 0.56,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000109/adbe-20260608.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000112/adbe-20260529.htm"
+        },
+        "insider30d": 4
+      },
+      "explain": "45 analysts cover it — 19 bullish, 22 hold, 4 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "NOW": {
+      "name": "ServiceNow",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 15,
+        "buy": 33,
+        "hold": 5,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 54,
+        "bullish": 48,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.15,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000065/now-20260521.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "ABT": {
+      "name": "Abbott Laboratories",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 10,
+        "buy": 14,
+        "hold": 10,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 24,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.0,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-04-27",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000110465926049434/tm2612318d1_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm"
+        },
+        "insider30d": 8
+      },
+      "explain": "34 analysts cover it — 24 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "ZTS": {
+      "name": "Zoetis",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 6,
+        "buy": 8,
+        "hold": 10,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 24,
+        "bullish": 14,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.83,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000029/zts-20260520.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm"
+        },
+        "insider30d": 2
+      },
+      "explain": "24 analysts cover it — 14 bullish, 10 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "DHR": {
+      "name": "Danaher",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 16,
+        "hold": 3,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 30,
+        "bullish": 27,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.27,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000119312526255555/d63873d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000107/dhr-20260327.htm"
+        },
+        "insider30d": 0
+      },
+      "explain": "30 analysts cover it — 27 bullish, 3 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "RKLB": {
+      "name": "Rocket Lab",
+      "qarp": "AVOID",
+      "consensus": {
+        "strongBuy": 7,
+        "buy": 15,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 27,
+        "bullish": 22,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.07,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000175392626001085/g085783_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm"
+        },
+        "insider30d": 4
+      },
+      "explain": "27 analysts cover it — 22 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+    },
+    "NVDA": {
+      "name": "NVIDIA",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 24,
+        "buy": 39,
+        "hold": 4,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 68,
+        "bullish": 63,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.26,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-02",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
+        },
+        "insider30d": 18
+      },
+      "explain": "68 analysts cover it — 63 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "BSX": {
+      "name": "Boston Scientific",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 12,
+        "buy": 20,
+        "hold": 8,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 40,
+        "bullish": 32,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-18",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000042/bsx-20260518.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "40 analysts cover it — 32 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "LULU": {
+      "name": "Lululemon",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 4,
+        "buy": 4,
+        "hold": 30,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 39,
+        "bullish": 8,
+        "bearish": 1,
+        "label": "Hold",
+        "score": 0.28,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000088/lulu-20260624.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm"
+        },
+        "insider30d": 15
+      },
+      "explain": "39 analysts cover it — 8 bullish, 30 hold, 1 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
+    },
+    "UBER": {
+      "name": "Uber",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 17,
+        "buy": 35,
+        "hold": 8,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 61,
+        "bullish": 52,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.11,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000320/e26247_uber-8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm"
+        },
+        "insider30d": 6
+      },
+      "explain": "61 analysts cover it — 52 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "IOT": {
+      "name": "Samsara",
+      "qarp": "AVOID",
+      "consensus": {
+        "strongBuy": 5,
+        "buy": 16,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 27,
+        "bullish": 21,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.96,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026040788/iot-20260604.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026041893/iot-20260502.htm"
+        },
+        "insider30d": 15
+      },
+      "explain": "27 analysts cover it — 21 bullish, 6 hold, 0 bearish (consensus <b>Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+    },
+    "GILD": {
+      "name": "Gilead Sciences",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 21,
+        "hold": 7,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 39,
+        "bullish": 32,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000110465926064518/tm2615045d1_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm"
+        },
+        "insider30d": 8
+      },
+      "explain": "39 analysts cover it — 32 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "NVS": {
+      "name": "Novartis",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 6,
+        "buy": 11,
+        "hold": 14,
+        "sell": 3,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 17,
+        "bearish": 3,
+        "label": "Buy",
+        "score": 0.59,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 0
+      },
+      "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "NBIX": {
+      "name": "Neurocrine Biosciences",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 14,
+        "buy": 17,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 36,
+        "bullish": 31,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.25,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000029/nbix-20260527.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm"
+        },
+        "insider30d": 4
+      },
+      "explain": "36 analysts cover it — 31 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "VRTX": {
+      "name": "Vertex Pharma",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 13,
+        "buy": 20,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 1,
+        "total": 40,
+        "bullish": 33,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-13",
+          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000204/vrtx-20260513.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm"
+        },
+        "insider30d": 4
+      },
+      "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "KO": {
+      "name": "Coca-Cola",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 8,
+        "buy": 20,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 28,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.06,
+        "period": "2026-06-01"
+      },
+      "news": {
+        "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
+        "ts": 1782832328,
+        "url": "https://www.benzinga.com/quote/KO",
+        "wiim": false
+      },
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-25",
+          "url": "https://www.sec.gov/Archives/edgar/data/21344/000155278126000366/e26287_ko-8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026028802/ko-20260403.htm"
+        },
+        "insider30d": 5
+      },
+      "explain": "34 analysts cover it — 28 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    }
   },
-  {
-   "ticker": "NVDA",
-   "sev": "watch",
-   "tag": "Export controls + AI-capex doubt",
-   "detail": "China export-license tightening + Senate scrutiny; the memory/chip complex swings on AI-spending sentiment.",
-   "next": "~Aug 27"
-  },
-  {
-   "ticker": "NOW",
-   "sev": "watch",
-   "tag": "Concentration + macro beta",
-   "detail": "No bad news — strong Q1, IBM AI deal. But it's the biggest weight + a high multiple; in a hawkish-Fed software de-rate it leads the drawdown.",
-   "next": "~Jul 23"
-  },
-  {
-   "ticker": "GILD·NVS",
-   "sev": "policy",
-   "sub": "+ NBIX, VRTX",
-   "tag": "Drug-pricing policy",
-   "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.",
-   "next": "Ongoing"
-  },
-  {
-   "ticker": "ABT",
-   "sev": "mild",
-   "tag": "EPS outlook trimmed",
-   "detail": "FY EPS guide cut on deal financing + a weak flu season; revenue raised. Defensive — a yellow flag, not a red one.",
-   "next": "~Jul 17"
+  "financials": {
+    "ADBE": {
+      "period": "Q2 FY2026",
+      "filed": "2026-06-15",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000112/adbe-20260529.htm",
+      "revenue": {
+        "fmt": "$6.6B",
+        "yoy": 12.7
+      },
+      "eps": {
+        "val": 4.25,
+        "yoy": 7.9
+      },
+      "net_income": {
+        "fmt": "$1.7B"
+      },
+      "margin": 25.9,
+      "summary": "Q2 FY2026 — revenue $6.6B (+12.7% YoY), diluted EPS $4.25 (+7.9% YoY), net margin 26%. (as reported, GAAP)"
+    },
+    "NOW": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-23",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm",
+      "revenue": {
+        "fmt": "$3.8B",
+        "yoy": 22.1
+      },
+      "eps": {
+        "val": 0.45,
+        "yoy": 2.3
+      },
+      "net_income": {
+        "fmt": "$469M"
+      },
+      "margin": 12.4,
+      "summary": "Q1 FY2026 — revenue $3.8B (+22.1% YoY), diluted EPS $0.45 (+2.3% YoY), net margin 12%. (as reported, GAAP)"
+    },
+    "ABT": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-29",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm",
+      "revenue": {
+        "fmt": "$11.2B",
+        "yoy": 7.8
+      },
+      "eps": {
+        "val": 0.61,
+        "yoy": -19.7
+      },
+      "net_income": {
+        "fmt": "$1.1B"
+      },
+      "margin": 9.6,
+      "summary": "Q1 FY2026 — revenue $11.2B (+7.8% YoY), diluted EPS $0.61 (-19.7% YoY), net margin 10%. (as reported, GAAP)"
+    },
+    "ZTS": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm",
+      "revenue": {
+        "fmt": "$2.3B",
+        "yoy": 2.9
+      },
+      "eps": {
+        "val": 1.42,
+        "yoy": 6.0
+      },
+      "net_income": {
+        "fmt": "$601M"
+      },
+      "margin": 26.6,
+      "summary": "Q1 FY2026 — revenue $2.3B (+2.9% YoY), diluted EPS $1.42 (+6.0% YoY), net margin 27%. (as reported, GAAP)"
+    },
+    "DHR": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-21",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000107/dhr-20260327.htm",
+      "revenue": {
+        "fmt": "$6.0B",
+        "yoy": 3.7
+      },
+      "eps": {
+        "val": 1.45,
+        "yoy": 9.8
+      },
+      "net_income": {
+        "fmt": "$1.0B"
+      },
+      "margin": 17.3,
+      "summary": "Q1 FY2026 — revenue $6.0B (+3.7% YoY), diluted EPS $1.45 (+9.8% YoY), net margin 17%. (as reported, GAAP)"
+    },
+    "RKLB": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm",
+      "revenue": {
+        "fmt": "$200M",
+        "yoy": 63.5
+      },
+      "eps": {
+        "val": -0.07,
+        "yoy": 41.7
+      },
+      "net_income": {
+        "fmt": "$-45M"
+      },
+      "margin": -22.5,
+      "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
+    },
+    "NVDA": {
+      "period": "Q1 FY2027",
+      "filed": "2026-05-20",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
+      "revenue": {
+        "fmt": "$81.6B",
+        "yoy": 85.2
+      },
+      "eps": {
+        "val": 2.39,
+        "yoy": 214.5
+      },
+      "net_income": {
+        "fmt": "$58.3B"
+      },
+      "margin": 71.5,
+      "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
+    },
+    "BSX": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-01",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm",
+      "revenue": {
+        "fmt": "$5.2B",
+        "yoy": 11.6
+      },
+      "eps": {
+        "val": 0.9,
+        "yoy": 100.0
+      },
+      "net_income": {
+        "fmt": "$190M"
+      },
+      "margin": null,
+      "summary": "Q1 FY2026 — revenue $5.2B (+11.6% YoY), diluted EPS $0.90 (+100.0% YoY). (as reported, GAAP)"
+    },
+    "LULU": {
+      "period": "Q1 FY2026",
+      "filed": "2026-06-04",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm",
+      "revenue": {
+        "fmt": "$2.5B",
+        "yoy": 4.3
+      },
+      "eps": {
+        "val": 1.69,
+        "yoy": -35.0
+      },
+      "net_income": {
+        "fmt": "$195M"
+      },
+      "margin": 7.9,
+      "summary": "Q1 FY2026 — revenue $2.5B (+4.3% YoY), diluted EPS $1.69 (-35.0% YoY), net margin 8%. (as reported, GAAP)"
+    },
+    "UBER": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-06",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm",
+      "revenue": {
+        "fmt": "$13.2B",
+        "yoy": 14.5
+      },
+      "eps": {
+        "val": 0.13,
+        "yoy": -84.3
+      },
+      "net_income": {
+        "fmt": "$263M"
+      },
+      "margin": 2.0,
+      "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
+    },
+    "IOT": {
+      "period": "Q1 FY2027",
+      "filed": "2026-06-09",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026041893/iot-20260502.htm",
+      "revenue": {
+        "fmt": "$479M",
+        "yoy": 30.5
+      },
+      "eps": {
+        "val": 0.08,
+        "yoy": 300.0
+      },
+      "net_income": {
+        "fmt": "$45M"
+      },
+      "margin": 9.3,
+      "summary": "Q1 FY2027 — revenue $479M (+30.5% YoY), diluted EPS $0.08 (+300.0% YoY), net margin 9%. (as reported, GAAP)"
+    },
+    "GILD": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm",
+      "revenue": {
+        "fmt": "$7.0B",
+        "yoy": 4.4
+      },
+      "eps": {
+        "val": 1.61,
+        "yoy": 54.8
+      },
+      "net_income": {
+        "fmt": "$2.0B"
+      },
+      "margin": 29.0,
+      "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
+    },
+    "NVS": null,
+    "NBIX": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-05",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm",
+      "revenue": {
+        "fmt": "$814M",
+        "yoy": 42.2
+      },
+      "eps": {
+        "val": 1.91,
+        "yoy": 2287.5
+      },
+      "net_income": {
+        "fmt": "$198M"
+      },
+      "margin": 24.3,
+      "summary": "Q1 FY2026 — revenue $814M (+42.2% YoY), diluted EPS $1.91 (+2287.5% YoY), net margin 24%. (as reported, GAAP)"
+    },
+    "VRTX": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-05",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm",
+      "revenue": {
+        "fmt": "$3.0B",
+        "yoy": 7.8
+      },
+      "eps": {
+        "val": 4.02,
+        "yoy": 61.4
+      },
+      "net_income": {
+        "fmt": "$1.0B"
+      },
+      "margin": 34.5,
+      "summary": "Q1 FY2026 — revenue $3.0B (+7.8% YoY), diluted EPS $4.02 (+61.4% YoY), net margin 34%. (as reported, GAAP)"
+    },
+    "KO": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-30",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026028802/ko-20260403.htm",
+      "revenue": {
+        "fmt": "$12.5B",
+        "yoy": 12.1
+      },
+      "eps": {
+        "val": 0.91,
+        "yoy": 18.2
+      },
+      "net_income": {
+        "fmt": "$3.9B"
+      },
+      "margin": 31.5,
+      "summary": "Q1 FY2026 — revenue $12.5B (+12.1% YoY), diluted EPS $0.91 (+18.2% YoY), net margin 32%. (as reported, GAAP)"
+    }
   }
- ],
- "catalysts": [
-  {
-   "when": "Jul 15",
-   "what": "ABT earnings",
-   "affects": "ABT",
-   "dir": "two-sided",
-   "why": "Q-results for Abbott Laboratories — guidance is the catalyst.",
-   "src": "earnings calendar (Benzinga + Finnhub)"
-  },
-  {
-   "when": "Jul 21",
-   "what": "DHR earnings",
-   "affects": "DHR",
-   "dir": "two-sided",
-   "why": "Q-results for Danaher — guidance is the catalyst.",
-   "src": "earnings calendar (Benzinga + Finnhub)"
-  },
-  {
-   "when": "Jul 21",
-   "what": "NVS earnings",
-   "affects": "NVS",
-   "dir": "two-sided",
-   "why": "Q-results for Novartis — guidance is the catalyst.",
-   "src": "earnings calendar (Benzinga + Finnhub)"
-  },
-  {
-   "when": "Jul 22",
-   "what": "NOW earnings",
-   "affects": "NOW",
-   "dir": "two-sided",
-   "why": "Q-results for ServiceNow — guidance is the catalyst.",
-   "src": "earnings calendar (Benzinga + Finnhub)"
-  },
-  {
-   "when": "Jul 5",
-   "what": "Energy & geopolitics — today's read",
-   "why": "As vessels transit the Strait of Hormuz under a UN evacuation program. Also, President Trump said he has ordered a DOJ investigation into retail fuel price gouging, which may lead to lower margins going forward.",
-   "affects": "Energy · growth",
-   "dir": "two-sided",
-   "src": "Benzinga WIIM (live)"
-  }
- ],
- "sectors": [
-  {
-   "sector": "Grocery Retailers",
-   "dir": "up",
-   "driver": "Ahead of the 4th of July holiday weekend",
-   "note": "Ahead of the 4th of July holiday weekend.",
-   "src": "Benzinga WIIM · price-confirmed"
-  },
-  {
-   "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
-   "dir": "down",
-   "driver": "Continued weakness after recent reports suggested that Meta will open a …",
-   "note": "Amid continued weakness after recent reports suggested that Meta will open a cloud business to sell excess AI compute. Also, weakness may reflect profit-taking following the industry-wide rally in H1 2026.",
-   "src": "Benzinga WIIM · price-confirmed"
-  },
-  {
-   "sector": "Software",
-   "dir": "up",
-   "driver": "A Guggenheim report suggested that AI concerns may be overblown",
-   "note": "After a Guggenheim report suggested that AI concerns may be overblown.",
-   "src": "Benzinga WIIM · price-confirmed"
-  },
-  {
-   "sector": "Homebuilding & Housing",
-   "dir": "up",
-   "driver": "The House and Senate sent a bipartisan housing bill designed to lower ho…",
-   "note": "After the House and Senate sent a bipartisan housing bill designed to lower housing costs for President Trump's signature. Sentiment was further boosted by KB Home’s better-than-expected second-quarter sales results.",
-   "src": "Benzinga WIIM · price-confirmed"
-  },
-  {
-   "sector": "Oil & Gas",
-   "dir": "down",
-   "driver": "Vessels transit the Strait of Hormuz under a UN evacuation program",
-   "note": "As vessels transit the Strait of Hormuz under a UN evacuation program. Also, President Trump said he has ordered a DOJ investigation into retail fuel price gouging, which may lead to lower margins going forward.",
-   "src": "Benzinga WIIM · price-confirmed"
-  }
- ],
- "holding_news": {
-  "KO": {
-   "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
-   "ts": 1782832328,
-   "url": "https://www.benzinga.com/quote/KO",
-   "wiim": false
-  }
- },
- "ratings": [
-  {
-   "date": "2026-06-29",
-   "ticker": "CVX",
-   "firm": "Morgan Stanley",
-   "action": "Maintains",
-   "rating": "Overweight",
-   "stance": "bullish",
-   "pt": "$210",
-   "price": 169.2,
-   "upside": 24.1,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-06-29",
-   "ticker": "NKE",
-   "firm": "JP Morgan",
-   "action": "Maintains",
-   "rating": "Neutral",
-   "stance": "neutral",
-   "pt": "$47",
-   "price": 44.09,
-   "upside": 6.6,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-06-30",
-   "ticker": "MRK",
-   "firm": "B of A Securities",
-   "action": "Maintains",
-   "rating": "Buy",
-   "stance": "bullish",
-   "pt": "$141",
-   "price": 129.56,
-   "upside": 8.8,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-06-30",
-   "ticker": "MRK",
-   "firm": "Scotiabank",
-   "action": "Maintains",
-   "rating": "Sector Outperform",
-   "stance": "bullish",
-   "pt": "$155",
-   "price": 129.56,
-   "upside": 19.6,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "Jefferies",
-   "action": "Maintains",
-   "rating": "Buy",
-   "stance": "bullish",
-   "pt": "$75",
-   "price": 44.09,
-   "upside": 70.1,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "UBS",
-   "action": "Maintains",
-   "rating": "Neutral",
-   "stance": "neutral",
-   "pt": "$48",
-   "price": 44.09,
-   "upside": 8.9,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "Telsey Advisory Group",
-   "action": "Maintains",
-   "rating": "Market Perform",
-   "stance": "neutral",
-   "pt": "$47",
-   "price": 44.09,
-   "upside": 6.6,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "Baird",
-   "action": "Reiterates",
-   "rating": "Outperform",
-   "stance": "bullish",
-   "pt": "$70",
-   "price": 44.09,
-   "upside": 58.8,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "BNP Paribas",
-   "action": "Reiterates",
-   "rating": "Underperform",
-   "stance": "bearish",
-   "pt": "$23",
-   "price": 44.09,
-   "upside": -47.8,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "Bernstein",
-   "action": "Maintains",
-   "rating": "Outperform",
-   "stance": "bullish",
-   "pt": "$72",
-   "price": 44.09,
-   "upside": 63.3,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "Citigroup",
-   "action": "Maintains",
-   "rating": "Neutral",
-   "stance": "neutral",
-   "pt": "$45",
-   "price": 44.09,
-   "upside": 2.1,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "Piper Sandler",
-   "action": "Maintains",
-   "rating": "Neutral",
-   "stance": "neutral",
-   "pt": "$45",
-   "price": 44.09,
-   "upside": 2.1,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "Guggenheim",
-   "action": "Maintains",
-   "rating": "Buy",
-   "stance": "bullish",
-   "pt": "$60",
-   "price": 44.09,
-   "upside": 36.1,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "CRM",
-   "firm": "Guggenheim",
-   "action": "Upgrades",
-   "rating": "Buy",
-   "stance": "bullish",
-   "pt": "$228",
-   "price": 166.11,
-   "upside": 37.3,
-   "held": false,
-   "uni": true,
-   "qarp": "STRONG BUY"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "Stifel",
-   "action": "Maintains",
-   "rating": "Hold",
-   "stance": "neutral",
-   "pt": "$45",
-   "price": 44.09,
-   "upside": 2.1,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "BTIG",
-   "action": "Reiterates",
-   "rating": "Buy",
-   "stance": "bullish",
-   "pt": "$55",
-   "price": 44.09,
-   "upside": 24.7,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "Barclays",
-   "action": "Maintains",
-   "rating": "Overweight",
-   "stance": "bullish",
-   "pt": "$52",
-   "price": 44.09,
-   "upside": 17.9,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "B of A Securities",
-   "action": "Maintains",
-   "rating": "Neutral",
-   "stance": "neutral",
-   "pt": "$47",
-   "price": 44.09,
-   "upside": 6.6,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-01",
-   "ticker": "NKE",
-   "firm": "Wells Fargo",
-   "action": "Maintains",
-   "rating": "Equal-Weight",
-   "stance": "neutral",
-   "pt": "$40",
-   "price": 44.09,
-   "upside": -9.3,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  },
-  {
-   "date": "2026-07-02",
-   "ticker": "CVX",
-   "firm": "Wolfe Research",
-   "action": "Upgrades",
-   "rating": "Outperform",
-   "stance": "bullish",
-   "pt": "$210",
-   "price": 169.2,
-   "upside": 24.1,
-   "held": false,
-   "uni": true,
-   "qarp": "HOLD-QUAL"
-  }
- ],
- "bz_news": [
-  {
-   "title": "Data Center Leases Top $850 Billion as Meta, Microsoft, Oracle Lead Record AI Infrastructure Spending",
-   "url": "https://www.benzinga.com/markets/tech/26/07/60269156/data-center-leases-top-850-billion-as-meta-microsoft-oracle-lead-record-ai-infrastructure-spending",
-   "ts": 1783224803,
-   "tickers": [
-    "MSFT",
-    "META",
-    "AMZN",
-    "GOOGL"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": false,
-   "relevance": 0.547
-  },
-  {
-   "title": "Forrest Gump Invested in a 'Fruit Company' — Here's What That Apple Bet Would Be Worth Today",
-   "url": "https://www.benzinga.com/news/education/26/07/60268915/forrest-gump-invested-in-a-fruit-company-heres-what-that-apple-bet-would-be-worth-today",
-   "ts": 1783195290,
-   "tickers": [
-    "AAPL"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.288
-  },
-  {
-   "title": "Salesforce CEO Marc Benioff Ignored 53 Emails Before This VC Founder Finally Got a Reply— Now He Says the Strategy is ‘Super Learnable’",
-   "url": "https://www.benzinga.com/markets/tech/26/07/60268803/salesforce-ceo-marc-benioff-ignored-53-emails-before-this-vc-founder-finally-got-a-reply-now-he-says-the-strategy-is-super-learnable",
-   "ts": 1783185566,
-   "tickers": [
-    "CRM"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.253
-  },
-  {
-   "title": "A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called...'",
-   "url": "https://www.benzinga.com/markets/tech/26/07/60268681/a-former-uber-engineer-visited-nvidias-headquarters-and-couldnt-believe-what-employees-actually-pay-for-at-work-we-use-this-thing-called",
-   "ts": 1783179112,
-   "tickers": [
-    "TSLA",
-    "META",
-    "MSFT",
-    "NVDA"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.422
-  },
-  {
-   "title": "Trump Administration Ramps Up Pressure on Oil Industry As Federal Agencies Push States to Investigate Elevated Gas Prices",
-   "url": "https://www.benzinga.com/news/politics/26/07/60268134/trump-administration-ramps-up-pressure-on-oil-industry-as-federal-agencies-push-states-to-investigate-elevated-gas-prices",
-   "ts": 1783137939,
-   "tickers": [
-    "CVX"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.323
-  },
-  {
-   "title": "Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom 250 Initiative",
-   "url": "https://www.benzinga.com/news/politics/26/07/60268100/trump-faces-new-questions-as-report-says-boeing-lockheed-palantir-and-other-federal-contractors-supported-both-america250-and-his-freedom-250-initiative",
-   "ts": 1783132685,
-   "tickers": [
-    "LMT",
-    "PLTR",
-    "RTX",
-    "BA"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": false,
-   "relevance": 0.237
-  },
-  {
-   "title": "$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today",
-   "url": "https://www.benzinga.com/news/26/07/60267783/100-invested-mcdonald-s-20-years-ago-would-be-worth-much-today",
-   "ts": 1783115136,
-   "tickers": [
-    "MCD"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": false,
-   "relevance": 0.255
-  },
-  {
-   "title": "$1000 Invested In Salesforce 20 Years Ago Would Be Worth This Much Today",
-   "url": "https://www.benzinga.com/news/26/07/60266933/1000-invested-salesforce-20-years-ago-would-be-worth-much-today",
-   "ts": 1783111531,
-   "tickers": [
-    "CRM"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.306
-  },
-  {
-   "title": "EXCLUSIVE: Top 12 Most-Searched Tickers For First Half of 2026 - Where Do Micron, Nvidia, Tesla, SanDisk Rank?",
-   "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60266829/exclusive-top-12-most-searched-tickers-for-first-half-of-2026-where-do-micron-nvidia-tesla-sandisk-rank",
-   "ts": 1783107090,
-   "tickers": [
-    "TSLA",
-    "AAPL",
-    "META",
-    "SPY"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.462
-  },
-  {
-   "title": "10 Industrials Stocks Whale Activity In Today’s Session",
-   "url": "https://www.benzinga.com/markets/options/26/07/60266615/10-industrials-stocks-whale-activity-today-s-session",
-   "ts": 1783100124,
-   "tickers": [
-    "UBER",
-    "RKLB",
-    "BA",
-    "FCEL"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.415
-  },
-  {
-   "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-   "url": "https://www.benzinga.com/markets/options/26/07/60266614/10-information-technology-stocks-whale-activity-today-s-session",
-   "ts": 1783100124,
-   "tickers": [
-    "AAPL",
-    "MSTR",
-    "NBIS",
-    "MU"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.394
-  },
-  {
-   "title": "This AI Stock Beat Nvidia by 200%—Then Zuckerberg Sparked a 17% Sell-Off",
-   "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60266223/this-ai-stock-beat-nvidia-by-200-then-zuckerberg-sparked-a-17-sell-off",
-   "ts": 1783092668,
-   "tickers": [
-    "AAOI",
-    "META",
-    "AMZN",
-    "GOOGL"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.566
-  },
-  {
-   "title": "XRP Crashed 70% in 1 Year While Ripple Was Doing Everything Right: What Happened?",
-   "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60266116/xrp-crashed-70-in-1-year-while-ripple-was-doing-everything-right-what-happened",
-   "ts": 1783090868,
-   "tickers": [
-    "$XRP",
-    "$BTC",
-    "$ETH",
-    "MA"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": false,
-   "relevance": 0.316
-  },
-  {
-   "title": "Here’s How Much You Would Have Made Owning Cisco Systems Stock In The Last 10 Years",
-   "url": "https://www.benzinga.com/news/26/07/60266007/here-s-how-much-you-would-have-made-owning-cisco-systems-stock-last-10-years",
-   "ts": 1783089050,
-   "tickers": [
-    "CSCO"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.29
-  },
-  {
-   "title": "Here's How Much $1000 Invested In Goldman Sachs Group 5 Years Ago Would Be Worth Today",
-   "url": "https://www.benzinga.com/news/26/07/60265925/here-s-how-much-1000-invested-goldman-sachs-group-5-years-ago-would-be-worth-today",
-   "ts": 1783087266,
-   "tickers": [
-    "GS"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": false,
-   "relevance": 0.298
-  },
-  {
-   "title": "Software Legend Kent Beck Says AI is Turning Coding Careers Into a ‘Cosmic Practical Joke’ as Soft Skills Become Critical",
-   "url": "https://www.benzinga.com/markets/tech/26/07/60265259/software-legend-kent-beck-says-ai-is-turning-coding-careers-into-a-cosmic-practical-joke-as-soft-skills-become-critical",
-   "ts": 1783074653,
-   "tickers": [
-    "CRM"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.304
-  },
-  {
-   "title": "Market Analysis: Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
-   "url": "https://www.benzinga.com/news/26/07/60265069/market-analysis-apple-and-competitors-technology-hardware-storage-amp-peripherals-industry",
-   "ts": 1783072722,
-   "tickers": [
-    "AAPL"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.423
-  },
-  {
-   "title": "Comparing Microsoft With Industry Competitors In Software Industry",
-   "url": "https://www.benzinga.com/news/26/07/60265067/comparing-microsoft-industry-competitors-software-industry",
-   "ts": 1783072714,
-   "tickers": [
-    "MSFT"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": false,
-   "relevance": 0.328
-  },
-  {
-   "title": "Michael Burry's Bearish Bet On Caterpillar Sparks Debate— Analyst Says the 'Big Short' Investor is Missing the 'Structural Theme'",
-   "url": "https://www.benzinga.com/markets/tech/26/07/60264966/michael-burrys-bearish-bet-on-caterpillar-sparks-debate-analyst-says-the-big-short-investor-is-missing-the-structural-theme",
-   "ts": 1783069617,
-   "tickers": [
-    "TSLA",
-    "NVDA",
-    "SOXX",
-    "CAT"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.313
-  },
-  {
-   "title": "Stock Market Open on July 3? What US Investors Need to Know About NYSE, Nasdaq and Bank Holiday Hours for the Fourth of July Weekend",
-   "url": "https://www.benzinga.com/markets/market-summary/26/07/60264249/stock-market-open-on-july-3-what-us-investors-need-to-know-about-nyse-nasdaq-and-bank-holiday-hours-for-the-fourth-of-july-weekend",
-   "ts": 1783058768,
-   "tickers": [
-    "FDX",
-    "WMT",
-    "COST",
-    "UPS"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.442
-  },
-  {
-   "title": "Why Is Avis Budget Group (CAR) Stock Trending Overnight? (CORRECTED)",
-   "url": "https://www.benzinga.com/markets/equities/26/07/60263990/why-is-avis-budget-group-car-stock-trending-overnight",
-   "ts": 1783053297,
-   "tickers": [
-    "JPM",
-    "WFC",
-    "MS",
-    "CAR"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": false,
-   "relevance": 0.376
-  },
-  {
-   "title": "Donald Trump Signals Confidence Elon Musk Will Donate SpaceX Stock to Trump Accounts: 'I Have a Very Good Relationship With Elon'",
-   "url": "https://www.benzinga.com/markets/tech/26/07/60263893/trump-says-he-thinks-elon-musk-will-donate-spacex-stock-to-trump-accounts",
-   "ts": 1783049287,
-   "tickers": [
-    "TSLA",
-    "JPM",
-    "HOOD",
-    "SOFI"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.265
-  },
-  {
-   "title": "Apple, Rivian, Tesla, CrowdStrike And SanDisk: Why These 5 Stocks Are On Investors' Radars Today",
-   "url": "https://www.benzinga.com/markets/equities/26/07/60263609/apple-rivian-tesla-crowdstrike-and-sandisk-why-these-5-stocks-are-on-investors-radars-today",
-   "ts": 1783042996,
-   "tickers": [
-    "AAPL",
-    "TSLA",
-    "RIVN",
-    "CRWD"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.45
-  },
-  {
-   "title": "If You Invested $100 In JPMorgan Chase Stock 20 Years Ago, You Would Have This Much Today",
-   "url": "https://www.benzinga.com/news/26/07/60262485/if-you-invested-100-jpmorgan-chase-stock-20-years-ago-you-would-have-much-today",
-   "ts": 1783028747,
-   "tickers": [
-    "JPM"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": false,
-   "relevance": 0.237
-  },
-  {
-   "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
-   "url": "https://www.benzinga.com/news/26/07/60245112/reported-earlier-coca-cola-said-seek-bankers-1-billion-india-bottler-ipo-bloomberg",
-   "ts": 1783000583,
-   "tickers": [
-    "KO"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.513
-  },
-  {
-   "title": "Trump's America250 Celebrations to Close Reagan National Airport for Nearly 15 Hours (UPDATED)",
-   "url": "https://www.benzinga.com/news/politics/26/07/60238040/trumps-america250-celebrations-to-close-reagan-national-airport-for-nearly-15-hours",
-   "ts": 1782993862,
-   "tickers": [
-    "AAL",
-    "BA",
-    "DAL",
-    "JBLU"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": false,
-   "relevance": 0.18
-  },
-  {
-   "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
-   "url": "https://www.benzinga.com/quote/KO",
-   "ts": 1782832328,
-   "tickers": [
-    "KO"
-   ],
-   "source": "Benzinga",
-   "wiim": false,
-   "rel": true,
-   "relevance": 0.534
-  }
- ],
- "portfolio_brief": {
-  "ADBE": {
-   "name": "Adobe",
-   "qarp": "STRONG BUY",
-   "consensus": {
-    "strongBuy": 10,
-    "buy": 9,
-    "hold": 22,
-    "sell": 4,
-    "strongSell": 0,
-    "total": 45,
-    "bullish": 19,
-    "bearish": 4,
-    "label": "Buy",
-    "score": 0.56,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-06-11",
-     "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000109/adbe-20260608.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-06-15",
-     "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000112/adbe-20260529.htm"
-    },
-    "insider30d": 4
-   },
-   "explain": "45 analysts cover it — 19 bullish, 22 hold, 4 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-  },
-  "NOW": {
-   "name": "ServiceNow",
-   "qarp": "BUY",
-   "consensus": {
-    "strongBuy": 15,
-    "buy": 33,
-    "hold": 5,
-    "sell": 1,
-    "strongSell": 0,
-    "total": 54,
-    "bullish": 48,
-    "bearish": 1,
-    "label": "Strong Buy",
-    "score": 1.15,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-05-22",
-     "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000065/now-20260521.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-04-23",
-     "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
-    },
-    "insider30d": 1
-   },
-   "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-  },
-  "ABT": {
-   "name": "Abbott Laboratories",
-   "qarp": "STRONG BUY",
-   "consensus": {
-    "strongBuy": 10,
-    "buy": 14,
-    "hold": 10,
-    "sell": 0,
-    "strongSell": 0,
-    "total": 34,
-    "bullish": 24,
-    "bearish": 0,
-    "label": "Strong Buy",
-    "score": 1.0,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-04-27",
-     "url": "https://www.sec.gov/Archives/edgar/data/1800/000110465926049434/tm2612318d1_8k.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-04-29",
-     "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm"
-    },
-    "insider30d": 8
-   },
-   "explain": "34 analysts cover it — 24 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-  },
-  "ZTS": {
-   "name": "Zoetis",
-   "qarp": "STRONG BUY",
-   "consensus": {
-    "strongBuy": 6,
-    "buy": 8,
-    "hold": 10,
-    "sell": 0,
-    "strongSell": 0,
-    "total": 24,
-    "bullish": 14,
-    "bearish": 0,
-    "label": "Buy",
-    "score": 0.83,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-05-22",
-     "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000029/zts-20260520.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-05-07",
-     "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm"
-    },
-    "insider30d": 2
-   },
-   "explain": "24 analysts cover it — 14 bullish, 10 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-  },
-  "DHR": {
-   "name": "Danaher",
-   "qarp": "BUY",
-   "consensus": {
-    "strongBuy": 11,
-    "buy": 16,
-    "hold": 3,
-    "sell": 0,
-    "strongSell": 0,
-    "total": 30,
-    "bullish": 27,
-    "bearish": 0,
-    "label": "Strong Buy",
-    "score": 1.27,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-06-03",
-     "url": "https://www.sec.gov/Archives/edgar/data/313616/000119312526255555/d63873d8k.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-04-21",
-     "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000107/dhr-20260327.htm"
-    },
-    "insider30d": 0
-   },
-   "explain": "30 analysts cover it — 27 bullish, 3 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-  },
-  "RKLB": {
-   "name": "Rocket Lab",
-   "qarp": "AVOID",
-   "consensus": {
-    "strongBuy": 7,
-    "buy": 15,
-    "hold": 5,
-    "sell": 0,
-    "strongSell": 0,
-    "total": 27,
-    "bullish": 22,
-    "bearish": 0,
-    "label": "Strong Buy",
-    "score": 1.07,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-06-29",
-     "url": "https://www.sec.gov/Archives/edgar/data/1819994/000175392626001085/g085783_8k.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-05-07",
-     "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm"
-    },
-    "insider30d": 4
-   },
-   "explain": "27 analysts cover it — 22 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
-  },
-  "NVDA": {
-   "name": "NVIDIA",
-   "qarp": "STRONG BUY",
-   "consensus": {
-    "strongBuy": 24,
-    "buy": 39,
-    "hold": 4,
-    "sell": 1,
-    "strongSell": 0,
-    "total": 68,
-    "bullish": 63,
-    "bearish": 1,
-    "label": "Strong Buy",
-    "score": 1.26,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-07-02",
-     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-05-20",
-     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
-    },
-    "insider30d": 18
-   },
-   "explain": "68 analysts cover it — 63 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-  },
-  "BSX": {
-   "name": "Boston Scientific",
-   "qarp": "STRONG BUY",
-   "consensus": {
-    "strongBuy": 12,
-    "buy": 20,
-    "hold": 8,
-    "sell": 0,
-    "strongSell": 0,
-    "total": 40,
-    "bullish": 32,
-    "bearish": 0,
-    "label": "Strong Buy",
-    "score": 1.1,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-05-18",
-     "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000042/bsx-20260518.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-05-01",
-     "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm"
-    },
-    "insider30d": 1
-   },
-   "explain": "40 analysts cover it — 32 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-  },
-  "LULU": {
-   "name": "Lululemon",
-   "qarp": "BUY",
-   "consensus": {
-    "strongBuy": 4,
-    "buy": 4,
-    "hold": 30,
-    "sell": 1,
-    "strongSell": 0,
-    "total": 39,
-    "bullish": 8,
-    "bearish": 1,
-    "label": "Hold",
-    "score": 0.28,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-06-26",
-     "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000088/lulu-20260624.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-06-04",
-     "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm"
-    },
-    "insider30d": 15
-   },
-   "explain": "39 analysts cover it — 8 bullish, 30 hold, 1 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
-  },
-  "UBER": {
-   "name": "Uber",
-   "qarp": "BUY",
-   "consensus": {
-    "strongBuy": 17,
-    "buy": 35,
-    "hold": 8,
-    "sell": 1,
-    "strongSell": 0,
-    "total": 61,
-    "bullish": 52,
-    "bearish": 1,
-    "label": "Strong Buy",
-    "score": 1.11,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-05-11",
-     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000320/e26247_uber-8k.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-05-06",
-     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm"
-    },
-    "insider30d": 6
-   },
-   "explain": "61 analysts cover it — 52 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-  },
-  "IOT": {
-   "name": "Samsara",
-   "qarp": "AVOID",
-   "consensus": {
-    "strongBuy": 5,
-    "buy": 16,
-    "hold": 6,
-    "sell": 0,
-    "strongSell": 0,
-    "total": 27,
-    "bullish": 21,
-    "bearish": 0,
-    "label": "Buy",
-    "score": 0.96,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-06-04",
-     "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026040788/iot-20260604.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-06-09",
-     "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026041893/iot-20260502.htm"
-    },
-    "insider30d": 15
-   },
-   "explain": "27 analysts cover it — 21 bullish, 6 hold, 0 bearish (consensus <b>Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
-  },
-  "GILD": {
-   "name": "Gilead Sciences",
-   "qarp": "HOLD-QUAL",
-   "consensus": {
-    "strongBuy": 11,
-    "buy": 21,
-    "hold": 7,
-    "sell": 0,
-    "strongSell": 0,
-    "total": 39,
-    "bullish": 32,
-    "bearish": 0,
-    "label": "Strong Buy",
-    "score": 1.1,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-05-20",
-     "url": "https://www.sec.gov/Archives/edgar/data/882095/000110465926064518/tm2615045d1_8k.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-05-07",
-     "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm"
-    },
-    "insider30d": 8
-   },
-   "explain": "39 analysts cover it — 32 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-  },
-  "NVS": {
-   "name": "Novartis",
-   "qarp": "HOLD-QUAL",
-   "consensus": {
-    "strongBuy": 6,
-    "buy": 11,
-    "hold": 14,
-    "sell": 3,
-    "strongSell": 0,
-    "total": 34,
-    "bullish": 17,
-    "bearish": 3,
-    "label": "Buy",
-    "score": 0.59,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": null,
-    "periodic": null,
-    "insider30d": 0
-   },
-   "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-  },
-  "NBIX": {
-   "name": "Neurocrine Biosciences",
-   "qarp": "STRONG BUY",
-   "consensus": {
-    "strongBuy": 14,
-    "buy": 17,
-    "hold": 5,
-    "sell": 0,
-    "strongSell": 0,
-    "total": 36,
-    "bullish": 31,
-    "bearish": 0,
-    "label": "Strong Buy",
-    "score": 1.25,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-05-28",
-     "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000029/nbix-20260527.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-05-05",
-     "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm"
-    },
-    "insider30d": 4
-   },
-   "explain": "36 analysts cover it — 31 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-  },
-  "VRTX": {
-   "name": "Vertex Pharma",
-   "qarp": "BUY",
-   "consensus": {
-    "strongBuy": 13,
-    "buy": 20,
-    "hold": 6,
-    "sell": 0,
-    "strongSell": 1,
-    "total": 40,
-    "bullish": 33,
-    "bearish": 1,
-    "label": "Strong Buy",
-    "score": 1.1,
-    "period": "2026-06-01"
-   },
-   "news": null,
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-05-13",
-     "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000204/vrtx-20260513.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-05-05",
-     "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm"
-    },
-    "insider30d": 4
-   },
-   "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-  },
-  "KO": {
-   "name": "Coca-Cola",
-   "qarp": "HOLD-QUAL",
-   "consensus": {
-    "strongBuy": 8,
-    "buy": 20,
-    "hold": 6,
-    "sell": 0,
-    "strongSell": 0,
-    "total": 34,
-    "bullish": 28,
-    "bearish": 0,
-    "label": "Strong Buy",
-    "score": 1.06,
-    "period": "2026-06-01"
-   },
-   "news": {
-    "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
-    "ts": 1782832328,
-    "url": "https://www.benzinga.com/quote/KO",
-    "wiim": false
-   },
-   "filings": {
-    "latest8k": {
-     "form": "8-K",
-     "date": "2026-06-25",
-     "url": "https://www.sec.gov/Archives/edgar/data/21344/000155278126000366/e26287_ko-8k.htm"
-    },
-    "periodic": {
-     "form": "10-Q",
-     "date": "2026-04-30",
-     "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026028802/ko-20260403.htm"
-    },
-    "insider30d": 5
-   },
-   "explain": "34 analysts cover it — 28 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-  }
- },
- "financials": {
-  "ADBE": {
-   "period": "Q2 FY2026",
-   "filed": "2026-06-15",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000112/adbe-20260529.htm",
-   "revenue": {
-    "fmt": "$6.6B",
-    "yoy": 12.7
-   },
-   "eps": {
-    "val": 4.25,
-    "yoy": 7.9
-   },
-   "net_income": {
-    "fmt": "$1.7B"
-   },
-   "margin": 25.9,
-   "summary": "Q2 FY2026 — revenue $6.6B (+12.7% YoY), diluted EPS $4.25 (+7.9% YoY), net margin 26%. (as reported, GAAP)"
-  },
-  "NOW": {
-   "period": "Q1 FY2026",
-   "filed": "2026-04-23",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm",
-   "revenue": {
-    "fmt": "$3.8B",
-    "yoy": 22.1
-   },
-   "eps": {
-    "val": 0.45,
-    "yoy": 2.3
-   },
-   "net_income": {
-    "fmt": "$469M"
-   },
-   "margin": 12.4,
-   "summary": "Q1 FY2026 — revenue $3.8B (+22.1% YoY), diluted EPS $0.45 (+2.3% YoY), net margin 12%. (as reported, GAAP)"
-  },
-  "ABT": {
-   "period": "Q1 FY2026",
-   "filed": "2026-04-29",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm",
-   "revenue": {
-    "fmt": "$11.2B",
-    "yoy": 7.8
-   },
-   "eps": {
-    "val": 0.61,
-    "yoy": -19.7
-   },
-   "net_income": {
-    "fmt": "$1.1B"
-   },
-   "margin": 9.6,
-   "summary": "Q1 FY2026 — revenue $11.2B (+7.8% YoY), diluted EPS $0.61 (-19.7% YoY), net margin 10%. (as reported, GAAP)"
-  },
-  "ZTS": {
-   "period": "Q1 FY2026",
-   "filed": "2026-05-07",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm",
-   "revenue": {
-    "fmt": "$2.3B",
-    "yoy": 2.9
-   },
-   "eps": {
-    "val": 1.42,
-    "yoy": 6.0
-   },
-   "net_income": {
-    "fmt": "$601M"
-   },
-   "margin": 26.6,
-   "summary": "Q1 FY2026 — revenue $2.3B (+2.9% YoY), diluted EPS $1.42 (+6.0% YoY), net margin 27%. (as reported, GAAP)"
-  },
-  "DHR": {
-   "period": "Q1 FY2026",
-   "filed": "2026-04-21",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000107/dhr-20260327.htm",
-   "revenue": {
-    "fmt": "$6.0B",
-    "yoy": 3.7
-   },
-   "eps": {
-    "val": 1.45,
-    "yoy": 9.8
-   },
-   "net_income": {
-    "fmt": "$1.0B"
-   },
-   "margin": 17.3,
-   "summary": "Q1 FY2026 — revenue $6.0B (+3.7% YoY), diluted EPS $1.45 (+9.8% YoY), net margin 17%. (as reported, GAAP)"
-  },
-  "RKLB": {
-   "period": "Q1 FY2026",
-   "filed": "2026-05-07",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm",
-   "revenue": {
-    "fmt": "$200M",
-    "yoy": 63.5
-   },
-   "eps": {
-    "val": -0.07,
-    "yoy": 41.7
-   },
-   "net_income": {
-    "fmt": "$-45M"
-   },
-   "margin": -22.5,
-   "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
-  },
-  "NVDA": {
-   "period": "Q1 FY2027",
-   "filed": "2026-05-20",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
-   "revenue": {
-    "fmt": "$81.6B",
-    "yoy": 85.2
-   },
-   "eps": {
-    "val": 2.39,
-    "yoy": 214.5
-   },
-   "net_income": {
-    "fmt": "$58.3B"
-   },
-   "margin": 71.5,
-   "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
-  },
-  "BSX": {
-   "period": "Q1 FY2026",
-   "filed": "2026-05-01",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm",
-   "revenue": {
-    "fmt": "$5.2B",
-    "yoy": 11.6
-   },
-   "eps": {
-    "val": 0.9,
-    "yoy": 100.0
-   },
-   "net_income": {
-    "fmt": "$190M"
-   },
-   "margin": null,
-   "summary": "Q1 FY2026 — revenue $5.2B (+11.6% YoY), diluted EPS $0.90 (+100.0% YoY). (as reported, GAAP)"
-  },
-  "LULU": {
-   "period": "Q1 FY2026",
-   "filed": "2026-06-04",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm",
-   "revenue": {
-    "fmt": "$2.5B",
-    "yoy": 4.3
-   },
-   "eps": {
-    "val": 1.69,
-    "yoy": -35.0
-   },
-   "net_income": {
-    "fmt": "$195M"
-   },
-   "margin": 7.9,
-   "summary": "Q1 FY2026 — revenue $2.5B (+4.3% YoY), diluted EPS $1.69 (-35.0% YoY), net margin 8%. (as reported, GAAP)"
-  },
-  "UBER": {
-   "period": "Q1 FY2026",
-   "filed": "2026-05-06",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm",
-   "revenue": {
-    "fmt": "$13.2B",
-    "yoy": 14.5
-   },
-   "eps": {
-    "val": 0.13,
-    "yoy": -84.3
-   },
-   "net_income": {
-    "fmt": "$263M"
-   },
-   "margin": 2.0,
-   "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
-  },
-  "IOT": {
-   "period": "Q1 FY2027",
-   "filed": "2026-06-09",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026041893/iot-20260502.htm",
-   "revenue": {
-    "fmt": "$479M",
-    "yoy": 30.5
-   },
-   "eps": {
-    "val": 0.08,
-    "yoy": 300.0
-   },
-   "net_income": {
-    "fmt": "$45M"
-   },
-   "margin": 9.3,
-   "summary": "Q1 FY2027 — revenue $479M (+30.5% YoY), diluted EPS $0.08 (+300.0% YoY), net margin 9%. (as reported, GAAP)"
-  },
-  "GILD": {
-   "period": "Q1 FY2026",
-   "filed": "2026-05-07",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm",
-   "revenue": {
-    "fmt": "$7.0B",
-    "yoy": 4.4
-   },
-   "eps": {
-    "val": 1.61,
-    "yoy": 54.8
-   },
-   "net_income": {
-    "fmt": "$2.0B"
-   },
-   "margin": 29.0,
-   "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
-  },
-  "NVS": null,
-  "NBIX": {
-   "period": "Q1 FY2026",
-   "filed": "2026-05-05",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm",
-   "revenue": {
-    "fmt": "$814M",
-    "yoy": 42.2
-   },
-   "eps": {
-    "val": 1.91,
-    "yoy": 2287.5
-   },
-   "net_income": {
-    "fmt": "$198M"
-   },
-   "margin": 24.3,
-   "summary": "Q1 FY2026 — revenue $814M (+42.2% YoY), diluted EPS $1.91 (+2287.5% YoY), net margin 24%. (as reported, GAAP)"
-  },
-  "VRTX": {
-   "period": "Q1 FY2026",
-   "filed": "2026-05-05",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm",
-   "revenue": {
-    "fmt": "$3.0B",
-    "yoy": 7.8
-   },
-   "eps": {
-    "val": 4.02,
-    "yoy": 61.4
-   },
-   "net_income": {
-    "fmt": "$1.0B"
-   },
-   "margin": 34.5,
-   "summary": "Q1 FY2026 — revenue $3.0B (+7.8% YoY), diluted EPS $4.02 (+61.4% YoY), net margin 34%. (as reported, GAAP)"
-  },
-  "KO": {
-   "period": "Q1 FY2026",
-   "filed": "2026-04-30",
-   "form": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026028802/ko-20260403.htm",
-   "revenue": {
-    "fmt": "$12.5B",
-    "yoy": 12.1
-   },
-   "eps": {
-    "val": 0.91,
-    "yoy": 18.2
-   },
-   "net_income": {
-    "fmt": "$3.9B"
-   },
-   "margin": 31.5,
-   "summary": "Q1 FY2026 — revenue $12.5B (+12.1% YoY), diluted EPS $0.91 (+18.2% YoY), net margin 32%. (as reported, GAAP)"
-  }
- },
- "risk_asof": "2026-07-05"
 }
