@@ -342,12 +342,6 @@ function renderDeskDiscipline() {
       <div class="drift-note">Fundamentals moved since the hand-score (earnings, targets, margins) — the daily price re-rank can't see this. Tap a name, read "what drifted" on hover.</div>
     </div>`);
   }
-  const rescreen = DATA.meta.shariah_rescreen;
-  if (rescreen && rescreen.due) {
-    parts.push(`<div class="drift-card overdue">
-      <div class="drift-head"><b>Quarterly Shariah re-screen due</b> — last full screen ${esc(rescreen.last_screen || "unknown")} (&gt;92 days). Compliance verdicts move with market caps and debt; run the screener.</div>
-    </div>`);
-  }
   host.innerHTML = parts.join("");
   host.hidden = !parts.length;
   host.querySelectorAll(".drift-chip").forEach((b) =>
