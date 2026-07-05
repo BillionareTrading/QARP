@@ -1333,3 +1333,16 @@ tbody tr:hover { background: var(--surface-2); }
 .dca-vs { align-self: center; font-family: var(--serif); font-style: italic; color: var(--ink-3); font-size: 15px; }
 .dca-edge { text-align: center; margin: 12px 0 4px; font-size: 14px; color: var(--ink); }
 .dca-foot { font-size: 11.5px; color: var(--ink-3); line-height: 1.5; margin: 10px 0 0; }
+
+/* ===== SEC filings: drawer block + subtab table accents ===== */
+.drawer-fin { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline;
+  border: 1px solid var(--line); background: var(--surface-2); border-radius: var(--radius-sm);
+  padding: 10px 13px; font-size: 12.5px; }
+.drawer-fin .fin-stat { color: var(--ink-2); }
+.drawer-fin .fin-stat b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.drawer-fin .fin-stat i { font-style: normal; font-size: 11.5px; font-weight: 700; margin-left: 3px; }
+.drawer-fin .fin-src { flex-basis: 100%; font-size: 11px; color: var(--ink-3); }
+.drawer-fin .fin-src a { color: var(--brand); }
+.er-link { font-size: 12px; color: var(--brand); text-decoration: none; }
+.er-link:hover { text-decoration: underline; }
+#usub-filings th[data-fk] { cursor: pointer; }
