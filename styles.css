@@ -1298,3 +1298,23 @@ tbody tr:hover { background: var(--surface-2); }
 .drift-chip .dw { font-weight: 400; color: var(--ink-3); margin-left: 5px; font-size: 10.5px; }
 .drift-note { font-size: 11.5px; color: var(--ink-3); font-style: italic; font-family: var(--serif); }
 .stale-flag { color: var(--neg); font-weight: 700; font-size: 11px; }
+
+/* ===== Additions desk (Portfolio > Signals): where new money could go ===== */
+.additions-card h3 .fw-sub { font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: 12.5px; color: var(--ink-3); text-transform: none; letter-spacing: 0; }
+.add-intro { font-size: 13px; color: var(--ink-2); line-height: 1.55; margin: 6px 0 12px; max-width: 74ch; }
+.gap-strip { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; margin-bottom: 12px; }
+.gap-label { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+.gap-chip { font-size: 12px; color: var(--ink-2); background: var(--surface-2); border: 1px solid var(--line);
+  border-radius: 999px; padding: 3px 10px; }
+.gap-chip b { color: var(--neg); }
+.add-row { display: grid; grid-template-columns: minmax(140px, 1fr) auto; gap: 2px 14px;
+  padding: 10px 2px; border-top: 1px solid var(--line-2); cursor: pointer; align-items: center; }
+.add-row:hover { background: var(--surface-2); }
+.add-meta { display: flex; align-items: center; gap: 8px; justify-self: end; white-space: nowrap; }
+.add-gate { font-family: var(--mono); font-size: 11px; font-weight: 700; }
+.add-gate.g-go { color: var(--pos); } .add-gate.g-turn { color: #b45309; }
+.add-mac { font-size: 11px; color: var(--ink-3); border: 1px solid var(--line); border-radius: 5px; padding: 1px 7px; }
+.add-why { grid-column: 1 / -1; font-size: 12px; color: var(--ink-2); font-family: var(--serif); font-style: italic; }
+.add-foot { margin: 12px 0 0; font-size: 11.5px; color: var(--ink-3); }
+@media (max-width: 640px) { .add-meta { justify-self: start; } }
