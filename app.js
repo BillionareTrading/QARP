@@ -921,7 +921,42 @@ function renderScorecard() {
       <div class="sc-note">Each <b>call</b> is a verdict locked at its entry price — it stays put until the name is re-scored (not on daily price moves). Return marks to current price. ${total} calls since ${sc.since || ""}. Early sample — watch the IC + spread trend as it matures.</div>
     </div>
     ${renderTrend(sc.history)}
-    <div class="sc-grid">${cards}</div>`;
+    <div class="sc-grid">${cards}</div>
+    ${renderDcaSim()}`;
+}
+
+/* ---------- the $1,000 test: plain-English proof under the track record ---------- */
+function renderDcaSim() {
+  const s = DATA.dca_sim;
+  if (!s || s.framework == null || s.sp500 == null) return "";
+  const fwPct = (s.framework / s.invested - 1) * 100;
+  const spPct = (s.sp500 / s.invested - 1) * 100;
+  const edge = fwPct - spPct;
+  return `<div class="card dca-card">
+    <h3>The $1,000 test <span class="fw-sub">same dollars, same days — only the picks differ</span></h3>
+    <p class="dca-intro">Take <b>$1,000</b> and split it into equal daily installments since the ledger began
+      (<b>${esc(s.since)}</b>, ${s.days} sessions). Each day, buy that day's <b>STRONG&nbsp;BUY</b> list,
+      equal-weight, at the closing price — stop buying a name the day its verdict changes, never sell.
+      Then do the identical thing with the <b>S&amp;P&nbsp;500</b>.</p>
+    <div class="dca-race">
+      <div class="dca-lane">
+        <div class="dca-label">QARP STRONG BUYs <span class="muted">(${s.names_bought} names bought)</span></div>
+        <div class="dca-value ${signClass(fwPct)}">${fmtUSD(s.framework, 0)}</div>
+        <div class="dca-pct ${signClass(fwPct)}">${fmtPct(fwPct, 1)}</div>
+      </div>
+      <div class="dca-vs">vs</div>
+      <div class="dca-lane">
+        <div class="dca-label">S&amp;P 500 <span class="muted">(same method)</span></div>
+        <div class="dca-value ${signClass(spPct)}">${fmtUSD(s.sp500, 0)}</div>
+        <div class="dca-pct ${signClass(spPct)}">${fmtPct(spPct, 1)}</div>
+      </div>
+    </div>
+    <div class="dca-edge">${edge >= 0 ? "The framework is ahead by" : "The framework trails by"}
+      <b class="${signClass(edge)}">${fmtPct(Math.abs(edge), 1).replace("+", "")}</b> over this stretch.</div>
+    <p class="dca-foot">Simulated at daily adjusted closes (split-safe), no costs or taxes, verdicts from the
+      calls ledger exactly as they stood each day. A short window — read the trend, not one snapshot.
+      Informational only, not advice.</p>
+  </div>`;
 }
 
 /* ---------- tabs ---------- */
