@@ -1280,3 +1280,21 @@ tbody tr:hover { background: var(--surface-2); }
 #tab-universe .table-wrap, #tab-portfolio .table-wrap, #tab-informed .table-wrap {
   box-shadow: none; border-color: var(--line);
 }
+
+/* ===== Desk discipline: re-score SLA queue + Shariah re-screen nag ===== */
+#desk-discipline { margin-bottom: 16px; display: flex; flex-direction: column; gap: 10px; }
+.drift-card { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius);
+  padding: 12px 15px; border-left: 4px solid var(--brass); }
+.drift-card.overdue { border-left-color: var(--neg); }
+.drift-head { font-size: 13px; color: var(--ink); line-height: 1.5; }
+.drift-sla { font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--brass); margin-left: 6px; }
+.drift-card.overdue .drift-sla { color: var(--neg); }
+.drift-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 9px 0 4px; }
+.drift-chip { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--ink);
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; padding: 3px 8px; }
+.drift-chip:hover { border-color: var(--brand); color: var(--brand); }
+.drift-chip.hot { border-color: var(--neg); }
+.drift-chip .dw { font-weight: 400; color: var(--ink-3); margin-left: 5px; font-size: 10.5px; }
+.drift-note { font-size: 11.5px; color: var(--ink-3); font-style: italic; font-family: var(--serif); }
+.stale-flag { color: var(--neg); font-weight: 700; font-size: 11px; }
