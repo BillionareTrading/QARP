@@ -292,6 +292,39 @@ let uIndex = "US Equities";
 const uList = () => DATA.universe.filter((x) => (x.index || "US Equities") === uIndex);
 
 /* ---------- render: Overview ---------- */
+/* ---------- Desk discipline: re-score SLA queue + quarterly Shariah re-screen nag ---------- */
+function renderDeskDiscipline() {
+  const host = document.getElementById("desk-discipline");
+  if (!host || !DATA.meta) return;
+  const parts = [];
+  const drift = DATA.meta.drift;
+  if (drift && drift.flagged && drift.flagged.length) {
+    // SLA: flagged names get re-scored within 5 trading days (~7 calendar); older = overdue
+    const ageDays = Math.round((new Date(asOfDate(DATA.meta.date) + "T12:00:00") - new Date(drift.date + "T12:00:00")) / 86400000);
+    const overdue = ageDays > 7;
+    const chips = drift.flagged.slice(0, 12).map((f) =>
+      `<button type="button" class="drift-chip${f.weight >= 3 ? " hot" : ""}" data-ticker="${f.ticker}"
+        title="${esc((f.reasons || []).join("; "))}">${f.ticker}<span class="dw">${f.weight}</span></button>`).join("");
+    const more = drift.flagged.length > 12 ? `<span class="muted">+${drift.flagged.length - 12} more</span>` : "";
+    parts.push(`<div class="drift-card${overdue ? " overdue" : ""}">
+      <div class="drift-head"><b>Re-score queue</b> — ${drift.flagged.length} name${drift.flagged.length > 1 ? "s" : ""} drifted
+        (weekly check, ${drift.date}) <span class="drift-sla">${overdue ? "SLA OVERDUE — re-score within 5 trading days" : "SLA: re-score within 5 trading days"}</span></div>
+      <div class="drift-chips">${chips}${more}</div>
+      <div class="drift-note">Fundamentals moved since the hand-score (earnings, targets, margins) — the daily price re-rank can't see this. Tap a name, read "what drifted" on hover.</div>
+    </div>`);
+  }
+  const rescreen = DATA.meta.shariah_rescreen;
+  if (rescreen && rescreen.due) {
+    parts.push(`<div class="drift-card overdue">
+      <div class="drift-head"><b>Quarterly Shariah re-screen due</b> — last full screen ${esc(rescreen.last_screen || "unknown")} (&gt;92 days). Compliance verdicts move with market caps and debt; run the screener.</div>
+    </div>`);
+  }
+  host.innerHTML = parts.join("");
+  host.hidden = !parts.length;
+  host.querySelectorAll(".drift-chip").forEach((b) =>
+    b.addEventListener("click", () => openDrawer(b.dataset.ticker)));
+}
+
 function renderVerdictSummary() {
   // verdict distribution — stacked proportion bar + count tiles (top of Shariah-Compliant tab)
   const list = uList();
@@ -560,10 +593,20 @@ function openDrawer(ticker) {
     kv.push(["P/E (trailing → forward)", `${t} → ${f}${tag}`]);
   }
   if (has(d.mktcap_b)) kv.push(["Market cap", "$" + fmtNum(d.mktcap_b, 1) + "B"]);
-  if (has(d.shariah_grade)) kv.push(["Shariah (Musaffa)", d.shariah_grade]);
+  if (has(d.shariah_grade)) {
+    // "as of" = the newer of the quarterly screen and the hand verdict; flag if >120d old
+    let sh = d.shariah_grade;
+    if (has(d.shariah_asof)) {
+      const ageDays = Math.round((new Date(asOfDate(DATA.meta.date) + "T12:00:00") - new Date(d.shariah_asof + "T12:00:00")) / 86400000);
+      sh += ` <span class="muted">· as of ${d.shariah_asof}</span>` +
+            (ageDays > 120 ? ` <span class="stale-flag" title="Verdict older than 120 days — re-verify on Musaffa">⚠ stale</span>` : "");
+    }
+    kv.push(["Shariah (Musaffa)", sh]);
+  }
+  if (has(d.first_date)) kv.push(["Scored / re-scored", `${d.first_date} <span class="muted">(current call opened)</span>`]);
   if (has(d.confidence)) kv.push(["Confidence", d.confidence]);
   if (d.catalyst) kv.push(["Catalyst (preview)", `<b>${d.catalyst.label}</b> — ${esc(d.catalyst.note || "")}`]);
-  if (has(d.insider)) kv.push(["Insider", d.insider]);
+  if (has(d.insider)) kv.push(["Insider (6-mo Form 4)", d.insider]);
   if (has(d.buzz)) kv.push(["Buzz", `${d.buzz} — ${d.buzz_signal || ""}`]);
   if (p) {
     kv.push(["Jaleel's position", `${fmtNum(p.shares, 2)} sh · ${fmtUSD(p.value, 0)}`]);
@@ -1858,7 +1901,7 @@ function setSpView(view) {
     pauseUniverseCycler();
   } else {
     uIndex = "US Equities";
-    renderVerdictSummary();
+    renderVerdictSummary(); renderDeskDiscipline();
     renderUniverseControls();
     renderUniverseTable();
     resumeUniverseCycler();
@@ -1885,7 +1928,7 @@ function initUniverseSubtabs() {
       } else if (u === "global") {
         uIndex = "Global";
         document.getElementById("usub-universe").classList.add("active");
-        renderVerdictSummary();
+        renderVerdictSummary(); renderDeskDiscipline();
         renderUniverseControls();
         renderUniverseTable();
         resumeUniverseCycler();
@@ -2036,7 +2079,7 @@ function renderBookBrief(el, b) {
 
 function renderAll() {
   document.getElementById("asof-date").textContent = asOfDate(DATA.meta.date);
-  renderVerdictSummary();
+  renderVerdictSummary(); renderDeskDiscipline();
   renderUniverseControls();
   renderUniverseTable();
   renderScorecard();
@@ -2063,7 +2106,7 @@ function startAutoRefresh() {
 // or restarting the live ticker — those are wired once at unlock.
 function rerenderFromData() {
   document.getElementById("asof-date").textContent = asOfDate(DATA.meta.date);
-  renderVerdictSummary();
+  renderVerdictSummary(); renderDeskDiscipline();
   renderUniverseControls();
   renderUniverseTable();
   renderScorecard();
