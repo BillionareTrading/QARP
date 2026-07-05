@@ -664,6 +664,13 @@ function openDrawer(ticker) {
       <div class="dim"><div class="dl">${l}</div><div class="dv">${has(v) ? v : "—"}<span class="muted" style="font-size:12px;font-weight:500"> /${m}</span></div>
       <div class="dbar"><div class="dfill" style="width:${has(v) ? (v / m * 100).toFixed(0) : 0}%"></div></div></div>`).join("")}</div>` : ""}
     ${kv.length ? `<div class="kv">${kv.map(([k, v]) => `<span class="k">${k}</span><span class="vv">${v}</span>`).join("")}</div>` : ""}
+    ${d.sec_fin ? `<h4>Latest filed quarter <span class="muted" style="font-weight:400">(SEC · as-reported)</span></h4>
+      <div class="drawer-fin">
+        ${d.sec_fin.revenue ? `<span class="fin-stat">Revenue <b>${esc(d.sec_fin.revenue.fmt)}</b> ${d.sec_fin.revenue.yoy != null ? `<i class="${d.sec_fin.revenue.yoy >= 0 ? "pos" : "neg"}">${d.sec_fin.revenue.yoy >= 0 ? "+" : ""}${d.sec_fin.revenue.yoy}% YoY</i>` : ""}</span>` : ""}
+        ${d.sec_fin.eps ? `<span class="fin-stat">Dil. EPS <b>${d.sec_fin.eps.val < 0 ? "−$" + Math.abs(d.sec_fin.eps.val) : "$" + d.sec_fin.eps.val}</b> ${d.sec_fin.eps.yoy != null ? `<i class="${d.sec_fin.eps.yoy >= 0 ? "pos" : "neg"}">${d.sec_fin.eps.yoy >= 0 ? "+" : ""}${d.sec_fin.eps.yoy}% YoY</i>` : ""}</span>` : ""}
+        ${d.sec_fin.net_income ? `<span class="fin-stat">Net income <b>${esc(d.sec_fin.net_income.fmt)}</b></span>` : ""}
+        <span class="fin-src">${d.sec_fin.url ? `<a href="${esc(safeUrl(d.sec_fin.url))}" target="_blank" rel="noopener noreferrer">${esc(d.sec_fin.form || "")} filed ${esc(d.sec_fin.filed || "")} · EDGAR</a>` : esc(d.sec_fin.period || "")}</span>
+      </div>` : ""}
     ${ab && ab.desc ? `<h4>What the company does</h4><div class="dcf-note">${esc(ab.desc)}</div>` : ""}
     ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${d.dcf_note}</div>` : ""}
     ${bzHoldingNewsHtml(ticker)}
@@ -1960,8 +1967,12 @@ function setSpView(view) {
     x.classList.toggle("active", x.dataset.spview === view));
   document.getElementById("usub-universe").classList.toggle("active", view === "universe");
   document.getElementById("usub-record").classList.toggle("active", view === "record");
+  document.getElementById("usub-filings").classList.toggle("active", view === "filings");
   if (view === "record") {
     renderScorecard();
+    pauseUniverseCycler();
+  } else if (view === "filings") {
+    renderFilings();
     pauseUniverseCycler();
   } else {
     uIndex = "US Equities";
@@ -1970,6 +1981,55 @@ function setSpView(view) {
     renderUniverseTable();
     resumeUniverseCycler();
   }
+}
+
+/* ---------- Filings: latest SEC-filed quarter for every scored name ---------- */
+let filingsSort = { key: "filed", dir: -1 };
+function renderFilings() {
+  const host = document.getElementById("filings-table");
+  if (!host) return;
+  const rows = (DATA.universe || []).filter((r) => r.sec_fin);
+  const naRows = (DATA.universe || []).filter((r) => !r.sec_fin);
+  const sv = (r) => {
+    const f = r.sec_fin;
+    switch (filingsSort.key) {
+      case "ticker": return r.ticker;
+      case "revyoy": return (f.revenue && f.revenue.yoy != null) ? f.revenue.yoy : -1e9;
+      case "epsyoy": return (f.eps && f.eps.yoy != null) ? f.eps.yoy : -1e9;
+      case "qarp": return r.qarp || 0;
+      default: return f.filed || "";
+    }
+  };
+  rows.sort((a, b) => (sv(a) > sv(b) ? 1 : sv(a) < sv(b) ? -1 : 0) * filingsSort.dir);
+  const yoy = (y) => y == null ? '<span class="muted">—</span>'
+    : `<span class="${y >= 0 ? "pos" : "neg"}">${y >= 0 ? "+" : ""}${y}%</span>`;
+  const arrow = (k) => filingsSort.key === k ? (filingsSort.dir === 1 ? " ↑" : " ↓") : "";
+  host.innerHTML = `<div class="table-wrap"><table class="u-table"><thead><tr>
+      <th class="left" data-fk="ticker">Name${arrow("ticker")}</th>
+      <th class="left">Quarter</th>
+      <th data-fk="qarp">QARP${arrow("qarp")}</th>
+      <th>Revenue</th><th data-fk="revyoy">Rev YoY${arrow("revyoy")}</th>
+      <th>Dil. EPS</th><th data-fk="epsyoy">EPS YoY${arrow("epsyoy")}</th>
+      <th class="left" data-fk="filed">Filing${arrow("filed")}</th></tr></thead><tbody>
+    ${rows.map((r) => { const f = r.sec_fin; return `<tr data-ticker="${r.ticker}">
+      <td class="left"><span class="tick">${r.ticker}<span class="name">${esc(r.name || "")}</span></span></td>
+      <td class="left"><span class="muted">${esc((f.period || "").replace("Q ended ", ""))}</span></td>
+      <td><span class="qarp-cell">${fmtNum(r.qarp, 1)}</span></td>
+      <td>${f.revenue ? esc(f.revenue.fmt) : '<span class="muted">—</span>'}</td>
+      <td>${yoy(f.revenue && f.revenue.yoy)}</td>
+      <td>${f.eps ? (f.eps.val < 0 ? "−$" + Math.abs(f.eps.val) : "$" + f.eps.val) : '<span class="muted">—</span>'}</td>
+      <td>${yoy(f.eps && f.eps.yoy)}</td>
+      <td class="left">${f.url ? `<a class="er-link" href="${esc(safeUrl(f.url))}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${esc(f.form || "")} · ${esc(f.filed || "")}</a>` : esc(f.filed || "")}</td>
+    </tr>`; }).join("")}
+  </tbody></table></div>
+  ${naRows.length ? `<p class="muted" style="margin-top:10px;font-size:12px">${naRows.length} name${naRows.length > 1 ? "s" : ""} without SEC XBRL (foreign filers / recent listings): ${naRows.map((r) => r.ticker).join(", ")}.</p>` : ""}`;
+  host.querySelectorAll("th[data-fk]").forEach((th) => th.addEventListener("click", () => {
+    const k = th.dataset.fk;
+    if (filingsSort.key === k) filingsSort.dir *= -1;
+    else filingsSort = { key: k, dir: k === "ticker" ? 1 : -1 };
+    renderFilings();
+  }));
+  host.querySelectorAll("tbody tr").forEach((tr) => tr.addEventListener("click", () => openDrawer(tr.dataset.ticker)));
 }
 
 function initUniverseSubtabs() {
