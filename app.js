@@ -342,6 +342,19 @@ function renderDeskDiscipline() {
       <div class="drift-note">Fundamentals moved since the hand-score (earnings, targets, margins) — the daily price re-rank can't see this. Tap a name, read "what drifted" on hover.</div>
     </div>`);
   }
+  const sw = DATA.meta.split_watch || [];
+  if (sw.length) {
+    const bad = sw.filter((s) => s.anchor_suspect);
+    const items = sw.map((s) => {
+      const f = s.factor >= 1 ? `${s.factor}:1 split` : `1:${Math.round(1 / s.factor)} reverse split`;
+      return `<span class="gap-chip">${esc(s.ticker)} ${f} · ${esc(s.date)} ${s.anchor_suspect ? "<b>⚠ anchor unadjusted</b>" : "✓ anchor ok"}</span>`;
+    }).join("");
+    parts.push(`<div class="drift-card${bad.length ? " overdue" : ""}">
+      <div class="drift-head"><b>Split watch</b> — corporate action detected in the last 10 days
+        ${bad.length ? `<span class="drift-sla">ANCHOR FIX NEEDED — the DCF/QARP is distorted until the fair-value anchor is split-adjusted</span>` : `<span class="drift-sla" style="color:var(--pos)">all anchors verified</span>`}</div>
+      <div class="drift-chips">${items}</div>
+    </div>`);
+  }
   const rescreen = DATA.meta.shariah_rescreen;
   if (rescreen && rescreen.due) {
     parts.push(`<div class="drift-card overdue">
