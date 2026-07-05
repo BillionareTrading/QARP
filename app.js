@@ -292,6 +292,35 @@ let uIndex = "US Equities";
 const uList = () => DATA.universe.filter((x) => (x.index || "US Equities") === uIndex);
 
 /* ---------- render: Overview ---------- */
+/* ---------- Additions desk: where new money could go (event-hooked, never momentum) ---------- */
+function renderAdditions() {
+  const host = document.getElementById("additions-desk");
+  if (!host || !DATA.additions) return;
+  const a = DATA.additions;
+  const gaps = (a.sector_gaps || []).map((g) =>
+    `<span class="gap-chip">${esc(g.macro)} <b>${g.book_pct}%</b></span>`).join("");
+  const rows = (a.candidates || []).map((c) => `
+    <div class="add-row" data-ticker="${c.ticker}" role="button" tabindex="0">
+      <span class="tick">${c.ticker}<span class="name">${esc(c.name || "")}</span></span>
+      <span class="add-meta">${verdictBadge(c.verdict)} <span class="qarp-cell">${fmtNum(c.qarp, 1)}</span>
+        <span class="add-gate g-${(c.gate || "").toLowerCase()}">${c.gate}</span>
+        <span class="add-mac">${esc(c.macro)}</span></span>
+      <span class="add-why">${(c.why || []).map(esc).join(" · ")}</span>
+    </div>`).join("");
+  host.innerHTML = `<div class="card additions-card">
+    <h3>Where new money could go <span class="fw-sub">the additions desk</span></h3>
+    <p class="add-intro">The book's discipline is to cure concentration by <b>addition</b>, not selling.
+      These are unheld <b>BUY-or-better</b> names with the tape actionable (gate GO/TURN) and a live
+      <b>event hook</b> — a catalyst, insider buying, a sector signal, or a gap in the book. Max two per
+      sector so the list itself diversifies.</p>
+    ${gaps ? `<div class="gap-strip"><span class="gap-label">Book gaps</span>${gaps}</div>` : ""}
+    ${rows || `<p class="muted">No qualified additions right now — no unheld BUY+ name has both an actionable tape and a live event hook. An empty list is honest; check back after the next build.</p>`}
+    <p class="add-foot">Candidates to research — not advice. Event-hooked only, refreshed with every build (${esc((DATA.meta || {}).date || "")}). Tap a name for its full breakdown.</p>
+  </div>`;
+  host.querySelectorAll(".add-row").forEach((r) =>
+    r.addEventListener("click", () => openDrawer(r.dataset.ticker)));
+}
+
 /* ---------- Desk discipline: re-score SLA queue + quarterly Shariah re-screen nag ---------- */
 function renderDeskDiscipline() {
   const host = document.getElementById("desk-discipline");
@@ -1881,7 +1910,7 @@ function initPortfolioSubtabs() {
       document.querySelectorAll("#tab-portfolio .psub").forEach((x) => x.classList.remove("active"));
       b.classList.add("active");
       document.getElementById("psub-" + b.dataset.psub).classList.add("active");
-      if (b.dataset.psub === "signals") { renderCalls(); renderSignals(); }
+      if (b.dataset.psub === "signals") { renderCalls(); renderSignals(); renderAdditions(); }
       if (b.dataset.psub === "briefing") renderBriefing();
       if (b.dataset.psub === "earnings") renderEarnings();
       if (b.dataset.psub === "gurus") renderGurus();
