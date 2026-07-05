@@ -2261,23 +2261,74 @@ function initFrameworkCalc() {
 const BOT_PROXY = "https://qarp-bot.murshidjaleel-990.workers.dev";   // deployed Cloudflare Worker (proxies to Anthropic; key server-side)
 let botHistory = [];
 
-function buildBotContext() {
+/* full dossier for one name — the bot's retrieval unit (everything the drawer knows) */
+function botDossier(tk) {
+  const u = (DATA.universe || []).find((x) => x.ticker === tk);
+  const p = (DATA.portfolio || []).find((x) => x.ticker === tk);
+  if (!u && !p) return "";
+  const d = u || {};
+  const L = [`=== ${tk} — ${d.name || (p && p.name) || ""} ===`];
+  if (u) {
+    L.push(`Rank #${d.rank}/${DATA.universe.length}. QARP ${d.qarp} → ${d.verdict}. Quality ${d.mech}/105 (Valuation ${d.val}/25, Growth ${d.grw}/20, Moat&Returns ${d.qual}/20, BalanceSheet ${d.bs}/20, CapitalAlloc ${d.cap}/20); DCF value ${d.dcf}/5.`);
+    L.push(`Price $${d.price}${d.day_pct != null ? ` (${fmtPct(d.day_pct)} day)` : ""}; mktcap $${d.mktcap_b}B; P/E trailing→forward ${d.trailing_pe != null ? d.trailing_pe : "n/a"}→${d.forward_pe != null ? d.forward_pe : "n/a"}${d.cyclical ? " (CYCLICAL — DCF anchored on forward earnings, not trailing)" : ""}.`);
+    if (d.mom) L.push(`Momentum gate: ${d.mom.state} (${fmtPct(d.mom.vs50)} vs 50-day). Gate times entries; it never changes the score.`);
+    if (d.catalyst) L.push(`Catalyst (shadow preview, not in the live score): ${d.catalyst.label} — ${(d.catalyst.note || "").replace(/<[^>]+>/g, "")}`);
+    if (d.insider) L.push(`Insider (6-mo Form 4, refreshed with the build): ${d.insider}.`);
+    if (d.shariah_grade) L.push(`Shariah (Musaffa, AAOIFI): ${d.shariah_grade}, verdict as of ${d.shariah_asof || "n/a"}.`);
+    if (d.first_date) L.push(`Current call opened ${d.first_date} @ $${d.first_price}; since ${fmtPct(d.since_pct)} vs S&P ${fmtPct(d.since_sp_pct)} (alpha ${fmtPct(d.alpha_pct)}). Verdict path: ${(d.verdict_path || []).join(" → ")}.`);
+    if (d.dcf_note) L.push(`Valuation & thesis note (the desk's own reasoning): ${String(d.dcf_note).replace(/<[^>]+>/g, "")}`);
+  }
+  const ab = d.about || (p && p.about);
+  if (ab && ab.desc) L.push(`What the company does: ${ab.desc.slice(0, 480)}${ab.desc.length > 480 ? "…" : ""} (Industry: ${ab.industry || "?"}${ab.emp ? `, ~${Number(ab.emp).toLocaleString("en-US")} employees` : ""}.)`);
+  if (p) L.push(`JALEEL HOLDS IT: ${fmtNum(p.shares, 2)} sh, value ${fmtUSD(p.value, 0)} = ${p.weight_pct}% of the book, unrealized ${fmtUSD(p.gain, 0)} (${fmtPct(p.gain_pct)}).`);
+  return L.join("\n");
+}
+
+/* which names does the question mention? tickers (short ones must be typed UPPERCASE) + company names */
+function botMatchTickers(q) {
+  const raw = " " + (q || "") + " ", ql = raw.toLowerCase();
+  const seen = new Set(), found = [];
+  for (const x of [...(DATA.universe || []), ...(DATA.portfolio || [])]) {
+    if (seen.has(x.ticker) || found.length >= 4) continue;
+    const tk = x.ticker;
+    const esc2 = tk.replace(".", "\\.");
+    const tkHit = tk.length <= 3
+      ? new RegExp(`(^|[^A-Za-z0-9])${esc2}([^A-Za-z0-9]|$)`).test(raw)              // short: exact case
+      : new RegExp(`(^|[^a-z0-9])${esc2.toLowerCase()}([^a-z0-9]|$)`).test(ql);       // long: any case
+    const nm = ((x.name || "").split(/[ ,.]/)[0] || "").toLowerCase();
+    const nmHit = nm.length > 3 && ql.includes(nm);
+    if (tkHit || nmHit) { seen.add(tk); found.push(tk); }
+  }
+  return found;
+}
+
+function buildBotContext(question) {
   const t = (DATA.meta && DATA.meta.portfolio_totals) || {};
-  const holds = (DATA.portfolio || []).map((h) => `${h.ticker} ${fmtNum(h.shares, 2)}sh ${fmtPct(h.gain_pct)} (QARP ${h.verdict || "?"})`).join("; ");
+  const holds = (DATA.portfolio || []).map((h) => `${h.ticker} ${h.weight_pct}% ${fmtUSD(h.value, 0)} ${fmtPct(h.gain_pct)} (${h.verdict || "?"})`).join("; ");
   const calls = (DATA.portfolio || []).map((h) => { try { return `${h.ticker}:${holdingCall(h.ticker).call}`; } catch (e) { return ""; } }).filter(Boolean).join(", ");
-  const top = [...(DATA.universe || [])].filter((u) => u.qarp != null).sort((a, b) => b.qarp - a.qarp).slice(0, 12).map((u) => `${u.ticker} ${fmtNum(u.qarp, 0)} ${u.verdict}`).join("; ");
+  const top = [...(DATA.universe || [])].filter((u) => u.qarp != null).sort((a, b) => b.qarp - a.qarp).slice(0, 15).map((u) => `${u.ticker} ${fmtNum(u.qarp, 0)} ${u.verdict}${u.mom ? " " + u.mom.state : ""}`).join("; ");
   const S = (typeof SIGNALS !== "undefined" && SIGNALS) || {};
   const risk = (S.risk || []).map((r) => `${r.ticker} (${r.tag})`).join(", ");
   const sectors = (S.sectors || []).map((s) => `${s.sector} ${s.dir}`).join(", ");
+  const cats = (S.catalysts || []).map((x) => `${x.when}: ${x.what}`).join("; ");
+  const A = DATA.additions || {};
+  const adds = (A.candidates || []).map((x) => `${x.ticker} (${x.verdict}, ${x.macro}: ${(x.why || [])[0] || ""})`).join("; ");
+  const gaps = (A.sector_gaps || []).map((g) => `${g.macro} ${g.book_pct}%`).join(", ");
+  const drift = ((DATA.meta || {}).drift || {});
+  const driftLine = (drift.flagged || []).map((f) => `${f.ticker}(w${f.weight})`).join(", ");
+  const dossiers = botMatchTickers(question).map(botDossier).filter(Boolean).join("\n\n");
   return [
-    "You are the assistant for the Jaleel Capital QARP dashboard — a Shariah-compliant equity tool. Answer questions about Jaleel's portfolio, the market, the holdings, the QARP framework, and investing generally. Be concise, direct, and honest. Informational only — NOT financial advice. Never fabricate a price, a Shariah verdict, or a figure; if it isn't in the context below, say you don't have it. When asked about a holding, use its QARP verdict + daily call + any risk flag.",
-    "QARP = 0.6×(Quality/105×100) + 0.4×(DCF/5×100). Bands: ≥85 STRONGEST, ≥72 STRONG BUY, ≥66 BUY, ≥60 HOLD-QUAL, 35–59 AVOID, <35 STRONG AVOID. Gate 1 = Shariah (AAOIFI, via Musaffa). Default stance: conservative / capital-preservation.",
-    `Data as of ${DATA.meta && DATA.meta.date}. Account ≈ ${fmtUSD(t.account, 0)}, cash ${fmtUSD(t.cash, 2)}, unrealized P/L ${fmtUSD(t.gain, 0)} (${fmtPct(t.gain_pct)}).`,
-    `Holdings: ${holds}.`,
-    `Daily calls (Add/Hold/Trim): ${calls}.`,
-    `Top universe by QARP: ${top}.`,
-    `Signals — macro: ${(S.macro && S.macro.headline) || "n/a"}. Risk flags: ${risk || "none"}. Sectors: ${sectors || "n/a"}.`,
-  ].join("\n\n");
+    "You are the desk analyst for the Jaleel Capital QARP dashboard — a Shariah-compliant, capital-preservation-first equity framework. Answer like a sharp senior analyst: direct answer first, then the reasoning, citing the actual numbers from the context. Challenge consensus, note both sides, never sugar-coat. Use ONLY the data below — never invent a price, verdict, Shariah status, or figure; if it isn't here, say so and suggest naming the ticker (full dossiers load for names mentioned in the question). Informational only — NOT financial advice. Keep answers TIGHT — under ~250 words unless asked to go deeper; end with a one-line NET: takeaway so the answer never cuts off mid-thought.",
+    "METHOD (compressed): QARP = w×(Quality/105×100) + (1−w)×(DCF/5×100); w slides with size 60% (≥$15B) → 75% (≤$0.3B) because small-cap DCFs are unreliable — quality/survival weighs more. Quality pillars: Valuation 25, Growth 20, Moat&Returns 20, BalanceSheet 20, CapitalAllocation 20. DCF 1–5 from triangulated fair value (AlphaSpread + analyst consensus + GF Value, conservative leg wins; first score capped at 4); re-banded DAILY against live price from a fixed anchor. CYCLICALS (semis, energy, chemicals, homebuilders…) are FORWARD-anchored — trailing P/E lies at troughs (looks dear when cheap) and peaks (looks cheap when dear). AI-disruption software capped at DCF 4. Bands: ≥85 STRONGEST, ≥72 STRONG BUY, ≥66 BUY, ≥60 HOLD-QUAL, 35–59 AVOID, <35 STRONG AVOID. Momentum gate (GO/TURN/WAIT vs 50/20-day) times entries only. Catalyst (SET/WATCH/WEAK/NONE) is a shadow preview. Gate 1 = AAOIFI Shariah (Musaffa, stricter-view-wins; quarterly re-screen). House rules: concentration is cured by ADDING elsewhere, never selling a name below fair value; an upcoming earnings print is event risk, not a reason to buy.",
+    `Data as of ${DATA.meta && DATA.meta.date}. Account ${fmtUSD(t.account, 0)}, cash ${fmtUSD(t.cash, 2)}, unrealized ${fmtUSD(t.gain, 0)} (${fmtPct(t.gain_pct)}).`,
+    `Holdings (weight, value, P/L, verdict): ${holds}.`,
+    `Daily Add/Hold/Trim calls: ${calls}.`,
+    `Top of the universe by QARP: ${top}.`,
+    `Additions desk (unheld, event-hooked candidates): ${adds || "none today"}. Book sector gaps: ${gaps || "none"}.`,
+    `Re-score queue (fundamentals drifted, ${drift.date || "n/a"}): ${driftLine || "empty"}.`,
+    `Signals — macro: ${(S.macro && S.macro.headline) || "n/a"}. Risk flags: ${risk || "none"}. Sector tape: ${sectors || "n/a"}. Catalysts ahead: ${cats || "n/a"}.`,
+    dossiers ? `FULL DOSSIERS for names in this question:\n\n${dossiers}` : "",
+  ].filter(Boolean).join("\n\n");
 }
 
 function botAppend(role, text) {
@@ -2302,7 +2353,7 @@ async function botSend(text) {
   try {
     const res = await fetch(BOT_PROXY, {
       method: "POST", headers: { "content-type": "application/json" },
-      body: JSON.stringify({ system: buildBotContext(), messages: botHistory }),
+      body: JSON.stringify({ system: buildBotContext(text), messages: botHistory }),
     });
     if (!res.ok || !res.body) { bubble.textContent = `Bot error (${res.status}). Check the Worker + API key.`; return; }
     const reader = res.body.getReader(), dec = new TextDecoder();
