@@ -1,6 +1,6 @@
 {
   "date": "2026-07-06",
-  "generated_at": "Jul 6, 6:18am ET",
+  "generated_at": "Jul 6, 10:22am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -108,8 +108,8 @@
     "ABT": "2026-07-15",
     "ZTS": "2026-08-03",
     "DHR": "2026-07-21",
-    "RKLB": "2026-08-05",
     "NVDA": "2026-08-25",
+    "RKLB": "2026-08-05",
     "BSX": "2026-07-29",
     "UBER": "2026-08-04",
     "GILD": "2026-07-30",
@@ -121,17 +121,17 @@
   "sectors": [
     {
       "sector": "Grocery Retailers",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Ahead of the 4th of July holiday weekend",
       "note": "Ahead of the 4th of July holiday weekend.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Continued weakness after recent reports suggested that Meta will open a …",
       "note": "Amid continued weakness after recent reports suggested that Meta will open a cloud business to sell excess AI compute. Also, weakness may reflect profit-taking following the industry-wide rally in H1 2026.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Software",
@@ -142,10 +142,10 @@
     },
     {
       "sector": "Homebuilding & Housing",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "The House and Senate sent a bipartisan housing bill designed to lower ho…",
       "note": "After the House and Senate sent a bipartisan housing bill designed to lower housing costs for President Trump's signature. Sentiment was further boosted by KB Home’s better-than-expected second-quarter sales results.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
@@ -172,8 +172,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$210",
-      "price": 169.2,
-      "upside": 24.1,
+      "price": 168.12,
+      "upside": 24.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -186,8 +186,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$47",
-      "price": 44.09,
-      "upside": 6.6,
+      "price": 42.42,
+      "upside": 10.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -200,8 +200,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$141",
-      "price": 129.56,
-      "upside": 8.8,
+      "price": 126.39,
+      "upside": 11.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -214,8 +214,8 @@
       "rating": "Sector Outperform",
       "stance": "bullish",
       "pt": "$155",
-      "price": 129.56,
-      "upside": 19.6,
+      "price": 126.39,
+      "upside": 22.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -228,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$75",
-      "price": 44.09,
-      "upside": 70.1,
+      "price": 42.42,
+      "upside": 76.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -242,8 +242,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$48",
-      "price": 44.09,
-      "upside": 8.9,
+      "price": 42.42,
+      "upside": 13.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -256,8 +256,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$47",
-      "price": 44.09,
-      "upside": 6.6,
+      "price": 42.42,
+      "upside": 10.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -270,8 +270,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$70",
-      "price": 44.09,
-      "upside": 58.8,
+      "price": 42.42,
+      "upside": 65.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -284,8 +284,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$23",
-      "price": 44.09,
-      "upside": -47.8,
+      "price": 42.42,
+      "upside": -45.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -298,8 +298,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$72",
-      "price": 44.09,
-      "upside": 63.3,
+      "price": 42.42,
+      "upside": 69.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -312,8 +312,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$45",
-      "price": 44.09,
-      "upside": 2.1,
+      "price": 42.42,
+      "upside": 6.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -326,8 +326,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$45",
-      "price": 44.09,
-      "upside": 2.1,
+      "price": 42.42,
+      "upside": 6.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -340,8 +340,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$60",
-      "price": 44.09,
-      "upside": 36.1,
+      "price": 42.42,
+      "upside": 41.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -354,8 +354,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$228",
-      "price": 166.11,
-      "upside": 37.3,
+      "price": 163.71,
+      "upside": 39.3,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -368,8 +368,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$45",
-      "price": 44.09,
-      "upside": 2.1,
+      "price": 42.42,
+      "upside": 6.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -382,8 +382,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 44.09,
-      "upside": 24.7,
+      "price": 42.42,
+      "upside": 29.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -396,8 +396,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$52",
-      "price": 44.09,
-      "upside": 17.9,
+      "price": 42.42,
+      "upside": 22.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -410,8 +410,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$47",
-      "price": 44.09,
-      "upside": 6.6,
+      "price": 42.42,
+      "upside": 10.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -424,8 +424,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$40",
-      "price": 44.09,
-      "upside": -9.3,
+      "price": 42.42,
+      "upside": -5.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -438,14 +438,238 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 169.2,
-      "upside": 24.1,
+      "price": 168.12,
+      "upside": 24.9,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-06",
+      "ticker": "MRK",
+      "firm": "Cantor Fitzgerald",
+      "action": "Reiterates",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$120",
+      "price": 126.39,
+      "upside": -5.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     }
   ],
   "bz_news": [
+    {
+      "title": "'Microsoft cuts 4,800 jobs across sales and Xbox' - Business Insider",
+      "url": "https://www.benzinga.com/news/26/07/60277889/microsoft-cuts-4-800-jobs-across-sales-and-xbox-business-insider",
+      "ts": 1783344873,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.265
+    },
+    {
+      "title": "SpaceX's Gwynne Shotwell Pledges SpaceX Stock for 2 Million Children Through Trump Accounts",
+      "url": "https://www.benzinga.com/personal-finance/management/26/07/60277725/spacexs-gwynne-shotwell-pledges-spacex-stock-for-2-million-children-through-trump-accounts",
+      "ts": 1783344307,
+      "tickers": [
+        "SPCX",
+        "JPM",
+        "GS",
+        "BAC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.313
+    },
+    {
+      "title": "Jim Cramer Says Solstice-Element Merger Would Create a 'Chemical Tech Powerhouse': Stocks Could 'Go Higher'",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60277607/jim-cramer-says-solstice-element-merger-would-create-a-chemical-tech-powerhouse-stocks-could-go-higher",
+      "ts": 1783343833,
+      "tickers": [
+        "SOLS",
+        "HON",
+        "ESI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.359
+    },
+    {
+      "title": "Cantor Fitzgerald Reiterates Neutral on Merck & Co, Maintains $120 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60277558/cantor-fitzgerald-reiterates-neutral-merck-co-maintains-120-price-target",
+      "ts": 1783343696,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.44
+    },
+    {
+      "title": "Cantor Fitzgerald Reiterates Neutral on Amgen, Maintains $350 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60276904/cantor-fitzgerald-reiterates-neutral-amgen-maintains-350-price-target",
+      "ts": 1783342573,
+      "tickers": [
+        "AMGN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.469
+    },
+    {
+      "title": "Broadcom Stock Climbs on Report of Apple Chip Deal Extension to 2031",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60276440/broadcom-stock-climbs-on-report-of-apple-chip-deal-extension-to-2031",
+      "ts": 1783341508,
+      "tickers": [
+        "RIVN",
+        "AAPL",
+        "AVGO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.364
+    },
+    {
+      "title": "IBM To Rally Around 14%? Here Are 10 Top Analyst Forecasts For Monday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60275938/ibm-to-rally-around-14-here-are-10-top-analyst-forecasts-for-monday",
+      "ts": 1783340470,
+      "tickers": [
+        "DDOG",
+        "IBM",
+        "UBER",
+        "DAL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.431
+    },
+    {
+      "title": "Broadcom, Apple To Expand Collaboration Through 2031 To Develop, Supply Tailored ASIC Products For Apple",
+      "url": "https://www.benzinga.com/news/26/07/60275429/broadcom-apple-expand-collaboration-through-2031-develop-supply-tailored-asic-products-apple",
+      "ts": 1783339445,
+      "tickers": [
+        "AVGO",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.416
+    },
+    {
+      "title": "BMO Capital Maintains Market Perform on Dow, Lowers Price Target to $33",
+      "url": "https://www.benzinga.com/news/26/07/60275169/bmo-capital-maintains-market-perform-dow-lowers-price-target-33",
+      "ts": 1783339053,
+      "tickers": [
+        "DOW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.496
+    },
+    {
+      "title": "Netflix, Alphabet, Nike And A Consumer Defensive Stock On CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60274970/netflix-alphabet-nike-and-a-consumer-defensive-stock-on-cnbcs-final-trades",
+      "ts": 1783338057,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "NFLX",
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.439
+    },
+    {
+      "title": "Market-Moving News for July 6th",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60274315/market-moving-news-july-6th",
+      "ts": 1783336744,
+      "tickers": [
+        "INTC",
+        "SEER"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.47
+    },
+    {
+      "title": "Johnson & Johnson Likely To Report Higher Q2 Earnings; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60274155/johnson-these-most-accurate-analysts-revise-forecasts-ahead-of-earnings-call-4",
+      "ts": 1783336264,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.454
+    },
+    {
+      "title": "IBM Announces First-Known Computations Of Fusion Materials On Quantum Computer With Oak Ridge National Lab And Cleveland Clinic",
+      "url": "https://www.benzinga.com/news/26/07/60274102/ibm-announces-first-known-computations-fusion-materials-quantum-computer-oak-ridge-national-lab-and-",
+      "ts": 1783336090,
+      "tickers": [
+        "IBM",
+        "QTUM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.314
+    },
+    {
+      "title": "B of A Securities Maintains Buy on IBM, Raises Price Target to $330",
+      "url": "https://www.benzinga.com/news/26/07/60273625/b-securities-maintains-buy-ibm-raises-price-target-330",
+      "ts": 1783335091,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.472
+    },
+    {
+      "title": "After Apple, Intel Raises Chip Prices by Up to $50, Citing 'Market Dynamics'",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60273487/after-apple-intel-raises-chip-prices-by-up-to-50-citing-market-dynamics",
+      "ts": 1783334312,
+      "tickers": [
+        "INTC",
+        "AAPL",
+        "TSM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.443
+    },
+    {
+      "title": "HSBC Maintains Hold on Travelers Companies, Raises Price Target to $351",
+      "url": "https://www.benzinga.com/news/26/07/60273100/hsbc-maintains-hold-travelers-companies-raises-price-target-351",
+      "ts": 1783333926,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.43
+    },
     {
       "title": "Industry Comparison: Evaluating Apple Against Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
       "url": "https://www.benzinga.com/news/26/07/60272386/industry-comparison-evaluating-apple-against-competitors-technology-hardware-storage-amp-peripherals",
@@ -471,9 +695,9 @@
       "relevance": 0.327
     },
     {
-      "title": "Stock Market Today: S&P 500, Dow Jones Futures Gain Following Independence Day Weekend—Intel, SanDisk, Tesla, Ford In Focus",
+      "title": "Stock Market Today: Dow Jones Futures Fall,  S&P 500, Nasdaq Gain Following Independence Day Weekend— Intel, SanDisk, Tesla, Ford In Focus (UPDATED)",
       "url": "https://www.benzinga.com/markets/equities/26/07/60272022/stock-market-today-sp-500-dow-jones-futures-gain-following-independence-day-weekend-intel-sandisk-tesla-ford-in-focus",
-      "ts": 1783329805,
+      "ts": 1783329780,
       "tickers": [
         "SPY",
         "TSLA",
@@ -483,7 +707,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.493
+      "relevance": 0.514
     },
     {
       "title": "Dan Niles Sees Apple Winning China Memory Exemption, Calls AI Chip Selloff a 'Speed Bump' as Nvidia's Vera Rubin Fuels Long-Term Demand",
@@ -523,7 +747,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.273
+      "relevance": 0.272
     },
     {
       "title": "'Honeywell Spin-Off In Merger Talks To Create $27bn Materials Group' - FT",
@@ -561,226 +785,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.287
-    },
-    {
-      "title": "MrBeast Says America Gave Him 'Freedom' to Chase Dreams, Tim Cook Calls 'Our Country' a Testament to 'Power of Possibility' as US Celebrates 250 Years",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60270675/mrbeast-says-america-gave-him-the-freedom-to-chase-his-dreams-as-us-celebrates-250-years",
-      "ts": 1783311004,
-      "tickers": [
-        "TSLA",
-        "AAPL",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.161
-    },
-    {
-      "title": "Samsung Eyes Another Record Quarter on Explosive AI Memory Demand, But Rising Employee Bonuses Could Cloud Earnings: Report",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60270603/samsung-eyes-another-record-quarter-on-explosive-ai-memory-demand-but-rising-employee-bonuses-could-cloud-earnings-report",
-      "ts": 1783307609,
-      "tickers": [
-        "AAPL",
-        "GOOGL",
-        "GOOG",
-        "SSNLF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.488
-    },
-    {
-      "title": "Bernie Sanders Slams Trump on 250th Anniversary of US Independence, Says His Administration Is Not ‘America First’",
-      "url": "https://www.benzinga.com/news/politics/26/07/60269884/bernie-sanders-slams-trump-on-250th-anniversary-of-us-independence-says-his-administration-is-not-america-first",
-      "ts": 1783277103,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.165
-    },
-    {
-      "title": "Warren Says Trump's Law Pushed 2 Million-Plus Children Off Medicaid, CHIP Across States",
-      "url": "https://www.benzinga.com/news/health-care/26/07/60269822/warren-says-trumps-law-pushed-2-million-plus-children-off-medicaid-chip-across-states",
-      "ts": 1783274907,
-      "tickers": [
-        "NVO",
-        "PFE",
-        "LLY",
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.158
-    },
-    {
-      "title": "Consumer Tech (June 29-July 2): Microsoft Announces Layoffs, Meta & Google Sued In Several States & More",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60269593/consumer-tech-june-29-july-2-microsoft-announces-layoffs-meta-google-sued-in-several-states-more",
-      "ts": 1783259148,
-      "tickers": [
-        "META",
-        "GOOGL",
-        "GOOG",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.404
-    },
-    {
-      "title": "Meta Platforms, SpaceX, Micron Technology and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60269449/meta-platforms-spacex-micron-technology-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
-      "ts": 1783252907,
-      "tickers": [
-        "META",
-        "AAPL",
-        "PLTR",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.371
-    },
-    {
-      "title": "Apple's Hardware Price Hikes, Elon Musk's SpaceX Denial, Epic Games Vs. Apple and More: This Week In Appleverse",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60269396/apples-hardware-price-hikes-elon-musks-spacex-denial-epic-games-vs-apple-and-more-this-week-in-appleverse",
-      "ts": 1783249377,
-      "tickers": [
-        "AAPL",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.314
-    },
-    {
-      "title": "Data Center Leases Top $850 Billion as Meta, Microsoft, Oracle Lead Record AI Infrastructure Spending",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60269156/data-center-leases-top-850-billion-as-meta-microsoft-oracle-lead-record-ai-infrastructure-spending",
-      "ts": 1783224803,
-      "tickers": [
-        "MSFT",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.547
-    },
-    {
-      "title": "Forrest Gump Invested in a 'Fruit Company' — Here's What That Apple Bet Would Be Worth Today",
-      "url": "https://www.benzinga.com/news/education/26/07/60268915/forrest-gump-invested-in-a-fruit-company-heres-what-that-apple-bet-would-be-worth-today",
-      "ts": 1783195290,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.288
-    },
-    {
-      "title": "Salesforce CEO Marc Benioff Ignored 53 Emails Before This VC Founder Finally Got a Reply— Now He Says the Strategy is ‘Super Learnable’",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60268803/salesforce-ceo-marc-benioff-ignored-53-emails-before-this-vc-founder-finally-got-a-reply-now-he-says-the-strategy-is-super-learnable",
-      "ts": 1783185566,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.253
-    },
-    {
-      "title": "A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called...'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60268681/a-former-uber-engineer-visited-nvidias-headquarters-and-couldnt-believe-what-employees-actually-pay-for-at-work-we-use-this-thing-called",
-      "ts": 1783179112,
-      "tickers": [
-        "TSLA",
-        "META",
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.422
-    },
-    {
-      "title": "Trump Administration Ramps Up Pressure on Oil Industry As Federal Agencies Push States to Investigate Elevated Gas Prices",
-      "url": "https://www.benzinga.com/news/politics/26/07/60268134/trump-administration-ramps-up-pressure-on-oil-industry-as-federal-agencies-push-states-to-investigate-elevated-gas-prices",
-      "ts": 1783137939,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.323
-    },
-    {
-      "title": "Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom 250 Initiative",
-      "url": "https://www.benzinga.com/news/politics/26/07/60268100/trump-faces-new-questions-as-report-says-boeing-lockheed-palantir-and-other-federal-contractors-supported-both-america250-and-his-freedom-250-initiative",
-      "ts": 1783132685,
-      "tickers": [
-        "LMT",
-        "PLTR",
-        "RTX",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.237
-    },
-    {
-      "title": "$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today",
-      "url": "https://www.benzinga.com/news/26/07/60267783/100-invested-mcdonald-s-20-years-ago-would-be-worth-much-today",
-      "ts": 1783115136,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.255
-    },
-    {
-      "title": "$1000 Invested In Salesforce 20 Years Ago Would Be Worth This Much Today",
-      "url": "https://www.benzinga.com/news/26/07/60266933/1000-invested-salesforce-20-years-ago-would-be-worth-much-today",
-      "ts": 1783111531,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.306
-    },
-    {
-      "title": "EXCLUSIVE: Top 12 Most-Searched Tickers For First Half of 2026 - Where Do Micron, Nvidia, Tesla, SanDisk Rank?",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60266829/exclusive-top-12-most-searched-tickers-for-first-half-of-2026-where-do-micron-nvidia-tesla-sandisk-rank",
-      "ts": 1783107090,
-      "tickers": [
-        "TSLA",
-        "AAPL",
-        "META",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.462
     },
     {
       "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
@@ -968,38 +972,6 @@
       },
       "explain": "30 analysts cover it — 27 bullish, 3 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "RKLB": {
-      "name": "Rocket Lab",
-      "qarp": "AVOID",
-      "consensus": {
-        "strongBuy": 7,
-        "buy": 15,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 27,
-        "bullish": 22,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.07,
-        "period": "2026-06-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-06-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000175392626001085/g085783_8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm"
-        },
-        "insider30d": 1
-      },
-      "explain": "27 analysts cover it — 22 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
-    },
     "NVDA": {
       "name": "NVIDIA",
       "qarp": "STRONG BUY",
@@ -1031,6 +1003,38 @@
         "insider30d": 17
       },
       "explain": "68 analysts cover it — 63 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "RKLB": {
+      "name": "Rocket Lab",
+      "qarp": "AVOID",
+      "consensus": {
+        "strongBuy": 7,
+        "buy": 15,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 27,
+        "bullish": 22,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.07,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000175392626001085/g085783_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "27 analysts cover it — 22 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
     "BSX": {
       "name": "Boston Scientific",
@@ -1098,7 +1102,7 @@
     },
     "UBER": {
       "name": "Uber",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 17,
         "buy": 35,
@@ -1414,25 +1418,6 @@
       "margin": 17.3,
       "summary": "Q1 FY2026 — revenue $6.0B (+3.7% YoY), diluted EPS $1.45 (+9.8% YoY), net margin 17%. (as reported, GAAP)"
     },
-    "RKLB": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-07",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm",
-      "revenue": {
-        "fmt": "$200M",
-        "yoy": 63.5
-      },
-      "eps": {
-        "val": -0.07,
-        "yoy": 41.7
-      },
-      "net_income": {
-        "fmt": "$-45M"
-      },
-      "margin": -22.5,
-      "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
-    },
     "NVDA": {
       "period": "Q1 FY2027",
       "filed": "2026-05-20",
@@ -1451,6 +1436,25 @@
       },
       "margin": 71.5,
       "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
+    },
+    "RKLB": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm",
+      "revenue": {
+        "fmt": "$200M",
+        "yoy": 63.5
+      },
+      "eps": {
+        "val": -0.07,
+        "yoy": 41.7
+      },
+      "net_income": {
+        "fmt": "$-45M"
+      },
+      "margin": -22.5,
+      "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
     },
     "BSX": {
       "period": "Q1 FY2026",
