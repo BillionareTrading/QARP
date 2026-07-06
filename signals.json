@@ -1,6 +1,6 @@
 {
   "date": "2026-07-06",
-  "generated_at": "Jul 6, 6:00pm ET",
+  "generated_at": "Jul 6, 7:20pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -112,10 +112,13 @@
     "RKLB": "2026-08-05",
     "BSX": "2026-07-29",
     "UBER": "2026-08-04",
+    "SPGI": "2026-07-29",
     "GILD": "2026-07-30",
     "NVS": "2026-07-21",
+    "AVGO": "2026-09-02",
     "NBIX": "2026-07-28",
-    "VRTX": "2026-07-30"
+    "VRTX": "2026-07-30",
+    "EFX": "2026-07-22"
   },
   "risk_asof": "2026-07-05",
   "sectors": [
@@ -1146,37 +1149,37 @@
       },
       "explain": "61 analysts cover it — 52 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "IOT": {
-      "name": "Samsara",
-      "qarp": "AVOID",
+    "SPGI": {
+      "name": "S&P Global",
+      "qarp": "HOLD-QUAL",
       "consensus": {
-        "strongBuy": 5,
-        "buy": 16,
-        "hold": 6,
+        "strongBuy": 11,
+        "buy": 19,
+        "hold": 4,
         "sell": 0,
         "strongSell": 0,
-        "total": 27,
-        "bullish": 21,
+        "total": 34,
+        "bullish": 30,
         "bearish": 0,
-        "label": "Buy",
-        "score": 0.96,
+        "label": "Strong Buy",
+        "score": 1.21,
         "period": "2026-06-01"
       },
       "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-06-04",
-          "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026040788/iot-20260604.htm"
+          "date": "2026-07-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000110465926080751/tm2619719d1_8k.htm"
         },
         "periodic": {
           "form": "10-Q",
-          "date": "2026-06-09",
-          "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026041893/iot-20260502.htm"
+          "date": "2026-04-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000024/spgi-20260331.htm"
         },
-        "insider30d": 15
+        "insider30d": 1
       },
-      "explain": "27 analysts cover it — 21 bullish, 6 hold, 0 bearish (consensus <b>Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+      "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "GILD": {
       "name": "Gilead Sciences",
@@ -1233,6 +1236,38 @@
         "insider30d": 0
       },
       "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 17,
+        "buy": 35,
+        "hold": 4,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 56,
+        "bullish": 52,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.23,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526295589/d84378d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
+        },
+        "insider30d": 6
+      },
+      "explain": "56 analysts cover it — 52 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
@@ -1297,6 +1332,38 @@
         "insider30d": 5
       },
       "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "EFX": {
+      "name": "Equifax",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 8,
+        "buy": 12,
+        "hold": 10,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 30,
+        "bullish": 20,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.93,
+        "period": "2026-06-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/33185/000119312526272759/d52077d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000018/efx-20260331.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "30 analysts cover it — 20 bullish, 10 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "KO": {
       "name": "Coca-Cola",
@@ -1527,24 +1594,24 @@
       "margin": 2.0,
       "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
     },
-    "IOT": {
-      "period": "Q1 FY2027",
-      "filed": "2026-06-09",
+    "SPGI": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-28",
       "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026041893/iot-20260502.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000024/spgi-20260331.htm",
       "revenue": {
-        "fmt": "$479M",
-        "yoy": 30.5
+        "fmt": "$4.2B",
+        "yoy": 10.4
       },
       "eps": {
-        "val": 0.08,
-        "yoy": 300.0
+        "val": 4.69,
+        "yoy": 32.5
       },
       "net_income": {
-        "fmt": "$45M"
+        "fmt": "$1.4B"
       },
-      "margin": 9.3,
-      "summary": "Q1 FY2027 — revenue $479M (+30.5% YoY), diluted EPS $0.08 (+300.0% YoY), net margin 9%. (as reported, GAAP)"
+      "margin": 33.4,
+      "summary": "Q1 FY2026 — revenue $4.2B (+10.4% YoY), diluted EPS $4.69 (+32.5% YoY), net margin 33%. (as reported, GAAP)"
     },
     "GILD": {
       "period": "Q1 FY2026",
@@ -1566,6 +1633,25 @@
       "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
     },
     "NVS": null,
+    "AVGO": {
+      "period": "Q2 FY2026",
+      "filed": "2026-06-09",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm",
+      "revenue": {
+        "fmt": "$22.2B",
+        "yoy": 47.9
+      },
+      "eps": {
+        "val": 1.91,
+        "yoy": 85.4
+      },
+      "net_income": {
+        "fmt": "$5.9B"
+      },
+      "margin": null,
+      "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
+    },
     "NBIX": {
       "period": "Q1 FY2026",
       "filed": "2026-05-05",
@@ -1603,6 +1689,25 @@
       },
       "margin": 34.5,
       "summary": "Q1 FY2026 — revenue $3.0B (+7.8% YoY), diluted EPS $4.02 (+61.4% YoY), net margin 34%. (as reported, GAAP)"
+    },
+    "EFX": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-21",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000018/efx-20260331.htm",
+      "revenue": {
+        "fmt": "$1.6B",
+        "yoy": 14.3
+      },
+      "eps": {
+        "val": 1.42,
+        "yoy": 34.0
+      },
+      "net_income": {
+        "fmt": "$172M"
+      },
+      "margin": 10.4,
+      "summary": "Q1 FY2026 — revenue $1.6B (+14.3% YoY), diluted EPS $1.42 (+34.0% YoY), net margin 10%. (as reported, GAAP)"
     },
     "KO": {
       "period": "Q1 FY2026",
