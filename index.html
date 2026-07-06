@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=ed5392f8" />
+  <link rel="stylesheet" href="styles.css?v=30adbe71" />
 </head>
 <body>
 
@@ -310,6 +310,16 @@
             <tbody></tbody>
           </table>
         </div>
+        <section id="realized" class="realized" hidden>
+          <h3 class="realized-head">Realized <span class="fw-sub">— closed positions</span></h3>
+          <div class="table-wrap realized-wrap">
+            <table id="realized-table">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <p class="realized-foot">Gains as reported by the broker (gross of commissions). <span class="realized-approx">~</span> = buy leg derived from the trade record; date estimated from price history, refined as records are added.</p>
+        </section>
       </div>
 
       <!-- Signals: simple Add/Hold/Trim per holding, then the detail (risk + catalysts) -->
@@ -673,7 +683,7 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=ed5392f8"></script>
-  <script src="app.js?v=ed5392f8"></script>
+  <script src="crypto.js?v=30adbe71"></script>
+  <script src="app.js?v=30adbe71"></script>
 </body>
 </html>
