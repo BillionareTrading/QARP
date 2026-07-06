@@ -547,6 +547,47 @@ function renderPortfolio() {
 
   renderSectorPerformance();
   renderPortfolioTable();
+  renderRealized();
+}
+
+// Realized — closed trades from the Abyan records, newest sale first. DATA.realized =
+// the imported trade cards (a plain list — per the desk's call, NO aggregate totals shown). buy_est rows show ~ on the Bought cell (derived basis,
+// history-estimated date). Gains brass (banked), losses navy — deliberately NOT the live
+// pos/neg palette: realized reads as history, not P&L in motion.
+function renderRealized() {
+  const el = document.getElementById("realized");
+  if (!el) return;
+  const rows = [...(DATA.realized || [])].sort((a, b) =>
+    (b.date_sold || "").localeCompare(a.date_sold || ""));
+  if (!rows.length) { el.hidden = true; return; }
+  el.hidden = false;
+
+  const d = (iso) => iso ? new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: iso.slice(0,4) !== String(new Date().getFullYear()) ? "2-digit" : undefined }) : "—";
+  const held = (r) => {
+    if (!r.date_bought || !r.date_sold) return "—";
+    const days = Math.round((new Date(r.date_sold) - new Date(r.date_bought)) / 86400000);
+    const t = days < 21 ? `${days} d` : days < 70 ? `${Math.round(days / 7)} w` : `${Math.round(days / 30.4)} mo`;
+    return r.buy_est ? `~${t}` : t;
+  };
+  const gain = (r) => {
+    const cls = r.gain >= 0 ? "realized-gain" : "realized-loss";
+    const sign = r.gain >= 0 ? "+" : "−";
+    const pct = r.gain_pct == null ? "" :
+      ` <span class="realized-pct">(${sign}${Math.abs(r.gain_pct).toFixed(1)}%)</span>`;
+    return `<span class="${cls}">${sign}$${Math.abs(r.gain).toFixed(2)}${pct}</span>`;
+  };
+
+  document.querySelector("#realized-table thead").innerHTML =
+    `<tr><th class="left">Company</th><th>Bought</th><th>Sold</th><th>Held</th><th>Gain</th></tr>`;
+  document.querySelector("#realized-table tbody").innerHTML = rows.map((r) => `
+    <tr>
+      <td class="left"><b>${r.ticker}</b> <span class="realized-name">${r.name}</span>
+        <span class="realized-sh">${(+r.shares).toLocaleString(undefined, {maximumFractionDigits: 2})} sh</span></td>
+      <td>${r.buy_est ? '<span class="realized-approx">~</span>' : ""}${d(r.date_bought)} · $${r.buy_px.toFixed(2)}</td>
+      <td>${d(r.date_sold)} · $${r.sell_px.toFixed(2)}</td>
+      <td>${held(r)}</td>
+      <td>${gain(r)}</td>
+    </tr>`).join("");
 }
 
 // Performance by sector — per-sector gain% bars, best -> worst.
