@@ -1,0 +1,36 @@
+name: Deploy site to GitHub Pages
+
+# Replaces the legacy Pages builder (2026-07-06). Why: the legacy pipeline errored on
+# superseded builds every time a new push landed mid-build (the pipeline pushes every
+# ~30 min during the session) — each error emailed the owner and sometimes hung serving
+# stale content for 30+ minutes. Here, a newer push CANCELS the in-flight deploy quietly
+# (concurrency below), failures are visible in this repo's Actions tab, and the deploy
+# is a deterministic file copy of the tracked tree (secrets are gitignored, never tracked).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true   # superseded deploys cancel silently — no failure emails
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
