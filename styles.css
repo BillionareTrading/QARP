@@ -1369,3 +1369,11 @@ tbody tr:hover { background: var(--surface-2); }
 .realized-approx { color: var(--brass); font-weight: 700; }
 .realized-sub { display: block; font-size: 11.5px; color: var(--ink-3); margin-top: 2px; }
 .realized-wrap { max-height: 248px; overflow-y: auto; }  /* ~4 rows + sticky header; rest scrolls */
+/* Realized on phones: fit Company | Sold | Gain with no sideways swipe (the gains ARE
+   the point); Bought/Held detail is a desktop affordance. 2026-07-07 mobile check. */
+@media (max-width: 640px) {
+  #realized-table th:nth-child(2), #realized-table td:nth-child(2),
+  #realized-table th:nth-child(4), #realized-table td:nth-child(4) { display: none; }
+  #realized-table td, #realized-table th { padding: 9px 6px; font-size: 12.5px; }
+  .realized-name { display: none; }   /* ticker + shares only — full name is a desktop detail */
+}
