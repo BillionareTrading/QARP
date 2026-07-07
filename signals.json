@@ -1,6 +1,6 @@
 {
   "date": "2026-07-07",
-  "generated_at": "Jul 7, 9:53am ET",
+  "generated_at": "Jul 7, 10:42am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -95,7 +95,7 @@
     {
       "when": "Jul 7",
       "what": "Energy & geopolitics — today's read",
-      "why": "As vessels transit the Strait of Hormuz under a UN evacuation program. Also, President Trump said he has ordered a DOJ investigation into retail fuel price gouging, which may lead to lower margins going forward.",
+      "why": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
       "affects": "Energy · growth",
       "dir": "two-sided",
       "src": "Benzinga WIIM (live)"
@@ -124,6 +124,13 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Oil & Gas",
+      "dir": "up",
+      "driver": "Reports suggesting that multiple ships",
+      "note": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Grocery Retailers",
       "dir": "up",
       "driver": "Ahead of the 4th of July holiday weekend",
@@ -146,16 +153,9 @@
     },
     {
       "sector": "Homebuilding & Housing",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "The House and Senate sent a bipartisan housing bill designed to lower ho…",
       "note": "After the House and Senate sent a bipartisan housing bill designed to lower housing costs for President Trump's signature. Sentiment was further boosted by KB Home’s better-than-expected second-quarter sales results.",
-      "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Oil & Gas",
-      "dir": "mixed",
-      "driver": "Vessels transit the Strait of Hormuz under a UN evacuation program",
-      "note": "As vessels transit the Strait of Hormuz under a UN evacuation program. Also, President Trump said he has ordered a DOJ investigation into retail fuel price gouging, which may lead to lower margins going forward.",
       "src": "Benzinga WIIM · flags a divergence vs our prices"
     }
   ],
@@ -172,6 +172,12 @@
       "url": "https://www.benzinga.com/quote/ADBE",
       "wiim": true
     },
+    "NVDA": {
+      "title": "Samsung’s Record Memory Profit Sparks a 7% Selloff: Is a Stock at 5 Times Earnings a Rare Buy?",
+      "ts": 1783434204,
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60307608/samsung-record-memory-profit-selloff-forward-pe",
+      "wiim": false
+    },
     "AVGO": {
       "title": "ALAB Shares Rise as Sector Rebounds from June Slump",
       "ts": 1783364849,
@@ -182,18 +188,6 @@
       "title": "Corgi's ETF Pack Grows Yet Again with 24 New Leveraged and Buffer Launches",
       "ts": 1783368974,
       "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60292541/corgis-etf-pack-grows-yet-again-with-24-new-leveraged-and-buffer-launches",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "Samsung 147% Stock Gain Helps Chairman Double Net Worth In 2026",
-      "ts": 1783366325,
-      "url": "https://www.benzinga.com/markets/asia/26/07/60290901/samsung-147-stock-gain-helps-chairman-double-net-worth-in-2026",
-      "wiim": false
-    },
-    "GILD": {
-      "title": "Generic Fears Overdone? Gilead Stock Has More Room to Run, Analyst Says",
-      "ts": 1783361123,
-      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/07/60288767/generic-fears-overdone-gilead-stock-has-more-room-to-run-analyst-says",
       "wiim": false
     }
   },
@@ -206,8 +200,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$141",
-      "price": 128.9,
-      "upside": 9.4,
+      "price": 129.26,
+      "upside": 9.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -220,8 +214,8 @@
       "rating": "Sector Outperform",
       "stance": "bullish",
       "pt": "$155",
-      "price": 128.9,
-      "upside": 20.2,
+      "price": 129.26,
+      "upside": 19.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -234,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$75",
-      "price": 43.58,
-      "upside": 72.1,
+      "price": 43.39,
+      "upside": 72.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -248,8 +242,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$48",
-      "price": 43.58,
-      "upside": 10.1,
+      "price": 43.39,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -262,8 +256,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$47",
-      "price": 43.58,
-      "upside": 7.8,
+      "price": 43.39,
+      "upside": 8.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -276,8 +270,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$70",
-      "price": 43.58,
-      "upside": 60.6,
+      "price": 43.39,
+      "upside": 61.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -290,8 +284,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$23",
-      "price": 43.58,
-      "upside": -47.2,
+      "price": 43.39,
+      "upside": -47.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -304,8 +298,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$72",
-      "price": 43.58,
-      "upside": 65.2,
+      "price": 43.39,
+      "upside": 65.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -318,8 +312,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$45",
-      "price": 43.58,
-      "upside": 3.3,
+      "price": 43.39,
+      "upside": 3.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -332,8 +326,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$45",
-      "price": 43.58,
-      "upside": 3.3,
+      "price": 43.39,
+      "upside": 3.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -346,8 +340,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$60",
-      "price": 43.58,
-      "upside": 37.7,
+      "price": 43.39,
+      "upside": 38.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -360,8 +354,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$228",
-      "price": 169.07,
-      "upside": 34.9,
+      "price": 170.8,
+      "upside": 33.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -374,8 +368,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$45",
-      "price": 43.58,
-      "upside": 3.3,
+      "price": 43.39,
+      "upside": 3.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -388,8 +382,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 43.58,
-      "upside": 26.2,
+      "price": 43.39,
+      "upside": 26.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -402,8 +396,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$52",
-      "price": 43.58,
-      "upside": 19.3,
+      "price": 43.39,
+      "upside": 19.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -416,8 +410,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$47",
-      "price": 43.58,
-      "upside": 7.8,
+      "price": 43.39,
+      "upside": 8.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -430,8 +424,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$40",
-      "price": 43.58,
-      "upside": -8.2,
+      "price": 43.39,
+      "upside": -7.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -444,8 +438,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 171.97,
-      "upside": 22.1,
+      "price": 173.02,
+      "upside": 21.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -458,14 +452,104 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 128.9,
-      "upside": -6.9,
+      "price": 129.26,
+      "upside": -7.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     }
   ],
   "bz_news": [
+    {
+      "title": "Shares of oil and gas-related companies are trading higher after reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
+      "url": "https://www.benzinga.com/quote/SKYQ",
+      "ts": 1783435046,
+      "tickers": [
+        "LNG",
+        "EQNR",
+        "SHEL",
+        "OKE"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.343
+    },
+    {
+      "title": "B of A Securities Maintains Buy on Goldman Sachs Group, Raises Price Target to $1150",
+      "url": "https://www.benzinga.com/news/26/07/60308349/b-securities-maintains-buy-goldman-sachs-group-raises-price-target-1150",
+      "ts": 1783434974,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.491
+    },
+    {
+      "title": "B of A Securities Maintains Buy on JPMorgan Chase, Raises Price Target to $408",
+      "url": "https://www.benzinga.com/news/26/07/60308049/b-securities-maintains-buy-jpmorgan-chase-raises-price-target-408",
+      "ts": 1783434637,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.466
+    },
+    {
+      "title": "JPMorgan Chase Stock Is Rising Ahead of July 14 Earnings Report: What Investors Need to Know",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60307920/jpmorgan-chase-stock-is-rising-ahead-of-july-14-earnings-report-what-investors-need-to-know",
+      "ts": 1783434504,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.386
+    },
+    {
+      "title": "Samsung’s Record Memory Profit Sparks a 7% Selloff: Is a Stock at 5 Times Earnings a Rare Buy?",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60307608/samsung-record-memory-profit-selloff-forward-pe",
+      "ts": 1783434204,
+      "tickers": [
+        "SSNLF",
+        "AAPL",
+        "NVDA",
+        "MU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.353
+    },
+    {
+      "title": "Cisco Partners With World Wide Technology On $230M U.S. Army GEMSS 2.1 IT Modernization Agreement",
+      "url": "https://www.benzinga.com/news/26/07/60306980/cisco-partners-world-wide-technology-230m-u-s-army-gemss-2-1-it-modernization-agreement",
+      "ts": 1783433467,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.303
+    },
+    {
+      "title": "TD Cowen Maintains Hold on American Express, Raises Price Target to $338",
+      "url": "https://www.benzinga.com/news/26/07/60306582/td-cowen-maintains-hold-american-express-raises-price-target-338",
+      "ts": 1783433082,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.421
+    },
     {
       "title": "UBS Maintains Neutral on Goldman Sachs Group, Raises Price Target to $1120",
       "url": "https://www.benzinga.com/news/26/07/60304982/ubs-maintains-neutral-goldman-sachs-group-raises-price-target-1120",
@@ -491,18 +575,6 @@
       "relevance": 0.471
     },
     {
-      "title": "UBS Maintains Buy on JPMorgan Chase, Raises Price Target to $384",
-      "url": "https://www.benzinga.com/news/26/07/60304640/ubs-maintains-buy-jpmorgan-chase-raises-price-target-384",
-      "ts": 1783431013,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.462
-    },
-    {
       "title": "Forget the iPhone. Apple's AI Story May Belong to Macs",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60304516/forget-the-iphone-apples-ai-story-may-belong-to-macs",
       "ts": 1783430810,
@@ -524,7 +596,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.359
+      "relevance": 0.358
     },
     {
       "title": "What's Going on With IBM Stock Tuesday?",
@@ -539,7 +611,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.4
+      "relevance": 0.399
     },
     {
       "title": "Stock Market Today: Dow Jones Futures Gain, S&P 500, Nasdaq 100 Slips As SpaceX Debuts On The Exchange—Rivian, Micron In Focus (UPDATED)",
@@ -578,7 +650,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.449
+      "relevance": 0.45
     },
     {
       "title": "Investors Want Quarterly Earnings to Stay as SEC Weighs Reporting Shake-Up: Report",
@@ -590,7 +662,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.541
+      "relevance": 0.54
     },
     {
       "title": "Salesforce Commits $1 Billion to Switzerland to Accelerate Agentic AI Push",
@@ -644,7 +716,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.389
+      "relevance": 0.388
     },
     {
       "title": "Baird Maintains Outperform on Visa, Raises Price Target to $412",
@@ -686,57 +758,6 @@
       "relevance": 0.23
     },
     {
-      "title": "IBM Launches Z17 And LinuxONE 5 Configurations, Its First Rack Mount Offering To Go Alongside Single-Frame Systems",
-      "url": "https://www.benzinga.com/news/26/07/60298497/ibm-launches-z17-and-linuxone-5-configurations-its-first-rack-mount-offering-go-alongside-single-fra",
-      "ts": 1783419252,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.338
-    },
-    {
-      "title": "Why Is Micron Technology Stock Falling Tuesday?",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60298487/why-is-micron-technology-stock-falling-tuesday-2",
-      "ts": 1783419173,
-      "tickers": [
-        "MU",
-        "AAPL",
-        "AMZN",
-        "SSNLF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.334
-    },
-    {
-      "title": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry",
-      "url": "https://www.benzinga.com/news/26/07/60297906/inquiry-apple-s-competitor-dynamics-technology-hardware-storage-amp-peripherals-industry",
-      "ts": 1783418306,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.404
-    },
-    {
-      "title": "Analyzing Microsoft In Comparison To Competitors In Software Industry",
-      "url": "https://www.benzinga.com/news/26/07/60297905/analyzing-microsoft-comparison-competitors-software-industry",
-      "ts": 1783418301,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.33
-    },
-    {
       "title": "Apple Offered Big iPhone Discounts—Why Sales Still Fell In China",
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60297828/apple-offered-big-iphone-discounts-why-sales-still-fell-in-china",
       "ts": 1783417992,
@@ -747,35 +768,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.299
-    },
-    {
-      "title": "Bernie Sanders Says Microsoft's Layoffs and Xbox Price Hike Show Tax Cuts 'It Never Trickles Down'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60297489/bernie-sanders-says-microsofts-layoffs-and-xbox-price-hike-show-tax-cuts-it-never-trickles-down",
-      "ts": 1783416655,
-      "tickers": [
-        "MSFT",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.271
-    },
-    {
-      "title": "Trump Accounts Praised by Bitcoin Bull Mike Novogratz: Galaxy Will Match $1,000 Contribution for Employees' Kids",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60296911/bitcoin-bull-mike-novogratz-praises-trump-accounts",
-      "ts": 1783409907,
-      "tickers": [
-        "GLXY",
-        "$BTC",
-        "COIN",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.241
     },
     {
       "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
@@ -990,9 +982,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Samsung 147% Stock Gain Helps Chairman Double Net Worth In 2026",
-        "ts": 1783366325,
-        "url": "https://www.benzinga.com/markets/asia/26/07/60290901/samsung-147-stock-gain-helps-chairman-double-net-worth-in-2026",
+        "title": "Samsung’s Record Memory Profit Sparks a 7% Selloff: Is a Stock at 5 Times Earnings a Rare Buy?",
+        "ts": 1783434204,
+        "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60307608/samsung-record-memory-profit-selloff-forward-pe",
         "wiim": false
       },
       "filings": {
@@ -1191,12 +1183,7 @@
         "score": 1.08,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Generic Fears Overdone? Gilead Stock Has More Room to Run, Analyst Says",
-        "ts": 1783361123,
-        "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/07/60288767/generic-fears-overdone-gilead-stock-has-more-room-to-run-analyst-says",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
