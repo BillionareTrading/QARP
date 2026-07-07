@@ -582,18 +582,48 @@ function renderPortfolio() {
   renderRealized();
 }
 
-// Realized — closed trades from the Abyan records, newest sale first. DATA.realized =
-// the imported trade cards (a plain list — per the desk's call, NO aggregate totals shown). buy_est rows show ~ on the Bought cell (derived basis,
-// history-estimated date). Gains brass (banked), losses navy — deliberately NOT the live
-// pos/neg palette: realized reads as history, not P&L in motion.
+// Realized — closed trades from the Abyan records. Sortable (pSort/uSort pattern),
+// with a stats band computed from the rows: total earned, trade count, win rate, best
+// trade. Wins render in the site's positive green (user call 2026-07-08: "it's literally
+// my earnings, make it look good") — this is the book's trophy case, not a data dump.
+let rSort = { key: "date_sold", dir: -1 };
+const R_COLS = [
+  { key: "ticker", label: "Company", align: "left", sortVal: (r) => r.ticker },
+  { key: "date_bought", label: "Bought", sortVal: (r) => r.date_bought || "" },
+  { key: "date_sold", label: "Sold", sortVal: (r) => r.date_sold || "" },
+  { key: "held", label: "Held", sortVal: (r) => (r.date_bought && r.date_sold) ? (new Date(r.date_sold) - new Date(r.date_bought)) : -1 },
+  { key: "gain", label: "Gain", sortVal: (r) => r.gain },
+  { key: "gain_pct", label: "Return", sortVal: (r) => r.gain_pct == null ? -1e9 : r.gain_pct },
+];
 function renderRealized() {
   const el = document.getElementById("realized");
   if (!el) return;
-  const rows = [...(DATA.realized || [])].sort((a, b) =>
-    (b.date_sold || "").localeCompare(a.date_sold || ""));
-  if (!rows.length) { el.hidden = true; return; }
+  const all = DATA.realized || [];
+  if (!all.length) { el.hidden = true; return; }
   el.hidden = false;
 
+  // ---- stats band (computed live from the rows, so future sells update it) ----
+  const total = all.reduce((s, r) => s + r.gain, 0);
+  const wins = all.filter((r) => r.gain >= 0).length;
+  const best = all.reduce((b, r) => (r.gain > b.gain ? r : b), all[0]);
+  document.getElementById("realized-stats").innerHTML = `
+    <div class="rz-hero">
+      <span class="rz-total-label">Total realized earnings</span>
+      <span class="rz-total">+$${total.toLocaleString("en-US", {minimumFractionDigits: 2})}</span>
+    </div>
+    <div class="rz-chips">
+      <span class="rz-chip"><b>${all.length}</b> closed trades</span>
+      <span class="rz-chip rz-chip-pos"><b>${wins}</b> profitable · ${Math.round(wins / all.length * 100)}%</span>
+      <span class="rz-chip">Best: <b>${best.ticker}</b> +$${best.gain.toFixed(2)}</span>
+    </div>`;
+
+  // ---- sortable table ----
+  const col = R_COLS.find((c) => c.key === rSort.key) || R_COLS[2];
+  const rows = [...all].sort((a, b) => {
+    const va = col.sortVal(a), vb = col.sortVal(b);
+    if (typeof va === "string") return rSort.dir * va.localeCompare(vb);
+    return rSort.dir * (va - vb);
+  });
   const d = (iso) => iso ? new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: iso.slice(0,4) !== String(new Date().getFullYear()) ? "2-digit" : undefined }) : "—";
   const held = (r) => {
     if (!r.date_bought || !r.date_sold) return "—";
@@ -601,16 +631,10 @@ function renderRealized() {
     const t = days < 21 ? `${days} d` : days < 70 ? `${Math.round(days / 7)} w` : `${Math.round(days / 30.4)} mo`;
     return r.buy_est ? `~${t}` : t;
   };
-  const gain = (r) => {
-    const cls = r.gain >= 0 ? "realized-gain" : "realized-loss";
-    const sign = r.gain >= 0 ? "+" : "−";
-    const pct = r.gain_pct == null ? "" :
-      ` <span class="realized-pct">(${sign}${Math.abs(r.gain_pct).toFixed(1)}%)</span>`;
-    return `<span class="${cls}">${sign}$${Math.abs(r.gain).toFixed(2)}${pct}</span>`;
-  };
-
-  document.querySelector("#realized-table thead").innerHTML =
-    `<tr><th class="left">Company</th><th>Bought</th><th>Sold</th><th>Held</th><th>Gain</th></tr>`;
+  document.querySelector("#realized-table thead").innerHTML = `<tr>${R_COLS.map((c) => {
+    const arrow = rSort.key === c.key ? `<span class="arrow">${rSort.dir > 0 ? "▲" : "▼"}</span>` : "";
+    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}</th>`;
+  }).join("")}</tr>`;
   document.querySelector("#realized-table tbody").innerHTML = rows.map((r) => `
     <tr>
       <td class="left"><b>${r.ticker}</b> <span class="realized-name">${r.name}</span>
@@ -618,8 +642,16 @@ function renderRealized() {
       <td>${r.buy_est ? '<span class="realized-approx">~</span>' : ""}${d(r.date_bought)} · $${r.buy_px.toFixed(2)}</td>
       <td>${d(r.date_sold)} · $${r.sell_px.toFixed(2)}</td>
       <td>${held(r)}</td>
-      <td>${gain(r)}</td>
+      <td><span class="${r.gain >= 0 ? "rz-gain" : "rz-loss"}">${r.gain >= 0 ? "+" : "−"}$${Math.abs(r.gain).toFixed(2)}</span></td>
+      <td><span class="${r.gain >= 0 ? "rz-gain" : "rz-loss"}">${r.gain_pct == null ? "—" : (r.gain_pct >= 0 ? "+" : "−") + Math.abs(r.gain_pct).toFixed(1) + "%"}</span></td>
     </tr>`).join("");
+  document.querySelectorAll("#realized-table thead th").forEach((th) =>
+    th.addEventListener("click", () => {
+      const k = th.dataset.key;
+      if (rSort.key === k) rSort.dir *= -1;
+      else rSort = { key: k, dir: k === "ticker" ? 1 : -1 };
+      renderRealized();
+    }));
 }
 
 // Performance by sector — per-sector gain% bars, best -> worst.
