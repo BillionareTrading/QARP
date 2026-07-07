@@ -456,6 +456,26 @@ function renderUniverseControls() {
   }
 }
 
+// Top horizontal scrollbar for the universe table: a 14px dummy strip above the wrap
+// whose inner width mirrors the table's scrollWidth; scrolling either bar moves both.
+// (The native bar sits at the BOTTOM of the 396-row table — unreachable mid-scroll.)
+let uHScrollWired = false;
+function syncUniverseHScroll() {
+  const bar = document.getElementById("u-hscroll");
+  const inner = document.getElementById("u-hscroll-inner");
+  const wrap = document.getElementById("u-wrap");
+  const tbl = document.getElementById("u-table");
+  if (!bar || !wrap || !tbl) return;
+  inner.style.width = tbl.scrollWidth + "px";
+  bar.style.display = tbl.scrollWidth > wrap.clientWidth + 2 ? "" : "none";
+  if (!uHScrollWired) {
+    let lock = false;
+    bar.addEventListener("scroll", () => { if (lock) return; lock = true; wrap.scrollLeft = bar.scrollLeft; lock = false; });
+    wrap.addEventListener("scroll", () => { if (lock) return; lock = true; bar.scrollLeft = wrap.scrollLeft; lock = false; });
+    uHScrollWired = true;
+  }
+}
+
 function renderUniverseTable() {
   const q = document.getElementById("u-search").value.trim().toLowerCase();
   const fv = document.getElementById("u-verdict").value;
@@ -493,6 +513,7 @@ function renderUniverseTable() {
     }));
   document.querySelectorAll("#u-table tbody tr").forEach((tr) =>
     tr.addEventListener("click", () => openDrawer(tr.dataset.ticker)));
+  syncUniverseHScroll();
 }
 
 /* ---------- render: Portfolio ---------- */
@@ -998,7 +1019,7 @@ function initTabs() {
       document.getElementById("tab-" + t.dataset.tab).classList.add("active");
       if (t.dataset.tab === "informed") enterInformed(); else leaveInformed();
       if (t.dataset.tab === "daily") enterDaily(); else leaveDaily();
-      if (t.dataset.tab === "universe") resumeUniverseCycler(); else pauseUniverseCycler();
+      if (t.dataset.tab === "universe") { resumeUniverseCycler(); syncUniverseHScroll(); } else pauseUniverseCycler();
     }));
 }
 

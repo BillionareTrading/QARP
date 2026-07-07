@@ -1377,3 +1377,16 @@ tbody tr:hover { background: var(--surface-2); }
   #realized-table td, #realized-table th { padding: 9px 6px; font-size: 12.5px; }
   .realized-name { display: none; }   /* ticker + shares only — full name is a desktop detail */
 }
+
+/* ===== Universe table: contained + compact (2026-07-08 user request) ===== */
+/* Vertical: ~11 rows then scroll inside, like the Realized box. */
+.u-wrap { max-height: 580px; overflow: auto; }
+/* Top horizontal scrollbar, synced with the table wrap (the native one sits at the
+   table's bottom, unreachable when 396 rows stretch past the viewport). */
+.hscroll { overflow-x: auto; overflow-y: hidden; height: 14px; margin-bottom: 4px; }
+.hscroll > div { height: 1px; }
+/* Horizontal: tighter cells so most columns fit the 1240px sheet. */
+#u-table { font-size: 12.5px; }
+#u-table thead th { padding: 10px 6px; font-size: 10.5px; }
+#u-table tbody td { padding: 8px 6px; }
+#u-table .tick .name { max-width: 108px; }
