@@ -1,6 +1,6 @@
 {
   "date": "2026-07-07",
-  "generated_at": "Jul 7, 12:01pm ET",
+  "generated_at": "Jul 7, 2:12pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -124,24 +124,24 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
+      "dir": "down",
+      "driver": "AI-related stocks face renewed pressure following Samsung Electronics' p…",
+      "note": "As AI-related stocks face renewed pressure following Samsung Electronics' preliminary second-quarter results, with investors focusing on concerns over AI infrastructure spending and demand. Reports that China's DeepSeek is developing its own AI chip have also raised concerns about future demand for third-party AI semiconductors from companies such as Nvidia and Huawei.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Oil & Gas",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Reports suggesting that multiple ships",
       "note": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Grocery Retailers",
       "dir": "up",
       "driver": "Ahead of the 4th of July holiday weekend",
       "note": "Ahead of the 4th of July holiday weekend.",
-      "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
-      "dir": "down",
-      "driver": "Continued weakness after recent reports suggested that Meta will open a …",
-      "note": "Amid continued weakness after recent reports suggested that Meta will open a cloud business to sell excess AI compute. Also, weakness may reflect profit-taking following the industry-wide rally in H1 2026.",
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
@@ -172,22 +172,28 @@
       "url": "https://www.benzinga.com/quote/ADBE",
       "wiim": true
     },
+    "RKLB": {
+      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
+      "ts": 1783445709,
+      "url": "https://www.benzinga.com/markets/options/26/07/60315513/10-industrials-stocks-whale-activity-today-s-session",
+      "wiim": false
+    },
+    "LULU": {
+      "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
+      "ts": 1783445709,
+      "url": "https://www.benzinga.com/markets/options/26/07/60315512/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
     "NVDA": {
-      "title": "SpaceX Nasdaq 100 Debut, Minimal Lift: Analysts Call the QQQ Hype Overdone",
-      "ts": 1783437930,
-      "url": "https://www.benzinga.com/markets/tech/26/07/60310466/spacex-nasdaq-100-debut-minimal-lift-analysts-call-the-qqq-hype-overdone",
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "ts": 1783445709,
+      "url": "https://www.benzinga.com/markets/options/26/07/60315511/10-information-technology-stocks-whale-activity-today-s-session",
       "wiim": false
     },
     "AVGO": {
-      "title": "Corgi's ETF Pack Grows Yet Again with 24 New Leveraged and Buffer Launches",
-      "ts": 1783368974,
-      "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60292541/corgis-etf-pack-grows-yet-again-with-24-new-leveraged-and-buffer-launches",
-      "wiim": false
-    },
-    "RKLB": {
-      "title": "Corgi's ETF Pack Grows Yet Again with 24 New Leveraged and Buffer Launches",
-      "ts": 1783368974,
-      "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60292541/corgis-etf-pack-grows-yet-again-with-24-new-leveraged-and-buffer-launches",
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "ts": 1783445709,
+      "url": "https://www.benzinga.com/markets/options/26/07/60315511/10-information-technology-stocks-whale-activity-today-s-session",
       "wiim": false
     }
   },
@@ -200,8 +206,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$141",
-      "price": 129.45,
-      "upside": 8.9,
+      "price": 128.19,
+      "upside": 10.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -214,8 +220,8 @@
       "rating": "Sector Outperform",
       "stance": "bullish",
       "pt": "$155",
-      "price": 129.45,
-      "upside": 19.7,
+      "price": 128.19,
+      "upside": 20.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -228,8 +234,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$75",
-      "price": 43.12,
-      "upside": 73.9,
+      "price": 43.15,
+      "upside": 73.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -242,8 +248,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$48",
-      "price": 43.12,
-      "upside": 11.3,
+      "price": 43.15,
+      "upside": 11.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -256,8 +262,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$47",
-      "price": 43.12,
-      "upside": 9.0,
+      "price": 43.15,
+      "upside": 8.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -270,8 +276,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$70",
-      "price": 43.12,
-      "upside": 62.3,
+      "price": 43.15,
+      "upside": 62.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -284,7 +290,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$23",
-      "price": 43.12,
+      "price": 43.15,
       "upside": -46.7,
       "held": false,
       "uni": true,
@@ -298,8 +304,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$72",
-      "price": 43.12,
-      "upside": 67.0,
+      "price": 43.15,
+      "upside": 66.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -312,8 +318,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$45",
-      "price": 43.12,
-      "upside": 4.4,
+      "price": 43.15,
+      "upside": 4.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -326,8 +332,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$45",
-      "price": 43.12,
-      "upside": 4.4,
+      "price": 43.15,
+      "upside": 4.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -340,8 +346,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$60",
-      "price": 43.12,
-      "upside": 39.1,
+      "price": 43.15,
+      "upside": 39.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -354,8 +360,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$228",
-      "price": 171.46,
-      "upside": 33.0,
+      "price": 171.69,
+      "upside": 32.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -368,8 +374,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$45",
-      "price": 43.12,
-      "upside": 4.4,
+      "price": 43.15,
+      "upside": 4.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -382,8 +388,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 43.12,
-      "upside": 27.6,
+      "price": 43.15,
+      "upside": 27.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -396,8 +402,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$52",
-      "price": 43.12,
-      "upside": 20.6,
+      "price": 43.15,
+      "upside": 20.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -410,8 +416,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$47",
-      "price": 43.12,
-      "upside": 9.0,
+      "price": 43.15,
+      "upside": 8.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -424,8 +430,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$40",
-      "price": 43.12,
-      "upside": -7.2,
+      "price": 43.15,
+      "upside": -7.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -438,8 +444,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 171.31,
-      "upside": 22.6,
+      "price": 171.77,
+      "upside": 22.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -452,14 +458,160 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 129.45,
-      "upside": -7.3,
+      "price": 128.19,
+      "upside": -6.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     }
   ],
   "bz_news": [
+    {
+      "title": "EXCLUSIVE: Alphabet Replaces Verizon, Here’s Who Market Expert Jay Woods Says Could Leave Dow Jones Next",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60316074/alphabet-replaces-verizon-market-expert-jay-woods-says-could-leave-dow-jones-next",
+      "ts": 1783446912,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "DIA",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.356
+    },
+    {
+      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60315513/10-industrials-stocks-whale-activity-today-s-session",
+      "ts": 1783445709,
+      "tickers": [
+        "CPRT",
+        "UPS",
+        "NMM",
+        "BE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.415
+    },
+    {
+      "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60315512/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
+      "ts": 1783445709,
+      "tickers": [
+        "TSLA",
+        "RIVN",
+        "AMZN",
+        "BABA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.363
+    },
+    {
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60315511/10-information-technology-stocks-whale-activity-today-s-session",
+      "ts": 1783445709,
+      "tickers": [
+        "NVDA",
+        "MSFT",
+        "MU",
+        "MRVL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.394
+    },
+    {
+      "title": "Chip Rout Drags Nasdaq 100 Lower, Oil Climbs: Stock Market Today",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60315082/chip-rout-samsung-earnings-nasdaq-100-oil-climbs-hormuz-stock-market-tuesday",
+      "ts": 1783444832,
+      "tickers": [
+        "DOCN",
+        "RIVN",
+        "INTC",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.48
+    },
+    {
+      "title": "Jim Cramer’s Take: GEV, CAT, INTC Still Have Room — But Today Is A Punisher",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60313837/jim-cramer-take-gev-cat-intc-have-room-today-is-a-punisher",
+      "ts": 1783442949,
+      "tickers": [
+        "INTC",
+        "CAT",
+        "GEV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.367
+    },
+    {
+      "title": "Stock Of The Day: Is This The Top For Apple?",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60313072/stock-of-the-day-is-this-the-top-for-apple",
+      "ts": 1783441783,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.36
+    },
+    {
+      "title": "'Microsoft Replaces OpenAI, Anthropic With Own AI in Some Apps' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60312829/microsoft-replaces-openai-anthropic-own-ai-some-apps-bloomberg",
+      "ts": 1783441472,
+      "tickers": [
+        "MSFT",
+        "AMZN",
+        "GOOG",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.328
+    },
+    {
+      "title": "Shares of data center infrastructure-related companies are trading lower. Catalysts including the the sector outlook following Samsung's preliminary Q2 results and reports suggesting DeepSeek will develop its own AI inference chips are weighing on the tech hardware industry.",
+      "url": "https://www.benzinga.com/quote/WCC",
+      "ts": 1783441430,
+      "tickers": [
+        "GEV",
+        "FIX",
+        "VRT",
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.521
+    },
+    {
+      "title": "Shares of foundry, fabricator and integrated device manufacturing semiconductor companies are trading lower as AI-related stocks face renewed pressure following Samsung Electronics' preliminary second-quarter results, with investors focusing on concerns over AI infrastructure spending and demand. Reports that China's DeepSeek is developing its own AI chip have also raised concerns about future demand for third-party AI semiconductors from companies such as Nvidia and Huawei.",
+      "url": "https://www.benzinga.com/quote/STM",
+      "ts": 1783440471,
+      "tickers": [
+        "TSM",
+        "GFS",
+        "UMC",
+        "TSEM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.627
+    },
     {
       "title": "If You Invested $100 In Amgen Stock 15 Years Ago, You Would Have This Much Today",
       "url": "https://www.benzinga.com/news/26/07/60311388/if-you-invested-100-amgen-stock-15-years-ago-you-would-have-much-today",
@@ -645,138 +797,6 @@
       "relevance": 0.471
     },
     {
-      "title": "Forget the iPhone. Apple's AI Story May Belong to Macs",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60304516/forget-the-iphone-apples-ai-story-may-belong-to-macs",
-      "ts": 1783430810,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.33
-    },
-    {
-      "title": "Caterpillar Acquires RPMGlobal; Financial Terms Undisclosed",
-      "url": "https://www.benzinga.com/m/26/07/60304383/caterpillar-acquires-rpmglobal-financial-terms-undisclosed",
-      "ts": 1783430449,
-      "tickers": [
-        "CAT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.358
-    },
-    {
-      "title": "What's Going on With IBM Stock Tuesday?",
-      "url": "https://www.benzinga.com/markets/large-cap/26/07/60304258/whats-going-on-with-ibm-stock-tuesday-3",
-      "ts": 1783430200,
-      "tickers": [
-        "IBM",
-        "TDIV",
-        "DJD",
-        "TDVI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.399
-    },
-    {
-      "title": "Stock Market Today: Dow Jones Futures Gain, S&P 500, Nasdaq 100 Slips As SpaceX Debuts On The Exchange—Rivian, Micron In Focus (UPDATED)",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60297478/stock-market-today-dow-jones-futures-gain-nasdaq-100-slips-as-spacex-debuts-on-the-exchange-rivian-micron-in-focus",
-      "ts": 1783427612,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "RIVN",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.498
-    },
-    {
-      "title": "Boeing Lands Denmark P-8 Poseidon Order as Greenland Tensions With Trump Simmer",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60302415/boeing-lands-denmark-p-8-poseidon-order-as-greenland-tensions-with-trump-simmer",
-      "ts": 1783427518,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.228
-    },
-    {
-      "title": "Barclays Maintains Equal-Weight on American Express, Raises Price Target to $364",
-      "url": "https://www.benzinga.com/news/26/07/60301871/barclays-maintains-equal-weight-american-express-raises-price-target-364",
-      "ts": 1783426532,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.45
-    },
-    {
-      "title": "Investors Want Quarterly Earnings to Stay as SEC Weighs Reporting Shake-Up: Report",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60301265/investors-want-quarterly-earnings-to-stay-as-sec-weighs-reporting-shake-up-report",
-      "ts": 1783425733,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.54
-    },
-    {
-      "title": "Salesforce Commits $1 Billion to Switzerland to Accelerate Agentic AI Push",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60301253/salesforce-commits-1-billion-to-switzerland-to-accelerate-agentic-ai-push",
-      "ts": 1783425714,
-      "tickers": [
-        "CRM",
-        "FDN",
-        "IGV",
-        "MRAD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.395
-    },
-    {
-      "title": "Truist Securities Maintains Hold on Amgen, Raises Price Target to $340",
-      "url": "https://www.benzinga.com/news/26/07/60300778/truist-securities-maintains-hold-amgen-raises-price-target-340",
-      "ts": 1783424526,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.457
-    },
-    {
-      "title": "Apple, Meta, Alphabet And A Financial Stock On CNBC’s ‘Final Trades’",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60300568/apple-meta-alphabet-and-a-financial-stock-on-cnbc-final-trades",
-      "ts": 1783424336,
-      "tickers": [
-        "AAPL",
-        "META",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.416
-    },
-    {
       "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
       "url": "https://www.benzinga.com/news/26/07/60245112/reported-earlier-coca-cola-said-seek-bankers-1-billion-india-bottler-ipo-bloomberg",
       "ts": 1783000583,
@@ -804,7 +824,7 @@
   "portfolio_brief": {
     "ADBE": {
       "name": "Adobe",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 8,
         "buy": 9,
@@ -989,9 +1009,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "SpaceX Nasdaq 100 Debut, Minimal Lift: Analysts Call the QQQ Hype Overdone",
-        "ts": 1783437930,
-        "url": "https://www.benzinga.com/markets/tech/26/07/60310466/spacex-nasdaq-100-debut-minimal-lift-analysts-call-the-qqq-hype-overdone",
+        "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+        "ts": 1783445709,
+        "url": "https://www.benzinga.com/markets/options/26/07/60315511/10-information-technology-stocks-whale-activity-today-s-session",
         "wiim": false
       },
       "filings": {
@@ -1058,9 +1078,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Corgi's ETF Pack Grows Yet Again with 24 New Leveraged and Buffer Launches",
-        "ts": 1783368974,
-        "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60292541/corgis-etf-pack-grows-yet-again-with-24-new-leveraged-and-buffer-launches",
+        "title": "10 Industrials Stocks Whale Activity In Today’s Session",
+        "ts": 1783445709,
+        "url": "https://www.benzinga.com/markets/options/26/07/60315513/10-industrials-stocks-whale-activity-today-s-session",
         "wiim": false
       },
       "filings": {
@@ -1094,7 +1114,12 @@
         "score": -0.1,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
+        "ts": 1783445709,
+        "url": "https://www.benzinga.com/markets/options/26/07/60315512/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1112,7 +1137,7 @@
     },
     "UBER": {
       "name": "Uber",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 16,
         "buy": 35,
@@ -1247,9 +1272,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Corgi's ETF Pack Grows Yet Again with 24 New Leveraged and Buffer Launches",
-        "ts": 1783368974,
-        "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60292541/corgis-etf-pack-grows-yet-again-with-24-new-leveraged-and-buffer-launches",
+        "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+        "ts": 1783445709,
+        "url": "https://www.benzinga.com/markets/options/26/07/60315511/10-information-technology-stocks-whale-activity-today-s-session",
         "wiim": false
       },
       "filings": {
