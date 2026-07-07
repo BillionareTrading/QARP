@@ -26,14 +26,25 @@ export default {
     const name = String(body.name || symbol).trim().slice(0, 60);
     if (!symbol) return J({ error: "no symbol" }, 400);
 
+    const context = String(body.context || "").slice(0, 400);   // optional: day move, headline, sector
     const prompt =
       `Search X (Twitter) in real time for the latest posts about ${name} ($${symbol}). Report the SOCIAL ` +
-      `PULSE on this stock. Use ONLY real posts you actually find — never invent a post, handle, number, or ` +
-      `sentiment. If X is quiet on this name, say so (buzz "quiet", empty posts). Sentiment is social signal, ` +
-      `not a recommendation. Prioritise posts with real engagement.\n\n` +
+      `PULSE. Use ONLY real posts you actually find — never invent a post, handle, number, or sentiment. ` +
+      `Prioritise posts with real engagement (replies/reposts), and weigh accounts with real followings.\n` +
+      (context ? `Context (react to it if X is discussing it): ${context}\n` : "") +
+      `\nCOUNT what you read: bullish vs bearish vs neutral posts from the last 24h.\n` +
+      `SCORING RULES (strict):\n` +
+      `- If you find FEWER THAN 5 substantive posts in 24h: buzz="quiet", sentiment_score=null, ` +
+      `sentiment_label="Quiet". A quiet name is a real finding — do NOT dress it up as Neutral 50.\n` +
+      `- NEVER default to 50. Scores near 50 are reserved for genuine two-sided arguments with ` +
+      `comparable numbers and conviction on both sides.\n` +
+      `- Otherwise score from the mix and conviction: 80+ bulls dominate loudly; 60-79 clearly ` +
+      `leaning bullish; 40-59 genuinely contested; 21-39 clearly leaning bearish; <=20 bears dominate.\n\n` +
       `Return ONLY a JSON object (no prose, no code fences):\n` +
-      `{"symbol":"${symbol}","sentiment_label":"Bullish|Neutral|Bearish","sentiment_score":<0-100, 50=neutral>,` +
-      `"buzz":"surging|rising|flat|quiet","posts_24h":<int or null>,"theme":"<one sentence>",` +
+      `{"symbol":"${symbol}","sentiment_label":"Bullish|Leaning bullish|Contested|Leaning bearish|Bearish|Quiet",` +
+      `"sentiment_score":<0-100 or null>,"bullish_n":<int>,"bearish_n":<int>,"neutral_n":<int>,` +
+      `"buzz":"surging|rising|flat|quiet","posts_24h":<int or null>,` +
+      `"theme":"<one sentence: WHAT the crowd is actually talking about>",` +
       `"posts":[{"handle":"@...","text":"<short paraphrase, never verbatim>"}],"as_of":"<ISO time>"}`;
 
     const payload = {

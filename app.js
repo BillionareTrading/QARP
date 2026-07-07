@@ -818,7 +818,15 @@ async function fetchPulse(ticker, name) {
   el.innerHTML = PULSE_HEAD + `<div class="pulse-loading"><span class="pulse-spin"></span>Reading X…</div>`;
   const fail = () => { el.innerHTML = PULSE_HEAD + `<div class="pulse-err">Couldn't reach X right now. <button type="button" class="pulse-link" data-act="get">Try again</button></div>`; wirePulse(ticker, name); };
   try {
-    const res = await fetch(GROK_PROXY, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ symbol: ticker, name }) });
+    const u = (DATA.universe || []).find((x) => x.ticker === ticker) || {};
+    const S = (typeof SIGNALS !== "undefined" && SIGNALS) || {};
+    const hn = S.holding_news && S.holding_news[ticker];
+    const context = [
+      u.day_pct != null ? `stock ${u.day_pct >= 0 ? "up" : "down"} ${Math.abs(u.day_pct).toFixed(1)}% ${sessionWord()}` : "",
+      u.sector ? `sector: ${u.sector}` : "",
+      hn && hn.title ? `latest headline: ${hn.title}` : "",
+    ].filter(Boolean).join(" · ");
+    const res = await fetch(GROK_PROXY, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ symbol: ticker, name, context }) });
     const j = await res.json().catch(() => ({}));
     if (!res.ok || !j || j.error || !j.pulse) return fail();
     PULSE_CACHE[ticker] = { data: j.pulse, ts: Date.now() };
@@ -828,17 +836,29 @@ async function fetchPulse(ticker, name) {
 }
 
 function pulseBodyHtml(p, ts) {
-  const lbl = p.sentiment_label || "Neutral";
+  const lbl = p.sentiment_label || "Quiet";
+  const quiet = p.sentiment_score == null || /quiet/i.test(lbl);
   const cls = /bull/i.test(lbl) ? "pos" : /bear/i.test(lbl) ? "neg" : "muted";
-  const score = p.sentiment_score != null ? Math.max(0, Math.min(100, Math.round(p.sentiment_score))) : 50;
-  const vol = p.posts_24h != null ? ` · ${fmtNum(p.posts_24h, 0)} posts/24h` : "";
   const posts = (Array.isArray(p.posts) ? p.posts : []).filter((x) => x && x.handle).slice(0, 3);
+  const counts = (p.bullish_n != null && p.bearish_n != null)
+    ? `<span class="pulse-counts"><b class="pos">${p.bullish_n}▲</b> / <b class="neg">${p.bearish_n}▼</b>${p.neutral_n ? ` / ${p.neutral_n}·` : ""}</span>` : "";
+  const vol = p.posts_24h != null ? ` · ${fmtNum(p.posts_24h, 0)} posts/24h` : "";
   const postsHtml = posts.length
     ? posts.map((x) => `<div class="pulse-post"><span class="pulse-handle">${esc(x.handle)}</span> ${esc(x.text || "")}</div>`).join("")
-    : `<div class="pulse-quiet">X is quiet on this name right now.</div>`;
+    : "";
+  if (quiet) {
+    // A quiet tape is a finding, not a failure — say it plainly instead of a fake Neutral 50.
+    return `
+      <div class="pulse-top"><span class="pulse-score muted">Quiet on X</span><span class="pulse-buzz">no crowd signal${vol}</span></div>
+      <div class="pulse-theme">${esc(p.theme || "No meaningful chatter in the last 24h — normal for a name like this between catalysts; buzz tends to spike around earnings and news.")}</div>
+      ${postsHtml}
+      <div class="pulse-foot">Fetched ${pulseAgo(ts)} · social signal, not advice · <button type="button" class="pulse-link" data-act="get">refresh</button></div>`;
+  }
+  const score = Math.max(0, Math.min(100, Math.round(p.sentiment_score)));
   return `
     <div class="pulse-top">
       <span class="pulse-score ${cls}">${esc(lbl)} · ${score}</span>
+      ${counts}
       <span class="pulse-buzz">${esc(p.buzz || "")}${vol}</span>
     </div>
     <div class="pulse-bar"><div class="pulse-fill ${cls}" style="width:${score}%"></div></div>
