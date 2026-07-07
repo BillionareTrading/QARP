@@ -1,6 +1,6 @@
 {
   "date": "2026-07-07",
-  "generated_at": "Jul 7, 4:31pm ET",
+  "generated_at": "Jul 7, 5:42pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -108,8 +108,8 @@
     "ABT": "2026-07-16",
     "ZTS": "2026-08-06",
     "RKLB": "2026-08-05",
-    "NVDA": "2026-08-25",
     "DHR": "2026-07-21",
+    "NVDA": "2026-08-25",
     "BSX": "2026-07-29",
     "LULU": "2026-09-02",
     "UBER": "2026-08-04",
@@ -467,6 +467,31 @@
   ],
   "bz_news": [
     {
+      "title": "MrBeast Heads to Shark Tank: ‘Looking for Some Founders That Are All In’",
+      "url": "https://www.benzinga.com/news/entertainment/26/07/60321950/mrbeast-heads-to-shark-tank-looking-for-some-founders-that-are-all-in",
+      "ts": 1783460500,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.278
+    },
+    {
+      "title": "'Netflix, Disney and YouTube interested in FIFA World Cup U.S. rights, package could reach $2B'- CNBC",
+      "url": "https://www.benzinga.com/news/26/07/60321842/netflix-disney-and-youtube-interested-fifa-world-cup-u-s-rights-package-could-reach-2b-cnbc",
+      "ts": 1783459963,
+      "tickers": [
+        "DIS",
+        "NFLX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.271
+    },
+    {
       "title": "Fox, Comcast Remain Big Winners of 2026 World Cup, Even With Team USA's Exit",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60319231/fox-comcast-remain-big-winners-of-2026-world-cup-even-with-team-usas-exit",
       "ts": 1783453887,
@@ -551,7 +576,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.394
+      "relevance": 0.395
     },
     {
       "title": "Chip Rout Drags Nasdaq 100 Lower, Oil Climbs: Stock Market Today",
@@ -773,7 +798,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.351
+      "relevance": 0.353
     },
     {
       "title": "Cisco Partners With World Wide Technology On $230M U.S. Army GEMSS 2.1 IT Modernization Agreement",
@@ -786,30 +811,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.303
-    },
-    {
-      "title": "TD Cowen Maintains Hold on American Express, Raises Price Target to $338",
-      "url": "https://www.benzinga.com/news/26/07/60306582/td-cowen-maintains-hold-american-express-raises-price-target-338",
-      "ts": 1783433082,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.421
-    },
-    {
-      "title": "UBS Maintains Neutral on Goldman Sachs Group, Raises Price Target to $1120",
-      "url": "https://www.benzinga.com/news/26/07/60304982/ubs-maintains-neutral-goldman-sachs-group-raises-price-target-1120",
-      "ts": 1783431440,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.524
     },
     {
       "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
@@ -1012,6 +1013,38 @@
       },
       "explain": "26 analysts cover it — 22 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
+    "DHR": {
+      "name": "Danaher",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 16,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 32,
+        "bullish": 27,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.19,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000119312526255555/d63873d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000107/dhr-20260327.htm"
+        },
+        "insider30d": 0
+      },
+      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "NVDA": {
       "name": "NVIDIA",
       "qarp": "STRONG BUY",
@@ -1048,38 +1081,6 @@
         "insider30d": 18
       },
       "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "DHR": {
-      "name": "Danaher",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 16,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 32,
-        "bullish": 27,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.19,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-06-03",
-          "url": "https://www.sec.gov/Archives/edgar/data/313616/000119312526255555/d63873d8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-04-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000107/dhr-20260327.htm"
-        },
-        "insider30d": 0
-      },
-      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "BSX": {
       "name": "Boston Scientific",
@@ -1532,25 +1533,6 @@
       "margin": -22.5,
       "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
     },
-    "NVDA": {
-      "period": "Q1 FY2027",
-      "filed": "2026-05-20",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
-      "revenue": {
-        "fmt": "$81.6B",
-        "yoy": 85.2
-      },
-      "eps": {
-        "val": 2.39,
-        "yoy": 214.5
-      },
-      "net_income": {
-        "fmt": "$58.3B"
-      },
-      "margin": 71.5,
-      "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
-    },
     "DHR": {
       "period": "Q1 FY2026",
       "filed": "2026-04-21",
@@ -1569,6 +1551,25 @@
       },
       "margin": 17.3,
       "summary": "Q1 FY2026 — revenue $6.0B (+3.7% YoY), diluted EPS $1.45 (+9.8% YoY), net margin 17%. (as reported, GAAP)"
+    },
+    "NVDA": {
+      "period": "Q1 FY2027",
+      "filed": "2026-05-20",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
+      "revenue": {
+        "fmt": "$81.6B",
+        "yoy": 85.2
+      },
+      "eps": {
+        "val": 2.39,
+        "yoy": 214.5
+      },
+      "net_income": {
+        "fmt": "$58.3B"
+      },
+      "margin": 71.5,
+      "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
     },
     "BSX": {
       "period": "Q1 FY2026",
