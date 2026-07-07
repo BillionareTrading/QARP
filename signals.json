@@ -1,6 +1,6 @@
 {
   "date": "2026-07-07",
-  "generated_at": "Jul 7, 7:28am ET",
+  "generated_at": "Jul 7, 7:38am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -160,10 +160,40 @@
     }
   ],
   "holding_news": {
-    "KO": {
-      "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
-      "ts": 1782832328,
-      "url": "https://www.benzinga.com/quote/KO",
+    "NOW": {
+      "title": "Shares of software companies are trading higher after a Guggenheim report suggested that AI concerns may be overblown.",
+      "ts": 1782928147,
+      "url": "https://www.benzinga.com/quote/ADBE",
+      "wiim": true
+    },
+    "ADBE": {
+      "title": "Shares of software companies are trading higher after a Guggenheim report suggested that AI concerns may be overblown.",
+      "ts": 1782928147,
+      "url": "https://www.benzinga.com/quote/ADBE",
+      "wiim": true
+    },
+    "AVGO": {
+      "title": "ALAB Shares Rise as Sector Rebounds from June Slump",
+      "ts": 1783364849,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60290296/alab-shares-rise-as-sector-rebounds-from-june-slump",
+      "wiim": false
+    },
+    "RKLB": {
+      "title": "Corgi's ETF Pack Grows Yet Again with 24 New Leveraged and Buffer Launches",
+      "ts": 1783368974,
+      "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60292541/corgis-etf-pack-grows-yet-again-with-24-new-leveraged-and-buffer-launches",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "Samsung 147% Stock Gain Helps Chairman Double Net Worth In 2026",
+      "ts": 1783366325,
+      "url": "https://www.benzinga.com/markets/asia/26/07/60290901/samsung-147-stock-gain-helps-chairman-double-net-worth-in-2026",
+      "wiim": false
+    },
+    "GILD": {
+      "title": "Generic Fears Overdone? Gilead Stock Has More Room to Run, Analyst Says",
+      "ts": 1783361123,
+      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/07/60288767/generic-fears-overdone-gilead-stock-has-more-room-to-run-analyst-says",
       "wiim": false
     }
   },
@@ -437,6 +467,21 @@
   ],
   "bz_news": [
     {
+      "title": "Apple, Meta, Alphabet And A Financial Stock On CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60300568/apple-meta-alphabet-and-a-financial-stock-on-cnbc-final-trades",
+      "ts": 1783424336,
+      "tickers": [
+        "AAPL",
+        "META",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.416
+    },
+    {
       "title": "How To Earn $500 A Month From Goldman Sachs Stock Ahead Of Q2 Earnings",
       "url": "https://www.benzinga.com/trading-ideas/dividends/26/07/60300139/how-to-earn-500-month-goldman-sachs-stock-q2-earnings",
       "ts": 1783423293,
@@ -536,7 +581,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.33
+      "relevance": 0.329
     },
     {
       "title": "Apple Offered Big iPhone Discounts—Why Sales Still Fell In China",
@@ -753,21 +798,6 @@
       "relevance": 0.252
     },
     {
-      "title": "Microsoft is Cutting 4,800 Jobs: Is AI To Blame? Yes And No",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60292782/microsoft-is-cutting-4800-jobs-is-ai-to-blame-yes-and-no",
-      "ts": 1783369445,
-      "tickers": [
-        "MSFT",
-        "AMZN",
-        "F",
-        "XYZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.381
-    },
-    {
       "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
       "url": "https://www.benzinga.com/news/26/07/60245112/reported-earlier-coca-cola-said-seek-bankers-1-billion-india-bottler-ipo-bloomberg",
       "ts": 1783000583,
@@ -809,7 +839,12 @@
         "score": 0.49,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Shares of software companies are trading higher after a Guggenheim report suggested that AI concerns may be overblown.",
+        "ts": 1782928147,
+        "url": "https://www.benzinga.com/quote/ADBE",
+        "wiim": true
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -841,7 +876,12 @@
         "score": 1.15,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Shares of software companies are trading higher after a Guggenheim report suggested that AI concerns may be overblown.",
+        "ts": 1782928147,
+        "url": "https://www.benzinga.com/quote/ADBE",
+        "wiim": true
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -969,7 +1009,12 @@
         "score": 1.26,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Samsung 147% Stock Gain Helps Chairman Double Net Worth In 2026",
+        "ts": 1783366325,
+        "url": "https://www.benzinga.com/markets/asia/26/07/60290901/samsung-147-stock-gain-helps-chairman-double-net-worth-in-2026",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1001,7 +1046,12 @@
         "score": 1.12,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Corgi's ETF Pack Grows Yet Again with 24 New Leveraged and Buffer Launches",
+        "ts": 1783368974,
+        "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60292541/corgis-etf-pack-grows-yet-again-with-24-new-leveraged-and-buffer-launches",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1161,7 +1211,12 @@
         "score": 1.08,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Generic Fears Overdone? Gilead Stock Has More Room to Run, Analyst Says",
+        "ts": 1783361123,
+        "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/07/60288767/generic-fears-overdone-gilead-stock-has-more-room-to-run-analyst-says",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1217,7 +1272,12 @@
         "score": 1.21,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "ALAB Shares Rise as Sector Rebounds from June Slump",
+        "ts": 1783364849,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60290296/alab-shares-rise-as-sector-rebounds-from-june-slump",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1345,12 +1405,7 @@
         "score": 1.09,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Coca-Cola Option Alert: Jul 17 $83 Calls Sweep (13) Near The Ask: 2061 @ $0.941 Vs 362 OI; Earnings 7/28 Before Open Ref=$81.89",
-        "ts": 1782832328,
-        "url": "https://www.benzinga.com/quote/KO",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
