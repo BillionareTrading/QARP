@@ -1419,3 +1419,21 @@ tbody tr:hover { background: var(--surface-2); }
 }
 .u-harrow:hover { color: var(--brand); border-color: var(--brand); }
 .u-harrow:active { transform: translateY(1px); }
+
+/* ===== Realized stats band — the trophy case (2026-07-08) ===== */
+.realized-stats { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; margin: 2px 0 10px; }
+.rz-hero { display: flex; align-items: baseline; gap: 10px; }
+.rz-total-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); }
+.rz-total { font-family: var(--serif); font-size: 26px; font-weight: 800; color: var(--pos); font-variant-numeric: tabular-nums; }
+.rz-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.rz-chip { font-size: 11.5px; color: var(--ink-2); background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; white-space: nowrap; }
+.rz-chip b { color: var(--ink); }
+.rz-chip-pos { background: var(--pos-bg); border-color: var(--pos); color: var(--pos); }
+.rz-chip-pos b { color: var(--pos); }
+.rz-gain { color: var(--pos); font-weight: 700; }
+.rz-loss { color: var(--neg); font-weight: 700; }
+#realized-table thead th { cursor: pointer; }
+@media (max-width: 640px) {
+  #realized-table th:nth-child(6), #realized-table td:nth-child(6) { display: none; }
+  .rz-total { font-size: 22px; }
+}
