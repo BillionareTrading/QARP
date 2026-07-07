@@ -1,6 +1,6 @@
 {
   "date": "2026-07-07",
-  "generated_at": "Jul 7, 8:57am ET",
+  "generated_at": "Jul 7, 9:53am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -109,8 +109,8 @@
     "ZTS": "2026-08-06",
     "DHR": "2026-07-21",
     "NVDA": "2026-08-25",
-    "RKLB": "2026-08-05",
     "BSX": "2026-07-29",
+    "RKLB": "2026-08-05",
     "LULU": "2026-09-02",
     "UBER": "2026-08-04",
     "SPGI": "2026-07-28",
@@ -125,17 +125,17 @@
   "sectors": [
     {
       "sector": "Grocery Retailers",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Ahead of the 4th of July holiday weekend",
       "note": "Ahead of the 4th of July holiday weekend.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Continued weakness after recent reports suggested that Meta will open a …",
       "note": "Amid continued weakness after recent reports suggested that Meta will open a cloud business to sell excess AI compute. Also, weakness may reflect profit-taking following the industry-wide rally in H1 2026.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Software",
@@ -146,10 +146,10 @@
     },
     {
       "sector": "Homebuilding & Housing",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "The House and Senate sent a bipartisan housing bill designed to lower ho…",
       "note": "After the House and Senate sent a bipartisan housing bill designed to lower housing costs for President Trump's signature. Sentiment was further boosted by KB Home’s better-than-expected second-quarter sales results.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Oil & Gas",
@@ -206,8 +206,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$141",
-      "price": 126.78,
-      "upside": 11.2,
+      "price": 128.9,
+      "upside": 9.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -220,8 +220,8 @@
       "rating": "Sector Outperform",
       "stance": "bullish",
       "pt": "$155",
-      "price": 126.78,
-      "upside": 22.3,
+      "price": 128.9,
+      "upside": 20.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -234,8 +234,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$75",
-      "price": 43.34,
-      "upside": 73.1,
+      "price": 43.58,
+      "upside": 72.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -248,8 +248,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$48",
-      "price": 43.34,
-      "upside": 10.8,
+      "price": 43.58,
+      "upside": 10.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -262,8 +262,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$47",
-      "price": 43.34,
-      "upside": 8.4,
+      "price": 43.58,
+      "upside": 7.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -276,8 +276,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$70",
-      "price": 43.34,
-      "upside": 61.5,
+      "price": 43.58,
+      "upside": 60.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -290,8 +290,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$23",
-      "price": 43.34,
-      "upside": -46.9,
+      "price": 43.58,
+      "upside": -47.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -304,8 +304,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$72",
-      "price": 43.34,
-      "upside": 66.1,
+      "price": 43.58,
+      "upside": 65.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -318,8 +318,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$45",
-      "price": 43.34,
-      "upside": 3.8,
+      "price": 43.58,
+      "upside": 3.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -332,8 +332,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$45",
-      "price": 43.34,
-      "upside": 3.8,
+      "price": 43.58,
+      "upside": 3.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -346,8 +346,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$60",
-      "price": 43.34,
-      "upside": 38.4,
+      "price": 43.58,
+      "upside": 37.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -360,11 +360,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$228",
-      "price": 165.65,
-      "upside": 37.6,
+      "price": 169.07,
+      "upside": 34.9,
       "held": false,
       "uni": true,
-      "qarp": "STRONG BUY"
+      "qarp": "BUY"
     },
     {
       "date": "2026-07-01",
@@ -374,8 +374,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$45",
-      "price": 43.34,
-      "upside": 3.8,
+      "price": 43.58,
+      "upside": 3.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -388,8 +388,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 43.34,
-      "upside": 26.9,
+      "price": 43.58,
+      "upside": 26.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -402,8 +402,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$52",
-      "price": 43.34,
-      "upside": 20.0,
+      "price": 43.58,
+      "upside": 19.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -416,8 +416,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$47",
-      "price": 43.34,
-      "upside": 8.4,
+      "price": 43.58,
+      "upside": 7.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -430,8 +430,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$40",
-      "price": 43.34,
-      "upside": -7.7,
+      "price": 43.58,
+      "upside": -8.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -444,8 +444,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 168.1,
-      "upside": 24.9,
+      "price": 171.97,
+      "upside": 22.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -458,14 +458,89 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 126.78,
-      "upside": -5.3,
+      "price": 128.9,
+      "upside": -6.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     }
   ],
   "bz_news": [
+    {
+      "title": "UBS Maintains Neutral on Goldman Sachs Group, Raises Price Target to $1120",
+      "url": "https://www.benzinga.com/news/26/07/60304982/ubs-maintains-neutral-goldman-sachs-group-raises-price-target-1120",
+      "ts": 1783431440,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.524
+    },
+    {
+      "title": "UBS Maintains Neutral on American Express, Raises Price Target to $386",
+      "url": "https://www.benzinga.com/news/26/07/60304748/ubs-maintains-neutral-american-express-raises-price-target-386",
+      "ts": 1783431270,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.471
+    },
+    {
+      "title": "UBS Maintains Buy on JPMorgan Chase, Raises Price Target to $384",
+      "url": "https://www.benzinga.com/news/26/07/60304640/ubs-maintains-buy-jpmorgan-chase-raises-price-target-384",
+      "ts": 1783431013,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.462
+    },
+    {
+      "title": "Forget the iPhone. Apple's AI Story May Belong to Macs",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60304516/forget-the-iphone-apples-ai-story-may-belong-to-macs",
+      "ts": 1783430810,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.33
+    },
+    {
+      "title": "Caterpillar Acquires RPMGlobal; Financial Terms Undisclosed",
+      "url": "https://www.benzinga.com/m/26/07/60304383/caterpillar-acquires-rpmglobal-financial-terms-undisclosed",
+      "ts": 1783430449,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.359
+    },
+    {
+      "title": "What's Going on With IBM Stock Tuesday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60304258/whats-going-on-with-ibm-stock-tuesday-3",
+      "ts": 1783430200,
+      "tickers": [
+        "IBM",
+        "TDIV",
+        "DJD",
+        "TDVI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.4
+    },
     {
       "title": "Stock Market Today: Dow Jones Futures Gain, S&P 500, Nasdaq 100 Slips As SpaceX Debuts On The Exchange—Rivian, Micron In Focus (UPDATED)",
       "url": "https://www.benzinga.com/markets/equities/26/07/60297478/stock-market-today-dow-jones-futures-gain-nasdaq-100-slips-as-spacex-debuts-on-the-exchange-rivian-micron-in-focus",
@@ -557,7 +632,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.415
+      "relevance": 0.416
     },
     {
       "title": "How To Earn $500 A Month From Goldman Sachs Stock Ahead Of Q2 Earnings",
@@ -635,7 +710,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.333
+      "relevance": 0.334
     },
     {
       "title": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry",
@@ -659,7 +734,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.329
+      "relevance": 0.33
     },
     {
       "title": "Apple Offered Big iPhone Discounts—Why Sales Still Fell In China",
@@ -701,89 +776,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.241
-    },
-    {
-      "title": "Bernie Sanders Warns Big Tech Wants Robots to Replace Millions of Jobs: 'Is This the Future We Want?'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60296853/bernie-sanders-warns-big-tech-wants-robots-to-replace-millions-of-jobs-is-this-the-future-we-want",
-      "ts": 1783409087,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.305
-    },
-    {
-      "title": "'JPMorgan, Bank of America and Other Banks Explore a Deal to Shake Up Payments World' - WSJ",
-      "url": "https://www.benzinga.com/news/26/07/60296797/jpmorgan-bank-america-and-other-banks-explore-deal-shake-payments-world-wsj",
-      "ts": 1783408550,
-      "tickers": [
-        "JPM",
-        "BAC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.345
-    },
-    {
-      "title": "Dow Settles Above 53,000: Investor Sentiment Improves, Fear & Greed Index Moves To ‘Neutral’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60296784/dow-settles-above-53000-investor-sentiment-improves-fear-greed-index-moves-to-neutral-zone",
-      "ts": 1783408160,
-      "tickers": [
-        "MSFT",
-        "SAR",
-        "EPAC",
-        "PENG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.482
-    },
-    {
-      "title": "Trump Touts Walmart Price Cuts on White House Request to Mark America 250, Pushes Other Retailers to Follow 'Absolute Patriots'",
-      "url": "https://www.benzinga.com/news/politics/26/07/60296613/trump-touts-walmart-price-cuts-on-white-house-request-to-mark-america-250-pushes-other-retailers-to-follow-absolute-patriots",
-      "ts": 1783406972,
-      "tickers": [
-        "WMT",
-        "TSN",
-        "JBS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.223
-    },
-    {
-      "title": "Elon Musk Says Optimus, AI Will Enable 'Excellent' Healthcare—Cathie Wood Sees $50 Billion AI Compute Need",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60296473/elon-musk-optimus-ai-enable-excellent-healthcare-cathie-wood-50-billion-compute",
-      "ts": 1783405820,
-      "tickers": [
-        "TSLA",
-        "MSFT",
-        "ORCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.467
-    },
-    {
-      "title": "Fiserv Stock (FISV) Is Trending Overnight: Here's Why",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60296437/fiserv-stock-fisv-is-trending-overnight-heres-why",
-      "ts": 1783405359,
-      "tickers": [
-        "FISV",
-        "JPM",
-        "BAC",
-        "WFC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.425
     },
     {
       "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
@@ -1018,6 +1010,38 @@
       },
       "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "BSX": {
+      "name": "Boston Scientific",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 12,
+        "buy": 19,
+        "hold": 8,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 39,
+        "bullish": 31,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-18",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000042/bsx-20260518.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "39 analysts cover it — 31 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "RKLB": {
       "name": "Rocket Lab",
       "qarp": "AVOID",
@@ -1054,38 +1078,6 @@
         "insider30d": 1
       },
       "explain": "26 analysts cover it — 22 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
-    },
-    "BSX": {
-      "name": "Boston Scientific",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 12,
-        "buy": 19,
-        "hold": 8,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 39,
-        "bullish": 31,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-18",
-          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000042/bsx-20260518.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-01",
-          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm"
-        },
-        "insider30d": 1
-      },
-      "explain": "39 analysts cover it — 31 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "LULU": {
       "name": "Lululemon",
@@ -1525,25 +1517,6 @@
       "margin": 71.5,
       "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
     },
-    "RKLB": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-07",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm",
-      "revenue": {
-        "fmt": "$200M",
-        "yoy": 63.5
-      },
-      "eps": {
-        "val": -0.07,
-        "yoy": 41.7
-      },
-      "net_income": {
-        "fmt": "$-45M"
-      },
-      "margin": -22.5,
-      "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
-    },
     "BSX": {
       "period": "Q1 FY2026",
       "filed": "2026-05-01",
@@ -1562,6 +1535,25 @@
       },
       "margin": null,
       "summary": "Q1 FY2026 — revenue $5.2B (+11.6% YoY), diluted EPS $0.90 (+100.0% YoY). (as reported, GAAP)"
+    },
+    "RKLB": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm",
+      "revenue": {
+        "fmt": "$200M",
+        "yoy": 63.5
+      },
+      "eps": {
+        "val": -0.07,
+        "yoy": 41.7
+      },
+      "net_income": {
+        "fmt": "$-45M"
+      },
+      "margin": -22.5,
+      "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
     },
     "LULU": {
       "period": "Q1 FY2026",
