@@ -1390,3 +1390,32 @@ tbody tr:hover { background: var(--surface-2); }
 #u-table thead th { padding: 10px 6px; font-size: 10.5px; }
 #u-table tbody td { padding: 8px 6px; }
 #u-table .tick .name { max-width: 108px; }
+
+/* Always-visible scrollbars for the big tables (macOS hides native ones until you
+   scroll — useless with a mouse). Brass thumb on a paper track, both axes. */
+.u-wrap, .hscroll, .realized-wrap {
+  scrollbar-width: auto; scrollbar-color: var(--brass) var(--line-2); /* Firefox */
+}
+.u-wrap::-webkit-scrollbar, .hscroll::-webkit-scrollbar, .realized-wrap::-webkit-scrollbar {
+  width: 12px; height: 12px;
+}
+.u-wrap::-webkit-scrollbar-track, .hscroll::-webkit-scrollbar-track, .realized-wrap::-webkit-scrollbar-track {
+  background: var(--line-2); border-radius: 6px;
+}
+.u-wrap::-webkit-scrollbar-thumb, .hscroll::-webkit-scrollbar-thumb, .realized-wrap::-webkit-scrollbar-thumb {
+  background: var(--brass); border-radius: 6px; border: 2px solid var(--line-2);
+}
+.u-wrap::-webkit-scrollbar-thumb:hover, .hscroll::-webkit-scrollbar-thumb:hover, .realized-wrap::-webkit-scrollbar-thumb:hover {
+  background: var(--brand);
+}
+/* Top strip: room for the styled bar + mouse-click nudge arrows at both ends. */
+.u-hnav { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+.u-hnav .hscroll { flex: 1; height: 16px; margin-bottom: 0; }
+.u-harrow {
+  flex: 0 0 auto; width: 28px; height: 22px; padding: 0; cursor: pointer;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--brass); font-size: 10px; line-height: 1;
+  box-shadow: var(--shadow-sm);
+}
+.u-harrow:hover { color: var(--brand); border-color: var(--brand); }
+.u-harrow:active { transform: translateY(1px); }

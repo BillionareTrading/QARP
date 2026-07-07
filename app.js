@@ -467,11 +467,22 @@ function syncUniverseHScroll() {
   const tbl = document.getElementById("u-table");
   if (!bar || !wrap || !tbl) return;
   inner.style.width = tbl.scrollWidth + "px";
-  bar.style.display = tbl.scrollWidth > wrap.clientWidth + 2 ? "" : "none";
+  const nav = document.getElementById("u-hnav");
+  if (nav) nav.style.display = tbl.scrollWidth > wrap.clientWidth + 2 ? "" : "none";
   if (!uHScrollWired) {
     let lock = false;
     bar.addEventListener("scroll", () => { if (lock) return; lock = true; wrap.scrollLeft = bar.scrollLeft; lock = false; });
     wrap.addEventListener("scroll", () => { if (lock) return; lock = true; bar.scrollLeft = wrap.scrollLeft; lock = false; });
+    // mouse-friendly nudge arrows: click = a wide smooth step, hold = fast glide
+    const step = (dir, px, behavior) => wrap.scrollBy({ left: dir * px, behavior });
+    [["u-harrow-l", -1], ["u-harrow-r", 1]].forEach(([id, dir]) => {
+      const b = document.getElementById(id);
+      if (!b) return;
+      let hold = null;
+      b.addEventListener("click", () => step(dir, 480, "smooth"));
+      b.addEventListener("mousedown", () => { hold = setInterval(() => step(dir, 190, "auto"), 90); });
+      ["mouseup", "mouseleave"].forEach((ev) => b.addEventListener(ev, () => clearInterval(hold)));
+    });
     uHScrollWired = true;
   }
 }
