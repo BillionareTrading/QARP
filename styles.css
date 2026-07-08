@@ -1438,3 +1438,6 @@ tbody tr:hover { background: var(--surface-2); }
   .rz-total { font-size: 22px; }
 }
 .pulse-counts { font-size: 11.5px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+/* Sector column: hard cap — mapping should keep labels short, but never let a stray
+   long label widen the whole column again (full name on hover). */
+#u-table td:nth-child(3) span { display: inline-block; max-width: 96px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom; }

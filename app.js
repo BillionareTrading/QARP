@@ -383,6 +383,12 @@ const MACRO_SECTOR_RULES = [
   [["financial"], "Financials"],
   [["chemical", "steel", "metal", "agricultur", "packaging", "glass", "lithium", "aggregate", "material", "industrial-gas", "timber"], "Materials"],
   [["industrial", "construction", "rail", "logistic", "truck", "waste", "business-services", "electrical", "distribution", "hvac", "infra", "safety", "warehouse", "testing", "certification", "water", "aerospace", "machinery", "elevator", "bearing", "automation", "power", "diversified", "test-measurement", "instruments"], "Industrials"],
+  // sweep-up rules (2026-07-08): 28 sectors were leaking their RAW 20-28 char names through
+  // the fallback and blowing the column wide (the Sector<->Price white-space complaint).
+  [["tech-", "research-subscription"], "Technology"],
+  [["consumer-education"], "Consumer Disc."],
+  [["consumer"], "Consumer Disc."],
+  [["reit", "realestate"], "Real Estate"],
 ];
 function sectorGroup(s) {
   const sl = (s || "").toLowerCase();
@@ -410,7 +416,7 @@ function peCell(x) {
 const U_COLS = [
   { key: "rank", label: "#", align: "left", fmt: (x) => `<span class="muted">${x.rank}</span>` },
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
-  { key: "sector", label: "Sector", align: "left", fmt: (x) => `<span class="muted">${sectorGroup(x.sector)}</span>`, sortVal: (x) => sectorGroup(x.sector) },
+  { key: "sector", label: "Sector", align: "left", fmt: (x) => `<span class="muted" title="${esc(x.sector || "")}">${sectorGroup(x.sector)}</span>`, sortVal: (x) => sectorGroup(x.sector) },
   { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
   { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
   { key: "div", label: "Dividends", fmt: (x) => x.div_rate
