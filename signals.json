@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-07",
-  "generated_at": "Jul 7, 7:12pm ET",
+  "date": "2026-07-08",
+  "generated_at": "Jul 8, 3:47am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Jul 7",
+      "when": "Jul 8",
       "what": "Energy & geopolitics — today's read",
       "why": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
       "affects": "Energy · growth",
@@ -198,34 +198,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-06-30",
-      "ticker": "MRK",
-      "firm": "B of A Securities",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$141",
-      "price": 128.86,
-      "upside": 9.4,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-06-30",
-      "ticker": "MRK",
-      "firm": "Scotiabank",
-      "action": "Maintains",
-      "rating": "Sector Outperform",
-      "stance": "bullish",
-      "pt": "$155",
-      "price": 128.86,
-      "upside": 20.3,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
     {
       "date": "2026-07-01",
       "ticker": "NKE",
@@ -467,6 +439,18 @@
   ],
   "bz_news": [
     {
+      "title": "Jim Cramer Calls Walmart Selloff an 'Incredible Buying Opportunity,' Says Fears 'Have Gone Out the Window'",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60323855/jim-cramer-calls-walmart-selloff-an-incredible-buying-opportunity-says-fears-have-gone-out-the-window",
+      "ts": 1783492863,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.359
+    },
+    {
       "title": "US Resumes 'Powerful Strikes' on Iran After 3 Ships Attacked in Strait of Hormuz",
       "url": "https://www.benzinga.com/news/politics/26/07/60321995/us-resumes-powerful-strikes-on-iran-after-3-ships-attacked-in-strait-of-hormuz",
       "ts": 1783460903,
@@ -479,7 +463,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.191
+      "relevance": 0.19
     },
     {
       "title": "MrBeast Heads to Shark Tank: ‘Looking for Some Founders That Are All In’",
@@ -662,7 +646,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.522
+      "relevance": 0.521
     },
     {
       "title": "Shares of foundry, fabricator and integrated device manufacturing semiconductor companies are trading lower as AI-related stocks face renewed pressure following Samsung Electronics' preliminary second-quarter results, with investors focusing on concerns over AI infrastructure spending and demand. Reports that China's DeepSeek is developing its own AI chip have also raised concerns about future demand for third-party AI semiconductors from companies such as Nvidia and Huawei.",
@@ -798,22 +782,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.387
-    },
-    {
-      "title": "Samsung’s Record Memory Profit Sparks a 7% Selloff: Is a Stock at 5 Times Earnings a Rare Buy?",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60307608/samsung-record-memory-profit-selloff-forward-pe",
-      "ts": 1783434204,
-      "tickers": [
-        "SSNLF",
-        "AAPL",
-        "NVDA",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.353
+      "relevance": 0.386
     },
     {
       "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
