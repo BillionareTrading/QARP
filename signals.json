@@ -1,6 +1,6 @@
 {
   "date": "2026-07-08",
-  "generated_at": "Jul 8, 5:52am ET",
+  "generated_at": "Jul 8, 6:43am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -172,6 +172,12 @@
       "url": "https://www.benzinga.com/quote/ADBE",
       "wiim": true
     },
+    "AVGO": {
+      "title": "Apple To Increase Spending To Over $30B On Broadcom Design And Production Of Custom Silicon Components And Wireless Connectivity Technologies",
+      "ts": 1783504963,
+      "url": "https://www.benzinga.com/news/26/07/60325357/apple-increase-spending-over-30b-broadcom-design-and-production-custom-silicon-components-and-wirele",
+      "wiim": false
+    },
     "RKLB": {
       "title": "10 Industrials Stocks Whale Activity In Today’s Session",
       "ts": 1783445709,
@@ -185,12 +191,6 @@
       "wiim": false
     },
     "NVDA": {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "ts": 1783445709,
-      "url": "https://www.benzinga.com/markets/options/26/07/60315511/10-information-technology-stocks-whale-activity-today-s-session",
-      "wiim": false
-    },
-    "AVGO": {
       "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
       "ts": 1783445709,
       "url": "https://www.benzinga.com/markets/options/26/07/60315511/10-information-technology-stocks-whale-activity-today-s-session",
@@ -435,9 +435,101 @@
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-08",
+      "ticker": "MRK",
+      "firm": "Wells Fargo",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$150",
+      "price": 128.86,
+      "upside": 16.4,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "bz_news": [
+    {
+      "title": "Wells Fargo Maintains Overweight on Merck & Co, Raises Price Target to $150",
+      "url": "https://www.benzinga.com/news/26/07/60326377/wells-fargo-maintains-overweight-merck-co-raises-price-target-150",
+      "ts": 1783507314,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.444
+    },
+    {
+      "title": "Chamath Palihapitiya Explains Why He Would Pick SPCX Over OpenAI, Anthropic",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60326366/chamath-palihapitiya-explains-why-he-would-pick-spcx-over-openai-anthropic",
+      "ts": 1783507298,
+      "tickers": [
+        "SPCX",
+        "INTC",
+        "MS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.341
+    },
+    {
+      "title": "GM-Backed Momenta's $9 Billion IPO Gets a Reality Check As Chinese Self-Driving Startup's Shares Slip in Hong Kong Debut",
+      "url": "https://www.benzinga.com/markets/asia/26/07/60326204/gm-backed-momentas-9-billion-ipo-gets-a-reality-check-as-chinese-self-driving-startups-shares-slip-in-hong-kong-debut",
+      "ts": 1783507185,
+      "tickers": [
+        "GM",
+        "MSFT",
+        "BYDDF",
+        "BYDDY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.359
+    },
+    {
+      "title": "Salesforce Announces That The U.S. Air Force Is Now Using Missionforce To Manage Its $13.5B Fleet Of Over 84K Vehicles Across ~389 Locations",
+      "url": "https://www.benzinga.com/news/26/07/60325421/salesforce-announces-u-s-air-force-now-using-missionforce-manage-its-13-5b-fleet-over-84k-vehicles-a",
+      "ts": 1783505137,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.351
+    },
+    {
+      "title": "Apple To Increase Spending To Over $30B On Broadcom Design And Production Of Custom Silicon Components And Wireless Connectivity Technologies",
+      "url": "https://www.benzinga.com/news/26/07/60325357/apple-increase-spending-over-30b-broadcom-design-and-production-custom-silicon-components-and-wirele",
+      "ts": 1783504963,
+      "tickers": [
+        "AVGO",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.472
+    },
+    {
+      "title": "Evaluating Microsoft Against Peers In Software Industry",
+      "url": "https://www.benzinga.com/news/26/07/60325134/evaluating-microsoft-against-peers-software-industry",
+      "ts": 1783504698,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.338
+    },
     {
       "title": "Reuters Reported Chevron Yasa Polaris Tanker Bound For CPC Loading Facilities Attacked By Drone Off Russia's Black Sea Coast; Chevron Said All Crew Safe, Vessel Stable And Proceeding To Safe Port; No Impact To TCO Operations Or Exports",
       "url": "https://www.benzinga.com/quote/SPY",
@@ -630,7 +722,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.394
+      "relevance": 0.395
     },
     {
       "title": "Chip Rout Drags Nasdaq 100 Lower, Oil Climbs: Stock Market Today",
@@ -702,91 +794,6 @@
       "wiim": true,
       "rel": true,
       "relevance": 0.521
-    },
-    {
-      "title": "Shares of foundry, fabricator and integrated device manufacturing semiconductor companies are trading lower as AI-related stocks face renewed pressure following Samsung Electronics' preliminary second-quarter results, with investors focusing on concerns over AI infrastructure spending and demand. Reports that China's DeepSeek is developing its own AI chip have also raised concerns about future demand for third-party AI semiconductors from companies such as Nvidia and Huawei.",
-      "url": "https://www.benzinga.com/quote/STM",
-      "ts": 1783440471,
-      "tickers": [
-        "TSM",
-        "GFS",
-        "UMC",
-        "TSEM"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.627
-    },
-    {
-      "title": "If You Invested $100 In Amgen Stock 15 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/07/60311388/if-you-invested-100-amgen-stock-15-years-ago-you-would-have-much-today",
-      "ts": 1783439416,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.346
-    },
-    {
-      "title": "July Is the S&P 500's Best Month: These 5 Tech Stocks Beat the Market",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60311387/july-sp500-best-month-5-tech-stocks-beat-market",
-      "ts": 1783439413,
-      "tickers": [
-        "AAPL",
-        "SPY",
-        "GOOGL",
-        "QCOM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.369
-    },
-    {
-      "title": "SpaceX Nasdaq 100 Debut, Minimal Lift: Analysts Call the QQQ Hype Overdone",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60310466/spacex-nasdaq-100-debut-minimal-lift-analysts-call-the-qqq-hype-overdone",
-      "ts": 1783437930,
-      "tickers": [
-        "QQQ",
-        "SPCX",
-        "TSLA",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.392
-    },
-    {
-      "title": "Recent Filing Shows That Rep. Lloyd Doggett Bought Over $4K Worth of Home Depot Stock",
-      "url": "https://www.benzinga.com/government/26/07/60309538/recent-filing-shows-rep-lloyd-doggett-bought-over-4k-worth-home-depot-stock",
-      "ts": 1783436405,
-      "tickers": [
-        "HD",
-        "PPG",
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.304
-    },
-    {
-      "title": "Walmart, Apple And Nike May Be Agentic AI's First Winners. Grocery May Be The First Loser",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60308906/walmart-apple-and-nike-may-be-agentic-ais-first-winners-grocery-may-be-the-first-loser",
-      "ts": 1783435612,
-      "tickers": [
-        "AAPL",
-        "WMT",
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.318
     },
     {
       "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
@@ -1264,9 +1271,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-        "ts": 1783445709,
-        "url": "https://www.benzinga.com/markets/options/26/07/60315511/10-information-technology-stocks-whale-activity-today-s-session",
+        "title": "Apple To Increase Spending To Over $30B On Broadcom Design And Production Of Custom Silicon Components And Wireless Connectivity Technologies",
+        "ts": 1783504963,
+        "url": "https://www.benzinga.com/news/26/07/60325357/apple-increase-spending-over-30b-broadcom-design-and-production-custom-silicon-components-and-wirele",
         "wiim": false
       },
       "filings": {
