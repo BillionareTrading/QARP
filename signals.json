@@ -1,6 +1,6 @@
 {
   "date": "2026-07-08",
-  "generated_at": "Jul 8, 5:03am ET",
+  "generated_at": "Jul 8, 5:52am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -85,11 +85,11 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Jul 22",
-      "what": "NOW earnings",
-      "affects": "NOW",
+      "when": "Jul 21",
+      "what": "EFX earnings",
+      "affects": "EFX",
       "dir": "two-sided",
-      "why": "Q-results for ServiceNow — guidance is the catalyst.",
+      "why": "Q-results for Equifax — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
@@ -119,7 +119,7 @@
     "AVGO": "2026-09-02",
     "NBIX": "2026-08-04",
     "VRTX": "2026-07-30",
-    "EFX": "2026-07-22"
+    "EFX": "2026-07-21"
   },
   "risk_asof": "2026-07-05",
   "sectors": [
@@ -438,6 +438,34 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "Reuters Reported Chevron Yasa Polaris Tanker Bound For CPC Loading Facilities Attacked By Drone Off Russia's Black Sea Coast; Chevron Said All Crew Safe, Vessel Stable And Proceeding To Safe Port; No Impact To TCO Operations Or Exports",
+      "url": "https://www.benzinga.com/quote/SPY",
+      "ts": 1783503183,
+      "tickers": [
+        "CVX",
+        "USO",
+        "EIS",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.223
+    },
+    {
+      "title": "Apple Tests China's CXMT Memory Chips as State-Backed Firm Accelerates Expansion, Eyes IPO Windfall: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60324836/apple-tests-chinas-cxmt-memory-chips-as-state-backed-firm-accelerates-expansion-eyes-ipo-windfall-report",
+      "ts": 1783503040,
+      "tickers": [
+        "AAPL",
+        "ASML"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.379
+    },
     {
       "title": "EU General Court Dismisses All Of Apple's Actions, Upholds Its Gatekeeper Designation Over App Store And iOS, While Ruling iMessage-Related Challenges Inadmissible Under Digital Markets Act",
       "url": "https://www.benzinga.com/quote/AAPL",
@@ -759,33 +787,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.318
-    },
-    {
-      "title": "Shares of oil and gas-related companies are trading higher after reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
-      "url": "https://www.benzinga.com/quote/SKYQ",
-      "ts": 1783435046,
-      "tickers": [
-        "LNG",
-        "EQNR",
-        "SHEL",
-        "OKE"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.343
-    },
-    {
-      "title": "B of A Securities Maintains Buy on Goldman Sachs Group, Raises Price Target to $1150",
-      "url": "https://www.benzinga.com/news/26/07/60308349/b-securities-maintains-buy-goldman-sachs-group-raises-price-target-1150",
-      "ts": 1783434974,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.491
     },
     {
       "title": "Reported Earlier: 'Coca-Cola Said to Seek Bankers for $1 Billion India Bottler IPO' - Bloomberg",
