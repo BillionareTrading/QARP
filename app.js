@@ -821,11 +821,15 @@ async function fetchPulse(ticker, name) {
     const u = (DATA.universe || []).find((x) => x.ticker === ticker) || {};
     const S = (typeof SIGNALS !== "undefined" && SIGNALS) || {};
     const hn = S.holding_news && S.holding_news[ticker];
+    // Search strategy rides in context: without it Grok issues 1-2 narrow queries, retrieves
+    // ~nothing, and every name reads "quiet" (TSLA came back with 4 posts). With it: 8 queries,
+    // 25+ posts, real counted reads. Verified 2026-07-08 on TSLA (62, 11/6) vs FELE (honest quiet).
+    const STRATEGY = "REQUIRED: run 4+ x_search queries (cashtag, bare ticker, company name, name+stock; Top AND Latest, last 24h). Collect 25+ candidate posts before judging; conclude quiet ONLY if all searches together yield <5 substantive posts.";
     const context = [
       u.day_pct != null ? `stock ${u.day_pct >= 0 ? "up" : "down"} ${Math.abs(u.day_pct).toFixed(1)}% ${sessionWord()}` : "",
-      u.sector ? `sector: ${u.sector}` : "",
-      hn && hn.title ? `latest headline: ${hn.title}` : "",
-    ].filter(Boolean).join(" · ");
+      hn && hn.title ? `headline: ${String(hn.title).slice(0, 80)}` : "",
+      STRATEGY,
+    ].filter(Boolean).join(" · ").slice(0, 400);
     const res = await fetch(GROK_PROXY, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ symbol: ticker, name, context }) });
     const j = await res.json().catch(() => ({}));
     if (!res.ok || !j || j.error || !j.pulse) return fail();
