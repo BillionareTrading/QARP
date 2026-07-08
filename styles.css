@@ -1441,3 +1441,77 @@ tbody tr:hover { background: var(--surface-2); }
 /* Sector column: hard cap — mapping should keep labels short, but never let a stray
    long label widen the whole column again (full name on hover). */
 #u-table td:nth-child(3) span { display: inline-block; max-width: 96px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom; }
+
+/* ===== Mobile clean-up pass (2026-07-08, <=640px): compact chrome, core-column tables ===== */
+@media (max-width: 640px) {
+  /* A. Topbar: one tidy row — the wrapping brand block + 3-line LIVE pill + wrapped
+     as-of date were eating a third of the first screen. */
+  .topbar { padding: 8px 12px; gap: 8px; }
+  .topbar .brand-sub { display: none; }
+  .topbar .brand strong { font-size: 14px; white-space: nowrap; }
+  .topbar .mark { width: 30px; height: 30px; font-size: 12px; }
+  .live-pill { padding: 3px 8px; font-size: 10px; white-space: nowrap; }
+  #live-text { letter-spacing: 0; }
+  .topbar .asof { display: none; }           /* date lives in the folio + gate screen */
+  #lock-btn { padding: 5px 10px; font-size: 12px; }
+
+  /* B/C. Tab + subtab strips: slimmer, momentum scroll, no double-height wrap. */
+  .tabs { gap: 2px; padding-top: 6px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { font-size: 13px; padding: 8px 9px; white-space: nowrap; }
+  .subtabs { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; flex-wrap: nowrap; }
+  .subtabs::-webkit-scrollbar { display: none; }
+  .subtab { white-space: nowrap; font-size: 12.5px; }
+
+  /* D. Holdings table: core read only (Name · Price · Value · Unrlzd% · Verdict);
+     the other 8 columns are desktop detail — 1295px of table in a 343px window
+     meant the P/L and verdict lived 3 blind swipes away. */
+  #p-table th:nth-child(3), #p-table td:nth-child(3),
+  #p-table th:nth-child(4), #p-table td:nth-child(4),
+  #p-table th:nth-child(5), #p-table td:nth-child(5),
+  #p-table th:nth-child(7), #p-table td:nth-child(7),
+  #p-table th:nth-child(9), #p-table td:nth-child(9),
+  #p-table th:nth-child(10), #p-table td:nth-child(10),
+  #p-table th:nth-child(11), #p-table td:nth-child(11),
+  #p-table th:nth-child(13), #p-table td:nth-child(13) { display: none; }
+  #p-table td, #p-table th { padding: 9px 7px; font-size: 12.5px; }
+
+  /* E. Universe table: Name · Price · QARP · Verdict · Gate. */
+  #u-table th:nth-child(1), #u-table td:nth-child(1),
+  #u-table th:nth-child(3), #u-table td:nth-child(3),
+  #u-table th:nth-child(5), #u-table td:nth-child(5),
+  #u-table th:nth-child(6), #u-table td:nth-child(6),
+  #u-table th:nth-child(8), #u-table td:nth-child(8),
+  #u-table th:nth-child(9), #u-table td:nth-child(9),
+  #u-table th:nth-child(10), #u-table td:nth-child(10),
+  #u-table th:nth-child(13), #u-table td:nth-child(13),
+  #u-table th:nth-child(14), #u-table td:nth-child(14) { display: none; }
+
+  /* info (ⓘ) buttons are tap-noise at this size and push the 5-col tables past 375px */
+  #p-table .info-btn, #u-table .info-btn { display: none; }
+  #p-table .tick .name, #u-table .tick .name { max-width: 84px; }
+  #u-table td, #u-table th { padding: 9px 6px; }
+
+  /* verdict chips + headers: compact so the 5-col core fits 343px exactly */
+  #p-table .badge, #u-table .badge, #p-table [class*="v-badge"], #u-table [class*="v-badge"],
+  #p-table td span[class*="verdict"], #u-table td span[class*="verdict"] { font-size: 8.5px; padding: 3px 6px; letter-spacing: .02em; }
+  #p-table thead th, #u-table thead th { font-size: 10px; padding: 9px 4px; }
+  #p-table td { padding: 9px 4px; }
+  #u-table td { padding: 9px 4px; }
+  #p-table .tick .name { max-width: 70px; }
+  #u-table .tick .name { max-width: 58px; }
+
+  /* F/G. Breathing room: KPI cards + donut legend slightly tighter. */
+  .kpis { gap: 8px; }
+  .kpis > div, .kpi { padding: 12px; }
+  .chart-row { gap: 10px; }
+  .legend { font-size: 12px; }
+}
+@media (max-width: 640px) {
+  /* Times folio: at phone width the flex row crushed "VOL. I · No. 190 ..." into a
+     77px-wide 8-line sliver next to the index ticker. Stack it: masthead line centered
+     and full-width, indexes centered beneath. */
+  .paper-folio { display: block; text-align: center; }
+  .folio-meta { display: block; width: 100%; margin-bottom: 6px; font-size: 9.5px; letter-spacing: .05em; }
+  .folio-idx { justify-content: center; gap: 10px; font-size: 9.5px; }
+}

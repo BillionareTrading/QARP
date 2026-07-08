@@ -1089,6 +1089,7 @@ function initTabs() {
       document.querySelectorAll(".tab").forEach((x) => x.classList.remove("active"));
       document.querySelectorAll(".tabpanel").forEach((x) => x.classList.remove("active"));
       t.classList.add("active");
+      t.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
       document.getElementById("tab-" + t.dataset.tab).classList.add("active");
       if (t.dataset.tab === "informed") enterInformed(); else leaveInformed();
       if (t.dataset.tab === "daily") enterDaily(); else leaveDaily();
