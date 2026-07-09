@@ -1,6 +1,6 @@
 {
   "date": "2026-07-09",
-  "generated_at": "Jul 9, 6:43am ET",
+  "generated_at": "Jul 9, 8:15am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -172,22 +172,16 @@
       "url": "https://www.benzinga.com/quote/ADBE",
       "wiim": true
     },
+    "AVGO": {
+      "title": "Why Is Broadcom Stock Gaining Thursday?",
+      "ts": 1783593976,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60352018/why-is-broadcom-stock-gaining-thursday",
+      "wiim": false
+    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1783532108,
       "url": "https://www.benzinga.com/markets/options/26/07/60341361/10-information-technology-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "Apple Unveils $30 Billion Broadcom Deal",
-      "ts": 1783519037,
-      "url": "https://www.benzinga.com/markets/large-cap/26/07/60332308/apple-unveils-30-billion-broadcom-deal",
-      "wiim": false
-    },
-    "KO": {
-      "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
-      "ts": 1783524011,
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60336463/pepsi-q2-preview-beverage-giant-underperforming-coca-cola-stock-in-2026-will-earnings-help-close-gap",
       "wiim": false
     }
   },
@@ -292,6 +286,109 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "WW International Partners With Sam's Club To Combine Expert Guidance, Nutrition Counseling, Affordable Healthy Foods And Trusted Pharmacy Services",
+      "url": "https://www.benzinga.com/news/26/07/60353951/ww-international-partners-sam-s-club-combine-expert-guidance-nutrition-counseling-affordable-healthy",
+      "ts": 1783598781,
+      "tickers": [
+        "WW",
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.289
+    },
+    {
+      "title": "Why Is Caterpillar Stock Gaining Thursday?",
+      "url": "https://www.benzinga.com/m-a/26/07/60353488/why-is-caterpillar-stock-gaining-thursday",
+      "ts": 1783598250,
+      "tickers": [
+        "CAT",
+        "DIA",
+        "XLI",
+        "VIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.329
+    },
+    {
+      "title": "International Business Machines shares are trading lower following reports suggesting that Starbucks is developing its own tools to reduce reliance on the company's software.",
+      "url": "https://www.benzinga.com/quote/IBM",
+      "ts": 1783597670,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.358
+    },
+    {
+      "title": "Microsoft in the Spotlight After Reports Show Company Is Swapping Out Anthropic, OpenAI for In-House AI",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60353287/microsoft-in-the-spotlight-after-reports-show-company-is-swapping-out-anthropic-openai-for-in-house-ai",
+      "ts": 1783597576,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.351
+    },
+    {
+      "title": "Jim Cramer: Fast Food Is 'Challenged,' But This Industrial Stock Is 'A Good Spec'",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60353047/jim-cramer-fast-food-is-challenged-but-this-industrial-stock-is-a-good-spec",
+      "ts": 1783596941,
+      "tickers": [
+        "AMPX",
+        "MCD",
+        "WEN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.325
+    },
+    {
+      "title": "B of A Securities Maintains Buy on American Express, Raises Price Target to $391",
+      "url": "https://www.benzinga.com/news/26/07/60352109/b-securities-maintains-buy-american-express-raises-price-target-391",
+      "ts": 1783594648,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.448
+    },
+    {
+      "title": "CORRECTION: Caterpillar Acquires SkyCatch; Financial Terms Not Disclosed",
+      "url": "https://www.benzinga.com/m/26/07/60352048/correction-caterpillar-acquires-skycatch-financial-terms-not-disclosed",
+      "ts": 1783594185,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.325
+    },
+    {
+      "title": "Why Is Broadcom Stock Gaining Thursday?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60352018/why-is-broadcom-stock-gaining-thursday",
+      "ts": 1783593976,
+      "tickers": [
+        "AVGO",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.616
+    },
     {
       "title": "Nvidia CEO Jensen Huang Says Software Engineers Would Rather Build AI Agents Than Write Python Code",
       "url": "https://www.benzinga.com/markets/tech/26/07/60351886/nvidia-ceo-jensen-huang-says-software-engineers-would-rather-build-ai-agents-than-write-python-code",
@@ -529,110 +626,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.395
-    },
-    {
-      "title": "Honeywell Intl Sees FY2026 Adj EPS $7.90-$8.30, Sees Sales $19.900B-$20.200B",
-      "url": "https://www.benzinga.com/news/26/07/60347193/honeywell-intl-sees-fy2026-adj-eps-7-90-8-30-sees-sales-19-900b-20-200b",
-      "ts": 1783544491,
-      "tickers": [
-        "HON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.418
-    },
-    {
-      "title": "OpenAI Unveils GPT-Live As Competition Heats Up Around AI Voice Assistants",
-      "url": "https://www.benzinga.com/markets/private-markets/26/07/60346806/openai-unveils-gpt-live-as-competition-heats-up-around-ai-voice-assistants",
-      "ts": 1783543050,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.285
-    },
-    {
-      "title": "Honeywell Raises FY26 Adjusted Earnings Guidance From $3.95 - $4.315/Share To $7.90 - $8.30/Share After 1-For-2 Reverse Stock Split, Reiterates Sales Outlook Range Of $19.9B - $20.2B",
-      "url": "https://www.benzinga.com/news/26/07/60345995/honeywell-raises-fy26-adjusted-earnings-guidance-3-95-4-315-share-7-90-8-30-share-after-1-2-reverse-",
-      "ts": 1783541321,
-      "tickers": [
-        "HON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.473
-    },
-    {
-      "title": "Apple Raised Prices, Samsung Raised Profits — Micron Predicted Both",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60342595/apple-raised-prices-samsung-raised-profits-micron-predicted-both",
-      "ts": 1783534207,
-      "tickers": [
-        "AAPL",
-        "SSNLF",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.414
-    },
-    {
-      "title": "UBS Maintains Neutral on Travelers Companies, Raises Price Target to $350",
-      "url": "https://www.benzinga.com/news/26/07/60342144/ubs-maintains-neutral-travelers-companies-raises-price-target-350",
-      "ts": 1783533339,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.485
-    },
-    {
-      "title": "EXCLUSIVE: Alphabet’s Empire Could Be Worth More In Pieces, Jay Woods Says",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60342126/exclusive-alphabet-empire-could-be-worth-more-in-pieces-jay-woods-says",
-      "ts": 1783533318,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "GE",
-        "CMCSA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.327
-    },
-    {
-      "title": "Semiconductors Below Support; Fed Minutes Ahead; Trump Says Iran Ceasefire Is Over, But Will He Back Off?",
-      "url": "https://www.benzinga.com/Opinion/26/07/60341954/semiconductors-below-support-fed-minutes-ahead-trump-says-iran-ceasefire-is-over-but-will-he-back-off",
-      "ts": 1783533002,
-      "tickers": [
-        "USO",
-        "SPY",
-        "NVDA",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.39
-    },
-    {
-      "title": "Watching Apple; Hearing Investor Business Daily SwingTrader Buys Stock",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1783532619,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.431
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
@@ -1115,9 +1108,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Apple Unveils $30 Billion Broadcom Deal",
-        "ts": 1783519037,
-        "url": "https://www.benzinga.com/markets/large-cap/26/07/60332308/apple-unveils-30-billion-broadcom-deal",
+        "title": "Why Is Broadcom Stock Gaining Thursday?",
+        "ts": 1783593976,
+        "url": "https://www.benzinga.com/markets/tech/26/07/60352018/why-is-broadcom-stock-gaining-thursday",
         "wiim": false
       },
       "filings": {
@@ -1215,12 +1208,7 @@
         "score": 1.09,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
-        "ts": 1783524011,
-        "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60336463/pepsi-q2-preview-beverage-giant-underperforming-coca-cola-stock-in-2026-will-earnings-help-close-gap",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
