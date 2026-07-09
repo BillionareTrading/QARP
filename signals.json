@@ -1,6 +1,6 @@
 {
   "date": "2026-07-09",
-  "generated_at": "Jul 9, 1:33pm ET",
+  "generated_at": "Jul 9, 2:11pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -125,10 +125,10 @@
   "sectors": [
     {
       "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
-      "dir": "mixed",
-      "driver": "AI-related stocks face renewed pressure following Samsung Electronics' p…",
-      "note": "As AI-related stocks face renewed pressure following Samsung Electronics' preliminary second-quarter results, with investors focusing on concerns over AI infrastructure spending and demand. Reports that China's DeepSeek is developing its own AI chip have also raised concerns about future demand for third-party AI semiconductors from companies such as Nvidia and Huawei.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "dir": "up",
+      "driver": "Reports that Meta will invest in hardware to double its in-house compute…",
+      "note": "After reports that Meta will invest in hardware to double its in-house compute capacity to 14GW next year. Also, Micron Technology's plan to increase U.S. investments to more than $250 billion through 2035 is supportive of chip hardware peers.",
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Oil & Gas",
@@ -152,11 +152,11 @@
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
-      "sector": "Homebuilding & Housing",
+      "sector": "Power Delivery & Hvac",
       "dir": "up",
-      "driver": "The House and Senate sent a bipartisan housing bill designed to lower ho…",
-      "note": "After the House and Senate sent a bipartisan housing bill designed to lower housing costs for President Trump's signature. Sentiment was further boosted by KB Home’s better-than-expected second-quarter sales results.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "driver": "The Heat Dome enveloping the Continental U.S. underscores the need for e…",
+      "note": "As the Heat Dome enveloping the Continental U.S. underscores the need for electricity reliability to meet civilian, commercial and data center demand that may reach new records.",
+      "src": "Benzinga WIIM · market-wide"
     }
   ],
   "holding_news": {
@@ -179,9 +179,15 @@
       "wiim": false
     },
     "NVDA": {
-      "title": "This Senator Just Sold Up To $165K In Apple Stock",
-      "ts": 1783609206,
-      "url": "https://www.benzinga.com/government/26/07/60362118/senator-just-sold-165k-apple-stock",
+      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
+      "ts": 1783618508,
+      "url": "https://www.benzinga.com/markets/options/26/07/60368130/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "UBER": {
+      "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You",
+      "ts": 1783620020,
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
       "wiim": false
     }
   },
@@ -194,8 +200,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 174.36,
-      "upside": 20.4,
+      "price": 174.2,
+      "upside": 20.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -208,8 +214,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 124.8,
-      "upside": -3.8,
+      "price": 125.05,
+      "upside": -4.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -222,8 +228,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 259.58,
-      "upside": 9.4,
+      "price": 259.9,
+      "upside": 9.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -236,8 +242,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 259.58,
-      "upside": 14.8,
+      "price": 259.9,
+      "upside": 14.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,8 +256,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 124.8,
-      "upside": 13.8,
+      "price": 125.05,
+      "upside": 13.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -264,8 +270,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 124.8,
-      "upside": 20.2,
+      "price": 125.05,
+      "upside": 20.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -278,8 +284,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 124.8,
-      "upside": -9.5,
+      "price": 125.05,
+      "upside": -9.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -292,7 +298,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 163.29,
+      "price": 162.65,
       "upside": null,
       "held": false,
       "uni": true,
@@ -300,6 +306,131 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "American Express shares are trading higher after B of A Securities raised its price target on the stock from $387 to $391.",
+      "url": "https://www.benzinga.com/quote/AXP",
+      "ts": 1783620097,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.415
+    },
+    {
+      "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
+      "ts": 1783620020,
+      "tickers": [
+        "AAPL",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.324
+    },
+    {
+      "title": "Starbucks Stock Rises Amid In-House Software Push",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60368889/starbucks-stock-rises-amid-in-house-software-push",
+      "ts": 1783619626,
+      "tickers": [
+        "SBUX",
+        "MSFT",
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.398
+    },
+    {
+      "title": "Salesforce Downgrade: Analyst Says It’s ‘Difficult To Find Evidence’ of Future Upside",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60368882/salesforce-downgrade-analyst-says-its-difficult-to-find-evidence-of-future-upside",
+      "ts": 1783619617,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.473
+    },
+    {
+      "title": "Shares of foundry, fabricator and integrated device manufacturing semiconductor companies are trading higher after reports that Meta will invest in hardware to double its in-house compute capacity to 14GW next year. Also, Micron Technology's plan to increase U.S. investments to more than $250 billion through 2035 is supportive of chip hardware peers.",
+      "url": "https://www.benzinga.com/quote/GFS",
+      "ts": 1783619335,
+      "tickers": [
+        "INTC",
+        "STM",
+        "TSEM",
+        "GFS"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.526
+    },
+    {
+      "title": "7 Communication Services Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60368132/7-communication-services-stocks-whale-alerts-today-s-session",
+      "ts": 1783618508,
+      "tickers": [
+        "SPCX",
+        "GOOG",
+        "NFLX",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.355
+    },
+    {
+      "title": "9 Health Care Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60368131/9-health-care-stocks-whale-alerts-today-s-session",
+      "ts": 1783618508,
+      "tickers": [
+        "REPL",
+        "CAPR",
+        "JNJ",
+        "ABVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.37
+    },
+    {
+      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60368130/10-information-technology-stocks-whale-alerts-today-s-session",
+      "ts": 1783618508,
+      "tickers": [
+        "NVDA",
+        "MU",
+        "DT",
+        "DELL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.375
+    },
+    {
+      "title": "RBC Capital Maintains Outperform on UnitedHealth Group, Raises Price Target to $463",
+      "url": "https://www.benzinga.com/news/26/07/60368118/rbc-capital-maintains-outperform-unitedhealth-group-raises-price-target-463",
+      "ts": 1783618492,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.455
+    },
     {
       "title": "Morgan Stanley Maintains Equal-Weight on Merck & Co, Raises Price Target to $113",
       "url": "https://www.benzinga.com/news/26/07/60367464/morgan-stanley-maintains-equal-weight-merck-co-raises-price-target-113",
@@ -337,7 +468,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.362
+      "relevance": 0.361
     },
     {
       "title": "New York Attorney General's Suit Names 3M, Chemours, Corteva, DuPont De Nemours; New York Attorney General Sues Chemical Companies Over Alleged Toxic Pollution from Consumer Products",
@@ -377,7 +508,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.462
+      "relevance": 0.461
     },
     {
       "title": "'OpenAI's newest AI model is 54% more token efficient on agentic coding, Altman tells CNBC'- CNBC",
@@ -513,129 +644,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.3
-    },
-    {
-      "title": "Stock Market Today: S&P 500, Nasdaq 100, Dow Jones Futures Rise as US-Iran Exchange Strikes—Levi Strauss, AZZ, Ionis Pharma In Focus (UPDATED)",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60350555/stock-market-today-sp-500-nasdaq-100-futures-rise-as-us-iran-exchange-strikes-levi-strauss-azz-ionis-pharma-in-focus",
-      "ts": 1783601892,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "WDFC",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.487
-    },
-    {
-      "title": "Micron Is Up 700%. It's Still Cheaper Than Nvidia, AMD And Even Intel",
-      "url": "https://www.benzinga.com/trading-ideas/technicals/26/07/60354862/micron-700-percent-cheaper-than-nvidia-amd-intel",
-      "ts": 1783600546,
-      "tickers": [
-        "INTC",
-        "AMD",
-        "NVDA",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.41
-    },
-    {
-      "title": "This Salesforce Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Thursday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60354428/this-salesforce-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-thursday",
-      "ts": 1783599729,
-      "tickers": [
-        "CRM",
-        "FCNCA",
-        "PKG",
-        "MSGE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.539
-    },
-    {
-      "title": "WW International Partners With Sam's Club To Combine Expert Guidance, Nutrition Counseling, Affordable Healthy Foods And Trusted Pharmacy Services",
-      "url": "https://www.benzinga.com/news/26/07/60353951/ww-international-partners-sam-s-club-combine-expert-guidance-nutrition-counseling-affordable-healthy",
-      "ts": 1783598781,
-      "tickers": [
-        "WW",
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.29
-    },
-    {
-      "title": "Why Is Caterpillar Stock Gaining Thursday?",
-      "url": "https://www.benzinga.com/m-a/26/07/60353488/why-is-caterpillar-stock-gaining-thursday",
-      "ts": 1783598250,
-      "tickers": [
-        "CAT",
-        "DIA",
-        "XLI",
-        "VIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.329
-    },
-    {
-      "title": "International Business Machines shares are trading lower following reports suggesting that Starbucks is developing its own tools to reduce reliance on the company's software.",
-      "url": "https://www.benzinga.com/quote/IBM",
-      "ts": 1783597670,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.358
-    },
-    {
-      "title": "Microsoft in the Spotlight After Reports Show Company Is Swapping Out Anthropic, OpenAI for In-House AI",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60353287/microsoft-in-the-spotlight-after-reports-show-company-is-swapping-out-anthropic-openai-for-in-house-ai",
-      "ts": 1783597576,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.351
-    },
-    {
-      "title": "Jim Cramer: Fast Food Is 'Challenged,' But This Industrial Stock Is 'A Good Spec'",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60353047/jim-cramer-fast-food-is-challenged-but-this-industrial-stock-is-a-good-spec",
-      "ts": 1783596941,
-      "tickers": [
-        "AMPX",
-        "MCD",
-        "WEN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.325
-    },
-    {
-      "title": "B of A Securities Maintains Buy on American Express, Raises Price Target to $391",
-      "url": "https://www.benzinga.com/news/26/07/60352109/b-securities-maintains-buy-american-express-raises-price-target-391",
-      "ts": 1783594648,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.448
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
@@ -897,9 +905,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "This Senator Just Sold Up To $165K In Apple Stock",
-        "ts": 1783609206,
-        "url": "https://www.benzinga.com/government/26/07/60362118/senator-just-sold-165k-apple-stock",
+        "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
+        "ts": 1783618508,
+        "url": "https://www.benzinga.com/markets/options/26/07/60368130/10-information-technology-stocks-whale-alerts-today-s-session",
         "wiim": false
       },
       "filings": {
@@ -997,7 +1005,12 @@
         "score": 1.1,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You",
+        "ts": 1783620020,
+        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
