@@ -1,6 +1,6 @@
 {
   "date": "2026-07-09",
-  "generated_at": "Jul 9, 8:19am ET",
+  "generated_at": "Jul 9, 9:05am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -172,16 +172,16 @@
       "url": "https://www.benzinga.com/quote/ADBE",
       "wiim": true
     },
-    "AVGO": {
-      "title": "Why Is Broadcom Stock Gaining Thursday?",
-      "ts": 1783593976,
-      "url": "https://www.benzinga.com/markets/tech/26/07/60352018/why-is-broadcom-stock-gaining-thursday",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1783532108,
       "url": "https://www.benzinga.com/markets/options/26/07/60341361/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Why Is Broadcom Stock Gaining Thursday?",
+      "ts": 1783593976,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60352018/why-is-broadcom-stock-gaining-thursday",
       "wiim": false
     }
   },
@@ -286,6 +286,78 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "'Khosla-Backed Startup Claims Breakthrough With Largest-Ever AI Model on an iPhone' - The Information",
+      "url": "https://www.benzinga.com/news/26/07/60355779/khosla-backed-startup-claims-breakthrough-largest-ever-ai-model-iphone-information",
+      "ts": 1783602279,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.29
+    },
+    {
+      "title": "SpaceX Could Become a 'Landmark Historical' Collapse, Warns Top Investor: 'In The End, The Reality Will Come Out'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60355676/spacex-could-become-a-landmark-historical-collapse-warns-top-investor-in-the-end-the-reality-will-come-out",
+      "ts": 1783602079,
+      "tickers": [
+        "TSLA",
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.3
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Nasdaq 100, Dow Jones Futures Rise as US-Iran Exchange Strikes—Levi Strauss, AZZ, Ionis Pharma In Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60350555/stock-market-today-sp-500-nasdaq-100-futures-rise-as-us-iran-exchange-strikes-levi-strauss-azz-ionis-pharma-in-focus",
+      "ts": 1783601892,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "WDFC",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.487
+    },
+    {
+      "title": "Micron Is Up 700%. It's Still Cheaper Than Nvidia, AMD And Even Intel",
+      "url": "https://www.benzinga.com/trading-ideas/technicals/26/07/60354862/micron-700-percent-cheaper-than-nvidia-amd-intel",
+      "ts": 1783600546,
+      "tickers": [
+        "INTC",
+        "AMD",
+        "NVDA",
+        "MU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.41
+    },
+    {
+      "title": "This Salesforce Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Thursday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60354428/this-salesforce-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-thursday",
+      "ts": 1783599729,
+      "tickers": [
+        "CRM",
+        "FCNCA",
+        "PKG",
+        "MSGE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.539
+    },
     {
       "title": "WW International Partners With Sam's Club To Combine Expert Guidance, Nutrition Counseling, Affordable Healthy Foods And Trusted Pharmacy Services",
       "url": "https://www.benzinga.com/news/26/07/60353951/ww-international-partners-sam-s-club-combine-expert-guidance-nutrition-counseling-affordable-healthy",
@@ -485,21 +557,6 @@
       "relevance": 0.338
     },
     {
-      "title": "Stock Market Today: S&P 500, Nasdaq 100 Futures Rise as US-Iran Exchange Strikes—Levi Strauss, AZZ, Ionis Pharma In Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60350555/stock-market-today-sp-500-nasdaq-100-futures-rise-as-us-iran-exchange-strikes-levi-strauss-azz-ionis-pharma-in-focus",
-      "ts": 1783588879,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "WDFC",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
       "title": "Futurum's Shay Boloor Explains Why Nvidia, AMD, Apple and Broadcom All Depend on TSMC: 'Every Token Ultimately Pays an Invisible Royalty'",
       "url": "https://www.benzinga.com/markets/tech/26/07/60350514/futurums-shay-boloor-explains-why-nvidia-amd-apple-and-broadcom-all-depend-on-tsmc-every-token-ultimately-pays-an-invisible-royalty",
       "ts": 1783588404,
@@ -566,66 +623,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.368
-    },
-    {
-      "title": "PepsiCo, Levi Strauss And 3 Stocks To Watch Heading Into Thursday",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60349720/pepsico-levi-strauss-and-3-stocks-to-watch-heading-into-thursday",
-      "ts": 1783580044,
-      "tickers": [
-        "PEP",
-        "WDFC",
-        "HON",
-        "LEVI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.456
-    },
-    {
-      "title": "Why Is Arista Networks (ANET) Stock Trending Overnight?",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60349185/why-is-arista-networks-anet-stock-trending-overnight",
-      "ts": 1783572839,
-      "tickers": [
-        "META",
-        "MSFT",
-        "ORCL",
-        "MS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.362
-    },
-    {
-      "title": "Trump Accounts Customer Growth 'Faster' Than America's 'Most Successful and Dynamic' Tech Companies, Says Robinhood CEO Vlad Tenev",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60349096/robinhood-ceo-vlad-tenev-says-trump-accounts-customer-growth-is-faster-than-americas-most-successful-tech-companies",
-      "ts": 1783570094,
-      "tickers": [
-        "JPM",
-        "HOOD",
-        "CMCSA",
-        "BLK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.324
-    },
-    {
-      "title": "Trump Announced His AI Action Plan Declaring  ‘America Is Going to Win’ — The Same Day He Bought Millions in Nvidia, Apple and Microsoft",
-      "url": "https://www.benzinga.com/news/topics/26/07/60348396/trump-announced-his-ai-action-plan-declaring-america-is-going-to-win-the-same-day-he-bought-millions-in-nvidia-apple-and-microsoft",
-      "ts": 1783555268,
-      "tickers": [
-        "AAPL",
-        "META",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.395
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
