@@ -1,6 +1,6 @@
 {
   "date": "2026-07-09",
-  "generated_at": "Jul 9, 12:15pm ET",
+  "generated_at": "Jul 9, 1:33pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -194,8 +194,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 174.6,
-      "upside": 20.3,
+      "price": 174.36,
+      "upside": 20.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -208,8 +208,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 124.86,
-      "upside": -3.9,
+      "price": 124.8,
+      "upside": -3.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -222,8 +222,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 259.47,
-      "upside": 9.5,
+      "price": 259.58,
+      "upside": 9.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -236,7 +236,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 259.47,
+      "price": 259.58,
       "upside": 14.8,
       "held": false,
       "uni": true,
@@ -250,8 +250,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 124.86,
-      "upside": 13.7,
+      "price": 124.8,
+      "upside": 13.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -264,8 +264,22 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 124.86,
-      "upside": 20.1,
+      "price": 124.8,
+      "upside": 20.2,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-09",
+      "ticker": "MRK",
+      "firm": "Morgan Stanley",
+      "action": "Maintains",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$113",
+      "price": 124.8,
+      "upside": -9.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -278,7 +292,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 163.04,
+      "price": 163.29,
       "upside": null,
       "held": false,
       "uni": true,
@@ -286,6 +300,30 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "Morgan Stanley Maintains Equal-Weight on Merck & Co, Raises Price Target to $113",
+      "url": "https://www.benzinga.com/news/26/07/60367464/morgan-stanley-maintains-equal-weight-merck-co-raises-price-target-113",
+      "ts": 1783617509,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.477
+    },
+    {
+      "title": "OpenAI Rolling Out Sol, Terra, Luna GPT-5.6 Family Of Models In ChatGPT, Codex, API",
+      "url": "https://www.benzinga.com/news/26/07/60367104/openai-rolling-out-sol-terra-luna-gpt-5-6-family-models-chatgpt-codex-api",
+      "ts": 1783616999,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.23
+    },
     {
       "title": "BlackRock Just Took The Fight To QQQ — The Nasdaq‑100 ETF War Is On",
       "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60363916/nasdaq%e2%80%91100-etf-blackrock-qqq-challenge",
@@ -339,7 +377,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.461
+      "relevance": 0.462
     },
     {
       "title": "'OpenAI's newest AI model is 54% more token efficient on agentic coding, Altman tells CNBC'- CNBC",
@@ -532,7 +570,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.289
+      "relevance": 0.29
     },
     {
       "title": "Why Is Caterpillar Stock Gaining Thursday?",
@@ -598,31 +636,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.448
-    },
-    {
-      "title": "CORRECTION: Caterpillar Acquires SkyCatch; Financial Terms Not Disclosed",
-      "url": "https://www.benzinga.com/m/26/07/60352048/correction-caterpillar-acquires-skycatch-financial-terms-not-disclosed",
-      "ts": 1783594185,
-      "tickers": [
-        "CAT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.325
-    },
-    {
-      "title": "Why Is Broadcom Stock Gaining Thursday?",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60352018/why-is-broadcom-stock-gaining-thursday",
-      "ts": 1783593976,
-      "tickers": [
-        "AVGO",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.616
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
