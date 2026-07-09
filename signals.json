@@ -1,6 +1,6 @@
 {
   "date": "2026-07-09",
-  "generated_at": "Jul 9, 3:03pm ET",
+  "generated_at": "Jul 9, 4:04pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -125,10 +125,10 @@
   "sectors": [
     {
       "sector": "Financial Services",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Declines in Treasury yields",
       "note": "Amid declines in Treasury yields, oil prices, and the U.S. dollar. The decline may ease inflation concerns and improve expectations for a more accommodative interest rate environment.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
@@ -172,6 +172,18 @@
       "url": "https://www.benzinga.com/quote/ADBE",
       "wiim": true
     },
+    "LULU": {
+      "title": "'Selling Winners, Buying Losers': Tech Stocks Drop as Energy Jumps to Start H2",
+      "ts": 1783626303,
+      "url": "https://www.benzinga.com/markets/equities/26/07/60372477/selling-winners-buying-losers-tech-stocks-drop-as-energy-jumps-to-start-h2",
+      "wiim": false
+    },
+    "BSX": {
+      "title": "'Selling Winners, Buying Losers': Tech Stocks Drop as Energy Jumps to Start H2",
+      "ts": 1783626303,
+      "url": "https://www.benzinga.com/markets/equities/26/07/60372477/selling-winners-buying-losers-tech-stocks-drop-as-energy-jumps-to-start-h2",
+      "wiim": false
+    },
     "AVGO": {
       "title": "Why Is Broadcom Stock Gaining Thursday?",
       "ts": 1783593976,
@@ -185,8 +197,8 @@
       "wiim": false
     },
     "UBER": {
-      "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You",
-      "ts": 1783620003,
+      "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You (CORRECTED)",
+      "ts": 1783625211,
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
       "wiim": false
     }
@@ -200,8 +212,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 174.13,
-      "upside": 20.6,
+      "price": 174.04,
+      "upside": 20.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -214,8 +226,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 124.79,
-      "upside": -3.8,
+      "price": 125.04,
+      "upside": -4.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -228,8 +240,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 258.73,
-      "upside": 9.8,
+      "price": 259.11,
+      "upside": 9.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -242,8 +254,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 258.73,
-      "upside": 15.2,
+      "price": 259.11,
+      "upside": 15.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -256,8 +268,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 124.79,
-      "upside": 13.8,
+      "price": 125.04,
+      "upside": 13.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -270,8 +282,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 124.79,
-      "upside": 20.2,
+      "price": 125.04,
+      "upside": 20.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -284,8 +296,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 124.79,
-      "upside": -9.4,
+      "price": 125.04,
+      "upside": -9.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -298,7 +310,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 162.0,
+      "price": 162.48,
       "upside": null,
       "held": false,
       "uni": true,
@@ -306,6 +318,36 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "'Selling Winners, Buying Losers': Tech Stocks Drop as Energy Jumps to Start H2",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60372477/selling-winners-buying-losers-tech-stocks-drop-as-energy-jumps-to-start-h2",
+      "ts": 1783626303,
+      "tickers": [
+        "INTC",
+        "MU",
+        "SNDK",
+        "LULU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.437
+    },
+    {
+      "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You (CORRECTED)",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
+      "ts": 1783625211,
+      "tickers": [
+        "AAPL",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.33
+    },
     {
       "title": "'Goldman Bans Staff Prediction Markets Bets on Finance, Politics' - Bloomberg News",
       "url": "https://www.benzinga.com/news/26/07/60370973/goldman-bans-staff-prediction-markets-bets-finance-politics-bloomberg-news",
@@ -371,21 +413,6 @@
       "wiim": true,
       "rel": false,
       "relevance": 0.415
-    },
-    {
-      "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
-      "ts": 1783620003,
-      "tickers": [
-        "AAPL",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.324
     },
     {
       "title": "Starbucks Stock Rises Amid In-House Software Push",
@@ -632,21 +659,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.434
-    },
-    {
-      "title": "Americans Are Driving Less But Paying More— and 7-Eleven Just Proved it With a $349 Million Quarterly Profit",
-      "url": "https://www.benzinga.com/news/retail-sales/26/07/60356780/americans-are-driving-less-but-paying-more-and-7-eleven-just-proved-it-with-a-349-million-quarterly-profit",
-      "ts": 1783603766,
-      "tickers": [
-        "WMT",
-        "BP",
-        "MPC",
-        "SVNDY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.304
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
@@ -944,7 +956,12 @@
         "score": 1.1,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "'Selling Winners, Buying Losers': Tech Stocks Drop as Energy Jumps to Start H2",
+        "ts": 1783626303,
+        "url": "https://www.benzinga.com/markets/equities/26/07/60372477/selling-winners-buying-losers-tech-stocks-drop-as-energy-jumps-to-start-h2",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -976,7 +993,12 @@
         "score": -0.1,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "'Selling Winners, Buying Losers': Tech Stocks Drop as Energy Jumps to Start H2",
+        "ts": 1783626303,
+        "url": "https://www.benzinga.com/markets/equities/26/07/60372477/selling-winners-buying-losers-tech-stocks-drop-as-energy-jumps-to-start-h2",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -994,7 +1016,7 @@
     },
     "UBER": {
       "name": "Uber",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 16,
         "buy": 35,
@@ -1009,8 +1031,8 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You",
-        "ts": 1783620003,
+        "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You (CORRECTED)",
+        "ts": 1783625211,
         "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
         "wiim": false
       },
