@@ -1,6 +1,6 @@
 {
   "date": "2026-07-09",
-  "generated_at": "Jul 9, 4:04pm ET",
+  "generated_at": "Jul 9, 5:39pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -212,7 +212,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 174.04,
+      "price": 174.05,
       "upside": 20.7,
       "held": false,
       "uni": true,
@@ -226,8 +226,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 125.04,
-      "upside": -4.0,
+      "price": 125.07,
+      "upside": -4.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -240,7 +240,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 259.11,
+      "price": 259.1,
       "upside": 9.6,
       "held": false,
       "uni": true,
@@ -254,7 +254,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 259.11,
+      "price": 259.1,
       "upside": 15.0,
       "held": false,
       "uni": true,
@@ -268,8 +268,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 125.04,
-      "upside": 13.6,
+      "price": 125.07,
+      "upside": 13.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -282,8 +282,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 125.04,
-      "upside": 20.0,
+      "price": 125.07,
+      "upside": 19.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -296,8 +296,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 125.04,
-      "upside": -9.6,
+      "price": 125.07,
+      "upside": -9.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -310,7 +310,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 162.48,
+      "price": 162.5,
       "upside": null,
       "held": false,
       "uni": true,
@@ -318,6 +318,45 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "Trump’s High School Athlete Competition Lands TV Coverage With ESPN: Will Americans Watch?",
+      "url": "https://www.benzinga.com/news/sports/26/07/60374070/trumps-high-school-athlete-competition-lands-tv-coverage-with-espn-will-americans-watch",
+      "ts": 1783629845,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.184
+    },
+    {
+      "title": "White House Says Adjusting Imports Of Commercial Aircraft, Jet Engines, And Aircraft And Engine Parts Into United States; Secretary Of Commerce Found U.S. Aircraft Industry Is Facing Challenges To Adequately Meet Economic And National Security Demands; Secretary Of Commerce Found That The United States Aircraft Industry Is Too Reliant On Foreign Supply Chains; Trump Directs Commerce Secretary And USTR To Negotiate Agreements With Trading Partners To Address Threatened Impairment Of National Security",
+      "url": "https://www.benzinga.com/news/politics/26/07/60373704/white-house-says-adjusting-imports-of-commercial-aircraft-jet-engines-and-aircraft-and-engine-parts-into-united-states-secretary-of-commerce-found-u-s-aircraft-industry-is-facing-challenges-to-ade",
+      "ts": 1783628885,
+      "tickers": [
+        "SPY",
+        "GE",
+        "BA",
+        "EADSY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.309
+    },
+    {
+      "title": "ChatGPT Goes From Assistant To Employee As OpenAI Launches Workplace AI Agent",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60373541/chatgpt-goes-from-assistant-to-employee-as-openai-launches-workplace-ai-agent",
+      "ts": 1783628333,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.238
+    },
     {
       "title": "'Selling Winners, Buying Losers': Tech Stocks Drop as Energy Jumps to Start H2",
       "url": "https://www.benzinga.com/markets/equities/26/07/60372477/selling-winners-buying-losers-tech-stocks-drop-as-energy-jumps-to-start-h2",
@@ -604,33 +643,6 @@
       "relevance": 0.321
     },
     {
-      "title": "OpenAI's Altman Says Rise In Cost Of Compute, Memory Definitely A Headwind",
-      "url": "https://www.benzinga.com/news/26/07/60359676/openai-s-altman-says-rise-cost-compute-memory-definitely-headwind",
-      "ts": 1783606341,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.509
-    },
-    {
-      "title": "EXCLUSIVE: Nvidia, Microsoft And Palantir Are All Exposed — CIO Warns Investors May Be Missing The Real Risk",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60358793/nvidia-microsoft-palantir-are-all-exposed-cio-warns-investors-may-be-missing-the-real-risk",
-      "ts": 1783605492,
-      "tickers": [
-        "MSFT",
-        "PLTR",
-        "NVDA",
-        "SEIC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.475
-    },
-    {
       "title": "What's Going on With Intel Stock Thursday?",
       "url": "https://www.benzinga.com/markets/tech/26/07/60357959/whats-going-on-with-intel-stock-thursday-5",
       "ts": 1783604690,
@@ -644,21 +656,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.393
-    },
-    {
-      "title": "What's Going on With Honeywell International Stock Thursday?",
-      "url": "https://www.benzinga.com/markets/guidance/26/07/60357067/whats-going-on-with-honeywell-international-stock-thursday",
-      "ts": 1783604126,
-      "tickers": [
-        "HON",
-        "PPA",
-        "DVAL",
-        "NATO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.434
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
