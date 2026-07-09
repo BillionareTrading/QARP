@@ -1,6 +1,6 @@
 {
   "date": "2026-07-09",
-  "generated_at": "Jul 9, 10:43am ET",
+  "generated_at": "Jul 9, 12:10pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -113,8 +113,8 @@
     "BSX": "2026-07-29",
     "LULU": "2026-09-02",
     "UBER": "2026-08-04",
-    "GILD": "2026-07-30",
     "SPGI": "2026-07-28",
+    "GILD": "2026-07-30",
     "AVGO": "2026-09-02",
     "NVS": "2026-07-21",
     "NBIX": "2026-08-04",
@@ -172,16 +172,16 @@
       "url": "https://www.benzinga.com/quote/ADBE",
       "wiim": true
     },
-    "NVDA": {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "ts": 1783532108,
-      "url": "https://www.benzinga.com/markets/options/26/07/60341361/10-information-technology-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
     "AVGO": {
       "title": "Why Is Broadcom Stock Gaining Thursday?",
       "ts": 1783593976,
       "url": "https://www.benzinga.com/markets/tech/26/07/60352018/why-is-broadcom-stock-gaining-thursday",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "This Senator Just Sold Up To $165K In Apple Stock",
+      "ts": 1783609206,
+      "url": "https://www.benzinga.com/government/26/07/60362118/senator-just-sold-165k-apple-stock",
       "wiim": false
     }
   },
@@ -194,8 +194,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 174.49,
-      "upside": 20.4,
+      "price": 174.26,
+      "upside": 20.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -208,8 +208,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 125.42,
-      "upside": -4.3,
+      "price": 124.87,
+      "upside": -3.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -222,8 +222,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 261.35,
-      "upside": 8.7,
+      "price": 259.33,
+      "upside": 9.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -236,8 +236,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 261.35,
-      "upside": 14.0,
+      "price": 259.33,
+      "upside": 14.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,8 +250,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 125.42,
-      "upside": 13.2,
+      "price": 124.87,
+      "upside": 13.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -264,8 +264,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 125.42,
-      "upside": 19.6,
+      "price": 124.87,
+      "upside": 20.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -278,7 +278,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 162.87,
+      "price": 163.14,
       "upside": null,
       "held": false,
       "uni": true,
@@ -286,6 +286,61 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "BlackRock Just Took The Fight To QQQ — The Nasdaq‑100 ETF War Is On",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60363916/nasdaq%e2%80%91100-etf-blackrock-qqq-challenge",
+      "ts": 1783611764,
+      "tickers": [
+        "QQQ",
+        "IQQ",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.362
+    },
+    {
+      "title": "New York Attorney General's Suit Names 3M, Chemours, Corteva, DuPont De Nemours; New York Attorney General Sues Chemical Companies Over Alleged Toxic Pollution from Consumer Products",
+      "url": "https://www.benzinga.com/news/26/07/60363782/new-york-attorney-general-s-suit-names-3m-chemours-corteva-dupont-de-nemours-new-york-attorney-gener",
+      "ts": 1783611530,
+      "tickers": [
+        "DD",
+        "CTVA",
+        "CC",
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.284
+    },
+    {
+      "title": "This Senator Just Sold Up To $165K In Apple Stock",
+      "url": "https://www.benzinga.com/government/26/07/60362118/senator-just-sold-165k-apple-stock",
+      "ts": 1783609206,
+      "tickers": [
+        "AAPL",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.323
+    },
+    {
+      "title": "Cantor Fitzgerald Maintains Overweight on Travelers Companies, Raises Price Target to $360",
+      "url": "https://www.benzinga.com/news/26/07/60362076/cantor-fitzgerald-maintains-overweight-travelers-companies-raises-price-target-360",
+      "ts": 1783609188,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.461
+    },
     {
       "title": "'OpenAI's newest AI model is 54% more token efficient on agentic coding, Altman tells CNBC'- CNBC",
       "url": "https://www.benzinga.com/news/26/07/60360084/openai-s-newest-ai-model-54-more-token-efficient-agentic-coding-altman-tells-cnbc-cnbc",
@@ -477,7 +532,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.289
+      "relevance": 0.29
     },
     {
       "title": "Why Is Caterpillar Stock Gaining Thursday?",
@@ -568,65 +623,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.616
-    },
-    {
-      "title": "Nvidia CEO Jensen Huang Says Software Engineers Would Rather Build AI Agents Than Write Python Code",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60351886/nvidia-ceo-jensen-huang-says-software-engineers-would-rather-build-ai-agents-than-write-python-code",
-      "ts": 1783593572,
-      "tickers": [
-        "NVDA",
-        "AMZN",
-        "MSFT",
-        "MRVL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.417
-    },
-    {
-      "title": "'Starbucks Taps AI to Reduce Reliance on Microsoft, IBM Software' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60351836/starbucks-taps-ai-reduce-reliance-microsoft-ibm-software-bloomberg",
-      "ts": 1783593149,
-      "tickers": [
-        "IBM",
-        "MSFT",
-        "SBUX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.415
-    },
-    {
-      "title": "Trump Accounts Could Attract $100 Billion in New Private Commitments, Brad Gerstner Predicts: 'We Have Tens of Billions… We Haven't Announced'",
-      "url": "https://www.benzinga.com/news/financing/26/07/60351603/trump-accounts-could-attract-100-billion-in-new-private-commitments-brad-gerstner-predicts-we-have-tens-of-billions-we-havent-announced",
-      "ts": 1783592492,
-      "tickers": [
-        "BK",
-        "JPM",
-        "HOOD",
-        "CMCSA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.333
-    },
-    {
-      "title": "Charlie Bilello Says 'Diversification Matters Again' as Magnificent 7 Hit Cheapest Valuation in Over a Decade",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60351458/charlie-bilello-says-diversification-matters-again-as-magnificent-7-hit-cheapest-valuation-in-over-a-decade",
-      "ts": 1783591964,
-      "tickers": [
-        "MAGS",
-        "TSLA",
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.354
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
@@ -888,9 +884,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-        "ts": 1783532108,
-        "url": "https://www.benzinga.com/markets/options/26/07/60341361/10-information-technology-stocks-whale-alerts-today-s-session",
+        "title": "This Senator Just Sold Up To $165K In Apple Stock",
+        "ts": 1783609206,
+        "url": "https://www.benzinga.com/government/26/07/60362118/senator-just-sold-165k-apple-stock",
         "wiim": false
       },
       "filings": {
@@ -1004,38 +1000,6 @@
       },
       "explain": "60 analysts cover it — 51 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "GILD": {
-      "name": "Gilead Sciences",
-      "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 10,
-        "buy": 20,
-        "hold": 7,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 37,
-        "bullish": 30,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.08,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-20",
-          "url": "https://www.sec.gov/Archives/edgar/data/882095/000110465926064518/tm2615045d1_8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm"
-        },
-        "insider30d": 8
-      },
-      "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-    },
     "SPGI": {
       "name": "S&P Global",
       "qarp": "BUY",
@@ -1067,6 +1031,38 @@
         "insider30d": 1
       },
       "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "GILD": {
+      "name": "Gilead Sciences",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 10,
+        "buy": 20,
+        "hold": 7,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 37,
+        "bullish": 30,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.08,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000110465926064518/tm2615045d1_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm"
+        },
+        "insider30d": 8
+      },
+      "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "AVGO": {
       "name": "Broadcom",
@@ -1131,7 +1127,7 @@
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 14,
         "buy": 18,
@@ -1449,25 +1445,6 @@
       "margin": 2.0,
       "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
     },
-    "GILD": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-07",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm",
-      "revenue": {
-        "fmt": "$7.0B",
-        "yoy": 4.4
-      },
-      "eps": {
-        "val": 1.61,
-        "yoy": 54.8
-      },
-      "net_income": {
-        "fmt": "$2.0B"
-      },
-      "margin": 29.0,
-      "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
-    },
     "SPGI": {
       "period": "Q1 FY2026",
       "filed": "2026-04-28",
@@ -1486,6 +1463,25 @@
       },
       "margin": 33.4,
       "summary": "Q1 FY2026 — revenue $4.2B (+10.4% YoY), diluted EPS $4.69 (+32.5% YoY), net margin 33%. (as reported, GAAP)"
+    },
+    "GILD": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm",
+      "revenue": {
+        "fmt": "$7.0B",
+        "yoy": 4.4
+      },
+      "eps": {
+        "val": 1.61,
+        "yoy": 54.8
+      },
+      "net_income": {
+        "fmt": "$2.0B"
+      },
+      "margin": 29.0,
+      "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
     },
     "AVGO": {
       "period": "Q2 FY2026",
