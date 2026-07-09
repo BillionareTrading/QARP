@@ -1,6 +1,6 @@
 {
   "date": "2026-07-09",
-  "generated_at": "Jul 9, 2:11pm ET",
+  "generated_at": "Jul 9, 3:03pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -124,6 +124,13 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Financial Services",
+      "dir": "mixed",
+      "driver": "Declines in Treasury yields",
+      "note": "Amid declines in Treasury yields, oil prices, and the U.S. dollar. The decline may ease inflation concerns and improve expectations for a more accommodative interest rate environment.",
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
+    },
+    {
       "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
       "dir": "up",
       "driver": "Reports that Meta will invest in hardware to double its in-house compute…",
@@ -150,13 +157,6 @@
       "driver": "A Guggenheim report suggested that AI concerns may be overblown",
       "note": "After a Guggenheim report suggested that AI concerns may be overblown.",
       "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Power Delivery & Hvac",
-      "dir": "up",
-      "driver": "The Heat Dome enveloping the Continental U.S. underscores the need for e…",
-      "note": "As the Heat Dome enveloping the Continental U.S. underscores the need for electricity reliability to meet civilian, commercial and data center demand that may reach new records.",
-      "src": "Benzinga WIIM · market-wide"
     }
   ],
   "holding_news": {
@@ -186,7 +186,7 @@
     },
     "UBER": {
       "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You",
-      "ts": 1783620020,
+      "ts": 1783620003,
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
       "wiim": false
     }
@@ -200,7 +200,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 174.2,
+      "price": 174.13,
       "upside": 20.6,
       "held": false,
       "uni": true,
@@ -214,8 +214,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 125.05,
-      "upside": -4.0,
+      "price": 124.79,
+      "upside": -3.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -228,8 +228,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 259.9,
-      "upside": 9.3,
+      "price": 258.73,
+      "upside": 9.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -242,8 +242,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 259.9,
-      "upside": 14.7,
+      "price": 258.73,
+      "upside": 15.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -256,8 +256,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 125.05,
-      "upside": 13.6,
+      "price": 124.79,
+      "upside": 13.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -270,8 +270,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 125.05,
-      "upside": 20.0,
+      "price": 124.79,
+      "upside": 20.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -284,8 +284,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 125.05,
-      "upside": -9.6,
+      "price": 124.79,
+      "upside": -9.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -298,7 +298,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 162.65,
+      "price": 162.0,
       "upside": null,
       "held": false,
       "uni": true,
@@ -306,6 +306,60 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "'Goldman Bans Staff Prediction Markets Bets on Finance, Politics' - Bloomberg News",
+      "url": "https://www.benzinga.com/news/26/07/60370973/goldman-bans-staff-prediction-markets-bets-finance-politics-bloomberg-news",
+      "ts": 1783623192,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.344
+    },
+    {
+      "title": "Wells Fargo Maintains Equal-Weight on Travelers Companies, Raises Price Target to $334",
+      "url": "https://www.benzinga.com/news/26/07/60370449/wells-fargo-maintains-equal-weight-travelers-companies-raises-price-target-334",
+      "ts": 1783622217,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.459
+    },
+    {
+      "title": "SK Hynix 7X Oversubscription Boosts Semi Stocks; Earnings Season Ahead; Oil Pulls Back After Iran Attacks",
+      "url": "https://www.benzinga.com/Opinion/26/07/60369943/sk-hynix-7x-oversubscription-boosts-semi-stocks-earnings-season-ahead-oil-pulls-back-after-iran-attacks",
+      "ts": 1783621480,
+      "tickers": [
+        "USO",
+        "SPY",
+        "NVDA",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.398
+    },
+    {
+      "title": "Shares of financial services companies are trading higher amid declines in Treasury yields, oil prices, and the U.S. dollar. The decline may ease inflation concerns and improve expectations for a more accommodative interest rate environment.",
+      "url": "https://www.benzinga.com/quote/SLVO",
+      "ts": 1783621324,
+      "tickers": [
+        "RWT",
+        "FIGR",
+        "XP",
+        "EZPW"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.454
+    },
     {
       "title": "American Express shares are trading higher after B of A Securities raised its price target on the stock from $387 to $391.",
       "url": "https://www.benzinga.com/quote/AXP",
@@ -321,7 +375,7 @@
     {
       "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
-      "ts": 1783620020,
+      "ts": 1783620003,
       "tickers": [
         "AAPL",
         "AMZN",
@@ -468,7 +522,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.361
+      "relevance": 0.362
     },
     {
       "title": "New York Attorney General's Suit Names 3M, Chemours, Corteva, DuPont De Nemours; New York Attorney General Sues Chemical Companies Over Alleged Toxic Pollution from Consumer Products",
@@ -593,57 +647,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.304
-    },
-    {
-      "title": "Mizuho Maintains Neutral on Travelers Companies, Raises Price Target to $324",
-      "url": "https://www.benzinga.com/news/26/07/60356635/mizuho-maintains-neutral-travelers-companies-raises-price-target-324",
-      "ts": 1783603553,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.437
-    },
-    {
-      "title": "IBM Stock Drops After Report That Starbucks Is Using AI to Cut Its $400 Million Software Bill",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60356414/ibm-stock-drops-after-report-that-starbucks-is-using-ai-to-cut-its-400-million-software-bill",
-      "ts": 1783603190,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.4
-    },
-    {
-      "title": "'Khosla-Backed Startup Claims Breakthrough With Largest-Ever AI Model on an iPhone' - The Information",
-      "url": "https://www.benzinga.com/news/26/07/60355779/khosla-backed-startup-claims-breakthrough-largest-ever-ai-model-iphone-information",
-      "ts": 1783602279,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.29
-    },
-    {
-      "title": "SpaceX Could Become a 'Landmark Historical' Collapse, Warns Top Investor: 'In The End, The Reality Will Come Out'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60355676/spacex-could-become-a-landmark-historical-collapse-warns-top-investor-in-the-end-the-reality-will-come-out",
-      "ts": 1783602079,
-      "tickers": [
-        "TSLA",
-        "AAPL",
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.3
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
@@ -1007,7 +1010,7 @@
       },
       "news": {
         "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You",
-        "ts": 1783620020,
+        "ts": 1783620003,
         "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
         "wiim": false
       },
