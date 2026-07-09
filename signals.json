@@ -1,6 +1,6 @@
 {
   "date": "2026-07-09",
-  "generated_at": "Jul 9, 9:56am ET",
+  "generated_at": "Jul 9, 10:43am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -194,8 +194,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "price": 174.71,
-      "upside": 20.2,
+      "price": 174.49,
+      "upside": 20.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -208,8 +208,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 125.32,
-      "upside": -4.2,
+      "price": 125.42,
+      "upside": -4.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -222,8 +222,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 262.47,
-      "upside": 8.2,
+      "price": 261.35,
+      "upside": 8.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -236,8 +236,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 262.47,
-      "upside": 13.5,
+      "price": 261.35,
+      "upside": 14.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,8 +250,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 125.32,
-      "upside": 13.3,
+      "price": 125.42,
+      "upside": 13.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -264,8 +264,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 125.32,
-      "upside": 19.7,
+      "price": 125.42,
+      "upside": 19.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -278,7 +278,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 162.19,
+      "price": 162.87,
       "upside": null,
       "held": false,
       "uni": true,
@@ -286,6 +286,45 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "'OpenAI's newest AI model is 54% more token efficient on agentic coding, Altman tells CNBC'- CNBC",
+      "url": "https://www.benzinga.com/news/26/07/60360084/openai-s-newest-ai-model-54-more-token-efficient-agentic-coding-altman-tells-cnbc-cnbc",
+      "ts": 1783606716,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.321
+    },
+    {
+      "title": "OpenAI's Altman Says Rise In Cost Of Compute, Memory Definitely A Headwind",
+      "url": "https://www.benzinga.com/news/26/07/60359676/openai-s-altman-says-rise-cost-compute-memory-definitely-headwind",
+      "ts": 1783606341,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.509
+    },
+    {
+      "title": "EXCLUSIVE: Nvidia, Microsoft And Palantir Are All Exposed — CIO Warns Investors May Be Missing The Real Risk",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60358793/nvidia-microsoft-palantir-are-all-exposed-cio-warns-investors-may-be-missing-the-real-risk",
+      "ts": 1783605492,
+      "tickers": [
+        "MSFT",
+        "PLTR",
+        "NVDA",
+        "SEIC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.475
+    },
     {
       "title": "What's Going on With Intel Stock Thursday?",
       "url": "https://www.benzinga.com/markets/tech/26/07/60357959/whats-going-on-with-intel-stock-thursday-5",
@@ -588,42 +627,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.354
-    },
-    {
-      "title": "Keybanc Downgrades Salesforce to Sector Weight",
-      "url": "https://www.benzinga.com/news/26/07/60351081/keybanc-downgrades-salesforce-sector-weight",
-      "ts": 1783591516,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.475
-    },
-    {
-      "title": "IBM Updates Its Bob Agentic Software Development Platform, Including New Multi-Agent Capabilities, Built-In AI Analytics And Pre-Built Workflows",
-      "url": "https://www.benzinga.com/news/26/07/60351015/ibm-updates-its-bob-agentic-software-development-platform-including-new-multi-agent-capabilities-bui",
-      "ts": 1783591367,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.356
-    },
-    {
-      "title": "Assessing Microsoft's Performance Against Competitors In Software Industry",
-      "url": "https://www.benzinga.com/news/26/07/60350868/assessing-microsoft-s-performance-against-competitors-software-industry",
-      "ts": 1783591102,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.338
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
@@ -1128,7 +1131,7 @@
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 14,
         "buy": 18,
