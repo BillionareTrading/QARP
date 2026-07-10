@@ -1,6 +1,6 @@
 {
   "date": "2026-07-10",
-  "generated_at": "Jul 10, 3:10pm ET",
+  "generated_at": "Jul 10, 4:43pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -147,10 +147,10 @@
     },
     {
       "sector": "Oil & Gas",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Reports suggesting that multiple ships",
       "note": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Grocery Retailers",
@@ -226,8 +226,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$95",
-      "price": 83.53,
-      "upside": 13.7,
+      "price": 83.49,
+      "upside": 13.8,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -240,8 +240,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 123.19,
-      "upside": -2.6,
+      "price": 123.54,
+      "upside": -2.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -254,7 +254,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 256.91,
+      "price": 256.98,
       "upside": 10.5,
       "held": false,
       "uni": true,
@@ -268,7 +268,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 256.91,
+      "price": 256.98,
       "upside": 16.0,
       "held": false,
       "uni": true,
@@ -282,8 +282,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 123.19,
-      "upside": 15.3,
+      "price": 123.54,
+      "upside": 14.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -296,8 +296,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 123.19,
-      "upside": 21.8,
+      "price": 123.54,
+      "upside": 21.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -310,8 +310,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 123.19,
-      "upside": -8.3,
+      "price": 123.54,
+      "upside": -8.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -324,7 +324,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 163.36,
+      "price": 163.32,
       "upside": null,
       "held": false,
       "uni": true,
@@ -338,8 +338,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$263",
-      "price": 256.91,
-      "upside": 2.4,
+      "price": 256.98,
+      "upside": 2.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -352,14 +352,54 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 147.63,
-      "upside": 12.4,
+      "price": 147.04,
+      "upside": 12.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
     }
   ],
   "bz_news": [
+    {
+      "title": "Apple Says Tang Yew Tan Allegedly Using Apple Trade Secrets As OpenAI Chief Hardware Officer; Chang Liu Allegedly Stole Dozens Of Confidential Hardware Files After Joining OpenAI; Alleges OpenAI Instructing Job Candidates To Bring Apple Prototypes And Design Artifacts To Interviews, Asked Suppliers Highly Specific Questions On Apple Manufacturing Processes & Components That Only Insiders Would Know To Ask, Persuaded Apple Partner To Perform Co's Metal-Finishing Techniques For OpenAI Hardware Development",
+      "url": "https://www.benzinga.com/news/26/07/60401302/apple-says-tang-yew-tan-allegedly-using-apple-trade-secrets-openai-chief-hardware-officer-chang-liu-",
+      "ts": 1783715646,
+      "tickers": [
+        "AAPL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.277
+    },
+    {
+      "title": "Apple Sues OpenAI Alleging Misappropriation Of Trade Secrets",
+      "url": "https://www.benzinga.com/news/26/07/60401163/apple-sues-openai-alleging-misappropriation-trade-secrets",
+      "ts": 1783715216,
+      "tickers": [
+        "AAPL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.311
+    },
+    {
+      "title": "Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk",
+      "url": "https://www.benzinga.com/markets/private-markets/26/07/60398726/blue-owl-saw-investor-exodus-after-ubs-flaged-rising-private-credit-default-risk",
+      "ts": 1783710924,
+      "tickers": [
+        "OWL",
+        "APO",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.388
+    },
     {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
       "url": "https://www.benzinga.com/news/26/07/60396959/b-securities-maintains-buy-coca-cola-raises-price-target-95",
@@ -482,7 +522,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.353
+      "relevance": 0.354
     },
     {
       "title": "Semis Volatile As Traders Wait For SK Hynix's Discount To Micron To Close; US Approves Cryptobank",
@@ -651,44 +691,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.414
-    },
-    {
-      "title": "'Boeing Unveils New 737 Line as Industry Drives to Boost Output' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60380216/boeing-unveils-new-737-line-industry-drives-boost-output-bloomberg",
-      "ts": 1783686293,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.305
-    },
-    {
-      "title": "What's Going on With Intel Stock on Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60380182/whats-going-on-with-intel-stock-on-friday-3",
-      "ts": 1783686072,
-      "tickers": [
-        "INTC",
-        "META",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.402
-    },
-    {
-      "title": "Susquehanna Initiates Coverage On IBM with Neutral Rating, Announces Price Target of $303",
-      "url": "https://www.benzinga.com/news/26/07/60379579/susquehanna-initiates-coverage-ibm-neutral-rating-announces-price-target-303",
-      "ts": 1783684457,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.529
     },
     {
       "title": "Howard Lutnick Tells Samsung and SK Hynix They Have 'No Choice' but to Build US AI Memory Fabs— and Micron's CEO May Not Be Happy",
