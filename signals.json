@@ -1,6 +1,6 @@
 {
   "date": "2026-07-10",
-  "generated_at": "Jul 10, 8:09am ET",
+  "generated_at": "Jul 10, 9:40am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -132,17 +132,17 @@
     },
     {
       "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Reports that Meta will invest in hardware to double its in-house compute…",
       "note": "After reports that Meta will invest in hardware to double its in-house compute capacity to 14GW next year. Also, Micron Technology's plan to increase U.S. investments to more than $250 billion through 2035 is supportive of chip hardware peers.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Reports suggesting that multiple ships",
       "note": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Grocery Retailers",
@@ -172,16 +172,16 @@
       "url": "https://www.benzinga.com/quote/ADBE",
       "wiim": true
     },
-    "AVGO": {
-      "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You (CORRECTED)",
-      "ts": 1783625211,
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1783618508,
       "url": "https://www.benzinga.com/markets/options/26/07/60368130/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You (CORRECTED)",
+      "ts": 1783625211,
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
       "wiim": false
     },
     "KO": {
@@ -218,8 +218,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 125.07,
-      "upside": -4.1,
+      "price": 123.99,
+      "upside": -3.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -232,8 +232,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 259.1,
-      "upside": 9.6,
+      "price": 258.08,
+      "upside": 10.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -246,8 +246,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 259.1,
-      "upside": 15.0,
+      "price": 258.08,
+      "upside": 15.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -260,8 +260,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 125.07,
-      "upside": 13.5,
+      "price": 123.99,
+      "upside": 14.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -274,8 +274,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 125.07,
-      "upside": 19.9,
+      "price": 123.99,
+      "upside": 21.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -288,8 +288,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 125.07,
-      "upside": -9.7,
+      "price": 123.99,
+      "upside": -8.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -302,7 +302,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 162.5,
+      "price": 165.74,
       "upside": null,
       "held": false,
       "uni": true,
@@ -316,14 +316,141 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 146.85,
-      "upside": 13.0,
+      "price": 147.36,
+      "upside": 12.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
     }
   ],
   "bz_news": [
+    {
+      "title": "ETF Investors Are Finally Getting Paid To Diversify Away From The Magnificent Seven",
+      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60381758/etf-investors-are-finally-getting-paid-to-diversify-away-from-the-magnificent-seven",
+      "ts": 1783690137,
+      "tickers": [
+        "RSP",
+        "IJR",
+        "IJH",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.341
+    },
+    {
+      "title": "President Trump Says In Social Media Post That He Won't Sign Congressionally Approved Housing Bill To Protest Lack Of Passage Of SAVE America Act",
+      "url": "https://www.benzinga.com/news/26/07/60381570/president-trump-says-social-media-post-he-won-t-sign-congressionally-approved-housing-bill-protest-l",
+      "ts": 1783689728,
+      "tickers": [
+        "XHB",
+        "LEN",
+        "TOL",
+        "PHM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.149
+    },
+    {
+      "title": "Stifel Maintains Hold on Intel, Raises Price Target to $120",
+      "url": "https://www.benzinga.com/news/26/07/60381468/stifel-maintains-hold-intel-raises-price-target-120",
+      "ts": 1783689399,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.44
+    },
+    {
+      "title": "This PepsiCo Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60380623/this-pepsico-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-friday-2",
+      "ts": 1783686964,
+      "tickers": [
+        "PEP",
+        "TRV",
+        "PSA",
+        "LAMR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.479
+    },
+    {
+      "title": "Palantir's Stock Has Bounced 23% Off Its Low— One Research Firm Says That's the Trap: 'We Still Won't Buy It'",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60380582/palantirs-stock-has-bounced-23-off-its-low-one-research-firm-says-thats-the-trap-we-still-wont-buy-it",
+      "ts": 1783686903,
+      "tickers": [
+        "PLTR",
+        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.363
+    },
+    {
+      "title": "Meta Could Face Billions in Fines as EU Cracks Down on 'Addictive' Facebook and Instagram Features",
+      "url": "https://www.benzinga.com/news/legal/26/07/60380435/meta-could-face-billions-in-fines-as-eu-cracks-down-on-addictive-facebook-and-instagram-features",
+      "ts": 1783686698,
+      "tickers": [
+        "AAPL",
+        "META",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.229
+    },
+    {
+      "title": "Seagate To Rally Around 24%? Here Are 10 Top Analyst Forecasts For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60380248/seagate-to-rally-around-24-here-are-10-top-analyst-forecasts-for-friday",
+      "ts": 1783686363,
+      "tickers": [
+        "SHOP",
+        "FTNT",
+        "PG",
+        "STX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.414
+    },
+    {
+      "title": "'Boeing Unveils New 737 Line as Industry Drives to Boost Output' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60380216/boeing-unveils-new-737-line-industry-drives-boost-output-bloomberg",
+      "ts": 1783686293,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.305
+    },
+    {
+      "title": "What's Going on With Intel Stock on Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60380182/whats-going-on-with-intel-stock-on-friday-3",
+      "ts": 1783686072,
+      "tickers": [
+        "INTC",
+        "META",
+        "MU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.402
+    },
     {
       "title": "Susquehanna Initiates Coverage On IBM with Neutral Rating, Announces Price Target of $303",
       "url": "https://www.benzinga.com/news/26/07/60379579/susquehanna-initiates-coverage-ibm-neutral-rating-announces-price-target-303",
@@ -539,129 +666,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.566
-    },
-    {
-      "title": "PMGC Holdings Stock Surges Over 37% Overnight: Why Is It Moving?",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60375749/pmgc-holdings-stock-surges-over-37-overnight-why-is-it-moving",
-      "ts": 1783656202,
-      "tickers": [
-        "ELAB",
-        "BA",
-        "HON",
-        "MOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.428
-    },
-    {
-      "title": "Making Fun of Trump Pays Off for Colbert & Kimmel: Late Night Hosts Score Record Emmy Nominations",
-      "url": "https://www.benzinga.com/news/entertainment/26/07/60374844/making-fun-of-trump-pays-off-for-colbert-kimmel-late-night-hosts-score-record-emmy-nominations",
-      "ts": 1783633670,
-      "tickers": [
-        "AAPL",
-        "DIS",
-        "PSKY",
-        "NFLX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.156
-    },
-    {
-      "title": "Trump’s High School Athlete Competition Lands TV Coverage With ESPN: Will Americans Watch?",
-      "url": "https://www.benzinga.com/news/sports/26/07/60374070/trumps-high-school-athlete-competition-lands-tv-coverage-with-espn-will-americans-watch",
-      "ts": 1783629845,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.184
-    },
-    {
-      "title": "White House Says Adjusting Imports Of Commercial Aircraft, Jet Engines, And Aircraft And Engine Parts Into United States; Secretary Of Commerce Found U.S. Aircraft Industry Is Facing Challenges To Adequately Meet Economic And National Security Demands; Secretary Of Commerce Found That The United States Aircraft Industry Is Too Reliant On Foreign Supply Chains; Trump Directs Commerce Secretary And USTR To Negotiate Agreements With Trading Partners To Address Threatened Impairment Of National Security",
-      "url": "https://www.benzinga.com/news/politics/26/07/60373704/white-house-says-adjusting-imports-of-commercial-aircraft-jet-engines-and-aircraft-and-engine-parts-into-united-states-secretary-of-commerce-found-u-s-aircraft-industry-is-facing-challenges-to-ade",
-      "ts": 1783628885,
-      "tickers": [
-        "SPY",
-        "GE",
-        "BA",
-        "EADSY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.309
-    },
-    {
-      "title": "ChatGPT Goes From Assistant To Employee As OpenAI Launches Workplace AI Agent",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60373541/chatgpt-goes-from-assistant-to-employee-as-openai-launches-workplace-ai-agent",
-      "ts": 1783628333,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.238
-    },
-    {
-      "title": "'Selling Winners, Buying Losers': Tech Stocks Drop as Energy Jumps to Start H2",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60372477/selling-winners-buying-losers-tech-stocks-drop-as-energy-jumps-to-start-h2",
-      "ts": 1783626303,
-      "tickers": [
-        "INTC",
-        "MU",
-        "SNDK",
-        "LULU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.437
-    },
-    {
-      "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You (CORRECTED)",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
-      "ts": 1783625211,
-      "tickers": [
-        "AAPL",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.33
-    },
-    {
-      "title": "'Goldman Bans Staff Prediction Markets Bets on Finance, Politics' - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/07/60370973/goldman-bans-staff-prediction-markets-bets-finance-politics-bloomberg-news",
-      "ts": 1783623192,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.344
-    },
-    {
-      "title": "Wells Fargo Maintains Equal-Weight on Travelers Companies, Raises Price Target to $334",
-      "url": "https://www.benzinga.com/news/26/07/60370449/wells-fargo-maintains-equal-weight-travelers-companies-raises-price-target-334",
-      "ts": 1783622217,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.459
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
@@ -1056,7 +1060,7 @@
     },
     "SPGI": {
       "name": "S&P Global",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 11,
         "buy": 19,
@@ -1084,7 +1088,7 @@
         },
         "insider30d": 1
       },
-      "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "GILD": {
       "name": "Gilead Sciences",
@@ -1181,7 +1185,7 @@
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 14,
         "buy": 18,
