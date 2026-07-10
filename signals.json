@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-09",
-  "generated_at": "Jul 9, 6:56pm ET",
+  "date": "2026-07-10",
+  "generated_at": "Jul 10, 6:24am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Jul 9",
+      "when": "Jul 10",
       "what": "Energy & geopolitics — today's read",
       "why": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
       "affects": "Energy · growth",
@@ -172,6 +172,18 @@
       "url": "https://www.benzinga.com/quote/ADBE",
       "wiim": true
     },
+    "NVDA": {
+      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
+      "ts": 1783618508,
+      "url": "https://www.benzinga.com/markets/options/26/07/60368130/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You (CORRECTED)",
+      "ts": 1783625211,
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
+      "wiim": false
+    },
     "LULU": {
       "title": "'Selling Winners, Buying Losers': Tech Stocks Drop as Energy Jumps to Start H2",
       "ts": 1783626303,
@@ -184,18 +196,6 @@
       "url": "https://www.benzinga.com/markets/equities/26/07/60372477/selling-winners-buying-losers-tech-stocks-drop-as-energy-jumps-to-start-h2",
       "wiim": false
     },
-    "AVGO": {
-      "title": "Why Is Broadcom Stock Gaining Thursday?",
-      "ts": 1783593976,
-      "url": "https://www.benzinga.com/markets/tech/26/07/60352018/why-is-broadcom-stock-gaining-thursday",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "ts": 1783618508,
-      "url": "https://www.benzinga.com/markets/options/26/07/60368130/10-information-technology-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
     "UBER": {
       "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You (CORRECTED)",
       "ts": 1783625211,
@@ -204,20 +204,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-07-02",
-      "ticker": "CVX",
-      "firm": "Wolfe Research",
-      "action": "Upgrades",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$210",
-      "price": 174.05,
-      "upside": 20.7,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
     {
       "date": "2026-07-06",
       "ticker": "MRK",
@@ -318,6 +304,127 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "UK Government Designates Four Major Global Cloud Services And Technology Providers Amazon, Google, Microsoft And Oracle As Critical Third Parties",
+      "url": "https://www.benzinga.com/news/26/07/60378092/uk-government-designates-four-major-global-cloud-services-and-technology-providers-amazon-google-mic",
+      "ts": 1783678634,
+      "tickers": [
+        "AMZN",
+        "GOOG",
+        "ORCL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.331
+    },
+    {
+      "title": "Comparative Study: Microsoft And Industry Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/07/60377606/comparative-study-microsoft-and-industry-competitors-software-industry",
+      "ts": 1783677507,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.309
+    },
+    {
+      "title": "Evercore ISI Group Downgrades Travelers Companies to In-Line, Raises Price Target to $329",
+      "url": "https://www.benzinga.com/news/26/07/60377491/evercore-isi-group-downgrades-travelers-companies-line-raises-price-target-329",
+      "ts": 1783676873,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.529
+    },
+    {
+      "title": "Cathie Wood's ARK Says AMD Chips 'Can Already Be More Performant Per Dollar' Than Nvidia",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60376902/cathie-woods-ark-says-amd-chips-can-already-be-more-performant-per-dollar-than-nvidia",
+      "ts": 1783670604,
+      "tickers": [
+        "AMD",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.439
+    },
+    {
+      "title": "'Boeing’s Smallest MAX Jet Nears FAA Milestone After Years of Delays' - WSJ",
+      "url": "https://www.benzinga.com/news/26/07/60376663/boeing-s-smallest-max-jet-nears-faa-milestone-after-years-delays-wsj",
+      "ts": 1783668288,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.233
+    },
+    {
+      "title": "'Disney Is Exploring Adding A Free Tier To Disney+ as YouTube Draws TV Viewers' - Business Insider",
+      "url": "https://www.benzinga.com/news/26/07/60376654/disney-exploring-adding-free-tier-disney-youtube-draws-tv-viewers-business-insider",
+      "ts": 1783668190,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.282
+    },
+    {
+      "title": "Fed Chair Kevin Warsh Bets on AI, Taps Marc Andreessen and Xbox CEO Asha Sharma to Help 'Inform' Future Fed Policy",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60375922/fed-chair-kevin-warsh-bets-on-ai-taps-marc-andreessen-and-xbox-ceo-asha-sharma-to-help-inform-future-fed-policy",
+      "ts": 1783661491,
+      "tickers": [
+        "WMT",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.386
+    },
+    {
+      "title": "Semiconductor ETFs Draw Record $7.1 Billion as Investors Buy the AI Chip Dip",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60375892/semiconductor-etfs-draw-record-7-1-billion-as-investors-buy-the-ai-chip-dip",
+      "ts": 1783660769,
+      "tickers": [
+        "SOXX",
+        "INTC",
+        "AVGO",
+        "AMD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.566
+    },
+    {
+      "title": "PMGC Holdings Stock Surges Over 37% Overnight: Why Is It Moving?",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60375749/pmgc-holdings-stock-surges-over-37-overnight-why-is-it-moving",
+      "ts": 1783656202,
+      "tickers": [
+        "ELAB",
+        "BA",
+        "HON",
+        "MOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.428
+    },
     {
       "title": "Making Fun of Trump Pays Off for Colbert & Kimmel: Late Night Hosts Score Record Emmy Nominations",
       "url": "https://www.benzinga.com/news/entertainment/26/07/60374844/making-fun-of-trump-pays-off-for-colbert-kimmel-late-night-hosts-score-record-emmy-nominations",
@@ -538,127 +645,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.37
-    },
-    {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/07/60368130/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1783618508,
-      "tickers": [
-        "NVDA",
-        "MU",
-        "DT",
-        "DELL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "RBC Capital Maintains Outperform on UnitedHealth Group, Raises Price Target to $463",
-      "url": "https://www.benzinga.com/news/26/07/60368118/rbc-capital-maintains-outperform-unitedhealth-group-raises-price-target-463",
-      "ts": 1783618492,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.455
-    },
-    {
-      "title": "Morgan Stanley Maintains Equal-Weight on Merck & Co, Raises Price Target to $113",
-      "url": "https://www.benzinga.com/news/26/07/60367464/morgan-stanley-maintains-equal-weight-merck-co-raises-price-target-113",
-      "ts": 1783617509,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.477
-    },
-    {
-      "title": "OpenAI Rolling Out Sol, Terra, Luna GPT-5.6 Family Of Models In ChatGPT, Codex, API",
-      "url": "https://www.benzinga.com/news/26/07/60367104/openai-rolling-out-sol-terra-luna-gpt-5-6-family-models-chatgpt-codex-api",
-      "ts": 1783616999,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.23
-    },
-    {
-      "title": "BlackRock Just Took The Fight To QQQ — The Nasdaq‑100 ETF War Is On",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60363916/nasdaq%e2%80%91100-etf-blackrock-qqq-challenge",
-      "ts": 1783611764,
-      "tickers": [
-        "QQQ",
-        "IQQ",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.362
-    },
-    {
-      "title": "New York Attorney General's Suit Names 3M, Chemours, Corteva, DuPont De Nemours; New York Attorney General Sues Chemical Companies Over Alleged Toxic Pollution from Consumer Products",
-      "url": "https://www.benzinga.com/news/26/07/60363782/new-york-attorney-general-s-suit-names-3m-chemours-corteva-dupont-de-nemours-new-york-attorney-gener",
-      "ts": 1783611530,
-      "tickers": [
-        "DD",
-        "CTVA",
-        "CC",
-        "MMM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.284
-    },
-    {
-      "title": "This Senator Just Sold Up To $165K In Apple Stock",
-      "url": "https://www.benzinga.com/government/26/07/60362118/senator-just-sold-165k-apple-stock",
-      "ts": 1783609206,
-      "tickers": [
-        "AAPL",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.323
-    },
-    {
-      "title": "Cantor Fitzgerald Maintains Overweight on Travelers Companies, Raises Price Target to $360",
-      "url": "https://www.benzinga.com/news/26/07/60362076/cantor-fitzgerald-maintains-overweight-travelers-companies-raises-price-target-360",
-      "ts": 1783609188,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.461
-    },
-    {
-      "title": "What's Going on With Intel Stock Thursday?",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60357959/whats-going-on-with-intel-stock-thursday-5",
-      "ts": 1783604690,
-      "tickers": [
-        "INTC",
-        "SMH",
-        "VLUE",
-        "XNTK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.393
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
@@ -1132,9 +1118,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Why Is Broadcom Stock Gaining Thursday?",
-        "ts": 1783593976,
-        "url": "https://www.benzinga.com/markets/tech/26/07/60352018/why-is-broadcom-stock-gaining-thursday",
+        "title": "Nancy Pelosi, Donald Trump Bet On The Same 10 Stocks – Some Might Surprise You (CORRECTED)",
+        "ts": 1783625211,
+        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60369075/nancy-pelosi-donald-trump-bet-on-the-same-10-stocks-some-might-surprise-you",
         "wiim": false
       },
       "filings": {
@@ -1204,7 +1190,7 @@
           "date": "2026-05-05",
           "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm"
         },
-        "insider30d": 4
+        "insider30d": 2
       },
       "explain": "37 analysts cover it — 32 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1236,7 +1222,7 @@
           "date": "2026-05-05",
           "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm"
         },
-        "insider30d": 7
+        "insider30d": 6
       },
       "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1300,7 +1286,7 @@
           "date": "2026-04-30",
           "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026028802/ko-20260403.htm"
         },
-        "insider30d": 4
+        "insider30d": 3
       },
       "explain": "35 analysts cover it — 29 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     }
