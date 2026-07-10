@@ -1,6 +1,6 @@
 {
   "date": "2026-07-10",
-  "generated_at": "Jul 10, 9:40am ET",
+  "generated_at": "Jul 10, 11:03am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -125,10 +125,10 @@
   "sectors": [
     {
       "sector": "Financial Services",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Declines in Treasury yields",
       "note": "Amid declines in Treasury yields, oil prices, and the U.S. dollar. The decline may ease inflation concerns and improve expectations for a more accommodative interest rate environment.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
@@ -139,10 +139,10 @@
     },
     {
       "sector": "Oil & Gas",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Reports suggesting that multiple ships",
       "note": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Grocery Retailers",
@@ -153,10 +153,10 @@
     },
     {
       "sector": "Software",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "A Guggenheim report suggested that AI concerns may be overblown",
       "note": "After a Guggenheim report suggested that AI concerns may be overblown.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     }
   ],
   "holding_news": {
@@ -232,7 +232,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 258.08,
+      "price": 258.17,
       "upside": 10.0,
       "held": false,
       "uni": true,
@@ -246,8 +246,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 258.08,
-      "upside": 15.5,
+      "price": 258.17,
+      "upside": 15.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -302,7 +302,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 165.74,
+      "price": 163.53,
       "upside": null,
       "held": false,
       "uni": true,
@@ -316,14 +316,66 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 147.36,
-      "upside": 12.6,
+      "price": 148.21,
+      "upside": 12.0,
       "held": false,
       "uni": true,
       "qarp": "BUY"
     }
   ],
   "bz_news": [
+    {
+      "title": "FDA Approves Pembrolizumab Or Pembrolizumab And Berahyaluronidase Alfa-pmph Each With Enfortumab Vedotin-ejfv For Muscle Invasive Bladder Cancer",
+      "url": "https://www.benzinga.com/news/26/07/60388151/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin-",
+      "ts": 1783694961,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.312
+    },
+    {
+      "title": "'Philippine Air to order 15 Boeing 787-10 and nine Airbus A350-1000' - Reuters",
+      "url": "https://www.benzinga.com/news/26/07/60387823/philippine-air-order-15-boeing-787-10-and-nine-airbus-a350-1000-reuters",
+      "ts": 1783694548,
+      "tickers": [
+        "BA",
+        "EADSY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.271
+    },
+    {
+      "title": "Argus Research Maintains Buy on Microsoft, Lowers Price Target to $510",
+      "url": "https://www.benzinga.com/news/26/07/60387054/argus-research-maintains-buy-microsoft-lowers-price-target-510",
+      "ts": 1783693963,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.458
+    },
+    {
+      "title": "Intel Stock Has Doubled, So Why Is JPMorgan Calling It a Top Short?",
+      "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60384820/intel-stock-has-doubled-so-why-is-jpmorgan-calling-it-a-top-short",
+      "ts": 1783692279,
+      "tickers": [
+        "INTC",
+        "MRNA",
+        "WIX",
+        "CAR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.403
+    },
     {
       "title": "ETF Investors Are Finally Getting Paid To Diversify Away From The Magnificent Seven",
       "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60381758/etf-investors-are-finally-getting-paid-to-diversify-away-from-the-magnificent-seven",
@@ -614,58 +666,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.439
-    },
-    {
-      "title": "'Boeing’s Smallest MAX Jet Nears FAA Milestone After Years of Delays' - WSJ",
-      "url": "https://www.benzinga.com/news/26/07/60376663/boeing-s-smallest-max-jet-nears-faa-milestone-after-years-delays-wsj",
-      "ts": 1783668288,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.233
-    },
-    {
-      "title": "'Disney Is Exploring Adding A Free Tier To Disney+ as YouTube Draws TV Viewers' - Business Insider",
-      "url": "https://www.benzinga.com/news/26/07/60376654/disney-exploring-adding-free-tier-disney-youtube-draws-tv-viewers-business-insider",
-      "ts": 1783668190,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.282
-    },
-    {
-      "title": "Fed Chair Kevin Warsh Bets on AI, Taps Marc Andreessen and Xbox CEO Asha Sharma to Help 'Inform' Future Fed Policy",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60375922/fed-chair-kevin-warsh-bets-on-ai-taps-marc-andreessen-and-xbox-ceo-asha-sharma-to-help-inform-future-fed-policy",
-      "ts": 1783661491,
-      "tickers": [
-        "WMT",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.386
-    },
-    {
-      "title": "Semiconductor ETFs Draw Record $7.1 Billion as Investors Buy the AI Chip Dip",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60375892/semiconductor-etfs-draw-record-7-1-billion-as-investors-buy-the-ai-chip-dip",
-      "ts": 1783660769,
-      "tickers": [
-        "SOXX",
-        "INTC",
-        "AVGO",
-        "AMD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.566
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
@@ -1060,7 +1060,7 @@
     },
     "SPGI": {
       "name": "S&P Global",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 11,
         "buy": 19,
@@ -1088,7 +1088,7 @@
         },
         "insider30d": 1
       },
-      "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "GILD": {
       "name": "Gilead Sciences",
@@ -1247,38 +1247,6 @@
       },
       "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "EFX": {
-      "name": "Equifax",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 8,
-        "buy": 12,
-        "hold": 10,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 30,
-        "bullish": 20,
-        "bearish": 0,
-        "label": "Buy",
-        "score": 0.93,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-06-16",
-          "url": "https://www.sec.gov/Archives/edgar/data/33185/000119312526272759/d52077d8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-04-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000018/efx-20260331.htm"
-        },
-        "insider30d": 1
-      },
-      "explain": "30 analysts cover it — 20 bullish, 10 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-    },
     "KO": {
       "name": "Coca-Cola",
       "qarp": "HOLD-QUAL",
@@ -1315,6 +1283,38 @@
         "insider30d": 3
       },
       "explain": "35 analysts cover it — 29 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "EFX": {
+      "name": "Equifax",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 8,
+        "buy": 12,
+        "hold": 10,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 30,
+        "bullish": 20,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.93,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/33185/000119312526272759/d52077d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000018/efx-20260331.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "30 analysts cover it — 20 bullish, 10 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     }
   },
   "financials": {
@@ -1604,25 +1604,6 @@
       "margin": 34.5,
       "summary": "Q1 FY2026 — revenue $3.0B (+7.8% YoY), diluted EPS $4.02 (+61.4% YoY), net margin 34%. (as reported, GAAP)"
     },
-    "EFX": {
-      "period": "Q1 FY2026",
-      "filed": "2026-04-21",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000018/efx-20260331.htm",
-      "revenue": {
-        "fmt": "$1.6B",
-        "yoy": 14.3
-      },
-      "eps": {
-        "val": 1.42,
-        "yoy": 34.0
-      },
-      "net_income": {
-        "fmt": "$172M"
-      },
-      "margin": 10.4,
-      "summary": "Q1 FY2026 — revenue $1.6B (+14.3% YoY), diluted EPS $1.42 (+34.0% YoY), net margin 10%. (as reported, GAAP)"
-    },
     "KO": {
       "period": "Q1 FY2026",
       "filed": "2026-04-30",
@@ -1641,6 +1622,25 @@
       },
       "margin": 31.5,
       "summary": "Q1 FY2026 — revenue $12.5B (+12.1% YoY), diluted EPS $0.91 (+18.2% YoY), net margin 32%. (as reported, GAAP)"
+    },
+    "EFX": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-21",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000018/efx-20260331.htm",
+      "revenue": {
+        "fmt": "$1.6B",
+        "yoy": 14.3
+      },
+      "eps": {
+        "val": 1.42,
+        "yoy": 34.0
+      },
+      "net_income": {
+        "fmt": "$172M"
+      },
+      "margin": 10.4,
+      "summary": "Q1 FY2026 — revenue $1.6B (+14.3% YoY), diluted EPS $1.42 (+34.0% YoY), net margin 10%. (as reported, GAAP)"
     }
   }
 }
