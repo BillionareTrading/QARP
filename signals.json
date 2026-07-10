@@ -1,6 +1,6 @@
 {
   "date": "2026-07-10",
-  "generated_at": "Jul 10, 12:33pm ET",
+  "generated_at": "Jul 10, 1:26pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -132,10 +132,10 @@
     },
     {
       "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Reports that Meta will invest in hardware to double its in-house compute…",
       "note": "After reports that Meta will invest in hardware to double its in-house compute capacity to 14GW next year. Also, Micron Technology's plan to increase U.S. investments to more than $250 billion through 2035 is supportive of chip hardware peers.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Oil & Gas",
@@ -218,8 +218,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 123.36,
-      "upside": -2.7,
+      "price": 123.59,
+      "upside": -2.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -232,8 +232,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 256.02,
-      "upside": 10.9,
+      "price": 256.83,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -246,8 +246,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 256.02,
-      "upside": 16.4,
+      "price": 256.83,
+      "upside": 16.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -260,8 +260,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 123.36,
-      "upside": 15.1,
+      "price": 123.59,
+      "upside": 14.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -274,8 +274,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 123.36,
-      "upside": 21.6,
+      "price": 123.59,
+      "upside": 21.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -288,8 +288,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 123.36,
-      "upside": -8.4,
+      "price": 123.59,
+      "upside": -8.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -302,7 +302,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 162.93,
+      "price": 162.86,
       "upside": null,
       "held": false,
       "uni": true,
@@ -316,14 +316,57 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 147.19,
-      "upside": 12.8,
+      "price": 147.46,
+      "upside": 12.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
     }
   ],
   "bz_news": [
+    {
+      "title": "EXCLUSIVE: Berkshire’s Alphabet, UnitedHealth Buys Show CEO Greg Abel Is Expanding the Playbook, Expert Says",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60394052/exclusive-berkshires-alphabet-unitedhealth-buys-show-ceo-greg-abel-is-expanding-the-playbook-expert-says",
+      "ts": 1783702869,
+      "tickers": [
+        "SPY",
+        "GOOGL",
+        "GOOG",
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.436
+    },
+    {
+      "title": "WD-40 Greases Wheels For Another Rally, DA Davidson Sees More Upside",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60393505/wd-40-analyst-q3-beat-more-upside-decelerating-in-q4",
+      "ts": 1783701994,
+      "tickers": [
+        "WDFC",
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.354
+    },
+    {
+      "title": "Semis Volatile As Traders Wait For SK Hynix's Discount To Micron To Close; US Approves Cryptobank",
+      "url": "https://www.benzinga.com/Opinion/26/07/60393150/semis-volatile-as-traders-wait-for-sk-hynixs-discount-to-micron-to-close-us-approves-cryptobank",
+      "ts": 1783701404,
+      "tickers": [
+        "USO",
+        "SPY",
+        "NVDA",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.428
+    },
     {
       "title": "FDA Approves Pembrolizumab Or Pembrolizumab And Berahyaluronidase Alfa-pmph Each With Enfortumab Vedotin-ejfv For Muscle Invasive Bladder Cancer",
       "url": "https://www.benzinga.com/news/26/07/60388151/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin-",
@@ -543,7 +586,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.302
+      "relevance": 0.301
     },
     {
       "title": "Trump Skips Aircraft Tariffs for Now After Security Review, but Puts Trade Partners on Six-Month Clock",
@@ -563,7 +606,7 @@
     {
       "title": "Howard Lutnick Tells Samsung and SK Hynix They Have 'No Choice' but to Build US AI Memory Fabs— and Micron's CEO May Not Be Happy",
       "url": "https://www.benzinga.com/markets/equities/26/07/60378886/howard-lutnick-tells-samsung-and-sk-hynix-they-have-no-choice-but-to-build-us-ai-memory-fabs-and-microns-ceo-may-not-be-happy",
-      "ts": 1783682076,
+      "ts": 1783682065,
       "tickers": [
         "SKHY",
         "AAPL",
@@ -627,45 +670,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.331
-    },
-    {
-      "title": "Comparative Study: Microsoft And Industry Competitors In Software Industry",
-      "url": "https://www.benzinga.com/news/26/07/60377606/comparative-study-microsoft-and-industry-competitors-software-industry",
-      "ts": 1783677507,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.309
-    },
-    {
-      "title": "Evercore ISI Group Downgrades Travelers Companies to In-Line, Raises Price Target to $329",
-      "url": "https://www.benzinga.com/news/26/07/60377491/evercore-isi-group-downgrades-travelers-companies-line-raises-price-target-329",
-      "ts": 1783676873,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.529
-    },
-    {
-      "title": "Cathie Wood's ARK Says AMD Chips 'Can Already Be More Performant Per Dollar' Than Nvidia",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60376902/cathie-woods-ark-says-amd-chips-can-already-be-more-performant-per-dollar-than-nvidia",
-      "ts": 1783670604,
-      "tickers": [
-        "AMD",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.439
     },
     {
       "title": "Pepsi Q2 Preview: Beverage Giant Underperforming Coca-Cola Stock in 2026, Will Earnings Help Close Gap?",
