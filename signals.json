@@ -1,6 +1,6 @@
 {
   "date": "2026-07-11",
-  "generated_at": "Jul 11, 7:18am ET",
+  "generated_at": "Jul 11, 10:28am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -180,6 +180,18 @@
       "url": "https://www.benzinga.com/quote/ADBE",
       "wiim": true
     },
+    "AVGO": {
+      "title": "Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir — And Stocks End Week With Solid Gains",
+      "ts": 1783771291,
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60403984/benzinga-bulls-and-bears-penguin-solutions-draftkings-palantir-and-stocks-end-week-with-solid-gains",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
+      "ts": 1783704906,
+      "url": "https://www.benzinga.com/markets/options/26/07/60395453/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
     "KO": {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
       "ts": 1783707180,
@@ -190,18 +202,6 @@
       "title": "6 Industrials Stocks With Whale Alerts In Today’s Session",
       "ts": 1783704906,
       "url": "https://www.benzinga.com/markets/options/26/07/60395454/6-industrials-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "ts": 1783704906,
-      "url": "https://www.benzinga.com/markets/options/26/07/60395453/10-information-technology-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "ts": 1783704906,
-      "url": "https://www.benzinga.com/markets/options/26/07/60395453/10-information-technology-stocks-whale-alerts-today-s-session",
       "wiim": false
     }
   },
@@ -349,6 +349,36 @@
   ],
   "bz_news": [
     {
+      "title": "Before BlackRock Became Untouchable, Carl Icahn Told Larry Fink His $4.8 Trillion Empire Was Protecting Bad CEOs— And He Had a $9 Billion Example to Prove It",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60404081/before-blackrock-became-untouchable-carl-icahn-told-larry-fink-his-4-8-trillion-empire-was-protecting-bad-ceos-and-he-had-a-9-billion-example-to-prove-it",
+      "ts": 1783774877,
+      "tickers": [
+        "AAPL",
+        "GOOGL",
+        "GOOG",
+        "NOK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.259
+    },
+    {
+      "title": "Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir — And Stocks End Week With Solid Gains",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60403984/benzinga-bulls-and-bears-penguin-solutions-draftkings-palantir-and-stocks-end-week-with-solid-gains",
+      "ts": 1783771291,
+      "tickers": [
+        "MSFT",
+        "PLTR",
+        "RIVN",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.462
+    },
+    {
       "title": "'OpenAI Is Burning It Down With One Mag 7 After Another'— Apple's Trade Secret Lawsuit Has Tech Analysts Talking and Elon Musk Saying That 'Sounds Pretty Bad'",
       "url": "https://www.benzinga.com/markets/tech/26/07/60403807/openai-is-burning-it-down-with-one-mag-7-after-another-apples-trade-secret-lawsuit-has-tech-analysts-talking-and-elon-musk-saying-that-sounds-pretty-bad",
       "ts": 1783756993,
@@ -414,7 +444,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.311
+      "relevance": 0.31
     },
     {
       "title": "Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk",
@@ -650,33 +680,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.149
-    },
-    {
-      "title": "Stifel Maintains Hold on Intel, Raises Price Target to $120",
-      "url": "https://www.benzinga.com/news/26/07/60381468/stifel-maintains-hold-intel-raises-price-target-120",
-      "ts": 1783689399,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.44
-    },
-    {
-      "title": "This PepsiCo Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Friday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60380623/this-pepsico-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-friday-2",
-      "ts": 1783686964,
-      "tickers": [
-        "PEP",
-        "TRV",
-        "PSA",
-        "LAMR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.479
     },
     {
       "title": "Howard Lutnick Tells Samsung and SK Hynix They Have 'No Choice' but to Build US AI Memory Fabs— and Micron's CEO May Not Be Happy",
@@ -1157,9 +1160,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-        "ts": 1783704906,
-        "url": "https://www.benzinga.com/markets/options/26/07/60395453/10-information-technology-stocks-whale-alerts-today-s-session",
+        "title": "Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir — And Stocks End Week With Solid Gains",
+        "ts": 1783771291,
+        "url": "https://www.benzinga.com/markets/market-summary/26/07/60403984/benzinga-bulls-and-bears-penguin-solutions-draftkings-palantir-and-stocks-end-week-with-solid-gains",
         "wiim": false
       },
       "filings": {
