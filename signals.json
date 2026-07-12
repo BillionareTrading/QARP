@@ -1,6 +1,6 @@
 {
   "date": "2026-07-12",
-  "generated_at": "Jul 12, 6:11am ET",
+  "generated_at": "Jul 12, 7:22am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,16 +168,16 @@
     }
   ],
   "holding_news": {
-    "AVGO": {
-      "title": "Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir — And Stocks End Week With Solid Gains",
-      "ts": 1783771291,
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60403984/benzinga-bulls-and-bears-penguin-solutions-draftkings-palantir-and-stocks-end-week-with-solid-gains",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1783704906,
       "url": "https://www.benzinga.com/markets/options/26/07/60395453/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir — And Stocks End Week With Solid Gains",
+      "ts": 1783771291,
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60403984/benzinga-bulls-and-bears-penguin-solutions-draftkings-palantir-and-stocks-end-week-with-solid-gains",
       "wiim": false
     },
     "KO": {
@@ -336,6 +336,21 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "Apple Sues OpenAI, Dependence on TSMC, Rise in Prices and More: This Week in Appleverse",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60405045/apple-sues-openai-dependence-on-tsmc-rise-in-prices-and-more-this-week-in-appleverse",
+      "ts": 1783854070,
+      "tickers": [
+        "AAPL",
+        "WMT",
+        "NVDA",
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.384
+    },
     {
       "title": "Bernie Sanders Warns Trump Can't Shut Down Media 'Just Because They Are Critical of You'",
       "url": "https://www.benzinga.com/news/politics/26/07/60404901/bernie-sanders-warns-trump-cant-shut-down-media-just-because-they-are-critical-of-you",
@@ -635,7 +650,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.354
+      "relevance": 0.353
     },
     {
       "title": "Semis Volatile As Traders Wait For SK Hynix's Discount To Micron To Close; US Approves Cryptobank",
@@ -650,19 +665,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.428
-    },
-    {
-      "title": "FDA Approves Pembrolizumab Or Pembrolizumab And Berahyaluronidase Alfa-pmph Each With Enfortumab Vedotin-ejfv For Muscle Invasive Bladder Cancer",
-      "url": "https://www.benzinga.com/news/26/07/60388151/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin-",
-      "ts": 1783694961,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.312
+      "relevance": 0.429
     },
     {
       "title": "Howard Lutnick Tells Samsung and SK Hynix They Have 'No Choice' but to Build US AI Memory Fabs— and Micron's CEO May Not Be Happy",
