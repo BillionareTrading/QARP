@@ -1,6 +1,6 @@
 {
   "date": "2026-07-13",
-  "generated_at": "Jul 13, 12:05pm ET",
+  "generated_at": "Jul 13, 12:53pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -190,7 +190,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$95",
-      "price": 83.96,
+      "price": 84.01,
       "upside": 13.1,
       "held": true,
       "uni": true,
@@ -204,8 +204,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 123.67,
-      "upside": -3.0,
+      "price": 123.52,
+      "upside": -2.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -218,8 +218,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 258.16,
-      "upside": 10.0,
+      "price": 258.48,
+      "upside": 9.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -232,8 +232,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 258.16,
-      "upside": 15.4,
+      "price": 258.48,
+      "upside": 15.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -246,8 +246,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 123.67,
-      "upside": 14.8,
+      "price": 123.52,
+      "upside": 15.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -260,8 +260,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 123.67,
-      "upside": 21.3,
+      "price": 123.52,
+      "upside": 21.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -274,8 +274,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 123.67,
-      "upside": -8.6,
+      "price": 123.52,
+      "upside": -8.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -288,7 +288,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 171.88,
+      "price": 172.06,
       "upside": null,
       "held": false,
       "uni": true,
@@ -302,8 +302,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$263",
-      "price": 258.16,
-      "upside": 1.9,
+      "price": 258.48,
+      "upside": 1.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -316,8 +316,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 147.35,
-      "upside": 12.7,
+      "price": 147.49,
+      "upside": 12.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -330,8 +330,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "price": 123.67,
-      "upside": 13.2,
+      "price": 123.52,
+      "upside": 13.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -344,8 +344,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 258.16,
-      "upside": 11.2,
+      "price": 258.48,
+      "upside": 11.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -358,8 +358,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 123.67,
-      "upside": 14.8,
+      "price": 123.52,
+      "upside": 15.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -372,14 +372,41 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 123.67,
-      "upside": 17.2,
+      "price": 123.52,
+      "upside": 17.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     }
   ],
   "bz_news": [
+    {
+      "title": "Quantum Tech on Capitol Hill: Nvidia, IBM and More Stocks to Watch",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60422341/quantum-tech-on-capitol-hill-nvidia-ibm-and-more-stocks-to-watch",
+      "ts": 1783961510,
+      "tickers": [
+        "NVDA",
+        "IBM",
+        "RGTI",
+        "QBTS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.504
+    },
+    {
+      "title": "HSBC Maintains Hold on American Express, Raises Price Target to $329",
+      "url": "https://www.benzinga.com/news/26/07/60421675/hsbc-maintains-hold-american-express-raises-price-target-329",
+      "ts": 1783960542,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.422
+    },
     {
       "title": "Shares of foundry, fabricator and IDM chip companies are trading lower due to volatility initiated from South Korea after Samsung and SK Hynix fell, dragging down the KOPSI and U.S. peers. Also, weakness within the industry may result from growing energy costs after the U.S. and Iran exchanged blows and President Trump's recent comments",
       "url": "https://www.benzinga.com/quote/GFS",
@@ -682,31 +709,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.465
-    },
-    {
-      "title": "Cisco President Says 'the Future Will Likely Have More Jobs' as AI Could Create More Work Than It Eliminates",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60408751/cisco-president-says-the-future-will-likely-have-more-jobs-as-ai-could-create-more-work-than-it-eliminates",
-      "ts": 1783939207,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.41
-    },
-    {
-      "title": "Riyadh Air Plans To Purchase 25-30 More 787 Aircraft By Exercising Most Of Its Outstanding Options - Reuters Exclusive",
-      "url": "https://www.benzinga.com/quote/GE",
-      "ts": 1783937863,
-      "tickers": [
-        "BA",
-        "GE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.272
     },
     {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
@@ -1143,7 +1145,7 @@
     },
     "AVGO": {
       "name": "Broadcom",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 17,
         "buy": 35,
@@ -1176,7 +1178,7 @@
         },
         "insider30d": 8
       },
-      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NVS": {
       "name": "Novartis",
