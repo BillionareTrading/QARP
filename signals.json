@@ -1,6 +1,6 @@
 {
   "date": "2026-07-13",
-  "generated_at": "Jul 13, 10:04am ET",
+  "generated_at": "Jul 13, 10:53am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -179,12 +179,6 @@
       "ts": 1783855871,
       "url": "https://www.benzinga.com/markets/tech/26/07/60405076/consumer-tech-news-july-6-10-micron-plans-250b-us-expansion-apple-signs-30b-broadcom-deal-more",
       "wiim": false
-    },
-    "KO": {
-      "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
-      "ts": 1783707180,
-      "url": "https://www.benzinga.com/news/26/07/60396959/b-securities-maintains-buy-coca-cola-raises-price-target-95",
-      "wiim": false
     }
   },
   "ratings": [
@@ -196,8 +190,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$95",
-      "price": 84.42,
-      "upside": 12.5,
+      "price": 83.93,
+      "upside": 13.2,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -210,8 +204,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 124.24,
-      "upside": -3.4,
+      "price": 123.36,
+      "upside": -2.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -224,8 +218,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 258.68,
-      "upside": 9.8,
+      "price": 257.08,
+      "upside": 10.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -238,8 +232,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 258.68,
-      "upside": 15.2,
+      "price": 257.08,
+      "upside": 15.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -252,8 +246,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 124.24,
-      "upside": 14.3,
+      "price": 123.36,
+      "upside": 15.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -266,8 +260,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 124.24,
-      "upside": 20.7,
+      "price": 123.36,
+      "upside": 21.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -280,8 +274,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 124.24,
-      "upside": -9.0,
+      "price": 123.36,
+      "upside": -8.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -294,11 +288,11 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 167.15,
+      "price": 170.06,
       "upside": null,
       "held": false,
       "uni": true,
-      "qarp": "STRONG BUY"
+      "qarp": "BUY"
     },
     {
       "date": "2026-07-10",
@@ -308,8 +302,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$263",
-      "price": 258.68,
-      "upside": 1.7,
+      "price": 257.08,
+      "upside": 2.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -322,11 +316,25 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 149.64,
-      "upside": 10.9,
+      "price": 147.73,
+      "upside": 12.4,
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-07-13",
+      "ticker": "JNJ",
+      "firm": "RBC Capital",
+      "action": "Maintains",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$287",
+      "price": 257.08,
+      "upside": 11.6,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     },
     {
       "date": "2026-07-13",
@@ -336,8 +344,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 124.24,
-      "upside": 14.3,
+      "price": 123.36,
+      "upside": 15.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -350,14 +358,53 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 124.24,
-      "upside": 16.7,
+      "price": 123.36,
+      "upside": 17.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     }
   ],
   "bz_news": [
+    {
+      "title": "Trump’s Trillion‑Dollar Defense Push Could Be a Boon for Lockheed, RTX, Boeing and Northrop",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60417773/trumps-trillion%e2%80%91dollar-defense-push-could-be-a-boon-for-lockheed-rtx-boeing-and-northrop",
+      "ts": 1783954425,
+      "tickers": [
+        "LMT",
+        "RTX",
+        "BA",
+        "NOC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.356
+    },
+    {
+      "title": "Wells Fargo Maintains Overweight on UnitedHealth Group, Raises Price Target to $485",
+      "url": "https://www.benzinga.com/news/26/07/60416351/wells-fargo-maintains-overweight-unitedhealth-group-raises-price-target-485",
+      "ts": 1783952531,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.438
+    },
+    {
+      "title": "RBC Capital Maintains Outperform on Johnson & Johnson, Raises Price Target to $287",
+      "url": "https://www.benzinga.com/news/26/07/60416342/rbc-capital-maintains-outperform-johnson-johnson-raises-price-target-287",
+      "ts": 1783952527,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.454
+    },
     {
       "title": "Reported Earlier: 'Saudi Tech Firm NourNet Is Said to Pick Goldman, HSBC for IPO' - Bloomberg",
       "url": "https://www.benzinga.com/news/26/07/60414741/reported-earlier-saudi-tech-firm-nournet-said-pick-goldman-hsbc-ipo-bloomberg",
@@ -647,48 +694,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.37
-    },
-    {
-      "title": "Boeing To Showcase MQ-28 Ghost Bat Debut, Full-Size 777X Cabin, T-7 Simulator And CH-47 Chinook As Company Highlights Commercial, Defense And Services Portfolio At Farnborough International Airshow",
-      "url": "https://www.benzinga.com/quote/BA",
-      "ts": 1783927155,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.269
-    },
-    {
-      "title": "Nvidia, Micron, Broadcom, Applied Materials Set to Generate $430 Billion in Free Cash Flow as Tech Giants Bleed Cash",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60406621/nvidia-micron-broadcom-and-applied-materials-set-to-generate-430-billion-in-free-cash-flow",
-      "ts": 1783922967,
-      "tickers": [
-        "NVDA",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.467
-    },
-    {
-      "title": "Bank Earnings Week: Goldman, JPMorgan, Citi, BofA, Morgan Stanley Set to Deliver a Profit Bonanza",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60405656/bank-earnings-week-goldman-jpmorgan-citi-bofa-morgan-stanley-set-to-deliver-a-profit-bonanza",
-      "ts": 1783891887,
-      "tickers": [
-        "JPM",
-        "GS",
-        "BAC",
-        "MS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.326
     },
     {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
@@ -1296,12 +1301,7 @@
         "score": 1.09,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
-        "ts": 1783707180,
-        "url": "https://www.benzinga.com/news/26/07/60396959/b-securities-maintains-buy-coca-cola-raises-price-target-95",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
