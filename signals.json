@@ -1,6 +1,6 @@
 {
   "date": "2026-07-13",
-  "generated_at": "Jul 13, 11:45am ET",
+  "generated_at": "Jul 13, 11:50am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -132,18 +132,18 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Foundry, Fabricator & Idm Chip",
+      "dir": "down",
+      "driver": "Due to volatility initiated from South Korea after Samsung and SK Hynix …",
+      "note": "Due to volatility initiated from South Korea after Samsung and SK Hynix fell, dragging down the KOPSI and U.S. peers. Also, weakness within the industry may result from growing energy costs after the U.S. and Iran exchanged blows and President Trump's recent comments.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Financial Services",
       "dir": "up",
       "driver": "Declines in Treasury yields",
       "note": "Amid declines in Treasury yields, oil prices, and the U.S. dollar. The decline may ease inflation concerns and improve expectations for a more accommodative interest rate environment.",
       "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Foundry, Fabricator & Device Manufacturing Semiconductor",
-      "dir": "mixed",
-      "driver": "Reports that Meta will invest in hardware to double its in-house compute…",
-      "note": "After reports that Meta will invest in hardware to double its in-house compute capacity to 14GW next year. Also, Micron Technology's plan to increase U.S. investments to more than $250 billion through 2035 is supportive of chip hardware peers.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
@@ -190,8 +190,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$95",
-      "price": 83.79,
-      "upside": 13.4,
+      "price": 83.89,
+      "upside": 13.2,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -204,7 +204,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$120",
-      "price": 123.7,
+      "price": 123.71,
       "upside": -3.0,
       "held": false,
       "uni": true,
@@ -218,8 +218,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 257.84,
-      "upside": 10.1,
+      "price": 257.77,
+      "upside": 10.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -232,7 +232,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 257.84,
+      "price": 257.77,
       "upside": 15.6,
       "held": false,
       "uni": true,
@@ -246,7 +246,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 123.7,
+      "price": 123.71,
       "upside": 14.8,
       "held": false,
       "uni": true,
@@ -260,7 +260,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 123.7,
+      "price": 123.71,
       "upside": 21.3,
       "held": false,
       "uni": true,
@@ -274,8 +274,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 123.7,
-      "upside": -8.6,
+      "price": 123.71,
+      "upside": -8.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -288,7 +288,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 172.2,
+      "price": 171.96,
       "upside": null,
       "held": false,
       "uni": true,
@@ -302,7 +302,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$263",
-      "price": 257.84,
+      "price": 257.77,
       "upside": 2.0,
       "held": false,
       "uni": true,
@@ -316,7 +316,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 147.42,
+      "price": 147.38,
       "upside": 12.6,
       "held": false,
       "uni": true,
@@ -330,7 +330,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "price": 123.7,
+      "price": 123.71,
       "upside": 13.2,
       "held": false,
       "uni": true,
@@ -344,7 +344,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 257.84,
+      "price": 257.77,
       "upside": 11.3,
       "held": false,
       "uni": true,
@@ -358,7 +358,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 123.7,
+      "price": 123.71,
       "upside": 14.8,
       "held": false,
       "uni": true,
@@ -372,7 +372,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 123.7,
+      "price": 123.71,
       "upside": 17.2,
       "held": false,
       "uni": true,
@@ -380,6 +380,50 @@
     }
   ],
   "bz_news": [
+    {
+      "title": "Shares of foundry, fabricator and IDM chip companies are trading lower due to volatility initiated from South Korea after Samsung and SK Hynix fell, dragging down the KOPSI and U.S. peers. Also, weakness within the industry may result from growing energy costs after the U.S. and Iran exchanged blows and President Trump's recent comments",
+      "url": "https://www.benzinga.com/quote/GFS",
+      "ts": 1783957716,
+      "tickers": [
+        "INTC",
+        "STM",
+        "GFS"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.413
+    },
+    {
+      "title": "3 Shipping And Insurance Stocks To Watch As Hormuz Tensions Rise",
+      "url": "https://www.benzinga.com/Opinion/26/07/60419859/3-shipping-and-insurance-stocks-to-watch-as-hormuz-tensions-rise",
+      "ts": 1783957686,
+      "tickers": [
+        "STNG",
+        "CVX",
+        "XOM",
+        "INSW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.364
+    },
+    {
+      "title": "Big Bank Earnings Preview: Bank of America, JPMorgan Stocks Starting to Rally — Will This Laggard Be Next?",
+      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60419822/big-bank-earnings-preview-bank-of-america-jpmorgan-stocks-starting-to-rally-will-this-laggard-be-next",
+      "ts": 1783957625,
+      "tickers": [
+        "JPM",
+        "GS",
+        "WFC",
+        "BAC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.386
+    },
     {
       "title": "JP Morgan Maintains Overweight on Merck & Co, Raises Price Target to $140",
       "url": "https://www.benzinga.com/news/26/07/60419675/jp-morgan-maintains-overweight-merck-co-raises-price-target-140",
@@ -405,7 +449,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.403
+      "relevance": 0.402
     },
     {
       "title": "Oppenheimer Maintains Outperform on Caterpillar, Raises Price Target to $1105",
@@ -484,7 +528,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.377
+      "relevance": 0.376
     },
     {
       "title": "Benchmark Initiates Coverage On Walt Disney with Buy Rating, Announces Price Target of $115",
@@ -625,7 +669,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.504
+      "relevance": 0.503
     },
     {
       "title": "JP Morgan Upgrades American Express to Overweight, Raises Price Target to $400",
@@ -663,48 +707,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.272
-    },
-    {
-      "title": "5 Stock Picks Last Week From Wall Street's Most Accurate Analysts",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60408392/5-stock-picks-last-week-from-wall-streets-most-accurate-analysts-32",
-      "ts": 1783937777,
-      "tickers": [
-        "INTC",
-        "AMAT",
-        "WDC",
-        "APH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.382
-    },
-    {
-      "title": "Industry Comparison: Evaluating Apple Against Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
-      "url": "https://www.benzinga.com/news/26/07/60408039/industry-comparison-evaluating-apple-against-competitors-technology-hardware-storage-amp-peripherals",
-      "ts": 1783936722,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.391
-    },
-    {
-      "title": "Taiwan Semiconductor’s AI Boom Rolls On: June Revenue Jumps 68%",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60408014/taiwan-semiconductors-ai-boom-rolls-on-june-revenue-jumps-68",
-      "ts": 1783936474,
-      "tickers": [
-        "TSM",
-        "AAPL",
-        "AMD",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.556
     },
     {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
