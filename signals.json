@@ -1,6 +1,6 @@
 {
   "date": "2026-07-14",
-  "generated_at": "Jul 14, 8:24am ET",
+  "generated_at": "Jul 14, 9:13am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -394,6 +394,20 @@
     },
     {
       "date": "2026-07-14",
+      "ticker": "CRM",
+      "firm": "Evercore ISI Group",
+      "action": "Maintains",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$250",
+      "price": 171.22,
+      "upside": 46.0,
+      "held": false,
+      "uni": true,
+      "qarp": "BUY"
+    },
+    {
+      "date": "2026-07-14",
       "ticker": "AAPL",
       "firm": "Keybanc",
       "action": "Downgrades",
@@ -408,6 +422,15 @@
     }
   ],
   "rating_moves": {
+    "CRM": {
+      "date": "2026-07-14",
+      "firm": "Evercore ISI Group",
+      "action": "Maintains",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$250",
+      "upside": 46.0
+    },
     "AAPL": {
       "date": "2026-07-14",
       "firm": "Keybanc",
@@ -453,15 +476,6 @@
       "pt": "$95",
       "upside": 12.8
     },
-    "CRM": {
-      "date": "2026-07-09",
-      "firm": "Keybanc",
-      "action": "Downgrades",
-      "rating": "Sector Weight",
-      "stance": "neutral",
-      "pt": "",
-      "upside": null
-    },
     "CVX": {
       "date": "2026-07-02",
       "firm": "Wolfe Research",
@@ -482,6 +496,135 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Oppenheimer Reiterates Outperform on IBM, Raises Price Target to $350",
+      "url": "https://www.benzinga.com/news/26/07/60440625/oppenheimer-reiterates-outperform-ibm-raises-price-target-350",
+      "ts": 1784034355,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.47
+    },
+    {
+      "title": "David Solomon Says Clients Are Bringing Their Most Critical Deals to Goldman Sachs",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60440163/david-solomon-says-clients-are-bringing-their-most-critical-deals-to-goldman-sachs",
+      "ts": 1784034031,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.349
+    },
+    {
+      "title": "JPMorgan CEO Says The Timeline Of Succession Is Dependent On The Board",
+      "url": "https://www.benzinga.com/news/26/07/60439928/jpmorgan-ceo-says-timeline-succession-dependent-board",
+      "ts": 1784033893,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.235
+    },
+    {
+      "title": "Stock Market Today: Dow, S&P 500, Nasdaq 100 Futures Rise on Better-Than-Expected CPI Data—Tower Semiconductor, Twin Vee, JPMorgan In Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60434246/stock-market-today-dow-jones-futures-fall-nasdaq-100-gains-as-trump-calls-us-the-guardian-of-hormuz-strait-tower-semiconductor-twin-vee-jpmorgan-in-focus",
+      "ts": 1784033355,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "QQQ",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.478
+    },
+    {
+      "title": "Evercore ISI Group Maintains Outperform on Salesforce, Lowers Price Target to $250",
+      "url": "https://www.benzinga.com/news/26/07/60439634/evercore-isi-group-maintains-outperform-salesforce-lowers-price-target-250",
+      "ts": 1784033232,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.504
+    },
+    {
+      "title": "Morgan Stanley Maintains Equal-Weight on Honeywell Intl, Lowers Price Target to $245",
+      "url": "https://www.benzinga.com/news/26/07/60439586/morgan-stanley-maintains-equal-weight-honeywell-intl-lowers-price-target-245",
+      "ts": 1784033110,
+      "tickers": [
+        "HON"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.468
+    },
+    {
+      "title": "How To Earn $500 A Month From Johnson & Johnson Stock Ahead Of Q2 Earnings",
+      "url": "https://www.benzinga.com/trading-ideas/dividends/26/07/60439472/how-to-earn-500-a-month-from-johnson-johnson-stock-ahead-of-q2-earnings-2",
+      "ts": 1784032820,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.405
+    },
+    {
+      "title": "New York Just Hit Brakes on AI: Kathy Hochul To Reportedly Freeze New 50 MW Data Centers Amid Grid Strain",
+      "url": "https://www.benzinga.com/news/politics/26/07/60439336/new-york-just-hit-brakes-on-ai-kathy-hochul-to-reportedly-freeze-new-50-mw-data-centers-amid-grid-strain",
+      "ts": 1784032603,
+      "tickers": [
+        "META",
+        "MSFT",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.348
+    },
+    {
+      "title": "This Apple Analyst Turns Bearish; Here Are Top 5 Downgrades For Tuesday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60439139/this-progressive-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-tuesday",
+      "ts": 1784032283,
+      "tickers": [
+        "PGR",
+        "CSGP",
+        "TMHC",
+        "PSO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.525
+    },
+    {
+      "title": "Jamie Dimon Delivers Mixed Message: Economy Is Resilient, But Market Risks Are Mounting",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60438897/jamie-dimon-delivers-mixed-message-economy-is-resilient-but-market-risks-are-mounting",
+      "ts": 1784031925,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.353
+    },
     {
       "title": "12 Information Technology Stocks Moving In Tuesday's Pre-Market Session",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60438406/12-information-technology-stocks-moving-tuesday-s-pre-market-session",
@@ -558,7 +701,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.375
+      "relevance": 0.376
     },
     {
       "title": "Ranger Energy Services Inks Contract With Hess To Deploy Three Additional ECHO Hybrid Workover Rigs In Lower 48 U.S.",
@@ -674,137 +817,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.452
-    },
-    {
-      "title": "IBM Reported Prelim Q2 Sales Of $17.2B Vs. $17.86B Est., With Adjusted EPS Of $2.93 Vs. $3.022 Est.; CEO Says Q2 Results Are Disappointing In A letter To Investors",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60436548/ibm-reported-prelim-q2-sales-17-2b-vs-17-86b-est-adjusted-eps-2-93-vs-3-022-est-ceo-says-q2-results-",
-      "ts": 1784027353,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.5
-    },
-    {
-      "title": "Keybanc Downgrades Apple to Underweight, Announces $250 Price Target",
-      "url": "https://www.benzinga.com/news/26/07/60436507/keybanc-downgrades-apple-underweight-announces-250-price-target",
-      "ts": 1784027262,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.511
-    },
-    {
-      "title": "Apple Defies Smartphone Slump With Record Market Share",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60435944/apple-defies-smartphone-slump-with-record-market-share",
-      "ts": 1784026198,
-      "tickers": [
-        "AAPL",
-        "SSNLF",
-        "XIACY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.325
-    },
-    {
-      "title": "JPMorgan Chase Q2 Adj. EPS $6.14 Beats $5.79 Estimate, Sales $58.020B Beat $50.195B Estimate",
-      "url": "https://www.benzinga.com/quote/JPM",
-      "ts": 1784025995,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.403
-    },
-    {
-      "title": "Meta Stock Just Surged 21% in 3 Weeks: Shay Boloor Calls It the 'Market's Latest Darling'",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60435862/meta-stock-surged-in-3-weeks-shay-boloor-calls-its-markets-latest-darling",
-      "ts": 1784025918,
-      "tickers": [
-        "META",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.489
-    },
-    {
-      "title": "JP Morgan CEO Says U.S. Economy Has Demonstrated Notable Resiliency This Year, With Stronger Business Investment And Hiring; Several Risks Are Shifting, Including Geopolitical Tensions And Wars, Sticky Inflation, Large Global Fiscal Deficits And Elevated Asset Prices; Investment Banking Activity Accelerated In Q2, With IB Fees Up 30%, Market Sentiment Remains Constructive For Continued Activity; Results Included $4.6B Net Gain Related To Visa Shares",
-      "url": "https://www.benzinga.com/quote/JPM",
-      "ts": 1784025601,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.35
-    },
-    {
-      "title": "Insights Into Apple's Performance Versus Peers In Technology Hardware, Storage &amp; Peripherals Sector",
-      "url": "https://www.benzinga.com/news/26/07/60434545/insights-apple-s-performance-versus-peers-technology-hardware-storage-amp-peripherals-sector",
-      "ts": 1784023126,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.41
-    },
-    {
-      "title": "Stock Market Today: Dow Jones Futures Fall, Nasdaq 100 Gains as Trump Calls US the 'Guardian' of Hormuz Strait—Tower Semiconductor, Twin Vee, JPMorgan In Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60434246/stock-market-today-dow-jones-futures-fall-nasdaq-100-gains-as-trump-calls-us-the-guardian-of-hormuz-strait-tower-semiconductor-twin-vee-jpmorgan-in-focus",
-      "ts": 1784021286,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "QQQ",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.49
-    },
-    {
-      "title": "Mohamed El-Erian Says Kevin Warsh Is 'Serious' About Reforming the Fed, Restoring Political Independence",
-      "url": "https://www.benzinga.com/markets/macro-economic-events/26/07/60434225/mohamed-el-erian-says-kevin-warsh-is-serious-about-reforming-the-fed-restoring-political-independence",
-      "ts": 1784021162,
-      "tickers": [
-        "WMT",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.317
-    },
-    {
-      "title": "Disney Could Unlock 40% Upside by Returning to Its Pre-Streaming Model, Wells Fargo Says",
-      "url": "https://www.benzinga.com/news/entertainment/26/07/60434176/disney-could-unlock-40-upside-by-returning-to-its-pre-streaming-model-wells-fargo-says",
-      "ts": 1784020646,
-      "tickers": [
-        "DIS",
-        "GOOGL",
-        "GOOG",
-        "SONY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.354
     },
     {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
