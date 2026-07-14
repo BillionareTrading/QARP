@@ -1,6 +1,6 @@
 {
   "date": "2026-07-14",
-  "generated_at": "Jul 14, 4:35pm ET",
+  "generated_at": "Jul 14, 5:12pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,6 +168,12 @@
     }
   ],
   "holding_news": {
+    "AVGO": {
+      "title": "IBM Says AI Spending Isn't Crowding Out Cybersecurity. These ETFs Are Gaining Momentum",
+      "ts": 1784061381,
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60457784/ibm-says-ai-spending-isnt-crowding-out-cybersecurity-these-etfs-are-gaining-momentum",
+      "wiim": false
+    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1784050509,
@@ -184,12 +190,6 @@
       "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $97",
       "ts": 1784039777,
       "url": "https://www.benzinga.com/news/26/07/60444857/citigroup-maintains-buy-coca-cola-raises-price-target-97",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "Reported Earlier: 'New York Becomes First State To Impose Data Center Moratorium; Gov. Kathy Hochul (D) Signed An Order To Block New Facilities For A Year' - Washington Post",
-      "ts": 1784039365,
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60444517/reported-earlier-new-york-becomes-first-state-impose-data-center-moratorium-gov-kathy-hochul-d-signe",
       "wiim": false
     }
   },
@@ -523,6 +523,33 @@
   },
   "bz_news": [
     {
+      "title": "'OpenAI’s First Device Will Be Moveable, Screenless Speaker Built as AI Companion'- Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60458083/openai-s-first-device-will-be-moveable-screenless-speaker-built-ai-companion-bloomberg",
+      "ts": 1784062133,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.304
+    },
+    {
+      "title": "IBM Says AI Spending Isn't Crowding Out Cybersecurity. These ETFs Are Gaining Momentum",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60457784/ibm-says-ai-spending-isnt-crowding-out-cybersecurity-these-etfs-are-gaining-momentum",
+      "ts": 1784061381,
+      "tickers": [
+        "HACK",
+        "BUG",
+        "CIBR",
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.462
+    },
+    {
       "title": "'Goldman Raises $10 Billion From Latest High-Grade Bond Sale' - Bloomberg",
       "url": "https://www.benzinga.com/news/26/07/60457715/goldman-raises-10-billion-latest-high-grade-bond-sale-bloomberg",
       "ts": 1784061196,
@@ -823,30 +850,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.407
-    },
-    {
-      "title": "Goldman Sachs Group Q2 2026 Earnings Call Transcript",
-      "url": "https://www.benzinga.com/news/26/07/60449209/goldman-sachs-group-q2-2026-earnings-call-transcript",
-      "ts": 1784045975,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.465
-    },
-    {
-      "title": "JPMorgan Chase Reports Q2 2026 Results: Full Earnings Call Transcript",
-      "url": "https://www.benzinga.com/news/26/07/60449115/jpmorgan-chase-reports-q2-2026-results-full-earnings-call-transcript",
-      "ts": 1784045823,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.473
     },
     {
       "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -1303,9 +1306,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Reported Earlier: 'New York Becomes First State To Impose Data Center Moratorium; Gov. Kathy Hochul (D) Signed An Order To Block New Facilities For A Year' - Washington Post",
-        "ts": 1784039365,
-        "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60444517/reported-earlier-new-york-becomes-first-state-impose-data-center-moratorium-gov-kathy-hochul-d-signe",
+        "title": "IBM Says AI Spending Isn't Crowding Out Cybersecurity. These ETFs Are Gaining Momentum",
+        "ts": 1784061381,
+        "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60457784/ibm-says-ai-spending-isnt-crowding-out-cybersecurity-these-etfs-are-gaining-momentum",
         "wiim": false
       },
       "filings": {
