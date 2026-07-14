@@ -1,6 +1,6 @@
 {
   "date": "2026-07-14",
-  "generated_at": "Jul 14, 9:13am ET",
+  "generated_at": "Jul 14, 10:03am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -113,8 +113,8 @@
     "KO": "2026-07-28",
     "ADBE": "2026-09-10",
     "ABT": "2026-07-16",
-    "NOW": "2026-07-22",
     "ZTS": "2026-08-06",
+    "NOW": "2026-07-22",
     "RKLB": "2026-08-05",
     "DHR": "2026-07-21",
     "NVDA": "2026-08-25",
@@ -123,8 +123,8 @@
     "UBER": "2026-08-04",
     "SPGI": "2026-07-28",
     "GILD": "2026-07-30",
-    "NVS": "2026-07-21",
     "AVGO": "2026-09-02",
+    "NVS": "2026-07-21",
     "NBIX": "2026-07-30",
     "VRTX": "2026-08-03",
     "EFX": "2026-07-21"
@@ -133,17 +133,17 @@
   "sectors": [
     {
       "sector": "Foundry, Fabricator & Idm Chip",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Due to volatility initiated from South Korea after Samsung and SK Hynix …",
       "note": "Due to volatility initiated from South Korea after Samsung and SK Hynix fell, dragging down the KOPSI and U.S. peers. Also, weakness within the industry may result from growing energy costs after the U.S. and Iran exchanged blows and President Trump's recent comments.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Financial Services",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Declines in Treasury yields",
       "note": "Amid declines in Treasury yields, oil prices, and the U.S. dollar. The decline may ease inflation concerns and improve expectations for a more accommodative interest rate environment.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
@@ -168,6 +168,12 @@
     }
   ],
   "holding_news": {
+    "NOW": {
+      "title": "IBM Crashes 24%, Drags Big Tech and IT Services Stocks Into Selloff",
+      "ts": 1784037461,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60442792/ibm-crashes-24-drags-big-tech-and-it-services-stocks-into-selloff",
+      "wiim": false
+    },
     "AVGO": {
       "title": "Why Is UMC Stock Trading Higher Today?",
       "ts": 1784029480,
@@ -190,7 +196,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$95",
-      "price": 84.25,
+      "price": 84.19,
       "upside": 12.8,
       "held": true,
       "uni": true,
@@ -204,8 +210,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 257.77,
-      "upside": 10.2,
+      "price": 254.38,
+      "upside": 11.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -218,8 +224,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 257.77,
-      "upside": 15.6,
+      "price": 254.38,
+      "upside": 17.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -232,8 +238,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 124.03,
-      "upside": 14.5,
+      "price": 121.62,
+      "upside": 16.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -246,8 +252,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 124.03,
-      "upside": 20.9,
+      "price": 121.62,
+      "upside": 23.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -260,8 +266,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 124.03,
-      "upside": -8.9,
+      "price": 121.62,
+      "upside": -7.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -274,11 +280,11 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 171.22,
+      "price": 166.75,
       "upside": null,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-07-10",
@@ -288,8 +294,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$263",
-      "price": 257.77,
-      "upside": 2.0,
+      "price": 254.38,
+      "upside": 3.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -302,8 +308,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 148.37,
-      "upside": 11.9,
+      "price": 146.88,
+      "upside": 13.0,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -316,8 +322,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 257.77,
-      "upside": 16.4,
+      "price": 254.38,
+      "upside": 17.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -330,8 +336,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$365",
-      "price": 317.31,
-      "upside": 15.0,
+      "price": 313.84,
+      "upside": 16.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -344,8 +350,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "price": 124.03,
-      "upside": 12.9,
+      "price": 121.62,
+      "upside": 15.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -358,8 +364,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 257.77,
-      "upside": 11.3,
+      "price": 254.38,
+      "upside": 12.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -372,8 +378,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 124.03,
-      "upside": 14.5,
+      "price": 121.62,
+      "upside": 16.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -386,8 +392,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 124.03,
-      "upside": 16.9,
+      "price": 121.62,
+      "upside": 19.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -400,11 +406,11 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "price": 171.22,
-      "upside": 46.0,
+      "price": 166.75,
+      "upside": 49.9,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-07-14",
@@ -414,8 +420,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$250",
-      "price": 317.31,
-      "upside": -21.2,
+      "price": 313.84,
+      "upside": -20.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -429,7 +435,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "upside": 46.0
+      "upside": 49.9
     },
     "AAPL": {
       "date": "2026-07-14",
@@ -438,7 +444,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$250",
-      "upside": -21.2
+      "upside": -20.3
     },
     "MRK": {
       "date": "2026-07-13",
@@ -447,7 +453,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 12.9
+      "upside": 15.1
     },
     "JNJ": {
       "date": "2026-07-13",
@@ -456,7 +462,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "upside": 16.4
+      "upside": 17.9
     },
     "PG": {
       "date": "2026-07-10",
@@ -465,7 +471,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "upside": 11.9
+      "upside": 13.0
     },
     "KO": {
       "date": "2026-07-10",
@@ -483,7 +489,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "upside": 15.3
+      "upside": 15.4
     },
     "NKE": {
       "date": "2026-07-01",
@@ -492,10 +498,85 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$75",
-      "upside": 71.4
+      "upside": 73.7
     }
   },
   "bz_news": [
+    {
+      "title": "IBM Crashes 24%, Drags Big Tech and IT Services Stocks Into Selloff",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60442792/ibm-crashes-24-drags-big-tech-and-it-services-stocks-into-selloff",
+      "ts": 1784037461,
+      "tickers": [
+        "IBM",
+        "MSFT",
+        "CRM",
+        "ORCL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.424
+    },
+    {
+      "title": "Goldman Sachs shares are trading higher after the company reported better-than-expected Q2 financial results.",
+      "url": "https://www.benzinga.com/quote/GS",
+      "ts": 1784037431,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.433
+    },
+    {
+      "title": "Goldman CEO Says We Raised $31B In Private Credit In Q2; Says We Are Further Accelerating Growth Across Asset And Wealth Management Through Targeted Acquisitions; Says AI Buildout Is Still In Early Stages; Says Sponsor-Backed Deal Volumes Are Still Subdued Versus Historical Averages",
+      "url": "https://www.benzinga.com/news/26/07/60442254/goldman-ceo-says-we-raised-31b-private-credit-q2-says-we-are-further-accelerating-growth-across-asse",
+      "ts": 1784036785,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.353
+    },
+    {
+      "title": "Truist Securities Maintains Buy on UnitedHealth Group, Raises Price Target to $480",
+      "url": "https://www.benzinga.com/news/26/07/60441756/truist-securities-maintains-buy-unitedhealth-group-raises-price-target-480",
+      "ts": 1784036264,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.43
+    },
+    {
+      "title": "Goldman Sachs CEO David Solomon Says AI Investment Cycle Is Expanding Capital Needs Beyond Core Technology And Infrastructure, Energy, And Data Centers; Says Deals Backlogs Increased To Its Highest Level In Five Years; Says Client Activity Was Particularly Strong In Asia, Driven In Part By Robust AI Capital Formation And Investment",
+      "url": "https://www.benzinga.com/news/26/07/60441735/goldman-sachs-ceo-david-solomon-says-ai-investment-cycle-expanding-capital-needs-beyond-core-technol",
+      "ts": 1784036254,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.485
+    },
+    {
+      "title": "JPMorgan CEO Jamie Dimon Says We Have 1,000 AI Use Cases Across The Bank; Says We Have Areas Where We Did Reduce Jobs By 30% Or 40% Due To AI And Offer Most Of Those People Jobs Elsewhere",
+      "url": "https://www.benzinga.com/news/26/07/60440957/jpmorgan-ceo-jamie-dimon-says-we-have-1-000-ai-use-cases-across-bank-says-we-have-areas-where-we-did",
+      "ts": 1784035267,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.335
+    },
     {
       "title": "Oppenheimer Reiterates Outperform on IBM, Raises Price Target to $350",
       "url": "https://www.benzinga.com/news/26/07/60440625/oppenheimer-reiterates-outperform-ibm-raises-price-target-350",
@@ -701,7 +782,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.376
+      "relevance": 0.375
     },
     {
       "title": "Ranger Energy Services Inks Contract With Hess To Deploy Three Additional ECHO Hybrid Workover Rigs In Lower 48 U.S.",
@@ -739,84 +820,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.41
-    },
-    {
-      "title": "Goldman Sachs Gr Q2 EPS $20.98 Beats $14.40 Estimate, Sales $20.338B Beat $16.125B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60436985/goldman-sachs-gr-q2-eps-20-98-beats-14-40-estimate-sales-20-338b-beat-16-125b-estimate",
-      "ts": 1784028478,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.434
-    },
-    {
-      "title": "International Business Machines shares are trading lower after the company reported preliminary Q2 guidance below estimates.",
-      "url": "https://www.benzinga.com/quote/IBM",
-      "ts": 1784028441,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.467
-    },
-    {
-      "title": "Circle President Hails Company's 'Historic' Milestone—So Why Is CRCL Going Down?",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60436892/circle-president-hails-companys-historic-milestone-so-why-is-crcl-going-down",
-      "ts": 1784028195,
-      "tickers": [
-        "MA",
-        "$USDC",
-        "CRCL",
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.323
-    },
-    {
-      "title": "IBM CEO, In Shareholder Letter, Said Saw Clients Shift Quarterly Capex Spend Toward Servers, Storage, And Memory Purchases In Last Few Weeks Of June",
-      "url": "https://www.benzinga.com/quote/IBM",
-      "ts": 1784027838,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.49
-    },
-    {
-      "title": "Keybanc Maintains Overweight on Intel, Raises Price Target to $155",
-      "url": "https://www.benzinga.com/news/26/07/60436634/keybanc-maintains-overweight-intel-raises-price-target-155",
-      "ts": 1784027495,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.477
-    },
-    {
-      "title": "Earnings Scheduled For July 14, 2026",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60436617/earnings-scheduled-july-14-2026",
-      "ts": 1784027465,
-      "tickers": [
-        "PAC",
-        "JPM",
-        "FAST",
-        "BAC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.452
     },
     {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
@@ -864,7 +867,7 @@
   "portfolio_brief": {
     "ADBE": {
       "name": "Adobe",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 8,
         "buy": 9,
@@ -926,38 +929,6 @@
       },
       "explain": "35 analysts cover it — 25 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "NOW": {
-      "name": "ServiceNow",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 15,
-        "buy": 33,
-        "hold": 5,
-        "sell": 1,
-        "strongSell": 0,
-        "total": 54,
-        "bullish": 48,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.15,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-22",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000065/now-20260521.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-04-23",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
-        },
-        "insider30d": 1
-      },
-      "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "ZTS": {
       "name": "Zoetis",
       "qarp": "STRONG BUY",
@@ -989,6 +960,43 @@
         "insider30d": 1
       },
       "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "NOW": {
+      "name": "ServiceNow",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 15,
+        "buy": 33,
+        "hold": 5,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 54,
+        "bullish": 48,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.15,
+        "period": "2026-07-01"
+      },
+      "news": {
+        "title": "IBM Crashes 24%, Drags Big Tech and IT Services Stocks Into Selloff",
+        "ts": 1784037461,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60442792/ibm-crashes-24-drags-big-tech-and-it-services-stocks-into-selloff",
+        "wiim": false
+      },
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000065/now-20260521.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "RKLB": {
       "name": "Rocket Lab",
@@ -1189,7 +1197,7 @@
     },
     "SPGI": {
       "name": "S&P Global",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 11,
         "buy": 19,
@@ -1217,7 +1225,7 @@
         },
         "insider30d": 1
       },
-      "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "GILD": {
       "name": "Gilead Sciences",
@@ -1251,33 +1259,9 @@
       },
       "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
-    "NVS": {
-      "name": "Novartis",
-      "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 6,
-        "buy": 11,
-        "hold": 14,
-        "sell": 3,
-        "strongSell": 0,
-        "total": 34,
-        "bullish": 17,
-        "bearish": 3,
-        "label": "Buy",
-        "score": 0.59,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": null,
-        "periodic": null,
-        "insider30d": 0
-      },
-      "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-    },
     "AVGO": {
       "name": "Broadcom",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 17,
         "buy": 35,
@@ -1310,7 +1294,31 @@
         },
         "insider30d": 8
       },
-      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "NVS": {
+      "name": "Novartis",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 6,
+        "buy": 11,
+        "hold": 14,
+        "sell": 3,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 17,
+        "bearish": 3,
+        "label": "Buy",
+        "score": 0.59,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 0
+      },
+      "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
@@ -1480,25 +1488,6 @@
       "margin": 9.6,
       "summary": "Q1 FY2026 — revenue $11.2B (+7.8% YoY), diluted EPS $0.61 (-19.7% YoY), net margin 10%. (as reported, GAAP)"
     },
-    "NOW": {
-      "period": "Q1 FY2026",
-      "filed": "2026-04-23",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm",
-      "revenue": {
-        "fmt": "$3.8B",
-        "yoy": 22.1
-      },
-      "eps": {
-        "val": 0.45,
-        "yoy": 2.3
-      },
-      "net_income": {
-        "fmt": "$469M"
-      },
-      "margin": 12.4,
-      "summary": "Q1 FY2026 — revenue $3.8B (+22.1% YoY), diluted EPS $0.45 (+2.3% YoY), net margin 12%. (as reported, GAAP)"
-    },
     "ZTS": {
       "period": "Q1 FY2026",
       "filed": "2026-05-07",
@@ -1517,6 +1506,25 @@
       },
       "margin": 26.6,
       "summary": "Q1 FY2026 — revenue $2.3B (+2.9% YoY), diluted EPS $1.42 (+6.0% YoY), net margin 27%. (as reported, GAAP)"
+    },
+    "NOW": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-23",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm",
+      "revenue": {
+        "fmt": "$3.8B",
+        "yoy": 22.1
+      },
+      "eps": {
+        "val": 0.45,
+        "yoy": 2.3
+      },
+      "net_income": {
+        "fmt": "$469M"
+      },
+      "margin": 12.4,
+      "summary": "Q1 FY2026 — revenue $3.8B (+22.1% YoY), diluted EPS $0.45 (+2.3% YoY), net margin 12%. (as reported, GAAP)"
     },
     "RKLB": {
       "period": "Q1 FY2026",
@@ -1670,7 +1678,6 @@
       "margin": 29.0,
       "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
     },
-    "NVS": null,
     "AVGO": {
       "period": "Q2 FY2026",
       "filed": "2026-06-09",
@@ -1690,6 +1697,7 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
     },
+    "NVS": null,
     "NBIX": {
       "period": "Q1 FY2026",
       "filed": "2026-05-05",
