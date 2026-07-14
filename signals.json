@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-13",
-  "generated_at": "Jul 13, 7:08pm ET",
+  "date": "2026-07-14",
+  "generated_at": "Jul 14, 5:03am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 13",
+      "when": "Jul 14",
       "what": "Energy & geopolitics — today's read",
       "why": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
       "affects": "Energy · growth",
@@ -169,9 +169,9 @@
   ],
   "holding_news": {
     "NVDA": {
-      "title": "Quantum Tech on Capitol Hill: Nvidia, IBM and More Stocks to Watch",
-      "ts": 1783961510,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60422341/quantum-tech-on-capitol-hill-nvidia-ibm-and-more-stocks-to-watch",
+      "title": "Nasdaq Dips Over 400 Points Amid Renewed US-Iran Tensions: Greed Index Remains In ‘Fear' Zone",
+      "ts": 1784012250,
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60433144/nasdaq-dips-over-400-points-amid-renewed-us-iran-tensions-greed-index-remains-in-fear-zone",
       "wiim": false
     }
   },
@@ -187,20 +187,6 @@
       "price": 84.25,
       "upside": 12.8,
       "held": true,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-07-06",
-      "ticker": "MRK",
-      "firm": "Cantor Fitzgerald",
-      "action": "Reiterates",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$120",
-      "price": 124.03,
-      "upside": -3.2,
-      "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     },
@@ -401,7 +387,196 @@
       "qarp": "HOLD-QUAL"
     }
   ],
+  "rating_moves": {
+    "MRK": {
+      "date": "2026-07-13",
+      "firm": "JP Morgan",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$140",
+      "upside": 12.9
+    },
+    "JNJ": {
+      "date": "2026-07-13",
+      "firm": "TD Cowen",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$300",
+      "upside": 16.4
+    },
+    "AAPL": {
+      "date": "2026-07-13",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$365",
+      "upside": 15.0
+    },
+    "PG": {
+      "date": "2026-07-10",
+      "firm": "B of A Securities",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$166",
+      "upside": 11.9
+    },
+    "KO": {
+      "date": "2026-07-10",
+      "firm": "B of A Securities",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$95",
+      "upside": 12.8
+    },
+    "CRM": {
+      "date": "2026-07-09",
+      "firm": "Keybanc",
+      "action": "Downgrades",
+      "rating": "Sector Weight",
+      "stance": "neutral",
+      "pt": "",
+      "upside": null
+    },
+    "CVX": {
+      "date": "2026-07-02",
+      "firm": "Wolfe Research",
+      "action": "Upgrades",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$210",
+      "upside": 15.3
+    },
+    "NKE": {
+      "date": "2026-07-01",
+      "firm": "Jefferies",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$75",
+      "upside": 71.4
+    }
+  },
   "bz_news": [
+    {
+      "title": "Gavin Newsom Unveils $3,500 California EV Rebate, Says State Is Filling 'Void Left by Trump'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60433746/gavin-newsom-california-ev-rebate-trump-serving-clean-car-industry-to-china",
+      "ts": 1784016772,
+      "tickers": [
+        "TSLA",
+        "LCID",
+        "RIVN",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.252
+    },
+    {
+      "title": "Bitcoin Adoption by Major Banks 'Accelerating, But Still Early,' Says Michael Saylor as New Index Ranks JPMorgan, Goldman Sachs, and Others",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60433289/michael-saylor-unveils-new-strategy-created-index-tracking-bitcoin-adoption",
+      "ts": 1784013007,
+      "tickers": [
+        "$BTC",
+        "MSTR",
+        "JPM",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.307
+    },
+    {
+      "title": "Nasdaq Dips Over 400 Points Amid Renewed US-Iran Tensions: Greed Index Remains In ‘Fear' Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60433144/nasdaq-dips-over-400-points-amid-renewed-us-iran-tensions-greed-index-remains-in-fear-zone",
+      "ts": 1784012250,
+      "tickers": [
+        "NVDA",
+        "META",
+        "JPM",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.461
+    },
+    {
+      "title": "Michael Burry Reiterates 'What Really Matters… Is Not the Strait of Hormuz' Amid Trillions in AI Spending",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60433131/michael-burry-reiterates-what-really-matters-is-not-the-strait-of-hormuz-amid-trillions-in-ai-spending",
+      "ts": 1784011601,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.367
+    },
+    {
+      "title": "JPMorgan, Goldman Sachs And 3 Stocks To Watch Heading Into Tuesday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60433090/jpmorgan-goldman-sachs-and-3-stocks-to-watch-heading-into-tuesday",
+      "ts": 1784011180,
+      "tickers": [
+        "JPM",
+        "GS",
+        "WFC",
+        "BAC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.39
+    },
+    {
+      "title": "After Blasting Trump's Intel Deal, Gavin Newsom Jokes California Should Collect Tesla Shares for 'Corporate Welfare' Given to Elon Musk",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60432509/after-blasting-trumps-intel-deal-gavin-newsom-jokes-california-should-collect-tesla-shares-for-corporate-welfare-given-to-elon-musk",
+      "ts": 1784005756,
+      "tickers": [
+        "TSLA",
+        "AAPL",
+        "INTC",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.321
+    },
+    {
+      "title": "Jamie Dimon Rules Out White House Run: 'I'm a Banker, I'm a New Yorker'",
+      "url": "https://www.benzinga.com/news/topics/26/07/60432413/jamie-dimon-reveals-whats-next-after-jpmorgan",
+      "ts": 1784003121,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.23
+    },
+    {
+      "title": "After Satya Nadella's 'Pay Twice' Warning, Mark Cuban Says AI Is Making Patents Less Valuable, Trade Secrets More Important",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60432164/mark-cuban-says-ai-is-making-patents-less-valuable-and-trade-secrets-more-important",
+      "ts": 1783996094,
+      "tickers": [
+        "MSFT",
+        "BOX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.317
+    },
     {
       "title": "Amazon Announces OpenAI GPT-5.6 Models Now Generally Available On Amazon Bedrock",
       "url": "https://www.benzinga.com/news/26/07/60430860/amazon-announces-openai-gpt-5-6-models-now-generally-available-amazon-bedrock",
@@ -467,7 +642,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.417
+      "relevance": 0.416
     },
     {
       "title": "UBS Maintains Neutral on Intel, Raises Price Target to $121",
@@ -587,7 +762,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.414
+      "relevance": 0.413
     },
     {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
@@ -627,116 +802,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.422
-    },
-    {
-      "title": "Evercore ISI Group Maintains Outperform on Honeywell Intl, Raises Price Target to $275",
-      "url": "https://www.benzinga.com/news/26/07/60423256/evercore-isi-group-maintains-outperform-honeywell-intl-raises-price-target-275",
-      "ts": 1783962770,
-      "tickers": [
-        "HON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.475
-    },
-    {
-      "title": "Forget Interest Rates: Bank Earnings Could Reveal the Next Catalyst for Financial ETFs",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60423105/bank-earnings-could-reveal-next-catalyst-for-financial-etfs",
-      "ts": 1783962517,
-      "tickers": [
-        "XLF",
-        "IYF",
-        "JPM",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.417
-    },
-    {
-      "title": "Quantum Tech on Capitol Hill: Nvidia, IBM and More Stocks to Watch",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60422341/quantum-tech-on-capitol-hill-nvidia-ibm-and-more-stocks-to-watch",
-      "ts": 1783961510,
-      "tickers": [
-        "NVDA",
-        "IBM",
-        "RGTI",
-        "QBTS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.504
-    },
-    {
-      "title": "HSBC Maintains Hold on American Express, Raises Price Target to $329",
-      "url": "https://www.benzinga.com/news/26/07/60421675/hsbc-maintains-hold-american-express-raises-price-target-329",
-      "ts": 1783960542,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.422
-    },
-    {
-      "title": "Shares of foundry, fabricator and IDM chip companies are trading lower due to volatility initiated from South Korea after Samsung and SK Hynix fell, dragging down the KOPSI and U.S. peers. Also, weakness within the industry may result from growing energy costs after the U.S. and Iran exchanged blows and President Trump's recent comments",
-      "url": "https://www.benzinga.com/quote/GFS",
-      "ts": 1783957716,
-      "tickers": [
-        "INTC",
-        "STM",
-        "GFS"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.413
-    },
-    {
-      "title": "3 Shipping And Insurance Stocks To Watch As Hormuz Tensions Rise",
-      "url": "https://www.benzinga.com/Opinion/26/07/60419859/3-shipping-and-insurance-stocks-to-watch-as-hormuz-tensions-rise",
-      "ts": 1783957686,
-      "tickers": [
-        "STNG",
-        "CVX",
-        "XOM",
-        "INSW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.364
-    },
-    {
-      "title": "Big Bank Earnings Preview: Bank of America, JPMorgan Stocks Starting to Rally — Will This Laggard Be Next?",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60419822/big-bank-earnings-preview-bank-of-america-jpmorgan-stocks-starting-to-rally-will-this-laggard-be-next",
-      "ts": 1783957625,
-      "tickers": [
-        "JPM",
-        "GS",
-        "WFC",
-        "BAC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.386
-    },
-    {
-      "title": "JP Morgan Maintains Overweight on Merck & Co, Raises Price Target to $140",
-      "url": "https://www.benzinga.com/news/26/07/60419675/jp-morgan-maintains-overweight-merck-co-raises-price-target-140",
-      "ts": 1783957398,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.434
     },
     {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
@@ -991,9 +1056,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Quantum Tech on Capitol Hill: Nvidia, IBM and More Stocks to Watch",
-        "ts": 1783961510,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60422341/quantum-tech-on-capitol-hill-nvidia-ibm-and-more-stocks-to-watch",
+        "title": "Nasdaq Dips Over 400 Points Amid Renewed US-Iran Tensions: Greed Index Remains In ‘Fear' Zone",
+        "ts": 1784012250,
+        "url": "https://www.benzinga.com/markets/market-summary/26/07/60433144/nasdaq-dips-over-400-points-amid-renewed-us-iran-tensions-greed-index-remains-in-fear-zone",
         "wiim": false
       },
       "filings": {
