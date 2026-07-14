@@ -1,6 +1,6 @@
 {
   "date": "2026-07-14",
-  "generated_at": "Jul 14, 6:56am ET",
+  "generated_at": "Jul 14, 7:54am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,6 +168,12 @@
     }
   ],
   "holding_news": {
+    "AVGO": {
+      "title": "Why Is UMC Stock Trading Higher Today?",
+      "ts": 1784029480,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60437567/why-is-umc-stock-trading-higher-today",
+      "wiim": false
+    },
     "NVDA": {
       "title": "Nasdaq Dips Over 400 Points Amid Renewed US-Iran Tensions: Greed Index Remains In ‘Fear' Zone",
       "ts": 1784012250,
@@ -385,9 +391,32 @@
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-14",
+      "ticker": "AAPL",
+      "firm": "Keybanc",
+      "action": "Downgrades",
+      "rating": "Underweight",
+      "stance": "bearish",
+      "pt": "$250",
+      "price": 317.31,
+      "upside": -21.2,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "AAPL": {
+      "date": "2026-07-14",
+      "firm": "Keybanc",
+      "action": "Downgrades",
+      "rating": "Underweight",
+      "stance": "bearish",
+      "pt": "$250",
+      "upside": -21.2
+    },
     "MRK": {
       "date": "2026-07-13",
       "firm": "JP Morgan",
@@ -405,15 +434,6 @@
       "stance": "bullish",
       "pt": "$300",
       "upside": 16.4
-    },
-    "AAPL": {
-      "date": "2026-07-13",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$365",
-      "upside": 15.0
     },
     "PG": {
       "date": "2026-07-10",
@@ -463,6 +483,184 @@
   },
   "bz_news": [
     {
+      "title": "Keybanc Maintains Overweight on UnitedHealth Group, Raises Price Target to $475",
+      "url": "https://www.benzinga.com/news/26/07/60437773/keybanc-maintains-overweight-unitedhealth-group-raises-price-target-475",
+      "ts": 1784029963,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.462
+    },
+    {
+      "title": "IBM Spooks Investors With Sub-Optimal Outlook",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60437723/ibm-spooks-investors-with-sub-optimal-outlook",
+      "ts": 1784029868,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.419
+    },
+    {
+      "title": "Why Is UMC Stock Trading Higher Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60437567/why-is-umc-stock-trading-higher-today",
+      "ts": 1784029480,
+      "tickers": [
+        "UMC",
+        "INTC",
+        "AVGO",
+        "TXN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.375
+    },
+    {
+      "title": "Ranger Energy Services Inks Contract With Hess To Deploy Three Additional ECHO Hybrid Workover Rigs In Lower 48 U.S.",
+      "url": "https://www.benzinga.com/news/26/07/60437334/ranger-energy-services-inks-contract-hess-deploy-three-additional-echo-hybrid-workover-rigs-lower-48",
+      "ts": 1784028921,
+      "tickers": [
+        "RNGR",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.303
+    },
+    {
+      "title": "Barclays Maintains Overweight on Walt Disney, Lowers Price Target to $110",
+      "url": "https://www.benzinga.com/news/26/07/60437211/barclays-maintains-overweight-walt-disney-lowers-price-target-110",
+      "ts": 1784028664,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.449
+    },
+    {
+      "title": "Goldman Sachs Raises Quarterly Dividend From $4.50 To $5.00/Shr",
+      "url": "https://www.benzinga.com/quote/GS",
+      "ts": 1784028609,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.41
+    },
+    {
+      "title": "Goldman Sachs Gr Q2 EPS $20.98 Beats $14.40 Estimate, Sales $20.338B Beat $16.125B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60436985/goldman-sachs-gr-q2-eps-20-98-beats-14-40-estimate-sales-20-338b-beat-16-125b-estimate",
+      "ts": 1784028478,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.434
+    },
+    {
+      "title": "International Business Machines shares are trading lower after the company reported preliminary Q2 guidance below estimates.",
+      "url": "https://www.benzinga.com/quote/IBM",
+      "ts": 1784028441,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.467
+    },
+    {
+      "title": "Circle President Hails Company's 'Historic' Milestone—So Why Is CRCL Going Down?",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60436892/circle-president-hails-companys-historic-milestone-so-why-is-crcl-going-down",
+      "ts": 1784028195,
+      "tickers": [
+        "MA",
+        "$USDC",
+        "CRCL",
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.323
+    },
+    {
+      "title": "IBM CEO, In Shareholder Letter, Said Saw Clients Shift Quarterly Capex Spend Toward Servers, Storage, And Memory Purchases In Last Few Weeks Of June",
+      "url": "https://www.benzinga.com/quote/IBM",
+      "ts": 1784027838,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.49
+    },
+    {
+      "title": "Keybanc Maintains Overweight on Intel, Raises Price Target to $155",
+      "url": "https://www.benzinga.com/news/26/07/60436634/keybanc-maintains-overweight-intel-raises-price-target-155",
+      "ts": 1784027495,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.478
+    },
+    {
+      "title": "Earnings Scheduled For July 14, 2026",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60436617/earnings-scheduled-july-14-2026",
+      "ts": 1784027465,
+      "tickers": [
+        "PAC",
+        "JPM",
+        "FAST",
+        "BAC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.452
+    },
+    {
+      "title": "IBM Reported Prelim Q2 Sales Of $17.2B Vs. $17.86B Est., With Adjusted EPS Of $2.93 Vs. $3.022 Est.; CEO Says Q2 Results Are Disappointing In A letter To Investors",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60436548/ibm-reported-prelim-q2-sales-17-2b-vs-17-86b-est-adjusted-eps-2-93-vs-3-022-est-ceo-says-q2-results-",
+      "ts": 1784027353,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.5
+    },
+    {
+      "title": "Keybanc Downgrades Apple to Underweight, Announces $250 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60436507/keybanc-downgrades-apple-underweight-announces-250-price-target",
+      "ts": 1784027262,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.511
+    },
+    {
       "title": "Apple Defies Smartphone Slump With Record Market Share",
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60435944/apple-defies-smartphone-slump-with-record-market-share",
       "ts": 1784026198,
@@ -486,7 +684,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.403
+      "relevance": 0.402
     },
     {
       "title": "Meta Stock Just Surged 21% in 3 Weeks: Shay Boloor Calls It the 'Market's Latest Darling'",
@@ -613,194 +811,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.461
-    },
-    {
-      "title": "Michael Burry Reiterates 'What Really Matters… Is Not the Strait of Hormuz' Amid Trillions in AI Spending",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60433131/michael-burry-reiterates-what-really-matters-is-not-the-strait-of-hormuz-amid-trillions-in-ai-spending",
-      "ts": 1784011601,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.367
-    },
-    {
-      "title": "JPMorgan, Goldman Sachs And 3 Stocks To Watch Heading Into Tuesday",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60433090/jpmorgan-goldman-sachs-and-3-stocks-to-watch-heading-into-tuesday",
-      "ts": 1784011180,
-      "tickers": [
-        "JPM",
-        "GS",
-        "WFC",
-        "BAC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.39
-    },
-    {
-      "title": "After Blasting Trump's Intel Deal, Gavin Newsom Jokes California Should Collect Tesla Shares for 'Corporate Welfare' Given to Elon Musk",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60432509/after-blasting-trumps-intel-deal-gavin-newsom-jokes-california-should-collect-tesla-shares-for-corporate-welfare-given-to-elon-musk",
-      "ts": 1784005756,
-      "tickers": [
-        "TSLA",
-        "AAPL",
-        "INTC",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.321
-    },
-    {
-      "title": "Jamie Dimon Rules Out White House Run: 'I'm a Banker, I'm a New Yorker'",
-      "url": "https://www.benzinga.com/news/topics/26/07/60432413/jamie-dimon-reveals-whats-next-after-jpmorgan",
-      "ts": 1784003121,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.23
-    },
-    {
-      "title": "After Satya Nadella's 'Pay Twice' Warning, Mark Cuban Says AI Is Making Patents Less Valuable, Trade Secrets More Important",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60432164/mark-cuban-says-ai-is-making-patents-less-valuable-and-trade-secrets-more-important",
-      "ts": 1783996094,
-      "tickers": [
-        "MSFT",
-        "BOX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.317
-    },
-    {
-      "title": "Amazon Announces OpenAI GPT-5.6 Models Now Generally Available On Amazon Bedrock",
-      "url": "https://www.benzinga.com/news/26/07/60430860/amazon-announces-openai-gpt-5-6-models-now-generally-available-amazon-bedrock",
-      "ts": 1783977341,
-      "tickers": [
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.243
-    },
-    {
-      "title": "Cisco Systems Maintains 1,063,980 CoreWeave Shares; Adds 237,375 Space Exploration Technologies Shares; 21,398 Navan Shares; 2,319 Rubrik Shares.",
-      "url": "https://www.benzinga.com/m/26/07/60430223/cisco-systems-maintains-1-063-980-coreweave-shares-adds-237-375-space-exploration-technologies-share",
-      "ts": 1783975377,
-      "tickers": [
-        "CSCO",
-        "NAVN",
-        "RBRK",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.365
-    },
-    {
-      "title": "Epic vs. Apple Enters New Phase as Court Battle Over App Store Fees Escalates",
-      "url": "https://www.benzinga.com/markets/private-markets/26/07/60429456/epic-vs-apple-enters-new-phase-as-court-battle-over-app-store-fees-escalates",
-      "ts": 1783973771,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.232
-    },
-    {
-      "title": "Big Bank Earnings Hit Tuesday: JPMorgan Headlines the Slate, but the Widest Implied Move Lies Elsewhere",
-      "url": "https://www.benzinga.com/markets/options/26/07/60429228/big-bank-earnings-hit-tuesday-jpmorgan-headlines-the-slate-but-the-widest-implied-move-lies-elsewhere",
-      "ts": 1783973286,
-      "tickers": [
-        "JPM",
-        "GS",
-        "WFC",
-        "BAC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.405
-    },
-    {
-      "title": "Salesforce Stock Is Testing a Level That Could Define the Next Move",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60427523/salesforce-stock-is-testing-a-level-that-could-define-the-next-move",
-      "ts": 1783969576,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.416
-    },
-    {
-      "title": "UBS Maintains Neutral on Intel, Raises Price Target to $121",
-      "url": "https://www.benzinga.com/news/26/07/60426234/ubs-maintains-neutral-intel-raises-price-target-121",
-      "ts": 1783967223,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.496
-    },
-    {
-      "title": "TD Cowen Downgrades Travelers Companies to Sell, Maintains Price Target to $297",
-      "url": "https://www.benzinga.com/news/26/07/60426173/td-cowen-downgrades-travelers-companies-sell-maintains-price-target-297",
-      "ts": 1783967127,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.48
-    },
-    {
-      "title": "Meta and xAI Just Strengthened Nvidia's AI Moat, Portfolio Manager Says",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60426151/meta-xai-just-strengthened-nvidia-ai-moat",
-      "ts": 1783967110,
-      "tickers": [
-        "META",
-        "NVDA",
-        "SPCX",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.496
-    },
-    {
-      "title": "UBS Maintains Buy on Amgen, Raises Price Target to $420",
-      "url": "https://www.benzinga.com/news/26/07/60426039/ubs-maintains-buy-amgen-raises-price-target-420",
-      "ts": 1783966934,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.478
     },
     {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
@@ -1275,7 +1285,12 @@
         "score": 1.21,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Why Is UMC Stock Trading Higher Today?",
+        "ts": 1784029480,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60437567/why-is-umc-stock-trading-higher-today",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
