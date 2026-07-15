@@ -1,6 +1,6 @@
 {
   "date": "2026-07-15",
-  "generated_at": "Jul 15, 5:07am ET",
+  "generated_at": "Jul 15, 6:11am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -184,12 +184,6 @@
       "title": "Bank Earnings Indicate Strong Economy; IBM Drops Dragging Software; Warsh Says No Tolerance For Inflation",
       "ts": 1784058180,
       "url": "https://www.benzinga.com/Opinion/26/07/60456071/bank-earnings-indicate-strong-economy-ibm-drops-dragging-software-warsh-says-no-tolerance-for-inflation",
-      "wiim": false
-    },
-    "KO": {
-      "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $97",
-      "ts": 1784039777,
-      "url": "https://www.benzinga.com/news/26/07/60444857/citigroup-maintains-buy-coca-cola-raises-price-target-97",
       "wiim": false
     }
   },
@@ -523,6 +517,85 @@
   },
   "bz_news": [
     {
+      "title": "ASML Unveils Bold Capacity Expansion As AI Customers Keep Spending",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60462317/asml-unveils-bold-capacity-expansion-as-ai-customers-keep-spending",
+      "ts": 1784109981,
+      "tickers": [
+        "ASML",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.576
+    },
+    {
+      "title": "IBM Launches Power Autonomous Operations AI Agent To Help Continuously Monitor Power Systems And Autonomously Resolve Issues",
+      "url": "https://www.benzinga.com/news/26/07/60462305/ibm-launches-power-autonomous-operations-ai-agent-help-continuously-monitor-power-systems-and-autono",
+      "ts": 1784109944,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.363
+    },
+    {
+      "title": "Evaluating Microsoft Against Peers In Software Industry",
+      "url": "https://www.benzinga.com/news/26/07/60461976/evaluating-microsoft-against-peers-software-industry",
+      "ts": 1784109537,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.338
+    },
+    {
+      "title": "Oracle Leads AWS, Microsoft, Google in Race to Build Japan's Secret Cloud Project to Counter Chinese Hacking Threats: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60461892/oracle-leads-aws-microsoft-google-in-race-to-build-japans-secret-cloud-project-to-counter-chinese-hacking-threats-report",
+      "ts": 1784108369,
+      "tickers": [
+        "AMZN",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.399
+    },
+    {
+      "title": "Why Is IBM's Preliminary Report A Buy Signal For AI Beneficiaries?",
+      "url": "https://www.benzinga.com/Opinion/26/07/60461827/ibm-preliminary-report-a-buy-signal-for-ai-beneficiaries",
+      "ts": 1784107944,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.422
+    },
+    {
+      "title": "Stock Market Today: Dow Jones, S&P 500 Futures Gain as Trump Vows 'Very Hard' Strikes on Iran—Pentair, ASML Holding, Intel in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60461692/stock-market-today-dow-jones-sp-500-futures-gain-as-trump-vows-very-hard-strikes-on-iran-pentair-asml-holding-intel-in-focus",
+      "ts": 1784107225,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "INTC",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.475
+    },
+    {
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
       "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60461322/sp500-july-15-open-up-or-down-polymarket-cpi-fed-rate-hike-inflation",
       "ts": 1784103920,
@@ -768,86 +841,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.333
-    },
-    {
-      "title": "Shares of foundry, fabricator and IDM chip companies are trading higher after cooler June CPI data helped bring down bond yields and expectations for Fed rate hikes, which cuts borrowing costs for the growth-oriented industry. Also, reports suggesting that shipments of H200 chips to China have begun is supportive of the sector.",
-      "url": "https://www.benzinga.com/quote/TSEM",
-      "ts": 1784054306,
-      "tickers": [
-        "INTC",
-        "STM",
-        "TSEM"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.438
-    },
-    {
-      "title": "IBM Heads for Worst Day Ever — But Why Are Cybersecurity Stocks Up?",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60453923/ibm-heads-for-worst-day-ever-but-why-are-cybersecurity-stocks-up",
-      "ts": 1784053908,
-      "tickers": [
-        "CRWD",
-        "IBM",
-        "OKTA",
-        "PANW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.396
-    },
-    {
-      "title": "Goldman Sachs CEO Says AI Boom Is Still in the ‘Early Innings'",
-      "url": "https://www.benzinga.com/markets/large-cap/26/07/60453760/goldman-sachs-ceo-says-ai-boom-is-still-in-the-early-innings",
-      "ts": 1784053685,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.379
-    },
-    {
-      "title": "Morgan Stanley Stock Climbs: What's Happening Today?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60453466/morgan-stanley-stock-climbs-whats-happening-today",
-      "ts": 1784053214,
-      "tickers": [
-        "MS",
-        "JPM",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.471
-    },
-    {
-      "title": "JPMorgan Says Markets Are 'Extremely Risk-On'",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60453371/jpmorgan-says-markets-are-extremely-risk-on",
-      "ts": 1784053016,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.338
-    },
-    {
-      "title": "'Verizon Plans New Round of Layoffs This Week' - Barrons Exclusive",
-      "url": "https://www.benzinga.com/news/26/07/60452210/verizon-plans-new-round-layoffs-week-barrons-exclusive",
-      "ts": 1784050673,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.347
+      "relevance": 0.332
     },
     {
       "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -1475,12 +1469,7 @@
         "score": 1.09,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $97",
-        "ts": 1784039777,
-        "url": "https://www.benzinga.com/news/26/07/60444857/citigroup-maintains-buy-coca-cola-raises-price-target-97",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
