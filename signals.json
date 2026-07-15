@@ -1,6 +1,6 @@
 {
   "date": "2026-07-15",
-  "generated_at": "Jul 15, 10:08am ET",
+  "generated_at": "Jul 15, 11:05am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -118,8 +118,8 @@
     "RKLB": "2026-08-05",
     "DHR": "2026-07-21",
     "NVDA": "2026-08-25",
-    "LULU": "2026-09-02",
     "BSX": "2026-07-29",
+    "LULU": "2026-09-02",
     "UBER": "2026-08-05",
     "SPGI": "2026-07-28",
     "GILD": "2026-07-30",
@@ -132,11 +132,18 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Insurance & Reinsurance",
+      "dir": "mixed",
+      "driver": "Sympathy with Progressive after that company reported Q2 financial resul…",
+      "note": "Amid sympathy with Progressive after that company reported Q2 financial results that included weak policies-in-force and underwriting margins.",
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
+    },
+    {
       "sector": "Foundry, Fabricator & Idm Chip",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Cooler June CPI data helped bring down bond yields and expectations for …",
       "note": "After cooler June CPI data helped bring down bond yields and expectations for Fed rate hikes, which cuts borrowing costs for the growth-oriented industry. Also, reports suggesting that shipments of H200 chips to China have begun is supportive of the sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Financial Services",
@@ -147,10 +154,10 @@
     },
     {
       "sector": "Oil & Gas",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Reports suggesting that multiple ships",
       "note": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Grocery Retailers",
@@ -158,20 +165,19 @@
       "driver": "Ahead of the 4th of July holiday weekend",
       "note": "Ahead of the 4th of July holiday weekend.",
       "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Software",
-      "dir": "up",
-      "driver": "A Guggenheim report suggested that AI concerns may be overblown",
-      "note": "After a Guggenheim report suggested that AI concerns may be overblown.",
-      "src": "Benzinga WIIM · price-confirmed"
     }
   ],
   "holding_news": {
     "NVDA": {
-      "title": "Morgan Stanley, JPMorgan, Invesco and a Key Tech Stock on CNBC’s ‘Final Trades’",
-      "ts": 1784121792,
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60468386/morgan-stanley-jpmorgan-invesco-and-a-key-tech-stock-on-cnbcs-final-trades",
+      "title": "Apple Intelligence Finally Cleared for China: Here's Which Stocks Are Popping on the News",
+      "ts": 1784124511,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60470681/apple-intelligence-finally-cleared-for-china-heres-which-stocks-are-popping-on-the-news",
+      "wiim": false
+    },
+    "NOW": {
+      "title": "'Big Short' Investor Steve Eisman Says AI Has 'No Moats,' Which Is 'Not A Recipe For Longevity'",
+      "ts": 1784126834,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60472881/big-short-investor-steve-eisman-says-ai-has-no-moats-which-is-not-a-recipe-for-longevity",
       "wiim": false
     }
   },
@@ -184,8 +190,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$95",
-      "price": 82.6,
-      "upside": 15.0,
+      "price": 82.96,
+      "upside": 14.5,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -198,8 +204,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "price": 82.6,
-      "upside": 17.4,
+      "price": 82.96,
+      "upside": 16.9,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -212,8 +218,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$284",
-      "price": 252.97,
-      "upside": 12.3,
+      "price": 253.18,
+      "upside": 12.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -226,8 +232,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$298",
-      "price": 252.97,
-      "upside": 17.8,
+      "price": 253.18,
+      "upside": 17.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -240,8 +246,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 123.46,
-      "upside": 15.0,
+      "price": 123.69,
+      "upside": 14.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -254,8 +260,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 123.46,
-      "upside": 21.5,
+      "price": 123.69,
+      "upside": 21.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -268,8 +274,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 123.46,
-      "upside": -8.5,
+      "price": 123.69,
+      "upside": -8.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -282,7 +288,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 171.35,
+      "price": 169.23,
       "upside": null,
       "held": false,
       "uni": true,
@@ -296,8 +302,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$263",
-      "price": 252.97,
-      "upside": 4.0,
+      "price": 253.18,
+      "upside": 3.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -310,8 +316,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 146.19,
-      "upside": 13.6,
+      "price": 148.07,
+      "upside": 12.1,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -324,8 +330,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 252.97,
-      "upside": 18.6,
+      "price": 253.18,
+      "upside": 18.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -338,8 +344,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$365",
-      "price": 322.93,
-      "upside": 13.0,
+      "price": 324.11,
+      "upside": 12.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -352,8 +358,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "price": 123.46,
-      "upside": 13.4,
+      "price": 123.69,
+      "upside": 13.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -366,8 +372,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 252.97,
-      "upside": 13.5,
+      "price": 253.18,
+      "upside": 13.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -380,8 +386,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 123.46,
-      "upside": 15.0,
+      "price": 123.69,
+      "upside": 14.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -394,8 +400,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 123.46,
-      "upside": 17.4,
+      "price": 123.69,
+      "upside": 17.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -408,8 +414,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "price": 171.35,
-      "upside": 45.9,
+      "price": 169.23,
+      "upside": 47.7,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -422,8 +428,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$250",
-      "price": 322.93,
-      "upside": -22.6,
+      "price": 324.11,
+      "upside": -22.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -437,7 +443,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "upside": 45.9
+      "upside": 47.7
     },
     "KO": {
       "date": "2026-07-14",
@@ -446,7 +452,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 17.4
+      "upside": 16.9
     },
     "AAPL": {
       "date": "2026-07-14",
@@ -455,7 +461,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$250",
-      "upside": -22.6
+      "upside": -22.9
     },
     "MRK": {
       "date": "2026-07-13",
@@ -464,7 +470,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 13.4
+      "upside": 13.2
     },
     "JNJ": {
       "date": "2026-07-13",
@@ -473,7 +479,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "upside": 18.6
+      "upside": 18.5
     },
     "PG": {
       "date": "2026-07-10",
@@ -482,7 +488,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "upside": 13.6
+      "upside": 12.1
     },
     "CVX": {
       "date": "2026-07-02",
@@ -491,7 +497,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "upside": 16.5
+      "upside": 16.7
     },
     "NKE": {
       "date": "2026-07-01",
@@ -500,10 +506,162 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$75",
-      "upside": 74.7
+      "upside": 72.7
     }
   },
   "bz_news": [
+    {
+      "title": "Major League Soccer Returns To Apple TV On July 16, 2026",
+      "url": "https://www.benzinga.com/news/26/07/60473643/major-league-soccer-returns-apple-tv-july-16-2026",
+      "ts": 1784127847,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.241
+    },
+    {
+      "title": "Chamath Palihapitiya Sees ‘Very Obvious Industrial Logic’ in SpaceX Acquiring Tesla to Fund Elon Musk’s Broad Swath Of Projects",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60473440/chamath-palihapitiya-sees-very-obvious-industrial-logic-in-spacex-acquiring-tesla-to-fund-elon-musks-broad-swath-of-projects",
+      "ts": 1784127665,
+      "tickers": [
+        "TSLA",
+        "IBM",
+        "SATS",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.317
+    },
+    {
+      "title": "'Big Short' Investor Steve Eisman Says AI Has 'No Moats,' Which Is 'Not A Recipe For Longevity'",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60472881/big-short-investor-steve-eisman-says-ai-has-no-moats-which-is-not-a-recipe-for-longevity",
+      "ts": 1784126834,
+      "tickers": [
+        "GOOGL",
+        "AAPL",
+        "MSFT",
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.305
+    },
+    {
+      "title": "Shares of insurance and reinsurance companies are trading lower amid sympathy with Progressive after that company reported Q2 financial results that included weak policies-in-force and underwriting margins.",
+      "url": "https://www.benzinga.com/quote/TRV",
+      "ts": 1784126307,
+      "tickers": [
+        "ALL",
+        "RNR",
+        "PRHI",
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.396
+    },
+    {
+      "title": "'Microsoft Gives Salespeople Tips to Knock Down Anthropic, OpenAI' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60472374/microsoft-gives-salespeople-tips-knock-down-anthropic-openai-bloomberg",
+      "ts": 1784126248,
+      "tickers": [
+        "MSFT",
+        "AMZN",
+        "GOOG",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.292
+    },
+    {
+      "title": "'Apple Hunts for AI Chip Acquisitions; Apple's In-House M2 Ultra Chips Haven’t Proven Sufficient For Running Advanced AI Workloads, Forcing NVIDIA Reliance; A Future Version Of Apple’s AI Server Chip, Code-Named Baltra, Was Originally Supposed To Ship This Year, But It Has Been Delayed - The Information",
+      "url": "https://www.benzinga.com/news/26/07/60472201/apple-hunts-ai-chip-acquisitions-apple-s-house-m2-ultra-chips-haven-t-proven-sufficient-running-adva",
+      "ts": 1784126040,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.433
+    },
+    {
+      "title": "What Is Going on With Intel Stock on Wednesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60472191/what-is-going-on-with-intel-stock-on-wednesday",
+      "ts": 1784126026,
+      "tickers": [
+        "INTC",
+        "SMH",
+        "ASML",
+        "IGPT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.389
+    },
+    {
+      "title": "3M shares are trading higher after the company announced that Microsoft Azure will be the first hyperscale cloud services provider to use its expanded beam optical technology.",
+      "url": "https://www.benzinga.com/quote/MMM",
+      "ts": 1784125895,
+      "tickers": [
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.364
+    },
+    {
+      "title": "Elevance Health's Small Outlook Boost Disappoints, Stock Sinks",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60471497/elevance-healths-small-outlook-boost-disappoints-stock-sinks",
+      "ts": 1784125353,
+      "tickers": [
+        "ELV",
+        "UNH",
+        "CNC",
+        "MOH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.404
+    },
+    {
+      "title": "These Analysts Raise Their Forecasts On JPMorgan Following Better-Than-Expected Q2 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60470937/these-analysts-raise-their-forecasts-on-jpmorgan-following-better-than-expected-q2-earnings",
+      "ts": 1784124793,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.434
+    },
+    {
+      "title": "Apple Intelligence Finally Cleared for China: Here's Which Stocks Are Popping on the News",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60470681/apple-intelligence-finally-cleared-for-china-heres-which-stocks-are-popping-on-the-news",
+      "ts": 1784124511,
+      "tickers": [
+        "AAPL",
+        "BABA",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.371
+    },
     {
       "title": "Scotiabank Maintains Sector Outperform on Verizon Communications, Lowers Price Target to $51.5",
       "url": "https://www.benzinga.com/news/26/07/60470075/scotiabank-maintains-sector-outperform-verizon-communications-lowers-price-target-51-5",
@@ -541,7 +699,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.482
+      "relevance": 0.483
     },
     {
       "title": "Morgan Stanley, JPMorgan, Invesco and a Key Tech Stock on CNBC’s ‘Final Trades’",
@@ -613,19 +771,6 @@
       "relevance": 0.452
     },
     {
-      "title": "3M Announces That Microsoft's Azure Cloud And AI Infrastructure Will Become The First Hyperscale Cloud Provider To Deploy Its Expanded Beam Optical Technology",
-      "url": "https://www.benzinga.com/news/26/07/60467937/3m-announces-microsoft-s-azure-cloud-and-ai-infrastructure-will-become-first-hyperscale-cloud-provid",
-      "ts": 1784120724,
-      "tickers": [
-        "MMM",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.423
-    },
-    {
       "title": "'JPMorgan, BlackRock and Goldman to Tokenize Stocks, Treasurys' - Wall Street Journal Exclusive",
       "url": "https://www.benzinga.com/news/26/07/60467204/jpmorgan-blackrock-and-goldman-tokenize-stocks-treasurys-wall-street-journal-exclusive",
       "ts": 1784120133,
@@ -688,143 +833,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.346
-    },
-    {
-      "title": "FTC Says CVS Caremark Settlement Could Save Consumers Upto $13 Billion",
-      "url": "https://www.benzinga.com/news/health-care/26/07/60466156/ftc-says-cvs-caremark-settlement-could-save-consumers-upto-13-billion",
-      "ts": 1784118584,
-      "tickers": [
-        "CVS",
-        "UNH",
-        "CI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.363
-    },
-    {
-      "title": "Barclays Maintains Overweight on JPMorgan Chase, Raises Price Target to $420",
-      "url": "https://www.benzinga.com/news/26/07/60466128/barclays-maintains-overweight-jpmorgan-chase-raises-price-target-420",
-      "ts": 1784118352,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.462
-    },
-    {
-      "title": "Barclays Maintains Overweight on Goldman Sachs Group, Raises Price Target to $1245",
-      "url": "https://www.benzinga.com/news/26/07/60466006/barclays-maintains-overweight-goldman-sachs-group-raises-price-target-1245",
-      "ts": 1784118111,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.476
-    },
-    {
-      "title": "Keefe, Bruyette & Woods Maintains Outperform on JPMorgan Chase, Raises Price Target to $384",
-      "url": "https://www.benzinga.com/news/26/07/60465996/keefe-bruyette-woods-maintains-outperform-jpmorgan-chase-raises-price-target-384",
-      "ts": 1784118088,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.477
-    },
-    {
-      "title": "Keefe, Bruyette & Woods Maintains Market Perform on Goldman Sachs Group, Raises Price Target to $1130",
-      "url": "https://www.benzinga.com/news/26/07/60465965/keefe-bruyette-woods-maintains-market-perform-goldman-sachs-group-raises-price-target-1130",
-      "ts": 1784118028,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.519
-    },
-    {
-      "title": "How to Earn $500 a Month From UnitedHealth Stock Ahead of Q2 Earnings",
-      "url": "https://www.benzinga.com/trading-ideas/dividends/26/07/60465931/how-to-earn-500-a-month-from-unitedhealth-stock-ahead-of-q2-earnings",
-      "ts": 1784117963,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.433
-    },
-    {
-      "title": "Live On CNBC, Warren Buffett Says He Made A Mistake Not Investing In Google, And The Company Is Now 'More Likely To Be A Winner' Based On Its Record; Berkshire Hathaway, Which Buffett Chairs, Owns ~$31B Of The Stock Of Google's Parent Alphabet; Buffett, Asked Whether He Or Berkshire CEO Greg Abel Was Behind The Alphabet Investment, Says Abel Is 'The Decider' But Neither Does Anything That The Other Disapproves Of; Says He Still Likes Berkshire's Investment In Apple",
-      "url": "https://www.benzinga.com/quote/BRK/B",
-      "ts": 1784117586,
-      "tickers": [
-        "GOOG",
-        "GOOGL",
-        "AAPL",
-        "BRK/A"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.337
-    },
-    {
-      "title": "UnitedHealth Stock in the Spotlight Ahead of Q2 Earnings Thursday",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60465029/unitedhealth-stock-in-the-spotlight-ahead-of-q2-earnings-thursday",
-      "ts": 1784116397,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.459
-    },
-    {
-      "title": "Piper Sandler Maintains Overweight on Travelers Companies, Raises Price Target to $389",
-      "url": "https://www.benzinga.com/news/26/07/60464709/piper-sandler-maintains-overweight-travelers-companies-raises-price-target-389",
-      "ts": 1784115580,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.464
-    },
-    {
-      "title": "What's Going on With IBM Stock Wednesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60464699/whats-going-on-with-ibm-stock-wednesday-3",
-      "ts": 1784115543,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.382
-    },
-    {
-      "title": "Wells Fargo Maintains Overweight on Microsoft, Lowers Price Target to $625",
-      "url": "https://www.benzinga.com/news/26/07/60464359/wells-fargo-maintains-overweight-microsoft-lowers-price-target-625",
-      "ts": 1784115096,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.441
     },
     {
       "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -982,7 +990,12 @@
         "score": 1.15,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "'Big Short' Investor Steve Eisman Says AI Has 'No Moats,' Which Is 'Not A Recipe For Longevity'",
+        "ts": 1784126834,
+        "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60472881/big-short-investor-steve-eisman-says-ai-has-no-moats-which-is-not-a-recipe-for-longevity",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1079,9 +1092,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Morgan Stanley, JPMorgan, Invesco and a Key Tech Stock on CNBC’s ‘Final Trades’",
-        "ts": 1784121792,
-        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60468386/morgan-stanley-jpmorgan-invesco-and-a-key-tech-stock-on-cnbcs-final-trades",
+        "title": "Apple Intelligence Finally Cleared for China: Here's Which Stocks Are Popping on the News",
+        "ts": 1784124511,
+        "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60470681/apple-intelligence-finally-cleared-for-china-heres-which-stocks-are-popping-on-the-news",
         "wiim": false
       },
       "filings": {
@@ -1098,38 +1111,6 @@
         "insider30d": 17
       },
       "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "LULU": {
-      "name": "Lululemon",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 1,
-        "buy": 1,
-        "hold": 32,
-        "sell": 3,
-        "strongSell": 2,
-        "total": 39,
-        "bullish": 2,
-        "bearish": 5,
-        "label": "Hold",
-        "score": -0.1,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-06-26",
-          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000088/lulu-20260624.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-06-04",
-          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm"
-        },
-        "insider30d": 12
-      },
-      "explain": "39 analysts cover it — 2 bullish, 32 hold, 5 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
     },
     "BSX": {
       "name": "Boston Scientific",
@@ -1162,6 +1143,38 @@
         "insider30d": 1
       },
       "explain": "39 analysts cover it — 31 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "LULU": {
+      "name": "Lululemon",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 1,
+        "buy": 1,
+        "hold": 32,
+        "sell": 3,
+        "strongSell": 2,
+        "total": 39,
+        "bullish": 2,
+        "bearish": 5,
+        "label": "Hold",
+        "score": -0.1,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-06-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000088/lulu-20260624.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm"
+        },
+        "insider30d": 12
+      },
+      "explain": "39 analysts cover it — 2 bullish, 32 hold, 5 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
     },
     "UBER": {
       "name": "Uber",
@@ -1578,25 +1591,6 @@
       "margin": 71.5,
       "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
     },
-    "LULU": {
-      "period": "Q1 FY2026",
-      "filed": "2026-06-04",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm",
-      "revenue": {
-        "fmt": "$2.5B",
-        "yoy": 4.3
-      },
-      "eps": {
-        "val": 1.69,
-        "yoy": -35.0
-      },
-      "net_income": {
-        "fmt": "$195M"
-      },
-      "margin": 7.9,
-      "summary": "Q1 FY2026 — revenue $2.5B (+4.3% YoY), diluted EPS $1.69 (-35.0% YoY), net margin 8%. (as reported, GAAP)"
-    },
     "BSX": {
       "period": "Q1 FY2026",
       "filed": "2026-05-01",
@@ -1615,6 +1609,25 @@
       },
       "margin": null,
       "summary": "Q1 FY2026 — revenue $5.2B (+11.6% YoY), diluted EPS $0.90 (+100.0% YoY). (as reported, GAAP)"
+    },
+    "LULU": {
+      "period": "Q1 FY2026",
+      "filed": "2026-06-04",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm",
+      "revenue": {
+        "fmt": "$2.5B",
+        "yoy": 4.3
+      },
+      "eps": {
+        "val": 1.69,
+        "yoy": -35.0
+      },
+      "net_income": {
+        "fmt": "$195M"
+      },
+      "margin": 7.9,
+      "summary": "Q1 FY2026 — revenue $2.5B (+4.3% YoY), diluted EPS $1.69 (-35.0% YoY), net margin 8%. (as reported, GAAP)"
     },
     "UBER": {
       "period": "Q1 FY2026",
