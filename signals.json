@@ -1,6 +1,6 @@
 {
   "date": "2026-07-16",
-  "generated_at": "Jul 16, 7:13am ET",
+  "generated_at": "Jul 16, 8:35am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,16 +168,16 @@
     }
   ],
   "holding_news": {
-    "ABT": {
-      "title": "Netflix's Q3 Earnings Report Could Lead to $21.5 Billion Swing in Market Value",
-      "ts": 1784143865,
-      "url": "https://www.benzinga.com/markets/equities/26/07/60483766/netflixs-q3-earnings-report-could-lead-to-21-5-billion-swing-in-market-value",
-      "wiim": false
-    },
     "NVDA": {
       "title": "Dan Ives Says AI Needs 'New Kind of Bank' as He Announces Launch of Yorkville Ives: 'This Is the Next Step for Me'",
       "ts": 1784185423,
       "url": "https://www.benzinga.com/markets/tech/26/07/60488714/dan-ives-says-ai-needs-new-kind-of-bank-as-he-announces-launch-of-yorkville-ives-this-is-the-next-step-for-me",
+      "wiim": false
+    },
+    "ABT": {
+      "title": "Netflix's Q3 Earnings Report Could Lead to $21.5 Billion Swing in Market Value",
+      "ts": 1784143865,
+      "url": "https://www.benzinga.com/markets/equities/26/07/60483766/netflixs-q3-earnings-report-could-lead-to-21-5-billion-swing-in-market-value",
       "wiim": false
     },
     "AVGO": {
@@ -452,6 +452,96 @@
   },
   "bz_news": [
     {
+      "title": "What’s Going on With IBM Stock on Thursday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60493640/whats-going-on-with-ibm-stock-on-thursday-2",
+      "ts": 1784204776,
+      "tickers": [
+        "IBM",
+        "TDIV",
+        "TDVI",
+        "DIVB"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.393
+    },
+    {
+      "title": "'Boeing Expects to Win Certification for Long-Delayed Jet Models' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60493535/boeing-expects-win-certification-long-delayed-jet-models-bloomberg",
+      "ts": 1784204369,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.278
+    },
+    {
+      "title": "Goldman Sachs CEO David Solomon Says He’s a ‘Huge Optimist’ on the US Economy Over the Next 7 Years — and AI is the Biggest Reason Why",
+      "url": "https://www.benzinga.com/markets/macro-economic-events/26/07/60493513/goldman-sachs-ceo-david-solomon-says-hes-a-huge-optimist-on-the-us-economy-over-the-next-7-years-and-ai-is-the-biggest-reason-why",
+      "ts": 1784204294,
+      "tickers": [
+        "GS",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.361
+    },
+    {
+      "title": "Johnson & Johnson Unit DePuy Synthes Acquires Expanding Innovations, A Maker Of Expandable Implant Technology For Spinal Surgery; Financial Terms Not Disclosed",
+      "url": "https://www.benzinga.com/news/26/07/60493451/johnson-johnson-unit-depuy-synthes-acquires-expanding-innovations-maker-expandable-implant-technolog",
+      "ts": 1784204085,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.411
+    },
+    {
+      "title": "Boeing, Lufthansa, Rolls-Royce Collaborating Over Technologies To Enhance Fuel Efficiency, Reduce Noise",
+      "url": "https://www.benzinga.com/news/26/07/60493208/boeing-lufthansa-rolls-royce-collaborating-over-technologies-enhance-fuel-efficiency-reduce-noise",
+      "ts": 1784203519,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.304
+    },
+    {
+      "title": "Jim Cramer Blames SK Hynix Chaos for TSMC Fall Despite 'Insanely Good' Q2 Earnings: 'A Casino of Emotions'",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60493174/jim-cramer-blames-sk-hynix-chaos-for-tsmc-fall-despite-insanely-good-q2-earnings-a-casino-of-emotions",
+      "ts": 1784203439,
+      "tickers": [
+        "TSM",
+        "AAPL",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.351
+    },
+    {
+      "title": "UnitedHealth Group shares are trading higher after the company reported better-than-expected Q2 financial results and issued FY26 guidance above estimates.",
+      "url": "https://www.benzinga.com/quote/UNH",
+      "ts": 1784201422,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.473
+    },
+    {
       "title": "Earnings Scheduled For July 16, 2026",
       "url": "https://www.benzinga.com/news/earnings/26/07/60491620/earnings-scheduled-july-16-2026",
       "ts": 1784200276,
@@ -521,7 +611,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.305
+      "relevance": 0.306
     },
     {
       "title": "Elon Musk Reacts to Jamie Dimon's ‘Einstein’ Praise With Two-Word Reply as Viral Post Hails His SpaceX and Tesla Legacy",
@@ -692,104 +782,6 @@
       "relevance": 0.146
     },
     {
-      "title": "UnitedHealth, Abbott Laboratories And 3 Stocks To Watch Heading Into Thursday",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60488767/unitedhealth-abbott-laboratories-and-3-stocks-to-watch-heading-into-thursday",
-      "ts": 1784186304,
-      "tickers": [
-        "UNH",
-        "TSM",
-        "GE",
-        "ABT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.572
-    },
-    {
-      "title": "Dow Jumps 150 Points Following Producer Inflation Data: Investor Sentiment Improves, Fear & Greed Index In ‘Neutral’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60488754/dow-jumps-150-points-following-producer-inflation-data-investor-sentiment-improves-fear-greed-index-in-neutral-zone",
-      "ts": 1784186230,
-      "tickers": [
-        "GOOGL",
-        "AAPL",
-        "AMZN",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.452
-    },
-    {
-      "title": "Dan Ives Says AI Needs 'New Kind of Bank' as He Announces Launch of Yorkville Ives: 'This Is the Next Step for Me'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60488714/dan-ives-says-ai-needs-new-kind-of-bank-as-he-announces-launch-of-yorkville-ives-this-is-the-next-step-for-me",
-      "ts": 1784185423,
-      "tickers": [
-        "NVDA",
-        "MSFT",
-        "PLTR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.294
-    },
-    {
-      "title": "Nvidia 'Would Not Be Here Today': Jensen Huang Credits Sega's $5 Million Bet For Saving the Company From Bankruptcy as He Revisits the Past",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60488549/jensen-huang-revisits-nvidias-biggest-turning-point",
-      "ts": 1784184322,
-      "tickers": [
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.419
-    },
-    {
-      "title": "Mira Murati Unveils Open-Weight AI Model as Alex Karp, Satya Nadella Warn Companies Are Giving Away Their IP",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60488374/mira-murati-unveils-open-weight-ai-model-as-alex-karp-satya-nadella-warn-companies-are-giving-away-their-ip",
-      "ts": 1784182543,
-      "tickers": [
-        "PLTR",
-        "MSFT",
-        "BOTZ",
-        "AIQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.349
-    },
-    {
-      "title": "Full Transcript: Johnson & Johnson Q2 2026 Earnings Call",
-      "url": "https://www.benzinga.com/news/26/07/60488172/full-transcript-johnson-johnson-q2-2026-earnings-call",
-      "ts": 1784181347,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.452
-    },
-    {
-      "title": "Apple Intelligence's China Win Sparks Rally in Alibaba, Baidu Shares in Hong Kong",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60487990/apple-intelligences-china-win-sparks-rally-in-alibaba-baidu-shares-in-hong-kong",
-      "ts": 1784178986,
-      "tickers": [
-        "BABA",
-        "AAPL",
-        "BIDU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.412
-    },
-    {
       "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $97",
       "url": "https://www.benzinga.com/news/26/07/60444857/citigroup-maintains-buy-coca-cola-raises-price-target-97",
       "ts": 1784039777,
@@ -890,8 +882,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-04-27",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000110465926049434/tm2612318d1_8k.htm"
+          "date": "2026-07-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
         },
         "periodic": {
           "form": "10-Q",
