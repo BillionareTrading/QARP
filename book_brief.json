@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Wednesday was a broadly constructive session for Jaleel's book, though the headline numbers mask a real split. Adobe led the day's winners, adding 1.71% (+$59) to bring its value to $3,518 — welcome given the stock is still sitting on an -8.4% open loss and carrying an AI-disruption risk flag. Equifax popped 2.80% despite being a small position ($172), and SPGI, GILD, and AVGO each ticked up around 1.3%. The defensive anchor Abbott ($2,589) crept up 0.35% ahead of its next catalyst on July 16 — tomorrow — where the EPS guide trim will be in focus. Danaher and BSX also added modest green. The book closed at $21,240 with cash near zero ($75), so there is no dry powder to act on opportunities.</p><p>The drag came from two names. Rocket Lab dropped another 3.31% (-$68) to $1,981, deepening an already punishing -18.1% open loss on a position rated AVOID with a QARP score of just 40.9 — the system is flagging exit while the position keeps bleeding. ServiceNow slipped -0.11%, barely notable on its own, but a Steve Eisman 'AI has no moats' headline landed squarely on its thesis today, the day before its July 22 earnings catalyst. That's noise worth watching, not panic — NOW's fundamentals (Q1 strong, IBM AI deal) remain intact — but it is the book's third-largest position at $2,409 and carries a high-multiple vulnerability if software sentiment cracks.</p><p>The drift story is concentrated in three names: ADBE (-8.4% open loss, Strong Buy), BSX (-10.1%, Strong Buy, guidance slashed), and RKLB (-18.1%, AVOID). In ADBE and BSX, thesis and price are diverging in opposite directions — the system still likes the quality but the market is disagreeing. In RKLB, the system agrees with the market and has said AVOID; the position is simply not being acted on. With unrealized losses at -$450.50 (-2.08%) and zero cash buffer, the RKLB drag is a real cost of inaction.</p>",
+  "your_book": "<p>Thursday was a tale of two very different stories inside Jaleel's book. Abbott Laboratories was the standout, surging +10.71% to $2,866 — the headline cites it as one of the day's big movers, and the timing is notable given ABT's next earnings flag was literally today (Jul 16). The position is now +14.3% in the green and carries a STRONG BUY verdict, so the thesis is holding. Zoetis (+3.19%), ADBE (+4.79%), BSX (+3.67%), and EFX (+4.67%) also contributed positively. On the other side, RKLB was punished hard — down -11.61% on a day the broader chip/Nasdaq complex sold off, deepening its already painful -27.7% unrealized loss. That position sits at $1,751 with an AVOID verdict and a QARP score of just 44.7; price and thesis have been diverging for some time. AVGO also slipped -5.03%, and NVDA shed -2.4% as Korean semi sentiment weighed on the complex despite solid TSMC numbers.</p><p>The drift to watch most carefully is BSX and LULU. Both carry elevated risk flags — BSX's FY26 growth guide was slashed to 7–8.5% with flat guidance through Q3 (next print Jul 29), yet the stock bounced +3.67% today. A one-day pop against a deteriorating fundamental backdrop is not thesis confirmation. LULU is similarly underwater at -7.1% with five straight quarters of negative Americas comps and tariff margin pressure; its next catalyst isn't until Sep 2, meaning this drift has room to continue. ADBE's +4.79% day is welcome, but the -4.0% unrealized loss and the AI-disruption narrative (not the numbers) remain the real headwind — the CFO exit and ARR de-emphasis aren't resolved by a single green session. Overall the book ended with an unrealized loss of -$82.17 (-0.38%) on $21,608 in assets.</p><p>Watch closely: NOW reports Jul 22 and is the single largest weight at 11.1% — it was flat-to-down today (-0.69%) and remains the book's biggest concentration risk in any hawkish-Fed or software de-rate scenario. KO's fairlife ransomware-driven U.S. production suspension is a new wrinkle on a small position ($171), but worth monitoring for any reputational or volume fallout. Cash is essentially nil at $75, leaving Jaleel no dry powder to act on any of these moving parts.</p>",
   "attention": [
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "AVOID-rated, -18.1% open loss, still held at 9.3% weight",
-      "note": "The system rates this AVOID (QARP 40.9) and the position has lost over 18% — with no cash buffer to redeploy, continuing to hold is an active choice that needs a concrete rationale or an exit plan."
-    },
-    {
-      "ticker": "ABT",
-      "severity": "watch",
-      "headline": "EPS guide-cut catalyst hits tomorrow, July 16",
-      "note": "Abbott's FY EPS outlook was already trimmed on deal financing and a weak flu season; tomorrow's report is the next live test of whether that flag escalates from yellow to red."
-    },
-    {
-      "ticker": "NOW",
-      "severity": "watch",
-      "headline": "Earnings July 22 with 'AI no moats' narrative emerging day before",
-      "note": "ServiceNow is the book's third-largest position at a high multiple, and a prominent short-seller's AI-moat skepticism surfaced today — exactly the sentiment that leads a software de-rate if the July 22 print disappoints."
+      "headline": "AVOID-rated, -27.7% unrealized, -11.61% today — conviction test",
+      "note": "With an AVOID verdict, a QARP of 44.7, and the position now down more than a quarter of its cost basis, there is no data-supported reason to hold; the chip-selloff context today only amplifies the existing structural concerns."
     },
     {
       "ticker": "BSX",
       "severity": "watch",
-      "headline": "Guidance slashed, mgmt guides flat through Q3, next print July 29",
-      "note": "FY26 growth was cut from 10.5% to 7–8.5% and the position is already -10.1% open; the July 29 earnings are the next checkpoint on whether the slowdown is stabilizing or worsening."
+      "headline": "Guidance slashed but stock up +3.67% today — don't mistake the bounce for recovery",
+      "note": "FY26 growth was cut to 7–8.5% with flat guidance through Q3, and the next earnings print is Jul 29; a single up-day against that fundamental backdrop warrants skepticism, not comfort."
+    },
+    {
+      "ticker": "NOW",
+      "severity": "watch",
+      "headline": "Largest position reports in 6 days — concentration risk is live",
+      "note": "At 11.1% of the book and a high multiple, NOW's Jul 22 print is the single biggest near-term binary for the portfolio, and today's -0.69% drift suggests the market is already cautious heading in."
+    },
+    {
+      "ticker": "LULU",
+      "severity": "note",
+      "headline": "Fifth straight negative comps, risk flag elevated, no catalyst until Sep 2",
+      "note": "Price and thesis continue to diverge with -7.1% unrealized loss and no near-term event to reset the narrative; the drift is slow but persistent and deserves a position-size review."
     }
   ],
-  "date": "2026-07-15",
-  "generated_at": "Jul 15, 5:14pm ET"
+  "date": "2026-07-16",
+  "generated_at": "Jul 16, 5:16pm ET"
 }
