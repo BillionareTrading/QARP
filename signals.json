@@ -1,6 +1,6 @@
 {
   "date": "2026-07-16",
-  "generated_at": "Jul 16, 12:59pm ET",
+  "generated_at": "Jul 16, 2:16pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,11 +93,11 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Jul 14",
-      "what": "KO — Citigroup maintains",
+      "when": "Jul 16",
+      "what": "KO — UBS maintains",
       "affects": "KO",
       "dir": "two-sided",
-      "why": "Now rated <b>Buy</b>, PT $97.",
+      "why": "Now rated <b>Buy</b>, PT $98.",
       "src": "Benzinga ratings"
     },
     {
@@ -132,6 +132,13 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Consumer Staples",
+      "dir": "up",
+      "driver": "Investors rotate into defensive sectors amid recent market volatility an…",
+      "note": "As investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Foundry, Fabricator & Idm Semiconductor",
       "dir": "down",
       "driver": "Sympathy with Taiwan Semiconductor",
@@ -158,27 +165,14 @@
       "driver": "Reports suggesting that multiple ships",
       "note": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
       "src": "Benzinga WIIM · flags a divergence vs our prices"
-    },
-    {
-      "sector": "Grocery Retailers",
-      "dir": "up",
-      "driver": "Ahead of the 4th of July holiday weekend",
-      "note": "Ahead of the 4th of July holiday weekend.",
-      "src": "Benzinga WIIM · price-confirmed"
     }
   ],
   "holding_news": {
-    "RKLB": {
-      "title": "Buy ASTS, Watch SpaceX and Rocket Lab From the Launch Pad: Piper Sandler's Space Playbook",
-      "ts": 1784217377,
-      "url": "https://www.benzinga.com/markets/tech/26/07/60502946/buy-asts-watch-spacex-and-rocket-lab-from-the-launch-pad-piper-sandlers-space-playbook",
-      "wiim": false
-    },
     "KO": {
-      "title": "Weak Investor Sentiment Overshadows Energy Drink Maker's Strong Growth",
-      "ts": 1784215891,
-      "url": "https://www.benzinga.com/Opinion/26/07/60501989/weak-investor-sentiment-overshadows-energy-drink-makers-strong-growth",
-      "wiim": false
+      "title": "Shares of consumer staples companies are trading higher as investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
+      "ts": 1784225025,
+      "url": "https://www.benzinga.com/quote/KO",
+      "wiim": true
     },
     "ABT": {
       "title": "Abbott Laboratories, AtaiBeckley, ManpowerGroup And Other Big Stocks Moving Higher On Thursday",
@@ -186,10 +180,10 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60498350/abbott-laboratories-ataibeckley-manpowergroup-and-other-big-stocks-moving-higher-on-thursday",
       "wiim": false
     },
-    "NVDA": {
-      "title": "Jim Cramer Blames SK Hynix Chaos for TSMC Fall Despite 'Insanely Good' Q2 Earnings: 'A Casino of Emotions'",
-      "ts": 1784203439,
-      "url": "https://www.benzinga.com/markets/equities/26/07/60493174/jim-cramer-blames-sk-hynix-chaos-for-tsmc-fall-despite-insanely-good-q2-earnings-a-casino-of-emotions",
+    "RKLB": {
+      "title": "Chip Selloff Drags Nasdaq 100, Gold Sinks Below $4,000: Stock Market Today",
+      "ts": 1784221565,
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60505919/stock-market-to-day-chipmakers-nasdaq-100-gold-4000-sandisk-stocks-performance-daily-movers-thursday-wall-street",
       "wiim": false
     }
   },
@@ -202,8 +196,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$95",
-      "price": 84.41,
-      "upside": 12.5,
+      "price": 84.73,
+      "upside": 12.1,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -216,8 +210,22 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "price": 84.41,
-      "upside": 14.9,
+      "price": 84.73,
+      "upside": 14.5,
+      "held": true,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-16",
+      "ticker": "KO",
+      "firm": "UBS",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$98",
+      "price": 84.73,
+      "upside": 15.7,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -230,8 +238,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$113",
-      "price": 127.86,
-      "upside": -11.6,
+      "price": 128.34,
+      "upside": -12.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -244,7 +252,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 172.59,
+      "price": 173.77,
       "upside": null,
       "held": false,
       "uni": true,
@@ -258,8 +266,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$263",
-      "price": 248.96,
-      "upside": 5.6,
+      "price": 249.81,
+      "upside": 5.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,8 +280,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 150.6,
-      "upside": 10.2,
+      "price": 150.85,
+      "upside": 10.0,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -286,8 +294,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 248.96,
-      "upside": 20.5,
+      "price": 249.81,
+      "upside": 20.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -300,8 +308,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$365",
-      "price": 331.91,
-      "upside": 10.0,
+      "price": 331.62,
+      "upside": 10.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -314,8 +322,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "price": 127.86,
-      "upside": 9.5,
+      "price": 128.34,
+      "upside": 9.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -328,8 +336,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 248.96,
-      "upside": 15.3,
+      "price": 249.81,
+      "upside": 14.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -342,8 +350,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 127.86,
-      "upside": 11.1,
+      "price": 128.34,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -356,8 +364,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 127.86,
-      "upside": 13.4,
+      "price": 128.34,
+      "upside": 13.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -370,8 +378,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "price": 172.59,
-      "upside": 44.9,
+      "price": 173.77,
+      "upside": 43.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -384,8 +392,22 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$250",
-      "price": 331.91,
-      "upside": -24.7,
+      "price": 331.62,
+      "upside": -24.6,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-16",
+      "ticker": "JNJ",
+      "firm": "Raymond James",
+      "action": "Maintains",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$265",
+      "price": 249.81,
+      "upside": 6.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -398,8 +420,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 248.96,
-      "upside": 15.3,
+      "price": 249.81,
+      "upside": 14.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -412,8 +434,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$272",
-      "price": 248.96,
-      "upside": 9.3,
+      "price": 249.81,
+      "upside": 8.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -426,8 +448,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$123",
-      "price": 162.01,
-      "upside": -24.1,
+      "price": 160.8,
+      "upside": -23.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -440,22 +462,31 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$294",
-      "price": 248.96,
-      "upside": 18.1,
+      "price": 249.81,
+      "upside": 17.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "KO": {
+      "date": "2026-07-16",
+      "firm": "UBS",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$98",
+      "upside": 15.7
+    },
     "JNJ": {
       "date": "2026-07-16",
-      "firm": "RBC Capital",
-      "action": "Reiterates",
+      "firm": "Raymond James",
+      "action": "Maintains",
       "rating": "Outperform",
       "stance": "bullish",
-      "pt": "$287",
-      "upside": 15.3
+      "pt": "$265",
+      "upside": 6.1
     },
     "MMM": {
       "date": "2026-07-16",
@@ -464,7 +495,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$123",
-      "upside": -24.1
+      "upside": -23.5
     },
     "CRM": {
       "date": "2026-07-14",
@@ -473,16 +504,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "upside": 44.9
-    },
-    "KO": {
-      "date": "2026-07-14",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$97",
-      "upside": 14.9
+      "upside": 43.9
     },
     "AAPL": {
       "date": "2026-07-14",
@@ -491,7 +513,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$250",
-      "upside": -24.7
+      "upside": -24.6
     },
     "MRK": {
       "date": "2026-07-13",
@@ -500,7 +522,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 9.5
+      "upside": 9.1
     },
     "PG": {
       "date": "2026-07-10",
@@ -509,7 +531,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "upside": 10.2
+      "upside": 10.0
     },
     "CVX": {
       "date": "2026-07-02",
@@ -518,10 +540,184 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$210",
-      "upside": 14.3
+      "upside": 14.1
     }
   },
   "bz_news": [
+    {
+      "title": "Raymond James Maintains Outperform on Johnson & Johnson, Raises Price Target to $265",
+      "url": "https://www.benzinga.com/news/26/07/60508561/raymond-james-maintains-outperform-johnson-johnson-raises-price-target-265",
+      "ts": 1784225524,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.432
+    },
+    {
+      "title": "Shares of consumer staples companies are trading higher as investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
+      "url": "https://www.benzinga.com/quote/KO",
+      "ts": 1784225025,
+      "tickers": [
+        "YSWY",
+        "BTI",
+        "DG",
+        "GIS"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.403
+    },
+    {
+      "title": "UBS Maintains Buy on Coca-Cola, Raises Price Target to $98",
+      "url": "https://www.benzinga.com/news/26/07/60507839/ubs-maintains-buy-coca-cola-raises-price-target-98",
+      "ts": 1784224640,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.541
+    },
+    {
+      "title": "B of A Securities Maintains Buy on JPMorgan Chase, Raises Price Target to $420",
+      "url": "https://www.benzinga.com/news/26/07/60507735/b-securities-maintains-buy-jpmorgan-chase-raises-price-target-420",
+      "ts": 1784224499,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.454
+    },
+    {
+      "title": "B of A Securities Maintains Buy on Goldman Sachs Group, Raises Price Target to $1300",
+      "url": "https://www.benzinga.com/news/26/07/60507353/b-securities-maintains-buy-goldman-sachs-group-raises-price-target-1300",
+      "ts": 1784223825,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.487
+    },
+    {
+      "title": "IBM shares are trading higher after Argus Research maintained its Buy rating on the stock and lowered its price target from $360 to $280. Also, Evercore ISI Group maintained its Outperform rating on the stock and lowered its price target from $310 to $250.",
+      "url": "https://www.benzinga.com/quote/IBM",
+      "ts": 1784223553,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.528
+    },
+    {
+      "title": "Baird Upgrades UnitedHealth Group to Neutral, Raises Price Target to $453",
+      "url": "https://www.benzinga.com/news/26/07/60507176/baird-upgrades-unitedhealth-group-neutral-raises-price-target-453",
+      "ts": 1784223541,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.521
+    },
+    {
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60507049/10-information-technology-stocks-whale-activity-today-s-session",
+      "ts": 1784223322,
+      "tickers": [
+        "MSFT",
+        "INTC",
+        "SKHY",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.394
+    },
+    {
+      "title": "UnitedHealth Rally Sparks Bullish Case for Healthcare ETFs Despite Medicare Advantage Losses",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60506630/unitedhealth-rally-sparks-bullish-case-for-healthcare-etfs-despite-medicare-advantage-losses",
+      "ts": 1784222657,
+      "tickers": [
+        "UNH",
+        "XLV",
+        "JNJ",
+        "LLY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.356
+    },
+    {
+      "title": "UnitedHealth Hits 15‑Month High: Congressional Trades That Suddenly Look Brilliant",
+      "url": "https://www.benzinga.com/news/politics/26/07/60506626/unitedhealth-hits-15%e2%80%91month-high-congressional-trades-that-suddenly-look-brilliant",
+      "ts": 1784222649,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.386
+    },
+    {
+      "title": "Shares of companies in the broader consumer discretionary sector are trading higher. The industry gained positive mention in a Barron's article on sector rotations as it has traded sideways in 2026 thus far.",
+      "url": "https://www.benzinga.com/quote/TJX",
+      "ts": 1784222504,
+      "tickers": [
+        "KXIN",
+        "NWTG",
+        "LVWR",
+        "INEO"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.389
+    },
+    {
+      "title": "Chip Selloff Drags Nasdaq 100, Gold Sinks Below $4,000: Stock Market Today",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60505919/stock-market-to-day-chipmakers-nasdaq-100-gold-4000-sandisk-stocks-performance-daily-movers-thursday-wall-street",
+      "ts": 1784221565,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "TSM",
+        "GLD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.469
+    },
+    {
+      "title": "CNBC Halftime Report Final Trades: Apple, Rocket Companies, Micron Technology, iShares U.S. Transportation ETF",
+      "url": "https://www.benzinga.com/quote/AAPL",
+      "ts": 1784221291,
+      "tickers": [
+        "MU",
+        "IYT",
+        "RKT",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.386
+    },
     {
       "title": "Elon Musk Just Agreed With Google — And Microsoft's CEO Did Too",
       "url": "https://www.benzinga.com/markets/tech/26/07/60505346/elon-musk-agreed-with-google-microsoft-ceo-too",
@@ -686,33 +882,6 @@
       "relevance": 0.305
     },
     {
-      "title": "Buy ASTS, Watch SpaceX and Rocket Lab From the Launch Pad: Piper Sandler's Space Playbook",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60502946/buy-asts-watch-spacex-and-rocket-lab-from-the-launch-pad-piper-sandlers-space-playbook",
-      "ts": 1784217377,
-      "tickers": [
-        "ASTS",
-        "RKLB",
-        "SPCX",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.456
-    },
-    {
-      "title": "Argus Research Maintains Buy on IBM, Lowers Price Target to $280",
-      "url": "https://www.benzinga.com/news/26/07/60502332/argus-research-maintains-buy-ibm-lowers-price-target-280",
-      "ts": 1784216490,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.471
-    },
-    {
       "title": "Weak Investor Sentiment Overshadows Energy Drink Maker's Strong Growth",
       "url": "https://www.benzinga.com/Opinion/26/07/60501989/weak-investor-sentiment-overshadows-energy-drink-makers-strong-growth",
       "ts": 1784215891,
@@ -726,148 +895,16 @@
       "relevance": 0.404
     },
     {
-      "title": "RBC Capital Reiterates Outperform on Johnson & Johnson, Maintains $287 Price Target",
-      "url": "https://www.benzinga.com/news/26/07/60501064/rbc-capital-reiterates-outperform-johnson-johnson-maintains-287-price-target",
-      "ts": 1784214279,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.44
-    },
-    {
-      "title": "TSMC's 68% Margins Show Why Intel's Foundry Turnaround Won't Be Easy",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60500889/tsmc-margins-show-intel-foundry-turnaround-not-easy",
-      "ts": 1784214133,
-      "tickers": [
-        "TSM",
-        "INTC",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.392
-    },
-    {
-      "title": "New Jersey Rep. Thomas Kean Sold Over $26K Worth of Alphabet Stock: Here’s What You Should Know",
-      "url": "https://www.benzinga.com/government/26/07/60500741/new-jersey-rep-thomas-kean-sold-over-26k-worth-alphabet-stock-here-s-what-you-should-know",
-      "ts": 1784214022,
-      "tickers": [
-        "GOOGL",
-        "ADI",
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.297
-    },
-    {
-      "title": "Rep. Jonathan Jackson Has Bought Up to $30K Worth Of Hilton Worldwide Holdings Stock: Here’s What You Should Know",
-      "url": "https://www.benzinga.com/government/26/07/60500740/rep-jonathan-jackson-has-bought-30k-worth-hilton-worldwide-holdings-stock-here-s-what-you-should-kno",
-      "ts": 1784214022,
-      "tickers": [
-        "HLT",
-        "V",
-        "MSFT",
-        "SPG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.312
-    },
-    {
-      "title": "Recent Report Shows That Rep. Rick Allen Sold Up to $50K Worth of Intuit Stock",
-      "url": "https://www.benzinga.com/government/26/07/60500738/recent-report-shows-rep-rick-allen-sold-50k-worth-intuit-stock",
-      "ts": 1784214022,
-      "tickers": [
-        "INTU",
-        "ACN",
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.292
-    },
-    {
-      "title": "Wells Fargo Maintains Overweight on Johnson & Johnson, Raises Price Target to $272",
-      "url": "https://www.benzinga.com/news/26/07/60500367/wells-fargo-maintains-overweight-johnson-johnson-raises-price-target-272",
-      "ts": 1784213627,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.419
-    },
-    {
-      "title": "UnitedHealth Stock Rallies on Earnings: Warren Buffett Successor's Nine-Figure Mistake",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60499589/unitedhealth-stock-rallies-on-earnings-warren-buffett-successors-nine-figure-mistake",
-      "ts": 1784212570,
-      "tickers": [
-        "UNH",
-        "SPY",
-        "BRK/A",
-        "BRK/B"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.348
-    },
-    {
-      "title": "Visa Rolls Out Visa Stablecoin Platform For Fintechs, Institutions To Access Stablecoin Capabilities",
-      "url": "https://www.benzinga.com/news/26/07/60499331/visa-rolls-out-visa-stablecoin-platform-fintechs-institutions-access-stablecoin-capabilities",
-      "ts": 1784212315,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.275
-    },
-    {
-      "title": "RBC Capital Maintains Underperform on 3M, Lowers Price Target to $123",
-      "url": "https://www.benzinga.com/news/26/07/60498906/rbc-capital-maintains-underperform-3m-lowers-price-target-123",
-      "ts": 1784211806,
-      "tickers": [
-        "MMM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.47
-    },
-    {
-      "title": "Wells Fargo Maintains Overweight on McDonald's, Lowers Price Target to $300",
-      "url": "https://www.benzinga.com/news/26/07/60498905/wells-fargo-maintains-overweight-mcdonald-s-lowers-price-target-300",
-      "ts": 1784211806,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.435
-    },
-    {
-      "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $97",
-      "url": "https://www.benzinga.com/news/26/07/60444857/citigroup-maintains-buy-coca-cola-raises-price-target-97",
-      "ts": 1784039777,
+      "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
+      "url": "https://www.benzinga.com/news/26/07/60396959/b-securities-maintains-buy-coca-cola-raises-price-target-95",
+      "ts": 1783707180,
       "tickers": [
         "KO"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.581
+      "relevance": 0.568
     },
     {
       "title": "Warsh’s Collateral Victim: Why Consumer Staples ETFs Are the Next Shoe To Drop",
@@ -1051,9 +1088,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Buy ASTS, Watch SpaceX and Rocket Lab From the Launch Pad: Piper Sandler's Space Playbook",
-        "ts": 1784217377,
-        "url": "https://www.benzinga.com/markets/tech/26/07/60502946/buy-asts-watch-spacex-and-rocket-lab-from-the-launch-pad-piper-sandlers-space-playbook",
+        "title": "Chip Selloff Drags Nasdaq 100, Gold Sinks Below $4,000: Stock Market Today",
+        "ts": 1784221565,
+        "url": "https://www.benzinga.com/markets/market-summary/26/07/60505919/stock-market-to-day-chipmakers-nasdaq-100-gold-4000-sandisk-stocks-performance-daily-movers-thursday-wall-street",
         "wiim": false
       },
       "filings": {
@@ -1119,12 +1156,7 @@
         "score": 1.26,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Jim Cramer Blames SK Hynix Chaos for TSMC Fall Despite 'Insanely Good' Q2 Earnings: 'A Casino of Emotions'",
-        "ts": 1784203439,
-        "url": "https://www.benzinga.com/markets/equities/26/07/60493174/jim-cramer-blames-sk-hynix-chaos-for-tsmc-fall-despite-insanely-good-q2-earnings-a-casino-of-emotions",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1469,10 +1501,10 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Weak Investor Sentiment Overshadows Energy Drink Maker's Strong Growth",
-        "ts": 1784215891,
-        "url": "https://www.benzinga.com/Opinion/26/07/60501989/weak-investor-sentiment-overshadows-energy-drink-makers-strong-growth",
-        "wiim": false
+        "title": "Shares of consumer staples companies are trading higher as investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
+        "ts": 1784225025,
+        "url": "https://www.benzinga.com/quote/KO",
+        "wiim": true
       },
       "filings": {
         "latest8k": {
