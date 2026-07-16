@@ -1,6 +1,6 @@
 {
   "date": "2026-07-16",
-  "generated_at": "Jul 16, 5:56am ET",
+  "generated_at": "Jul 16, 6:43am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,28 +168,22 @@
     }
   ],
   "holding_news": {
-    "AVGO": {
-      "title": "New Magnificent 10 ETF Targets Nvidia, Microsoft and AI Leaders With Daily Income Strategy",
-      "ts": 1784145988,
-      "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60484862/new-magnificent-10-etf-targets-nvidia-microsoft-and-ai-leaders-with-daily-income-strategy",
-      "wiim": false
-    },
     "NVDA": {
       "title": "Dan Ives Says AI Needs 'New Kind of Bank' as He Announces Launch of Yorkville Ives: 'This Is the Next Step for Me'",
       "ts": 1784185423,
       "url": "https://www.benzinga.com/markets/tech/26/07/60488714/dan-ives-says-ai-needs-new-kind-of-bank-as-he-announces-launch-of-yorkville-ives-this-is-the-next-step-for-me",
       "wiim": false
     },
+    "AVGO": {
+      "title": "New Magnificent 10 ETF Targets Nvidia, Microsoft and AI Leaders With Daily Income Strategy",
+      "ts": 1784145988,
+      "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60484862/new-magnificent-10-etf-targets-nvidia-microsoft-and-ai-leaders-with-daily-income-strategy",
+      "wiim": false
+    },
     "ABT": {
       "title": "Netflix's Q3 Earnings Report Could Lead to $21.5 Billion Swing in Market Value",
       "ts": 1784143865,
       "url": "https://www.benzinga.com/markets/equities/26/07/60483766/netflixs-q3-earnings-report-could-lead-to-21-5-billion-swing-in-market-value",
-      "wiim": false
-    },
-    "RKLB": {
-      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
-      "ts": 1784136921,
-      "url": "https://www.benzinga.com/markets/options/26/07/60479699/10-industrials-stocks-whale-activity-today-s-session",
       "wiim": false
     }
   },
@@ -458,6 +452,105 @@
   },
   "bz_news": [
     {
+      "title": "Boeing, Airbus, Major Airlines Push Congress for $20 Billion to Modernize Air Traffic Control: Report",
+      "url": "https://www.benzinga.com/news/politics/26/07/60490965/boeing-airbus-major-airlines-push-congress-for-20-billion-to-modernize-air-traffic-control-report",
+      "ts": 1784198580,
+      "tickers": [
+        "BA",
+        "AAL",
+        "EADSF",
+        "UAL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.282
+    },
+    {
+      "title": "Microsoft Wants Sales Team to Push Its Own AI Models Instead of Rivals OpenAI, Google and Anthropic: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60490610/microsoft-wants-sales-team-to-push-its-own-ai-models-instead-of-rivals-openai-google-and-anthropic-report",
+      "ts": 1784197503,
+      "tickers": [
+        "MSFT",
+        "META",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.325
+    },
+    {
+      "title": "'Chinese AI start-up Moonshot to launch model challenging Anthropic’s lead' - Financial Times",
+      "url": "https://www.benzinga.com/news/26/07/60490596/chinese-ai-start-moonshot-launch-model-challenging-anthropic-s-lead-financial-times",
+      "ts": 1784197484,
+      "tickers": [
+        "FXI",
+        "AMZN",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.306
+    },
+    {
+      "title": "Elon Musk Reacts to Jamie Dimon's ‘Einstein’ Praise With Two-Word Reply as Viral Post Hails His SpaceX and Tesla Legacy",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60490230/elon-musk-reacts-to-jamie-dimons-einstein-praise-with-two-word-reply-as-viral-post-hails-his-spacex-and-tesla-legacy",
+      "ts": 1784196653,
+      "tickers": [
+        "TSLA",
+        "JPM",
+        "SPCX",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.264
+    },
+    {
+      "title": "Apple's AI Catch-Up Plan May Include Buying Chip Companies",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60490165/apples-ai-catch-up-plan-may-include-buying-chip-companies",
+      "ts": 1784196477,
+      "tickers": [
+        "AAPL",
+        "GOOGL",
+        "BABA",
+        "BIDU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.451
+    },
+    {
+      "title": "Analyzing Microsoft In Comparison To Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/07/60489816/analyzing-microsoft-comparison-competitors-software-industry",
+      "ts": 1784195930,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.329
+    },
+    {
+      "title": "UnitedHealth Group Sees FY2026 Adj EPS $19.50-$20.00 vs $18.43 Est",
+      "url": "https://www.benzinga.com/news/26/07/60489758/unitedhealth-group-sees-fy2026-adj-eps-19-50-20-00-vs-18-43-est",
+      "ts": 1784195826,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.396
+    },
+    {
       "title": "UnitedHealth Group Q2 Adj. EPS $6.38 Beats $4.86 Estimate, Sales $112.032B Beat $110.825B Estimate",
       "url": "https://www.benzinga.com/news/earnings/26/07/60489742/unitedhealth-group-q2-adj-eps-6-38-beats-4-86-estimate-sales-112-032b-beat-110-825b-estimate",
       "ts": 1784195725,
@@ -653,7 +746,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.453
+      "relevance": 0.452
     },
     {
       "title": "Apple Intelligence's China Win Sparks Rally in Alibaba, Baidu Shares in Hong Kong",
@@ -698,115 +791,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.401
-    },
-    {
-      "title": "Jamie Dimon Says Anthropic’s Mythos Access Debate Is a Warning Sign for AI’s Future",
-      "url": "https://www.benzinga.com/markets/private-markets/26/07/60486804/jamie-dimon-says-anthropics-mythos-access-debate-is-a-warning-sign-for-ais-future",
-      "ts": 1784152218,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.299
-    },
-    {
-      "title": "Wildfire Smoke Spurs Fresh Demand for Masks, Putting 3M, Other Stocks In Focus",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60486294/wildfire-smoke-spurs-fresh-demand-for-masks-putting-3m-other-stocks-in-focus",
-      "ts": 1784149387,
-      "tickers": [
-        "MMM",
-        "WHR",
-        "CARR",
-        "UL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.331
-    },
-    {
-      "title": "Nike Says Co. In 2026, Recognized $385M Of Estimated Employee Severance Costs Related To Organizational Changes",
-      "url": "https://www.benzinga.com/news/26/07/60486176/nike-says-co-2026-recognized-385m-estimated-employee-severance-costs-related-organizational-changes",
-      "ts": 1784149239,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.305
-    },
-    {
-      "title": "Nike Says As Of May 31, 2026, Co. Received $302M And Recorded $684M Of Outstanding IEEPA Tariff Receivables Reflected Within Accounts Receivable, Net On The Consolidated Balance Sheets",
-      "url": "https://www.benzinga.com/news/26/07/60486029/nike-says-may-31-2026-co-received-302m-and-recorded-684m-outstanding-ieepa-tariff-receivables-reflec",
-      "ts": 1784148720,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.331
-    },
-    {
-      "title": "SpaceXAI Open-Sources Grok Build Coding Agent With Full Local-First Support On GitHub",
-      "url": "https://www.benzinga.com/news/26/07/60485780/spacexai-open-sources-grok-build-coding-agent-full-local-first-support-github",
-      "ts": 1784147638,
-      "tickers": [
-        "SPCX",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.29
-    },
-    {
-      "title": "U.S. Aviation Sector Asks Congress For Another $20B To Complete Air Traffic Control Modernization Effort",
-      "url": "https://www.benzinga.com/news/26/07/60485478/u-s-aviation-sector-asks-congress-another-20b-complete-air-traffic-control-modernization-effort",
-      "ts": 1784147134,
-      "tickers": [
-        "SPY",
-        "DAL",
-        "UAL",
-        "AAL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.317
-    },
-    {
-      "title": "New Magnificent 10 ETF Targets Nvidia, Microsoft and AI Leaders With Daily Income Strategy",
-      "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60484862/new-magnificent-10-etf-targets-nvidia-microsoft-and-ai-leaders-with-daily-income-strategy",
-      "ts": 1784145988,
-      "tickers": [
-        "TMGN",
-        "TSLA",
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.54
-    },
-    {
-      "title": "Netflix's Q3 Earnings Report Could Lead to $21.5 Billion Swing in Market Value",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60483766/netflixs-q3-earnings-report-could-lead-to-21-5-billion-swing-in-market-value",
-      "ts": 1784143865,
-      "tickers": [
-        "GE",
-        "NFLX",
-        "ABT",
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.419
     },
     {
       "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -1001,12 +985,7 @@
         "score": 1.12,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "10 Industrials Stocks Whale Activity In Today’s Session",
-        "ts": 1784136921,
-        "url": "https://www.benzinga.com/markets/options/26/07/60479699/10-industrials-stocks-whale-activity-today-s-session",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1175,8 +1154,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-05-11",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000320/e26247_uber-8k.htm"
+          "date": "2026-07-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000382/e26302_uber-8k.htm"
         },
         "periodic": {
           "form": "10-Q",
