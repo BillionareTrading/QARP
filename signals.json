@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-15",
-  "generated_at": "Jul 15, 7:38pm ET",
+  "date": "2026-07-16",
+  "generated_at": "Jul 16, 5:12am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 15",
+      "when": "Jul 16",
       "what": "Energy & geopolitics — today's read",
       "why": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
       "affects": "Energy · growth",
@@ -175,9 +175,9 @@
       "wiim": false
     },
     "NVDA": {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "ts": 1784136920,
-      "url": "https://www.benzinga.com/markets/options/26/07/60479697/10-information-technology-stocks-whale-activity-today-s-session",
+      "title": "Dan Ives Says AI Needs 'New Kind of Bank' as He Announces Launch of Yorkville Ives: 'This Is the Next Step for Me'",
+      "ts": 1784185423,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60488714/dan-ives-says-ai-needs-new-kind-of-bank-as-he-announces-launch-of-yorkville-ives-this-is-the-next-step-for-me",
       "wiim": false
     },
     "ABT": {
@@ -190,12 +190,6 @@
       "title": "10 Industrials Stocks Whale Activity In Today’s Session",
       "ts": 1784136921,
       "url": "https://www.benzinga.com/markets/options/26/07/60479699/10-industrials-stocks-whale-activity-today-s-session",
-      "wiim": false
-    },
-    "NOW": {
-      "title": "'Big Short' Investor Steve Eisman Says AI Has 'No Moats,' Which Is 'Not A Recipe For Longevity'",
-      "ts": 1784126834,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60472881/big-short-investor-steve-eisman-says-ai-has-no-moats-which-is-not-a-recipe-for-longevity",
       "wiim": false
     }
   },
@@ -225,62 +219,6 @@
       "price": 82.45,
       "upside": 17.6,
       "held": true,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-07-08",
-      "ticker": "JNJ",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$284",
-      "price": 247.02,
-      "upside": 15.0,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-08",
-      "ticker": "JNJ",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$298",
-      "price": 247.02,
-      "upside": 20.6,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-08",
-      "ticker": "MRK",
-      "firm": "RBC Capital",
-      "action": "Reiterates",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$142",
-      "price": 123.61,
-      "upside": 14.9,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-07-08",
-      "ticker": "MRK",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$150",
-      "price": 123.61,
-      "upside": 21.3,
-      "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     },
@@ -516,18 +454,224 @@
       "stance": "bullish",
       "pt": "$210",
       "upside": 15.6
-    },
-    "NKE": {
-      "date": "2026-07-01",
-      "firm": "Jefferies",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$75",
-      "upside": 75.4
     }
   },
   "bz_news": [
+    {
+      "title": "TSMC Stock Slides Despite Crushing Q2 Estimates With Fifth Straight Record Profit",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60489128/tsmc-stock-slides-despite-crushing-q2-estimates-with-fifth-straight-record-profit",
+      "ts": 1784190799,
+      "tickers": [
+        "TSM",
+        "AAPL",
+        "AVGO",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.412
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60489078/sp500-july-16-open-up-or-down-polymarket-ppi-inflation-fed-retail-sales-netflix",
+      "ts": 1784189741,
+      "tickers": [
+        "AAPL",
+        "AMZN",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.464
+    },
+    {
+      "title": "Jamie Dimon Backs Philadelphia Navy Yard With $24 Million as US Defense Spending Surges, Says 'The Arsenal of Democracy Has Been Reignited'",
+      "url": "https://www.benzinga.com/news/contracts/26/07/60489050/jamie-dimon-backs-philadelphia-navy-yard-with-24-million-as-us-defense-spending-surges-says-the-arsenal-of-democracy-has-been-reignited",
+      "ts": 1784189239,
+      "tickers": [
+        "JPM",
+        "GD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.257
+    },
+    {
+      "title": "BlackRock CEO Larry Fink Warned of an AI Power Crunch—New York Just Halted Large Data Centers: CEG, VST, NEE in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60488957/blackrock-ceo-larry-fink-warned-of-an-ai-power-crunch-new-york-just-halted-large-data-centers-ceg-vst-nee-in-focus",
+      "ts": 1784187617,
+      "tickers": [
+        "BLK",
+        "CVX",
+        "OXY",
+        "COP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.454
+    },
+    {
+      "title": "Gene Munster Says New Siri AI Makes It Feel 'Like Having a New Phone,' Ming-Chi Kuo Says Stock Rally Was Expected as Apple Stock Touches Record High",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60488917/gene-munster-says-new-siri-ai-makes-it-feel-like-having-a-new-phone-ming-chi-kuo-says-stock-rally-was-expected-as-apple-stock-touches-record-high",
+      "ts": 1784187253,
+      "tickers": [
+        "AAPL",
+        "BABA",
+        "BIDU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.318
+    },
+    {
+      "title": "Nancy Pelosi Slams Trump, GOP Budget as 'America Last' Plan, Says Republicans Spend $73 Billion on 'Endless Wars'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60488797/nancy-pelosi-slams-trump-gop-budget-as-america-last-plan-says-republicans-spend-73-billion-on-endless-wars",
+      "ts": 1784186433,
+      "tickers": [
+        "LMT",
+        "RTX",
+        "BA",
+        "NOC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.146
+    },
+    {
+      "title": "UnitedHealth, Abbott Laboratories And 3 Stocks To Watch Heading Into Thursday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60488767/unitedhealth-abbott-laboratories-and-3-stocks-to-watch-heading-into-thursday",
+      "ts": 1784186304,
+      "tickers": [
+        "UNH",
+        "TSM",
+        "GE",
+        "ABT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.572
+    },
+    {
+      "title": "Dow Jumps 150 Points Following Producer Inflation Data: Investor Sentiment Improves, Fear & Greed Index In ‘Neutral’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60488754/dow-jumps-150-points-following-producer-inflation-data-investor-sentiment-improves-fear-greed-index-in-neutral-zone",
+      "ts": 1784186230,
+      "tickers": [
+        "GOOGL",
+        "AAPL",
+        "AMZN",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.452
+    },
+    {
+      "title": "Dan Ives Says AI Needs 'New Kind of Bank' as He Announces Launch of Yorkville Ives: 'This Is the Next Step for Me'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60488714/dan-ives-says-ai-needs-new-kind-of-bank-as-he-announces-launch-of-yorkville-ives-this-is-the-next-step-for-me",
+      "ts": 1784185423,
+      "tickers": [
+        "NVDA",
+        "MSFT",
+        "PLTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.294
+    },
+    {
+      "title": "Nvidia 'Would Not Be Here Today': Jensen Huang Credits Sega's $5 Million Bet For Saving the Company From Bankruptcy as He Revisits the Past",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60488549/jensen-huang-revisits-nvidias-biggest-turning-point",
+      "ts": 1784184322,
+      "tickers": [
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.419
+    },
+    {
+      "title": "Mira Murati Unveils Open-Weight AI Model as Alex Karp, Satya Nadella Warn Companies Are Giving Away Their IP",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60488374/mira-murati-unveils-open-weight-ai-model-as-alex-karp-satya-nadella-warn-companies-are-giving-away-their-ip",
+      "ts": 1784182543,
+      "tickers": [
+        "PLTR",
+        "MSFT",
+        "BOTZ",
+        "AIQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.349
+    },
+    {
+      "title": "Full Transcript: Johnson & Johnson Q2 2026 Earnings Call",
+      "url": "https://www.benzinga.com/news/26/07/60488172/full-transcript-johnson-johnson-q2-2026-earnings-call",
+      "ts": 1784181347,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.452
+    },
+    {
+      "title": "Apple Intelligence's China Win Sparks Rally in Alibaba, Baidu Shares in Hong Kong",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60487990/apple-intelligences-china-win-sparks-rally-in-alibaba-baidu-shares-in-hong-kong",
+      "ts": 1784178986,
+      "tickers": [
+        "BABA",
+        "AAPL",
+        "BIDU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.412
+    },
+    {
+      "title": "Bernie Sanders Says Trump 'Lied' About 10% Credit Card Rate Cap, Points to Big Banks Making Billions Charging 25-30% Interest Rates",
+      "url": "https://www.benzinga.com/news/politics/26/07/60487919/bernie-sanders-says-trump-lied-about-10-credit-card-rate-cap-points-to-big-banks-making-billions-charging-25-30-interest-rates",
+      "ts": 1784177218,
+      "tickers": [
+        "JPM",
+        "GS",
+        "WFC",
+        "BAC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.321
+    },
+    {
+      "title": "AST SpaceMobile, PayPal Holdings, Apple, Micron Technology and SanDisk: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60487566/ast-spacemobile-paypal-holdings-apple-micron-technology-and-sandisk-why-these-5-stocks-are-on-investors-radars",
+      "ts": 1784166272,
+      "tickers": [
+        "SNDK",
+        "AAPL",
+        "MU",
+        "PYPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.401
+    },
     {
       "title": "Jamie Dimon Says Anthropic’s Mythos Access Debate Is a Warning Sign for AI’s Future",
       "url": "https://www.benzinga.com/markets/private-markets/26/07/60486804/jamie-dimon-says-anthropics-mythos-access-debate-is-a-warning-sign-for-ais-future",
@@ -664,198 +808,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.259
-    },
-    {
-      "title": "Microsoft shares are trading higher after reports suggesting the company is focusing its sales tactics more on its comprehensive suite to gain an edge over AI competitors. Also, multiple analysts maintained their Buy or Overweight ratings on the stock.",
-      "url": "https://www.benzinga.com/quote/MSFT",
-      "ts": 1784142068,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.39
-    },
-    {
-      "title": "Morgan Stanley Downgrades Travelers Companies to Underweight, Lowers Price Target to $290",
-      "url": "https://www.benzinga.com/news/26/07/60482411/morgan-stanley-downgrades-travelers-companies-underweight-lowers-price-target-290",
-      "ts": 1784141208,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.5
-    },
-    {
-      "title": "Goldman Sachs Crushes Records, but This Analyst Warns the Party Is Over",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60482145/goldman-sachs-crushes-records-but-this-analyst-warns-the-party-is-over",
-      "ts": 1784140768,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.345
-    },
-    {
-      "title": "'Microsoft’s New Security Chief Replaces Top Execs to Force an AI Overhaul' - The Information",
-      "url": "https://www.benzinga.com/news/26/07/60482021/microsoft-s-new-security-chief-replaces-top-execs-force-ai-overhaul-information",
-      "ts": 1784140597,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.322
-    },
-    {
-      "title": "SEI Enters Active Multifactor ETF Race With New US Equity Fund, Expands Quant Factor Investing",
-      "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60481416/sei-enters-active-multifactor-etf-race-with-new-us-equity-fund-expands-quant-factor-investing",
-      "ts": 1784139766,
-      "tickers": [
-        "SEUS",
-        "AAPL",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.403
-    },
-    {
-      "title": "Evercore ISI Group Maintains Outperform on Microsoft, Raises Price Target to $525",
-      "url": "https://www.benzinga.com/news/26/07/60481240/evercore-isi-group-maintains-outperform-microsoft-raises-price-target-525",
-      "ts": 1784139482,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.484
-    },
-    {
-      "title": "Mizuho Maintains Outperform on Microsoft, Lowers Price Target to $490",
-      "url": "https://www.benzinga.com/news/26/07/60481173/mizuho-maintains-outperform-microsoft-lowers-price-target-490",
-      "ts": 1784139368,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.464
-    },
-    {
-      "title": "Analysts React on IBM's Worst Day on Record: What History Says Happens Next",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60480452/ibm-international-business-machines-25-percent-drop-worst-day-ever-wall-street-analyst-reaction-statistical-historical-performance-after-drops",
-      "ts": 1784138085,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.385
-    },
-    {
-      "title": "Taiwan Semiconductor Manufacturing Q2 Preview: Analysts Expect Record Revenue, Could Stock Hit New All-Time Highs?",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60480445/taiwan-semiconductor-manufacturing-q2-preview-analysts-expect-record-revenue-could-stock-hit-new-all-time-highs",
-      "ts": 1784138076,
-      "tickers": [
-        "TSM",
-        "AAPL",
-        "AMD",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.444
-    },
-    {
-      "title": "BMO Capital Maintains Outperform on Visa, Raises Price Target to $387",
-      "url": "https://www.benzinga.com/news/26/07/60480230/bmo-capital-maintains-outperform-visa-raises-price-target-387",
-      "ts": 1784137769,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.446
-    },
-    {
-      "title": "\"FCC Nearing Rulings Against Disney Over ‘The View,’ TV Licenses\" - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/07/60480191/fcc-nearing-rulings-against-disney-over-view-tv-licenses-bloomberg-news",
-      "ts": 1784137736,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.276
-    },
-    {
-      "title": "BMO Capital Maintains Market Perform on Goldman Sachs Group, Raises Price Target to $1190",
-      "url": "https://www.benzinga.com/news/26/07/60480082/bmo-capital-maintains-market-perform-goldman-sachs-group-raises-price-target-1190",
-      "ts": 1784137559,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.507
-    },
-    {
-      "title": "57 Economists Wrong On Inflation; ASML Earnings Bring Optimism To AI Trade",
-      "url": "https://www.benzinga.com/Opinion/26/07/60479835/57-economists-wrong-on-inflation-asml-earnings-bring-optimism-to-ai-trade",
-      "ts": 1784137127,
-      "tickers": [
-        "USO",
-        "SPY",
-        "NVDA",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.461
-    },
-    {
-      "title": "Baird Maintains Neutral on JPMorgan Chase, Raises Price Target to $305",
-      "url": "https://www.benzinga.com/news/26/07/60479744/baird-maintains-neutral-jpmorgan-chase-raises-price-target-305",
-      "ts": 1784136993,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.481
-    },
-    {
-      "title": "10 Financials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/07/60479700/10-financials-stocks-whale-alerts-today-s-session",
-      "ts": 1784136921,
-      "tickers": [
-        "PYPL",
-        "HOOD",
-        "V",
-        "BX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.39
     },
     {
       "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -1018,12 +970,7 @@
         "score": 1.15,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "'Big Short' Investor Steve Eisman Says AI Has 'No Moats,' Which Is 'Not A Recipe For Longevity'",
-        "ts": 1784126834,
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60472881/big-short-investor-steve-eisman-says-ai-has-no-moats-which-is-not-a-recipe-for-longevity",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1125,9 +1072,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-        "ts": 1784136920,
-        "url": "https://www.benzinga.com/markets/options/26/07/60479697/10-information-technology-stocks-whale-activity-today-s-session",
+        "title": "Dan Ives Says AI Needs 'New Kind of Bank' as He Announces Launch of Yorkville Ives: 'This Is the Next Step for Me'",
+        "ts": 1784185423,
+        "url": "https://www.benzinga.com/markets/tech/26/07/60488714/dan-ives-says-ai-needs-new-kind-of-bank-as-he-announces-launch-of-yorkville-ives-this-is-the-next-step-for-me",
         "wiim": false
       },
       "filings": {
@@ -1338,7 +1285,7 @@
           "date": "2026-06-09",
           "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
         },
-        "insider30d": 10
+        "insider30d": 9
       },
       "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
