@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "generated_at": "Jul 17, 1:44pm ET",
+  "generated_at": "Jul 17, 3:31pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -103,7 +103,7 @@
     {
       "when": "Jul 17",
       "what": "Energy & geopolitics — today's read",
-      "why": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
+      "why": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "affects": "Energy · growth",
       "dir": "two-sided",
       "src": "Benzinga WIIM (live)"
@@ -113,8 +113,8 @@
     "KO": "2026-07-28",
     "ADBE": "2026-09-10",
     "ZTS": "2026-08-06",
-    "NOW": "2026-07-22",
     "ABT": "2026-10-13",
+    "NOW": "2026-07-22",
     "RKLB": "2026-08-05",
     "DHR": "2026-07-21",
     "NVDA": "2026-08-25",
@@ -132,6 +132,13 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Energy Drink",
+      "dir": "mixed",
+      "driver": "The UK government clarified that its ban on the sale of highly caffeinat…",
+      "note": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
+    },
+    {
       "sector": "Insurance & Reinsurance",
       "dir": "down",
       "driver": "Sympathy with Progressive after that company reported Q2 financial resul…",
@@ -147,10 +154,10 @@
     },
     {
       "sector": "Foundry, Fabricator & Idm Semiconductor",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Sympathy with Taiwan Semiconductor",
       "note": "Amid sympathy with Taiwan Semiconductor, as capex concerns weigh on further upside for the industry due to high spending to accommodate new orders. Investors may be concerned that growing capital expenditures may hurt margins.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Financial Services",
@@ -158,32 +165,19 @@
       "driver": "Declines in Treasury yields",
       "note": "Amid declines in Treasury yields, oil prices, and the U.S. dollar. The decline may ease inflation concerns and improve expectations for a more accommodative interest rate environment.",
       "src": "Benzinga WIIM · flags a divergence vs our prices"
-    },
-    {
-      "sector": "Oil & Gas",
-      "dir": "up",
-      "driver": "Reports suggesting that multiple ships",
-      "note": "After reports suggesting that multiple ships, including a Qatari LNG tanker, were struck by Iranian forces in the Strait of Hormuz.",
-      "src": "Benzinga WIIM · price-confirmed"
     }
   ],
   "holding_news": {
     "KO": {
-      "title": "Shares of consumer staples companies are trading higher as investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
-      "ts": 1784225025,
-      "url": "https://www.benzinga.com/quote/KO",
+      "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
+      "ts": 1784310647,
+      "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
     },
     "NVDA": {
       "title": "QUICK SPARK: Apple Overtakes Nvidia as World's Biggest Company",
       "ts": 1784297196,
       "url": "https://www.benzinga.com/markets/tech/26/07/60524413/apple-overtakes-nvidia-worlds-most-valuable-company-market-cap",
-      "wiim": false
-    },
-    "ABT": {
-      "title": "Abbott To Rally More Than 35%? Here Are 10 Top Analyst Forecasts For Friday",
-      "ts": 1784289654,
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60519842/abbott-to-rally-more-than-35-here-are-10-top-analyst-forecasts-for-friday",
       "wiim": false
     }
   },
@@ -196,8 +190,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$95",
-      "price": 81.36,
-      "upside": 16.8,
+      "price": 81.6,
+      "upside": 16.4,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -210,8 +204,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "price": 81.36,
-      "upside": 19.2,
+      "price": 81.6,
+      "upside": 18.9,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -224,8 +218,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$98",
-      "price": 81.36,
-      "upside": 20.5,
+      "price": 81.6,
+      "upside": 20.1,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -238,8 +232,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$263",
-      "price": 252.55,
-      "upside": 4.1,
+      "price": 253.39,
+      "upside": 3.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -252,8 +246,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$166",
-      "price": 149.93,
-      "upside": 10.7,
+      "price": 149.79,
+      "upside": 10.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -266,8 +260,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 252.55,
-      "upside": 18.8,
+      "price": 253.39,
+      "upside": 18.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -280,8 +274,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$365",
-      "price": 330.54,
-      "upside": 10.4,
+      "price": 333.08,
+      "upside": 9.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -294,8 +288,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "price": 127.39,
-      "upside": 9.9,
+      "price": 127.48,
+      "upside": 9.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -308,8 +302,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 252.55,
-      "upside": 13.6,
+      "price": 253.39,
+      "upside": 13.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -322,8 +316,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 127.39,
-      "upside": 11.5,
+      "price": 127.48,
+      "upside": 11.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -336,8 +330,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 127.39,
-      "upside": 13.8,
+      "price": 127.48,
+      "upside": 13.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -350,8 +344,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "price": 171.65,
-      "upside": 45.6,
+      "price": 170.67,
+      "upside": 46.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -364,8 +358,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$250",
-      "price": 330.54,
-      "upside": -24.4,
+      "price": 333.08,
+      "upside": -24.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -378,8 +372,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$162",
-      "price": 149.93,
-      "upside": 8.1,
+      "price": 149.79,
+      "upside": 8.2,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -392,8 +386,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$265",
-      "price": 252.55,
-      "upside": 4.9,
+      "price": 253.39,
+      "upside": 4.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -406,8 +400,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 252.55,
-      "upside": 13.6,
+      "price": 253.39,
+      "upside": 13.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -420,8 +414,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$272",
-      "price": 252.55,
-      "upside": 7.7,
+      "price": 253.39,
+      "upside": 7.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -434,8 +428,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$123",
-      "price": 160.56,
-      "upside": -23.4,
+      "price": 160.43,
+      "upside": -23.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -448,8 +442,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$294",
-      "price": 252.55,
-      "upside": 16.4,
+      "price": 253.39,
+      "upside": 16.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -462,8 +456,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 330.54,
-      "upside": 10.7,
+      "price": 333.08,
+      "upside": 9.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -476,8 +470,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 252.55,
-      "upside": 6.9,
+      "price": 253.39,
+      "upside": 6.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -490,8 +484,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 160.56,
-      "upside": 12.1,
+      "price": 160.43,
+      "upside": 12.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -505,7 +499,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 6.9
+      "upside": 6.6
     },
     "MMM": {
       "date": "2026-07-17",
@@ -514,7 +508,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "upside": 12.1
+      "upside": 12.2
     },
     "AAPL": {
       "date": "2026-07-17",
@@ -523,7 +517,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "upside": 10.7
+      "upside": 9.9
     },
     "PG": {
       "date": "2026-07-16",
@@ -532,7 +526,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$162",
-      "upside": 8.1
+      "upside": 8.2
     },
     "KO": {
       "date": "2026-07-16",
@@ -541,7 +535,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$98",
-      "upside": 20.5
+      "upside": 20.1
     },
     "CRM": {
       "date": "2026-07-14",
@@ -550,7 +544,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "upside": 45.6
+      "upside": 46.5
     },
     "MRK": {
       "date": "2026-07-13",
@@ -559,10 +553,112 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 9.9
+      "upside": 9.8
     }
   },
   "bz_news": [
+    {
+      "title": "Apple Widens Trade Secrets Fight With OpenAI, Targets Former Employees",
+      "url": "https://www.benzinga.com/markets/private-markets/26/07/60536666/apple-widens-trade-secrets-fight-with-openai-targets-former-employees",
+      "ts": 1784316649,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.335
+    },
+    {
+      "title": "IBM shares are trading lower after JP Morgan lowered its price target on the stock from $291 to $250.",
+      "url": "https://www.benzinga.com/quote/IBM",
+      "ts": 1784315721,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.432
+    },
+    {
+      "title": "BMO Capital Maintains Market Perform on Goldman Sachs Group, Lowers Price Target to $1150",
+      "url": "https://www.benzinga.com/news/26/07/60535272/bmo-capital-maintains-market-perform-goldman-sachs-group-lowers-price-target-1150",
+      "ts": 1784313711,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.512
+    },
+    {
+      "title": "Why Is IBM Stock Falling Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60534939/why-is-ibm-stock-falling-friday",
+      "ts": 1784313042,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.372
+    },
+    {
+      "title": "Tigress Financial Maintains Buy on McDonald's, Raises Price Target to $390",
+      "url": "https://www.benzinga.com/news/26/07/60533518/tigress-financial-maintains-buy-mcdonald-s-raises-price-target-390",
+      "ts": 1784310689,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.449
+    },
+    {
+      "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
+      "url": "https://www.benzinga.com/quote/MNST",
+      "ts": 1784310647,
+      "tickers": [
+        "KO",
+        "MNST"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.318
+    },
+    {
+      "title": "China's AI Breakthrough Triggers A Semiconductor Selloff—What It Means For Investors",
+      "url": "https://www.benzinga.com/Opinion/26/07/60533334/china-ai-breakthrough-triggers-semiconductor-selloff-what-it-means-for-investors",
+      "ts": 1784310390,
+      "tickers": [
+        "SPY",
+        "NVDA",
+        "TSLA",
+        "NFLX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.586
+    },
+    {
+      "title": "Trump Threatens Comcast and Disney: President Says Their Licenses Could Be at Risk",
+      "url": "https://www.benzinga.com/news/politics/26/07/60533305/trump-threatens-comcast-and-disney-president-says-their-licenses-could-be-at-risk",
+      "ts": 1784310349,
+      "tickers": [
+        "DIS",
+        "CMCSA",
+        "PSKY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.244
+    },
     {
       "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
       "url": "https://www.benzinga.com/markets/options/26/07/60532977/10-information-technology-stocks-whale-activity-today-s-session",
@@ -773,99 +869,6 @@
       "relevance": 0.302
     },
     {
-      "title": "JP Morgan Maintains Overweight on IBM, Lowers Price Target to $250",
-      "url": "https://www.benzinga.com/news/26/07/60528024/jp-morgan-maintains-overweight-ibm-lowers-price-target-250",
-      "ts": 1784301377,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.447
-    },
-    {
-      "title": "Tom Lee Says 'People Are Rage Quitting at the Bottom,' Compares Ethereum to Amazon, Nvidia, JPMorgan",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60527869/tom-lee-says-people-are-rage-quitting-at-the-bottom-compares-ethereum-to-amazon-nvidia-jpmorgan",
-      "ts": 1784301169,
-      "tickers": [
-        "$ETH",
-        "AMZN",
-        "JPM",
-        "HOOD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.331
-    },
-    {
-      "title": "Texas Rep. Dan Crenshaw Sold Up to $90K Worth of Alphabet Stock",
-      "url": "https://www.benzinga.com/government/26/07/60527211/texas-rep-dan-crenshaw-sold-90k-worth-alphabet-stock",
-      "ts": 1784300428,
-      "tickers": [
-        "GOOG",
-        "AMZN",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.338
-    },
-    {
-      "title": "Travelers CEO Refuses to Chase Growth With Price Cuts: 'That's a Fool's Errand'",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60527061/travelers-ceo-refuses-to-chase-growth-with-price-cuts-thats-a-fools-errand",
-      "ts": 1784300240,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.338
-    },
-    {
-      "title": "'Walmart Further Shuffles Top Executives; Walmart U.S. COO Kieran Shanahan Leaving; Walmart International COO Kyle Kinnard Named Shanahan's Successor' - Wall Street Journal Exclusive",
-      "url": "https://www.benzinga.com/news/26/07/60525765/walmart-further-shuffles-top-executives-walmart-u-s-coo-kieran-shanahan-leaving-walmart-internationa",
-      "ts": 1784298627,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.264
-    },
-    {
-      "title": "ManpowerGroup Posts Upbeat Q2 Earnings, Joins Docebo, Zentalis Pharmaceuticals And Other Big Stocks Moving Higher On Friday",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60524659/manpowergroup-posts-upbeat-q2-earnings-joins-docebo-zentalis-pharmaceuticals-and-other-big-stocks-moving-higher-on-friday",
-      "ts": 1784297390,
-      "tickers": [
-        "SG",
-        "ZNTL",
-        "TRV",
-        "BJRI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.468
-    },
-    {
-      "title": "QUICK SPARK: Apple Overtakes Nvidia as World's Biggest Company",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60524413/apple-overtakes-nvidia-worlds-most-valuable-company-market-cap",
-      "ts": 1784297196,
-      "tickers": [
-        "AAPL",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.47
-    },
-    {
       "title": "Stock Market Today: Dow, Nasdaq, S&P 500 Futures Slump as Trump Says U.S. Is Going 'Great'— Netflix, Coca-Cola, Nebius in Focus (UPDATED)",
       "url": "https://www.benzinga.com/markets/equities/26/07/60517314/stock-market-today-dow-futures-sp-500-futures-slump-even-as-trump-says-us-is-doing-great-netflix-coca-cola-nebius-in-focus",
       "ts": 1784292543,
@@ -961,20 +964,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.404
-    },
-    {
-      "title": "Shares of insurance and reinsurance companies are trading lower amid sympathy with Progressive after that company reported Q2 financial results that included weak policies-in-force and underwriting margins.",
-      "url": "https://www.benzinga.com/quote/PRHI",
-      "ts": 1784126307,
-      "tickers": [
-        "TRV",
-        "RNR",
-        "PRHI"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.396
     },
     {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
@@ -1084,6 +1073,38 @@
       },
       "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
+    "ABT": {
+      "name": "Abbott Laboratories",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 14,
+        "hold": 10,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 35,
+        "bullish": 25,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.03,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-04-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm"
+        },
+        "insider30d": 8
+      },
+      "explain": "35 analysts cover it — 25 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "NOW": {
       "name": "ServiceNow",
       "qarp": "STRONG BUY",
@@ -1115,43 +1136,6 @@
         "insider30d": 1
       },
       "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "ABT": {
-      "name": "Abbott Laboratories",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 14,
-        "hold": 10,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 35,
-        "bullish": 25,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.03,
-        "period": "2026-07-01"
-      },
-      "news": {
-        "title": "Abbott To Rally More Than 35%? Here Are 10 Top Analyst Forecasts For Friday",
-        "ts": 1784289654,
-        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60519842/abbott-to-rally-more-than-35-here-are-10-top-analyst-forecasts-for-friday",
-        "wiim": false
-      },
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-16",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-04-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm"
-        },
-        "insider30d": 8
-      },
-      "explain": "35 analysts cover it — 25 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "RKLB": {
       "name": "Rocket Lab",
@@ -1583,9 +1567,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Shares of consumer staples companies are trading higher as investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
-        "ts": 1784225025,
-        "url": "https://www.benzinga.com/quote/KO",
+        "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
+        "ts": 1784310647,
+        "url": "https://www.benzinga.com/quote/MNST",
         "wiim": true
       },
       "filings": {
@@ -1643,25 +1627,6 @@
       "margin": 26.6,
       "summary": "Q1 FY2026 — revenue $2.3B (+2.9% YoY), diluted EPS $1.42 (+6.0% YoY), net margin 27%. (as reported, GAAP)"
     },
-    "NOW": {
-      "period": "Q1 FY2026",
-      "filed": "2026-04-23",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm",
-      "revenue": {
-        "fmt": "$3.8B",
-        "yoy": 22.1
-      },
-      "eps": {
-        "val": 0.45,
-        "yoy": 2.3
-      },
-      "net_income": {
-        "fmt": "$469M"
-      },
-      "margin": 12.4,
-      "summary": "Q1 FY2026 — revenue $3.8B (+22.1% YoY), diluted EPS $0.45 (+2.3% YoY), net margin 12%. (as reported, GAAP)"
-    },
     "ABT": {
       "period": "Q1 FY2026",
       "filed": "2026-04-29",
@@ -1680,6 +1645,25 @@
       },
       "margin": 9.6,
       "summary": "Q1 FY2026 — revenue $11.2B (+7.8% YoY), diluted EPS $0.61 (-19.7% YoY), net margin 10%. (as reported, GAAP)"
+    },
+    "NOW": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-23",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm",
+      "revenue": {
+        "fmt": "$3.8B",
+        "yoy": 22.1
+      },
+      "eps": {
+        "val": 0.45,
+        "yoy": 2.3
+      },
+      "net_income": {
+        "fmt": "$469M"
+      },
+      "margin": 12.4,
+      "summary": "Q1 FY2026 — revenue $3.8B (+22.1% YoY), diluted EPS $0.45 (+2.3% YoY), net margin 12%. (as reported, GAAP)"
     },
     "RKLB": {
       "period": "Q1 FY2026",
