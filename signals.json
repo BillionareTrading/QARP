@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "generated_at": "Jul 17, 6:39am ET",
+  "generated_at": "Jul 17, 6:58am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,6 +174,12 @@
       "url": "https://www.benzinga.com/news/26/07/60513288/coca-cola-s-fairlife-hit-ransomware-attack-temporarily-suspends-u-s-production-product-quality-and-s",
       "wiim": false
     },
+    "NVDA": {
+      "title": "Korea Drives Semi Stocks Lower Despite Solid Taiwan Semi Earnings; Apple Boosts China AI Models",
+      "ts": 1784225911,
+      "url": "https://www.benzinga.com/Opinion/26/07/60508815/korea-drives-semi-stocks-lower-despite-solid-taiwan-semi-earnings-apple-boosts-china-ai-models",
+      "wiim": false
+    },
     "ABT": {
       "title": "Chip Selloff Drags Nasdaq 100, Gold Sinks Below $4,000: Stock Market Today",
       "ts": 1784221565,
@@ -184,12 +190,6 @@
       "title": "Chip Selloff Drags Nasdaq 100, Gold Sinks Below $4,000: Stock Market Today",
       "ts": 1784221565,
       "url": "https://www.benzinga.com/markets/market-summary/26/07/60505919/stock-market-to-day-chipmakers-nasdaq-100-gold-4000-sandisk-stocks-performance-daily-movers-thursday-wall-street",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "Korea Drives Semi Stocks Lower Despite Solid Taiwan Semi Earnings; Apple Boosts China AI Models",
-      "ts": 1784225911,
-      "url": "https://www.benzinga.com/Opinion/26/07/60508815/korea-drives-semi-stocks-lower-despite-solid-taiwan-semi-earnings-apple-boosts-china-ai-models",
       "wiim": false
     }
   },
@@ -459,9 +459,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-17",
+      "ticker": "MMM",
+      "firm": "JP Morgan",
+      "action": "Upgrades",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$180",
+      "price": 161.77,
+      "upside": 11.3,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "MMM": {
+      "date": "2026-07-17",
+      "firm": "JP Morgan",
+      "action": "Upgrades",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$180",
+      "upside": 11.3
+    },
     "PG": {
       "date": "2026-07-16",
       "firm": "JP Morgan",
@@ -488,15 +511,6 @@
       "stance": "bullish",
       "pt": "$265",
       "upside": 6.0
-    },
-    "MMM": {
-      "date": "2026-07-16",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$123",
-      "upside": -24.0
     },
     "CRM": {
       "date": "2026-07-14",
@@ -527,6 +541,45 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Travelers Companies Q2 Adj. EPS $10.04 Beats $5.38 Estimate, Sales $12.153B Beat $11.346B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60518866/travelers-companies-q2-adj-eps-10-04-beats-5-38-estimate-sales-12-153b-beat-11-346b-estimate",
+      "ts": 1784285850,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.449
+    },
+    {
+      "title": "JP Morgan Upgrades 3M to Overweight, Raises Price Target to $180",
+      "url": "https://www.benzinga.com/news/26/07/60518836/jp-morgan-upgrades-3m-overweight-raises-price-target-180",
+      "ts": 1784285616,
+      "tickers": [
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.508
+    },
+    {
+      "title": "Nebius Extends Slide as Competition Fears Overshadow Rapid Capacity Growth",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60518726/nebius-extends-slide-competition-fears-overshadow-capacity-growth",
+      "ts": 1784284964,
+      "tickers": [
+        "NBIS",
+        "META",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.389
+    },
     {
       "title": "Analyst Calls Taiwan Semiconductor 'Very Solid' Despite Post-Earnings Pullback",
       "url": "https://www.benzinga.com/markets/tech/26/07/60518272/analyst-calls-taiwan-semiconductor-very-solid-despite-post-earnings-pullback",
@@ -731,7 +784,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.306
+      "relevance": 0.305
     },
     {
       "title": "Senator Goes Stock, ETF Shopping: Palladium ETF Among Newest Purchases",
@@ -811,46 +864,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.427
-    },
-    {
-      "title": "JP Morgan Maintains Overweight on Procter & Gamble, Lowers Price Target to $162",
-      "url": "https://www.benzinga.com/news/26/07/60511286/jp-morgan-maintains-overweight-procter-gamble-lowers-price-target-162",
-      "ts": 1784229920,
-      "tickers": [
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.448
-    },
-    {
-      "title": "QUICK SPARK: TSMC's Worst Selloff Since 2022 Looks Bad — Until You Look At Intel",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60511035/taiwan-semiconductor-tsm-stock-falling-versus-intel",
-      "ts": 1784229529,
-      "tickers": [
-        "TSM",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.379
-    },
-    {
-      "title": "What's Going on With Nike Stock Thursday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60510992/whats-going-on-with-nike-stock-thursday-2",
-      "ts": 1784229445,
-      "tickers": [
-        "NKE",
-        "DJIA",
-        "ESG",
-        "STYL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.398
     },
     {
       "title": "Shares of consumer staples companies are trading higher as investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
