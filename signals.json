@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "generated_at": "Jul 17, 5:49am ET",
+  "generated_at": "Jul 17, 6:39am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -528,9 +528,76 @@
   },
   "bz_news": [
     {
+      "title": "Analyst Calls Taiwan Semiconductor 'Very Solid' Despite Post-Earnings Pullback",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60518272/analyst-calls-taiwan-semiconductor-very-solid-despite-post-earnings-pullback",
+      "ts": 1784283553,
+      "tickers": [
+        "TSM",
+        "INTC",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.433
+    },
+    {
+      "title": "'Airbus Wins Major Order from Air China to Cement Regional Hold' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60518200/airbus-wins-major-order-air-china-cement-regional-hold-bloomberg",
+      "ts": 1784283160,
+      "tickers": [
+        "EADSY",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.266
+    },
+    {
+      "title": "'Apple targets dozens of OpenAI employees with legal letters' - Financial Times",
+      "url": "https://www.benzinga.com/news/26/07/60517902/apple-targets-dozens-openai-employees-legal-letters-financial-times",
+      "ts": 1784282507,
+      "tickers": [
+        "MSFT",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.281
+    },
+    {
+      "title": "Industry Comparison: Evaluating Microsoft Against Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/07/60517797/industry-comparison-evaluating-microsoft-against-competitors-software-industry",
+      "ts": 1784282341,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.32
+    },
+    {
+      "title": "What's Going on With Coca-Cola Stock Friday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60517726/whats-going-on-with-coca-cola-stock-friday",
+      "ts": 1784281907,
+      "tickers": [
+        "KO",
+        "XLP",
+        "VDC",
+        "FSTA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.625
+    },
+    {
       "title": "Stock Market Today: Dow Futures, S&P 500 Futures Slump Even as Trump Says US Is Doing 'Great'—Netflix, Coca-Cola, Nebius in Focus",
       "url": "https://www.benzinga.com/markets/equities/26/07/60517314/stock-market-today-dow-futures-sp-500-futures-slump-even-as-trump-says-us-is-doing-great-netflix-coca-cola-nebius-in-focus",
-      "ts": 1784278863,
+      "ts": 1784278852,
       "tickers": [
         "SPY",
         "$BTC",
@@ -584,7 +651,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.371
+      "relevance": 0.372
     },
     {
       "title": "'Microsoft Preps Mythos-Like AI Bug Finder' - The Information",
@@ -664,7 +731,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.305
+      "relevance": 0.306
     },
     {
       "title": "Senator Goes Stock, ETF Shopping: Palladium ETF Among Newest Purchases",
@@ -784,69 +851,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.398
-    },
-    {
-      "title": "FDA Approval Adds New Cholesterol Treatment Option in Merck Portfolio",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60509694/fda-approval-adds-new-cholesterol-treatment-option-in-merck-portfolio",
-      "ts": 1784227276,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.417
-    },
-    {
-      "title": "'Verizon to Cut About 3,000 Jobs, Divest Itself of Some Retail Stores' - Wall Street Journal",
-      "url": "https://www.benzinga.com/news/26/07/60509600/verizon-cut-about-3-000-jobs-divest-itself-some-retail-stores-wall-street-journal",
-      "ts": 1784227148,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.327
-    },
-    {
-      "title": "Stock of the Day: Is This the Bottom for IBM?",
-      "url": "https://www.benzinga.com/trading-ideas/technicals/26/07/60509050/stock-of-the-day-is-this-the-bottom-for-ibm",
-      "ts": 1784226245,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.369
-    },
-    {
-      "title": "Korea Drives Semi Stocks Lower Despite Solid Taiwan Semi Earnings; Apple Boosts China AI Models",
-      "url": "https://www.benzinga.com/Opinion/26/07/60508815/korea-drives-semi-stocks-lower-despite-solid-taiwan-semi-earnings-apple-boosts-china-ai-models",
-      "ts": 1784225911,
-      "tickers": [
-        "SPY",
-        "NVDA",
-        "TSLA",
-        "BABA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.472
-    },
-    {
-      "title": "Raymond James Maintains Outperform on Johnson & Johnson, Raises Price Target to $265",
-      "url": "https://www.benzinga.com/news/26/07/60508561/raymond-james-maintains-outperform-johnson-johnson-raises-price-target-265",
-      "ts": 1784225524,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.432
     },
     {
       "title": "Shares of consumer staples companies are trading higher as investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
