@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "generated_at": "Jul 17, 6:58am ET",
+  "generated_at": "Jul 17, 8:21am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,16 +174,16 @@
       "url": "https://www.benzinga.com/news/26/07/60513288/coca-cola-s-fairlife-hit-ransomware-attack-temporarily-suspends-u-s-production-product-quality-and-s",
       "wiim": false
     },
-    "NVDA": {
-      "title": "Korea Drives Semi Stocks Lower Despite Solid Taiwan Semi Earnings; Apple Boosts China AI Models",
-      "ts": 1784225911,
-      "url": "https://www.benzinga.com/Opinion/26/07/60508815/korea-drives-semi-stocks-lower-despite-solid-taiwan-semi-earnings-apple-boosts-china-ai-models",
-      "wiim": false
-    },
     "ABT": {
       "title": "Chip Selloff Drags Nasdaq 100, Gold Sinks Below $4,000: Stock Market Today",
       "ts": 1784221565,
       "url": "https://www.benzinga.com/markets/market-summary/26/07/60505919/stock-market-to-day-chipmakers-nasdaq-100-gold-4000-sandisk-stocks-performance-daily-movers-thursday-wall-street",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "Korea Drives Semi Stocks Lower Despite Solid Taiwan Semi Earnings; Apple Boosts China AI Models",
+      "ts": 1784225911,
+      "url": "https://www.benzinga.com/Opinion/26/07/60508815/korea-drives-semi-stocks-lower-despite-solid-taiwan-semi-earnings-apple-boosts-china-ai-models",
       "wiim": false
     },
     "RKLB": {
@@ -542,6 +542,65 @@
   },
   "bz_news": [
     {
+      "title": "This 3M Analyst Turns Bullish; Here Are Top 5 Upgrades For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/07/60520317/this-3m-analyst-turns-bullish-here-are-top-5-upgrades-for-friday",
+      "ts": 1784290332,
+      "tickers": [
+        "MMM",
+        "PPG",
+        "MCO",
+        "EMR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.555
+    },
+    {
+      "title": "Abbott To Rally More Than 35%? Here Are 10 Top Analyst Forecasts For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60519842/abbott-to-rally-more-than-35-here-are-10-top-analyst-forecasts-for-friday",
+      "ts": 1784289654,
+      "tickers": [
+        "NFLX",
+        "ABT",
+        "MMM",
+        "OKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.546
+    },
+    {
+      "title": "What's Going on With Apple Stock Friday?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60519766/whats-going-on-with-apple-stock-friday",
+      "ts": 1784289524,
+      "tickers": [
+        "AAPL",
+        "SCHG",
+        "TCHP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.423
+    },
+    {
+      "title": "Earnings Scheduled For July 17, 2026",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60519170/earnings-scheduled-july-17-2026",
+      "ts": 1784286676,
+      "tickers": [
+        "TRV",
+        "SPFI",
+        "FITB",
+        "TFC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
       "title": "Travelers Companies Q2 Adj. EPS $10.04 Beats $5.38 Estimate, Sales $12.153B Beat $11.346B Estimate",
       "url": "https://www.benzinga.com/news/earnings/26/07/60518866/travelers-companies-q2-adj-eps-10-04-beats-5-38-estimate-sales-12-153b-beat-11-346b-estimate",
       "ts": 1784285850,
@@ -812,46 +871,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.315
-    },
-    {
-      "title": "'Boeing, Airbus Vie for Major Plane Order From Jet Lessor SMBC'- Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60514545/boeing-airbus-vie-major-plane-order-jet-lessor-smbc-bloomberg",
-      "ts": 1784235976,
-      "tickers": [
-        "BA",
-        "EADSY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.334
-    },
-    {
-      "title": "Manulife Adds High-Conviction Large-Cap ETF to Capitalize on Momentum",
-      "url": "https://www.benzinga.com/etfs/new-etfs/26/07/60513801/manulife-adds-high-conviction-large-cap-etf-to-capitalize-on-momentum",
-      "ts": 1784233990,
-      "tickers": [
-        "JLCO",
-        "AMZN",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.341
-    },
-    {
-      "title": "Citigroup Maintains Neutral on Goldman Sachs Group, Raises Price Target to $1200",
-      "url": "https://www.benzinga.com/news/26/07/60513511/citigroup-maintains-neutral-goldman-sachs-group-raises-price-target-1200",
-      "ts": 1784233570,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.476
     },
     {
       "title": "Coca-Cola's fairlife Hit By Ransomware Attack, Temporarily Suspends U.S. Production; Product Quality And Safety Have Not Been Impacted",
