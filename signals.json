@@ -1,6 +1,6 @@
 {
   "date": "2026-07-19",
-  "generated_at": "Jul 19, 2:36pm ET",
+  "generated_at": "Jul 19, 3:49pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -178,6 +178,12 @@
       "title": "Chamath Palihapitiya Warns AI Restrictions Could Leave America at an Economic and Security Disadvantage: 'The Future Is Open Source'",
       "ts": 1784448646,
       "url": "https://www.benzinga.com/markets/tech/26/07/60542500/chamath-palihapitiya-warns-ai-restrictions-could-leave-america-at-an-economic-and-security-disadvantage-the-future-is-open-source",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Nvidia on Edge as New Risks Emerge Ahead of Big Tech Earnings",
+      "ts": 1784490068,
+      "url": "https://www.benzinga.com/markets/equities/26/07/60543105/nvidia-on-edge-as-new-risks-emerge-ahead-of-big-tech-earnings",
       "wiim": false
     },
     "UBER": {
@@ -522,6 +528,21 @@
   },
   "bz_news": [
     {
+      "title": "Nvidia on Edge as New Risks Emerge Ahead of Big Tech Earnings",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60543105/nvidia-on-edge-as-new-risks-emerge-ahead-of-big-tech-earnings",
+      "ts": 1784490068,
+      "tickers": [
+        "NVDA",
+        "AMZN",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.532
+    },
+    {
       "title": "Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More",
       "url": "https://www.benzinga.com/markets/tech/26/07/60542784/consumer-tech-jul-13-17-ibm-sees-worst-day-on-record-gemini-3-5-pro-release-delayed-uber-acquires-delivery-hero-more",
       "ts": 1784466825,
@@ -619,7 +640,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.453
+      "relevance": 0.452
     },
     {
       "title": "Benzinga Bulls and Bears: PayPal, UnitedHealth, Netflix — And Stocks End Wild Week",
@@ -844,18 +865,6 @@
       "relevance": 0.213
     },
     {
-      "title": "'Apple in Early Settlement Talks With DOJ Over Antitrust Case' - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/07/60532086/apple-early-settlement-talks-doj-over-antitrust-case-bloomberg-news",
-      "ts": 1784308156,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.325
-    },
-    {
       "title": "Stock Market Today: Dow, Nasdaq, S&P 500 Futures Slump as Trump Says U.S. Is Going 'Great'— Netflix, Coca-Cola, Nebius in Focus (UPDATED)",
       "url": "https://www.benzinga.com/markets/equities/26/07/60517314/stock-market-today-dow-futures-sp-500-futures-slump-even-as-trump-says-us-is-doing-great-netflix-coca-cola-nebius-in-focus",
       "ts": 1784292543,
@@ -868,7 +877,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.511
     },
     {
       "title": "Jim Cramer Says Microchip Is Near A Bottom — 'I Don't See It Yet' — While Nebius Is 'Not Done Going Down'",
@@ -1415,7 +1424,12 @@
         "score": 1.21,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Nvidia on Edge as New Risks Emerge Ahead of Big Tech Earnings",
+        "ts": 1784490068,
+        "url": "https://www.benzinga.com/markets/equities/26/07/60543105/nvidia-on-edge-as-new-risks-emerge-ahead-of-big-tech-earnings",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
