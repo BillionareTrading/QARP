@@ -1,6 +1,6 @@
 {
   "date": "2026-07-19",
-  "generated_at": "Jul 19, 7:24am ET",
+  "generated_at": "Jul 19, 10:32am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -178,6 +178,12 @@
       "title": "Chamath Palihapitiya Warns AI Restrictions Could Leave America at an Economic and Security Disadvantage: 'The Future Is Open Source'",
       "ts": 1784448646,
       "url": "https://www.benzinga.com/markets/tech/26/07/60542500/chamath-palihapitiya-warns-ai-restrictions-could-leave-america-at-an-economic-and-security-disadvantage-the-future-is-open-source",
+      "wiim": false
+    },
+    "UBER": {
+      "title": "Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More",
+      "ts": 1784466825,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60542784/consumer-tech-jul-13-17-ibm-sees-worst-day-on-record-gemini-3-5-pro-release-delayed-uber-acquires-delivery-hero-more",
       "wiim": false
     }
   },
@@ -516,6 +522,21 @@
   },
   "bz_news": [
     {
+      "title": "Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60542784/consumer-tech-jul-13-17-ibm-sees-worst-day-on-record-gemini-3-5-pro-release-delayed-uber-acquires-delivery-hero-more",
+      "ts": 1784466825,
+      "tickers": [
+        "INTC",
+        "VWAGY",
+        "LEDS",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.467
+    },
+    {
       "title": "Trade Secrets Fight With OpenAI, China's Regulatory Nod and More: This Week in Appleverse",
       "url": "https://www.benzinga.com/markets/tech/26/07/60542630/trade-secrets-fight-with-openai-chinas-regulatory-nod-and-more-this-week-in-appleverse",
       "ts": 1784458881,
@@ -584,7 +605,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.354
+      "relevance": 0.353
     },
     {
       "title": "Earnings Season is Booming, So Why Are S&P 500 and Nasdaq 100 Falling?",
@@ -929,7 +950,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.404
+      "relevance": 0.405
     },
     {
       "title": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
@@ -1205,7 +1226,12 @@
         "score": 1.1,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More",
+        "ts": 1784466825,
+        "url": "https://www.benzinga.com/markets/tech/26/07/60542784/consumer-tech-jul-13-17-ibm-sees-worst-day-on-record-gemini-3-5-pro-release-delayed-uber-acquires-delivery-hero-more",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
