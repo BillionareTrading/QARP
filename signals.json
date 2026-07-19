@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-18",
-  "generated_at": "Jul 18, 7:02pm ET",
+  "date": "2026-07-19",
+  "generated_at": "Jul 19, 6:13am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 18",
+      "when": "Jul 19",
       "what": "Energy & geopolitics — today's read",
       "why": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "affects": "Energy · growth",
@@ -175,9 +175,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "QUICK SPARK: Apple Overtakes Nvidia as World's Biggest Company",
-      "ts": 1784297196,
-      "url": "https://www.benzinga.com/markets/tech/26/07/60524413/apple-overtakes-nvidia-worlds-most-valuable-company-market-cap",
+      "title": "Chamath Palihapitiya Warns AI Restrictions Could Leave America at an Economic and Security Disadvantage: 'The Future Is Open Source'",
+      "ts": 1784448646,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60542500/chamath-palihapitiya-warns-ai-restrictions-could-leave-america-at-an-economic-and-security-disadvantage-the-future-is-open-source",
       "wiim": false
     }
   },
@@ -450,15 +450,6 @@
     }
   ],
   "rating_moves": {
-    "JNJ": {
-      "date": "2026-07-17",
-      "firm": "Guggenheim",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$270",
-      "upside": 6.7
-    },
     "MMM": {
       "date": "2026-07-17",
       "firm": "JP Morgan",
@@ -476,6 +467,15 @@
       "stance": "bullish",
       "pt": "$366",
       "upside": 9.7
+    },
+    "JNJ": {
+      "date": "2026-07-17",
+      "firm": "Guggenheim",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$270",
+      "upside": 6.7
     },
     "PG": {
       "date": "2026-07-16",
@@ -515,6 +515,35 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Chamath Palihapitiya Warns AI Restrictions Could Leave America at an Economic and Security Disadvantage: 'The Future Is Open Source'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60542500/chamath-palihapitiya-warns-ai-restrictions-could-leave-america-at-an-economic-and-security-disadvantage-the-future-is-open-source",
+      "ts": 1784448646,
+      "tickers": [
+        "NVDA",
+        "MSFT",
+        "PLTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.369
+    },
+    {
+      "title": "Samsung Lays Off Hundreds of US Employees While Relocating Headquarters to Texas: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60542448/samsung-lays-off-hundreds-of-us-employees-while-relocating-headquarters-to-texas-report",
+      "ts": 1784442877,
+      "tickers": [
+        "SSNLF",
+        "TSLA",
+        "AAPL",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.248
+    },
     {
       "title": "Top S&P 500 Stocks to Watch Next Week: Tesla, Google, Intel, GE Vernova",
       "url": "https://www.benzinga.com/markets/equities/26/07/60542123/top-sp-500-stocks-to-watch-next-week-tesla-google-intel-ge-vernova",
@@ -806,35 +835,6 @@
       "relevance": 0.504
     },
     {
-      "title": "CNBC Halftime Report Final Trades: Apple, Rio Tinto, UnitedHealth Group",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1784307645,
-      "tickers": [
-        "UNH",
-        "RIO",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.393
-    },
-    {
-      "title": "Crude Oil Surges 4%; Travelers Posts Upbeat Q2 results",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60531417/crude-oil-surges-4-travelers-posts-upbeat-q2-results",
-      "ts": 1784307126,
-      "tickers": [
-        "TRV",
-        "RGNX",
-        "SDOT",
-        "SLND"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.371
-    },
-    {
       "title": "Stock Market Today: Dow, Nasdaq, S&P 500 Futures Slump as Trump Says U.S. Is Going 'Great'— Netflix, Coca-Cola, Nebius in Focus (UPDATED)",
       "url": "https://www.benzinga.com/markets/equities/26/07/60517314/stock-market-today-dow-futures-sp-500-futures-slump-even-as-trump-says-us-is-doing-great-netflix-coca-cola-nebius-in-focus",
       "ts": 1784292543,
@@ -889,7 +889,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.426
+      "relevance": 0.427
     },
     {
       "title": "Shares of consumer staples companies are trading higher as investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
@@ -1052,7 +1052,7 @@
           "date": "2026-04-29",
           "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm"
         },
-        "insider30d": 8
+        "insider30d": 7
       },
       "explain": "35 analysts cover it — 25 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1116,7 +1116,7 @@
           "date": "2026-05-07",
           "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm"
         },
-        "insider30d": 2
+        "insider30d": 1
       },
       "explain": "26 analysts cover it — 22 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
@@ -1169,9 +1169,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "QUICK SPARK: Apple Overtakes Nvidia as World's Biggest Company",
-        "ts": 1784297196,
-        "url": "https://www.benzinga.com/markets/tech/26/07/60524413/apple-overtakes-nvidia-worlds-most-valuable-company-market-cap",
+        "title": "Chamath Palihapitiya Warns AI Restrictions Could Leave America at an Economic and Security Disadvantage: 'The Future Is Open Source'",
+        "ts": 1784448646,
+        "url": "https://www.benzinga.com/markets/tech/26/07/60542500/chamath-palihapitiya-warns-ai-restrictions-could-leave-america-at-an-economic-and-security-disadvantage-the-future-is-open-source",
         "wiim": false
       },
       "filings": {
@@ -1185,7 +1185,7 @@
           "date": "2026-05-20",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
         },
-        "insider30d": 17
+        "insider30d": 16
       },
       "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1217,7 +1217,7 @@
           "date": "2026-05-06",
           "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm"
         },
-        "insider30d": 9
+        "insider30d": 4
       },
       "explain": "60 analysts cover it — 51 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1401,7 +1401,7 @@
           "date": "2026-06-09",
           "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
         },
-        "insider30d": 8
+        "insider30d": 7
       },
       "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
