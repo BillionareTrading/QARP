@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "generated_at": "Jul 20, 6:53am ET",
+  "generated_at": "Jul 20, 7:59am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -459,9 +459,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-20",
+      "ticker": "CRM",
+      "firm": "CLSA",
+      "action": "Initiates Coverage On",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$165",
+      "price": 170.77,
+      "upside": -3.4,
+      "held": false,
+      "uni": true,
+      "qarp": "BUY"
     }
   ],
   "rating_moves": {
+    "CRM": {
+      "date": "2026-07-20",
+      "firm": "CLSA",
+      "action": "Initiates Coverage On",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$165",
+      "upside": -3.4
+    },
     "MMM": {
       "date": "2026-07-17",
       "firm": "JP Morgan",
@@ -507,15 +530,6 @@
       "pt": "$98",
       "upside": 20.2
     },
-    "CRM": {
-      "date": "2026-07-14",
-      "firm": "Evercore ISI Group",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$250",
-      "upside": 46.4
-    },
     "MRK": {
       "date": "2026-07-13",
       "firm": "JP Morgan",
@@ -527,6 +541,57 @@
     }
   },
   "bz_news": [
+    {
+      "title": "B of A Securities Maintains Underperform on Travelers Companies, Raises Price Target to $307",
+      "url": "https://www.benzinga.com/news/26/07/60547386/b-securities-maintains-underperform-travelers-companies-raises-price-target-307",
+      "ts": 1784547037,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.492
+    },
+    {
+      "title": "The Biggest Myth About Steve Jobs? Former Apple Executive Says Most People Got His Leadership Wrong",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60547352/the-biggest-myth-about-steve-jobs-former-apple-executive-says-most-people-got-his-leadership-wrong",
+      "ts": 1784546987,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.178
+    },
+    {
+      "title": "Boeing Confirms 2028 Delivery for Air Force One but Warns of Higher Costs",
+      "url": "https://www.benzinga.com/news/travel/26/07/60547263/boeing-confirms-2028-delivery-for-air-force-one-but-warns-of-higher-costs",
+      "ts": 1784546592,
+      "tickers": [
+        "BA",
+        "RYCEY",
+        "DLAKF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.216
+    },
+    {
+      "title": "Hexcel Expands Boeing Supply Deals Across Aerospace Programs",
+      "url": "https://www.benzinga.com/news/26/07/60547003/hexcel-expands-boeing-supply-deals-across-aerospace-programs",
+      "ts": 1784546072,
+      "tickers": [
+        "HXL",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.356
+    },
     {
       "title": "Boeing, Philippine Airlines Plan Deal For Up To 20 Dreamliners",
       "url": "https://www.benzinga.com/news/26/07/60546395/boeing-philippine-airlines-plan-deal-20-dreamliners",
@@ -812,65 +877,6 @@
       "relevance": 0.369
     },
     {
-      "title": "Samsung Lays Off Hundreds of US Employees While Relocating Headquarters to Texas: Report",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60542448/samsung-lays-off-hundreds-of-us-employees-while-relocating-headquarters-to-texas-report",
-      "ts": 1784442877,
-      "tickers": [
-        "SSNLF",
-        "TSLA",
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.248
-    },
-    {
-      "title": "Top S&P 500 Stocks to Watch Next Week: Tesla, Google, Intel, GE Vernova",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60542123/top-sp-500-stocks-to-watch-next-week-tesla-google-intel-ge-vernova",
-      "ts": 1784408722,
-      "tickers": [
-        "TSLA",
-        "GOOG",
-        "INTC",
-        "GEV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.481
-    },
-    {
-      "title": "Bill Ackman Losing Winning Streak as Pershing Square's Core Holdings Falter",
-      "url": "https://www.benzinga.com/markets/hedge-funds/26/07/60542110/bill-ackman-losing-winning-streak-as-pershing-squares-core-holdings-falter",
-      "ts": 1784408135,
-      "tickers": [
-        "PSUS",
-        "PS",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.353
-    },
-    {
-      "title": "Earnings Season is Booming, So Why Are S&P 500 and Nasdaq 100 Falling?",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60542098/earnings-season-is-booming-so-why-are-sp-500-and-nasdaq-100-falling",
-      "ts": 1784407537,
-      "tickers": [
-        "NFLX",
-        "IBM",
-        "FDS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.452
-    },
-    {
       "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "url": "https://www.benzinga.com/quote/MNST",
       "ts": 1784310647,
@@ -896,7 +902,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.511
+      "relevance": 0.512
     },
     {
       "title": "Jim Cramer Says Microchip Is Near A Bottom — 'I Don't See It Yet' — While Nebius Is 'Not Done Going Down'",
@@ -991,21 +997,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.568
-    },
-    {
-      "title": "Warsh’s Collateral Victim: Why Consumer Staples ETFs Are the Next Shoe To Drop",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60378824/warshs-collateral-victim-why-consumer-staples-etfs-are-the-next-shoe-to-drop",
-      "ts": 1783681856,
-      "tickers": [
-        "XLP",
-        "VDC",
-        "KO",
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.333
     }
   ],
   "portfolio_brief": {
