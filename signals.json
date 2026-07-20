@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "generated_at": "Jul 20, 3:04pm ET",
+  "generated_at": "Jul 20, 4:33pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -140,10 +140,10 @@
     },
     {
       "sector": "Insurance & Reinsurance",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Sympathy with Progressive after that company reported Q2 financial resul…",
       "note": "Amid sympathy with Progressive after that company reported Q2 financial results that included weak policies-in-force and underwriting margins.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Consumer Staples",
@@ -161,10 +161,10 @@
     },
     {
       "sector": "Financial Services",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Declines in Treasury yields",
       "note": "Amid declines in Treasury yields, oil prices, and the U.S. dollar. The decline may ease inflation concerns and improve expectations for a more accommodative interest rate environment.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     }
   ],
   "holding_news": {
@@ -174,6 +174,12 @@
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
     },
+    "DHR": {
+      "title": "Danaher Could Swing Over $7 Billion in Value After Earnings",
+      "ts": 1784575777,
+      "url": "https://www.benzinga.com/markets/options/26/07/60564225/danaher-could-swing-7-33-billion-in-value-after-earnings",
+      "wiim": false
+    },
     "NVDA": {
       "title": "What's Going on With NVIDIA Stock Monday?",
       "ts": 1784561662,
@@ -181,12 +187,6 @@
       "wiim": false
     },
     "NOW": {
-      "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
-      "ts": 1784557745,
-      "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
-      "wiim": false
-    },
-    "DHR": {
       "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
       "ts": 1784557745,
       "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
@@ -208,8 +208,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "price": 81.71,
-      "upside": 18.7,
+      "price": 82.12,
+      "upside": 18.1,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -222,8 +222,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$98",
-      "price": 81.71,
-      "upside": 19.9,
+      "price": 82.12,
+      "upside": 19.3,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -236,8 +236,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 249.42,
-      "upside": 20.3,
+      "price": 248.82,
+      "upside": 20.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,8 +250,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$365",
-      "price": 327.29,
-      "upside": 11.5,
+      "price": 326.59,
+      "upside": 11.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -264,8 +264,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "price": 124.91,
-      "upside": 12.1,
+      "price": 124.4,
+      "upside": 12.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -278,8 +278,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 249.42,
-      "upside": 15.1,
+      "price": 248.82,
+      "upside": 15.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -292,8 +292,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 124.91,
-      "upside": 13.7,
+      "price": 124.4,
+      "upside": 14.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -306,8 +306,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 124.91,
-      "upside": 16.1,
+      "price": 124.4,
+      "upside": 16.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -320,7 +320,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "price": 173.78,
+      "price": 173.79,
       "upside": 43.9,
       "held": false,
       "uni": true,
@@ -334,8 +334,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$250",
-      "price": 327.29,
-      "upside": -23.6,
+      "price": 326.59,
+      "upside": -23.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +348,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$162",
-      "price": 148.54,
-      "upside": 9.1,
+      "price": 149.13,
+      "upside": 8.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -362,8 +362,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$265",
-      "price": 249.42,
-      "upside": 6.2,
+      "price": 248.82,
+      "upside": 6.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -376,8 +376,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 249.42,
-      "upside": 15.1,
+      "price": 248.82,
+      "upside": 15.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -390,8 +390,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$272",
-      "price": 249.42,
-      "upside": 9.1,
+      "price": 248.82,
+      "upside": 9.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -404,8 +404,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$123",
-      "price": 160.14,
-      "upside": -23.2,
+      "price": 159.11,
+      "upside": -22.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -418,8 +418,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$294",
-      "price": 249.42,
-      "upside": 17.9,
+      "price": 248.82,
+      "upside": 18.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -432,8 +432,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 327.29,
-      "upside": 11.8,
+      "price": 326.59,
+      "upside": 12.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -446,8 +446,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 249.42,
-      "upside": 8.3,
+      "price": 248.82,
+      "upside": 8.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -460,8 +460,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 160.14,
-      "upside": 12.4,
+      "price": 159.11,
+      "upside": 13.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -474,8 +474,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 332.36,
-      "upside": 27.9,
+      "price": 333.04,
+      "upside": 27.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -488,7 +488,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 173.78,
+      "price": 173.79,
       "upside": -5.1,
       "held": false,
       "uni": true,
@@ -512,7 +512,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "upside": 27.9
+      "upside": 27.6
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -521,7 +521,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 8.3
+      "upside": 8.5
     },
     "MMM": {
       "date": "2026-07-17",
@@ -530,7 +530,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "upside": 12.4
+      "upside": 13.1
     },
     "AAPL": {
       "date": "2026-07-17",
@@ -539,7 +539,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "upside": 11.8
+      "upside": 12.1
     },
     "PG": {
       "date": "2026-07-16",
@@ -548,7 +548,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$162",
-      "upside": 9.1
+      "upside": 8.6
     },
     "KO": {
       "date": "2026-07-16",
@@ -557,7 +557,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$98",
-      "upside": 19.9
+      "upside": 19.3
     },
     "MRK": {
       "date": "2026-07-13",
@@ -566,10 +566,64 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 12.1
+      "upside": 12.5
     }
   },
   "bz_news": [
+    {
+      "title": "If You Invested $100 In Apple Stock 10 Years Ago, You Would Have This Much Today",
+      "url": "https://www.benzinga.com/news/26/07/60566069/if-you-invested-100-apple-stock-10-years-ago-you-would-have-much-today",
+      "ts": 1784579428,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.281
+    },
+    {
+      "title": "OpenAI Warns Autonomous AI Agents Could Learn To Bypass Safeguards",
+      "url": "https://www.benzinga.com/markets/private-markets/26/07/60565989/openai-warns-autonomous-ai-agents-could-learn-to-bypass-safeguards",
+      "ts": 1784579199,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.272
+    },
+    {
+      "title": "Chamath Says Stripe's PayPal Deal Is 'a Shot Across the Bow' for Visa and Mastercard",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60565924/chamath-stripe-paypal-deal-shot-across-the-bow-for-visa-mastercard",
+      "ts": 1784579016,
+      "tickers": [
+        "MA",
+        "V",
+        "PYPL",
+        "XYZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.313
+    },
+    {
+      "title": "Danaher Could Swing Over $7 Billion in Value After Earnings",
+      "url": "https://www.benzinga.com/markets/options/26/07/60564225/danaher-could-swing-7-33-billion-in-value-after-earnings",
+      "ts": 1784575777,
+      "tickers": [
+        "SCHW",
+        "MMM",
+        "DHI",
+        "NLY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.675
+    },
     {
       "title": "Citigroup Maintains Neutral on JPMorgan Chase, Raises Price Target to $360",
       "url": "https://www.benzinga.com/news/26/07/60563363/citigroup-maintains-neutral-jpmorgan-chase-raises-price-target-360",
@@ -744,7 +798,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.378
+      "relevance": 0.379
     },
     {
       "title": "Philippine Airlines Signs With GE Aerospace For Genx-1b Engines To Power New Boeing 787-10 Dreamliners",
@@ -814,7 +868,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.498
+      "relevance": 0.499
     },
     {
       "title": "RBC Capital Maintains Sector Perform on Verizon Communications, Lowers Price Target to $46",
@@ -841,49 +895,6 @@
       "relevance": 0.317
     },
     {
-      "title": "Winners And Losers From Moonshot—Wall Street Fears Overblown—US May Ban Chinese Models",
-      "url": "https://www.benzinga.com/Opinion/26/07/60557342/winners-and-losers-from-moonshot-wall-street-fears-overblown-us-may-ban-chinese-models",
-      "ts": 1784563165,
-      "tickers": [
-        "USO",
-        "SPY",
-        "TSLA",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.301
-    },
-    {
-      "title": "Microsoft Investors Brace for AI Reality Check As Earnings Near",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/07/60557283/microsoft-investors-brace-for-ai-reality-check-as-earnings-near",
-      "ts": 1784563061,
-      "tickers": [
-        "MSFT",
-        "XLK",
-        "VOOG",
-        "TGRW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.431
-    },
-    {
-      "title": "xAI Introduces Grok For Excel, Bringing AI-Powered Analysis And Automation Directly Into Spreadsheets",
-      "url": "https://www.benzinga.com/news/26/07/60557102/xai-introduces-grok-excel-bringing-ai-powered-analysis-and-automation-directly-spreadsheets",
-      "ts": 1784562718,
-      "tickers": [
-        "SPCX",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.293
-    },
-    {
       "title": "Scott Galloway Predicts Sam Altman Is Out as OpenAI CEO Within 6 Months: 'He's an Innovator, Not an Operator'",
       "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60557060/scott-galloway-predicts-sam-altman-is-out-as-openai-ceo-within-6-months-hes-an-innovator-not-an-operator",
       "ts": 1784562654,
@@ -897,21 +908,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.26
-    },
-    {
-      "title": "Cinema Operator AMC Entertainment Rides the Box Office Boom",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60555146/cinema-operator-amc-entertainment-rides-the-box-office-boom",
-      "ts": 1784559619,
-      "tickers": [
-        "AMC",
-        "DIS",
-        "SONY",
-        "NFLX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.293
     },
     {
       "title": "'Coca-Cola appoints JPMorgan, Citi for India bottler IPO, sources say' - Reuters",
@@ -1233,9 +1229,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
-        "ts": 1784557745,
-        "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
+        "title": "Danaher Could Swing Over $7 Billion in Value After Earnings",
+        "ts": 1784575777,
+        "url": "https://www.benzinga.com/markets/options/26/07/60564225/danaher-could-swing-7-33-billion-in-value-after-earnings",
         "wiim": false
       },
       "filings": {
