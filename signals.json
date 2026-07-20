@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "generated_at": "Jul 20, 8:45am ET",
+  "generated_at": "Jul 20, 11:26am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -133,17 +133,17 @@
   "sectors": [
     {
       "sector": "Energy Drink",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "The UK government clarified that its ban on the sale of highly caffeinat…",
       "note": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Insurance & Reinsurance",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Sympathy with Progressive after that company reported Q2 financial resul…",
       "note": "Amid sympathy with Progressive after that company reported Q2 financial results that included weak policies-in-force and underwriting margins.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Consumer Staples",
@@ -154,17 +154,17 @@
     },
     {
       "sector": "Foundry, Fabricator & Idm Semiconductor",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Sympathy with Taiwan Semiconductor",
       "note": "Amid sympathy with Taiwan Semiconductor, as capex concerns weigh on further upside for the industry due to high spending to accommodate new orders. Investors may be concerned that growing capital expenditures may hurt margins.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Financial Services",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Declines in Treasury yields",
       "note": "Amid declines in Treasury yields, oil prices, and the U.S. dollar. The decline may ease inflation concerns and improve expectations for a more accommodative interest rate environment.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     }
   ],
   "holding_news": {
@@ -178,6 +178,18 @@
       "title": "Chamath Palihapitiya Warns AI Restrictions Could Leave America at an Economic and Security Disadvantage: 'The Future Is Open Source'",
       "ts": 1784448646,
       "url": "https://www.benzinga.com/markets/tech/26/07/60542500/chamath-palihapitiya-warns-ai-restrictions-could-leave-america-at-an-economic-and-security-disadvantage-the-future-is-open-source",
+      "wiim": false
+    },
+    "NOW": {
+      "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
+      "ts": 1784557745,
+      "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
+      "wiim": false
+    },
+    "DHR": {
+      "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
+      "ts": 1784557745,
+      "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
       "wiim": false
     },
     "AVGO": {
@@ -202,8 +214,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "price": 81.56,
-      "upside": 18.9,
+      "price": 81.86,
+      "upside": 18.5,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -216,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$98",
-      "price": 81.56,
-      "upside": 20.2,
+      "price": 81.86,
+      "upside": 19.7,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -230,8 +242,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 253.04,
-      "upside": 18.6,
+      "price": 250.56,
+      "upside": 19.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +256,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$365",
-      "price": 333.74,
-      "upside": 9.4,
+      "price": 324.64,
+      "upside": 12.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -258,8 +270,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "price": 127.5,
-      "upside": 9.8,
+      "price": 125.97,
+      "upside": 11.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -272,8 +284,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 253.04,
-      "upside": 13.4,
+      "price": 250.56,
+      "upside": 14.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -286,8 +298,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$142",
-      "price": 127.5,
-      "upside": 11.4,
+      "price": 125.97,
+      "upside": 12.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -300,8 +312,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 127.5,
-      "upside": 13.7,
+      "price": 125.97,
+      "upside": 15.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -314,8 +326,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "price": 170.77,
-      "upside": 46.4,
+      "price": 171.11,
+      "upside": 46.1,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -328,8 +340,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$250",
-      "price": 333.74,
-      "upside": -25.1,
+      "price": 324.64,
+      "upside": -23.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -342,8 +354,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$162",
-      "price": 149.98,
-      "upside": 8.0,
+      "price": 149.79,
+      "upside": 8.2,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -356,8 +368,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$265",
-      "price": 253.04,
-      "upside": 4.7,
+      "price": 250.56,
+      "upside": 5.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -370,8 +382,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 253.04,
-      "upside": 13.4,
+      "price": 250.56,
+      "upside": 14.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -384,8 +396,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$272",
-      "price": 253.04,
-      "upside": 7.5,
+      "price": 250.56,
+      "upside": 8.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -398,8 +410,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$123",
-      "price": 159.84,
-      "upside": -23.0,
+      "price": 161.51,
+      "upside": -23.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -412,8 +424,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$294",
-      "price": 253.04,
-      "upside": 16.2,
+      "price": 250.56,
+      "upside": 17.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -426,8 +438,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 333.74,
-      "upside": 9.7,
+      "price": 324.64,
+      "upside": 12.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -440,8 +452,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 253.04,
-      "upside": 6.7,
+      "price": 250.56,
+      "upside": 7.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -454,8 +466,22 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 159.84,
-      "upside": 12.6,
+      "price": 161.51,
+      "upside": 11.4,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-20",
+      "ticker": "HD",
+      "firm": "Guggenheim",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$425",
+      "price": 333.39,
+      "upside": 27.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -468,8 +494,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 170.77,
-      "upside": -3.4,
+      "price": 171.11,
+      "upside": -3.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -483,25 +509,16 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "upside": -3.4
+      "upside": -3.6
     },
-    "MMM": {
-      "date": "2026-07-17",
-      "firm": "JP Morgan",
-      "action": "Upgrades",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$180",
-      "upside": 12.6
-    },
-    "AAPL": {
-      "date": "2026-07-17",
-      "firm": "HSBC",
-      "action": "Upgrades",
+    "HD": {
+      "date": "2026-07-20",
+      "firm": "Guggenheim",
+      "action": "Reiterates",
       "rating": "Buy",
       "stance": "bullish",
-      "pt": "$366",
-      "upside": 9.7
+      "pt": "$425",
+      "upside": 27.5
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -510,7 +527,25 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 6.7
+      "upside": 7.8
+    },
+    "MMM": {
+      "date": "2026-07-17",
+      "firm": "JP Morgan",
+      "action": "Upgrades",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$180",
+      "upside": 11.4
+    },
+    "AAPL": {
+      "date": "2026-07-17",
+      "firm": "HSBC",
+      "action": "Upgrades",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$366",
+      "upside": 12.7
     },
     "PG": {
       "date": "2026-07-16",
@@ -519,7 +554,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$162",
-      "upside": 8.0
+      "upside": 8.2
     },
     "KO": {
       "date": "2026-07-16",
@@ -528,7 +563,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$98",
-      "upside": 20.2
+      "upside": 19.7
     },
     "MRK": {
       "date": "2026-07-13",
@@ -537,10 +572,334 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 9.8
+      "upside": 11.1
     }
   },
   "bz_news": [
+    {
+      "title": "Stifel Maintains Buy on IBM, Lowers Price Target to $235",
+      "url": "https://www.benzinga.com/news/26/07/60555819/stifel-maintains-buy-ibm-lowers-price-target-235",
+      "ts": 1784560627,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.471
+    },
+    {
+      "title": "Cinema Operator AMC Entertainment Rides the Box Office Boom",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60555146/cinema-operator-amc-entertainment-rides-the-box-office-boom",
+      "ts": 1784559624,
+      "tickers": [
+        "AMC",
+        "DIS",
+        "SONY",
+        "NFLX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.294
+    },
+    {
+      "title": "$100 Invested In JPMorgan Chase 15 Years Ago Would Be Worth This Much Today",
+      "url": "https://www.benzinga.com/news/26/07/60555143/100-invested-jpmorgan-chase-15-years-ago-would-be-worth-much-today",
+      "ts": 1784559623,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.254
+    },
+    {
+      "title": "What Is Going On With Apple Stock On Monday?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60554902/what-is-going-on-with-apple-stock-on-monday",
+      "ts": 1784559231,
+      "tickers": [
+        "AAPL",
+        "NVDA",
+        "OEF",
+        "SCHG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.424
+    },
+    {
+      "title": "Truist Securities Maintains Buy on Travelers Companies, Raises Price Target to $425",
+      "url": "https://www.benzinga.com/news/26/07/60553922/truist-securities-maintains-buy-travelers-companies-raises-price-target-425",
+      "ts": 1784557862,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.423
+    },
+    {
+      "title": "GE Aerospace Stock Rises As Hybrid-Electric Flight Reaches New Heights",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60553892/ge-aerospace-stock-rises-as-hybrid-electric-flight-reaches-new-heights",
+      "ts": 1784557843,
+      "tickers": [
+        "GE",
+        "BA",
+        "PPA",
+        "XLI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.358
+    },
+    {
+      "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
+      "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
+      "ts": 1784557745,
+      "tickers": [
+        "TSLA",
+        "GOOGL",
+        "GOOG",
+        "LMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.433
+    },
+    {
+      "title": "Travelers Analysts Increase Their Forecasts After Better-Than-Expected Q2 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60553446/travelers-analysts-increase-their-forecasts-after-better-than-expected-q2-results",
+      "ts": 1784557313,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.455
+    },
+    {
+      "title": "‘Big Short’ Investor Steve Eisman: Forget The Banks, AI Now Controls US Economy’s Fate",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60553391/big-short-investor-steve-eisman-recession-us-economy-ai",
+      "ts": 1784557253,
+      "tickers": [
+        "JPM",
+        "GS",
+        "WFC",
+        "BAC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.339
+    },
+    {
+      "title": "QUICK SPARK: SpaceX's Brutal Week Erased More Stock Value Than Boeing's Entire Market Cap",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60553243/quick-spark-spacexs-brutal-week-erased-more-stock-value-than-boeings-entire-market-cap",
+      "ts": 1784557034,
+      "tickers": [
+        "SPCX",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.358
+    },
+    {
+      "title": "'Coca-Cola appoints JPMorgan, Citi for India bottler IPO, sources say' - Reuters",
+      "url": "https://www.benzinga.com/news/26/07/60553171/coca-cola-appoints-jpmorgan-citi-india-bottler-ipo-sources-say-reuters",
+      "ts": 1784556964,
+      "tickers": [
+        "KO",
+        "JPM",
+        "C"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.515
+    },
+    {
+      "title": "Why Is Intel Stock Soaring Monday?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60553155/why-is-intel-stock-soaring-monday",
+      "ts": 1784556949,
+      "tickers": [
+        "INTC",
+        "GOOGL",
+        "XLK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.384
+    },
+    {
+      "title": "Boeing Scores Major Airline Wins as Fleet Modernization Accelerates",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60552645/boeing-scores-major-airline-wins-as-fleet-modernization-accelerates",
+      "ts": 1784556278,
+      "tickers": [
+        "BA",
+        "ITA",
+        "PPA",
+        "IDEF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.338
+    },
+    {
+      "title": "Intel's Most Overlooked Edge Over TSMC Starts With Pat Gelsinger's 'Great Depression' Warning",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60552332/intels-most-overlooked-edge-over-tsmc-starts-with-pat-gelsingers-great-depression-warning",
+      "ts": 1784555843,
+      "tickers": [
+        "TSM",
+        "INTC",
+        "AAPL",
+        "QCOM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.43
+    },
+    {
+      "title": "Why Is IREN Stock Jumping on Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60552102/why-is-iren-stock-jumping-on-monday",
+      "ts": 1784555629,
+      "tickers": [
+        "IREN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.358
+    },
+    {
+      "title": "Barclays Maintains Overweight on UnitedHealth Group, Raises Price Target to $441",
+      "url": "https://www.benzinga.com/news/26/07/60550705/barclays-maintains-overweight-unitedhealth-group-raises-price-target-441",
+      "ts": 1784554336,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.451
+    },
+    {
+      "title": "Coca-Cola Stock in Focus: A Look at the Earnings, Analyst Activity, Technical Picture",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60550683/coca-cola-stock-in-focus-a-look-at-the-earnings-analyst-activity-technical-picture",
+      "ts": 1784554255,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.599
+    },
+    {
+      "title": "Investors Pour Record $46 Billion Into Semiconductor ETFs. What the Technicals Say Next",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60550500/investors-record-46-billion-semiconductor-etfs",
+      "ts": 1784553703,
+      "tickers": [
+        "SMH",
+        "SOXX",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.447
+    },
+    {
+      "title": "Apple, UnitedHealth Group And A Basic Material Stock: CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60550200/apple-unitedhealth-group-and-a-basic-material-stock-cnbcs-final-trades",
+      "ts": 1784552901,
+      "tickers": [
+        "AAPL",
+        "UNH",
+        "RIO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.403
+    },
+    {
+      "title": "How To Earn $500 A Month From 3M Stock Ahead Of Q2 Earnings",
+      "url": "https://www.benzinga.com/trading-ideas/dividends/26/07/60550055/how-to-earn-500-a-month-from-3m-stock-ahead-of-q2-earnings-2",
+      "ts": 1784552776,
+      "tickers": [
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.484
+    },
+    {
+      "title": "Microsoft Expands AMD Partnership, To Deploy Helios AI Systems And New EPYC-Powered Azure VMs",
+      "url": "https://www.benzinga.com/news/26/07/60549825/microsoft-expands-amd-partnership-deploy-helios-ai-systems-and-new-epyc-powered-azure-vms",
+      "ts": 1784552501,
+      "tickers": [
+        "MSFT",
+        "AMD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.421
+    },
+    {
+      "title": "Evercore ISI Group Maintains In-Line on Travelers Companies, Raises Price Target to $338",
+      "url": "https://www.benzinga.com/news/26/07/60549789/evercore-isi-group-maintains-line-travelers-companies-raises-price-target-338",
+      "ts": 1784552470,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.493
+    },
+    {
+      "title": "SpaceX Wants To Power Pentagon AI. Microsoft, Amazon And Google Already Do.",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60549662/spacex-pentagon-ai-microsoft-amazon-google",
+      "ts": 1784552404,
+      "tickers": [
+        "SPCX",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.408
+    },
+    {
+      "title": "Guggenheim Reiterates Buy on Home Depot, Maintains $425 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60549461/guggenheim-reiterates-buy-home-depot-maintains-425-price-target",
+      "ts": 1784552017,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.419
+    },
     {
       "title": "UBS Maintains Buy on Walt Disney, Lowers Price Target to $133",
       "url": "https://www.benzinga.com/news/26/07/60548149/ubs-maintains-buy-walt-disney-lowers-price-target-133",
@@ -552,327 +911,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.441
-    },
-    {
-      "title": "B of A Securities Maintains Underperform on Travelers Companies, Raises Price Target to $307",
-      "url": "https://www.benzinga.com/news/26/07/60547386/b-securities-maintains-underperform-travelers-companies-raises-price-target-307",
-      "ts": 1784547037,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.492
-    },
-    {
-      "title": "The Biggest Myth About Steve Jobs? Former Apple Executive Says Most People Got His Leadership Wrong",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60547352/the-biggest-myth-about-steve-jobs-former-apple-executive-says-most-people-got-his-leadership-wrong",
-      "ts": 1784546987,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.178
-    },
-    {
-      "title": "Boeing Confirms 2028 Delivery for Air Force One but Warns of Higher Costs",
-      "url": "https://www.benzinga.com/news/travel/26/07/60547263/boeing-confirms-2028-delivery-for-air-force-one-but-warns-of-higher-costs",
-      "ts": 1784546592,
-      "tickers": [
-        "BA",
-        "RYCEY",
-        "DLAKF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.216
-    },
-    {
-      "title": "Hexcel Expands Boeing Supply Deals Across Aerospace Programs",
-      "url": "https://www.benzinga.com/news/26/07/60547003/hexcel-expands-boeing-supply-deals-across-aerospace-programs",
-      "ts": 1784546072,
-      "tickers": [
-        "HXL",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.356
-    },
-    {
-      "title": "Boeing, Philippine Airlines Plan Deal For Up To 20 Dreamliners",
-      "url": "https://www.benzinga.com/news/26/07/60546395/boeing-philippine-airlines-plan-deal-20-dreamliners",
-      "ts": 1784544356,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.242
-    },
-    {
-      "title": "Why Is Alibaba Stock Gaining Monday?",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60545494/why-is-alibaba-stock-gaining-monday-2",
-      "ts": 1784541770,
-      "tickers": [
-        "BABA",
-        "AAPL",
-        "AVEM",
-        "AVSE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.344
-    },
-    {
-      "title": "Boeing Wins 100-Plane 737 MAX Order From SMBC Aviation Capital",
-      "url": "https://www.benzinga.com/news/26/07/60545244/boeing-wins-100-plane-737-max-order-smbc-aviation-capital",
-      "ts": 1784540364,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.319
-    },
-    {
-      "title": "Reuters Reported Boeing 737 MAX 7 Certification Is Around The Corner And MAX 10 Right Behind It, Deputy FAA Administrator Chris Rocheleau Said In Interview At Farnborough Air Show",
-      "url": "https://www.benzinga.com/quote/BA",
-      "ts": 1784539022,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.196
-    },
-    {
-      "title": "Riyadh Air Commits to Purchase 28 Boeing 787 Dreamliners, Adds 787-10 to Future Fleet",
-      "url": "https://www.benzinga.com/news/26/07/60544985/riyadh-air-commits-purchase-28-boeing-787-dreamliners-adds-787-10-future-fleet",
-      "ts": 1784538872,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.247
-    },
-    {
-      "title": "Elon Musk's Tesla Releases Wall Street Estimates Ahead of Q2 Earnings: Here's What Analysts Expect",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60544629/elon-musks-tesla-releases-wall-street-estimates-ahead-of-q2-earnings-heres-what-analysts-expect",
-      "ts": 1784535631,
-      "tickers": [
-        "TSLA",
-        "JPM",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.505
-    },
-    {
-      "title": "Reported Sunday, 'AerCap in Talks to Buy Boeing 787 Dreamliner Jets at UK Air Show' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60544564/reported-sunday-aercap-talks-buy-boeing-787-dreamliner-jets-uk-air-show-bloomberg",
-      "ts": 1784535442,
-      "tickers": [
-        "AER",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.3
-    },
-    {
-      "title": "QIIB And Visa Consulting & Analytics Announce Strategic Collaboration To Support Payments Growth And Customer Engagement",
-      "url": "https://www.benzinga.com/news/26/07/60544446/qiib-and-visa-consulting-analytics-announce-strategic-collaboration-support-payments-growth-and-cust",
-      "ts": 1784533466,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.324
-    },
-    {
-      "title": "Honeywell Aerospace To Supply APUs, Weather Radar And Flight Management Systems For IndiGo's 810 New Airbus Jets",
-      "url": "https://www.benzinga.com/quote/HON",
-      "ts": 1784532907,
-      "tickers": [
-        "HONA",
-        "HON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.288
-    },
-    {
-      "title": "Kroger Offers the Cheapest Store-Brand Grocery Basket Among Four Major Chains, Study Finds",
-      "url": "https://www.benzinga.com/news/retail-sales/26/07/60544343/kroger-offers-the-cheapest-store-brand-grocery-basket-among-four-major-chains-study-finds",
-      "ts": 1784532378,
-      "tickers": [
-        "KR",
-        "WMT",
-        "COST",
-        "ACI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.321
-    },
-    {
-      "title": "Reported Friday, Boeing's 20-Year Outlook Projects $4.9T Services Market And 2.4M New Aviation Professionals As Digitalization, Sustainability And Retirements Reshape Industry Workforce Needs",
-      "url": "https://www.benzinga.com/news/26/07/60544318/reported-friday-boeing-s-20-year-outlook-projects-4-9t-services-market-and-2-4m-new-aviation-profess",
-      "ts": 1784532081,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.306
-    },
-    {
-      "title": "Trump Praises Giant Eagle's Price Cuts, Urges Other Grocery Chains to Follow: 'Stepping Up in a Big and Bold Way'",
-      "url": "https://www.benzinga.com/news/politics/26/07/60544277/trump-praises-giant-eagles-price-cuts-urges-other-grocery-chains-to-follow-stepping-up-in-a-big-and-bold-way",
-      "ts": 1784531532,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.289
-    },
-    {
-      "title": "Dow Tumbles Over 400 Points, Records Weekly Loss: Investor Sentiment Declines, Greed Index In ‘Fear’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60544009/dow-tumbles-over-400-points-records-weekly-loss-investor-sentiment-declines-greed-index-in-fear-zone",
-      "ts": 1784529510,
-      "tickers": [
-        "META",
-        "GOOGL",
-        "GOOG",
-        "NFLX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.503
-    },
-    {
-      "title": "Ross Gerber Says Apple Should Buy Disney or 'Stop Wasting Time' in Entertainment",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60543613/ross-gerber-says-apple-should-buy-disney-or-stop-wasting-time-in-entertainment",
-      "ts": 1784521117,
-      "tickers": [
-        "AAPL",
-        "DIS",
-        "WFC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.341
-    },
-    {
-      "title": "SpaceX Has Fallen 45% Since Its Peak: Gary Black Says Investors Are Breaking the 'Number One Rule in Investing'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60543491/spacex-has-fallen-45-since-its-peak-gary-black-says-investors-are-breaking-the-number-one-rule-in-investing",
-      "ts": 1784513859,
-      "tickers": [
-        "SPCX",
-        "TSLA",
-        "AAPL",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.37
-    },
-    {
-      "title": "Top Analysts are Extremely Bullish on 3M Stock Ahead of Earnings: Here’s Why",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60543322/top-analysts-are-extremely-bullish-on-3m-stock-ahead-of-earnings-heres-why",
-      "ts": 1784504439,
-      "tickers": [
-        "MMM",
-        "JPM",
-        "GS",
-        "JEF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.396
-    },
-    {
-      "title": "Intel Stock Forms an Alarming Pattern as Earnings Loom",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60543133/intel-stock-forms-an-alarming-pattern-as-earnings-loom",
-      "ts": 1784491688,
-      "tickers": [
-        "INTC",
-        "AAPL",
-        "NVDA",
-        "SOXX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.446
-    },
-    {
-      "title": "Nvidia on Edge as New Risks Emerge Ahead of Big Tech Earnings",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60543105/nvidia-on-edge-as-new-risks-emerge-ahead-of-big-tech-earnings",
-      "ts": 1784490068,
-      "tickers": [
-        "NVDA",
-        "AMZN",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.532
-    },
-    {
-      "title": "Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60542784/consumer-tech-jul-13-17-ibm-sees-worst-day-on-record-gemini-3-5-pro-release-delayed-uber-acquires-delivery-hero-more",
-      "ts": 1784466825,
-      "tickers": [
-        "INTC",
-        "VWAGY",
-        "LEDS",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.467
-    },
-    {
-      "title": "Trade Secrets Fight With OpenAI, China's Regulatory Nod and More: This Week in Appleverse",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60542630/trade-secrets-fight-with-openai-chinas-regulatory-nod-and-more-this-week-in-appleverse",
-      "ts": 1784458881,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.326
     },
     {
       "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
@@ -900,7 +938,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.511
     },
     {
       "title": "Jim Cramer Says Microchip Is Near A Bottom — 'I Don't See It Yet' — While Nebius Is 'Not Done Going Down'",
@@ -1110,7 +1148,12 @@
         "score": 1.15,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
+        "ts": 1784557745,
+        "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1174,7 +1217,12 @@
         "score": 1.19,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
+        "ts": 1784557745,
+        "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
