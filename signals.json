@@ -1,6 +1,6 @@
 {
   "date": "2026-07-21",
-  "generated_at": "Jul 21, 5:04am ET",
+  "generated_at": "Jul 21, 5:54am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -184,12 +184,6 @@
       "title": "Danaher Could Swing Over $7 Billion in Value After Earnings",
       "ts": 1784575777,
       "url": "https://www.benzinga.com/markets/options/26/07/60564225/danaher-could-swing-7-33-billion-in-value-after-earnings",
-      "wiim": false
-    },
-    "NOW": {
-      "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
-      "ts": 1784557745,
-      "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
       "wiim": false
     }
   },
@@ -480,6 +474,18 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Boeing Receives Order For Four 737-8 And Four 787-9 Aircraft From Uganda Airlines",
+      "url": "https://www.benzinga.com/news/26/07/60570179/boeing-receives-order-four-737-8-and-four-787-9-aircraft-uganda-airlines",
+      "ts": 1784627298,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.33
+    },
     {
       "title": "JPMorgan CEO Jamie Dimon Just Issued a Stark Warning About Long-Term US Bonds: 'I Would Not Be a Buyer...'",
       "url": "https://www.benzinga.com/markets/bonds/26/07/60569828/jpmorgan-ceo-jamie-dimon-just-issued-a-stark-warning-about-long-term-us-bonds-i-would-not-be-a-buyer",
@@ -775,7 +781,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.313
+      "relevance": 0.312
     },
     {
       "title": "Why Did This Arcus Biosciences Analyst Bump Price Forecast by 33%?",
@@ -801,18 +807,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.496
-    },
-    {
-      "title": "Morgan Stanley Maintains Equal-Weight on Intel, Raises Price Target to $75",
-      "url": "https://www.benzinga.com/news/26/07/60562704/morgan-stanley-maintains-equal-weight-intel-raises-price-target-75",
-      "ts": 1784572889,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.46
     },
     {
       "title": "'Coca-Cola appoints JPMorgan, Citi for India bottler IPO, sources say' - Reuters",
@@ -908,7 +902,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.426
+      "relevance": 0.427
     },
     {
       "title": "Shares of consumer staples companies are trading higher as investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
@@ -1064,12 +1058,7 @@
         "score": 1.15,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
-        "ts": 1784557745,
-        "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
