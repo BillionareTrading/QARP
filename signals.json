@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-20",
-  "generated_at": "Jul 20, 7:17pm ET",
+  "date": "2026-07-21",
+  "generated_at": "Jul 21, 5:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -49,7 +49,7 @@
       "sub": "+ NBIX, VRTX",
       "tag": "Drug-pricing policy",
       "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.",
-      "next": "Aug 5"
+      "next": "Aug 6"
     },
     {
       "ticker": "ABT",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 20",
+      "when": "Jul 21",
       "what": "Energy & geopolitics — today's read",
       "why": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "affects": "Energy · growth",
@@ -122,7 +122,7 @@
     "BSX": "2026-07-29",
     "LULU": "2026-09-02",
     "SPGI": "2026-07-28",
-    "GILD": "2026-08-05",
+    "GILD": "2026-08-06",
     "AVGO": "2026-09-02",
     "NVS": "2026-07-21",
     "NBIX": "2026-07-30",
@@ -174,28 +174,22 @@
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
     },
-    "DHR": {
-      "title": "Danaher Could Swing Over $7 Billion in Value After Earnings",
-      "ts": 1784575777,
-      "url": "https://www.benzinga.com/markets/options/26/07/60564225/danaher-could-swing-7-33-billion-in-value-after-earnings",
-      "wiim": false
-    },
     "NVDA": {
       "title": "What's Going on With NVIDIA Stock Monday?",
       "ts": 1784561662,
       "url": "https://www.benzinga.com/markets/tech/26/07/60556527/whats-going-on-with-nvidia-stock-monday-9",
       "wiim": false
     },
+    "DHR": {
+      "title": "Danaher Could Swing Over $7 Billion in Value After Earnings",
+      "ts": 1784575777,
+      "url": "https://www.benzinga.com/markets/options/26/07/60564225/danaher-could-swing-7-33-billion-in-value-after-earnings",
+      "wiim": false
+    },
     "NOW": {
       "title": "Intel Could Swing $61.4 Billion in Value After Earnings This Week",
       "ts": 1784557745,
       "url": "https://www.benzinga.com/markets/options/26/07/60553797/intel-could-swing-61-4-billion-in-value-after-earnings-this-week",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "Investors Pour Record $46 Billion Into Semiconductor ETFs. What the Technicals Say Next",
-      "ts": 1784553703,
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60550500/investors-record-46-billion-semiconductor-etfs",
       "wiim": false
     }
   },
@@ -225,90 +219,6 @@
       "price": 82.12,
       "upside": 19.3,
       "held": true,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-07-13",
-      "ticker": "JNJ",
-      "firm": "TD Cowen",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$300",
-      "price": 248.82,
-      "upside": 20.6,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-13",
-      "ticker": "AAPL",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$365",
-      "price": 326.59,
-      "upside": 11.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-13",
-      "ticker": "MRK",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$140",
-      "price": 124.4,
-      "upside": 12.5,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-07-13",
-      "ticker": "JNJ",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$287",
-      "price": 248.82,
-      "upside": 15.3,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-13",
-      "ticker": "MRK",
-      "firm": "BMO Capital",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$142",
-      "price": 124.4,
-      "upside": 14.1,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-07-13",
-      "ticker": "MRK",
-      "firm": "Guggenheim",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$145",
-      "price": 124.4,
-      "upside": 16.6,
-      "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     },
@@ -571,6 +481,156 @@
   },
   "bz_news": [
     {
+      "title": "JPMorgan CEO Jamie Dimon Just Issued a Stark Warning About Long-Term US Bonds: 'I Would Not Be a Buyer...'",
+      "url": "https://www.benzinga.com/markets/bonds/26/07/60569828/jpmorgan-ceo-jamie-dimon-just-issued-a-stark-warning-about-long-term-us-bonds-i-would-not-be-a-buyer",
+      "ts": 1784624054,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.257
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60569710/sp500-july-21-open-up-or-down-polymarket-iran-ceasefire-oil-earnings-ai",
+      "ts": 1784622546,
+      "tickers": [
+        "TSLA",
+        "GOOGL",
+        "GOOG",
+        "GM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.464
+    },
+    {
+      "title": "Dow Dips Over 300 Points As Oil Prices Rise: Greed Index Remains In ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60569657/dow-dips-over-300-points-as-oil-prices-rise-greed-index-remains-in-fear-zone",
+      "ts": 1784621482,
+      "tickers": [
+        "DPZ",
+        "GM",
+        "NOC",
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.442
+    },
+    {
+      "title": "3M, General Motors And 3 Stocks To Watch Heading Into Tuesday",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60569621/3m-general-motors-and-3-stocks-to-watch-heading-into-tuesday",
+      "ts": 1784621289,
+      "tickers": [
+        "MMM",
+        "GM",
+        "NOC",
+        "STLD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.361
+    },
+    {
+      "title": "'JPMorgan, Other US Banks Set To Help Finance Japan's $550 Billion US Investment Plan, Sources Say' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/07/60569532/jpmorgan-other-us-banks-set-help-finance-japan-s-550-billion-us-investment-plan-sources-say-reuters-",
+      "ts": 1784620218,
+      "tickers": [
+        "JPM",
+        "EWJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.308
+    },
+    {
+      "title": "Verizon Files WARN Notice For Approximately 54 Employee Layoffs Across Nine Washington State Facilities Effective September 18, 2026",
+      "url": "https://www.benzinga.com/quote/VZ",
+      "ts": 1784619774,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.298
+    },
+    {
+      "title": "Bill Ackman Says META and AMZN Are 'Cheap Stocks' Despite Their Massive Size",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60569391/bill-ackman-says-meta-and-amzn-are-cheap-stocks-despite-their-massive-size",
+      "ts": 1784618319,
+      "tickers": [
+        "AMZN",
+        "META",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.333
+    },
+    {
+      "title": "Jim Cramer Warns Investors Could Be 'Slaughtered' by Overloaded Tech Portfolios, but Backs Nvidia and Intel: 'It's Time to Go to Other Sectors'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60569367/jim-cramer-tech-stocks-nvidia-intel-other-sectors",
+      "ts": 1784617989,
+      "tickers": [
+        "INTC",
+        "BA",
+        "AMD",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.441
+    },
+    {
+      "title": "AAPL, HPQ, SNDK, WDC: Gene Munster Says 'Memory Hog' AI Will Trigger a Massive 2027 Upgrade Cycle",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60568845/aapl-hpq-sndk-wdc-gene-munster-says-memory-hog-ai-will-trigger-a-massive-2027-upgrade-cycle",
+      "ts": 1784613701,
+      "tickers": [
+        "WDC",
+        "AAPL",
+        "HPQ",
+        "SNDK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.453
+    },
+    {
+      "title": "Intel Launches Fresh Layoffs in Data Center and AI Unit Ahead of Earnings as Lip-Bu Tan Pushes Turnaround Strategy",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60568468/intel-layoffs-data-center-ai-unit-earnings",
+      "ts": 1784604786,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.436
+    },
+    {
+      "title": "Here’s How Much You Would Have Made Owning Travelers Companies Stock In The Last 15 Years",
+      "url": "https://www.benzinga.com/news/26/07/60567973/here-s-how-much-you-would-have-made-owning-travelers-companies-stock-last-15-years",
+      "ts": 1784590220,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.289
+    },
+    {
       "title": "If You Invested $100 In McDonald's Stock 20 Years Ago, You Would Have This Much Today",
       "url": "https://www.benzinga.com/news/26/07/60567875/if-you-invested-100-mcdonald-s-stock-20-years-ago-you-would-have-much-today",
       "ts": 1784587529,
@@ -663,7 +723,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.674
+      "relevance": 0.675
     },
     {
       "title": "Citigroup Maintains Neutral on JPMorgan Chase, Raises Price Target to $360",
@@ -753,163 +813,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.46
-    },
-    {
-      "title": "IREN Stock Rally Sparks 40% Surge in Leveraged ETFs After $2.8 Billion AI Deal Win",
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60562648/iren-stock-rally-sparks-40-surge-in-leveraged-etfs-after-2-8-billion-ai-deal-win",
-      "ts": 1784572824,
-      "tickers": [
-        "IREN",
-        "MSFT",
-        "NVDA",
-        "IREX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.406
-    },
-    {
-      "title": "Microsoft Is A Value Stock? Morningstar Says Yes — Here's Why",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60561958/microsoft-is-a-value-stock-morningstar-says-yes-heres-why",
-      "ts": 1784571653,
-      "tickers": [
-        "MSFT",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.369
-    },
-    {
-      "title": "10 Financials Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/07/60560388/10-financials-stocks-whale-activity-today-s-session",
-      "ts": 1784568912,
-      "tickers": [
-        "COF",
-        "SAN",
-        "V",
-        "NU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.413
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/07/60560387/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1784568912,
-      "tickers": [
-        "MSFT",
-        "NVDA",
-        "IONQ",
-        "WULF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "Apple Stock Hits All-Time Highs: ‘End Of An Era’ with Tim Cook's Final Quarter, Analyst Says Focus on iPhone, Gross Margins",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60560356/apple-stock-hits-all-time-highs-end-of-an-era-with-tim-cooks-final-quarter-analyst-says-focus-on-iphone-gross-margins",
-      "ts": 1784568869,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.35
-    },
-    {
-      "title": "Why Is Oracle Stock Falling on Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60560087/why-is-oracle-stock-falling-on-monday",
-      "ts": 1784568323,
-      "tickers": [
-        "ORCL",
-        "META",
-        "MSFT",
-        "AMD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.379
-    },
-    {
-      "title": "Philippine Airlines Signs With GE Aerospace For Genx-1b Engines To Power New Boeing 787-10 Dreamliners",
-      "url": "https://www.benzinga.com/news/26/07/60559410/philippine-airlines-signs-ge-aerospace-genx-1b-engines-power-new-boeing-787-10-dreamliners",
-      "ts": 1784566950,
-      "tickers": [
-        "GE",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.247
-    },
-    {
-      "title": "CNBC Halftime Report Final Trades: Morgan Stanley, The Goldman Sachs Group, Valero Energy, iShares U.S. Energy ETF",
-      "url": "https://www.benzinga.com/quote/IYE",
-      "ts": 1784566861,
-      "tickers": [
-        "MS",
-        "GS",
-        "VLO",
-        "IYE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.393
-    },
-    {
-      "title": "Apple shares are trading lower. The company reached a new all-time high valuation on July 17.",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1784566327,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.348
-    },
-    {
-      "title": "Big Tech Is Minting Mountains of Cash — But Amazon’s Is Vanishing",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60559005/big-tech-is-minting-mountains-of-cash-but-amazons-is-vanishing",
-      "ts": 1784566024,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.287
-    },
-    {
-      "title": "Tech Selloff: Expert Says ‘Get Your Shopping List Ready' – Stocks ‘Took the Elevator Up and the Elevator Shaft Down’",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60558626/tech-selloff-expert-says-get-your-shopping-list-ready-stocks-took-the-elevator-up-and-the-elevator-shaft-down",
-      "ts": 1784565330,
-      "tickers": [
-        "QQQ",
-        "MU",
-        "XLK",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.498
     },
     {
       "title": "'Coca-Cola appoints JPMorgan, Citi for India bottler IPO, sources say' - Reuters",
@@ -1045,7 +948,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.404
+      "relevance": 0.405
     }
   ],
   "portfolio_brief": {
@@ -1316,7 +1219,7 @@
           "date": "2026-05-06",
           "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm"
         },
-        "insider30d": 4
+        "insider30d": 10
       },
       "explain": "60 analysts cover it — 51 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1464,12 +1367,7 @@
         "score": 1.21,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Investors Pour Record $46 Billion Into Semiconductor ETFs. What the Technicals Say Next",
-        "ts": 1784553703,
-        "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60550500/investors-record-46-billion-semiconductor-etfs",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
