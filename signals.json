@@ -1,6 +1,6 @@
 {
   "date": "2026-07-21",
-  "generated_at": "Jul 21, 4:08pm ET",
+  "generated_at": "Jul 21, 4:58pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -262,7 +262,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$250",
-      "price": 170.12,
+      "price": 170.06,
       "upside": 47.0,
       "held": false,
       "uni": true,
@@ -290,7 +290,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$162",
-      "price": 148.13,
+      "price": 148.1,
       "upside": 9.4,
       "held": false,
       "uni": true,
@@ -304,7 +304,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$265",
-      "price": 250.66,
+      "price": 250.61,
       "upside": 5.7,
       "held": false,
       "uni": true,
@@ -318,7 +318,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 250.66,
+      "price": 250.61,
       "upside": 14.5,
       "held": false,
       "uni": true,
@@ -332,7 +332,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$272",
-      "price": 250.66,
+      "price": 250.61,
       "upside": 8.5,
       "held": false,
       "uni": true,
@@ -360,7 +360,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$294",
-      "price": 250.66,
+      "price": 250.61,
       "upside": 17.3,
       "held": false,
       "uni": true,
@@ -388,7 +388,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 250.66,
+      "price": 250.61,
       "upside": 7.7,
       "held": false,
       "uni": true,
@@ -416,7 +416,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 331.58,
+      "price": 331.6,
       "upside": 28.2,
       "held": false,
       "uni": true,
@@ -430,7 +430,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 170.12,
+      "price": 170.06,
       "upside": -3.0,
       "held": false,
       "uni": true,
@@ -444,7 +444,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 148.13,
+      "price": 148.1,
       "upside": 2.6,
       "held": false,
       "uni": true,
@@ -458,8 +458,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 170.12,
-      "upside": 8.7,
+      "price": 170.06,
+      "upside": 8.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -482,7 +482,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 8.7
+      "upside": 8.8
     },
     "KO": {
       "date": "2026-07-21",
@@ -540,6 +540,48 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Trump's Ally Hints at Blocking Netflix, Amazon, ESPN From 2030 World Cup Rights",
+      "url": "https://www.benzinga.com/news/politics/26/07/60596032/trumps-ally-hints-at-blocking-netflix-amazon-espn-from-2030-world-cup-rights",
+      "ts": 1784667230,
+      "tickers": [
+        "AMZN",
+        "DIS",
+        "NFLX",
+        "CMCSA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.219
+    },
+    {
+      "title": "Alaska Airlines Signs Lease Agreements To Add Four Boeing 737-800 Converted Freighter Aircraft To Its Fleet; Financial Terms Undisclosed",
+      "url": "https://www.benzinga.com/m/26/07/60595469/alaska-airlines-signs-lease-agreements-add-four-boeing-737-800-converted-freighter-aircraft-its-flee",
+      "ts": 1784666217,
+      "tickers": [
+        "ALK",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.277
+    },
+    {
+      "title": "OpenAI Appoints Bank Of New Mellon CEO Robin Vince, Nubank Chairman David Velez To Its Board",
+      "url": "https://www.benzinga.com/news/26/07/60595068/openai-appoints-bank-new-mellon-ceo-robin-vince-nubank-chairman-david-velez-its-board",
+      "ts": 1784665667,
+      "tickers": [
+        "MSFT",
+        "NU",
+        "BNY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.331
+    },
     {
       "title": "OpenAI And Hugging Face Partner To Address Security Incident During Model Evaluation; Implementing Stricter Controls On Infrastructure And Strengthening Model Alignment Safeguards; Sharing Preliminary Findings At This Stage To Help Defenders Understand What Happened Related To The Cybersecurity Incident",
       "url": "https://www.benzinga.com/news/26/07/60594227/openai-and-hugging-face-partner-address-security-incident-during-model-evaluation-implementing-stric",
@@ -847,47 +889,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.399
-    },
-    {
-      "title": "Klarna Lands Apple Deal to Power New Device Leasing Program: Report",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60586874/klarna-lands-apple-deal-to-power-new-device-leasing-program-report",
-      "ts": 1784652347,
-      "tickers": [
-        "KLAR",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.3
-    },
-    {
-      "title": "Alphabet Earnings Could Reveal New Way to Lower AI Costs",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60586591/alphabet-earnings-could-reveal-new-way-to-lower-ai-costs",
-      "ts": 1784651924,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.421
-    },
-    {
-      "title": "White House Announces Royal Jordanian Airlines Acquires Six Boeing 787-9 Jets For $1.4B; Hikma Pharmaceuticals Intends To Invest $1B In U.S.",
-      "url": "https://www.benzinga.com/news/26/07/60586132/white-house-announces-royal-jordanian-airlines-acquires-six-boeing-787-9-jets-1-4b-hikma-pharmaceuti",
-      "ts": 1784651105,
-      "tickers": [
-        "BA",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.364
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -1598,8 +1599,8 @@
         },
         "periodic": {
           "form": "10-Q",
-          "date": "2026-04-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000018/efx-20260331.htm"
+          "date": "2026-07-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000028/efx-20260630.htm"
         },
         "insider30d": 1
       },
@@ -1931,23 +1932,23 @@
       "summary": "Q1 FY2026 — revenue $3.0B (+7.8% YoY), diluted EPS $4.02 (+61.4% YoY), net margin 34%. (as reported, GAAP)"
     },
     "EFX": {
-      "period": "Q1 FY2026",
-      "filed": "2026-04-21",
+      "period": "Q2 FY2026",
+      "filed": "2026-07-21",
       "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000018/efx-20260331.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000028/efx-20260630.htm",
       "revenue": {
-        "fmt": "$1.6B",
-        "yoy": 14.3
+        "fmt": "$1.7B",
+        "yoy": 10.6
       },
       "eps": {
-        "val": 1.42,
-        "yoy": 34.0
+        "val": 1.54,
+        "yoy": 0.7
       },
       "net_income": {
-        "fmt": "$172M"
+        "fmt": "$184M"
       },
-      "margin": 10.4,
-      "summary": "Q1 FY2026 — revenue $1.6B (+14.3% YoY), diluted EPS $1.42 (+34.0% YoY), net margin 10%. (as reported, GAAP)"
+      "margin": 10.8,
+      "summary": "Q2 FY2026 — revenue $1.7B (+10.6% YoY), diluted EPS $1.54 (+0.7% YoY), net margin 11%. (as reported, GAAP)"
     },
     "KO": {
       "period": "Q1 FY2026",
