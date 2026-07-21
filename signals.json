@@ -1,6 +1,6 @@
 {
   "date": "2026-07-21",
-  "generated_at": "Jul 21, 7:18am ET",
+  "generated_at": "Jul 21, 8:07am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,6 +174,18 @@
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
     },
+    "ADBE": {
+      "title": "This Adobe Analyst Turns Bearish; Here Are Top 5 Dowgrades For Tuesday",
+      "ts": 1784633688,
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60572734/this-adobe-analyst-turns-bearish-here-are-top-5-dowgrades-for-tuesday",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "What’s Going on With Iren Stock on Tuesday?",
+      "ts": 1784632993,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60572520/whats-going-on-with-iren-stock-on-tuesday",
+      "wiim": false
+    },
     "EFX": {
       "title": "Earnings Scheduled For July 21, 2026",
       "ts": 1784632272,
@@ -190,12 +202,6 @@
       "title": "Earnings Scheduled For July 21, 2026",
       "ts": 1784632272,
       "url": "https://www.benzinga.com/news/earnings/26/07/60572297/earnings-scheduled-july-21-2026",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "AAPL Stock Hits Historic 11x Sales Valuation Ahead of Tim Cook's Final Earnings Call as Apple CEO",
-      "ts": 1784629589,
-      "url": "https://www.benzinga.com/markets/tech/26/07/60571024/aapl-stock-hits-historic-11x-sales-peak-ahead-of-tim-cooks-final-earnings-call-as-apple-ceo",
       "wiim": false
     }
   },
@@ -409,17 +415,31 @@
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-07-21",
+      "ticker": "CRM",
+      "firm": "Morgan Stanley",
+      "action": "Downgrades",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$185",
+      "price": 173.79,
+      "upside": 6.5,
+      "held": false,
+      "uni": true,
+      "qarp": "BUY"
     }
   ],
   "rating_moves": {
     "CRM": {
-      "date": "2026-07-20",
-      "firm": "CLSA",
-      "action": "Initiates Coverage On",
-      "rating": "Hold",
+      "date": "2026-07-21",
+      "firm": "Morgan Stanley",
+      "action": "Downgrades",
+      "rating": "Equal-Weight",
       "stance": "neutral",
-      "pt": "$165",
-      "upside": -5.1
+      "pt": "$185",
+      "upside": 6.5
     },
     "HD": {
       "date": "2026-07-20",
@@ -486,6 +506,124 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Jefferies Maintains Buy on IBM, Lowers Price Target to $260",
+      "url": "https://www.benzinga.com/news/26/07/60573757/jefferies-maintains-buy-ibm-lowers-price-target-260",
+      "ts": 1784635648,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.426
+    },
+    {
+      "title": "BAE Systems, Boeing And Saab Sign Agreement To Advance Next Generation Pilot Training For The UK Using The Boeing T-7 System",
+      "url": "https://www.benzinga.com/news/26/07/60573232/bae-systems-boeing-and-saab-sign-agreement-advance-next-generation-pilot-training-uk-using-boeing-t-",
+      "ts": 1784635074,
+      "tickers": [
+        "BA",
+        "BAESY",
+        "SAABY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.296
+    },
+    {
+      "title": "Goldman Sachs, Morgan Stanley, Valero Energy And More On CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60573161/goldman-sachs-morgan-stanley-valero-energy-cnbc-final-trades",
+      "ts": 1784634721,
+      "tickers": [
+        "GS",
+        "MS",
+        "VLO",
+        "IYE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.385
+    },
+    {
+      "title": "Morgan Stanley Downgrades Salesforce to Equal-Weight, Lowers Price Target to $185",
+      "url": "https://www.benzinga.com/news/26/07/60573114/morgan-stanley-downgrades-salesforce-equal-weight-lowers-price-target-185",
+      "ts": 1784634502,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.504
+    },
+    {
+      "title": "Reported Earlier: 'Emirates' Clark uses Farnborough to air industry frustrations over jets, engines' - Reuters",
+      "url": "https://www.benzinga.com/news/26/07/60572982/reported-earlier-emirates-clark-uses-farnborough-air-industry-frustrations-over-jets-engines-reuters",
+      "ts": 1784634018,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.233
+    },
+    {
+      "title": "3M Turnaround Gains Momentum, Raises 2026 Profit Outlook",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60572755/3m-turnaround-gains-momentum-raises-2026-profit-outlook",
+      "ts": 1784633725,
+      "tickers": [
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.446
+    },
+    {
+      "title": "This Adobe Analyst Turns Bearish; Here Are Top 5 Dowgrades For Tuesday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60572734/this-adobe-analyst-turns-bearish-here-are-top-5-dowgrades-for-tuesday",
+      "ts": 1784633688,
+      "tickers": [
+        "TRIP",
+        "ADBE",
+        "INTU",
+        "TENB"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.501
+    },
+    {
+      "title": "3M shares are trading higher after the company reported better-than-expected Q3 financial results and raised its FY26 adjusted EPS guidance above estimates. The company widened its FY26 sales guidance.",
+      "url": "https://www.benzinga.com/quote/MMM",
+      "ts": 1784633250,
+      "tickers": [
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.501
+    },
+    {
+      "title": "What’s Going on With Iren Stock on Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60572520/whats-going-on-with-iren-stock-on-tuesday",
+      "ts": 1784632993,
+      "tickers": [
+        "IREN",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.36
+    },
     {
       "title": "Earnings Scheduled For July 21, 2026",
       "url": "https://www.benzinga.com/news/earnings/26/07/60572297/earnings-scheduled-july-21-2026",
@@ -704,125 +842,6 @@
       "relevance": 0.361
     },
     {
-      "title": "'JPMorgan, Other US Banks Set To Help Finance Japan's $550 Billion US Investment Plan, Sources Say' - Reuters Exclusive",
-      "url": "https://www.benzinga.com/news/26/07/60569532/jpmorgan-other-us-banks-set-help-finance-japan-s-550-billion-us-investment-plan-sources-say-reuters-",
-      "ts": 1784620218,
-      "tickers": [
-        "JPM",
-        "EWJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.308
-    },
-    {
-      "title": "Verizon Files WARN Notice For Approximately 54 Employee Layoffs Across Nine Washington State Facilities Effective September 18, 2026",
-      "url": "https://www.benzinga.com/quote/VZ",
-      "ts": 1784619774,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.298
-    },
-    {
-      "title": "Bill Ackman Says META and AMZN Are 'Cheap Stocks' Despite Their Massive Size",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60569391/bill-ackman-says-meta-and-amzn-are-cheap-stocks-despite-their-massive-size",
-      "ts": 1784618319,
-      "tickers": [
-        "AMZN",
-        "META",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.333
-    },
-    {
-      "title": "Jim Cramer Warns Investors Could Be 'Slaughtered' by Overloaded Tech Portfolios, but Backs Nvidia and Intel: 'It's Time to Go to Other Sectors'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60569367/jim-cramer-tech-stocks-nvidia-intel-other-sectors",
-      "ts": 1784617989,
-      "tickers": [
-        "INTC",
-        "BA",
-        "AMD",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.441
-    },
-    {
-      "title": "AAPL, HPQ, SNDK, WDC: Gene Munster Says 'Memory Hog' AI Will Trigger a Massive 2027 Upgrade Cycle",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60568845/aapl-hpq-sndk-wdc-gene-munster-says-memory-hog-ai-will-trigger-a-massive-2027-upgrade-cycle",
-      "ts": 1784613701,
-      "tickers": [
-        "WDC",
-        "AAPL",
-        "HPQ",
-        "SNDK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.453
-    },
-    {
-      "title": "Intel Launches Fresh Layoffs in Data Center and AI Unit Ahead of Earnings as Lip-Bu Tan Pushes Turnaround Strategy",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60568468/intel-layoffs-data-center-ai-unit-earnings",
-      "ts": 1784604786,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.436
-    },
-    {
-      "title": "Here’s How Much You Would Have Made Owning Travelers Companies Stock In The Last 15 Years",
-      "url": "https://www.benzinga.com/news/26/07/60567973/here-s-how-much-you-would-have-made-owning-travelers-companies-stock-last-15-years",
-      "ts": 1784590220,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.289
-    },
-    {
-      "title": "If You Invested $100 In McDonald's Stock 20 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/07/60567875/if-you-invested-100-mcdonald-s-stock-20-years-ago-you-would-have-much-today",
-      "ts": 1784587529,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.266
-    },
-    {
-      "title": "2.6 Million People Lost Their Medicare Advantage Plan This Year: Here's How To Avoid Being Caught Off Guard For 2027",
-      "url": "https://www.benzinga.com/Opinion/26/07/60567376/2-6-million-people-lost-their-medicare-advantage-plan-this-year-heres-how-to-avoid-being-caught-off-guard-for-2027",
-      "ts": 1784582673,
-      "tickers": [
-        "UNH",
-        "HUM",
-        "CVS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.175
-    },
-    {
       "title": "'Coca-Cola appoints JPMorgan, Citi for India bottler IPO, sources say' - Reuters",
       "url": "https://www.benzinga.com/news/26/07/60553171/coca-cola-appoints-jpmorgan-citi-india-bottler-ipo-sources-say-reuters",
       "ts": 1784556964,
@@ -976,7 +995,12 @@
         "score": 0.49,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "This Adobe Analyst Turns Bearish; Here Are Top 5 Dowgrades For Tuesday",
+        "ts": 1784633688,
+        "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60572734/this-adobe-analyst-turns-bearish-here-are-top-5-dowgrades-for-tuesday",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1174,9 +1198,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "AAPL Stock Hits Historic 11x Sales Valuation Ahead of Tim Cook's Final Earnings Call as Apple CEO",
-        "ts": 1784629589,
-        "url": "https://www.benzinga.com/markets/tech/26/07/60571024/aapl-stock-hits-historic-11x-sales-peak-ahead-of-tim-cooks-final-earnings-call-as-apple-ceo",
+        "title": "What’s Going on With Iren Stock on Tuesday?",
+        "ts": 1784632993,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60572520/whats-going-on-with-iren-stock-on-tuesday",
         "wiim": false
       },
       "filings": {
