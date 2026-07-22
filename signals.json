@@ -1,6 +1,6 @@
 {
   "date": "2026-07-22",
-  "generated_at": "Jul 22, 11:24am ET",
+  "generated_at": "Jul 22, 1:06pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -132,6 +132,13 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Software",
+      "dir": "down",
+      "driver": "Reports suggesting that OpenAI is developing a product called Presence t…",
+      "note": "After reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Energy Drink",
       "dir": "mixed",
       "driver": "The UK government clarified that its ban on the sale of highly caffeinat…",
@@ -147,10 +154,10 @@
     },
     {
       "sector": "Consumer Staples",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Investors rotate into defensive sectors amid recent market volatility an…",
       "note": "As investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Foundry, Fabricator & Idm Semiconductor",
@@ -161,6 +168,18 @@
     }
   ],
   "holding_news": {
+    "NOW": {
+      "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+      "ts": 1784737943,
+      "url": "https://www.benzinga.com/quote/SAP",
+      "wiim": true
+    },
+    "ADBE": {
+      "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+      "ts": 1784737943,
+      "url": "https://www.benzinga.com/quote/SAP",
+      "wiim": true
+    },
     "KO": {
       "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "ts": 1784310647,
@@ -168,27 +187,15 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Alphabet, Microsoft, Meta Earnings Will Spotlight AI Spending — But the Bigger Story May Be In The Footnotes",
-      "ts": 1784725371,
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60605323/alphabet-microsoft-meta-earnings-will-spotlight-ai-spending-but-the-bigger-story-may-be-in-the-footnotes",
+      "title": "Intel Q2 Preview: Stock Hammers Nvidia with 7x Returns Since Dow Swap — Will Earnings Fuel Further Gains?",
+      "ts": 1784737995,
+      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60615237/intel-q2-preview-stock-hammers-nvidia-with-7x-returns-since-dow-swap-will-earnings-fuel-further-gains",
       "wiim": false
     },
     "AVGO": {
       "title": "Stock Market Today: Dow, S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Capital One in Focus (UPDATED)",
       "ts": 1784723400,
       "url": "https://www.benzinga.com/markets/equities/26/07/60600025/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stocks-cool-down-and-tesla-alphabet-gear-up-for-earnings-super-micro-adtran-capital-one-in-focus",
-      "wiim": false
-    },
-    "NOW": {
-      "title": "'OpenAI is launching new corporate software that takes it beyond the AI model war' - Business Insider",
-      "ts": 1784722261,
-      "url": "https://www.benzinga.com/news/26/07/60603749/openai-launching-new-corporate-software-takes-it-beyond-ai-model-war-business-insider",
-      "wiim": false
-    },
-    "NVS": {
-      "title": "Trump Sets August 1 Start for Generic Drug Tariff Clock, Warns of 200% Duties: Companies Must 'Build Plant and Equipment' in US",
-      "ts": 1784686390,
-      "url": "https://www.benzinga.com/news/health-care/26/07/60598187/trump-generic-drug-tariffs-200-percent-august-1",
       "wiim": false
     }
   },
@@ -201,8 +208,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$98",
-      "price": 82.1,
-      "upside": 19.4,
+      "price": 82.49,
+      "upside": 18.8,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -215,8 +222,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "price": 82.1,
-      "upside": 10.8,
+      "price": 82.49,
+      "upside": 10.3,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -229,8 +236,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$162",
-      "price": 149.41,
-      "upside": 8.4,
+      "price": 150.13,
+      "upside": 7.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -243,8 +250,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$265",
-      "price": 254.77,
-      "upside": 4.0,
+      "price": 255.53,
+      "upside": 3.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -257,8 +264,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 254.77,
-      "upside": 12.7,
+      "price": 255.53,
+      "upside": 12.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -271,8 +278,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$272",
-      "price": 254.77,
-      "upside": 6.8,
+      "price": 255.53,
+      "upside": 6.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -285,8 +292,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$123",
-      "price": 173.14,
-      "upside": -29.0,
+      "price": 171.26,
+      "upside": -28.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -299,8 +306,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$294",
-      "price": 254.77,
-      "upside": 15.4,
+      "price": 255.53,
+      "upside": 15.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -313,8 +320,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 324.48,
-      "upside": 12.8,
+      "price": 324.23,
+      "upside": 12.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -327,8 +334,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 254.77,
-      "upside": 6.0,
+      "price": 255.53,
+      "upside": 5.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -341,8 +348,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 173.14,
-      "upside": 4.0,
+      "price": 171.26,
+      "upside": 5.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -355,8 +362,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 331.06,
-      "upside": 28.4,
+      "price": 332.76,
+      "upside": 27.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -369,8 +376,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 165.1,
-      "upside": -0.1,
+      "price": 163.99,
+      "upside": 0.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -383,8 +390,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 149.41,
-      "upside": 1.7,
+      "price": 150.13,
+      "upside": 1.2,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -397,8 +404,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 165.1,
-      "upside": 12.1,
+      "price": 163.99,
+      "upside": 12.8,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -411,8 +418,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 173.14,
-      "upside": 5.7,
+      "price": 171.26,
+      "upside": 6.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -425,8 +432,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 173.14,
-      "upside": -23.8,
+      "price": 171.26,
+      "upside": -22.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -440,7 +447,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "upside": 5.7
+      "upside": 6.9
     },
     "PG": {
       "date": "2026-07-21",
@@ -449,7 +456,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 1.7
+      "upside": 1.2
     },
     "CRM": {
       "date": "2026-07-21",
@@ -458,7 +465,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 12.1
+      "upside": 12.8
     },
     "KO": {
       "date": "2026-07-21",
@@ -467,7 +474,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "upside": 10.8
+      "upside": 10.3
     },
     "HD": {
       "date": "2026-07-20",
@@ -476,7 +483,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "upside": 28.4
+      "upside": 27.7
     },
     "AAPL": {
       "date": "2026-07-17",
@@ -485,7 +492,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "upside": 12.8
+      "upside": 12.9
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -494,7 +501,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 6.0
+      "upside": 5.7
     },
     "MRK": {
       "date": "2026-07-13",
@@ -503,10 +510,168 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 9.1
+      "upside": 9.3
     }
   },
   "bz_news": [
+    {
+      "title": "CNBC Halftime Report Final Trades: Nvidia, UnitedHealth Group, Invesco S&P 500 Equal Weight ETF, Ardagh Metal Packaging S.A.",
+      "url": "https://www.benzinga.com/quote/NVDA",
+      "ts": 1784739684,
+      "tickers": [
+        "UNH",
+        "AMBP",
+        "RSP",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.512
+    },
+    {
+      "title": "Stock Market Today: Nasdaq 100 Falls as Crude Rallies to $88",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60615991/stock-market-today-news-oil-nasdaq-wednesday",
+      "ts": 1784739484,
+      "tickers": [
+        "QQQ",
+        "USO",
+        "DIA",
+        "VOO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.479
+    },
+    {
+      "title": "Intel Q2 Preview: Stock Hammers Nvidia with 7x Returns Since Dow Swap — Will Earnings Fuel Further Gains?",
+      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60615237/intel-q2-preview-stock-hammers-nvidia-with-7x-returns-since-dow-swap-will-earnings-fuel-further-gains",
+      "ts": 1784737995,
+      "tickers": [
+        "INTC",
+        "NVDA",
+        "SOXX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.496
+    },
+    {
+      "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+      "url": "https://www.benzinga.com/quote/SAP",
+      "ts": 1784737943,
+      "tickers": [
+        "PATH",
+        "APPN",
+        "VERX",
+        "NTSK"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.377
+    },
+    {
+      "title": "Live On CNBC, Steve Weiss Announces Bought More UnitedHealth Group",
+      "url": "https://www.benzinga.com/quote/UNH",
+      "ts": 1784737925,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.408
+    },
+    {
+      "title": "Bernstein Reiterates Outperform on Microsoft, Maintains $646 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60614805/bernstein-reiterates-outperform-microsoft-maintains-646-price-target",
+      "ts": 1784737430,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.467
+    },
+    {
+      "title": "Oppenheimer Reiterates Outperform on Microsoft, Maintains $515 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60614644/oppenheimer-reiterates-outperform-microsoft-maintains-515-price-target",
+      "ts": 1784737246,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.446
+    },
+    {
+      "title": "3M Analysts Increase Their Forecasts After Strong Q2 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60614577/3m-analysts-increase-their-forecasts-after-strong-q2-earnings",
+      "ts": 1784737131,
+      "tickers": [
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.494
+    },
+    {
+      "title": "Truist Securities Reiterates Buy on Microsoft, Maintains $575 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60614542/truist-securities-reiterates-buy-microsoft-maintains-575-price-target",
+      "ts": 1784737073,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.432
+    },
+    {
+      "title": "Moody’s Stock Gains on Q2 Earnings Beat: Robust Debt Issuance, AI Growth Drive Target Raise",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60614448/moodys-stock-gains-on-q2-earnings-beat-robust-debt-issuance-ai-growth-drive-target-raise",
+      "ts": 1784736941,
+      "tickers": [
+        "MCO",
+        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.473
+    },
+    {
+      "title": "Here's How Much $1000 Invested In Salesforce 20 Years Ago Would Be Worth Today",
+      "url": "https://www.benzinga.com/news/26/07/60613844/here-s-how-much-1000-invested-salesforce-20-years-ago-would-be-worth-today",
+      "ts": 1784736058,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.299
+    },
+    {
+      "title": "OpenAI Commits To Provide $4M In Codex Access To ~2K Genesis Researchers At National Laboratories And Universities; Committing To $3M For API Support; To Offer Participating Researchers Up To $10M In API Usage For $2.5M Spent",
+      "url": "https://www.benzinga.com/news/26/07/60613132/openai-commits-provide-4m-codex-access-2k-genesis-researchers-national-laboratories-and-universities",
+      "ts": 1784734990,
+      "tickers": [
+        "MSFT",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.294
+    },
     {
       "title": "Citigroup Maintains Neutral on 3M, Raises Price Target to $183",
       "url": "https://www.benzinga.com/news/26/07/60612254/citigroup-maintains-neutral-3m-raises-price-target-183",
@@ -676,172 +841,6 @@
       "relevance": 0.182
     },
     {
-      "title": "What's Going on With Apple Stock Wednesday?",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60606020/whats-going-on-with-apple-stock-wednesday-3",
-      "ts": 1784726447,
-      "tickers": [
-        "AAPL",
-        "OEF",
-        "SCHG",
-        "TCHP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.413
-    },
-    {
-      "title": "Alphabet, Microsoft, Meta Earnings Will Spotlight AI Spending — But the Bigger Story May Be In The Footnotes",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60605323/alphabet-microsoft-meta-earnings-will-spotlight-ai-spending-but-the-bigger-story-may-be-in-the-footnotes",
-      "ts": 1784725371,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.447
-    },
-    {
-      "title": "'OpenAI’s Planned Cloud Spending Hits $750 Billion as Computing Efforts Ramp Up' - WSJ Exclusive",
-      "url": "https://www.benzinga.com/news/26/07/60605280/openais-planned-cloud-spending-hits-750-billion-as-computing-efforts-ramp-up-wsj-exclusive",
-      "ts": 1784725316,
-      "tickers": [
-        "AAPL",
-        "META",
-        "AMZN",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.462
-    },
-    {
-      "title": "AT&T Surprises Wall Street With Strong Subscriber Growth",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60604626/att-surprises-wall-street-with-strong-subscriber-growth",
-      "ts": 1784724063,
-      "tickers": [
-        "T",
-        "TMUS",
-        "VZ",
-        "CHTR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.349
-    },
-    {
-      "title": "IRS Chief Frank Bisignano Fires Back After WSJ Spying Report, Says He 'Wouldn't Even Know How' to Access Confidential Files: 'None of It's True...'",
-      "url": "https://www.benzinga.com/news/politics/26/07/60604301/irs-chief-frank-bisignano-fires-back-after-wsj-spying-report-says-he-wouldnt-even-know-how-to-access-confidential-files-none-of-its-true",
-      "ts": 1784723755,
-      "tickers": [
-        "JPM",
-        "WFC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.228
-    },
-    {
-      "title": "Nvidia, Goldman Sachs, UnitedHealth and an Energy Stock on CNBC’s ‘Final Trades’",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60604168/nvidia-goldman-sachs-unitedhealth-and-an-energy-stock-on-cnbcs-final-trades",
-      "ts": 1784723578,
-      "tickers": [
-        "GS",
-        "NVDA",
-        "FANG",
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.513
-    },
-    {
-      "title": "Stock Market Today: Dow, S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Capital One in Focus (UPDATED)",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60600025/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stocks-cool-down-and-tesla-alphabet-gear-up-for-earnings-super-micro-adtran-capital-one-in-focus",
-      "ts": 1784723400,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "AVGO",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.53
-    },
-    {
-      "title": "RBC Capital Maintains Underperform on 3M, Raises Price Target to $132",
-      "url": "https://www.benzinga.com/news/26/07/60603992/rbc-capital-maintains-underperform-3m-raises-price-target-132",
-      "ts": 1784723331,
-      "tickers": [
-        "MMM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.483
-    },
-    {
-      "title": "AEGIS Hedging Solutions Agrees To Be Acquired By Private Equity At Goldman Sachs Alternatives; Financial Terms Undisclosed",
-      "url": "https://www.benzinga.com/m/26/07/60603938/aegis-hedging-solutions-agrees-be-acquired-private-equity-goldman-sachs-alternatives-financial-terms",
-      "ts": 1784723108,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.435
-    },
-    {
-      "title": "IBM Earnings Are Imminent; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60603935/ibm-earnings-are-imminent-these-most-accurate-analysts-revise-forecasts-ahead-of-earnings-call-3",
-      "ts": 1784723105,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.489
-    },
-    {
-      "title": "Microsoft Investing $60M Over AI For Science Support For U.S. Department Of Energy's Genesis Mission",
-      "url": "https://www.benzinga.com/news/26/07/60603883/microsoft-investing-60m-over-ai-science-support-u-s-department-energy-s-genesis-mission",
-      "ts": 1784722737,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.405
-    },
-    {
-      "title": "'OpenAI is launching new corporate software that takes it beyond the AI model war' - Business Insider",
-      "url": "https://www.benzinga.com/news/26/07/60603749/openai-launching-new-corporate-software-takes-it-beyond-ai-model-war-business-insider",
-      "ts": 1784722261,
-      "tickers": [
-        "MSFT",
-        "ORCL",
-        "CRM",
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.362
-    },
-    {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
       "url": "https://www.benzinga.com/news/26/07/60579075/barclays-maintains-overweight-coca-cola-raises-price-target-91",
       "ts": 1784642677,
@@ -987,7 +986,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.404
+      "relevance": 0.405
     }
   ],
   "portfolio_brief": {
@@ -1007,7 +1006,12 @@
         "score": 0.49,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+        "ts": 1784737943,
+        "url": "https://www.benzinga.com/quote/SAP",
+        "wiim": true
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1104,10 +1108,10 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "'OpenAI is launching new corporate software that takes it beyond the AI model war' - Business Insider",
-        "ts": 1784722261,
-        "url": "https://www.benzinga.com/news/26/07/60603749/openai-launching-new-corporate-software-takes-it-beyond-ai-model-war-business-insider",
-        "wiim": false
+        "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+        "ts": 1784737943,
+        "url": "https://www.benzinga.com/quote/SAP",
+        "wiim": true
       },
       "filings": {
         "latest8k": {
@@ -1173,9 +1177,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Alphabet, Microsoft, Meta Earnings Will Spotlight AI Spending — But the Bigger Story May Be In The Footnotes",
-        "ts": 1784725371,
-        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60605323/alphabet-microsoft-meta-earnings-will-spotlight-ai-spending-but-the-bigger-story-may-be-in-the-footnotes",
+        "title": "Intel Q2 Preview: Stock Hammers Nvidia with 7x Returns Since Dow Swap — Will Earnings Fuel Further Gains?",
+        "ts": 1784737995,
+        "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60615237/intel-q2-preview-stock-hammers-nvidia-with-7x-returns-since-dow-swap-will-earnings-fuel-further-gains",
         "wiim": false
       },
       "filings": {
@@ -1438,12 +1442,7 @@
         "score": 0.59,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Trump Sets August 1 Start for Generic Drug Tariff Clock, Warns of 200% Duties: Companies Must 'Build Plant and Equipment' in US",
-        "ts": 1784686390,
-        "url": "https://www.benzinga.com/news/health-care/26/07/60598187/trump-generic-drug-tariffs-200-percent-august-1",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": null,
         "periodic": null,
