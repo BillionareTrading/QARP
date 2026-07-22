@@ -1,6 +1,6 @@
 {
   "date": "2026-07-22",
-  "generated_at": "Jul 22, 5:58am ET",
+  "generated_at": "Jul 22, 6:54am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,16 +174,16 @@
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
     },
-    "AVGO": {
-      "title": "Stock Market Today: S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Adtran, Capital One in Focus",
-      "ts": 1784712820,
-      "url": "https://www.benzinga.com/markets/equities/26/07/60600025/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stocks-cool-down-and-tesla-alphabet-gear-up-for-earnings-super-micro-adtran-capital-one-in-focus",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1784655312,
       "url": "https://www.benzinga.com/markets/options/26/07/60588781/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Stock Market Today: S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Adtran, Capital One in Focus",
+      "ts": 1784712820,
+      "url": "https://www.benzinga.com/markets/equities/26/07/60600025/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stocks-cool-down-and-tesla-alphabet-gear-up-for-earnings-super-micro-adtran-capital-one-in-focus",
       "wiim": false
     },
     "NVS": {
@@ -505,6 +505,21 @@
   },
   "bz_news": [
     {
+      "title": "What's Going on With AMD Stock Wednesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60601029/whats-going-on-with-amd-stock-wednesday-8",
+      "ts": 1784715709,
+      "tickers": [
+        "AMD",
+        "INTC",
+        "ARKW",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.403
+    },
+    {
       "title": "American Express And ALL Accor Announce Global Partnership Featuring Elite Status Match And Points Transfer",
       "url": "https://www.benzinga.com/quote/AXP",
       "ts": 1784714051,
@@ -810,19 +825,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.594
-    },
-    {
-      "title": "'Goldman Sachs creates private markets platform as rich investors seek the next SpaceX and Stripe' - CNBC",
-      "url": "https://www.benzinga.com/news/26/07/60590833/goldman-sachs-creates-private-markets-platform-rich-investors-seek-next-spacex-and-stripe-cnbc",
-      "ts": 1784658716,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.361
+      "relevance": 0.593
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -915,7 +918,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.511
     },
     {
       "title": "Jim Cramer Says Microchip Is Near A Bottom — 'I Don't See It Yet' — While Nebius Is 'Not Done Going Down'",
