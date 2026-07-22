@@ -1,6 +1,6 @@
 {
   "date": "2026-07-22",
-  "generated_at": "Jul 22, 8:05am ET",
+  "generated_at": "Jul 22, 8:57am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,12 +174,6 @@
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
     },
-    "NOW": {
-      "title": "Earnings Scheduled For July 22, 2026",
-      "ts": 1784718690,
-      "url": "https://www.benzinga.com/news/earnings/26/07/60602326/earnings-scheduled-july-22-2026",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1784655312,
@@ -187,9 +181,15 @@
       "wiim": false
     },
     "AVGO": {
-      "title": "Stock Market Today: S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Adtran, Capital One in Focus",
-      "ts": 1784712820,
+      "title": "Stock Market Today: Dow, S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Capital One in Focus (UPDATED)",
+      "ts": 1784723400,
       "url": "https://www.benzinga.com/markets/equities/26/07/60600025/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stocks-cool-down-and-tesla-alphabet-gear-up-for-earnings-super-micro-adtran-capital-one-in-focus",
+      "wiim": false
+    },
+    "NOW": {
+      "title": "'OpenAI is launching new corporate software that takes it beyond the AI model war' - Business Insider",
+      "ts": 1784722261,
+      "url": "https://www.benzinga.com/news/26/07/60603749/openai-launching-new-corporate-software-takes-it-beyond-ai-model-war-business-insider",
       "wiim": false
     },
     "NVS": {
@@ -208,12 +208,6 @@
       "title": "Micron Leads Memory-Stock Rally, Nasdaq 100 Tops 29,000: Stock Market Today",
       "ts": 1784655608,
       "url": "https://www.benzinga.com/markets/market-summary/26/07/60589094/chips-power-micron-rallies-12-percent-nasdaq-100-markets-tuesday",
-      "wiim": false
-    },
-    "GILD": {
-      "title": "Gilead, Merck Advance Potential Blockbuster Weekly HIV Pill",
-      "ts": 1784654881,
-      "url": "https://www.benzinga.com/news/health-care/26/07/60588458/gilead-merck-advance-potential-blockbuster-weekly-hiv-pill",
       "wiim": false
     }
   },
@@ -427,9 +421,32 @@
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-07-22",
+      "ticker": "MMM",
+      "firm": "RBC Capital",
+      "action": "Maintains",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$132",
+      "price": 170.76,
+      "upside": -22.7,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "MMM": {
+      "date": "2026-07-22",
+      "firm": "RBC Capital",
+      "action": "Maintains",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$132",
+      "upside": -22.7
+    },
     "PG": {
       "date": "2026-07-21",
       "firm": "Barclays",
@@ -475,15 +492,6 @@
       "pt": "$270",
       "upside": 7.7
     },
-    "MMM": {
-      "date": "2026-07-17",
-      "firm": "JP Morgan",
-      "action": "Upgrades",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$180",
-      "upside": 5.4
-    },
     "AAPL": {
       "date": "2026-07-17",
       "firm": "HSBC",
@@ -504,6 +512,127 @@
     }
   },
   "bz_news": [
+    {
+      "title": "AT&T Surprises Wall Street With Strong Subscriber Growth",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60604626/att-surprises-wall-street-with-strong-subscriber-growth",
+      "ts": 1784724063,
+      "tickers": [
+        "T",
+        "TMUS",
+        "VZ",
+        "CHTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.349
+    },
+    {
+      "title": "IRS Chief Frank Bisignano Fires Back After WSJ Spying Report, Says He 'Wouldn't Even Know How' to Access Confidential Files: 'None of It's True...'",
+      "url": "https://www.benzinga.com/news/politics/26/07/60604301/irs-chief-frank-bisignano-fires-back-after-wsj-spying-report-says-he-wouldnt-even-know-how-to-access-confidential-files-none-of-its-true",
+      "ts": 1784723755,
+      "tickers": [
+        "JPM",
+        "WFC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.228
+    },
+    {
+      "title": "Nvidia, Goldman Sachs, UnitedHealth and an Energy Stock on CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60604168/nvidia-goldman-sachs-unitedhealth-and-an-energy-stock-on-cnbcs-final-trades",
+      "ts": 1784723578,
+      "tickers": [
+        "GS",
+        "NVDA",
+        "FANG",
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.513
+    },
+    {
+      "title": "Stock Market Today: Dow, S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Capital One in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60600025/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stocks-cool-down-and-tesla-alphabet-gear-up-for-earnings-super-micro-adtran-capital-one-in-focus",
+      "ts": 1784723400,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "AVGO",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.53
+    },
+    {
+      "title": "RBC Capital Maintains Underperform on 3M, Raises Price Target to $132",
+      "url": "https://www.benzinga.com/news/26/07/60603992/rbc-capital-maintains-underperform-3m-raises-price-target-132",
+      "ts": 1784723331,
+      "tickers": [
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.483
+    },
+    {
+      "title": "AEGIS Hedging Solutions Agrees To Be Acquired By Private Equity At Goldman Sachs Alternatives; Financial Terms Undisclosed",
+      "url": "https://www.benzinga.com/m/26/07/60603938/aegis-hedging-solutions-agrees-be-acquired-private-equity-goldman-sachs-alternatives-financial-terms",
+      "ts": 1784723108,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.435
+    },
+    {
+      "title": "IBM Earnings Are Imminent; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60603935/ibm-earnings-are-imminent-these-most-accurate-analysts-revise-forecasts-ahead-of-earnings-call-3",
+      "ts": 1784723105,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.489
+    },
+    {
+      "title": "Microsoft Investing $60M Over AI For Science Support For U.S. Department Of Energy's Genesis Mission",
+      "url": "https://www.benzinga.com/news/26/07/60603883/microsoft-investing-60m-over-ai-science-support-u-s-department-energy-s-genesis-mission",
+      "ts": 1784722737,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.406
+    },
+    {
+      "title": "'OpenAI is launching new corporate software that takes it beyond the AI model war' - Business Insider",
+      "url": "https://www.benzinga.com/news/26/07/60603749/openai-launching-new-corporate-software-takes-it-beyond-ai-model-war-business-insider",
+      "ts": 1784722261,
+      "tickers": [
+        "MSFT",
+        "ORCL",
+        "CRM",
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.362
+    },
     {
       "title": "Manulife, Microsoft Expand Partnership Over Manulife's Adoption Of Microsoft 365 E7 Frontier Suite To Become AI-Powered Firm",
       "url": "https://www.benzinga.com/news/26/07/60603441/manulife-microsoft-expand-partnership-over-manulife-s-adoption-microsoft-365-e7-frontier-suite-becom",
@@ -624,21 +753,6 @@
       "relevance": 0.314
     },
     {
-      "title": "Stock Market Today: S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Adtran, Capital One in Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60600025/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stocks-cool-down-and-tesla-alphabet-gear-up-for-earnings-super-micro-adtran-capital-one-in-focus",
-      "ts": 1784712820,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "AVGO",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.509
-    },
-    {
       "title": "Elizabeth Warren Says 'AI Companies Don’t Get to Call All the Shots,' Demands More Oversight of Big Tech Data Centers",
       "url": "https://www.benzinga.com/markets/tech/26/07/60599996/elizabeth-warren-says-ai-companies-dont-get-to-call-all-the-shots-demands-more-oversight-of-big-tech-data-centers",
       "ts": 1784712507,
@@ -723,104 +837,6 @@
       "relevance": 0.303
     },
     {
-      "title": "Mark Cuban Says AI Data Centers Could Become Pickleball Courts— and Warns Venture Capital Is 'All In' on a Bet That May Not Pay Off",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60599433/mark-cuban-says-ai-data-centers-could-become-pickleball-courts-and-warns-venture-capital-is-all-in-on-a-bet-that-may-not-pay-off",
-      "ts": 1784705997,
-      "tickers": [
-        "ORCL",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.34
-    },
-    {
-      "title": "Nokia Oyj (NOK) Stock Is Trending: Here's What You Should Know",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60598758/nokia-oyj-nok-stock-is-trending-heres-what-you-should-know",
-      "ts": 1784700182,
-      "tickers": [
-        "JPM",
-        "NOK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.35
-    },
-    {
-      "title": "Anthony Scaramucci Explains Why He's Long Bitcoin and Gold: 'Imagine an American President...Sitting in Front of a $55 Trillion Deficit'",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60598465/anthony-scaramucci-bitcoin-gold-55-trillion-deficit",
-      "ts": 1784695269,
-      "tickers": [
-        "$BTC",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.243
-    },
-    {
-      "title": "Jim Cramer Picks Micron, Applied Materials And Intel Or AMD As Top Semiconductor Bets After AI Selloff, Says Supermicro Is 'Great For Nvidia'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60598362/jim-cramer-top-semiconductor-stocks-ai-selloff",
-      "ts": 1784692920,
-      "tickers": [
-        "INTC",
-        "AMD",
-        "NVDA",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.515
-    },
-    {
-      "title": "SK Hynix Dismisses Intel Ohio Buyout Report: 'We Have No Plans for an Acquisition' (UPDATED)",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60598297/sk-hynix-denies-intel-ohio-buyout-report",
-      "ts": 1784690418,
-      "tickers": [
-        "SKHY",
-        "INTC",
-        "NVDA",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.291
-    },
-    {
-      "title": "Trump Sets August 1 Start for Generic Drug Tariff Clock, Warns of 200% Duties: Companies Must 'Build Plant and Equipment' in US",
-      "url": "https://www.benzinga.com/news/health-care/26/07/60598187/trump-generic-drug-tariffs-200-percent-august-1",
-      "ts": 1784686390,
-      "tickers": [
-        "JNJ",
-        "BMY",
-        "MRK",
-        "NVS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.279
-    },
-    {
-      "title": "$100 Invested In Amgen 15 Years Ago Would Be Worth This Much Today",
-      "url": "https://www.benzinga.com/news/26/07/60596136/100-invested-amgen-15-years-ago-would-be-worth-much-today",
-      "ts": 1784667632,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.348
-    },
-    {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
       "url": "https://www.benzinga.com/news/26/07/60579075/barclays-maintains-overweight-coca-cola-raises-price-target-91",
       "ts": 1784642677,
@@ -831,18 +847,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.56
-    },
-    {
-      "title": "Intel Launches Fresh Layoffs in Data Center and AI Unit Ahead of Earnings as Lip-Bu Tan Pushes Turnaround Strategy",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60568468/intel-layoffs-data-center-ai-unit-earnings",
-      "ts": 1784604782,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.436
     },
     {
       "title": "'Coca-Cola appoints JPMorgan, Citi for India bottler IPO, sources say' - Reuters",
@@ -993,7 +997,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.405
+      "relevance": 0.404
     }
   ],
   "portfolio_brief": {
@@ -1110,9 +1114,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Earnings Scheduled For July 22, 2026",
-        "ts": 1784718690,
-        "url": "https://www.benzinga.com/news/earnings/26/07/60602326/earnings-scheduled-july-22-2026",
+        "title": "'OpenAI is launching new corporate software that takes it beyond the AI model war' - Business Insider",
+        "ts": 1784722261,
+        "url": "https://www.benzinga.com/news/26/07/60603749/openai-launching-new-corporate-software-takes-it-beyond-ai-model-war-business-insider",
         "wiim": false
       },
       "filings": {
@@ -1380,12 +1384,7 @@
         "score": 1.08,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Gilead, Merck Advance Potential Blockbuster Weekly HIV Pill",
-        "ts": 1784654881,
-        "url": "https://www.benzinga.com/news/health-care/26/07/60588458/gilead-merck-advance-potential-blockbuster-weekly-hiv-pill",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1418,8 +1417,8 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Stock Market Today: S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Adtran, Capital One in Focus",
-        "ts": 1784712820,
+        "title": "Stock Market Today: Dow, S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Capital One in Focus (UPDATED)",
+        "ts": 1784723400,
         "url": "https://www.benzinga.com/markets/equities/26/07/60600025/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stocks-cool-down-and-tesla-alphabet-gear-up-for-earnings-super-micro-adtran-capital-one-in-focus",
         "wiim": false
       },
