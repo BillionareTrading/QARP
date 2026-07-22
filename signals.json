@@ -1,6 +1,6 @@
 {
   "date": "2026-07-22",
-  "generated_at": "Jul 22, 6:54am ET",
+  "generated_at": "Jul 22, 7:20am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,6 +174,12 @@
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
     },
+    "NOW": {
+      "title": "Earnings Scheduled For July 22, 2026",
+      "ts": 1784718690,
+      "url": "https://www.benzinga.com/news/earnings/26/07/60602326/earnings-scheduled-july-22-2026",
+      "wiim": false
+    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1784655312,
@@ -190,12 +196,6 @@
       "title": "Trump Sets August 1 Start for Generic Drug Tariff Clock, Warns of 200% Duties: Companies Must 'Build Plant and Equipment' in US",
       "ts": 1784686390,
       "url": "https://www.benzinga.com/news/health-care/26/07/60598187/trump-generic-drug-tariffs-200-percent-august-1",
-      "wiim": false
-    },
-    "NOW": {
-      "title": "Tesla Earnings Could Move $83 Billion in Market Value",
-      "ts": 1784662274,
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60592947/tesla-earnings-could-move-83-billion-in-market-value",
       "wiim": false
     },
     "DHR": {
@@ -505,6 +505,61 @@
   },
   "bz_news": [
     {
+      "title": "Johnson & Johnson Receives FDA De Novo Authorization For Its OTTAVA Robotic Surgical System",
+      "url": "https://www.benzinga.com/news/26/07/60602426/johnson-johnson-receives-fda-de-novo-authorization-its-ottava-robotic-surgical-system",
+      "ts": 1784719003,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.358
+    },
+    {
+      "title": "Earnings Scheduled For July 22, 2026",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60602326/earnings-scheduled-july-22-2026",
+      "ts": 1784718690,
+      "tickers": [
+        "NTRS",
+        "ONB",
+        "FBP",
+        "RCI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.471
+    },
+    {
+      "title": "This DigitalOcean Analyst Begins Coverage On A Bullish Note; Here Are Top 5 Initiations For Wednesday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/07/60602178/this-digitalocean-analyst-begins-coverage-on-a-bullish-note-here-are-top-5-initiations-for-wednesday",
+      "ts": 1784718544,
+      "tickers": [
+        "IBM",
+        "DOCN",
+        "CRSR",
+        "AEIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.434
+    },
+    {
+      "title": "'Wild Times Ahead': Aaron Levie Warns AI Agents Can Escape Systems, Find Zero-Day Flaws and Spark New Cybersecurity Arms Race",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60601666/wild-times-ahead-aaron-levie-warns-ai-agents-can-escape-systems-find-zero-day-flaws-and-spark-new-cybersecurity-arms-race",
+      "ts": 1784717755,
+      "tickers": [
+        "CSCO",
+        "BOX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.331
+    },
+    {
       "title": "What's Going on With AMD Stock Wednesday?",
       "url": "https://www.benzinga.com/markets/tech/26/07/60601029/whats-going-on-with-amd-stock-wednesday-8",
       "ts": 1784715709,
@@ -669,7 +724,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.243
+      "relevance": 0.244
     },
     {
       "title": "Jim Cramer Picks Micron, Applied Materials And Intel Or AMD As Top Semiconductor Bets After AI Selloff, Says Supermicro Is 'Great For Nvidia'",
@@ -699,7 +754,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.292
+      "relevance": 0.291
     },
     {
       "title": "Trump Sets August 1 Start for Generic Drug Tariff Clock, Warns of 200% Duties: Companies Must 'Build Plant and Equipment' in US",
@@ -769,63 +824,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.331
-    },
-    {
-      "title": "OpenAI And Hugging Face Partner To Address Security Incident During Model Evaluation; Implementing Stricter Controls On Infrastructure And Strengthening Model Alignment Safeguards; Sharing Preliminary Findings At This Stage To Help Defenders Understand What Happened Related To The Cybersecurity Incident",
-      "url": "https://www.benzinga.com/news/26/07/60594227/openai-and-hugging-face-partner-address-security-incident-during-model-evaluation-implementing-stric",
-      "ts": 1784664431,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.267
-    },
-    {
-      "title": "Tesla Earnings Could Move $83 Billion in Market Value",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60592947/tesla-earnings-could-move-83-billion-in-market-value",
-      "ts": 1784662274,
-      "tickers": [
-        "TSLA",
-        "IBM",
-        "NOW",
-        "TXN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "SpaceX Millionaires Fuel Mark Cuban's Stock Ownership Case—and These ETFs Stand to Benefit",
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60592484/spacex-millionaires-fuel-mark-cubans-stock-ownership-case-and-these-etfs-stand-to-benefit",
-      "ts": 1784661350,
-      "tickers": [
-        "QQQ",
-        "SPCX",
-        "AAPL",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.326
-    },
-    {
-      "title": "Shares of data center infrastructure-related companies are trading higher, aided by reports suggesting a Taiwan Semiconductor price hike in 2027 and further U.S.-China competition in the AI deployment race, which help support the demand outlook for compute buildout.",
-      "url": "https://www.benzinga.com/quote/FPS",
-      "ts": 1784659447,
-      "tickers": [
-        "FIX",
-        "VRT",
-        "CAT",
-        "CMI"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.593
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -918,7 +916,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.511
+      "relevance": 0.512
     },
     {
       "title": "Jim Cramer Says Microchip Is Near A Bottom — 'I Don't See It Yet' — While Nebius Is 'Not Done Going Down'",
@@ -1000,7 +998,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.404
+      "relevance": 0.405
     }
   ],
   "portfolio_brief": {
@@ -1117,9 +1115,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Tesla Earnings Could Move $83 Billion in Market Value",
-        "ts": 1784662274,
-        "url": "https://www.benzinga.com/markets/earnings/26/07/60592947/tesla-earnings-could-move-83-billion-in-market-value",
+        "title": "Earnings Scheduled For July 22, 2026",
+        "ts": 1784718690,
+        "url": "https://www.benzinga.com/news/earnings/26/07/60602326/earnings-scheduled-july-22-2026",
         "wiim": false
       },
       "filings": {
