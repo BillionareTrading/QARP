@@ -1,6 +1,6 @@
 {
   "date": "2026-07-22",
-  "generated_at": "Jul 22, 5:25pm ET",
+  "generated_at": "Jul 22, 6:17pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -190,12 +190,6 @@
       "title": "Intel Q2 Preview: Stock Hammers Nvidia with 7x Returns Since Dow Swap — Will Earnings Fuel Further Gains?",
       "ts": 1784737995,
       "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60615237/intel-q2-preview-stock-hammers-nvidia-with-7x-returns-since-dow-swap-will-earnings-fuel-further-gains",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "Stock Market Today: Dow, S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Capital One in Focus (UPDATED)",
-      "ts": 1784723400,
-      "url": "https://www.benzinga.com/markets/equities/26/07/60600025/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stocks-cool-down-and-tesla-alphabet-gear-up-for-earnings-super-micro-adtran-capital-one-in-focus",
       "wiim": false
     }
   },
@@ -566,6 +560,66 @@
   },
   "bz_news": [
     {
+      "title": "Transcript: IBM Q2 2026 Earnings Conference Call",
+      "url": "https://www.benzinga.com/news/26/07/60627176/transcript-ibm-q2-2026-earnings-conference-call",
+      "ts": 1784758324,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.519
+    },
+    {
+      "title": "If You Invested $1000 In Home Depot Stock 15 Years Ago, You Would Have This Much Today",
+      "url": "https://www.benzinga.com/news/26/07/60627076/if-you-invested-1000-home-depot-stock-15-years-ago-you-would-have-much-today",
+      "ts": 1784757784,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.304
+    },
+    {
+      "title": "IBM stock has given up its prior gain. IBM shares were trading higher after the company reported better-than-expected Q2 financial results.",
+      "url": "https://www.benzinga.com/quote/IBM",
+      "ts": 1784756847,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.412
+    },
+    {
+      "title": "IBM CFO Says Generative AI Represented About 50% Of Consulting Signings In Q2, Now Makes Up Over 30% Of Backlog",
+      "url": "https://www.benzinga.com/news/26/07/60626685/ibm-cfo-says-generative-ai-represented-about-50-consulting-signings-q2-now-makes-over-30-backlog",
+      "ts": 1784755982,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.45
+    },
+    {
+      "title": "IBM CFO Says Expect Q3 Constant Currency Revenue Growth Consistent With The Full Year;  Given Strengthening Of Dollar, Now Expect Currency To Be A 1.5 Point Headwind To Revenue Growth In Q3",
+      "url": "https://www.benzinga.com/news/26/07/60626638/ibm-cfo-says-expect-q3-constant-currency-revenue-growth-consistent-full-year-given-strengthening-dol",
+      "ts": 1784755854,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.471
+    },
+    {
       "title": "'Intel Seeks Operating Partners For Ohio Chip Fab; Sk Hynix Is Among Those Being Considered To Work With Intel In Ohio' - Semafor Exclusive",
       "url": "https://www.benzinga.com/news/26/07/60626194/intel-seeks-operating-partners-ohio-chip-fab-sk-hynix-among-those-being-considered-work-intel-ohio-s",
       "ts": 1784754691,
@@ -797,50 +851,6 @@
       "relevance": 0.343
     },
     {
-      "title": "CNBC Halftime Report Final Trades: Nvidia, UnitedHealth Group, Invesco S&P 500 Equal Weight ETF, Ardagh Metal Packaging S.A.",
-      "url": "https://www.benzinga.com/quote/NVDA",
-      "ts": 1784739684,
-      "tickers": [
-        "UNH",
-        "AMBP",
-        "RSP",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.512
-    },
-    {
-      "title": "Stock Market Today: Nasdaq 100 Falls as Crude Rallies to $88",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60615991/stock-market-today-news-oil-nasdaq-wednesday",
-      "ts": 1784739484,
-      "tickers": [
-        "QQQ",
-        "USO",
-        "DIA",
-        "VOO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.479
-    },
-    {
-      "title": "Intel Q2 Preview: Stock Hammers Nvidia with 7x Returns Since Dow Swap — Will Earnings Fuel Further Gains?",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60615237/intel-q2-preview-stock-hammers-nvidia-with-7x-returns-since-dow-swap-will-earnings-fuel-further-gains",
-      "ts": 1784737995,
-      "tickers": [
-        "INTC",
-        "NVDA",
-        "SOXX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.496
-    },
-    {
       "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
       "url": "https://www.benzinga.com/quote/WEAV",
       "ts": 1784737943,
@@ -854,30 +864,6 @@
       "wiim": true,
       "rel": true,
       "relevance": 0.377
-    },
-    {
-      "title": "Live On CNBC, Steve Weiss Announces Bought More UnitedHealth Group",
-      "url": "https://www.benzinga.com/quote/UNH",
-      "ts": 1784737925,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.408
-    },
-    {
-      "title": "Bernstein Reiterates Outperform on Microsoft, Maintains $646 Price Target",
-      "url": "https://www.benzinga.com/news/26/07/60614805/bernstein-reiterates-outperform-microsoft-maintains-646-price-target",
-      "ts": 1784737430,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.467
     },
     {
       "title": "Tesla Earnings Prediction Market Preview: What Will Elon Musk Say?",
@@ -1457,12 +1443,7 @@
         "score": 1.21,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Stock Market Today: Dow, S&P 500, Nasdaq 100 Futures Fall As Chip Stocks Cool Down and Tesla, Alphabet Gear Up for Earnings— Super Micro, Capital One in Focus (UPDATED)",
-        "ts": 1784723400,
-        "url": "https://www.benzinga.com/markets/equities/26/07/60600025/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stocks-cool-down-and-tesla-alphabet-gear-up-for-earnings-super-micro-adtran-capital-one-in-focus",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
