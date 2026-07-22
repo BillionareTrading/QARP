@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-21",
-  "generated_at": "Jul 21, 7:36pm ET",
+  "date": "2026-07-22",
+  "generated_at": "Jul 22, 5:06am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,35 +61,35 @@
   ],
   "catalysts": [
     {
-      "when": "Jul 21",
-      "what": "DHR earnings",
-      "affects": "DHR",
-      "dir": "two-sided",
-      "why": "Q-results for Danaher — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
-      "when": "Jul 21",
-      "what": "NVS earnings",
-      "affects": "NVS",
-      "dir": "two-sided",
-      "why": "Q-results for Novartis — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
-      "when": "Jul 21",
-      "what": "EFX earnings",
-      "affects": "EFX",
-      "dir": "two-sided",
-      "why": "Q-results for Equifax — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Jul 22",
       "what": "NOW earnings",
       "affects": "NOW",
       "dir": "two-sided",
       "why": "Q-results for ServiceNow — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Jul 28",
+      "what": "KO earnings",
+      "affects": "KO",
+      "dir": "two-sided",
+      "why": "Q-results for Coca-Cola — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Jul 28",
+      "what": "SPGI earnings",
+      "affects": "SPGI",
+      "dir": "two-sided",
+      "why": "Q-results for S&P Global — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Jul 29",
+      "what": "BSX earnings",
+      "affects": "BSX",
+      "dir": "two-sided",
+      "why": "Q-results for Boston Scientific — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 21",
+      "when": "Jul 22",
       "what": "Energy & geopolitics — today's read",
       "why": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "affects": "Energy · growth",
@@ -117,17 +117,17 @@
     "NOW": "2026-07-22",
     "RKLB": "2026-08-05",
     "NVDA": "2026-08-26",
-    "DHR": "2026-07-21",
+    "DHR": "2026-10-19",
     "UBER": "2026-08-05",
     "BSX": "2026-07-29",
     "LULU": "2026-09-02",
     "SPGI": "2026-07-28",
     "GILD": "2026-08-06",
     "AVGO": "2026-09-02",
-    "NVS": "2026-07-21",
+    "NVS": "2026-10-27",
     "NBIX": "2026-07-30",
     "VRTX": "2026-08-03",
-    "EFX": "2026-07-21"
+    "EFX": "2026-10-19"
   },
   "risk_asof": "2026-07-05",
   "sectors": [
@@ -174,6 +174,18 @@
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
     },
+    "NVDA": {
+      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
+      "ts": 1784655312,
+      "url": "https://www.benzinga.com/markets/options/26/07/60588781/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "NVS": {
+      "title": "Trump Sets August 1 Start for Generic Drug Tariff Clock, Warns of 200% Duties: Companies Must 'Build Plant and Equipment' in US",
+      "ts": 1784686390,
+      "url": "https://www.benzinga.com/news/health-care/26/07/60598187/trump-generic-drug-tariffs-200-percent-august-1",
+      "wiim": false
+    },
     "NOW": {
       "title": "Tesla Earnings Could Move $83 Billion in Market Value",
       "ts": 1784662274,
@@ -184,12 +196,6 @@
       "title": "SpaceX Millionaires Fuel Mark Cuban's Stock Ownership Case—and These ETFs Stand to Benefit",
       "ts": 1784661350,
       "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60592484/spacex-millionaires-fuel-mark-cubans-stock-ownership-case-and-these-etfs-stand-to-benefit",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "ts": 1784655312,
-      "url": "https://www.benzinga.com/markets/options/26/07/60588781/10-information-technology-stocks-whale-alerts-today-s-session",
       "wiim": false
     },
     "DHR": {
@@ -212,20 +218,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-07-14",
-      "ticker": "KO",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$97",
-      "price": 81.97,
-      "upside": 18.3,
-      "held": true,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
     {
       "date": "2026-07-16",
       "ticker": "KO",
@@ -253,34 +245,6 @@
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-07-14",
-      "ticker": "CRM",
-      "firm": "Evercore ISI Group",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$250",
-      "price": 170.06,
-      "upside": 47.0,
-      "held": false,
-      "uni": true,
-      "qarp": "BUY"
-    },
-    {
-      "date": "2026-07-14",
-      "ticker": "AAPL",
-      "firm": "Keybanc",
-      "action": "Downgrades",
-      "rating": "Underweight",
-      "stance": "bearish",
-      "pt": "$250",
-      "price": 327.74,
-      "upside": -23.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
     },
     {
       "date": "2026-07-16",
@@ -541,6 +505,149 @@
   },
   "bz_news": [
     {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60599715/sp500-july-22-open-up-or-down-polymarket-oil-fed-earnings-ai-stocks",
+      "ts": 1784709843,
+      "tickers": [
+        "TSLA",
+        "GOOGL",
+        "GOOG",
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.464
+    },
+    {
+      "title": "Ross Gerber Renews Call For Disney Shake-Up After Stock Trails S&P 500 For 11 Years: 'Break Up The Mouse House Or Sell It'",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60599545/ross-gerber-renews-call-for-disney-shake-up-after-stock-trails-sp-500-for-11-years-break-up-the-mouse-house-or-sell-it",
+      "ts": 1784707179,
+      "tickers": [
+        "DIS",
+        "AAPL",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.331
+    },
+    {
+      "title": "Nasdaq Jumps Over 1% Amid Gain In Chip Stocks: Investor Sentiment Improves, Greed Index Remains In ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60599496/nasdaq-jumps-over-1-amid-gain-in-chip-stocks-investor-sentiment-improves-greed-index-remains-in-fear-zone",
+      "ts": 1784706434,
+      "tickers": [
+        "TSLA",
+        "GM",
+        "MU",
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.464
+    },
+    {
+      "title": "Nike To Terminate Topsports International's Online China Sales Of Its Products Effective January 1, 2027",
+      "url": "https://www.benzinga.com/quote/TPSRF",
+      "ts": 1784706221,
+      "tickers": [
+        "NKE",
+        "TPSRF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.303
+    },
+    {
+      "title": "Mark Cuban Says AI Data Centers Could Become Pickleball Courts— and Warns Venture Capital Is 'All In' on a Bet That May Not Pay Off",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60599433/mark-cuban-says-ai-data-centers-could-become-pickleball-courts-and-warns-venture-capital-is-all-in-on-a-bet-that-may-not-pay-off",
+      "ts": 1784705997,
+      "tickers": [
+        "ORCL",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.34
+    },
+    {
+      "title": "Nokia Oyj (NOK) Stock Is Trending: Here's What You Should Know",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60598758/nokia-oyj-nok-stock-is-trending-heres-what-you-should-know",
+      "ts": 1784700182,
+      "tickers": [
+        "JPM",
+        "NOK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.35
+    },
+    {
+      "title": "Anthony Scaramucci Explains Why He's Long Bitcoin and Gold: 'Imagine an American President...Sitting in Front of a $55 Trillion Deficit'",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60598465/anthony-scaramucci-bitcoin-gold-55-trillion-deficit",
+      "ts": 1784695269,
+      "tickers": [
+        "$BTC",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.244
+    },
+    {
+      "title": "Jim Cramer Picks Micron, Applied Materials And Intel Or AMD As Top Semiconductor Bets After AI Selloff, Says Supermicro Is 'Great For Nvidia'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60598362/jim-cramer-top-semiconductor-stocks-ai-selloff",
+      "ts": 1784692920,
+      "tickers": [
+        "INTC",
+        "AMD",
+        "NVDA",
+        "MU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.515
+    },
+    {
+      "title": "SK Hynix Dismisses Intel Ohio Buyout Report: 'We Have No Plans for an Acquisition' (UPDATED)",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60598297/sk-hynix-denies-intel-ohio-buyout-report",
+      "ts": 1784690418,
+      "tickers": [
+        "SKHY",
+        "INTC",
+        "NVDA",
+        "MU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.292
+    },
+    {
+      "title": "Trump Sets August 1 Start for Generic Drug Tariff Clock, Warns of 200% Duties: Companies Must 'Build Plant and Equipment' in US",
+      "url": "https://www.benzinga.com/news/health-care/26/07/60598187/trump-generic-drug-tariffs-200-percent-august-1",
+      "ts": 1784686390,
+      "tickers": [
+        "JNJ",
+        "BMY",
+        "MRK",
+        "NVS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.279
+    },
+    {
       "title": "$100 Invested In Amgen 15 Years Ago Would Be Worth This Much Today",
       "url": "https://www.benzinga.com/news/26/07/60596136/100-invested-amgen-15-years-ago-would-be-worth-much-today",
       "ts": 1784667632,
@@ -604,7 +711,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.267
+      "relevance": 0.266
     },
     {
       "title": "Tesla Earnings Could Move $83 Billion in Market Value",
@@ -703,7 +810,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.369
+      "relevance": 0.37
     },
     {
       "title": "3M Flags Consumer Electronics Weakness As Memory Costs Bite",
@@ -719,175 +826,6 @@
       "relevance": 0.385
     },
     {
-      "title": "Buying In Semiconductors On Iran Ceasefire Soap Opera, Earnings Hopium, And Korea",
-      "url": "https://www.benzinga.com/Opinion/26/07/60589483/buying-in-semiconductors-on-iran-ceasefire-soap-opera-earnings-hopium-and-korea",
-      "ts": 1784656200,
-      "tickers": [
-        "SLV",
-        "GLD",
-        "USO",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.432
-    },
-    {
-      "title": "Micron Leads Memory-Stock Rally, Nasdaq 100 Tops 29,000: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60589094/chips-power-micron-rallies-12-percent-nasdaq-100-markets-tuesday",
-      "ts": 1784655608,
-      "tickers": [
-        "TSLA",
-        "$BTC",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.468
-    },
-    {
-      "title": "UnitedHealth Group shares are trading higher after Mizuho and JP Morgan raised their respective price targets on the stock.",
-      "url": "https://www.benzinga.com/quote/UNH",
-      "ts": 1784655316,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.43
-    },
-    {
-      "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/07/60588786/10-health-care-stocks-whale-alerts-today-s-session",
-      "ts": 1784655312,
-      "tickers": [
-        "IOVA",
-        "NKTR",
-        "AGIO",
-        "GKOS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/07/60588781/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1784655312,
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "MSFT",
-        "VSH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "Salesforce shares are trading lower after Morgan Stanley downgraded the stock from Overweight to Equal-Weight rating and lowered its price target from $287 to $185.",
-      "url": "https://www.benzinga.com/quote/CRM",
-      "ts": 1784655043,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.461
-    },
-    {
-      "title": "Shares of foundry, fabricator and IDM semiconductor companies are trading higher, possibly amid sympathy with TSMC after reports suggested the company will raise its chipmaking prices.",
-      "url": "https://www.benzinga.com/quote/GFS",
-      "ts": 1784654891,
-      "tickers": [
-        "INTC",
-        "STM",
-        "TSEM",
-        "GFS"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.431
-    },
-    {
-      "title": "Gilead, Merck Advance Potential Blockbuster Weekly HIV Pill",
-      "url": "https://www.benzinga.com/news/health-care/26/07/60588458/gilead-merck-advance-potential-blockbuster-weekly-hiv-pill",
-      "ts": 1784654881,
-      "tickers": [
-        "MRK",
-        "GILD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.624
-    },
-    {
-      "title": "Oil At $90? Prediction Market Odds Jump, Bringing Energy ETFs Back in Focus",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60588081/oil-90-prediction-market-odds-jump-bringing-energy-etfs",
-      "ts": 1784654224,
-      "tickers": [
-        "USO",
-        "XLE",
-        "XOM",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.37
-    },
-    {
-      "title": "OpenAI Introduces The ChatGPT For Small Business Program",
-      "url": "https://www.benzinga.com/news/26/07/60587703/openai-introduces-chatgpt-small-business-program",
-      "ts": 1784653691,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.253
-    },
-    {
-      "title": "CNBC Halftime Report Final Trades: NVIDIA, UnitedHealth Group, The Goldman Sachs Group, Diamondback Energy",
-      "url": "https://www.benzinga.com/quote/FANG",
-      "ts": 1784653223,
-      "tickers": [
-        "NVDA",
-        "UNH",
-        "GS",
-        "FANG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.559
-    },
-    {
-      "title": "Neoclouds Nebius, IREN Tap Massive Hyperscaler AI Capex — Compute Is The New Oil",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60587199/neoclouds-nebius-iren-tap-massive-hyperscaler-ai-capex",
-      "ts": 1784652890,
-      "tickers": [
-        "IREN",
-        "NBIS",
-        "$BTC",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.517
-    },
-    {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
       "url": "https://www.benzinga.com/news/26/07/60579075/barclays-maintains-overweight-coca-cola-raises-price-target-91",
       "ts": 1784642677,
@@ -898,6 +836,18 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.56
+    },
+    {
+      "title": "Intel Launches Fresh Layoffs in Data Center and AI Unit Ahead of Earnings as Lip-Bu Tan Pushes Turnaround Strategy",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60568468/intel-layoffs-data-center-ai-unit-earnings",
+      "ts": 1784604782,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.436
     },
     {
       "title": "'Coca-Cola appoints JPMorgan, Citi for India bottler IPO, sources say' - Reuters",
@@ -924,6 +874,21 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.599
+    },
+    {
+      "title": "Samsung Lays Off Hundreds of US Employees While Relocating Headquarters to Texas: Report (UPDATED)",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60542448/samsung-lays-off-hundreds-of-us-employees-while-relocating-headquarters-to-texas-report",
+      "ts": 1784442855,
+      "tickers": [
+        "SSNLF",
+        "TSLA",
+        "AAPL",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.261
     },
     {
       "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
@@ -1033,7 +998,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.404
+      "relevance": 0.405
     }
   ],
   "portfolio_brief": {
@@ -1481,19 +1446,48 @@
     "NVS": {
       "name": "Novartis",
       "qarp": "HOLD-QUAL",
-      "consensus": null,
-      "news": null,
+      "consensus": {
+        "strongBuy": 6,
+        "buy": 11,
+        "hold": 14,
+        "sell": 3,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 17,
+        "bearish": 3,
+        "label": "Buy",
+        "score": 0.59,
+        "period": "2026-07-01"
+      },
+      "news": {
+        "title": "Trump Sets August 1 Start for Generic Drug Tariff Clock, Warns of 200% Duties: Companies Must 'Build Plant and Equipment' in US",
+        "ts": 1784686390,
+        "url": "https://www.benzinga.com/news/health-care/26/07/60598187/trump-generic-drug-tariffs-200-percent-august-1",
+        "wiim": false
+      },
       "filings": {
         "latest8k": null,
         "periodic": null,
         "insider30d": 0
       },
-      "explain": "No analyst-consensus data; our QARP view: HOLD-QUAL."
+      "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
       "qarp": "BUY",
-      "consensus": null,
+      "consensus": {
+        "strongBuy": 14,
+        "buy": 18,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 37,
+        "bullish": 32,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.24,
+        "period": "2026-07-01"
+      },
       "news": null,
       "filings": {
         "latest8k": {
@@ -1508,12 +1502,24 @@
         },
         "insider30d": 4
       },
-      "explain": "No analyst-consensus data; our QARP view: BUY."
+      "explain": "37 analysts cover it — 32 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "VRTX": {
       "name": "Vertex Pharma",
       "qarp": "BUY",
-      "consensus": null,
+      "consensus": {
+        "strongBuy": 13,
+        "buy": 20,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 1,
+        "total": 40,
+        "bullish": 33,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-07-01"
+      },
       "news": null,
       "filings": {
         "latest8k": {
@@ -1528,12 +1534,24 @@
         },
         "insider30d": 7
       },
-      "explain": "No analyst-consensus data; our QARP view: BUY."
+      "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "EFX": {
       "name": "Equifax",
       "qarp": "STRONG BUY",
-      "consensus": null,
+      "consensus": {
+        "strongBuy": 8,
+        "buy": 12,
+        "hold": 10,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 30,
+        "bullish": 20,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.93,
+        "period": "2026-07-01"
+      },
       "news": {
         "title": "Micron Leads Memory-Stock Rally, Nasdaq 100 Tops 29,000: Stock Market Today",
         "ts": 1784655608,
@@ -1553,12 +1571,24 @@
         },
         "insider30d": 1
       },
-      "explain": "No analyst-consensus data; our QARP view: STRONG BUY."
+      "explain": "30 analysts cover it — 20 bullish, 10 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "KO": {
       "name": "Coca-Cola",
       "qarp": "HOLD-QUAL",
-      "consensus": null,
+      "consensus": {
+        "strongBuy": 9,
+        "buy": 20,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 35,
+        "bullish": 29,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.09,
+        "period": "2026-07-01"
+      },
       "news": {
         "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
         "ts": 1784310647,
@@ -1578,7 +1608,7 @@
         },
         "insider30d": 0
       },
-      "explain": "No analyst-consensus data; our QARP view: HOLD-QUAL."
+      "explain": "35 analysts cover it — 29 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     }
   },
   "financials": {
