@@ -1,6 +1,6 @@
 {
   "date": "2026-07-23",
-  "generated_at": "Jul 23, 11:32am ET",
+  "generated_at": "Jul 23, 1:05pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -132,6 +132,13 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Financial Services",
+      "dir": "down",
+      "driver": "Surging oil prices and Treasury yields weigh on sentiment",
+      "note": "As surging oil prices and Treasury yields weigh on sentiment, with the 10-year U.S. Treasury yield climbing to its highest level since January 2025. Rising yields and energy prices have fueled inflation concerns, reinforcing expectations that interest rates will remain elevated and raising concerns about slower loan demand and economic growth.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Software",
       "dir": "down",
       "driver": "Reports suggesting that OpenAI is developing a product called Presence t…",
@@ -158,13 +165,6 @@
       "driver": "Investors rotate into defensive sectors amid recent market volatility an…",
       "note": "As investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
       "src": "Benzinga WIIM · flags a divergence vs our prices"
-    },
-    {
-      "sector": "Foundry, Fabricator & Idm Semiconductor",
-      "dir": "down",
-      "driver": "Sympathy with Taiwan Semiconductor",
-      "note": "Amid sympathy with Taiwan Semiconductor, as capex concerns weigh on further upside for the industry due to high spending to accommodate new orders. Investors may be concerned that growing capital expenditures may hurt margins.",
-      "src": "Benzinga WIIM · price-confirmed"
     }
   ],
   "holding_news": {
@@ -187,9 +187,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "'Anthropic Considers Unusual Plan for Employee Stock Sales After It Goes Public' - The Information",
-      "ts": 1784815286,
-      "url": "https://www.benzinga.com/news/26/07/60639567/anthropic-considers-unusual-plan-employee-stock-sales-after-it-goes-public-information",
+      "title": "Intel Earnings Prediction Market Preview: What Will Lip-Bu Tan Say?",
+      "ts": 1784822152,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60645683/intel-earnings-prediction-market-preview-what-will-lip-bu-tan-say-2",
       "wiim": false
     }
   },
@@ -202,8 +202,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$98",
-      "price": 81.58,
-      "upside": 20.1,
+      "price": 81.06,
+      "upside": 20.9,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -216,8 +216,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "price": 81.58,
-      "upside": 11.5,
+      "price": 81.06,
+      "upside": 12.3,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -230,8 +230,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$162",
-      "price": 147.1,
-      "upside": 10.1,
+      "price": 146.24,
+      "upside": 10.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -244,8 +244,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$265",
-      "price": 260.08,
-      "upside": 1.9,
+      "price": 258.12,
+      "upside": 2.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -258,8 +258,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$287",
-      "price": 260.08,
-      "upside": 10.4,
+      "price": 258.12,
+      "upside": 11.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,8 +272,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$272",
-      "price": 260.08,
-      "upside": 4.6,
+      "price": 258.12,
+      "upside": 5.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -286,8 +286,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$123",
-      "price": 169.56,
-      "upside": -27.5,
+      "price": 170.11,
+      "upside": -27.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -300,8 +300,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$294",
-      "price": 260.08,
-      "upside": 13.0,
+      "price": 258.12,
+      "upside": 13.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -314,8 +314,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 321.32,
-      "upside": 13.9,
+      "price": 320.84,
+      "upside": 14.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -328,8 +328,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 260.08,
-      "upside": 3.8,
+      "price": 258.12,
+      "upside": 4.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -342,8 +342,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 169.56,
-      "upside": 6.2,
+      "price": 170.11,
+      "upside": 5.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -356,8 +356,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 325.12,
-      "upside": 30.7,
+      "price": 325.4,
+      "upside": 30.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -370,8 +370,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 156.0,
-      "upside": 5.8,
+      "price": 157.36,
+      "upside": 4.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -384,8 +384,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 147.1,
-      "upside": 3.3,
+      "price": 146.24,
+      "upside": 3.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -398,8 +398,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 156.0,
-      "upside": 18.6,
+      "price": 157.36,
+      "upside": 17.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -412,8 +412,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 169.56,
-      "upside": 28.6,
+      "price": 170.11,
+      "upside": 28.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -426,8 +426,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 197.23,
-      "upside": 1.4,
+      "price": 195.87,
+      "upside": 2.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -440,8 +440,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 169.56,
-      "upside": -14.5,
+      "price": 170.11,
+      "upside": -14.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -454,8 +454,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 169.56,
-      "upside": 7.9,
+      "price": 170.11,
+      "upside": 7.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -468,8 +468,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 169.56,
-      "upside": -22.2,
+      "price": 170.11,
+      "upside": -22.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -482,8 +482,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 197.23,
-      "upside": 5.0,
+      "price": 195.87,
+      "upside": 5.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -497,7 +497,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "upside": 5.0
+      "upside": 5.7
     },
     "MMM": {
       "date": "2026-07-22",
@@ -506,7 +506,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "upside": 28.6
+      "upside": 28.2
     },
     "PG": {
       "date": "2026-07-21",
@@ -515,7 +515,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 3.3
+      "upside": 3.9
     },
     "CRM": {
       "date": "2026-07-21",
@@ -524,7 +524,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 18.6
+      "upside": 17.6
     },
     "KO": {
       "date": "2026-07-21",
@@ -533,7 +533,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "upside": 11.5
+      "upside": 12.3
     },
     "HD": {
       "date": "2026-07-20",
@@ -542,7 +542,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "upside": 30.7
+      "upside": 30.6
     },
     "AAPL": {
       "date": "2026-07-17",
@@ -551,7 +551,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "upside": 13.9
+      "upside": 14.1
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -560,7 +560,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 3.8
+      "upside": 4.6
     },
     "MRK": {
       "date": "2026-07-13",
@@ -569,10 +569,147 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 7.0
+      "upside": 7.6
     }
   },
   "bz_news": [
+    {
+      "title": "STMicroelectronics Stock Sinks 18%: Weak Sales Outlook Drowns Out AI Growth Story",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60648317/stmicroelectronics-stock-sinks-18-weak-sales-outlook-drowns-out-ai-growth-story",
+      "ts": 1784826177,
+      "tickers": [
+        "STM",
+        "TSLA",
+        "AAPL",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.428
+    },
+    {
+      "title": "'Microsoft Is Replacing OpenAI Image Models in PowerPoint, Bing' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60647935/microsoft-replacing-openai-image-models-powerpoint-bing-bloomberg",
+      "ts": 1784825660,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.299
+    },
+    {
+      "title": "Market Selling As Houthis Open A New Front; Google AI Cash Burn; Tesla Humanoid Spending",
+      "url": "https://www.benzinga.com/Opinion/26/07/60646424/market-selling-as-houthis-open-a-new-front-google-ai-cash-burn-tesla-humanoid-spending",
+      "ts": 1784823121,
+      "tickers": [
+        "USO",
+        "SPY",
+        "NVDA",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.353
+    },
+    {
+      "title": "SpaceX Stock’s Hidden Risk Isn’t Rockets — It’s AI Spending",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60646239/spacex-stocks-hidden-risk-isnt-rockets-its-ai-spending",
+      "ts": 1784822902,
+      "tickers": [
+        "SPCX",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.366
+    },
+    {
+      "title": "Microsoft, Databricks Expand Collaboration Through 2030s; To Deepen Use Of Azure Databricks For Core Business Operations",
+      "url": "https://www.benzinga.com/news/26/07/60646218/microsoft-databricks-expand-collaboration-through-2030s-deepen-use-azure-databricks-core-business-op",
+      "ts": 1784822875,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.373
+    },
+    {
+      "title": "RBC Capital Reiterates Outperform on IBM, Maintains $270 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60646005/rbc-capital-reiterates-outperform-ibm-maintains-270-price-target",
+      "ts": 1784822593,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.469
+    },
+    {
+      "title": "Dow Boosts Outlook After Q2 Beat, Targets $2B in Total Savings",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60645735/dow-boosts-outlook-after-q2-beat-targets-2b-in-total-savings",
+      "ts": 1784822240,
+      "tickers": [
+        "DOW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.442
+    },
+    {
+      "title": "Intel Earnings Prediction Market Preview: What Will Lip-Bu Tan Say?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60645683/intel-earnings-prediction-market-preview-what-will-lip-bu-tan-say-2",
+      "ts": 1784822152,
+      "tickers": [
+        "INTC",
+        "NVDA",
+        "FTNT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.484
+    },
+    {
+      "title": "Shares of financial services companies are trading lower as surging oil prices and Treasury yields weigh on sentiment, with the 10-year U.S. Treasury yield climbing to its highest level since January 2025. Rising yields and energy prices have fueled inflation concerns, reinforcing expectations that interest rates will remain elevated and raising concerns about slower loan demand and economic growth.",
+      "url": "https://www.benzinga.com/quote/FTFT",
+      "ts": 1784822116,
+      "tickers": [
+        "MVRL",
+        "SLVO",
+        "GS",
+        "SOFI"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.414
+    },
+    {
+      "title": "Peacock Soars, Broadband Stumbles: Comcast Stock Slips After Earnings",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60644882/peacock-soars-broadband-stumbles-comcast-stock-slips-after-earnings",
+      "ts": 1784821321,
+      "tickers": [
+        "CMCSA",
+        "AMZN",
+        "DIS",
+        "NFLX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.408
+    },
     {
       "title": "QUICK SPARK: Magnificent Seven Eye Worst Day Since Trump's Tariff Turmoil",
       "url": "https://www.benzinga.com/markets/large-cap/26/07/60643044/magnificent-seven-worst-day-since-april-2025-google-tesla-earnings",
@@ -757,141 +894,6 @@
       "relevance": 0.548
     },
     {
-      "title": "Apple Maps To Be Integrated Into Upcoming Ford's Universal Electric Vehicle Platform Through Apple's New Mapkit For Automotive For SDK",
-      "url": "https://www.benzinga.com/news/26/07/60636213/apple-maps-be-integrated-upcoming-ford-s-universal-electric-vehicle-platform-through-apple-s-new-map",
-      "ts": 1784811885,
-      "tickers": [
-        "AAPL",
-        "F"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.298
-    },
-    {
-      "title": "Evercore ISI Group Maintains Outperform on McDonald's, Lowers Price Target to $320",
-      "url": "https://www.benzinga.com/news/26/07/60636162/evercore-isi-group-maintains-outperform-mcdonald-s-lowers-price-target-320",
-      "ts": 1784811822,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.481
-    },
-    {
-      "title": "Honeywell International CEO Says Expects Divestures Of Productivity Solution And Services, Warehouse And Workforce Solution Business By Early August 2026; Divestitures About 2 Months Ahead Of Initial Assumption, Has Reduced 2026 Revenue Expectation By ~$400M; Sees Sharp Growth Inflection In Process Automation And Technology, Continued Momentum In Industrial Automation In H2 2026",
-      "url": "https://www.benzinga.com/news/26/07/60635506/honeywell-international-ceo-says-expects-divestures-productivity-solution-and-services-warehouse-and",
-      "ts": 1784810967,
-      "tickers": [
-        "HON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.406
-    },
-    {
-      "title": "NYC Mayor Zohran Mamdani Taps Amazon and Meta Antitrust Foe Lina Khan for Key Economic Role as Wall Street Watches for a Regulatory Shift",
-      "url": "https://www.benzinga.com/news/politics/26/07/60635450/nyc-mayor-zohran-mamdani-taps-amazon-and-meta-antitrust-foe-lina-khan-for-key-economic-role-as-wall-street-watches-for-a-regulatory-shift",
-      "ts": 1784810891,
-      "tickers": [
-        "META",
-        "AMZN",
-        "MSFT",
-        "KR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.404
-    },
-    {
-      "title": "Stock Market Today: Dow, Nasdaq 100, S&P 500 Futures Slip As GOOGL, Elon Musk's TSLA Drag After Q2 Earnings—Intel, ServiceNow, Quantumscape in Focus (UPDATED)",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60630054/stock-market-today-dow-jones-sp-500-futures-slip-as-googl-elon-musks-tsla-drag-after-q2-earnings-intel-servicenow-quantumscape-in-focus",
-      "ts": 1784810539,
-      "tickers": [
-        "SPY",
-        "TSLA",
-        "$BTC",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.478
-    },
-    {
-      "title": "Johnson & Johnson Announces Topline Results From Phase 3 MonumenTAL-6 Study Evaluating TECVAYLI + TALVEY In Adult Patients With Multiple Myeloma; Study Demonstrated Statistically Significant And Clinically Meaningful Improvements In Progression-Free Survival And Overall Survival",
-      "url": "https://www.benzinga.com/news/26/07/60635024/johnson-johnson-announces-topline-results-phase-3-monumental-6-study-evaluating-tecvayli-talvey-adul",
-      "ts": 1784810395,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.377
-    },
-    {
-      "title": "Trump Is Expanding a Pledge That Could Stop AI Data Centers From Hiking Your Electricity Bill— Here's Who Just Signed On",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60634722/trump-is-expanding-a-pledge-that-could-stop-ai-data-centers-from-hiking-your-electricity-bill-heres-who-just-signed-on",
-      "ts": 1784809762,
-      "tickers": [
-        "NEE",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.346
-    },
-    {
-      "title": "Dow Geopolitical Impact On Energy And Feedstocks Continues To Support Higher Risk Premiums; Sees Renewed Value Placed On Supply Security, Including Both Reliability And Logistics; Says Given The Uncertainty Across Markets Today Due To Ongoing Middle East Conflict, Projecting The Quarter Ahead Is Difficult",
-      "url": "https://www.benzinga.com/news/26/07/60634625/dow-geopolitical-impact-energy-and-feedstocks-continues-support-higher-risk-premiums-sees-renewed-va",
-      "ts": 1784809556,
-      "tickers": [
-        "DOW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.413
-    },
-    {
-      "title": "UnitedHealth, Ardagh Metal Packaging, Nvidia And More: CNBC’s ‘Final Trades’",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60634476/unitedhealth-ardagh-metal-packaging-nvidia-and-more-cnbc-final-trades",
-      "ts": 1784808913,
-      "tickers": [
-        "UNH",
-        "NVDA",
-        "RSP",
-        "AMBP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.444
-    },
-    {
-      "title": "Paramount Skydance Wins EU Approval for Warner Bros. Discovery Deal After Offering This Key Concession— but US Hurdles Loom",
-      "url": "https://www.benzinga.com/m-a/26/07/60633547/paramount-skydance-wins-eu-approval-for-warner-bros-discovery-deal-after-offering-this-key-concession-but-us-hurdles-loom",
-      "ts": 1784807281,
-      "tickers": [
-        "DIS",
-        "WBD",
-        "PSKY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.296
-    },
-    {
       "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
       "url": "https://www.benzinga.com/quote/WEAV",
       "ts": 1784737943,
@@ -970,7 +972,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.511
+      "relevance": 0.512
     },
     {
       "title": "Jim Cramer Says Microchip Is Near A Bottom — 'I Don't See It Yet' — While Nebius Is 'Not Done Going Down'",
@@ -1243,9 +1245,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "'Anthropic Considers Unusual Plan for Employee Stock Sales After It Goes Public' - The Information",
-        "ts": 1784815286,
-        "url": "https://www.benzinga.com/news/26/07/60639567/anthropic-considers-unusual-plan-employee-stock-sales-after-it-goes-public-information",
+        "title": "Intel Earnings Prediction Market Preview: What Will Lip-Bu Tan Say?",
+        "ts": 1784822152,
+        "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60645683/intel-earnings-prediction-market-preview-what-will-lip-bu-tan-say-2",
         "wiim": false
       },
       "filings": {
