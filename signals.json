@@ -1,6 +1,6 @@
 {
   "date": "2026-07-24",
-  "generated_at": "Jul 24, 8:45am ET",
+  "generated_at": "Jul 24, 9:39am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -123,8 +123,8 @@
     "LULU": "2026-09-02",
     "SPGI": "2026-07-28",
     "GILD": "2026-08-04",
-    "AVGO": "2026-09-02",
     "NVS": "2026-10-27",
+    "AVGO": "2026-09-02",
     "NBIX": "2026-07-30",
     "VRTX": "2026-08-03",
     "EFX": "2026-10-19"
@@ -133,31 +133,31 @@
   "sectors": [
     {
       "sector": "Financial Services",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Surging oil prices and Treasury yields weigh on sentiment",
       "note": "As surging oil prices and Treasury yields weigh on sentiment, with the 10-year U.S. Treasury yield climbing to its highest level since January 2025. Rising yields and energy prices have fueled inflation concerns, reinforcing expectations that interest rates will remain elevated and raising concerns about slower loan demand and economic growth.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Software",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Reports suggesting that OpenAI is developing a product called Presence t…",
       "note": "After reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Energy Drink",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "The UK government clarified that its ban on the sale of highly caffeinat…",
       "note": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Insurance & Reinsurance",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Sympathy with Progressive after that company reported Q2 financial resul…",
       "note": "Amid sympathy with Progressive after that company reported Q2 financial results that included weak policies-in-force and underwriting margins.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Consumer Staples",
@@ -208,8 +208,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "price": 81.17,
-      "upside": 12.1,
+      "price": 81.32,
+      "upside": 11.9,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -222,8 +222,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 321.66,
-      "upside": 13.8,
+      "price": 325.41,
+      "upside": 12.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -236,8 +236,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 259.27,
-      "upside": 4.1,
+      "price": 261.52,
+      "upside": 3.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,8 +250,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 169.59,
-      "upside": 6.1,
+      "price": 170.36,
+      "upside": 5.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -264,8 +264,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 324.71,
-      "upside": 30.9,
+      "price": 324.84,
+      "upside": 30.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -278,8 +278,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 156.93,
-      "upside": 5.1,
+      "price": 161.91,
+      "upside": 1.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -292,8 +292,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 146.97,
-      "upside": 3.4,
+      "price": 146.11,
+      "upside": 4.0,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -306,8 +306,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 156.93,
-      "upside": 17.9,
+      "price": 161.91,
+      "upside": 14.3,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -320,8 +320,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 169.59,
-      "upside": 28.5,
+      "price": 170.36,
+      "upside": 28.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +334,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 194.42,
-      "upside": 2.9,
+      "price": 195.12,
+      "upside": 2.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +348,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 169.59,
-      "upside": -14.5,
+      "price": 170.36,
+      "upside": -14.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -362,8 +362,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 169.59,
-      "upside": 7.9,
+      "price": 170.36,
+      "upside": 7.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -376,8 +376,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 169.59,
-      "upside": -22.2,
+      "price": 170.36,
+      "upside": -22.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -390,8 +390,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 321.66,
-      "upside": 13.2,
+      "price": 325.41,
+      "upside": 11.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -404,8 +404,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 169.59,
-      "upside": 6.1,
+      "price": 170.36,
+      "upside": 5.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -418,8 +418,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 194.42,
-      "upside": 6.5,
+      "price": 195.12,
+      "upside": 6.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -433,7 +433,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": 6.1
+      "upside": 5.7
     },
     "CVX": {
       "date": "2026-07-23",
@@ -442,7 +442,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "upside": 6.5
+      "upside": 6.1
     },
     "AAPL": {
       "date": "2026-07-23",
@@ -451,7 +451,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "upside": 13.2
+      "upside": 11.9
     },
     "PG": {
       "date": "2026-07-21",
@@ -460,7 +460,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 3.4
+      "upside": 4.0
     },
     "CRM": {
       "date": "2026-07-21",
@@ -469,7 +469,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 17.9
+      "upside": 14.3
     },
     "KO": {
       "date": "2026-07-21",
@@ -478,7 +478,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "upside": 12.1
+      "upside": 11.9
     },
     "HD": {
       "date": "2026-07-20",
@@ -487,7 +487,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "upside": 30.9
+      "upside": 30.8
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -496,7 +496,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 4.1
+      "upside": 3.2
     },
     "MRK": {
       "date": "2026-07-13",
@@ -505,10 +505,127 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 7.3
+      "upside": 7.2
     }
   },
   "bz_news": [
+    {
+      "title": "India Just Ordered Jack Dorsey’s BitChat To Be Erased From GitHub, After Protesters Used the Bluetooth Messaging App to Outsmart a Government Blackout Amid Mass Protests",
+      "url": "https://www.benzinga.com/news/politics/26/07/60666073/india-just-ordered-jack-dorseys-bitchat-to-be-erased-from-github-after-protesters-used-the-bluetooth-messaging-app-to-outsmart-a-government-blackout-amid-mass-protests",
+      "ts": 1784900140,
+      "tickers": [
+        "AAPL",
+        "MSFT",
+        "XYZ",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.225
+    },
+    {
+      "title": "Verizon CFO Says Company Board Has Extended CEO's Contract Through December 31, 2028; Expects Wireless Revenue To Be Flat For The Full Year",
+      "url": "https://www.benzinga.com/news/26/07/60665994/verizon-cfo-says-company-board-has-extended-ceo-s-contract-through-december-31-2028-expects-wireless",
+      "ts": 1784900075,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.389
+    },
+    {
+      "title": "Verizon CEO Says Revenue From Mobility And Broadband Expected To Grow Around 4% In Q4; AI Infrastructure Revenue To Start Layering Into Results Beginning In 2027",
+      "url": "https://www.benzinga.com/news/26/07/60665979/verizon-ceo-says-revenue-mobility-and-broadband-expected-grow-around-4-q4-ai-infrastructure-revenue-",
+      "ts": 1784900029,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.422
+    },
+    {
+      "title": "Intel’s AI Boom Raked in $2.5 Billion—Then Its Foundry Lost 84% of It",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60665708/intels-ai-boom-raked-in-2-5-billion-then-its-foundry-lost-84-of-it",
+      "ts": 1784898872,
+      "tickers": [
+        "INTC",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.482
+    },
+    {
+      "title": "Albertsons Says Walmart, Amazon and Aldi Are Winning Price-Sensitive Shoppers",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60665473/albertsons-says-walmart-amazon-and-aldi-are-winning-price-sensitive-shoppers",
+      "ts": 1784898404,
+      "tickers": [
+        "ACI",
+        "AMZN",
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.312
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Gain as Oil Prices Decline—Intel, Edwards Lifesciences, SAP in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60660984/stock-market-today-sp-500-dow-jones-futures-gain-as-oil-prices-decline-intel-edwards-lifesciences-sap-in-focus",
+      "ts": 1784898152,
+      "tickers": [
+        "SPY",
+        "TSLA",
+        "$BTC",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.515
+    },
+    {
+      "title": "Wedbush Maintains Neutral on Intel, Raises Price Target to $98",
+      "url": "https://www.benzinga.com/news/26/07/60665286/wedbush-maintains-neutral-intel-raises-price-target-98",
+      "ts": 1784897847,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.468
+    },
+    {
+      "title": "Verizon CEO Says Expects Q3 Mobility, Broadband Service Revenue To Grow 3% YoY; On Track To Deliver At Least $9B Of OPEX And CAPEX Savings In 2026; Expects To Close Transaction With BT In H2 2027; Signed An Agreement With Google, Valued At Over $1B To Use Verizon Dark Fiber To Connect Their Data Centers;",
+      "url": "https://www.benzinga.com/news/26/07/60665194/verizon-ceo-says-expects-q3-mobility-broadband-service-revenue-grow-3-yoy-track-deliver-least-9b-ope",
+      "ts": 1784897625,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.414
+    },
+    {
+      "title": "Verizon CEO Says AI Models Have Helped To Autonomously Fix Network Issues In Minutes As Opposed To Hours",
+      "url": "https://www.benzinga.com/news/26/07/60665074/verizon-ceo-says-ai-models-have-helped-autonomously-fix-network-issues-minutes-opposed-hours",
+      "ts": 1784897171,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.326
+    },
     {
       "title": "Alphabet Lost $294 Billion in One Brutal Day — Almost an Entire Palantir",
       "url": "https://www.benzinga.com/markets/tech/26/07/60664934/alphabet-lost-294-billion-in-one-brutal-day-almost-an-entire-palantir",
@@ -676,7 +793,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.45
+      "relevance": 0.449
     },
     {
       "title": "American Express shares are trading lower after the company reported mixed Q2 financial results and narrowed its FY26 sales guidance slightly below estimates.",
@@ -714,124 +831,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.477
-    },
-    {
-      "title": "AMD's Anthropic and OpenAI Deals Power $2 Trillion AI Ambitions",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60662818/amds-anthropic-and-openai-deals-power-2-trillion-ai-ambitions",
-      "ts": 1784891523,
-      "tickers": [
-        "AMD",
-        "META",
-        "CSCO",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.451
-    },
-    {
-      "title": "Earnings Scheduled For July 24, 2026",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60662798/earnings-scheduled-july-24-2026",
-      "ts": 1784891482,
-      "tickers": [
-        "CHTR",
-        "AXP",
-        "VZ",
-        "SXT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.463
-    },
-    {
-      "title": "Mizuho Maintains Neutral on Intel, Lowers Price Target to $109",
-      "url": "https://www.benzinga.com/news/26/07/60662650/mizuho-maintains-neutral-intel-lowers-price-target-109",
-      "ts": 1784890895,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.46
-    },
-    {
-      "title": "American Express Q2 EPS $4.53 Beats $4.40 Estimate, Sales $19.637B Miss $19.694B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60662618/american-express-q2-eps-4-53-beats-4-40-estimate-sales-19-637b-miss-19-694b-estimate",
-      "ts": 1784890882,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.448
-    },
-    {
-      "title": "Verizon Communications Q2 Adj. EPS $1.30 Beats $1.27 Estimate, Sales $34.253B Miss $35.111B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60662611/verizon-communications-q2-adj-eps-1-30-beats-1-27-estimate-sales-34-253b-miss-35-111b-estimate",
-      "ts": 1784890872,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.437
-    },
-    {
-      "title": "American Express Affirms FY2026 GAAP EPS Guidance of $17.30-$17.90 vs $17.64 Est; Narrows FY2026 Sales Guidance from $78.729B-$79.452B to $79.452B vs $79.491B Est",
-      "url": "https://www.benzinga.com/news/26/07/60662608/american-express-affirms-fy2026-gaap-eps-guidance-17-30-17-90-vs-17-64-est-narrows-fy2026-sales-guid",
-      "ts": 1784890870,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.448
-    },
-    {
-      "title": "Verizon Communications Raises FY2026 Adj EPS Guidance from $4.95-$4.99 to $4.99-$5.04 vs $4.96 Est",
-      "url": "https://www.benzinga.com/news/26/07/60662599/verizon-communications-raises-fy2026-adj-eps-guidance-4-95-4-99-4-99-5-04-vs-4-96-est",
-      "ts": 1784890867,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.436
-    },
-    {
-      "title": "Merck Announces Strategy For Rapid, Broad And Sustainable Access To Its HIV-1 Prevention Pill Alimatravir In Low- And Middle-Income Countries",
-      "url": "https://www.benzinga.com/news/26/07/60662471/merck-announces-strategy-rapid-broad-and-sustainable-access-its-hiv-1-prevention-pill-alimatravir-lo",
-      "ts": 1784890175,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.427
-    },
-    {
-      "title": "Why Wall Street Says Intel's Rich Valuation May Still Be Worth Paying",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60661219/why-wall-street-says-intels-rich-valuation-may-still-be-worth-paying",
-      "ts": 1784886176,
-      "tickers": [
-        "INTC",
-        "AAPL",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.377
+      "relevance": 0.478
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -939,7 +939,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.426
+      "relevance": 0.427
     },
     {
       "title": "Shares of consumer staples companies are trading higher as investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
@@ -1387,9 +1387,33 @@
       },
       "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
+    "NVS": {
+      "name": "Novartis",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 6,
+        "buy": 11,
+        "hold": 14,
+        "sell": 3,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 17,
+        "bearish": 3,
+        "label": "Buy",
+        "score": 0.59,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 0
+      },
+      "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
     "AVGO": {
       "name": "Broadcom",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 17,
         "buy": 35,
@@ -1417,31 +1441,7 @@
         },
         "insider30d": 7
       },
-      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-    },
-    "NVS": {
-      "name": "Novartis",
-      "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 6,
-        "buy": 11,
-        "hold": 14,
-        "sell": 3,
-        "strongSell": 0,
-        "total": 34,
-        "bullish": 17,
-        "bearish": 3,
-        "label": "Buy",
-        "score": 0.59,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": null,
-        "periodic": null,
-        "insider30d": 0
-      },
-      "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
@@ -1806,6 +1806,7 @@
       "margin": 29.0,
       "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
     },
+    "NVS": null,
     "AVGO": {
       "period": "Q2 FY2026",
       "filed": "2026-06-09",
@@ -1825,7 +1826,6 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
     },
-    "NVS": null,
     "NBIX": {
       "period": "Q1 FY2026",
       "filed": "2026-05-05",
