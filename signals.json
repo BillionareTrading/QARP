@@ -1,6 +1,6 @@
 {
   "date": "2026-07-24",
-  "generated_at": "Jul 24, 6:36am ET",
+  "generated_at": "Jul 24, 7:12am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -186,16 +186,16 @@
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
     },
-    "GILD": {
-      "title": "Two Years to Build or Pay 200% — Which US Pharma Stocks Win?",
-      "ts": 1784888713,
-      "url": "https://www.benzinga.com/news/health-care/26/07/60662049/two-years-to-build-or-pay-200-which-us-pharma-stocks-win",
-      "wiim": false
-    },
     "NVDA": {
       "title": "NVIDIA's Next Breakout? Market Veteran Sees Plenty of Fuel Left in the AI Leader",
       "ts": 1784834007,
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60653023/nvidias-next-breakout-market-veteran-sees-plenty-of-fuel-left-in-the-ai-leader",
+      "wiim": false
+    },
+    "GILD": {
+      "title": "Two Years to Build or Pay 200% — Which US Pharma Stocks Win?",
+      "ts": 1784888713,
+      "url": "https://www.benzinga.com/news/health-care/26/07/60662049/two-years-to-build-or-pay-200-which-us-pharma-stocks-win",
       "wiim": false
     },
     "UBER": {
@@ -208,12 +208,6 @@
       "title": "NVIDIA's Next Breakout? Market Veteran Sees Plenty of Fuel Left in the AI Leader",
       "ts": 1784834007,
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60653023/nvidias-next-breakout-market-veteran-sees-plenty-of-fuel-left-in-the-ai-leader",
-      "wiim": false
-    },
-    "BSX": {
-      "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
-      "ts": 1784828136,
-      "url": "https://www.benzinga.com/markets/options/26/07/60649594/10-health-care-stocks-whale-alerts-today-s-session",
       "wiim": false
     }
   },
@@ -528,6 +522,108 @@
   },
   "bz_news": [
     {
+      "title": "AMD's Anthropic and OpenAI Deals Power $2 Trillion AI Ambitions",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60662818/amds-anthropic-and-openai-deals-power-2-trillion-ai-ambitions",
+      "ts": 1784891523,
+      "tickers": [
+        "AMD",
+        "META",
+        "CSCO",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.451
+    },
+    {
+      "title": "Earnings Scheduled For July 24, 2026",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60662798/earnings-scheduled-july-24-2026",
+      "ts": 1784891482,
+      "tickers": [
+        "CHTR",
+        "AXP",
+        "VZ",
+        "SXT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.463
+    },
+    {
+      "title": "Mizuho Maintains Neutral on Intel, Lowers Price Target to $109",
+      "url": "https://www.benzinga.com/news/26/07/60662650/mizuho-maintains-neutral-intel-lowers-price-target-109",
+      "ts": 1784890895,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.46
+    },
+    {
+      "title": "American Express Q2 EPS $4.53 Beats $4.40 Estimate, Sales $19.637B Miss $19.694B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60662618/american-express-q2-eps-4-53-beats-4-40-estimate-sales-19-637b-miss-19-694b-estimate",
+      "ts": 1784890882,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.448
+    },
+    {
+      "title": "Verizon Communications Q2 Adj. EPS $1.30 Beats $1.27 Estimate, Sales $34.253B Miss $35.111B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60662611/verizon-communications-q2-adj-eps-1-30-beats-1-27-estimate-sales-34-253b-miss-35-111b-estimate",
+      "ts": 1784890872,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.437
+    },
+    {
+      "title": "American Express Affirms FY2026 GAAP EPS Guidance of $17.30-$17.90 vs $17.64 Est; Narrows FY2026 Sales Guidance from $78.729B-$79.452B to $79.452B vs $79.491B Est",
+      "url": "https://www.benzinga.com/news/26/07/60662608/american-express-affirms-fy2026-gaap-eps-guidance-17-30-17-90-vs-17-64-est-narrows-fy2026-sales-guid",
+      "ts": 1784890870,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.448
+    },
+    {
+      "title": "Verizon Communications Raises FY2026 Adj EPS Guidance from $4.95-$4.99 to $4.99-$5.04 vs $4.96 Est",
+      "url": "https://www.benzinga.com/news/26/07/60662599/verizon-communications-raises-fy2026-adj-eps-guidance-4-95-4-99-4-99-5-04-vs-4-96-est",
+      "ts": 1784890867,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.436
+    },
+    {
+      "title": "Merck Announces Strategy For Rapid, Broad And Sustainable Access To Its HIV-1 Prevention Pill Alimatravir In Low- And Middle-Income Countries",
+      "url": "https://www.benzinga.com/news/26/07/60662471/merck-announces-strategy-rapid-broad-and-sustainable-access-its-hiv-1-prevention-pill-alimatravir-lo",
+      "ts": 1784890175,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.427
+    },
+    {
       "title": "Two Years to Build or Pay 200% — Which US Pharma Stocks Win?",
       "url": "https://www.benzinga.com/news/health-care/26/07/60662049/two-years-to-build-or-pay-200-which-us-pharma-stocks-win",
       "ts": 1784888713,
@@ -557,7 +653,7 @@
     {
       "title": "Why Wall Street Says Intel's Rich Valuation May Still Be Worth Paying",
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60661219/why-wall-street-says-intels-rich-valuation-may-still-be-worth-paying",
-      "ts": 1784886184,
+      "ts": 1784886176,
       "tickers": [
         "INTC",
         "AAPL",
@@ -738,111 +834,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.359
-    },
-    {
-      "title": "Intel, Amkor Technology, MaxLinear, Lockheed Martin and Oracle: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60659166/intel-amkor-maxlinear-lockheed-oracle-stocks-to-watch",
-      "ts": 1784855872,
-      "tickers": [
-        "INTC",
-        "LMT",
-        "ORCL",
-        "AMKR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.458
-    },
-    {
-      "title": "5 Early Earnings Winners Setting the Pace in Q2",
-      "url": "https://www.benzinga.com/news/26/07/60658402/5-early-earnings-winners-setting-the-pace-in-q2",
-      "ts": 1784843939,
-      "tickers": [
-        "GM",
-        "MMM",
-        "MLI",
-        "CME"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.485
-    },
-    {
-      "title": "Intel CFO Says AI PC Revenue Grew 26% Sequentially, Now Represents Two-thirds Of Our Client Revenue Mix; See Strong Momentum In Purpose-built Silicon Product LINE With Revenue Up Roughly 20% Sequentially And Nearly Tripling YoY; Stepped Up Investments In Q2 For Intel 14A To Prepare For Risk Production In 2027 And Committed High Volume Ramps In 2028",
-      "url": "https://www.benzinga.com/news/26/07/60658361/intel-cfo-says-ai-pc-revenue-grew-26-sequentially-now-represents-two-thirds-our-client-revenue-mix-s",
-      "ts": 1784843718,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.567
-    },
-    {
-      "title": "Intel CEO Says Factories Exceeded Volume Targets During Q2; 18A Output Increased Meaningfully During Q2; 18a-P Technology Is Now Positioned As A Competitive Node For External Customers; Says He Is Increasingly Confident That 14A Will Be A Highly Competitive Offering; Co Has 'Fully Committed' To High Volume Production Of 14A Chips In 2028; 18A Now In Volume Production In Core PC Client Segment Across Multiple Products",
-      "url": "https://www.benzinga.com/news/26/07/60658349/intel-ceo-says-factories-exceeded-volume-targets-during-q2-18a-output-increased-meaningfully-during-",
-      "ts": 1784843686,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.484
-    },
-    {
-      "title": "Intel CFO Says Co Will Buy 40% More Chip Manufacturing Tools In 2026 Than In 2025",
-      "url": "https://www.benzinga.com/news/26/07/60658322/intel-cfo-says-co-will-buy-40-more-chip-manufacturing-tools-2026-2025",
-      "ts": 1784843545,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.484
-    },
-    {
-      "title": "Intel Executive Says We Now Expect Our CapEx To Be More Than $20B",
-      "url": "https://www.benzinga.com/news/26/07/60658067/intel-executive-says-we-now-expect-our-capex-be-more-20b",
-      "ts": 1784842247,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.374
-    },
-    {
-      "title": "Intel Just Reported Earnings. Here's What It Means for the AI Trade.",
-      "url": "https://www.benzinga.com/opinion/26/07/60658011/intel-just-reported-earnings-heres-what-it-means-for-the-ai-trade",
-      "ts": 1784841987,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.51
-    },
-    {
-      "title": "New Senator Makes 700+ Stock Trades, Ditches Old Oil Company for Magnificent Seven",
-      "url": "https://www.benzinga.com/news/politics/26/07/60657916/new-senator-makes-700-stock-trades-ditches-old-oil-company-for-magnificent-seven",
-      "ts": 1784841531,
-      "tickers": [
-        "AAPL",
-        "GOOG",
-        "NVDA",
-        "ASML"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.301
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -1286,12 +1277,7 @@
         "score": 1.1,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
-        "ts": 1784828136,
-        "url": "https://www.benzinga.com/markets/options/26/07/60649594/10-health-care-stocks-whale-alerts-today-s-session",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
