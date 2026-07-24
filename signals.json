@@ -1,6 +1,6 @@
 {
   "date": "2026-07-24",
-  "generated_at": "Jul 24, 2:31pm ET",
+  "generated_at": "Jul 24, 3:14pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -116,8 +116,8 @@
     "ABT": "2026-10-13",
     "NOW": "2026-10-27",
     "RKLB": "2026-08-05",
-    "NVDA": "2026-08-26",
     "DHR": "2026-10-19",
+    "NVDA": "2026-08-26",
     "BSX": "2026-07-29",
     "UBER": "2026-08-05",
     "LULU": "2026-09-02",
@@ -147,10 +147,10 @@
     },
     {
       "sector": "Energy Drink",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "The UK government clarified that its ban on the sale of highly caffeinat…",
       "note": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Insurance & Reinsurance",
@@ -186,16 +186,16 @@
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
     },
-    "RKLB": {
-      "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
-      "ts": 1784914531,
-      "url": "https://www.benzinga.com/markets/options/26/07/60676407/10-industrials-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
       "ts": 1784914531,
       "url": "https://www.benzinga.com/markets/options/26/07/60676406/10-information-technology-stocks-whale-activity-today-s-session",
+      "wiim": false
+    },
+    "RKLB": {
+      "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
+      "ts": 1784914531,
+      "url": "https://www.benzinga.com/markets/options/26/07/60676407/10-industrials-stocks-whale-alerts-today-s-session",
       "wiim": false
     },
     "AVGO": {
@@ -214,8 +214,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "price": 82.17,
-      "upside": 10.7,
+      "price": 82.26,
+      "upside": 10.6,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -228,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 332.33,
-      "upside": 10.1,
+      "price": 332.7,
+      "upside": 10.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -242,8 +242,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 262.98,
-      "upside": 2.7,
+      "price": 263.44,
+      "upside": 2.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -256,8 +256,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 170.85,
-      "upside": 5.4,
+      "price": 170.95,
+      "upside": 5.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -270,7 +270,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 331.17,
+      "price": 331.2,
       "upside": 28.3,
       "held": false,
       "uni": true,
@@ -284,8 +284,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 163.33,
-      "upside": 1.0,
+      "price": 163.6,
+      "upside": 0.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -298,8 +298,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 146.79,
-      "upside": 3.5,
+      "price": 146.71,
+      "upside": 3.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -312,8 +312,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 163.33,
-      "upside": 13.3,
+      "price": 163.6,
+      "upside": 13.1,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -326,8 +326,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 170.85,
-      "upside": 27.6,
+      "price": 170.95,
+      "upside": 27.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -340,8 +340,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 195.2,
-      "upside": 2.5,
+      "price": 195.43,
+      "upside": 2.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -354,8 +354,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 170.85,
-      "upside": -15.1,
+      "price": 170.95,
+      "upside": -15.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -368,8 +368,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 170.85,
-      "upside": 7.1,
+      "price": 170.95,
+      "upside": 7.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -382,8 +382,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 170.85,
-      "upside": -22.7,
+      "price": 170.95,
+      "upside": -22.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -396,8 +396,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 332.33,
-      "upside": 9.5,
+      "price": 332.7,
+      "upside": 9.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -410,8 +410,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 170.85,
-      "upside": 5.4,
+      "price": 170.95,
+      "upside": 5.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -424,8 +424,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 195.2,
-      "upside": 6.0,
+      "price": 195.43,
+      "upside": 5.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -439,7 +439,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": 5.4
+      "upside": 5.3
     },
     "CVX": {
       "date": "2026-07-23",
@@ -448,7 +448,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "upside": 6.0
+      "upside": 5.9
     },
     "AAPL": {
       "date": "2026-07-23",
@@ -457,7 +457,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "upside": 9.5
+      "upside": 9.4
     },
     "PG": {
       "date": "2026-07-21",
@@ -466,7 +466,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 3.5
+      "upside": 3.6
     },
     "CRM": {
       "date": "2026-07-21",
@@ -475,7 +475,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 13.3
+      "upside": 13.1
     },
     "KO": {
       "date": "2026-07-21",
@@ -484,7 +484,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "upside": 10.7
+      "upside": 10.6
     },
     "HD": {
       "date": "2026-07-20",
@@ -502,7 +502,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 2.7
+      "upside": 2.5
     },
     "MRK": {
       "date": "2026-07-13",
@@ -511,10 +511,88 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 6.8
+      "upside": 6.4
     }
   },
   "bz_news": [
+    {
+      "title": "Nvidia, Meta and 23 Others Put Their Names on Open-Weight AI Letter — Google, Amazon and the Closed Labs Keep Theirs Off",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60679534/nvidia-meta-and-23-others-put-their-names-on-open-weight-ai-letter-google-amazon-and-the-closed-labs-keep-theirs-off",
+      "ts": 1784919920,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.436
+    },
+    {
+      "title": "Citigroup Maintains Buy on Honeywell Intl, Raises Price Target to $279",
+      "url": "https://www.benzinga.com/news/26/07/60679431/citigroup-maintains-buy-honeywell-intl-raises-price-target-279",
+      "ts": 1784919670,
+      "tickers": [
+        "HON"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.439
+    },
+    {
+      "title": "Citigroup Maintains Buy on IBM, Lowers Price Target to $245",
+      "url": "https://www.benzinga.com/news/26/07/60679200/citigroup-maintains-buy-ibm-lowers-price-target-245",
+      "ts": 1784919258,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.445
+    },
+    {
+      "title": "Morgan Stanley Maintains Equal-Weight on Intel, Raises Price Target to $84",
+      "url": "https://www.benzinga.com/news/26/07/60679051/morgan-stanley-maintains-equal-weight-intel-raises-price-target-84",
+      "ts": 1784919036,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.462
+    },
+    {
+      "title": "Intel Slides Despite Strong Quarter as Street Weighs $20 Billion Capex Plan",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60678955/intel-slides-despite-strong-quarter-as-street-weighs-20-billion-capex-plan",
+      "ts": 1784918849,
+      "tickers": [
+        "INTC",
+        "GOOGL",
+        "AMD",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.425
+    },
+    {
+      "title": "Mizuho Maintains Neutral on Travelers Companies, Raises Price Target to $343",
+      "url": "https://www.benzinga.com/news/26/07/60678865/mizuho-maintains-neutral-travelers-companies-raises-price-target-343",
+      "ts": 1784918683,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.458
+    },
     {
       "title": "JP Morgan Maintains Overweight on Dow, Lowers Price Target to $40",
       "url": "https://www.benzinga.com/news/26/07/60677965/jp-morgan-maintains-overweight-dow-lowers-price-target-40",
@@ -721,7 +799,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.463
+      "relevance": 0.462
     },
     {
       "title": "Meta, Microsoft, Palantir, Nvidia and 21 Others Sign Letter Backing Open-Weight AI Models",
@@ -761,87 +839,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.353
-    },
-    {
-      "title": "Jensen Huang Posts On X For The First Time Ever — And Uses It To Defend Open-Source AI",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60671067/jensen-huang-posts-on-x-for-the-first-time-ever-and-uses-it-to-defend-open-source-ai",
-      "ts": 1784906013,
-      "tickers": [
-        "NVDA",
-        "META",
-        "MSFT",
-        "PLTR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.37
-    },
-    {
-      "title": "Everyone Talks GPUs, But CPUs Benefit From Agentic AI—Intel Earnings Stop Tech Stocks Bleeding",
-      "url": "https://www.benzinga.com/Opinion/26/07/60670812/everyone-talks-gpus-but-cpus-benefit-from-agentic-ai-intel-earnings-stop-tech-stocks-bleeding",
-      "ts": 1784905675,
-      "tickers": [
-        "USO",
-        "TSLA",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.496
-    },
-    {
-      "title": "Verizon Communications shares are trading higher after the company reported better-than-expected Q2 adjusted EPS result and raised its FY26 adjusted EPS guidance above estimates.",
-      "url": "https://www.benzinga.com/quote/VZ",
-      "ts": 1784904527,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.431
-    },
-    {
-      "title": "Google Goes Cash Flow Negative for First Time Since 2004, Is Apple the Anti-CapEx AI Trade?",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60670029/google-goes-cash-flow-negative-for-first-time-since-2004-is-apple-the-anti-capex-ai-trade",
-      "ts": 1784904474,
-      "tickers": [
-        "AAPL",
-        "GOOGL",
-        "PLTR",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "RBC Capital Maintains Outperform on Honeywell Intl, Raises Price Target to $298",
-      "url": "https://www.benzinga.com/news/26/07/60669716/rbc-capital-maintains-outperform-honeywell-intl-raises-price-target-298",
-      "ts": 1784904154,
-      "tickers": [
-        "HON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.458
-    },
-    {
-      "title": "Stifel Maintains Hold on Intel, Lowers Price Target to $110",
-      "url": "https://www.benzinga.com/news/26/07/60669331/stifel-maintains-hold-intel-lowers-price-target-110",
-      "ts": 1784903646,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.446
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -907,7 +904,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.511
+      "relevance": 0.512
     },
     {
       "title": "Jim Cramer Says Microchip Is Near A Bottom — 'I Don't See It Yet' — While Nebius Is 'Not Done Going Down'",
@@ -989,7 +986,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.404
+      "relevance": 0.405
     }
   ],
   "portfolio_brief": {
@@ -1168,6 +1165,38 @@
       },
       "explain": "26 analysts cover it — 22 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
+    "DHR": {
+      "name": "Danaher",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 16,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 32,
+        "bullish": 27,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.19,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000163/dhr-20260721.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
+        },
+        "insider30d": 3
+      },
+      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "NVDA": {
       "name": "NVIDIA",
       "qarp": "STRONG BUY",
@@ -1204,38 +1233,6 @@
         "insider30d": 10
       },
       "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "DHR": {
-      "name": "Danaher",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 16,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 32,
-        "bullish": 27,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.19,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000163/dhr-20260721.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
-        },
-        "insider30d": 3
-      },
-      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "BSX": {
       "name": "Boston Scientific",
@@ -1688,25 +1685,6 @@
       "margin": -22.5,
       "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
     },
-    "NVDA": {
-      "period": "Q1 FY2027",
-      "filed": "2026-05-20",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
-      "revenue": {
-        "fmt": "$81.6B",
-        "yoy": 85.2
-      },
-      "eps": {
-        "val": 2.39,
-        "yoy": 214.5
-      },
-      "net_income": {
-        "fmt": "$58.3B"
-      },
-      "margin": 71.5,
-      "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
-    },
     "DHR": {
       "period": "Q2 FY2026",
       "filed": "2026-07-21",
@@ -1725,6 +1703,25 @@
       },
       "margin": 13.9,
       "summary": "Q2 FY2026 — revenue $6.3B (+5.5% YoY), diluted EPS $1.23 (+59.7% YoY), net margin 14%. (as reported, GAAP)"
+    },
+    "NVDA": {
+      "period": "Q1 FY2027",
+      "filed": "2026-05-20",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
+      "revenue": {
+        "fmt": "$81.6B",
+        "yoy": 85.2
+      },
+      "eps": {
+        "val": 2.39,
+        "yoy": 214.5
+      },
+      "net_income": {
+        "fmt": "$58.3B"
+      },
+      "margin": 71.5,
+      "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
     },
     "BSX": {
       "period": "Q1 FY2026",
