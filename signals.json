@@ -1,6 +1,6 @@
 {
   "date": "2026-07-24",
-  "generated_at": "Jul 24, 3:14pm ET",
+  "generated_at": "Jul 24, 4:01pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -116,8 +116,8 @@
     "ABT": "2026-10-13",
     "NOW": "2026-10-27",
     "RKLB": "2026-08-05",
-    "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
+    "DHR": "2026-10-19",
     "BSX": "2026-07-29",
     "UBER": "2026-08-05",
     "LULU": "2026-09-02",
@@ -131,6 +131,13 @@
   },
   "risk_asof": "2026-07-05",
   "sectors": [
+    {
+      "sector": "Foundry, Fabricator & Idm Semiconductor",
+      "dir": "down",
+      "driver": "The industry pulls back from earlier gains",
+      "note": "As the industry pulls back from earlier gains, possibly due to pressure from Asia as ChangXin Memory Technologies prepares for its Shanghai STAR Market debut. Industry weakness could result from investors adopting a risk-off stance amid a broader AI-related pullback.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
     {
       "sector": "Software",
       "dir": "up",
@@ -158,13 +165,6 @@
       "driver": "Sympathy with Progressive after that company reported Q2 financial resul…",
       "note": "Amid sympathy with Progressive after that company reported Q2 financial results that included weak policies-in-force and underwriting margins.",
       "src": "Benzinga WIIM · flags a divergence vs our prices"
-    },
-    {
-      "sector": "Consumer Staples",
-      "dir": "up",
-      "driver": "Investors rotate into defensive sectors amid recent market volatility an…",
-      "note": "As investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
-      "src": "Benzinga WIIM · price-confirmed"
     }
   ],
   "holding_news": {
@@ -214,8 +214,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "price": 82.26,
-      "upside": 10.6,
+      "price": 82.16,
+      "upside": 10.8,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -228,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 332.7,
-      "upside": 10.0,
+      "price": 333.19,
+      "upside": 9.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -242,7 +242,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 263.44,
+      "price": 263.36,
       "upside": 2.5,
       "held": false,
       "uni": true,
@@ -256,8 +256,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 170.95,
-      "upside": 5.3,
+      "price": 172.49,
+      "upside": 4.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -270,8 +270,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 331.2,
-      "upside": 28.3,
+      "price": 332.73,
+      "upside": 27.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -284,7 +284,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 163.6,
+      "price": 163.52,
       "upside": 0.9,
       "held": false,
       "uni": true,
@@ -298,8 +298,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 146.71,
-      "upside": 3.6,
+      "price": 147.12,
+      "upside": 3.3,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -312,7 +312,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 163.6,
+      "price": 163.52,
       "upside": 13.1,
       "held": false,
       "uni": true,
@@ -326,8 +326,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 170.95,
-      "upside": 27.5,
+      "price": 172.49,
+      "upside": 26.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -340,8 +340,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 195.43,
-      "upside": 2.3,
+      "price": 194.47,
+      "upside": 2.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -354,8 +354,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 170.95,
-      "upside": -15.2,
+      "price": 172.49,
+      "upside": -15.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -368,8 +368,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 170.95,
-      "upside": 7.0,
+      "price": 172.49,
+      "upside": 6.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -382,8 +382,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 170.95,
-      "upside": -22.8,
+      "price": 172.49,
+      "upside": -23.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -396,8 +396,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 332.7,
-      "upside": 9.4,
+      "price": 333.19,
+      "upside": 9.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -410,8 +410,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 170.95,
-      "upside": 5.3,
+      "price": 172.49,
+      "upside": 4.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -424,8 +424,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 195.43,
-      "upside": 5.9,
+      "price": 194.47,
+      "upside": 6.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -439,7 +439,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": 5.3
+      "upside": 4.4
     },
     "CVX": {
       "date": "2026-07-23",
@@ -448,7 +448,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "upside": 5.9
+      "upside": 6.4
     },
     "AAPL": {
       "date": "2026-07-23",
@@ -457,7 +457,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "upside": 9.4
+      "upside": 9.2
     },
     "PG": {
       "date": "2026-07-21",
@@ -466,7 +466,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 3.6
+      "upside": 3.3
     },
     "CRM": {
       "date": "2026-07-21",
@@ -484,7 +484,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "upside": 10.6
+      "upside": 10.8
     },
     "HD": {
       "date": "2026-07-20",
@@ -493,7 +493,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "upside": 28.3
+      "upside": 27.7
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -511,10 +511,40 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 6.4
+      "upside": 6.8
     }
   },
   "bz_news": [
+    {
+      "title": "Shares of foundry, fabricator and IDM semiconductor companies are trading lower as the industry pulls back from earlier gains, possibly due to pressure from Asia as ChangXin Memory Technologies prepares for its Shanghai STAR Market debut. Industry weakness could result from investors adopting a risk-off stance amid a broader AI-related pullback.",
+      "url": "https://www.benzinga.com/quote/UMC",
+      "ts": 1784921919,
+      "tickers": [
+        "INTC",
+        "STM",
+        "TSEM",
+        "TSM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.461
+    },
+    {
+      "title": "Warren Buffett Says Alphabet Is More Likely to Win Than 95% of Wall Street — But Adds ‘I Don’t Like It as Well as’ Coca-Cola And 4 Others",
+      "url": "https://www.benzinga.com/news/26/07/60680506/warren-buffett-says-alphabet-is-more-likely-to-win-than-95-of-wall-street-but-adds-i-dont-like-it-as-well-as-coca-cola-and-4-others",
+      "ts": 1784921832,
+      "tickers": [
+        "KO",
+        "AXP",
+        "BRK",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.443
+    },
     {
       "title": "Nvidia, Meta and 23 Others Put Their Names on Open-Weight AI Letter — Google, Amazon and the Closed Labs Keep Theirs Off",
       "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60679534/nvidia-meta-and-23-others-put-their-names-on-open-weight-ai-letter-google-amazon-and-the-closed-labs-keep-theirs-off",
@@ -827,18 +857,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.376
-    },
-    {
-      "title": "American Express CEO Says Consumers Keep Spending Despite Economic Uncertainty",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60671751/american-express-ceo-says-consumers-keep-spending-despite-economic-uncertainty",
-      "ts": 1784906904,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.353
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -1165,38 +1183,6 @@
       },
       "explain": "26 analysts cover it — 22 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
-    "DHR": {
-      "name": "Danaher",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 16,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 32,
-        "bullish": 27,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.19,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000163/dhr-20260721.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
-        },
-        "insider30d": 3
-      },
-      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "NVDA": {
       "name": "NVIDIA",
       "qarp": "STRONG BUY",
@@ -1233,6 +1219,38 @@
         "insider30d": 10
       },
       "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "DHR": {
+      "name": "Danaher",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 16,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 32,
+        "bullish": 27,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.19,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000163/dhr-20260721.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
+        },
+        "insider30d": 3
+      },
+      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "BSX": {
       "name": "Boston Scientific",
@@ -1685,25 +1703,6 @@
       "margin": -22.5,
       "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
     },
-    "DHR": {
-      "period": "Q2 FY2026",
-      "filed": "2026-07-21",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm",
-      "revenue": {
-        "fmt": "$6.3B",
-        "yoy": 5.5
-      },
-      "eps": {
-        "val": 1.23,
-        "yoy": 59.7
-      },
-      "net_income": {
-        "fmt": "$870M"
-      },
-      "margin": 13.9,
-      "summary": "Q2 FY2026 — revenue $6.3B (+5.5% YoY), diluted EPS $1.23 (+59.7% YoY), net margin 14%. (as reported, GAAP)"
-    },
     "NVDA": {
       "period": "Q1 FY2027",
       "filed": "2026-05-20",
@@ -1722,6 +1721,25 @@
       },
       "margin": 71.5,
       "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
+    },
+    "DHR": {
+      "period": "Q2 FY2026",
+      "filed": "2026-07-21",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm",
+      "revenue": {
+        "fmt": "$6.3B",
+        "yoy": 5.5
+      },
+      "eps": {
+        "val": 1.23,
+        "yoy": 59.7
+      },
+      "net_income": {
+        "fmt": "$870M"
+      },
+      "margin": 13.9,
+      "summary": "Q2 FY2026 — revenue $6.3B (+5.5% YoY), diluted EPS $1.23 (+59.7% YoY), net margin 14%. (as reported, GAAP)"
     },
     "BSX": {
       "period": "Q1 FY2026",
