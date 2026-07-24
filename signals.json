@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-23",
-  "generated_at": "Jul 23, 7:37pm ET",
+  "date": "2026-07-24",
+  "generated_at": "Jul 24, 5:33am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -49,7 +49,7 @@
       "sub": "+ NBIX, VRTX",
       "tag": "Drug-pricing policy",
       "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.",
-      "next": "Aug 6"
+      "next": "Aug 4"
     },
     {
       "ticker": "ABT",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 23",
+      "when": "Jul 24",
       "what": "Energy & geopolitics — today's read",
       "why": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "affects": "Energy · growth",
@@ -122,7 +122,7 @@
     "BSX": "2026-07-29",
     "LULU": "2026-09-02",
     "SPGI": "2026-07-28",
-    "GILD": "2026-08-06",
+    "GILD": "2026-08-04",
     "AVGO": "2026-09-02",
     "NVS": "2026-10-27",
     "NBIX": "2026-07-30",
@@ -213,20 +213,6 @@
   },
   "ratings": [
     {
-      "date": "2026-07-16",
-      "ticker": "KO",
-      "firm": "UBS",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$98",
-      "price": 81.17,
-      "upside": 20.7,
-      "held": true,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
       "date": "2026-07-21",
       "ticker": "KO",
       "firm": "Barclays",
@@ -239,90 +225,6 @@
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-07-16",
-      "ticker": "PG",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$162",
-      "price": 146.97,
-      "upside": 10.2,
-      "held": false,
-      "uni": true,
-      "qarp": "BUY"
-    },
-    {
-      "date": "2026-07-16",
-      "ticker": "JNJ",
-      "firm": "Raymond James",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$265",
-      "price": 259.27,
-      "upside": 2.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-16",
-      "ticker": "JNJ",
-      "firm": "RBC Capital",
-      "action": "Reiterates",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$287",
-      "price": 259.27,
-      "upside": 10.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-16",
-      "ticker": "JNJ",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$272",
-      "price": 259.27,
-      "upside": 4.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-16",
-      "ticker": "MMM",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$123",
-      "price": 169.59,
-      "upside": -27.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-16",
-      "ticker": "JNJ",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$294",
-      "price": 259.27,
-      "upside": 13.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
     },
     {
       "date": "2026-07-17",
@@ -620,6 +522,191 @@
   },
   "bz_news": [
     {
+      "title": "Stock Market Today: S&P 500, Dow Jones Futures Gain as Oil Prices Decline—Intel, Edwards Lifesciences, SAP in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60660984/stock-market-today-sp-500-dow-jones-futures-gain-as-oil-prices-decline-intel-edwards-lifesciences-sap-in-focus",
+      "ts": 1784884343,
+      "tickers": [
+        "SPY",
+        "TSLA",
+        "$BTC",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.505
+    },
+    {
+      "title": "Salesforce Announced That The U.S. Department Of Veterans Affairs Has Awarded The Company A $1.6B, Three-year, Agentic Enterprise License Agreement",
+      "url": "https://www.benzinga.com/quote/CRM",
+      "ts": 1784883791,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.372
+    },
+    {
+      "title": "Bernie Sanders Rips Walmart Over $37.6 Billion Buybacks as Workers Rely on Medicaid, SNAP: 'The Real Welfare Queen Is the Walton Family'",
+      "url": "https://www.benzinga.com/news/politics/26/07/60660867/bernie-sanders-rips-walmart-over-37-6-billion-buybacks-as-workers-rely-on-medicaid-snap-the-real-welfare-queen-is-the-walton-family",
+      "ts": 1784883446,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.228
+    },
+    {
+      "title": "Intel's CEO Just Made a Bold AI Prediction. Here's Why NVDA Investors Should Pay Attention",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60660778/intels-ceo-just-made-a-bold-ai-prediction-heres-why-nvda-investors-should-pay-attention",
+      "ts": 1784882399,
+      "tickers": [
+        "INTC",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.641
+    },
+    {
+      "title": "Intel CEO Lip-Bu Tan Eyes $100 Billion Custom AI Chip Market, Backs $20 Over Billion CapEx Push Amid 'Unprecedented Demand for Compute'",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60660614/intel-ceo-lip-bu-tan-eyes-100-billion-custom-ai-chip-market-backs-20-over-billion-capex-push-amid-unprecedented-demand-for-compute",
+      "ts": 1784880639,
+      "tickers": [
+        "INTC",
+        "FTNT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.573
+    },
+    {
+      "title": "Boeing And SPEEA Agree On Ed Wells Funding, NORA Process Improvements And Seniority Clarifications As Talks Continue On Pay And Retirement",
+      "url": "https://www.benzinga.com/news/26/07/60660569/boeing-and-speea-agree-ed-wells-funding-nora-process-improvements-and-seniority-clarifications-talks",
+      "ts": 1784879714,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.26
+    },
+    {
+      "title": "Intel CEO Lip-Bu Tan Warns AI Supply Crunch Won't Ease: Shortages Will 'Persist for the Foreseeable Future'",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60660243/intel-ceo-lip-bu-tan-ai-chip-shortage",
+      "ts": 1784877143,
+      "tickers": [
+        "INTC",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.503
+    },
+    {
+      "title": "Verizon Gears Up For Q2 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60660150/verizon-gears-up-for-q2-print-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts-2",
+      "ts": 1784876524,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.467
+    },
+    {
+      "title": "AMD Stock Could Surge 48% as Daniel Newman Calls It a 'Top Conviction'—Patrick Moorhead Sees $200 Billion Server CPU Market",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60660114/amd-stock-could-surge-48-as-daniel-newman-calls-it-a-top-conviction-patrick-moorhead-sees-200-billion-server-cpu-market",
+      "ts": 1784875810,
+      "tickers": [
+        "AMD",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.488
+    },
+    {
+      "title": "Nasdaq Tumbles Over 2% Amid Higher Oil Prices: Investor Sentiment Weakens, Greed Index Remains In ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60660103/nasdaq-tumbles-over-2-amid-higher-oil-prices-investor-sentiment-weakens-greed-index-remains-in-fear-zone",
+      "ts": 1784875623,
+      "tickers": [
+        "TSLA",
+        "GOOGL",
+        "GOOG",
+        "TMUS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.458
+    },
+    {
+      "title": "Top Wall Street Forecasters Revamp American Express Expectations Ahead Of Q2 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60660017/top-wall-street-forecasters-revamp-american-express-expectations-ahead-of-q2-earnings-2",
+      "ts": 1784875263,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.481
+    },
+    {
+      "title": "American Express, Deckers Outdoor And 3 Stocks To Watch Heading Into Friday",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60659926/american-express-deckers-outdoor-and-3-stocks-to-watch-heading-into-friday",
+      "ts": 1784873781,
+      "tickers": [
+        "AXP",
+        "VZ",
+        "HCA",
+        "EW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.401
+    },
+    {
+      "title": "Intel Earnings Spark Bullish Reactions as Jim Cramer Calls 'Intel's the One,' Gene Munster Says Investors Can 'Sleep Well at Night'",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60659686/intel-earnings-jim-cramer-gene-munster-bullish",
+      "ts": 1784871103,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.359
+    },
+    {
+      "title": "Intel, Amkor Technology, MaxLinear, Lockheed Martin and Oracle: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60659166/intel-amkor-maxlinear-lockheed-oracle-stocks-to-watch",
+      "ts": 1784855872,
+      "tickers": [
+        "INTC",
+        "LMT",
+        "ORCL",
+        "AMKR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.459
+    },
+    {
       "title": "5 Early Earnings Winners Setting the Pace in Q2",
       "url": "https://www.benzinga.com/news/26/07/60658402/5-early-earnings-winners-setting-the-pace-in-q2",
       "ts": 1784843939,
@@ -632,7 +719,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.486
+      "relevance": 0.485
     },
     {
       "title": "Intel CFO Says AI PC Revenue Grew 26% Sequentially, Now Represents Two-thirds Of Our Client Revenue Mix; See Strong Momentum In Purpose-built Silicon Product LINE With Revenue Up Roughly 20% Sequentially And Nearly Tripling YoY; Stepped Up Investments In Q2 For Intel 14A To Prepare For Risk Production In 2027 And Committed High Volume Ramps In 2028",
@@ -707,7 +794,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.307
+      "relevance": 0.301
     },
     {
       "title": "12 Information Technology Stocks Moving In Thursday's After-Market Session",
@@ -760,184 +847,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.58
-    },
-    {
-      "title": "Intel shares are trading higher after the company reported better-than-expected Q2 financial results and issued Q3 guidance above estimates.",
-      "url": "https://www.benzinga.com/quote/INTC",
-      "ts": 1784837672,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.559
-    },
-    {
-      "title": "RingCentral Partners With OpenAI Over AI Adoption Throughout RingCentral Operations",
-      "url": "https://www.benzinga.com/news/26/07/60655434/ringcentral-partners-openai-over-ai-adoption-throughout-ringcentral-operations",
-      "ts": 1784837662,
-      "tickers": [
-        "RNG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.303
-    },
-    {
-      "title": "Big Tech's Off-Balance-Sheet AI Debt Reportedly Tops $1.65 Trillion: Ed Zitron Says It 'Should Be a Shareholder Riot'",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60654488/big-techs-off-balance-sheet-ai-debt-reportedly-tops-1-65-trillion-ed-zitron-says-it-should-be-a-shareholder-riot",
-      "ts": 1784837003,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.355
-    },
-    {
-      "title": "Intel Sees Q3 GAAP EPS $0.31 vs $0.13 Est",
-      "url": "https://www.benzinga.com/news/26/07/60654408/intel-sees-q3-gaap-eps-0-31-vs-0-13-est",
-      "ts": 1784836943,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.513
-    },
-    {
-      "title": "Intel CFO David Zinsner Says Plans To Raise Capital Expenditures From $18B To $20B For 2026; Intel Plans For Capital Expenditures 'To Be Up Meaningfully' In 2027; Intel Signed Long-term Agreements With Customers To Supply CPUs And XPUs; Intel's Long-Term Chip Supply Agreements Range From 3-5 Years, With Some Including Both Volume & Price Commitments",
-      "url": "https://www.benzinga.com/news/26/07/60654383/intel-cfo-david-zinsner-says-plans-raise-capital-expenditures-18b-20b-2026-intel-plans-capital-expen",
-      "ts": 1784836929,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.452
-    },
-    {
-      "title": "Intel Q2 Adj. EPS $0.42 Beats $0.21 Estimate, Sales $16.128B Beat $14.417B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60654326/intel-q2-adj-eps-0-42-beats-0-21-estimate-sales-16-128b-beat-14-417b-estimate",
-      "ts": 1784836898,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.523
-    },
-    {
-      "title": "Trump Official Buys ETF Version of 'Keep Your Enemies Closer'",
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60653896/trump-official-buys-democratic-trades-etf-nanc-pelosi",
-      "ts": 1784836007,
-      "tickers": [
-        "GOP",
-        "NANC",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.319
-    },
-    {
-      "title": "NVIDIA's Next Breakout? Market Veteran Sees Plenty of Fuel Left in the AI Leader",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60653023/nvidias-next-breakout-market-veteran-sees-plenty-of-fuel-left-in-the-ai-leader",
-      "ts": 1784834007,
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "META",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.571
-    },
-    {
-      "title": "Why Is Walt Disney Stock Falling Thursday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60652375/why-is-walt-disney-stock-falling-thursday",
-      "ts": 1784832837,
-      "tickers": [
-        "DIS",
-        "AAPL",
-        "SPY",
-        "IDCC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.341
-    },
-    {
-      "title": "Chevron’s Biggest Stock Rally Since 2022 Faces a China-Sized Problem",
-      "url": "https://www.benzinga.com/markets/commodities/26/07/60651526/chevron-exxon-china-oil-demand-lpl-roach",
-      "ts": 1784831412,
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.37
-    },
-    {
-      "title": "Goldman Backs Clarity Act as Democrats Says It 'Falls Short' and Warren Says 'Dead on Arrival'",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60651447/goldman-backs-clarity-act-as-democrats-says-it-falls-short-and-warren-says-dead-on-arrival",
-      "ts": 1784831310,
-      "tickers": [
-        "GS",
-        "COIN",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.211
-    },
-    {
-      "title": "Intel Stock Nearly Tripled in 2026 — Q2 Earnings Could Be a Reality Check",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60651262/intel-stock-nearly-tripled-in-2026-q2-earnings-could-be-a-reality-check",
-      "ts": 1784830954,
-      "tickers": [
-        "INTC",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.491
-    },
-    {
-      "title": "Palisade Bio Draws Bullish Call, Lead IBD Drug Advances Toward Phase 2",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/07/60650722/palisade-bio-analyst-sees-lead-drug-can-potentially-bridge-gap-in-ulcerative-colitis",
-      "ts": 1784830007,
-      "tickers": [
-        "PALI",
-        "JNJ",
-        "MRK",
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.457
+      "relevance": 0.581
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -1085,7 +995,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.405
+      "relevance": 0.404
     }
   ],
   "portfolio_brief": {
@@ -1292,7 +1202,7 @@
           "date": "2026-05-20",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
         },
-        "insider30d": 16
+        "insider30d": 10
       },
       "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1619,7 +1529,7 @@
           "date": "2026-05-05",
           "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm"
         },
-        "insider30d": 9
+        "insider30d": 8
       },
       "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
