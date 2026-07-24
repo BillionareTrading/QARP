@@ -1,6 +1,6 @@
 {
   "date": "2026-07-24",
-  "generated_at": "Jul 24, 5:33am ET",
+  "generated_at": "Jul 24, 6:36am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -185,6 +185,12 @@
       "ts": 1784310647,
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
+    },
+    "GILD": {
+      "title": "Two Years to Build or Pay 200% — Which US Pharma Stocks Win?",
+      "ts": 1784888713,
+      "url": "https://www.benzinga.com/news/health-care/26/07/60662049/two-years-to-build-or-pay-200-which-us-pharma-stocks-win",
+      "wiim": false
     },
     "NVDA": {
       "title": "NVIDIA's Next Breakout? Market Veteran Sees Plenty of Fuel Left in the AI Leader",
@@ -522,6 +528,48 @@
   },
   "bz_news": [
     {
+      "title": "Two Years to Build or Pay 200% — Which US Pharma Stocks Win?",
+      "url": "https://www.benzinga.com/news/health-care/26/07/60662049/two-years-to-build-or-pay-200-which-us-pharma-stocks-win",
+      "ts": 1784888713,
+      "tickers": [
+        "ABBV",
+        "AMGN",
+        "XLV",
+        "GILD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.444
+    },
+    {
+      "title": "BTIG Maintains Buy on McDonald's, Lowers Price Target to $350",
+      "url": "https://www.benzinga.com/news/26/07/60661931/btig-maintains-buy-mcdonald-s-lowers-price-target-350",
+      "ts": 1784888240,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.447
+    },
+    {
+      "title": "Why Wall Street Says Intel's Rich Valuation May Still Be Worth Paying",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60661219/why-wall-street-says-intels-rich-valuation-may-still-be-worth-paying",
+      "ts": 1784886184,
+      "tickers": [
+        "INTC",
+        "AAPL",
+        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.377
+    },
+    {
       "title": "Stock Market Today: S&P 500, Dow Jones Futures Gain as Oil Prices Decline—Intel, Edwards Lifesciences, SAP in Focus",
       "url": "https://www.benzinga.com/markets/equities/26/07/60660984/stock-market-today-sp-500-dow-jones-futures-gain-as-oil-prices-decline-intel-edwards-lifesciences-sap-in-focus",
       "ts": 1784884343,
@@ -704,7 +752,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.459
+      "relevance": 0.458
     },
     {
       "title": "5 Early Earnings Winners Setting the Pace in Q2",
@@ -795,59 +843,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.301
-    },
-    {
-      "title": "12 Information Technology Stocks Moving In Thursday's After-Market Session",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60657574/12-information-technology-stocks-moving-thursday-s-after-market-session",
-      "ts": 1784840761,
-      "tickers": [
-        "AMKR",
-        "ANY",
-        "INTC",
-        "WCT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.452
-    },
-    {
-      "title": "AMD Stock Rises After The Bell: Here's Why",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60657484/amd-stock-rises-after-the-bell-heres-why",
-      "ts": 1784840510,
-      "tickers": [
-        "AMD",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.46
-    },
-    {
-      "title": "'Goldman Offers Way to Trade AI Junk Bonds $250 Million at a Time' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60657238/goldman-offers-way-trade-ai-junk-bonds-250-million-time-bloomberg",
-      "ts": 1784839975,
-      "tickers": [
-        "GS",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.348
-    },
-    {
-      "title": "Intel Posts Strongest Revenue Growth in 15 Years on 'Unprecedented' AI Demand",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60655939/intel-posts-strongest-revenue-growth-in-15-years-on-unprecedented-ai-demand",
-      "ts": 1784838075,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.581
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -1392,7 +1387,12 @@
         "score": 1.08,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Two Years to Build or Pay 200% — Which US Pharma Stocks Win?",
+        "ts": 1784888713,
+        "url": "https://www.benzinga.com/news/health-care/26/07/60662049/two-years-to-build-or-pay-200-which-us-pharma-stocks-win",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
