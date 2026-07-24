@@ -1,6 +1,6 @@
 {
   "date": "2026-07-24",
-  "generated_at": "Jul 24, 9:39am ET",
+  "generated_at": "Jul 24, 10:43am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -118,8 +118,8 @@
     "RKLB": "2026-08-05",
     "NVDA": "2026-08-26",
     "DHR": "2026-10-19",
-    "UBER": "2026-08-05",
     "BSX": "2026-07-29",
+    "UBER": "2026-08-05",
     "LULU": "2026-09-02",
     "SPGI": "2026-07-28",
     "GILD": "2026-08-04",
@@ -161,10 +161,10 @@
     },
     {
       "sector": "Consumer Staples",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Investors rotate into defensive sectors amid recent market volatility an…",
       "note": "As investors rotate into defensive sectors amid recent market volatility and heightened uncertainty. Investors may be drawn to cash-generative, dividend-paying stocks as an inflation hedge.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     }
   ],
   "holding_news": {
@@ -185,6 +185,12 @@
       "ts": 1784310647,
       "url": "https://www.benzinga.com/quote/MNST",
       "wiim": true
+    },
+    "AVGO": {
+      "title": "Why Wall Street May Be Mispricing Qualcomm's AI Future, Citrini Says",
+      "ts": 1784902400,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60668110/qualcomm-qcom-citrini-research-memory-wall-ai-thesis",
+      "wiim": false
     },
     "NVDA": {
       "title": "Intel's CEO Just Made a Bold AI Prediction. Here's Why NVDA Investors Should Pay Attention",
@@ -208,8 +214,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "price": 81.32,
-      "upside": 11.9,
+      "price": 81.87,
+      "upside": 11.2,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -222,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 325.41,
-      "upside": 12.5,
+      "price": 328.88,
+      "upside": 11.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -236,8 +242,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 261.52,
-      "upside": 3.2,
+      "price": 262.82,
+      "upside": 2.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,8 +256,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 170.36,
-      "upside": 5.7,
+      "price": 170.1,
+      "upside": 5.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -264,8 +270,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 324.84,
-      "upside": 30.8,
+      "price": 325.25,
+      "upside": 30.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -278,8 +284,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 161.91,
-      "upside": 1.9,
+      "price": 161.02,
+      "upside": 2.5,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -292,8 +298,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 146.11,
-      "upside": 4.0,
+      "price": 147.27,
+      "upside": 3.2,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -306,8 +312,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 161.91,
-      "upside": 14.3,
+      "price": 161.02,
+      "upside": 14.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -320,8 +326,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 170.36,
-      "upside": 28.0,
+      "price": 170.1,
+      "upside": 28.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +340,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 195.12,
-      "upside": 2.5,
+      "price": 195.65,
+      "upside": 2.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +354,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 170.36,
-      "upside": -14.9,
+      "price": 170.1,
+      "upside": -14.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -362,8 +368,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 170.36,
-      "upside": 7.4,
+      "price": 170.1,
+      "upside": 7.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -376,8 +382,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 170.36,
-      "upside": -22.5,
+      "price": 170.1,
+      "upside": -22.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -390,8 +396,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 325.41,
-      "upside": 11.9,
+      "price": 328.88,
+      "upside": 10.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -404,8 +410,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 170.36,
-      "upside": 5.7,
+      "price": 170.1,
+      "upside": 5.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -418,8 +424,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 195.12,
-      "upside": 6.1,
+      "price": 195.65,
+      "upside": 5.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -433,7 +439,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": 5.7
+      "upside": 5.8
     },
     "CVX": {
       "date": "2026-07-23",
@@ -442,7 +448,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "upside": 6.1
+      "upside": 5.8
     },
     "AAPL": {
       "date": "2026-07-23",
@@ -451,7 +457,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "upside": 11.9
+      "upside": 10.7
     },
     "PG": {
       "date": "2026-07-21",
@@ -460,7 +466,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 4.0
+      "upside": 3.2
     },
     "CRM": {
       "date": "2026-07-21",
@@ -469,7 +475,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 14.3
+      "upside": 14.9
     },
     "KO": {
       "date": "2026-07-21",
@@ -478,7 +484,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "upside": 11.9
+      "upside": 11.2
     },
     "HD": {
       "date": "2026-07-20",
@@ -487,7 +493,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "upside": 30.8
+      "upside": 30.7
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -496,7 +502,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 3.2
+      "upside": 2.7
     },
     "MRK": {
       "date": "2026-07-13",
@@ -505,10 +511,103 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 7.2
+      "upside": 6.9
     }
   },
   "bz_news": [
+    {
+      "title": "RBC Capital Maintains Outperform on Honeywell Intl, Raises Price Target to $298",
+      "url": "https://www.benzinga.com/news/26/07/60669716/rbc-capital-maintains-outperform-honeywell-intl-raises-price-target-298",
+      "ts": 1784904154,
+      "tickers": [
+        "HON"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.458
+    },
+    {
+      "title": "Stifel Maintains Hold on Intel, Lowers Price Target to $110",
+      "url": "https://www.benzinga.com/news/26/07/60669331/stifel-maintains-hold-intel-lowers-price-target-110",
+      "ts": 1784903646,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.446
+    },
+    {
+      "title": "Why Wall Street May Be Mispricing Qualcomm's AI Future, Citrini Says",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60668110/qualcomm-qcom-citrini-research-memory-wall-ai-thesis",
+      "ts": 1784902400,
+      "tickers": [
+        "QCOM",
+        "MSFT",
+        "AVGO",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.464
+    },
+    {
+      "title": "Susquehanna Maintains Neutral on IBM, Lowers Price Target to $225",
+      "url": "https://www.benzinga.com/news/26/07/60667592/susquehanna-maintains-neutral-ibm-lowers-price-target-225",
+      "ts": 1784901837,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.508
+    },
+    {
+      "title": "Robinhood, Hyperliquid Could Lead Crypto's Next Bull Market, Says Matthew Sigel: 'Wall Street Is Going Onchain'",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60667129/robinhood-hyperliquid-could-lead-cryptos-next-bull-market-says-matthew-sigel-wall-street-is-going-onchain",
+      "ts": 1784901356,
+      "tickers": [
+        "$BTC",
+        "$ETH",
+        "COIN",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.366
+    },
+    {
+      "title": "Intel Just Took 14A Off Death Row — The 2028 Clock Is Ticking",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60667040/intel-just-took-14a-off-death-row-2028-clock-is-ticking",
+      "ts": 1784901270,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.374
+    },
+    {
+      "title": "US Stocks Mixed; American Express Shares Fall Following Q2 Results",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60666627/us-stocks-mixed-american-express-shares-fall-following-q2-results",
+      "ts": 1784900721,
+      "tickers": [
+        "AXP",
+        "OMH",
+        "CDXS",
+        "LVWR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.423
+    },
     {
       "title": "India Just Ordered Jack Dorsey’s BitChat To Be Erased From GitHub, After Protesters Used the Bluetooth Messaging App to Outsmart a Government Blackout Amid Mass Protests",
       "url": "https://www.benzinga.com/news/politics/26/07/60666073/india-just-ordered-jack-dorseys-bitchat-to-be-erased-from-github-after-protesters-used-the-bluetooth-messaging-app-to-outsmart-a-government-blackout-amid-mass-protests",
@@ -534,7 +633,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.389
+      "relevance": 0.388
     },
     {
       "title": "Verizon CEO Says Revenue From Mobility And Broadband Expected To Grow Around 4% In Q4; AI Infrastructure Revenue To Start Layering Into Results Beginning In 2027",
@@ -559,7 +658,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.482
+      "relevance": 0.483
     },
     {
       "title": "Albertsons Says Walmart, Amazon and Aldi Are Winning Price-Sensitive Shoppers",
@@ -573,7 +672,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.312
+      "relevance": 0.309
     },
     {
       "title": "Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Gain as Oil Prices Decline—Intel, Edwards Lifesciences, SAP in Focus (UPDATED)",
@@ -588,7 +687,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.515
+      "relevance": 0.514
     },
     {
       "title": "Wedbush Maintains Neutral on Intel, Raises Price Target to $98",
@@ -612,7 +711,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.414
+      "relevance": 0.413
     },
     {
       "title": "Verizon CEO Says AI Models Have Helped To Autonomously Fix Network Issues In Minutes As Opposed To Hours",
@@ -730,82 +829,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.478
-    },
-    {
-      "title": "Amgen Disagrees With FDA Proposal To Withdraw TAVNEOS From U.S. Market; Submitted Data And Analyses To FDA To Request Hearing On TAVNEOS",
-      "url": "https://www.benzinga.com/general/biotech/26/07/60664357/amgen-disagrees-fda-proposal-withdraw-tavneos-u-s-market-submitted-data-and-analyses-fda-request-hea",
-      "ts": 1784895267,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.393
-    },
-    {
-      "title": "These Analysts Revise Their Forecasts On Intel Following Q2 Results",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60663863/these-analysts-revise-their-forecasts-on-intel-following-q2-results",
-      "ts": 1784894484,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.482
-    },
-    {
-      "title": "Dell To Rally More Than 17%? Here Are 10 Top Analyst Forecasts For Friday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60663665/dell-to-rally-more-than-17-here-are-10-top-analyst-forecasts-for-friday",
-      "ts": 1784893881,
-      "tickers": [
-        "MCD",
-        "INTC",
-        "PYPL",
-        "DELL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.424
-    },
-    {
-      "title": "Apple Stock Trades Above Every Major Moving Average Heading Into Q3",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60663633/apple-stock-trades-above-every-major-moving-average-heading-into-q3",
-      "ts": 1784893776,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.462
-    },
-    {
-      "title": "Wells Fargo Maintains Equal-Weight on Intel, Raises Price Target to $120",
-      "url": "https://www.benzinga.com/news/26/07/60663569/wells-fargo-maintains-equal-weight-intel-raises-price-target-120",
-      "ts": 1784893669,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.449
-    },
-    {
-      "title": "American Express shares are trading lower after the company reported mixed Q2 financial results and narrowed its FY26 sales guidance slightly below estimates.",
-      "url": "https://www.benzinga.com/quote/AXP",
-      "ts": 1784893337,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.443
+      "relevance": 0.479
     },
     {
       "title": "Intel shares are trading higher after the company reported better-than-expected Q2 financial results and issued Q3 guidance above estimates.",
@@ -815,23 +839,9 @@
         "INTC"
       ],
       "source": "Benzinga",
-      "wiim": true,
+      "wiim": false,
       "rel": false,
       "relevance": 0.559
-    },
-    {
-      "title": "Market-Moving News for July 24th",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60662980/market-moving-news-july-24th",
-      "ts": 1784892004,
-      "tickers": [
-        "AMKR",
-        "INTC",
-        "ORCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.478
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -979,7 +989,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.405
+      "relevance": 0.404
     }
   ],
   "portfolio_brief": {
@@ -1222,38 +1232,6 @@
       },
       "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "UBER": {
-      "name": "Uber",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 16,
-        "buy": 35,
-        "hold": 8,
-        "sell": 1,
-        "strongSell": 0,
-        "total": 60,
-        "bullish": 51,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-16",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000382/e26302_uber-8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm"
-        },
-        "insider30d": 10
-      },
-      "explain": "60 analysts cover it — 51 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "BSX": {
       "name": "Boston Scientific",
       "qarp": "STRONG BUY",
@@ -1285,6 +1263,38 @@
         "insider30d": 1
       },
       "explain": "39 analysts cover it — 31 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "UBER": {
+      "name": "Uber",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 16,
+        "buy": 35,
+        "hold": 8,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 60,
+        "bullish": 51,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000382/e26302_uber-8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm"
+        },
+        "insider30d": 10
+      },
+      "explain": "60 analysts cover it — 51 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "LULU": {
       "name": "Lululemon",
@@ -1427,7 +1437,12 @@
         "score": 1.21,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Why Wall Street May Be Mispricing Qualcomm's AI Future, Citrini Says",
+        "ts": 1784902400,
+        "url": "https://www.benzinga.com/markets/tech/26/07/60668110/qualcomm-qcom-citrini-research-memory-wall-ai-thesis",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1711,25 +1726,6 @@
       "margin": 13.9,
       "summary": "Q2 FY2026 — revenue $6.3B (+5.5% YoY), diluted EPS $1.23 (+59.7% YoY), net margin 14%. (as reported, GAAP)"
     },
-    "UBER": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-06",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm",
-      "revenue": {
-        "fmt": "$13.2B",
-        "yoy": 14.5
-      },
-      "eps": {
-        "val": 0.13,
-        "yoy": -84.3
-      },
-      "net_income": {
-        "fmt": "$263M"
-      },
-      "margin": 2.0,
-      "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
-    },
     "BSX": {
       "period": "Q1 FY2026",
       "filed": "2026-05-01",
@@ -1748,6 +1744,25 @@
       },
       "margin": null,
       "summary": "Q1 FY2026 — revenue $5.2B (+11.6% YoY), diluted EPS $0.90 (+100.0% YoY). (as reported, GAAP)"
+    },
+    "UBER": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-06",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm",
+      "revenue": {
+        "fmt": "$13.2B",
+        "yoy": 14.5
+      },
+      "eps": {
+        "val": 0.13,
+        "yoy": -84.3
+      },
+      "net_income": {
+        "fmt": "$263M"
+      },
+      "margin": 2.0,
+      "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
     },
     "LULU": {
       "period": "Q1 FY2026",
