@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-24",
-  "generated_at": "Jul 24, 4:55pm ET",
+  "date": "2026-07-25",
+  "generated_at": "Jul 25, 8:11am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 24",
+      "when": "Jul 25",
       "what": "Energy & geopolitics — today's read",
       "why": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "affects": "Energy · growth",
@@ -193,9 +193,9 @@
       "wiim": false
     },
     "RKLB": {
-      "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
-      "ts": 1784914531,
-      "url": "https://www.benzinga.com/markets/options/26/07/60676407/10-industrials-stocks-whale-alerts-today-s-session",
+      "title": "Benzinga Bulls and Bears: IBM, Super Micro, Tesla",
+      "ts": 1784980837,
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60684165/benzinga-bulls-and-bears-ibm-super-micro-tesla",
       "wiim": false
     },
     "AVGO": {
@@ -219,48 +219,6 @@
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-07-17",
-      "ticker": "AAPL",
-      "firm": "HSBC",
-      "action": "Upgrades",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$366",
-      "price": 333.02,
-      "upside": 9.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-17",
-      "ticker": "JNJ",
-      "firm": "Guggenheim",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$270",
-      "price": 263.4,
-      "upside": 2.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-17",
-      "ticker": "MMM",
-      "firm": "JP Morgan",
-      "action": "Upgrades",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$180",
-      "price": 172.62,
-      "upside": 4.3,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
     },
     {
       "date": "2026-07-20",
@@ -516,6 +474,36 @@
   },
   "bz_news": [
     {
+      "title": "Benzinga Bulls and Bears: IBM, Super Micro, Tesla",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60684165/benzinga-bulls-and-bears-ibm-super-micro-tesla",
+      "ts": 1784980837,
+      "tickers": [
+        "TSLA",
+        "GOOG",
+        "MSFT",
+        "PLTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.448
+    },
+    {
+      "title": "Elon Musk, Mark Zuckerberg, Satya Nadella Show 'Overwhelming Support' for Open-Weight AI Models as OpenAI, Anthropic Stay Silent",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60683802/elon-musk-mark-zuckerberg-satya-nadella-show-overwhelming-support-for-open-weight-ai-models-as-openai-anthropic-stay-silent",
+      "ts": 1784956116,
+      "tickers": [
+        "TSLA",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.322
+    },
+    {
       "title": "Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week",
       "url": "https://www.benzinga.com/markets/equities/26/07/60681323/oil-tops-100-alphabet-tesla-capex-weekly-market-wrap",
       "ts": 1784923398,
@@ -528,7 +516,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.429
+      "relevance": 0.428
     },
     {
       "title": "Shares of foundry, fabricator and IDM semiconductor companies are trading lower as the industry pulls back from earlier gains, possibly due to pressure from Asia as ChangXin Memory Technologies prepares for its Shanghai STAR Market debut. Industry weakness could result from investors adopting a risk-off stance amid a broader AI-related pullback.",
@@ -585,7 +573,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.438
+      "relevance": 0.439
     },
     {
       "title": "Citigroup Maintains Buy on IBM, Lowers Price Target to $245",
@@ -820,31 +808,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.369
-    },
-    {
-      "title": "Live On CNBC, Kevin Simpson Announces Sold Chevron Covered Calls",
-      "url": "https://www.benzinga.com/quote/CVX",
-      "ts": 1784911570,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.316
-    },
-    {
-      "title": "Intel Stock Slips Despite Blowout Quarter: Here's What 4 Analysts Are Saying",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60673157/intel-show-server-compute-as-a-strong-player-in-ongoing-agentic-cycle-say-analysts",
-      "ts": 1784908964,
-      "tickers": [
-        "INTC",
-        "TSM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.462
     },
     {
       "title": "Reported Earlier: 'In India, Iran war forces Diet Coke to roll out a bigger can, heftier price tag' - Reuters",
@@ -1163,9 +1126,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
-        "ts": 1784914531,
-        "url": "https://www.benzinga.com/markets/options/26/07/60676407/10-industrials-stocks-whale-alerts-today-s-session",
+        "title": "Benzinga Bulls and Bears: IBM, Super Micro, Tesla",
+        "ts": 1784980837,
+        "url": "https://www.benzinga.com/markets/market-summary/26/07/60684165/benzinga-bulls-and-bears-ibm-super-micro-tesla",
         "wiim": false
       },
       "filings": {
