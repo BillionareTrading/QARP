@@ -1626,7 +1626,9 @@ async function renderDailyTicker() {
 
 /* ---------- live prices (Finnhub, browser-side) ---------- */
 const LIVE_INTERVAL_MS = 60000;  // holdings refresh ~every 60s (≈17 calls/min)
-const UNIVERSE_PUMP_MS = 1200;   // 1 universe name per 1.2s (≈50/min); cycles in rank order, so
+const UNIVERSE_PUMP_MS = 2400;   // 1 universe name per 2.4s (≈25/min; was 1.2s but cycler+holdings
+                                 // ≈67/min blew the 60/min Finnhub quota and starved the holdings
+                                 // tick — 2026-07-27 stuck-"connecting" incident); rank order, so
                                  // the top names you're looking at go live first (~4min full pass)
 // Live quotes go through our Cloudflare Worker (DATA.meta.quote_proxy) — it holds the
 // Finnhub key server-side and caches/dedupes, so the key never reaches the browser.
@@ -1686,6 +1688,13 @@ async function liveTick() {
   const key = DATA.meta && DATA.meta.quote_proxy;
   if (!key) return;
   if (!marketOpenNow()) { setLivePill("closed", "Market closed"); return; }
+  // Backing off after a 429 (throttleUntil was SET but never READ before 2026-07-27 —
+  // the dead throttle let ticks keep burning quota mid-rate-limit, so the holdings
+  // tick could stay starved forever, pinning the pill on "connecting…").
+  if (Date.now() < throttleUntil) {
+    if (lastGoodTs) setLivePill("live", `LIVE · ${lastGoodClock} · delayed`);
+    return;
+  }
 
   let ok = 0, fail = 0;
   await Promise.all(DATA.portfolio.map(async (h) => {
@@ -1753,6 +1762,7 @@ function universeTick() {
   // just fails silently and we move on next pump — no global pause, so updates keep flowing.
   if (!(DATA.meta && DATA.meta.quote_proxy) || !uniQueue.length) return;
   if (!marketOpenNow()) return; // pill state is owned by the holdings tick
+  if (Date.now() < throttleUntil) return; // honor the 429 backoff — holdings tick gets the quota first
   const ticker = uniQueue[uniIdx % uniQueue.length];
   uniIdx++;
   fetchQuote(ticker, DATA.meta.quote_proxy).then((q) => {
