@@ -2144,7 +2144,7 @@ function initPortfolioSubtabs() {
              EDGAR balance sheets is the planned v2]
    - income: 2.5% x (dividends received + realized gains + cash) [dividends-only school;
              inputs are the user's, persisted locally, divs prefilled from the book] */
-const ZAKAT_RATE = 0.025, NISAB_GOLD_GRAMS = 85, ZAKAT_PROXY = 0.30, ZAKAT_LT_DAYS = 365;
+const ZAKAT_RATE = 0.025, ZAKAT_PROXY = 0.30, ZAKAT_LT_DAYS = 365;
 let zakatMethod = "auto";
 // Earliest desk record for a ticker = holding-age proxy. It can only UNDERSTATE the true
 // age (he may have owned it before the desk's first call), which classifies long-term
@@ -2181,10 +2181,7 @@ function renderZakat() {
   const t = DATA.meta.portfolio_totals;
   const positions = DATA.portfolio.reduce((s, h) => s + (h.value || 0), 0);
   const cash = t.cash || 0;
-  const goldG = zget("goldg", 107);                    // USD per gram — user-editable
-  const nisab = NISAB_GOLD_GRAMS * goldG;
-  const wealth = positions + cash;
-  const aboveNisab = wealth >= nisab;
+  const aboveNisab = true;   // book is far above nisab; user asked to keep it simple (2026-07-27)
   const divs = zget("divs", Math.round((t.div_income_yr || 0) * 100) / 100);
   const realized = zget("realized", 0);
 
@@ -2208,15 +2205,7 @@ function renderZakat() {
   document.getElementById("zakat-summary").innerHTML = `
     <h3>Zakat due</h3>
     <div class="kpi"><span class="label">Zakatable base (${esc(baseLabel)})</span><span class="value">${fmtUSD(base, 2)}</span></div>
-    <div class="kpi"><span class="label">Zakat @ 2.5%</span><span class="value">${aboveNisab ? fmtUSD(due, 2) : "$0.00"}</span></div>
-    ${aboveNisab ? "" : `<p class="muted">Wealth is below the nisab threshold — no zakat is due this year under any method.</p>`}`;
-  document.getElementById("zakat-nisab").innerHTML = `
-    <h3>Nisab check</h3>
-    <div class="kpi"><span class="label">Total wealth (book + cash)</span><span class="value">${fmtUSD(wealth, 2)}</span></div>
-    <div class="kpi"><span class="label">Nisab (${NISAB_GOLD_GRAMS}g gold × <input id="zakat-goldg" class="zakat-in" type="number" step="0.5" min="1" value="${goldG}"> $/g)</span>
-      <span class="value">${fmtUSD(nisab, 2)}</span></div>
-    <p class="${aboveNisab ? "pos" : "muted"}">${aboveNisab ? "Above nisab — zakat applies." : "Below nisab."}
-      <span class="muted">Set the gold $/gram to today's price; using the (lower) silver nisab is the more cautious choice — ask your authority.</span></p>`;
+    <div class="kpi"><span class="label">Zakat @ 2.5%</span><span class="value">${fmtUSD(due, 2)}</span></div>`;
 
   if (zakatMethod === "income") {
     document.getElementById("zakat-detail").innerHTML = `
@@ -2245,8 +2234,6 @@ function renderZakat() {
       <tr><td><b>Cash</b></td>${showAge ? "<td>—</td>" : ""}<td class="num">${fmtUSD(cash, 2)}</td><td class="num">${fmtUSD(cash, 2)}</td>
       <td class="num">${aboveNisab ? fmtUSD(cash * ZAKAT_RATE, 2) : "—"}</td></tr></tbody></table></div>`;
   }
-  const g = document.getElementById("zakat-goldg");
-  if (g) g.addEventListener("change", () => { zset("goldg", parseFloat(g.value) || 107); renderZakat(); });
   const dv = document.getElementById("zakat-divs"), rl = document.getElementById("zakat-realized");
   if (dv) dv.addEventListener("change", () => { zset("divs", parseFloat(dv.value) || 0); renderZakat(); });
   if (rl) rl.addEventListener("change", () => { zset("realized", parseFloat(rl.value) || 0); renderZakat(); });
