@@ -1878,6 +1878,12 @@ async function renderIndexes() {
   row.innerHTML = cards.join("");
   const asof = document.getElementById("idx-asof");
   if (asof) asof.textContent = latestT ? "as of " + asOfLabel(latestT) : "";
+  // One retry per cycle: the 60s holdings burst usually empties the minute's quota right
+  // before this runs — a lone re-attempt a few seconds later routinely sneaks through.
+  if (!throttled && INDEXES.some((ix) => !lastIdxQuote[ix.sym]) && !renderIndexes._retry) {
+    renderIndexes._retry = true;
+    setTimeout(async () => { await renderIndexes(); renderIndexes._retry = false; }, 4500);
+  }
 }
 
 function renderNewsFilters() {
@@ -2012,7 +2018,7 @@ function enterInformed() {
   if (!informedLoaded) { renderNewsFilters(); loadNews("Top Stories"); informedLoaded = true; }
   renderIndexes();
   if (informedTimer) clearInterval(informedTimer);
-  informedTimer = setInterval(renderIndexes, 60000); // refresh the index screens while viewing
+  informedTimer = setInterval(renderIndexes, 65000); // 65s: deliberately de-synced from the 60s holdings burst
 }
 function leaveInformed() {
   if (informedTimer) { clearInterval(informedTimer); informedTimer = null; }
