@@ -1,6 +1,6 @@
 {
   "date": "2026-07-27",
-  "generated_at": "Jul 27, 10:26am ET",
+  "generated_at": "Jul 27, 11:13am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -197,12 +197,6 @@
       "ts": 1785114542,
       "url": "https://www.benzinga.com/news/26/07/60686814/wall-street-journal-reported-sunday-nvidia-talks-provide-250b-financing-openai-part-data-center-proj",
       "wiim": false
-    },
-    "RKLB": {
-      "title": "Benzinga Bulls and Bears: IBM, Super Micro, Tesla",
-      "ts": 1784980837,
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60684165/benzinga-bulls-and-bears-ibm-super-micro-tesla",
-      "wiim": false
     }
   },
   "ratings": [
@@ -214,8 +208,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "price": 83.04,
-      "upside": 9.6,
+      "price": 83.24,
+      "upside": 9.3,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -228,8 +222,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 337.18,
-      "upside": 26.0,
+      "price": 338.84,
+      "upside": 25.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -242,8 +236,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 171.49,
-      "upside": -3.8,
+      "price": 171.74,
+      "upside": -3.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -256,8 +250,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 148.26,
-      "upside": 2.5,
+      "price": 149.12,
+      "upside": 1.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -270,8 +264,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 171.49,
-      "upside": 7.9,
+      "price": 171.74,
+      "upside": 7.7,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -284,8 +278,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 177.62,
-      "upside": 22.7,
+      "price": 176.24,
+      "upside": 23.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -298,7 +292,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 191.46,
+      "price": 191.44,
       "upside": 4.5,
       "held": false,
       "uni": true,
@@ -312,8 +306,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 177.62,
-      "upside": -18.4,
+      "price": 176.24,
+      "upside": -17.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -326,8 +320,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 177.62,
-      "upside": 3.0,
+      "price": 176.24,
+      "upside": 3.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -340,8 +334,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 177.62,
-      "upside": -25.7,
+      "price": 176.24,
+      "upside": -25.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -354,8 +348,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 336.02,
-      "upside": 8.3,
+      "price": 337.4,
+      "upside": 7.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -368,8 +362,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 177.62,
-      "upside": 1.3,
+      "price": 176.24,
+      "upside": 2.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -382,22 +376,36 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 191.46,
+      "price": 191.44,
       "upside": 8.1,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-27",
+      "ticker": "HD",
+      "firm": "DA Davidson",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$377",
+      "price": 338.84,
+      "upside": 11.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
     }
   ],
   "rating_moves": {
-    "MMM": {
-      "date": "2026-07-23",
-      "firm": "Mizuho",
+    "HD": {
+      "date": "2026-07-27",
+      "firm": "DA Davidson",
       "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$180",
-      "upside": 1.3
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$377",
+      "upside": 11.3
     },
     "CVX": {
       "date": "2026-07-23",
@@ -408,6 +416,15 @@
       "pt": "$207",
       "upside": 8.1
     },
+    "MMM": {
+      "date": "2026-07-23",
+      "firm": "Mizuho",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$180",
+      "upside": 2.1
+    },
     "AAPL": {
       "date": "2026-07-23",
       "firm": "Morgan Stanley",
@@ -415,7 +432,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "upside": 8.3
+      "upside": 7.9
     },
     "PG": {
       "date": "2026-07-21",
@@ -424,7 +441,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 2.5
+      "upside": 1.9
     },
     "CRM": {
       "date": "2026-07-21",
@@ -433,7 +450,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 7.9
+      "upside": 7.7
     },
     "KO": {
       "date": "2026-07-21",
@@ -442,16 +459,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "upside": 9.6
-    },
-    "HD": {
-      "date": "2026-07-20",
-      "firm": "Guggenheim",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$425",
-      "upside": 26.0
+      "upside": 9.3
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -460,7 +468,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 1.6
+      "upside": 1.0
     },
     "MRK": {
       "date": "2026-07-13",
@@ -469,10 +477,47 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 6.3
+      "upside": 6.2
     }
   },
   "bz_news": [
+    {
+      "title": "Keysight Certifies RF Design Software For Intel 14A And 18A-P Processes To Help Accelerate Advanced Chip Development",
+      "url": "https://www.benzinga.com/news/26/07/60699682/keysight-certifies-rf-design-software-intel-14a-and-18a-p-processes-help-accelerate-advanced-chip-de",
+      "ts": 1785164771,
+      "tickers": [
+        "KEYS",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.382
+    },
+    {
+      "title": "RBC Capital Maintains Sector Perform on Verizon Communications, Raises Price Target to $47",
+      "url": "https://www.benzinga.com/news/26/07/60698146/rbc-capital-maintains-sector-perform-verizon-communications-raises-price-target-47",
+      "ts": 1785163153,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.467
+    },
+    {
+      "title": "Evercore ISI Group Maintains In-Line on American Express, Lowers Price Target to $370",
+      "url": "https://www.benzinga.com/news/26/07/60697984/evercore-isi-group-maintains-line-american-express-lowers-price-target-370",
+      "ts": 1785162959,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.5
+    },
     {
       "title": "EXCLUSIVE: After Nvidia And SK Hynix, These 3 AI Stocks Could Be The Next Winners, CEO Says",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60697145/exclusive-after-nvidia-and-sk-hynix-these-3-ai-stocks-could-be-the-next-winners-ceo-says",
@@ -771,45 +816,6 @@
       "relevance": 0.351
     },
     {
-      "title": "Michael Burry Says Wall Street Has Turned on Big Tech's AI Spending: 'The Market Has Voted'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60688494/michael-burry-says-wall-street-has-turned-on-big-techs-ai-spending-the-market-has-voted",
-      "ts": 1785144477,
-      "tickers": [
-        "GOOGL",
-        "AAPL",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.362
-    },
-    {
-      "title": "Sam Altman Shuts Down Hopes of an AI-Led 4-Day Workweek Anytime Soon: 'Competition Drives the Economy'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60688184/sam-altman-shuts-down-hopes-of-an-ai-led-4-day-workweek-anytime-soon-competition-drives-the-economy",
-      "ts": 1785141720,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.332
-    },
-    {
-      "title": "Former Microsoft President Jeff Raikes Says AI Could Create a 'Talent Debt' by Replacing Entry-Level Work",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60688069/former-microsoft-president-jeff-raikes-says-ai-could-create-a-talent-debt-by-replacing-entry-level-work",
-      "ts": 1785139583,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.348
-    },
-    {
       "title": "Warren Buffett Says Alphabet Is More Likely to Win Than 95% of Wall Street — But Adds ‘I Don’t Like It as Well as’ Coca-Cola And 4 Others",
       "url": "https://www.benzinga.com/news/26/07/60680506/warren-buffett-says-alphabet-is-more-likely-to-win-than-95-of-wall-street-but-adds-i-dont-like-it-as-well-as-coca-cola-and-4-others",
       "ts": 1784921832,
@@ -1043,12 +1049,7 @@
         "score": 1.12,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Benzinga Bulls and Bears: IBM, Super Micro, Tesla",
-        "ts": 1784980837,
-        "url": "https://www.benzinga.com/markets/market-summary/26/07/60684165/benzinga-bulls-and-bears-ibm-super-micro-tesla",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1231,7 +1232,7 @@
     },
     "SPGI": {
       "name": "S&P Global",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 11,
         "buy": 19,
@@ -1259,7 +1260,7 @@
         },
         "insider30d": 1
       },
-      "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "GILD": {
       "name": "Gilead Sciences",
@@ -1356,7 +1357,7 @@
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 14,
         "buy": 18,
