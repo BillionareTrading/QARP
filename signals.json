@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-26",
-  "generated_at": "Jul 26, 7:45pm ET",
+  "date": "2026-07-27",
+  "generated_at": "Jul 27, 6:07am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -62,18 +62,18 @@
   "catalysts": [
     {
       "when": "Jul 28",
-      "what": "SPGI earnings",
-      "affects": "SPGI",
-      "dir": "two-sided",
-      "why": "Q-results for S&P Global — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
-      "when": "Jul 28",
       "what": "KO earnings",
       "affects": "KO",
       "dir": "two-sided",
       "why": "Q-results for Coca-Cola — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Jul 28",
+      "what": "SPGI earnings",
+      "affects": "SPGI",
+      "dir": "two-sided",
+      "why": "Q-results for S&P Global — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
@@ -91,9 +91,26 @@
       "dir": "two-sided",
       "why": "Q-results for Neurocrine Biosciences — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Jul 21",
+      "what": "KO — Barclays maintains",
+      "affects": "KO",
+      "dir": "two-sided",
+      "why": "Now rated <b>Overweight</b>, PT $91.",
+      "src": "Benzinga ratings"
+    },
+    {
+      "when": "Jul 27",
+      "what": "Energy & geopolitics — today's read",
+      "why": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
+      "affects": "Energy · growth",
+      "dir": "two-sided",
+      "src": "Benzinga WIIM (live)"
     }
   ],
   "earnings_next": {
+    "KO": "2026-07-28",
     "ADBE": "2026-09-10",
     "ZTS": "2026-08-06",
     "ABT": "2026-10-13",
@@ -110,15 +127,820 @@
     "AVGO": "2026-09-02",
     "NBIX": "2026-07-30",
     "VRTX": "2026-08-03",
-    "EFX": "2026-10-19",
-    "KO": "2026-07-28"
+    "EFX": "2026-10-19"
   },
   "risk_asof": "2026-07-05",
-  "sectors": [],
-  "holding_news": {},
-  "ratings": [],
-  "rating_moves": {},
-  "bz_news": [],
+  "sectors": [
+    {
+      "sector": "Foundry, Fabricator & Idm Semiconductor",
+      "dir": "down",
+      "driver": "The industry pulls back from earlier gains",
+      "note": "As the industry pulls back from earlier gains, possibly due to pressure from Asia as ChangXin Memory Technologies prepares for its Shanghai STAR Market debut. Industry weakness could result from investors adopting a risk-off stance amid a broader AI-related pullback.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Software",
+      "dir": "up",
+      "driver": "Recent earnings from ServiceNow and SAP help assuage concerns over AI en…",
+      "note": "As recent earnings from ServiceNow and SAP help assuage concerns over AI encroachment. Also, recent investor unease over AI-related capex spending by hyperscalers and steep valuations for semiconductor-related companies may be bolstering confidence in the software sector.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Financial Services",
+      "dir": "mixed",
+      "driver": "Surging oil prices and Treasury yields weigh on sentiment",
+      "note": "As surging oil prices and Treasury yields weigh on sentiment, with the 10-year U.S. Treasury yield climbing to its highest level since January 2025. Rising yields and energy prices have fueled inflation concerns, reinforcing expectations that interest rates will remain elevated and raising concerns about slower loan demand and economic growth.",
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
+    },
+    {
+      "sector": "Energy Drink",
+      "dir": "down",
+      "driver": "The UK government clarified that its ban on the sale of highly caffeinat…",
+      "note": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Insurance & Reinsurance",
+      "dir": "mixed",
+      "driver": "Sympathy with Progressive after that company reported Q2 financial resul…",
+      "note": "Amid sympathy with Progressive after that company reported Q2 financial results that included weak policies-in-force and underwriting margins.",
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
+    }
+  ],
+  "holding_news": {
+    "NOW": {
+      "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+      "ts": 1784737943,
+      "url": "https://www.benzinga.com/quote/WEAV",
+      "wiim": true
+    },
+    "ADBE": {
+      "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+      "ts": 1784737943,
+      "url": "https://www.benzinga.com/quote/WEAV",
+      "wiim": true
+    },
+    "KO": {
+      "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
+      "ts": 1784310647,
+      "url": "https://www.benzinga.com/quote/MNST",
+      "wiim": true
+    },
+    "NVDA": {
+      "title": "The Wall Street Journal Reported Sunday NVIDIA Is In Talks To Provide ~$250B Financing For OpenAI As Part Of Data Center Project",
+      "ts": 1785114542,
+      "url": "https://www.benzinga.com/news/26/07/60686814/wall-street-journal-reported-sunday-nvidia-talks-provide-250b-financing-openai-part-data-center-proj",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Intel Layoffs, Musk's Micron Moment, $200 Billion Samsung-Broadcom Pact and More: This Week in Tech",
+      "ts": 1785070828,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60685961/intel-layoffs-musks-micron-moment-200-billion-samsung-broadcom-pact-and-more-this-week-in-tech",
+      "wiim": false
+    },
+    "RKLB": {
+      "title": "Benzinga Bulls and Bears: IBM, Super Micro, Tesla",
+      "ts": 1784980837,
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60684165/benzinga-bulls-and-bears-ibm-super-micro-tesla",
+      "wiim": false
+    }
+  },
+  "ratings": [
+    {
+      "date": "2026-07-21",
+      "ticker": "KO",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$91",
+      "price": 82.25,
+      "upside": 10.6,
+      "held": true,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-20",
+      "ticker": "HD",
+      "firm": "Guggenheim",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$425",
+      "price": 332.98,
+      "upside": 27.6,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-20",
+      "ticker": "CRM",
+      "firm": "CLSA",
+      "action": "Initiates Coverage On",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$165",
+      "price": 163.66,
+      "upside": 0.8,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-07-21",
+      "ticker": "PG",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$152",
+      "price": 147.41,
+      "upside": 3.1,
+      "held": false,
+      "uni": true,
+      "qarp": "BUY"
+    },
+    {
+      "date": "2026-07-21",
+      "ticker": "CRM",
+      "firm": "Morgan Stanley",
+      "action": "Downgrades",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$185",
+      "price": 163.66,
+      "upside": 13.0,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-07-22",
+      "ticker": "MMM",
+      "firm": "UBS",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$218",
+      "price": 172.62,
+      "upside": 26.3,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-22",
+      "ticker": "CVX",
+      "firm": "TD Cowen",
+      "action": "Maintains",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$200",
+      "price": 194.79,
+      "upside": 2.7,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-22",
+      "ticker": "MMM",
+      "firm": "Bernstein",
+      "action": "Maintains",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$145",
+      "price": 172.62,
+      "upside": -16.0,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-22",
+      "ticker": "MMM",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$183",
+      "price": 172.62,
+      "upside": 6.0,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-22",
+      "ticker": "MMM",
+      "firm": "RBC Capital",
+      "action": "Maintains",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$132",
+      "price": 172.62,
+      "upside": -23.5,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-23",
+      "ticker": "AAPL",
+      "firm": "Morgan Stanley",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$364",
+      "price": 333.02,
+      "upside": 9.3,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-23",
+      "ticker": "MMM",
+      "firm": "Mizuho",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$180",
+      "price": 172.62,
+      "upside": 4.3,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-23",
+      "ticker": "CVX",
+      "firm": "Piper Sandler",
+      "action": "Assumes",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$207",
+      "price": 194.79,
+      "upside": 6.3,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    }
+  ],
+  "rating_moves": {
+    "MMM": {
+      "date": "2026-07-23",
+      "firm": "Mizuho",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$180",
+      "upside": 4.3
+    },
+    "CVX": {
+      "date": "2026-07-23",
+      "firm": "Piper Sandler",
+      "action": "Assumes",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$207",
+      "upside": 6.3
+    },
+    "AAPL": {
+      "date": "2026-07-23",
+      "firm": "Morgan Stanley",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$364",
+      "upside": 9.3
+    },
+    "PG": {
+      "date": "2026-07-21",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$152",
+      "upside": 3.1
+    },
+    "CRM": {
+      "date": "2026-07-21",
+      "firm": "Morgan Stanley",
+      "action": "Downgrades",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$185",
+      "upside": 13.0
+    },
+    "KO": {
+      "date": "2026-07-21",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$91",
+      "upside": 10.6
+    },
+    "HD": {
+      "date": "2026-07-20",
+      "firm": "Guggenheim",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$425",
+      "upside": 27.6
+    },
+    "JNJ": {
+      "date": "2026-07-17",
+      "firm": "Guggenheim",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$270",
+      "upside": 2.5
+    },
+    "MRK": {
+      "date": "2026-07-13",
+      "firm": "JP Morgan",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$140",
+      "upside": 6.8
+    }
+  },
+  "bz_news": [
+    {
+      "title": "Apple Is Making an Existential AI Bet—One Analyst Thinks It's Wrong",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60688648/apple-is-making-an-existential-ai-bet-one-analyst-thinks-its-wrong",
+      "ts": 1785145778,
+      "tickers": [
+        "AAPL",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.351
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow Jones Futures Rise as US-Iran Halt Retaliatory Strikes—Microchip Technology, AMD, Nucor in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60688523/stock-market-today-sp-500-dow-jones-futures-rise-as-us-iran-halt-retaliatory-strikes-microchip-technology-amd-nucor-in-focus",
+      "ts": 1785144949,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "AAPL",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.499
+    },
+    {
+      "title": "Michael Burry Says Wall Street Has Turned on Big Tech's AI Spending: 'The Market Has Voted'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60688494/michael-burry-says-wall-street-has-turned-on-big-techs-ai-spending-the-market-has-voted",
+      "ts": 1785144477,
+      "tickers": [
+        "GOOGL",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.362
+    },
+    {
+      "title": "Sam Altman Shuts Down Hopes of an AI-Led 4-Day Workweek Anytime Soon: 'Competition Drives the Economy'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60688184/sam-altman-shuts-down-hopes-of-an-ai-led-4-day-workweek-anytime-soon-competition-drives-the-economy",
+      "ts": 1785141720,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.332
+    },
+    {
+      "title": "Former Microsoft President Jeff Raikes Says AI Could Create a 'Talent Debt' by Replacing Entry-Level Work",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60688069/former-microsoft-president-jeff-raikes-says-ai-could-create-a-talent-debt-by-replacing-entry-level-work",
+      "ts": 1785139583,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.348
+    },
+    {
+      "title": "Dow Gains Over 200 Points But Records Weekly Loss: Investor Sentiment Edges Higher, But Greed Index Remains in 'Fear' Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60687939/dow-gains-over-200-points-but-records-weekly-loss-investor-sentiment-edges-higher-but-greed-index-remains-in-fear-zone",
+      "ts": 1785137197,
+      "tickers": [
+        "CLS",
+        "VZ",
+        "AXP",
+        "NUE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.505
+    },
+    {
+      "title": "Sundar Pichai Backs Jensen Huang's Open-Weight AI Push as OpenAI Joins Letter, Anthropic and Amazon Remain Notably Absent",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60687389/sundar-pichai-jensen-huang-open-weight-ai-openai",
+      "ts": 1785132126,
+      "tickers": [
+        "TSLA",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.374
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60687326/stock-market-will-sp-500-open-up-or-down-today-11",
+      "ts": 1785131514,
+      "tickers": [
+        "$POL",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.464
+    },
+    {
+      "title": "Apple to Launch a Foldable iPhone Before 2027? Here's What the Prediction Market is Saying",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60687207/apple-to-launch-a-foldable-iphone-before-2027-heres-what-the-prediction-market-is-saying",
+      "ts": 1785130277,
+      "tickers": [
+        "AAPL",
+        "SSNLF",
+        "$USDC",
+        "$POL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.262
+    },
+    {
+      "title": "CXMT Becomes China's Most Valuable Listed Company After Memory Chipmaker Surges 500% on Debut",
+      "url": "https://www.benzinga.com/markets/ipos/26/07/60687153/cxmt-stock-debut-chinas-most-valuable-listed-company",
+      "ts": 1785129692,
+      "tickers": [
+        "INTC",
+        "MU",
+        "SKHY",
+        "APPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.33
+    },
+    {
+      "title": "Nvidia Reportedly Moves to Backstop $250 Billion in OpenAI Data Center Financing, Michael Burry Says, 'Around and Around We Go'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60686864/nvidia-openai-data-center-financing-michael-burry",
+      "ts": 1785117059,
+      "tickers": [
+        "TSLA",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.505
+    },
+    {
+      "title": "The Wall Street Journal Reported Sunday NVIDIA Is In Talks To Provide ~$250B Financing For OpenAI As Part Of Data Center Project",
+      "url": "https://www.benzinga.com/news/26/07/60686814/wall-street-journal-reported-sunday-nvidia-talks-provide-250b-financing-openai-part-data-center-proj",
+      "ts": 1785114542,
+      "tickers": [
+        "NVDA",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.523
+    },
+    {
+      "title": "Top Four Magnificent 7 Stocks to Watch This Week: Apple, Microsoft, Meta, Amazon",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60686454/top-four-magnificent-7-stocks-to-watch-this-week-apple-microsoft-meta-amazon",
+      "ts": 1785106423,
+      "tickers": [
+        "AAPL",
+        "META",
+        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.371
+    },
+    {
+      "title": "Top Three Catalysts for VOO, QQQ and DIA ETFs This Week",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60686327/top-three-catalysts-for-voo-qqq-and-dia-etfs-this-week",
+      "ts": 1785095716,
+      "tickers": [
+        "QQQ",
+        "DIA",
+        "VOO",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.422
+    },
+    {
+      "title": "Top Three ETFs to Watch This Week: TQQQ, MAGS, SCHD",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60686287/top-three-etfs-to-watch-this-week-tqqq-mags-schd",
+      "ts": 1785093934,
+      "tickers": [
+        "TQQQ",
+        "MAGS",
+        "SCHD",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.409
+    },
+    {
+      "title": "Trump Says The Government’s Intel Stake Made $70 Billion in Eight Months — ‘Do I Get Credit for That? No’",
+      "url": "https://www.benzinga.com/news/topics/26/07/60686083/trump-says-the-governments-intel-stake-made-70-billion-in-eight-months-do-i-get-credit-for-that-no",
+      "ts": 1785076275,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.276
+    },
+    {
+      "title": "Consumer Tech (July 20-24): AI Boom Drives Big Tech Earnings, Oracle Grabs $7B Defense Deal & More",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60686015/consumer-tech-july-20-24-ai-boom-drives-big-tech-earnings-oracle-grabs-7b-defense-deal-more",
+      "ts": 1785072608,
+      "tickers": [
+        "$BTC",
+        "AMKR",
+        "ORCL",
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.51
+    },
+    {
+      "title": "Intel Layoffs, Musk's Micron Moment, $200 Billion Samsung-Broadcom Pact and More: This Week in Tech",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60685961/intel-layoffs-musks-micron-moment-200-billion-samsung-broadcom-pact-and-more-this-week-in-tech",
+      "ts": 1785070828,
+      "tickers": [
+        "AVGO",
+        "TSM",
+        "INTC",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.457
+    },
+    {
+      "title": "Earnings Volatility Watch: 12 Stocks With Double-Digit Implied Moves This Week",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60685935/earnings-volatility-watch-12-stocks-with-double-digit-implied-moves-this-week",
+      "ts": 1785069023,
+      "tickers": [
+        "AAPL",
+        "META",
+        "XOM",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.478
+    },
+    {
+      "title": "Apple Hits Record Highs, Eyes Foldable Market Share, Tim Cook's Final Earnings Call and More: This Week in Appleverse",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60685866/apple-hits-record-highs-eyes-foldable-market-share-and-preps-for-tim-cooks-final-earnings-call-this-week-in-appleverse",
+      "ts": 1785063619,
+      "tickers": [
+        "AAPL",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.391
+    },
+    {
+      "title": "Iran War Escalates, Political Divides Deepen and Streaming Giants Face World Cup Roadblock and More: This Week in Politics",
+      "url": "https://www.benzinga.com/news/politics/26/07/60685724/iran-war-escalates-political-divides-deepen-and-streaming-giants-face-world-cup-roadblock-this-week-in-politics",
+      "ts": 1785056422,
+      "tickers": [
+        "AMZN",
+        "DIS",
+        "NFLX",
+        "CMCSA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.242
+    },
+    {
+      "title": "David Sacks Warns Anthropic Doesn't Want Competition: 'You're Going to Basically Put a Dagger Through the Heart of the Entire American Open Source Ecosystem'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60685709/david-sacks-warns-anthropic-doesnt-want-competition-youre-going-to-basically-put-a-dagger-through-the-heart-of-the-entire-american-open-source-ecosystem",
+      "ts": 1785055568,
+      "tickers": [
+        "NVDA",
+        "META",
+        "MSFT",
+        "PLTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.209
+    },
+    {
+      "title": "Demis Hassabis Backs Jensen Huang's AI Vision, Says 'A Strong and Secure Open Ecosystem Is Important' for Global AI Growth",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60685609/demis-hassabis-backs-jensen-huangs-ai-vision-says-a-strong-and-secure-open-ecosystem-is-important-for-global-ai-growth",
+      "ts": 1785044888,
+      "tickers": [
+        "GOOGL",
+        "TSLA",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.447
+    },
+    {
+      "title": "Why is Salesforce the Worst-Performing Dow Jones Stock?",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60685389/why-is-salesforce-the-worst-performing-dow-jones-stock",
+      "ts": 1785015277,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.336
+    },
+    {
+      "title": "Tesla, Intel, Google All Dropped After Earnings - Will Microsoft, Amazon, Meta Follow?",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60685388/tesla-intel-google-all-dropped-after-earnings-will-microsoft-amazon-meta-follow",
+      "ts": 1785015271,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.417
+    },
+    {
+      "title": "Warren Buffett Says Alphabet Is More Likely to Win Than 95% of Wall Street — But Adds ‘I Don’t Like It as Well as’ Coca-Cola And 4 Others",
+      "url": "https://www.benzinga.com/news/26/07/60680506/warren-buffett-says-alphabet-is-more-likely-to-win-than-95-of-wall-street-but-adds-i-dont-like-it-as-well-as-coca-cola-and-4-others",
+      "ts": 1784921832,
+      "tickers": [
+        "KO",
+        "AXP",
+        "BRK",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.443
+    },
+    {
+      "title": "Reported Earlier: 'In India, Iran war forces Diet Coke to roll out a bigger can, heftier price tag' - Reuters",
+      "url": "https://www.benzinga.com/news/26/07/60672012/reported-earlier-india-iran-war-forces-diet-coke-roll-out-bigger-can-heftier-price-tag-reuters",
+      "ts": 1784907253,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.376
+    },
+    {
+      "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
+      "url": "https://www.benzinga.com/news/26/07/60579075/barclays-maintains-overweight-coca-cola-raises-price-target-91",
+      "ts": 1784642677,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.56
+    },
+    {
+      "title": "'Coca-Cola appoints JPMorgan, Citi for India bottler IPO, sources say' - Reuters",
+      "url": "https://www.benzinga.com/news/26/07/60553171/coca-cola-appoints-jpmorgan-citi-india-bottler-ipo-sources-say-reuters",
+      "ts": 1784556964,
+      "tickers": [
+        "KO",
+        "JPM",
+        "C"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.515
+    },
+    {
+      "title": "Coca-Cola Stock in Focus: A Look at the Earnings, Analyst Activity, Technical Picture",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60550683/coca-cola-stock-in-focus-a-look-at-the-earnings-analyst-activity-technical-picture",
+      "ts": 1784554255,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.599
+    },
+    {
+      "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
+      "url": "https://www.benzinga.com/quote/MNST",
+      "ts": 1784310647,
+      "tickers": [
+        "KO",
+        "MNST"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.318
+    },
+    {
+      "title": "Stock Market Today: Dow, Nasdaq, S&P 500 Futures Slump as Trump Says U.S. Is Going 'Great'— Netflix, Coca-Cola, Nebius in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60517314/stock-market-today-dow-futures-sp-500-futures-slump-even-as-trump-says-us-is-doing-great-netflix-coca-cola-nebius-in-focus",
+      "ts": 1784292543,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "KO",
+        "NFLX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.512
+    },
+    {
+      "title": "Jim Cramer Says Microchip Is Near A Bottom — 'I Don't See It Yet' — While Nebius Is 'Not Done Going Down'",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60520782/jim-cramer-says-microchip-is-near-a-bottom-i-dont-see-it-yet-while-nebius-is-not-done-going-down",
+      "ts": 1784291627,
+      "tickers": [
+        "MCHP",
+        "NBIS",
+        "KO",
+        "VRT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.362
+    }
+  ],
   "portfolio_brief": {
     "ADBE": {
       "name": "Adobe",
@@ -136,7 +958,12 @@
         "score": 0.49,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+        "ts": 1784737943,
+        "url": "https://www.benzinga.com/quote/WEAV",
+        "wiim": true
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -148,7 +975,7 @@
           "date": "2026-06-15",
           "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000112/adbe-20260529.htm"
         },
-        "insider30d": 9
+        "insider30d": 8
       },
       "explain": "45 analysts cover it — 17 bullish, 25 hold, 3 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -232,7 +1059,12 @@
         "score": 1.15,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+        "ts": 1784737943,
+        "url": "https://www.benzinga.com/quote/WEAV",
+        "wiim": true
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -264,7 +1096,12 @@
         "score": 1.12,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Benzinga Bulls and Bears: IBM, Super Micro, Tesla",
+        "ts": 1784980837,
+        "url": "https://www.benzinga.com/markets/market-summary/26/07/60684165/benzinga-bulls-and-bears-ibm-super-micro-tesla",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -296,7 +1133,12 @@
         "score": 1.26,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "The Wall Street Journal Reported Sunday NVIDIA Is In Talks To Provide ~$250B Financing For OpenAI As Part Of Data Center Project",
+        "ts": 1785114542,
+        "url": "https://www.benzinga.com/news/26/07/60686814/wall-street-journal-reported-sunday-nvidia-talks-provide-250b-financing-openai-part-data-center-proj",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -544,7 +1386,12 @@
         "score": 1.21,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Intel Layoffs, Musk's Micron Moment, $200 Billion Samsung-Broadcom Pact and More: This Week in Tech",
+        "ts": 1785070828,
+        "url": "https://www.benzinga.com/markets/tech/26/07/60685961/intel-layoffs-musks-micron-moment-200-billion-samsung-broadcom-pact-and-more-this-week-in-tech",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -556,7 +1403,7 @@
           "date": "2026-06-09",
           "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
         },
-        "insider30d": 7
+        "insider30d": 6
       },
       "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -672,7 +1519,12 @@
         "score": 1.09,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
+        "ts": 1784310647,
+        "url": "https://www.benzinga.com/quote/MNST",
+        "wiim": true
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
