@@ -1,6 +1,6 @@
 {
   "date": "2026-07-27",
-  "generated_at": "Jul 27, 12:10pm ET",
+  "generated_at": "Jul 27, 12:34pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -132,6 +132,13 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Banking & Financial Service",
+      "dir": "up",
+      "driver": "Declining oil prices and a weaker U.S. dollar have eased inflation conce…",
+      "note": "As declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Foundry, Fabricator & Idm Semiconductor",
       "dir": "down",
       "driver": "The industry pulls back from earlier gains",
@@ -144,13 +151,6 @@
       "driver": "Recent earnings from ServiceNow and SAP help assuage concerns over AI en…",
       "note": "As recent earnings from ServiceNow and SAP help assuage concerns over AI encroachment. Also, recent investor unease over AI-related capex spending by hyperscalers and steep valuations for semiconductor-related companies may be bolstering confidence in the software sector.",
       "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Financial Services",
-      "dir": "mixed",
-      "driver": "Surging oil prices and Treasury yields weigh on sentiment",
-      "note": "As surging oil prices and Treasury yields weigh on sentiment, with the 10-year U.S. Treasury yield climbing to its highest level since January 2025. Rising yields and energy prices have fueled inflation concerns, reinforcing expectations that interest rates will remain elevated and raising concerns about slower loan demand and economic growth.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Energy Drink",
@@ -168,6 +168,12 @@
     }
   ],
   "holding_news": {
+    "SPGI": {
+      "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
+      "ts": 1785169388,
+      "url": "https://www.benzinga.com/quote/MA",
+      "wiim": true
+    },
     "NOW": {
       "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
       "ts": 1784737943,
@@ -187,9 +193,9 @@
       "wiim": true
     },
     "AVGO": {
-      "title": "Intel Layoffs, Musk's Micron Moment, $200 Billion Samsung-Broadcom Pact and More: This Week in Tech",
-      "ts": 1785070828,
-      "url": "https://www.benzinga.com/markets/tech/26/07/60685961/intel-layoffs-musks-micron-moment-200-billion-samsung-broadcom-pact-and-more-this-week-in-tech",
+      "title": "EXCLUSIVE: After Nvidia And SK Hynix, These 3 AI Stocks Could Be The Next Winners, CEO Says",
+      "ts": 1785162050,
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60697145/exclusive-after-nvidia-and-sk-hynix-these-3-ai-stocks-could-be-the-next-winners-ceo-says",
       "wiim": false
     },
     "NVDA": {
@@ -208,8 +214,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "price": 83.83,
-      "upside": 8.6,
+      "price": 83.65,
+      "upside": 8.8,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -222,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 338.17,
-      "upside": 25.7,
+      "price": 337.62,
+      "upside": 25.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -236,8 +242,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 173.54,
-      "upside": -4.9,
+      "price": 173.68,
+      "upside": -5.0,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -250,8 +256,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 149.24,
-      "upside": 1.8,
+      "price": 148.42,
+      "upside": 2.4,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -264,8 +270,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 173.54,
-      "upside": 6.6,
+      "price": 173.68,
+      "upside": 6.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -278,8 +284,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 176.7,
-      "upside": 23.4,
+      "price": 177.03,
+      "upside": 23.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -292,8 +298,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 191.76,
-      "upside": 4.3,
+      "price": 191.95,
+      "upside": 4.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -306,8 +312,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 176.7,
-      "upside": -17.9,
+      "price": 177.03,
+      "upside": -18.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,8 +326,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 176.7,
-      "upside": 3.6,
+      "price": 177.03,
+      "upside": 3.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +340,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 176.7,
-      "upside": -25.3,
+      "price": 177.03,
+      "upside": -25.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +354,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 338.16,
-      "upside": 7.6,
+      "price": 337.42,
+      "upside": 7.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -362,8 +368,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 176.7,
-      "upside": 1.9,
+      "price": 177.03,
+      "upside": 1.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -376,8 +382,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 191.76,
-      "upside": 7.9,
+      "price": 191.95,
+      "upside": 7.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -390,8 +396,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 338.17,
-      "upside": 11.5,
+      "price": 337.62,
+      "upside": 11.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -405,7 +411,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 11.5
+      "upside": 11.7
     },
     "CVX": {
       "date": "2026-07-23",
@@ -414,7 +420,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "upside": 7.9
+      "upside": 7.8
     },
     "MMM": {
       "date": "2026-07-23",
@@ -423,7 +429,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": 1.9
+      "upside": 1.7
     },
     "AAPL": {
       "date": "2026-07-23",
@@ -432,7 +438,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "upside": 7.6
+      "upside": 7.9
     },
     "PG": {
       "date": "2026-07-21",
@@ -441,7 +447,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 1.8
+      "upside": 2.4
     },
     "CRM": {
       "date": "2026-07-21",
@@ -450,7 +456,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 6.6
+      "upside": 6.5
     },
     "KO": {
       "date": "2026-07-21",
@@ -459,7 +465,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "upside": 8.6
+      "upside": 8.8
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -468,7 +474,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 0.8
+      "upside": 0.9
     },
     "MRK": {
       "date": "2026-07-13",
@@ -477,10 +483,64 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 6.2
+      "upside": 6.3
     }
   },
   "bz_news": [
+    {
+      "title": "These Analysts Cut Their Forecasts On American Express Following Q2 Earnings",
+      "url": "https://www.benzinga.com/news/26/07/60703308/these-analysts-cut-their-forecasts-on-american-express-following-q2-earnings",
+      "ts": 1785170029,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.418
+    },
+    {
+      "title": "Morgan Stanley Maintains Equal-Weight on American Express, Lowers Price Target to $382",
+      "url": "https://www.benzinga.com/news/26/07/60702917/morgan-stanley-maintains-equal-weight-american-express-lowers-price-target-382",
+      "ts": 1785169503,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.465
+    },
+    {
+      "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
+      "url": "https://www.benzinga.com/quote/MA",
+      "ts": 1785169388,
+      "tickers": [
+        "LGHL",
+        "XBP",
+        "GRAN",
+        "PAY"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.4
+    },
+    {
+      "title": "Alphabet Changed Wall Street’s Favorite AI Metric: Microsoft and Meta Are Up Next",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60702674/alphabet-microsoft-meta-ai-capex-1-trillion-race-hyperscaler-capex-tracker",
+      "ts": 1785169131,
+      "tickers": [
+        "META",
+        "MSFT",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.407
+    },
     {
       "title": "Charter Communications Stock Jumps 5%: Why Analysts Warn Broadband Pressure Will Persist",
       "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/07/60702158/charter-communications-stock-jumps-5-why-analysts-warn-broadband-pressure-will-persist",
@@ -520,7 +580,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.4
+      "relevance": 0.399
     },
     {
       "title": "Verizon Raises Outlook, But Needs Subscriber Ramp For Sustainable Growth, Says Analyst",
@@ -758,48 +818,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.426
-    },
-    {
-      "title": "Guggenheim Reiterates Buy on Microsoft, Maintains $586 Price Target",
-      "url": "https://www.benzinga.com/news/26/07/60693350/guggenheim-reiterates-buy-microsoft-maintains-586-price-target",
-      "ts": 1785157134,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.432
-    },
-    {
-      "title": "Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Rise as US-Iran Halt Retaliatory Strikes—Microchip Technology, AMD, Nucor in Focus (UPDATED)",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60688523/stock-market-today-sp-500-dow-jones-futures-rise-as-us-iran-halt-retaliatory-strikes-microchip-technology-amd-nucor-in-focus",
-      "ts": 1785157069,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.509
-    },
-    {
-      "title": "IBM, Amazon, Alphabet And More: CNBC’s ‘Final Trades’",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60692555/ibm-amazon-alphabet-and-more-cnbcs-final-trades",
-      "ts": 1785155422,
-      "tickers": [
-        "AMZN",
-        "GOOGL",
-        "GOOG",
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.386
     },
     {
       "title": "How To Earn $500 A Month From Coca-Cola Stock Ahead Of Q2 Earnings",
@@ -1256,7 +1274,12 @@
         "score": 1.21,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
+        "ts": 1785169388,
+        "url": "https://www.benzinga.com/quote/MA",
+        "wiim": true
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1345,9 +1368,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Intel Layoffs, Musk's Micron Moment, $200 Billion Samsung-Broadcom Pact and More: This Week in Tech",
-        "ts": 1785070828,
-        "url": "https://www.benzinga.com/markets/tech/26/07/60685961/intel-layoffs-musks-micron-moment-200-billion-samsung-broadcom-pact-and-more-this-week-in-tech",
+        "title": "EXCLUSIVE: After Nvidia And SK Hynix, These 3 AI Stocks Could Be The Next Winners, CEO Says",
+        "ts": 1785162050,
+        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60697145/exclusive-after-nvidia-and-sk-hynix-these-3-ai-stocks-could-be-the-next-winners-ceo-says",
         "wiim": false
       },
       "filings": {
