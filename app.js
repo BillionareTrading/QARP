@@ -214,6 +214,8 @@ function renderKpis() {
   ];
   if (t.div_income_yr) cards.push({ label: "Dividends", note: "annual", value: fmtUSD(t.div_income_yr, 0) + "/yr",
     delta: t.positions ? fmtPct(t.div_income_yr / t.positions * 100, 2).replace("+", "") + " yield" : "", dClass: "muted" });
+  cards.push({ label: "Zakat", note: "2.5% · yearly", value: fmtUSD(zakatOnBook(), 0),
+    delta: "on book + cash", dClass: "muted" });
   document.getElementById("kpis").innerHTML = cards.map((c) => `
     <div class="kpi">
       <div class="label">${c.label}${c.note ? ` <span class="kpi-note">· ${c.note}</span>` : ""}</div>
@@ -621,6 +623,7 @@ function renderRealized() {
       <span class="rz-chip"><b>${all.length}</b> closed trades</span>
       <span class="rz-chip rz-chip-pos"><b>${wins}</b> profitable · ${Math.round(wins / all.length * 100)}%</span>
       <span class="rz-chip">Best: <b>${best.ticker}</b> +$${best.gain.toFixed(2)}</span>
+      <span class="rz-chip">Zakat on realized · 2.5%: <b>${fmtUSD(Math.max(0, total) * ZAKAT_RATE, 2)}</b></span>
     </div>`;
 
   // ---- sortable table ----
@@ -2130,25 +2133,18 @@ function initPortfolioSubtabs() {
       if (b.dataset.psub === "gurus") renderGurus();
       if (b.dataset.psub === "news" && !pNewsLoaded) { pNewsLoaded = true; loadPortfolioNews(); }
       if (b.dataset.psub === "dates") loadPortfolioDates();
-      if (b.dataset.psub === "zakat") renderZakat();
     }));
-  initZakatMethods();
 }
 
-/* ---------- Zakat calculator (Portfolio → Zakat) ----------
-   Three scholarly methods, computed from the live book. Scholars differ; the UI
-   says so and the user picks. Cash is 100% zakatable in every method.
-   - market: 2.5% x (portfolio market value + cash)              [trading stance]
-   - proxy : 2.5% x (30% of market value + cash)                 [long-term, NZF-style
-             liquid-assets approximation; precise per-company AAOIFI base from
-             EDGAR balance sheets is the planned v2]
-   - income: 2.5% x (dividends received + realized gains + cash) [dividends-only school;
-             inputs are the user's, persisted locally, divs prefilled from the book] */
+/* ---------- Zakat, integrated into the Portfolio (user pref 2026-07-27: no separate
+   tab, no per-holding list — just the numbers, where the money is shown).
+   Book: Zoya-style per-holding age — held <12mo = 100% of market value zakatable,
+   >=12mo = 30% liquid-assets proxy. Ages come from the desk's earliest record of the
+   name (can only UNDERSTATE true age -> stricter 100% -> the safe direction); unknown
+   = 100%. Cash is fully zakatable. Realized: 2.5% of net realized gains (all closed
+   trades so far are <12mo holds). Scholars differ on method — the Method note in the
+   old subtab was retired with it; the user owns the ruling, we own the arithmetic. */
 const ZAKAT_RATE = 0.025, ZAKAT_PROXY = 0.30, ZAKAT_LT_DAYS = 365;
-let zakatMethod = "auto";
-// Earliest desk record for a ticker = holding-age proxy. It can only UNDERSTATE the true
-// age (he may have owned it before the desk's first call), which classifies long-term
-// LATER than reality -> more zakat -> the safe direction. Unknown = short-term (100%).
 function zakatAcquired(ticker) {
   let first = null;
   (DATA.calls || []).forEach((c) => {
@@ -2160,83 +2156,14 @@ function zakatHeldDays(ticker) {
   const d = zakatAcquired(ticker);
   return d ? Math.floor((Date.now() - new Date(d + "T00:00:00Z")) / 86400000) : null;
 }
-const ZNOTES = {
-  auto: "Zoya-style: each holding is judged by its own age — under 12 months = trading stance (100% of market value zakatable); 12 months and over = long-term (30% liquid-assets proxy). Ages are estimated from the desk's records and err toward the stricter 100%.",
-  market: "Treats the whole position as zakatable wealth at market value — the standard view for actively traded portfolios, and the most conservative number.",
-  proxy: "For long-term investors: only the companies' liquid (current) assets are zakatable. 30% of market value is the common approximation (NZF/Zoya-style). A precise per-company figure from SEC balance sheets is planned.",
-  income: "The view that long-term holdings themselves are not zakatable — only what they pay out: dividends and realized gains, plus your cash. Enter the amounts received in your zakat year.",
-};
-function zget(k, d) { try { const v = localStorage.getItem("zakat_" + k); return v === null ? d : parseFloat(v); } catch (e) { return d; } }
-function zset(k, v) { try { localStorage.setItem("zakat_" + k, String(v)); } catch (e) {} }
-function initZakatMethods() {
-  document.querySelectorAll("#zakat-methods .subtab").forEach((b) =>
-    b.addEventListener("click", () => {
-      document.querySelectorAll("#zakat-methods .subtab").forEach((x) => x.classList.remove("active"));
-      b.classList.add("active");
-      zakatMethod = b.dataset.zmethod;
-      renderZakat();
-    }));
-}
-function renderZakat() {
-  const t = DATA.meta.portfolio_totals;
-  const positions = DATA.portfolio.reduce((s, h) => s + (h.value || 0), 0);
-  const cash = t.cash || 0;
-  const aboveNisab = true;   // book is far above nisab; user asked to keep it simple (2026-07-27)
-  const divs = zget("divs", Math.round((t.div_income_yr || 0) * 100) / 100);
-  const realized = zget("realized", 0);
-
-  const zfactor = (h) => {
-    if (zakatMethod === "market") return 1;
-    if (zakatMethod === "proxy") return ZAKAT_PROXY;
+function zakatOnBook() {
+  const cash = (DATA.meta.portfolio_totals && DATA.meta.portfolio_totals.cash) || 0;
+  const base = DATA.portfolio.reduce((s, h) => {
     const days = zakatHeldDays(h.ticker);
-    return (days !== null && days >= ZAKAT_LT_DAYS) ? ZAKAT_PROXY : 1;
-  };
-  let base, baseLabel;
-  if (zakatMethod === "income") { base = divs + realized + cash; baseLabel = "dividends + realized gains + cash"; }
-  else {
-    base = DATA.portfolio.reduce((s, h) => s + (h.value || 0) * zfactor(h), 0) + cash;
-    baseLabel = zakatMethod === "market" ? "market value + cash"
-      : zakatMethod === "proxy" ? "30% of market value + cash"
-      : "per-holding by age + cash";
-  }
-  const due = aboveNisab ? base * ZAKAT_RATE : 0;
-
-  document.getElementById("zakat-method-note").textContent = ZNOTES[zakatMethod];
-  document.getElementById("zakat-summary").innerHTML = `
-    <h3>Zakat due</h3>
-    <div class="kpi"><span class="label">Zakatable base (${esc(baseLabel)})</span><span class="value">${fmtUSD(base, 2)}</span></div>
-    <div class="kpi"><span class="label">Zakat @ 2.5%</span><span class="value">${fmtUSD(due, 2)}</span></div>`;
-
-  if (zakatMethod === "income") {
-    document.getElementById("zakat-detail").innerHTML = `
-      <h3>Your zakat-year income</h3>
-      <div class="kpi"><span class="label">Dividends received ($, prefilled = book's est. annual)</span>
-        <input id="zakat-divs" class="zakat-in" type="number" step="0.01" min="0" value="${divs}"></div>
-      <div class="kpi"><span class="label">Realized gains ($, from your broker statement)</span>
-        <input id="zakat-realized" class="zakat-in" type="number" step="0.01" value="${realized}"></div>
-      <p class="muted">Both persist on this device only. Losses may be entered as negative realized gains.</p>`;
-  } else {
-    const showAge = zakatMethod === "auto";
-    const rows = DATA.portfolio.slice().sort((a, b) => (b.value || 0) - (a.value || 0)).map((h) => {
-      const f = zfactor(h);
-      const days = zakatHeldDays(h.ticker);
-      const ageCell = showAge ? `<td>${days === null ? "unknown → 100%"
-        : Math.floor(days / 30.44) + "mo → " + (f === 1 ? "100%" : "30%")}</td>` : "";
-      return `<tr><td>${esc(h.ticker)}</td>${ageCell}<td class="num">${fmtUSD(h.value || 0, 2)}</td>
-      <td class="num">${fmtUSD((h.value || 0) * f, 2)}</td>
-      <td class="num">${aboveNisab ? fmtUSD((h.value || 0) * f * ZAKAT_RATE, 2) : "—"}</td></tr>`;
-    }).join("");
-    document.getElementById("zakat-detail").innerHTML = `
-      <h3>Per holding</h3>
-      <div class="table-wrap"><table class="mini-table">
-      <thead><tr><th>Ticker</th>${showAge ? "<th>Held</th>" : ""}<th class="num">Market value</th><th class="num">Zakatable</th><th class="num">Zakat</th></tr></thead>
-      <tbody>${rows}
-      <tr><td><b>Cash</b></td>${showAge ? "<td>—</td>" : ""}<td class="num">${fmtUSD(cash, 2)}</td><td class="num">${fmtUSD(cash, 2)}</td>
-      <td class="num">${aboveNisab ? fmtUSD(cash * ZAKAT_RATE, 2) : "—"}</td></tr></tbody></table></div>`;
-  }
-  const dv = document.getElementById("zakat-divs"), rl = document.getElementById("zakat-realized");
-  if (dv) dv.addEventListener("change", () => { zset("divs", parseFloat(dv.value) || 0); renderZakat(); });
-  if (rl) rl.addEventListener("change", () => { zset("realized", parseFloat(rl.value) || 0); renderZakat(); });
+    const f = (days !== null && days >= ZAKAT_LT_DAYS) ? ZAKAT_PROXY : 1;
+    return s + (h.value || 0) * f;
+  }, 0) + cash;
+  return base * ZAKAT_RATE;
 }
 
 // Secondary views shown ONLY under S&P 500: Universe table vs Track Record scorecard.
