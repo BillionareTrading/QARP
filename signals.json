@@ -1,6 +1,6 @@
 {
   "date": "2026-07-27",
-  "generated_at": "Jul 27, 5:46pm ET",
+  "generated_at": "Jul 27, 6:44pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -186,16 +186,16 @@
       "url": "https://www.benzinga.com/quote/WEAV",
       "wiim": true
     },
+    "NVDA": {
+      "title": "Nvidia Funds AI Frenzy: Timeline of its Circular Financing Deals ... So Far",
+      "ts": 1785191663,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60713664/nvidia-funds-ai-frenzy-timeline-of-its-circular-financing-deals-so-far",
+      "wiim": false
+    },
     "KO": {
       "title": "Coca-Cola Q2 Preview: Stock Near All-Time Highs, Will Outperformance Vs. Pepsi Continue?",
       "ts": 1785170458,
       "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60703705/coca-cola-q2-preview-stock-near-all-time-highs-will-outperformance-vs-pepsi-continue",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "Aggressive Buying On Nvidia Backing Massive OpenAI Data Center And Trump Pausing Iran Attacks",
-      "ts": 1785179356,
-      "url": "https://www.benzinga.com/Opinion/26/07/60708587/aggressive-buying-on-nvidia-backing-massive-openai-data-center-and-trump-pausing-iran-attacks",
       "wiim": false
     },
     "AVGO": {
@@ -488,6 +488,21 @@
   },
   "bz_news": [
     {
+      "title": "Nvidia Funds AI Frenzy: Timeline of its Circular Financing Deals ... So Far",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60713664/nvidia-funds-ai-frenzy-timeline-of-its-circular-financing-deals-so-far",
+      "ts": 1785191663,
+      "tickers": [
+        "NVDA",
+        "MSFT",
+        "NBIS",
+        "CRWV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.515
+    },
+    {
       "title": "'The World's Most Powerful Network': X Money Rolls Out, Challenging Venmo, Robinhood, Apple Pay",
       "url": "https://www.benzinga.com/markets/tech/26/07/60713325/the-worlds-most-powerful-network-x-money-rolls-out-challenging-venmo-robinhood-apple-pay",
       "ts": 1785187836,
@@ -656,7 +671,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.402
+      "relevance": 0.403
     },
     {
       "title": "Why Is Salesforce Stock Surging Monday?",
@@ -758,7 +773,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.4
+      "relevance": 0.401
     },
     {
       "title": "Alphabet Changed Wall Street’s Favorite AI Metric: Microsoft and Meta Are Up Next",
@@ -815,18 +830,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.399
-    },
-    {
-      "title": "Verizon Raises Outlook, But Needs Subscriber Ramp For Sustainable Growth, Says Analyst",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60701206/verizon-raises-outlook-but-needs-subscriber-ramp-for-sustainable-growth-says-analyst",
-      "ts": 1785167152,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.427
     },
     {
       "title": "How To Earn $500 A Month From Coca-Cola Stock Ahead Of Q2 Earnings",
@@ -1138,9 +1141,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Aggressive Buying On Nvidia Backing Massive OpenAI Data Center And Trump Pausing Iran Attacks",
-        "ts": 1785179356,
-        "url": "https://www.benzinga.com/Opinion/26/07/60708587/aggressive-buying-on-nvidia-backing-massive-openai-data-center-and-trump-pausing-iran-attacks",
+        "title": "Nvidia Funds AI Frenzy: Timeline of its Circular Financing Deals ... So Far",
+        "ts": 1785191663,
+        "url": "https://www.benzinga.com/markets/tech/26/07/60713664/nvidia-funds-ai-frenzy-timeline-of-its-circular-financing-deals-so-far",
         "wiim": false
       },
       "filings": {
