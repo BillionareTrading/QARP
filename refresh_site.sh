@@ -27,6 +27,12 @@ if [ "$PUSH" = "1" ] && [ -d .git ]; then
   # overwrites the enriched feed with a keyless one. Drop any local drift on them, sync, then push
   # ONLY the encrypted price payload.
   git checkout -- signals.json gurus.json daily_brief.json book_brief.json 2>/dev/null || true
+  # A conflicted pull below is swallowed by "|| true" and can leave a rebase-merge dir behind,
+  # after which EVERY later push fails "behind remote" (bit us 2026-07-28). Clear any stale
+  # rebase state first — this repo's local commits are always disposable price refreshes.
+  if [ -d .git/rebase-merge ] || [ -d .git/rebase-apply ]; then
+    git rebase --abort 2>/dev/null || rm -rf .git/rebase-merge .git/rebase-apply
+  fi
   git pull --rebase --quiet origin main 2>/dev/null || true
   # PRE-PUBLISH GATE: stamp consistency + the payload must not outrun the (about-to-be-live) feeds
   # beyond the render tolerance, or the Times front page drops to the generic fallback. Abort if so.

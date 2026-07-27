@@ -1845,26 +1845,35 @@ function asOfLabel(tsSec) {
     return new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }).format(new Date(tsSec * 1000)) + " ET";
   } catch (e) { return ""; }
 }
+const lastIdxQuote = {};   // sym -> last good quote; a rate-limited refresh must never blank a card
 async function renderIndexes() {
   const key = DATA.meta && DATA.meta.quote_proxy;
   const row = document.getElementById("idx-row");
   if (!row) return;
   if (!key) { row.innerHTML = `<div class="idx-card"><span class="muted">Live market data needs the API key.</span></div>`; return; }
   let latestT = 0;
+  // 2026-07-28 (user saw an empty S&P card + a day-old stamp): honor the 429 backoff like the
+  // other loops, and on any fetch failure fall back to the last good quote — the honest "as of"
+  // stamp below (driven by q.t) is what signals staleness, never a blank card.
+  const throttled = Date.now() < throttleUntil;
   const cards = await Promise.all(INDEXES.map(async (ix) => {
-    try {
-      const q = await fetchQuote(ix.sym, key);
-      if (!q || typeof q.c !== "number" || !q.c) throw new Error("no data");
-      if (q.t && q.t > latestT) latestT = q.t;
-      const up = (q.d || 0) >= 0;
-      return `<div class="idx-card ${up ? "up" : "down"}">
-        <div class="idx-name">${esc(ix.label)} <span class="idx-tick">· ${esc(ix.sym)} ETF</span></div>
-        <div class="idx-pct ${up ? "pos" : "neg"}">${up ? "▲" : "▼"} ${Math.abs(q.dp).toFixed(2)}%</div>
-        <div class="idx-price">$${fmtNum(q.c, 2)} <span class="${up ? "pos" : "neg"}">${q.d >= 0 ? "+" : "−"}$${fmtNum(Math.abs(q.d), 2)}</span></div>
-      </div>`;
-    } catch (e) {
-      return `<div class="idx-card"><div class="idx-top"><span class="idx-name">${esc(ix.label)}</span></div><div class="idx-level muted">—</div></div>`;
+    let q = null;
+    if (!throttled) {
+      try {
+        q = await fetchQuote(ix.sym, key);
+        if (!q || typeof q.c !== "number" || !q.c) q = null;
+        else lastIdxQuote[ix.sym] = q;
+      } catch (e) { q = null; }
     }
+    if (!q) q = lastIdxQuote[ix.sym] || null;
+    if (!q) return `<div class="idx-card"><div class="idx-top"><span class="idx-name">${esc(ix.label)}</span></div><div class="idx-level muted">—</div></div>`;
+    if (q.t && q.t > latestT) latestT = q.t;
+    const up = (q.d || 0) >= 0;
+    return `<div class="idx-card ${up ? "up" : "down"}">
+      <div class="idx-name">${esc(ix.label)} <span class="idx-tick">· ${esc(ix.sym)} ETF</span></div>
+      <div class="idx-pct ${up ? "pos" : "neg"}">${up ? "▲" : "▼"} ${Math.abs(q.dp).toFixed(2)}%</div>
+      <div class="idx-price">$${fmtNum(q.c, 2)} <span class="${up ? "pos" : "neg"}">${q.d >= 0 ? "+" : "−"}$${fmtNum(Math.abs(q.d), 2)}</span></div>
+    </div>`;
   }));
   row.innerHTML = cards.join("");
   const asof = document.getElementById("idx-asof");
