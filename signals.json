@@ -1,6 +1,6 @@
 {
   "date": "2026-07-27",
-  "generated_at": "Jul 27, 1:45pm ET",
+  "generated_at": "Jul 27, 3:17pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -132,17 +132,17 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
-      "sector": "Software",
-      "dir": "up",
-      "driver": "A rebound following IBM's profit warning last week",
-      "note": "Amid a rebound following IBM's profit warning last week, aided by positive SAP and ServiceNow earnings. Also, Apollo's chief economist wrote a note supportive of security and infrastructure software.",
-      "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
       "sector": "Banking & Financial Service",
       "dir": "up",
       "driver": "Declining oil prices and a weaker U.S. dollar have eased inflation conce…",
       "note": "As declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Software",
+      "dir": "up",
+      "driver": "A rebound following IBM's profit warning last week",
+      "note": "Amid a rebound following IBM's profit warning last week, aided by positive SAP and ServiceNow earnings. Also, Apollo's chief economist wrote a note supportive of security and infrastructure software.",
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
@@ -168,6 +168,12 @@
     }
   ],
   "holding_news": {
+    "SPGI": {
+      "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
+      "ts": 1785169388,
+      "url": "https://www.benzinga.com/quote/WSE",
+      "wiim": true
+    },
     "ADBE": {
       "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
       "ts": 1784737943,
@@ -180,28 +186,22 @@
       "url": "https://www.benzinga.com/quote/WEAV",
       "wiim": true
     },
-    "SPGI": {
-      "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
-      "ts": 1785169388,
-      "url": "https://www.benzinga.com/quote/MA",
-      "wiim": true
+    "NVDA": {
+      "title": "Jim Chanos Says Nvidia Is Effectively Financing Its Own AI Chip Sales in Reported OpenAI Deal",
+      "ts": 1785148421,
+      "url": "https://www.benzinga.com/markets/equities/26/07/60689552/jim-chanos-says-nvidia-is-effectively-financing-its-own-ai-chip-sales-in-reported-openai-deal",
+      "wiim": false
     },
     "KO": {
-      "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
-      "ts": 1784310647,
-      "url": "https://www.benzinga.com/quote/MNST",
-      "wiim": true
+      "title": "Coca-Cola Q2 Preview: Stock Near All-Time Highs, Will Outperformance Vs. Pepsi Continue?",
+      "ts": 1785170458,
+      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60703705/coca-cola-q2-preview-stock-near-all-time-highs-will-outperformance-vs-pepsi-continue",
+      "wiim": false
     },
     "AVGO": {
       "title": "EXCLUSIVE: After Nvidia And SK Hynix, These 3 AI Stocks Could Be The Next Winners, CEO Says",
       "ts": 1785162050,
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60697145/exclusive-after-nvidia-and-sk-hynix-these-3-ai-stocks-could-be-the-next-winners-ceo-says",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "Jim Chanos Says Nvidia Is Effectively Financing Its Own AI Chip Sales in Reported OpenAI Deal",
-      "ts": 1785148421,
-      "url": "https://www.benzinga.com/markets/equities/26/07/60689552/jim-chanos-says-nvidia-is-effectively-financing-its-own-ai-chip-sales-in-reported-openai-deal",
       "wiim": false
     }
   },
@@ -214,8 +214,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "price": 83.72,
-      "upside": 8.7,
+      "price": 83.99,
+      "upside": 8.3,
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -228,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 337.87,
-      "upside": 25.8,
+      "price": 337.32,
+      "upside": 26.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -242,8 +242,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$165",
-      "price": 175.52,
-      "upside": -6.0,
+      "price": 176.45,
+      "upside": -6.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -256,8 +256,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 148.77,
-      "upside": 2.2,
+      "price": 149.03,
+      "upside": 2.0,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -270,8 +270,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 175.52,
-      "upside": 5.4,
+      "price": 176.45,
+      "upside": 4.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -284,8 +284,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 176.62,
-      "upside": 23.4,
+      "price": 176.58,
+      "upside": 23.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -298,8 +298,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 191.71,
-      "upside": 4.3,
+      "price": 191.21,
+      "upside": 4.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -312,7 +312,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 176.62,
+      "price": 176.58,
       "upside": -17.9,
       "held": false,
       "uni": true,
@@ -326,7 +326,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 176.62,
+      "price": 176.58,
       "upside": 3.6,
       "held": false,
       "uni": true,
@@ -340,8 +340,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 176.62,
-      "upside": -25.3,
+      "price": 176.58,
+      "upside": -25.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -354,8 +354,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 336.16,
-      "upside": 8.3,
+      "price": 335.82,
+      "upside": 8.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -368,7 +368,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 176.62,
+      "price": 176.58,
       "upside": 1.9,
       "held": false,
       "uni": true,
@@ -382,8 +382,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 191.71,
-      "upside": 8.0,
+      "price": 191.21,
+      "upside": 8.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -396,8 +396,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 337.87,
-      "upside": 11.6,
+      "price": 337.32,
+      "upside": 11.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -411,7 +411,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 11.6
+      "upside": 11.8
     },
     "CVX": {
       "date": "2026-07-23",
@@ -420,7 +420,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "upside": 8.0
+      "upside": 8.3
     },
     "MMM": {
       "date": "2026-07-23",
@@ -438,7 +438,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "upside": 8.3
+      "upside": 8.4
     },
     "PG": {
       "date": "2026-07-21",
@@ -447,7 +447,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 2.2
+      "upside": 2.0
     },
     "CRM": {
       "date": "2026-07-21",
@@ -456,7 +456,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 5.4
+      "upside": 4.8
     },
     "KO": {
       "date": "2026-07-21",
@@ -465,7 +465,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "upside": 8.7
+      "upside": 8.3
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -474,7 +474,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 0.7
+      "upside": 0.8
     },
     "MRK": {
       "date": "2026-07-13",
@@ -483,10 +483,106 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$140",
-      "upside": 6.5
+      "upside": 6.7
     }
   },
   "bz_news": [
+    {
+      "title": "Aggressive Buying On Nvidia Backing Massive OpenAI Data Center And Trump Pausing Iran Attacks",
+      "url": "https://www.benzinga.com/Opinion/26/07/60708587/aggressive-buying-on-nvidia-backing-massive-openai-data-center-and-trump-pausing-iran-attacks",
+      "ts": 1785179356,
+      "tickers": [
+        "USO",
+        "SPY",
+        "NVDA",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.442
+    },
+    {
+      "title": "Adobe Stock Climbs Post-IBM Warning, ServiceNow Boost",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60708537/adobe-stock-climbs-post-ibm-warning-servicenow-boost",
+      "ts": 1785179250,
+      "tickers": [
+        "ADBE",
+        "IBM",
+        "NOW",
+        "SAP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.518
+    },
+    {
+      "title": "EXCLUSIVE: Anthropic Is a ‘Generational Company,’ Tema CEO Says — and Why LAZR Made It the Top Holding Before IPO",
+      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60708249/exclusive-anthropic-is-a-generational-company-tema-ceo-says-and-why-lazr-made-it-the-top-holding-before-ipo",
+      "ts": 1785178579,
+      "tickers": [
+        "LAZR",
+        "SPCX",
+        "INTC",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.356
+    },
+    {
+      "title": "China's $500B Memory Giant Isn't Chasing Nvidia. It's Betting on Intel and AMD",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60708035/chinas-500b-memory-giant-isnt-chasing-nvidia-its-betting-on-intel-and-amd",
+      "ts": 1785178176,
+      "tickers": [
+        "INTC",
+        "AMD",
+        "NVDA",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.443
+    },
+    {
+      "title": "UBS Maintains Buy on Microsoft, Lowers Price Target to $480",
+      "url": "https://www.benzinga.com/news/26/07/60706590/ubs-maintains-buy-microsoft-lowers-price-target-480",
+      "ts": 1785175590,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.454
+    },
+    {
+      "title": "UBS Maintains Buy on McDonald's, Lowers Price Target to $340",
+      "url": "https://www.benzinga.com/news/26/07/60706363/ubs-maintains-buy-mcdonald-s-lowers-price-target-340",
+      "ts": 1785175219,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.459
+    },
+    {
+      "title": "Mizuho Maintains Outperform on Honeywell Intl, Raises Price Target to $265",
+      "url": "https://www.benzinga.com/news/26/07/60706262/mizuho-maintains-outperform-honeywell-intl-raises-price-target-265",
+      "ts": 1785175147,
+      "tickers": [
+        "HON"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.445
+    },
     {
       "title": "Shares of software companies are trading higher amid a rebound following IBM's profit warning last week, aided by positive SAP and ServiceNow earnings. Also, Apollo's chief economist wrote a note supportive of security and infrastructure software.",
       "url": "https://www.benzinga.com/quote/WEAV",
@@ -606,13 +702,13 @@
     },
     {
       "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
-      "url": "https://www.benzinga.com/quote/MA",
+      "url": "https://www.benzinga.com/quote/WSE",
       "ts": 1785169388,
       "tickers": [
-        "LGHL",
-        "XBP",
-        "GRAN",
-        "PAY"
+        "COIN",
+        "NU",
+        "MA",
+        "AFRM"
       ],
       "source": "Benzinga",
       "wiim": true,
@@ -726,100 +822,6 @@
       "relevance": 0.379
     },
     {
-      "title": "Magnificent Seven In Spotlight: What to Expert From Meta, Microsoft, Amazon, Apple Earnings This Week",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60700295/magnificent-seven-in-spotlight-what-to-expert-from-meta-microsoft-amazon-apple-earnings-this-week",
-      "ts": 1785165563,
-      "tickers": [
-        "AAPL",
-        "META",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.369
-    },
-    {
-      "title": "Why Is Microsoft Stock Gaining Monday?",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60700222/why-is-microsoft-stock-gaining-monday",
-      "ts": 1785165475,
-      "tickers": [
-        "MSFT",
-        "XLK",
-        "VOOG",
-        "TGRW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.365
-    },
-    {
-      "title": "Keysight Certifies RF Design Software For Intel 14A And 18A-P Processes To Help Accelerate Advanced Chip Development",
-      "url": "https://www.benzinga.com/news/26/07/60699682/keysight-certifies-rf-design-software-intel-14a-and-18a-p-processes-help-accelerate-advanced-chip-de",
-      "ts": 1785164771,
-      "tickers": [
-        "KEYS",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.382
-    },
-    {
-      "title": "RBC Capital Maintains Sector Perform on Verizon Communications, Raises Price Target to $47",
-      "url": "https://www.benzinga.com/news/26/07/60698146/rbc-capital-maintains-sector-perform-verizon-communications-raises-price-target-47",
-      "ts": 1785163153,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.467
-    },
-    {
-      "title": "Evercore ISI Group Maintains In-Line on American Express, Lowers Price Target to $370",
-      "url": "https://www.benzinga.com/news/26/07/60697984/evercore-isi-group-maintains-line-american-express-lowers-price-target-370",
-      "ts": 1785162959,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.5
-    },
-    {
-      "title": "EXCLUSIVE: After Nvidia And SK Hynix, These 3 AI Stocks Could Be The Next Winners, CEO Says",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60697145/exclusive-after-nvidia-and-sk-hynix-these-3-ai-stocks-could-be-the-next-winners-ceo-says",
-      "ts": 1785162050,
-      "tickers": [
-        "TSM",
-        "AVGO",
-        "MRVL",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.541
-    },
-    {
-      "title": "Scotiabank Maintains Sector Outperform on Verizon Communications, Raises Price Target to $52.5",
-      "url": "https://www.benzinga.com/news/26/07/60696054/scotiabank-maintains-sector-outperform-verizon-communications-raises-price-target-52-5",
-      "ts": 1785160905,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.456
-    },
-    {
       "title": "How To Earn $500 A Month From Coca-Cola Stock Ahead Of Q2 Earnings",
       "url": "https://www.benzinga.com/trading-ideas/dividends/26/07/60692276/how-to-earn-500-a-month-from-coca-cola-stock-ahead-of-q2-earnings-2",
       "ts": 1785154770,
@@ -907,19 +909,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.599
-    },
-    {
-      "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
-      "url": "https://www.benzinga.com/quote/MNST",
-      "ts": 1784310647,
-      "tickers": [
-        "KO",
-        "MNST"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.318
     }
   ],
   "portfolio_brief": {
@@ -1277,7 +1266,7 @@
       "news": {
         "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
         "ts": 1785169388,
-        "url": "https://www.benzinga.com/quote/MA",
+        "url": "https://www.benzinga.com/quote/WSE",
         "wiim": true
       },
       "filings": {
@@ -1501,10 +1490,10 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Shares of energy drink-related companies are trading lower after the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
-        "ts": 1784310647,
-        "url": "https://www.benzinga.com/quote/MNST",
-        "wiim": true
+        "title": "Coca-Cola Q2 Preview: Stock Near All-Time Highs, Will Outperformance Vs. Pepsi Continue?",
+        "ts": 1785170458,
+        "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60703705/coca-cola-q2-preview-stock-near-all-time-highs-will-outperformance-vs-pepsi-continue",
+        "wiim": false
       },
       "filings": {
         "latest8k": {
