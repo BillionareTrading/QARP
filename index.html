@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=37448079" />
+  <link rel="stylesheet" href="styles.css?v=70f0eed3" />
 </head>
 <body>
 
@@ -291,6 +291,7 @@
         <button class="subtab" type="button" data-psub="news">News</button>
         <button class="subtab" type="button" data-psub="dates">Key Dates</button>
         <button class="subtab" type="button" data-psub="gurus">Smart Money</button>
+        <button class="subtab" type="button" data-psub="zakat">Zakat</button>
       </nav>
 
       <!-- Holdings -->
@@ -364,6 +365,25 @@
       <div id="psub-gurus" class="psub">
         <p class="tab-intro">What notable investors hold, from their latest <b>SEC 13F filing</b> — Michael Burry, Leopold Aschenbrenner, Cathie Wood, Warren Buffett. Where a name overlaps <b>Jaleel's</b> book, it's flagged.</p>
         <div id="gurus-list" class="gurus-list"></div>
+      </div>
+
+      <!-- Zakat calculator: three scholarly methods, computed from the live book -->
+      <div id="psub-zakat" class="psub">
+        <p class="tab-intro">Zakat on the portfolio, four methods — scholars differ on which applies;
+          <b>confirm the method with your own authority</b>. Cash is fully zakatable in every method.
+          Values use today's live book.</p>
+        <nav class="subtabs subtabs-2" id="zakat-methods">
+          <button class="subtab active" type="button" data-zmethod="auto">Auto (by holding period)</button>
+          <button class="subtab" type="button" data-zmethod="market">Market value</button>
+          <button class="subtab" type="button" data-zmethod="proxy">Long-term (30% proxy)</button>
+          <button class="subtab" type="button" data-zmethod="income">Income only</button>
+        </nav>
+        <p class="tab-intro" id="zakat-method-note"></p>
+        <div class="grid-2">
+          <section class="card" id="zakat-summary"></section>
+          <section class="card" id="zakat-nisab"></section>
+        </div>
+        <section class="card" id="zakat-detail"></section>
       </div>
     </section>
 
@@ -689,7 +709,7 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=37448079"></script>
-  <script src="app.js?v=37448079"></script>
+  <script src="crypto.js?v=70f0eed3"></script>
+  <script src="app.js?v=70f0eed3"></script>
 </body>
 </html>
