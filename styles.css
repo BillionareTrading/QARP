@@ -1516,15 +1516,3 @@ tbody tr:hover { background: var(--surface-2); }
   .folio-idx { justify-content: center; gap: 10px; font-size: 9.5px; }
 }
 
-/* ===== Zakat calculator (Portfolio → Zakat) ===== */
-#psub-zakat .grid-2 { margin-bottom: 14px; }
-#psub-zakat .card h3 { font-family: var(--serif); margin-bottom: 10px; }
-#psub-zakat .kpi { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; border-top: 1px solid var(--line); }
-#psub-zakat .kpi:first-of-type { border-top: none; }
-#psub-zakat .kpi .value { font-family: var(--mono); font-weight: 700; font-size: 17px; }
-#psub-zakat table { width: 100%; border-collapse: collapse; font-size: 13px; }
-#psub-zakat th, #psub-zakat td { padding: 7px 10px; border-top: 1px solid var(--line); text-align: left; }
-#psub-zakat thead th { border-top: none; color: var(--ink-3); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
-#psub-zakat th.num, #psub-zakat td.num { text-align: right; font-family: var(--mono); }
-.zakat-in { width: 110px; font-family: var(--mono); font-size: 13px; padding: 3px 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
-#psub-zakat .pos { color: #1a7a3a; font-weight: 600; }
