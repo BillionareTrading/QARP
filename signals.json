@@ -1,6 +1,6 @@
 {
   "date": "2026-07-28",
-  "generated_at": "Jul 28, 6:00am ET",
+  "generated_at": "Jul 28, 6:20am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -186,16 +186,16 @@
       "url": "https://www.benzinga.com/quote/WEAV",
       "wiim": true
     },
-    "KO": {
-      "title": "Coca-Cola Q2 Preview: Stock Near All-Time Highs, Will Outperformance Vs. Pepsi Continue?",
-      "ts": 1785170458,
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60703705/coca-cola-q2-preview-stock-near-all-time-highs-will-outperformance-vs-pepsi-continue",
-      "wiim": false
-    },
     "NVDA": {
       "title": "Nvidia Funds AI Frenzy: Timeline of its Circular Financing Deals ... So Far",
       "ts": 1785191663,
       "url": "https://www.benzinga.com/markets/tech/26/07/60713664/nvidia-funds-ai-frenzy-timeline-of-its-circular-financing-deals-so-far",
+      "wiim": false
+    },
+    "KO": {
+      "title": "Coca-Cola Q2 Preview: Stock Near All-Time Highs, Will Outperformance Vs. Pepsi Continue?",
+      "ts": 1785170458,
+      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60703705/coca-cola-q2-preview-stock-near-all-time-highs-will-outperformance-vs-pepsi-continue",
       "wiim": false
     },
     "AVGO": {
@@ -450,6 +450,21 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Anthropic CEO Dario Amodei Says He 'Never Advocated' Open-Weight AI Ban, Calls for Tougher Curbs on China Instead",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60717161/anthropic-ceo-dario-amodei-says-he-never-advocated-open-weight-ai-ban-calls-for-tougher-curbs-on-china-instead",
+      "ts": 1785233082,
+      "tickers": [
+        "AMZN",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.312
+    },
     {
       "title": "Box CEO Aaron Levie Says AI Is Creating New Hiring Opportunities, Not the 'Negative AI Jobs Outcome' Many Predicted",
       "url": "https://www.benzinga.com/markets/tech/26/07/60716749/box-ceo-aaron-levie-says-ai-is-creating-new-hiring-opportunities-not-the-negative-ai-jobs-outcome-many-predicted",
@@ -773,18 +788,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.402
-    },
-    {
-      "title": "Why Is Salesforce Stock Surging Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60704998/why-is-salesforce-stock-surging-monday",
-      "ts": 1785172856,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.358
     },
     {
       "title": "Coca-Cola Q2 Preview: Stock Near All-Time Highs, Will Outperformance Vs. Pepsi Continue?",
