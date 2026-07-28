@@ -1,6 +1,6 @@
 {
   "date": "2026-07-28",
-  "generated_at": "Jul 28, 11:45am ET",
+  "generated_at": "Jul 28, 12:06pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -222,8 +222,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 151.9,
-      "upside": 0.1,
+      "price": 151.4,
+      "upside": 0.4,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -236,8 +236,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 184.29,
-      "upside": 0.4,
+      "price": 182.43,
+      "upside": 1.4,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -250,8 +250,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 183.57,
-      "upside": 18.8,
+      "price": 184.59,
+      "upside": 18.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -264,8 +264,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 188.24,
-      "upside": 6.2,
+      "price": 187.73,
+      "upside": 6.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -278,8 +278,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 183.57,
-      "upside": -21.0,
+      "price": 184.59,
+      "upside": -21.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -292,8 +292,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 183.57,
-      "upside": -0.3,
+      "price": 184.59,
+      "upside": -0.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -306,8 +306,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 183.57,
-      "upside": -28.1,
+      "price": 184.59,
+      "upside": -28.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,7 +320,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 339.42,
+      "price": 339.4,
       "upside": 7.2,
       "held": false,
       "uni": true,
@@ -334,8 +334,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 183.57,
-      "upside": -1.9,
+      "price": 184.59,
+      "upside": -2.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +348,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 188.24,
-      "upside": 10.0,
+      "price": 187.73,
+      "upside": 10.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -362,8 +362,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 345.99,
-      "upside": 9.0,
+      "price": 345.48,
+      "upside": 9.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -377,7 +377,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 9.0
+      "upside": 9.1
     },
     "CVX": {
       "date": "2026-07-23",
@@ -386,7 +386,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "upside": 10.0
+      "upside": 10.3
     },
     "AAPL": {
       "date": "2026-07-23",
@@ -404,7 +404,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": -1.9
+      "upside": -2.5
     },
     "PG": {
       "date": "2026-07-21",
@@ -413,7 +413,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 0.1
+      "upside": 0.4
     },
     "CRM": {
       "date": "2026-07-21",
@@ -422,7 +422,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 0.4
+      "upside": 1.4
     },
     "KO": {
       "date": "2026-07-21",
@@ -440,10 +440,22 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": -0.1
+      "upside": 0.2
     }
   },
   "bz_news": [
+    {
+      "title": "FIFA World Cup Delivers Coca-Cola's Best Quarterly Volume Growth in 17 Years",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60733302/fifa-world-cup-delivers-coca-colas-best-quarterly-volume-growth-in-17-years",
+      "ts": 1785254386,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.531
+    },
     {
       "title": "The Magnificent 7 Just Broke a Key Technical Level: What Happened Next Last Time?",
       "url": "https://www.benzinga.com/trading-ideas/technicals/26/07/60732291/magnificent-7-below-200-day-moving-average-buy-opportunity",
