@@ -1,6 +1,6 @@
 {
   "date": "2026-07-28",
-  "generated_at": "Jul 28, 4:11pm ET",
+  "generated_at": "Jul 28, 5:04pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -215,8 +215,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 148.76,
-      "upside": 2.2,
+      "price": 148.88,
+      "upside": 2.1,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -243,7 +243,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 182.46,
+      "price": 182.48,
       "upside": 19.5,
       "held": false,
       "uni": true,
@@ -257,8 +257,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 187.72,
-      "upside": 6.5,
+      "price": 187.58,
+      "upside": 6.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -271,7 +271,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 182.46,
+      "price": 182.48,
       "upside": -20.5,
       "held": false,
       "uni": true,
@@ -285,7 +285,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 182.46,
+      "price": 182.48,
       "upside": 0.3,
       "held": false,
       "uni": true,
@@ -299,7 +299,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 182.46,
+      "price": 182.48,
       "upside": -27.7,
       "held": false,
       "uni": true,
@@ -327,8 +327,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 182.46,
-      "upside": -1.3,
+      "price": 182.48,
+      "upside": -1.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -341,8 +341,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 187.72,
-      "upside": 10.3,
+      "price": 187.58,
+      "upside": 10.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -355,7 +355,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 344.57,
+      "price": 344.47,
       "upside": 9.4,
       "held": false,
       "uni": true,
@@ -369,8 +369,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "price": 187.72,
-      "upside": 20.9,
+      "price": 187.58,
+      "upside": 21.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -384,7 +384,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "upside": 20.9
+      "upside": 21.0
     },
     "HD": {
       "date": "2026-07-27",
@@ -411,7 +411,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": -1.3
+      "upside": -1.4
     },
     "PG": {
       "date": "2026-07-21",
@@ -420,7 +420,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 2.2
+      "upside": 2.1
     },
     "CRM": {
       "date": "2026-07-21",
@@ -452,6 +452,56 @@
   },
   "bz_news": [
     {
+      "title": "B of A Securities Maintains Buy on Intel, Maintains $160 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60746277/b-securities-maintains-buy-intel-maintains-160-price-target",
+      "ts": 1785271675,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.444
+    },
+    {
+      "title": "CLARITY Act Vote Delayed as Senate Turns to Russia Sanctions: What Do Prediction Markets Forecast?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60745675/clarity-act-vote-delayed-as-senate-turns-to-russia-sanctions-what-do-prediction-markets-forecast",
+      "ts": 1785270940,
+      "tickers": [
+        "$BTC",
+        "COIN",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.304
+    },
+    {
+      "title": "Visa Posts Strong Q3 Results: CEO Says 'Consumer and Business Spending Remains Resilient'",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60745628/visa-posts-strong-q3-results-ceo-says-consumer-and-business-spending-remains-resilient",
+      "ts": 1785270892,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.418
+    },
+    {
+      "title": "Visa Reports $563M As Severance Expenses",
+      "url": "https://www.benzinga.com/news/26/07/60745299/visa-reports-563m-severance-expenses",
+      "ts": 1785270602,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.323
+    },
+    {
       "title": "Visa Q3 Adj. EPS $3.32 Beats $3.23 Estimate, Sales $11.633B Beat $11.388B Estimate",
       "url": "https://www.benzinga.com/news/earnings/26/07/60743583/visa-q3-adj-eps-3-32-beats-3-23-estimate-sales-11-633b-beat-11-388b-estimate",
       "ts": 1785269238,
@@ -460,7 +510,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false
+      "rel": false,
+      "relevance": 0.495
     },
     {
       "title": "'Trump Administration To End Medicare Drug Plan Subsidy; Program That Held Down Premiums Not Renewed For 2027, Resulting In Higher Costs For Some Seniors' - WSJ Exclusive",
@@ -474,7 +525,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false
+      "rel": false,
+      "relevance": 0.231
     },
     {
       "title": "Amazon, Apple, Meta, Microsoft Earnings on Deck: 33% of Benzinga Viewers Say This is Top Report to Watch",
@@ -488,7 +540,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.42
     },
     {
       "title": "Microsoft Could Swing $189 Billion in Value After Earnings",
@@ -502,7 +555,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.392
     },
     {
       "title": "China Developments Spark KOSPI Crash, US Semi Stocks Follow As Fed Decision Looms",
@@ -516,7 +570,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.47
     },
     {
       "title": "QUICK SPARK: Jim Cramer Says Boeing Stock Is 'Ready to Run'",
@@ -527,7 +582,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false
+      "rel": false,
+      "relevance": 0.342
     },
     {
       "title": "Shares of data center infrastructure-related companies are trading lower as growth-oriented, AI-exposed stocks continue their retracement amid concerns over Chinese competition affecting the sector's hyperscaler clients and elevated Fed rates leading to costlier borrowing.",
@@ -541,7 +597,8 @@
       ],
       "source": "Benzinga",
       "wiim": true,
-      "rel": true
+      "rel": true,
+      "relevance": 0.467
     },
     {
       "title": "Apple, Microsoft, Meta, Amazon Earnings: Why The Next 48 Hours Could Redefine The AI Trade",
@@ -555,7 +612,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.49
     },
     {
       "title": "Why Is Salesforce Stock Surging Tuesday?",
@@ -569,7 +627,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.359
     },
     {
       "title": "B of A Securities Maintains Buy on Chevron, Raises Price Target to $227",
@@ -580,7 +639,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.474
     },
     {
       "title": "QUICK SPARK: AI Memory Demand May Stay Tight Until 2028, CEO Says",
@@ -594,7 +654,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.51
     },
     {
       "title": "Saint-Gobain Inks Deal With Microsoft To Leverage Microsoft's Digital, AI Tools",
@@ -605,7 +666,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false
+      "rel": false,
+      "relevance": 0.359
     },
     {
       "title": "What's Going On With Apple Stock Ahead of Q3 Earnings?",
@@ -616,7 +678,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.528
     },
     {
       "title": "Shares of software companies are trading higher as the sector rebounds from last week's sell-off following IBM's profit warning. Investors may also be rotating into software names as weakness in semiconductor and AI hardware stocks shifts interest toward less capital-intensive areas of the technology sector.",
@@ -630,7 +693,8 @@
       ],
       "source": "Benzinga",
       "wiim": true,
-      "rel": true
+      "rel": true,
+      "relevance": 0.44
     },
     {
       "title": "QUICK SPARK: Micron, SK Hynix And Memory Stocks Wipe Out More Than $2 Trillion Since June Highs",
@@ -644,7 +708,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.401
     },
     {
       "title": "Nasdaq 100 Enters Correction, SanDisk Sinks Over 50% From Peak: Stock Market Today",
@@ -658,7 +723,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.513
     },
     {
       "title": "Shares of foundry, fabricator and IDM semiconductor companies are trading lower as the industry extends its losses amid a selloff in Asian markets, spurred by concerns about AI infrastructure and Chinese competition, which weigh on U.S.-listed stocks.",
@@ -672,7 +738,8 @@
       ],
       "source": "Benzinga",
       "wiim": true,
-      "rel": true
+      "rel": true,
+      "relevance": 0.475
     },
     {
       "title": "Microsoft Stock Moves Higher: What's Going On?",
@@ -683,7 +750,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false
+      "rel": false,
+      "relevance": 0.55
     },
     {
       "title": "Microsoft Q4 Preview: 13 Straight Double Beats, Magnificent Seven Stock Goes for Another Blowout",
@@ -697,7 +765,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false
+      "rel": false,
+      "relevance": 0.41
     },
     {
       "title": "'OpenAI, Anthropic Staff Share Letter Asking US to Help Pace AI Progress' - Bloomberg",
@@ -711,7 +780,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false
+      "rel": false,
+      "relevance": 0.292
     },
     {
       "title": "Live On CNBC, Stephanie Link Announces Bought More IBM",
@@ -722,34 +792,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false
-    },
-    {
-      "title": "Top 3 Financial Stocks That May Keep You Up At Night This Quarter",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60735242/top-3-financial-stocks-that-may-keep-you-up-at-night-this-quarter-2",
-      "ts": 1785256949,
-      "tickers": [
-        "TRV",
-        "USCB",
-        "ACT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false
-    },
-    {
-      "title": "Crude Oil Down Over 5%; Boeing Shares Rise After Q2 Results",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60734567/crude-oil-down-over-5-boeing-shares-rise-after-q2-results",
-      "ts": 1785256092,
-      "tickers": [
-        "BA",
-        "OPK",
-        "AMKR",
-        "KNSA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true
+      "rel": false,
+      "relevance": 0.352
     },
     {
       "title": "FIFA World Cup Delivers Coca-Cola's Best Quarterly Volume Growth in 17 Years",
@@ -760,21 +804,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
-    },
-    {
-      "title": "Is the AI Chip Trade Actually Cracking? $1 Trillion Wiped Out in Korea — And It's Spreading",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60732161/ai-chip-trade-cracking-1-trillion-wipeout-in-korea-spreading",
-      "ts": 1785252808,
-      "tickers": [
-        "AMD",
-        "MU",
-        "SNDK",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.531
     },
     {
       "title": "QUICK SPARK: Coca-Cola Stock Hits Record High After Earnings",
@@ -785,7 +816,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.602
     },
     {
       "title": "Sherwin-Williams Posts Upbeat Q2 Earnings, Joins Itron, Armstrong World And Other Big Stocks Moving Higher On Tuesday",
@@ -799,7 +831,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.402
     },
     {
       "title": "Dow Jumps 350 Points; Coca-Cola Shares Gain On Upbeat Earnings",
@@ -813,7 +846,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.526
     },
     {
       "title": "Stock Market Today: Dow Jones Futures Gain as Coca-Cola Jumps After Q2 Beat, S&P 500, Nasdaq 100 Decline—Boeing, Johnson & Johnson in Focus (UPDATED)",
@@ -827,7 +861,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.512
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -838,7 +873,8 @@
       ],
       "source": "Benzinga",
       "wiim": true,
-      "rel": true
+      "rel": true,
+      "relevance": 0.579
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -849,7 +885,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.488
     },
     {
       "title": "Coca-Cola CFO Says Hydration Breaks During FIFA World Cup Were Boost For The Powerade Brand; Aluminum And PET Costs Were Higher Than Company Had Anticipated This Year",
@@ -860,7 +897,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.481
     },
     {
       "title": "Coca-Cola Raises FY2026 Adj EPS Guidance from $3.24-$3.27 to $3.27-$3.30 vs $3.27 Est",
@@ -871,7 +909,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.536
     },
     {
       "title": "Coca-Cola Q2 Adj. EPS $0.97 Beats $0.93 Estimate, Sales $13.400B Beat $13.162B Estimate",
@@ -882,7 +921,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.569
     },
     {
       "title": "Dow Gains Over 250 Points Amid Lower Oil Prices: Investor Sentiment Weakens, Greed Index Remains In ‘Fear’ Zone",
@@ -896,7 +936,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.47
     },
     {
       "title": "Boeing, Coca-Cola And 3 Stocks To Watch Heading Into Tuesday",
@@ -910,7 +951,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.49
     },
     {
       "title": "Coca-Cola's Earnings Could Put $10.7 Billion In Market Value On The Line",
@@ -924,7 +966,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.592
     },
     {
       "title": "Coca-Cola Q2 Preview: Stock Near All-Time Highs, Will Outperformance Vs. Pepsi Continue?",
@@ -937,7 +980,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.582
     },
     {
       "title": "How To Earn $500 A Month From Coca-Cola Stock Ahead Of Q2 Earnings",
@@ -948,7 +992,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.522
     },
     {
       "title": "Coca-Cola Announces That Its fairlife Dairy Unit Has Resumed Majority Of Its Production At Four U.S. Facilities",
@@ -959,7 +1004,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.484
     },
     {
       "title": "Warren Buffett Says Alphabet Is More Likely to Win Than 95% of Wall Street — But Adds ‘I Don’t Like It as Well as’ Coca-Cola And 4 Others",
@@ -973,7 +1019,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.443
     },
     {
       "title": "Reported Earlier: 'In India, Iran war forces Diet Coke to roll out a bigger can, heftier price tag' - Reuters",
@@ -984,7 +1031,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.376
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $91",
@@ -995,7 +1043,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.56
     },
     {
       "title": "'Coca-Cola appoints JPMorgan, Citi for India bottler IPO, sources say' - Reuters",
@@ -1008,7 +1057,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.515
     },
     {
       "title": "Coca-Cola Stock in Focus: A Look at the Earnings, Analyst Activity, Technical Picture",
@@ -1019,7 +1069,8 @@
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true
+      "rel": true,
+      "relevance": 0.599
     }
   ],
   "portfolio_brief": {
@@ -1420,8 +1471,8 @@
         },
         "periodic": {
           "form": "10-Q",
-          "date": "2026-04-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000024/spgi-20260331.htm"
+          "date": "2026-07-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm"
         },
         "insider30d": 1
       },
@@ -1575,7 +1626,7 @@
           "date": "2026-07-21",
           "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000028/efx-20260630.htm"
         },
-        "insider30d": 1
+        "insider30d": 2
       },
       "explain": "30 analysts cover it — 20 bullish, 10 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1823,23 +1874,18 @@
       "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
     },
     "SPGI": {
-      "period": "Q1 FY2026",
-      "filed": "2026-04-28",
+      "period": "Q3 FY2018",
+      "filed": "2018-10-26",
       "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000024/spgi-20260331.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
       "revenue": {
-        "fmt": "$4.2B",
-        "yoy": 10.4
+        "fmt": "$1.5B",
+        "yoy": 2.2
       },
-      "eps": {
-        "val": 4.69,
-        "yoy": 32.5
-      },
-      "net_income": {
-        "fmt": "$1.4B"
-      },
-      "margin": 33.4,
-      "summary": "Q1 FY2026 — revenue $4.2B (+10.4% YoY), diluted EPS $4.69 (+32.5% YoY), net margin 33%. (as reported, GAAP)"
+      "eps": null,
+      "net_income": null,
+      "margin": null,
+      "summary": "Q3 FY2018 — revenue $1.5B (+2.2% YoY). (as reported, GAAP)"
     },
     "NVS": null,
     "AVGO": {
