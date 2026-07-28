@@ -1,6 +1,6 @@
 {
   "date": "2026-07-28",
-  "generated_at": "Jul 28, 1:55pm ET",
+  "generated_at": "Jul 28, 2:23pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -113,16 +113,16 @@
     "KO": "2026-07-28",
     "RKLB": "2026-08-10",
     "ABT": "2026-10-13",
-    "NOW": "2026-10-27",
     "ZTS": "2026-08-06",
+    "NOW": "2026-10-27",
     "ADBE": "2026-09-10",
     "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
     "BSX": "2026-07-29",
     "UBER": "2026-08-05",
     "LULU": "2026-09-02",
-    "SPGI": "2026-07-28",
     "GILD": "2026-08-04",
+    "SPGI": "2026-07-28",
     "NVS": "2026-10-27",
     "AVGO": "2026-09-02",
     "NBIX": "2026-07-30",
@@ -132,17 +132,17 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Data Center Infrastructure",
+      "dir": "down",
+      "driver": "Growth-oriented",
+      "note": "As growth-oriented, AI-exposed stocks continue their retracement amid concerns over Chinese competition affecting the sector's hyperscaler clients and elevated Fed rates leading to costlier borrowing.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Software",
       "dir": "up",
       "driver": "The sector rebounds from last week's sell-off following IBM's profit war…",
       "note": "As the sector rebounds from last week's sell-off following IBM's profit warning. Investors may also be rotating into software names as weakness in semiconductor and AI hardware stocks shifts interest toward less capital-intensive areas of the technology sector.",
-      "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Foundry, Fabricator & Idm Semiconductor",
-      "dir": "down",
-      "driver": "The industry extends its losses amid a selloff in Asian markets",
-      "note": "As the industry extends its losses amid a selloff in Asian markets, spurred by concerns about AI infrastructure and Chinese competition, which weigh on U.S.-listed stocks.",
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
@@ -158,13 +158,6 @@
       "driver": "The UK government clarified that its ban on the sale of highly caffeinat…",
       "note": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Insurance & Reinsurance",
-      "dir": "mixed",
-      "driver": "Sympathy with Progressive after that company reported Q2 financial resul…",
-      "note": "Amid sympathy with Progressive after that company reported Q2 financial results that included weak policies-in-force and underwriting margins.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
     }
   ],
   "holding_news": {
@@ -208,8 +201,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "price": 87.71,
-      "upside": 3.8,
+      "price": 87.85,
+      "upside": 3.6,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -222,8 +215,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "price": 151.03,
-      "upside": 0.6,
+      "price": 151.28,
+      "upside": 0.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -236,8 +229,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "price": 183.5,
-      "upside": 0.8,
+      "price": 183.27,
+      "upside": 0.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -250,8 +243,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 182.16,
-      "upside": 19.7,
+      "price": 181.43,
+      "upside": 20.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -264,8 +257,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 188.09,
-      "upside": 6.3,
+      "price": 188.31,
+      "upside": 6.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -278,8 +271,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 182.16,
-      "upside": -20.4,
+      "price": 181.43,
+      "upside": -20.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -292,8 +285,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 182.16,
-      "upside": 0.5,
+      "price": 181.43,
+      "upside": 0.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -306,8 +299,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 182.16,
-      "upside": -27.5,
+      "price": 181.43,
+      "upside": -27.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +327,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 182.16,
-      "upside": -1.2,
+      "price": 181.43,
+      "upside": -0.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +341,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 188.09,
-      "upside": 10.1,
+      "price": 188.31,
+      "upside": 9.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -362,14 +355,37 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 344.06,
+      "price": 344.04,
       "upside": 9.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-28",
+      "ticker": "CVX",
+      "firm": "B of A Securities",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$227",
+      "price": 188.31,
+      "upside": 20.5,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "rating_moves": {
+    "CVX": {
+      "date": "2026-07-28",
+      "firm": "B of A Securities",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$227",
+      "upside": 20.5
+    },
     "HD": {
       "date": "2026-07-27",
       "firm": "DA Davidson",
@@ -378,15 +394,6 @@
       "stance": "bullish",
       "pt": "$377",
       "upside": 9.6
-    },
-    "CVX": {
-      "date": "2026-07-23",
-      "firm": "Piper Sandler",
-      "action": "Assumes",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$207",
-      "upside": 10.1
     },
     "AAPL": {
       "date": "2026-07-23",
@@ -404,7 +411,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": -1.2
+      "upside": -0.8
     },
     "PG": {
       "date": "2026-07-21",
@@ -413,7 +420,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 0.6
+      "upside": 0.5
     },
     "CRM": {
       "date": "2026-07-21",
@@ -422,7 +429,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 0.8
+      "upside": 0.9
     },
     "KO": {
       "date": "2026-07-21",
@@ -431,7 +438,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$91",
-      "upside": 3.8
+      "upside": 3.6
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -445,6 +452,63 @@
   },
   "bz_news": [
     {
+      "title": "Shares of data center infrastructure-related companies are trading lower as growth-oriented, AI-exposed stocks continue their retracement amid concerns over Chinese competition affecting the sector's hyperscaler clients and elevated Fed rates leading to costlier borrowing.",
+      "url": "https://www.benzinga.com/quote/WCC",
+      "ts": 1785262162,
+      "tickers": [
+        "STRL",
+        "GEV",
+        "FIX",
+        "VRT"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.467
+    },
+    {
+      "title": "Apple, Microsoft, Meta, Amazon Earnings: Why The Next 48 Hours Could Redefine The AI Trade",
+      "url": "https://www.benzinga.com/Opinion/26/07/60738619/apple-microsoft-meta-amazon-earnings-why-the-next-48-hours-could-redefine-the-ai-trade",
+      "ts": 1785261962,
+      "tickers": [
+        "AMZN",
+        "AAPL",
+        "META",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.49
+    },
+    {
+      "title": "Why Is Salesforce Stock Surging Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60738580/why-is-salesforce-stock-surging-tuesday",
+      "ts": 1785261874,
+      "tickers": [
+        "CRM",
+        "IBM",
+        "NOW",
+        "SAP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.359
+    },
+    {
+      "title": "B of A Securities Maintains Buy on Chevron, Raises Price Target to $227",
+      "url": "https://www.benzinga.com/news/26/07/60738266/b-securities-maintains-buy-chevron-raises-price-target-227",
+      "ts": 1785261417,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.474
+    },
+    {
       "title": "QUICK SPARK: AI Memory Demand May Stay Tight Until 2028, CEO Says",
       "url": "https://www.benzinga.com/markets/tech/26/07/60737789/ai-memory-shortage-could-last-until-2028-ceo-says",
       "ts": 1785260734,
@@ -457,7 +521,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.51
+      "relevance": 0.509
     },
     {
       "title": "Saint-Gobain Inks Deal With Microsoft To Leverage Microsoft's Digital, AI Tools",
@@ -729,57 +793,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.263
-    },
-    {
-      "title": "Boeing CEO, On 737 MAX, Says Think It's Going To Get Harder For The Supply Chain As We Go From 52 Jets To 57 Jets And Beyond",
-      "url": "https://www.benzinga.com/news/26/07/60730565/boeing-ceo-737-max-says-think-it-s-going-get-harder-supply-chain-we-go-52-jets-57-jets-and-beyond",
-      "ts": 1785250945,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.265
-    },
-    {
-      "title": "Boeing CEO, On 777X, Says Continue To Make Steady Progress On Certification; Remain On Track For First Delivery In 2027",
-      "url": "https://www.benzinga.com/news/26/07/60730334/boeing-ceo-777x-says-continue-make-steady-progress-certification-remain-track-first-delivery-2027",
-      "ts": 1785250742,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.248
-    },
-    {
-      "title": "Boeing Exec Says GE Is Finalizing Engine Modifications With The FAA; GE Has Already Incorporated The Change Into Their Production System; GE Engine Deliveries Are Expected To Resume In Q3",
-      "url": "https://www.benzinga.com/news/26/07/60729960/boeing-exec-says-ge-finalizing-engine-modifications-faa-ge-has-already-incorporated-change-their-pro",
-      "ts": 1785250368,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.312
-    },
-    {
-      "title": "Is Elon Musk Borrowing Amazon Prime's Playbook for X Money?",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60729858/is-elon-musk-borrowing-amazon-primes-playbook-for-x-money",
-      "ts": 1785250265,
-      "tickers": [
-        "AMZN",
-        "SPCX",
-        "AAPL",
-        "HOOD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.266
     },
     {
       "title": "QUICK SPARK: Coca-Cola Stock Hits Record High After Earnings",
@@ -1112,6 +1125,38 @@
       },
       "explain": "35 analysts cover it — 25 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "ZTS": {
+      "name": "Zoetis",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 5,
+        "buy": 8,
+        "hold": 11,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 24,
+        "bullish": 13,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.75,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000029/zts-20260520.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm"
+        },
+        "insider30d": 9
+      },
+      "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
     "NOW": {
       "name": "ServiceNow",
       "qarp": "BUY",
@@ -1148,38 +1193,6 @@
         "insider30d": 0
       },
       "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "ZTS": {
-      "name": "Zoetis",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 5,
-        "buy": 8,
-        "hold": 11,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 24,
-        "bullish": 13,
-        "bearish": 0,
-        "label": "Buy",
-        "score": 0.75,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-22",
-          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000029/zts-20260520.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm"
-        },
-        "insider30d": 9
-      },
-      "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "ADBE": {
       "name": "Adobe",
@@ -1383,6 +1396,38 @@
       },
       "explain": "39 analysts cover it — 2 bullish, 32 hold, 5 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
     },
+    "GILD": {
+      "name": "Gilead Sciences",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 10,
+        "buy": 20,
+        "hold": 7,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 37,
+        "bullish": 30,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.08,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000110465926064518/tm2615045d1_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm"
+        },
+        "insider30d": 3
+      },
+      "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
     "SPGI": {
       "name": "S&P Global",
       "qarp": "BUY",
@@ -1419,38 +1464,6 @@
         "insider30d": 1
       },
       "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "GILD": {
-      "name": "Gilead Sciences",
-      "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 10,
-        "buy": 20,
-        "hold": 7,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 37,
-        "bullish": 30,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.08,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-20",
-          "url": "https://www.sec.gov/Archives/edgar/data/882095/000110465926064518/tm2615045d1_8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm"
-        },
-        "insider30d": 3
-      },
-      "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "NVS": {
       "name": "Novartis",
@@ -1681,25 +1694,6 @@
       "margin": 9.6,
       "summary": "Q1 FY2026 — revenue $11.2B (+7.8% YoY), diluted EPS $0.61 (-19.7% YoY), net margin 10%. (as reported, GAAP)"
     },
-    "NOW": {
-      "period": "Q2 FY2026",
-      "filed": "2026-07-23",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm",
-      "revenue": {
-        "fmt": "$4.0B",
-        "yoy": 24.0
-      },
-      "eps": {
-        "val": 0.29,
-        "yoy": -21.6
-      },
-      "net_income": {
-        "fmt": "$298M"
-      },
-      "margin": 7.5,
-      "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
-    },
     "ZTS": {
       "period": "Q1 FY2026",
       "filed": "2026-05-07",
@@ -1718,6 +1712,25 @@
       },
       "margin": 26.6,
       "summary": "Q1 FY2026 — revenue $2.3B (+2.9% YoY), diluted EPS $1.42 (+6.0% YoY), net margin 27%. (as reported, GAAP)"
+    },
+    "NOW": {
+      "period": "Q2 FY2026",
+      "filed": "2026-07-23",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm",
+      "revenue": {
+        "fmt": "$4.0B",
+        "yoy": 24.0
+      },
+      "eps": {
+        "val": 0.29,
+        "yoy": -21.6
+      },
+      "net_income": {
+        "fmt": "$298M"
+      },
+      "margin": 7.5,
+      "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
     },
     "ADBE": {
       "period": "Q2 FY2026",
@@ -1833,25 +1846,6 @@
       "margin": 7.9,
       "summary": "Q1 FY2026 — revenue $2.5B (+4.3% YoY), diluted EPS $1.69 (-35.0% YoY), net margin 8%. (as reported, GAAP)"
     },
-    "SPGI": {
-      "period": "Q1 FY2026",
-      "filed": "2026-04-28",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000024/spgi-20260331.htm",
-      "revenue": {
-        "fmt": "$4.2B",
-        "yoy": 10.4
-      },
-      "eps": {
-        "val": 4.69,
-        "yoy": 32.5
-      },
-      "net_income": {
-        "fmt": "$1.4B"
-      },
-      "margin": 33.4,
-      "summary": "Q1 FY2026 — revenue $4.2B (+10.4% YoY), diluted EPS $4.69 (+32.5% YoY), net margin 33%. (as reported, GAAP)"
-    },
     "GILD": {
       "period": "Q1 FY2026",
       "filed": "2026-05-07",
@@ -1870,6 +1864,25 @@
       },
       "margin": 29.0,
       "summary": "Q1 FY2026 — revenue $7.0B (+4.4% YoY), diluted EPS $1.61 (+54.8% YoY), net margin 29%. (as reported, GAAP)"
+    },
+    "SPGI": {
+      "period": "Q1 FY2026",
+      "filed": "2026-04-28",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000024/spgi-20260331.htm",
+      "revenue": {
+        "fmt": "$4.2B",
+        "yoy": 10.4
+      },
+      "eps": {
+        "val": 4.69,
+        "yoy": 32.5
+      },
+      "net_income": {
+        "fmt": "$1.4B"
+      },
+      "margin": 33.4,
+      "summary": "Q1 FY2026 — revenue $4.2B (+10.4% YoY), diluted EPS $4.69 (+32.5% YoY), net margin 33%. (as reported, GAAP)"
     },
     "NVS": null,
     "AVGO": {
