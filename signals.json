@@ -1,6 +1,6 @@
 {
   "date": "2026-07-28",
-  "generated_at": "Jul 28, 8:33am ET",
+  "generated_at": "Jul 28, 9:24am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,6 +168,12 @@
     }
   ],
   "holding_news": {
+    "KO": {
+      "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
+      "ts": 1785242106,
+      "url": "https://www.benzinga.com/quote/KO",
+      "wiim": true
+    },
     "SPGI": {
       "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
       "ts": 1785169388,
@@ -185,12 +191,6 @@
       "ts": 1784737943,
       "url": "https://www.benzinga.com/quote/WEAV",
       "wiim": true
-    },
-    "KO": {
-      "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
-      "ts": 1785239953,
-      "url": "https://www.benzinga.com/news/26/07/60720814/coca-cola-cfo-says-it-true-say-we-have-lost-share-india-past-quarter",
-      "wiim": false
     },
     "NVDA": {
       "title": "Nvidia Funds AI Frenzy: Timeline of its Circular Financing Deals ... So Far",
@@ -445,6 +445,84 @@
   },
   "bz_news": [
     {
+      "title": "Micron, Nvidia, AMD on Watch as Asia's Chip Selloff Sends Warning to Wall Street",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60723966/micron-nvidia-amd-on-watch-as-asias-chip-selloff-sends-warning-to-wall-street",
+      "ts": 1785244566,
+      "tickers": [
+        "AMD",
+        "NVDA",
+        "MU",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.479
+    },
+    {
+      "title": "'Apple Set to Make Major Smart Home Push With Siri AI at Center' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60723699/apple-set-make-major-smart-home-push-siri-ai-center-bloomberg",
+      "ts": 1785244050,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.342
+    },
+    {
+      "title": "Citizens Reiterates Market Outperform on Microsoft, Maintains $550 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60722760/citizens-reiterates-market-outperform-microsoft-maintains-550-price-target",
+      "ts": 1785242828,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.458
+    },
+    {
+      "title": "'Visa to Cut 7% of Workforce as CEO Seeks to Revamp Payments Firm' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60722614/visa-cut-7-workforce-ceo-seeks-revamp-payments-firm-bloomberg",
+      "ts": 1785242488,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.324
+    },
+    {
+      "title": "Stock Market Today: Dow Jones Futures Gain as Coca-Cola Jumps After Q2 Beat, S&P 500, Nasdaq 100 Decline—Boeing, Johnson & Johnson in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60716461/stock-market-today-dow-jones-futures-gain-nasdaq-100-declines-as-oil-slips-ahead-of-trumps-meetings-with-zelensky-and-netanyahu-boeing-coca-cola-johnson-johnson-in-focus",
+      "ts": 1785242316,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "KO",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.512
+    },
+    {
+      "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
+      "url": "https://www.benzinga.com/quote/KO",
+      "ts": 1785242106,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.579
+    },
+    {
       "title": "Jim Cramer: Nike Is 'Just OK' While This 'Inexpensive' Financial Stock Is ‘Terrific'",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60722228/jim-cramer-nike-is-just-ok-while-this-inexpensive-financial-stock-is-terrific",
       "ts": 1785241913,
@@ -471,7 +549,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.32
+      "relevance": 0.319
     },
     {
       "title": "Twilio To Rally Around 26%? Here Are 10 Top Analyst Forecasts For Tuesday",
@@ -486,7 +564,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.42
+      "relevance": 0.421
     },
     {
       "title": "Apple Launches New Klarna-Powered Leasing Program, Giving Customers More Flexible Ways To Upgrade iPhones, Macs, iPads, And Apple Watches",
@@ -684,21 +762,6 @@
       "relevance": 0.471
     },
     {
-      "title": "Stock Market Today: Dow Jones Futures Gain, Nasdaq 100 Declines as Oil Slips Ahead of Trump's Meetings With Zelensky and Netanyahu—Boeing, Coca-Cola, Johnson & Johnson in Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60716461/stock-market-today-dow-jones-futures-gain-nasdaq-100-declines-as-oil-slips-ahead-of-trumps-meetings-with-zelensky-and-netanyahu-boeing-coca-cola-johnson-johnson-in-focus",
-      "ts": 1785230957,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "KO",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.435
-    },
-    {
       "title": "Dow Gains Over 250 Points Amid Lower Oil Prices: Investor Sentiment Weakens, Greed Index Remains In ‘Fear’ Zone",
       "url": "https://www.benzinga.com/markets/market-summary/26/07/60715901/dow-gains-over-250-points-amid-lower-oil-prices-investor-sentiment-weakens-greed-index-remains-in-fear-zone",
       "ts": 1785225610,
@@ -714,42 +777,6 @@
       "relevance": 0.47
     },
     {
-      "title": "Reported Earlier, Johnson & Johnson Proposes $5.5B Resolution Of Roughly 76,000 Ovarian Talc Claims, With First Payment Of Up To $3B In 2027, Conditioned On 95% Plaintiff Participation",
-      "url": "https://www.benzinga.com/news/26/07/60715698/reported-earlier-johnson-johnson-proposes-5-5b-resolution-roughly-76-000-ovarian-talc-claims-first-p",
-      "ts": 1785224463,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.302
-    },
-    {
-      "title": "SPEEA And Boeing Reach Tentative Agreements On Health Benefits, Vacation, Bereavement Leave And Adoption Assistance",
-      "url": "https://www.benzinga.com/news/26/07/60715583/speea-and-boeing-reach-tentative-agreements-health-benefits-vacation-bereavement-leave-and-adoption-",
-      "ts": 1785223359,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.262
-    },
-    {
-      "title": "FAA Proposes Airworthiness Directive For Boeing 737-8, 737-9 And 737-8200 Over Incorrectly Installed Passenger Seat Assemblies",
-      "url": "https://www.benzinga.com/quote/BA",
-      "ts": 1785222869,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.203
-    },
-    {
       "title": "Boeing, Coca-Cola And 3 Stocks To Watch Heading Into Tuesday",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60715418/boeing-coca-cola-and-3-stocks-to-watch-heading-into-tuesday",
       "ts": 1785222725,
@@ -763,21 +790,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.49
-    },
-    {
-      "title": "Elizabeth Warren Says Trump's Unfulfilled 10% Credit Card Rate Promise Has Cost Families $55B: The President Is 'Letting Wall Street Pad Its Profits'",
-      "url": "https://www.benzinga.com/markets/economic-data/26/07/60714718/elizabeth-warren-trump-credit-card-interest-rate-promise",
-      "ts": 1785212089,
-      "tickers": [
-        "JPM",
-        "BAC",
-        "AXP",
-        "COF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.264
     },
     {
       "title": "Coca-Cola's Earnings Could Put $10.7 Billion In Market Value On The Line",
@@ -1472,10 +1484,10 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
-        "ts": 1785239953,
-        "url": "https://www.benzinga.com/news/26/07/60720814/coca-cola-cfo-says-it-true-say-we-have-lost-share-india-past-quarter",
-        "wiim": false
+        "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
+        "ts": 1785242106,
+        "url": "https://www.benzinga.com/quote/KO",
+        "wiim": true
       },
       "filings": {
         "latest8k": {
