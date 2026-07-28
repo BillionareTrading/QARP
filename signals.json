@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-27",
-  "generated_at": "Jul 27, 7:59pm ET",
+  "date": "2026-07-28",
+  "generated_at": "Jul 28, 5:27am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 27",
+      "when": "Jul 28",
       "what": "Energy & geopolitics — today's read",
       "why": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "affects": "Energy · growth",
@@ -186,16 +186,16 @@
       "url": "https://www.benzinga.com/quote/WEAV",
       "wiim": true
     },
-    "NVDA": {
-      "title": "Nvidia Funds AI Frenzy: Timeline of its Circular Financing Deals ... So Far",
-      "ts": 1785191663,
-      "url": "https://www.benzinga.com/markets/tech/26/07/60713664/nvidia-funds-ai-frenzy-timeline-of-its-circular-financing-deals-so-far",
-      "wiim": false
-    },
     "KO": {
       "title": "Coca-Cola Q2 Preview: Stock Near All-Time Highs, Will Outperformance Vs. Pepsi Continue?",
       "ts": 1785170458,
       "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60703705/coca-cola-q2-preview-stock-near-all-time-highs-will-outperformance-vs-pepsi-continue",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "Nvidia Funds AI Frenzy: Timeline of its Circular Financing Deals ... So Far",
+      "ts": 1785191663,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60713664/nvidia-funds-ai-frenzy-timeline-of-its-circular-financing-deals-so-far",
       "wiim": false
     },
     "AVGO": {
@@ -219,34 +219,6 @@
       "held": true,
       "uni": true,
       "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-07-20",
-      "ticker": "HD",
-      "firm": "Guggenheim",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$425",
-      "price": 336.09,
-      "upside": 26.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-20",
-      "ticker": "CRM",
-      "firm": "CLSA",
-      "action": "Initiates Coverage On",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$165",
-      "price": 173.6,
-      "upside": -5.0,
-      "held": false,
-      "uni": true,
-      "qarp": "BUY"
     },
     {
       "date": "2026-07-21",
@@ -475,18 +447,90 @@
       "stance": "bullish",
       "pt": "$270",
       "upside": 1.5
-    },
-    "MRK": {
-      "date": "2026-07-13",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$140",
-      "upside": 7.1
     }
   },
   "bz_news": [
+    {
+      "title": "Dow Gains Over 250 Points Amid Lower Oil Prices: Investor Sentiment Weakens, Greed Index Remains In ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60715901/dow-gains-over-250-points-amid-lower-oil-prices-investor-sentiment-weakens-greed-index-remains-in-fear-zone",
+      "ts": 1785225610,
+      "tickers": [
+        "AZN",
+        "KO",
+        "BA",
+        "UPS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.47
+    },
+    {
+      "title": "Reported Earlier, Johnson & Johnson Proposes $5.5B Resolution Of Roughly 76,000 Ovarian Talc Claims, With First Payment Of Up To $3B In 2027, Conditioned On 95% Plaintiff Participation",
+      "url": "https://www.benzinga.com/news/26/07/60715698/reported-earlier-johnson-johnson-proposes-5-5b-resolution-roughly-76-000-ovarian-talc-claims-first-p",
+      "ts": 1785224463,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.302
+    },
+    {
+      "title": "SPEEA And Boeing Reach Tentative Agreements On Health Benefits, Vacation, Bereavement Leave And Adoption Assistance",
+      "url": "https://www.benzinga.com/news/26/07/60715583/speea-and-boeing-reach-tentative-agreements-health-benefits-vacation-bereavement-leave-and-adoption-",
+      "ts": 1785223359,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.262
+    },
+    {
+      "title": "FAA Proposes Airworthiness Directive For Boeing 737-8, 737-9 And 737-8200 Over Incorrectly Installed Passenger Seat Assemblies",
+      "url": "https://www.benzinga.com/quote/BA",
+      "ts": 1785222869,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.203
+    },
+    {
+      "title": "Boeing, Coca-Cola And 3 Stocks To Watch Heading Into Tuesday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60715418/boeing-coca-cola-and-3-stocks-to-watch-heading-into-tuesday",
+      "ts": 1785222725,
+      "tickers": [
+        "UPS",
+        "KO",
+        "BA",
+        "CDNS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.49
+    },
+    {
+      "title": "Elizabeth Warren Says Trump's Unfulfilled 10% Credit Card Rate Promise Has Cost Families $55B: The President Is 'Letting Wall Street Pad Its Profits'",
+      "url": "https://www.benzinga.com/markets/economic-data/26/07/60714718/elizabeth-warren-trump-credit-card-interest-rate-promise",
+      "ts": 1785212089,
+      "tickers": [
+        "JPM",
+        "BAC",
+        "AXP",
+        "COF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.264
+    },
     {
       "title": "Nvidia Funds AI Frenzy: Timeline of its Circular Financing Deals ... So Far",
       "url": "https://www.benzinga.com/markets/tech/26/07/60713664/nvidia-funds-ai-frenzy-timeline-of-its-circular-financing-deals-so-far",
@@ -530,7 +574,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.279
+      "relevance": 0.28
     },
     {
       "title": "Coca-Cola's Earnings Could Put $10.7 Billion In Market Value On The Line",
@@ -737,30 +781,6 @@
       "relevance": 0.463
     },
     {
-      "title": "These Analysts Cut Their Forecasts On American Express Following Q2 Earnings",
-      "url": "https://www.benzinga.com/news/26/07/60703308/these-analysts-cut-their-forecasts-on-american-express-following-q2-earnings",
-      "ts": 1785170029,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.418
-    },
-    {
-      "title": "Morgan Stanley Maintains Equal-Weight on American Express, Lowers Price Target to $382",
-      "url": "https://www.benzinga.com/news/26/07/60702917/morgan-stanley-maintains-equal-weight-american-express-lowers-price-target-382",
-      "ts": 1785169503,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.465
-    },
-    {
       "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
       "url": "https://www.benzinga.com/quote/WSE",
       "ts": 1785169388,
@@ -774,62 +794,6 @@
       "wiim": true,
       "rel": true,
       "relevance": 0.4
-    },
-    {
-      "title": "Alphabet Changed Wall Street’s Favorite AI Metric: Microsoft and Meta Are Up Next",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60702674/alphabet-microsoft-meta-ai-capex-1-trillion-race-hyperscaler-capex-tracker",
-      "ts": 1785169131,
-      "tickers": [
-        "META",
-        "MSFT",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.407
-    },
-    {
-      "title": "Charter Communications Stock Jumps 5%: Why Analysts Warn Broadband Pressure Will Persist",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/07/60702158/charter-communications-stock-jumps-5-why-analysts-warn-broadband-pressure-will-persist",
-      "ts": 1785168474,
-      "tickers": [
-        "CHTR",
-        "TMUS",
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.407
-    },
-    {
-      "title": "Gen Zer Asks Why Boomer Parents Don't Understand Today's Job Market. 'It Must Be You Who is Doing Something Wrong,' Their Father Tells Them",
-      "url": "https://www.benzinga.com/news/topics/26/07/60701779/gen-zer-asks-why-boomer-parents-dont-understand-todays-job-market-it-must-be-you-who-is-doing-something-wrong-their-father-tells-them",
-      "ts": 1785168063,
-      "tickers": [
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.164
-    },
-    {
-      "title": "LVMH Q2 Revenue €19.52 Billion Vs €19.45 Billion Est.; H1 Profit From Recurring Operations €8.69 Billion Vs €8.45 Billion Est.; Q2 Fashion And Leather Goods Revenue €8.90 Billion Vs €8.97 Billion Est.; H1 Net Income Group Share €5.70 Billion  Vs €5.22 Billion Est.",
-      "url": "https://www.benzinga.com/news/26/07/60701771/lvmh-q2-revenue-19-52-billion-vs-19-45-billion-est-h1-profit-recurring-operations-8-69-billion-vs-8-",
-      "ts": 1785168052,
-      "tickers": [
-        "LVMUY",
-        "LVMHF",
-        "CPRI",
-        "TPR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.399
     },
     {
       "title": "How To Earn $500 A Month From Coca-Cola Stock Ahead Of Q2 Earnings",
