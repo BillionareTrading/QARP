@@ -1,6 +1,6 @@
 {
   "date": "2026-07-29",
-  "generated_at": "Jul 29, 6:44am ET",
+  "generated_at": "Jul 29, 7:34am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,11 +93,11 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Jul 21",
-      "what": "KO — Barclays maintains",
+      "when": "Jul 29",
+      "what": "KO — Jefferies maintains",
       "affects": "KO",
       "dir": "two-sided",
-      "why": "Now rated <b>Overweight</b>, PT $91.",
+      "why": "Now rated <b>Buy</b>, PT $104.",
       "src": "Benzinga ratings"
     },
     {
@@ -186,13 +186,27 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "The Magnificent 7 Just Broke a Key Technical Level: What Happened Next Last Time?",
-      "ts": 1785252974,
-      "url": "https://www.benzinga.com/trading-ideas/technicals/26/07/60732291/magnificent-7-below-200-day-moving-average-buy-opportunity",
+      "title": "Meta CEO Mark Zuckerberg Says Chinese AI Model Ban Not an 'Effective Solution', Calls for Fewer Barriers: 'There's...This Question of Regulatory Capture'",
+      "ts": 1785313971,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60750429/meta-ceo-mark-zuckerberg-says-chinese-ai-model-ban-not-an-effective-solution-calls-for-fewer-barriers-theres-this-question-of-regulatory-capture",
       "wiim": false
     }
   },
   "ratings": [
+    {
+      "date": "2026-07-29",
+      "ticker": "KO",
+      "firm": "Jefferies",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$104",
+      "price": 88.27,
+      "upside": 17.8,
+      "held": true,
+      "uni": true,
+      "qarp": "AVOID"
+    },
     {
       "date": "2026-07-22",
       "ticker": "MMM",
@@ -335,6 +349,15 @@
     }
   ],
   "rating_moves": {
+    "KO": {
+      "date": "2026-07-29",
+      "firm": "Jefferies",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$104",
+      "upside": 17.8
+    },
     "CVX": {
       "date": "2026-07-28",
       "firm": "B of A Securities",
@@ -389,15 +412,6 @@
       "pt": "$185",
       "upside": 1.9
     },
-    "KO": {
-      "date": "2026-07-21",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$91",
-      "upside": 3.1
-    },
     "JNJ": {
       "date": "2026-07-17",
       "firm": "Guggenheim",
@@ -409,6 +423,142 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Intel Stock Is Gaining Wednesday: What's Going On?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60755221/intel-stock-is-gaining-wednesday-whats-going-on",
+      "ts": 1785324114,
+      "tickers": [
+        "INTC",
+        "SMH",
+        "SOXQ",
+        "IGPT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.454
+    },
+    {
+      "title": "JP Morgan Maintains Overweight on Visa, Raises Price Target to $450",
+      "url": "https://www.benzinga.com/news/26/07/60755079/jp-morgan-maintains-overweight-visa-raises-price-target-450",
+      "ts": 1785324018,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.416
+    },
+    {
+      "title": "Procter & Gamble Appoints President, CEO Shailesh Jejurikar To Additional Role Of Board Chairman, Effective Aug. 1, Succeeding Jon Moeller",
+      "url": "https://www.benzinga.com/news/26/07/60755065/procter-gamble-appoints-president-ceo-shailesh-jejurikar-additional-role-board-chairman-effective-au",
+      "ts": 1785323986,
+      "tickers": [
+        "PG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.338
+    },
+    {
+      "title": "Visa Delivers Reassuring Read on the US Consumer: No Signs of Spending Weakness",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60754784/visa-delivers-reassuring-read-on-the-us-consumer-no-signs-of-spending-weakness",
+      "ts": 1785323519,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.287
+    },
+    {
+      "title": "Bain Capital, Tillman Announce $1.5B Investment In Eaton Fiber To Bring Verizon Fiber Broadband To Over A Million Locations; Verizon To Acquire Ripple Fiber Customers",
+      "url": "https://www.benzinga.com/quote/VZ",
+      "ts": 1785323440,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.342
+    },
+    {
+      "title": "Jefferies Maintains Buy on Coca-Cola, Raises Price Target to $104",
+      "url": "https://www.benzinga.com/news/26/07/60754622/jefferies-maintains-buy-coca-cola-raises-price-target-104",
+      "ts": 1785323315,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.556
+    },
+    {
+      "title": "Procter & Gamble Sees FY2027 Adj EPS $6.89-$7.11 vs $7.04 Est; Sees Sales $85.127B-$86.813B vs $89.412B Est",
+      "url": "https://www.benzinga.com/news/26/07/60754285/procter-gamble-sees-fy2027-adj-eps-6-89-7-11-vs-7-04-est-sees-sales-85-127b-86-813b-vs-89-412b-est",
+      "ts": 1785323031,
+      "tickers": [
+        "PG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.399
+    },
+    {
+      "title": "Procter & Gamble Q4 Adj. EPS $1.43 Beats $1.41 Estimate, Sales $21.203B Miss $21.379B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60754004/procter-gamble-q4-adj-eps-1-43-beats-1-41-estimate-sales-21-203b-miss-21-379b-estimate",
+      "ts": 1785322863,
+      "tickers": [
+        "PG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.434
+    },
+    {
+      "title": "Apple's Incoming CEO John Ternus Signals More Apple TV Growth as Tim Cook Teases More Formula 1-Style Bets: 'We'll Do Things That...'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60753943/apples-incoming-ceo-john-ternus-signals-more-apple-tv-growth-as-tim-cook-teases-more-formula-1-style-bets-well-do-things-that",
+      "ts": 1785322842,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.317
+    },
+    {
+      "title": "Rick Scott Warns Beijing's New Drug Rules Could Threaten US Medicine Supply: 'Stop Being Dependent on Communist China'",
+      "url": "https://www.benzinga.com/news/health-care/26/07/60753443/rick-scott-warns-beijings-new-drug-rules-could-threaten-us-medicine-supply-stop-being-dependent-on-communist-china",
+      "ts": 1785322296,
+      "tickers": [
+        "MRK",
+        "ABBV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.29
+    },
+    {
+      "title": "Trump Admin Pulls The Plug On A Medicare Subsidy That Cut Drug Premiums— Oz Says the 'Bailout' Is Over As Seniors Brace for 2027 Hikes",
+      "url": "https://www.benzinga.com/news/health-care/26/07/60753422/trump-medicare-part-d-subsidy-end-2027",
+      "ts": 1785322247,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.236
+    },
     {
       "title": "Baird Downgrades Caterpillar to Neutral, Lowers Price Target to $900",
       "url": "https://www.benzinga.com/news/26/07/60752033/baird-downgrades-caterpillar-neutral-lowers-price-target-900",
@@ -545,7 +695,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.431
+      "relevance": 0.432
     },
     {
       "title": "QUICK SPARK: Goldman's High Beta Momentum Basket Heads for Worst Month Ever",
@@ -582,173 +732,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.444
-    },
-    {
-      "title": "CLARITY Act Vote Delayed as Senate Turns to Russia Sanctions: What Do Prediction Markets Forecast?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60745675/clarity-act-vote-delayed-as-senate-turns-to-russia-sanctions-what-do-prediction-markets-forecast",
-      "ts": 1785270940,
-      "tickers": [
-        "$BTC",
-        "COIN",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.304
-    },
-    {
-      "title": "Visa Posts Strong Q3 Results: CEO Says 'Consumer and Business Spending Remains Resilient'",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60745628/visa-posts-strong-q3-results-ceo-says-consumer-and-business-spending-remains-resilient",
-      "ts": 1785270892,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.418
-    },
-    {
-      "title": "Visa Reports $563M As Severance Expenses",
-      "url": "https://www.benzinga.com/news/26/07/60745299/visa-reports-563m-severance-expenses",
-      "ts": 1785270602,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.323
-    },
-    {
-      "title": "Visa Q3 Adj. EPS $3.32 Beats $3.23 Estimate, Sales $11.633B Beat $11.388B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60743583/visa-q3-adj-eps-3-32-beats-3-23-estimate-sales-11-633b-beat-11-388b-estimate",
-      "ts": 1785269238,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.496
-    },
-    {
-      "title": "'Trump Administration To End Medicare Drug Plan Subsidy; Program That Held Down Premiums Not Renewed For 2027, Resulting In Higher Costs For Some Seniors' - WSJ Exclusive",
-      "url": "https://www.benzinga.com/general/biotech/26/07/60742923/trump-administration-end-medicare-drug-plan-subsidy-program-held-down-premiums-not-renewed-2027-resu",
-      "ts": 1785268934,
-      "tickers": [
-        "XLV",
-        "HUM",
-        "UNH",
-        "CI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.231
-    },
-    {
-      "title": "Amazon, Apple, Meta, Microsoft Earnings on Deck: 33% of Benzinga Viewers Say This is Top Report to Watch",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60742266/amazon-apple-meta-microsoft-earnings-on-deck-33-of-benzinga-viewers-say-this-is-top-report-to-watch",
-      "ts": 1785267848,
-      "tickers": [
-        "AAPL",
-        "META",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.42
-    },
-    {
-      "title": "Microsoft Could Swing $189 Billion in Value After Earnings",
-      "url": "https://www.benzinga.com/markets/options/26/07/60741589/microsoft-could-swing-189-billion-in-value-after-earnings",
-      "ts": 1785267023,
-      "tickers": [
-        "META",
-        "MSFT",
-        "FTNT",
-        "SBUX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.392
-    },
-    {
-      "title": "China Developments Spark KOSPI Crash, US Semi Stocks Follow As Fed Decision Looms",
-      "url": "https://www.benzinga.com/Opinion/26/07/60740360/china-developments-spark-kospi-crash-us-semi-stocks-follow-as-fed-decision-looms",
-      "ts": 1785264739,
-      "tickers": [
-        "USO",
-        "SPY",
-        "NVDA",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.47
-    },
-    {
-      "title": "QUICK SPARK: Jim Cramer Says Boeing Stock Is 'Ready to Run'",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60739697/quick-spark-jim-cramer-says-boeing-stock-is-ready-to-run",
-      "ts": 1785263616,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.342
-    },
-    {
-      "title": "Shares of data center infrastructure-related companies are trading lower as growth-oriented, AI-exposed stocks continue their retracement amid concerns over Chinese competition affecting the sector's hyperscaler clients and elevated Fed rates leading to costlier borrowing.",
-      "url": "https://www.benzinga.com/quote/WCC",
-      "ts": 1785262162,
-      "tickers": [
-        "STRL",
-        "GEV",
-        "FIX",
-        "VRT"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.467
-    },
-    {
-      "title": "Apple, Microsoft, Meta, Amazon Earnings: Why The Next 48 Hours Could Redefine The AI Trade",
-      "url": "https://www.benzinga.com/Opinion/26/07/60738619/apple-microsoft-meta-amazon-earnings-why-the-next-48-hours-could-redefine-the-ai-trade",
-      "ts": 1785261962,
-      "tickers": [
-        "AMZN",
-        "AAPL",
-        "META",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.49
-    },
-    {
-      "title": "Why Is Salesforce Stock Surging Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60738580/why-is-salesforce-stock-surging-tuesday",
-      "ts": 1785261874,
-      "tickers": [
-        "CRM",
-        "IBM",
-        "NOW",
-        "SAP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.359
     },
     {
       "title": "Nasdaq 100 Enters Correction, SanDisk Sinks Over 50% From Peak: Stock Market Today",
@@ -1248,9 +1231,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "The Magnificent 7 Just Broke a Key Technical Level: What Happened Next Last Time?",
-        "ts": 1785252974,
-        "url": "https://www.benzinga.com/trading-ideas/technicals/26/07/60732291/magnificent-7-below-200-day-moving-average-buy-opportunity",
+        "title": "Meta CEO Mark Zuckerberg Says Chinese AI Model Ban Not an 'Effective Solution', Calls for Fewer Barriers: 'There's...This Question of Regulatory Capture'",
+        "ts": 1785313971,
+        "url": "https://www.benzinga.com/markets/tech/26/07/60750429/meta-ceo-mark-zuckerberg-says-chinese-ai-model-ban-not-an-effective-solution-calls-for-fewer-barriers-theres-this-question-of-regulatory-capture",
         "wiim": false
       },
       "filings": {
