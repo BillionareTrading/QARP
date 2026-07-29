@@ -1,6 +1,6 @@
 {
   "date": "2026-07-29",
-  "generated_at": "Jul 29, 11:19am ET",
+  "generated_at": "Jul 29, 11:28am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -99,21 +99,13 @@
       "dir": "two-sided",
       "why": "Now rated <b>Outperform</b>, PT $96.",
       "src": "Benzinga ratings"
-    },
-    {
-      "when": "Jul 29",
-      "what": "Energy & geopolitics — today's read",
-      "why": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
-      "affects": "Energy · growth",
-      "dir": "two-sided",
-      "src": "Benzinga WIIM (live)"
     }
   ],
   "earnings_next": {
     "KO": "2026-10-20",
     "RKLB": "2026-08-10",
-    "ADBE": "2026-09-10",
     "ABT": "2026-10-13",
+    "ADBE": "2026-09-10",
     "NOW": "2026-10-27",
     "ZTS": "2026-08-06",
     "DHR": "2026-10-19",
@@ -133,13 +125,6 @@
   },
   "risk_asof": "2026-07-05",
   "sectors": [
-    {
-      "sector": "Oil & Gas",
-      "dir": "up",
-      "driver": "Crude prices gain after Iranian strikes directed at U.S. assets in Jordan",
-      "note": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
-      "src": "Benzinga WIIM · price-confirmed"
-    },
     {
       "sector": "Data Center Infrastructure",
       "dir": "down",
@@ -243,7 +228,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 180.18,
+      "price": 180.15,
       "upside": 21.0,
       "held": false,
       "uni": true,
@@ -257,8 +242,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 192.22,
-      "upside": 4.0,
+      "price": 192.59,
+      "upside": 3.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -271,7 +256,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 180.18,
+      "price": 180.15,
       "upside": -19.5,
       "held": false,
       "uni": true,
@@ -285,7 +270,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 180.18,
+      "price": 180.15,
       "upside": 1.6,
       "held": false,
       "uni": true,
@@ -299,7 +284,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 180.18,
+      "price": 180.15,
       "upside": -26.7,
       "held": false,
       "uni": true,
@@ -313,7 +298,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 340.0,
+      "price": 339.77,
       "upside": 7.1,
       "held": false,
       "uni": true,
@@ -327,7 +312,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 180.18,
+      "price": 180.15,
       "upside": -0.1,
       "held": false,
       "uni": true,
@@ -341,8 +326,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 192.22,
-      "upside": 7.7,
+      "price": 192.59,
+      "upside": 7.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -355,7 +340,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 339.86,
+      "price": 339.83,
       "upside": 10.9,
       "held": false,
       "uni": true,
@@ -369,8 +354,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "price": 192.22,
-      "upside": 18.1,
+      "price": 192.59,
+      "upside": 17.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -383,7 +368,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 131.33,
+      "price": 131.34,
       "upside": 14.2,
       "held": false,
       "uni": true,
@@ -416,7 +401,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "upside": 18.1
+      "upside": 17.9
     },
     "HD": {
       "date": "2026-07-27",
@@ -452,7 +437,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 4.6
+      "upside": 4.7
     },
     "CRM": {
       "date": "2026-07-21",
@@ -461,7 +446,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": -0.9
+      "upside": -0.8
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -470,10 +455,22 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 1.0
+      "upside": 0.8
     }
   },
   "bz_news": [
+    {
+      "title": "UBS Maintains Buy on Visa, Raises Price Target to $420",
+      "url": "https://www.benzinga.com/news/26/07/60766513/ubs-maintains-buy-visa-raises-price-target-420",
+      "ts": 1785338662,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.463
+    },
     {
       "title": "SpaceX Stock Now Has $26 Billion in Short Bets — 35% of its Entire Float",
       "url": "https://www.benzinga.com/markets/tech/26/07/60766052/spacex-stock-now-has-26-billion-in-short-bets-35-of-its-entire-float",
@@ -795,18 +792,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.487
-    },
-    {
-      "title": "Barclays Maintains Equal-Weight on Amgen, Raises Price Target to $360",
-      "url": "https://www.benzinga.com/news/26/07/60756360/barclays-maintains-equal-weight-amgen-raises-price-target-360",
-      "ts": 1785326117,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.48
     },
     {
       "title": "Jefferies Maintains Buy on Coca-Cola, Raises Price Target to $104",
@@ -1135,6 +1120,38 @@
       },
       "explain": "26 analysts cover it — 22 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
+    "ABT": {
+      "name": "Abbott Laboratories",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 14,
+        "hold": 10,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 35,
+        "bullish": 25,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.03,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
+        },
+        "insider30d": 7
+      },
+      "explain": "35 analysts cover it — 25 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "ADBE": {
       "name": "Adobe",
       "qarp": "BUY",
@@ -1171,38 +1188,6 @@
         "insider30d": 8
       },
       "explain": "45 analysts cover it — 17 bullish, 25 hold, 3 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "ABT": {
-      "name": "Abbott Laboratories",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 14,
-        "hold": 10,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 35,
-        "bullish": 25,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.03,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-16",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
-        },
-        "insider30d": 7
-      },
-      "explain": "35 analysts cover it — 25 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NOW": {
       "name": "ServiceNow",
@@ -1783,6 +1768,20 @@
       "margin": -22.5,
       "summary": "Q1 FY2026 — revenue $200M (+63.5% YoY), diluted EPS $-0.07 (+41.7% YoY), net margin -22%. (as reported, GAAP)"
     },
+    "ABT": {
+      "period": "FY2017",
+      "filed": "2018-02-16",
+      "form": "10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
+      "revenue": {
+        "fmt": "$7.6B",
+        "yoy": 42.3
+      },
+      "eps": null,
+      "net_income": null,
+      "margin": null,
+      "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
+    },
     "ADBE": {
       "period": "Q2 FY2026",
       "filed": "2026-06-15",
@@ -1801,20 +1800,6 @@
       },
       "margin": 25.9,
       "summary": "Q2 FY2026 — revenue $6.6B (+12.7% YoY), diluted EPS $4.25 (+7.9% YoY), net margin 26%. (as reported, GAAP)"
-    },
-    "ABT": {
-      "period": "FY2017",
-      "filed": "2018-02-16",
-      "form": "10-K",
-      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
-      "revenue": {
-        "fmt": "$7.6B",
-        "yoy": 42.3
-      },
-      "eps": null,
-      "net_income": null,
-      "margin": null,
-      "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
     },
     "NOW": {
       "period": "Q2 FY2026",
