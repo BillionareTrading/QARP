@@ -1,6 +1,6 @@
 {
   "date": "2026-07-29",
-  "generated_at": "Jul 29, 9:15am ET",
+  "generated_at": "Jul 29, 10:05am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -94,10 +94,10 @@
     },
     {
       "when": "Jul 29",
-      "what": "KO — Jefferies maintains",
+      "what": "KO — RBC Capital maintains",
       "affects": "KO",
       "dir": "two-sided",
-      "why": "Now rated <b>Buy</b>, PT $104.",
+      "why": "Now rated <b>Outperform</b>, PT $96.",
       "src": "Benzinga ratings"
     }
   ],
@@ -105,18 +105,20 @@
     "KO": "2026-10-20",
     "RKLB": "2026-08-10",
     "ABT": "2026-10-13",
-    "ZTS": "2026-08-06",
     "NOW": "2026-10-27",
+    "ZTS": "2026-08-06",
     "ADBE": "2026-09-10",
     "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
-    "BSX": "2026-07-29",
     "UBER": "2026-08-05",
+    "BSX": "2026-07-29",
     "LULU": "2026-09-02",
     "GILD": "2026-08-04",
     "SPGI": "2026-10-28",
     "NVS": "2026-10-27",
     "AVGO": "2026-09-02",
+    "SAP": "2026-10-21",
+    "EXE": "2026-10-26",
     "NBIX": "2026-07-30",
     "VRTX": "2026-08-03",
     "EFX": "2026-10-19"
@@ -146,6 +148,12 @@
     }
   ],
   "holding_news": {
+    "KO": {
+      "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
+      "ts": 1785333521,
+      "url": "https://www.benzinga.com/quote/KO",
+      "wiim": true
+    },
     "ADBE": {
       "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
       "ts": 1784737943,
@@ -158,10 +166,10 @@
       "url": "https://www.benzinga.com/quote/WEAV",
       "wiim": true
     },
-    "KO": {
-      "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
-      "ts": 1785242106,
-      "url": "https://www.benzinga.com/quote/KO",
+    "SAP": {
+      "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+      "ts": 1784737943,
+      "url": "https://www.benzinga.com/quote/WEAV",
       "wiim": true
     },
     "SPGI": {
@@ -171,13 +179,27 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Corning Landed Apple, Meta, Nvidia and Amazon in Six Months. Now It Thinks Revenue Can Double by 2030.",
-      "ts": 1785330695,
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60759109/corning-landed-apple-meta-nvidia-and-amazon-in-six-months-now-it-thinks-revenue-can-double-by-2030",
+      "title": "SK Hynix Just Had Its Best Quarter Ever: The Stock Is Down 53% From Peak",
+      "ts": 1785332594,
+      "url": "https://www.benzinga.com/markets/equities/26/07/60760346/sk-hynix-just-had-its-best-quarter-ever-the-stock-is-down-53-from-peak",
       "wiim": false
     }
   },
   "ratings": [
+    {
+      "date": "2026-07-29",
+      "ticker": "KO",
+      "firm": "RBC Capital",
+      "action": "Maintains",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$96",
+      "price": 90.66,
+      "upside": 5.9,
+      "held": true,
+      "uni": true,
+      "qarp": "AVOID"
+    },
     {
       "date": "2026-07-29",
       "ticker": "KO",
@@ -186,8 +208,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$104",
-      "price": 88.27,
-      "upside": 17.8,
+      "price": 90.66,
+      "upside": 14.7,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -200,8 +222,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 182.48,
-      "upside": 19.5,
+      "price": 181.75,
+      "upside": 19.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -214,11 +236,11 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 187.58,
-      "upside": 6.6,
+      "price": 191.91,
+      "upside": 4.2,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-07-22",
@@ -228,8 +250,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 182.48,
-      "upside": -20.5,
+      "price": 181.75,
+      "upside": -20.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -242,8 +264,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 182.48,
-      "upside": 0.3,
+      "price": 181.75,
+      "upside": 0.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -256,8 +278,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 182.48,
-      "upside": -27.7,
+      "price": 181.75,
+      "upside": -27.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -270,8 +292,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 340.08,
-      "upside": 7.0,
+      "price": 342.95,
+      "upside": 6.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -284,8 +306,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 182.48,
-      "upside": -1.4,
+      "price": 181.75,
+      "upside": -1.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -298,11 +320,11 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 187.58,
-      "upside": 10.4,
+      "price": 191.91,
+      "upside": 7.9,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-07-27",
@@ -312,8 +334,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 344.47,
-      "upside": 9.4,
+      "price": 341.79,
+      "upside": 10.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -326,11 +348,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "price": 187.58,
-      "upside": 21.0,
+      "price": 191.91,
+      "upside": 18.3,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-07-29",
@@ -340,8 +362,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 131.82,
-      "upside": 13.8,
+      "price": 131.01,
+      "upside": 14.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -355,16 +377,16 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "upside": 13.8
+      "upside": 14.5
     },
     "KO": {
       "date": "2026-07-29",
-      "firm": "Jefferies",
+      "firm": "RBC Capital",
       "action": "Maintains",
-      "rating": "Buy",
+      "rating": "Outperform",
       "stance": "bullish",
-      "pt": "$104",
-      "upside": 17.8
+      "pt": "$96",
+      "upside": 5.9
     },
     "CVX": {
       "date": "2026-07-28",
@@ -373,7 +395,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "upside": 21.0
+      "upside": 18.3
     },
     "HD": {
       "date": "2026-07-27",
@@ -382,7 +404,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 9.4
+      "upside": 10.3
     },
     "AAPL": {
       "date": "2026-07-23",
@@ -391,7 +413,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "upside": 7.0
+      "upside": 6.1
     },
     "MMM": {
       "date": "2026-07-23",
@@ -400,7 +422,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": -1.4
+      "upside": -1.0
     },
     "PG": {
       "date": "2026-07-21",
@@ -409,7 +431,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 2.1
+      "upside": 4.5
     },
     "CRM": {
       "date": "2026-07-21",
@@ -418,7 +440,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 1.9
+      "upside": -0.2
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -427,10 +449,155 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 1.2
+      "upside": 1.0
     }
   },
   "bz_news": [
+    {
+      "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
+      "url": "https://www.benzinga.com/quote/KO",
+      "ts": 1785333521,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.511
+    },
+    {
+      "title": "Opendoor Technologies Chief Growth Officer Morgan Brown Posts On X \"Opendoor is now running ads in ChatGPT. We launched a test this week putting Opendoor in front of sellers directly inside ChatGPT via OpenAI's new ad product. Excited to see how this new channel does.\"",
+      "url": "https://www.benzinga.com/news/26/07/60761257/opendoor-technologies-chief-growth-officer-morgan-brown-posts-x-opendoor-now-running-ads-chatgpt-we-",
+      "ts": 1785333518,
+      "tickers": [
+        "OPEN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.299
+    },
+    {
+      "title": "Procter & Gamble Reports Flat Organic Sales Amid Rising Costs",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60761029/procter-gamble-reports-flat-organic-sales-amid-rising-costs",
+      "ts": 1785333329,
+      "tickers": [
+        "PG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.379
+    },
+    {
+      "title": "RBC Capital Maintains Outperform on Visa, Raises Price Target to $412",
+      "url": "https://www.benzinga.com/news/26/07/60760934/rbc-capital-maintains-outperform-visa-raises-price-target-412",
+      "ts": 1785333197,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.435
+    },
+    {
+      "title": "RBC Capital Maintains Outperform on Coca-Cola, Raises Price Target to $96",
+      "url": "https://www.benzinga.com/news/26/07/60760846/rbc-capital-maintains-outperform-coca-cola-raises-price-target-96",
+      "ts": 1785333109,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.558
+    },
+    {
+      "title": "Dow Tumbles 400 Points; Procter & Gamble Shares Fall After Q4 Results",
+      "url": "https://www.benzinga.com/news/26/07/60760497/dow-tumbles-400-points-procter-gamble-shares-fall-after-q4-results",
+      "ts": 1785332791,
+      "tickers": [
+        "PG",
+        "PSN",
+        "AMIX",
+        "NCRA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.4
+    },
+    {
+      "title": "SK Hynix Just Had Its Best Quarter Ever: The Stock Is Down 53% From Peak",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60760346/sk-hynix-just-had-its-best-quarter-ever-the-stock-is-down-53-from-peak",
+      "ts": 1785332594,
+      "tickers": [
+        "SKHY",
+        "AAPL",
+        "SSNLF",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.326
+    },
+    {
+      "title": "RBC Capital Maintains Outperform on Boeing, Lowers Price Target to $265",
+      "url": "https://www.benzinga.com/news/26/07/60759949/rbc-capital-maintains-outperform-boeing-lowers-price-target-265",
+      "ts": 1785332242,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.46
+    },
+    {
+      "title": "Citigroup Maintains Buy on Walt Disney, Lowers Price Target to $135",
+      "url": "https://www.benzinga.com/news/26/07/60759832/citigroup-maintains-buy-walt-disney-lowers-price-target-135",
+      "ts": 1785332151,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.429
+    },
+    {
+      "title": "Visa To Rally Around 23%? Here Are 10 Top Analyst Forecasts For Wednesday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60759724/visa-to-rally-around-23-here-are-10-top-analyst-forecasts-for-wednesday",
+      "ts": 1785332071,
+      "tickers": [
+        "V",
+        "PYPL",
+        "STX",
+        "CAKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.43
+    },
+    {
+      "title": "'Bitcoin Doesn't Need CLARITY,' Anthony Pompliano Says: 'We'll Hit All-Time Highs Either Way'",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60759498/bitcoin-doesnt-need-clarity-anthony-pompliano-says-well-hit-all-time-highs-either-way",
+      "ts": 1785331488,
+      "tickers": [
+        "$BTC",
+        "COIN",
+        "JPM",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.211
+    },
     {
       "title": "Corning Landed Apple, Meta, Nvidia and Amazon in Six Months. Now It Thinks Revenue Can Double by 2030.",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60759109/corning-landed-apple-meta-nvidia-and-amazon-in-six-months-now-it-thinks-revenue-can-double-by-2030",
@@ -471,7 +638,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.483
+      "relevance": 0.482
     },
     {
       "title": "Citigroup Maintains Buy on Visa, Raises Price Target to $440",
@@ -600,81 +767,6 @@
       "relevance": 0.359
     },
     {
-      "title": "Baird Maintains Outperform on Visa, Raises Price Target to $420",
-      "url": "https://www.benzinga.com/news/26/07/60755719/baird-maintains-outperform-visa-raises-price-target-420",
-      "ts": 1785324984,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.449
-    },
-    {
-      "title": "Intel Stock Is Gaining Wednesday: What's Going On?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60755221/intel-stock-is-gaining-wednesday-whats-going-on",
-      "ts": 1785324114,
-      "tickers": [
-        "INTC",
-        "SMH",
-        "SOXQ",
-        "IGPT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.454
-    },
-    {
-      "title": "JP Morgan Maintains Overweight on Visa, Raises Price Target to $450",
-      "url": "https://www.benzinga.com/news/26/07/60755079/jp-morgan-maintains-overweight-visa-raises-price-target-450",
-      "ts": 1785324018,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.416
-    },
-    {
-      "title": "Procter & Gamble Appoints President, CEO Shailesh Jejurikar To Additional Role Of Board Chairman, Effective Aug. 1, Succeeding Jon Moeller",
-      "url": "https://www.benzinga.com/news/26/07/60755065/procter-gamble-appoints-president-ceo-shailesh-jejurikar-additional-role-board-chairman-effective-au",
-      "ts": 1785323986,
-      "tickers": [
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.338
-    },
-    {
-      "title": "Visa Delivers Reassuring Read on the US Consumer: No Signs of Spending Weakness",
-      "url": "https://www.benzinga.com/markets/large-cap/26/07/60754784/visa-delivers-reassuring-read-on-the-us-consumer-no-signs-of-spending-weakness",
-      "ts": 1785323519,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.288
-    },
-    {
-      "title": "Bain Capital, Tillman Announce $1.5B Investment In Eaton Fiber To Bring Verizon Fiber Broadband To Over A Million Locations; Verizon To Acquire Ripple Fiber Customers",
-      "url": "https://www.benzinga.com/quote/VZ",
-      "ts": 1785323440,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.342
-    },
-    {
       "title": "Jefferies Maintains Buy on Coca-Cola, Raises Price Target to $104",
       "url": "https://www.benzinga.com/news/26/07/60754622/jefferies-maintains-buy-coca-cola-raises-price-target-104",
       "ts": 1785323315,
@@ -685,42 +777,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.556
-    },
-    {
-      "title": "Procter & Gamble Sees FY2027 Adj EPS $6.89-$7.11 vs $7.04 Est; Sees Sales $85.127B-$86.813B vs $89.412B Est",
-      "url": "https://www.benzinga.com/news/26/07/60754285/procter-gamble-sees-fy2027-adj-eps-6-89-7-11-vs-7-04-est-sees-sales-85-127b-86-813b-vs-89-412b-est",
-      "ts": 1785323031,
-      "tickers": [
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.398
-    },
-    {
-      "title": "Procter & Gamble Q4 Adj. EPS $1.43 Beats $1.41 Estimate, Sales $21.203B Miss $21.379B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60754004/procter-gamble-q4-adj-eps-1-43-beats-1-41-estimate-sales-21-203b-miss-21-379b-estimate",
-      "ts": 1785322863,
-      "tickers": [
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.433
-    },
-    {
-      "title": "Apple's Incoming CEO John Ternus Signals More Apple TV Growth as Tim Cook Teases More Formula 1-Style Bets: 'We'll Do Things That...'",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60753943/apples-incoming-ceo-john-ternus-signals-more-apple-tv-growth-as-tim-cook-teases-more-formula-1-style-bets-well-do-things-that",
-      "ts": 1785322842,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.317
     },
     {
       "title": "Trump Administration Pulls the Plug on a Medicare Subsidy That Cut Drug Premiums— Oz Says the 'Bailout' Is Over as Seniors Brace for 2027 Hikes",
@@ -1014,32 +1070,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.56
-    },
-    {
-      "title": "'Coca-Cola appoints JPMorgan, Citi for India bottler IPO, sources say' - Reuters",
-      "url": "https://www.benzinga.com/news/26/07/60553171/coca-cola-appoints-jpmorgan-citi-india-bottler-ipo-sources-say-reuters",
-      "ts": 1784556964,
-      "tickers": [
-        "KO",
-        "JPM",
-        "C"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.515
-    },
-    {
-      "title": "Coca-Cola Stock in Focus: A Look at the Earnings, Analyst Activity, Technical Picture",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60550683/coca-cola-stock-in-focus-a-look-at-the-earnings-analyst-activity-technical-picture",
-      "ts": 1784554255,
-      "tickers": [
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.599
     }
   ],
   "portfolio_brief": {
@@ -1107,38 +1137,6 @@
       },
       "explain": "35 analysts cover it — 25 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "ZTS": {
-      "name": "Zoetis",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 5,
-        "buy": 8,
-        "hold": 11,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 24,
-        "bullish": 13,
-        "bearish": 0,
-        "label": "Buy",
-        "score": 0.75,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-22",
-          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000029/zts-20260520.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm"
-        },
-        "insider30d": 9
-      },
-      "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-    },
     "NOW": {
       "name": "ServiceNow",
       "qarp": "BUY",
@@ -1175,6 +1173,38 @@
         "insider30d": 0
       },
       "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "ZTS": {
+      "name": "Zoetis",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 5,
+        "buy": 8,
+        "hold": 11,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 24,
+        "bullish": 13,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.75,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000029/zts-20260520.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm"
+        },
+        "insider30d": 9
+      },
+      "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "ADBE": {
       "name": "Adobe",
@@ -1262,9 +1292,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Corning Landed Apple, Meta, Nvidia and Amazon in Six Months. Now It Thinks Revenue Can Double by 2030.",
-        "ts": 1785330695,
-        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60759109/corning-landed-apple-meta-nvidia-and-amazon-in-six-months-now-it-thinks-revenue-can-double-by-2030",
+        "title": "SK Hynix Just Had Its Best Quarter Ever: The Stock Is Down 53% From Peak",
+        "ts": 1785332594,
+        "url": "https://www.benzinga.com/markets/equities/26/07/60760346/sk-hynix-just-had-its-best-quarter-ever-the-stock-is-down-53-from-peak",
         "wiim": false
       },
       "filings": {
@@ -1281,38 +1311,6 @@
         "insider30d": 10
       },
       "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "BSX": {
-      "name": "Boston Scientific",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 12,
-        "buy": 19,
-        "hold": 8,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 39,
-        "bullish": 31,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000051/bsx-20260729.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-01",
-          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm"
-        },
-        "insider30d": 1
-      },
-      "explain": "39 analysts cover it — 31 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "UBER": {
       "name": "Uber",
@@ -1345,6 +1343,38 @@
         "insider30d": 10
       },
       "explain": "60 analysts cover it — 51 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "BSX": {
+      "name": "Boston Scientific",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 12,
+        "buy": 19,
+        "hold": 8,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 39,
+        "bullish": 31,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000051/bsx-20260729.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "39 analysts cover it — 31 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "LULU": {
       "name": "Lululemon",
@@ -1503,6 +1533,67 @@
       },
       "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "SAP": {
+      "name": "SAP",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 9,
+        "buy": 20,
+        "hold": 8,
+        "sell": 1,
+        "strongSell": 1,
+        "total": 39,
+        "bullish": 29,
+        "bearish": 2,
+        "label": "Buy",
+        "score": 0.9,
+        "period": "2026-07-01"
+      },
+      "news": {
+        "title": "Shares of software companies are trading lower after reports suggesting that OpenAI is developing a product called Presence that will help customers automate internal processes using AI agents. The deployment of AI tools into customer back-office systems may erode confidence in legacy software business models.",
+        "ts": 1784737943,
+        "url": "https://www.benzinga.com/quote/WEAV",
+        "wiim": true
+      },
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 0
+      },
+      "explain": "39 analysts cover it — 29 bullish, 8 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "EXE": {
+      "name": "Expand Energy",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 10,
+        "buy": 16,
+        "hold": 4,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 30,
+        "bullish": 26,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.2,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/895126/000089512626000046/exe-20260728.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/895126/000089512626000047/exe-20260630.htm"
+        },
+        "insider30d": 0
+      },
+      "explain": "30 analysts cover it — 26 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "NBIX": {
       "name": "Neurocrine Biosciences",
       "qarp": "BUY",
@@ -1616,8 +1707,8 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
-        "ts": 1785242106,
+        "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
+        "ts": 1785333521,
         "url": "https://www.benzinga.com/quote/KO",
         "wiim": true
       },
@@ -1671,25 +1762,6 @@
       "margin": null,
       "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
     },
-    "ZTS": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-07",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm",
-      "revenue": {
-        "fmt": "$2.3B",
-        "yoy": 2.9
-      },
-      "eps": {
-        "val": 1.42,
-        "yoy": 6.0
-      },
-      "net_income": {
-        "fmt": "$601M"
-      },
-      "margin": 26.6,
-      "summary": "Q1 FY2026 — revenue $2.3B (+2.9% YoY), diluted EPS $1.42 (+6.0% YoY), net margin 27%. (as reported, GAAP)"
-    },
     "NOW": {
       "period": "Q2 FY2026",
       "filed": "2026-07-23",
@@ -1708,6 +1780,25 @@
       },
       "margin": 7.5,
       "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
+    },
+    "ZTS": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm",
+      "revenue": {
+        "fmt": "$2.3B",
+        "yoy": 2.9
+      },
+      "eps": {
+        "val": 1.42,
+        "yoy": 6.0
+      },
+      "net_income": {
+        "fmt": "$601M"
+      },
+      "margin": 26.6,
+      "summary": "Q1 FY2026 — revenue $2.3B (+2.9% YoY), diluted EPS $1.42 (+6.0% YoY), net margin 27%. (as reported, GAAP)"
     },
     "ADBE": {
       "period": "Q2 FY2026",
@@ -1766,25 +1857,6 @@
       "margin": 71.5,
       "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
     },
-    "BSX": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-01",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm",
-      "revenue": {
-        "fmt": "$5.2B",
-        "yoy": 11.6
-      },
-      "eps": {
-        "val": 0.9,
-        "yoy": 100.0
-      },
-      "net_income": {
-        "fmt": "$190M"
-      },
-      "margin": null,
-      "summary": "Q1 FY2026 — revenue $5.2B (+11.6% YoY), diluted EPS $0.90 (+100.0% YoY). (as reported, GAAP)"
-    },
     "UBER": {
       "period": "Q1 FY2026",
       "filed": "2026-05-06",
@@ -1803,6 +1875,25 @@
       },
       "margin": 2.0,
       "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
+    },
+    "BSX": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-01",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm",
+      "revenue": {
+        "fmt": "$5.2B",
+        "yoy": 11.6
+      },
+      "eps": {
+        "val": 0.9,
+        "yoy": 100.0
+      },
+      "net_income": {
+        "fmt": "$190M"
+      },
+      "margin": null,
+      "summary": "Q1 FY2026 — revenue $5.2B (+11.6% YoY), diluted EPS $0.90 (+100.0% YoY). (as reported, GAAP)"
     },
     "LULU": {
       "period": "Q1 FY2026",
@@ -1875,6 +1966,21 @@
       },
       "margin": null,
       "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
+    },
+    "SAP": null,
+    "EXE": {
+      "period": "FY2020",
+      "filed": "2021-03-01",
+      "form": "10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/895126/000089512626000047/exe-20260630.htm",
+      "revenue": {
+        "fmt": "$2.7B",
+        "yoy": -39.2
+      },
+      "eps": null,
+      "net_income": null,
+      "margin": null,
+      "summary": "FY2020 — revenue $2.7B (-39.2% YoY). (as reported, GAAP)"
     },
     "NBIX": {
       "period": "Q1 FY2026",
