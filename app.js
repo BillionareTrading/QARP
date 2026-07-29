@@ -1036,15 +1036,26 @@ function renderScorecard() {
     `<div class="sc-spread">Strong&nbsp;Buy beats Avoid by <b class="${signClass(sc.spread)}">${fmtPct(sc.spread, 1).replace("%", " pts")}</b></div>`;
   const icTxt = sc.ic == null ? "" :
     `<span class="sc-ic">Rank signal (IC) <b class="${signClass(sc.ic)}">${sc.ic > 0 ? "+" : ""}${sc.ic.toFixed(2)}</b>${infoBtn("ic")}</span>`;
-  const matTxt = sc.days_tracked == null ? "" :
-    `<span class="sc-mat">Day ${sc.days_tracked} of ~${sc.target_days || 20} — early read</span>`;
+  // Maturity indicator. `target_days` is the EARLY-READ BAR (~20 trading days ~= 1 month),
+  // NOT a finish line — past it the sample stops being "early" and is merely short. This
+  // string was unconditional until 2026-07-29 and had been printing the self-contradicting
+  // "Day 41 of ~20 — early read" ever since day 21. Landmarks: 21d ~= a month, 63d ~= a
+  // quarter, 252d ~= a year.
+  const matTxt = sc.days_tracked == null ? "" : (() => {
+    const d = sc.days_tracked, bar = sc.target_days || 20;
+    const txt = d < bar ? `Day ${d} of ~${bar} — early read`
+              : d < 63  ? `Day ${d} — past the ~${bar}-day bar, under a quarter`
+              : d < 252 ? `Day ${d} — ${Math.round(d / 21)}-month sample`
+                        : `Day ${d} — ${(d / 252).toFixed(1)}-year sample`;
+    return `<span class="sc-mat">${txt}</span>`;
+  })();
   host.innerHTML = `
     <div class="card sc-headline">
       <div class="sc-q">Does the ranking rank?${infoBtn("scorecard")}</div>
       ${spreadTxt}
       <div class="sc-meta">${icTxt}${matTxt}</div>
       <div class="sc-bars">${bars}</div>
-      <div class="sc-note">Each <b>call</b> is a verdict locked at its entry price — it stays put until the name is re-scored (not on daily price moves). Return marks to current price. ${total} calls since ${sc.since || ""}. Early sample — watch the IC + spread trend as it matures.</div>
+      <div class="sc-note">Each <b>call</b> is a verdict locked at its entry price — it stays put until the name is re-scored (not on daily price moves). Return marks to current price. ${total} calls since ${sc.since || ""}. ${sc.days_tracked != null && sc.days_tracked >= 63 ? "Watch" : "Early sample — watch"} the IC + spread trend as it matures.</div>
     </div>
     ${renderTrend(sc.history)}
     <div class="sc-grid">${cards}</div>
