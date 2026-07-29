@@ -1,6 +1,6 @@
 {
   "date": "2026-07-29",
-  "generated_at": "Jul 29, 12:56pm ET",
+  "generated_at": "Jul 29, 1:45pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -94,10 +94,10 @@
     },
     {
       "when": "Jul 29",
-      "what": "KO — Wells Fargo maintains",
+      "what": "KO — TD Cowen maintains",
       "affects": "KO",
       "dir": "two-sided",
-      "why": "Now rated <b>Overweight</b>, PT $95.",
+      "why": "Now rated <b>Buy</b>, PT $100.",
       "src": "Benzinga ratings"
     },
     {
@@ -160,6 +160,13 @@
       "driver": "Declining oil prices and a weaker U.S. dollar have eased inflation conce…",
       "note": "As declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
       "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Defense",
+      "dir": "down",
+      "driver": "The Middle Eastern conflict grinds on",
+      "note": "As the Middle Eastern conflict grinds on. General Dynamics' Q2 earnings possibly underscore known industry and bureaucratic constraints, including production and delivery bottlenecks that hurt margins, and award funding delays as the reconciliation bill stalls in Congress.",
+      "src": "Benzinga WIIM · market-wide"
     }
   ],
   "holding_news": {
@@ -194,19 +201,47 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Trump Bans Chinese Humanoid Robots; Micron Competitor SK Hynix Creates Volatility; Fed Decision Looms",
-      "ts": 1785342855,
-      "url": "https://www.benzinga.com/Opinion/26/07/60769529/trump-bans-chinese-humanoid-robots-micron-competitor-sk-hynix-creates-volatility-fed-decision-looms",
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "ts": 1785346515,
+      "url": "https://www.benzinga.com/markets/options/26/07/60771948/10-information-technology-stocks-whale-activity-today-s-session",
       "wiim": false
     },
     "AVGO": {
-      "title": "SpaceX Stock Now Has $26 Billion in Short Bets — 35% of its Entire Float",
-      "ts": 1785338118,
-      "url": "https://www.benzinga.com/markets/tech/26/07/60766052/spacex-stock-now-has-26-billion-in-short-bets-35-of-its-entire-float",
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "ts": 1785346515,
+      "url": "https://www.benzinga.com/markets/options/26/07/60771948/10-information-technology-stocks-whale-activity-today-s-session",
       "wiim": false
     }
   },
   "ratings": [
+    {
+      "date": "2026-07-29",
+      "ticker": "KO",
+      "firm": "TD Cowen",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$100",
+      "price": 89.53,
+      "upside": 11.7,
+      "held": true,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "KO",
+      "firm": "Piper Sandler",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$95",
+      "price": 89.53,
+      "upside": 6.1,
+      "held": true,
+      "uni": true,
+      "qarp": "AVOID"
+    },
     {
       "date": "2026-07-29",
       "ticker": "KO",
@@ -215,8 +250,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 89.89,
-      "upside": 5.7,
+      "price": 89.53,
+      "upside": 6.1,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -229,8 +264,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$96",
-      "price": 89.89,
-      "upside": 6.8,
+      "price": 89.53,
+      "upside": 7.2,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -243,8 +278,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$104",
-      "price": 89.89,
-      "upside": 15.7,
+      "price": 89.53,
+      "upside": 16.2,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -257,7 +292,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 179.17,
+      "price": 179.16,
       "upside": 21.7,
       "held": false,
       "uni": true,
@@ -271,8 +306,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 192.26,
-      "upside": 4.0,
+      "price": 191.76,
+      "upside": 4.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -285,7 +320,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 179.17,
+      "price": 179.16,
       "upside": -19.1,
       "held": false,
       "uni": true,
@@ -299,7 +334,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 179.17,
+      "price": 179.16,
       "upside": 2.1,
       "held": false,
       "uni": true,
@@ -313,7 +348,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 179.17,
+      "price": 179.16,
       "upside": -26.3,
       "held": false,
       "uni": true,
@@ -327,8 +362,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 340.88,
-      "upside": 6.8,
+      "price": 343.08,
+      "upside": 6.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -341,7 +376,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 179.17,
+      "price": 179.16,
       "upside": 0.5,
       "held": false,
       "uni": true,
@@ -355,8 +390,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 192.26,
-      "upside": 7.7,
+      "price": 191.76,
+      "upside": 7.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -369,7 +404,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 341.92,
+      "price": 341.67,
       "upside": 10.3,
       "held": false,
       "uni": true,
@@ -383,8 +418,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "price": 192.26,
-      "upside": 18.1,
+      "price": 191.76,
+      "upside": 18.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -397,7 +432,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 131.09,
+      "price": 131.12,
       "upside": 14.4,
       "held": false,
       "uni": true,
@@ -416,12 +451,12 @@
     },
     "KO": {
       "date": "2026-07-29",
-      "firm": "Wells Fargo",
+      "firm": "TD Cowen",
       "action": "Maintains",
-      "rating": "Overweight",
+      "rating": "Buy",
       "stance": "bullish",
-      "pt": "$95",
-      "upside": 5.7
+      "pt": "$100",
+      "upside": 11.7
     },
     "CVX": {
       "date": "2026-07-28",
@@ -430,7 +465,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "upside": 18.1
+      "upside": 18.4
     },
     "HD": {
       "date": "2026-07-27",
@@ -457,7 +492,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "upside": 6.8
+      "upside": 6.1
     },
     "PG": {
       "date": "2026-07-21",
@@ -466,7 +501,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 4.3
+      "upside": 4.7
     },
     "CRM": {
       "date": "2026-07-21",
@@ -475,7 +510,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": -1.8
+      "upside": -1.6
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -484,10 +519,199 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 1.1
+      "upside": 1.0
     }
   },
   "bz_news": [
+    {
+      "title": "TD Cowen Maintains Buy on Coca-Cola, Raises Price Target to $100",
+      "url": "https://www.benzinga.com/news/26/07/60772315/td-cowen-maintains-buy-coca-cola-raises-price-target-100",
+      "ts": 1785347150,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.585
+    },
+    {
+      "title": "8 Financials Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60771951/8-financials-stocks-whale-alerts-today-s-session",
+      "ts": 1785346516,
+      "tickers": [
+        "RKT",
+        "HOOD",
+        "TOST",
+        "BAC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.379
+    },
+    {
+      "title": "9 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60771950/9-consumer-discretionary-stocks-whale-alerts-today-s-session",
+      "ts": 1785346516,
+      "tickers": [
+        "TSLA",
+        "CVNA",
+        "HD",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.363
+    },
+    {
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/07/60771948/10-information-technology-stocks-whale-activity-today-s-session",
+      "ts": 1785346515,
+      "tickers": [
+        "MU",
+        "NBIS",
+        "NVDA",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.394
+    },
+    {
+      "title": "Piper Sandler Maintains Overweight on Coca-Cola, Raises Price Target to $95",
+      "url": "https://www.benzinga.com/news/26/07/60771674/piper-sandler-maintains-overweight-coca-cola-raises-price-target-95",
+      "ts": 1785346115,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.571
+    },
+    {
+      "title": "OpenAI Introduces ChatGPT For Academic Researchers; Program Starting With 10,000 Researchers This Summer, Expanding To 100,000 Through 2027",
+      "url": "https://www.benzinga.com/news/26/07/60771579/openai-introduces-chatgpt-academic-researchers-program-starting-10-000-researchers-summer-expanding-",
+      "ts": 1785345993,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.252
+    },
+    {
+      "title": "QUICK SPARK: Google, Amazon, Nvidia Among 2026's Top 10 Most-Shorted Stocks",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60771518/quick-spark-google-amazon-nvidia-among-2026s-top-10-most-shorted-stocks",
+      "ts": 1785345923,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "MU",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.469
+    },
+    {
+      "title": "Piper Sandler Maintains Overweight on Visa, Raises Price Target to $430",
+      "url": "https://www.benzinga.com/news/26/07/60771475/piper-sandler-maintains-overweight-visa-raises-price-target-430",
+      "ts": 1785345858,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.451
+    },
+    {
+      "title": "Oil Spikes 7%, Nasdaq 100 Sinks Before Fed: Stock Market Today",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60771129/oil-surge-us-iran-trump-nasdaq-100-drops-fed-interest-rate-decision-markets-wednesday",
+      "ts": 1785345390,
+      "tickers": [
+        "XLE",
+        "META",
+        "MSFT",
+        "MDLZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.499
+    },
+    {
+      "title": "Shares of defense-related companies are trading lower as the Middle Eastern conflict grinds on. General Dynamics' Q2 earnings possibly underscore known industry and bureaucratic constraints, including production and delivery bottlenecks that hurt margins, and award funding delays as the reconciliation bill stalls in Congress.",
+      "url": "https://www.benzinga.com/quote/FTAI",
+      "ts": 1785344744,
+      "tickers": [
+        "HII",
+        "ESLT",
+        "BWXT",
+        "KTOS"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.405
+    },
+    {
+      "title": "Boeing shares are trading lower after RBC Capital lowered its price target on the stock from $275 to $265.",
+      "url": "https://www.benzinga.com/quote/BA",
+      "ts": 1785344735,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.406
+    },
+    {
+      "title": "Humana's Strong Quarter Fails To Impress",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60770735/humanas-strong-quarter-fails-to-impress",
+      "ts": 1785344720,
+      "tickers": [
+        "HUM",
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.404
+    },
+    {
+      "title": "Susquehanna Maintains Positive on Visa, Raises Price Target to $427",
+      "url": "https://www.benzinga.com/news/26/07/60770721/susquehanna-maintains-positive-visa-raises-price-target-427",
+      "ts": 1785344712,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.469
+    },
+    {
+      "title": "CNBC Halftime Report Final Trades: Steel Dynamics, Apple, CBRE Group",
+      "url": "https://www.benzinga.com/quote/STLD",
+      "ts": 1785344473,
+      "tickers": [
+        "CBRE",
+        "AAPL",
+        "STLD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.395
+    },
     {
       "title": "Caterpillar Stock Drops After Baird Downgrade",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60770180/caterpillar-stock-drops-after-baird-downgrade",
@@ -637,75 +861,6 @@
       "relevance": 0.397
     },
     {
-      "title": "UBS Maintains Buy on Visa, Raises Price Target to $420",
-      "url": "https://www.benzinga.com/news/26/07/60766513/ubs-maintains-buy-visa-raises-price-target-420",
-      "ts": 1785338662,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.463
-    },
-    {
-      "title": "SpaceX Stock Now Has $26 Billion in Short Bets — 35% of its Entire Float",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60766052/spacex-stock-now-has-26-billion-in-short-bets-35-of-its-entire-float",
-      "ts": 1785338118,
-      "tickers": [
-        "SPCX",
-        "TSLA",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.335
-    },
-    {
-      "title": "Grayscale CEO Sells GXRP as XRP Trades 70% off the Highs: What's Happening?",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60764074/grayscale-ceo-sells-gxrp-as-xrp-trades-70-off-the-highs-whats-happening",
-      "ts": 1785336077,
-      "tickers": [
-        "$XRP",
-        "$BTC",
-        "$ETH",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.322
-    },
-    {
-      "title": "Shares of integrated oil and gas companies are trading higher as crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
-      "url": "https://www.benzinga.com/quote/EQNR",
-      "ts": 1785335745,
-      "tickers": [
-        "XOM",
-        "CVX",
-        "BP",
-        "SHEL"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.343
-    },
-    {
-      "title": "BMO Capital Maintains Outperform on Visa, Raises Price Target to $405",
-      "url": "https://www.benzinga.com/news/26/07/60763552/bmo-capital-maintains-outperform-visa-raises-price-target-405",
-      "ts": 1785335557,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.437
-    },
-    {
       "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
       "url": "https://www.benzinga.com/quote/KO",
       "ts": 1785333521,
@@ -718,43 +873,6 @@
       "relevance": 0.511
     },
     {
-      "title": "Opendoor Technologies Chief Growth Officer Morgan Brown Posts On X \"Opendoor is now running ads in ChatGPT. We launched a test this week putting Opendoor in front of sellers directly inside ChatGPT via OpenAI's new ad product. Excited to see how this new channel does.\"",
-      "url": "https://www.benzinga.com/news/26/07/60761257/opendoor-technologies-chief-growth-officer-morgan-brown-posts-x-opendoor-now-running-ads-chatgpt-we-",
-      "ts": 1785333518,
-      "tickers": [
-        "OPEN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.299
-    },
-    {
-      "title": "Procter & Gamble Reports Flat Organic Sales Amid Rising Costs",
-      "url": "https://www.benzinga.com/markets/large-cap/26/07/60761029/procter-gamble-reports-flat-organic-sales-amid-rising-costs",
-      "ts": 1785333329,
-      "tickers": [
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.379
-    },
-    {
-      "title": "RBC Capital Maintains Outperform on Visa, Raises Price Target to $412",
-      "url": "https://www.benzinga.com/news/26/07/60760934/rbc-capital-maintains-outperform-visa-raises-price-target-412",
-      "ts": 1785333197,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.435
-    },
-    {
       "title": "RBC Capital Maintains Outperform on Coca-Cola, Raises Price Target to $96",
       "url": "https://www.benzinga.com/news/26/07/60760846/rbc-capital-maintains-outperform-coca-cola-raises-price-target-96",
       "ts": 1785333109,
@@ -765,60 +883,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.558
-    },
-    {
-      "title": "Dow Tumbles 400 Points; Procter & Gamble Shares Fall After Q4 Results",
-      "url": "https://www.benzinga.com/news/26/07/60760497/dow-tumbles-400-points-procter-gamble-shares-fall-after-q4-results",
-      "ts": 1785332791,
-      "tickers": [
-        "PG",
-        "PSN",
-        "AMIX",
-        "NCRA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.4
-    },
-    {
-      "title": "SK Hynix Just Had Its Best Quarter Ever: The Stock Is Down 53% From Peak",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60760346/sk-hynix-just-had-its-best-quarter-ever-the-stock-is-down-53-from-peak",
-      "ts": 1785332594,
-      "tickers": [
-        "SKHY",
-        "AAPL",
-        "SSNLF",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.326
-    },
-    {
-      "title": "RBC Capital Maintains Outperform on Boeing, Lowers Price Target to $265",
-      "url": "https://www.benzinga.com/news/26/07/60759949/rbc-capital-maintains-outperform-boeing-lowers-price-target-265",
-      "ts": 1785332242,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.461
-    },
-    {
-      "title": "Citigroup Maintains Buy on Walt Disney, Lowers Price Target to $135",
-      "url": "https://www.benzinga.com/news/26/07/60759832/citigroup-maintains-buy-walt-disney-lowers-price-target-135",
-      "ts": 1785332151,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.429
     },
     {
       "title": "Jefferies Maintains Buy on Coca-Cola, Raises Price Target to $104",
@@ -1049,30 +1113,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.582
-    },
-    {
-      "title": "How To Earn $500 A Month From Coca-Cola Stock Ahead Of Q2 Earnings",
-      "url": "https://www.benzinga.com/trading-ideas/dividends/26/07/60692276/how-to-earn-500-a-month-from-coca-cola-stock-ahead-of-q2-earnings-2",
-      "ts": 1785154770,
-      "tickers": [
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.522
-    },
-    {
-      "title": "Coca-Cola Announces That Its fairlife Dairy Unit Has Resumed Majority Of Its Production At Four U.S. Facilities",
-      "url": "https://www.benzinga.com/news/26/07/60689924/coca-cola-announces-its-fairlife-dairy-unit-has-resumed-majority-its-production-four-u-s-facilities",
-      "ts": 1785149882,
-      "tickers": [
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.484
     }
   ],
   "portfolio_brief": {
@@ -1295,9 +1335,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Trump Bans Chinese Humanoid Robots; Micron Competitor SK Hynix Creates Volatility; Fed Decision Looms",
-        "ts": 1785342855,
-        "url": "https://www.benzinga.com/Opinion/26/07/60769529/trump-bans-chinese-humanoid-robots-micron-competitor-sk-hynix-creates-volatility-fed-decision-looms",
+        "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+        "ts": 1785346515,
+        "url": "https://www.benzinga.com/markets/options/26/07/60771948/10-information-technology-stocks-whale-activity-today-s-session",
         "wiim": false
       },
       "filings": {
@@ -1521,9 +1561,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "SpaceX Stock Now Has $26 Billion in Short Bets — 35% of its Entire Float",
-        "ts": 1785338118,
-        "url": "https://www.benzinga.com/markets/tech/26/07/60766052/spacex-stock-now-has-26-billion-in-short-bets-35-of-its-entire-float",
+        "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+        "ts": 1785346515,
+        "url": "https://www.benzinga.com/markets/options/26/07/60771948/10-information-technology-stocks-whale-activity-today-s-session",
         "wiim": false
       },
       "filings": {
