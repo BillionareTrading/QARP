@@ -1,6 +1,6 @@
 {
   "date": "2026-07-29",
-  "generated_at": "Jul 29, 5:53am ET",
+  "generated_at": "Jul 29, 6:44am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -410,6 +410,18 @@
   },
   "bz_news": [
     {
+      "title": "Baird Downgrades Caterpillar to Neutral, Lowers Price Target to $900",
+      "url": "https://www.benzinga.com/news/26/07/60752033/baird-downgrades-caterpillar-neutral-lowers-price-target-900",
+      "ts": 1785319803,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.519
+    },
+    {
       "title": "Ray Dalio Warns Against Blind Faith in AI: 'Computers Have No Common Sense'",
       "url": "https://www.benzinga.com/markets/tech/26/07/60750971/ray-dalio-warns-against-blind-faith-in-ai-computers-have-no-common-sense",
       "ts": 1785318246,
@@ -619,7 +631,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.495
+      "relevance": 0.496
     },
     {
       "title": "'Trump Administration To End Medicare Drug Plan Subsidy; Program That Held Down Premiums Not Renewed For 2027, Resulting In Higher Costs For Some Seniors' - WSJ Exclusive",
@@ -737,18 +749,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.359
-    },
-    {
-      "title": "B of A Securities Maintains Buy on Chevron, Raises Price Target to $227",
-      "url": "https://www.benzinga.com/news/26/07/60738266/b-securities-maintains-buy-chevron-raises-price-target-227",
-      "ts": 1785261417,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.474
     },
     {
       "title": "Nasdaq 100 Enters Correction, SanDisk Sinks Over 50% From Peak: Stock Market Today",
@@ -1288,8 +1288,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-07-27",
-          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000049/bsx-20260721.htm"
+          "date": "2026-07-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000051/bsx-20260729.htm"
         },
         "periodic": {
           "form": "10-Q",
