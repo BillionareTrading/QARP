@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-28",
-  "generated_at": "Jul 28, 7:37pm ET",
+  "date": "2026-07-29",
+  "generated_at": "Jul 29, 5:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,22 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Jul 28",
-      "what": "KO earnings",
-      "affects": "KO",
-      "dir": "two-sided",
-      "why": "Q-results for Coca-Cola — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
-      "when": "Jul 28",
-      "what": "SPGI earnings",
-      "affects": "SPGI",
-      "dir": "two-sided",
-      "why": "Q-results for S&P Global — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Jul 29",
       "what": "BSX earnings",
       "affects": "BSX",
@@ -93,6 +77,22 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
+      "when": "Aug 3",
+      "what": "VRTX earnings",
+      "affects": "VRTX",
+      "dir": "two-sided",
+      "why": "Q-results for Vertex Pharma — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Aug 4",
+      "what": "GILD earnings",
+      "affects": "GILD",
+      "dir": "two-sided",
+      "why": "Q-results for Gilead Sciences — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
       "when": "Jul 21",
       "what": "KO — Barclays maintains",
       "affects": "KO",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 28",
+      "when": "Jul 29",
       "what": "Energy & geopolitics — today's read",
       "why": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
       "affects": "Energy · growth",
@@ -110,7 +110,7 @@
     }
   ],
   "earnings_next": {
-    "KO": "2026-07-28",
+    "KO": "2026-10-20",
     "RKLB": "2026-08-10",
     "ABT": "2026-10-13",
     "ZTS": "2026-08-06",
@@ -122,7 +122,7 @@
     "UBER": "2026-08-05",
     "LULU": "2026-09-02",
     "GILD": "2026-08-04",
-    "SPGI": "2026-07-28",
+    "SPGI": "2026-10-28",
     "NVS": "2026-10-27",
     "AVGO": "2026-09-02",
     "NBIX": "2026-07-30",
@@ -193,48 +193,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-07-21",
-      "ticker": "KO",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$91",
-      "price": 88.27,
-      "upside": 3.1,
-      "held": true,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-21",
-      "ticker": "PG",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$152",
-      "price": 148.88,
-      "upside": 2.1,
-      "held": false,
-      "uni": true,
-      "qarp": "BUY"
-    },
-    {
-      "date": "2026-07-21",
-      "ticker": "CRM",
-      "firm": "Morgan Stanley",
-      "action": "Downgrades",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$185",
-      "price": 181.5,
-      "upside": 1.9,
-      "held": false,
-      "uni": true,
-      "qarp": "BUY"
-    },
     {
       "date": "2026-07-22",
       "ticker": "MMM",
@@ -452,6 +410,93 @@
   },
   "bz_news": [
     {
+      "title": "Meta CEO Mark Zuckerberg Says Chinese AI Model Ban Not an 'Effective Solution', Calls for Fewer Barriers: 'There's...This Question of Regulatory Capture'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60750429/meta-ceo-mark-zuckerberg-says-chinese-ai-model-ban-not-an-effective-solution-calls-for-fewer-barriers-theres-this-question-of-regulatory-capture",
+      "ts": 1785313971,
+      "tickers": [
+        "META",
+        "LVMUY",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.33
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60750402/sp500-july-29-open-up-or-down-polymarket-fed-warsh-microsoft-meta-qualcomm-earnings",
+      "ts": 1785313822,
+      "tickers": [
+        "META",
+        "MSFT",
+        "KO",
+        "QCOM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.464
+    },
+    {
+      "title": "Dow Jumps Over 500 Points As Oil Prices Fall: Investor Sentiment Improves, Greed Index Remains In ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60750007/dow-jumps-over-500-points-as-oil-prices-fall-investor-sentiment-improves-greed-index-remains-in-fear-zone",
+      "ts": 1785308772,
+      "tickers": [
+        "MSFT",
+        "KO",
+        "GD",
+        "PG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.482
+    },
+    {
+      "title": "Procter & Gamble, Microsoft And 3 Stocks To Watch Heading Into Wednesday",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60749787/procter-gamble-microsoft-and-3-stocks-to-watch-heading-into-wednesday",
+      "ts": 1785306273,
+      "tickers": [
+        "MSFT",
+        "MDLZ",
+        "GD",
+        "F"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.417
+    },
+    {
+      "title": "Microsoft Earnings ‘Don’t Matter,’ Says Gene Munster Because 'Battle With the Bots' Just Beginning, Analyst Sounds 'Value Trap' Warning",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60749172/microsoft-stock-earnings-gene-munster-ai-bots-value-trap-warning",
+      "ts": 1785299699,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.318
+    },
+    {
+      "title": "Sk Hynix, Bloom Energy, Seagate, Micron Technology and Visa: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/news/26/07/60748641/sk-hynix-bloom-energy-seagate-micron-technology-and-visa-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1785288733,
+      "tickers": [
+        "SKHY",
+        "MU",
+        "STX",
+        "BE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.431
+    },
+    {
       "title": "QUICK SPARK: Goldman's High Beta Momentum Basket Heads for Worst Month Ever",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60747707/quick-spark-goldmans-high-beta-momentum-basket-heads-for-worst-month-ever",
       "ts": 1785275333,
@@ -565,7 +610,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.42
+      "relevance": 0.419
     },
     {
       "title": "Microsoft Could Swing $189 Billion in Value After Earnings",
@@ -706,36 +751,6 @@
       "relevance": 0.528
     },
     {
-      "title": "Shares of software companies are trading higher as the sector rebounds from last week's sell-off following IBM's profit warning. Investors may also be rotating into software names as weakness in semiconductor and AI hardware stocks shifts interest toward less capital-intensive areas of the technology sector.",
-      "url": "https://www.benzinga.com/quote/CHKP",
-      "ts": 1785259765,
-      "tickers": [
-        "DFNS",
-        "JG",
-        "SAIH",
-        "ANY"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.44
-    },
-    {
-      "title": "QUICK SPARK: Micron, SK Hynix And Memory Stocks Wipe Out More Than $2 Trillion Since June Highs",
-      "url": "https://www.benzinga.com/news/26/07/60736961/memory-stocks-lose-2-trillion-since-june-highs-cxmt-ai-selloff",
-      "ts": 1785259295,
-      "tickers": [
-        "SSNLF",
-        "INTC",
-        "MU",
-        "STX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.401
-    },
-    {
       "title": "Nasdaq 100 Enters Correction, SanDisk Sinks Over 50% From Peak: Stock Market Today",
       "url": "https://www.benzinga.com/markets/equities/26/07/60736942/nasdaq-100-enters-correction-sandisk-sinks-over-50-from-peak-stock-market-today",
       "ts": 1785259266,
@@ -749,48 +764,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.513
-    },
-    {
-      "title": "Shares of foundry, fabricator and IDM semiconductor companies are trading lower as the industry extends its losses amid a selloff in Asian markets, spurred by concerns about AI infrastructure and Chinese competition, which weigh on U.S.-listed stocks.",
-      "url": "https://www.benzinga.com/quote/GFS",
-      "ts": 1785258559,
-      "tickers": [
-        "INTC",
-        "STM",
-        "TSEM",
-        "GFS"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.475
-    },
-    {
-      "title": "Microsoft Stock Moves Higher: What's Going On?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60736386/microsoft-stock-moves-higher-whats-going-on",
-      "ts": 1785258452,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.55
-    },
-    {
-      "title": "Microsoft Q4 Preview: 13 Straight Double Beats, Magnificent Seven Stock Goes for Another Blowout",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60735811/microsoft-q4-preview-13-straight-double-beats-magnificent-seven-stock-goes-for-another-blowout",
-      "ts": 1785257674,
-      "tickers": [
-        "MSFT",
-        "SPY",
-        "QQQ",
-        "DIA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.41
     },
     {
       "title": "FIFA World Cup Delivers Coca-Cola's Best Quarterly Volume Growth in 17 Years",
@@ -920,21 +893,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.569
-    },
-    {
-      "title": "Dow Gains Over 250 Points Amid Lower Oil Prices: Investor Sentiment Weakens, Greed Index Remains In ‘Fear’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60715901/dow-gains-over-250-points-amid-lower-oil-prices-investor-sentiment-weakens-greed-index-remains-in-fear-zone",
-      "ts": 1785225610,
-      "tickers": [
-        "AZN",
-        "KO",
-        "BA",
-        "UPS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.47
     },
     {
       "title": "Boeing, Coca-Cola And 3 Stocks To Watch Heading Into Tuesday",
