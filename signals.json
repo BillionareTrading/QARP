@@ -1,6 +1,6 @@
 {
   "date": "2026-07-29",
-  "generated_at": "Jul 29, 6:14pm ET",
+  "generated_at": "Jul 29, 7:41pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -115,7 +115,6 @@
     "NOW": "2026-10-27",
     "ADBE": "2026-09-10",
     "ABT": "2026-10-13",
-    "ZTS": "2026-08-06",
     "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
     "BSX": "2026-07-29",
@@ -170,6 +169,12 @@
     }
   ],
   "holding_news": {
+    "NVDA": {
+      "title": "Steve Eisman Says He'd Be 'Petrified' Running OpenAI or Anthropic as Cheap Chinese Models Threaten Price War",
+      "ts": 1785355520,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60778791/steve-eisman-says-hed-be-petrified-running-openai-or-anthropic-as-cheap-chinese-models-threaten-price-war",
+      "wiim": false
+    },
     "NOW": {
       "title": "Shares of software companies are trading higher as the industry extends its recent rally, which may be due to investors rotating out of weakened semiconductor and AI hardware stocks into less capital-intensive areas of the tech sector. The industry may be buoyed by trader optimism ahead of Microsoft's Q4 earnings that will be reported after the market closes.",
       "ts": 1785351767,
@@ -189,21 +194,9 @@
       "wiim": true
     },
     "KO": {
-      "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
-      "ts": 1785333521,
-      "url": "https://www.benzinga.com/quote/KO",
-      "wiim": true
-    },
-    "SPGI": {
-      "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
-      "ts": 1785169388,
-      "url": "https://www.benzinga.com/quote/WSE",
-      "wiim": true
-    },
-    "NVDA": {
-      "title": "Steve Eisman Says He'd Be 'Petrified' Running OpenAI or Anthropic as Cheap Chinese Models Threaten Price War",
-      "ts": 1785355520,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60778791/steve-eisman-says-hed-be-petrified-running-openai-or-anthropic-as-cheap-chinese-models-threaten-price-war",
+      "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
+      "ts": 1785349548,
+      "url": "https://www.benzinga.com/news/26/07/60774161/jp-morgan-maintains-overweight-coca-cola-raises-price-target-96",
       "wiim": false
     },
     "AVGO": {
@@ -559,7 +552,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.334
+      "relevance": 0.333
     },
     {
       "title": "Microsoft CFO Says For The Full Year, Cloud Revenue Surpassed $214B, With Nearly 90% From Customers Outside Of Frontier Model Companies; In Cloud Business, Customer Demand Continues To Exceed Available Capacity; Revenue Growth In Cloud Unit Helped By Earlier Delivery Of New Capacity; Additional Import Of Capacity Was Quickly Monetized",
@@ -571,7 +564,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.417
+      "relevance": 0.416
     },
     {
       "title": "Microsoft CFO Says Contract Backlog In Q4 Increased 25% When Excluding OpenAI",
@@ -631,7 +624,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.404
+      "relevance": 0.405
     },
     {
       "title": "'Goldman Pitches $5.4 Billion Debt for Microsoft-Tied Data Center' - Bloomberg",
@@ -764,7 +757,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.41
+      "relevance": 0.411
     },
     {
       "title": "'Sam Altman To Meet With White House’s Wiles This Week Ahead Of AI Framework Deadline' - CNBC",
@@ -958,7 +951,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.464
+      "relevance": 0.465
     },
     {
       "title": "Dow Jumps Over 500 Points As Oil Prices Fall: Investor Sentiment Improves, Greed Index Remains In ‘Fear’ Zone",
@@ -1012,7 +1005,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.602
+      "relevance": 0.604
     },
     {
       "title": "Sherwin-Williams Posts Upbeat Q2 Earnings, Joins Itron, Armstrong World And Other Big Stocks Moving Higher On Tuesday",
@@ -1057,7 +1050,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.513
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1069,7 +1062,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1534,12 +1527,7 @@
         "score": 1.21,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
-        "ts": 1785169388,
-        "url": "https://www.benzinga.com/quote/WSE",
-        "wiim": true
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1790,10 +1778,10 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
-        "ts": 1785333521,
-        "url": "https://www.benzinga.com/quote/KO",
-        "wiim": true
+        "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
+        "ts": 1785349548,
+        "url": "https://www.benzinga.com/news/26/07/60774161/jp-morgan-maintains-overweight-coca-cola-raises-price-target-96",
+        "wiim": false
       },
       "filings": {
         "latest8k": {
