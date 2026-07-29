@@ -1,6 +1,6 @@
 {
   "date": "2026-07-29",
-  "generated_at": "Jul 29, 7:40am ET",
+  "generated_at": "Jul 29, 8:24am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -99,14 +99,6 @@
       "dir": "two-sided",
       "why": "Now rated <b>Buy</b>, PT $104.",
       "src": "Benzinga ratings"
-    },
-    {
-      "when": "Jul 29",
-      "what": "Energy & geopolitics — today's read",
-      "why": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
-      "affects": "Energy · growth",
-      "dir": "two-sided",
-      "src": "Benzinga WIIM (live)"
     }
   ],
   "earnings_next": {
@@ -151,13 +143,6 @@
       "driver": "Declining oil prices and a weaker U.S. dollar have eased inflation conce…",
       "note": "As declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
       "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Energy Drink",
-      "dir": "down",
-      "driver": "The UK government clarified that its ban on the sale of highly caffeinat…",
-      "note": "After the UK government clarified that its ban on the sale of highly caffeinated beverages to children under that age of 16 that was announced yesterday will enter force by April 2027.",
-      "src": "Benzinga WIIM · price-confirmed"
     }
   ],
   "holding_news": {
@@ -186,9 +171,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Meta CEO Mark Zuckerberg Says Chinese AI Model Ban Not an 'Effective Solution', Calls for Fewer Barriers: 'There's...This Question of Regulatory Capture'",
-      "ts": 1785313971,
-      "url": "https://www.benzinga.com/markets/tech/26/07/60750429/meta-ceo-mark-zuckerberg-says-chinese-ai-model-ban-not-an-effective-solution-calls-for-fewer-barriers-theres-this-question-of-regulatory-capture",
+      "title": "Analyst Says AI Is Making SK Hynix Less Cyclical—and More Valuable",
+      "ts": 1785326531,
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60756699/analyst-says-ai-is-making-sk-hynix-less-cyclical-and-more-valuable",
       "wiim": false
     }
   },
@@ -346,9 +331,32 @@
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "MRK",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$150",
+      "price": 131.82,
+      "upside": 13.8,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "rating_moves": {
+    "MRK": {
+      "date": "2026-07-29",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$150",
+      "upside": 13.8
+    },
     "KO": {
       "date": "2026-07-29",
       "firm": "Jefferies",
@@ -423,6 +431,81 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Caterpillar shares are trading lower after Baird downgraded its rating on the stock from Outperform to Neutral and lowered its price target from $1200 to $900.",
+      "url": "https://www.benzinga.com/quote/CAT",
+      "ts": 1785327886,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.487
+    },
+    {
+      "title": "Barclays Maintains Overweight on Merck & Co, Raises Price Target to $150",
+      "url": "https://www.benzinga.com/news/26/07/60756916/barclays-maintains-overweight-merck-co-raises-price-target-150",
+      "ts": 1785326710,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.457
+    },
+    {
+      "title": "Analyst Says AI Is Making SK Hynix Less Cyclical—and More Valuable",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60756699/analyst-says-ai-is-making-sk-hynix-less-cyclical-and-more-valuable",
+      "ts": 1785326531,
+      "tickers": [
+        "SKHY",
+        "AAPL",
+        "TSM",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.487
+    },
+    {
+      "title": "Barclays Maintains Equal-Weight on Amgen, Raises Price Target to $360",
+      "url": "https://www.benzinga.com/news/26/07/60756360/barclays-maintains-equal-weight-amgen-raises-price-target-360",
+      "ts": 1785326117,
+      "tickers": [
+        "AMGN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.48
+    },
+    {
+      "title": "Microsoft Likely To Report Higher Q4 Earnings; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60756331/microsoft-likely-to-report-higher-q4-earnings-these-most-accurate-analysts-revise-forecasts-ahead-of-earnings-call",
+      "ts": 1785326062,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.532
+    },
+    {
+      "title": "Procter & Gamble shares are trading lower after the company reported worse-than-expected Q4 sales results and issued FY27 GAAP EPS guidance below estimates. Also, the company issued FY27 sales guidance below estimates.",
+      "url": "https://www.benzinga.com/quote/PG",
+      "ts": 1785325239,
+      "tickers": [
+        "PG"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.473
+    },
     {
       "title": "Microsoft Facing U.K. Competition And Markets Authority Investigation Over Alleged Infringements Of Consumer Protection Law By Microsoft Ireland Operations",
       "url": "https://www.benzinga.com/news/26/07/60755817/microsoft-facing-u-k-competition-and-markets-authority-investigation-over-alleged-infringements-cons",
@@ -508,7 +591,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.342
+      "relevance": 0.341
     },
     {
       "title": "Jefferies Maintains Buy on Coca-Cola, Raises Price Target to $104",
@@ -572,9 +655,9 @@
       "relevance": 0.29
     },
     {
-      "title": "Trump Admin Pulls The Plug On A Medicare Subsidy That Cut Drug Premiums— Oz Says the 'Bailout' Is Over As Seniors Brace for 2027 Hikes",
+      "title": "Trump Administration Pulls the Plug on a Medicare Subsidy That Cut Drug Premiums— Oz Says the 'Bailout' Is Over as Seniors Brace for 2027 Hikes",
       "url": "https://www.benzinga.com/news/health-care/26/07/60753422/trump-medicare-part-d-subsidy-end-2027",
-      "ts": 1785322247,
+      "ts": 1785322241,
       "tickers": [
         "UNH"
       ],
@@ -678,60 +761,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.482
-    },
-    {
-      "title": "Procter & Gamble, Microsoft And 3 Stocks To Watch Heading Into Wednesday",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60749787/procter-gamble-microsoft-and-3-stocks-to-watch-heading-into-wednesday",
-      "ts": 1785306273,
-      "tickers": [
-        "MSFT",
-        "MDLZ",
-        "GD",
-        "F"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.417
-    },
-    {
-      "title": "Microsoft Earnings ‘Don’t Matter,’ Says Gene Munster Because 'Battle With the Bots' Just Beginning, Analyst Sounds 'Value Trap' Warning",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60749172/microsoft-stock-earnings-gene-munster-ai-bots-value-trap-warning",
-      "ts": 1785299699,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.318
-    },
-    {
-      "title": "Sk Hynix, Bloom Energy, Seagate, Micron Technology and Visa: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/news/26/07/60748641/sk-hynix-bloom-energy-seagate-micron-technology-and-visa-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1785288733,
-      "tickers": [
-        "SKHY",
-        "MU",
-        "STX",
-        "BE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.431
-    },
-    {
-      "title": "QUICK SPARK: Goldman's High Beta Momentum Basket Heads for Worst Month Ever",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60747707/quick-spark-goldmans-high-beta-momentum-basket-heads-for-worst-month-ever",
-      "ts": 1785275333,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.415
     },
     {
       "title": "Nasdaq 100 Enters Correction, SanDisk Sinks Over 50% From Peak: Stock Market Today",
@@ -1231,9 +1260,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Meta CEO Mark Zuckerberg Says Chinese AI Model Ban Not an 'Effective Solution', Calls for Fewer Barriers: 'There's...This Question of Regulatory Capture'",
-        "ts": 1785313971,
-        "url": "https://www.benzinga.com/markets/tech/26/07/60750429/meta-ceo-mark-zuckerberg-says-chinese-ai-model-ban-not-an-effective-solution-calls-for-fewer-barriers-theres-this-question-of-regulatory-capture",
+        "title": "Analyst Says AI Is Making SK Hynix Less Cyclical—and More Valuable",
+        "ts": 1785326531,
+        "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60756699/analyst-says-ai-is-making-sk-hynix-less-cyclical-and-more-valuable",
         "wiim": false
       },
       "filings": {
