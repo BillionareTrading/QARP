@@ -1,6 +1,6 @@
 {
   "date": "2026-07-29",
-  "generated_at": "Jul 29, 10:05am ET",
+  "generated_at": "Jul 29, 10:54am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -99,6 +99,14 @@
       "dir": "two-sided",
       "why": "Now rated <b>Outperform</b>, PT $96.",
       "src": "Benzinga ratings"
+    },
+    {
+      "when": "Jul 29",
+      "what": "Energy & geopolitics — today's read",
+      "why": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
+      "affects": "Energy · growth",
+      "dir": "two-sided",
+      "src": "Benzinga WIIM (live)"
     }
   ],
   "earnings_next": {
@@ -106,12 +114,12 @@
     "RKLB": "2026-08-10",
     "ABT": "2026-10-13",
     "NOW": "2026-10-27",
-    "ZTS": "2026-08-06",
     "ADBE": "2026-09-10",
+    "ZTS": "2026-08-06",
     "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
-    "UBER": "2026-08-05",
     "BSX": "2026-07-29",
+    "UBER": "2026-08-05",
     "LULU": "2026-09-02",
     "GILD": "2026-08-04",
     "SPGI": "2026-10-28",
@@ -125,6 +133,13 @@
   },
   "risk_asof": "2026-07-05",
   "sectors": [
+    {
+      "sector": "Oil & Gas",
+      "dir": "up",
+      "driver": "Crude prices gain after Iranian strikes directed at U.S. assets in Jordan",
+      "note": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
     {
       "sector": "Data Center Infrastructure",
       "dir": "down",
@@ -194,8 +209,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$96",
-      "price": 90.66,
-      "upside": 5.9,
+      "price": 90.23,
+      "upside": 6.4,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -208,8 +223,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$104",
-      "price": 90.66,
-      "upside": 14.7,
+      "price": 90.23,
+      "upside": 15.3,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -222,8 +237,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$218",
-      "price": 181.75,
-      "upside": 19.9,
+      "price": 180.82,
+      "upside": 20.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -236,8 +251,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$200",
-      "price": 191.91,
-      "upside": 4.2,
+      "price": 192.12,
+      "upside": 4.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,8 +265,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$145",
-      "price": 181.75,
-      "upside": -20.2,
+      "price": 180.82,
+      "upside": -19.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -264,8 +279,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$183",
-      "price": 181.75,
-      "upside": 0.7,
+      "price": 180.82,
+      "upside": 1.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -278,8 +293,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$132",
-      "price": 181.75,
-      "upside": -27.4,
+      "price": 180.82,
+      "upside": -27.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -292,8 +307,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$364",
-      "price": 342.95,
-      "upside": 6.1,
+      "price": 340.75,
+      "upside": 6.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -306,8 +321,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "price": 181.75,
-      "upside": -1.0,
+      "price": 180.82,
+      "upside": -0.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,8 +335,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$207",
-      "price": 191.91,
-      "upside": 7.9,
+      "price": 192.12,
+      "upside": 7.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +349,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 341.79,
-      "upside": 10.3,
+      "price": 338.15,
+      "upside": 11.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +363,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "price": 191.91,
-      "upside": 18.3,
+      "price": 192.12,
+      "upside": 18.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -362,8 +377,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 131.01,
-      "upside": 14.5,
+      "price": 130.5,
+      "upside": 14.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -377,7 +392,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "upside": 14.5
+      "upside": 14.9
     },
     "KO": {
       "date": "2026-07-29",
@@ -386,7 +401,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$96",
-      "upside": 5.9
+      "upside": 6.4
     },
     "CVX": {
       "date": "2026-07-28",
@@ -395,7 +410,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "upside": 18.3
+      "upside": 18.2
     },
     "HD": {
       "date": "2026-07-27",
@@ -404,16 +419,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 10.3
-    },
-    "AAPL": {
-      "date": "2026-07-23",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$364",
-      "upside": 6.1
+      "upside": 11.5
     },
     "MMM": {
       "date": "2026-07-23",
@@ -422,7 +428,16 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": -1.0
+      "upside": -0.5
+    },
+    "AAPL": {
+      "date": "2026-07-23",
+      "firm": "Morgan Stanley",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$364",
+      "upside": 6.8
     },
     "PG": {
       "date": "2026-07-21",
@@ -431,7 +446,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$152",
-      "upside": 4.5
+      "upside": 4.8
     },
     "CRM": {
       "date": "2026-07-21",
@@ -440,7 +455,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": -0.2
+      "upside": -0.0
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -453,6 +468,48 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Grayscale CEO Sells GXRP as XRP Trades 70% off the Highs: What's Happening?",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60764074/grayscale-ceo-sells-gxrp-as-xrp-trades-70-off-the-highs-whats-happening",
+      "ts": 1785336077,
+      "tickers": [
+        "$XRP",
+        "$BTC",
+        "$ETH",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.322
+    },
+    {
+      "title": "Shares of integrated oil and gas companies are trading higher as crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
+      "url": "https://www.benzinga.com/quote/EC",
+      "ts": 1785335745,
+      "tickers": [
+        "XOM",
+        "CVX",
+        "BP",
+        "SHEL"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.343
+    },
+    {
+      "title": "BMO Capital Maintains Outperform on Visa, Raises Price Target to $405",
+      "url": "https://www.benzinga.com/news/26/07/60763552/bmo-capital-maintains-outperform-visa-raises-price-target-405",
+      "ts": 1785335557,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.437
+    },
     {
       "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
       "url": "https://www.benzinga.com/quote/KO",
@@ -554,7 +611,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.46
+      "relevance": 0.461
     },
     {
       "title": "Citigroup Maintains Buy on Walt Disney, Lowers Price Target to $135",
@@ -638,7 +695,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.482
+      "relevance": 0.483
     },
     {
       "title": "Citigroup Maintains Buy on Visa, Raises Price Target to $440",
@@ -740,31 +797,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.532
-    },
-    {
-      "title": "Procter & Gamble shares are trading lower after the company reported worse-than-expected Q4 sales results and issued FY27 GAAP EPS guidance below estimates. Also, the company issued FY27 sales guidance below estimates.",
-      "url": "https://www.benzinga.com/quote/PG",
-      "ts": 1785325239,
-      "tickers": [
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.473
-    },
-    {
-      "title": "Microsoft Facing U.K. Competition And Markets Authority Investigation Over Alleged Infringements Of Consumer Protection Law By Microsoft Ireland Operations",
-      "url": "https://www.benzinga.com/news/26/07/60755817/microsoft-facing-u-k-competition-and-markets-authority-investigation-over-alleged-infringements-cons",
-      "ts": 1785325197,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.359
+      "relevance": 0.533
     },
     {
       "title": "Jefferies Maintains Buy on Coca-Cola, Raises Price Target to $104",
@@ -777,18 +810,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.556
-    },
-    {
-      "title": "Trump Administration Pulls the Plug on a Medicare Subsidy That Cut Drug Premiums— Oz Says the 'Bailout' Is Over as Seniors Brace for 2027 Hikes",
-      "url": "https://www.benzinga.com/news/health-care/26/07/60753422/trump-medicare-part-d-subsidy-end-2027",
-      "ts": 1785322241,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.236
     },
     {
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
@@ -1174,38 +1195,6 @@
       },
       "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "ZTS": {
-      "name": "Zoetis",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 5,
-        "buy": 8,
-        "hold": 11,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 24,
-        "bullish": 13,
-        "bearish": 0,
-        "label": "Buy",
-        "score": 0.75,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-05-22",
-          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000029/zts-20260520.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm"
-        },
-        "insider30d": 9
-      },
-      "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-    },
     "ADBE": {
       "name": "Adobe",
       "qarp": "BUY",
@@ -1242,6 +1231,38 @@
         "insider30d": 8
       },
       "explain": "45 analysts cover it — 17 bullish, 25 hold, 3 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "ZTS": {
+      "name": "Zoetis",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 5,
+        "buy": 8,
+        "hold": 11,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 24,
+        "bullish": 13,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.75,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-05-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000029/zts-20260520.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm"
+        },
+        "insider30d": 9
+      },
+      "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "DHR": {
       "name": "Danaher",
@@ -1312,38 +1333,6 @@
       },
       "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "UBER": {
-      "name": "Uber",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 16,
-        "buy": 35,
-        "hold": 8,
-        "sell": 1,
-        "strongSell": 0,
-        "total": 60,
-        "bullish": 51,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-07-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-16",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000382/e26302_uber-8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-05-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm"
-        },
-        "insider30d": 10
-      },
-      "explain": "60 analysts cover it — 51 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "BSX": {
       "name": "Boston Scientific",
       "qarp": "STRONG BUY",
@@ -1375,6 +1364,38 @@
         "insider30d": 1
       },
       "explain": "39 analysts cover it — 31 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "UBER": {
+      "name": "Uber",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 16,
+        "buy": 35,
+        "hold": 8,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 60,
+        "bullish": 51,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-07-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000382/e26302_uber-8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-05-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm"
+        },
+        "insider30d": 10
+      },
+      "explain": "60 analysts cover it — 51 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "LULU": {
       "name": "Lululemon",
@@ -1781,25 +1802,6 @@
       "margin": 7.5,
       "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
     },
-    "ZTS": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-07",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm",
-      "revenue": {
-        "fmt": "$2.3B",
-        "yoy": 2.9
-      },
-      "eps": {
-        "val": 1.42,
-        "yoy": 6.0
-      },
-      "net_income": {
-        "fmt": "$601M"
-      },
-      "margin": 26.6,
-      "summary": "Q1 FY2026 — revenue $2.3B (+2.9% YoY), diluted EPS $1.42 (+6.0% YoY), net margin 27%. (as reported, GAAP)"
-    },
     "ADBE": {
       "period": "Q2 FY2026",
       "filed": "2026-06-15",
@@ -1818,6 +1820,25 @@
       },
       "margin": 25.9,
       "summary": "Q2 FY2026 — revenue $6.6B (+12.7% YoY), diluted EPS $4.25 (+7.9% YoY), net margin 26%. (as reported, GAAP)"
+    },
+    "ZTS": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-07",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000024/zts-20260331.htm",
+      "revenue": {
+        "fmt": "$2.3B",
+        "yoy": 2.9
+      },
+      "eps": {
+        "val": 1.42,
+        "yoy": 6.0
+      },
+      "net_income": {
+        "fmt": "$601M"
+      },
+      "margin": 26.6,
+      "summary": "Q1 FY2026 — revenue $2.3B (+2.9% YoY), diluted EPS $1.42 (+6.0% YoY), net margin 27%. (as reported, GAAP)"
     },
     "DHR": {
       "period": "Q2 FY2026",
@@ -1857,25 +1878,6 @@
       "margin": 71.5,
       "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
     },
-    "UBER": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-06",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm",
-      "revenue": {
-        "fmt": "$13.2B",
-        "yoy": 14.5
-      },
-      "eps": {
-        "val": 0.13,
-        "yoy": -84.3
-      },
-      "net_income": {
-        "fmt": "$263M"
-      },
-      "margin": 2.0,
-      "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
-    },
     "BSX": {
       "period": "Q1 FY2026",
       "filed": "2026-05-01",
@@ -1894,6 +1896,25 @@
       },
       "margin": null,
       "summary": "Q1 FY2026 — revenue $5.2B (+11.6% YoY), diluted EPS $0.90 (+100.0% YoY). (as reported, GAAP)"
+    },
+    "UBER": {
+      "period": "Q1 FY2026",
+      "filed": "2026-05-06",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm",
+      "revenue": {
+        "fmt": "$13.2B",
+        "yoy": 14.5
+      },
+      "eps": {
+        "val": 0.13,
+        "yoy": -84.3
+      },
+      "net_income": {
+        "fmt": "$263M"
+      },
+      "margin": 2.0,
+      "summary": "Q1 FY2026 — revenue $13.2B (+14.5% YoY), diluted EPS $0.13 (-84.3% YoY), net margin 2%. (as reported, GAAP)"
     },
     "LULU": {
       "period": "Q1 FY2026",
