@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "generated_at": "Jul 30, 5:54am ET",
+  "generated_at": "Jul 30, 6:44am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -200,16 +200,16 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
-    "NVDA": {
-      "title": "Steve Eisman Says He'd Be 'Petrified' Running OpenAI or Anthropic as Cheap Chinese Models Threaten Price War",
-      "ts": 1785355520,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60778791/steve-eisman-says-hed-be-petrified-running-openai-or-anthropic-as-cheap-chinese-models-threaten-price-war",
-      "wiim": false
-    },
     "AVGO": {
       "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
       "ts": 1785346515,
       "url": "https://www.benzinga.com/markets/options/26/07/60771948/10-information-technology-stocks-whale-activity-today-s-session",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "Steve Eisman Says He'd Be 'Petrified' Running OpenAI or Anthropic as Cheap Chinese Models Threaten Price War",
+      "ts": 1785355520,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60778791/steve-eisman-says-hed-be-petrified-running-openai-or-anthropic-as-cheap-chinese-models-threaten-price-war",
       "wiim": false
     }
   },
@@ -468,6 +468,71 @@
   },
   "bz_news": [
     {
+      "title": "Rising Memory Costs Are Hurting Smartphones, Qualcomm Warns",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60791225/rising-memory-costs-are-hurting-smartphones-qualcomm-warns",
+      "ts": 1785407623,
+      "tickers": [
+        "QCOM",
+        "AAPL",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.405
+    },
+    {
+      "title": "Chip Stocks Are Crashing— but This Analyst Says AI Chip Demand Still Outpaces Supply Until At Least 2028: 'You Just Don't Have The..'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60790759/wolfe-research-says-ai-chip-oversupply-remains-years-away-flags-financing-as-next-bottleneck",
+      "ts": 1785407429,
+      "tickers": [
+        "SOXX",
+        "INTC",
+        "AVGO",
+        "AMD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.559
+    },
+    {
+      "title": "IBM And The University Of Chicago Achieve Computations Beyond Reach Of Leading Classical Simulation Methods",
+      "url": "https://www.benzinga.com/news/26/07/60790424/ibm-and-university-chicago-achieve-computations-beyond-reach-leading-classical-simulation-methods",
+      "ts": 1785406606,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.31
+    },
+    {
+      "title": "IBM And Algorithmiq Announce Joint Demonstration Of Quantum Advantage With The Simulation Of Heterogeneous Quantum Material",
+      "url": "https://www.benzinga.com/news/26/07/60790072/ibm-and-algorithmiq-announce-joint-demonstration-quantum-advantage-simulation-heterogeneous-quantum-",
+      "ts": 1785406143,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.409
+    },
+    {
+      "title": "IBM And Qedma Quantum Computing Announce Study Demonstrating How Trusted, Error-Mitigated Quantum Computation Is Possible",
+      "url": "https://www.benzinga.com/news/26/07/60790024/ibm-and-qedma-quantum-computing-announce-study-demonstrating-how-trusted-error-mitigated-quantum-com",
+      "ts": 1785406079,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.344
+    },
+    {
       "title": "Chuck Schumer, Other Senators Reportedly Warn Apple CEO Tim Cook Against Buying Chinese Memory Chips: 'Would Be a Mistake'",
       "url": "https://www.benzinga.com/markets/tech/26/07/60789256/chuck-schumer-other-senators-reportedly-warn-apple-ceo-tim-cook-against-buying-chinese-memory-chips-would-be-a-mistake",
       "ts": 1785405299,
@@ -547,7 +612,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.428
+      "relevance": 0.429
     },
     {
       "title": "Why Microsoft Shares Are Trading Higher By 8%; Here Are 20 Stocks Moving Premarket",
@@ -689,7 +754,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.278
+      "relevance": 0.279
     },
     {
       "title": "Microsoft’s AI CapEx Is Surging, but CFO Amy Hood Says the Company Can Hit the Brakes on GPU Spending if Demand Cools: ‘You Just Slow Down’",
@@ -716,7 +781,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.399
+      "relevance": 0.4
     },
     {
       "title": "Microsoft Sees Q1 Sales $89.850B-$90.950B vs $89.634B Est",
@@ -729,78 +794,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.417
-    },
-    {
-      "title": "Microsoft CFO Says Effective At The Start Of FY27, We Are Extending The Estimated Useful Life Of Our Data Centers And Office Buildings From 15 To 25 Years; 29 Change In Useful Life Of Properties Affects Only The Timing Of Future Depreciation, Expected To Have A Minimal Benefit To FY27 Operating Income",
-      "url": "https://www.benzinga.com/news/26/07/60785276/microsoft-cfo-says-effective-start-fy27-we-are-extending-estimated-useful-life-our-data-centers-and-",
-      "ts": 1785362656,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.333
-    },
-    {
-      "title": "Microsoft CFO Says For The Full Year, Cloud Revenue Surpassed $214B, With Nearly 90% From Customers Outside Of Frontier Model Companies; In Cloud Business, Customer Demand Continues To Exceed Available Capacity; Revenue Growth In Cloud Unit Helped By Earlier Delivery Of New Capacity; Additional Import Of Capacity Was Quickly Monetized",
-      "url": "https://www.benzinga.com/news/26/07/60785231/microsoft-cfo-says-full-year-cloud-revenue-surpassed-214b-nearly-90-customers-outside-frontier-model",
-      "ts": 1785362415,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.416
-    },
-    {
-      "title": "Microsoft CFO Says Contract Backlog In Q4 Increased 25% When Excluding OpenAI",
-      "url": "https://www.benzinga.com/news/26/07/60785201/microsoft-cfo-says-contract-backlog-q4-increased-25-when-excluding-openai",
-      "ts": 1785362272,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.362
-    },
-    {
-      "title": "Microsoft CEO Says Number Of Enterprise Customers Deploying Copilot To The Majority Of Information Workers Grew Nearly 75% QoQ;  Copilot Revenue Accelerated Over 60% Quarter Over Quarter; GitHub Now Has 225M Users; GitHub Copilot Now Has 50M Users",
-      "url": "https://www.benzinga.com/news/26/07/60785059/microsoft-ceo-says-number-enterprise-customers-deploying-copilot-majority-information-workers-grew-n",
-      "ts": 1785361748,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.313
-    },
-    {
-      "title": "Microsoft CEO Says Added 31 New Data Centers Across Five Continents This Quarter, Bringing The Total To 88 This Year; Added Another Gigawatt Of Capacity This Quarter; Remains On Track To Roughly Double Overall Capacity In Two Years",
-      "url": "https://www.benzinga.com/news/26/07/60784969/microsoft-ceo-says-added-31-new-data-centers-across-five-continents-quarter-bringing-total-88-year-a",
-      "ts": 1785361359,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.378
-    },
-    {
-      "title": "Johnson & Johnson Partners With Sail Biomedicines On In Vivo CAR-T Therapies, Secures $2.58B Acquisition Option; To Invest $785M In Sail,  Expects The Agreements To Dilute Adjusted Operational Earnings Per Share And Adjusted Earnings Per Share By ~$0.18 In 2026 And ~$1.28 In 2027",
-      "url": "https://www.benzinga.com/m/26/07/60784858/johnson-johnson-partners-sail-biomedicines-vivo-car-t-therapies-secures-2-58b-acquisition-option-inv",
-      "ts": 1785360815,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.452
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1008,7 +1001,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.513
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1020,7 +1013,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1071,19 +1064,19 @@
       "relevance": 0.569
     },
     {
-      "title": "Boeing, Coca-Cola And 3 Stocks To Watch Heading Into Tuesday",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60715418/boeing-coca-cola-and-3-stocks-to-watch-heading-into-tuesday",
-      "ts": 1785222725,
+      "title": "Warren Buffett Says Alphabet Is More Likely to Win Than 95% of Wall Street — But Adds ‘I Don’t Like It as Well as’ Coca-Cola And 4 Others",
+      "url": "https://www.benzinga.com/news/topics/26/07/60680506/warren-buffett-says-alphabet-is-more-likely-to-win-than-95-of-wall-street-but-adds-i-dont-like-it-as-well-as-coca-cola-and-4-others",
+      "ts": 1784921826,
       "tickers": [
-        "UPS",
         "KO",
-        "BA",
-        "CDNS"
+        "AXP",
+        "BRK",
+        "GOOG"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.49
+      "relevance": 0.443
     }
   ],
   "portfolio_brief": {
