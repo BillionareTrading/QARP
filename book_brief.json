@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Wednesday was a split session for Jaleel's book — software carried the day while space and semiconductors dragged. ServiceNow (+4.65%, now +21.5% overall) and Adobe (+5.72%, +7.4%) were the standout movers, both riding a sector rotation trade as investors pivoted from AI hardware into software names ahead of Microsoft's post-close earnings. SAP added another +3.81% on the same tailwind. That software surge is what kept the book's unrealized gain at $232 on a $22,757 account — without it, the session would have looked considerably uglier.</p><p>The real damage came from Rocket Lab, which shed another 8.28% and now sits 25.2% in the hole on a $2,930 position — the largest single drag in the book and flagged AVOID with a QARP of 49.3, the lowest quality score here. That's a thesis-vs-price divergence that's hard to ignore: Jaleel is still holding a position the model rates avoid while it bleeds. NVIDIA slipped 3.55% (QARP 84.0, STRONG BUY) — the semiconductor selloff looks like rotation noise rather than deterioration, but the export-control overhang is real and earnings loom August 26. Boston Scientific is essentially flat on the day but its next catalyst is today (July 29 earnings) after FY26 guidance was already slashed from 10.5% to 7–8.5% growth — that read matters immediately.</p><p>Watch the drift in LULU (-1.07%, -6.9% total) and SPGI (-1.11%, -6.1% total) — both are underwater on the position with ongoing fundamental headwinds (guidance cut and tariff margin pressure for LULU; a small position but six points in the red for SPGI). The software pop today is a sentiment trade, not a fundamental re-rating; if Microsoft's print disappoints after the close, NOW and ADBE could give back a chunk of today's gains quickly.</p>",
+  "your_book": "<p>Thursday was a tale of two tapes for Jaleel's book. The standout mover was <strong>RKLB</strong>, which surged +10.38% on the session — the largest day-gain in the portfolio — yet remains deep in the red at –17.5% overall and carries an AVOID verdict with a QARP score of just 46. That divergence is worth sitting with: a single-day pop doesn't rehabilitate a thesis that was never strongly held, and at 14.3% of the book it is the single largest position. On the positive side, <strong>AVGO</strong> (+4.73%) and <strong>NVDA</strong> (+2.65%) caught a tailwind from Microsoft AI-infrastructure optimism, adding modest support. <strong>NBIX</strong> also ticked up +2.61% and is now +13.8% on cost — one of the cleaner wins in the book.</p><p>The drag came from the software cluster and medical devices. <strong>ADBE</strong> fell –5.9% and <strong>NOW</strong> dropped –4.92% — both despite a sector headline suggesting software was actually rallying into Microsoft's earnings. That's a red flag: if the tide was coming in and these names still sold off, something idiosyncratic is weighing on them. <strong>EFX</strong> dropped –5.84% with no clear catalyst provided. <strong>ABT</strong> (–2.21%) and <strong>ZTS</strong> (–2.44%) gave back ground despite both carrying STRONG BUY verdicts and solid QARP scores — likely noise, but worth monitoring given ABT's existing EPS-guide flag. The portfolio's overall unrealized gain sits at just +$143.68 (+0.64%), reflecting how much dead weight RKLB's –17.5% hole and several other underwater names represent against the winners.</p><p>The drift that deserves scrutiny: <strong>BSX</strong> sits at –3.9% overall with a guidance-slashed flag (FY26 growth cut to 7–8.5%, flat through Q3 guided), yet it barely moved today (–0.09%) and still holds a STRONG BUY verdict with an 80.4 QARP. Price and analyst verdict are pulling against the fundamental risk flag — that tension needs resolution before the next earnings in October. Similarly, <strong>LULU</strong> is –6.6% overall with a guidance-cut flag and five straight quarters of negative Americas comps, yet it edged up +0.37% today. The next read is September 2 — that's the moment of truth.</p>",
   "attention": [
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "AVOID-rated, down 25.2% — another 8.28% today with no thesis support",
-      "note": "At nearly 13% of the book, Rocket Lab is the single largest position and carries the lowest QARP score (49.3) with an AVOID verdict; the continued price deterioration against a negative model rating is a direct contradiction of a capital-preservation mandate that demands a decision, not patience."
+      "headline": "Largest position, AVOID-rated, –17.5% in the hole — today's 10% pop changes nothing structurally",
+      "note": "At 14.3% of the book, RKLB is both the biggest weight and the lowest-conviction name (QARP 46, AVOID verdict); the day's gain looks like noise given no fundamental catalyst was cited — Jaleel needs to decide whether to use this strength to reduce or exit rather than let a bounce mask a broken thesis."
+    },
+    {
+      "ticker": "ADBE",
+      "severity": "watch",
+      "headline": "Fell –5.9% on a day the software sector was broadly rallying — divergence is a warning sign",
+      "note": "The headline context was positive for software yet ADBE underperformed badly, which reinforces the existing AI-disruption narrative risk and CFO-exit overhang; if it can't participate in a sector up-day, the next catalyst (Sep 10 earnings) carries asymmetric downside."
+    },
+    {
+      "ticker": "NOW",
+      "severity": "watch",
+      "headline": "–4.92% despite a software rally day; highest dollar weight in the book",
+      "note": "NOW is the largest-weight high-multiple name and it sold off on a day its sector was cited as a beneficiary — that relative weakness, combined with its known macro-beta risk flag, warrants watching closely ahead of its October 27 earnings."
     },
     {
       "ticker": "BSX",
-      "severity": "act",
-      "headline": "Earnings catalyst is today — guidance already slashed, flat through Q3 guided",
-      "note": "Boston Scientific's next catalyst date is July 29 (today), and management has already pre-guided flat growth through Q3 after cutting FY26 targets from 10.5% to 7–8.5%; Jaleel needs to know the actual print before the next session to decide whether the STRONG BUY thesis still holds or the flag escalates."
-    },
-    {
-      "ticker": "LULU",
       "severity": "watch",
-      "headline": "Guidance-cut risk flag, -6.9% on position, Americas comps negative five straight quarters",
-      "note": "Lululemon carries an elevated risk flag with deteriorating fundamentals (tariff margin hit, China stall, fifth consecutive negative Americas comp) and the position is nearly 7% underwater — the next read on whether comps stabilize isn't until September 2."
-    },
-    {
-      "ticker": "NVDA",
-      "severity": "watch",
-      "headline": "Semiconductor rotation selloff (-3.55%) meets export-control overhang ahead of Aug 26 earnings",
-      "note": "Today's drop looks like sector rotation noise but the China export-license tightening and Senate scrutiny flagged in the risk data are structural headwinds that won't resolve before the August 26 earnings print, making this worth monitoring closely despite the STRONG BUY rating."
+      "headline": "STRONG BUY verdict sits uneasily against a slashed guidance flag and –3.9% unrealized loss",
+      "note": "Management guided flat through Q3 and cut FY26 growth to 7–8.5%, yet the system still rates it STRONG BUY (QARP 80.4) — Jaleel should verify whether that verdict has been updated to reflect the guidance cut, or whether there's a stale-rating risk heading into the October 20 print."
     }
   ],
-  "date": "2026-07-29",
-  "generated_at": "Jul 29, 4:46pm ET"
+  "date": "2026-07-30",
+  "generated_at": "Jul 30, 4:26pm ET"
 }
