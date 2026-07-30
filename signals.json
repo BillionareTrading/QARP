@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "generated_at": "Jul 30, 5:04am ET",
+  "generated_at": "Jul 30, 5:54am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -468,6 +468,64 @@
   },
   "bz_news": [
     {
+      "title": "Chuck Schumer, Other Senators Reportedly Warn Apple CEO Tim Cook Against Buying Chinese Memory Chips: 'Would Be a Mistake'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60789256/chuck-schumer-other-senators-reportedly-warn-apple-ceo-tim-cook-against-buying-chinese-memory-chips-would-be-a-mistake",
+      "ts": 1785405299,
+      "tickers": [
+        "AAPL",
+        "SSNLF",
+        "MU",
+        "SKHY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.313
+    },
+    {
+      "title": "Ross Gerber Says MSFT Is 'Crushing It,' Jim Cramer Calls Quarter a 'Tour De Force' After Earnings Beat",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60789027/microsoft-draws-bullish-reactions-from-ross-gerber-jim-cramer",
+      "ts": 1785404189,
+      "tickers": [
+        "MSFT",
+        "PIPR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.377
+    },
+    {
+      "title": "The Wall Street Journal Reported Bidding War Among Exxon, Chevron, Others For Venezuela's Best Oil Fields Has Hit An Impasse",
+      "url": "https://www.benzinga.com/quote/USO",
+      "ts": 1785403991,
+      "tickers": [
+        "XOM",
+        "CVX",
+        "SPY",
+        "USO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.236
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain as Federal Reserve Holds Interest Rates—Meta, Microsoft, Apple in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60788808/stock-market-today-sp-500-nasdaq-100-futures-gain-as-federal-reserve-holds-interest-rates-meta-microsoft-apple-in-focus",
+      "ts": 1785402947,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "AAPL",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.502
+    },
+    {
       "title": "Piper Sandler Maintains Overweight on Microsoft, Raises Price Target to $550",
       "url": "https://www.benzinga.com/news/26/07/60788658/piper-sandler-maintains-overweight-microsoft-raises-price-target-550",
       "ts": 1785402250,
@@ -489,7 +547,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.429
+      "relevance": 0.428
     },
     {
       "title": "Why Microsoft Shares Are Trading Higher By 8%; Here Are 20 Stocks Moving Premarket",
@@ -745,55 +803,6 @@
       "relevance": 0.452
     },
     {
-      "title": "Johnson & Johnson Says 2026 Adj Operational EPS And Adj EPS Expected To Decrease By $0.64; 2027 Adj Operational EPS And Adj EPS Expected To Decrease By $1.36",
-      "url": "https://www.benzinga.com/news/26/07/60784820/johnson-johnson-says-2026-adj-operational-eps-and-adj-eps-expected-decrease-0-64-2027-adj-operationa",
-      "ts": 1785360677,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.405
-    },
-    {
-      "title": "'Goldman Pitches $5.4 Billion Debt for Microsoft-Tied Data Center' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60783619/goldman-pitches-5-4-billion-debt-microsoft-tied-data-center-bloomberg",
-      "ts": 1785358865,
-      "tickers": [
-        "GS",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.317
-    },
-    {
-      "title": "Microsoft shares are trading higher after the company reported better-than-expected Q4 financial results.",
-      "url": "https://www.benzinga.com/quote/MSFT",
-      "ts": 1785358293,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.451
-    },
-    {
-      "title": "Microsoft Q4 Earnings Highlights: 14th Straight Double Beat, Cloud Revenue Up 27%",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60781289/microsoft-q4-earnings-highlights-14th-straight-double-beat-cloud-revenue-up-27",
-      "ts": 1785356573,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.526
-    },
-    {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
       "url": "https://www.benzinga.com/news/26/07/60774161/jp-morgan-maintains-overweight-coca-cola-raises-price-target-96",
       "ts": 1785349548,
@@ -999,7 +1008,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.513
+      "relevance": 0.512
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1011,7 +1020,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.578
+      "relevance": 0.579
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
