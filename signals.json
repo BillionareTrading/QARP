@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-29",
-  "generated_at": "Jul 29, 7:41pm ET",
+  "date": "2026-07-30",
+  "generated_at": "Jul 30, 5:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -20,7 +20,7 @@
       "sev": "elevated",
       "tag": "Guidance slashed",
       "detail": "FY26 growth cut 10.5→7–8.5%; Watchman/EP/urology soft; mgmt guides <b>flat through Q3</b>.",
-      "next": "Jul 29"
+      "next": "Oct 20"
     },
     {
       "ticker": "ADBE",
@@ -61,14 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Jul 29",
-      "what": "BSX earnings",
-      "affects": "BSX",
-      "dir": "two-sided",
-      "why": "Q-results for Boston Scientific — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Jul 30",
       "what": "NBIX earnings",
       "affects": "NBIX",
@@ -93,6 +85,14 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
+      "when": "Aug 5",
+      "what": "UBER earnings",
+      "affects": "UBER",
+      "dir": "two-sided",
+      "why": "Q-results for Uber — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
       "when": "Jul 29",
       "what": "KO — JP Morgan maintains",
       "affects": "KO",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 29",
+      "when": "Jul 30",
       "what": "Energy & geopolitics — today's read",
       "why": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
       "affects": "Energy · growth",
@@ -115,9 +115,10 @@
     "NOW": "2026-10-27",
     "ADBE": "2026-09-10",
     "ABT": "2026-10-13",
+    "ZTS": "2026-08-06",
     "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
-    "BSX": "2026-07-29",
+    "BSX": "2026-10-20",
     "UBER": "2026-08-05",
     "LULU": "2026-09-02",
     "GILD": "2026-08-04",
@@ -169,12 +170,6 @@
     }
   ],
   "holding_news": {
-    "NVDA": {
-      "title": "Steve Eisman Says He'd Be 'Petrified' Running OpenAI or Anthropic as Cheap Chinese Models Threaten Price War",
-      "ts": 1785355520,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60778791/steve-eisman-says-hed-be-petrified-running-openai-or-anthropic-as-cheap-chinese-models-threaten-price-war",
-      "wiim": false
-    },
     "NOW": {
       "title": "Shares of software companies are trading higher as the industry extends its recent rally, which may be due to investors rotating out of weakened semiconductor and AI hardware stocks into less capital-intensive areas of the tech sector. The industry may be buoyed by trader optimism ahead of Microsoft's Q4 earnings that will be reported after the market closes.",
       "ts": 1785351767,
@@ -194,9 +189,21 @@
       "wiim": true
     },
     "KO": {
-      "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
-      "ts": 1785349548,
-      "url": "https://www.benzinga.com/news/26/07/60774161/jp-morgan-maintains-overweight-coca-cola-raises-price-target-96",
+      "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
+      "ts": 1785333521,
+      "url": "https://www.benzinga.com/quote/KO",
+      "wiim": true
+    },
+    "SPGI": {
+      "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
+      "ts": 1785169388,
+      "url": "https://www.benzinga.com/quote/WSE",
+      "wiim": true
+    },
+    "NVDA": {
+      "title": "Steve Eisman Says He'd Be 'Petrified' Running OpenAI or Anthropic as Cheap Chinese Models Threaten Price War",
+      "ts": 1785355520,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60778791/steve-eisman-says-hed-be-petrified-running-openai-or-anthropic-as-cheap-chinese-models-threaten-price-war",
       "wiim": false
     },
     "AVGO": {
@@ -288,76 +295,6 @@
       "price": 89.08,
       "upside": 16.7,
       "held": true,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-22",
-      "ticker": "MMM",
-      "firm": "UBS",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$218",
-      "price": 177.95,
-      "upside": 22.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-22",
-      "ticker": "CVX",
-      "firm": "TD Cowen",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$200",
-      "price": 191.86,
-      "upside": 4.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-22",
-      "ticker": "MMM",
-      "firm": "Bernstein",
-      "action": "Maintains",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$145",
-      "price": 177.95,
-      "upside": -18.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-22",
-      "ticker": "MMM",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$183",
-      "price": 177.95,
-      "upside": 2.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-22",
-      "ticker": "MMM",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$132",
-      "price": 177.95,
-      "upside": -25.8,
-      "held": false,
       "uni": true,
       "qarp": "AVOID"
     },
@@ -531,6 +468,199 @@
   },
   "bz_news": [
     {
+      "title": "Piper Sandler Maintains Overweight on Microsoft, Raises Price Target to $550",
+      "url": "https://www.benzinga.com/news/26/07/60788658/piper-sandler-maintains-overweight-microsoft-raises-price-target-550",
+      "ts": 1785402250,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.463
+    },
+    {
+      "title": "MSFT Says the Next Phase of AI Is 'Per Seat Plus Consumption' as Copilot Usage Grows",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60788615/as-ai-takes-on-more-work-for-users-microsoft-bets-on-usage-over-software-seats",
+      "ts": 1785401750,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.429
+    },
+    {
+      "title": "Why Microsoft Shares Are Trading Higher By 8%; Here Are 20 Stocks Moving Premarket",
+      "url": "https://www.benzinga.com/news/26/07/60788399/why-microsoft-shares-are-trading-higher-by-8-here-are-20-stocks-moving-premarket",
+      "ts": 1785400235,
+      "tickers": [
+        "MSFT",
+        "NUWE",
+        "FTNT",
+        "CHGG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.437
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60788305/sp500-july-30-open-up-or-down-polymarket-fed-bond-yields-big-tech-earnings-oil",
+      "ts": 1785399556,
+      "tickers": [
+        "SPY",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Forget the Apple Phase-Out: Patrick Moorhead Says Qualcomm Boasts a 'Rocking' Auto Business and Data Center Tech 'Different From NVIDIA'",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60788275/forget-the-apple-phase-out-patrick-moorhead-says-qualcomm-boasts-a-rocking-auto-business-and-data-center-tech-different-from-nvidia",
+      "ts": 1785399434,
+      "tickers": [
+        "QCOM",
+        "AAPL",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.427
+    },
+    {
+      "title": "Microsoft's Copilot Just Crossed 30 Million Paid Seats as CEO Satya Nadella Unveiled Unified App: 'Major Step Forward'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60788224/microsofts-copilot-just-crossed-30-million-paid-seats-as-ceo-satya-nadella-unveiled-unified-app-major-step-forward",
+      "ts": 1785399210,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.33
+    },
+    {
+      "title": "SK Hynix Slump Marks 'Short-Term Bottom' in AI Stocks Fueled by Forced Liquidations, Says Dan Niles",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60787722/sk-hynix-slump-marks-short-term-bottom-in-ai-stocks-fueled-by-forced-liquidations-says-dan-niles",
+      "ts": 1785395484,
+      "tickers": [
+        "SKHY",
+        "INTC",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.419
+    },
+    {
+      "title": "A Phone? Glasses? A Pin?  Prediction Markets Buzzing About Jony Ive and OpenAI's First Device",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60787623/a-phone-glasses-a-pin-prediction-markets-buzzing-about-jony-ive-and-openais-first-device",
+      "ts": 1785394396,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.344
+    },
+    {
+      "title": "Intel Gives Little-Known Stealth Startup Access to Atom Chip Technology in Deal Linked to CEO Lip-Bu Tan’s Former Business Partner: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60787498/intel-atom-chip-stealth-startup-lip-bu-tan-report",
+      "ts": 1785393941,
+      "tickers": [
+        "META",
+        "INTC",
+        "QCOM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.364
+    },
+    {
+      "title": "Dow Records Worst Session Since April 2025; Investor Sentiment Weakens, Greed Index Remains In ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60787300/dow-records-worst-session-since-april-2025-investor-sentiment-weakens-greed-index-remains-in-fear-zone",
+      "ts": 1785392405,
+      "tickers": [
+        "KLAC",
+        "AAPL",
+        "AMZN",
+        "GD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.464
+    },
+    {
+      "title": "Apple, Microsoft And 3 Stocks To Watch Heading Into Thursday",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60787028/apple-microsoft-and-3-stocks-to-watch-heading-into-thursday-2",
+      "ts": 1785389653,
+      "tickers": [
+        "AAPL",
+        "META",
+        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.407
+    },
+    {
+      "title": "Mark Zuckerberg Says Can't Rely on Open Source AI Models Right Now: 'We Think That There's Some Risk…'",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60786995/mark-zuckerberg-open-source-ai-models-risk-meta-stock-pops",
+      "ts": 1785389451,
+      "tickers": [
+        "META",
+        "MSFT",
+        "PLTR",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.278
+    },
+    {
+      "title": "Microsoft’s AI CapEx Is Surging, but CFO Amy Hood Says the Company Can Hit the Brakes on GPU Spending if Demand Cools: ‘You Just Slow Down’",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60786971/microsoft-stock-ai-capex-amy-hood-gpu-spending-surges-after-hours",
+      "ts": 1785389143,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.468
+    },
+    {
+      "title": "Meta Platforms, Qualcomm, Robinhood, Microsoft and Chipotle: Why These 5 Stock Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60786380/meta-platforms-qualcomm-robinhood-microsoft-and-chipotle-why-these-5-stock-are-on-investors-radars-today",
+      "ts": 1785377218,
+      "tickers": [
+        "META",
+        "MSFT",
+        "QCOM",
+        "HOOD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.399
+    },
+    {
       "title": "Microsoft Sees Q1 Sales $89.850B-$90.950B vs $89.634B Est",
       "url": "https://www.benzinga.com/news/26/07/60785300/microsoft-sees-q1-sales-89-850b-90-950b-vs-89-634b-est",
       "ts": 1785362787,
@@ -576,7 +706,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.363
+      "relevance": 0.362
     },
     {
       "title": "Microsoft CEO Says Number Of Enterprise Customers Deploying Copilot To The Majority Of Information Workers Grew Nearly 75% QoQ;  Copilot Revenue Accelerated Over 60% Quarter Over Quarter; GitHub Now Has 225M Users; GitHub Copilot Now Has 50M Users",
@@ -661,116 +791,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.527
-    },
-    {
-      "title": "Microsoft CEO Satya Nadella Said, :This year, Azure revenue surpassed $100 billion for the first time, and Microsoft 365 Copilot reached over 30 million paid seats, reflecting the confidence customers are placing in us to power their AI transformation.”",
-      "url": "https://www.benzinga.com/quote/MSFT",
-      "ts": 1785355666,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.354
-    },
-    {
-      "title": "Microsoft Q4 Adj. EPS $4.74 Beats $4.24 Estimate, Sales $90.007B Beat $87.621B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60778888/microsoft-q4-adj-eps-4-74-beats-4-24-estimate-sales-90-007b-beat-87-621b-estimate",
-      "ts": 1785355562,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.495
-    },
-    {
-      "title": "Steve Eisman Says He'd Be 'Petrified' Running OpenAI or Anthropic as Cheap Chinese Models Threaten Price War",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60778791/steve-eisman-says-hed-be-petrified-running-openai-or-anthropic-as-cheap-chinese-models-threaten-price-war",
-      "ts": 1785355520,
-      "tickers": [
-        "NVDA",
-        "GOOGL",
-        "INTC",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.288
-    },
-    {
-      "title": "Apple Could Swing $170 Billion In Value After Earnings",
-      "url": "https://www.benzinga.com/markets/options/26/07/60777143/apple-could-swing-170-billion-in-value-after-earnings",
-      "ts": 1785353473,
-      "tickers": [
-        "AAPL",
-        "AMZN",
-        "MA",
-        "BMY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.392
-    },
-    {
-      "title": "Shares of software companies are trading higher as the industry extends its recent rally, which may be due to investors rotating out of weakened semiconductor and AI hardware stocks into less capital-intensive areas of the tech sector. The industry may be buoyed by trader optimism ahead of Microsoft's Q4 earnings that will be reported after the market closes.",
-      "url": "https://www.benzinga.com/quote/PLTR",
-      "ts": 1785351767,
-      "tickers": [
-        "DFNS",
-        "MTC",
-        "YXT",
-        "ROC"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.455
-    },
-    {
-      "title": "Apple Q3 Preview: Stock Hits All-Time Highs, Will Earnings Justify the Momentum?",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/07/60775030/apple-q3-preview-stock-hits-all-time-highs-will-earnings-justify-the-momentum",
-      "ts": 1785350739,
-      "tickers": [
-        "AAPL",
-        "SPY",
-        "QQQ",
-        "DIA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.481
-    },
-    {
-      "title": "Apple Stock Hits All-Time Highs: What's Happening?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60774367/apple-stock-hits-all-time-highs-whats-happening",
-      "ts": 1785349793,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.411
-    },
-    {
-      "title": "'Sam Altman To Meet With White House’s Wiles This Week Ahead Of AI Framework Deadline' - CNBC",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60774264/sam-altman-meet-white-house-s-wiles-week-ahead-ai-framework-deadline-cnbc",
-      "ts": 1785349653,
-      "tickers": [
-        "MSFT",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.332
+      "relevance": 0.526
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -785,18 +806,6 @@
       "relevance": 0.55
     },
     {
-      "title": "JP Morgan Maintains Overweight on Boeing, Raises Price Target to $290",
-      "url": "https://www.benzinga.com/news/26/07/60774023/jp-morgan-maintains-overweight-boeing-raises-price-target-290",
-      "ts": 1785349377,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.419
-    },
-    {
       "title": "TD Cowen Maintains Buy on Coca-Cola, Raises Price Target to $100",
       "url": "https://www.benzinga.com/news/26/07/60772315/td-cowen-maintains-buy-coca-cola-raises-price-target-100",
       "ts": 1785347150,
@@ -807,51 +816,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.585
-    },
-    {
-      "title": "8 Financials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/07/60771951/8-financials-stocks-whale-alerts-today-s-session",
-      "ts": 1785346516,
-      "tickers": [
-        "RKT",
-        "HOOD",
-        "TOST",
-        "BAC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.379
-    },
-    {
-      "title": "9 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/07/60771950/9-consumer-discretionary-stocks-whale-alerts-today-s-session",
-      "ts": 1785346516,
-      "tickers": [
-        "TSLA",
-        "CVNA",
-        "HD",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.363
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/07/60771948/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1785346515,
-      "tickers": [
-        "MU",
-        "NBIS",
-        "NVDA",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
     },
     {
       "title": "Piper Sandler Maintains Overweight on Coca-Cola, Raises Price Target to $95",
@@ -937,21 +901,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.556
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60750402/sp500-july-29-open-up-or-down-polymarket-fed-warsh-microsoft-meta-qualcomm-earnings",
-      "ts": 1785313822,
-      "tickers": [
-        "META",
-        "MSFT",
-        "KO",
-        "QCOM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
     },
     {
       "title": "Dow Jumps Over 500 Points As Oil Prices Fall: Investor Sentiment Improves, Greed Index Remains In ‘Fear’ Zone",
@@ -1126,21 +1075,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.49
-    },
-    {
-      "title": "Coca-Cola's Earnings Could Put $10.7 Billion In Market Value On The Line",
-      "url": "https://www.benzinga.com/markets/options/26/07/60709161/coca-colas-earnings-could-put-10-7-billion-in-market-value-on-the-line",
-      "ts": 1785180600,
-      "tickers": [
-        "KO",
-        "BA",
-        "STX",
-        "SPGI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.592
     }
   ],
   "portfolio_brief": {
@@ -1278,7 +1212,7 @@
           "date": "2026-07-28",
           "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
         },
-        "insider30d": 7
+        "insider30d": 6
       },
       "explain": "35 analysts cover it — 25 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1379,7 +1313,7 @@
           "date": "2026-05-20",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
         },
-        "insider30d": 10
+        "insider30d": 1
       },
       "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1475,7 +1409,7 @@
           "date": "2026-06-04",
           "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm"
         },
-        "insider30d": 11
+        "insider30d": 0
       },
       "explain": "39 analysts cover it — 2 bullish, 32 hold, 5 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
     },
@@ -1527,7 +1461,12 @@
         "score": 1.21,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
+        "ts": 1785169388,
+        "url": "https://www.benzinga.com/quote/WSE",
+        "wiim": true
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1629,7 +1568,7 @@
           "date": "2026-06-09",
           "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
         },
-        "insider30d": 6
+        "insider30d": 5
       },
       "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1778,10 +1717,10 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
-        "ts": 1785349548,
-        "url": "https://www.benzinga.com/news/26/07/60774161/jp-morgan-maintains-overweight-coca-cola-raises-price-target-96",
-        "wiim": false
+        "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
+        "ts": 1785333521,
+        "url": "https://www.benzinga.com/quote/KO",
+        "wiim": true
       },
       "filings": {
         "latest8k": {
