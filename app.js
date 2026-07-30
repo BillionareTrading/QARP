@@ -1121,7 +1121,15 @@ function initGuide() {
   }));
   const tryBtn = g.querySelector("#guide-try-stock");
   if (tryBtn) tryBtn.addEventListener("click", () => {
-    const h = [...(DATA.portfolio || [])].sort((x, y) => (y.value || 0) - (x.value || 0))[0] || (DATA.universe || [])[0];
+    // The example MUST be a Shariah-compliant universe name. Picking the largest holding
+    // outright opened RKLB — NON-COMPLIANT, so it is not in the ranked universe at all and
+    // its drawer has no QARP breakdown and no Shariah grade, i.e. none of the three things
+    // this button promises to show. Largest COMPLIANT holding first (a name he actually
+    // owns makes the best example), then fall back to the top-ranked universe name.
+    const inUniverse = new Set((DATA.universe || []).map((r) => r.ticker));
+    const h = [...(DATA.portfolio || [])]
+      .filter((p) => inUniverse.has(p.ticker) && p.shariah !== "NON-COMPLIANT")
+      .sort((x, y) => (y.value || 0) - (x.value || 0))[0] || (DATA.universe || [])[0];
     if (h) openDrawer(h.ticker);
   });
 }
