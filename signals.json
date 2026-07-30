@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "generated_at": "Jul 30, 7:22am ET",
+  "generated_at": "Jul 30, 8:14am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,11 +93,11 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Jul 29",
-      "what": "KO — JP Morgan maintains",
+      "when": "Jul 30",
+      "what": "KO — Barclays maintains",
       "affects": "KO",
       "dir": "two-sided",
-      "why": "Now rated <b>Overweight</b>, PT $96.",
+      "why": "Now rated <b>Overweight</b>, PT $93.",
       "src": "Benzinga ratings"
     },
     {
@@ -299,6 +299,20 @@
       "qarp": "AVOID"
     },
     {
+      "date": "2026-07-30",
+      "ticker": "KO",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$93",
+      "price": 89.08,
+      "upside": 4.4,
+      "held": true,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
       "date": "2026-07-23",
       "ticker": "AAPL",
       "firm": "Morgan Stanley",
@@ -384,6 +398,15 @@
     }
   ],
   "rating_moves": {
+    "KO": {
+      "date": "2026-07-30",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$93",
+      "upside": 4.4
+    },
     "MRK": {
       "date": "2026-07-29",
       "firm": "Barclays",
@@ -392,15 +415,6 @@
       "stance": "bullish",
       "pt": "$150",
       "upside": 15.1
-    },
-    "KO": {
-      "date": "2026-07-29",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$96",
-      "upside": 7.8
     },
     "CVX": {
       "date": "2026-07-28",
@@ -467,6 +481,43 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Elastic Partners With OpenAI Over AI Application Through OpenAI Models",
+      "url": "https://www.benzinga.com/news/26/07/60795747/elastic-partners-openai-over-ai-application-through-openai-models",
+      "ts": 1785413352,
+      "tickers": [
+        "ESTC",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.29
+    },
+    {
+      "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $93",
+      "url": "https://www.benzinga.com/news/26/07/60794669/barclays-maintains-overweight-coca-cola-raises-price-target-93",
+      "ts": 1785412069,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.562
+    },
+    {
+      "title": "Microsoft shares are trading higher after the company reported better-than-expected Q4 financial results and issued Q1 sales guidance with its midpoint above estimates. Piper Sandler maintained an Overweight rating on the stock and raised its price target from $540 to $550.",
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "ts": 1785411815,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.496
+    },
     {
       "title": "Market-Moving News for July 30th",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60793513/market-moving-news-july-30th",
@@ -753,48 +804,6 @@
       "relevance": 0.464
     },
     {
-      "title": "Apple, Microsoft And 3 Stocks To Watch Heading Into Thursday",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60787028/apple-microsoft-and-3-stocks-to-watch-heading-into-thursday-2",
-      "ts": 1785389653,
-      "tickers": [
-        "AAPL",
-        "META",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.407
-    },
-    {
-      "title": "Mark Zuckerberg Says Can't Rely on Open Source AI Models Right Now: 'We Think That There's Some Risk…'",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60786995/mark-zuckerberg-open-source-ai-models-risk-meta-stock-pops",
-      "ts": 1785389451,
-      "tickers": [
-        "META",
-        "MSFT",
-        "PLTR",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.278
-    },
-    {
-      "title": "Microsoft’s AI CapEx Is Surging, but CFO Amy Hood Says the Company Can Hit the Brakes on GPU Spending if Demand Cools: ‘You Just Slow Down’",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60786971/microsoft-stock-ai-capex-amy-hood-gpu-spending-surges-after-hours",
-      "ts": 1785389143,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.468
-    },
-    {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
       "url": "https://www.benzinga.com/news/26/07/60774161/jp-morgan-maintains-overweight-coca-cola-raises-price-target-96",
       "ts": 1785349548,
@@ -828,7 +837,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.572
+      "relevance": 0.571
     },
     {
       "title": "Coca-Cola's Consumption Trends Remain 'Best in Class,' Analyst Says",
@@ -1012,7 +1021,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
