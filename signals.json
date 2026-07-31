@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-30",
-  "generated_at": "Jul 30, 7:18pm ET",
+  "date": "2026-07-31",
+  "generated_at": "Jul 31, 5:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,14 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Jul 30",
-      "what": "NBIX earnings",
-      "affects": "NBIX",
-      "dir": "two-sided",
-      "why": "Q-results for Neurocrine Biosciences — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Aug 3",
       "what": "VRTX earnings",
       "affects": "VRTX",
@@ -93,6 +85,14 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
+      "when": "Aug 6",
+      "what": "ZTS earnings",
+      "affects": "ZTS",
+      "dir": "two-sided",
+      "why": "Q-results for Zoetis — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
       "when": "Jul 30",
       "what": "KO — Argus Research maintains",
       "affects": "KO",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Jul 30",
+      "when": "Jul 31",
       "what": "Energy & geopolitics — today's read",
       "why": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
       "affects": "Energy · growth",
@@ -125,7 +125,7 @@
     "SPGI": "2026-10-28",
     "NVS": "2026-10-27",
     "AVGO": "2026-09-02",
-    "NBIX": "2026-07-30",
+    "NBIX": "2026-10-26",
     "EXE": "2026-10-26",
     "SAP": "2026-10-21",
     "VRTX": "2026-08-03",
@@ -200,22 +200,16 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
-    "AVGO": {
-      "title": "Microsoft's AI Pivot Could Be Bigger Win for AI Infrastructure ETFs Than OpenAI Bets",
-      "ts": 1785441778,
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60819982/microsofts-ai-pivot-could-be-bigger-win-for-ai-infrastructure-etfs-than-openai-bets",
-      "wiim": false
-    },
     "NVDA": {
       "title": "Microsoft's AI Pivot Could Be Bigger Win for AI Infrastructure ETFs Than OpenAI Bets",
       "ts": 1785441778,
       "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60819982/microsofts-ai-pivot-could-be-bigger-win-for-ai-infrastructure-etfs-than-openai-bets",
       "wiim": false
     },
-    "RKLB": {
-      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
-      "ts": 1785432916,
-      "url": "https://www.benzinga.com/markets/options/26/07/60813347/10-industrials-stocks-whale-activity-today-s-session",
+    "AVGO": {
+      "title": "Microsoft's AI Pivot Could Be Bigger Win for AI Infrastructure ETFs Than OpenAI Bets",
+      "ts": 1785441778,
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60819982/microsofts-ai-pivot-could-be-bigger-win-for-ai-infrastructure-etfs-than-openai-bets",
       "wiim": false
     }
   },
@@ -329,48 +323,6 @@
       "price": 88.49,
       "upside": 5.1,
       "held": true,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-23",
-      "ticker": "AAPL",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$364",
-      "price": 333.43,
-      "upside": 9.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-23",
-      "ticker": "MMM",
-      "firm": "Mizuho",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$180",
-      "price": 176.07,
-      "upside": 2.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-23",
-      "ticker": "CVX",
-      "firm": "Piper Sandler",
-      "action": "Assumes",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$207",
-      "price": 192.31,
-      "upside": 7.6,
-      "held": false,
       "uni": true,
       "qarp": "AVOID"
     },
@@ -530,6 +482,193 @@
   },
   "bz_news": [
     {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60829343/sp500-july-31-open-up-or-down-polymarket-amazon-microsoft-apple-ai-earnings",
+      "ts": 1785487991,
+      "tickers": [
+        "AAPL",
+        "META",
+        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "US Schools Are Ditching Chromebooks for MacBooks by the Thousands— Apple Just Named Names",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60828864/us-schools-are-ditching-chromebooks-for-macbooks-by-the-thousands-apple-just-named-names",
+      "ts": 1785484835,
+      "tickers": [
+        "AAPL",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.272
+    },
+    {
+      "title": "Nasdaq Jumps Over 600 Points as MSFT Shares Surge: Investor Sentiment Improves, but Greed Index Remains in 'Fear' Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60828427/nasdaq-jumps-over-600-points-as-msft-shares-surge-investor-sentiment-improves-but-greed-index-remains-in-fear-zone",
+      "ts": 1785481637,
+      "tickers": [
+        "MSFT",
+        "META",
+        "XOM",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.458
+    },
+    {
+      "title": "Apple Underestimated Its Own Customers: AAPL CEO Tim Cook Blames 'Demand Forecast Issue' for Q4 Supply Bottlenecks",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60828386/apple-underestimated-its-own-customers-aapl-ceo-tim-cook-blames-demand-forecast-issue-for-q4-supply-bottlenecks",
+      "ts": 1785481309,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.339
+    },
+    {
+      "title": "SK Hynix Stock Just Hit Its Daily Limit in South Korea for the First Time Ever, Surging Nearly 30% as Asian Chip Stocks Recover",
+      "url": "https://www.benzinga.com/markets/asia/26/07/60828228/sk-hynix-stock-just-hit-its-daily-limit-in-south-korea-for-the-first-time-ever-surging-nearly-30-as-asian-chip-stocks-recover",
+      "ts": 1785480622,
+      "tickers": [
+        "AMZN",
+        "MSFT",
+        "SOXX",
+        "SKHY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.348
+    },
+    {
+      "title": "Amazon, Apple and 3 Stocks to Watch Heading Into Friday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60828207/amazon-apple-and-3-stocks-to-watch-heading-into-friday-2",
+      "ts": 1785480468,
+      "tickers": [
+        "AMZN",
+        "AAPL",
+        "XOM",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.411
+    },
+    {
+      "title": "iPhone Prices to Go up as Memory Chip Costs Keep Climbing? Tim Cook Says Apple Is 'Evaluating All Options'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60827845/apple-stock-slide-tim-cook-memory-costs-rising",
+      "ts": 1785477423,
+      "tickers": [
+        "AAPL",
+        "SKHY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.355
+    },
+    {
+      "title": "Apple Stock Sinks as Much as 6% in After-Hours Trading, Wipes Out $390 Billion in an Hour: Jim Cramer Says It's All 'Memory and Currency'",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60827453/apple-stock-sinks-as-much-as-6-in-after-hours-trading-cramer-supply-constraints",
+      "ts": 1785473290,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.446
+    },
+    {
+      "title": "Cathie Wood Snaps Up $14.3 Million of Meta Stock After Post-Earnings Selloff, Ark Sheds Caterpillar Shares",
+      "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/07/60827179/cathie-wood-snaps-up-14-3-million-of-meta-stock-after-post-earnings-selloff-ark-sheds-caterpillar-shares",
+      "ts": 1785467419,
+      "tickers": [
+        "META",
+        "ARKK",
+        "ARKW",
+        "ARKF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.314
+    },
+    {
+      "title": "Amazon Stock Pops 9.5% After-Hours as AWS Fuels Earnings Beat: Jim Cramer Calls it 'Astonishing'",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60827112/amazon-stock-aws-earnings-beat-jim-cramer",
+      "ts": 1785465160,
+      "tickers": [
+        "AMZN",
+        "MSFT",
+        "MU",
+        "SNDK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.411
+    },
+    {
+      "title": "SK Hynix Stock Soars 22%, Samsung Jumps 19% as Kospi Hits Trading Halt: Dow Futures Climb 151 Points",
+      "url": "https://www.benzinga.com/news/politics/26/07/60827094/samsung-skhynix-spark-kospi-surge",
+      "ts": 1785464800,
+      "tickers": [
+        "SKHY",
+        "AAPL",
+        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.416
+    },
+    {
+      "title": "Bitcoin, Ethereum Spike, XRP and Dogecoin Climb Amid Sharp Crypto Recovery: Analyst Says 'Don't Fear' BTC Dropping to $60,000",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60827004/bitcoin-ethereum-xrp-spike-dogecoin-flat-amid-sharp-crypto-recovery",
+      "ts": 1785464249,
+      "tickers": [
+        "$BTC",
+        "$DOGE",
+        "$ETH",
+        "MSTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.387
+    },
+    {
+      "title": "Apple, Amazon, Reddit, Rivian and Cycurion: Why These 5 Stocks Are on Investors Radars' Today",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60826895/apple-amazon-reddit-rivian-and-cycurion-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1785461619,
+      "tickers": [
+        "AAPL",
+        "AMZN",
+        "RIVN",
+        "RDDT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.402
+    },
+    {
       "title": "Apple CEO Says Co. Has Received Approval In China To Ship 'Original' Features Of Apple Intelligence",
       "url": "https://www.benzinga.com/news/26/07/60826036/apple-ceo-says-co-has-received-approval-china-ship-original-features-apple-intelligence",
       "ts": 1785448900,
@@ -674,167 +813,6 @@
       "relevance": 0.438
     },
     {
-      "title": "Apple CEO Tim Cook Said Q3 Mac Sales Particularly Strong In Greater China",
-      "url": "https://www.benzinga.com/quote/SPY",
-      "ts": 1785445956,
-      "tickers": [
-        "AAPL",
-        "FXI",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.335
-    },
-    {
-      "title": "Apple Delivers Double Beat In Q3, Active Installed Base Reaches All-Time High: 'Strongest June Quarter Ever'",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60824040/apple-delivers-double-beat-in-q3-active-installed-base-reaches-all-time-high-strongest-june-quarter-ever",
-      "ts": 1785444551,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.403
-    },
-    {
-      "title": "Apple CFO Kevan Parekh Says, \"Our installed base of active devices also reached a new all-time high across all major product categories and geographic segments.\"",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1785443674,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.367
-    },
-    {
-      "title": "Apple Reports Record Q3 Net Sales of $109.4B As Americas Revenue Reaches $45.8B, Europe $29.4B, Greater China $18.8B, Japan $6.6B And Rest Of Asia Pacific $8.9B",
-      "url": "https://www.benzinga.com/news/26/07/60823329/apple-reports-record-q3-net-sales-109-4b-americas-revenue-reaches-45-8b-europe-29-4b-greater-china-1",
-      "ts": 1785443547,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.455
-    },
-    {
-      "title": "Apple EPS Included Favorable Impact Of $0.11 From Tariff Refunds",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1785443535,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.349
-    },
-    {
-      "title": "Apple Q3 2026 Services Sales $30.739B",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1785443518,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.452
-    },
-    {
-      "title": "Apple Q3 2026 Wearables, Home & Accessories Sales $7.883B",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1785443491,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.395
-    },
-    {
-      "title": "Apple Q3 2026 Mac Sales $10.352B",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1785443469,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.383
-    },
-    {
-      "title": "Apple Q3 2026 iPad Sales $6.191B",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1785443456,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.374
-    },
-    {
-      "title": "Apple Q3 EPS $2.02 Beats $1.89 Estimate, Sales $109.417B Beat $108.651B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60823055/apple-q3-eps-2-02-beats-1-89-estimate-sales-109-417b-beat-108-651b-estimate",
-      "ts": 1785443428,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.48
-    },
-    {
-      "title": "Home Depot Announces Organizational Realignment To Capture Share Of $1.2T Addressable Market, Names CFO Richard McPhail To Lead New Office Of Pro Acceleration",
-      "url": "https://www.benzinga.com/quote/HD",
-      "ts": 1785443066,
-      "tickers": [
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.393
-    },
-    {
-      "title": "Microsoft's AI Pivot Could Be Bigger Win for AI Infrastructure ETFs Than OpenAI Bets",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60819982/microsofts-ai-pivot-could-be-bigger-win-for-ai-infrastructure-etfs-than-openai-bets",
-      "ts": 1785441778,
-      "tickers": [
-        "MSFT",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.44
-    },
-    {
-      "title": "HSBC Downgrades Procter & Gamble to Hold, Lowers Price Target to $149",
-      "url": "https://www.benzinga.com/news/26/07/60819524/hsbc-downgrades-procter-gamble-hold-lowers-price-target-149",
-      "ts": 1785441446,
-      "tickers": [
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.48
-    },
-    {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
       "url": "https://www.benzinga.com/news/26/07/60806540/argus-research-maintains-buy-coca-cola-raises-price-target-97",
       "ts": 1785424863,
@@ -857,21 +835,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.561
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60788305/sp500-july-30-open-up-or-down-polymarket-fed-bond-yields-big-tech-earnings-oil",
-      "ts": 1785399556,
-      "tickers": [
-        "SPY",
-        "AAPL",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.464
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1079,7 +1042,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.513
+      "relevance": 0.512
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1091,7 +1054,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.578
+      "relevance": 0.579
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1162,12 +1125,7 @@
         "score": 1.12,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "10 Industrials Stocks Whale Activity In Today’s Session",
-        "ts": 1785432916,
-        "url": "https://www.benzinga.com/markets/options/26/07/60813347/10-industrials-stocks-whale-activity-today-s-session",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1644,7 +1602,7 @@
           "date": "2026-05-05",
           "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm"
         },
-        "insider30d": 5
+        "insider30d": 4
       },
       "explain": "37 analysts cover it — 32 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1737,7 +1695,7 @@
           "date": "2026-05-05",
           "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm"
         },
-        "insider30d": 8
+        "insider30d": 7
       },
       "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
