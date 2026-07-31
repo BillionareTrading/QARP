@@ -1575,16 +1575,21 @@ function renderCalls() {
 function renderEarnings() {
   const el = document.getElementById("earnings-list");
   if (!el) return;
-  const fn = (SIGNALS && SIGNALS.financials) || {};
+  // SOURCE (changed 2026-07-31): each holding's own sec_fin, from sec_financials.py — the same
+  // primary-source pipeline the Filings subtab and the drawer use. It was reading
+  // SIGNALS.financials, a SECOND XBRL fetcher that treats any failed EDGAR request as "this
+  // company doesn't use this tag" and so silently fell back to discontinued legacy revenue
+  // tags: ABT showed FY2017, SPGI Q3 FY2018, EXE FY2020, and KO was missing altogether.
+  // Those ancient filings carry no matching EPS/net-income points, which is why the panel
+  // rendered a lone Revenue line. sec_fin drops non-recent points instead of degrading.
   const pb = (SIGNALS && SIGNALS.portfolio_brief) || {};
-  if (!Object.keys(fn).length) { el.innerHTML = `<p class="muted">The latest filings load with the daily signals run — check back shortly.</p>`; return; }
   const holds = [...DATA.portfolio].sort((a, b) => (b.value || 0) - (a.value || 0));
   const yoy = (y) => (y == null ? "" : `<span class="er-yoy ${y >= 0 ? "pos" : "neg"}">${y >= 0 ? "+" : ""}${y}% YoY</span>`);
   const stat = (label, val, y) => `<div class="er-stat"><div class="er-l">${label}</div><div class="er-v">${val} ${yoy(y)}</div></div>`;
   const fdate = (d) => { try { return new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); } catch (e) { return d; } };
   el.innerHTML = holds.map((h) => {
-    const f = fn[h.ticker];
-    const name = (pb[h.ticker] || {}).name || h.ticker;
+    const f = h.sec_fin;
+    const name = (pb[h.ticker] || {}).name || h.name || h.ticker;
     if (!f) {
       return `<article class="er-row na"><div class="er-head"><span class="er-tk">${esc(h.ticker)}</span><span class="er-name">${esc(name)}</span></div><div class="er-na">Not available via SEC EDGAR (foreign filer — files 20-F/6-K).</div></article>`;
     }
