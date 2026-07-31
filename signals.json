@@ -1,6 +1,6 @@
 {
   "date": "2026-07-31",
-  "generated_at": "Jul 31, 9:26am ET",
+  "generated_at": "Jul 31, 10:16am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -135,17 +135,17 @@
   "sectors": [
     {
       "sector": "Software",
-      "dir": "mixed",
-      "driver": "The industry extends its recent rally",
-      "note": "As the industry extends its recent rally, which may be due to investors rotating out of weakened semiconductor and AI hardware stocks into less capital-intensive areas of the tech sector. The industry may be buoyed by trader optimism ahead of Microsoft's Q4 earnings that will be reported after the market closes.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "dir": "up",
+      "driver": "A rebound following IBM's profit warning last week",
+      "note": "Amid a rebound following IBM's profit warning last week, aided by positive SAP and ServiceNow earnings. Also, Apollo's chief economist wrote a note supportive of security and infrastructure software.",
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Oil & Gas",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Crude prices gain after Iranian strikes directed at U.S. assets in Jordan",
       "note": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Data Center Infrastructure",
@@ -170,13 +170,13 @@
     }
   ],
   "holding_news": {
-    "NOW": {
+    "ADBE": {
       "title": "Shares of software companies are trading higher as the industry extends its recent rally, which may be due to investors rotating out of weakened semiconductor and AI hardware stocks into less capital-intensive areas of the tech sector. The industry may be buoyed by trader optimism ahead of Microsoft's Q4 earnings that will be reported after the market closes.",
       "ts": 1785351767,
       "url": "https://www.benzinga.com/quote/PLTR",
       "wiim": true
     },
-    "ADBE": {
+    "NOW": {
       "title": "Shares of software companies are trading higher as the industry extends its recent rally, which may be due to investors rotating out of weakened semiconductor and AI hardware stocks into less capital-intensive areas of the tech sector. The industry may be buoyed by trader optimism ahead of Microsoft's Q4 earnings that will be reported after the market closes.",
       "ts": 1785351767,
       "url": "https://www.benzinga.com/quote/PLTR",
@@ -200,16 +200,16 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
+    "NVDA": {
+      "title": "Microsoft Stock Eyes Best Week Since 2000: History Has a Warning for Buyers",
+      "ts": 1785505900,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60838651/microsoft-stock-best-week-since-2000-history-warning-for-buyers",
+      "wiim": false
+    },
     "LULU": {
       "title": "Michael Burry Expands Bets Against Nvidia, Micron— and Is Now Buying Lululemon and DraftKings",
       "ts": 1785503978,
       "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60836312/michael-burry-expands-bets-against-nvidia-micron-and-is-now-buying-lululemon-and-draftkings",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "Jim Cramer Says INTC Stock ‘Belongs at $110,’ Blames Situational Awareness Blowup for Intel’s Post-Earnings ’Hideous Selling’",
-      "ts": 1785498276,
-      "url": "https://www.benzinga.com/markets/equities/26/07/60833376/jim-cramer-says-intc-stock-belongs-at-110-blames-situational-awareness-blowup-for-intels-post-earnings-hideous-selling",
       "wiim": false
     },
     "ZTS": {
@@ -228,7 +228,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$96",
-      "price": 88.49,
+      "price": 88.51,
       "upside": 8.5,
       "held": true,
       "uni": true,
@@ -242,7 +242,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$100",
-      "price": 88.49,
+      "price": 88.51,
       "upside": 13.0,
       "held": true,
       "uni": true,
@@ -256,8 +256,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 88.49,
-      "upside": 7.4,
+      "price": 88.51,
+      "upside": 7.3,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -270,8 +270,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 88.49,
-      "upside": 7.4,
+      "price": 88.51,
+      "upside": 7.3,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -284,7 +284,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$96",
-      "price": 88.49,
+      "price": 88.51,
       "upside": 8.5,
       "held": true,
       "uni": true,
@@ -298,7 +298,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$104",
-      "price": 88.49,
+      "price": 88.51,
       "upside": 17.5,
       "held": true,
       "uni": true,
@@ -312,7 +312,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "price": 88.49,
+      "price": 88.51,
       "upside": 9.6,
       "held": true,
       "uni": true,
@@ -326,7 +326,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$93",
-      "price": 88.49,
+      "price": 88.51,
       "upside": 5.1,
       "held": true,
       "uni": true,
@@ -340,8 +340,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 333.35,
-      "upside": 13.1,
+      "price": 330.37,
+      "upside": 14.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -354,8 +354,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "price": 192.31,
-      "upside": 18.0,
+      "price": 192.91,
+      "upside": 17.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -368,8 +368,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 129.79,
-      "upside": 15.6,
+      "price": 129.39,
+      "upside": 15.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -382,8 +382,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$149",
-      "price": 143.96,
-      "upside": 3.5,
+      "price": 142.73,
+      "upside": 4.4,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -396,8 +396,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$170",
-      "price": 143.96,
-      "upside": 18.1,
+      "price": 142.73,
+      "upside": 19.1,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -410,7 +410,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 333.43,
+      "price": 301.49,
       "upside": null,
       "held": false,
       "uni": true,
@@ -424,8 +424,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$300",
-      "price": 333.43,
-      "upside": -10.0,
+      "price": 301.49,
+      "upside": -0.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -438,8 +438,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$245",
-      "price": 333.43,
-      "upside": -26.5,
+      "price": 301.49,
+      "upside": -18.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -452,8 +452,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$360",
-      "price": 333.43,
-      "upside": 8.0,
+      "price": 301.49,
+      "upside": 19.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -466,8 +466,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "price": 333.43,
-      "upside": 8.0,
+      "price": 301.49,
+      "upside": 19.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -490,7 +490,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$149",
-      "upside": 3.5
+      "upside": 4.4
     },
     "KO": {
       "date": "2026-07-30",
@@ -508,7 +508,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "upside": 15.6
+      "upside": 15.9
     },
     "CVX": {
       "date": "2026-07-28",
@@ -517,7 +517,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "upside": 18.0
+      "upside": 17.7
     },
     "HD": {
       "date": "2026-07-27",
@@ -526,7 +526,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 13.1
+      "upside": 14.1
     },
     "MMM": {
       "date": "2026-07-23",
@@ -535,7 +535,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": 2.2
+      "upside": 2.7
     },
     "CRM": {
       "date": "2026-07-21",
@@ -544,7 +544,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": 2.4
+      "upside": 1.7
     },
     "JNJ": {
       "date": "2026-07-17",
@@ -553,10 +553,82 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "upside": 5.5
+      "upside": 6.1
     }
   },
   "bz_news": [
+    {
+      "title": "Apple Takes on Microsoft, Meta with Five Times More R&D than Capex",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60839139/apple-takes-on-microsoft-meta-with-five-times-more-rd-than-capex",
+      "ts": 1785506186,
+      "tickers": [
+        "AAPL",
+        "META",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.358
+    },
+    {
+      "title": "Microsoft Stock Eyes Best Week Since 2000: History Has a Warning for Buyers",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60838651/microsoft-stock-best-week-since-2000-history-warning-for-buyers",
+      "ts": 1785505900,
+      "tickers": [
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.468
+    },
+    {
+      "title": "CLARITY's Chances Are 50-50, Bitwise Exec Says: 'The Industry Will Be too Big to Kill'",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60838110/claritys-chances-are-50-50-bitwise-exec-says-the-industry-will-be-too-big-to-kill",
+      "ts": 1785505536,
+      "tickers": [
+        "$BTC",
+        "JPM",
+        "GS",
+        "HOOD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.301
+    },
+    {
+      "title": "Why Is Oracle Stock Gaining Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60837550/why-is-oracle-stock-gaining-friday",
+      "ts": 1785505221,
+      "tickers": [
+        "ORCL",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.365
+    },
+    {
+      "title": "Apple Blames '100-Year Flood' in Memory Prices — And Hints the DRAM Market Needs More Competition",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60837303/apple-blames-100-year-flood-in-memory-prices-and-hints-the-dram-market-needs-more-competition",
+      "ts": 1785505087,
+      "tickers": [
+        "AAPL",
+        "SSNLF",
+        "MU",
+        "SKHY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.384
+    },
     {
       "title": "Intel Stock Is Surging Friday: What's Going On?",
       "url": "https://www.benzinga.com/markets/tech/26/07/60836472/intel-stock-is-surging-friday-whats-going-on",
@@ -820,84 +892,6 @@
       "relevance": 0.489
     },
     {
-      "title": "Goldman Sachs Maintains Buy on Apple, Lowers Price Target to $360",
-      "url": "https://www.benzinga.com/news/26/07/60831767/goldman-sachs-maintains-buy-apple-lowers-price-target-360",
-      "ts": 1785494846,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.451
-    },
-    {
-      "title": "Morgan Stanley Maintains Overweight on Apple, Lowers Price Target to $360",
-      "url": "https://www.benzinga.com/news/26/07/60831404/morgan-stanley-maintains-overweight-apple-lowers-price-target-360",
-      "ts": 1785493831,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.475
-    },
-    {
-      "title": "SKHY Stock Jumps 6% In Friday Premarket After Shares Surged 30% to Hit First-Ever Daily Limit In South Korea (UPDATED)",
-      "url": "https://www.benzinga.com/markets/asia/26/07/60828228/sk-hynix-stock-just-hit-its-daily-limit-in-south-korea-for-the-first-time-ever-surging-nearly-30-as-asian-chip-stocks-recover",
-      "ts": 1785493608,
-      "tickers": [
-        "AMZN",
-        "MSFT",
-        "SOXX",
-        "SKHY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.37
-    },
-    {
-      "title": "'The Breakout the Stock Needed': Analyst Cheers Amazon's AWS Surge",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60831159/the-breakout-the-stock-needed-analyst-cheers-amazons-aws-surge",
-      "ts": 1785493121,
-      "tickers": [
-        "AMZN",
-        "GOOGL",
-        "MSFT",
-        "PNQI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.386
-    },
-    {
-      "title": "Chevron CEO Mike Wirth Said, \"During the second quarter, the company achieved its structural cost reduction target six months early by capturing $3 billion in annual run-rate savings. Furthermore, we delivered $1.5 billion of annual run-rate synergies related to the Hess Corporation acquisition within one year of closing.\"",
-      "url": "https://www.benzinga.com/quote/CVX",
-      "ts": 1785493024,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.334
-    },
-    {
-      "title": "Chevron Q2 Adj. EPS $6.06 Beats $5.56 Estimate, Sales $70.055B Beat $61.970B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60831103/chevron-q2-adj-eps-6-06-beats-5-56-estimate-sales-70-055b-beat-61-970b-estimate",
-      "ts": 1785492931,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.501
-    },
-    {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
       "url": "https://www.benzinga.com/news/26/07/60806540/argus-research-maintains-buy-coca-cola-raises-price-target-97",
       "ts": 1785424863,
@@ -1097,7 +1091,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.602
+      "relevance": 0.604
     },
     {
       "title": "Sherwin-Williams Posts Upbeat Q2 Earnings, Joins Itron, Armstrong World And Other Big Stocks Moving Higher On Tuesday",
@@ -1154,7 +1148,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1191,6 +1185,21 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.536
+    },
+    {
+      "title": "Shares of software companies are trading higher amid a rebound following IBM's profit warning last week, aided by positive SAP and ServiceNow earnings. Also, Apollo's chief economist wrote a note supportive of security and infrastructure software.",
+      "url": "https://www.benzinga.com/quote/WEAV",
+      "ts": 1785174026,
+      "tickers": [
+        "MSFT",
+        "PLTR",
+        "ZS",
+        "ZM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.445
     },
     {
       "title": "Warren Buffett Says Alphabet Is More Likely to Win Than 95% of Wall Street — But Adds ‘I Don’t Like It as Well as’ Coca-Cola And 4 Others",
@@ -1433,9 +1442,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Jim Cramer Says INTC Stock ‘Belongs at $110,’ Blames Situational Awareness Blowup for Intel’s Post-Earnings ’Hideous Selling’",
-        "ts": 1785498276,
-        "url": "https://www.benzinga.com/markets/equities/26/07/60833376/jim-cramer-says-intc-stock-belongs-at-110-blames-situational-awareness-blowup-for-intels-post-earnings-hideous-selling",
+        "title": "Microsoft Stock Eyes Best Week Since 2000: History Has a Warning for Buyers",
+        "ts": 1785505900,
+        "url": "https://www.benzinga.com/markets/tech/26/07/60838651/microsoft-stock-best-week-since-2000-history-warning-for-buyers",
         "wiim": false
       },
       "filings": {
