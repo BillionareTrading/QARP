@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Thursday was a tale of two tapes for Jaleel's book. The standout mover was <strong>RKLB</strong>, which surged +10.38% on the session — the largest day-gain in the portfolio — yet remains deep in the red at –17.5% overall and carries an AVOID verdict with a QARP score of just 46. That divergence is worth sitting with: a single-day pop doesn't rehabilitate a thesis that was never strongly held, and at 14.3% of the book it is the single largest position. On the positive side, <strong>AVGO</strong> (+4.73%) and <strong>NVDA</strong> (+2.65%) caught a tailwind from Microsoft AI-infrastructure optimism, adding modest support. <strong>NBIX</strong> also ticked up +2.61% and is now +13.8% on cost — one of the cleaner wins in the book.</p><p>The drag came from the software cluster and medical devices. <strong>ADBE</strong> fell –5.9% and <strong>NOW</strong> dropped –4.92% — both despite a sector headline suggesting software was actually rallying into Microsoft's earnings. That's a red flag: if the tide was coming in and these names still sold off, something idiosyncratic is weighing on them. <strong>EFX</strong> dropped –5.84% with no clear catalyst provided. <strong>ABT</strong> (–2.21%) and <strong>ZTS</strong> (–2.44%) gave back ground despite both carrying STRONG BUY verdicts and solid QARP scores — likely noise, but worth monitoring given ABT's existing EPS-guide flag. The portfolio's overall unrealized gain sits at just +$143.68 (+0.64%), reflecting how much dead weight RKLB's –17.5% hole and several other underwater names represent against the winners.</p><p>The drift that deserves scrutiny: <strong>BSX</strong> sits at –3.9% overall with a guidance-slashed flag (FY26 growth cut to 7–8.5%, flat through Q3 guided), yet it barely moved today (–0.09%) and still holds a STRONG BUY verdict with an 80.4 QARP. Price and analyst verdict are pulling against the fundamental risk flag — that tension needs resolution before the next earnings in October. Similarly, <strong>LULU</strong> is –6.6% overall with a guidance-cut flag and five straight quarters of negative Americas comps, yet it edged up +0.37% today. The next read is September 2 — that's the moment of truth.</p>",
+  "your_book": "<p>Jaleel's book closed Friday, July 31 with a modest unrealized gain of $247 on a $23,123 account (+1.08%), a respectable result for a capital-preservation mandate. The day's headline mover was NBIX (Neurocrine Biosciences), which cratered 10.08% — by far the worst single-day print in the book — trimming its position to $333.60 despite sitting on a 2.3% overall gain. That kind of single-session drop on a STRONG BUY rated name demands immediate explanation. On the positive side, NVDA led gainers at +2.93%, ZTS added +1.66%, BSX rose +1.59%, and SAP gained +1.51%, all benefiting from a software/quality rotation day. NOW (+1.05%) and ADBE (+1.01%) rode the same software-sector tailwind tied to Microsoft earnings optimism and rotation out of hardware names.</p><p>The drift problem in this book remains RKLB: at 14% of the portfolio — the single largest weight — it carries an AVOID verdict, a QARP of just 45.9, and is sitting on a -17.1% loss ($3,247 value). Price and thesis have been diverging for some time, and size is making it worse. LULU is a secondary drift concern: a guidance-cut risk flag, -7.0% overall, and comps deteriorating for five straight quarters, yet it still occupies a 4.6% slot. BSX (-2.4% overall, guidance slashed to 7–8.5% growth) and SPGI (-4.4% overall) are also underwater despite constructive verdicts.</p><p>Watch the pharma cluster into next week: the drug-pricing policy flag on GILD, NVS, NBIX, and VRTX has a noted next event of August 4 — just days away. NVS dropped 1.45% today, GILD fell 0.82%, and NBIX's 10% single-day drop may be pricing in something in that policy pipeline. ABT flatlined at +0.09% despite its STRONG BUY rating, suggesting the market is still digesting the EPS guide trim.</p>",
   "attention": [
+    {
+      "ticker": "NBIX",
+      "severity": "act",
+      "headline": "10% single-session drop on a STRONG BUY name",
+      "note": "A -10.08% day with no headline context provided is an immediate red flag — Jaleel needs to identify the catalyst before the next session and decide whether the thesis holds or the position should be reduced."
+    },
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "Largest position, AVOID-rated, –17.5% in the hole — today's 10% pop changes nothing structurally",
-      "note": "At 14.3% of the book, RKLB is both the biggest weight and the lowest-conviction name (QARP 46, AVOID verdict); the day's gain looks like noise given no fundamental catalyst was cited — Jaleel needs to decide whether to use this strength to reduce or exit rather than let a bounce mask a broken thesis."
+      "headline": "Largest position carries AVOID verdict and -17.1% loss",
+      "note": "At 14% of the book, RKLB is the single biggest weight yet scores AVOID with a QARP of 45.9 and a deepening loss — the size-versus-verdict mismatch is the most structurally dangerous feature of this portfolio right now."
     },
     {
-      "ticker": "ADBE",
+      "ticker": "NBIX·GILD·NVS·VRTX",
       "severity": "watch",
-      "headline": "Fell –5.9% on a day the software sector was broadly rallying — divergence is a warning sign",
-      "note": "The headline context was positive for software yet ADBE underperformed badly, which reinforces the existing AI-disruption narrative risk and CFO-exit overhang; if it can't participate in a sector up-day, the next catalyst (Sep 10 earnings) carries asymmetric downside."
+      "headline": "Drug-pricing policy event due August 4",
+      "note": "The MFN pricing/tariff overhang flags across the pharma cluster have a next catalyst in four days; with NBIX already down 10% today, the cluster warrants close monitoring heading into that date."
     },
     {
-      "ticker": "NOW",
+      "ticker": "LULU",
       "severity": "watch",
-      "headline": "–4.92% despite a software rally day; highest dollar weight in the book",
-      "note": "NOW is the largest-weight high-multiple name and it sold off on a day its sector was cited as a beneficiary — that relative weakness, combined with its known macro-beta risk flag, warrants watching closely ahead of its October 27 earnings."
-    },
-    {
-      "ticker": "BSX",
-      "severity": "watch",
-      "headline": "STRONG BUY verdict sits uneasily against a slashed guidance flag and –3.9% unrealized loss",
-      "note": "Management guided flat through Q3 and cut FY26 growth to 7–8.5%, yet the system still rates it STRONG BUY (QARP 80.4) — Jaleel should verify whether that verdict has been updated to reflect the guidance cut, or whether there's a stale-rating risk heading into the October 20 print."
+      "headline": "Guidance-cut risk flag with -7.0% open loss and deteriorating fundamentals",
+      "note": "Five straight quarters of negative Americas comps, tariff margin pressure, and a stalled China business make the 4.6% weight hard to justify unless the Sep 2 earnings report shows a credible inflection."
     }
   ],
-  "date": "2026-07-30",
-  "generated_at": "Jul 30, 4:26pm ET"
+  "date": "2026-07-31",
+  "generated_at": "Jul 31, 4:26pm ET"
 }
