@@ -1,6 +1,6 @@
 {
   "date": "2026-07-31",
-  "generated_at": "Jul 31, 8:25am ET",
+  "generated_at": "Jul 31, 9:26am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -200,10 +200,22 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
+    "LULU": {
+      "title": "Michael Burry Expands Bets Against Nvidia, Micron— and Is Now Buying Lululemon and DraftKings",
+      "ts": 1785503978,
+      "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60836312/michael-burry-expands-bets-against-nvidia-micron-and-is-now-buying-lululemon-and-draftkings",
+      "wiim": false
+    },
     "NVDA": {
       "title": "Jim Cramer Says INTC Stock ‘Belongs at $110,’ Blames Situational Awareness Blowup for Intel’s Post-Earnings ’Hideous Selling’",
       "ts": 1785498276,
       "url": "https://www.benzinga.com/markets/equities/26/07/60833376/jim-cramer-says-intc-stock-belongs-at-110-blames-situational-awareness-blowup-for-intels-post-earnings-hideous-selling",
+      "wiim": false
+    },
+    "ZTS": {
+      "title": "Michael Burry Expands Bets Against Nvidia, Micron— and Is Now Buying Lululemon and DraftKings",
+      "ts": 1785503978,
+      "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60836312/michael-burry-expands-bets-against-nvidia-micron-and-is-now-buying-lululemon-and-draftkings",
       "wiim": false
     }
   },
@@ -393,6 +405,20 @@
     {
       "date": "2026-07-31",
       "ticker": "AAPL",
+      "firm": "Needham",
+      "action": "Reiterates",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "",
+      "price": 333.43,
+      "upside": null,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-31",
+      "ticker": "AAPL",
       "firm": "Rosenblatt",
       "action": "Maintains",
       "rating": "Neutral",
@@ -450,12 +476,12 @@
   "rating_moves": {
     "AAPL": {
       "date": "2026-07-31",
-      "firm": "Rosenblatt",
-      "action": "Maintains",
-      "rating": "Neutral",
+      "firm": "Needham",
+      "action": "Reiterates",
+      "rating": "Hold",
       "stance": "neutral",
-      "pt": "$300",
-      "upside": -10.0
+      "pt": "",
+      "upside": null
     },
     "PG": {
       "date": "2026-07-30",
@@ -532,6 +558,133 @@
   },
   "bz_news": [
     {
+      "title": "Intel Stock Is Surging Friday: What's Going On?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60836472/intel-stock-is-surging-friday-whats-going-on",
+      "ts": 1785504176,
+      "tickers": [
+        "INTC",
+        "AMZN",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.484
+    },
+    {
+      "title": "'Leopold Just Stopped Taking Calls': Inside the Week That Gutted Wall Street's Hottest AI Fund",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60836340/leopold-just-stopped-taking-calls-inside-the-week-that-gutted-wall-streets-hottest-ai-fund",
+      "ts": 1785504013,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.319
+    },
+    {
+      "title": "Michael Burry Expands Bets Against Nvidia, Micron— and Is Now Buying Lululemon and DraftKings",
+      "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60836312/michael-burry-expands-bets-against-nvidia-micron-and-is-now-buying-lululemon-and-draftkings",
+      "ts": 1785503978,
+      "tickers": [
+        "TSLA",
+        "META",
+        "MSFT",
+        "PLTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.506
+    },
+    {
+      "title": "Why Is Marvell Technology Stock Surging Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60836037/why-is-marvell-technology-stock-surging-friday",
+      "ts": 1785503462,
+      "tickers": [
+        "MRVL",
+        "AMZN",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.437
+    },
+    {
+      "title": "South Korea's KOSPI Rallies 18%, Its Best Day Ever: SK Hynix Jumps 30%",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60835846/south-korea-kospi-best-day-ever-sk-hynix-samsung-rally",
+      "ts": 1785503072,
+      "tickers": [
+        "SSNLF",
+        "SOXX",
+        "SKHY",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.373
+    },
+    {
+      "title": "AMD Stock Is Gaining Friday: What's Going On?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60835573/amd-stock-is-gaining-friday-whats-going-on",
+      "ts": 1785502701,
+      "tickers": [
+        "AMD",
+        "MSFT",
+        "ARKW",
+        "LRCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.459
+    },
+    {
+      "title": "Exxon Mobil Misses Profit Mark After Refinery Maintenance Blunts Oil Price Windfall",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60834925/exxon-mobil-misses-profit-mark-after-refinery-maintenance-blunts-oil-price-windfall",
+      "ts": 1785501422,
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.308
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow, Nasdaq 100 Futures Gain Amid Cooler June PCE Inflation Data and Slower-Than-Expected Q2 GDP—Apple, Amazon, Coinbase in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60829644/stock-market-today-sp-500-dow-jones-futures-rise-after-cooler-june-pce-inflation-data-apple-amazon-coinbase-in-focus",
+      "ts": 1785501162,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "AAPL",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.458
+    },
+    {
+      "title": "Needham Reiterates Hold on Appleto Hold",
+      "url": "https://www.benzinga.com/news/26/07/60834564/needham-reiterates-hold-appleto-hold",
+      "ts": 1785500822,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.396
+    },
+    {
       "title": "Amazon To Rally Around 55%? Here Are 10 Top Analyst Forecasts For Friday",
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60834240/amazon-to-rally-around-55-here-are-10-top-analyst-forecasts-for-friday",
       "ts": 1785500124,
@@ -572,7 +725,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.486
+      "relevance": 0.487
     },
     {
       "title": "Jim Cramer Says INTC Stock ‘Belongs at $110,’ Blames Situational Awareness Blowup for Intel’s Post-Earnings ’Hideous Selling’",
@@ -703,7 +856,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.369
+      "relevance": 0.37
     },
     {
       "title": "'The Breakout the Stock Needed': Analyst Cheers Amazon's AWS Surge",
@@ -745,135 +898,6 @@
       "relevance": 0.501
     },
     {
-      "title": "Apple Stock Is Sinking Friday: What's Going On?",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60830088/apple-stock-is-sinking-friday-whats-going-on",
-      "ts": 1785491427,
-      "tickers": [
-        "AAPL",
-        "META",
-        "BABA",
-        "BIDU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.433
-    },
-    {
-      "title": "Trump Administration Unveils $874 Million CHIPS Act AI Push, With GlobalFoundries Securing Top Award",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60830001/trump-administration-unveils-874-million-chips-act-ai-push-with-globalfoundries-securing-top-award",
-      "ts": 1785490684,
-      "tickers": [
-        "IBM",
-        "GFS",
-        "QBTS",
-        "RGTI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.486
-    },
-    {
-      "title": "Apple's Services Slowdown Has a Weird Culprit: No F1 Movie This Year",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60829738/apples-services-slowdown-has-a-weird-culprit-no-f1-movie-this-year",
-      "ts": 1785489720,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.276
-    },
-    {
-      "title": "Stock Market Today: S&P 500, Dow Jones Futures Rise After Cooler June PCE Inflation Data—Apple, Amazon, Coinbase in Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60829644/stock-market-today-sp-500-dow-jones-futures-rise-after-cooler-june-pce-inflation-data-apple-amazon-coinbase-in-focus",
-      "ts": 1785489225,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "AAPL",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.458
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60829343/sp500-july-31-open-up-or-down-polymarket-amazon-microsoft-apple-ai-earnings",
-      "ts": 1785487991,
-      "tickers": [
-        "AAPL",
-        "META",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.464
-    },
-    {
-      "title": "US Schools Are Ditching Chromebooks for MacBooks by the Thousands— Apple Just Named Names",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60828864/us-schools-are-ditching-chromebooks-for-macbooks-by-the-thousands-apple-just-named-names",
-      "ts": 1785484835,
-      "tickers": [
-        "AAPL",
-        "GOOGL",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.272
-    },
-    {
-      "title": "Nasdaq Jumps Over 600 Points as MSFT Shares Surge: Investor Sentiment Improves, but Greed Index Remains in 'Fear' Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60828427/nasdaq-jumps-over-600-points-as-msft-shares-surge-investor-sentiment-improves-but-greed-index-remains-in-fear-zone",
-      "ts": 1785481637,
-      "tickers": [
-        "MSFT",
-        "META",
-        "XOM",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.458
-    },
-    {
-      "title": "Apple Underestimated Its Own Customers: AAPL CEO Tim Cook Blames 'Demand Forecast Issue' for Q4 Supply Bottlenecks",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60828386/apple-underestimated-its-own-customers-aapl-ceo-tim-cook-blames-demand-forecast-issue-for-q4-supply-bottlenecks",
-      "ts": 1785481309,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.339
-    },
-    {
-      "title": "Amazon, Apple and 3 Stocks to Watch Heading Into Friday",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60828207/amazon-apple-and-3-stocks-to-watch-heading-into-friday-2",
-      "ts": 1785480468,
-      "tickers": [
-        "AMZN",
-        "AAPL",
-        "XOM",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.41
-    },
-    {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
       "url": "https://www.benzinga.com/news/26/07/60806540/argus-research-maintains-buy-coca-cola-raises-price-target-97",
       "ts": 1785424863,
@@ -896,6 +920,21 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.561
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60788305/sp500-july-30-open-up-or-down-polymarket-fed-bond-yields-big-tech-earnings-oil",
+      "ts": 1785399556,
+      "tickers": [
+        "SPY",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1058,7 +1097,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.604
+      "relevance": 0.602
     },
     {
       "title": "Sherwin-Williams Posts Upbeat Q2 Earnings, Joins Itron, Armstrong World And Other Big Stocks Moving Higher On Tuesday",
@@ -1115,7 +1154,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.578
+      "relevance": 0.579
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1287,7 +1326,12 @@
         "score": 0.75,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Michael Burry Expands Bets Against Nvidia, Micron— and Is Now Buying Lululemon and DraftKings",
+        "ts": 1785503978,
+        "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60836312/michael-burry-expands-bets-against-nvidia-micron-and-is-now-buying-lululemon-and-draftkings",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1489,7 +1533,12 @@
         "score": -0.1,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Michael Burry Expands Bets Against Nvidia, Micron— and Is Now Buying Lululemon and DraftKings",
+        "ts": 1785503978,
+        "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60836312/michael-burry-expands-bets-against-nvidia-micron-and-is-now-buying-lululemon-and-draftkings",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
