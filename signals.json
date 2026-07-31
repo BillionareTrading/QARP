@@ -1,6 +1,6 @@
 {
   "date": "2026-07-31",
-  "generated_at": "Jul 31, 7:04am ET",
+  "generated_at": "Jul 31, 7:36am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -201,9 +201,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Microsoft's AI Pivot Could Be Bigger Win for AI Infrastructure ETFs Than OpenAI Bets",
-      "ts": 1785441778,
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60819982/microsofts-ai-pivot-could-be-bigger-win-for-ai-infrastructure-etfs-than-openai-bets",
+      "title": "NVIDIA Stock Is Still Up, But $250 Billion AI Risk Has Spooked The Debt Market",
+      "ts": 1785496026,
+      "url": "https://www.benzinga.com/markets/tech/26/07/60832453/nvidia-stock-is-still-up-but-250-billion-ai-risk-has-spooked-the-debt-market",
       "wiim": false
     },
     "AVGO": {
@@ -399,6 +399,20 @@
     {
       "date": "2026-07-31",
       "ticker": "AAPL",
+      "firm": "Rosenblatt",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$300",
+      "price": 333.43,
+      "upside": -10.0,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-31",
+      "ticker": "AAPL",
       "firm": "Barclays",
       "action": "Maintains",
       "rating": "Underweight",
@@ -442,12 +456,12 @@
   "rating_moves": {
     "AAPL": {
       "date": "2026-07-31",
-      "firm": "Barclays",
+      "firm": "Rosenblatt",
       "action": "Maintains",
-      "rating": "Underweight",
-      "stance": "bearish",
-      "pt": "$245",
-      "upside": -26.5
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$300",
+      "upside": -10.0
     },
     "PG": {
       "date": "2026-07-30",
@@ -523,6 +537,49 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Wall Street's Most Accurate Analysts Weigh In On 3 Materials Stocks With Over 4% Dividend Yields",
+      "url": "https://www.benzinga.com/trading-ideas/dividends/26/07/60832757/wall-streets-most-accurate-analysts-weigh-in-on-3-materials-stocks-with-over-4-dividend-yields-3",
+      "ts": 1785497119,
+      "tickers": [
+        "DOW",
+        "IP",
+        "EMN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.372
+    },
+    {
+      "title": "Market-Moving News for July 31st",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60832609/market-moving-news-july-31st",
+      "ts": 1785496499,
+      "tickers": [
+        "AMZN",
+        "AAPL",
+        "REPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.479
+    },
+    {
+      "title": "NVIDIA Stock Is Still Up, But $250 Billion AI Risk Has Spooked The Debt Market",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60832453/nvidia-stock-is-still-up-but-250-billion-ai-risk-has-spooked-the-debt-market",
+      "ts": 1785496026,
+      "tickers": [
+        "NVDA",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.574
+    },
     {
       "title": "Barclays Maintains Underweight on Apple, Lowers Price Target to $245",
       "url": "https://www.benzinga.com/news/26/07/60832106/barclays-maintains-underweight-apple-lowers-price-target-245",
@@ -765,7 +822,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.447
+      "relevance": 0.446
     },
     {
       "title": "Cathie Wood Snaps Up $14.3 Million of Meta Stock After Post-Earnings Selloff, Ark Sheds Caterpillar Shares",
@@ -810,7 +867,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.414
+      "relevance": 0.416
     },
     {
       "title": "Bitcoin, Ethereum Spike, XRP and Dogecoin Climb Amid Sharp Crypto Recovery: Analyst Says 'Don't Fear' BTC Dropping to $60,000",
@@ -826,45 +883,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.387
-    },
-    {
-      "title": "Apple, Amazon, Reddit, Rivian and Cycurion: Why These 5 Stocks Are on Investors Radars' Today",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60826895/apple-amazon-reddit-rivian-and-cycurion-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1785461619,
-      "tickers": [
-        "AAPL",
-        "AMZN",
-        "RIVN",
-        "RDDT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.402
-    },
-    {
-      "title": "Apple CEO Says Co. Has Received Approval In China To Ship 'Original' Features Of Apple Intelligence",
-      "url": "https://www.benzinga.com/news/26/07/60826036/apple-ceo-says-co-has-received-approval-china-ship-original-features-apple-intelligence",
-      "ts": 1785448900,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.289
-    },
-    {
-      "title": "Apple CFO Says Co. Saw 'Softness' On Mobile Gaming Revenue In App Store",
-      "url": "https://www.benzinga.com/news/26/07/60825955/apple-cfo-says-co-saw-softness-mobile-gaming-revenue-app-store",
-      "ts": 1785448471,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.355
     },
     {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -1096,7 +1114,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.513
+      "relevance": 0.512
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1382,9 +1400,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Microsoft's AI Pivot Could Be Bigger Win for AI Infrastructure ETFs Than OpenAI Bets",
-        "ts": 1785441778,
-        "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60819982/microsofts-ai-pivot-could-be-bigger-win-for-ai-infrastructure-etfs-than-openai-bets",
+        "title": "NVIDIA Stock Is Still Up, But $250 Billion AI Risk Has Spooked The Debt Market",
+        "ts": 1785496026,
+        "url": "https://www.benzinga.com/markets/tech/26/07/60832453/nvidia-stock-is-still-up-but-250-billion-ai-risk-has-spooked-the-debt-market",
         "wiim": false
       },
       "filings": {
