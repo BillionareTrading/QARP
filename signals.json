@@ -1,6 +1,6 @@
 {
   "date": "2026-07-31",
-  "generated_at": "Jul 31, 6:05am ET",
+  "generated_at": "Jul 31, 7:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -395,9 +395,60 @@
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-07-31",
+      "ticker": "AAPL",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Underweight",
+      "stance": "bearish",
+      "pt": "$245",
+      "price": 333.43,
+      "upside": -26.5,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-31",
+      "ticker": "AAPL",
+      "firm": "Goldman Sachs",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$360",
+      "price": 333.43,
+      "upside": 8.0,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-07-31",
+      "ticker": "AAPL",
+      "firm": "Morgan Stanley",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$360",
+      "price": 333.43,
+      "upside": 8.0,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "AAPL": {
+      "date": "2026-07-31",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Underweight",
+      "stance": "bearish",
+      "pt": "$245",
+      "upside": -26.5
+    },
     "PG": {
       "date": "2026-07-30",
       "firm": "HSBC",
@@ -443,15 +494,6 @@
       "pt": "$377",
       "upside": 13.1
     },
-    "AAPL": {
-      "date": "2026-07-23",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$364",
-      "upside": 9.2
-    },
     "MMM": {
       "date": "2026-07-23",
       "firm": "Mizuho",
@@ -481,6 +523,96 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Barclays Maintains Underweight on Apple, Lowers Price Target to $245",
+      "url": "https://www.benzinga.com/news/26/07/60832106/barclays-maintains-underweight-apple-lowers-price-target-245",
+      "ts": 1785495536,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.489
+    },
+    {
+      "title": "Goldman Sachs Maintains Buy on Apple, Lowers Price Target to $360",
+      "url": "https://www.benzinga.com/news/26/07/60831767/goldman-sachs-maintains-buy-apple-lowers-price-target-360",
+      "ts": 1785494846,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.451
+    },
+    {
+      "title": "Morgan Stanley Maintains Overweight on Apple, Lowers Price Target to $360",
+      "url": "https://www.benzinga.com/news/26/07/60831404/morgan-stanley-maintains-overweight-apple-lowers-price-target-360",
+      "ts": 1785493831,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.475
+    },
+    {
+      "title": "SKHY Stock Jumps 6% In Friday Premarket After Shares Surged 30% to Hit First-Ever Daily Limit In South Korea (UPDATED)",
+      "url": "https://www.benzinga.com/markets/asia/26/07/60828228/sk-hynix-stock-just-hit-its-daily-limit-in-south-korea-for-the-first-time-ever-surging-nearly-30-as-asian-chip-stocks-recover",
+      "ts": 1785493608,
+      "tickers": [
+        "AMZN",
+        "MSFT",
+        "SOXX",
+        "SKHY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.37
+    },
+    {
+      "title": "'The Breakout the Stock Needed': Analyst Cheers Amazon's AWS Surge",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60831159/the-breakout-the-stock-needed-analyst-cheers-amazons-aws-surge",
+      "ts": 1785493121,
+      "tickers": [
+        "AMZN",
+        "GOOGL",
+        "MSFT",
+        "PNQI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.386
+    },
+    {
+      "title": "Chevron CEO Mike Wirth Said, \"During the second quarter, the company achieved its structural cost reduction target six months early by capturing $3 billion in annual run-rate savings. Furthermore, we delivered $1.5 billion of annual run-rate synergies related to the Hess Corporation acquisition within one year of closing.\"",
+      "url": "https://www.benzinga.com/quote/CVX",
+      "ts": 1785493024,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.334
+    },
+    {
+      "title": "Chevron Q2 Adj. EPS $6.06 Beats $5.56 Estimate, Sales $70.055B Beat $61.970B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60831103/chevron-q2-adj-eps-6-06-beats-5-56-estimate-sales-70-055b-beat-61-970b-estimate",
+      "ts": 1785492931,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.501
+    },
     {
       "title": "Apple Stock Is Sinking Friday: What's Going On?",
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60830088/apple-stock-is-sinking-friday-whats-going-on",
@@ -536,7 +668,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.457
+      "relevance": 0.458
     },
     {
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
@@ -596,21 +728,6 @@
       "relevance": 0.339
     },
     {
-      "title": "SK Hynix Stock Just Hit Its Daily Limit in South Korea for the First Time Ever, Surging Nearly 30% as Asian Chip Stocks Recover",
-      "url": "https://www.benzinga.com/markets/asia/26/07/60828228/sk-hynix-stock-just-hit-its-daily-limit-in-south-korea-for-the-first-time-ever-surging-nearly-30-as-asian-chip-stocks-recover",
-      "ts": 1785480622,
-      "tickers": [
-        "AMZN",
-        "MSFT",
-        "SOXX",
-        "SKHY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.348
-    },
-    {
       "title": "Amazon, Apple and 3 Stocks to Watch Heading Into Friday",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60828207/amazon-apple-and-3-stocks-to-watch-heading-into-friday-2",
       "ts": 1785480468,
@@ -648,7 +765,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.446
+      "relevance": 0.447
     },
     {
       "title": "Cathie Wood Snaps Up $14.3 Million of Meta Stock After Post-Earnings Selloff, Ark Sheds Caterpillar Shares",
@@ -735,7 +852,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.288
+      "relevance": 0.289
     },
     {
       "title": "Apple CFO Says Co. Saw 'Softness' On Mobile Gaming Revenue In App Store",
@@ -748,78 +865,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.355
-    },
-    {
-      "title": "Apple CEO Says Co. Will Have 'Upgrade Possibilities' For Users Who Want To Heavily Use New AI Products",
-      "url": "https://www.benzinga.com/news/26/07/60825809/apple-ceo-says-co-will-have-upgrade-possibilities-users-who-want-heavily-use-new-ai-products",
-      "ts": 1785447723,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.367
-    },
-    {
-      "title": "Apple CEO Says Co. Is 'Evaulating All Options' For Alternative Suppliers Of Components",
-      "url": "https://www.benzinga.com/news/26/07/60825764/apple-ceo-says-co-evaulating-all-options-alternative-suppliers-components",
-      "ts": 1785447589,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.35
-    },
-    {
-      "title": "Conference Call:\nApple Sees Q4 Sales $111.688B-$113.737B vs $114.840B Est",
-      "url": "https://www.benzinga.com/news/26/07/60825742/conference-call-apple-sees-q4-sales-111-688b-113-737b-vs-114-840b-est",
-      "ts": 1785447520,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Apple CFO Says Co. Expects Supply Constraints To Increase Significantly Going From June To September Quarter, Constraints Will Affect iPhone, Mac And iPad",
-      "url": "https://www.benzinga.com/news/26/07/60825718/apple-cfo-says-co-expects-supply-constraints-increase-significantly-going-june-september-quarter-con",
-      "ts": 1785447327,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.388
-    },
-    {
-      "title": "Apple CFO Says Expects Operating Expenses To Be Between $19.1B And $19.4B In Q4",
-      "url": "https://www.benzinga.com/news/26/07/60825694/apple-cfo-says-expects-operating-expenses-be-between-19-1b-and-19-4b-q4",
-      "ts": 1785447246,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.401
-    },
-    {
-      "title": "Apple CFO Says Expects September Quarter Total Company Revenue To Grow Between 9% And 11% Year Over Year;  Expects iPhone Revenue To Growth Rate To Be 'Mid-Teens' Year Over Year; Expects Gross Margins To Be Between 47% And 48% With 1 Point Of Benefit From Tariff Refunds",
-      "url": "https://www.benzinga.com/news/26/07/60825606/apple-cfo-says-expects-september-quarter-total-company-revenue-grow-between-9-and-11-year-over-year-",
-      "ts": 1785447038,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.458
     },
     {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -843,7 +888,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.562
+      "relevance": 0.561
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1006,7 +1051,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.602
+      "relevance": 0.604
     },
     {
       "title": "Sherwin-Williams Posts Upbeat Q2 Earnings, Joins Itron, Armstrong World And Other Big Stocks Moving Higher On Tuesday",
@@ -1063,7 +1108,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1608,8 +1653,8 @@
         },
         "periodic": {
           "form": "10-Q",
-          "date": "2026-05-05",
-          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm"
+          "date": "2026-07-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000037/nbix-20260630.htm"
         },
         "insider30d": 4
       },
@@ -2018,23 +2063,23 @@
       "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
     },
     "NBIX": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-05",
+      "period": "Q2 FY2026",
+      "filed": "2026-07-31",
       "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000037/nbix-20260630.htm",
       "revenue": {
-        "fmt": "$814M",
-        "yoy": 42.2
+        "fmt": "$959M",
+        "yoy": 39.5
       },
       "eps": {
-        "val": 1.91,
-        "yoy": 2287.5
+        "val": 1.39,
+        "yoy": 31.1
       },
       "net_income": {
-        "fmt": "$198M"
+        "fmt": "$144M"
       },
-      "margin": 24.3,
-      "summary": "Q1 FY2026 — revenue $814M (+42.2% YoY), diluted EPS $1.91 (+2287.5% YoY), net margin 24%. (as reported, GAAP)"
+      "margin": 15.1,
+      "summary": "Q2 FY2026 — revenue $959M (+39.5% YoY), diluted EPS $1.39 (+31.1% YoY), net margin 15%. (as reported, GAAP)"
     },
     "EXE": {
       "period": "FY2020",
