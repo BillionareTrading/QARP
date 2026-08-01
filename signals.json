@@ -1,6 +1,6 @@
 {
   "date": "2026-08-01",
-  "generated_at": "Aug 1, 1:39pm ET",
+  "generated_at": "Aug 1, 2:38pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -200,6 +200,12 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
+    "UBER": {
+      "title": "Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb",
+      "ts": 1785608717,
+      "url": "https://www.benzinga.com/markets/equities/26/08/60860236/top-4-nasdaq-100-stocks-to-watch-next-week-amd-uber-palantir-airbnb",
+      "wiim": false
+    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1785519315,
@@ -207,12 +213,6 @@
       "wiim": false
     },
     "RKLB": {
-      "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
-      "ts": 1785519316,
-      "url": "https://www.benzinga.com/markets/options/26/07/60850180/10-industrials-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
-    "UBER": {
       "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
       "ts": 1785519316,
       "url": "https://www.benzinga.com/markets/options/26/07/60850180/10-industrials-stocks-whale-alerts-today-s-session",
@@ -623,6 +623,21 @@
   },
   "bz_news": [
     {
+      "title": "Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb",
+      "url": "https://www.benzinga.com/markets/equities/26/08/60860236/top-4-nasdaq-100-stocks-to-watch-next-week-amd-uber-palantir-airbnb",
+      "ts": 1785608717,
+      "tickers": [
+        "PLTR",
+        "AMD",
+        "ABNB",
+        "UBER"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.46
+    },
+    {
       "title": "SK Hynix, Meta, Apple, and More: 5 Stocks Investors Couldn't Stop Buzzing About this Week",
       "url": "https://www.benzinga.com/markets/market-summary/26/08/60859915/sk-hynix-meta-apple-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
       "ts": 1785587533,
@@ -794,7 +809,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.442
+      "relevance": 0.443
     },
     {
       "title": "JP Morgan Maintains Overweight on Apple, Lowers Price Target to $340",
@@ -936,18 +951,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.334
-    },
-    {
-      "title": "Apple Just Flagged a Headwind That Could Hit iPhone, Mac and iPad All at Once",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60847240/apple-just-flagged-a-headwind-that-could-hit-iphone-mac-and-ipad-all-at-once",
-      "ts": 1785515541,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.281
     },
     {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -1206,7 +1209,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.578
+      "relevance": 0.579
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1559,9 +1562,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
-        "ts": 1785519316,
-        "url": "https://www.benzinga.com/markets/options/26/07/60850180/10-industrials-stocks-whale-alerts-today-s-session",
+        "title": "Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb",
+        "ts": 1785608717,
+        "url": "https://www.benzinga.com/markets/equities/26/08/60860236/top-4-nasdaq-100-stocks-to-watch-next-week-amd-uber-palantir-airbnb",
         "wiim": false
       },
       "filings": {
