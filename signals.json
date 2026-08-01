@@ -1,6 +1,6 @@
 {
   "date": "2026-08-01",
-  "generated_at": "Aug 1, 2:38pm ET",
+  "generated_at": "Aug 1, 3:50pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -200,16 +200,16 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
-    "UBER": {
-      "title": "Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb",
-      "ts": 1785608717,
-      "url": "https://www.benzinga.com/markets/equities/26/08/60860236/top-4-nasdaq-100-stocks-to-watch-next-week-amd-uber-palantir-airbnb",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1785519315,
       "url": "https://www.benzinga.com/markets/options/26/07/60850177/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "UBER": {
+      "title": "Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb",
+      "ts": 1785608717,
+      "url": "https://www.benzinga.com/markets/equities/26/08/60860236/top-4-nasdaq-100-stocks-to-watch-next-week-amd-uber-palantir-airbnb",
       "wiim": false
     },
     "RKLB": {
@@ -623,6 +623,66 @@
   },
   "bz_news": [
     {
+      "title": "Elon Musk's Net Worth Down Nearly $700 Billion Amid Tesla, SpaceX Merger Rumors",
+      "url": "https://www.benzinga.com/markets/equities/26/08/60860326/elon-musks-net-worth-tumbles-amid-tesla-spacex-merger-rumors",
+      "ts": 1785612979,
+      "tickers": [
+        "TSLA",
+        "SPCX",
+        "GOOG",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.318
+    },
+    {
+      "title": "Steve Jobs Once Told Bill Gates Microsoft Had 'Absolutely No Taste' and the Tech Boss Fired Back, Saying the iPad Was Just a 'Nice Reader' — Years Later, One of Them Was Very Wrong",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60860313/steve-jobs-once-told-bill-gates-microsoft-had-absolutely-no-taste-and-the-tech-boss-fired-back-saying-the-ipad-was-just-a-nice-reader-years-later-one-of-them-was-very-wrong",
+      "ts": 1785612626,
+      "tickers": [
+        "AAPL",
+        "MSFT",
+        "MCD",
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.246
+    },
+    {
+      "title": "S&P 500 Earnings Growth Hits 47.4%, Best Since 2021",
+      "url": "https://www.benzinga.com/markets/equities/26/08/60860297/sp-500-earnings-growth-hits-47-4-best-since-2021-as-tech-leads-charge",
+      "ts": 1785611684,
+      "tickers": [
+        "XOM",
+        "NVDA",
+        "MU",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.466
+    },
+    {
+      "title": "Warren Buffett Says You Don't Need 20 Right Calls To Get Rich — '4 Or 5 Will Probably Do It'",
+      "url": "https://www.benzinga.com/personal-finance/management/26/08/60860272/warren-buffett-says-you-dont-need-20-right-calls-to-get-rich-four-or-five-will-probably-do-it",
+      "ts": 1785610818,
+      "tickers": [
+        "AMZN",
+        "KO",
+        "BAC",
+        "BRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.21
+    },
+    {
       "title": "Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb",
       "url": "https://www.benzinga.com/markets/equities/26/08/60860236/top-4-nasdaq-100-stocks-to-watch-next-week-amd-uber-palantir-airbnb",
       "ts": 1785608717,
@@ -893,66 +953,6 @@
       "relevance": 0.398
     },
     {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/07/60850177/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1785519315,
-      "tickers": [
-        "NVDA",
-        "MU",
-        "AMD",
-        "SKHY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "Microsoft Stock Surge: Analyst Highlights Expanding Cloud Footprint and OpenAI Momentum",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60849508/microsoft-stock-surge-analyst-highlights-expanding-cloud-footprint-and-openai-momentum",
-      "ts": 1785518608,
-      "tickers": [
-        "MSFT",
-        "XLK",
-        "VOOG",
-        "TGRW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.467
-    },
-    {
-      "title": "Why Is BitMine Immersion Technologies Stock Falling on Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60849221/why-is-bitmine-immersion-technologies-stock-falling-on-friday",
-      "ts": 1785518277,
-      "tickers": [
-        "BMNR",
-        "$BTC",
-        "$ETH",
-        "COIN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.359
-    },
-    {
-      "title": "Why Is IREN Stock Falling on Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60847791/why-is-iren-stock-falling-on-friday",
-      "ts": 1785516509,
-      "tickers": [
-        "IREN",
-        "$BTC",
-        "COIN",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.334
-    },
-    {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
       "url": "https://www.benzinga.com/news/26/07/60806540/argus-research-maintains-buy-coca-cola-raises-price-target-97",
       "ts": 1785424863,
@@ -1062,7 +1062,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.578
+      "relevance": 0.579
     },
     {
       "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
@@ -1086,7 +1086,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.558
+      "relevance": 0.557
     },
     {
       "title": "Jefferies Maintains Buy on Coca-Cola, Raises Price Target to $104",
@@ -1197,7 +1197,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.513
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1209,7 +1209,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1234,18 +1234,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.481
-    },
-    {
-      "title": "Coca-Cola Raises FY2026 Adj EPS Guidance from $3.24-$3.27 to $3.27-$3.30 vs $3.27 Est",
-      "url": "https://www.benzinga.com/news/26/07/60718962/coca-cola-raises-fy2026-adj-eps-guidance-3-24-3-27-3-27-3-30-vs-3-27-est",
-      "ts": 1785236359,
-      "tickers": [
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.536
     },
     {
       "title": "Warren Buffett Says Alphabet Is More Likely to Win Than 95% of Wall Street — But Adds ‘I Don’t Like It as Well as’ Coca-Cola And 4 Others",
