@@ -1,6 +1,6 @@
 {
   "date": "2026-08-01",
-  "generated_at": "Aug 1, 7:31am ET",
+  "generated_at": "Aug 1, 10:43am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -200,16 +200,16 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
-    "RKLB": {
-      "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
-      "ts": 1785519316,
-      "url": "https://www.benzinga.com/markets/options/26/07/60850180/10-industrials-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1785519315,
       "url": "https://www.benzinga.com/markets/options/26/07/60850177/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "RKLB": {
+      "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
+      "ts": 1785519316,
+      "url": "https://www.benzinga.com/markets/options/26/07/60850180/10-industrials-stocks-whale-alerts-today-s-session",
       "wiim": false
     },
     "UBER": {
@@ -623,6 +623,36 @@
   },
   "bz_news": [
     {
+      "title": "SK Hynix, Meta, Apple, and More: 5 Stocks Investors Couldn't Stop Buzzing About this Week",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/60859915/sk-hynix-meta-apple-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
+      "ts": 1785587533,
+      "tickers": [
+        "SKHY",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.397
+    },
+    {
+      "title": "Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/60859854/benzinga-bulls-and-bears-amazon-microsoft-spacex",
+      "ts": 1785585635,
+      "tickers": [
+        "TSLA",
+        "AAPL",
+        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.429
+    },
+    {
       "title": "$1000 Invested In Home Depot 15 Years Ago Would Be Worth This Much Today",
       "url": "https://www.benzinga.com/news/26/07/60858957/1000-invested-home-depot-15-years-ago-would-be-worth-much-today",
       "ts": 1785541528,
@@ -644,7 +674,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.334
+      "relevance": 0.335
     },
     {
       "title": "Bernstein Maintains Outperform on Walmart, Lowers Price Target to $142",
@@ -656,7 +686,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.438
+      "relevance": 0.439
     },
     {
       "title": "'OpenAI Investigators Find Evidence That Other AI Agents Escaped Containment, Sources Say' - Reuters Exclusive",
@@ -845,7 +875,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.397
+      "relevance": 0.398
     },
     {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
@@ -918,33 +948,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.281
-    },
-    {
-      "title": "TD Cowen Maintains Buy on Apple, Raises Price Target to $400",
-      "url": "https://www.benzinga.com/news/26/07/60846083/td-cowen-maintains-buy-apple-raises-price-target-400",
-      "ts": 1785513916,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.461
-    },
-    {
-      "title": "Crude Oil Gains 1%; Apple Shares Tumble After Q3 Results",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60845955/crude-oil-gains-1-apple-shares-tumble-after-q3-results",
-      "ts": 1785513777,
-      "tickers": [
-        "AAPL",
-        "RBLX",
-        "NWL",
-        "AXTI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.405
     },
     {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -1176,7 +1179,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.527
+      "relevance": 0.526
     },
     {
       "title": "Stock Market Today: Dow Jones Futures Gain as Coca-Cola Jumps After Q2 Beat, S&P 500, Nasdaq 100 Decline—Boeing, Johnson & Johnson in Focus (UPDATED)",
