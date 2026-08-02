@@ -1,6 +1,6 @@
 {
   "date": "2026-08-02",
-  "generated_at": "Aug 2, 7:28am ET",
+  "generated_at": "Aug 2, 10:46am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -200,16 +200,16 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
+    "UBER": {
+      "title": "Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More",
+      "ts": 1785672030,
+      "url": "https://www.benzinga.com/markets/tech/26/08/60861868/consumer-tech-july-27-31-ai-boom-drives-tech-earnings-as-apple-amazon-lead-markets-more",
+      "wiim": false
+    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1785519315,
       "url": "https://www.benzinga.com/markets/options/26/07/60850177/10-information-technology-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
-    "UBER": {
-      "title": "Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb",
-      "ts": 1785608717,
-      "url": "https://www.benzinga.com/markets/equities/26/08/60860236/top-4-nasdaq-100-stocks-to-watch-next-week-amd-uber-palantir-airbnb",
       "wiim": false
     },
     "RKLB": {
@@ -222,18 +222,6 @@
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1785519315,
       "url": "https://www.benzinga.com/markets/options/26/07/60850177/10-information-technology-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
-    "LULU": {
-      "title": "Michael Burry Expands Bets Against Nvidia, Micron— and Is Now Buying Lululemon and DraftKings",
-      "ts": 1785503978,
-      "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60836312/michael-burry-expands-bets-against-nvidia-micron-and-is-now-buying-lululemon-and-draftkings",
-      "wiim": false
-    },
-    "ZTS": {
-      "title": "Michael Burry Expands Bets Against Nvidia, Micron— and Is Now Buying Lululemon and DraftKings",
-      "ts": 1785503978,
-      "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60836312/michael-burry-expands-bets-against-nvidia-micron-and-is-now-buying-lululemon-and-draftkings",
       "wiim": false
     }
   },
@@ -623,6 +611,51 @@
   },
   "bz_news": [
     {
+      "title": "Earnings Volatility Watch: SanDisk and Nine Other Stocks Could Swing Up To 17.5% This Week",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/60861965/earnings-volatility-watch-sandisk-implied-moves-august-2026",
+      "ts": 1785678300,
+      "tickers": [
+        "AAPL",
+        "META",
+        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.428
+    },
+    {
+      "title": "Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60861868/consumer-tech-july-27-31-ai-boom-drives-tech-earnings-as-apple-amazon-lead-markets-more",
+      "ts": 1785672030,
+      "tickers": [
+        "$BTC",
+        "AAPL",
+        "AMZN",
+        "MSTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.498
+    },
+    {
+      "title": "Wall Street Is Falling Out of Love With the AI Trade — Here's Why",
+      "url": "https://www.benzinga.com/markets/equities/26/08/60861854/wall-street-is-falling-out-of-love-with-the-ai-trade-heres-why",
+      "ts": 1785671783,
+      "tickers": [
+        "SPY",
+        "AMZN",
+        "MSFT",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.384
+    },
+    {
       "title": "Gene Munster Sees AAPL Stock Slump as Temporary, Steve Jobs' Critique of Microsoft and More: This Week in Appleverse",
       "url": "https://www.benzinga.com/markets/tech/26/08/60861817/apple-weekly-roundup-q3-results-stock-outlook",
       "ts": 1785668436,
@@ -649,7 +682,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.399
+      "relevance": 0.4
     },
     {
       "title": "Elon Musk's Net Worth Down Nearly $700 Billion Amid Tesla, SpaceX Merger Rumors",
@@ -928,45 +961,6 @@
       "relevance": 0.338
     },
     {
-      "title": "Apple Stock Slump Could Just Be a Blip — Gene Munster Says Outlook 'Wasn’t as Bad as It Looked'",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60851324/apple-stock-slump-could-just-be-a-blip-gene-munster-says-outlook-wasnt-as-bad-as-it-looked",
-      "ts": 1785520822,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.383
-    },
-    {
-      "title": "Mizuho Maintains Neutral on McDonald's, Lowers Price Target to $290",
-      "url": "https://www.benzinga.com/news/26/07/60850944/mizuho-maintains-neutral-mcdonald-s-lowers-price-target-290",
-      "ts": 1785520369,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.434
-    },
-    {
-      "title": "Stock Market Today: Amazon Jumps 15%, Apple Wipes Out $475 Billion",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60850532/stock-market-today-amazon-jumps-15-apple-wipes-out-475-billion",
-      "ts": 1785519765,
-      "tickers": [
-        "AMZN",
-        "AAPL",
-        "META",
-        "COIN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.481
-    },
-    {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
       "url": "https://www.benzinga.com/news/26/07/60806540/argus-research-maintains-buy-coca-cola-raises-price-target-97",
       "ts": 1785424863,
@@ -1166,7 +1160,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.602
+      "relevance": 0.604
     },
     {
       "title": "Sherwin-Williams Posts Upbeat Q2 Earnings, Joins Itron, Armstrong World And Other Big Stocks Moving Higher On Tuesday",
@@ -1356,12 +1350,7 @@
         "score": 0.75,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Michael Burry Expands Bets Against Nvidia, Micron— and Is Now Buying Lululemon and DraftKings",
-        "ts": 1785503978,
-        "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60836312/michael-burry-expands-bets-against-nvidia-micron-and-is-now-buying-lululemon-and-draftkings",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1564,9 +1553,9 @@
         "period": "2026-07-01"
       },
       "news": {
-        "title": "Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb",
-        "ts": 1785608717,
-        "url": "https://www.benzinga.com/markets/equities/26/08/60860236/top-4-nasdaq-100-stocks-to-watch-next-week-amd-uber-palantir-airbnb",
+        "title": "Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More",
+        "ts": 1785672030,
+        "url": "https://www.benzinga.com/markets/tech/26/08/60861868/consumer-tech-july-27-31-ai-boom-drives-tech-earnings-as-apple-amazon-lead-markets-more",
         "wiim": false
       },
       "filings": {
@@ -1600,12 +1589,7 @@
         "score": -0.1,
         "period": "2026-07-01"
       },
-      "news": {
-        "title": "Michael Burry Expands Bets Against Nvidia, Micron— and Is Now Buying Lululemon and DraftKings",
-        "ts": 1785503978,
-        "url": "https://www.benzinga.com/trading-ideas/short-ideas/26/07/60836312/michael-burry-expands-bets-against-nvidia-micron-and-is-now-buying-lululemon-and-draftkings",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
