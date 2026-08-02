@@ -1,6 +1,6 @@
 {
   "date": "2026-08-02",
-  "generated_at": "Aug 2, 6:08pm ET",
+  "generated_at": "Aug 2, 7:07pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -200,16 +200,16 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
-    "UBER": {
-      "title": "Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More",
-      "ts": 1785672030,
-      "url": "https://www.benzinga.com/markets/tech/26/08/60861868/consumer-tech-july-27-31-ai-boom-drives-tech-earnings-as-apple-amazon-lead-markets-more",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1785519315,
       "url": "https://www.benzinga.com/markets/options/26/07/60850177/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "UBER": {
+      "title": "Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More",
+      "ts": 1785672030,
+      "url": "https://www.benzinga.com/markets/tech/26/08/60861868/consumer-tech-july-27-31-ai-boom-drives-tech-earnings-as-apple-amazon-lead-markets-more",
       "wiim": false
     },
     "RKLB": {
@@ -611,6 +611,35 @@
   },
   "bz_news": [
     {
+      "title": "AMD Stock Rally Stalls Ahead of Earnings as Options Predict a 12% Move",
+      "url": "https://www.benzinga.com/markets/equities/26/08/60862387/amd-stock-rally-stalls-ahead-of-earnings-as-options-predict-a-12-move",
+      "ts": 1785710114,
+      "tickers": [
+        "AMD",
+        "GOOG",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.508
+    },
+    {
+      "title": "RSP ETF Beating VOO, SPY as S&P 500 Equal Weight Fund Nears $100 Billion Milestone",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/60862370/rsp-etf-is-beating-voo-spy-as-sp-500-equal-weight-fund-nears-100-billion-milestone",
+      "ts": 1785709514,
+      "tickers": [
+        "SPY",
+        "RSP",
+        "VOO",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.474
+    },
+    {
       "title": "Goldman Sachs' GPIX, GPIQ Beat JPMorgan's JEPI, JEPQ in Key Metrics",
       "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/60862076/goldman-sachs-gpix-gpiq-beat-jpmorgans-jepi-jepq-in-key-metrics",
       "ts": 1785688219,
@@ -919,7 +948,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.268
+      "relevance": 0.27
     },
     {
       "title": "Johnson & Johnson Shares Edge Higher as $3.5B Biotech Moves Expand Oncology Pipeline",
@@ -932,33 +961,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.469
-    },
-    {
-      "title": "Wonder Boy Blowup Sparks Massive Semiconductor Rally; Kospi Up 18%; Amazon Helps, Apple Disappoints",
-      "url": "https://www.benzinga.com/Opinion/26/07/60851764/wonder-boy-blowup-sparks-massive-semiconductor-rally-korea-up-18-amazon-helps-apple-disappoints",
-      "ts": 1785521545,
-      "tickers": [
-        "SLV",
-        "GLD",
-        "USO",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.443
-    },
-    {
-      "title": "JP Morgan Maintains Overweight on Apple, Lowers Price Target to $340",
-      "url": "https://www.benzinga.com/news/26/07/60851666/jp-morgan-maintains-overweight-apple-lowers-price-target-340",
-      "ts": 1785521319,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.456
     },
     {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -1205,7 +1207,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.513
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1217,7 +1219,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.578
+      "relevance": 0.579
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
