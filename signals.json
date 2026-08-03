@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-02",
-  "generated_at": "Aug 2, 7:07pm ET",
+  "date": "2026-08-03",
+  "generated_at": "Aug 3, 5:07am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Aug 2",
+      "when": "Aug 3",
       "what": "Energy & geopolitics — today's read",
       "why": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
       "affects": "Energy · growth",
@@ -204,6 +204,12 @@
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1785519315,
       "url": "https://www.benzinga.com/markets/options/26/07/60850177/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "VRTX": {
+      "title": "Nasdaq Jumps 1% as Amazon Shares Surge: Investor Sentiment Improves, But Greed Index Remains in 'Fear' Zone",
+      "ts": 1785738104,
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/60863538/nasdaq-jumps-1-as-amazon-shares-surge-investor-sentiment-improves-but-greed-index-remains-in-fear-zone",
       "wiim": false
     },
     "UBER": {
@@ -611,6 +617,107 @@
   },
   "bz_news": [
     {
+      "title": "AMD Q2 Earnings Preview: Can Lisa Su's AI Strategy Prove the Structural Shift Is Real?",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60864974/amd-q2-earnings-preview-can-lisa-su-prove-the-structural-shift-is-real",
+      "ts": 1785747873,
+      "tickers": [
+        "AMD",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.52
+    },
+    {
+      "title": "Steve Hanke Says AI Won't Replace Workers Because It's 'Incredibly Costly:' 'Businesses Will Not Be Firing…'",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60864779/steve-hanke-ai-costly-replace-workers",
+      "ts": 1785746311,
+      "tickers": [
+        "MSFT",
+        "TSLA",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.313
+    },
+    {
+      "title": "ArcelorMittal Expands Microsoft Collaboration, Making Azure Primary Cloud Platform To Drive AI-Enabled Transformation",
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "ts": 1785738832,
+      "tickers": [
+        "MT",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.385
+    },
+    {
+      "title": "Nasdaq Jumps 1% as Amazon Shares Surge: Investor Sentiment Improves, But Greed Index Remains in 'Fear' Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/60863538/nasdaq-jumps-1-as-amazon-shares-surge-investor-sentiment-improves-but-greed-index-remains-in-fear-zone",
+      "ts": 1785738104,
+      "tickers": [
+        "AMZN",
+        "AAPL",
+        "VRTX",
+        "TSN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.463
+    },
+    {
+      "title": "IBM’s Arvind Krishna Predicts Quantum Computing Will Become a Meaningful Business by 2028: 'We Are Now Pretty Convinced...'",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60863473/ibms-arvind-krishna-predicts-quantum-computing-will-become-a-meaningful-business-by-2028",
+      "ts": 1785736724,
+      "tickers": [
+        "IBM",
+        "GOOGL",
+        "GOOG",
+        "RGTI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.399
+    },
+    {
+      "title": "Wall Street Questioned the AI Boom, Earnings Are Delivering: Here Are the ETFs You Should Watch Closely",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60863456/ai-spending-pays-off-as-big-tech-delivers-historic-earnings-beats-etfs-to-watch",
+      "ts": 1785736680,
+      "tickers": [
+        "QQQ",
+        "AAPL",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.403
+    },
+    {
+      "title": "Hunter Biden Says Trump Is Making 'Big Oil' Great Again as Chevron, Exxon Mobil Profits Soar—Gavin Newsom Says CVX Is 'Fleecing Californians'",
+      "url": "https://www.benzinga.com/news/politics/26/08/60863124/hunter-biden-says-trump-is-making-big-oil-great-again-as-chevron-exxon-mobil-profits-soar-gavin-newsom-says-cvx-is-fleecing-californians",
+      "ts": 1785731940,
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.231
+    },
+    {
       "title": "AMD Stock Rally Stalls Ahead of Earnings as Options Predict a 12% Move",
       "url": "https://www.benzinga.com/markets/equities/26/08/60862387/amd-stock-rally-stalls-ahead-of-earnings-as-options-predict-a-12-move",
       "ts": 1785710114,
@@ -870,99 +977,6 @@
       "relevance": 0.438
     },
     {
-      "title": "'OpenAI Investigators Find Evidence That Other AI Agents Escaped Containment, Sources Say' - Reuters Exclusive",
-      "url": "https://www.benzinga.com/news/26/07/60856429/openai-investigators-find-evidence-other-ai-agents-escaped-containment-sources-say-reuters-exclusive",
-      "ts": 1785528937,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.249
-    },
-    {
-      "title": "Amgen Identifies Unauthorized Activity In Third-party Cloud Environments In July 2026; Reports No Impact To Products, Operations, Or Financial Reporting From Incident; Reports Exfiltration Of Proprietary And Patient Data From Cloud Environments",
-      "url": "https://www.benzinga.com/news/26/07/60855979/amgen-identifies-unauthorized-activity-third-party-cloud-environments-july-2026-reports-no-impact-pr",
-      "ts": 1785528383,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.375
-    },
-    {
-      "title": "Fed's Warsh Sparks Bond Selloff, Apple Warns of '100-Year' Memory Flood: What Moved Markets This Week",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60855602/fed-hawks-big-tech-split-what-moved-markets-this-week",
-      "ts": 1785528027,
-      "tickers": [
-        "AAPL",
-        "META",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.468
-    },
-    {
-      "title": "Gary Black Compares Rivian’s R2 Launch to Apple Product Expansion, Tesla Launch of Model Y",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60853707/gary-black-compares-rivians-r2-launch-to-apple-product-expansion-tesla-launch-of-model-y",
-      "ts": 1785525212,
-      "tickers": [
-        "RIVN",
-        "TSLA",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.318
-    },
-    {
-      "title": "Martin Shkreli Warns AI Bulls: Peak Earnings Won’t Last Forever",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60853427/martin-shkreli-warns-ai-bulls-peak-earnings-wont-last-forever",
-      "ts": 1785524651,
-      "tickers": [
-        "META",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.31
-    },
-    {
-      "title": "Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms",
-      "url": "https://www.benzinga.com/news/26/07/60853012/space-force-fosters-development-next-generation-test-training-technology-awards-contract-15-firms",
-      "ts": 1785523870,
-      "tickers": [
-        "SPY",
-        "LMT",
-        "BA",
-        "NOC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.27
-    },
-    {
-      "title": "Johnson & Johnson Shares Edge Higher as $3.5B Biotech Moves Expand Oncology Pipeline",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60852016/johnson-johnson-shares-edge-higher-as-3-5b-biotech-moves-expand-oncology-pipeline",
-      "ts": 1785521985,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.469
-    },
-    {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
       "url": "https://www.benzinga.com/news/26/07/60806540/argus-research-maintains-buy-coca-cola-raises-price-target-97",
       "ts": 1785424863,
@@ -1162,7 +1176,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.604
+      "relevance": 0.602
     },
     {
       "title": "Sherwin-Williams Posts Upbeat Q2 Earnings, Joins Itron, Armstrong World And Other Big Stocks Moving Higher On Tuesday",
@@ -1219,7 +1233,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1846,7 +1860,12 @@
         "score": 1.1,
         "period": "2026-07-01"
       },
-      "news": null,
+      "news": {
+        "title": "Nasdaq Jumps 1% as Amazon Shares Surge: Investor Sentiment Improves, But Greed Index Remains in 'Fear' Zone",
+        "ts": 1785738104,
+        "url": "https://www.benzinga.com/markets/market-summary/26/08/60863538/nasdaq-jumps-1-as-amazon-shares-surge-investor-sentiment-improves-but-greed-index-remains-in-fear-zone",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
