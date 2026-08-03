@@ -1,6 +1,6 @@
 {
   "date": "2026-08-03",
-  "generated_at": "Aug 3, 5:55am ET",
+  "generated_at": "Aug 3, 6:45am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -617,6 +617,30 @@
   },
   "bz_news": [
     {
+      "title": "Analyzing Microsoft In Comparison To Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/08/60865473/analyzing-microsoft-comparison-competitors-software-industry",
+      "ts": 1785751140,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.329
+    },
+    {
+      "title": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors",
+      "url": "https://www.benzinga.com/news/26/08/60865462/investigating-apple-s-standing-technology-hardware-storage-amp-peripherals-industry-compared-competi",
+      "ts": 1785751116,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.383
+    },
+    {
       "title": "5 Stocks In The Spotlight From Wall Street's Most Accurate Analysts Last Month",
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/60865298/5-stocks-in-the-spotlight-from-wall-streets-most-accurate-analysts-last-month-3",
       "ts": 1785750324,
@@ -644,7 +668,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.522
+      "relevance": 0.523
     },
     {
       "title": "AMD Q2 Earnings Preview: Can Lisa Su's AI Strategy Prove the Structural Shift Is Real?",
@@ -863,7 +887,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.399
+      "relevance": 0.4
     },
     {
       "title": "Elon Musk's Net Worth Down Nearly $700 Billion Amid Tesla, SpaceX Merger Rumors",
@@ -954,33 +978,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.397
-    },
-    {
-      "title": "Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/60859854/benzinga-bulls-and-bears-amazon-microsoft-spacex",
-      "ts": 1785585635,
-      "tickers": [
-        "TSLA",
-        "AAPL",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.429
-    },
-    {
-      "title": "$1000 Invested In Home Depot 15 Years Ago Would Be Worth This Much Today",
-      "url": "https://www.benzinga.com/news/26/07/60858957/1000-invested-home-depot-15-years-ago-would-be-worth-much-today",
-      "ts": 1785541528,
-      "tickers": [
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.278
     },
     {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -1551,8 +1548,8 @@
         },
         "periodic": {
           "form": "10-Q",
-          "date": "2026-05-01",
-          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm"
+          "date": "2026-08-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000053/bsx-20260630.htm"
         },
         "insider30d": 0
       },
@@ -2087,23 +2084,23 @@
       "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
     },
     "BSX": {
-      "period": "Q1 FY2026",
-      "filed": "2026-05-01",
+      "period": "Q2 FY2026",
+      "filed": "2026-08-03",
       "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000033/bsx-20260331.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000053/bsx-20260630.htm",
       "revenue": {
-        "fmt": "$5.2B",
-        "yoy": 11.6
+        "fmt": "$5.4B",
+        "yoy": 7.5
       },
       "eps": {
-        "val": 0.9,
-        "yoy": 100.0
+        "val": 0.61,
+        "yoy": 15.1
       },
       "net_income": {
         "fmt": "$190M"
       },
       "margin": null,
-      "summary": "Q1 FY2026 — revenue $5.2B (+11.6% YoY), diluted EPS $0.90 (+100.0% YoY). (as reported, GAAP)"
+      "summary": "Q2 FY2026 — revenue $5.4B (+7.5% YoY), diluted EPS $0.61 (+15.1% YoY). (as reported, GAAP)"
     },
     "UBER": {
       "period": "Q1 FY2026",
