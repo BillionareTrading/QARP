@@ -1,6 +1,6 @@
 {
   "date": "2026-08-03",
-  "generated_at": "Aug 3, 6:45am ET",
+  "generated_at": "Aug 3, 7:36am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -539,9 +539,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-03",
+      "ticker": "CVX",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$216",
+      "price": 196.83,
+      "upside": 9.7,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "CVX": {
+      "date": "2026-08-03",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$216",
+      "upside": 9.7
+    },
     "AAPL": {
       "date": "2026-07-31",
       "firm": "JP Morgan",
@@ -578,15 +601,6 @@
       "pt": "$150",
       "upside": 15.2
     },
-    "CVX": {
-      "date": "2026-07-28",
-      "firm": "B of A Securities",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$227",
-      "upside": 15.3
-    },
     "HD": {
       "date": "2026-07-27",
       "firm": "DA Davidson",
@@ -616,6 +630,30 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Barclays Maintains Equal-Weight on Chevron, Raises Price Target to $216",
+      "url": "https://www.benzinga.com/news/26/08/60868058/barclays-maintains-equal-weight-chevron-raises-price-target-216",
+      "ts": 1785756160,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.477
+    },
+    {
+      "title": "Chevron Expands Base Oil Distribution Across North America, Adds HF Sinclair, Renkert Oil To Reach More Base Oil Customers",
+      "url": "https://www.benzinga.com/news/26/08/60867789/chevron-expands-base-oil-distribution-across-north-america-adds-hf-sinclair-renkert-oil-reach-more-b",
+      "ts": 1785755463,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.273
+    },
     {
       "title": "Analyzing Microsoft In Comparison To Competitors In Software Industry",
       "url": "https://www.benzinga.com/news/26/08/60865473/analyzing-microsoft-comparison-competitors-software-industry",
@@ -950,36 +988,6 @@
       "relevance": 0.21
     },
     {
-      "title": "Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb",
-      "url": "https://www.benzinga.com/markets/equities/26/08/60860236/top-4-nasdaq-100-stocks-to-watch-next-week-amd-uber-palantir-airbnb",
-      "ts": 1785608717,
-      "tickers": [
-        "PLTR",
-        "AMD",
-        "ABNB",
-        "UBER"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.46
-    },
-    {
-      "title": "SK Hynix, Meta, Apple, and More: 5 Stocks Investors Couldn't Stop Buzzing About this Week",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/60859915/sk-hynix-meta-apple-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
-      "ts": 1785587533,
-      "tickers": [
-        "SKHY",
-        "AAPL",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.397
-    },
-    {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
       "url": "https://www.benzinga.com/news/26/07/60806540/argus-research-maintains-buy-coca-cola-raises-price-target-97",
       "ts": 1785424863,
@@ -1179,7 +1187,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.604
+      "relevance": 0.602
     },
     {
       "title": "Sherwin-Williams Posts Upbeat Q2 Earnings, Joins Itron, Armstrong World And Other Big Stocks Moving Higher On Tuesday",
@@ -1236,7 +1244,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
