@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Friday was a broadly constructive session for Jaleel's book, with the portfolio sitting on $247 in unrealized gains (+1.08%) against a $23,123 account. The headline mover was <strong>NVDA</strong>, up +2.93% to $1,310, as whale-alert volume flagged institutional interest; it's one of the cleaner stories in the book with a +9.4% open gain and an 80.4 QARP. The software cluster — <strong>NOW</strong> (+1.05%, $2,558), <strong>ADBE</strong> (+1.01%, $2,504), and <strong>SAP</strong> (+1.51%, $367) — all caught a rotation bid as investors pivoted away from hardware/semis into less capital-intensive software names ahead of Microsoft's earnings. That tailwind is real but event-driven; it can reverse fast. <strong>ZTS</strong> was the quiet outperformer, up +1.66% to $2,551 on no specific catalyst — steady accumulation in a name the model rates STRONG BUY with an 84.6 QARP.</p><p>The drift story is <strong>RKLB</strong>, and it keeps getting worse. At 14% of the book — the single largest weight — it's down -17.1% from cost, rated AVOID, and scored a weak 45.9 QARP. Friday's +0.42% did nothing to close that gap. Price and thesis are running in opposite directions: the model says avoid, the allocation says overweight. That's the central tension in this portfolio and it hasn't been resolved. <strong>LULU</strong> (-0.51%, -7.0% open loss) and <strong>BSX</strong> (+1.59% Friday, but -2.4% open loss with a guidance-slashed flag) are also drifting — both carry elevated risk flags and both sit underwater.</p><p>The sharp watch item is <strong>NBIX</strong>, which cratered -10.08% Friday to $333. It's the only single-day move of that magnitude in the book. It's still marginally above cost (+2.3% open gain) and rated STRONG BUY at 76.2, but a -10% single-session drop without context demands scrutiny before the next session. Also worth noting: <strong>NVS</strong> slid -1.45% and the pharma cluster (GILD, NVS, NBIX, VRTX) faces a drug-pricing policy overhang with a flagged date of August 4 — that's Monday.</p>",
+  "your_book": "<p>Jaleel's book had a strong Monday, with the account sitting at $23,682.85 and an unrealized gain of $806.63 (+3.53% overall). The headline mover was <strong>RKLB (Rocket Lab)</strong>, up a striking 8.44% today — but this is a name to scrutinize, not celebrate. It carries a −10.1% position-level loss, an AVOID verdict, and a QARP of just 43.3, meaning price has bounced while the fundamental thesis has been underwater for some time. At 14.9% of the book, it's the single largest weight, and that mismatch between size, verdict, and performance is the most pressing structural issue in the portfolio. Elsewhere, the software cluster did real work: <strong>NOW</strong> (+2.66%), <strong>SAP</strong> (+3.28%), and <strong>ADBE</strong> (+0.37%) all moved higher on a sector rotation trade as investors pivoted out of hardware/semis ahead of Microsoft earnings. <strong>NVDA</strong> added 2.93% and <strong>BSX</strong> rose 3.64%, though BSX's guidance slash from FY26 growth of 10.5% to 7–8.5% remains a live concern despite today's pop.</p><p>The drift zone is worth naming plainly. <strong>LULU</strong> bounced 4.04% today, but it's still down 3.3% in the position and carries a guidance-cut flag — five straight quarters of negative Americas comps, tariff margin pressure, and a stalled China business. A one-day pop doesn't fix that. <strong>SPGI</strong> is up 1.05% today on financial-sector tailwinds, but it too sits at a −3.4% position loss. Both HOLD-QUAL names — <strong>NVS</strong> (−1.59% today, −5.6% in the position) and <strong>GILD</strong> — are drifting, with MFN drug-pricing pressure a structural overhang for the whole pharma cluster including NBIX and VRTX.</p><p>What to watch: NVDA reports August 26 with export-control and AI-capex sentiment as the swing factor. LULU's next read is September 2. The RKLB size vs. verdict mismatch is not a watch item — it's a decision. Cash at $3.62 leaves no tactical buffer if any of the elevated-flag names deteriorate into their next earnings.</p>",
   "attention": [
-    {
-      "ticker": "NBIX",
-      "severity": "act",
-      "headline": "−10% single-session drop demands immediate diagnosis",
-      "note": "Neurocrine fell -10.08% on Friday — the largest single-day drawdown in the book by a wide margin — and the cause needs to be identified before markets reopen; the open gain (+2.3%) provides almost no cushion if the move is fundamental."
-    },
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "Largest position is rated AVOID with a −17.1% open loss",
-      "note": "At 14% of the portfolio, RKLB is simultaneously the biggest weight, the worst open loss, and the lowest QARP (45.9) in the book — a capital-preservation mandate makes this concentration indefensible without a documented thesis override."
+      "headline": "Largest holding carries AVOID verdict and a −10.1% loss",
+      "note": "At 14.9% of the book, RKLB is the biggest position yet holds the lowest QARP (43.3) and an AVOID verdict — today's 8.44% pop widens the gap between price action and thesis, making it a sizing decision that can't wait for another leg down."
     },
     {
-      "ticker": "GILD·NVS",
+      "ticker": "LULU",
       "severity": "watch",
-      "headline": "Drug-pricing policy event flagged for Monday, August 4",
-      "note": "The MFN pricing overhang across the pharma cluster (GILD, NVS, NBIX, VRTX) has a flagged catalyst date of August 4; with NBIX already down hard Friday, any adverse policy headline Monday could compound damage across the entire healthcare sleeve."
+      "headline": "Guidance-cut flag unresolved; today's bounce doesn't fix the thesis",
+      "note": "Five consecutive quarters of negative Americas comps, tariff margin damage, and a stalled China business underpin the elevated risk flag — next catalyst is September 2 and the position is still underwater at −3.3%."
     },
     {
       "ticker": "BSX",
       "severity": "watch",
-      "headline": "Guidance slashed, flat through Q3 — Friday's bounce doesn't fix the thesis",
-      "note": "BSX popped +1.59% Friday but remains -2.4% underwater with an elevated risk flag citing FY26 growth cut from 10.5% to 7–8.5% and management guiding flat through Q3; a single green day in a structurally weakened story isn't a reason to relax."
+      "headline": "STRONG BUY rating in conflict with slashed FY26 guidance",
+      "note": "Management guided flat growth through Q3 after cutting the FY26 growth target from 10.5% to 7–8.5%; today's 3.64% gain looks like noise against that fundamental deterioration, and the next update isn't until October 20."
+    },
+    {
+      "ticker": "NVS",
+      "severity": "note",
+      "headline": "Sliding on two fronts: down today and down in the position",
+      "note": "NVS fell 1.59% today and sits at a −5.6% position loss with an MFN drug-pricing overhang; at HOLD-QUAL with a QARP of 65.4, there is no strong fundamental reason to add, and the policy risk is ongoing."
     }
   ],
-  "date": "2026-08-02",
-  "generated_at": "Aug 2, 5:10pm ET"
+  "date": "2026-08-03",
+  "generated_at": "Aug 3, 4:48pm ET"
 }
