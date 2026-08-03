@@ -1,6 +1,6 @@
 {
   "date": "2026-08-03",
-  "generated_at": "Aug 3, 5:21pm ET",
+  "generated_at": "Aug 3, 6:06pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -128,7 +128,8 @@
     "SAP": "2026-10-21",
     "EXE": "2026-10-26",
     "NBIX": "2026-10-26",
-    "VRTX": "2026-08-03"
+    "VRTX": "2026-08-03",
+    "EFX": "2026-10-19"
   },
   "risk_asof": "2026-07-05",
   "sectors": [
@@ -655,6 +656,21 @@
   },
   "bz_news": [
     {
+      "title": "Spotify Earnings Prediction Market Preview: What Will Its New Co-CEOs Say?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60893295/spotify-earnings-prediction-market-preview-what-will-its-new-co-ceos-say",
+      "ts": 1785792621,
+      "tickers": [
+        "SPOT",
+        "AAPL",
+        "PTON",
+        "UMGNF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.44
+    },
+    {
       "title": "Congressman Who Spent Millions on Magnificent Seven Stocks Just Bought Another Tech Giant",
       "url": "https://www.benzinga.com/news/politics/26/08/60892017/congressman-who-spent-millions-on-magnificent-seven-stocks-just-bought-another-tech-giant",
       "ts": 1785790627,
@@ -837,7 +853,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.396
+      "relevance": 0.397
     },
     {
       "title": "Boeing Secures US Federal Aviation Administration Amended Type Certificate For New 737-7 Airplane, Clearing Path To Commercial Service",
@@ -988,19 +1004,6 @@
       "relevance": 0.341
     },
     {
-      "title": "Live On CNBC, Inside The (JOET) Rebalance; Removed Microsoft, Removed Meta Platforms",
-      "url": "https://www.benzinga.com/quote/MSFT",
-      "ts": 1785773081,
-      "tickers": [
-        "META",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.373
-    },
-    {
       "title": "Warren Buffett Says You Don't Need 20 Right Calls To Get Rich — '4 Or 5 Will Probably Do It'",
       "url": "https://www.benzinga.com/personal-finance/management/26/08/60860272/warren-buffett-says-you-dont-need-20-right-calls-to-get-rich-four-or-five-will-probably-do-it",
       "ts": 1785610818,
@@ -1125,7 +1128,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
@@ -1203,7 +1206,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.531
+      "relevance": 0.53
     },
     {
       "title": "QUICK SPARK: Coca-Cola Stock Hits Record High After Earnings",
@@ -1260,7 +1263,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.513
+      "relevance": 0.512
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
