@@ -1,6 +1,6 @@
 {
   "date": "2026-08-03",
-  "generated_at": "Aug 3, 4:46pm ET",
+  "generated_at": "Aug 3, 5:21pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -49,7 +49,7 @@
       "sub": "+ NBIX, VRTX",
       "tag": "Drug-pricing policy",
       "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.",
-      "next": "Ongoing"
+      "next": "Aug 4"
     },
     {
       "ticker": "ABT",
@@ -69,6 +69,14 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
+      "when": "Aug 4",
+      "what": "GILD earnings",
+      "affects": "GILD",
+      "dir": "two-sided",
+      "why": "Q-results for Gilead Sciences — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
       "when": "Aug 5",
       "what": "UBER earnings",
       "affects": "UBER",
@@ -82,14 +90,6 @@
       "affects": "ZTS",
       "dir": "two-sided",
       "why": "Q-results for Zoetis — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
-      "when": "Aug 10",
-      "what": "RKLB earnings",
-      "affects": "RKLB",
-      "dir": "two-sided",
-      "why": "Q-results for RKLB — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
@@ -122,9 +122,13 @@
     "UBER": "2026-08-05",
     "LULU": "2026-09-02",
     "SPGI": "2026-10-28",
+    "GILD": "2026-08-04",
+    "AVGO": "2026-09-02",
+    "NVS": "2026-10-27",
+    "SAP": "2026-10-21",
+    "EXE": "2026-10-26",
     "NBIX": "2026-10-26",
-    "VRTX": "2026-08-03",
-    "EFX": "2026-10-19"
+    "VRTX": "2026-08-03"
   },
   "risk_asof": "2026-07-05",
   "sectors": [
@@ -195,16 +199,16 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
-    "AVGO": {
-      "title": "Hyperscaler Capex Tops $1.2 Trillion: These Nine Stocks Are Cashing In, BofA Says",
-      "ts": 1785785514,
-      "url": "https://www.benzinga.com/markets/tech/26/08/60886732/hyperscaler-capex-1-2-trillion-9-semiconductor-stocks-bofa",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1785778515,
       "url": "https://www.benzinga.com/markets/options/26/08/60882897/10-information-technology-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Hyperscaler Capex Tops $1.2 Trillion: These Nine Stocks Are Cashing In, BofA Says",
+      "ts": 1785785514,
+      "url": "https://www.benzinga.com/markets/tech/26/08/60886732/hyperscaler-capex-1-2-trillion-9-semiconductor-stocks-bofa",
       "wiim": false
     },
     "GILD": {
@@ -651,6 +655,33 @@
   },
   "bz_news": [
     {
+      "title": "Congressman Who Spent Millions on Magnificent Seven Stocks Just Bought Another Tech Giant",
+      "url": "https://www.benzinga.com/news/politics/26/08/60892017/congressman-who-spent-millions-on-magnificent-seven-stocks-just-bought-another-tech-giant",
+      "ts": 1785790627,
+      "tickers": [
+        "TSM",
+        "AAPL",
+        "META",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.335
+    },
+    {
+      "title": "UBS Maintains Neutral on Goldman Sachs Group, Raises Price Target to $1150",
+      "url": "https://www.benzinga.com/news/26/08/60891785/ubs-maintains-neutral-goldman-sachs-group-raises-price-target-1150",
+      "ts": 1785790167,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.526
+    },
+    {
       "title": "UBS Maintains Neutral on American Express, Lowers Price Target to $384",
       "url": "https://www.benzinga.com/news/26/08/60889849/ubs-maintains-neutral-american-express-lowers-price-target-384",
       "ts": 1785788401,
@@ -970,33 +1001,6 @@
       "relevance": 0.373
     },
     {
-      "title": "What Is Going On With Nebius Stock On Monday?",
-      "url": "https://www.benzinga.com/markets/tech/26/08/60879696/what-is-going-on-nebius-stock-on-monday",
-      "ts": 1785773011,
-      "tickers": [
-        "NBIS",
-        "AAPL",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.501
-    },
-    {
-      "title": "Salesforce Stock Is Gaining Monday: What's Going On?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60879154/salesforce-stock-is-gaining-monday-whats-going-on",
-      "ts": 1785772360,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.426
-    },
-    {
       "title": "Warren Buffett Says You Don't Need 20 Right Calls To Get Rich — '4 Or 5 Will Probably Do It'",
       "url": "https://www.benzinga.com/personal-finance/management/26/08/60860272/warren-buffett-says-you-dont-need-20-right-calls-to-get-rich-four-or-five-will-probably-do-it",
       "ts": 1785610818,
@@ -1121,7 +1125,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.578
+      "relevance": 0.579
     },
     {
       "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
@@ -1256,7 +1260,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.513
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1319,7 +1323,19 @@
     "NOW": {
       "name": "ServiceNow",
       "qarp": "BUY",
-      "consensus": null,
+      "consensus": {
+        "strongBuy": 15,
+        "buy": 33,
+        "hold": 5,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 54,
+        "bullish": 48,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.15,
+        "period": "2026-07-01"
+      },
       "news": {
         "title": "Shares of software companies are trading higher as the industry extends its recent rally, which may be due to investors rotating out of weakened semiconductor and AI hardware stocks into less capital-intensive areas of the tech sector. The industry may be buoyed by trader optimism ahead of Microsoft's Q4 earnings that will be reported after the market closes.",
         "ts": 1785351767,
@@ -1339,7 +1355,7 @@
         },
         "insider30d": 0
       },
-      "explain": "No analyst-consensus data; our QARP view: BUY."
+      "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ABT": {
       "name": "Abbott Laboratories",
