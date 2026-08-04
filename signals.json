@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-03",
-  "generated_at": "Aug 3, 7:46pm ET",
+  "date": "2026-08-04",
+  "generated_at": "Aug 4, 5:05am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,14 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Aug 3",
-      "what": "VRTX earnings",
-      "affects": "VRTX",
-      "dir": "two-sided",
-      "why": "Q-results for Vertex Pharma — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Aug 4",
       "what": "GILD earnings",
       "affects": "GILD",
@@ -93,6 +85,14 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
+      "when": "Aug 10",
+      "what": "RKLB earnings",
+      "affects": "RKLB",
+      "dir": "two-sided",
+      "why": "Q-results for RKLB — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
       "when": "Jul 30",
       "what": "KO — Argus Research maintains",
       "affects": "KO",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Aug 3",
+      "when": "Aug 4",
       "what": "Energy & geopolitics — today's read",
       "why": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
       "affects": "Energy · growth",
@@ -123,12 +123,12 @@
     "LULU": "2026-09-02",
     "SPGI": "2026-10-28",
     "GILD": "2026-08-04",
-    "AVGO": "2026-09-02",
+    "AVGO": "2026-09-03",
     "NVS": "2026-10-27",
     "SAP": "2026-10-21",
     "EXE": "2026-10-26",
     "NBIX": "2026-10-26",
-    "VRTX": "2026-08-03",
+    "VRTX": "2026-11-02",
     "EFX": "2026-10-19"
   },
   "risk_asof": "2026-07-05",
@@ -329,20 +329,6 @@
       "price": 86.86,
       "upside": 7.1,
       "held": true,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-27",
-      "ticker": "HD",
-      "firm": "DA Davidson",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$377",
-      "price": 340.02,
-      "upside": 10.9,
-      "held": false,
       "uni": true,
       "qarp": "AVOID"
     },
@@ -656,6 +642,78 @@
   },
   "bz_news": [
     {
+      "title": "Amazon CEO Andy Jassy's AI Spending Pitch Won Wall Street Over, Jim Cramer Says— While Meta and Alphabet Are Still Struggling to Explain Theirs: 'The Same Numbers...'",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60896536/jim-cramer-says-andy-jassy-changed-wall-street-view-on-big-tech-ai-spending",
+      "ts": 1785831460,
+      "tickers": [
+        "AMZN",
+        "META",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.38
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60896308/sp500-aug-4-open-up-or-down-polymarket-trump-iran-tech-rally-amazon-ai-earnings",
+      "ts": 1785829796,
+      "tickers": [
+        "SPY",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Snap's $2,195 Glasses Will See 'Mass Market Adoption' By End of Decade, Says CEO Evan Spiegel: 'Designed For a Future in Which AI Does More Work'",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60896086/snap-evan-spiegel-ai-smart-glasses-mass-adoption",
+      "ts": 1785828015,
+      "tickers": [
+        "SNAP",
+        "AAPL",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.338
+    },
+    {
+      "title": "Chuck Schumer Says Iran War a 'Gift' to Trump's 'Big Oil' Friends Who Bankrolled His Campaign: 'One Promise He Actually Delivered On' (CORRECTED)",
+      "url": "https://www.benzinga.com/news/politics/26/08/60895244/chuck-schumer-iran-war-big-oil-campaign",
+      "ts": 1785821059,
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.127
+    },
+    {
+      "title": "Palantir Stock Soars Nearly 15% After Hours as Company 'Smoked Expectations' on Earnings, but Jim Cramer Questions if 'Old Days' Still Viable",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60894831/palantir-stock-earnings-jim-cramer-after-hours",
+      "ts": 1785811126,
+      "tickers": [
+        "PLTR",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.389
+    },
+    {
       "title": "Spotify Earnings Prediction Market Preview: What Will Its New Co-CEOs Say?",
       "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60893295/spotify-earnings-prediction-market-preview-what-will-its-new-co-ceos-say",
       "ts": 1785792621,
@@ -707,7 +765,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.47
+      "relevance": 0.469
     },
     {
       "title": "Spider-Man Swings Into the Record Books: How Sony’s Bet on One Comic Book Character Keeps Paying Off",
@@ -766,7 +824,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.403
+      "relevance": 0.402
     },
     {
       "title": "BNP Paribas Upgrades Boeing to Outperform, Raises Price Target to $300",
@@ -853,7 +911,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.396
+      "relevance": 0.397
     },
     {
       "title": "Boeing Secures US Federal Aviation Administration Amended Type Certificate For New 737-7 Airplane, Clearing Path To Commercial Service",
@@ -935,75 +993,6 @@
       "relevance": 0.379
     },
     {
-      "title": "Jamie Dimon's $750 Billion Housing Bet Puts Homebuilder ETFs Back in Focus",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/60881168/jamie-dimon-jpmorgan-housing-market-investment-750-billion-homebuilder-etf",
-      "ts": 1785775298,
-      "tickers": [
-        "JPM",
-        "KBH",
-        "LEN",
-        "PHM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.332
-    },
-    {
-      "title": "Federal Aviation Administration Certifies Boeing 737 Max 7",
-      "url": "https://www.benzinga.com/news/26/08/60880857/federal-aviation-certifies-boeing-737-max-7",
-      "ts": 1785774728,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.202
-    },
-    {
-      "title": "Reported Earlier: 'Apple launches legal challenge to UK attempt to access encrypted user data' - Financial Times",
-      "url": "https://www.benzinga.com/news/26/08/60880737/reported-earlier-apple-launches-legal-challenge-uk-attempt-access-encrypted-user-data-financial-time",
-      "ts": 1785774556,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.255
-    },
-    {
-      "title": "Semiconductor ETF SOXX’s Worst Month Since 2002: 'A Significant Discount,' Ed Yardeni Says",
-      "url": "https://www.benzinga.com/markets/tech/26/08/60880736/soxx-worst-month-since-2002-semiconductor-stocks-ed-yardeni",
-      "ts": 1785774553,
-      "tickers": [
-        "SOXX",
-        "INTC",
-        "AVGO",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.393
-    },
-    {
-      "title": "Dr. Copper Is Flashing An Economic Boom: Industrial Stocks Just Confirmed It",
-      "url": "https://www.benzinga.com/markets/commodities/26/08/60880407/dr-copper-economic-boom-ism-pmi-four-year-high-fcx-copx-industrials",
-      "ts": 1785774126,
-      "tickers": [
-        "COPX",
-        "SPY",
-        "CAT",
-        "FCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.341
-    },
-    {
       "title": "Warren Buffett Says You Don't Need 20 Right Calls To Get Rich — '4 Or 5 Will Probably Do It'",
       "url": "https://www.benzinga.com/personal-finance/management/26/08/60860272/warren-buffett-says-you-dont-need-20-right-calls-to-get-rich-four-or-five-will-probably-do-it",
       "ts": 1785610818,
@@ -1041,21 +1030,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.561
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60788305/sp500-july-30-open-up-or-down-polymarket-fed-bond-yields-big-tech-earnings-oil",
-      "ts": 1785399556,
-      "tickers": [
-        "SPY",
-        "AAPL",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1128,7 +1102,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
@@ -1275,7 +1249,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1296,16 +1270,16 @@
       "qarp": "AVOID",
       "consensus": {
         "strongBuy": 7,
-        "buy": 15,
-        "hold": 4,
+        "buy": 14,
+        "hold": 6,
         "sell": 0,
         "strongSell": 0,
-        "total": 26,
-        "bullish": 22,
+        "total": 27,
+        "bullish": 21,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.12,
-        "period": "2026-07-01"
+        "score": 1.04,
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1321,23 +1295,23 @@
         },
         "insider30d": 1
       },
-      "explain": "26 analysts cover it — 22 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+      "explain": "27 analysts cover it — 21 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
     "NOW": {
       "name": "ServiceNow",
       "qarp": "BUY",
       "consensus": {
-        "strongBuy": 15,
+        "strongBuy": 16,
         "buy": 33,
-        "hold": 5,
-        "sell": 1,
+        "hold": 4,
+        "sell": 2,
         "strongSell": 0,
-        "total": 54,
-        "bullish": 48,
-        "bearish": 1,
+        "total": 55,
+        "bullish": 49,
+        "bearish": 2,
         "label": "Strong Buy",
         "score": 1.15,
-        "period": "2026-07-01"
+        "period": "2026-08-01"
       },
       "news": {
         "title": "Shares of software companies are trading higher as the industry extends its recent rally, which may be due to investors rotating out of weakened semiconductor and AI hardware stocks into less capital-intensive areas of the tech sector. The industry may be buoyed by trader optimism ahead of Microsoft's Q4 earnings that will be reported after the market closes.",
@@ -1358,23 +1332,23 @@
         },
         "insider30d": 0
       },
-      "explain": "54 analysts cover it — 48 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ABT": {
       "name": "Abbott Laboratories",
       "qarp": "BUY",
       "consensus": {
         "strongBuy": 11,
-        "buy": 14,
-        "hold": 10,
+        "buy": 13,
+        "hold": 9,
         "sell": 0,
         "strongSell": 0,
-        "total": 35,
-        "bullish": 25,
+        "total": 33,
+        "bullish": 24,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.03,
-        "period": "2026-07-01"
+        "score": 1.06,
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1390,7 +1364,7 @@
         },
         "insider30d": 0
       },
-      "explain": "35 analysts cover it — 25 bullish, 10 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ZTS": {
       "name": "Zoetis",
@@ -1406,7 +1380,7 @@
         "bearish": 0,
         "label": "Buy",
         "score": 0.75,
-        "period": "2026-07-01"
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1428,17 +1402,17 @@
       "name": "Adobe",
       "qarp": "BUY",
       "consensus": {
-        "strongBuy": 8,
-        "buy": 9,
-        "hold": 25,
-        "sell": 3,
+        "strongBuy": 7,
+        "buy": 11,
+        "hold": 23,
+        "sell": 5,
         "strongSell": 0,
-        "total": 45,
-        "bullish": 17,
-        "bearish": 3,
+        "total": 46,
+        "bullish": 18,
+        "bearish": 5,
         "label": "Buy",
-        "score": 0.49,
-        "period": "2026-07-01"
+        "score": 0.43,
+        "period": "2026-08-01"
       },
       "news": {
         "title": "Shares of software companies are trading higher as the industry extends its recent rally, which may be due to investors rotating out of weakened semiconductor and AI hardware stocks into less capital-intensive areas of the tech sector. The industry may be buoyed by trader optimism ahead of Microsoft's Q4 earnings that will be reported after the market closes.",
@@ -1459,14 +1433,14 @@
         },
         "insider30d": 9
       },
-      "explain": "45 analysts cover it — 17 bullish, 25 hold, 3 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "46 analysts cover it — 18 bullish, 23 hold, 5 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "DHR": {
       "name": "Danaher",
       "qarp": "BUY",
       "consensus": {
-        "strongBuy": 11,
-        "buy": 16,
+        "strongBuy": 12,
+        "buy": 15,
         "hold": 5,
         "sell": 0,
         "strongSell": 0,
@@ -1474,8 +1448,8 @@
         "bullish": 27,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.19,
-        "period": "2026-07-01"
+        "score": 1.22,
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1497,17 +1471,17 @@
       "name": "NVIDIA",
       "qarp": "STRONG BUY",
       "consensus": {
-        "strongBuy": 24,
-        "buy": 40,
-        "hold": 4,
+        "strongBuy": 23,
+        "buy": 41,
+        "hold": 3,
         "sell": 1,
         "strongSell": 0,
-        "total": 69,
+        "total": 68,
         "bullish": 64,
         "bearish": 1,
         "label": "Strong Buy",
         "score": 1.26,
-        "period": "2026-07-01"
+        "period": "2026-08-01"
       },
       "news": {
         "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
@@ -1528,23 +1502,23 @@
         },
         "insider30d": 1
       },
-      "explain": "69 analysts cover it — 64 bullish, 4 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "68 analysts cover it — 64 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "BSX": {
       "name": "Boston Scientific",
       "qarp": "STRONG BUY",
       "consensus": {
-        "strongBuy": 12,
+        "strongBuy": 11,
         "buy": 19,
         "hold": 8,
         "sell": 0,
         "strongSell": 0,
-        "total": 39,
-        "bullish": 31,
+        "total": 38,
+        "bullish": 30,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-07-01"
+        "score": 1.08,
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1560,23 +1534,23 @@
         },
         "insider30d": 2
       },
-      "explain": "39 analysts cover it — 31 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "UBER": {
       "name": "Uber",
       "qarp": "STRONG BUY",
       "consensus": {
-        "strongBuy": 16,
-        "buy": 35,
-        "hold": 8,
+        "strongBuy": 15,
+        "buy": 34,
+        "hold": 7,
         "sell": 1,
         "strongSell": 0,
-        "total": 60,
-        "bullish": 51,
+        "total": 57,
+        "bullish": 49,
         "bearish": 1,
         "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-07-01"
+        "score": 1.11,
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1592,7 +1566,7 @@
         },
         "insider30d": 9
       },
-      "explain": "60 analysts cover it — 51 bullish, 8 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "57 analysts cover it — 49 bullish, 7 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "LULU": {
       "name": "Lululemon",
@@ -1600,15 +1574,15 @@
       "consensus": {
         "strongBuy": 1,
         "buy": 1,
-        "hold": 32,
-        "sell": 3,
+        "hold": 31,
+        "sell": 5,
         "strongSell": 2,
-        "total": 39,
+        "total": 40,
         "bullish": 2,
-        "bearish": 5,
+        "bearish": 7,
         "label": "Hold",
-        "score": -0.1,
-        "period": "2026-07-01"
+        "score": -0.15,
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1624,14 +1598,14 @@
         },
         "insider30d": 0
       },
-      "explain": "39 analysts cover it — 2 bullish, 32 hold, 5 bearish (consensus <b>Hold</b>). Our QARP view: HOLD-QUAL."
+      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: HOLD-QUAL."
     },
     "SPGI": {
       "name": "S&P Global",
       "qarp": "BUY",
       "consensus": {
-        "strongBuy": 11,
-        "buy": 19,
+        "strongBuy": 10,
+        "buy": 20,
         "hold": 4,
         "sell": 0,
         "strongSell": 0,
@@ -1639,8 +1613,8 @@
         "bullish": 30,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.21,
-        "period": "2026-07-01"
+        "score": 1.18,
+        "period": "2026-08-01"
       },
       "news": {
         "title": "Shares of banking and financial service companies are trading higher as declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
@@ -1667,8 +1641,8 @@
       "name": "Gilead Sciences",
       "qarp": "HOLD-QUAL",
       "consensus": {
-        "strongBuy": 10,
-        "buy": 20,
+        "strongBuy": 9,
+        "buy": 21,
         "hold": 7,
         "sell": 0,
         "strongSell": 0,
@@ -1676,8 +1650,8 @@
         "bullish": 30,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.08,
-        "period": "2026-07-01"
+        "score": 1.05,
+        "period": "2026-08-01"
       },
       "news": {
         "title": "SpaceX Could Swing $204 Billion After Earnings",
@@ -1705,16 +1679,16 @@
       "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 17,
-        "buy": 35,
+        "buy": 34,
         "hold": 5,
         "sell": 0,
         "strongSell": 0,
-        "total": 57,
-        "bullish": 52,
+        "total": 56,
+        "bullish": 51,
         "bearish": 0,
         "label": "Strong Buy",
         "score": 1.21,
-        "period": "2026-07-01"
+        "period": "2026-08-01"
       },
       "news": {
         "title": "Hyperscaler Capex Tops $1.2 Trillion: These Nine Stocks Are Cashing In, BofA Says",
@@ -1735,23 +1709,23 @@
         },
         "insider30d": 4
       },
-      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "56 analysts cover it — 51 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "NVS": {
       "name": "Novartis",
       "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 6,
-        "buy": 11,
+        "buy": 10,
         "hold": 14,
-        "sell": 3,
+        "sell": 4,
         "strongSell": 0,
         "total": 34,
-        "bullish": 17,
-        "bearish": 3,
+        "bullish": 16,
+        "bearish": 4,
         "label": "Buy",
-        "score": 0.59,
-        "period": "2026-07-01"
+        "score": 0.53,
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1759,23 +1733,23 @@
         "periodic": null,
         "insider30d": 0
       },
-      "explain": "34 analysts cover it — 17 bullish, 14 hold, 3 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "SAP": {
       "name": "SAP",
       "qarp": "STRONG BUY",
       "consensus": {
-        "strongBuy": 9,
-        "buy": 20,
-        "hold": 8,
+        "strongBuy": 8,
+        "buy": 22,
+        "hold": 7,
         "sell": 1,
         "strongSell": 1,
         "total": 39,
-        "bullish": 29,
+        "bullish": 30,
         "bearish": 2,
         "label": "Buy",
         "score": 0.9,
-        "period": "2026-07-01"
+        "period": "2026-08-01"
       },
       "news": {
         "title": "Shares of software companies are trading higher as the industry extends its recent rally, which may be due to investors rotating out of weakened semiconductor and AI hardware stocks into less capital-intensive areas of the tech sector. The industry may be buoyed by trader optimism ahead of Microsoft's Q4 earnings that will be reported after the market closes.",
@@ -1788,23 +1762,23 @@
         "periodic": null,
         "insider30d": 0
       },
-      "explain": "39 analysts cover it — 29 bullish, 8 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "39 analysts cover it — 30 bullish, 7 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "EXE": {
       "name": "Expand Energy",
       "qarp": "STRONG BUY",
       "consensus": {
-        "strongBuy": 10,
-        "buy": 16,
-        "hold": 4,
+        "strongBuy": 9,
+        "buy": 15,
+        "hold": 6,
         "sell": 0,
         "strongSell": 0,
         "total": 30,
-        "bullish": 26,
+        "bullish": 24,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.2,
-        "period": "2026-07-01"
+        "score": 1.1,
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1820,23 +1794,23 @@
         },
         "insider30d": 0
       },
-      "explain": "30 analysts cover it — 26 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "30 analysts cover it — 24 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
       "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 14,
-        "buy": 18,
+        "buy": 17,
         "hold": 5,
         "sell": 0,
         "strongSell": 0,
-        "total": 37,
-        "bullish": 32,
+        "total": 36,
+        "bullish": 31,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.24,
-        "period": "2026-07-01"
+        "score": 1.25,
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1852,23 +1826,23 @@
         },
         "insider30d": 4
       },
-      "explain": "37 analysts cover it — 32 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "36 analysts cover it — 31 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "VRTX": {
       "name": "Vertex Pharma",
       "qarp": "BUY",
       "consensus": {
-        "strongBuy": 13,
-        "buy": 20,
+        "strongBuy": 11,
+        "buy": 19,
         "hold": 6,
         "sell": 0,
         "strongSell": 1,
-        "total": 40,
-        "bullish": 33,
+        "total": 37,
+        "bullish": 30,
         "bearish": 1,
         "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-07-01"
+        "score": 1.05,
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
@@ -1884,23 +1858,23 @@
         },
         "insider30d": 7
       },
-      "explain": "40 analysts cover it — 33 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "37 analysts cover it — 30 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "KO": {
       "name": "Coca-Cola",
       "qarp": "AVOID",
       "consensus": {
-        "strongBuy": 9,
-        "buy": 20,
-        "hold": 6,
+        "strongBuy": 8,
+        "buy": 19,
+        "hold": 8,
         "sell": 0,
         "strongSell": 0,
         "total": 35,
-        "bullish": 29,
+        "bullish": 27,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.09,
-        "period": "2026-07-01"
+        "score": 1.0,
+        "period": "2026-08-01"
       },
       "news": {
         "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
@@ -1921,7 +1895,7 @@
         },
         "insider30d": 3
       },
-      "explain": "35 analysts cover it — 29 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+      "explain": "35 analysts cover it — 27 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
     "EFX": {
       "name": "Equifax",
@@ -1937,7 +1911,7 @@
         "bearish": 0,
         "label": "Buy",
         "score": 0.93,
-        "period": "2026-07-01"
+        "period": "2026-08-01"
       },
       "news": null,
       "filings": {
