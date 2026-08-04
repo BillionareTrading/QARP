@@ -1,6 +1,6 @@
 {
   "date": "2026-08-04",
-  "generated_at": "Aug 4, 1:19pm ET",
+  "generated_at": "Aug 4, 2:08pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -113,8 +113,8 @@
     "KO": "2026-10-20",
     "RKLB": "2026-08-10",
     "NOW": "2026-10-27",
-    "ABT": "2026-10-13",
     "ADBE": "2026-09-10",
+    "ABT": "2026-10-13",
     "ZTS": "2026-08-06",
     "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
@@ -134,6 +134,20 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Foundry, Fabricator & Idm Chip",
+      "dir": "up",
+      "driver": "Risk assets enjoy a tailwind",
+      "note": "As risk assets enjoy a tailwind. Also, financial results and commentary from companies such as ON Semiconductor and Palantir may help support the ongoing themes of chip supply shortages and growing demand from an expansionary AI services sector.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Banks & Financial Services",
+      "dir": "up",
+      "driver": "Softer oil prices have driven a decline in Treasury yields",
+      "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Software",
       "dir": "up",
       "driver": "A rebound following IBM's profit warning last week",
@@ -145,20 +159,6 @@
       "dir": "up",
       "driver": "Crude prices gain after Iranian strikes directed at U.S. assets in Jordan",
       "note": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
-      "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Data Center Infrastructure",
-      "dir": "mixed",
-      "driver": "Growth-oriented",
-      "note": "As growth-oriented, AI-exposed stocks continue their retracement amid concerns over Chinese competition affecting the sector's hyperscaler clients and elevated Fed rates leading to costlier borrowing.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
-    },
-    {
-      "sector": "Banking & Financial Service",
-      "dir": "up",
-      "driver": "Declining oil prices and a weaker U.S. dollar have eased inflation conce…",
-      "note": "As declining oil prices and a weaker U.S. dollar have eased inflation concerns. The shift has reduced expectations that interest rates will remain elevated, improving sentiment across the broader financial sector.",
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
@@ -200,16 +200,22 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
-    "AVGO": {
-      "title": "S&P 500 Hits Record Highs, Palantir Jumps 27%: Stock Market Today",
-      "ts": 1785863271,
-      "url": "https://www.benzinga.com/markets/equities/26/08/60920438/tocks-hit-records-palantir-earnings-oil-sink-hormuz-deal-hopes-markets-tuesday",
+    "UBER": {
+      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
+      "ts": 1785864914,
+      "url": "https://www.benzinga.com/markets/options/26/08/60921728/10-industrials-stocks-whale-activity-today-s-session",
       "wiim": false
     },
     "NVDA": {
       "title": "Open Secure AI Alliance Drafting Shared AI Findings Exchange Guidelines, Including Proposals To Confidentially Collect, Analyze AI Incidents, Near Misses",
       "ts": 1785849183,
       "url": "https://www.benzinga.com/news/26/08/60906240/open-secure-ai-alliance-drafting-shared-ai-findings-exchange-guidelines-including-proposals-confiden",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "S&P 500 Hits Record Highs, Palantir Jumps 27%: Stock Market Today",
+      "ts": 1785863271,
+      "url": "https://www.benzinga.com/markets/equities/26/08/60920438/tocks-hit-records-palantir-earnings-oil-sink-hormuz-deal-hopes-markets-tuesday",
       "wiim": false
     },
     "RKLB": {
@@ -228,8 +234,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$96",
-      "price": 86.31,
-      "upside": 11.2,
+      "price": 86.49,
+      "upside": 11.0,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -242,8 +248,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$100",
-      "price": 86.31,
-      "upside": 15.9,
+      "price": 86.49,
+      "upside": 15.6,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -256,8 +262,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 86.31,
-      "upside": 10.1,
+      "price": 86.49,
+      "upside": 9.8,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -270,8 +276,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 86.31,
-      "upside": 10.1,
+      "price": 86.49,
+      "upside": 9.8,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -284,8 +290,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$96",
-      "price": 86.31,
-      "upside": 11.2,
+      "price": 86.49,
+      "upside": 11.0,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -298,8 +304,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$104",
-      "price": 86.31,
-      "upside": 20.5,
+      "price": 86.49,
+      "upside": 20.2,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -312,8 +318,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "price": 86.31,
-      "upside": 12.4,
+      "price": 86.49,
+      "upside": 12.2,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -326,8 +332,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$93",
-      "price": 86.31,
-      "upside": 7.8,
+      "price": 86.49,
+      "upside": 7.5,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -340,11 +346,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$227",
-      "price": 190.73,
-      "upside": 19.0,
+      "price": 191.22,
+      "upside": 18.7,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-07-29",
@@ -354,8 +360,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 128.79,
-      "upside": 16.5,
+      "price": 128.83,
+      "upside": 16.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -368,8 +374,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$149",
-      "price": 147.25,
-      "upside": 1.2,
+      "price": 147.54,
+      "upside": 1.0,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -382,8 +388,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$170",
-      "price": 147.25,
-      "upside": 15.4,
+      "price": 147.54,
+      "upside": 15.2,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -396,8 +402,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$340",
-      "price": 310.39,
-      "upside": 9.5,
+      "price": 309.48,
+      "upside": 9.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -410,8 +416,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 310.39,
-      "upside": 28.9,
+      "price": 309.48,
+      "upside": 29.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -424,8 +430,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$270",
-      "price": 310.39,
-      "upside": -13.0,
+      "price": 309.48,
+      "upside": -12.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -438,8 +444,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$350",
-      "price": 310.39,
-      "upside": 12.8,
+      "price": 309.48,
+      "upside": 13.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -452,7 +458,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 310.39,
+      "price": 309.48,
       "upside": null,
       "held": false,
       "uni": true,
@@ -466,8 +472,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$300",
-      "price": 310.39,
-      "upside": -3.3,
+      "price": 309.48,
+      "upside": -3.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -480,8 +486,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$245",
-      "price": 310.39,
-      "upside": -21.1,
+      "price": 309.48,
+      "upside": -20.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -494,8 +500,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$360",
-      "price": 310.39,
-      "upside": 16.0,
+      "price": 309.48,
+      "upside": 16.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -508,8 +514,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "price": 310.39,
-      "upside": 16.0,
+      "price": 309.48,
+      "upside": 16.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -522,11 +528,11 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$209",
-      "price": 190.73,
-      "upside": 9.6,
+      "price": 191.22,
+      "upside": 9.3,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-03",
@@ -536,8 +542,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$282",
-      "price": 253.66,
-      "upside": 11.2,
+      "price": 253.96,
+      "upside": 11.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -550,11 +556,11 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$216",
-      "price": 190.73,
-      "upside": 13.2,
+      "price": 191.22,
+      "upside": 13.0,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-04",
@@ -564,8 +570,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 310.39,
-      "upside": -9.8,
+      "price": 309.48,
+      "upside": -9.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -578,8 +584,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.98,
-      "upside": -4.7,
+      "price": 41.49,
+      "upside": -3.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -593,7 +599,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -4.7
+      "upside": -3.6
     },
     "AAPL": {
       "date": "2026-08-04",
@@ -602,7 +608,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "upside": -9.8
+      "upside": -9.5
     },
     "CVX": {
       "date": "2026-08-03",
@@ -611,7 +617,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$209",
-      "upside": 9.6
+      "upside": 9.3
     },
     "JNJ": {
       "date": "2026-08-03",
@@ -620,7 +626,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$282",
-      "upside": 11.2
+      "upside": 11.0
     },
     "PG": {
       "date": "2026-07-30",
@@ -629,7 +635,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$149",
-      "upside": 1.2
+      "upside": 1.0
     },
     "KO": {
       "date": "2026-07-30",
@@ -638,7 +644,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 12.4
+      "upside": 12.2
     },
     "MRK": {
       "date": "2026-07-29",
@@ -647,7 +653,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "upside": 16.5
+      "upside": 16.4
     },
     "HD": {
       "date": "2026-07-27",
@@ -656,7 +662,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 7.6
+      "upside": 7.7
     },
     "MMM": {
       "date": "2026-07-23",
@@ -665,7 +671,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$180",
-      "upside": -0.2
+      "upside": 0.0
     },
     "CRM": {
       "date": "2026-07-21",
@@ -674,10 +680,111 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$185",
-      "upside": -2.4
+      "upside": -2.7
     }
   },
   "bz_news": [
+    {
+      "title": "Shares of foundry, fabricator and IDM chip companies are trading higher as risk assets enjoy a tailwind. Also, financial results and commentary from companies such as ON Semiconductor and Palantir may help support the ongoing themes of chip supply shortages and growing demand from an expansionary AI services sector.",
+      "url": "https://www.benzinga.com/quote/WOLF",
+      "ts": 1785865664,
+      "tickers": [
+        "ADI",
+        "GFS",
+        "INTC",
+        "TSM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.543
+    },
+    {
+      "title": "Nike Stock Slides After JPMorgan Downgrades to Underweight",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60922046/nike-stock-slides-after-jpmorgan-downgrades-to-underweight",
+      "ts": 1785865419,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.458
+    },
+    {
+      "title": "9 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/08/60921729/9-consumer-discretionary-stocks-whale-alerts-today-s-session",
+      "ts": 1785864914,
+      "tickers": [
+        "TSLA",
+        "AMZN",
+        "WSM",
+        "GRPN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.363
+    },
+    {
+      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/08/60921728/10-industrials-stocks-whale-activity-today-s-session",
+      "ts": 1785864914,
+      "tickers": [
+        "RCAT",
+        "CAT",
+        "GE",
+        "LMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.415
+    },
+    {
+      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/08/60921727/10-information-technology-stocks-whale-alerts-today-s-session",
+      "ts": 1785864914,
+      "tickers": [
+        "PLTR",
+        "AAPL",
+        "ORCL",
+        "TDC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.375
+    },
+    {
+      "title": "Shares of banks and financial services companies are trading higher as softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
+      "url": "https://www.benzinga.com/quote/C",
+      "ts": 1785864630,
+      "tickers": [
+        "KG",
+        "ACRE",
+        "WU",
+        "AVAT"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.402
+    },
+    {
+      "title": "Why Is CrowdStrike Stock Surging on Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60921120/why-is-crowdstrike-stock-surging-on-tuesday",
+      "ts": 1785864143,
+      "tickers": [
+        "CRWD",
+        "CSCO",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.36
+    },
     {
       "title": "Trillion-Dollar Countdown: The Math Behind AMD's Next Big Milestone",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60920872/trillion-dollar-countdown-the-math-behind-amds-next-big-milestone",
@@ -815,7 +922,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.297
+      "relevance": 0.296
     },
     {
       "title": "McDonald's Says Botched Value Rollout Hurt Loyal Customer Visits",
@@ -869,7 +976,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.391
+      "relevance": 0.39
     },
     {
       "title": "SpaceX Is Stuffing Its Rockets With Starlink — And Everyone Else Is Getting Shut Out",
@@ -899,7 +1006,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.392
+      "relevance": 0.393
     },
     {
       "title": "Nike’s 'Win Now' Plan May Be a Long Game, JPMorgan Warns",
@@ -931,99 +1038,6 @@
       "relevance": 0.456
     },
     {
-      "title": "Big Tech's $1.2 Trillion Hyperscaler AI Bet Could Ignite the Next Semiconductor ETF Rally",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/60911484/big-tech-1-2-trillion-hyperscaler-ai-bet-could-ignite-the-next-semiconductor-etf-rally",
-      "ts": 1785855091,
-      "tickers": [
-        "SMH",
-        "DRAM",
-        "INTC",
-        "AVGO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.579
-    },
-    {
-      "title": "Elon Musk Posts On X \"Can't trust OpenAI\" In Response To Post That Says \"Apple filed for a PRELIMINARY INJUNCTION against OpenAI AND asked a federal judge to put them under forensic supervision... \"",
-      "url": "https://www.benzinga.com/news/26/08/60911443/elon-musk-posts-x-can-t-trust-openai-response-post-says-apple-filed-preliminary-injunction-against-o",
-      "ts": 1785855025,
-      "tickers": [
-        "SPCX",
-        "MSFT",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.26
-    },
-    {
-      "title": "Walmart Stock Slides After Analyst Downgrade: Time To Buy Or Stay Away?",
-      "url": "https://www.benzinga.com/Opinion/26/08/60911322/walmart-stock-slides-after-analyst-downgrade-time-to-buy-or-stay-away",
-      "ts": 1785854806,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.454
-    },
-    {
-      "title": "Here’s How Much You Would Have Made Owning Salesforce Stock In The Last 20 Years",
-      "url": "https://www.benzinga.com/news/26/08/60910471/here-s-how-much-you-would-have-made-owning-salesforce-stock-last-20-years",
-      "ts": 1785853827,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.293
-    },
-    {
-      "title": "Here’s How Much You Would Have Made Owning Microsoft Stock In The Last 20 Years",
-      "url": "https://www.benzinga.com/news/26/08/60909764/here-s-how-much-you-would-have-made-owning-microsoft-stock-last-20-years",
-      "ts": 1785852941,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.291
-    },
-    {
-      "title": "Intel Stock Up Nearly 8%: AI Growth Narrative Trumps Foundry Capex Concerns",
-      "url": "https://www.benzinga.com/markets/tech/26/08/60909403/intel-stock-up-nearly-8-ai-growth-narrative-trumps-foundry-capex-concerns",
-      "ts": 1785852542,
-      "tickers": [
-        "INTC",
-        "SOXX",
-        "TRFK",
-        "ESN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.5
-    },
-    {
-      "title": "Scott Bessent Says Hormuz Deal Could Come by Tomorrow: Do Prediction Markets Agree?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60909398/scott-bessent-says-hormuz-deal-could-come-by-tomorrow-do-prediction-markets-agree",
-      "ts": 1785852539,
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.308
-    },
-    {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
       "url": "https://www.benzinga.com/trading-ideas/previews/26/08/60881668/mcdonalds-q2-preview-world-cup-new-3-menu-higher-gas-prices-which-theme-wins-out",
       "ts": 1785776312,
@@ -1034,7 +1048,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.293
+      "relevance": 0.292
     },
     {
       "title": "Warren Buffett Says You Don't Need 20 Right Calls To Get Rich — '4 Or 5 Will Probably Do It'",
@@ -1296,7 +1310,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.513
+      "relevance": 0.512
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1398,38 +1412,6 @@
       },
       "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "ABT": {
-      "name": "Abbott Laboratories",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 13,
-        "hold": 9,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 33,
-        "bullish": 24,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.06,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-16",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
-        },
-        "insider30d": 0
-      },
-      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "ADBE": {
       "name": "Adobe",
       "qarp": "BUY",
@@ -1466,6 +1448,38 @@
         "insider30d": 9
       },
       "explain": "46 analysts cover it — 18 bullish, 23 hold, 5 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "ABT": {
+      "name": "Abbott Laboratories",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 13,
+        "hold": 9,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 33,
+        "bullish": 24,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.06,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
+        },
+        "insider30d": 0
+      },
+      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ZTS": {
       "name": "Zoetis",
@@ -1616,7 +1630,12 @@
         "score": 1.11,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "10 Industrials Stocks Whale Activity In Today’s Session",
+        "ts": 1785864914,
+        "url": "https://www.benzinga.com/markets/options/26/08/60921728/10-industrials-stocks-whale-activity-today-s-session",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1921,7 +1940,7 @@
     },
     "EFX": {
       "name": "Equifax",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 8,
         "buy": 12,
@@ -2028,20 +2047,6 @@
       "margin": 7.5,
       "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
     },
-    "ABT": {
-      "period": "FY2017",
-      "filed": "2018-02-16",
-      "form": "10-K",
-      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
-      "revenue": {
-        "fmt": "$7.6B",
-        "yoy": 42.3
-      },
-      "eps": null,
-      "net_income": null,
-      "margin": null,
-      "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
-    },
     "ADBE": {
       "period": "Q2 FY2026",
       "filed": "2026-06-15",
@@ -2060,6 +2065,20 @@
       },
       "margin": 25.9,
       "summary": "Q2 FY2026 — revenue $6.6B (+12.7% YoY), diluted EPS $4.25 (+7.9% YoY), net margin 26%. (as reported, GAAP)"
+    },
+    "ABT": {
+      "period": "FY2017",
+      "filed": "2018-02-16",
+      "form": "10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
+      "revenue": {
+        "fmt": "$7.6B",
+        "yoy": 42.3
+      },
+      "eps": null,
+      "net_income": null,
+      "margin": null,
+      "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
     },
     "ZTS": {
       "period": "Q1 FY2026",
