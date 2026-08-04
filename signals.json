@@ -1,6 +1,6 @@
 {
   "date": "2026-08-04",
-  "generated_at": "Aug 4, 6:07am ET",
+  "generated_at": "Aug 4, 7:06am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -555,9 +555,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-04",
+      "ticker": "NKE",
+      "firm": "JP Morgan",
+      "action": "Downgrades",
+      "rating": "Underweight",
+      "stance": "bearish",
+      "pt": "$40",
+      "price": 42.64,
+      "upside": -6.2,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "rating_moves": {
+    "NKE": {
+      "date": "2026-08-04",
+      "firm": "JP Morgan",
+      "action": "Downgrades",
+      "rating": "Underweight",
+      "stance": "bearish",
+      "pt": "$40",
+      "upside": -6.2
+    },
     "CVX": {
       "date": "2026-08-03",
       "firm": "Bernstein",
@@ -642,6 +665,135 @@
   },
   "bz_news": [
     {
+      "title": "McDonald's Q2 Global Comparable Sales Increased 1.3%; US Comparable Sales Were Up 0.8%",
+      "url": "https://www.benzinga.com/quote/MCD",
+      "ts": 1785841538,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.39
+    },
+    {
+      "title": "McDonald's Q2 Adj. EPS $3.38 Beats $3.32 Estimate, Sales $7.099B Miss $7.128B Estimate",
+      "url": "https://www.benzinga.com/quote/MCD",
+      "ts": 1785841309,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.452
+    },
+    {
+      "title": "Merck & Co Lowers FY2026 Adj EPS Guidance from $5.04-$5.16 to $2.66-$2.76 vs $2.76 Est; Raises FY2026 Sales Guidance from $65.800B-$67.000B to $66.300B-$67.300B vs $66.802B Est",
+      "url": "https://www.benzinga.com/news/26/08/60899171/merck-co-lowers-fy2026-adj-eps-guidance-5-04-5-16-2-66-2-76-vs-2-76-est-raises-fy2026-sales-guidance",
+      "ts": 1785839776,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.486
+    },
+    {
+      "title": "Caterpillar Q2 Adj. EPS $8.17 Beats $5.71 Estimate, Sales $20.500B Beat $18.358B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60899040/caterpillar-q2-adj-eps-8-17-beats-5-71-estimate-sales-20-500b-beat-18-358b-estimate",
+      "ts": 1785839594,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.492
+    },
+    {
+      "title": "Dow Closes at Record High, Nasdaq Surges 2%, but Fear & Greed Index Signals Investors Are Still Playing It Safe",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/60899027/dow-closes-at-record-high-nasdaq-surges-2-but-fear-greed-index-signals-investors-are-still-playing-it-safe",
+      "ts": 1785839585,
+      "tickers": [
+        "PFE",
+        "AMD",
+        "CAT",
+        "MMYT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.506
+    },
+    {
+      "title": "Merck & Co Q2 Adj. EPS $(0.13) Beats $(0.27) Estimate, Sales $16.607B Beat $16.356B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60898822/merck-co-q2-adj-eps-0-13-beats-0-27-estimate-sales-16-607b-beat-16-356b-estimate",
+      "ts": 1785839448,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.425
+    },
+    {
+      "title": "Caterpillar, Pfizer and 3 Stocks to Watch Heading Into Tuesday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/60898659/caterpillar-pfizer-and-3-stocks-to-watch-heading-into-tuesday-2",
+      "ts": 1785839366,
+      "tickers": [
+        "PLTR",
+        "MCD",
+        "PFE",
+        "SNAP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.386
+    },
+    {
+      "title": "Oppenheimer Downgrades Walmart to Perform",
+      "url": "https://www.benzinga.com/news/26/08/60898528/oppenheimer-downgrades-walmart-perform",
+      "ts": 1785838816,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.466
+    },
+    {
+      "title": "JP Morgan Downgrades Nike to Underweight, Lowers Price Target to $40",
+      "url": "https://www.benzinga.com/news/26/08/60898171/jp-morgan-downgrades-nike-underweight-lowers-price-target-40",
+      "ts": 1785838260,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.461
+    },
+    {
+      "title": "'US has used 'virtually all' of its long-range precision missiles during Iran war, sources say' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/quote/GD",
+      "ts": 1785838204,
+      "tickers": [
+        "LMT",
+        "NOC",
+        "BA",
+        "RTX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.198
+    },
+    {
       "title": "Market Analysis: Microsoft And Competitors In Software Industry",
       "url": "https://www.benzinga.com/news/26/08/60897328/market-analysis-microsoft-and-competitors-software-industry",
       "ts": 1785837521,
@@ -651,7 +803,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.362
+      "relevance": 0.363
     },
     {
       "title": "Exploring The Competitive Space: Apple Versus Industry Peers In Technology Hardware, Storage &amp; Peripherals",
@@ -708,7 +860,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.379
+      "relevance": 0.38
     },
     {
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
@@ -807,7 +959,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.527
+      "relevance": 0.526
     },
     {
       "title": "UBS Maintains Neutral on American Express, Lowers Price Target to $384",
@@ -819,7 +971,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.47
+      "relevance": 0.469
     },
     {
       "title": "Spider-Man Swings Into the Record Books: How Sony’s Bet on One Comic Book Character Keeps Paying Off",
@@ -849,147 +1001,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.371
-    },
-    {
-      "title": "SpaceX Could Swing $204 Billion After Earnings",
-      "url": "https://www.benzinga.com/markets/options/26/08/60886675/spacex-could-swing-204-billion-after-earnings",
-      "ts": 1785785421,
-      "tickers": [
-        "PFE",
-        "SPOT",
-        "AMD",
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.352
-    },
-    {
-      "title": "Software companies are trading higher amid broader market strength, lifting the industry alongside other tech peers. Investor optimism about Palantir's Q2 financial results could act as a bellwether, indicating broader industry growth.",
-      "url": "https://www.benzinga.com/quote/RBRK",
-      "ts": 1785784722,
-      "tickers": [
-        "CANG",
-        "CXAI",
-        "IDAI",
-        "HTCR"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.402
-    },
-    {
-      "title": "BNP Paribas Upgrades Boeing to Outperform, Raises Price Target to $300",
-      "url": "https://www.benzinga.com/news/26/08/60885755/bnp-paribas-upgrades-boeing-outperform-raises-price-target-300",
-      "ts": 1785783584,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.477
-    },
-    {
-      "title": "Why Is Applied Digital Stock Surging Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60883840/why-is-applied-digital-stock-surging-monday",
-      "ts": 1785780151,
-      "tickers": [
-        "APLD",
-        "GOOGL",
-        "MSFT",
-        "SPRX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.408
-    },
-    {
-      "title": "5 Financials Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/60882899/5-financials-stocks-whale-activity-today-s-session",
-      "ts": 1785778516,
-      "tickers": [
-        "PYPL",
-        "BMO",
-        "LMND",
-        "C"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.399
-    },
-    {
-      "title": "6 Health Care Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/60882898/6-health-care-stocks-whale-activity-today-s-session",
-      "ts": 1785778516,
-      "tickers": [
-        "TLRY",
-        "A",
-        "NVO",
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.387
-    },
-    {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/60882897/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1785778515,
-      "tickers": [
-        "NVDA",
-        "IREN",
-        "ASML",
-        "ADBE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "Careful MSFT, AMZN, ORCL Bulls: Trouble at OpenAI, Anthropic Could Trigger 'Sustained' AI Selloff, 'Big Short' Legend Says",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60882801/careful-msft-amzn-orcl-bulls-trouble-at-openai-anthropic-could-trigger-sustained-ai-selloff-big-short-legend-says",
-      "ts": 1785778224,
-      "tickers": [
-        "MSFT",
-        "AMZN",
-        "ORCL",
-        "CRWV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.396
-    },
-    {
-      "title": "Boeing Secures US Federal Aviation Administration Amended Type Certificate For New 737-7 Airplane, Clearing Path To Commercial Service",
-      "url": "https://www.benzinga.com/news/26/08/60882777/boeing-secures-us-federal-aviation-administration-amended-type-certificate-new-737-7-airplane-cleari",
-      "ts": 1785778185,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.214
-    },
-    {
-      "title": "Visa Buys BioCatch for $2.4 Billion to Fight AI Fraud",
-      "url": "https://www.benzinga.com/m-a/26/08/60882480/visa-buys-biocatch-for-2-4-billion-to-fight-ai-fraud",
-      "ts": 1785777730,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.354
     },
     {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
@@ -1249,7 +1260,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.513
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
