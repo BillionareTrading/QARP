@@ -1882,6 +1882,16 @@ async function renderIndexes() {
   // 2026-07-28 (user saw an empty S&P card + a day-old stamp): honor the 429 backoff like the
   // other loops, and on any fetch failure fall back to the last good quote — the honest "as of"
   // stamp below (driven by q.t) is what signals staleness, never a blank card.
+  // 2026-08-04 (user: "always not working"): the two index fetches starve behind the holdings
+  // burst on the shared 60/min key, so a fresh session could sit on "—" forever. Seed the
+  // fallback from the BUILD-TIME quote baked into the payload (meta.index_quotes) — the as-of
+  // stamp stays honest; a live fetch overwrites the bake the moment one gets through.
+  const baked = (DATA.meta && DATA.meta.index_quotes) || {};
+  for (const ix of INDEXES) {
+    if (!lastIdxQuote[ix.sym] && baked[ix.sym] && baked[ix.sym].c) {
+      lastIdxQuote[ix.sym] = Object.assign({ _baked: true }, baked[ix.sym]);
+    }
+  }
   const throttled = Date.now() < throttleUntil;
   const cards = await Promise.all(INDEXES.map(async (ix) => {
     let q = null;
@@ -1907,9 +1917,13 @@ async function renderIndexes() {
   if (asof) asof.textContent = latestT ? "as of " + asOfLabel(latestT) : "";
   // One retry per cycle: the 60s holdings burst usually empties the minute's quota right
   // before this runs — a lone re-attempt a few seconds later routinely sneaks through.
-  if (!throttled && INDEXES.some((ix) => !lastIdxQuote[ix.sym]) && !renderIndexes._retry) {
+  // 2026-08-04: time the retry to land AFTER the 429 backoff expires (the old fixed 4.5s
+  // fired mid-throttle and wasted itself), and keep retrying while a card is missing or
+  // still showing the build-time bake.
+  if (INDEXES.some((ix) => !lastIdxQuote[ix.sym] || lastIdxQuote[ix.sym]._baked) && !renderIndexes._retry) {
     renderIndexes._retry = true;
-    setTimeout(async () => { await renderIndexes(); renderIndexes._retry = false; }, 4500);
+    const wait = Math.max(4500, (throttleUntil || 0) - Date.now() + 1500);
+    setTimeout(async () => { await renderIndexes(); renderIndexes._retry = false; }, wait);
   }
 }
 
