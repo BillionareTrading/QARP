@@ -1,6 +1,6 @@
 {
   "date": "2026-08-04",
-  "generated_at": "Aug 4, 8:25am ET",
+  "generated_at": "Aug 4, 9:15am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -201,9 +201,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Box CEO Aaron Levie Warns AI Pricing Could Collapse as Open-Weight Models Like Qwen Close the Gap On Closed AI: 'Can’t Reasonably Remain Behind...'",
-      "ts": 1785842859,
-      "url": "https://www.benzinga.com/markets/tech/26/08/60901427/box-ceo-aaron-levie-warns-ai-pricing-could-collapse-as-open-weight-models-like-qwen-close-the-gap-on-closed-ai-cant-reasonably-remain-behind",
+      "title": "Open Secure AI Alliance Drafting Shared AI Findings Exchange Guidelines, Including Proposals To Confidentially Collect, Analyze AI Incidents, Near Misses",
+      "ts": 1785849183,
+      "url": "https://www.benzinga.com/news/26/08/60906240/open-secure-ai-alliance-drafting-shared-ai-findings-exchange-guidelines-including-proposals-confiden",
       "wiim": false
     },
     "AVGO": {
@@ -558,6 +558,20 @@
     },
     {
       "date": "2026-08-04",
+      "ticker": "AAPL",
+      "firm": "China Renaissance",
+      "action": "Downgrades",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$280",
+      "price": 303.42,
+      "upside": -7.7,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-04",
       "ticker": "NKE",
       "firm": "JP Morgan",
       "action": "Downgrades",
@@ -581,6 +595,15 @@
       "pt": "$40",
       "upside": -6.2
     },
+    "AAPL": {
+      "date": "2026-08-04",
+      "firm": "China Renaissance",
+      "action": "Downgrades",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$280",
+      "upside": -7.7
+    },
     "CVX": {
       "date": "2026-08-03",
       "firm": "Bernstein",
@@ -598,15 +621,6 @@
       "stance": "bullish",
       "pt": "$282",
       "upside": 10.8
-    },
-    "AAPL": {
-      "date": "2026-07-31",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$340",
-      "upside": 12.1
     },
     "PG": {
       "date": "2026-07-30",
@@ -665,6 +679,123 @@
   },
   "bz_news": [
     {
+      "title": "Open Secure AI Alliance Drafting Shared AI Findings Exchange Guidelines, Including Proposals To Confidentially Collect, Analyze AI Incidents, Near Misses",
+      "url": "https://www.benzinga.com/news/26/08/60906240/open-secure-ai-alliance-drafting-shared-ai-findings-exchange-guidelines-including-proposals-confiden",
+      "ts": 1785849183,
+      "tickers": [
+        "NVDA",
+        "CSCO",
+        "CRWD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.308
+    },
+    {
+      "title": "Caterpillar Cashes In On AI Buildout, Raises 2026 Sales Outlook",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60906229/caterpillar-cashes-in-on-ai-buildout-raises-2026-sales-outlook",
+      "ts": 1785849154,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.388
+    },
+    {
+      "title": "'Intel China Has Completed Day-0 Adaptation For MiniMax H3, The Latest Multimodal Generative Model From Chinese AI Startup Minimax, Following Its Earlier Support For The DeepSeek Model Family. The Move Underscores Intel's Push To Capture Local AI Deployment Opportunities In China's Growing Open-Source Model Ecosystem' - DIGITIMES",
+      "url": "https://www.benzinga.com/news/26/08/60905359/intel-china-has-completed-day-0-adaptation-minimax-h3-latest-multimodal-generative-model-chinese-ai-",
+      "ts": 1785848316,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.395
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow and Nasdaq Futures Gain as Scott Bessent Says Hormuz Deal Could Come Soon— Caterpiller, Palantir in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/08/60897120/stock-market-today-sp-500-dow-and-nasdaq-futures-rise-after-strong-monday-gains-mcdonalds-amd-palantir-in-focus",
+      "ts": 1785848227,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.454
+    },
+    {
+      "title": "McDonald's Exec Says Restaurant Teams Were Overwhelmed By Too Many Deployments In Q2, Which Led To Less Efficient Operations; Starting Next Week, We're Launching Digital Flash Offers To Re-Energize Our High Frequency Customers; We'll Be Reallocating Marketing Dollars Throughout H2 To Increase Support Behind Offers Such As Extra Value Meals",
+      "url": "https://www.benzinga.com/news/26/08/60905222/mcdonald-s-exec-says-restaurant-teams-were-overwhelmed-too-many-deployments-q2-which-led-less-effici",
+      "ts": 1785847900,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.302
+    },
+    {
+      "title": "Caterpillar CEO Says In Construction Segment, Witnessed Softness In Sales To Users In Middle East",
+      "url": "https://www.benzinga.com/news/26/08/60905000/caterpillar-ceo-says-construction-segment-witnessed-softness-sales-users-middle-east",
+      "ts": 1785847510,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.359
+    },
+    {
+      "title": "McDonald's CEO Says We Don't Have A Strategy Problem, We Simply Didn't Execute At The Level We Needed To In Q2; Restaurant Teams Were 'overwhelmed By Too Many Deployments' In Q2, Which LED To Less Efficient Operations",
+      "url": "https://www.benzinga.com/news/26/08/60904959/mcdonald-s-ceo-says-we-don-t-have-strategy-problem-we-simply-didn-t-execute-level-we-needed-q2-resta",
+      "ts": 1785847467,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.28
+    },
+    {
+      "title": "Apple Seeks Injunction Against OpenAI in Trade Secrets Lawsuit, Says It Faces 'Irreparable Harm'— Jim Cramer Says 'Gloves Off'",
+      "url": "https://www.benzinga.com/news/legal/26/08/60904111/apple-seeks-injunction-against-openai-in-trade-secrets-lawsuit-says-it-faces-irreparable-harm-jim-cramer-says-gloves-off",
+      "ts": 1785846596,
+      "tickers": [
+        "AAPL",
+        "HNHAF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.315
+    },
+    {
+      "title": "This Walmart Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Tuesday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/08/60904036/this-walmart-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-tuesday",
+      "ts": 1785846460,
+      "tickers": [
+        "WMT",
+        "NKE",
+        "OLN",
+        "CI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.502
+    },
+    {
       "title": "'Goldman Sachs Creates $1 Billion Reinsurance Pool With Talcott' - Bloomberg",
       "url": "https://www.benzinga.com/news/26/08/60902183/goldman-sachs-creates-1-billion-reinsurance-pool-talcott-bloomberg",
       "ts": 1785843828,
@@ -715,7 +846,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.447
+      "relevance": 0.446
     },
     {
       "title": "HP, Asus, Acer Quietly Embrace Limited CXMT Chips Amid Tight DRAM Supply, as They Fear Upsetting Memory Giants: Report",
@@ -874,131 +1005,6 @@
       "relevance": 0.466
     },
     {
-      "title": "JP Morgan Downgrades Nike to Underweight, Lowers Price Target to $40",
-      "url": "https://www.benzinga.com/news/26/08/60898171/jp-morgan-downgrades-nike-underweight-lowers-price-target-40",
-      "ts": 1785838260,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.461
-    },
-    {
-      "title": "'US has used 'virtually all' of its long-range precision missiles during Iran war, sources say' - Reuters Exclusive",
-      "url": "https://www.benzinga.com/quote/GD",
-      "ts": 1785838204,
-      "tickers": [
-        "LMT",
-        "NOC",
-        "BA",
-        "RTX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.198
-    },
-    {
-      "title": "Market Analysis: Microsoft And Competitors In Software Industry",
-      "url": "https://www.benzinga.com/news/26/08/60897328/market-analysis-microsoft-and-competitors-software-industry",
-      "ts": 1785837521,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.363
-    },
-    {
-      "title": "Exploring The Competitive Space: Apple Versus Industry Peers In Technology Hardware, Storage &amp; Peripherals",
-      "url": "https://www.benzinga.com/news/26/08/60897317/exploring-competitive-space-apple-versus-industry-peers-technology-hardware-storage-amp-peripherals",
-      "ts": 1785837505,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.396
-    },
-    {
-      "title": "Will Elon Musk's Bullish Starlink Bet Help SPCX Recover? Billionaire Charts Ambitious Connectivity Plan Ahead of SpaceX Earnings",
-      "url": "https://www.benzinga.com/news/space/26/08/60897203/will-elon-musks-bullish-starlink-bet-help-spcx-recover-billionaire-charts-ambitious-connectivity-plan-ahead-of-spacex-earnings",
-      "ts": 1785836896,
-      "tickers": [
-        "SPCX",
-        "TSLA",
-        "AAPL",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.408
-    },
-    {
-      "title": "Stock Market Today: S&P 500, Dow and Nasdaq Futures Rise After Strong Monday Gains— McDonald's, AMD, Palantir in Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/08/60897120/stock-market-today-sp-500-dow-and-nasdaq-futures-rise-after-strong-monday-gains-mcdonalds-amd-palantir-in-focus",
-      "ts": 1785836141,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.497
-    },
-    {
-      "title": "Amazon CEO Andy Jassy's AI Spending Pitch Won Wall Street Over, Jim Cramer Says— While Meta and Alphabet Are Still Struggling to Explain Theirs: 'The Same Numbers...'",
-      "url": "https://www.benzinga.com/markets/tech/26/08/60896536/jim-cramer-says-andy-jassy-changed-wall-street-view-on-big-tech-ai-spending",
-      "ts": 1785831460,
-      "tickers": [
-        "AMZN",
-        "META",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.379
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60896308/sp500-aug-4-open-up-or-down-polymarket-trump-iran-tech-rally-amazon-ai-earnings",
-      "ts": 1785829796,
-      "tickers": [
-        "SPY",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Snap's $2,195 Glasses Will See 'Mass Market Adoption' By End of Decade, Says CEO Evan Spiegel: 'Designed For a Future in Which AI Does More Work'",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/60896086/snap-evan-spiegel-ai-smart-glasses-mass-adoption",
-      "ts": 1785828015,
-      "tickers": [
-        "SNAP",
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.338
-    },
-    {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
       "url": "https://www.benzinga.com/trading-ideas/previews/26/08/60881668/mcdonalds-q2-preview-world-cup-new-3-menu-higher-gas-prices-which-theme-wins-out",
       "ts": 1785776312,
@@ -1049,6 +1055,21 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.561
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60788305/sp500-july-30-open-up-or-down-polymarket-fed-bond-yields-big-tech-earnings-oil",
+      "ts": 1785399556,
+      "tickers": [
+        "SPY",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1503,9 +1524,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Box CEO Aaron Levie Warns AI Pricing Could Collapse as Open-Weight Models Like Qwen Close the Gap On Closed AI: 'Can’t Reasonably Remain Behind...'",
-        "ts": 1785842859,
-        "url": "https://www.benzinga.com/markets/tech/26/08/60901427/box-ceo-aaron-levie-warns-ai-pricing-could-collapse-as-open-weight-models-like-qwen-close-the-gap-on-closed-ai-cant-reasonably-remain-behind",
+        "title": "Open Secure AI Alliance Drafting Shared AI Findings Exchange Guidelines, Including Proposals To Confidentially Collect, Analyze AI Incidents, Near Misses",
+        "ts": 1785849183,
+        "url": "https://www.benzinga.com/news/26/08/60906240/open-secure-ai-alliance-drafting-shared-ai-findings-exchange-guidelines-including-proposals-confiden",
         "wiim": false
       },
       "filings": {
