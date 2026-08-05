@@ -1,6 +1,6 @@
 {
   "date": "2026-08-05",
-  "generated_at": "Aug 5, 6:45am ET",
+  "generated_at": "Aug 5, 7:30am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -656,6 +656,33 @@
   },
   "bz_news": [
     {
+      "title": "Walt Disney shares are trading higher after the company reported better-than-expected Q3 adjusted EPS results and raised its FY26 adjusted EPS guidance.",
+      "url": "https://www.benzinga.com/quote/DIS",
+      "ts": 1785928963,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.459
+    },
+    {
+      "title": "SEC Is 'Ready, Willing And Able' To Replace CLARITY Act If It Fails, Bitwise's Matt Hougan Says",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/60943858/sec-is-ready-willing-and-able-to-replace-clarity-act-if-it-fails-bitwises-matt-hougan-says",
+      "ts": 1785928940,
+      "tickers": [
+        "$XRP",
+        "$BTC",
+        "AMZN",
+        "COIN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.298
+    },
+    {
       "title": "Disney Records Q3 Tariff Refund Of ~$100M; Notes Toy Story 5 Contribution To Robust Streaming And Consumer Products Performance",
       "url": "https://www.benzinga.com/news/26/08/60941774/disney-records-q3-tariff-refund-100m-notes-toy-story-5-contribution-robust-streaming-and-consumer-pr",
       "ts": 1785926760,
@@ -757,7 +784,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.381
+      "relevance": 0.38
     },
     {
       "title": "'The Big Short' Investor Michael Burry Holds His Ground on Nvidia, Tesla and Other Shorts— Warns Of 1987-Style Crash: 'It Is Possible We Are Near...'",
@@ -951,7 +978,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.366
+      "relevance": 0.365
     },
     {
       "title": "Amgen Exec Says Spent $500M In Q2 On Capital Expenditures, Driven By Investments Across U.S. Manufacturing Sites; Continues To Expect Capital Expenditures Of About $2.6B In 2026 To Scale Manufacturing Capacity, Including For Maritide's Launch; Expect A Meaningful Sequential Increase In Operating Expenses In Q3",
@@ -964,33 +991,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.421
-    },
-    {
-      "title": "Amgen Discontinuing Future Development Of AMG 513; To Continue Phase 1 Trial Of AMG 513 In Adults With Obesity",
-      "url": "https://www.benzinga.com/news/26/08/60933763/amgen-discontinuing-future-development-amg-513-continue-phase-1-trial-amg-513-adults-obesity",
-      "ts": 1785877188,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.387
-    },
-    {
-      "title": "Semiconductors Just Posted Their Best Four-Day Rally Since March 2020. These Five Stocks Led the Charge",
-      "url": "https://www.benzinga.com/markets/tech/26/08/60929876/semiconductor-best-four-day-rally-since-2020-five-stocks-driving-the-move",
-      "ts": 1785874424,
-      "tickers": [
-        "INTC",
-        "AMD",
-        "MU",
-        "SOXX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.509
     },
     {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
@@ -1042,7 +1042,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.561
+      "relevance": 0.562
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1559,8 +1559,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-07-16",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000382/e26302_uber-8k.htm"
+          "date": "2026-08-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000027/uber-20260805.htm"
         },
         "periodic": {
           "form": "10-Q",
