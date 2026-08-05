@@ -1,6 +1,6 @@
 {
   "date": "2026-08-05",
-  "generated_at": "Aug 5, 8:25am ET",
+  "generated_at": "Aug 5, 9:25am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -200,22 +200,22 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
+    "AVGO": {
+      "title": "QUICK SPARK: QQQ Pulls In Nearly $5 Billion in a Day as Investors Pile Into Big Tech",
+      "ts": 1785935886,
+      "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/08/60948333/quick-spark-qqq-nearly-5-billion-in-one-day-investors-big-tech",
+      "wiim": false
+    },
     "NVDA": {
-      "title": "Why Is CrowdStrike Stock Surging on Tuesday?",
-      "ts": 1785864143,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60921120/why-is-crowdstrike-stock-surging-on-tuesday",
+      "title": "QUICK SPARK: QQQ Pulls In Nearly $5 Billion in a Day as Investors Pile Into Big Tech",
+      "ts": 1785935886,
+      "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/08/60948333/quick-spark-qqq-nearly-5-billion-in-one-day-investors-big-tech",
       "wiim": false
     },
     "UBER": {
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
       "ts": 1785918097,
       "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60938801/will-sp500-open-up-or-down-august-5-polymarket-record-high-ai-earnings-iran",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "JPMorgan Says Bet NVDA, AMD, but Morgan Stanley Backs MSFT, GOOGL: What Is the Best AI Trade?",
-      "ts": 1785875780,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60932483/jpmorgan-says-bet-nvda-amd-but-morgan-stanley-backs-msft-googl-what-is-the-best-ai-trade",
       "wiim": false
     }
   },
@@ -670,6 +670,121 @@
   },
   "bz_news": [
     {
+      "title": "QUICK SPARK: QQQ Pulls In Nearly $5 Billion in a Day as Investors Pile Into Big Tech",
+      "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/08/60948333/quick-spark-qqq-nearly-5-billion-in-one-day-investors-big-tech",
+      "ts": 1785935886,
+      "tickers": [
+        "QQQ",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.411
+    },
+    {
+      "title": "$130 Million Coldcard Hack Puts Cybersecurity ETFs on Investors' Radar",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/60948131/130-million-coldcard-hack-puts-cybersecurity-etfs-on-investors-radar",
+      "ts": 1785935470,
+      "tickers": [
+        "HACK",
+        "CSCO",
+        "PANW",
+        "FTNT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.404
+    },
+    {
+      "title": "Disney Says Our Strategy On Disney+ Is To Bring Additional Sports Content To Users; Exploring Fast Free Streaming Service",
+      "url": "https://www.benzinga.com/news/26/08/60948118/disney-says-our-strategy-disney-bring-additional-sports-content-users-exploring-fast-free-streaming-",
+      "ts": 1785935452,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.247
+    },
+    {
+      "title": "Disney Says On Track To Spend $24B Across The Company This Year",
+      "url": "https://www.benzinga.com/news/26/08/60947507/disney-says-track-spend-24b-across-company-year",
+      "ts": 1785934756,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.303
+    },
+    {
+      "title": "Disney Says We Had Seen A Weaker Consumer Count In Parks In Shanghai And Hong Kong In Q3, And That's Continuing In Q4",
+      "url": "https://www.benzinga.com/news/26/08/60947395/disney-says-we-had-seen-weaker-consumer-count-parks-shanghai-and-hong-kong-q3-and-s-continuing-q4",
+      "ts": 1785934387,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.3
+    },
+    {
+      "title": "Disney CEO Says Disney+ To Add Games, Merchandise, Other Features; To Roll Out Elements Of Expanded Disney+ Ecosystem In Spring 2027",
+      "url": "https://www.benzinga.com/news/26/08/60947025/disney-ceo-says-disney-add-games-merchandise-other-features-roll-out-elements-expanded-disney-ecosys",
+      "ts": 1785933772,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.27
+    },
+    {
+      "title": "Disney CEO Says Working To Scale Disney+ Outside U.S. And Focused On Driving Growth And Returns Over The Long Term In Under Monetized Markets",
+      "url": "https://www.benzinga.com/news/26/08/60946986/disney-ceo-says-working-scale-disney-outside-u-s-and-focused-driving-growth-and-returns-over-long-te",
+      "ts": 1785933654,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.299
+    },
+    {
+      "title": "Disney CEO Says NBA Finals, NHL Drove ESPN To Strongest Fiscal Q3 Viewership Since 2016",
+      "url": "https://www.benzinga.com/news/26/08/60946976/disney-ceo-says-nba-finals-nhl-drove-espn-strongest-fiscal-q3-viewership-2016",
+      "ts": 1785933621,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.333
+    },
+    {
+      "title": "Disney Finds Its Magic Again With Streaming Surge and Theme Park Strength",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60946932/disney-finds-its-magic-again-with-streaming-surge-and-theme-park-strength",
+      "ts": 1785933514,
+      "tickers": [
+        "DIS",
+        "CMCSA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.251
+    },
+    {
       "title": "Guggenheim Maintains Buy on Merck & Co, Raises Price Target to $146",
       "url": "https://www.benzinga.com/news/26/08/60946349/guggenheim-maintains-buy-merck-co-raises-price-target-146",
       "ts": 1785932467,
@@ -757,7 +872,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.375
+      "relevance": 0.376
     },
     {
       "title": "Walt Disney Raises FY2026 Adj EPS Guidance of $6.64 vs $6.81 Est",
@@ -808,7 +923,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.439
+      "relevance": 0.438
     },
     {
       "title": "Disney Enters Global Agreement With TikTok To Allow Fan-Created Short-Form Videos Based On The Company's Characters",
@@ -880,133 +995,6 @@
       "relevance": 0.356
     },
     {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60938801/will-sp500-open-up-or-down-august-5-polymarket-record-high-ai-earnings-iran",
-      "ts": 1785918097,
-      "tickers": [
-        "PLTR",
-        "DIS",
-        "AMD",
-        "LLY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Disney Earnings on the Horizon: Prediction Market Traders Bet on 'Toy Story 5,' 'Doomsday' Box-Office Talk",
-      "url": "https://www.benzinga.com/markets/tech/26/08/60938560/disney-earnings-prediction-market-toy-story-5-doomsday",
-      "ts": 1785916161,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.364
-    },
-    {
-      "title": "Dow Jumps Over 900 Points As Crude Oil Falls: Investor Sentiment Improves Further, Fear Index Moves To ‘Greed’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/60938156/dow-jumps-over-900-points-as-crude-oil-falls-investor-sentiment-improves-further-fear-index-moves-to-greed-zone",
-      "ts": 1785913331,
-      "tickers": [
-        "CAT",
-        "MCD",
-        "DIS",
-        "PFE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.463
-    },
-    {
-      "title": "AMD, Walt Disney And 3 Stocks To Watch Heading Into Wednesday",
-      "url": "https://www.benzinga.com/markets/equities/26/08/60937831/amd-walt-disney-and-3-stocks-to-watch-heading-into-wednesday",
-      "ts": 1785910922,
-      "tickers": [
-        "AMD",
-        "DIS",
-        "LLY",
-        "SNDK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.442
-    },
-    {
-      "title": "AMD Says Unexpected Demand Is Squeezing Server CPU Supply, But Lisa Su Forecasts a Brighter 2027: ‘Should Be Better Than 2026’",
-      "url": "https://www.benzinga.com/markets/tech/26/08/60937553/amd-server-cpu-supply-demand-lisa-su-2027-forecast",
-      "ts": 1785907008,
-      "tickers": [
-        "AMD",
-        "TSLA",
-        "AAPL",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.528
-    },
-    {
-      "title": "Anthony Scaramucci Slams 'Banking Lobby' for 'Last Minute Effort to Stall Things' as Crypto Act Comes Under Fire: 'Expose the Ciphers'",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/60937379/anthony-scaramucci-slams-editorial-critiquing-crypto-legislation-clarity-act",
-      "ts": 1785902871,
-      "tickers": [
-        "$BTC",
-        "$ZEC",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.235
-    },
-    {
-      "title": "Ross Gerber Says July Tech Correction Was About Taking Leopold Aschenbrenner's Money and Offers a Lesson: 'Experience Matters'",
-      "url": "https://www.benzinga.com/markets/tech/26/08/60937324/ross-gerber-tech-correction-leopold-aschenbrenner-experience",
-      "ts": 1785901974,
-      "tickers": [
-        "INTC",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.292
-    },
-    {
-      "title": "If You Invested $100 In Walmart Stock 20 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/08/60936005/if-you-invested-100-walmart-stock-20-years-ago-you-would-have-much-today",
-      "ts": 1785883570,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.233
-    },
-    {
-      "title": "SpaceX's Starlink Mobile Plans to Take 'Quite a Few' T-Mobile, Verizon, AT&T Customers [CORRECTED]",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60935870/spacexs-starlink-mobile-plans-to-take-quite-a-few-t-mobile-verizon-att-customers",
-      "ts": 1785881863,
-      "tickers": [
-        "SPCX",
-        "TMUS",
-        "VZ",
-        "ECHO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.276
-    },
-    {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
       "url": "https://www.benzinga.com/trading-ideas/previews/26/08/60881668/mcdonalds-q2-preview-world-cup-new-3-menu-higher-gas-prices-which-theme-wins-out",
       "ts": 1785776312,
@@ -1044,7 +1032,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.578
+      "relevance": 0.579
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $93",
@@ -1057,6 +1045,21 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.562
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60788305/sp500-july-30-open-up-or-down-polymarket-fed-bond-yields-big-tech-earnings-oil",
+      "ts": 1785399556,
+      "tickers": [
+        "SPY",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1141,7 +1144,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.51
+      "relevance": 0.511
     },
     {
       "title": "RBC Capital Maintains Outperform on Coca-Cola, Raises Price Target to $96",
@@ -1166,6 +1169,21 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.556
+    },
+    {
+      "title": "Dow Jumps Over 500 Points As Oil Prices Fall: Investor Sentiment Improves, Greed Index Remains In ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60750007/dow-jumps-over-500-points-as-oil-prices-fall-investor-sentiment-improves-greed-index-remains-in-fear-zone",
+      "ts": 1785308772,
+      "tickers": [
+        "MSFT",
+        "KO",
+        "GD",
+        "PG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.482
     },
     {
       "title": "Nasdaq 100 Enters Correction, SanDisk Sinks Over 50% From Peak: Stock Market Today",
@@ -1249,7 +1267,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.513
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1261,7 +1279,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.578
+      "relevance": 0.579
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1464,9 +1482,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Why Is CrowdStrike Stock Surging on Tuesday?",
-        "ts": 1785864143,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60921120/why-is-crowdstrike-stock-surging-on-tuesday",
+        "title": "QUICK SPARK: QQQ Pulls In Nearly $5 Billion in a Day as Investors Pile Into Big Tech",
+        "ts": 1785935886,
+        "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/08/60948333/quick-spark-qqq-nearly-5-billion-in-one-day-investors-big-tech",
         "wiim": false
       },
       "filings": {
@@ -1703,9 +1721,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "JPMorgan Says Bet NVDA, AMD, but Morgan Stanley Backs MSFT, GOOGL: What Is the Best AI Trade?",
-        "ts": 1785875780,
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60932483/jpmorgan-says-bet-nvda-amd-but-morgan-stanley-backs-msft-googl-what-is-the-best-ai-trade",
+        "title": "QUICK SPARK: QQQ Pulls In Nearly $5 Billion in a Day as Investors Pile Into Big Tech",
+        "ts": 1785935886,
+        "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/08/60948333/quick-spark-qqq-nearly-5-billion-in-one-day-investors-big-tech",
         "wiim": false
       },
       "filings": {
