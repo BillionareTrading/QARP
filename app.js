@@ -787,6 +787,8 @@ function openDrawer(ticker) {
 
   renderDrawerPulse(ticker, d.name || (p && p.name) || ticker);
   renderClaudeRead(ticker);
+  const secLink = document.querySelector("#drawer-panel .fin-src a");
+  if (secLink) resolveSecHref(secLink);   // rewrite directory -> document before the click
   const drawer = document.getElementById("drawer");
   drawer.hidden = false;
   document.querySelector(".drawer-close").addEventListener("click", closeDrawer);
@@ -2235,23 +2237,48 @@ function setSpView(view) {
 // that tab to the primary document once the accession matches. Holdings' Briefing chips
 // already get the resolved URL from the cloud (benzinga_signals.py) — this brings the
 // other 500+ names to the same reading experience without a universe-wide EDGAR crawl.
+const SEC_SUBS = new Map();   // cik10 -> Promise<filings.recent>; one fetch per company per session
+function secRecent(cik10) {
+  if (!SEC_SUBS.has(cik10)) {
+    SEC_SUBS.set(cik10, fetch("https://data.sec.gov/submissions/CIK" + cik10 + ".json")
+      .then((r) => r.json()).then((d) => d.filings.recent)
+      .catch((e) => { SEC_SUBS.delete(cik10); throw e; }));   // failed fetches don't poison the memo
+  }
+  return SEC_SUBS.get(cik10);
+}
+function secParse(url) { return (url || "").match(/edgar\/data\/(\d+)\/(\d+)\/?$/); }
+function secDocUrl(f, cik, accn) {
+  for (let i = 0; i < f.accessionNumber.length; i++) {
+    if (f.accessionNumber[i].replace(/-/g, "") === accn && f.primaryDocument[i]) {
+      return "https://www.sec.gov/Archives/edgar/data/" + Number(cik) + "/" + accn + "/" + f.primaryDocument[i];
+    }
+  }
+  return null;
+}
+// Preferred path: rewrite the anchor IN PLACE as soon as it renders (drawer open) — by the
+// time the reader clicks, it is a plain link straight to the document; no window.open, no
+// popup-blocker or Safari cross-origin-redirect concerns, and cmd/middle-click work too.
+async function resolveSecHref(a) {
+  const m = secParse(a.getAttribute("href"));
+  if (!m) return;
+  try {
+    const doc = secDocUrl(await secRecent(m[1].padStart(10, "0")), m[1], m[2]);
+    if (doc) { a.href = doc; a.removeAttribute("onclick"); }
+  } catch (_) { /* keep the directory href + the click-time fallback below */ }
+}
+// Click-time fallback (Filings' 500 rows aren't prefetched; a slow prefetch may not have
+// landed): open the directory synchronously (popup blockers need the user gesture; it is
+// also the honest fallback), then redirect that tab once the document name resolves.
 async function openSecDoc(ev, a) {
   ev.stopPropagation();                       // Filings rows also open the drawer on click
   const url = a.href;
-  const m = url.match(/edgar\/data\/(\d+)\/(\d+)\/?$/);
+  const m = secParse(url);
   const w = m ? window.open(url, "_blank") : null;
   if (!w) return;                             // popup blocked or already a document link — default nav
   ev.preventDefault();
-  w.opener = null;
   try {
-    const r = await fetch("https://data.sec.gov/submissions/CIK" + m[1].padStart(10, "0") + ".json");
-    const f = (await r.json()).filings.recent;
-    for (let i = 0; i < f.accessionNumber.length; i++) {
-      if (f.accessionNumber[i].replace(/-/g, "") === m[2] && f.primaryDocument[i]) {
-        w.location = "https://www.sec.gov/Archives/edgar/data/" + Number(m[1]) + "/" + m[2] + "/" + f.primaryDocument[i];
-        return;
-      }
-    }
+    const doc = secDocUrl(await secRecent(m[1].padStart(10, "0")), m[1], m[2]);
+    if (doc) { a.href = doc; a.removeAttribute("onclick"); w.location = doc; }
   } catch (_) { /* the directory tab is already open — the honest fallback */ }
 }
 let filingsSort = { key: "filed", dir: -1 };
