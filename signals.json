@@ -1,6 +1,6 @@
 {
   "date": "2026-08-05",
-  "generated_at": "Aug 5, 7:30am ET",
+  "generated_at": "Aug 5, 8:25am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -569,9 +569,32 @@
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-08-05",
+      "ticker": "MRK",
+      "firm": "Guggenheim",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$146",
+      "price": 128.0,
+      "upside": 14.1,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "rating_moves": {
+    "MRK": {
+      "date": "2026-08-05",
+      "firm": "Guggenheim",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$146",
+      "upside": 14.1
+    },
     "NKE": {
       "date": "2026-08-04",
       "firm": "JP Morgan",
@@ -626,15 +649,6 @@
       "pt": "$97",
       "upside": 12.1
     },
-    "MRK": {
-      "date": "2026-07-29",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$150",
-      "upside": 17.2
-    },
     "HD": {
       "date": "2026-07-27",
       "firm": "DA Davidson",
@@ -655,6 +669,57 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Guggenheim Maintains Buy on Merck & Co, Raises Price Target to $146",
+      "url": "https://www.benzinga.com/news/26/08/60946349/guggenheim-maintains-buy-merck-co-raises-price-target-146",
+      "ts": 1785932467,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.487
+    },
+    {
+      "title": "Keybanc Maintains Overweight on McDonald's, Lowers Price Target to $305",
+      "url": "https://www.benzinga.com/news/26/08/60946286/keybanc-maintains-overweight-mcdonald-s-lowers-price-target-305",
+      "ts": 1785932267,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.487
+    },
+    {
+      "title": "BMO Capital Maintains Outperform on Amgen, Raises Price Target to $450",
+      "url": "https://www.benzinga.com/news/26/08/60945051/bmo-capital-maintains-outperform-amgen-raises-price-target-450",
+      "ts": 1785930965,
+      "tickers": [
+        "AMGN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.464
+    },
+    {
+      "title": "Apple, Alphabet, JB Hunt And Howmet Aerospace: CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/60944748/apple-alphabet-jb-hunt-and-howmet-aerospace-cnbcs-final-trades",
+      "ts": 1785930244,
+      "tickers": [
+        "AAPL",
+        "GOOGL",
+        "GOOG",
+        "JBHT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.411
+    },
     {
       "title": "Walt Disney shares are trading higher after the company reported better-than-expected Q3 adjusted EPS results and raised its FY26 adjusted EPS guidance.",
       "url": "https://www.benzinga.com/quote/DIS",
@@ -942,57 +1007,6 @@
       "relevance": 0.276
     },
     {
-      "title": "Third-Party Cyber Evaluations Involving OpenAI Models; On Aug 3, UK AISI Told During Routine Cyber Evaluation, Models From OpenAI, Another Lab Went Beyond Scope Of Testing In Some Cases; Irregular Has Not Identified Impact Beyond Affected Site’s Own Data, Its Audit Is Ongoing; Of 19 Events Identified In UK AISI Evaluation, Two Involved An OpenAI Model, Gpt‑5.6 Sol; Other Instances Were Models From Another Lab",
-      "url": "https://www.benzinga.com/news/26/08/60935349/third-party-cyber-evaluations-involving-openai-models-aug-3-uk-aisi-told-during-routine-cyber-evalua",
-      "ts": 1785879392,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.25
-    },
-    {
-      "title": "SpaceX CEO Musk Says Whether SpaceX Catches, Recovers Starship Upper Stage On Next Test Flight This Month Hinges On Regulatory Approval; President Shotwell Says Anticipate To Acquire “Quite A Few Of” Of T-Mobile, AT&T And Verizon Customers, Says Co Aims To Build Terrestrial Infrastructure In Starlink Direct-To-Device Unit \"To Make A True Mobile Service\"; Musk Expects Starship To Be Safe Enough For Humans By End Of Next Year",
-      "url": "https://www.benzinga.com/news/26/08/60935270/spacex-ceo-musk-says-whether-spacex-catches-recovers-starship-upper-stage-on-next-test-flight-this-month-hinges-on-regulatory-approval-president-shotwell-says-anticipate-to-acquire-quite-a",
-      "ts": 1785879152,
-      "tickers": [
-        "TMUS",
-        "T",
-        "VZ",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.297
-    },
-    {
-      "title": "Walt Disney Announces Agreement To Sell Its 50% Interest In A+E Global Media To Hearst For $1.2B In All-Cash Deal, Making Venture Wholly Owned By Hearst",
-      "url": "https://www.benzinga.com/quote/DIS",
-      "ts": 1785878850,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.365
-    },
-    {
-      "title": "Amgen Exec Says Spent $500M In Q2 On Capital Expenditures, Driven By Investments Across U.S. Manufacturing Sites; Continues To Expect Capital Expenditures Of About $2.6B In 2026 To Scale Manufacturing Capacity, Including For Maritide's Launch; Expect A Meaningful Sequential Increase In Operating Expenses In Q3",
-      "url": "https://www.benzinga.com/news/26/08/60934834/amgen-exec-says-spent-500m-q2-capital-expenditures-driven-investments-across-u-s-manufacturing-sites",
-      "ts": 1785878623,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.421
-    },
-    {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
       "url": "https://www.benzinga.com/trading-ideas/previews/26/08/60881668/mcdonalds-q2-preview-world-cup-new-3-menu-higher-gas-prices-which-theme-wins-out",
       "ts": 1785776312,
@@ -1030,7 +1044,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $93",
