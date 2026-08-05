@@ -1,6 +1,6 @@
 {
   "date": "2026-08-05",
-  "generated_at": "Aug 5, 5:32am ET",
+  "generated_at": "Aug 5, 5:55am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -216,12 +216,6 @@
       "title": "JPMorgan Says Bet NVDA, AMD, but Morgan Stanley Backs MSFT, GOOGL: What Is the Best AI Trade?",
       "ts": 1785875780,
       "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60932483/jpmorgan-says-bet-nvda-amd-but-morgan-stanley-backs-msft-googl-what-is-the-best-ai-trade",
-      "wiim": false
-    },
-    "RKLB": {
-      "title": "SpaceX Is Stuffing Its Rockets With Starlink — And Everyone Else Is Getting Shut Out",
-      "ts": 1785858041,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60914362/spacex-is-stuffing-its-rockets-with-starlink-and-everyone-else-is-getting-shut-out",
       "wiim": false
     }
   },
@@ -662,6 +656,21 @@
   },
   "bz_news": [
     {
+      "title": "How Intel's Earnings Turned AMD's Beat Into A Sell-Off",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/60939483/how-intels-earnings-turned-amds-beat-into-a-sell-off",
+      "ts": 1785922445,
+      "tickers": [
+        "AMD",
+        "INTC",
+        "ARKW",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.38
+    },
+    {
       "title": "'The Big Short' Investor Michael Burry Holds His Ground on Nvidia, Tesla and Other Shorts— Warns Of 1987-Style Crash: 'It Is Possible We Are Near...'",
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/60939039/the-big-short-investor-michael-burry-holds-his-ground-on-nvidia-tesla-and-other-shorts-warns-of-1987-style-crash-it-is-possible-we-are-near",
       "ts": 1785919947,
@@ -920,7 +929,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.292
+      "relevance": 0.291
     },
     {
       "title": "Amgen Narrows FY2026 GAAP EPS Guidance from $15.62-$17.10 to $15.80-$17.08 vs $15.44 Est",
@@ -986,18 +995,6 @@
       "relevance": 0.437
     },
     {
-      "title": "Disney Q3 Preview: Stock Priced for More Pain, But 'Doomsday' Is Coming (And That's A Good Thing)",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/08/60924457/disney-q3-preview-stock-priced-for-more-pain-but-doomsday-is-coming-and-thats-a-good-thing",
-      "ts": 1785868860,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.355
-    },
-    {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
       "url": "https://www.benzinga.com/trading-ideas/previews/26/08/60881668/mcdonalds-q2-preview-world-cup-new-3-menu-higher-gas-prices-which-theme-wins-out",
       "ts": 1785776312,
@@ -1035,7 +1032,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $93",
@@ -1132,7 +1129,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.511
+      "relevance": 0.51
     },
     {
       "title": "RBC Capital Maintains Outperform on Coca-Cola, Raises Price Target to $96",
@@ -1183,7 +1180,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.531
+      "relevance": 0.53
     },
     {
       "title": "QUICK SPARK: Coca-Cola Stock Hits Record High After Earnings",
@@ -1240,7 +1237,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.513
+      "relevance": 0.512
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1252,7 +1249,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1284,12 +1281,7 @@
         "score": 1.04,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "SpaceX Is Stuffing Its Rockets With Starlink — And Everyone Else Is Getting Shut Out",
-        "ts": 1785858041,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60914362/spacex-is-stuffing-its-rockets-with-starlink-and-everyone-else-is-getting-shut-out",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
