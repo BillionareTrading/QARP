@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-04",
-  "generated_at": "Aug 4, 7:39pm ET",
+  "date": "2026-08-05",
+  "generated_at": "Aug 5, 5:14am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -49,7 +49,7 @@
       "sub": "+ NBIX, VRTX",
       "tag": "Drug-pricing policy",
       "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.",
-      "next": "Aug 4"
+      "next": "Oct 28"
     },
     {
       "ticker": "ABT",
@@ -60,14 +60,6 @@
     }
   ],
   "catalysts": [
-    {
-      "when": "Aug 4",
-      "what": "GILD earnings",
-      "affects": "GILD",
-      "dir": "two-sided",
-      "why": "Q-results for Gilead Sciences — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
     {
       "when": "Aug 5",
       "what": "UBER earnings",
@@ -93,6 +85,14 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
+      "when": "Aug 26",
+      "what": "NVDA earnings",
+      "affects": "NVDA",
+      "dir": "two-sided",
+      "why": "Q-results for NVIDIA — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
       "when": "Jul 30",
       "what": "KO — Argus Research maintains",
       "affects": "KO",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Aug 4",
+      "when": "Aug 5",
       "what": "Energy & geopolitics — today's read",
       "why": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
       "affects": "Energy · growth",
@@ -122,8 +122,8 @@
     "UBER": "2026-08-05",
     "LULU": "2026-09-02",
     "SPGI": "2026-10-28",
-    "GILD": "2026-08-04",
-    "AVGO": "2026-09-03",
+    "GILD": "2026-10-28",
+    "AVGO": "2026-09-02",
     "SAP": "2026-10-21",
     "NVS": "2026-10-27",
     "EXE": "2026-10-26",
@@ -200,12 +200,6 @@
       "url": "https://www.benzinga.com/quote/WSE",
       "wiim": true
     },
-    "AVGO": {
-      "title": "JPMorgan Says Bet NVDA, AMD, but Morgan Stanley Backs MSFT, GOOGL: What Is the Best AI Trade?",
-      "ts": 1785875780,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60932483/jpmorgan-says-bet-nvda-amd-but-morgan-stanley-backs-msft-googl-what-is-the-best-ai-trade",
-      "wiim": false
-    },
     "NVDA": {
       "title": "Why Is CrowdStrike Stock Surging on Tuesday?",
       "ts": 1785864143,
@@ -213,9 +207,15 @@
       "wiim": false
     },
     "UBER": {
-      "title": "Eli Lilly Could Swing $65.9 Billion After Earnings",
-      "ts": 1785871872,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60926371/eli-lilly-could-swing-65-9-billion-after-earnings",
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "ts": 1785918097,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60938801/will-sp500-open-up-or-down-august-5-polymarket-record-high-ai-earnings-iran",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "JPMorgan Says Bet NVDA, AMD, but Morgan Stanley Backs MSFT, GOOGL: What Is the Best AI Trade?",
+      "ts": 1785875780,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60932483/jpmorgan-says-bet-nvda-amd-but-morgan-stanley-backs-msft-googl-what-is-the-best-ai-trade",
       "wiim": false
     },
     "RKLB": {
@@ -337,20 +337,6 @@
       "held": true,
       "uni": true,
       "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-28",
-      "ticker": "CVX",
-      "firm": "B of A Securities",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$227",
-      "price": 190.4,
-      "upside": 19.2,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-07-29",
@@ -672,18 +658,137 @@
       "stance": "neutral",
       "pt": "$180",
       "upside": -0.8
-    },
-    "CRM": {
-      "date": "2026-07-21",
-      "firm": "Morgan Stanley",
-      "action": "Downgrades",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$185",
-      "upside": -3.1
     }
   },
   "bz_news": [
+    {
+      "title": "'The Big Short' Investor Michael Burry Holds His Ground on Nvidia, Tesla and Other Shorts— Warns Of 1987-Style Crash: 'It Is Possible We Are Near...'",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/60939039/the-big-short-investor-michael-burry-holds-his-ground-on-nvidia-tesla-and-other-shorts-warns-of-1987-style-crash-it-is-possible-we-are-near",
+      "ts": 1785919947,
+      "tickers": [
+        "TSLA",
+        "PLTR",
+        "QQQ",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.431
+    },
+    {
+      "title": "Disney Sells A+E Stake to Hearst Amid Wall Street Calls to Focus on Core Businesses",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60938970/disney-cashes-out-of-ae-with-1-2-billion-hearst-deal-as-breakup-calls-mount",
+      "ts": 1785919325,
+      "tickers": [
+        "DIS",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.356
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60938801/will-sp500-open-up-or-down-august-5-polymarket-record-high-ai-earnings-iran",
+      "ts": 1785918097,
+      "tickers": [
+        "PLTR",
+        "DIS",
+        "AMD",
+        "LLY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Disney Earnings on the Horizon: Prediction Market Traders Bet on 'Toy Story 5,' 'Doomsday' Box-Office Talk",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60938560/disney-earnings-prediction-market-toy-story-5-doomsday",
+      "ts": 1785916161,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.364
+    },
+    {
+      "title": "Dow Jumps Over 900 Points As Crude Oil Falls: Investor Sentiment Improves Further, Fear Index Moves To ‘Greed’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/60938156/dow-jumps-over-900-points-as-crude-oil-falls-investor-sentiment-improves-further-fear-index-moves-to-greed-zone",
+      "ts": 1785913331,
+      "tickers": [
+        "CAT",
+        "MCD",
+        "DIS",
+        "PFE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.463
+    },
+    {
+      "title": "AMD, Walt Disney And 3 Stocks To Watch Heading Into Wednesday",
+      "url": "https://www.benzinga.com/markets/equities/26/08/60937831/amd-walt-disney-and-3-stocks-to-watch-heading-into-wednesday",
+      "ts": 1785910922,
+      "tickers": [
+        "AMD",
+        "DIS",
+        "LLY",
+        "SNDK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.442
+    },
+    {
+      "title": "AMD Says Unexpected Demand Is Squeezing Server CPU Supply, But Lisa Su Forecasts a Brighter 2027: ‘Should Be Better Than 2026’",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60937553/amd-server-cpu-supply-demand-lisa-su-2027-forecast",
+      "ts": 1785907008,
+      "tickers": [
+        "AMD",
+        "TSLA",
+        "AAPL",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.528
+    },
+    {
+      "title": "Anthony Scaramucci Slams 'Banking Lobby' for 'Last Minute Effort to Stall Things' as Crypto Act Comes Under Fire: 'Expose the Ciphers'",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/60937379/anthony-scaramucci-slams-editorial-critiquing-crypto-legislation-clarity-act",
+      "ts": 1785902871,
+      "tickers": [
+        "$BTC",
+        "$ZEC",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.235
+    },
+    {
+      "title": "Ross Gerber Says July Tech Correction Was About Taking Leopold Aschenbrenner's Money and Offers a Lesson: 'Experience Matters'",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60937324/ross-gerber-tech-correction-leopold-aschenbrenner-experience",
+      "ts": 1785901974,
+      "tickers": [
+        "INTC",
+        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.292
+    },
     {
       "title": "If You Invested $100 In Walmart Stock 20 Years Ago, You Would Have This Much Today",
       "url": "https://www.benzinga.com/news/26/08/60936005/if-you-invested-100-walmart-stock-20-years-ago-you-would-have-much-today",
@@ -787,7 +892,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.599
+      "relevance": 0.6
     },
     {
       "title": "Semiconductors Just Posted Their Best Four-Day Rally Since March 2020. These Five Stocks Led the Charge",
@@ -893,135 +998,6 @@
       "relevance": 0.355
     },
     {
-      "title": "'White House Plans To Keep AI Framework Under Wraps' - Axios",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/60923882/white-house-plans-keep-ai-framework-under-wraps-axios",
-      "ts": 1785868131,
-      "tickers": [
-        "SPY",
-        "GOOG",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.306
-    },
-    {
-      "title": "Why Merck Just Slashed Its Profit Outlook By Nearly 50%",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/60923734/why-merck-just-slashed-its-profit-outlook-by-nearly-50",
-      "ts": 1785867968,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.425
-    },
-    {
-      "title": "'White House Set To Extend Jones Act Waiver As Trump Hunts For Cheaper Gasoline' - Reuters Exclusive",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/60923557/white-house-set-extend-jones-act-waiver-trump-hunts-cheaper-gasoline-reuters-exclusive",
-      "ts": 1785867629,
-      "tickers": [
-        "XOM",
-        "CVX",
-        "SPY",
-        "SHEL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.231
-    },
-    {
-      "title": "Shares of foundry, fabricator and IDM chip companies are trading higher as risk assets enjoy a tailwind. Also, financial results and commentary from companies such as ON Semiconductor and Palantir may help support the ongoing themes of chip supply shortages and growing demand from an expansionary AI services sector.",
-      "url": "https://www.benzinga.com/quote/WOLF",
-      "ts": 1785865664,
-      "tickers": [
-        "ADI",
-        "GFS",
-        "INTC",
-        "TSM"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.542
-    },
-    {
-      "title": "Nike Stock Slides After JPMorgan Downgrades to Underweight",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60922046/nike-stock-slides-after-jpmorgan-downgrades-to-underweight",
-      "ts": 1785865419,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.458
-    },
-    {
-      "title": "9 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/60921729/9-consumer-discretionary-stocks-whale-alerts-today-s-session",
-      "ts": 1785864914,
-      "tickers": [
-        "TSLA",
-        "AMZN",
-        "WSM",
-        "GRPN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.363
-    },
-    {
-      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/60921728/10-industrials-stocks-whale-activity-today-s-session",
-      "ts": 1785864914,
-      "tickers": [
-        "RCAT",
-        "CAT",
-        "GE",
-        "LMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.415
-    },
-    {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/60921727/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1785864914,
-      "tickers": [
-        "PLTR",
-        "AAPL",
-        "ORCL",
-        "TDC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "Shares of banks and financial services companies are trading higher as softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "url": "https://www.benzinga.com/quote/C",
-      "ts": 1785864630,
-      "tickers": [
-        "KG",
-        "ACRE",
-        "WU",
-        "AVAT"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.402
-    },
-    {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
       "url": "https://www.benzinga.com/trading-ideas/previews/26/08/60881668/mcdonalds-q2-preview-world-cup-new-3-menu-higher-gas-prices-which-theme-wins-out",
       "ts": 1785776312,
@@ -1071,22 +1047,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.561
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60788305/sp500-july-30-open-up-or-down-polymarket-fed-bond-yields-big-tech-earnings-oil",
-      "ts": 1785399556,
-      "tickers": [
-        "SPY",
-        "AAPL",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
+      "relevance": 0.562
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1196,21 +1157,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.556
-    },
-    {
-      "title": "Dow Jumps Over 500 Points As Oil Prices Fall: Investor Sentiment Improves, Greed Index Remains In ‘Fear’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60750007/dow-jumps-over-500-points-as-oil-prices-fall-investor-sentiment-improves-greed-index-remains-in-fear-zone",
-      "ts": 1785308772,
-      "tickers": [
-        "MSFT",
-        "KO",
-        "GD",
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.482
     },
     {
       "title": "Nasdaq 100 Enters Correction, SanDisk Sinks Over 50% From Peak: Stock Market Today",
@@ -1615,9 +1561,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Eli Lilly Could Swing $65.9 Billion After Earnings",
-        "ts": 1785871872,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60926371/eli-lilly-could-swing-65-9-billion-after-earnings",
+        "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+        "ts": 1785918097,
+        "url": "https://www.benzinga.com/markets/prediction-markets/26/08/60938801/will-sp500-open-up-or-down-august-5-polymarket-record-high-ai-earnings-iran",
         "wiim": false
       },
       "filings": {
