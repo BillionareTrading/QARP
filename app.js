@@ -777,7 +777,7 @@ function openDrawer(ticker) {
         ${d.sec_fin.revenue ? `<span class="fin-stat">Revenue <b>${esc(d.sec_fin.revenue.fmt)}</b> ${d.sec_fin.revenue.yoy != null ? `<i class="${d.sec_fin.revenue.yoy >= 0 ? "pos" : "neg"}">${d.sec_fin.revenue.yoy >= 0 ? "+" : ""}${d.sec_fin.revenue.yoy}% YoY</i>` : ""}</span>` : ""}
         ${d.sec_fin.eps ? `<span class="fin-stat">Dil. EPS <b>${d.sec_fin.eps.val < 0 ? "−$" + Math.abs(d.sec_fin.eps.val) : "$" + d.sec_fin.eps.val}</b> ${d.sec_fin.eps.yoy != null ? `<i class="${d.sec_fin.eps.yoy >= 0 ? "pos" : "neg"}">${d.sec_fin.eps.yoy >= 0 ? "+" : ""}${d.sec_fin.eps.yoy}% YoY</i>` : ""}</span>` : ""}
         ${d.sec_fin.net_income ? `<span class="fin-stat">Net income <b>${esc(d.sec_fin.net_income.fmt)}</b>${d.sec_fin.revenue && d.sec_fin.revenue.val ? ` <i class="${d.sec_fin.net_income.val < 0 ? "neg" : "pos"}">${(d.sec_fin.net_income.val / d.sec_fin.revenue.val * 100).toFixed(1)}% margin</i>` : ""}</span>` : ""}
-        <span class="fin-src">${d.sec_fin.url ? `<a href="${esc(safeUrl(d.sec_fin.url))}" target="_blank" rel="noopener noreferrer">${esc(d.sec_fin.form || "")} filed ${esc(d.sec_fin.filed || "")} · EDGAR</a>` : esc(d.sec_fin.period || "")}</span>
+        <span class="fin-src">${d.sec_fin.url ? `<a href="${esc(safeUrl(d.sec_fin.url))}" target="_blank" rel="noopener noreferrer" onclick="openSecDoc(event, this)">${esc(d.sec_fin.form || "")} filed ${esc(d.sec_fin.filed || "")} · EDGAR</a>` : esc(d.sec_fin.period || "")}</span>
       </div>` : ""}
     ${ab && ab.desc ? `<h4>What the company does</h4><div class="dcf-note">${esc(ab.desc)}</div>` : ""}
     ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${d.dcf_note}</div>` : ""}
@@ -2227,6 +2227,33 @@ function setSpView(view) {
 }
 
 /* ---------- Filings: latest SEC-filed quarter for every scored name ---------- */
+// The build can only link the accession DIRECTORY (sec_financials.py works from XBRL
+// company-facts, which carry the accession number but no document name — the raw file
+// listing the reader used to land on). The document name lives in EDGAR's submissions API,
+// which is CORS-open, so resolve it AT CLICK TIME: open the directory immediately (popup
+// blockers require a synchronous open; it doubles as the honest fallback), then redirect
+// that tab to the primary document once the accession matches. Holdings' Briefing chips
+// already get the resolved URL from the cloud (benzinga_signals.py) — this brings the
+// other 500+ names to the same reading experience without a universe-wide EDGAR crawl.
+async function openSecDoc(ev, a) {
+  ev.stopPropagation();                       // Filings rows also open the drawer on click
+  const url = a.href;
+  const m = url.match(/edgar\/data\/(\d+)\/(\d+)\/?$/);
+  const w = m ? window.open(url, "_blank") : null;
+  if (!w) return;                             // popup blocked or already a document link — default nav
+  ev.preventDefault();
+  w.opener = null;
+  try {
+    const r = await fetch("https://data.sec.gov/submissions/CIK" + m[1].padStart(10, "0") + ".json");
+    const f = (await r.json()).filings.recent;
+    for (let i = 0; i < f.accessionNumber.length; i++) {
+      if (f.accessionNumber[i].replace(/-/g, "") === m[2] && f.primaryDocument[i]) {
+        w.location = "https://www.sec.gov/Archives/edgar/data/" + Number(m[1]) + "/" + m[2] + "/" + f.primaryDocument[i];
+        return;
+      }
+    }
+  } catch (_) { /* the directory tab is already open — the honest fallback */ }
+}
 let filingsSort = { key: "filed", dir: -1 };
 function renderFilings() {
   const host = document.getElementById("filings-table");
@@ -2268,7 +2295,7 @@ function renderFilings() {
       <td>${yoy(f.eps && f.eps.yoy)}</td>
       <td>${f.net_income ? `<span class="${f.net_income.val < 0 ? "neg" : ""}">${esc(f.net_income.fmt)}</span>` : '<span class="muted">—</span>'}</td>
       <td>${(f.net_income && f.revenue && f.revenue.val) ? `<span class="${f.net_income.val < 0 ? "neg" : "pos"}">${(f.net_income.val / f.revenue.val * 100).toFixed(1)}%</span>` : '<span class="muted">—</span>'}</td>
-      <td class="left">${f.url ? `<a class="er-link" href="${esc(safeUrl(f.url))}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${esc(f.form || "")} · ${esc(f.filed || "")}</a>` : esc(f.filed || "")}</td>
+      <td class="left">${f.url ? `<a class="er-link" href="${esc(safeUrl(f.url))}" target="_blank" rel="noopener noreferrer" onclick="openSecDoc(event, this)">${esc(f.form || "")} · ${esc(f.filed || "")}</a>` : esc(f.filed || "")}</td>
     </tr>`; }).join("")}
   </tbody></table></div>
   ${naRows.length ? `<p class="muted" style="margin-top:10px;font-size:12px">${naRows.length} name${naRows.length > 1 ? "s" : ""} without SEC XBRL (foreign filers / recent listings): ${naRows.map((r) => r.ticker).join(", ")}.</p>` : ""}`;
