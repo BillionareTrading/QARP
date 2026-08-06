@@ -1,6 +1,6 @@
 {
   "date": "2026-08-06",
-  "generated_at": "Aug 6, 8:25am ET",
+  "generated_at": "Aug 6, 9:26am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -493,9 +493,32 @@
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-08-06",
+      "ticker": "JNJ",
+      "firm": "Guggenheim",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$287",
+      "price": 257.59,
+      "upside": 11.4,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "JNJ": {
+      "date": "2026-08-06",
+      "firm": "Guggenheim",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$287",
+      "upside": 11.4
+    },
     "CVX": {
       "date": "2026-08-05",
       "firm": "TD Cowen",
@@ -531,15 +554,6 @@
       "stance": "neutral",
       "pt": "$280",
       "upside": -10.0
-    },
-    "JNJ": {
-      "date": "2026-08-03",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$282",
-      "upside": 9.5
     },
     "PG": {
       "date": "2026-07-30",
@@ -579,6 +593,44 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Guggenheim Maintains Buy on Johnson & Johnson, Raises Price Target to $287",
+      "url": "https://www.benzinga.com/news/26/08/60995754/guggenheim-maintains-buy-johnson-johnson-raises-price-target-287",
+      "ts": 1786022577,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.448
+    },
+    {
+      "title": "Microsoft Announces General Availability Of Its India South Central Cloud Region In Hyderabad",
+      "url": "https://www.benzinga.com/news/26/08/60995461/microsoft-announces-general-availability-its-india-south-central-cloud-region-hyderabad",
+      "ts": 1786022033,
+      "tickers": [
+        "INDA",
+        "MSFT",
+        "HDB"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.318
+    },
+    {
+      "title": "Barclays Maintains Equal-Weight on Caterpillar, Raises Price Target to $900",
+      "url": "https://www.benzinga.com/news/26/08/60995447/barclays-maintains-equal-weight-caterpillar-raises-price-target-900",
+      "ts": 1786021992,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.479
+    },
     {
       "title": "Merck Receives FDA Approval For Supplemental Biologics License Application For ENFLONSIA To Expand Indication To Prevention Of Respiratory Syncytial Virus Lower Respiratory Tract Disease In Children Under Two Years Of Age At Increased Risk For Severe RSV Disease; PDUFA Date Set For March 22, 2027",
       "url": "https://www.benzinga.com/news/26/08/60986252/merck-receives-fda-approval-supplemental-biologics-license-application-enflonsia-expand-indication-p",
@@ -877,48 +929,6 @@
       "relevance": 0.487
     },
     {
-      "title": "SpaceX's Biggest Victim Yet? Starlink's 55-Year-Old Rival Files for Bankruptcy",
-      "url": "https://www.benzinga.com/news/space/26/08/60970288/spacex-biggest-victim-yet-starlinks-55-year-old-rival-files-for-bankruptcy",
-      "ts": 1785960722,
-      "tickers": [
-        "SPCX",
-        "TMUS",
-        "T",
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.367
-    },
-    {
-      "title": "TD Cowen Maintains Hold on Chevron, Raises Price Target to $205",
-      "url": "https://www.benzinga.com/news/26/08/60967818/td-cowen-maintains-hold-chevron-raises-price-target-205",
-      "ts": 1785959935,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.424
-    },
-    {
-      "title": "'Meta Releases Coding Agent to Compete With OpenAI and Anthropic; The company, pressed by investors to generate revenue from AI, says its offering will cost less than popular alternatives' - WSJ",
-      "url": "https://www.benzinga.com/news/26/08/60967383/meta-releases-coding-agent-compete-openai-and-anthropic-company-pressed-investors-generate-revenue-a",
-      "ts": 1785959218,
-      "tickers": [
-        "META",
-        "MSFT",
-        "GOOG",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.324
-    },
-    {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
       "url": "https://www.benzinga.com/trading-ideas/previews/26/08/60881668/mcdonalds-q2-preview-world-cup-new-3-menu-higher-gas-prices-which-theme-wins-out",
       "ts": 1785776312,
@@ -968,7 +978,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.562
+      "relevance": 0.561
     },
     {
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
@@ -1191,7 +1201,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.513
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
