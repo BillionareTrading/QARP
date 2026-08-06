@@ -26,7 +26,7 @@ if [ "$PUSH" = "1" ] && [ -d .git ]; then
   # read — and enriches signals with OpenAI embeddings. This machine must NEVER publish those, or it
   # overwrites the enriched feed with a keyless one. Drop any local drift on them, sync, then push
   # ONLY the encrypted price payload.
-  git checkout -- signals.json gurus.json daily_brief.json book_brief.json 2>/dev/null || true
+  git checkout -- signals.json daily_brief.json book_brief.json 2>/dev/null || true
   # A conflicted pull below is swallowed by "|| true" and can leave a rebase-merge dir behind,
   # after which EVERY later push fails "behind remote" (bit us 2026-07-28). Clear any stale
   # rebase state first — this repo's local commits are always disposable price refreshes.
