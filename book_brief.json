@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Wednesday's session left Jaleel's $23,970 book essentially treading water at the portfolio level — unrealized gains sit at $1,094 (+4.78%) — but the day had sharp cross-currents underneath. NVDA was the standout winner, surging +3.43% to $1,430, while Danaher added +2.51% to $1,398; both provided meaningful lift. On the other side, UBER cratered -5.29% to $1,091 — the single worst day move in the book — with no company-specific catalyst visible in the data, suggesting macro or sector-rotation pressure. BSX dropped another -2.75% to $1,193, ZTS fell -2.17% to $2,455, and GILD shed -2.58%, compounding an already uncomfortable picture in the healthcare sleeve.</p><p>The drift problem is concentrated and worth naming plainly. RKLB remains the largest single position at 15.6% of the book ($3,741) yet carries an AVOID verdict and a -4.5% open loss — price and thesis are fully disconnected. UBER is rated STRONG BUY with a QARP of 77.6 but sits at a -4.8% loss and just took a -5.29% session hit. BSX and ZTS are both STRONG BUY-rated names sitting in the red on cost basis while their underlying risk flags (BSX guidance slashed, ZTS session weakness) deserve scrutiny. SPGI is down -4.9% from cost on a BUY verdict — another wedge to monitor.</p><p>Software held up relatively well: ADBE added +0.71%, SAP +0.94%, and NOW slipped only -0.78% despite the rotation narrative benefiting the group broadly. The Microsoft earnings event after the close could move NOW and ADBE on Thursday. The NVDA headline mentioning Michael Burry's 'ghost town' framing is noise for now but worth tracking given the export-control risk flag already on file. Next hard date to watch: NVDA reports August 26.</p>",
+  "your_book": "<p>Jaleel's book closed Thursday, August 6 at <strong>$24,254</strong> with an unrealized gain of <strong>$1,378 (6.0%)</strong> — capital preservation intact on the surface, but today's session had meaningful divergences beneath that. The day's clear winners were the healthcare names: <strong>ZTS</strong> surged <strong>+3.82%</strong> to $2,549 and <strong>BSX</strong> gained <strong>+3.31%</strong> to $1,233, with <strong>ABT</strong> adding <strong>+2.12%</strong> to $2,591 — all three lifted by sector rotation into defensive quality. <strong>UBER</strong> also popped <strong>+3.39%</strong> to $1,128. On the software side, the rotation narrative from semis into less capital-intensive tech nudged <strong>NOW</strong> (+0.1%), <strong>ADBE</strong> (+0.35%), and <strong>SAP</strong> (+1.08%) modestly higher ahead of Microsoft's earnings.</p><p>The drift problem is harder to ignore. <strong>RKLB</strong> ticked up <strong>+1.14%</strong> today but remains the largest single position at 15.6% of the book ($3,784) while sitting at a <strong>−3.4% loss</strong> and carrying an AVOID verdict with a QARP of just 41.1 — price and thesis are pointing in opposite directions, and that weight is inconsistent with a capital-preservation mandate. <strong>SPGI</strong> slipped <strong>−1.12%</strong> and is now down <strong>−6.0%</strong> overall despite a BUY rating; the loss is widening without a clear catalyst. <strong>GILD</strong> fell <strong>−0.68%</strong> on ongoing drug-pricing headline pressure, and <strong>LULU</strong> continues its drift with a guidance-cut flag still live heading into September 2 earnings.</p><p>Watch the BSX and LULU risk flags most closely: BSX's guidance was slashed to 7–8.5% growth with management signaling flat through Q3, yet the stock jumped hard today — today's move may be noise, not resolution. LULU's next earnings catalyst is September 2, and five straight negative Americas comps with tariff-pressured margins leaves little margin for error. NVDA's export-control overhang (next catalyst August 26) and the pharma cluster's MFN pricing pressure on GILD, NVS, NBIX, and VRTX deserve continued monitoring as policy headlines remain unpredictable.</p>",
   "attention": [
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "Largest position carries AVOID verdict and open loss",
-      "note": "At 15.6% of the book ($3,741) with a -4.5% loss and an AVOID rating, RKLB is the clearest position-sizing contradiction in the portfolio — a capital-preservation mandate is hard to square with this much concentration in a name the model explicitly flags to avoid."
+      "headline": "Largest position, AVOID verdict, underwater — thesis-weight mismatch",
+      "note": "At 15.6% of the book ($3,784) with a −3.4% loss and a QARP of 41.1, RKLB is the book's single biggest position yet carries an explicit AVOID rating — Jaleel needs to decide whether to trim toward a weight that reflects the conviction level, or document a reason to override the verdict."
     },
     {
-      "ticker": "UBER",
+      "ticker": "SPGI",
       "severity": "watch",
-      "headline": "-5.29% session drop on no visible company catalyst",
-      "note": "A STRONG BUY-rated name with QARP 77.6 just had its worst session in the book with no earnings or news trigger provided — the gap between the conviction rating and the price action is widening and warrants watching for a confirming reason."
+      "headline": "BUY-rated name quietly bleeding to −6.0% with no catalyst in sight",
+      "note": "SPGI fell another −1.12% today and is now the worst-performing rated-BUY name in the book; if the loss continues widening without a fundamental trigger, the thesis needs to be re-examined or a stop level defined."
+    },
+    {
+      "ticker": "LULU",
+      "severity": "watch",
+      "headline": "Guidance-cut flag live, earnings September 2 — five straight bad comps",
+      "note": "LULU is a HOLD-QUAL at −2.4% overall with elevated risk flagged (Americas comps −5% for a fifth straight quarter, tariff margin damage, China stalled); the September 2 print is a binary event and position sizing should reflect that uncertainty now, not after."
     },
     {
       "ticker": "BSX",
       "severity": "watch",
-      "headline": "STRONG BUY but guidance was slashed and stock fell -2.75% today",
-      "note": "BSX's FY26 growth was cut from 10.5% to 7–8.5% with management guiding flat through Q3; today's -2.75% session move on top of a -0.3% open loss means the risk flag is actively translating into price pressure, not just sitting on paper."
-    },
-    {
-      "ticker": "ZTS",
-      "severity": "watch",
-      "headline": "Biggest dollar loser on the day at -2.17% with no flag resolution",
-      "note": "ZTS is the second-largest position at $2,455, rated STRONG BUY with a high QARP of 84.6, yet sits at a -5.5% loss on cost and shed the most dollar value in the book today — the conviction is high but the price continues to move the wrong direction without a clear catalyst in the data."
+      "headline": "Guidance slashed to 7–8.5% growth yet stock surged +3.31% today — credibility gap",
+      "note": "BSX management guided flat through Q3 after cutting FY26 growth expectations materially; today's sharp rally may be short-covering or sector rotation rather than fundamental re-rating, and Jaleel should not let the price move paper over the unresolved guidance deterioration ahead of the October 20 update."
     }
   ],
-  "date": "2026-08-05",
-  "generated_at": "Aug 5, 4:45pm ET"
+  "date": "2026-08-06",
+  "generated_at": "Aug 6, 4:08pm ET"
 }
