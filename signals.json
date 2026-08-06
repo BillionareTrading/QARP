@@ -1,6 +1,6 @@
 {
   "date": "2026-08-06",
-  "generated_at": "Aug 6, 5:04am ET",
+  "generated_at": "Aug 6, 5:59am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -194,6 +194,12 @@
       "url": "https://www.benzinga.com/quote/KO",
       "wiim": true
     },
+    "NVDA": {
+      "title": "Michael Burry Warns Today's AI Boom Could Become Tomorrow's 'Ghost Towns' Despite Surging Demand",
+      "ts": 1786009583,
+      "url": "https://www.benzinga.com/markets/tech/26/08/60983603/michael-burry-says-ai-gold-rush-could-leave-future-ghost-towns",
+      "wiim": false
+    },
     "GILD": {
       "title": "Kathy Hochul Slams Trump Over Medicare Cut, Says 1.3 Million New Yorkers Will Pay More for Prescriptions: 'A New Assault on Seniors...'",
       "ts": 1786002065,
@@ -204,12 +210,6 @@
       "title": "Gold Jumps 4%, Dow Jones Smashes Record Highs: Stock Market Today",
       "ts": 1785953660,
       "url": "https://www.benzinga.com/markets/equities/26/08/60964006/gold-jumps-4-percent-dow-tops-record-highs-markets-wednesday",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "QUICK SPARK: Michael Burry Pegs Palantir, Nvidia as 'Future Ghost Towns'",
-      "ts": 1785942299,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60955407/michael-burry-pegs-palantir-nvidia-as-future-ghost-towns",
       "wiim": false
     }
   },
@@ -580,6 +580,57 @@
   },
   "bz_news": [
     {
+      "title": "Assessing Microsoft's Performance Against Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/08/60983741/assessing-microsoft-s-performance-against-competitors-software-industry",
+      "ts": 1786010330,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.338
+    },
+    {
+      "title": "Michael Burry Warns Today's AI Boom Could Become Tomorrow's 'Ghost Towns' Despite Surging Demand",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60983603/michael-burry-says-ai-gold-rush-could-leave-future-ghost-towns",
+      "ts": 1786009583,
+      "tickers": [
+        "NVDA",
+        "TSLA",
+        "PLTR",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.458
+    },
+    {
+      "title": "Trump's $400 Million Qatari Jet May Not End Up At His Presidential Library After All— Here's Why",
+      "url": "https://www.benzinga.com/news/politics/26/08/60983572/trumps-400-million-qatari-jet-may-not-end-up-at-his-presidential-library-after-all-heres-why",
+      "ts": 1786009417,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.166
+    },
+    {
+      "title": "OpenAI Moves to Dismiss Apple's Trade Secrets Lawsuit, Says It Has 'No Use, Need or Desire' for AAPL's Proprietary Information",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60983332/openai-seeks-dismissal-apple-trade-secrets-lawsuit",
+      "ts": 1786008541,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.32
+    },
+    {
       "title": "OpenAI Seeks Dismissal of Apple’s Trade-Secret Misappropriation Lawsuit, Court Filing Shows",
       "url": "https://www.benzinga.com/news/26/08/60982712/openai-seeks-dismissal-apple-s-trade-secret-misappropriation-lawsuit-court-filing-shows",
       "ts": 1786004896,
@@ -646,7 +697,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.455
+      "relevance": 0.456
     },
     {
       "title": "Zohran Mamdani Targets Walmart, Amazon, Target and Others Over 'Illegal' E-Bikes and E-Scooters: 'Too Many Lives Have Been Cut Short'",
@@ -824,7 +875,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.441
+      "relevance": 0.44
     },
     {
       "title": "Citigroup Maintains Buy on McDonald's, Raises Price Target to $345",
@@ -861,58 +912,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.382
-    },
-    {
-      "title": "Gold Jumps 4%, Dow Jones Smashes Record Highs: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/08/60964006/gold-jumps-4-percent-dow-tops-record-highs-markets-wednesday",
-      "ts": 1785953660,
-      "tickers": [
-        "DIA",
-        "VOO",
-        "GOOGL",
-        "AMD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.469
-    },
-    {
-      "title": "Truist Securities Maintains Buy on Visa, Raises Price Target to $406",
-      "url": "https://www.benzinga.com/news/26/08/60963908/truist-securities-maintains-buy-visa-raises-price-target-406",
-      "ts": 1785953523,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.472
-    },
-    {
-      "title": "'Boeing-Lockheed Rocket Joint Venture Taps Private Bond Market' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/08/60963804/boeing-lockheed-rocket-joint-venture-taps-private-bond-market-bloomberg",
-      "ts": 1785953388,
-      "tickers": [
-        "BA",
-        "LMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.412
-    },
-    {
-      "title": "Truist Securities Maintains Buy on Caterpillar, Raises Price Target to $1225",
-      "url": "https://www.benzinga.com/news/26/08/60963385/truist-securities-maintains-buy-caterpillar-raises-price-target-1225",
-      "ts": 1785952808,
-      "tickers": [
-        "CAT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.408
     },
     {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
@@ -964,7 +963,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.561
+      "relevance": 0.562
     },
     {
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
@@ -979,7 +978,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.464
+      "relevance": 0.465
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1103,7 +1102,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.481
+      "relevance": 0.482
     },
     {
       "title": "Nasdaq 100 Enters Correction, SanDisk Sinks Over 50% From Peak: Stock Market Today",
@@ -1199,7 +1198,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.578
+      "relevance": 0.579
     },
     {
       "title": "Coca-Cola CFO Says 'It Is True To Say That We Have Lost Share In India In This Past Quarter'",
@@ -1402,9 +1401,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "QUICK SPARK: Michael Burry Pegs Palantir, Nvidia as 'Future Ghost Towns'",
-        "ts": 1785942299,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60955407/michael-burry-pegs-palantir-nvidia-as-future-ghost-towns",
+        "title": "Michael Burry Warns Today's AI Boom Could Become Tomorrow's 'Ghost Towns' Despite Surging Demand",
+        "ts": 1786009583,
+        "url": "https://www.benzinga.com/markets/tech/26/08/60983603/michael-burry-says-ai-gold-rush-could-leave-future-ghost-towns",
         "wiim": false
       },
       "filings": {
