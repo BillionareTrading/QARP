@@ -1,6 +1,6 @@
 {
   "date": "2026-08-06",
-  "generated_at": "Aug 6, 5:07pm ET",
+  "generated_at": "Aug 6, 6:05pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -113,8 +113,8 @@
     "KO": "2026-10-20",
     "RKLB": "2026-08-10",
     "NOW": "2026-10-27",
-    "ABT": "2026-10-13",
     "ADBE": "2026-09-10",
+    "ABT": "2026-10-13",
     "ZTS": "2026-08-06",
     "NVDA": "2026-08-26",
     "DHR": "2026-10-19",
@@ -216,8 +216,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "price": 86.65,
-      "upside": 11.9,
+      "price": 86.85,
+      "upside": 11.7,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -230,8 +230,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$93",
-      "price": 86.65,
-      "upside": 7.3,
+      "price": 86.85,
+      "upside": 7.1,
       "held": true,
       "uni": true,
       "qarp": "AVOID"
@@ -565,7 +565,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.9
+      "upside": 11.7
     },
     "HD": {
       "date": "2026-07-27",
@@ -587,6 +587,18 @@
     }
   },
   "bz_news": [
+    {
+      "title": "DA Davidson Maintains Neutral on Caterpillar, Raises Price Target to $882",
+      "url": "https://www.benzinga.com/news/26/08/61026106/da-davidson-maintains-neutral-caterpillar-raises-price-target-882",
+      "ts": 1786052445,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.497
+    },
     {
       "title": "JPMorgan Warns HYPE Could Lose Ground to SOL, XRP as ETF Inflows Stall",
       "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61021606/jpmorgan-warns-hype-could-lose-ground-to-sol-xrp-as-etf-inflows-stall",
@@ -898,18 +910,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.487
-    },
-    {
-      "title": "Barclays Maintains Overweight on Walt Disney, Raises Price Target to $115",
-      "url": "https://www.benzinga.com/news/26/08/61002163/barclays-maintains-overweight-walt-disney-raises-price-target-115",
-      "ts": 1786028149,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.44
     },
     {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
@@ -1269,38 +1269,6 @@
       },
       "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "ABT": {
-      "name": "Abbott Laboratories",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 13,
-        "hold": 9,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 33,
-        "bullish": 24,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.06,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-16",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
-        },
-        "insider30d": 0
-      },
-      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "ADBE": {
       "name": "Adobe",
       "qarp": "BUY",
@@ -1337,6 +1305,38 @@
         "insider30d": 9
       },
       "explain": "46 analysts cover it — 18 bullish, 23 hold, 5 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "ABT": {
+      "name": "Abbott Laboratories",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 13,
+        "hold": 9,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 33,
+        "bullish": 24,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.06,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
+        },
+        "insider30d": 0
+      },
+      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ZTS": {
       "name": "Zoetis",
@@ -1787,7 +1787,7 @@
     },
     "EFX": {
       "name": "Equifax",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 8,
         "buy": 12,
@@ -1894,20 +1894,6 @@
       "margin": 7.5,
       "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
     },
-    "ABT": {
-      "period": "FY2017",
-      "filed": "2018-02-16",
-      "form": "10-K",
-      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
-      "revenue": {
-        "fmt": "$7.6B",
-        "yoy": 42.3
-      },
-      "eps": null,
-      "net_income": null,
-      "margin": null,
-      "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
-    },
     "ADBE": {
       "period": "Q2 FY2026",
       "filed": "2026-06-15",
@@ -1926,6 +1912,20 @@
       },
       "margin": 25.9,
       "summary": "Q2 FY2026 — revenue $6.6B (+12.7% YoY), diluted EPS $4.25 (+7.9% YoY), net margin 26%. (as reported, GAAP)"
+    },
+    "ABT": {
+      "period": "FY2017",
+      "filed": "2018-02-16",
+      "form": "10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
+      "revenue": {
+        "fmt": "$7.6B",
+        "yoy": 42.3
+      },
+      "eps": null,
+      "net_income": null,
+      "margin": null,
+      "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
     },
     "ZTS": {
       "period": "Q2 FY2026",
