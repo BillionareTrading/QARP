@@ -1535,26 +1535,70 @@ function riskSevFor(tk) {
   }
   return null;
 }
+// v2 (2026-08-05, owner-directed after RKLB said TRIM from $150 to $55 and through the
+// bounce): the old rule was verdict arithmetic — an AVOID holding scored -2 and could never
+// escape TRIM (best analyst reading lands exactly on the threshold), with price, cost,
+// momentum and catalysts not inputs at all. New shape: the verdict sets the long-term stance,
+// but the DAILY call is forward-looking — catalysts + the Street + the tape + cost basis.
+// TRIM only ever fires INTO STRENGTH (in profit, uptrend, catalysts exhausted) — never at a
+// loss below cost (standing rule: concentration is cured by addition, weakness is for DCA).
+const FULL_WEIGHT_USD = 1050;   // sizing doctrine: full position ~$900-1,100; adds go to underweights
 function holdingCall(tk) {
   const pb = (SIGNALS && SIGNALS.portfolio_brief && SIGNALS.portfolio_brief[tk]) || {};
-  const qarp = pb.qarp || (DATA.portfolio.find((h) => h.ticker === tk) || {}).verdict || "";
+  const h = DATA.portfolio.find((x) => x.ticker === tk) || {};
+  const row = (DATA.universe || []).find((x) => x.ticker === tk) || h;   // non-compliant: portfolio row carries mom/catalyst
+  const qarp = pb.qarp || h.verdict || "";
   const cons = pb.consensus || null;
   const sev = riskSevFor(tk);
+  const gate = (gateNow(Object.assign({}, row, { price: h.price })) || {}).state || null;
+  const avgCost = h.shares ? h.cost / h.shares : null;
+  const inProfit = avgCost != null && h.price >= avgCost;
+  const full = (h.value || 0) >= FULL_WEIGHT_USD;
+  const chip = row.catalyst || null;
+  const chipHook = !!(chip && (chip.label === "SET" || chip.label === "WATCH"));
+  // a near-unanimous bullish panel is a standing forward signal even between news cycles
+  const panelHook = !!(cons && cons.label === "Strong Buy" && !cons.bearish && cons.total >= 8 && cons.bullish / cons.total >= 0.7);
+  const hooks = [];
+  if (chipHook) hooks.push(`catalyst ${chip.label}`);
+  if (panelHook) hooks.push(`Street ${cons.bullish}/${cons.total} bullish, 0 bearish`);
+  const en = (SIGNALS && SIGNALS.earnings_next && SIGNALS.earnings_next[tk]) || null;
+  const daysToPrint = en ? Math.round((new Date(en) - Date.now()) / 86400000) : null;
+  const eventRisk = daysToPrint != null && daysToPrint >= 0 && daysToPrint <= 5;
   const Q = { STRONGEST: 2, "STRONG BUY": 2, BUY: 1, "HOLD-QUAL": 0, AVOID: -2, "STRONG AVOID": -3 };
-  const C = { "Strong Buy": 1, Buy: 0.5, Hold: 0, Sell: -1, "Strong Sell": -1.5 };
-  const R = { elevated: -1.5, watch: -0.5, policy: -0.5, mild: -0.25 };
-  const score = (Q[qarp] ?? 0) + (C[cons && cons.label] ?? 0) + (R[sev] ?? 0);
-  let call = score >= 1.5 ? "ADD" : score <= -1.0 ? "TRIM" : "HOLD";
-  // conservative override: don't ADD into an elevated news flag or an AVOID, even if cheap
-  let capped = false;
-  if (call === "ADD" && (sev === "elevated" || qarp === "AVOID" || qarp === "STRONG AVOID")) { call = "HOLD"; capped = true; }
   const bits = [];
   if (qarp) bits.push(`QARP ${qarp}`);
   if (cons && cons.label) bits.push(`analysts ${cons.label}`);
-  bits.push(sev ? `${sev} risk flag` : "no risk flags");
-  let reason = bits.join(" · ") + ".";
-  if (capped) reason += " The news flag caps it at Hold despite the cheap score.";
-  return { call, reason, qarp, sev };
+  if (gate) bits.push(`gate ${gate}`);
+  if (avgCost != null) bits.push(`${inProfit ? "above" : "below"} avg cost ${fmtUSD(avgCost, 2)}`);
+  if (hooks.length) bits.push(hooks.join(" + "));
+  if (sev) bits.push(`${sev} risk flag`);
+  if (eventRisk) bits.push(`earnings ${en} = event risk`);
+  let call = "HOLD", dca = false, extra = "";
+  const qpts = Q[qarp] ?? 0;
+  if (qpts >= 1) {
+    // BUY+ holdings: accumulate when the tape and calendar allow, position not yet full
+    if (!full && gate !== "WAIT" && sev !== "elevated" && !eventRisk) { call = "ADD"; }
+    else { extra = full ? " At full weight — adds go to underweight names." :
+           eventRisk ? " Print this week caps it at Hold." :
+           sev === "elevated" ? " News flag caps it at Hold." :
+           " Knife gate (below 20DMA) caps it at Hold."; }
+  } else if (qpts <= -2) {
+    // AVOID-class holding: long-term exit stands, but timing is catalysts + strength
+    if (hooks.length && !inProfit && !full && sev !== "elevated" && !eventRisk) {
+      call = "ADD"; dca = true; extra = " DCA into weakness — catalysts and the Street argue the fall is sentiment, not thesis.";
+    } else if (inProfit && (gate === "GO" || gate === "TURN") && (!hooks.length || sev === "elevated")) {
+      call = "TRIM"; extra = " Exit into strength — in profit, uptrend, no pending catalyst holding the exit open.";
+    } else if (inProfit && hooks.length) {
+      extra = " In profit but catalysts pending — let them play before exiting into strength.";
+    } else if (hooks.length) {
+      extra = full ? " Catalysts pending; DCA blocked at full weight — hold for strength." :
+                     " Catalysts pending — patience over a sell-at-a-loss.";
+    } else {
+      extra = ` Below cost with no catalyst — exit discipline: sell strength, not weakness (watch ${avgCost != null ? fmtUSD(avgCost, 2) : "avg cost"}).`;
+    }
+  }
+  // HOLD-QUAL (qpts 0): always HOLD — flags and catalysts annotate, never flip the badge alone
+  return { call, dca, reason: bits.join(" · ") + "." + extra, qarp, sev };
 }
 function renderCalls() {
   const el = document.getElementById("calls-list");
@@ -1567,7 +1611,7 @@ function renderCalls() {
     const cl = c.call.toLowerCase();
     return `<div class="call-row ${cl}">
       <div class="call-tk"><span class="ctk">${esc(h.ticker)}</span><span class="cnm">${esc(name)}</span></div>
-      <span class="call-badge ${cl}">${c.call}</span>
+      <span class="call-badge ${cl}">${c.call}${c.dca ? " · DCA" : ""}</span>
       <div class="call-reason">${esc(c.reason)}</div>
     </div>`;
   }).join("");
