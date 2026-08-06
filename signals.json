@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-05",
-  "generated_at": "Aug 5, 7:15pm ET",
+  "date": "2026-08-06",
+  "generated_at": "Aug 6, 5:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,14 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Aug 5",
-      "what": "UBER earnings",
-      "affects": "UBER",
-      "dir": "two-sided",
-      "why": "Q-results for Uber — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Aug 6",
       "what": "ZTS earnings",
       "affects": "ZTS",
@@ -93,6 +85,14 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
+      "when": "Sep 2",
+      "what": "LULU earnings",
+      "affects": "LULU",
+      "dir": "two-sided",
+      "why": "Q-results for Lululemon — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
       "when": "Jul 30",
       "what": "KO — Argus Research maintains",
       "affects": "KO",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Aug 5",
+      "when": "Aug 6",
       "what": "Energy & geopolitics — today's read",
       "why": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
       "affects": "Energy · growth",
@@ -120,7 +120,7 @@
     "DHR": "2026-10-19",
     "BSX": "2026-10-20",
     "LULU": "2026-09-02",
-    "UBER": "2026-08-05",
+    "UBER": "2026-11-02",
     "SPGI": "2026-10-28",
     "GILD": "2026-10-28",
     "AVGO": "2026-09-02",
@@ -194,6 +194,12 @@
       "url": "https://www.benzinga.com/quote/KO",
       "wiim": true
     },
+    "GILD": {
+      "title": "Kathy Hochul Slams Trump Over Medicare Cut, Says 1.3 Million New Yorkers Will Pay More for Prescriptions: 'A New Assault on Seniors...'",
+      "ts": 1786002065,
+      "url": "https://www.benzinga.com/news/health-care/26/08/60982422/kathy-hochul-medicare-subsidy-prescription-drug-costs",
+      "wiim": false
+    },
     "UBER": {
       "title": "Gold Jumps 4%, Dow Jones Smashes Record Highs: Stock Market Today",
       "ts": 1785953660,
@@ -205,99 +211,9 @@
       "ts": 1785942299,
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60955407/michael-burry-pegs-palantir-nvidia-as-future-ghost-towns",
       "wiim": false
-    },
-    "AVGO": {
-      "title": "QUICK SPARK: QQQ Pulls In Nearly $5 Billion in a Day as Investors Pile Into Big Tech",
-      "ts": 1785935886,
-      "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/08/60948333/quick-spark-qqq-nearly-5-billion-in-one-day-investors-big-tech",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-07-29",
-      "ticker": "KO",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$96",
-      "price": 86.83,
-      "upside": 10.6,
-      "held": true,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-29",
-      "ticker": "KO",
-      "firm": "TD Cowen",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$100",
-      "price": 86.83,
-      "upside": 15.2,
-      "held": true,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-29",
-      "ticker": "KO",
-      "firm": "Piper Sandler",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$95",
-      "price": 86.83,
-      "upside": 9.4,
-      "held": true,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-29",
-      "ticker": "KO",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$95",
-      "price": 86.83,
-      "upside": 9.4,
-      "held": true,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-29",
-      "ticker": "KO",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$96",
-      "price": 86.83,
-      "upside": 10.6,
-      "held": true,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-29",
-      "ticker": "KO",
-      "firm": "Jefferies",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$104",
-      "price": 86.83,
-      "upside": 19.8,
-      "held": true,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-07-30",
       "ticker": "KO",
@@ -325,20 +241,6 @@
       "held": true,
       "uni": true,
       "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-29",
-      "ticker": "MRK",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$150",
-      "price": 128.33,
-      "upside": 16.9,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-07-30",
@@ -678,6 +580,105 @@
   },
   "bz_news": [
     {
+      "title": "OpenAI Seeks Dismissal of Apple’s Trade-Secret Misappropriation Lawsuit, Court Filing Shows",
+      "url": "https://www.benzinga.com/news/26/08/60982712/openai-seeks-dismissal-apple-s-trade-secret-misappropriation-lawsuit-court-filing-shows",
+      "ts": 1786004896,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.288
+    },
+    {
+      "title": "JPMorgan Was a Broker to AI Hedge Fund Situational Awareness— Now Jamie Dimon Is Warning About Hidden Leverage Risk: 'Margin Debt Is the Highest...'",
+      "url": "https://www.benzinga.com/markets/equities/26/08/60982468/jpmorgan-was-a-broker-to-ai-hedge-fund-situational-awareness-now-jamie-dimon-is-warning-about-hidden-leverage-risk-margin-debt-is-the-highest",
+      "ts": 1786002551,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.3
+    },
+    {
+      "title": "Kathy Hochul Slams Trump Over Medicare Cut, Says 1.3 Million New Yorkers Will Pay More for Prescriptions: 'A New Assault on Seniors...'",
+      "url": "https://www.benzinga.com/news/health-care/26/08/60982422/kathy-hochul-medicare-subsidy-prescription-drug-costs",
+      "ts": 1786002065,
+      "tickers": [
+        "LLY",
+        "PFE",
+        "JNJ",
+        "ABBV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.181
+    },
+    {
+      "title": "Disney May Be Taking a Page Out of Tubi’s and Pluto TV Playbook: ‘We’re Exploring a Free Product For Consumers,’ Says Josh D'Amaro",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60982192/disney-free-streaming-product-josh-damaro-tubi-pluto-tv",
+      "ts": 1786000944,
+      "tickers": [
+        "DIS",
+        "NFLX",
+        "FOX",
+        "PSKY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.287
+    },
+    {
+      "title": "Dow Hits New All-Time High: Investor Sentiment Improves, Fear Index In ‘Greed’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/60982144/dow-hits-new-all-time-high-investor-sentiment-improves-fear-index-in-greed-zone",
+      "ts": 1786000508,
+      "tickers": [
+        "DIS",
+        "KDP",
+        "LLY",
+        "WYNN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.455
+    },
+    {
+      "title": "Zohran Mamdani Targets Walmart, Amazon, Target and Others Over 'Illegal' E-Bikes and E-Scooters: 'Too Many Lives Have Been Cut Short'",
+      "url": "https://www.benzinga.com/news/politics/26/08/60981982/zohran-mamdani-illegal-e-bikes-e-scooters-walmart-amazon-target",
+      "ts": 1785998914,
+      "tickers": [
+        "WMT",
+        "AMZN",
+        "PDD",
+        "TGT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.249
+    },
+    {
+      "title": "Tom Lee Says Quantum Computing 'Probably Not Gonna Be a Problem' for Ethereum and Solana, but for Bitcoin...",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/60981926/tom-lee-bitcoin-ethereum-solana-quantum-computing",
+      "ts": 1785998144,
+      "tickers": [
+        "$BTC",
+        "$ETH",
+        "MSTR",
+        "COIN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.351
+    },
+    {
       "title": "AWS Newsroom Posts On X \"AWS is partnering with @AnthropicAI and @OpenAI to bring AWS Continuum into Claude Code, Codex, and @Kirodotdev. Discover, prioritize, validate, and remediate code vulnerabilities without leaving your dev environment.\"",
       "url": "https://www.benzinga.com/news/26/08/60979845/aws-newsroom-posts-x-aws-partnering-anthropicai-and-openai-bring-aws-continuum-claude-code-codex-and",
       "ts": 1785971480,
@@ -874,7 +875,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.47
+      "relevance": 0.469
     },
     {
       "title": "Truist Securities Maintains Buy on Visa, Raises Price Target to $406",
@@ -912,90 +913,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.408
-    },
-    {
-      "title": "Truist Securities Maintains Hold on Amgen, Raises Price Target to $362",
-      "url": "https://www.benzinga.com/news/26/08/60963155/truist-securities-maintains-hold-amgen-raises-price-target-362",
-      "ts": 1785952451,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.457
-    },
-    {
-      "title": "10 Consumer Discretionary Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/60962357/10-consumer-discretionary-stocks-whale-activity-today-s-session",
-      "ts": 1785951315,
-      "tickers": [
-        "TSLA",
-        "XPEV",
-        "DASH",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.387
-    },
-    {
-      "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/60962356/10-industrials-stocks-whale-alerts-today-s-session",
-      "ts": 1785951314,
-      "tickers": [
-        "BA",
-        "KRMN",
-        "RCAT",
-        "JOBY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.398
-    },
-    {
-      "title": "SpaceX Chooses Nvidia; Short Squeeze Drives Market Rally, But Extreme Positive Sentiment Flashes Warning",
-      "url": "https://www.benzinga.com/Opinion/26/08/60961514/spacex-chooses-nvidia-short-squeeze-drives-market-rally-but-extreme-positive-sentiment-flashes-warning",
-      "ts": 1785950246,
-      "tickers": [
-        "USO",
-        "SPY",
-        "NVDA",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.541
-    },
-    {
-      "title": "Oppenheimer Maintains Outperform on Amgen, Raises Price Target to $450",
-      "url": "https://www.benzinga.com/news/26/08/60961476/oppenheimer-maintains-outperform-amgen-raises-price-target-450",
-      "ts": 1785950172,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.456
-    },
-    {
-      "title": "Shares of telecommunications companies are trading lower after SpaceX President Gwynne Shotwell said on a conference call that it anticipates acquiring \"quite a few\" customers from AT&T, T-Mobile and Verizon.",
-      "url": "https://www.benzinga.com/quote/ECHO",
-      "ts": 1785940150,
-      "tickers": [
-        "TMUS",
-        "T",
-        "VZ",
-        "AMX"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.375
     },
     {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
@@ -1062,7 +979,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.465
+      "relevance": 0.464
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
@@ -1086,7 +1003,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.584
+      "relevance": 0.585
     },
     {
       "title": "Piper Sandler Maintains Overweight on Coca-Cola, Raises Price Target to $95",
@@ -1098,7 +1015,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.57
+      "relevance": 0.571
     },
     {
       "title": "Coca-Cola's Consumption Trends Remain 'Best in Class,' Analyst Says",
@@ -1138,21 +1055,6 @@
       "relevance": 0.578
     },
     {
-      "title": "Shares of integrated oil and gas companies are trading higher as crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
-      "url": "https://www.benzinga.com/quote/EC",
-      "ts": 1785335745,
-      "tickers": [
-        "XOM",
-        "CVX",
-        "BP",
-        "SHEL"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.343
-    },
-    {
       "title": "Coca-Cola shares are trading higher after Jefferies maintained its Buy rating on the stock and raised its price target from $95 to $104. Also, RBC Capital maintained its Outperform rating and raised its price target from $87 to $96.",
       "url": "https://www.benzinga.com/quote/KO",
       "ts": 1785333521,
@@ -1162,7 +1064,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.51
+      "relevance": 0.511
     },
     {
       "title": "RBC Capital Maintains Outperform on Coca-Cola, Raises Price Target to $96",
@@ -1201,7 +1103,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.482
+      "relevance": 0.481
     },
     {
       "title": "Nasdaq 100 Enters Correction, SanDisk Sinks Over 50% From Peak: Stock Market Today",
@@ -1285,7 +1187,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.512
+      "relevance": 0.513
     },
     {
       "title": "Coca-Cola shares are trading higher after the company reported better-than-expected Q2 financial results and raised its FY26 adjusted EPS guidance with its midpoint above estimates.",
@@ -1516,7 +1418,7 @@
           "date": "2026-05-20",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
         },
-        "insider30d": 1
+        "insider30d": 0
       },
       "explain": "68 analysts cover it — 64 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1681,7 +1583,7 @@
           "date": "2026-07-28",
           "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm"
         },
-        "insider30d": 2
+        "insider30d": 1
       },
       "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1701,7 +1603,12 @@
         "score": 1.05,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "Kathy Hochul Slams Trump Over Medicare Cut, Says 1.3 Million New Yorkers Will Pay More for Prescriptions: 'A New Assault on Seniors...'",
+        "ts": 1786002065,
+        "url": "https://www.benzinga.com/news/health-care/26/08/60982422/kathy-hochul-medicare-subsidy-prescription-drug-costs",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1733,12 +1640,7 @@
         "score": 1.21,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "QUICK SPARK: QQQ Pulls In Nearly $5 Billion in a Day as Investors Pile Into Big Tech",
-        "ts": 1785935886,
-        "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/08/60948333/quick-spark-qqq-nearly-5-billion-in-one-day-investors-big-tech",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1899,7 +1801,7 @@
           "date": "2026-08-04",
           "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000259/vrtx-20260630.htm"
         },
-        "insider30d": 7
+        "insider30d": 6
       },
       "explain": "37 analysts cover it — 30 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
