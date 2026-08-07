@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3bfe9163" />
+  <link rel="stylesheet" href="styles.css?v=6b39ad24" />
 </head>
 <body>
 
@@ -55,6 +55,7 @@
       <button class="tab" data-tab="informed">Stay Informed</button>
       <button class="tab" data-tab="universe">Shariah-Compliant</button>
       <button class="tab" data-tab="portfolio">Portfolio</button>
+      <button class="tab" data-tab="charts">Charts</button>
     </nav>
 
     <!-- Daily: newspaper-style market front page -->
@@ -657,6 +658,36 @@
 
     </section>
 
+    <!-- Charts: the Chart Room + Chart School -->
+    <section id="tab-charts" class="tabpanel">
+      <div class="cr-mast">
+        <div>
+          <div class="cr-kicker">Jaleel Capital · QARP</div>
+          <h1 id="cr-title">the Chart Room</h1>
+        </div>
+        <div class="cr-mast-note">QARP decides <b>what</b> to own; this page studies <b>when &amp; where</b>.<br>
+          It never touches verdicts or signals — a reading instrument, not a caller.</div>
+      </div>
+      <nav class="subtabs" id="c-subtabs">
+        <button class="csub-btn active" data-csub="room">the Chart Room</button>
+        <button class="csub-btn" data-csub="school">Chart School</button>
+      </nav>
+      <div id="csub-room" class="csub active">
+        <div class="cr-pickrow">
+          <div class="cr-search-wrap">
+            <input id="cr-search" type="text" placeholder="Search any name…" autocomplete="off" spellcheck="false">
+            <div id="cr-search-list" class="cr-search-list" hidden></div>
+          </div>
+          <span class="cr-picklab">Holdings:</span>
+          <div id="cr-holdchips" class="cr-holdchips"></div>
+        </div>
+        <div id="cr-room-body"><div class="cr-empty">Loading…</div></div>
+      </div>
+      <div id="csub-school" class="csub">
+        <div id="cs-body"></div>
+      </div>
+    </section>
+
     <footer class="foot">
       <p><b>Not investment advice.</b> Informational QARP analysis for personal use. Shariah verdicts are Musaffa-primary (AAOIFI); scores are a snapshot at the stated price and date. Prices may be delayed.</p>
     </footer>
@@ -683,7 +714,7 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=3bfe9163"></script>
-  <script src="app.js?v=3bfe9163"></script>
+  <script src="crypto.js?v=6b39ad24"></script>
+  <script src="app.js?v=6b39ad24"></script>
 </body>
 </html>
