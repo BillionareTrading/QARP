@@ -2943,7 +2943,7 @@ function crBuildSvg(view, feats) {
   const N = view.c.length;
   const win = Math.min(CR_RANGES[CR.range] || 126, N);
   const s0 = N - win;
-  const X0 = 8, X1 = 826, Y0 = 16, Y1 = 356, VY0 = 372, VY1 = 436, W = 886, H = 462;
+  const X0 = 8, X1 = 826, Y0 = 16, Y1 = 356, VY0 = 372, VY1 = 436, W = 906, H = 462;
   const SLOTS = win + 6;
   const xs = (j) => X0 + (X1 - X0) * (j + 0.5) / SLOTS;
   let lo = Infinity, hi = -Infinity;
@@ -2982,24 +2982,23 @@ function crBuildSvg(view, feats) {
       }
     }
   }
-  // S/R zones (staggered labels)
+  // S/R zones — bands/lines in-plot, labels on the right-gutter TAG RAIL.
+  // (The old in-plot boxes stacked onto each other and the candles painted
+  // over them — user: "can't read the checkpoints". Rail tags are collision-
+  // resolved below; dates live in the Trader's Read, tags stay compact.)
+  const px = view.c[N - 1], yp = ys(px);
+  const rail = [{ y: yp, trueY: yp, pri: 0, fill: "#15181f",
+                  txt: px >= 100 ? px.toFixed(0) : px.toFixed(2) }];
+  const srLines = [];
   if (CR.ovl.sr) {
-    const sr = [];
-    const lastY = [-99, -99];
-    const px = view.c[N - 1];
-    for (const c of feats.levels.filter((c) => c.level > lo && c.level < hi).sort((a, b) => a.level - b.level)) {
+    for (const c of feats.levels.filter((c) => c.level > lo && c.level < hi)) {
       const col = c.level >= px ? "#9a6b25" : "#1a2a55";
       const band = c.level * 0.006, ya = ys(c.level + band), yb = ys(c.level - band), ly = ys(c.level);
-      sr.push(`<rect x="${X0}" y="${f1(ya)}" width="${X1 - X0}" height="${f1(yb - ya)}" fill="${col}" opacity="0.08"/>`);
-      sr.push(`<line x1="${X0}" y1="${f1(ly)}" x2="${X1}" y2="${f1(ly)}" stroke="${col}" stroke-dasharray="1 3" opacity="0.7"/>`);
-      const colx = Math.abs(ly - lastY[0]) >= 18 ? 0 : 1;
-      lastY[colx] = ly;
-      const lx = colx === 0 ? X1 - 118 : X1 - 244;
-      const lab = `${c.level >= px ? "R" : "S"} ${c.level >= 100 ? c.level.toFixed(0) : c.level.toFixed(1)} · ${c.touches}t · ${c.last.slice(5)}`;
-      sr.push(`<g><rect x="${lx}" y="${f1(ly - 9)}" width="112" height="15" rx="2" fill="#fbfbf7" stroke="${col}" stroke-width="0.7" opacity="0.95"/>
-        <text x="${lx + 56}" y="${f1(ly + 2.5)}" class="cr-srlab" fill="${col}" text-anchor="middle">${lab}</text></g>`);
+      srLines.push(`<rect x="${X0}" y="${f1(ya)}" width="${X1 - X0}" height="${f1(yb - ya)}" fill="${col}" opacity="0.08"/>`);
+      srLines.push(`<line x1="${X0}" y1="${f1(ly)}" x2="${X1}" y2="${f1(ly)}" stroke="${col}" stroke-dasharray="1 3" opacity="0.7"/>`);
+      rail.push({ y: ly, trueY: ly, pri: 2, fill: col,
+                  txt: `${c.level >= px ? "R" : "S"} ${c.level >= 100 ? c.level.toFixed(0) : c.level.toFixed(1)} · ${c.touches}t` });
     }
-    parts.push(`<g>${sr.join("")}</g>`);
   }
   // MAs
   if (CR.ovl.ma) {
@@ -3023,13 +3022,13 @@ function crBuildSvg(view, feats) {
     if (view.v[i] > 0) vol.push(`<rect x="${f1(x - cw / 2)}" y="${f1(yv(view.v[i]))}" width="${f1(cw)}" height="${f1(VY1 - yv(view.v[i]))}" fill="${col}" opacity="0.35"/>`);
   }
   parts.push(`<g>${cnd.join("")}</g>`);
+  if (srLines.length) parts.push(`<g>${srLines.join("")}</g>`);  // level lines above candles — the checkpoints must be visible
   if (CR.ovl.vol) parts.push(`<g>${vol.join("")}<text x="${X0 + 2}" y="${VY0 + 9}" class="cr-ax">volume</text></g>`);
-  // avg cost
+  // avg cost — dashed line in-plot, label on the rail
   if (CR.ovl.cost && feats.avgCost && feats.avgCost > lo && feats.avgCost < hi) {
     const yc = ys(feats.avgCost);
-    parts.push(`<g><line x1="${X0}" y1="${f1(yc)}" x2="${X1}" y2="${f1(yc)}" stroke="#1a2a55" stroke-width="1.3" stroke-dasharray="7 4"/>
-      <rect x="${X0 + 4}" y="${f1(yc - 17)}" width="96" height="15" rx="2" fill="#1a2a55"/>
-      <text x="${X0 + 52}" y="${f1(yc - 6)}" class="cr-srlab" fill="#fbfbf7" text-anchor="middle">your avg ${feats.avgCost.toFixed(2)}</text></g>`);
+    parts.push(`<line x1="${X0}" y1="${f1(yc)}" x2="${X1}" y2="${f1(yc)}" stroke="#1a2a55" stroke-width="1.3" stroke-dasharray="7 4"/>`);
+    rail.push({ y: yc, trueY: yc, pri: 1, fill: "#2c3f77", txt: `avg ${feats.avgCost.toFixed(2)}` });
   }
   // earnings marker (right gutter)
   if (CR.ovl.earn && feats.earn) {
@@ -3039,10 +3038,21 @@ function crBuildSvg(view, feats) {
       <text x="${f1(xe)}" y="${Y0 + 12}" class="cr-srlab" fill="#b45309" text-anchor="middle">earnings</text>
       <text x="${f1(xe)}" y="${Y0 + 23}" class="cr-srlab" fill="#b45309" text-anchor="middle">${feats.earn.slice(5)}</text></g>`);
   }
-  // last price tag
-  const px = view.c[N - 1], yp = ys(px);
-  parts.push(`<rect x="${X1 + 2}" y="${f1(yp - 8)}" width="52" height="16" rx="2" fill="#15181f"/>
-    <text x="${X1 + 28}" y="${f1(yp + 3.5)}" class="cr-srlab" fill="#fbfbf7" text-anchor="middle">${px >= 100 ? px.toFixed(0) : px.toFixed(2)}</text>`);
+  // right-gutter tag rail: sort by y, sweep apart to a minimum gap, clamp to
+  // the plot, connector ticks point displaced tags back at their true level
+  const TAGW = 74, GAPR = 17;
+  rail.sort((a, b) => a.y - b.y || a.pri - b.pri);
+  for (let i = 1; i < rail.length; i++) rail[i].y = Math.max(rail[i].y, rail[i - 1].y + GAPR);
+  const overflow = rail[rail.length - 1].y - (Y1 - 6);
+  if (overflow > 0) for (const t of rail) t.y -= overflow;
+  for (let i = 0; i < rail.length; i++)
+    rail[i].y = Math.max(rail[i].y, (i ? rail[i - 1].y + GAPR : Y0 + 8));
+  for (const t of rail) {
+    if (Math.abs(t.y - t.trueY) > 4)
+      parts.push(`<line x1="${X1}" y1="${f1(t.trueY)}" x2="${X1 + 2}" y2="${f1(t.y)}" stroke="${t.fill}" stroke-width="0.8" opacity="0.55"/>`);
+    parts.push(`<rect x="${X1 + 2}" y="${f1(t.y - 8)}" width="${TAGW}" height="16" rx="2" fill="${t.fill}"${t.pri === 2 ? ' opacity="0.93"' : ""}/>
+      <text x="${X1 + 2 + TAGW / 2}" y="${f1(t.y + 3.5)}" class="cr-tag" fill="#fbfbf7" text-anchor="middle">${t.txt}</text>`);
+  }
   // crosshair skeleton
   parts.push(`<g id="cr-xhair" style="display:none">
     <line id="cr-xv" y1="${Y0}" y2="${VY1}" stroke="#454b57" stroke-width="0.7" stroke-dasharray="2 2"/>
