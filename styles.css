@@ -1714,3 +1714,25 @@ table.ed-ledger td { padding: 5px 8px; border-bottom: 1px dotted var(--line-2); 
   .ed-card-body { grid-template-columns: 1fr; }
   .ed-numbers { border-right: 0; border-bottom: 1px solid var(--line-2); }
 }
+
+/* Estimates Desk UX rework (2026-08-07, user: "fix the UX"): docket = stacked
+   flex rows (the 10-col table clipped off the sheet edge); far-out cards
+   collapse to their headline; calendar strip groups by month. */
+.ed-drow { border: 1px solid var(--line); background: var(--surface); padding: 10px 14px; margin-bottom: 8px; cursor: pointer; }
+.ed-drow:hover { border-color: var(--brand); }
+.ed-drow-top { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.ed-drow-when { margin-left: auto; font-family: var(--mono); font-size: 11px; color: var(--brass); font-weight: 700; white-space: nowrap; }
+.ed-drow-figs { font-family: var(--mono); font-size: 11.5px; color: var(--ink-2); margin-top: 6px; line-height: 1.7; }
+.ed-drow-calls { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; margin-top: 8px; }
+.ed-lbl2 { font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; color: var(--ink-3); }
+.ed-pendchip { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); border: 1px dashed var(--news-rule); padding: 2px 8px; border-radius: 3px; }
+.ed-drow-open { margin-left: auto; font-family: var(--mono); font-size: 11px; color: var(--brand); white-space: nowrap; }
+.ed-more { font-size: 12px; color: var(--ink-2); margin-top: 8px; line-height: 1.55; }
+.ed-more summary { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; color: var(--ink-3); cursor: pointer; }
+.ed-calstrip { display: flex; flex-wrap: wrap; gap: 3px 9px; align-items: baseline; }
+.ed-cal-lbl { flex: 0 0 auto; white-space: nowrap; color: var(--brass); letter-spacing: .12em; font-size: 10px; font-weight: 700; margin-right: 4px; }
+.ed-cal-mon { color: var(--brass); font-size: 9.5px; letter-spacing: .12em; font-weight: 700; margin-left: 6px; }
+.ed-card-head { cursor: pointer; }
+.ed-caret { font-family: var(--mono); color: var(--ink-3); font-size: 12px; transition: transform .15s; }
+.ed-card.ed-closed .ed-caret { transform: rotate(-90deg); display: inline-block; }
+.ed-card.ed-closed .ed-card-body { display: none; }

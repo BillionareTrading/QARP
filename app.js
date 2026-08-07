@@ -3619,7 +3619,7 @@ function crDeskPlan(tkr, view, feats) {
    Doctrine: the Desk times the question around a print; verdicts own whether. */
 
 function edMoney(n) {
-  if (n == null) return "—";
+  if (n == null || n === 0) return "—";  // 0 = Yahoo's empty-pool placeholder, never real revenue
   const a = Math.abs(n);
   if (a >= 1e9) return `$${(n / 1e9).toFixed(1)}B`;
   if (a >= 1e6) return `$${(n / 1e6).toFixed(1)}M`;
@@ -3704,38 +3704,56 @@ function edPosChips(e) {
   return out.join(" ");
 }
 
+/* docket rows — stacked flex rows, can never overflow the sheet (the 10-column
+   table clipped its right half on desktop and demanded pinch-zoom on mobile) */
+function edDocketRowHtml(e) {
+  const days = edDaysOut(e.print_date);
+  const c = e.calls || {}, eps = e.eps || {}, rev = e.rev || {}, rx = e.reactions || {};
+  const when = `${edDateTxt(e.print_date)}${e.hour ? " · " + e.hour.toUpperCase() : ""}`;
+  const tchip = days === 0 ? ` <span class="ed-chip ed-warn">PRINTS TODAY</span>` : days > 0 ? ` · T−${days}` : "";
+  const figs = e.skip
+    ? `<span class="ed-co">${esc(e.skip.reason)} — event coverage only, no faked call</span>`
+    : [
+        eps.avg != null ? `EPS ${fmtNum(eps.avg, Math.abs(eps.avg) < 1 ? 3 : 2)} <span class="ed-co">(${eps.n} an.)</span>` : null,
+        rev.avg ? `rev ${edMoney(rev.avg)}${rev.growth != null ? ` <span class="${signClass(rev.growth * 100)}">${fmtPct(rev.growth * 100)}</span>` : ""}` : null,
+        `bar ${edBarTxt(e)}`,
+        rx.median_abs != null ? `moves ±${fmtNum(rx.median_abs, 1)}%` : null,
+      ].filter(Boolean).join(`<span class="ed-co"> · </span>`);
+  const calls = e.skip ? "" : c.print
+    ? `<span class="ed-lbl2">PRINT</span>${edCallChip("print", c.print, c.print_conf)}
+       <span class="ed-lbl2">GUIDE</span>${edCallChip("guide", c.guide, c.guide_conf)}
+       <span class="ed-lbl2">TAPE</span>${edCallChip("tape", c.tape, c.tape_conf)}`
+    : `<span class="ed-pendchip">numbers live — the take lands at T−10</span>`;
+  return `<div class="ed-drow" onclick="edOpenCard('${esc(e.tk)}')">
+    <div class="ed-drow-top">
+      <span class="ed-tk">${esc(e.tk)}</span> <span class="ed-co">${esc(e.name || "")}</span> ${edPosChips(e)}
+      <span class="ed-drow-when">${when}${tchip}</span>
+    </div>
+    <div class="ed-drow-figs">${figs}</div>
+    <div class="ed-drow-calls">${calls}<span class="ed-drow-open">open card →</span></div>
+  </div>`;
+}
+
 function edDocketHtml(docket) {
-  const rows = docket.map((e) => {
-    const days = edDaysOut(e.print_date);
-    const when = `${edDateTxt(e.print_date)}${e.hour ? " · " + e.hour.toUpperCase() : ""}${days === 0 ? ` · <span class="ed-chip ed-warn">PRINTS TODAY</span>` : days > 0 ? ` · T−${days}` : ""}`;
-    const c = e.calls || {};
-    const eps = e.eps || {};
-    const rx = e.reactions || {};
-    const cells = e.skip
-      ? `<td colspan="3"><span class="ed-chip ed-na">${esc(e.skip.reason)} — event coverage only</span></td>`
-      : `<td>${edCallChip("print", c.print, c.print_conf)}</td>
-         <td>${edCallChip("guide", c.guide, c.guide_conf)}</td>
-         <td>${edCallChip("tape", c.tape, c.tape_conf)}</td>`;
-    return `<tr>
-      <td><span class="ed-tk">${esc(e.tk)}</span> <span class="ed-co">${esc(e.name || "")}</span> ${edPosChips(e)}</td>
-      <td class="ed-mono">${when}</td>
-      <td class="ed-mono">${eps.avg != null ? fmtNum(eps.avg, Math.abs(eps.avg) < 1 ? 3 : 2) : "—"} <span class="ed-co">${eps.n ? `(n=${eps.n})` : ""}</span></td>
-      <td class="ed-mono">${edMoney((e.rev || {}).avg)}${(e.rev || {}).growth != null ? ` <span class="${signClass((e.rev.growth) * 100)}">${fmtPct(e.rev.growth * 100)}</span>` : ""}</td>
-      <td class="ed-mono">${edBarTxt(e)}</td>
-      <td class="ed-mono">${rx.median_abs != null ? "±" + fmtNum(rx.median_abs, 1) + "%" : "—"}</td>
-      ${cells}
-      <td><a class="ed-jump" href="#ed-card-${esc(e.tk)}" onclick="document.getElementById('ed-card-${esc(e.tk)}').scrollIntoView({behavior:'smooth'});return false;">card ↓</a></td>
-    </tr>`;
-  }).join("");
-  return `<div class="ed-sec-h"><h2>The Docket</h2><span class="ed-sub">Confirmed prints, next 3 weeks · full desk treatment</span></div>
-  <div class="ed-tblwrap"><table class="ed-docket">
-    <tr><th>Name</th><th>Prints</th><th>Cons. EPS</th><th>Revenue est.</th><th>Bar, 90d</th><th>Typical move</th><th>Print</th><th>Guide</th><th>Tape</th><th></th></tr>
-    ${rows}</table></div>
-  <p class="ed-legend">CALLS — PRINT: beat/inline/miss vs consensus · GUIDE: raise/hold/cut · TAPE: up/down/muted on the reaction close.
-  NO CALL = a counted abstention, never a hidden one. ●○ = conviction 1–5.<br>
-  DOCKET RULE — holdings always; unheld names at BUY or better; plus names under an active re-score watch.
-  Everything else prints without a take. Names enter when a confirmed date comes inside 21 days; takes are written
-  from 10 days out, re-checked every desk run, rewritten when the inputs move — the last pre-print snapshot grades.</p>`;
+  return `<div class="ed-sec-h"><h2>The Docket</h2><span class="ed-sub">Confirmed prints, next 3 weeks · tap a row</span></div>
+  ${docket.map(edDocketRowHtml).join("")}
+  <p class="ed-legend">PRINT beat/inline/miss · GUIDE raise/hold/cut · TAPE up/down/muted on the reaction close ·
+  NO CALL = a counted abstention · ●○ conviction 1–5</p>
+  <details class="ed-more"><summary>How names get on the docket</summary>
+  Holdings always; unheld names at BUY or better; plus names under an active re-score watch. Everything else prints
+  without a take. Names enter when a confirmed date comes inside 21 days; takes are written from 10 days out,
+  re-checked every desk run and rewritten when the inputs move — the last pre-print snapshot is what grades.</details>`;
+}
+
+function edOpenCard(tk) {
+  const card = document.getElementById("ed-card-" + tk);
+  if (!card) return;
+  card.classList.remove("ed-closed");
+  card.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+function edToggleCard(tk) {
+  const card = document.getElementById("ed-card-" + tk);
+  if (card) card.classList.toggle("ed-closed");
 }
 
 function edCalStripHtml() {
@@ -3746,11 +3764,17 @@ function edCalStripHtml() {
     .filter((x) => x.date && x.date >= from)
     .sort((a, b) => a.date.localeCompare(b.date));
   if (!items.length) return "";
-  return `<div class="ed-calstrip"><b>THE BOOK'S NEXT 90 DAYS&nbsp;&nbsp;</b>${items.map((x) => {
+  // group by month so the strip reads as a calendar, not a word-soup line
+  const MON = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+  const groups = [];
+  for (const x of items) {
     const d = new Date(x.date + "T12:00:00");
-    const mon = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()];
-    return `<span class="ed-e"><i>${esc(x.tk)}</i> ${mon} ${d.getDate()}</span>`;
-  }).join("")}</div>`;
+    const m = MON[d.getMonth()];
+    if (!groups.length || groups[groups.length - 1].m !== m) groups.push({ m, es: [] });
+    groups[groups.length - 1].es.push(`<span class="ed-e"><i>${esc(x.tk)}</i> ${d.getDate()}</span>`);
+  }
+  return `<div class="ed-calstrip"><span class="ed-cal-lbl">THE BOOK'S PRINTS AHEAD</span>${groups.map((g) =>
+    `<span class="ed-cal-mon">${g.m}</span>${g.es.join("")}`).join("")}</div>`;
 }
 
 function edCardHtml(e) {
@@ -3778,12 +3802,13 @@ function edCardHtml(e) {
   const revline = (e.revlog || []).map((r) =>
     `<br>REVISED ${esc(r.at)}: ${esc(r.call)} ${esc(r.from)} → ${esc(r.to)}`).join("");
   const gradeDay = e.hour === "bmo" ? e.print_date : null;
-  return `<div class="ed-card" id="ed-card-${esc(e.tk)}">
-    <div class="ed-card-head">
+  return `<div class="ed-card${e.collapsed ? " ed-closed" : ""}" id="ed-card-${esc(e.tk)}">
+    <div class="ed-card-head" onclick="edToggleCard('${esc(e.tk)}')">
+      <span class="ed-caret">▾</span>
       <span class="ed-name">${esc(e.name)}</span><span class="ed-tk">${esc(e.tk)}</span>
       ${edPosChips(e)}
       ${e.held && e.gain_pct != null ? `<span class="ed-chip">${e.gain_pct >= 0 ? "in profit +" + fmtNum(e.gain_pct, 1) + "%" : "below cost −" + fmtNum(Math.abs(e.gain_pct), 1) + "%"}</span>` : ""}
-      <span class="ed-chip" style="cursor:pointer;color:var(--brand);font-weight:700" onclick="openChart('${esc(e.tk)}')">Desk Plan →</span>
+      <span class="ed-chip" style="cursor:pointer;color:var(--brand);font-weight:700" onclick="event.stopPropagation();openChart('${esc(e.tk)}')">Desk Plan →</span>
       <span class="ed-when">${when}</span>
     </div>
     <div class="ed-card-body">
@@ -3887,9 +3912,16 @@ function renderEstimates() {
     return;
   }
   const docket = est.docket;
+  // this week expanded, further-out collapsed to their headline — ten open cards
+  // stacked was an endless scroll (user: "fix the UX")
+  const week = docket.filter((e) => edDaysOut(e.print_date) <= 7);
+  const later = docket.filter((e) => edDaysOut(e.print_date) > 7);
+  later.forEach((e) => { if (!e.skip) e.collapsed = true; });
   el.innerHTML = edHowHtml() + edCalStripHtml() + edDocketHtml(docket)
-    + `<div class="ed-sec-h"><h2>The Cards</h2><span class="ed-sub">Numbers left · the house call right · desk data as of ${esc(est.asof || "")}</span></div>`
-    + docket.map(edCardHtml).join("")
+    + (week.length ? `<div class="ed-sec-h"><h2>This Week's Wave</h2><span class="ed-sub">Numbers left · the house call right · as of ${esc(est.asof || "")}</span></div>`
+        + week.map(edCardHtml).join("") : "")
+    + (later.length ? `<div class="ed-sec-h"><h2>Further Out</h2><span class="ed-sub">Tap a card to open it</span></div>`
+        + later.map(edCardHtml).join("") : "")
     + edScorecardHtml(est.scorecard)
     + `<p class="ed-legend" style="margin-top:18px">SOURCES — consensus, revisions &amp; surprise history: Yahoo estimate
     pools (canonical), dates &amp; AMC/BMO cross-checked against the Finnhub calendar where available · reaction history:
