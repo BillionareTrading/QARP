@@ -3841,7 +3841,7 @@ function edCardHtml(e) {
           : `<p class="ed-pending">Take pending — the Desk writes it from T−10; the numbers on this card are live now.</p>`}
         <div class="ed-playbook"><div class="ed-pb-h">PRE-PRINT PLAYBOOK${e.held ? ` — HELD ${fmtNum(e.weight_pct, 1)}%` : " — NOT HELD"}</div>
           <div class="ed-pb-b">${e.playbook_html || ""}</div></div>
-        <div class="ed-whytag">at-call: px ${fmtNum(e.px, 2)} · cons ${fmtNum(eps.avg, 3)} (n=${eps.n || "?"}) · ${rvs.up7 || 0}↑/${rvs.dn7 || 0}↓ 7d${take.written_at ? ` · written ${esc(take.written_at)}` : ""} · grades ${gradeDay ? "same session" : "next session"} + guide at T+7${revline}</div>
+        <div class="ed-whytag">at-call: px ${fmtNum(e.px, 2)} · cons ${fmtNum(eps.avg, 3)} (n=${eps.n || "?"}) · ${rvs.up7 || 0}↑/${rvs.dn7 || 0}↓ 7d${take.written_at ? ` · written ${esc(take.written_at)}` : ""} · grades ${gradeDay ? "same session" : "next session"} + guide at T+7${e.mech_calls ? `<br>shadow baseline (arithmetic only, graded alongside): ${esc(e.mech_calls.print)} / ${esc(e.mech_calls.guide)} / ${esc(e.mech_calls.tape)}` : ""}${revline}</div>
       </div>
     </div>
   </div>`;
@@ -3861,10 +3861,12 @@ function edScorecardHtml(sc) {
     };
     return `<tr><td class="ed-tk">${esc(r.tk)}</td><td>${edDateTxt(r.print_date)}</td>${cell("print")}${cell("guide")}${cell("tape")}</tr>`;
   }).join("");
+  const mt = (sc && sc.mech_tallies) || {};
   const tally = (k, lbl) => {
     const x = t[k] || { HIT: 0, MISS: 0, ABSTAIN: 0 };
-    const n = x.HIT + x.MISS;
-    return `${lbl} ${n ? Math.round((100 * x.HIT) / n) + "% of " + n : "—"}${x.ABSTAIN ? ` (+${x.ABSTAIN} abstained)` : ""}`;
+    const m = mt[k] || { HIT: 0, MISS: 0 };
+    const n = x.HIT + x.MISS, mn = m.HIT + m.MISS;
+    return `${lbl} ${n ? Math.round((100 * x.HIT) / n) + "% of " + n : "—"}${mn ? ` <span class="ed-co">(baseline ${Math.round((100 * m.HIT) / mn)}%)</span>` : ""}${x.ABSTAIN ? ` (+${x.ABSTAIN} abstained)` : ""}`;
   };
   return `<div class="ed-sec-h"><h2>The Scorecard</h2><span class="ed-sub">Every call graded · abstentions counted · nothing memory-holed</span></div>
   <div class="ed-score">
@@ -3884,6 +3886,9 @@ function edScorecardHtml(sc) {
         own bar data; ambiguous timings grade close-to-close only. "Muted" = under half the name's typical move.</div>
       <div class="ed-g"><b>GUIDE — graded vs the forward bar.</b> Where the current-FY consensus stands 7 sessions
         after the print vs the freeze: raised (+2%), cut (−2%), else held. Slower, but objective.</div>
+      <div class="ed-g"><b>THE SHADOW BASELINE.</b> Every house call is graded against a frozen arithmetic-only
+        call — beat-rate + revision tilt + run-up vs typical move, no news, no judgment (rules pre-registered,
+        never tuned). If the analysis layer doesn't beat the arithmetic, this table will show it.</div>
     </div>
   </div>`;
 }
