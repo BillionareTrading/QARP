@@ -3552,8 +3552,20 @@ function crDeskPlan(tkr, view, feats) {
   // ---- SELL ----
   let target = null, targetTxt = "—", targetSub = "", rrChip = "";
   if (r1) {
+    // The chart decides WHERE, never WHETHER: the verdict / weight / event decides whether
+    // to sell; the ceiling only picks the best-paid spot once that decision exists.
     target = r1.level; targetTxt = fp(r1.level);
-    targetSub = `The ${r1.touches}-touch ceiling, +${((r1.level / px - 1) * 100).toFixed(1)}% from here${r2 ? `; through it the map reads ${fp(r2.level)}` : ""}.${h && h.cost && r1.level > h.cost / h.shares ? " Trim into strength here — never into weakness." : ""}`;
+    const avg = h && h.shares ? h.cost / h.shares : null;
+    targetSub = `The ${r1.touches}-touch ceiling, +${((r1.level / px - 1) * 100).toFixed(1)}% — ${r1.touches} rejections = trapped supply waiting there, though each absorbed test also weakens it${r2 ? ` (a close through flips the map toward ${fp(r2.level)})` : ""}. `;
+    if (/AVOID/.test(verd) && h && avg && target > avg) {
+      targetSub += `<b>Swing entries harvest here.</b> The position: this is the trim spot — into strength, above your cost, partial — because the <i>verdict</i> (not the chart) wants this capital elsewhere.`;
+    } else if (h && avg && target <= avg) {
+      targetSub += `<b>Swing entries harvest here.</b> The position: this sits below your ${fp(avg)} cost — no selling at a loss; the exit question waits for strength or a verdict change.`;
+    } else if (/STRONG|BUY/.test(verd) && !/AVOID/.test(verd)) {
+      targetSub += `<b>Swing entries harvest here</b> — it completes the R:R taken. The investment does NOT auto-sell: the verdict still prices upside, and take-profit rules tested <i>negative</i> in our own study — treat this as a checkpoint, not an exit.`;
+    } else {
+      targetSub += `<b>Swing entries harvest here.</b> Held as an investment, it is a checkpoint — the chart picks the spot; whether to sell belongs to the verdict.`;
+    }
   } else if (feats.hi52 > px * 1.01) {
     target = feats.hi52; targetTxt = fp(feats.hi52);
     targetSub = `No tested ceiling overhead — the 52-week high is the last mark on the map.`;
