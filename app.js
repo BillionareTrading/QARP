@@ -768,6 +768,8 @@ function openDrawer(ticker) {
       ${has(d.sector) ? `<span class="chip">${d.sector}</span>` : ""}
       ${has(d.price) ? `<span class="chip">${fmtUSD(d.price, 2)}${has(d.day_pct) ? ` · <span class="${signClass(d.day_pct)}">${fmtPct(d.day_pct)}</span>` : ""}</span>` : ""}
       <span class="chip" style="cursor:pointer;color:var(--brand);font-weight:700" onclick="closeDrawer();openChart('${ticker}')">Open chart →</span>
+      ${(DATA.estimates && (DATA.estimates.docket || []).some((x) => x.tk === ticker))
+        ? `<span class="chip" style="cursor:pointer;color:var(--brass);font-weight:700" onclick="closeDrawer();openEstimates('${ticker}')">Estimates →</span>` : ""}
     </div>
     ${x ? `<h4>Quality dimensions</h4><div class="dims">${dims.map(([l, v, m]) => `
       <div class="dim"><div class="dl">${l}</div><div class="dv">${has(v) ? v : "—"}<span class="muted" style="font-size:12px;font-weight:500"> /${m}</span></div>
@@ -1112,6 +1114,7 @@ function initTabs() {
       if (t.dataset.tab === "daily") enterDaily(); else leaveDaily();
       if (t.dataset.tab === "universe") { resumeUniverseCycler(); syncUniverseHScroll(); } else pauseUniverseCycler();
       if (t.dataset.tab === "charts") enterCharts(); else leaveCharts();
+      if (t.dataset.tab === "estimates") enterEstimates();
     }));
 }
 
@@ -2142,11 +2145,18 @@ async function loadPortfolioDates() {
   // the old all-at-once browser fetch tripped rate limits (silent gaps) and took Finnhub's
   // first row instead of the NEAREST date (wrong quarter when two were in the window).
   const srv = (typeof SIGNALS !== "undefined" && SIGNALS && SIGNALS.earnings_next) || {};
+  // Estimates Desk enrichment (2026-08-07): the dormant hour/est-EPS row slots
+  // light up for names the desk covers (payload-carried, no extra fetches)
+  const edm = {};
+  ((DATA.estimates && DATA.estimates.docket) || []).forEach((x) => { edm[x.tk] = x; });
   const events = [];
   const missing = [];
   for (const h of (DATA.portfolio || [])) {
     const d = srv[h.ticker];
-    if (d && d >= from) events.push({ tk: h.ticker, date: d, src: "srv" });
+    const x = edm[h.ticker];
+    if (d && d >= from) events.push({ tk: h.ticker, date: d, src: "srv",
+      hour: x && x.print_date === d ? x.hour : undefined,
+      epsEst: x && x.print_date === d && x.eps ? x.eps.avg : undefined });
     else missing.push(h.ticker);
   }
   // FALLBACK: live Finnhub for names the server map lacks — SEQUENTIAL + paced (no burst),
@@ -3600,4 +3610,299 @@ function crDeskPlan(tkr, view, feats) {
     </div>
     <div class="cr-plan-say">${held}${frame}${earnWarn}</div>
   </div>`;
+}
+
+/* ============================== THE ESTIMATES DESK ==============================
+   8th tab (2026-08-07). Renders entirely from DATA.estimates — payload-carried,
+   cloud-maintained (earnings_desk.py). No client fetches: consensus, reactions,
+   takes, playbooks and the scorecard all arrive in the encrypted payload.
+   Doctrine: the Desk times the question around a print; verdicts own whether. */
+
+function edMoney(n) {
+  if (n == null) return "—";
+  const a = Math.abs(n);
+  if (a >= 1e9) return `$${(n / 1e9).toFixed(1)}B`;
+  if (a >= 1e6) return `$${(n / 1e6).toFixed(1)}M`;
+  return `$${fmtNum(n, 2)}`;
+}
+function edDots(c) { return "●".repeat(c || 0) + "○".repeat(5 - (c || 0)); }
+function edDateTxt(iso) {
+  const d = new Date(iso + "T12:00:00");
+  const mon = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()];
+  const wd = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][d.getDay()];
+  return `${wd} ${mon} ${d.getDate()}`;
+}
+function edDaysOut(iso) {
+  return Math.round((new Date(iso + "T12:00:00") - new Date()) / 86400000);
+}
+function edHourTxt(h) { return h === "amc" ? "after the close" : h === "bmo" ? "before the open" : ""; }
+function edCallChip(kind, call, conf) {
+  if (!call) return `<span class="ed-chip ed-na">—</span>`;
+  const cls = call === "BEAT" || call === "RAISE" || call === "UP" ? "ed-beat"
+    : call === "MISS" || call === "CUT" || call === "DOWN" ? "ed-down"
+    : call === "NO CALL" ? "ed-na" : "ed-inline";
+  const dots = call === "NO CALL" ? "" : ` <span class="ed-conf">${edDots(conf)}</span>`;
+  return `<span class="ed-chip ${cls}">${esc(call)}</span>${dots}`;
+}
+function edBarTxt(e) {
+  const l = e.ladder || {};
+  if (l.now == null || l.d90 == null || !l.d90) return `<span class="ed-co">—</span>`;
+  const pct = ((l.now - l.d90) / Math.abs(l.d90)) * 100;
+  if (pct >= 1) return `<span class="ed-up">raised ▴ ${pct.toFixed(1)}%</span>`;
+  if (pct <= -1) return `<span class="ed-dn">cut ▾ ${Math.abs(pct).toFixed(1)}%</span>`;
+  return `<span class="ed-co">flat</span>`;
+}
+
+/* programmatic ladder SVG — y strictly proportional to value (the mis-drawn
+   hand-placed draft chart is exactly the bug class this prevents) */
+function edLadderSvg(l) {
+  const pts = [["90d", l.d90], ["60d", l.d60], ["30d", l.d30], ["7d", l.d7], ["now", l.now]]
+    .filter((p) => p[1] != null);
+  if (pts.length < 3) return "";
+  const vals = pts.map((p) => p[1]);
+  const mx = Math.max(...vals), mn = Math.min(...vals);
+  const span = mx - mn || Math.abs(mx) * 0.02 || 1;
+  const X = (i) => 22 + (i * 256) / (pts.length - 1);
+  const Y = (v) => 13 + ((mx - v) * 20) / span;
+  const line = pts.map((p, i) => `${X(i)},${Y(p[1]).toFixed(1)}`).join(" ");
+  const dots = pts.map((p, i) =>
+    `<circle cx="${X(i)}" cy="${Y(p[1]).toFixed(1)}" r="${i === pts.length - 1 ? 3.4 : 2.6}" fill="${i === pts.length - 1 ? "#9a6b25" : "#1a2a55"}"/>`).join("");
+  const labels = pts.map((p, i) =>
+    `<text x="${X(i)}" y="54" font-size="8.5" fill="${i === pts.length - 1 ? "#9a6b25" : "#8b8e97"}" text-anchor="middle"${i === pts.length - 1 ? ' font-weight="bold"' : ""}>${p[0]} ${fmtNum(p[1], Math.abs(p[1]) < 1 ? 3 : 2)}</text>`).join("");
+  return `<svg viewBox="0 0 300 58" width="100%" style="max-width:320px">
+    <line x1="8" y1="44" x2="292" y2="44" stroke="#e2ddcf" stroke-width="1"/>
+    <polyline points="${line}" fill="none" stroke="#1a2a55" stroke-width="2"/>${dots}${labels}</svg>`;
+}
+
+/* surprise record — dollar deltas on near-zero bases (surprise % is noise there) */
+function edSurpriseSvg(surprises, epsAvg) {
+  const hs = (surprises || []).slice(-4);
+  if (!hs.length) return "";
+  const nearZero = Math.abs(epsAvg == null ? 1 : epsAvg) < 0.10;
+  const vals = hs.map((h) => nearZero ? h.abs : (h.pct == null ? 0 : h.pct * 100));
+  const mx = Math.max(...vals.map(Math.abs)) || 1;
+  const bars = hs.map((h, i) => {
+    const v = vals[i];
+    const hgt = Math.max(2, (Math.abs(v) * 24) / mx);
+    const up = v >= 0;
+    const x = 30 + i * 70;
+    const lbl = nearZero ? `${v >= 0 ? "+" : "−"}$${Math.abs(v).toFixed(2)}` : `${v >= 0 ? "+" : "−"}${Math.abs(v).toFixed(1)}%`;
+    return `<rect x="${x}" y="${up ? 31 - hgt : 31}" width="34" height="${hgt.toFixed(1)}" fill="${up ? "#15803d" : "#be123c"}" opacity=".82"/>
+      <text x="${x + 17}" y="59" font-size="8.5" fill="#8b8e97" text-anchor="middle">${esc((h.q || "").slice(0, 7))} ${lbl}</text>`;
+  }).join("");
+  return `<svg viewBox="0 0 300 64" width="100%" style="max-width:320px">
+    <line x1="8" y1="31" x2="292" y2="31" stroke="#cdc7b6" stroke-width="1"/>${bars}</svg>`;
+}
+
+function edPosChips(e) {
+  const out = [];
+  if (e.held) out.push(`<span class="ed-chip ed-hold">HELD ${fmtNum(e.weight_pct, 1)}%</span>`);
+  if (e.verdict) {
+    const bad = e.verdict === "AVOID" || e.verdict === "STRONG AVOID";
+    out.push(`<span class="ed-chip ${bad ? "ed-avoid" : ""}">${esc(e.verdict)}${e.qarp ? " " + fmtNum(e.qarp, 1) : ""}</span>`);
+  }
+  return out.join(" ");
+}
+
+function edDocketHtml(docket) {
+  const rows = docket.map((e) => {
+    const days = edDaysOut(e.print_date);
+    const when = `${edDateTxt(e.print_date)}${e.hour ? " · " + e.hour.toUpperCase() : ""}${days === 0 ? ` · <span class="ed-chip ed-warn">PRINTS TODAY</span>` : days > 0 ? ` · T−${days}` : ""}`;
+    const c = e.calls || {};
+    const eps = e.eps || {};
+    const rx = e.reactions || {};
+    const cells = e.skip
+      ? `<td colspan="3"><span class="ed-chip ed-na">${esc(e.skip.reason)} — event coverage only</span></td>`
+      : `<td>${edCallChip("print", c.print, c.print_conf)}</td>
+         <td>${edCallChip("guide", c.guide, c.guide_conf)}</td>
+         <td>${edCallChip("tape", c.tape, c.tape_conf)}</td>`;
+    return `<tr>
+      <td><span class="ed-tk">${esc(e.tk)}</span> <span class="ed-co">${esc(e.name || "")}</span> ${edPosChips(e)}</td>
+      <td class="ed-mono">${when}</td>
+      <td class="ed-mono">${eps.avg != null ? fmtNum(eps.avg, Math.abs(eps.avg) < 1 ? 3 : 2) : "—"} <span class="ed-co">${eps.n ? `(n=${eps.n})` : ""}</span></td>
+      <td class="ed-mono">${edMoney((e.rev || {}).avg)}${(e.rev || {}).growth != null ? ` <span class="${signClass((e.rev.growth) * 100)}">${fmtPct(e.rev.growth * 100)}</span>` : ""}</td>
+      <td class="ed-mono">${edBarTxt(e)}</td>
+      <td class="ed-mono">${rx.median_abs != null ? "±" + fmtNum(rx.median_abs, 1) + "%" : "—"}</td>
+      ${cells}
+      <td><a class="ed-jump" href="#ed-card-${esc(e.tk)}" onclick="document.getElementById('ed-card-${esc(e.tk)}').scrollIntoView({behavior:'smooth'});return false;">card ↓</a></td>
+    </tr>`;
+  }).join("");
+  return `<div class="ed-sec-h"><h2>The Docket</h2><span class="ed-sub">Confirmed prints, next 3 weeks · full desk treatment</span></div>
+  <div class="ed-tblwrap"><table class="ed-docket">
+    <tr><th>Name</th><th>Prints</th><th>Cons. EPS</th><th>Revenue est.</th><th>Bar, 90d</th><th>Typical move</th><th>Print</th><th>Guide</th><th>Tape</th><th></th></tr>
+    ${rows}</table></div>
+  <p class="ed-legend">CALLS — PRINT: beat/inline/miss vs consensus · GUIDE: raise/hold/cut · TAPE: up/down/muted on the reaction close.
+  NO CALL = a counted abstention, never a hidden one. ●○ = conviction 1–5.<br>
+  DOCKET RULE — holdings always; unheld names at BUY or better; plus names under an active re-score watch.
+  Everything else prints without a take. Names enter when a confirmed date comes inside 21 days; takes are written
+  from 10 days out, re-checked every desk run, rewritten when the inputs move — the last pre-print snapshot grades.</p>`;
+}
+
+function edCalStripHtml() {
+  const srv = (typeof SIGNALS !== "undefined" && SIGNALS && SIGNALS.earnings_next) || {};
+  const from = new Date().toISOString().slice(0, 10);
+  const items = (DATA.portfolio || [])
+    .map((h) => ({ tk: h.ticker, date: srv[h.ticker] }))
+    .filter((x) => x.date && x.date >= from)
+    .sort((a, b) => a.date.localeCompare(b.date));
+  if (!items.length) return "";
+  return `<div class="ed-calstrip"><b>THE BOOK'S NEXT 90 DAYS&nbsp;&nbsp;</b>${items.map((x) => {
+    const d = new Date(x.date + "T12:00:00");
+    const mon = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()];
+    return `<span class="ed-e"><i>${esc(x.tk)}</i> ${mon} ${d.getDate()}</span>`;
+  }).join("")}</div>`;
+}
+
+function edCardHtml(e) {
+  const eps = e.eps || {}, rev = e.rev || {}, rvs = e.revisions || {}, rx = e.reactions || {};
+  const days = edDaysOut(e.print_date);
+  const when = `${edDateTxt(e.print_date).toUpperCase()}${e.hour ? " · " + edHourTxt(e.hour).toUpperCase() : ""}${e.date_estimated ? "" : " · CONFIRMED"}${days > 0 ? ` · T−${days}` : days === 0 ? " · TODAY" : ""}`;
+  if (e.skip) {
+    const fy = ((e.skip.annual || {}).fy_eps) || {};
+    const fyr = ((e.skip.annual || {}).fy_rev) || {};
+    return `<div class="ed-note-card" id="ed-card-${esc(e.tk)}">
+      <span class="ed-tk">${esc(e.tk)}</span> <b>${esc(e.name)} · ${edDateTxt(e.print_date)}${e.verdict ? " · " + esc(e.verdict) + (e.qarp ? " " + fmtNum(e.qarp, 1) : "") : ""}</b>
+      — ${esc(e.skip.reason)}. ${fy.avg != null ? `Annual anchor: FY EPS ${fmtNum(fy.avg, 2)} (n=${fy.n || "?"})${fyr.avg != null ? `, revenue ${edMoney(fyr.avg)} (n=${fyr.n || "?"})` : ""}.` : ""}
+      <b>The Desk does not fake a call it cannot ground</b> — this name gets event-risk coverage only: the date,
+      the anchor, and the post-print re-score check.</div>`;
+  }
+  const ladder = edLadderSvg(e.ladder || {});
+  const spr = edSurpriseSvg(e.surprises, eps.avg);
+  const rxRows = (rx.rows || []).slice(0, 8).map((r) =>
+    `<tr><td>${edDateTxt(r.date)} <span class="ed-co">${esc(r.timing || "")}</span></td>
+     <td class="${r.gap == null ? "" : signClass(r.gap)}">${r.gap == null ? "—" : fmtPct(r.gap)}</td>
+     <td class="${signClass(r.close)}">${fmtPct(r.close)}</td></tr>`).join("");
+  const c = e.calls || {};
+  const take = e.take || {};
+  const runup = e.runup || {};
+  const revline = (e.revlog || []).map((r) =>
+    `<br>REVISED ${esc(r.at)}: ${esc(r.call)} ${esc(r.from)} → ${esc(r.to)}`).join("");
+  const gradeDay = e.hour === "bmo" ? e.print_date : null;
+  return `<div class="ed-card" id="ed-card-${esc(e.tk)}">
+    <div class="ed-card-head">
+      <span class="ed-name">${esc(e.name)}</span><span class="ed-tk">${esc(e.tk)}</span>
+      ${edPosChips(e)}
+      ${e.held && e.gain_pct != null ? `<span class="ed-chip">${e.gain_pct >= 0 ? "in profit +" + fmtNum(e.gain_pct, 1) + "%" : "below cost −" + fmtNum(Math.abs(e.gain_pct), 1) + "%"}</span>` : ""}
+      <span class="ed-chip" style="cursor:pointer;color:var(--brand);font-weight:700" onclick="openChart('${esc(e.tk)}')">Desk Plan →</span>
+      <span class="ed-when">${when}</span>
+    </div>
+    <div class="ed-card-body">
+      <div class="ed-numbers">
+        <div class="ed-blk-h">Consensus — ${e.period ? "quarter ending " + esc(e.period) : "this quarter"}</div>
+        <div class="ed-kv"><span class="ed-k">EPS consensus (${eps.n || "?"} analysts)</span>
+          <span class="ed-v">${fmtNum(eps.avg, 3)} ${eps.low != null ? `[${fmtNum(eps.low, 2)} … ${fmtNum(eps.high, 2)}]` : ""}</span></div>
+        <div class="ed-kv"><span class="ed-k">Revenue consensus (${rev.n || "?"} analysts)</span>
+          <span class="ed-v">${edMoney(rev.avg)}${rev.growth != null ? ` <span class="${signClass(rev.growth * 100)}">${fmtPct(rev.growth * 100)} y/y</span>` : ""}</span></div>
+        <div class="ed-kv"><span class="ed-k">Revisions</span>
+          <span class="ed-v"><span class="${rvs.up7 ? "ed-up" : "ed-co"}">${rvs.up7 || 0}↑</span>/<span class="${rvs.dn7 ? "ed-dn" : "ed-co"}">${rvs.dn7 || 0}↓</span> 7d ·
+          <span class="${rvs.up30 ? "ed-up" : "ed-co"}">${rvs.up30 || 0}↑</span>/<span class="${rvs.dn30 ? "ed-dn" : "ed-co"}">${rvs.dn30 || 0}↓</span> 30d</span></div>
+        ${ladder ? `<div class="ed-blk-h">The bar, last 90 days</div>${ladder}` : ""}
+        ${spr ? `<div class="ed-blk-h">Surprise record — last ${Math.min(4, (e.surprises || []).length)} prints</div>${spr}` : ""}
+        ${rxRows ? `<div class="ed-blk-h">How this name trades its prints</div>
+          <table class="ed-rx"><tr><th>Print</th><th>Gap</th><th>Close</th></tr>${rxRows}</table>
+          <div class="ed-kv" style="margin-top:8px"><span class="ed-k">Median move · worst · best</span>
+            <span class="ed-v">±${fmtNum(rx.median_abs, 1)}% · ${fmtPct(rx.worst)} · ${fmtPct(rx.best)}</span></div>` : ""}
+        ${runup.d5 != null ? `<div class="ed-kv"><span class="ed-k">Into the print</span>
+          <span class="ed-v"><span class="${signClass(runup.d5)}">${fmtPct(runup.d5)} 5d</span> · ${fmtPct(runup.d20)} 20d · ${fmtPct(runup.d60)} 60d</span></div>` : ""}
+      </div>
+      <div class="ed-call-side">
+        <div class="ed-calls">
+          <div class="ed-callrow"><span class="ed-lbl">PRINT</span>${edCallChip("print", c.print, c.print_conf)}</div>
+          <div class="ed-callrow"><span class="ed-lbl">GUIDE</span>${edCallChip("guide", c.guide, c.guide_conf)}</div>
+          <div class="ed-callrow"><span class="ed-lbl">TAPE</span>${edCallChip("tape", c.tape, c.tape_conf)}</div>
+        </div>
+        ${take.bar_read ? `<div class="ed-blk-h">The bar</div><div class="ed-kv" style="border:0"><span class="ed-v" style="text-align:left;font-family:var(--sans);font-size:12.5px;color:var(--ink-2)">${take.bar_read}</span></div>` : ""}
+        ${take.html ? `<div class="ed-take">${take.html}</div>`
+          : `<p class="ed-pending">Take pending — the Desk writes it from T−10; the numbers on this card are live now.</p>`}
+        <div class="ed-playbook"><div class="ed-pb-h">PRE-PRINT PLAYBOOK${e.held ? ` — HELD ${fmtNum(e.weight_pct, 1)}%` : " — NOT HELD"}</div>
+          <div class="ed-pb-b">${e.playbook_html || ""}</div></div>
+        <div class="ed-whytag">at-call: px ${fmtNum(e.px, 2)} · cons ${fmtNum(eps.avg, 3)} (n=${eps.n || "?"}) · ${rvs.up7 || 0}↑/${rvs.dn7 || 0}↓ 7d${take.written_at ? ` · written ${esc(take.written_at)}` : ""} · grades ${gradeDay ? "same session" : "next session"} + guide at T+7${revline}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function edScorecardHtml(sc) {
+  const t = (sc && sc.tallies) || {};
+  const anyGraded = ["print", "tape", "guide"].some((k) => t[k] && (t[k].HIT + t[k].MISS + t[k].ABSTAIN) > 0);
+  const vcls = (v) => v === "HIT" ? "ed-hit" : v === "MISS" ? "ed-missv" : "ed-abst";
+  const rows = ((sc && sc.rows) || []).map((r) => {
+    const g = r.grades || {};
+    const cell = (k) => {
+      const call = (r.calls || {})[k];
+      const gr = g[k];
+      if (!gr) return `<td>${esc(call || "—")} <span class="ed-co">${edDaysOut(r.print_date) >= 0 ? "frozen" : "awaiting"}</span></td>`;
+      return `<td>${esc(call || "—")} → ${esc(gr.outcome || "?")} <span class="${vcls(gr.verdict)}">${esc(gr.verdict)}</span></td>`;
+    };
+    return `<tr><td class="ed-tk">${esc(r.tk)}</td><td>${edDateTxt(r.print_date)}</td>${cell("print")}${cell("guide")}${cell("tape")}</tr>`;
+  }).join("");
+  const tally = (k, lbl) => {
+    const x = t[k] || { HIT: 0, MISS: 0, ABSTAIN: 0 };
+    const n = x.HIT + x.MISS;
+    return `${lbl} ${n ? Math.round((100 * x.HIT) / n) + "% of " + n : "—"}${x.ABSTAIN ? ` (+${x.ABSTAIN} abstained)` : ""}`;
+  };
+  return `<div class="ed-sec-h"><h2>The Scorecard</h2><span class="ed-sub">Every call graded · abstentions counted · nothing memory-holed</span></div>
+  <div class="ed-score">
+    ${anyGraded
+      ? `<div class="ed-big">${tally("print", "PRINT")} · ${tally("guide", "GUIDE")} · ${tally("tape", "TAPE")}</div>`
+      : `<div class="ed-big">No graded calls yet — the first frozen calls grade off the next wave.</div>`}
+    <p>Every call freezes when written (the at-call line under each take). A take may be rewritten up to the print
+    as inputs move — each rewrite appends a visible revision line, and <b>the last pre-print snapshot is what
+    grades</b>. NO CALL lands here too, counted as an abstention. If these calls turn out no better than a coin,
+    this table will say so.</p>
+    <p class="ed-lifecycle">LIFECYCLE&nbsp; <b>T−n</b> → <b>PRINTS TODAY</b> → <b>AWAITING REACTION</b> (print grade posts same night · tape next session · guide at T+7) → <b>GRADED</b></p>
+    ${rows ? `<table class="ed-ledger"><tr><th>Name</th><th>Print</th><th>Print call</th><th>Guide call</th><th>Tape call</th></tr>${rows}</table>` : ""}
+    <div class="ed-grade-rules">
+      <div class="ed-g"><b>PRINT — graded vs actuals.</b> Beat/miss against reported EPS vs the frozen consensus.
+        Inline band: ±2% (±$0.01 where the base is near zero — surprise % is noise there).</div>
+      <div class="ed-g"><b>TAPE — graded vs the reaction session.</b> AMC → next session, BMO → same session, from our
+        own bar data; ambiguous timings grade close-to-close only. "Muted" = under half the name's typical move.</div>
+      <div class="ed-g"><b>GUIDE — graded vs the forward bar.</b> Where the current-FY consensus stands 7 sessions
+        after the print vs the freeze: raised (+2%), cut (−2%), else held. Slower, but objective.</div>
+    </div>
+  </div>`;
+}
+
+function edHowHtml() {
+  return `<div class="ed-how">
+    <div class="ed-box"><h4>① THE PRINT — beat · inline · miss</h4>
+      <p>Will the reported number land above or below the consensus bar? Called from the company's own surprise
+      record, the direction analysts are moving, and how tight their range is.</p></div>
+    <div class="ed-box"><h4>② THE GUIDE — raise · hold · cut</h4>
+      <p>The quarter is history the moment it prints — the forward guide is what re-prices the stock.
+      Often the only call that matters.</p></div>
+    <div class="ed-box"><h4>③ THE TAPE — up · down · muted</h4>
+      <p>What's already priced in. A beat over a bar the market has silently raised sells off; a "miss" against
+      slashed estimates can rally. This call frames what a print is worth once it lands.</p></div>
+  </div>
+  <p class="ed-boundary">The Desk decides <b>when</b> around a print. The verdict still decides <b>whether</b> — nothing here overrides QARP.</p>`;
+}
+
+function renderEstimates() {
+  const el = document.getElementById("ed-body");
+  if (!el || typeof DATA === "undefined" || !DATA) return;
+  const est = DATA.estimates;
+  if (!est || !(est.docket || []).length) {
+    el.innerHTML = `<p class="muted" style="padding:24px 0">The desk is being seeded — the next cloud run fills it. Nothing is faked in the meantime.</p>`;
+    return;
+  }
+  const docket = est.docket;
+  el.innerHTML = edHowHtml() + edCalStripHtml() + edDocketHtml(docket)
+    + `<div class="ed-sec-h"><h2>The Cards</h2><span class="ed-sub">Numbers left · the house call right · desk data as of ${esc(est.asof || "")}</span></div>`
+    + docket.map(edCardHtml).join("")
+    + edScorecardHtml(est.scorecard)
+    + `<p class="ed-legend" style="margin-top:18px">SOURCES — consensus, revisions &amp; surprise history: Yahoo estimate
+    pools (canonical), dates &amp; AMC/BMO cross-checked against the Finnhub calendar where available · reaction history:
+    the Desk's own daily bars · takes: house model, frozen at-call, graded after — causal reads beyond the data are
+    marked "house read." The Desk times entries around prints; verdicts own the buy/sell question. Not licensed advice.</p>`;
+}
+
+function enterEstimates() { renderEstimates(); }
+function openEstimates(tk) {
+  const btn = document.querySelector('.tab[data-tab="estimates"]');
+  if (btn && !btn.classList.contains("active")) btn.click();
+  setTimeout(() => {
+    const card = document.getElementById("ed-card-" + tk);
+    if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 60);
 }
