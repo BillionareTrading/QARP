@@ -1736,3 +1736,8 @@ table.ed-ledger td { padding: 5px 8px; border-bottom: 1px dotted var(--line-2); 
 .ed-caret { font-family: var(--mono); color: var(--ink-3); font-size: 12px; transition: transform .15s; }
 .ed-card.ed-closed .ed-caret { transform: rotate(-90deg); display: inline-block; }
 .ed-card.ed-closed .ed-card-body { display: none; }
+
+/* Chart Room tag rail (2026-08-07, user: "can't read the checkpoints"):
+   S/R + avg-cost + price labels moved off-plot to a collision-resolved
+   right-gutter rail; solid fills for contrast. */
+.cr-tag { font: 700 10.5px var(--mono); }
