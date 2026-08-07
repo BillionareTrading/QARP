@@ -1512,7 +1512,19 @@ function riskSevFor(tk) {
 // but the DAILY call is forward-looking — catalysts + the Street + the tape + cost basis.
 // TRIM only ever fires INTO STRENGTH (in profit, uptrend, catalysts exhausted) — never at a
 // loss below cost (standing rule: concentration is cured by addition, weakness is for DCA).
-const FULL_WEIGHT_USD = 1050;   // sizing doctrine: full position ~$900-1,100; adds go to underweights
+// Sizing doctrine v2 (user-approved 2026-08-07): a FULL position scales with the
+// live book instead of a static dollar line (the old $1,050 was ~5% of a $21k book
+// and drifted as the book grew). Conviction buys a bigger allowance, inside a band:
+//   BUY and below .... 6% of book     STRONG BUY / STRONGEST .... 8% of book
+// floor $1,000. Keep in sync with earnings_desk.py full_weight_usd().
+const FULL_WEIGHT_FLOOR = 1000;
+function bookValueUsd() {
+  return ((DATA && DATA.portfolio) || []).reduce((s, h) => s + (h.value || 0), 0);
+}
+function fullWeightUsd(verdict) {
+  const pct = (verdict === "STRONG BUY" || verdict === "STRONGEST") ? 0.08 : 0.06;
+  return Math.max(FULL_WEIGHT_FLOOR, bookValueUsd() * pct);
+}
 function holdingCall(tk) {
   const pb = (SIGNALS && SIGNALS.portfolio_brief && SIGNALS.portfolio_brief[tk]) || {};
   const h = DATA.portfolio.find((x) => x.ticker === tk) || {};
@@ -1523,7 +1535,7 @@ function holdingCall(tk) {
   const gate = (gateNow(Object.assign({}, row, { price: h.price })) || {}).state || null;
   const avgCost = h.shares ? h.cost / h.shares : null;
   const inProfit = avgCost != null && h.price >= avgCost;
-  const full = (h.value || 0) >= FULL_WEIGHT_USD;
+  const full = (h.value || 0) >= fullWeightUsd(qarp);
   const chip = row.catalyst || null;
   const chipHook = !!(chip && (chip.label === "SET" || chip.label === "WATCH"));
   // a near-unanimous bullish panel is a standing forward signal even between news cycles
