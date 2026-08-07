@@ -1610,3 +1610,25 @@ tbody tr:hover { background: var(--surface-2); }
   .cs-toc { border-right:none; padding-right:0; }
   .cr-mast-note { text-align:left; }
 }
+
+/* ---- the Desk Plan strip ---- */
+.cr-plan { margin-top:24px; border-top:3px double var(--news-rule); padding-top:14px; }
+.cr-plan-head { display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+.cr-plan-head h3 { font-family:"Playfair Display", var(--serif); font-weight:800; font-size:18px; }
+.cr-plan-note { font:italic 11.5px "PT Serif", var(--serif); color:var(--ink-3); }
+.cr-plan-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+.cr-pbox { background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--brand);
+  border-radius:8px; padding:12px 14px; }
+.cr-pbox.stop { border-top-color:var(--neg); }
+.cr-pbox.sell { border-top-color:var(--pos); }
+.cr-pbox.wait { border-top-color:#b45309; }
+.cr-pbox-k { font:700 10px var(--sans); letter-spacing:1.2px; text-transform:uppercase; color:var(--ink-3);
+  display:flex; align-items:baseline; gap:8px; }
+.cr-pbox-v { font:700 24px var(--mono); color:var(--ink); margin:4px 0 5px; }
+.cr-pbox.wait .cr-pbox-v { font-size:19px; color:#b45309; text-transform:uppercase; letter-spacing:.5px; }
+.cr-pbox-s { font:12.5px/1.5 "PT Serif", var(--serif); color:var(--ink-2); }
+.cr-rr { font:700 10px var(--mono); background:var(--surface-2); border:1px solid var(--line);
+  border-radius:8px; padding:2px 7px; color:var(--brand); letter-spacing:0; text-transform:none; }
+.cr-plan-say { margin-top:12px; font:13.5px/1.55 "PT Serif", var(--serif); color:var(--ink); }
+.cr-plan-warn { color:#b45309; font-family:var(--sans); font-size:12px; }
+@media (max-width: 980px) { .cr-plan-grid { grid-template-columns:1fr; } }

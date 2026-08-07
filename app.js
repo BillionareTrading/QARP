@@ -3161,6 +3161,7 @@ function crRenderRoom() {
       <div class="cr-chartcard"><div id="cr-readout"></div>${svg}</div>
       <div class="cr-foot">Settled daily bars through ${esc(CR.bars.asof || "")}${CR.live ? " + today’s live candle from the quote feed" : ""}.
         Levels are computed from swing highs &amp; lows (2.5%-clustered, touch-counted) — drawn by rule, never by hand. Crosshair: move your cursor over the chart.</div>
+      ${crDeskPlan(tkr, view, feats)}
     </div>
     <div class="cr-read">${crTradersRead(tkr, view, feats)}</div></div>`;
   // wire controls
@@ -3504,4 +3505,87 @@ function renderSchool() {
   };
   if (CR.bars) fillTypes(CR.bars, CR.tkr);
   else crLoadBars("RKLB").then((b) => fillTypes(b, "RKLB")).catch(() => {});
+}
+
+/* ---------- the Desk Plan: enter / stop / sell, computed from the chart's own levels ----------
+   Advisory overlay for the owner (he executes, he holds responsibility). Numbers come from
+   tested structure only — shelves, ceilings, averages — never invented. It reconciles with
+   the framework: the verdict decides WHAT deserves capital; this strip advises WHERE. */
+function crDeskPlan(tkr, view, feats) {
+  const n = view.c.length, px = feats.px;
+  const above = feats.levels.filter((c) => c.level >= px * 1.005).sort((a, b) => a.level - b.level);
+  const below = feats.levels.filter((c) => c.level < px * 0.995).sort((a, b) => b.level - a.level);
+  const s1 = below[0], s2 = below[1], r1 = above[0], r2 = above[1];
+  const rsi = feats.rsi[n - 1], ma50 = feats.ma50[n - 1], ma20 = feats.ma20[n - 1];
+  const fp = (p) => "$" + (p >= 1000 ? p.toFixed(0) : p >= 100 ? p.toFixed(1) : p.toFixed(2));
+  const h = crHolding(tkr), u = crRowFor(tkr);
+  const verd = (u && u.verdict) || (h && h.verdict) || "";
+  const sig = CR.signals || {};
+  const earn = sig.earnings_next && sig.earnings_next[tkr];
+  // ---- ENTER ----
+  let entry = null, entryTxt = "—", entrySub = "", entryTone = "";
+  if (rsi != null && rsi < 30) {
+    entryTxt = "not yet";
+    entrySub = `RSI ${rsi.toFixed(0)} — knife zone. Our tested rule: wait for the cross back above 30, then bid ${s1 ? "the " + fp(s1.level) + " shelf" : "the base that forms"}.`;
+    entryTone = "wait";
+  } else if (s1 && (px - s1.level) / s1.level <= 0.015) {
+    entry = px; entryTxt = fp(px);
+    entrySub = `Enter here — price is sitting on the ${s1.touches}-touch shelf at ${fp(s1.level)}.`;
+  } else if (s1) {
+    entry = s1.level; entryTxt = fp(s1.level);
+    entrySub = `Patient limit at the ${s1.touches}-touch shelf, ${((s1.level / px - 1) * 100).toFixed(1)}% below (last defended ${s1.last.slice(5)}).`;
+  } else if (ma50 && ma50 < px * 0.995) {
+    entry = ma50; entryTxt = fp(ma50);
+    entrySub = `No tested shelf in range — the rising 50-day average (${fp(ma50)}) is the fallback bid.`;
+  } else {
+    entrySub = "No tested floor beneath the price — stand aside until one forms.";
+    entryTone = "wait";
+  }
+  // ---- STOP ----
+  let stop = null, stopTxt = "—", stopSub = "Without an entry there is nothing to protect.";
+  if (entry) {
+    stop = entry * 0.97;
+    if (s2 && s2.level * 0.99 > stop) stop = s2.level * 0.99;
+    stopTxt = fp(stop);
+    stopSub = `${((stop / entry - 1) * 100).toFixed(1)}% under the entry — the shelf failing is the idea failing. Swing stop: honor it. Accumulating per the verdict instead? A break means re-check, not auto-sell.`;
+  }
+  // ---- SELL ----
+  let target = null, targetTxt = "—", targetSub = "", rrChip = "";
+  if (r1) {
+    target = r1.level; targetTxt = fp(r1.level);
+    targetSub = `The ${r1.touches}-touch ceiling, +${((r1.level / px - 1) * 100).toFixed(1)}% from here${r2 ? `; through it the map reads ${fp(r2.level)}` : ""}.${h && h.cost && r1.level > h.cost / h.shares ? " Trim into strength here — never into weakness." : ""}`;
+  } else if (feats.hi52 > px * 1.01) {
+    target = feats.hi52; targetTxt = fp(feats.hi52);
+    targetSub = `No tested ceiling overhead — the 52-week high is the last mark on the map.`;
+  } else {
+    targetSub = `Open air — at the highs there is no ceiling to sell into; trail the 20-day average${ma20 ? " (" + fp(ma20) + ")" : ""} instead of picking a number.`;
+  }
+  if (entry && stop && target && target > entry) {
+    const rr = (target - entry) / Math.max(entry - stop, 0.01);
+    rrChip = `<span class="cr-rr">R:R ${rr.toFixed(1)}</span>`;
+  }
+  // ---- the advisor's line ----
+  const held = h ? `You hold ${h.shares % 1 ? h.shares.toFixed(1) : h.shares} sh at ${fp(h.cost / h.shares)} (${h.gain_pct >= 0 ? "+" : ""}${(h.gain_pct || 0).toFixed(1)}%). ` : "";
+  let frame;
+  if (/STRONG|BUY/.test(verd) && !/AVOID/.test(verd)) frame = `The framework backs this name (${verd}) — this plan times the add.`;
+  else if (/HOLD/.test(verd)) frame = `Framework says ${verd} — quality without a discount; take entries strictly at the levels or not at all.`;
+  else if (/AVOID/.test(verd)) frame = `The framework does NOT back this name (${verd}) — anything entered here is a trade, sized small, stop honored without debate.`;
+  else frame = `No framework verdict on this name — chart-only read; size accordingly.`;
+  // warn only when the print is close enough to be event risk (<=7 calendar days)
+  const earnDays = earn ? Math.round((new Date(earn + "T00:00:00Z") - Date.now()) / 86400000) : null;
+  const earnWarn = earn && earnDays != null && earnDays >= 0 && earnDays <= 7
+    ? ` <b class="cr-plan-warn">⚠ Earnings ${earn} (${earnDays === 0 ? "today" : earnDays + "d"}) — halve size into the print or wait for it; gaps ignore levels.</b>` : "";
+  return `<div class="cr-plan">
+    <div class="cr-plan-head"><h3>the Desk Plan</h3>
+      <span class="cr-plan-note">my advisory read of this chart — you hold the wheel · not licensed advice</span></div>
+    <div class="cr-plan-grid">
+      <div class="cr-pbox${entryTone ? " " + entryTone : ""}"><div class="cr-pbox-k">Enter</div>
+        <div class="cr-pbox-v">${entryTxt}</div><div class="cr-pbox-s">${entrySub}</div></div>
+      <div class="cr-pbox stop"><div class="cr-pbox-k">Stop loss</div>
+        <div class="cr-pbox-v">${stopTxt}</div><div class="cr-pbox-s">${stopSub}</div></div>
+      <div class="cr-pbox sell"><div class="cr-pbox-k">Sell / target ${rrChip}</div>
+        <div class="cr-pbox-v">${targetTxt}</div><div class="cr-pbox-s">${targetSub}</div></div>
+    </div>
+    <div class="cr-plan-say">${held}${frame}${earnWarn}</div>
+  </div>`;
 }
