@@ -767,6 +767,7 @@ function openDrawer(ticker) {
       ${has(d.mech) ? `<span class="chip">Quality ${d.mech}/105</span>` : ""}
       ${has(d.sector) ? `<span class="chip">${d.sector}</span>` : ""}
       ${has(d.price) ? `<span class="chip">${fmtUSD(d.price, 2)}${has(d.day_pct) ? ` · <span class="${signClass(d.day_pct)}">${fmtPct(d.day_pct)}</span>` : ""}</span>` : ""}
+      <span class="chip" style="cursor:pointer;color:var(--brand);font-weight:700" onclick="closeDrawer();openChart('${ticker}')">Open chart →</span>
     </div>
     ${x ? `<h4>Quality dimensions</h4><div class="dims">${dims.map(([l, v, m]) => `
       <div class="dim"><div class="dl">${l}</div><div class="dv">${has(v) ? v : "—"}<span class="muted" style="font-size:12px;font-weight:500"> /${m}</span></div>
@@ -1110,6 +1111,7 @@ function initTabs() {
       if (t.dataset.tab === "informed") enterInformed(); else leaveInformed();
       if (t.dataset.tab === "daily") enterDaily(); else leaveDaily();
       if (t.dataset.tab === "universe") { resumeUniverseCycler(); syncUniverseHScroll(); } else pauseUniverseCycler();
+      if (t.dataset.tab === "charts") enterCharts(); else leaveCharts();
     }));
 }
 
@@ -2813,3 +2815,693 @@ initBot();
 boot();
 
 // asset-version bump 2026-06-30: force browser refetch (Stay Informed relevance UI was cache-stale)
+
+/* =====================================================================================
+   CHARTS TAB — "the Chart Room" + "Chart School"                          (2026-08-07)
+   Boundary: charts inform TIMING only — nothing here reads into verdicts or signals.
+   Data: charts/<TKR>.json = ~520 settled daily OHLCV bars (cloud-appended post-close);
+   the TODAY candle is drawn live from the Finnhub quote (o/h/l/c) while the market is
+   open. All indicators (MA/RSI/S&R) compute client-side from the bars. Levels are drawn
+   BY RULE (swing pivots, 2.5%-clustered, >=2 touches) — never by hand, never invented.
+   ===================================================================================== */
+const CR = {
+  tkr: null, bars: null, live: null,   // live = {o,h,l,c,d} synthetic today-candle
+  range: "6M", scale: "D",
+  ovl: { sr: true, ma: true, cost: true, earn: true, vol: true },
+  cache: new Map(), timer: null, signals: null, lastGeo: null,
+};
+const CR_RANGES = { "3M": 63, "6M": 126, "1Y": 251, "2Y": 9999 };
+
+function crSMA(vals, w) {
+  const out = new Array(vals.length).fill(null); let s = 0;
+  for (let i = 0; i < vals.length; i++) {
+    s += vals[i]; if (i >= w) s -= vals[i - w];
+    if (i >= w - 1) out[i] = s / w;
+  }
+  return out;
+}
+function crRSI(vals, w = 14) {
+  const out = new Array(vals.length).fill(null);
+  let ag = null, al = null, g = 0, l = 0;
+  for (let i = 1; i < vals.length; i++) {
+    const ch = vals[i] - vals[i - 1], up = Math.max(ch, 0), dn = Math.max(-ch, 0);
+    if (i <= w) { g += up; l += dn; if (i === w) { ag = g / w; al = l / w; } }
+    else { ag = (ag * (w - 1) + up) / w; al = (al * (w - 1) + dn) / w; }
+    if (ag !== null) out[i] = 100 - 100 / (1 + (al > 1e-12 ? ag / al : 1e9));
+  }
+  return out;
+}
+// Swing pivots (k=3) + clustered S/R levels over the trailing window — the same rule the
+// backtest used: a level is real only when >=2 confirmed swings agree within 2.5%.
+function crLevels(bars, look = 190) {
+  const K = 3, n = bars.c.length, piv = [];
+  const lo = Math.max(K, n - look);
+  for (let i = lo; i < n - K; i++) {
+    let isH = true, isL = true;
+    for (let j = i - K; j <= i + K; j++) {
+      if (bars.h[j] > bars.h[i]) isH = false;
+      if (bars.l[j] < bars.l[i]) isL = false;
+    }
+    if (isH) piv.push({ i, p: bars.h[i] });
+    if (isL) piv.push({ i, p: bars.l[i] });
+  }
+  piv.sort((a, b) => a.p - b.p);
+  const cls = [];
+  for (const pv of piv) {
+    const cl = cls.find((c) => Math.abs(pv.p - c.level) / c.level < 0.025);
+    if (cl) { cl.m.push(pv); cl.level = cl.m.reduce((s, x) => s + x.p, 0) / cl.m.length; }
+    else cls.push({ level: pv.p, m: [pv] });
+  }
+  return cls.filter((c) => c.m.length >= 2)
+    .map((c) => ({ level: c.level, touches: c.m.length, last: bars.d[Math.max(...c.m.map((x) => x.i))] }));
+}
+async function crLoadBars(tkr) {
+  if (CR.cache.has(tkr)) return CR.cache.get(tkr);
+  const r = await fetch(`charts/${encodeURIComponent(tkr)}.json?v=${(DATA.meta && DATA.meta.date) || ""}`, { cache: "no-store" });
+  if (!r.ok) throw new Error("no chart data");
+  const j = await r.json();
+  CR.cache.set(tkr, j);
+  return j;
+}
+async function crSignals() {
+  if (CR.signals) return CR.signals;
+  try { CR.signals = await (await fetch("signals.json", { cache: "no-store" })).json(); }
+  catch (e) { CR.signals = {}; }
+  return CR.signals;
+}
+function crRowFor(tkr) {
+  return DATA.universe.find((x) => x.ticker === tkr) || null;
+}
+function crHolding(tkr) {
+  return DATA.portfolio.find((x) => x.ticker === tkr) || null;
+}
+// weekly resample (ISO week buckets by Monday) — MAs/RSI recompute on the resampled series
+function crWeekly(bars) {
+  const out = { d: [], o: [], h: [], l: [], c: [], v: [] };
+  let wk = null;
+  for (let i = 0; i < bars.d.length; i++) {
+    const dt = new Date(bars.d[i] + "T00:00:00Z");
+    const mon = new Date(dt); mon.setUTCDate(dt.getUTCDate() - ((dt.getUTCDay() + 6) % 7));
+    const key = mon.toISOString().slice(0, 10);
+    if (key !== wk) {
+      wk = key;
+      out.d.push(bars.d[i]); out.o.push(bars.o[i]); out.h.push(bars.h[i]);
+      out.l.push(bars.l[i]); out.c.push(bars.c[i]); out.v.push(bars.v[i]);
+    } else {
+      const j = out.d.length - 1;
+      out.d[j] = bars.d[i];
+      out.h[j] = Math.max(out.h[j], bars.h[i]);
+      out.l[j] = Math.min(out.l[j], bars.l[i]);
+      out.c[j] = bars.c[i]; out.v[j] += bars.v[i];
+    }
+  }
+  return out;
+}
+// merged view = settled bars + (optionally) the live today-candle
+function crView() {
+  const b = CR.bars;
+  if (!b) return null;
+  const m = { d: b.d.slice(), o: b.o.slice(), h: b.h.slice(), l: b.l.slice(), c: b.c.slice(), v: b.v.slice() };
+  if (CR.live && CR.live.d > m.d[m.d.length - 1]) {
+    m.d.push(CR.live.d); m.o.push(CR.live.o); m.h.push(CR.live.h);
+    m.l.push(CR.live.l); m.c.push(CR.live.c); m.v.push(0);
+  }
+  return CR.scale === "W" ? crWeekly(m) : m;
+}
+
+function crBuildSvg(view, feats) {
+  const N = view.c.length;
+  const win = Math.min(CR_RANGES[CR.range] || 126, N);
+  const s0 = N - win;
+  const X0 = 8, X1 = 826, Y0 = 16, Y1 = 356, VY0 = 372, VY1 = 436, W = 886, H = 462;
+  const SLOTS = win + 6;
+  const xs = (j) => X0 + (X1 - X0) * (j + 0.5) / SLOTS;
+  let lo = Infinity, hi = -Infinity;
+  for (let i = s0; i < N; i++) { lo = Math.min(lo, view.l[i]); hi = Math.max(hi, view.h[i]); }
+  if (CR.ovl.cost && feats.avgCost) { lo = Math.min(lo, feats.avgCost); hi = Math.max(hi, feats.avgCost); }
+  const pad = (hi - lo) * 0.06 || 1; lo -= pad; hi += pad;
+  const ys = (p) => Y1 - (Y1 - Y0) * (p - lo) / (hi - lo);
+  let vmax = 1;
+  for (let i = s0; i < N; i++) vmax = Math.max(vmax, view.v[i]);
+  const yv = (v) => VY1 - (VY1 - VY0) * v / vmax;
+  const cw = Math.max(1.2, (X1 - X0) / SLOTS * 0.62);
+  const f1 = (x) => x.toFixed(1);
+  const parts = [];
+  // grid + y labels
+  const span = hi - lo;
+  const step = span > 400 ? 100 : span > 160 ? 50 : span > 80 ? 20 : span > 40 ? 10 : span > 16 ? 5 : span > 8 ? 2 : 1;
+  for (let gp = Math.ceil(lo / step) * step; gp < hi; gp += step) {
+    parts.push(`<line x1="${X0}" y1="${f1(ys(gp))}" x2="${X1}" y2="${f1(ys(gp))}" stroke="#e7e2d3"/>`);
+    parts.push(`<text x="${X1 + 8}" y="${f1(ys(gp) + 3.5)}" class="cr-ax">${step < 2 ? gp.toFixed(1) : gp.toFixed(0)}</text>`);
+  }
+  // month/quarter ticks
+  let seenM = "";
+  for (let i = s0; i < N; i++) {
+    const mk = view.d[i].slice(0, 7);
+    if (mk !== seenM) {
+      seenM = mk;
+      const j = i - s0;
+      if (j > 2) {
+        const mo = new Date(view.d[i] + "T00:00:00Z");
+        const lab = mo.toLocaleString("en-US", { month: "short", timeZone: "UTC" });
+        const showYr = mo.getUTCMonth() === 0;
+        if (win <= 140 || mo.getUTCMonth() % 3 === 0) {
+          parts.push(`<line x1="${f1(xs(j))}" y1="${Y0}" x2="${f1(xs(j))}" y2="${VY1}" stroke="#eeeadd"/>`);
+          parts.push(`<text x="${f1(xs(j))}" y="${VY1 + 16}" class="cr-ax" text-anchor="middle">${showYr ? lab + " ’" + String(mo.getUTCFullYear()).slice(2) : lab}</text>`);
+        }
+      }
+    }
+  }
+  // S/R zones (staggered labels)
+  if (CR.ovl.sr) {
+    const sr = [];
+    const lastY = [-99, -99];
+    const px = view.c[N - 1];
+    for (const c of feats.levels.filter((c) => c.level > lo && c.level < hi).sort((a, b) => a.level - b.level)) {
+      const col = c.level >= px ? "#9a6b25" : "#1a2a55";
+      const band = c.level * 0.006, ya = ys(c.level + band), yb = ys(c.level - band), ly = ys(c.level);
+      sr.push(`<rect x="${X0}" y="${f1(ya)}" width="${X1 - X0}" height="${f1(yb - ya)}" fill="${col}" opacity="0.08"/>`);
+      sr.push(`<line x1="${X0}" y1="${f1(ly)}" x2="${X1}" y2="${f1(ly)}" stroke="${col}" stroke-dasharray="1 3" opacity="0.7"/>`);
+      const colx = Math.abs(ly - lastY[0]) >= 18 ? 0 : 1;
+      lastY[colx] = ly;
+      const lx = colx === 0 ? X1 - 118 : X1 - 244;
+      const lab = `${c.level >= px ? "R" : "S"} ${c.level >= 100 ? c.level.toFixed(0) : c.level.toFixed(1)} · ${c.touches}t · ${c.last.slice(5)}`;
+      sr.push(`<g><rect x="${lx}" y="${f1(ly - 9)}" width="112" height="15" rx="2" fill="#fbfbf7" stroke="${col}" stroke-width="0.7" opacity="0.95"/>
+        <text x="${lx + 56}" y="${f1(ly + 2.5)}" class="cr-srlab" fill="${col}" text-anchor="middle">${lab}</text></g>`);
+    }
+    parts.push(`<g>${sr.join("")}</g>`);
+  }
+  // MAs
+  if (CR.ovl.ma) {
+    const mas = [[feats.ma20, "#2c3f77", ""], [feats.ma50, "#9a6b25", ""], [feats.ma200, "#8b8e97", "4 3"]];
+    for (const [ser, col, dash] of mas) {
+      const pts = [];
+      for (let i = s0; i < N; i++) if (ser[i] != null) pts.push(`${f1(xs(i - s0))},${f1(ys(ser[i]))}`);
+      if (pts.length > 1) parts.push(`<polyline points="${pts.join(" ")}" fill="none" stroke="${col}" stroke-width="1.4"${dash ? ` stroke-dasharray="${dash}"` : ""}/>`);
+    }
+  }
+  // candles + volume
+  const cnd = [], vol = [];
+  for (let i = s0; i < N; i++) {
+    const up = view.c[i] >= view.o[i], col = up ? "#15803d" : "#be123c";
+    const x = xs(i - s0);
+    const isLive = CR.live && CR.scale === "D" && view.d[i] === CR.live.d;
+    cnd.push(`<line x1="${f1(x)}" y1="${f1(ys(view.h[i]))}" x2="${f1(x)}" y2="${f1(ys(view.l[i]))}" stroke="${col}"/>`);
+    const top = ys(Math.max(view.o[i], view.c[i]));
+    const bot = Math.max(ys(Math.min(view.o[i], view.c[i])), top + 1);
+    cnd.push(`<rect x="${f1(x - cw / 2)}" y="${f1(top)}" width="${f1(cw)}" height="${f1(bot - top)}" fill="${col}"${isLive ? ' opacity="0.75"' : ""}/>`);
+    if (view.v[i] > 0) vol.push(`<rect x="${f1(x - cw / 2)}" y="${f1(yv(view.v[i]))}" width="${f1(cw)}" height="${f1(VY1 - yv(view.v[i]))}" fill="${col}" opacity="0.35"/>`);
+  }
+  parts.push(`<g>${cnd.join("")}</g>`);
+  if (CR.ovl.vol) parts.push(`<g>${vol.join("")}<text x="${X0 + 2}" y="${VY0 + 9}" class="cr-ax">volume</text></g>`);
+  // avg cost
+  if (CR.ovl.cost && feats.avgCost && feats.avgCost > lo && feats.avgCost < hi) {
+    const yc = ys(feats.avgCost);
+    parts.push(`<g><line x1="${X0}" y1="${f1(yc)}" x2="${X1}" y2="${f1(yc)}" stroke="#1a2a55" stroke-width="1.3" stroke-dasharray="7 4"/>
+      <rect x="${X0 + 4}" y="${f1(yc - 17)}" width="96" height="15" rx="2" fill="#1a2a55"/>
+      <text x="${X0 + 52}" y="${f1(yc - 6)}" class="cr-srlab" fill="#fbfbf7" text-anchor="middle">your avg ${feats.avgCost.toFixed(2)}</text></g>`);
+  }
+  // earnings marker (right gutter)
+  if (CR.ovl.earn && feats.earn) {
+    const xe = xs(win + 3);
+    parts.push(`<g><line x1="${f1(xe)}" y1="${Y0}" x2="${f1(xe)}" y2="${Y1}" stroke="#b45309" stroke-width="1.2" stroke-dasharray="3 3"/>
+      <rect x="${f1(xe - 36)}" y="${Y0}" width="72" height="28" rx="3" fill="#fdf3e7" stroke="#b45309" stroke-width="0.8"/>
+      <text x="${f1(xe)}" y="${Y0 + 12}" class="cr-srlab" fill="#b45309" text-anchor="middle">earnings</text>
+      <text x="${f1(xe)}" y="${Y0 + 23}" class="cr-srlab" fill="#b45309" text-anchor="middle">${feats.earn.slice(5)}</text></g>`);
+  }
+  // last price tag
+  const px = view.c[N - 1], yp = ys(px);
+  parts.push(`<rect x="${X1 + 2}" y="${f1(yp - 8)}" width="52" height="16" rx="2" fill="#15181f"/>
+    <text x="${X1 + 28}" y="${f1(yp + 3.5)}" class="cr-srlab" fill="#fbfbf7" text-anchor="middle">${px >= 100 ? px.toFixed(0) : px.toFixed(2)}</text>`);
+  // crosshair skeleton
+  parts.push(`<g id="cr-xhair" style="display:none">
+    <line id="cr-xv" y1="${Y0}" y2="${VY1}" stroke="#454b57" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <line id="cr-xh" x1="${X0}" x2="${X1}" stroke="#454b57" stroke-width="0.7" stroke-dasharray="2 2"/></g>`);
+  CR.lastGeo = { X0, X1, Y0, Y1, VY1, SLOTS, lo, hi, s0, win, W, H };
+  return `<svg id="cr-svg" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">${parts.join("")}</svg>`;
+}
+
+function crFeatures(tkr, view) {
+  const b = view;
+  const closes = b.c;
+  const feats = {};
+  feats.ma20 = crSMA(closes, 20); feats.ma50 = crSMA(closes, 50); feats.ma200 = crSMA(closes, 200);
+  feats.rsi = crRSI(closes);
+  feats.levels = crLevels(b, CR.scale === "W" ? 104 : 190);
+  const h = crHolding(tkr);
+  feats.avgCost = h && h.shares ? h.cost / h.shares : null;
+  feats.hi52 = Math.max(...b.h.slice(-252)); feats.lo52 = Math.min(...b.l.slice(-252));
+  const n = closes.length;
+  feats.px = closes[n - 1];
+  const v5 = b.v.slice(-6, -1).filter(Boolean), v20 = b.v.slice(-21, -1).filter(Boolean);
+  feats.volRatio = v5.length && v20.length ? (v5.reduce((a, x) => a + x, 0) / v5.length) / (v20.reduce((a, x) => a + x, 0) / v20.length) : null;
+  return feats;
+}
+
+function crTradersRead(tkr, view, feats) {
+  const n = view.c.length, px = feats.px;
+  const above = feats.levels.filter((c) => c.level >= px).sort((a, b) => a.level - b.level);
+  const below = feats.levels.filter((c) => c.level < px).sort((a, b) => b.level - a.level);
+  const r1 = above[0], r2 = above[1], s1 = below[0], s2 = below[1];
+  const fp = (p) => "$" + (p >= 100 ? p.toFixed(0) : p.toFixed(1));
+  const ma50 = feats.ma50[n - 1], ma200 = feats.ma200[n - 1], ma20 = feats.ma20[n - 1];
+  const rsi = feats.rsi[n - 1];
+  // trend prose from structure
+  let trend;
+  if (ma200 && px > ma200 && ma50 && px > ma50) trend = `Uptrend — price above the rising long-term averages; pullbacks to the averages are the pattern to watch.`;
+  else if (ma200 && px < ma200 && ma50 && px < ma50) trend = `Downtrend — price below both the 50 and 200-day averages; rallies into overhead supply tend to stall until a base forms.`;
+  else trend = `Transition — price is between its major averages; repair after a fall (or first crack in a trend). Structure decides from here.`;
+  // washout state
+  let wash = "";
+  if (rsi != null && rsi < 30) wash = `<span class="cr-wash">KNIFE ZONE — RSI ${rsi.toFixed(0)}; the tested pattern waits for the cross BACK above 30</span>`;
+  else {
+    for (let i = Math.max(1, n - 5); i < n; i++) {
+      if (feats.rsi[i - 1] != null && feats.rsi[i - 1] < 30 && feats.rsi[i] >= 30) {
+        wash = `<span class="cr-wash stamped">REBOUND STAMPED ${view.d[i].slice(5)} — RSI crossed back above 30</span>`; break;
+      }
+    }
+  }
+  const u = crRowFor(tkr);
+  const gate = u && u.mom ? momGate(u) : (ma20 && ma50 ? `<span class="mg mg-${px >= ma50 ? "go" : px >= ma20 ? "turn" : "wait"}">${px >= ma50 ? "GO" : px >= ma20 ? "TURN" : "WAIT"}</span>` : "—");
+  const sig = CR.signals || {};
+  const earn = sig.earnings_next && sig.earnings_next[tkr];
+  const rows = [];
+  rows.push(["Trend", trend]);
+  rows.push(["Gate", `${gate} ${ma20 && ma50 ? `MA20 ${fp(ma20)} · MA50 ${fp(ma50)}${ma200 ? ` · MA200 ${fp(ma200)}` : ""}` : ""}`]);
+  rows.push(["Resistance", r1 ? `${fp(r1.level)} overhead (${r1.touches} touches, last ${r1.last.slice(5)})${r2 ? `, then ${fp(r2.level)}` : ""}.` : `No tested ceiling inside this window — price is in open air near its highs.`]);
+  rows.push(["Support", s1 ? `${fp(s1.level)} below (${s1.touches} touches, last ${s1.last.slice(5)})${s2 ? `, then ${fp(s2.level)}` : ""}.` : `No tested floor inside this window — the last defended shelf is below the visible range.`]);
+  rows.push(["RSI(14)", rsi != null ? `${rsi.toFixed(0)} — ${rsi < 30 ? "oversold; panic zone" : rsi > 70 ? "overbought; stretched" : "neutral"}. ${wash}` : "—"]);
+  if (feats.volRatio != null) rows.push(["Volume", `5-day avg ${feats.volRatio.toFixed(1)}× the 20-day — ${feats.volRatio > 1.15 ? "expanding; moves carry more conviction" : feats.volRatio < 0.85 ? "contracting; quiet tape" : "steady"}.`]);
+  rows.push(["52-week", `${fp(feats.lo52)} — ${fp(feats.hi52)}; now ${((px / feats.hi52 - 1) * 100).toFixed(0)}% from the high.`]);
+  if (earn) rows.push(["Event", `Earnings ${earn} — gaps ignore levels; a fresh setup after the print beats a position through it.`]);
+  const html = rows.map(([k, v]) => `<div class="cr-trrow"><span class="cr-trk">${k}</span><span>${v}</span></div>`).join("");
+  // playbooks (honest: risk structures, not signals — with the study numbers)
+  let pb = "";
+  if (r1 && ma20) {
+    const entry = r1.level * 1.005, target = r2 ? r2.level : (ma50 && ma50 > entry ? ma50 : feats.hi52);
+    const stop = s1 ? Math.min(s1.level * 0.99, ma20 * 0.99) : ma20 * 0.99;
+    const rr = (target - entry) / Math.max(entry - stop, 0.01);
+    pb += `<div class="cr-pb"><div class="cr-pbh">Breakout structure <span class="cr-lessonlink" onclick="openLesson(9)">lesson 09 →</span></div>
+      A close above <b>${fp(entry)}</b> (the ${r1.touches}-touch ceiling) opens the road toward <b>${fp(target)}</b>; stop under <b>${fp(stop)}</b> → reward-to-risk ≈ <b>${rr > 0 ? rr.toFixed(1) : "—"}</b>.
+      <i>Our own 50-name test: breakouts alone carried no edge — this is a risk template, not a signal.</i></div>`;
+  }
+  if (s1) {
+    pb += `<div class="cr-pb"><div class="cr-pbh">Pullback structure <span class="cr-lessonlink" onclick="openLesson(4)">lesson 04 →</span></div>
+      Patient bids at the <b>${fp(s1.level)}</b> shelf (${s1.touches} touches), stop just beneath it — tighter risk, better price, may never fill.
+      <i>Best used with the washout stamp below.</i></div>`;
+  }
+  pb += `<div class="cr-pb cr-pb-study"><div class="cr-pbh">What our data says <span class="cr-lessonlink" onclick="openLesson(11)">lesson 11 →</span></div>
+    Across 50 of our own names, the only entry timing that stayed positive everywhere: <b>buy weakness after it stabilizes</b> —
+    RSI crossing back above 30 ran ≈ +2–4% vs untimed entry over the next quarter (fails ~1 name in 3; suggestive, not proven). Chasing strength tested at zero.</div>`;
+  return `<h3>the Trader’s Read</h3>
+    <div class="cr-read-note">Auto-written from this chart’s computed features — education, not a signal. Levels are rule-drawn (swing clusters, touch-counted).</div>
+    ${html}<h3 style="margin-top:16px">Entry structures</h3>${pb}`;
+}
+
+function crRenderRoom() {
+  const el = document.getElementById("cr-room-body");
+  if (!CR.bars) { el.innerHTML = `<div class="cr-empty">Pick a name to open its chart.</div>`; return; }
+  const tkr = CR.tkr;
+  const view = crView();
+  const feats = crFeatures(tkr, view);
+  const sig = CR.signals || {};
+  feats.earn = sig.earnings_next && sig.earnings_next[tkr];
+  const u = crRowFor(tkr), h = crHolding(tkr);
+  const name = (u && u.name) || (h && h.name) || "";
+  const sect = (u && u.sector) || "";
+  const px = (h && h.price) || (u && u.price) || feats.px;
+  const dp = (h && h.day_pct) != null ? h.day_pct : (u && u.day_pct);
+  const verd = (u && u.verdict) || (h && h.verdict) || "";
+  const wt = h ? ` · ${h.weight_pct}% of book` : "";
+  const svg = crBuildSvg(view, feats);
+  el.innerHTML = `
+    <div class="cr-grid"><div>
+      <div class="cr-tickhead">
+        <span class="cr-tk">${esc(tkr)}</span><span class="cr-nm">${esc(name)}${sect ? " · " + esc(sect) : ""}${wt}</span>
+        <span class="cr-px">${fmtUSD(px, 2)}</span>
+        ${dp != null ? `<span class="cr-dd ${signClass(dp)}">${fmtPct(dp)}</span>` : ""}
+        ${verd ? verdictBadge(verd) : ""}
+        <span class="cr-chip52">52w ${feats.lo52 >= 100 ? feats.lo52.toFixed(0) : feats.lo52.toFixed(1)} — ${feats.hi52 >= 100 ? feats.hi52.toFixed(0) : feats.hi52.toFixed(1)}</span>
+      </div>
+      <div class="cr-ctl">
+        <div class="cr-ranges">
+          ${Object.keys(CR_RANGES).map((r) => `<button class="cr-rbtn${CR.range === r ? " on" : ""}" data-crr="${r}">${r}</button>`).join("")}
+          <span class="cr-rsep"></span>
+          <button class="cr-rbtn cr-scale${CR.scale === "D" ? " on" : ""}" data-crs="D">D</button>
+          <button class="cr-rbtn cr-scale${CR.scale === "W" ? " on" : ""}" data-crs="W">W</button>
+        </div>
+        <div class="cr-ovl">
+          <label><input type="checkbox" data-cro="sr"${CR.ovl.sr ? " checked" : ""}>S/R levels</label>
+          <label><input type="checkbox" data-cro="ma"${CR.ovl.ma ? " checked" : ""}>MA 20·50·200</label>
+          ${feats.avgCost ? `<label><input type="checkbox" data-cro="cost"${CR.ovl.cost ? " checked" : ""}>my cost</label>` : ""}
+          ${feats.earn ? `<label><input type="checkbox" data-cro="earn"${CR.ovl.earn ? " checked" : ""}>earnings</label>` : ""}
+          <label><input type="checkbox" data-cro="vol"${CR.ovl.vol ? " checked" : ""}>volume</label>
+        </div>
+      </div>
+      <div class="cr-chartcard"><div id="cr-readout"></div>${svg}</div>
+      <div class="cr-foot">Settled daily bars through ${esc(CR.bars.asof || "")}${CR.live ? " + today’s live candle from the quote feed" : ""}.
+        Levels are computed from swing highs &amp; lows (2.5%-clustered, touch-counted) — drawn by rule, never by hand. Crosshair: move your cursor over the chart.</div>
+    </div>
+    <div class="cr-read">${crTradersRead(tkr, view, feats)}</div></div>`;
+  // wire controls
+  el.querySelectorAll("[data-crr]").forEach((b) => b.addEventListener("click", () => { CR.range = b.dataset.crr; crRenderRoom(); }));
+  el.querySelectorAll("[data-crs]").forEach((b) => b.addEventListener("click", () => { CR.scale = b.dataset.crs; crRenderRoom(); }));
+  el.querySelectorAll("[data-cro]").forEach((c) => c.addEventListener("change", () => { CR.ovl[c.dataset.cro] = c.checked; crRenderRoom(); }));
+  crWireCrosshair(view);
+  crMarkChips();
+}
+function crWireCrosshair(view) {
+  const svg = document.getElementById("cr-svg"), ro = document.getElementById("cr-readout");
+  if (!svg || !CR.lastGeo) return;
+  const G = CR.lastGeo;
+  svg.addEventListener("mousemove", (e) => {
+    const r = svg.getBoundingClientRect();
+    const vx = (e.clientX - r.left) * G.W / r.width, vy = (e.clientY - r.top) * G.H / r.height;
+    const xh = document.getElementById("cr-xhair");
+    if (vx < G.X0 || vx > G.X1 || vy > G.VY1) { xh.style.display = "none"; ro.style.display = "none"; return; }
+    let j = Math.round((vx - G.X0) * G.SLOTS / (G.X1 - G.X0) - 0.5);
+    j = Math.max(0, Math.min(j, G.win - 1));
+    const i = G.s0 + j;
+    const bx = G.X0 + (G.X1 - G.X0) * (j + 0.5) / G.SLOTS;
+    xh.style.display = "";
+    document.getElementById("cr-xv").setAttribute("x1", bx); document.getElementById("cr-xv").setAttribute("x2", bx);
+    document.getElementById("cr-xh").setAttribute("y1", vy); document.getElementById("cr-xh").setAttribute("y2", vy);
+    const cp = (G.lo + (G.Y1 - vy) * (G.hi - G.lo) / (G.Y1 - G.Y0));
+    ro.style.display = "";
+    const fm = (x) => x >= 100 ? x.toFixed(1) : x.toFixed(2);
+    ro.innerHTML = `<b>${view.d[i]}</b> &nbsp;O ${fm(view.o[i])} &nbsp;H ${fm(view.h[i])} &nbsp;L ${fm(view.l[i])} &nbsp;C <b>${fm(view.c[i])}</b>${view.v[i] ? ` &nbsp;V ${(view.v[i] / 1e6).toFixed(1)}M` : ""}${vy <= G.Y1 ? ` &nbsp;·&nbsp; ${fm(cp)}` : ""}`;
+  });
+  svg.addEventListener("mouseleave", () => {
+    const xh = document.getElementById("cr-xhair");
+    if (xh) xh.style.display = "none";
+    ro.style.display = "none";
+  });
+}
+async function crLiveCandle() {
+  // today's candle, live: Finnhub quote carries o/h/l/c for the current session
+  if (!CR.tkr || !CR.bars || !marketOpenNow()) return;
+  if (Date.now() < throttleUntil) return;
+  try {
+    const q = await fetchQuote(CR.tkr);
+    if (q && q.c > 0 && q.o > 0 && q.t) {
+      const qd = new Date(q.t * 1000).toISOString().slice(0, 10);
+      if (qd > CR.bars.d[CR.bars.d.length - 1]) {
+        CR.live = { d: qd, o: q.o, h: q.h, l: q.l, c: q.c };
+        crRenderRoom();
+      }
+    }
+  } catch (e) { /* quiet — the settled chart is already honest */ }
+}
+async function openChart(tkr) {
+  const btn = document.querySelector('.tab[data-tab="charts"]');
+  if (btn && !btn.classList.contains("active")) btn.click();
+  crShowSub("room");
+  CR.tkr = tkr; CR.live = null;
+  try { localStorage.setItem("jc_chart_tkr", tkr); } catch (e) {}
+  const el = document.getElementById("cr-room-body");
+  el.innerHTML = `<div class="cr-empty">Loading ${esc(tkr)}…</div>`;
+  try {
+    await crSignals();
+    CR.bars = await crLoadBars(tkr);
+    crRenderRoom();
+    crLiveCandle();
+  } catch (e) {
+    CR.bars = null;
+    el.innerHTML = `<div class="cr-empty">No chart data for ${esc(tkr)} yet — bars are baked daily; new names appear after the next cloud build.</div>`;
+  }
+}
+function crMarkChips() {
+  document.querySelectorAll(".cr-chip").forEach((c) => c.classList.toggle("on", c.dataset.tk === CR.tkr));
+}
+function crAllNames() {
+  const seen = new Set(), out = [];
+  for (const p of DATA.portfolio) { if (!seen.has(p.ticker)) { seen.add(p.ticker); out.push({ t: p.ticker, n: p.name || "" }); } }
+  for (const u of DATA.universe) { if (!seen.has(u.ticker)) { seen.add(u.ticker); out.push({ t: u.ticker, n: u.name || "" }); } }
+  return out;
+}
+function crShowSub(which) {
+  document.querySelectorAll("#c-subtabs .csub-btn").forEach((b) => b.classList.toggle("active", b.dataset.csub === which));
+  document.querySelectorAll("#tab-charts .csub").forEach((p) => p.classList.toggle("active", p.id === "csub-" + which));
+  document.getElementById("cr-title").textContent = which === "school" ? "Chart School" : "the Chart Room";
+  if (which === "school") renderSchool();
+}
+function openLesson(nn) {
+  crShowSub("school");
+  const anchor = document.getElementById("cs-l" + nn);
+  if (anchor) anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+}
+function enterCharts() {
+  if (!CR.tkr) {
+    let last = null;
+    try { last = localStorage.getItem("jc_chart_tkr"); } catch (e) {}
+    const biggest = DATA.portfolio.slice().sort((a, b) => b.value - a.value)[0];
+    openChart(last || (biggest && biggest.ticker) || DATA.universe[0].ticker);
+    const chips = document.getElementById("cr-holdchips");
+    if (chips && !chips.childElementCount) {
+      chips.innerHTML = DATA.portfolio.slice().sort((a, b) => b.value - a.value).slice(0, 8)
+        .map((p) => `<button class="cr-chip" data-tk="${esc(p.ticker)}">${esc(p.ticker)}</button>`).join("");
+      chips.querySelectorAll(".cr-chip").forEach((c) => c.addEventListener("click", () => openChart(c.dataset.tk)));
+    }
+  }
+  if (CR.timer) clearInterval(CR.timer);
+  CR.timer = setInterval(crLiveCandle, 60000);
+}
+function leaveCharts() { if (CR.timer) { clearInterval(CR.timer); CR.timer = null; } }
+function initCharts() {
+  document.querySelectorAll("#c-subtabs .csub-btn").forEach((b) =>
+    b.addEventListener("click", () => crShowSub(b.dataset.csub)));
+  const inp = document.getElementById("cr-search"), list = document.getElementById("cr-search-list");
+  if (!inp) return;
+  let selIdx = -1;
+  function hide() { list.hidden = true; selIdx = -1; }
+  function show(items) {
+    if (!items.length) { hide(); return; }
+    list.innerHTML = items.map((x, i) => `<div class="cr-search-item${i === selIdx ? " sel" : ""}" data-tk="${esc(x.t)}"><b>${esc(x.t)}</b><span>${esc(x.n)}</span></div>`).join("");
+    list.hidden = false;
+    list.querySelectorAll(".cr-search-item").forEach((r) => r.addEventListener("mousedown", (e) => { e.preventDefault(); openChart(r.dataset.tk); inp.value = ""; hide(); }));
+  }
+  function matches() {
+    const q = inp.value.trim().toUpperCase();
+    // DATA is a top-level `let`, NOT window.DATA — typeof is the only safe pre-unlock probe
+    if (!q || typeof DATA === "undefined" || !DATA) return [];
+    const all = crAllNames();
+    const pri = all.filter((x) => x.t.startsWith(q));
+    const sec = all.filter((x) => !x.t.startsWith(q) && (x.t.includes(q) || x.n.toUpperCase().includes(q)));
+    return pri.concat(sec).slice(0, 12);
+  }
+  inp.addEventListener("input", () => { selIdx = -1; show(matches()); });
+  inp.addEventListener("keydown", (e) => {
+    const items = matches();
+    if (e.key === "ArrowDown") { e.preventDefault(); selIdx = Math.min(selIdx + 1, items.length - 1); show(items); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); selIdx = Math.max(selIdx - 1, 0); show(items); }
+    else if (e.key === "Enter") { e.preventDefault(); const pick = items[Math.max(selIdx, 0)]; if (pick) { openChart(pick.t); inp.value = ""; hide(); } }
+    else if (e.key === "Escape") hide();
+  });
+  inp.addEventListener("blur", () => setTimeout(hide, 150));
+}
+initCharts();
+
+/* ---------- Chart School: the curriculum ---------- */
+function crMiniChart(kind, bars) {
+  const n = bars.c.length, s0 = Math.max(0, n - 30);
+  const seg = { o: bars.o.slice(s0), h: bars.h.slice(s0), l: bars.l.slice(s0), c: bars.c.slice(s0) };
+  const m = seg.c.length;
+  let lo = Math.min(...seg.l), hi = Math.max(...seg.h);
+  const mx = (j) => 5 + j * 106 / (m - 1);
+  const my = (p) => 62 - 54 * (p - lo) / (hi - lo);
+  const parts = [];
+  if (kind === "line") {
+    parts.push(`<polyline points="${seg.c.map((c, j) => `${mx(j).toFixed(1)},${my(c).toFixed(1)}`).join(" ")}" fill="none" stroke="#1a2a55" stroke-width="1.5"/>`);
+  } else if (kind === "bars") {
+    for (let j = 0; j < m; j++) {
+      const col = seg.c[j] >= seg.o[j] ? "#15803d" : "#be123c", x = mx(j);
+      parts.push(`<line x1="${x.toFixed(1)}" y1="${my(seg.h[j]).toFixed(1)}" x2="${x.toFixed(1)}" y2="${my(seg.l[j]).toFixed(1)}" stroke="${col}"/>`);
+      parts.push(`<line x1="${(x - 1.6).toFixed(1)}" y1="${my(seg.o[j]).toFixed(1)}" x2="${x.toFixed(1)}" y2="${my(seg.o[j]).toFixed(1)}" stroke="${col}"/>`);
+      parts.push(`<line x1="${x.toFixed(1)}" y1="${my(seg.c[j]).toFixed(1)}" x2="${(x + 1.6).toFixed(1)}" y2="${my(seg.c[j]).toFixed(1)}" stroke="${col}"/>`);
+    }
+  } else if (kind === "candle" || kind === "ha") {
+    let series = seg;
+    if (kind === "ha") {
+      let ho = null, hc = null; const hs = { o: [], h: [], l: [], c: [] };
+      for (let j = 0; j < m; j++) {
+        const c2 = (seg.o[j] + seg.h[j] + seg.l[j] + seg.c[j]) / 4;
+        const o2 = ho === null ? (seg.o[j] + seg.c[j]) / 2 : (ho + hc) / 2;
+        hs.o.push(o2); hs.c.push(c2); hs.h.push(Math.max(seg.h[j], o2, c2)); hs.l.push(Math.min(seg.l[j], o2, c2));
+        ho = o2; hc = c2;
+      }
+      series = hs;
+    }
+    for (let j = 0; j < m; j++) {
+      const col = series.c[j] >= series.o[j] ? "#15803d" : "#be123c", x = mx(j);
+      parts.push(`<line x1="${x.toFixed(1)}" y1="${my(series.h[j]).toFixed(1)}" x2="${x.toFixed(1)}" y2="${my(series.l[j]).toFixed(1)}" stroke="${col}" stroke-width="0.8"/>`);
+      const t = my(Math.max(series.o[j], series.c[j])), b = Math.max(my(Math.min(series.o[j], series.c[j])), t + 0.8);
+      parts.push(`<rect x="${(x - 1.4).toFixed(1)}" y="${t.toFixed(1)}" width="2.8" height="${(b - t).toFixed(1)}" fill="${col}"/>`);
+    }
+  }
+  return `<svg viewBox="0 0 116 70" xmlns="http://www.w3.org/2000/svg">${parts.join("")}</svg>`;
+}
+function renderSchool() {
+  const el = document.getElementById("cs-body");
+  if (!el || el._rendered) return;
+  el._rendered = true;
+  const TOC = [
+    "Reading a candle", "Chart types", "Trend & market structure", "Support, resistance & the role flip",
+    "Volume — the fuel gauge", "Moving averages & our Gate", "Continuation patterns", "Reversal patterns",
+    "Breakouts — and bull traps", "Entries, stops & risk-reward", "What our own data says",
+  ];
+  const card = (nn, title, fig, body, live, liveTk) => `
+    <div class="cs-card${nn === 11 ? " cs-wide" : ""}" id="cs-l${nn}">
+      <span class="cs-lk">Lesson ${String(nn).padStart(2, "0")}</span><h4>${title}</h4>
+      ${fig ? `<figure>${fig}</figure>` : ""}${body}
+      ${live ? `<span class="cs-live" onclick="openChart('${liveTk}')">See it live: ${live} →</span>` : ""}</div>`;
+  const D = "cs-dlab", DB = "cs-dlab-b";
+  const figCandle = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg">
+    <line x1="90" y1="18" x2="90" y2="132" stroke="#15803d" stroke-width="2"/><rect x="72" y="45" width="36" height="60" fill="#15803d"/>
+    <text x="120" y="22" class="${D}">high</text><text x="120" y="50" class="${D}">close</text>
+    <text x="120" y="108" class="${D}">open</text><text x="120" y="133" class="${D}">low</text>
+    <line x1="210" y1="30" x2="210" y2="120" stroke="#be123c" stroke-width="2"/><rect x="192" y="52" width="36" height="45" fill="#be123c"/>
+    <text x="56" y="145" class="${D}">buyer’s day</text><text x="180" y="145" class="${D}">seller’s day</text></svg>`;
+  const figTrend = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="10,120 40,86 62,104 96,62 120,84 156,40 180,58 214,22" fill="none" stroke="#15803d" stroke-width="2"/>
+    <circle cx="62" cy="104" r="3" fill="none" stroke="#15803d" stroke-width="1.4"/><circle cx="120" cy="84" r="3" fill="none" stroke="#15803d" stroke-width="1.4"/>
+    <text x="12" y="30" class="${DB}" fill="#15803d">uptrend: higher highs + higher lows</text>
+    <text x="52" y="122" class="${D}">HL</text><text x="112" y="100" class="${D}">HL</text>
+    <polyline points="216,118 236,96 248,112 266,84" fill="none" stroke="#be123c" stroke-width="1.6"/>
+    <text x="272" y="138" class="${D}" fill="#be123c" text-anchor="end">break of structure = first warning</text></svg>`;
+  const figSR = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg">
+    <line x1="12" y1="78" x2="268" y2="78" stroke="#9a6b25" stroke-width="1.4" stroke-dasharray="5 3"/>
+    <polyline points="14,120 40,84 58,112 84,82 104,116 128,80 150,58 172,40 192,60 210,74 228,52 252,30" fill="none" stroke="#1a2a55" stroke-width="2"/>
+    <circle cx="40" cy="84" r="3.5" fill="none" stroke="#be123c" stroke-width="1.5"/><circle cx="84" cy="82" r="3.5" fill="none" stroke="#be123c" stroke-width="1.5"/>
+    <circle cx="128" cy="80" r="3.5" fill="none" stroke="#be123c" stroke-width="1.5"/><circle cx="210" cy="74" r="3.5" fill="none" stroke="#15803d" stroke-width="1.5"/>
+    <text x="26" y="103" class="${D}">3 touches = resistance</text><text x="140" y="48" class="${D}">breakout</text>
+    <text x="196" y="95" class="${D}">retest → support</text>
+    <path d="M210,64 l0,-14 l-4,5 m4,-5 l4,5" stroke="#15803d" stroke-width="1.6" fill="none"/></svg>`;
+  const figVol = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg">
+    <line x1="12" y1="60" x2="268" y2="60" stroke="#9a6b25" stroke-width="1.2" stroke-dasharray="5 3"/>
+    <polyline points="14,100 40,72 62,90 88,66 112,84 134,64 150,52 172,40" fill="none" stroke="#1a2a55" stroke-width="2"/>
+    ${[14,26,38,50,62,74,86,98,110,122].map((x,i)=>`<rect x="${x+2}" y="${132-8-(i%3)*4}" width="6" height="${8+(i%3)*4}" fill="#8b8e97" opacity="0.5"/>`).join("")}
+    <rect x="136" y="108" width="6" height="32" fill="#15803d" opacity="0.8"/><rect x="148" y="102" width="6" height="38" fill="#15803d" opacity="0.8"/>
+    <rect x="160" y="112" width="6" height="28" fill="#15803d" opacity="0.8"/>
+    <text x="132" y="100" class="${DB}" fill="#15803d">volume expands = real</text>
+    <text x="16" y="30" class="${D}">a breakout without volume is a rumor</text></svg>`;
+  const figMA = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="12,40 34,58 52,46 70,72 88,62 106,92 124,84 142,108 160,96 178,116 196,102 214,86 232,72 252,56" fill="none" stroke="#15181f" stroke-width="1.6"/>
+    <path d="M12,60 C 60,64 110,96 160,110 C 190,114 225,96 252,74" fill="none" stroke="#2c3f77" stroke-width="1.6"/>
+    <path d="M12,78 C 70,74 130,96 190,104 C 215,106 235,100 252,92" fill="none" stroke="#9a6b25" stroke-width="1.6"/>
+    <circle cx="238" cy="82" r="4" fill="#fbfbf7" stroke="#15803d" stroke-width="2"/>
+    <text x="252" y="66" class="${DB}" fill="#15803d" text-anchor="end">cross = GO</text>
+    <text x="140" y="132" class="${D}" text-anchor="middle">under both = WAIT · between = TURN · above = GO</text>
+    <text x="16" y="55" class="${D}" fill="#2c3f77">MA20</text><text x="16" y="92" class="${D}" fill="#9a6b25">MA50</text></svg>`;
+  const figCont = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="10,120 26,100 40,108 56,84 70,92 84,66" fill="none" stroke="#1a2a55" stroke-width="2"/>
+    <polyline points="84,66 94,74 104,68 114,78 124,72" fill="none" stroke="#1a2a55" stroke-width="1.5"/>
+    <line x1="80" y1="60" x2="128" y2="70" stroke="#9a6b25" stroke-dasharray="4 3"/><line x1="84" y1="82" x2="130" y2="90" stroke="#9a6b25" stroke-dasharray="4 3"/>
+    <polyline points="124,72 140,52 154,38" fill="none" stroke="#15803d" stroke-width="2.2"/>
+    <text x="14" y="52" class="${D}">flag</text>
+    <polyline points="168,118 184,92 196,104 210,84 222,94 236,80 250,88 262,78" fill="none" stroke="#1a2a55" stroke-width="1.8"/>
+    <line x1="180" y1="86" x2="264" y2="74" stroke="#9a6b25" stroke-dasharray="4 3"/><line x1="176" y1="122" x2="264" y2="92" stroke="#9a6b25" stroke-dasharray="4 3"/>
+    <text x="188" y="140" class="${D}">triangle: range tightens, then resolves</text></svg>`;
+  const figRev = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="10,120 30,60 48,88 68,58 88,124" fill="none" stroke="#1a2a55" stroke-width="2"/>
+    <line x1="16" y1="90" x2="92" y2="90" stroke="#be123c" stroke-dasharray="4 3"/>
+    <text x="16" y="140" class="${D}">double top: M shape, neckline breaks</text>
+    <polyline points="150,120 168,84 182,98 198,52 214,96 230,80 248,122" fill="none" stroke="#1a2a55" stroke-width="2"/>
+    <line x1="156" y1="98" x2="252" y2="98" stroke="#be123c" stroke-dasharray="4 3"/>
+    <text x="164" y="140" class="${D}">head &amp; shoulders</text></svg>`;
+  const figBrk = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg">
+    <line x1="12" y1="64" x2="130" y2="64" stroke="#9a6b25" stroke-width="1.3" stroke-dasharray="5 3"/>
+    <polyline points="14,110 34,72 52,96 74,68 92,88 110,58 124,44" fill="none" stroke="#15803d" stroke-width="2"/>
+    <text x="16" y="38" class="${DB}" fill="#15803d">clean break: close + volume + hold</text>
+    <line x1="152" y1="64" x2="268" y2="64" stroke="#9a6b25" stroke-width="1.3" stroke-dasharray="5 3"/>
+    <polyline points="154,108 176,70 192,92 210,58 224,52 238,74 252,102 264,118" fill="none" stroke="#be123c" stroke-width="2"/>
+    <circle cx="224" cy="52" r="4" fill="none" stroke="#be123c" stroke-width="1.5"/>
+    <text x="160" y="140" class="${D}" fill="#be123c">bull trap: pokes above, closes back under</text></svg>`;
+  const figRR = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg">
+    <line x1="30" y1="96" x2="250" y2="96" stroke="#1a2a55" stroke-width="1.4"/>
+    <line x1="30" y1="118" x2="250" y2="118" stroke="#be123c" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <line x1="30" y1="40" x2="250" y2="40" stroke="#15803d" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="34" y="90" class="${D}">entry — at the level, never mid-air</text>
+    <text x="34" y="132" class="${D}" fill="#be123c">stop — where the idea is WRONG</text>
+    <text x="34" y="34" class="${D}" fill="#15803d">target — next tested level</text>
+    <path d="M262,96 L262,118" stroke="#be123c" stroke-width="2"/><path d="M262,96 L262,40" stroke="#15803d" stroke-width="2"/>
+    <text x="268" y="112" class="${D}" fill="#be123c">1R</text><text x="268" y="66" class="${D}" fill="#15803d">2.5R</text></svg>`;
+  const study = `
+    <p><b>We do not teach folklore here.</b> Before this page shipped, we backtested the entry rules it explains on our own
+    universe — 15 random names, then 74 rule variants, then the winners frozen and retested on 35 names the search had never
+    seen (50 names, 5 years, entry at next day’s open, every method judged against each stock’s own drift — code audited for
+    look-ahead, results reproduced independently). The full result, unvarnished:</p>
+    <table class="cs-tbl"><tr><th>Entry rule</th><th>Sample 1 (15)</th><th>Sample 2 (15)</th><th>Sample 3 (20)</th><th>Verdict</th></tr>
+    <tr><td>Breakout (fresh 50-day high)</td><td class="neg">−0.4%</td><td class="neg">−1.2%</td><td>—</td><td>no edge, worst stop-race odds</td></tr>
+    <tr><td>Breakout + heavy volume</td><td class="neg">−2.1%</td><td class="neg">−4.8%</td><td>—</td><td>negative both samples</td></tr>
+    <tr><td>Pullback to support (uptrend)</td><td class="neg">−2.0%</td><td>+0.7%</td><td>—</td><td>negative in every robustness run</td></tr>
+    <tr><td>Golden cross / MA50 reclaim</td><td>≈0</td><td>flips sign</td><td>—</td><td>regime-dependent noise</td></tr>
+    <tr><td><b>RSI(14) rebound through 30</b></td><td class="pos">+2.0% · 11/15</td><td class="pos">+1.9% · 9/15</td><td class="pos">+4.1% · 14/20</td><td><b>only rule positive everywhere</b></td></tr></table>
+    <p>Read the last row honestly: <b>+2–4% median over the following quarter, works on roughly 2 names in 3, and the sample
+    cannot statistically separate it from timing luck</b> (oversold rebounds cluster in market-wide selloffs, so 50 names are
+    really a handful of independent episodes). No rule reached 80% of names — nothing does; anyone claiming otherwise is
+    selling an overfit backtest. What survives: <b>entries don’t create edge — they structure risk.</b> The one directional
+    truth in our data favors <b>buying weakness after it stabilizes</b> on already-vetted names, never chasing strength.
+    That is exactly how this desk already adds. The verdict decides <i>what</i>; the washout stamp helps with <i>when</i>.</p>`;
+  el.innerHTML = `
+    <div class="cs-cols">
+      <div class="cs-toc"><h3>the Curriculum</h3>
+        <ol>${TOC.map((t, i) => `<li onclick="openLesson(${i + 1})">${t}</li>`).join("")}</ol>
+        <p class="cs-toc-note">Short lessons, hand-drawn figures, and — where we make a claim — our own tested numbers.
+        Every “see it live” opens a real chart from this universe.</p></div>
+      <div><div class="cs-lgrid">
+        ${card(1, "Reading a candle", figCandle,
+          `<p>One candle is one session’s argument between buyers and sellers: the <b>body</b> is where it settled, the
+          <b>wicks</b> are where it was refused. Long lower wicks at a support level mean buyers showed up into the fall —
+          that is the entire grammar; everything else is sentences built from it.</p>`, "the July defense on RKLB", "RKLB")}
+        ${card(2, "Chart types", `<div class="cs-types" id="cs-types"></div>`,
+          `<p>The same days, four dialects. <b>Line</b> shows the path, <b>OHLC bars</b> add each day’s range,
+          <b>candlesticks</b> make the buyer/seller fight visible at a glance, and <b>Heikin-Ashi</b> averages the noise away
+          to show the trend’s spine. The Chart Room speaks candlestick; know the others exist.</p>`, null, null)}
+        ${card(3, "Trend & market structure", figTrend,
+          `<p>A trend is just a staircase: <b>higher highs and higher lows</b> going up, lower ones going down. The market
+          tips its hand at the joints — when a stock stops making higher lows, the staircase is broken <i>before</i> the
+          averages notice. Structure first, indicators second.</p>`, "NVDA’s staircase", "NVDA")}
+        ${card(4, "Support, resistance & the role flip", figSR,
+          `<p>A level the market rejects repeatedly is a memory. <b>Support</b> is where regret and waiting bids live;
+          <b>resistance</b> is where trapped buyers wait to get out even. When price finally breaks a ceiling and
+          <b>retests it from above</b>, the trapped side flips — the old ceiling becomes a floor, with the stop just
+          beneath it. Our levels are computed, never drawn by eye: swing points, clustered, touch-counted.</p>`, "the tested shelf on SAP", "SAP")}
+        ${card(5, "Volume — the fuel gauge", figVol,
+          `<p>Price says what moved; volume says <b>who showed up</b>. A breakout on expanding volume is participation; the
+          same candle on silence is a rumor. In our own test, volume alone rescued nothing (breakout + heavy volume still
+          tested negative) — treat it as a <b>veto</b>, not a green light.</p>`, null, null)}
+        ${card(6, "Moving averages & our Gate", figMA,
+          `<p>An MA is the crowd’s average memory of price. Trend traders don’t predict — they stand aside below it, lean in
+          above it. This is precisely the <b>GO / TURN / WAIT</b> gate printed all over this site; in the Chart Room you
+          finally <i>see</i> the lines it reads.</p>`, "the gate on your largest holding", "RKLB")}
+        ${card(7, "Continuation patterns", figCont,
+          `<p>Strong moves rest. <b>Flags</b> (a tight drift against the trend) and <b>triangles</b> (range compressing to a
+          point) are the market catching its breath — the move that follows usually resolves in the direction it was already
+          going. The measured target is the prior move’s height stacked on the break.</p>`, null, null)}
+        ${card(8, "Reversal patterns", figRev,
+          `<p><b>Double tops</b> (an M that breaks its neckline) and <b>head-and-shoulders</b> mark exhaustion: each rally
+          attracts fewer buyers until the last support gives. They matter most after long runs — a reversal pattern at the
+          start of a trend is usually just a pullback wearing a costume.</p>`, null, null)}
+        ${card(9, "Breakouts — and bull traps", figBrk,
+          `<p>The textbook loves breakouts; our data doesn’t. A <b>clean break</b> needs a close through the level, volume,
+          and a hold — and even then, across 50 of our names, fresh-high breakouts carried <b>no edge</b> over just owning
+          the stock. The <b>bull trap</b> — a poke above that closes back under — is why: obvious levels attract obvious
+          orders. If you play them, play the <i>retest</i>, and let lesson 11 calibrate your expectations.</p>`, null, null)}
+        ${card(10, "Entries, stops & risk-reward", figRR,
+          `<p>An entry’s real job is to define <b>where you’re wrong, cheaply</b>. Enter at a tested level so the stop sits
+          just beneath it; the target is the next tested level. Risk one unit to make two or three — then position size so
+          the one unit is survivable. This page’s playbooks are these templates with live numbers; none of them is a
+          signal.</p>`, "a live R:R on EFX", "EFX")}
+        ${card(11, "What our own data says", null, study, null, null)}
+      </div></div></div>`;
+  // lesson-2 minis from real bars (whatever chart is loaded; RKLB as fallback)
+  const fillTypes = (bars, tk) => {
+    const t = document.getElementById("cs-types");
+    if (!t) return;
+    t.innerHTML = [["line", "Line"], ["bars", "OHLC bars"], ["candle", "Candlesticks"], ["ha", "Heikin-Ashi"]]
+      .map(([k, lab]) => `<figure>${crMiniChart(k, bars)}<figcaption>${lab}</figcaption></figure>`).join("")
+      + `<div style="grid-column:1/-1;font:italic 11px 'PT Serif',var(--serif);color:var(--ink-3)">real ${esc(tk)} bars, last 30 sessions</div>`;
+  };
+  if (CR.bars) fillTypes(CR.bars, CR.tkr);
+  else crLoadBars("RKLB").then((b) => fillTypes(b, "RKLB")).catch(() => {});
+}
