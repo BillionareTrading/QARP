@@ -1,6 +1,6 @@
 {
   "date": "2026-08-07",
-  "generated_at": "Aug 7, 8:45am ET",
+  "generated_at": "Aug 7, 9:46am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -135,17 +135,17 @@
   "sectors": [
     {
       "sector": "Software",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
       "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Crude prices gain after Iranian strikes directed at U.S. assets in Jordan",
       "note": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Foundry, Fabricator & Idm Chip",
@@ -156,10 +156,10 @@
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Telecommunications",
@@ -210,8 +210,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$340",
-      "price": 312.41,
-      "upside": 8.8,
+      "price": 312.12,
+      "upside": 8.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -224,8 +224,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 312.41,
-      "upside": 28.0,
+      "price": 312.12,
+      "upside": 28.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -238,8 +238,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$270",
-      "price": 312.41,
-      "upside": -13.6,
+      "price": 312.12,
+      "upside": -13.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -252,8 +252,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$350",
-      "price": 312.41,
-      "upside": 12.0,
+      "price": 312.12,
+      "upside": 12.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -266,7 +266,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 312.41,
+      "price": 312.12,
       "upside": null,
       "held": false,
       "uni": true,
@@ -280,8 +280,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$300",
-      "price": 312.41,
-      "upside": -4.0,
+      "price": 312.12,
+      "upside": -3.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -294,8 +294,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$245",
-      "price": 312.41,
-      "upside": -21.6,
+      "price": 312.12,
+      "upside": -21.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -308,8 +308,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$360",
-      "price": 312.41,
-      "upside": 15.2,
+      "price": 312.12,
+      "upside": 15.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -322,8 +322,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "price": 312.41,
-      "upside": 15.2,
+      "price": 312.12,
+      "upside": 15.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -336,8 +336,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$209",
-      "price": 189.23,
-      "upside": 10.4,
+      "price": 186.34,
+      "upside": 12.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -350,7 +350,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$282",
-      "price": 256.98,
+      "price": 257.15,
       "upside": 9.7,
       "held": false,
       "uni": true,
@@ -364,8 +364,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$216",
-      "price": 189.23,
-      "upside": 14.1,
+      "price": 186.34,
+      "upside": 15.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -378,8 +378,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 312.41,
-      "upside": -10.4,
+      "price": 312.12,
+      "upside": -10.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -392,8 +392,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 42.0,
-      "upside": -4.8,
+      "price": 42.12,
+      "upside": -5.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -406,8 +406,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 189.23,
-      "upside": 8.3,
+      "price": 186.34,
+      "upside": 10.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -420,8 +420,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 128.37,
-      "upside": 13.7,
+      "price": 127.77,
+      "upside": 14.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -434,8 +434,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 256.98,
-      "upside": 11.7,
+      "price": 257.15,
+      "upside": 11.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -449,7 +449,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 11.7
+      "upside": 11.6
     },
     "CVX": {
       "date": "2026-08-05",
@@ -458,7 +458,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 8.3
+      "upside": 10.0
     },
     "MRK": {
       "date": "2026-08-05",
@@ -467,7 +467,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "upside": 13.7
+      "upside": 14.3
     },
     "NKE": {
       "date": "2026-08-04",
@@ -476,7 +476,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -4.8
+      "upside": -5.0
     },
     "AAPL": {
       "date": "2026-08-04",
@@ -485,7 +485,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "upside": -10.4
+      "upside": -10.3
     },
     "PG": {
       "date": "2026-07-30",
@@ -494,7 +494,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$149",
-      "upside": 1.4
+      "upside": 2.5
     },
     "KO": {
       "date": "2026-07-30",
@@ -503,7 +503,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.7
+      "upside": 11.9
     },
     "HD": {
       "date": "2026-07-27",
@@ -512,10 +512,25 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 7.9
+      "upside": 6.9
     }
   },
   "bz_news": [
+    {
+      "title": "Trump Says Data Centers Could Be Bigger Than Oil, Urges States to Cut Taxes and Accelerate AI Growth: 'If I Were Governor...'",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61038669/trump-says-data-centers-could-be-bigger-than-oil-urges-states-to-cut-taxes-and-accelerate-ai-growth-if-i-were-governor",
+      "ts": 1786109313,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.394
+    },
     {
       "title": "Elon Musk Wants Starlink To Take On T-Mobile, Verizon, AT&T—Here's Why That's Easier Said Than Done",
       "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61036008/starlink-mobile-cellular-networks",
@@ -544,7 +559,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.364
+      "relevance": 0.365
     },
     {
       "title": "Chubb, Toast And A Health Care Stock On CNBC’s ‘Final Trades’",
@@ -721,7 +736,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.354
+      "relevance": 0.355
     },
     {
       "title": "AI Infrastructure Trade Powers 2026’s Best-Performing Leveraged ETFs",
@@ -853,18 +868,6 @@
       "relevance": 0.393
     },
     {
-      "title": "Wells Fargo Maintains Overweight on Walt Disney, Raises Price Target to $132",
-      "url": "https://www.benzinga.com/news/26/08/61009453/wells-fargo-maintains-overweight-walt-disney-raises-price-target-132",
-      "ts": 1786037004,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.426
-    },
-    {
       "title": "Texas Rep. Lloyd Doggett Bought Over $1K Worth of Coca-Cola Stock: Here’s What You Should Know",
       "url": "https://www.benzinga.com/government/26/08/61002440/texas-rep-lloyd-doggett-bought-over-1k-worth-coca-cola-stock-here-s-what-you-should-know",
       "ts": 1786028438,
@@ -967,7 +970,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.585
+      "relevance": 0.584
     },
     {
       "title": "Piper Sandler Maintains Overweight on Coca-Cola, Raises Price Target to $95",
@@ -979,7 +982,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.572
+      "relevance": 0.57
     },
     {
       "title": "Coca-Cola's Consumption Trends Remain 'Best in Class,' Analyst Says",
@@ -1028,7 +1031,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.511
+      "relevance": 0.51
     },
     {
       "title": "RBC Capital Maintains Outperform on Coca-Cola, Raises Price Target to $96",
@@ -1174,7 +1177,7 @@
     },
     "NOW": {
       "name": "ServiceNow",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 16,
         "buy": 33,
@@ -1207,7 +1210,7 @@
         },
         "insider30d": 0
       },
-      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "ADBE": {
       "name": "Adobe",
