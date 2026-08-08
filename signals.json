@@ -1,6 +1,6 @@
 {
   "date": "2026-08-08",
-  "generated_at": "Aug 8, 1:43pm ET",
+  "generated_at": "Aug 8, 2:55pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -412,6 +412,21 @@
   },
   "bz_news": [
     {
+      "title": "VOO, SPY, SPYM ETF Inflows Jump as S&P 500 Index Q2 Earnings Growth Hits 50%",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61062092/voo-spy-spym-etf-inflows-jump-as-sp-500-index-q2-earnings-growth-hits-50",
+      "ts": 1786211070,
+      "tickers": [
+        "SPY",
+        "VOO",
+        "SPYM",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.503
+    },
+    {
       "title": "Cisco, Top Dow Jones Stock of 2026, Faces Crucial Test as Earnings Loom",
       "url": "https://www.benzinga.com/markets/equities/26/08/61061775/cisco-the-top-dow-jones-stock-of-2026-faces-a-crucial-test-as-earnings-loom",
       "ts": 1786197294,
@@ -731,7 +746,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.365
+      "relevance": 0.364
     },
     {
       "title": "Chubb, Toast And A Health Care Stock On CNBC’s ‘Final Trades’",
@@ -746,21 +761,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.321
-    },
-    {
-      "title": "Tom Lee Says 'Just A Matter Of Time' Until Bitcoin, ETH Get Going Again",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61034234/tom-lee-says-just-a-matter-of-time-until-bitcoin-eth-get-going-again",
-      "ts": 1786102118,
-      "tickers": [
-        "$ETH",
-        "$BTC",
-        "JPM",
-        "BLK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.315
     },
     {
       "title": "Texas Rep. Lloyd Doggett Bought Over $1K Worth of Coca-Cola Stock: Here’s What You Should Know",
@@ -814,7 +814,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.579
+      "relevance": 0.578
     },
     {
       "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $93",
@@ -842,30 +842,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.465
-    },
-    {
-      "title": "JP Morgan Maintains Overweight on Coca-Cola, Raises Price Target to $96",
-      "url": "https://www.benzinga.com/news/26/07/60774161/jp-morgan-maintains-overweight-coca-cola-raises-price-target-96",
-      "ts": 1785349548,
-      "tickers": [
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.55
-    },
-    {
-      "title": "TD Cowen Maintains Buy on Coca-Cola, Raises Price Target to $100",
-      "url": "https://www.benzinga.com/news/26/07/60772315/td-cowen-maintains-buy-coca-cola-raises-price-target-100",
-      "ts": 1785347150,
-      "tickers": [
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.585
     }
   ],
   "portfolio_brief": {
