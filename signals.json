@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-07",
-  "generated_at": "Aug 7, 6:58pm ET",
+  "date": "2026-08-08",
+  "generated_at": "Aug 8, 6:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -101,7 +101,7 @@
       "src": "Benzinga ratings"
     },
     {
-      "when": "Aug 7",
+      "when": "Aug 8",
       "what": "Energy & geopolitics — today's read",
       "why": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
       "affects": "Energy · growth",
@@ -209,132 +209,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-07-31",
-      "ticker": "AAPL",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$340",
-      "price": 313.33,
-      "upside": 8.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-31",
-      "ticker": "AAPL",
-      "firm": "TD Cowen",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$400",
-      "price": 313.33,
-      "upside": 27.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-31",
-      "ticker": "AAPL",
-      "firm": "DA Davidson",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$270",
-      "price": 313.33,
-      "upside": -13.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-31",
-      "ticker": "AAPL",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$350",
-      "price": 313.33,
-      "upside": 11.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-31",
-      "ticker": "AAPL",
-      "firm": "Needham",
-      "action": "Reiterates",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "",
-      "price": 313.33,
-      "upside": null,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-31",
-      "ticker": "AAPL",
-      "firm": "Rosenblatt",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$300",
-      "price": 313.33,
-      "upside": -4.3,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-31",
-      "ticker": "AAPL",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Underweight",
-      "stance": "bearish",
-      "pt": "$245",
-      "price": 313.33,
-      "upside": -21.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-31",
-      "ticker": "AAPL",
-      "firm": "Goldman Sachs",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$360",
-      "price": 313.33,
-      "upside": 14.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-07-31",
-      "ticker": "AAPL",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$360",
-      "price": 313.33,
-      "upside": 14.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-03",
       "ticker": "CVX",
@@ -538,6 +412,19 @@
   },
   "bz_news": [
     {
+      "title": "Trump Administration Pledges Over $2 Billion for Battery, Critical-Minerals Firms to Cut China Reliance: 'We Want These...'",
+      "url": "https://www.benzinga.com/markets/commodities/26/08/61061394/trump-administration-2-billion-battery-critical-minerals-funding",
+      "ts": 1786165816,
+      "tickers": [
+        "TSLA",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.29
+    },
+    {
       "title": "Citigroup Maintains Neutral on Amgen, Raises Price Target to $405",
       "url": "https://www.benzinga.com/news/26/08/61056259/citigroup-maintains-neutral-amgen-raises-price-target-405",
       "ts": 1786133240,
@@ -739,7 +626,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.311
+      "relevance": 0.312
     },
     {
       "title": "U.S. CDC Says As Of August 6, 2,465 Confirmed Measles Cases Were Reported In U.S. In 2026; There Have Been 38 New Measles Outbreaks Reported In 2026, And 94% Of Confirmed Cases Are Outbreak-Associated",
@@ -874,21 +761,6 @@
       "relevance": 0.303
     },
     {
-      "title": "T-Mobile's CEO Just Dismantled SpaceX's Starlink Mobile Ambitions as Musk's Firm Pours Billions Into Buying Spectrum: 'What's Their Differentiation?'",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61033809/t-mobiles-ceo-just-dismantled-spacexs-starlink-mobile-ambitions-as-musks-firm-pours-billions-into-buying-spectrum-whats-their-differentiation",
-      "ts": 1786101220,
-      "tickers": [
-        "TMUS",
-        "T",
-        "VZ",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.287
-    },
-    {
       "title": "Texas Rep. Lloyd Doggett Bought Over $1K Worth of Coca-Cola Stock: Here’s What You Should Know",
       "url": "https://www.benzinga.com/government/26/08/61002440/texas-rep-lloyd-doggett-bought-over-1k-worth-coca-cola-stock-here-s-what-you-should-know",
       "ts": 1786028438,
@@ -991,7 +863,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.584
+      "relevance": 0.585
     },
     {
       "title": "Piper Sandler Maintains Overweight on Coca-Cola, Raises Price Target to $95",
@@ -1064,7 +936,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.558
+      "relevance": 0.557
     },
     {
       "title": "Jefferies Maintains Buy on Coca-Cola, Raises Price Target to $104",
@@ -1077,21 +949,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.556
-    },
-    {
-      "title": "Dow Jumps Over 500 Points As Oil Prices Fall: Investor Sentiment Improves, Greed Index Remains In ‘Fear’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60750007/dow-jumps-over-500-points-as-oil-prices-fall-investor-sentiment-improves-greed-index-remains-in-fear-zone",
-      "ts": 1785308772,
-      "tickers": [
-        "MSFT",
-        "KO",
-        "GD",
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.482
     }
   ],
   "portfolio_brief": {
@@ -1123,7 +980,7 @@
           "date": "2026-05-07",
           "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm"
         },
-        "insider30d": 1
+        "insider30d": 0
       },
       "explain": "27 analysts cover it — 21 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
