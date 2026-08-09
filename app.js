@@ -3760,7 +3760,8 @@ function edDocketHtml(docket) {
   return `<div class="ed-sec-h"><h2>The Docket</h2><span class="ed-sub">Confirmed prints, next 3 weeks · tap a row</span></div>
   ${docket.map(edDocketRowHtml).join("")}
   <p class="ed-legend">PRINT beat/inline/miss · GUIDE raise/hold/cut · TAPE up/down/muted on the reaction close ·
-  NO CALL = a counted abstention · ●○ conviction 1–5</p>
+  every name with numbers gets all three calls (owner's standing order) · ●○ conviction 1–5, 1 = minimal edge —
+  the side the desk would lean with real money · only data-absent names (semi-annual reporters) go uncalled</p>
   <details class="ed-more"><summary>How names get on the docket</summary>
   Holdings always; unheld names at BUY or better; plus names under an active re-score watch. Everything else prints
   without a take. Names enter when a confirmed date comes inside 21 days; takes are written from 10 days out,
@@ -3884,11 +3885,13 @@ function edScorecardHtml(sc) {
     return `<tr><td class="ed-tk">${esc(r.tk)}</td><td>${edDateTxt(r.print_date)}</td>${cell("print")}${cell("guide")}${cell("tape")}</tr>`;
   }).join("");
   const mt = (sc && sc.mech_tallies) || {};
+  const ht = (sc && sc.hi_tallies) || {};
   const tally = (k, lbl) => {
     const x = t[k] || { HIT: 0, MISS: 0, ABSTAIN: 0 };
     const m = mt[k] || { HIT: 0, MISS: 0 };
-    const n = x.HIT + x.MISS, mn = m.HIT + m.MISS;
-    return `${lbl} ${n ? Math.round((100 * x.HIT) / n) + "% of " + n : "—"}${mn ? ` <span class="ed-co">(baseline ${Math.round((100 * m.HIT) / mn)}%)</span>` : ""}${x.ABSTAIN ? ` (+${x.ABSTAIN} abstained)` : ""}`;
+    const hx = ht[k] || { HIT: 0, MISS: 0 };
+    const n = x.HIT + x.MISS, mn = m.HIT + m.MISS, hn = hx.HIT + hx.MISS;
+    return `${lbl} ${n ? Math.round((100 * x.HIT) / n) + "% of " + n : "—"}${hn ? ` <span class="ed-co">(●●●+ ${Math.round((100 * hx.HIT) / hn)}%)</span>` : ""}${mn ? ` <span class="ed-co">(baseline ${Math.round((100 * m.HIT) / mn)}%)</span>` : ""}${x.ABSTAIN ? ` (+${x.ABSTAIN} legacy abstains)` : ""}`;
   };
   return `<div class="ed-sec-h"><h2>The Scorecard</h2><span class="ed-sub">Every call graded · abstentions counted · nothing memory-holed</span></div>
   <div class="ed-score">
@@ -3897,7 +3900,7 @@ function edScorecardHtml(sc) {
       : `<div class="ed-big">No graded calls yet — the first frozen calls grade off the next wave.</div>`}
     <p>Every call freezes when written (the at-call line under each take). A take may be rewritten up to the print
     as inputs move — each rewrite appends a visible revision line, and <b>the last pre-print snapshot is what
-    grades</b>. NO CALL lands here too, counted as an abstention. If these calls turn out no better than a coin,
+    grades</b>. Low-conviction calls grade like any other — hit rates split by conviction, so a forced coin-flip can't inflate the record. If these calls turn out no better than a coin,
     this table will say so.</p>
     <p class="ed-lifecycle">LIFECYCLE&nbsp; <b>T−n</b> → <b>PRINTS TODAY</b> → <b>AWAITING REACTION</b> (print grade posts same night · tape next session · guide at T+7) → <b>GRADED</b></p>
     ${rows ? `<table class="ed-ledger"><tr><th>Name</th><th>Print</th><th>Print call</th><th>Guide call</th><th>Tape call</th></tr>${rows}</table>` : ""}
