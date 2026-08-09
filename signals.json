@@ -1,6 +1,6 @@
 {
   "date": "2026-08-09",
-  "generated_at": "Aug 9, 10:07am ET",
+  "generated_at": "Aug 9, 10:48am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -183,10 +183,10 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
-    "KO": {
-      "title": "Apple's OpenAI Lawsuit, Earnings, Senator's Stock Sales and more: This Week in Appleverse",
-      "ts": 1786273273,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61063618/weekend-business-headlines-openai-apple-stock-sales",
+    "AVGO": {
+      "title": "US-China AI War: Inside the Battle for Global Tech Dominance",
+      "ts": 1786286827,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61063847/us-china-ai-war-inside-the-battle-for-global-tech-dominance",
       "wiim": false
     },
     "NVDA": {
@@ -195,10 +195,16 @@
       "url": "https://www.benzinga.com/markets/options/26/08/61010129/10-information-technology-stocks-whale-activity-today-s-session",
       "wiim": false
     },
-    "AVGO": {
-      "title": "Trump Says AI Could Be Bigger Than Oil. These ETFs Are Betting on the Fuel Behind the Boom",
-      "ts": 1786120540,
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61048357/trump-says-ai-could-be-bigger-than-oil-these-etfs-are-betting-on-the-fuel-behind-the-boom",
+    "UBER": {
+      "title": "Consumer Tech (Aug 3-7): SpaceX Released Strong First Earnings, Meta Sued For Harming Children's Mental Health & More",
+      "ts": 1786286424,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61063819/consumer-tech-aug-3-7-spacex-released-strong-first-earnings-meta-sued-for-harming-childrens-mental-health-more",
+      "wiim": false
+    },
+    "KO": {
+      "title": "Apple's OpenAI Lawsuit, Earnings, Senator's Stock Sales and more: This Week in Appleverse",
+      "ts": 1786273273,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61063618/weekend-business-headlines-openai-apple-stock-sales",
       "wiim": false
     }
   },
@@ -405,6 +411,36 @@
     }
   },
   "bz_news": [
+    {
+      "title": "US-China AI War: Inside the Battle for Global Tech Dominance",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61063847/us-china-ai-war-inside-the-battle-for-global-tech-dominance",
+      "ts": 1786286827,
+      "tickers": [
+        "AAPL",
+        "AVGO",
+        "AMD",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.392
+    },
+    {
+      "title": "Consumer Tech (Aug 3-7): SpaceX Released Strong First Earnings, Meta Sued For Harming Children's Mental Health & More",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61063819/consumer-tech-aug-3-7-spacex-released-strong-first-earnings-meta-sued-for-harming-childrens-mental-health-more",
+      "ts": 1786286424,
+      "tickers": [
+        "NET",
+        "IONQ",
+        "DDOG",
+        "SOUN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.346
+    },
     {
       "title": "Apple's OpenAI Lawsuit, Earnings, Senator's Stock Sales and more: This Week in Appleverse",
       "url": "https://www.benzinga.com/markets/tech/26/08/61063618/weekend-business-headlines-openai-apple-stock-sales",
@@ -693,7 +729,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.311
+      "relevance": 0.312
     },
     {
       "title": "U.S. CDC Says As Of August 6, 2,465 Confirmed Measles Cases Were Reported In U.S. In 2026; There Have Been 38 New Measles Outbreaks Reported In 2026, And 94% Of Confirmed Cases Are Outbreak-Associated",
@@ -726,36 +762,6 @@
       "relevance": 0.498
     },
     {
-      "title": "Trump Says Data Centers Could Be Bigger Than Oil, Urges States to Cut Taxes and Accelerate AI Growth: 'If I Were Governor...'",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61038669/trump-says-data-centers-could-be-bigger-than-oil-urges-states-to-cut-taxes-and-accelerate-ai-growth-if-i-were-governor",
-      "ts": 1786109313,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.394
-    },
-    {
-      "title": "Elon Musk Wants Starlink To Take On T-Mobile, Verizon, AT&T—Here's Why That's Easier Said Than Done",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61036008/starlink-mobile-cellular-networks",
-      "ts": 1786105337,
-      "tickers": [
-        "TMUS",
-        "VZ",
-        "SPCX",
-        "T"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.265
-    },
-    {
       "title": "Texas Rep. Lloyd Doggett Bought Over $1K Worth of Coca-Cola Stock: Here’s What You Should Know",
       "url": "https://www.benzinga.com/government/26/08/61002440/texas-rep-lloyd-doggett-bought-over-1k-worth-coca-cola-stock-here-s-what-you-should-know",
       "ts": 1786028438,
@@ -767,7 +773,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.488
+      "relevance": 0.487
     },
     {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
@@ -780,7 +786,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.293
+      "relevance": 0.292
     },
     {
       "title": "Warren Buffett Says You Don't Need 20 Right Calls To Get Rich — '4 Or 5 Will Probably Do It'",
@@ -795,7 +801,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.21
+      "relevance": 0.211
     },
     {
       "title": "Argus Research Maintains Buy on Coca-Cola, Raises Price Target to $97",
@@ -992,7 +998,12 @@
         "score": 1.11,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "Consumer Tech (Aug 3-7): SpaceX Released Strong First Earnings, Meta Sued For Harming Children's Mental Health & More",
+        "ts": 1786286424,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61063819/consumer-tech-aug-3-7-spacex-released-strong-first-earnings-meta-sued-for-harming-childrens-mental-health-more",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1222,9 +1233,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Trump Says AI Could Be Bigger Than Oil. These ETFs Are Betting on the Fuel Behind the Boom",
-        "ts": 1786120540,
-        "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61048357/trump-says-ai-could-be-bigger-than-oil-these-etfs-are-betting-on-the-fuel-behind-the-boom",
+        "title": "US-China AI War: Inside the Battle for Global Tech Dominance",
+        "ts": 1786286827,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61063847/us-china-ai-war-inside-the-battle-for-global-tech-dominance",
         "wiim": false
       },
       "filings": {
