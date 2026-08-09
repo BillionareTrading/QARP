@@ -1,6 +1,6 @@
 {
   "date": "2026-08-09",
-  "generated_at": "Aug 9, 1:43pm ET",
+  "generated_at": "Aug 9, 2:59pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -183,16 +183,16 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
-    "AVGO": {
-      "title": "US-China AI War: Inside the Battle for Global Tech Dominance",
-      "ts": 1786286827,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61063847/us-china-ai-war-inside-the-battle-for-global-tech-dominance",
-      "wiim": false
-    },
     "NVDA": {
       "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
       "ts": 1786037721,
       "url": "https://www.benzinga.com/markets/options/26/08/61010129/10-information-technology-stocks-whale-activity-today-s-session",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "US-China AI War: Inside the Battle for Global Tech Dominance",
+      "ts": 1786286827,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61063847/us-china-ai-war-inside-the-battle-for-global-tech-dominance",
       "wiim": false
     },
     "UBER": {
@@ -411,6 +411,21 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Investors Rotate to Magnificent 7 Stocks as Bargain Hunting Continues",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61064069/investors-rotate-to-magnificent-7-stocks-as-bargain-hunting-continues",
+      "ts": 1786297697,
+      "tickers": [
+        "TSLA",
+        "META",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.425
+    },
     {
       "title": "US-China AI War: Inside the Battle for Global Tech Dominance",
       "url": "https://www.benzinga.com/markets/tech/26/08/61063847/us-china-ai-war-inside-the-battle-for-global-tech-dominance",
@@ -745,21 +760,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.174
-    },
-    {
-      "title": "Chip Stocks Find Buyers After Earnings Shock Shakes Out AI Trade",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61042097/chip-stocks-find-buyers-after-earnings-shock-shakes-out-ai-trade",
-      "ts": 1786112774,
-      "tickers": [
-        "INTC",
-        "AMD",
-        "NVDA",
-        "FSLR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.498
     },
     {
       "title": "Texas Rep. Lloyd Doggett Bought Over $1K Worth of Coca-Cola Stock: Here’s What You Should Know",
