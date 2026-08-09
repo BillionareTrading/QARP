@@ -19,6 +19,13 @@ Password source (first that exists wins):
   2. .site_password file (one line)  (local secret, gitignored)
   3. interactive getpass prompt      (manual run)
 
+PRIVACY SPLIT (2026-08-09): this script now emits a SECOND blob. private.json (the
+absolute dollar amounts + share counts that build_master_sheet strips from data.json)
+is encrypted into private.enc with a SEPARATE owner passcode ($OWNER_PASSWORD env,
+else .owner_password file). Identical v2 envelope, so crypto.js decrypts it unchanged.
+If the owner passcode is unavailable the private blob is SKIPPED with a warning (the
+prior private.enc stays in place) — a missing secret must never break a cloud publish.
+
 Run after every data.json refresh:  python3 encrypt_data.py
 """
 
@@ -37,6 +44,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "data.json")
 OUT = os.path.join(HERE, "payload.enc")
 PW_FILE = os.path.join(HERE, ".site_password")
+PRIV_DATA = os.path.join(HERE, "private.json")
+PRIV_OUT = os.path.join(HERE, "private.enc")
+OWNER_PW_FILE = os.path.join(HERE, ".owner_password")
 ITERATIONS = 250_000
 
 
@@ -58,6 +68,42 @@ def get_password() -> str:
     if not pw:
         sys.exit("ERROR: empty password.")
     return pw
+
+
+def get_owner_password() -> str:
+    """Owner passcode for private.enc. Env first (cloud secret OWNER_PASSWORD),
+    then .owner_password file (local, gitignored). NO interactive prompt and no
+    hard exit — returns "" so a missing secret degrades to a skip, never a
+    broken publish."""
+    env = os.environ.get("OWNER_PASSWORD")
+    if env:
+        return env.strip()
+    if os.path.exists(OWNER_PW_FILE):
+        with open(OWNER_PW_FILE) as f:
+            pw = f.read().strip()
+        if pw:
+            return pw
+    return ""
+
+
+def encrypt_envelope(data: dict, password: str) -> dict:
+    """gzip -> PBKDF2-SHA256 -> AES-256-GCM, the v2 envelope crypto.js expects.
+    Shared by payload.enc and private.enc — one implementation, one lockstep."""
+    plaintext = gzip.compress(json.dumps(data, separators=(",", ":")).encode("utf-8"), 6)
+    salt = os.urandom(16)
+    iv = os.urandom(12)
+    kdf = PBKDF2HMAC(algorithm=hashes.SHA256(), length=32, salt=salt, iterations=ITERATIONS)
+    key = kdf.derive(password.encode("utf-8"))
+    ciphertext = AESGCM(key).encrypt(iv, plaintext, None)  # returns ct||tag
+    return {
+        "v": 2,   # v2 = plaintext is gzipped JSON (crypto.js sniffs the gzip magic)
+        "kdf": "PBKDF2-SHA256",
+        "iterations": ITERATIONS,
+        "cipher": "AES-256-GCM",
+        "salt": base64.b64encode(salt).decode(),
+        "iv": base64.b64encode(iv).decode(),
+        "ct": base64.b64encode(ciphertext).decode(),
+    }
 
 
 def load_finnhub_key() -> str:
@@ -100,34 +146,37 @@ def main() -> None:
     # compressed JSON is ~3-4x smaller. crypto.js auto-detects: decrypted bytes starting
     # with the gzip magic (0x1f 0x8b) are inflated first; old v1 payloads (raw JSON,
     # starts with '{') still parse, so the transition is backward-compatible.
-    plaintext = gzip.compress(json.dumps(data, separators=(",", ":")).encode("utf-8"), 6)
-
-    password = get_password().encode("utf-8")
-    salt = os.urandom(16)
-    iv = os.urandom(12)
-
-    kdf = PBKDF2HMAC(algorithm=hashes.SHA256(), length=32, salt=salt, iterations=ITERATIONS)
-    key = kdf.derive(password)
-
-    ciphertext = AESGCM(key).encrypt(iv, plaintext, None)  # returns ct||tag
-
-    payload = {
-        "v": 2,   # v2 = plaintext is gzipped JSON (crypto.js sniffs the gzip magic)
-        "kdf": "PBKDF2-SHA256",
-        "iterations": ITERATIONS,
-        "cipher": "AES-256-GCM",
-        "salt": base64.b64encode(salt).decode(),
-        "iv": base64.b64encode(iv).decode(),
-        "ct": base64.b64encode(ciphertext).decode(),
-        # plaintext metadata is safe to expose and lets the gate show a date
-        # without decrypting; do NOT put holdings or the API key here.
-        "date": data.get("meta", {}).get("date", ""),
-    }
+    payload = encrypt_envelope(data, get_password())
+    # plaintext metadata is safe to expose and lets the gate show a date
+    # without decrypting; do NOT put holdings or the API key here.
+    payload["date"] = data.get("meta", {}).get("date", "")
     with open(OUT, "w") as f:
         json.dump(payload, f)
+    print(f"Wrote {OUT}  ({ITERATIONS} PBKDF2 iters{', +finnhub key' if fk else ''})")
 
-    print(f"Wrote {OUT}  ({len(ciphertext)} bytes ciphertext, {ITERATIONS} PBKDF2 iters"
-          f"{', +finnhub key' if fk else ''})")
+    # ---- PRIVACY SPLIT: the owner blob (dollar amounts + share counts) ----
+    if not os.path.exists(PRIV_DATA):
+        print("WARNING: no private.json next to data.json — private.enc NOT refreshed "
+              "(old build? run build_master_sheet.py --json).")
+        return
+    with open(PRIV_DATA) as f:
+        priv = json.load(f)
+    # both blobs must come from the SAME build pass — a date skew here means a stale
+    # private.json is about to ship against a fresh payload; refuse it.
+    if priv.get("date") != data.get("meta", {}).get("date"):
+        sys.exit(f"REFUSING private.enc: private.json date {priv.get('date')!r} != "
+                 f"data.json date {data.get('meta', {}).get('date')!r} — rebuild with --json.")
+    opw = get_owner_password()
+    if not opw:
+        print("WARNING: no $OWNER_PASSWORD and no .owner_password — private.enc NOT "
+              "refreshed (prior file stays; owner-unlock amounts will lag the payload).")
+        return
+    penv = encrypt_envelope(priv, opw)
+    penv["date"] = priv.get("date", "")
+    with open(PRIV_OUT, "w") as f:
+        json.dump(penv, f)
+    print(f"Wrote {PRIV_OUT}  (owner blob: {len(priv.get('portfolio', {}))} holdings, "
+          f"{len(priv.get('realized', []))} realized rows)")
 
 
 if __name__ == "__main__":

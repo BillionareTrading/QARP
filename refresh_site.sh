@@ -44,6 +44,7 @@ if [ "$PUSH" = "1" ] && [ -d .git ]; then
     exit 1
   fi
   git add payload.enc 2>/dev/null
+  git add private.enc 2>/dev/null || true   # owner blob (PRIVACY SPLIT) — same commit as the payload
   git commit -m "price refresh $(cat payload.enc | python3 -c 'import sys,json;print(json.load(sys.stdin)["date"])')" --quiet || true
   git push --quiet origin main && echo "refresh_site: pushed to remote."
 fi

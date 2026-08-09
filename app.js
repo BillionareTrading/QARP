@@ -12,6 +12,20 @@ const fmtNum = (n, dp = 2) => (n == null ? "—" : Number(n).toLocaleString("en-
 const fmtPct = (n, dp = 1) => (n == null ? "—" : (n >= 0 ? "+" : "") + Number(n).toFixed(dp) + "%");
 const signClass = (n) => (n == null ? "" : n > 0 ? "pos" : n < 0 ? "neg" : "muted");
 
+/* ---------- PRIVACY SPLIT: the owner tier (2026-08-09) ----------
+   Dollar amounts + share counts are NOT in the payload — they ship separately in
+   private.enc, encrypted with the OWNER passcode. Until that blob is unlocked the
+   fields are simply absent from DATA and every $ render shows a blurred redaction.
+   Percentages (day%, P/L%, weight%), per-share prices, avg_cost and fw_x stay
+   public. NEVER render a private field without going through pUSD/pSH or an
+   explicit privUnlocked() branch. */
+let PRIV = null;                 // decrypted private blob; null = locked
+let lastPrivateIv = null;
+const privUnlocked = () => !!PRIV;
+const lockUSD = () => `<span class="priv-blur" role="button" title="Amounts are owner-locked — click to unlock">$•,•••</span>`;
+const lockSH = () => `<span class="priv-blur" role="button" title="Amounts are owner-locked — click to unlock">•• sh</span>`;
+const pUSD = (v, dp = 0) => (v == null && !privUnlocked() ? lockUSD() : fmtUSD(v, dp));
+
 function verdictSlug(v) {
   return "v-" + String(v).toLowerCase().replace(/[^a-z]+/g, "");
 }
@@ -188,6 +202,18 @@ function legend(items) {
 // value minus yesterday's (value / (1 + day%/100)) — NOT value*day%, which OVERSTATES when a holding
 // has a big % move (RKLB +16% made the front page read +$139 vs the true +$103). Used everywhere.
 function portfolioDayPnl() {
+  if (!privUnlocked()) {
+    // Locked: dollar values are absent, but the SAME exact math survives in weight space —
+    // prev_i ∝ w_i/(1+d_i), so pct = Σ(wPrev·d)/ΣwPrev is identical to the $ version
+    // (the account denominator cancels). The $ figure itself stays owner-only (null).
+    let acc = 0, wsum = 0;
+    (DATA.portfolio || []).forEach((h) => {
+      if (typeof h.day_pct !== "number" || typeof h.weight_pct !== "number") return;
+      const wPrev = h.weight_pct / (1 + h.day_pct / 100);
+      acc += wPrev * h.day_pct; wsum += wPrev;
+    });
+    return { usd: null, pct: wsum ? acc / wsum : 0 };
+  }
   let prev = 0, now = 0;
   (DATA.portfolio || []).forEach((h) => {
     if (typeof h.day_pct !== "number") return;
@@ -206,22 +232,28 @@ function renderKpis() {
   const sessionLive = marketOpenNow() && asOfDate(DATA.meta.date) === lastSessionDate();
   const todayLabel = sessionLive ? "Today" : `${lastCloseName(DATA.meta.date)} close`;
   const todayNote = sessionLive ? "live" : "";
+  // Locked view: every $ tile shows a blurred redaction; %s stay live. The delta under
+  // Today/Unrealized is a percent, so those cards stay informative for visitors.
+  const dayCls = privUnlocked() ? signClass(dayChg) : signClass(dayPct);
   const cards = [
-    { label: "Account Value", value: fmtUSD(t.account, 0), delta: `${fmtUSD(t.cash, 2)} cash`, dClass: "muted" },
-    { label: todayLabel, note: todayNote, value: fmtUSD(dayChg, 0), delta: fmtPct(dayPct), dClass: signClass(dayChg) },
-    { label: "Unrealized P/L", note: "open holdings only", value: fmtUSD(t.gain, 0), delta: fmtPct(t.gain_pct), dClass: signClass(t.gain) },
-    { label: "Cost Basis", value: fmtUSD(t.cost, 0), delta: `${DATA.portfolio.length} holdings`, dClass: "muted" },
+    { label: "Account Value", value: pUSD(t.account, 0), delta: privUnlocked() ? `${fmtUSD(t.cash, 2)} cash` : "owner-locked", dClass: "muted" },
+    { label: todayLabel, note: todayNote, value: privUnlocked() ? fmtUSD(dayChg, 0) : fmtPct(dayPct), delta: privUnlocked() ? fmtPct(dayPct) : "book move", dClass: dayCls },
+    { label: "Unrealized P/L", note: "open holdings only", value: privUnlocked() ? fmtUSD(t.gain, 0) : fmtPct(t.gain_pct), delta: privUnlocked() ? fmtPct(t.gain_pct) : "on cost", dClass: privUnlocked() ? signClass(t.gain) : signClass(t.gain_pct) },
+    { label: "Cost Basis", value: pUSD(t.cost, 0), delta: `${DATA.portfolio.length} holdings`, dClass: "muted" },
   ];
-  if (t.div_income_yr) cards.push({ label: "Dividends", note: "annual", value: fmtUSD(t.div_income_yr, 0) + "/yr",
-    delta: t.positions ? fmtPct(t.div_income_yr / t.positions * 100, 2).replace("+", "") + " yield" : "", dClass: "muted" });
-  cards.push({ label: "Zakat", note: "2.5% · yearly", value: fmtUSD(zakatOnBook(), 0),
+  if (t.div_income_yr || !privUnlocked()) cards.push({ label: "Dividends", note: "annual", value: pUSD(t.div_income_yr, 0) + "/yr",
+    delta: privUnlocked() && t.positions ? fmtPct(t.div_income_yr / t.positions * 100, 2).replace("+", "") + " yield" : "", dClass: "muted" });
+  cards.push({ label: "Zakat", note: "2.5% · yearly", value: pUSD(zakatOnBook(), 0),
     delta: "on book + cash", dClass: "muted" });
+  const lockChip = privUnlocked()
+    ? `<button type="button" class="kpi kpi-lock unlocked" id="owner-lock-chip" title="Amounts are visible on this device — click to hide them again"><div class="label">Owner</div><div class="value">🔓</div><div class="delta muted">amounts visible · hide</div></button>`
+    : `<button type="button" class="kpi kpi-lock" id="owner-lock-chip" title="Dollar amounts and share counts are hidden — the owner passcode reveals them"><div class="label">Owner</div><div class="value">🔒</div><div class="delta muted">amounts hidden · unlock</div></button>`;
   document.getElementById("kpis").innerHTML = cards.map((c) => `
     <div class="kpi">
       <div class="label">${c.label}${c.note ? ` <span class="kpi-note">· ${c.note}</span>` : ""}</div>
       <div class="value">${c.value}</div>
       <div class="delta ${c.dClass}">${c.delta}</div>
-    </div>`).join("");
+    </div>`).join("") + lockChip;
 }
 
 function isoOf(d) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; }
@@ -539,31 +571,35 @@ function renderUniverseTable() {
 const P_COLS = [
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
   { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
-  { key: "avgcost", label: "Avg Cost", fmt: (x) => `<span class="muted">${fmtUSD(x.shares ? x.cost / x.shares : 0, 2)}</span>`, sortVal: (x) => (x.shares ? x.cost / x.shares : 0) },
+  // avg cost is PER-SHARE (scale-free) — published as avg_cost so it survives the privacy
+  // split; the shares/cost fallback keeps working after the owner unlock merges them in.
+  { key: "avgcost", label: "Avg Cost", fmt: (x) => `<span class="muted">${fmtUSD(x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : null), 2)}</span>`, sortVal: (x) => (x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : 0)) },
   { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
-  { key: "shares", label: "Shares", fmt: (x) => fmtNum(x.shares, 2) },
-  { key: "value", label: "Value", fmt: (x) => fmtUSD(x.value, 0) },
-  { key: "gain", label: "Unrlzd $", fmt: (x) => `<span class="${signClass(x.gain)}">${fmtUSD(x.gain, 0)}</span>` },
+  { key: "shares", label: "Shares", fmt: (x) => (x.shares == null && !privUnlocked() ? lockSH() : fmtNum(x.shares, 2)), sortVal: (x) => (x.shares != null ? x.shares : x.weight_pct || 0) },
+  { key: "value", label: "Value", fmt: (x) => pUSD(x.value, 0), sortVal: (x) => (x.value != null ? x.value : x.weight_pct || 0) },
+  { key: "gain", label: "Unrlzd $", fmt: (x) => (x.gain == null && !privUnlocked() ? lockUSD() : `<span class="${signClass(x.gain)}">${fmtUSD(x.gain, 0)}</span>`), sortVal: (x) => (x.gain != null ? x.gain : x.gain_pct || 0) },
   { key: "gain_pct", label: "Unrlzd %", fmt: (x) => `<span class="${signClass(x.gain_pct)}">${fmtPct(x.gain_pct)}</span>` },
   { key: "weight_pct", label: "Weight", fmt: (x) => fmtNum(x.weight_pct, 1) + "%" },
-  { key: "div_income", label: "Div /yr", fmt: (x) => x.div_income
+  { key: "div_income", label: "Div /yr", fmt: (x) => x.div_income != null
       ? `<span class="div-rate">${fmtUSD(x.div_income, 2)}</span>`
-      : `<span class="muted">N/A</span>`,
-    sortVal: (x) => x.div_income || 0 },
+      : (!privUnlocked() && x.div_rate ? lockUSD() : `<span class="muted">N/A</span>`),
+    sortVal: (x) => (x.div_income != null ? x.div_income : x.div_rate || 0) },
   { key: "qarp", label: "QARP", fmt: (x) => `<span class="qarp-cell">${fmtNum(x.qarp, 1)}</span>` },
   { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
   { key: "calls", label: "Calls", align: "left", fmt: (x) => callsCell(x.ticker, x.price),
     sortVal: (x) => openCallReturn(x.ticker, x.price) },
 ];
-let pSort = { key: "value", dir: -1 };
+let pSort = { key: "weight_pct", dir: -1 };   // weight order == value order, works locked or unlocked
 
 function renderTopHoldings() {
   const el = document.getElementById("p-holdings-bars");
   if (!el) return;
-  const holds = [...DATA.portfolio].sort((a, b) => b.value - a.value);
-  const total = holds.reduce((s, h) => s + h.value, 0) || 1;
+  // weight_pct shares the denominator across rows, so ratios match the old value math
+  // exactly — and it survives the privacy split (values are owner-tier).
+  const holds = [...DATA.portfolio].sort((a, b) => (b.weight_pct || 0) - (a.weight_pct || 0));
+  const total = holds.reduce((s, h) => s + (h.weight_pct || 0), 0) || 1;
   const shown = holds.slice(0, 6);
-  const ws = shown.map((h) => h.value / total * 100);
+  const ws = shown.map((h) => (h.weight_pct || 0) / total * 100);
   const maxW = Math.max(...ws, 1);                 // biggest holding fills the bar; rest scale down
   const bars = shown.map((h, i) =>
     `<div class="hbar-row"><span class="hbar-tk">${esc(h.ticker)}</span><span class="hbar-track"><span class="hbar-fill" style="width:${Math.max(4, ws[i] / maxW * 100).toFixed(1)}%;background:${SECTOR_COLORS[i % SECTOR_COLORS.length]}"></span></span><span class="hbar-pct">${ws[i].toFixed(1)}%</span></div>`
@@ -582,7 +618,7 @@ function renderPortfolio() {
   // allocation donut by broad sector (from the daily snapshot)
   const secs = DATA.sectors.map((s, i) => ({ ...s, color: SECTOR_COLORS[i % SECTOR_COLORS.length] }));
   document.getElementById("sector-chart").innerHTML =
-    donut(secs.map((s) => ({ value: s.value, color: s.color }))) +
+    donut(secs.map((s) => ({ value: s.weight_pct, color: s.color }))) +   // % shares — sector $ no longer ships
     legend(secs.map((s) => ({ label: s.sector, right: s.weight_pct + "%", color: s.color })));
 
   renderSectorPerformance();
@@ -600,7 +636,7 @@ const R_COLS = [
   { key: "date_bought", label: "Bought", sortVal: (r) => r.date_bought || "" },
   { key: "date_sold", label: "Sold", sortVal: (r) => r.date_sold || "" },
   { key: "held", label: "Held", sortVal: (r) => (r.date_bought && r.date_sold) ? (new Date(r.date_sold) - new Date(r.date_bought)) : -1 },
-  { key: "gain", label: "Gain", sortVal: (r) => r.gain },
+  { key: "gain", label: "Gain", sortVal: (r) => (r.gain != null ? r.gain : r.gain_pct || 0) },
   { key: "gain_pct", label: "Return", sortVal: (r) => r.gain_pct == null ? -1e9 : r.gain_pct },
 ];
 function renderRealized() {
@@ -611,19 +647,21 @@ function renderRealized() {
   el.hidden = false;
 
   // ---- stats band (computed live from the rows, so future sells update it) ----
-  const total = all.reduce((s, r) => s + r.gain, 0);
-  const wins = all.filter((r) => r.gain >= 0).length;
-  const best = all.reduce((b, r) => (r.gain > b.gain ? r : b), all[0]);
+  // Locked: gain $ is owner-tier, but wins/best are decidable from gain_pct (public).
+  const unlocked = privUnlocked();
+  const total = unlocked ? all.reduce((s, r) => s + r.gain, 0) : null;
+  const wins = all.filter((r) => (unlocked ? r.gain : r.gain_pct || 0) >= 0).length;
+  const best = all.reduce((b, r) => ((unlocked ? r.gain > b.gain : (r.gain_pct || -1e9) > (b.gain_pct || -1e9)) ? r : b), all[0]);
   document.getElementById("realized-stats").innerHTML = `
     <div class="rz-hero">
       <span class="rz-total-label">Total realized earnings</span>
-      <span class="rz-total">+$${total.toLocaleString("en-US", {minimumFractionDigits: 2})}</span>
+      <span class="rz-total">${unlocked ? "+$" + total.toLocaleString("en-US", {minimumFractionDigits: 2}) : lockUSD()}</span>
     </div>
     <div class="rz-chips">
       <span class="rz-chip"><b>${all.length}</b> closed trades</span>
       <span class="rz-chip rz-chip-pos"><b>${wins}</b> profitable · ${Math.round(wins / all.length * 100)}%</span>
-      <span class="rz-chip">Best: <b>${best.ticker}</b> +$${best.gain.toFixed(2)}</span>
-      <span class="rz-chip">Zakat on realized · 2.5%: <b>${fmtUSD(Math.max(0, total) * ZAKAT_RATE, 2)}</b></span>
+      <span class="rz-chip">Best: <b>${best.ticker}</b> ${unlocked ? "+$" + best.gain.toFixed(2) : fmtPct(best.gain_pct)}</span>
+      <span class="rz-chip">Zakat on realized · 2.5%: <b>${unlocked ? fmtUSD(Math.max(0, total) * ZAKAT_RATE, 2) : lockUSD()}</b></span>
     </div>`;
 
   // ---- sortable table ----
@@ -647,12 +685,12 @@ function renderRealized() {
   document.querySelector("#realized-table tbody").innerHTML = rows.map((r) => `
     <tr>
       <td class="left"><b>${r.ticker}</b> <span class="realized-name">${r.name}</span>
-        <span class="realized-sh">${(+r.shares).toLocaleString(undefined, {maximumFractionDigits: 2})} sh</span></td>
+        <span class="realized-sh">${r.shares == null ? lockSH() : (+r.shares).toLocaleString(undefined, {maximumFractionDigits: 2}) + " sh"}</span></td>
       <td>${r.buy_est ? '<span class="realized-approx">~</span>' : ""}${d(r.date_bought)} · $${r.buy_px.toFixed(2)}</td>
       <td>${d(r.date_sold)} · $${r.sell_px.toFixed(2)}</td>
       <td>${held(r)}</td>
-      <td><span class="${r.gain >= 0 ? "rz-gain" : "rz-loss"}">${r.gain >= 0 ? "+" : "−"}$${Math.abs(r.gain).toFixed(2)}</span></td>
-      <td><span class="${r.gain >= 0 ? "rz-gain" : "rz-loss"}">${r.gain_pct == null ? "—" : (r.gain_pct >= 0 ? "+" : "−") + Math.abs(r.gain_pct).toFixed(1) + "%"}</span></td>
+      <td>${r.gain == null ? lockUSD() : `<span class="${r.gain >= 0 ? "rz-gain" : "rz-loss"}">${r.gain >= 0 ? "+" : "−"}$${Math.abs(r.gain).toFixed(2)}</span>`}</td>
+      <td><span class="${(r.gain != null ? r.gain : r.gain_pct || 0) >= 0 ? "rz-gain" : "rz-loss"}">${r.gain_pct == null ? "—" : (r.gain_pct >= 0 ? "+" : "−") + Math.abs(r.gain_pct).toFixed(1) + "%"}</span></td>
     </tr>`).join("");
   document.querySelectorAll("#realized-table thead th").forEach((th) =>
     th.addEventListener("click", () => {
@@ -667,7 +705,7 @@ function renderRealized() {
 function renderSectorPerformance() {
   const perfEl = document.getElementById("sector-perf");
   if (!perfEl) return;
-  const secs = (DATA.sectors || []).filter((s) => s.gain_pct != null && s.cost);
+  const secs = (DATA.sectors || []).filter((s) => s.gain_pct != null);   // sector cost $ no longer ships
   if (!secs.length) { perfEl.innerHTML = `<p class="muted">No sector performance yet.</p>`; return; }
   const perf = [...secs].sort((a, b) => b.gain_pct - a.gain_pct);
   const maxAbs = Math.max(1, ...perf.map((s) => Math.abs(s.gain_pct)));
@@ -746,8 +784,8 @@ function openDrawer(ticker) {
   if (has(d.insider)) kv.push(["Insider (6-mo Form 4)", d.insider]);
   if (has(d.buzz)) kv.push(["Buzz", `${d.buzz} — ${d.buzz_signal || ""}`]);
   if (p) {
-    kv.push(["Jaleel's position", `${fmtNum(p.shares, 2)} sh · ${fmtUSD(p.value, 0)}`]);
-    kv.push(["Jaleel's gain", `${fmtUSD(p.gain, 0)} (${fmtPct(p.gain_pct)})`]);
+    kv.push(["Jaleel's position", privUnlocked() ? `${fmtNum(p.shares, 2)} sh · ${fmtUSD(p.value, 0)}` : `${lockSH()} · ${lockUSD()}`]);
+    kv.push(["Jaleel's gain", `${privUnlocked() ? fmtUSD(p.gain, 0) : lockUSD()} (${fmtPct(p.gain_pct)})`]);
     kv.push(["Weight", fmtNum(p.weight_pct, 1) + "%"]);
   }
 
@@ -926,7 +964,8 @@ function buildCreadContext(ticker) {
     u.insider ? `Insider activity: ${u.insider}.` : "",
     u.mktcap_b != null ? `Market cap ~$${fmtNum(u.mktcap_b, 1)}B.` : "",
     news && news.title ? `Latest headline (Benzinga): ${news.title}` : "",
-    p ? `User OWNS this: ${fmtNum(p.shares, 2)} sh, ${fmtPct(p.gain_pct)} unrealized.` : "Not currently held.",
+    p ? (privUnlocked() ? `User OWNS this: ${fmtNum(p.shares, 2)} sh, ${fmtPct(p.gain_pct)} unrealized.`
+                        : `User OWNS this: ${fmtPct(p.gain_pct)} unrealized (size owner-private).`) : "Not currently held.",
     pulse ? `Live X social pulse: ${pulse.sentiment_label} ${pulse.sentiment_score}/100, buzz ${pulse.buzz}. ${pulse.theme || ""}` : "",
   ].filter(Boolean).join("\n");
 }
@@ -1136,7 +1175,7 @@ function initGuide() {
     const inUniverse = new Set((DATA.universe || []).map((r) => r.ticker));
     const h = [...(DATA.portfolio || [])]
       .filter((p) => inUniverse.has(p.ticker) && p.shariah !== "NON-COMPLIANT")
-      .sort((x, y) => (y.value || 0) - (x.value || 0))[0] || (DATA.universe || [])[0];
+      .sort((x, y) => (y.weight_pct || 0) - (x.weight_pct || 0))[0] || (DATA.universe || [])[0];
     if (h) openDrawer(h.ticker);
   });
 }
@@ -1191,7 +1230,7 @@ function renderDaily() {
     const mv = (h) => `<li><span class="mv-tk">${esc(h.ticker)}</span><span class="${signClass(h.day_pct)}">${fmtPct(h.day_pct)}</span></li>`;
     document.getElementById("paper-portfolio").innerHTML =
       `<div class="side-head">Jaleel's Portfolio ${sessionSub()}</div>`
-      + `<p class="side-body">Jaleel's book is <b class="${signClass(todayPct)}">${todayPct >= 0 ? "up" : "down"} ${fmtPct(Math.abs(todayPct))}</b> (${todayUsd >= 0 ? "+" : "−"}${fmtUSD(Math.abs(todayUsd), 0)}) on the day — ${pUp} green, ${pDown} red.</p>`
+      + `<p class="side-body">Jaleel's book is <b class="${signClass(todayPct)}">${todayPct >= 0 ? "up" : "down"} ${fmtPct(Math.abs(todayPct))}</b>${todayUsd != null ? ` (${todayUsd >= 0 ? "+" : "−"}${fmtUSD(Math.abs(todayUsd), 0)})` : ""} on the day — ${pUp} green, ${pDown} red.</p>`
       + `<ul class="mv-list">${ps.slice(0, 3).map(mv).join("")}${ps.slice(-2).reverse().map(mv).join("")}</ul>`;
   }
   // Sector Watch
@@ -1353,7 +1392,7 @@ function renderSignals() {
 
 function sigRiskRow(r) {
   const held = DATA.portfolio.find((h) => h.ticker === r.ticker);
-  const sub = held ? `${fmtNum(held.shares, 2)} sh` : (r.sub || "cluster");
+  const sub = held ? (held.shares != null ? `${fmtNum(held.shares, 2)} sh` : `${fmtNum(held.weight_pct, 1)}% wt`) : (r.sub || "cluster");
   return `<div class="sig-row sev-${r.sev}">
     <div class="sig-tk"><span class="tk">${esc(r.ticker)}</span><span class="sig-sh">${esc(sub)}</span></div>
     <div class="sig-mid">
@@ -1533,9 +1572,12 @@ function holdingCall(tk) {
   const cons = pb.consensus || null;
   const sev = riskSevFor(tk);
   const gate = (gateNow(Object.assign({}, row, { price: h.price })) || {}).state || null;
-  const avgCost = h.shares ? h.cost / h.shares : null;
+  const avgCost = h.avg_cost != null ? h.avg_cost : (h.shares ? h.cost / h.shares : null);
   const inProfit = avgCost != null && h.price >= avgCost;
-  const full = (h.value || 0) >= fullWeightUsd(qarp);
+  // at-full check: live dollars when the owner blob is unlocked; otherwise the build-baked
+  // fw_x multiple (same doctrine, refreshed every cloud publish). Without this branch the
+  // locked engine read (0 >= $1,000) and could never call a position full.
+  const full = privUnlocked() ? (h.value || 0) >= fullWeightUsd(qarp) : (h.fw_x || 0) >= 1;
   const chip = row.catalyst || null;
   const chipHook = !!(chip && (chip.label === "SET" || chip.label === "WATCH"));
   // a near-unanimous bullish panel is a standing forward signal even between news cycles
@@ -1586,7 +1628,7 @@ function renderCalls() {
   const el = document.getElementById("calls-list");
   if (!el) return;
   const pb = (SIGNALS && SIGNALS.portfolio_brief) || {};
-  const holds = [...DATA.portfolio].sort((a, b) => (b.value || 0) - (a.value || 0));
+  const holds = [...DATA.portfolio].sort((a, b) => (b.weight_pct || 0) - (a.weight_pct || 0));
   el.innerHTML = holds.map((h) => {
     const c = holdingCall(h.ticker);
     const name = (pb[h.ticker] || {}).name || h.name || h.ticker;
@@ -1758,9 +1800,13 @@ async function liveTick() {
       if (q && typeof q.c === "number" && q.c > 0) {
         h.price = q.c;
         if (typeof q.dp === "number") h.day_pct = +q.dp.toFixed(2);
-        h.value = +(h.shares * q.c).toFixed(2);
-        h.gain = +(h.value - h.cost).toFixed(2);
-        h.gain_pct = +((h.gain / h.cost) * 100).toFixed(2);
+        if (h.shares != null) {   // owner tier merged: full dollar recompute
+          h.value = +(h.shares * q.c).toFixed(2);
+          h.gain = +(h.value - h.cost).toFixed(2);
+          h.gain_pct = +((h.gain / h.cost) * 100).toFixed(2);
+        } else if (h.avg_cost) {  // locked: gain% still tracks live off the public avg cost
+          h.gain_pct = +((q.c / h.avg_cost - 1) * 100).toFixed(2);
+        }
         const u = DATA.universe.find((x) => x.ticker === h.ticker); // keep universe consistent (silent)
         if (u) {
           u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2);
@@ -1772,16 +1818,18 @@ async function liveTick() {
   }));
 
   if (ok > 0) {
-    const positions = DATA.portfolio.reduce((s, h) => s + h.value, 0);
-    DATA.portfolio.forEach((h) => (h.weight_pct = +(h.value / positions * 100).toFixed(1)));
-    const t = DATA.meta.portfolio_totals;
-    t.positions = +positions.toFixed(2);
-    t.account = +(positions + t.cash).toFixed(2);
-    t.gain = +(positions - t.cost).toFixed(2);
-    t.gain_pct = +((t.gain / t.cost) * 100).toFixed(2);
+    if (privUnlocked()) {   // dollar totals only exist on the owner tier
+      const positions = DATA.portfolio.reduce((s, h) => s + h.value, 0);
+      DATA.portfolio.forEach((h) => (h.weight_pct = +(h.value / positions * 100).toFixed(1)));
+      const t = DATA.meta.portfolio_totals;
+      t.positions = +positions.toFixed(2);
+      t.account = +(positions + t.cash).toFixed(2);
+      t.gain = +(positions - t.cost).toFixed(2);
+      t.gain_pct = +((t.gain / t.cost) * 100).toFixed(2);
+      flashAccount(t.account);
+    }
     renderPortfolio();      // re-renders the KPI strip (inside this panel) + donut + table
     patchLivePrices();      // reflect holdings' live price/day in the Universe + Overview tabs
-    flashAccount(t.account);
     lastGoodTs = Date.now();
     lastGoodClock = nyClock();
     setLivePill("live", `LIVE · ${lastGoodClock}`);
@@ -2229,6 +2277,7 @@ function zakatHeldDays(ticker) {
   return d ? Math.floor((Date.now() - new Date(d + "T00:00:00Z")) / 86400000) : null;
 }
 function zakatOnBook() {
+  if (!privUnlocked()) return null;   // computed purely from owner-tier values
   const cash = (DATA.meta.portfolio_totals && DATA.meta.portfolio_totals.cash) || 0;
   const base = DATA.portfolio.reduce((s, h) => {
     const days = zakatHeldDays(h.ticker);
@@ -2586,9 +2635,115 @@ async function softRefresh() {
     if (p && p.iv && p.iv === lastPayloadIv) return;   // identical ciphertext -> no new build, skip
     const fresh = await decryptPayload(p, pw);
     DATA = fresh; lastPayloadIv = p.iv;
+    await refreshPrivateIntoData();   // a fresh DATA wiped the merged owner fields — re-merge BEFORE rendering
     rerenderFromData();
   } catch (e) { /* transient (offline / mid-publish) — keep showing the current data */ }
 }
+
+/* ---------- PRIVACY SPLIT: owner unlock machinery ---------- */
+// Merge the decrypted private blob back into DATA (the reverse of the build-side split),
+// then recompute dollars against whatever live prices have arrived since the build.
+function mergePrivate(priv) {
+  if (!priv || !DATA) return;
+  PRIV = priv;
+  (DATA.portfolio || []).forEach((h) => {
+    const m = priv.portfolio && priv.portfolio[h.ticker];
+    if (m) Object.assign(h, m);
+  });
+  if (priv.totals && DATA.meta && DATA.meta.portfolio_totals) Object.assign(DATA.meta.portfolio_totals, priv.totals);
+  const R = DATA.realized || [], PR = priv.realized || [];
+  R.forEach((r, i) => {
+    const key = `${r.ticker}|${r.date_sold || ""}`;
+    const pr = (PR[i] && PR[i].k === key) ? PR[i] : PR.find((x) => x.k === key);   // index first, key on skew
+    if (pr) { r.shares = pr.shares; r.gain = pr.gain; }
+  });
+  // live prices may have moved since this blob was built — recompute value/gain/totals
+  const t = (DATA.meta && DATA.meta.portfolio_totals) || {};
+  let positions = 0;
+  (DATA.portfolio || []).forEach((h) => {
+    if (h.shares != null && h.price != null) {
+      h.value = +(h.shares * h.price).toFixed(2);
+      if (h.cost != null) { h.gain = +(h.value - h.cost).toFixed(2); if (h.cost) h.gain_pct = +((h.gain / h.cost) * 100).toFixed(2); }
+    }
+    positions += h.value || 0;
+  });
+  if (positions && t.cash != null) {
+    t.positions = +positions.toFixed(2);
+    t.account = +(positions + t.cash).toFixed(2);
+    if (t.cost) { t.gain = +(positions - t.cost).toFixed(2); t.gain_pct = +((t.gain / t.cost) * 100).toFixed(2); }
+  }
+}
+// Fetch + decrypt private.enc with the remembered owner passcode and merge it in.
+// Wrong stored passcode (rotated) -> forget it and stay locked; network trouble -> keep
+// the last good blob so an open tab never loses the owner view mid-session.
+async function refreshPrivateIntoData() {
+  const opw = localStorage.getItem("jc_owner_pw");
+  if (!opw) return false;
+  let p = null;
+  try { p = await (await fetch("private.enc", { cache: "no-store" })).json(); }
+  catch (e) { if (PRIV) mergePrivate(PRIV); return !!PRIV; }
+  try {
+    if (p && p.iv && p.iv === lastPrivateIv && PRIV) { mergePrivate(PRIV); return true; }
+    const priv = await decryptPayload(p, opw);
+    lastPrivateIv = p.iv;
+    mergePrivate(priv);
+    return true;
+  } catch (e) {   // fetched fine but wouldn't decrypt = passcode changed
+    localStorage.removeItem("jc_owner_pw");
+    if (PRIV) mergePrivate(PRIV);
+    return !!PRIV;
+  }
+}
+// The small owner-gate modal (built on demand; newsprint tokens in styles.css .og-*).
+function openOwnerGate() {
+  if (privUnlocked()) return;
+  if (document.getElementById("owner-gate")) return;
+  const wrap = document.createElement("div");
+  wrap.id = "owner-gate";
+  wrap.innerHTML = `
+    <div class="og-bg"></div>
+    <form class="og-card">
+      <h3>Owner unlock</h3>
+      <p class="og-note">Dollar amounts and share counts are hidden on shared views. Enter the owner passcode to reveal them on this device.</p>
+      <input type="password" id="og-pw" autocomplete="current-password" placeholder="Owner passcode" aria-label="Owner passcode">
+      <div class="og-row"><button type="submit" class="og-btn">Unlock</button><button type="button" class="og-cancel">Cancel</button></div>
+      <p class="og-err" hidden>Wrong passcode.</p>
+    </form>`;
+  document.body.appendChild(wrap);
+  const close = () => wrap.remove();
+  wrap.querySelector(".og-bg").addEventListener("click", close);
+  wrap.querySelector(".og-cancel").addEventListener("click", close);
+  wrap.querySelector("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const pw = document.getElementById("og-pw").value;
+    if (!pw) return;
+    const btn = wrap.querySelector(".og-btn");
+    btn.disabled = true; btn.textContent = "Unlocking…";
+    try {
+      const p = await (await fetch("private.enc", { cache: "no-store" })).json();
+      const priv = await decryptPayload(p, pw);
+      lastPrivateIv = p.iv;
+      localStorage.setItem("jc_owner_pw", pw);   // per-device: enter once, stays unlocked
+      mergePrivate(priv);
+      close();
+      rerenderFromData();
+    } catch (err) {
+      btn.disabled = false; btn.textContent = "Unlock";
+      const el = wrap.querySelector(".og-err"); el.hidden = false;
+      document.getElementById("og-pw").select();
+    }
+  });
+  document.getElementById("og-pw").focus();
+}
+function ownerRelock() {
+  localStorage.removeItem("jc_owner_pw");
+  location.reload();   // cleanest way to purge merged dollars from every render
+}
+// One delegated listener: the KPI lock chip + every blurred redaction opens the gate.
+document.addEventListener("click", (e) => {
+  if (e.target.closest("#owner-lock-chip")) { privUnlocked() ? ownerRelock() : openOwnerGate(); return; }
+  if (e.target.closest(".priv-blur")) openOwnerGate();
+});
 
 async function boot() {
   const gate = document.getElementById("gate"), app = document.getElementById("app");
@@ -2618,6 +2773,8 @@ async function boot() {
       lastPayloadIv = payload.iv;
       gate.hidden = true; app.hidden = false;
       sessionStorage.setItem("jc_pw", pw);   // remember within this tab session only
+      // owner tier: silently restore the amounts on a remembered device BEFORE first paint
+      await refreshPrivateIntoData();
       renderAll();
     } catch (err) {
       if (fromSaved) { sessionStorage.removeItem("jc_pw"); btn.disabled = false; btn.textContent = "Unlock"; }
@@ -2709,7 +2866,9 @@ function botDossier(tk) {
   }
   const ab = d.about || (p && p.about);
   if (ab && ab.desc) L.push(`What the company does: ${ab.desc.slice(0, 480)}${ab.desc.length > 480 ? "…" : ""} (Industry: ${ab.industry || "?"}${ab.emp ? `, ~${Number(ab.emp).toLocaleString("en-US")} employees` : ""}.)`);
-  if (p) L.push(`JALEEL HOLDS IT: ${fmtNum(p.shares, 2)} sh, value ${fmtUSD(p.value, 0)} = ${p.weight_pct}% of the book, unrealized ${fmtUSD(p.gain, 0)} (${fmtPct(p.gain_pct)}).`);
+  if (p) L.push(privUnlocked()
+    ? `JALEEL HOLDS IT: ${fmtNum(p.shares, 2)} sh, value ${fmtUSD(p.value, 0)} = ${p.weight_pct}% of the book, unrealized ${fmtUSD(p.gain, 0)} (${fmtPct(p.gain_pct)}).`
+    : `JALEEL HOLDS IT: ${p.weight_pct}% of the book, unrealized ${fmtPct(p.gain_pct)}. (Position sizes are owner-private — never state or estimate dollar amounts or share counts.)`);
   return L.join("\n");
 }
 
@@ -2733,7 +2892,7 @@ function botMatchTickers(q) {
 
 function buildBotContext(question) {
   const t = (DATA.meta && DATA.meta.portfolio_totals) || {};
-  const holds = (DATA.portfolio || []).map((h) => `${h.ticker} ${h.weight_pct}% ${fmtUSD(h.value, 0)} ${fmtPct(h.gain_pct)} (${h.verdict || "?"})`).join("; ");
+  const holds = (DATA.portfolio || []).map((h) => `${h.ticker} ${h.weight_pct}%${privUnlocked() ? " " + fmtUSD(h.value, 0) : ""} ${fmtPct(h.gain_pct)} (${h.verdict || "?"})`).join("; ");
   const calls = (DATA.portfolio || []).map((h) => { try { return `${h.ticker}:${holdingCall(h.ticker).call}`; } catch (e) { return ""; } }).filter(Boolean).join(", ");
   const top = [...(DATA.universe || [])].filter((u) => u.qarp != null).sort((a, b) => b.qarp - a.qarp).slice(0, 15).map((u) => `${u.ticker} ${fmtNum(u.qarp, 0)} ${u.verdict}${u.mom ? " " + u.mom.state : ""}`).join("; ");
   const S = (typeof SIGNALS !== "undefined" && SIGNALS) || {};
@@ -2744,13 +2903,17 @@ function buildBotContext(question) {
   const adds = (A.candidates || []).map((x) => `${x.ticker} (${x.verdict}, ${x.macro}: ${(x.why || [])[0] || ""})`).join("; ");
   const gaps = (A.sector_gaps || []).map((g) => `${g.macro} ${g.book_pct}%`).join(", ");
   const drift = ((DATA.meta || {}).drift || {});
-  const driftLine = (drift.flagged || []).map((f) => `${f.ticker}(w${f.weight})`).join(", ");
+  // meta.drift is DRIFT_META ({date, flagged[]}) some days and a bare count on others —
+  // the bare-count shape made this .map throw and killed the whole Ask bot.
+  const driftLine = (Array.isArray(drift.flagged) ? drift.flagged : []).map((f) => `${f.ticker}(w${f.weight})`).join(", ");
   const dossiers = botMatchTickers(question).map(botDossier).filter(Boolean).join("\n\n");
   return [
     "You are the desk analyst for the Jaleel Capital QARP dashboard — a Shariah-compliant, capital-preservation-first equity framework. Answer like a sharp senior analyst: direct answer first, then the reasoning, citing the actual numbers from the context. Challenge consensus, note both sides, never sugar-coat. Use ONLY the data below — never invent a price, verdict, Shariah status, or figure; if it isn't here, say so and suggest naming the ticker (full dossiers load for names mentioned in the question). Informational only — NOT financial advice. Keep answers TIGHT — under ~250 words unless asked to go deeper; end with a one-line NET: takeaway so the answer never cuts off mid-thought.",
     "METHOD (compressed): QARP = w×(Quality/105×100) + (1−w)×(DCF/5×100); w slides with size 60% (≥$15B) → 75% (≤$0.3B) because small-cap DCFs are unreliable — quality/survival weighs more. Quality pillars: Valuation 25, Growth 20, Moat&Returns 20, BalanceSheet 20, CapitalAllocation 20. DCF 1–5 from triangulated fair value (AlphaSpread + analyst consensus + GF Value, conservative leg wins; first score capped at 4); re-banded DAILY against live price from a fixed anchor. CYCLICALS (semis, energy, chemicals, homebuilders…) are FORWARD-anchored — trailing P/E lies at troughs (looks dear when cheap) and peaks (looks cheap when dear). AI-disruption software capped at DCF 4. Bands: ≥85 STRONGEST, ≥72 STRONG BUY, ≥66 BUY, ≥60 HOLD-QUAL, 35–59 AVOID, <35 STRONG AVOID. Momentum gate (GO/TURN/WAIT vs 50/20-day) times entries only. Catalyst (SET/WATCH/WEAK/NONE) is a shadow preview. Gate 1 = AAOIFI Shariah (Musaffa, stricter-view-wins; quarterly re-screen). House rules: concentration is cured by ADDING elsewhere, never selling a name below fair value; an upcoming earnings print is event risk, not a reason to buy.",
-    `Data as of ${DATA.meta && DATA.meta.date}. Account ${fmtUSD(t.account, 0)}, cash ${fmtUSD(t.cash, 2)}, unrealized ${fmtUSD(t.gain, 0)} (${fmtPct(t.gain_pct)}).`,
-    `Holdings (weight, value, P/L, verdict): ${holds}.`,
+    privUnlocked()
+      ? `Data as of ${DATA.meta && DATA.meta.date}. Account ${fmtUSD(t.account, 0)}, cash ${fmtUSD(t.cash, 2)}, unrealized ${fmtUSD(t.gain, 0)} (${fmtPct(t.gain_pct)}).`
+      : `Data as of ${DATA.meta && DATA.meta.date}. Book unrealized ${fmtPct(t.gain_pct)}. (The account's dollar size is owner-private — never state or estimate dollar amounts or share counts.)`,
+    `Holdings (weight${privUnlocked() ? ", value" : ""}, P/L, verdict): ${holds}.`,
     `Daily Add/Hold/Trim calls: ${calls}.`,
     `Top of the universe by QARP: ${top}.`,
     `Additions desk (unheld, event-hooked candidates): ${adds || "none today"}. Book sector gaps: ${gaps || "none"}.`,
@@ -3081,7 +3244,7 @@ function crFeatures(tkr, view) {
   feats.rsi = crRSI(closes);
   feats.levels = crLevels(b, CR.scale === "W" ? 104 : 190);
   const h = crHolding(tkr);
-  feats.avgCost = h && h.shares ? h.cost / h.shares : null;
+  feats.avgCost = h ? (h.avg_cost != null ? h.avg_cost : (h.shares ? h.cost / h.shares : null)) : null;
   feats.hi52 = Math.max(...b.h.slice(-252)); feats.lo52 = Math.min(...b.l.slice(-252));
   const n = closes.length;
   feats.px = closes[n - 1];
@@ -3587,7 +3750,7 @@ function crDeskPlan(tkr, view, feats) {
     // The chart decides WHERE, never WHETHER: the verdict / weight / event decides whether
     // to sell; the ceiling only picks the best-paid spot once that decision exists.
     target = r1.level; targetTxt = fp(r1.level);
-    const avg = h && h.shares ? h.cost / h.shares : null;
+    const avg = h ? (h.avg_cost != null ? h.avg_cost : (h.shares ? h.cost / h.shares : null)) : null;
     targetSub = `The ${r1.touches}-touch ceiling, +${((r1.level / px - 1) * 100).toFixed(1)}% — ${r1.touches} rejections = trapped supply waiting there, though each absorbed test also weakens it${r2 ? ` (a close through flips the map toward ${fp(r2.level)})` : ""}. `;
     if (/AVOID/.test(verd) && h && avg && target > avg) {
       targetSub += `<b>Swing entries harvest here.</b> The position: this is the trim spot — into strength, above your cost, partial — because the <i>verdict</i> (not the chart) wants this capital elsewhere.`;
@@ -3609,7 +3772,12 @@ function crDeskPlan(tkr, view, feats) {
     rrChip = `<span class="cr-rr">R:R ${rr.toFixed(1)}</span>`;
   }
   // ---- the advisor's line ----
-  const held = h ? `You hold ${h.shares % 1 ? h.shares.toFixed(1) : h.shares} sh at ${fp(h.cost / h.shares)} (${h.gain_pct >= 0 ? "+" : ""}${(h.gain_pct || 0).toFixed(1)}%). ` : "";
+  const heldAvg = h ? (h.avg_cost != null ? h.avg_cost : (h.shares ? h.cost / h.shares : null)) : null;
+  const held = h
+    ? (privUnlocked() && h.shares != null
+        ? `You hold ${h.shares % 1 ? h.shares.toFixed(1) : h.shares} sh at ${fp(h.shares ? h.cost / h.shares : heldAvg)} (${h.gain_pct >= 0 ? "+" : ""}${(h.gain_pct || 0).toFixed(1)}%). `
+        : `You hold this at ${heldAvg != null ? fp(heldAvg) + " avg" : "cost"} (${h.gain_pct >= 0 ? "+" : ""}${(h.gain_pct || 0).toFixed(1)}%). `)
+    : "";
   let frame;
   if (/STRONG|BUY/.test(verd) && !/AVOID/.test(verd)) frame = `The framework backs this name (${verd}) — this plan times the add.`;
   else if (/HOLD/.test(verd)) frame = `Framework says ${verd} — quality without a discount; take entries strictly at the levels or not at all.`;

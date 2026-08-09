@@ -1,7 +1,9 @@
 # NEVER deploy these — they contain plaintext holdings / the password.
-# Only payload.enc (ciphertext) + the static assets should ever reach a host.
+# Only payload.enc + private.enc (ciphertext) + the static assets should ever reach a host.
 data.json
+private.json
 .site_password
+.owner_password
 .finnhub_key
 .benzinga_key
 .openai_key

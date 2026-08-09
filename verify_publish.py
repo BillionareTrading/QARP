@@ -65,6 +65,23 @@ def _check_live(local_ver):
             fails.append("LIVE signals.json has NO relevance scores (news enrichment lost)")
     except Exception:
         pass
+    # PRIVACY SPLIT (2026-08-09): the owner blob must ride every publish. The LIVE pair is
+    # writer-agnostic (cloud/local race safely), so check date skew between the two blobs.
+    # Tolerance 2 days: a cloud without the OWNER_PASSWORD secret skips the refresh (client
+    # recomputes $ from live prices, so a briefly-stale blob is harmless) — but a lag beyond
+    # that means an allowlist/race-recovery regression dropped the file. Then it's a FAIL.
+    try:
+        pd = json.loads(_fetch("payload.enc?cb=%d" % int(time.time()))).get("date", "")
+        vd = json.loads(_fetch("private.enc?cb=%d" % int(time.time()))).get("date", "")
+        if pd and vd and pd != vd:
+            from datetime import date as _d
+            lag = (_d.fromisoformat(pd) - _d.fromisoformat(vd)).days
+            if lag > 2:
+                fails.append("LIVE private.enc lags payload.enc by %dd (%s vs %s) — owner blob dropped from a publish path" % (lag, vd, pd))
+            else:
+                print("  note: LIVE private.enc date %s != payload %s (<=2d, tolerated — cloud secret missing?)" % (vd, pd))
+    except Exception as e:
+        fails.append("LIVE private.enc fetch/parse failed: %s" % str(e)[:60])
     # THE TIMES front page: the daily column must be present + non-empty, and must not lag the
     # payload beyond app.js's render tolerance (4 calendar days). If it does, the front page
     # silently drops to the generic "Shariah universe trades mixed…" fallback — the exact
@@ -115,6 +132,21 @@ def main():
         pass
     except Exception as e:
         fails.append("LOCAL daily_brief.json check failed: %s" % str(e)[:60])
+
+    # 1c) PRIVACY SPLIT: locally the two blobs are written by the same encrypt pass, so their
+    # plaintext dates must MATCH exactly (strict-if-present; a missing local private.enc only
+    # warns — encrypt_data already printed why it skipped).
+    try:
+        _pd = json.loads(open(os.path.join(HERE, "payload.enc")).read()).get("date", "")
+        _vp = os.path.join(HERE, "private.enc")
+        if os.path.exists(_vp):
+            _vd = json.loads(open(_vp).read()).get("date", "")
+            if _pd and _vd and _pd != _vd:
+                fails.append("LOCAL private.enc date %s != payload.enc date %s — re-run encrypt_data.py before publishing" % (_vd, _pd))
+        else:
+            print("  note: no local private.enc (owner blob) — cloud copy stays as-is")
+    except Exception as e:
+        fails.append("LOCAL private.enc check failed: %s" % str(e)[:60])
 
     # 2) LIVE: poll until the served site matches local, tolerating propagation lag
     if "--live" in sys.argv and not fails:
