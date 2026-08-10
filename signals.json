@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "generated_at": "Aug 10, 9:35am ET",
+  "generated_at": "Aug 10, 10:25am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,14 +93,6 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Jul 30",
-      "what": "KO — Argus Research maintains",
-      "affects": "KO",
-      "dir": "two-sided",
-      "why": "Now rated <b>Buy</b>, PT $97.",
-      "src": "Benzinga ratings"
-    },
-    {
       "when": "Aug 10",
       "what": "Energy & geopolitics — today's read",
       "why": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
@@ -110,7 +102,6 @@
     }
   ],
   "earnings_next": {
-    "KO": "2026-10-20",
     "RKLB": "2026-08-10",
     "ABT": "2026-10-13",
     "ZTS": "2026-11-02",
@@ -122,12 +113,12 @@
     "DHR": "2026-10-19",
     "ADBE": "2026-09-10",
     "LULU": "2026-09-02",
+    "EXE": "2026-10-26",
     "SPGI": "2026-10-28",
     "AVGO": "2026-09-02",
     "GILD": "2026-10-28",
     "SAP": "2026-10-21",
     "NVS": "2026-10-27",
-    "EXE": "2026-10-26",
     "NBIX": "2026-10-26",
     "VRTX": "2026-11-02",
     "EFX": "2026-10-19"
@@ -136,10 +127,10 @@
   "sectors": [
     {
       "sector": "Software",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
       "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
@@ -157,10 +148,10 @@
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Telecommunications",
@@ -200,12 +191,6 @@
       "ts": 1786286827,
       "url": "https://www.benzinga.com/markets/tech/26/08/61063847/us-china-ai-war-inside-the-battle-for-global-tech-dominance",
       "wiim": false
-    },
-    "KO": {
-      "title": "Apple's OpenAI Lawsuit, Earnings, Senator's Stock Sales and more: This Week in Appleverse",
-      "ts": 1786273273,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61063618/weekend-business-headlines-openai-apple-stock-sales",
-      "wiim": false
     }
   },
   "ratings": [
@@ -217,11 +202,11 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$209",
-      "price": 189.0,
-      "upside": 10.6,
+      "price": 192.41,
+      "upside": 8.6,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-03",
@@ -231,8 +216,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$282",
-      "price": 259.66,
-      "upside": 8.6,
+      "price": 259.99,
+      "upside": 8.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -245,11 +230,11 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$216",
-      "price": 189.0,
-      "upside": 14.3,
+      "price": 192.41,
+      "upside": 12.3,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-04",
@@ -259,8 +244,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 306.81,
-      "upside": -8.7,
+      "price": 307.07,
+      "upside": -8.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -273,8 +258,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.68,
-      "upside": -4.0,
+      "price": 41.37,
+      "upside": -3.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -287,11 +272,11 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 189.0,
-      "upside": 8.5,
+      "price": 192.41,
+      "upside": 6.5,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-05",
@@ -301,8 +286,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 128.25,
-      "upside": 13.8,
+      "price": 129.33,
+      "upside": 12.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -315,8 +300,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 259.66,
-      "upside": 10.5,
+      "price": 259.99,
+      "upside": 10.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -329,7 +314,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 145.79,
+      "price": 145.18,
       "upside": null,
       "held": false,
       "uni": true,
@@ -343,7 +328,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 306.81,
+      "price": 307.07,
       "upside": -14.1,
       "held": false,
       "uni": true,
@@ -376,16 +361,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.5
-    },
-    "CVX": {
-      "date": "2026-08-05",
-      "firm": "TD Cowen",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$205",
-      "upside": 8.5
+      "upside": 10.4
     },
     "MRK": {
       "date": "2026-08-05",
@@ -394,7 +370,16 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "upside": 13.8
+      "upside": 12.9
+    },
+    "CVX": {
+      "date": "2026-08-05",
+      "firm": "TD Cowen",
+      "action": "Maintains",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$205",
+      "upside": 6.5
     },
     "NKE": {
       "date": "2026-08-04",
@@ -403,7 +388,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -4.0
+      "upside": -3.3
     },
     "KO": {
       "date": "2026-07-30",
@@ -412,7 +397,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.4
+      "upside": 11.5
     },
     "HD": {
       "date": "2026-07-27",
@@ -421,14 +406,92 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 7.0
+      "upside": 8.4
     }
   },
   "bz_news": [
     {
+      "title": "Intel shares are trading lower after the company announced a proposed $15 billion stock offering.",
+      "url": "https://www.benzinga.com/quote/INTC",
+      "ts": 1786371833,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.366
+    },
+    {
+      "title": "Intel Just Put $15 Billion of Stock on the Table. Here's What Investors Need to Know",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61077167/intel-15-billion-stock-offer-what-investors-must-know",
+      "ts": 1786371711,
+      "tickers": [
+        "INTC",
+        "TSM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.388
+    },
+    {
+      "title": "Disney's Disney+, Hulu Announce Video Podcast Deal With iHeartMedia For Six iHeartPodcasts Titles; Terms Not Disclosed",
+      "url": "https://www.benzinga.com/news/26/08/61076983/disney-s-disney-hulu-announce-video-podcast-deal-iheartmedia-six-iheartpodcasts-titles-terms-not-dis",
+      "ts": 1786371434,
+      "tickers": [
+        "IHRT",
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.243
+    },
+    {
+      "title": "Varex Imaging Posts Upbeat Q3 Earnings, Joins Bowman Consulting, MarineMax And Other Big Stocks Moving Higher On Monday",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61076669/varex-imaging-posts-upbeat-q3-earnings-joins-bowman-consulting-marinemax-and-other-big-stocks-moving-higher-on-monday",
+      "ts": 1786371097,
+      "tickers": [
+        "BA",
+        "BFLY",
+        "PTEN",
+        "FSLY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.505
+    },
+    {
+      "title": "Guggenheim Maintains Neutral on Amgen, Raises Price Target to $388",
+      "url": "https://www.benzinga.com/news/26/08/61075359/guggenheim-maintains-neutral-amgen-raises-price-target-388",
+      "ts": 1786369407,
+      "tickers": [
+        "AMGN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.497
+    },
+    {
+      "title": "Merek & Company 13F Filing Shows Co Reported 1.214M-Share Position In Evaxion Valued At $3.76M",
+      "url": "https://www.benzinga.com/m/26/08/61075062/merek-company-13f-filing-shows-co-reported-1-214m-share-position-evaxion-valued-3-76m",
+      "ts": 1786369206,
+      "tickers": [
+        "MRK",
+        "EVAX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.448
+    },
+    {
       "title": "Trump Adviser Sounds Alarm On Fuel Prices, Grocery Inflation As Iran War Keeps Energy Costs High, But Sees US Economy Entering 'Liftoff Stage'",
       "url": "https://www.benzinga.com/markets/macro-economic-events/26/08/61074679/trump-adviser-sounds-alarm-on-fuel-prices-grocery-inflation-as-iran-war-keeps-energy-costs-high-but-sees-us-economy-entering-liftoff-stage",
-      "ts": 1786368773,
+      "ts": 1786368769,
       "tickers": [
         "MCD"
       ],
@@ -545,7 +608,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.308
+      "relevance": 0.307
     },
     {
       "title": "Archer Aviation Announces Deal To Acquire Boeing's Wisk Aero, SkyGrid, Insitu, Adding Over $200M In Annual Defense Revenue; Boeing To Take Stake, Become Strategic Partner; Terms Not Disclosed",
@@ -558,7 +621,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.412
+      "relevance": 0.411
     },
     {
       "title": "How To Earn $500 A Month From Cisco Stock Ahead Of Q4 Earnings",
@@ -606,7 +669,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.362
+      "relevance": 0.361
     },
     {
       "title": "Trump’s Transportation Secretary Touts 2,000 New Air Traffic Controllers After Gamer Hiring Push: ‘Game Changer’",
@@ -660,19 +723,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.33
-    },
-    {
-      "title": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry",
-      "url": "https://www.benzinga.com/news/26/08/61067037/inquiry-apple-s-competitor-dynamics-technology-hardware-storage-amp-peripherals-industry",
-      "ts": 1786355919,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.404
+      "relevance": 0.329
     },
     {
       "title": "Taiwan Semiconductor’s Blockbuster Run Rolls On: July Revenue Surges 45%",
@@ -687,166 +738,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.446
-    },
-    {
-      "title": "Elon Musk Says AI Agents Will Dwarf Human Internet Traffic, But Michael Burry Asks, ‘Who Will Pay’ for AI Agents to Socialize?",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61066418/elon-musk-says-ai-agents-will-dwarf-human-internet-traffic-but-michael-burry-asks-who-will-pay-for-ai-agents-to-socialize",
-      "ts": 1786351163,
-      "tickers": [
-        "TSLA",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.367
-    },
-    {
-      "title": "Apple Tests China's CXMT Memory Chips for iPhones and Macbooks Amid AI-Fueled Supply Crunch: Report",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61065901/apple-tests-chinas-cxmt-memory-chips-for-iphones-and-macbooks-amid-ai-fueled-supply-crunch-report",
-      "ts": 1786346136,
-      "tickers": [
-        "AAPL",
-        "XIACF",
-        "XIACY",
-        "HPQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.473
-    },
-    {
-      "title": "JB Pritzker Demands Big Oil Return 'Windfall Profits' as Iran’s Hormuz Demands Threaten Another Gas Price Spike",
-      "url": "https://www.benzinga.com/news/politics/26/08/61065715/jb-pritzker-demands-big-oil-return-windfall-profits-as-irans-hormuz-demands-threaten-another-gas-price-spike",
-      "ts": 1786344782,
-      "tickers": [
-        "XOM",
-        "CVX",
-        "COP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.244
-    },
-    {
-      "title": "Ross Gerber Cites Data to Make a Point: Take Out Alphabet and Amazon, S&P 500 Earnings Growth Looks Far Less Impressive",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61065241/ross-gerber-alphabet-amazon-sp-500-earnings-growth",
-      "ts": 1786340151,
-      "tickers": [
-        "AMZN",
-        "GOOGL",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.403
-    },
-    {
-      "title": "Starlink 'Unbelievable Juggernaut Cash Machine,' Says VC David Friedberg; SpaceX CEO Elon Musk Responds With $1 Trillion+ Annual Revenue Projection",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61064883/starlink-david-friedberg-elon-musk-1-trillion-revenue",
-      "ts": 1786331407,
-      "tickers": [
-        "SPCX",
-        "GOOGL",
-        "GOOG",
-        "TMUS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.368
-    },
-    {
-      "title": "Apple's OpenAI Lawsuit, Earnings, Senator's Stock Sales and more: This Week in Appleverse",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61063618/weekend-business-headlines-openai-apple-stock-sales",
-      "ts": 1786273273,
-      "tickers": [
-        "AAPL",
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.341
-    },
-    {
-      "title": "BofA Sounds Alarm On Extreme Bullishness. These ETFs Offer a Defensive Play",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61061746/bofa-sounds-alarm-on-extreme-bullishness-these-etfs-offer-a-defensive-play",
-      "ts": 1786195820,
-      "tickers": [
-        "XLP",
-        "KO",
-        "WMT",
-        "COST"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.39
-    },
-    {
-      "title": "Bad Timing or Bad Luck? Shelley Moore Capito Sold Apple and Coca‑Cola Before Big Moves",
-      "url": "https://www.benzinga.com/news/politics/26/08/61048293/bad-timing-or-bad-luck-shelley-moore-capito-sold-apple-and-coca%e2%80%91cola-before-big-moves",
-      "ts": 1786120406,
-      "tickers": [
-        "AAPL",
-        "MSFT",
-        "KO",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.353
-    },
-    {
-      "title": "Texas Rep. Lloyd Doggett Bought Over $1K Worth of Coca-Cola Stock: Here’s What You Should Know",
-      "url": "https://www.benzinga.com/government/26/08/61002440/texas-rep-lloyd-doggett-bought-over-1k-worth-coca-cola-stock-here-s-what-you-should-know",
-      "ts": 1786028438,
-      "tickers": [
-        "KO",
-        "HD",
-        "PPG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.487
-    },
-    {
-      "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/08/60881668/mcdonalds-q2-preview-world-cup-new-3-menu-higher-gas-prices-which-theme-wins-out",
-      "ts": 1785776312,
-      "tickers": [
-        "MCD",
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.292
-    },
-    {
-      "title": "Warren Buffett Says You Don't Need 20 Right Calls To Get Rich — '4 Or 5 Will Probably Do It'",
-      "url": "https://www.benzinga.com/personal-finance/management/26/08/60860272/warren-buffett-says-you-dont-need-20-right-calls-to-get-rich-four-or-five-will-probably-do-it",
-      "ts": 1785610818,
-      "tickers": [
-        "AMZN",
-        "KO",
-        "BAC",
-        "BRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.21
+      "relevance": 0.445
     }
   ],
   "portfolio_brief": {
@@ -1054,7 +946,7 @@
     },
     "AZO": {
       "name": "AutoZone",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 9,
         "buy": 16,
@@ -1217,6 +1109,38 @@
       },
       "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: HOLD-QUAL."
     },
+    "EXE": {
+      "name": "Expand Energy",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 9,
+        "buy": 15,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 30,
+        "bullish": 24,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/895126/000110465926088451/tm2621424d1_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/895126/000089512626000047/exe-20260630.htm"
+        },
+        "insider30d": 0
+      },
+      "explain": "30 analysts cover it — 24 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "SPGI": {
       "name": "S&P Global",
       "qarp": "BUY",
@@ -1371,38 +1295,6 @@
       },
       "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
-    "EXE": {
-      "name": "Expand Energy",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 9,
-        "buy": 15,
-        "hold": 6,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 30,
-        "bullish": 24,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-30",
-          "url": "https://www.sec.gov/Archives/edgar/data/895126/000110465926088451/tm2621424d1_8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/895126/000089512626000047/exe-20260630.htm"
-        },
-        "insider30d": 0
-      },
-      "explain": "30 analysts cover it — 24 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "NBIX": {
       "name": "Neurocrine Biosciences",
       "qarp": "STRONG BUY",
@@ -1498,43 +1390,6 @@
         "insider30d": 1
       },
       "explain": "30 analysts cover it — 20 bullish, 10 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "KO": {
-      "name": "Coca-Cola",
-      "qarp": "AVOID",
-      "consensus": {
-        "strongBuy": 8,
-        "buy": 19,
-        "hold": 8,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 35,
-        "bullish": 27,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.0,
-        "period": "2026-08-01"
-      },
-      "news": {
-        "title": "Apple's OpenAI Lawsuit, Earnings, Senator's Stock Sales and more: This Week in Appleverse",
-        "ts": 1786273273,
-        "url": "https://www.benzinga.com/markets/tech/26/08/61063618/weekend-business-headlines-openai-apple-stock-sales",
-        "wiim": false
-      },
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026049922/ko-20260728.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026050503/ko-20260703.htm"
-        },
-        "insider30d": 4
-      },
-      "explain": "35 analysts cover it — 27 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     }
   },
   "financials": {
@@ -1742,6 +1597,20 @@
       "margin": 7.9,
       "summary": "Q1 FY2026 — revenue $2.5B (+4.3% YoY), diluted EPS $1.69 (-35.0% YoY), net margin 8%. (as reported, GAAP)"
     },
+    "EXE": {
+      "period": "FY2020",
+      "filed": "2021-03-01",
+      "form": "10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/895126/000089512626000047/exe-20260630.htm",
+      "revenue": {
+        "fmt": "$2.7B",
+        "yoy": -39.2
+      },
+      "eps": null,
+      "net_income": null,
+      "margin": null,
+      "summary": "FY2020 — revenue $2.7B (-39.2% YoY). (as reported, GAAP)"
+    },
     "SPGI": {
       "period": "Q3 FY2018",
       "filed": "2018-10-26",
@@ -1796,20 +1665,6 @@
     },
     "SAP": null,
     "NVS": null,
-    "EXE": {
-      "period": "FY2020",
-      "filed": "2021-03-01",
-      "form": "10-K",
-      "url": "https://www.sec.gov/Archives/edgar/data/895126/000089512626000047/exe-20260630.htm",
-      "revenue": {
-        "fmt": "$2.7B",
-        "yoy": -39.2
-      },
-      "eps": null,
-      "net_income": null,
-      "margin": null,
-      "summary": "FY2020 — revenue $2.7B (-39.2% YoY). (as reported, GAAP)"
-    },
     "NBIX": {
       "period": "Q2 FY2026",
       "filed": "2026-07-31",
@@ -1866,7 +1721,6 @@
       },
       "margin": 10.8,
       "summary": "Q2 FY2026 — revenue $1.7B (+10.6% YoY), diluted EPS $1.54 (+0.7% YoY), net margin 11%. (as reported, GAAP)"
-    },
-    "KO": null
+    }
   }
 }
