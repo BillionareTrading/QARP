@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "generated_at": "Aug 10, 5:55am ET",
+  "generated_at": "Aug 10, 6:30am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -183,16 +183,16 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
-    "NVDA": {
-      "title": "Nvidia-Backed Lumentum Soaring Again: Will It Rise or Fall After Earnings?",
-      "ts": 1786306272,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61064193/nvidia-backed-lumentum-stock-is-soaring-again-will-it-rise-or-fall-after-earnings",
-      "wiim": false
-    },
     "AVGO": {
       "title": "US-China AI War: Inside the Battle for Global Tech Dominance",
       "ts": 1786286827,
       "url": "https://www.benzinga.com/markets/tech/26/08/61063847/us-china-ai-war-inside-the-battle-for-global-tech-dominance",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "Nvidia-Backed Lumentum Soaring Again: Will It Rise or Fall After Earnings?",
+      "ts": 1786306272,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61064193/nvidia-backed-lumentum-stock-is-soaring-again-will-it-rise-or-fall-after-earnings",
       "wiim": false
     },
     "UBER": {
@@ -412,6 +412,60 @@
   },
   "bz_news": [
     {
+      "title": "Jamie Dimon Warns Dollar Won’t Stay Reserve Currency if US Loses Its Edge: ‘The World Will Be Fragmented’",
+      "url": "https://www.benzinga.com/markets/forex/26/08/61067934/jamie-dimon-warns-dollar-wont-stay-reserve-currency-if-us-loses-its-edge-the-world-will-be-fragmented",
+      "ts": 1786357251,
+      "tickers": [
+        "JPM",
+        "UUP",
+        "UDN",
+        "USDU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.275
+    },
+    {
+      "title": "Sony, TSMC Plan $6.3B Image Sensor Plant in Japan as Apple Camera Demand, ‘Physical AI’ Drive Expansion: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61067145/sony-tsmc-plan-6-3b-image-sensor-plant-in-japan-as-apple-camera-demand-physical-ai-drive-expansion-report",
+      "ts": 1786356055,
+      "tickers": [
+        "SONY",
+        "AAPL",
+        "TSM",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.477
+    },
+    {
+      "title": "Analyzing Microsoft In Comparison To Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/08/61067045/analyzing-microsoft-comparison-competitors-software-industry",
+      "ts": 1786355924,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.329
+    },
+    {
+      "title": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/08/61067037/inquiry-apple-s-competitor-dynamics-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1786355919,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.404
+    },
+    {
       "title": "Taiwan Semiconductor’s Blockbuster Run Rolls On: July Revenue Surges 45%",
       "url": "https://www.benzinga.com/markets/tech/26/08/61066972/taiwan-semiconductors-blockbuster-run-rolls-on-july-revenue-surges-45",
       "ts": 1786354990,
@@ -424,7 +478,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.445
+      "relevance": 0.446
     },
     {
       "title": "Elon Musk Says AI Agents Will Dwarf Human Internet Traffic, But Michael Burry Asks, ‘Who Will Pay’ for AI Agents to Socialize?",
@@ -716,60 +770,6 @@
       "relevance": 0.381
     },
     {
-      "title": "Deal Dispatch: Bending Spoons Acquires Airtable, Bain Capital Buys Gong Cha Global, Salad and Go Bankruptcy",
-      "url": "https://www.benzinga.com/m-a/26/08/61049824/deal-dispatch-bending-spoons-acquires-airtable-bain-capital-buys-gong-cha-global-salad-and-go-bankruptcy",
-      "ts": 1786122739,
-      "tickers": [
-        "DBGI",
-        "APO",
-        "PG",
-        "BWXT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.391
-    },
-    {
-      "title": "OpenAI Says Have Implemented Universal Monitoring For Risky Actions & Misalignment Across All Agentic Applications Of Astra; Concluded We Cannot Rule Out Critical Cyber Capabilities Under Our Preparedness Framework For Model Astra At This Time",
-      "url": "https://www.benzinga.com/news/26/08/61048579/openai-says-have-implemented-universal-monitoring-risky-actions-misalignment-across-all-agentic-appl",
-      "ts": 1786120796,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.254
-    },
-    {
-      "title": "OpenAI Says Astra Is An Upcoming Model, And Was Not Involved In Exploiting Hugging Face; Pausing Internal Activities Involving Astra That Do Not Yet Meet These Strengthened Security Control Requirements; Implementing Stricter Security Controls For Higher-Capability Models & Associated Activities, Including Isolated Testing Environments; Will Be Providing Recommended Security Controls To Third-party Testing Partners For Running Higher Risk Evaluations And Workloads Safely",
-      "url": "https://www.benzinga.com/news/26/08/61048561/openai-says-astra-upcoming-model-and-was-not-involved-exploiting-hugging-face-pausing-internal-activ",
-      "ts": 1786120775,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.236
-    },
-    {
-      "title": "Trump Says AI Could Be Bigger Than Oil. These ETFs Are Betting on the Fuel Behind the Boom",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61048357/trump-says-ai-could-be-bigger-than-oil-these-etfs-are-betting-on-the-fuel-behind-the-boom",
-      "ts": 1786120540,
-      "tickers": [
-        "AIQ",
-        "MSFT",
-        "PLTR",
-        "TSM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.374
-    },
-    {
       "title": "Bad Timing or Bad Luck? Shelley Moore Capito Sold Apple and Coca‑Cola Before Big Moves",
       "url": "https://www.benzinga.com/news/politics/26/08/61048293/bad-timing-or-bad-luck-shelley-moore-capito-sold-apple-and-coca%e2%80%91cola-before-big-moves",
       "ts": 1786120406,
@@ -796,7 +796,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.488
+      "relevance": 0.487
     },
     {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
