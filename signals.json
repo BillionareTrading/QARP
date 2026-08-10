@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "generated_at": "Aug 10, 8:00am ET",
+  "generated_at": "Aug 10, 8:45am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -183,6 +183,12 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
+    "UBER": {
+      "title": "Consumer Tech (Aug 3-7): SpaceX Released Strong First Earnings, Meta Sued For Harming Children's Mental Health & More",
+      "ts": 1786286424,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61063819/consumer-tech-aug-3-7-spacex-released-strong-first-earnings-meta-sued-for-harming-childrens-mental-health-more",
+      "wiim": false
+    },
     "NVDA": {
       "title": "Nvidia-Backed Lumentum Soaring Again: Will It Rise or Fall After Earnings?",
       "ts": 1786306272,
@@ -193,12 +199,6 @@
       "title": "US-China AI War: Inside the Battle for Global Tech Dominance",
       "ts": 1786286827,
       "url": "https://www.benzinga.com/markets/tech/26/08/61063847/us-china-ai-war-inside-the-battle-for-global-tech-dominance",
-      "wiim": false
-    },
-    "UBER": {
-      "title": "Consumer Tech (Aug 3-7): SpaceX Released Strong First Earnings, Meta Sued For Harming Children's Mental Health & More",
-      "ts": 1786286424,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61063819/consumer-tech-aug-3-7-spacex-released-strong-first-earnings-meta-sued-for-harming-childrens-mental-health-more",
       "wiim": false
     },
     "KO": {
@@ -334,9 +334,32 @@
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-08-10",
+      "ticker": "AAPL",
+      "firm": "Jefferies",
+      "action": "Downgrades",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$264",
+      "price": 313.33,
+      "upside": -15.9,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "AAPL": {
+      "date": "2026-08-10",
+      "firm": "Jefferies",
+      "action": "Downgrades",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$264",
+      "upside": -15.9
+    },
     "PG": {
       "date": "2026-08-07",
       "firm": "Argus Research",
@@ -382,15 +405,6 @@
       "pt": "$40",
       "upside": -4.1
     },
-    "AAPL": {
-      "date": "2026-08-04",
-      "firm": "China Renaissance",
-      "action": "Downgrades",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$280",
-      "upside": -10.6
-    },
     "KO": {
       "date": "2026-07-30",
       "firm": "Argus Research",
@@ -412,6 +426,75 @@
   },
   "bz_news": [
     {
+      "title": "Jefferies Downgrades Apple to Underperform, Lowers Price Target to $263.66",
+      "url": "https://www.benzinga.com/news/26/08/61072938/jefferies-downgrades-apple-underperform-lowers-price-target-263-66",
+      "ts": 1786365613,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.456
+    },
+    {
+      "title": "Intel Makes $15 Billion Move to Fund AI Ambitions",
+      "url": "https://www.benzinga.com/markets/offerings/26/08/61072893/intel-makes-15-billion-move-to-fund-ai-ambitions",
+      "ts": 1786365494,
+      "tickers": [
+        "INTC",
+        "SOXX",
+        "MTUM",
+        "XNTK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.499
+    },
+    {
+      "title": "Scott Bessent Says America's 'K-Shaped' Economy Is Dead, But Robert Reich Fires Back With a McDonald's Warning: 'Very Much Alive, Even CEOs are Admitting It's a Problem'",
+      "url": "https://www.benzinga.com/markets/macro-economic-events/26/08/61072486/k-shaped-economy-scott-bessent-economists-consumer-spending",
+      "ts": 1786364819,
+      "tickers": [
+        "MCD",
+        "RL",
+        "WMT",
+        "UBER"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.267
+    },
+    {
+      "title": "Elizabeth Warren Says UnitedHealth, CVS Have Too Much Control Over US Healthcare—Now She Wants to Break Up the Vertical Integration",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61072410/elizabeth-warren-says-unitedhealth-cvs-have-too-much-control-over-us-healthcare-now-she-wants-to-break-up-the-vertical-integration",
+      "ts": 1786364375,
+      "tickers": [
+        "UNH",
+        "CI",
+        "CVS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.308
+    },
+    {
+      "title": "Archer Aviation Announces Deal To Acquire Boeing's Wisk Aero, SkyGrid, Insitu, Adding Over $200M In Annual Defense Revenue; Boeing To Take Stake, Become Strategic Partner; Terms Not Disclosed",
+      "url": "https://www.benzinga.com/quote/BA",
+      "ts": 1786363487,
+      "tickers": [
+        "ACHR",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.411
+    },
+    {
       "title": "How To Earn $500 A Month From Cisco Stock Ahead Of Q4 Earnings",
       "url": "https://www.benzinga.com/trading-ideas/dividends/26/08/61071236/how-to-earn-500-a-month-from-cisco-stock-ahead-of-q4-earnings-3",
       "ts": 1786362820,
@@ -421,7 +504,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.419
+      "relevance": 0.418
     },
     {
       "title": "Intel Announces $15B Offering Of Common Stock",
@@ -445,7 +528,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.387
+      "relevance": 0.386
     },
     {
       "title": "Exclusive: Curative Ditches $600,000 Salesforce Contract Says 'AI Changes the Economics of Building Software,' But CRM Warns of Security Risks",
@@ -511,7 +594,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.33
+      "relevance": 0.329
     },
     {
       "title": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry",
@@ -688,51 +771,6 @@
       "relevance": 0.341
     },
     {
-      "title": "CoreWeave Stock Stuck in a Bear Market as Short Interest Rises Ahead of Earnings",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61062163/coreweave-stock-stuck-in-a-bear-market-as-short-interest-rises-ahead-of-earnings",
-      "ts": 1786218348,
-      "tickers": [
-        "NVDA",
-        "CRWV",
-        "$BTC",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.403
-    },
-    {
-      "title": "VOO, SPY, SPYM ETF Inflows Jump as S&P 500 Index Q2 Earnings Growth Hits 50%",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61062092/voo-spy-spym-etf-inflows-jump-as-sp-500-index-q2-earnings-growth-hits-50",
-      "ts": 1786211070,
-      "tickers": [
-        "SPY",
-        "VOO",
-        "SPYM",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.503
-    },
-    {
-      "title": "Cisco, Top Dow Jones Stock of 2026, Faces Crucial Test as Earnings Loom",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61061775/cisco-the-top-dow-jones-stock-of-2026-faces-a-crucial-test-as-earnings-loom",
-      "ts": 1786197294,
-      "tickers": [
-        "CSCO",
-        "META",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.346
-    },
-    {
       "title": "BofA Sounds Alarm On Extreme Bullishness. These ETFs Offer a Defensive Play",
       "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61061746/bofa-sounds-alarm-on-extreme-bullishness-these-etfs-offer-a-defensive-play",
       "ts": 1786195820,
@@ -746,19 +784,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.39
-    },
-    {
-      "title": "Trump Administration Pledges Over $2 Billion for Battery, Critical-Minerals Firms to Cut China Reliance: 'We Want These...'",
-      "url": "https://www.benzinga.com/markets/commodities/26/08/61061394/trump-administration-2-billion-battery-critical-minerals-funding",
-      "ts": 1786165816,
-      "tickers": [
-        "TSLA",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.29
     },
     {
       "title": "Bad Timing or Bad Luck? Shelley Moore Capito Sold Apple and Coca‑Cola Before Big Moves",
@@ -787,7 +812,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.488
+      "relevance": 0.487
     },
     {
       "title": "McDonald’s Q2 Preview: World Cup, New $3 Menu, Higher Gas Prices – Which Theme Wins Out?",
