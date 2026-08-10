@@ -3913,6 +3913,10 @@ function edDocketRowHtml(e) {
     ? `<span class="ed-lbl2">PRINT</span>${edCallChip("print", c.print, c.print_conf)}
        <span class="ed-lbl2">GUIDE</span>${edCallChip("guide", c.guide, c.guide_conf)}
        <span class="ed-lbl2">TAPE</span>${edCallChip("tape", c.tape, c.tape_conf)}`
+    /* a name that reached its print takeless is a MISS the desk owns out loud —
+       blank calls here used to read as "pending" forever (NABL, 2026-08-10) */
+    : e.no_call
+    ? `<span class="ed-pendchip ed-warn">NO CALL — printed before a take was written (${esc(e.no_call.hour || "hour unknown")})</span>`
     : `<span class="ed-pendchip">numbers live — the take lands at T−10</span>`;
   return `<div class="ed-drow" onclick="edOpenCard('${esc(e.tk)}')">
     <div class="ed-drow-top">

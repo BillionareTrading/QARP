@@ -1726,6 +1726,8 @@ table.ed-ledger td { padding: 5px 8px; border-bottom: 1px dotted var(--line-2); 
 .ed-drow-calls { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; margin-top: 8px; }
 .ed-lbl2 { font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; color: var(--ink-3); }
 .ed-pendchip { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); border: 1px dashed var(--news-rule); padding: 2px 8px; border-radius: 3px; }
+/* a coverage miss reads as an admission, not as "still pending" — solid brass, not dashed grey */
+.ed-pendchip.ed-warn { color: var(--brass); background: #f7efe2; border: 1px solid #e2cfa8; font-weight: 700; }
 .ed-drow-open { margin-left: auto; font-family: var(--mono); font-size: 11px; color: var(--brand); white-space: nowrap; }
 .ed-more { font-size: 12px; color: var(--ink-2); margin-top: 8px; line-height: 1.55; }
 .ed-more summary { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; color: var(--ink-3); cursor: pointer; }
