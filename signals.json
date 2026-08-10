@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "generated_at": "Aug 10, 3:25pm ET",
+  "generated_at": "Aug 10, 3:41pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -208,8 +208,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$209",
-      "price": 194.64,
-      "upside": 7.4,
+      "price": 194.4,
+      "upside": 7.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -222,7 +222,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$282",
-      "price": 259.93,
+      "price": 259.79,
       "upside": 8.5,
       "held": false,
       "uni": true,
@@ -236,8 +236,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$216",
-      "price": 194.64,
-      "upside": 11.0,
+      "price": 194.4,
+      "upside": 11.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,8 +250,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 307.36,
-      "upside": -8.9,
+      "price": 307.03,
+      "upside": -8.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -264,8 +264,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.93,
-      "upside": -4.6,
+      "price": 42.1,
+      "upside": -5.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -278,8 +278,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 194.64,
-      "upside": 5.3,
+      "price": 194.4,
+      "upside": 5.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -292,8 +292,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 130.6,
-      "upside": 11.8,
+      "price": 130.51,
+      "upside": 11.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -306,8 +306,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 259.93,
-      "upside": 10.4,
+      "price": 259.79,
+      "upside": 10.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,7 +320,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 145.78,
+      "price": 145.67,
       "upside": null,
       "held": false,
       "uni": true,
@@ -334,8 +334,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 307.36,
-      "upside": -14.2,
+      "price": 307.03,
+      "upside": -14.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -349,7 +349,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -14.2
+      "upside": -14.1
     },
     "PG": {
       "date": "2026-08-07",
@@ -367,7 +367,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.4
+      "upside": 10.5
     },
     "MRK": {
       "date": "2026-08-05",
@@ -376,7 +376,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "upside": 11.8
+      "upside": 11.9
     },
     "CVX": {
       "date": "2026-08-05",
@@ -385,7 +385,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 5.3
+      "upside": 5.5
     },
     "NKE": {
       "date": "2026-08-04",
@@ -394,7 +394,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -4.6
+      "upside": -5.0
     },
     "KO": {
       "date": "2026-07-30",
@@ -403,7 +403,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.5
+      "upside": 11.7
     },
     "HD": {
       "date": "2026-07-27",
@@ -412,10 +412,22 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 7.8
+      "upside": 7.9
     }
   },
   "bz_news": [
+    {
+      "title": "iPhone 18 Costs Could Jump 38% — Will Apple Pass It On?",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61089627/iphone-18-costs-could-jump-38-will-apple-pass-it-on",
+      "ts": 1786390354,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.308
+    },
     {
       "title": "Trump Says Administration Recognizing Childhood Vaccine Recommendations For Only 11 Core Vaccinations; Hepatitis B, COVID-19, Influenza No Longer Recommended For All Children",
       "url": "https://www.benzinga.com/news/26/08/61088567/trump-says-administration-recognizing-childhood-vaccine-recommendations-for-only-11-core-vaccinations-hepatitis-b-covid-19-influenza-no-longer-recommended-for-all-children",
@@ -501,7 +513,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.386
+      "relevance": 0.387
     },
     {
       "title": "SpaceX Earnings Highlights from Cathie Wood's ARK Invest",
@@ -528,7 +540,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.532
+      "relevance": 0.533
     },
     {
       "title": "S&P 500 Earnings Growth May Be Less Impressive Than It Looks; SpaceX Short Squeeze; Inflation Data Ahead",
@@ -555,7 +567,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.307
+      "relevance": 0.306
     },
     {
       "title": "Microsoft Stock Rises 2%: Upcoming Maia 300 Chip Launch Targets Reduced Nvidia Reliance",
@@ -570,7 +582,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.516
+      "relevance": 0.515
     },
     {
       "title": "'Wall Street Giants Partner With NVIDIA On $500B AI Financing Deal; A Consortium Including Apollo, Blackstone, BlackRock’s Unit, Brookfield , Goldman Sachs & KKR Entering A Partnership With NVIDIA' - Financial Times",
@@ -598,7 +610,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.409
+      "relevance": 0.408
     },
     {
       "title": "Apple shares are trading lower after Jefferies downgraded the stock from Hold to Underperform and lowered its price target on the stock from $285.56 to $263.66.",
@@ -610,7 +622,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.464
+      "relevance": 0.465
     },
     {
       "title": "QUICK SPARK: Microsoft Price Target Raised — 'Not Building Too Fast' Given Demand",
@@ -745,22 +757,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.389
-    },
-    {
-      "title": "Varex Imaging Posts Upbeat Q3 Earnings, Joins Bowman Consulting, MarineMax And Other Big Stocks Moving Higher On Monday",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61076669/varex-imaging-posts-upbeat-q3-earnings-joins-bowman-consulting-marinemax-and-other-big-stocks-moving-higher-on-monday",
-      "ts": 1786371097,
-      "tickers": [
-        "BA",
-        "BFLY",
-        "PTEN",
-        "FSLY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.505
+      "relevance": 0.388
     }
   ],
   "portfolio_brief": {
