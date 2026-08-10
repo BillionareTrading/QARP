@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "generated_at": "Aug 10, 11:49am ET",
+  "generated_at": "Aug 10, 12:30pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -95,7 +95,7 @@
     {
       "when": "Aug 10",
       "what": "Energy & geopolitics — today's read",
-      "why": "Amid energy price contraction due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
+      "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
       "dir": "two-sided",
       "src": "Benzinga WIIM (live)"
@@ -127,10 +127,10 @@
   "sectors": [
     {
       "sector": "Oil & Gas",
-      "dir": "mixed",
-      "driver": "Energy price contraction due to concerns that the U.S. and Iran aren't m…",
-      "note": "Amid energy price contraction due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "dir": "up",
+      "driver": "Energy price gains due to concerns that the U.S. and Iran aren't making …",
+      "note": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Software",
@@ -174,16 +174,16 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
-    "UBER": {
-      "title": "Consumer Tech (Aug 3-7): SpaceX Released Strong First Earnings, Meta Sued For Harming Children's Mental Health & More",
-      "ts": 1786286424,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61063819/consumer-tech-aug-3-7-spacex-released-strong-first-earnings-meta-sued-for-harming-childrens-mental-health-more",
-      "wiim": false
-    },
     "NVDA": {
       "title": "Nvidia-Backed Lumentum Soaring Again: Will It Rise or Fall After Earnings?",
       "ts": 1786306272,
       "url": "https://www.benzinga.com/markets/tech/26/08/61064193/nvidia-backed-lumentum-stock-is-soaring-again-will-it-rise-or-fall-after-earnings",
+      "wiim": false
+    },
+    "UBER": {
+      "title": "Consumer Tech (Aug 3-7): SpaceX Released Strong First Earnings, Meta Sued For Harming Children's Mental Health & More",
+      "ts": 1786286424,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61063819/consumer-tech-aug-3-7-spacex-released-strong-first-earnings-meta-sued-for-harming-childrens-mental-health-more",
       "wiim": false
     },
     "AVGO": {
@@ -202,8 +202,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$209",
-      "price": 193.04,
-      "upside": 8.3,
+      "price": 192.78,
+      "upside": 8.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -216,7 +216,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$282",
-      "price": 260.2,
+      "price": 260.07,
       "upside": 8.4,
       "held": false,
       "uni": true,
@@ -230,8 +230,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$216",
-      "price": 193.04,
-      "upside": 11.9,
+      "price": 192.78,
+      "upside": 12.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +244,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 306.52,
-      "upside": -8.7,
+      "price": 305.61,
+      "upside": -8.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -258,8 +258,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.84,
-      "upside": -4.4,
+      "price": 41.89,
+      "upside": -4.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -272,8 +272,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 193.04,
-      "upside": 6.2,
+      "price": 192.78,
+      "upside": 6.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -286,8 +286,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 130.14,
-      "upside": 12.2,
+      "price": 130.49,
+      "upside": 11.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -300,8 +300,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 260.2,
-      "upside": 10.3,
+      "price": 260.07,
+      "upside": 10.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -314,7 +314,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 145.72,
+      "price": 145.75,
       "upside": null,
       "held": false,
       "uni": true,
@@ -328,8 +328,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 306.52,
-      "upside": -14.0,
+      "price": 305.61,
+      "upside": -13.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -343,7 +343,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -14.0
+      "upside": -13.7
     },
     "PG": {
       "date": "2026-08-07",
@@ -361,7 +361,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.3
+      "upside": 10.4
     },
     "MRK": {
       "date": "2026-08-05",
@@ -370,7 +370,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "upside": 12.2
+      "upside": 11.9
     },
     "CVX": {
       "date": "2026-08-05",
@@ -379,7 +379,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 6.2
+      "upside": 6.3
     },
     "NKE": {
       "date": "2026-08-04",
@@ -388,7 +388,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -4.4
+      "upside": -4.5
     },
     "KO": {
       "date": "2026-07-30",
@@ -397,7 +397,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.0
+      "upside": 11.1
     },
     "HD": {
       "date": "2026-07-27",
@@ -406,10 +406,104 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 7.9
+      "upside": 8.1
     }
   },
   "bz_news": [
+    {
+      "title": "'Wall Street Giants Partner With NVIDIA On $500B AI Financing Deal; A Consortium Including Apollo, Blackstone, BlackRock’s Unit, Brookfield , Goldman Sachs & KKR Entering A Partnership With NVIDIA' - Financial Times",
+      "url": "https://www.benzinga.com/news/26/08/61082575/wall-street-giants-partner-nvidia-500b-ai-financing-deal-consortium-including-apollo-blackstone-blac",
+      "ts": 1786379287,
+      "tickers": [
+        "NVDA",
+        "APO",
+        "BX",
+        "BLK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.495
+    },
+    {
+      "title": "TSMC Is Pumping $64B Into Expansion — Intel Needs a $15B Stock Sale to Do It",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61082475/tsmc-pumping-64-billion-intel-raises-15-billion-for-expansion",
+      "ts": 1786379131,
+      "tickers": [
+        "TSM",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.408
+    },
+    {
+      "title": "Apple shares are trading lower after Jefferies downgraded the stock from Hold to Underperform and lowered its price target on the stock from $285.56 to $263.66.",
+      "url": "https://www.benzinga.com/quote/AAPL",
+      "ts": 1786378747,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.464
+    },
+    {
+      "title": "QUICK SPARK: Microsoft Price Target Raised — 'Not Building Too Fast' Given Demand",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61081922/quick-spark-microsoft-price-target-raised-not-building-too-fast-given-demand",
+      "ts": 1786378333,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.42
+    },
+    {
+      "title": "Home Depot Realigns Leadership to Capture Bigger Share of $1.2 Trillion Home Improvement Market",
+      "url": "https://www.benzinga.com/markets/large-cap/26/08/61081496/home-depot-realigns-leadership-to-capture-bigger-share-of-1-2-trillion-home-improvement-market",
+      "ts": 1786377773,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.387
+    },
+    {
+      "title": "Boeing, Archer Join Forces in Major Autonomous Aviation Deal",
+      "url": "https://www.benzinga.com/markets/large-cap/26/08/61081416/boeing-archer-join-forces-in-major-autonomous-aviation-deal",
+      "ts": 1786377660,
+      "tickers": [
+        "BA",
+        "LMT",
+        "NOC",
+        "ITA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.4
+    },
+    {
+      "title": "Boeing and Airbus Need More Engines. GE and RTX Are Racing to Supply Them",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61081109/ge-rtx-race-to-supply-engines-boeing-airbus",
+      "ts": 1786377138,
+      "tickers": [
+        "RTX",
+        "GE",
+        "BA",
+        "EADSY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.332
+    },
     {
       "title": "US-Japan Yen Intervention Signals Bond Market Fear",
       "url": "https://www.benzinga.com/Opinion/26/08/61080332/us-japan-yen-intervention-signals-bond-market-fear",
@@ -452,19 +546,19 @@
       "relevance": 0.395
     },
     {
-      "title": "Shares of integrated oil and gas companies are trading lower amid energy price contraction due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
+      "title": "Shares of integrated oil and gas companies are trading higher amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "url": "https://www.benzinga.com/quote/EC",
       "ts": 1786373262,
       "tickers": [
+        "XOM",
         "CVX",
-        "EQNR",
         "CVE",
-        "SU"
+        "IMO"
       ],
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.344
+      "relevance": 0.35
     },
     {
       "title": "Intel shares are trading lower after the company announced a proposed $15 billion stock offering.",
@@ -502,7 +596,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.242
+      "relevance": 0.243
     },
     {
       "title": "Varex Imaging Posts Upbeat Q3 Earnings, Joins Bowman Consulting, MarineMax And Other Big Stocks Moving Higher On Monday",
@@ -517,7 +611,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.506
+      "relevance": 0.505
     },
     {
       "title": "Guggenheim Maintains Neutral on Amgen, Raises Price Target to $388",
@@ -542,7 +636,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.449
+      "relevance": 0.448
     },
     {
       "title": "Trump Adviser Sounds Alarm On Fuel Prices, Grocery Inflation As Iran War Keeps Energy Costs High, But Sees US Economy Entering 'Liftoff Stage'",
@@ -620,7 +714,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.455
+      "relevance": 0.456
     },
     {
       "title": "Intel Makes $15 Billion Move to Fund AI Ambitions",
@@ -651,96 +745,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.267
-    },
-    {
-      "title": "Elizabeth Warren Says UnitedHealth, CVS Have Too Much Control Over US Healthcare—Now She Wants to Break Up the Vertical Integration",
-      "url": "https://www.benzinga.com/news/health-care/26/08/61072410/elizabeth-warren-says-unitedhealth-cvs-have-too-much-control-over-us-healthcare-now-she-wants-to-break-up-the-vertical-integration",
-      "ts": 1786364375,
-      "tickers": [
-        "UNH",
-        "CI",
-        "CVS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.308
-    },
-    {
-      "title": "Archer Aviation Announces Deal To Acquire Boeing's Wisk Aero, SkyGrid, Insitu, Adding Over $200M In Annual Defense Revenue; Boeing To Take Stake, Become Strategic Partner; Terms Not Disclosed",
-      "url": "https://www.benzinga.com/quote/BA",
-      "ts": 1786363487,
-      "tickers": [
-        "ACHR",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.411
-    },
-    {
-      "title": "How To Earn $500 A Month From Cisco Stock Ahead Of Q4 Earnings",
-      "url": "https://www.benzinga.com/trading-ideas/dividends/26/08/61071236/how-to-earn-500-a-month-from-cisco-stock-ahead-of-q4-earnings-3",
-      "ts": 1786362820,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.418
-    },
-    {
-      "title": "Intel Announces $15B Offering Of Common Stock",
-      "url": "https://www.benzinga.com/quote/INTC",
-      "ts": 1786362394,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.408
-    },
-    {
-      "title": "Intel Files Prospectus To Sell Shares Of Common Stock And On Behalf Of Selling Stockholders",
-      "url": "https://www.benzinga.com/news/26/08/61069475/intel-files-prospectus-sell-shares-common-stock-and-behalf-selling-stockholders",
-      "ts": 1786359962,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.386
-    },
-    {
-      "title": "Exclusive: Curative Ditches $600,000 Salesforce Contract Says 'AI Changes the Economics of Building Software,' But CRM Warns of Security Risks",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61068540/exclusive-curative-ditches-600000-salesforce-contract-says-ai-changes-the-economics-of-building-software-but-crm-warns-of-security-risks",
-      "ts": 1786358512,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.362
-    },
-    {
-      "title": "Taiwan Semiconductor’s Blockbuster Run Rolls On: July Revenue Surges 45%",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61066972/taiwan-semiconductors-blockbuster-run-rolls-on-july-revenue-surges-45",
-      "ts": 1786354984,
-      "tickers": [
-        "TSM",
-        "AAPL",
-        "AMD",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.446
     }
   ],
   "portfolio_brief": {
