@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "generated_at": "Aug 10, 11:36am ET",
+  "generated_at": "Aug 10, 11:49am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -148,10 +148,10 @@
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Telecommunications",
@@ -202,7 +202,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$209",
-      "price": 192.99,
+      "price": 193.04,
       "upside": 8.3,
       "held": false,
       "uni": true,
@@ -216,7 +216,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$282",
-      "price": 260.19,
+      "price": 260.2,
       "upside": 8.4,
       "held": false,
       "uni": true,
@@ -230,7 +230,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$216",
-      "price": 192.99,
+      "price": 193.04,
       "upside": 11.9,
       "held": false,
       "uni": true,
@@ -244,7 +244,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 306.6,
+      "price": 306.52,
       "upside": -8.7,
       "held": false,
       "uni": true,
@@ -258,8 +258,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.76,
-      "upside": -4.2,
+      "price": 41.84,
+      "upside": -4.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -272,7 +272,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 192.99,
+      "price": 193.04,
       "upside": 6.2,
       "held": false,
       "uni": true,
@@ -286,7 +286,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 130.08,
+      "price": 130.14,
       "upside": 12.2,
       "held": false,
       "uni": true,
@@ -300,7 +300,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 260.19,
+      "price": 260.2,
       "upside": 10.3,
       "held": false,
       "uni": true,
@@ -314,7 +314,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 145.78,
+      "price": 145.72,
       "upside": null,
       "held": false,
       "uni": true,
@@ -328,7 +328,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 306.6,
+      "price": 306.52,
       "upside": -14.0,
       "held": false,
       "uni": true,
@@ -388,7 +388,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -4.2
+      "upside": -4.4
     },
     "KO": {
       "date": "2026-07-30",
@@ -397,7 +397,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 10.9
+      "upside": 11.0
     },
     "HD": {
       "date": "2026-07-27",
@@ -406,7 +406,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 7.8
+      "upside": 7.9
     }
   },
   "bz_news": [
@@ -502,7 +502,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.243
+      "relevance": 0.242
     },
     {
       "title": "Varex Imaging Posts Upbeat Q3 Earnings, Joins Bowman Consulting, MarineMax And Other Big Stocks Moving Higher On Monday",
@@ -517,7 +517,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.505
+      "relevance": 0.506
     },
     {
       "title": "Guggenheim Maintains Neutral on Amgen, Raises Price Target to $388",
@@ -542,7 +542,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.448
+      "relevance": 0.449
     },
     {
       "title": "Trump Adviser Sounds Alarm On Fuel Prices, Grocery Inflation As Iran War Keeps Energy Costs High, But Sees US Economy Entering 'Liftoff Stage'",
@@ -620,7 +620,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.456
+      "relevance": 0.455
     },
     {
       "title": "Intel Makes $15 Billion Move to Fund AI Ambitions",
@@ -664,7 +664,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.307
+      "relevance": 0.308
     },
     {
       "title": "Archer Aviation Announces Deal To Acquire Boeing's Wisk Aero, SkyGrid, Insitu, Adding Over $200M In Annual Defense Revenue; Boeing To Take Stake, Become Strategic Partner; Terms Not Disclosed",
