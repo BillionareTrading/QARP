@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "generated_at": "Aug 10, 8:45am ET",
+  "generated_at": "Aug 10, 9:35am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -136,17 +136,17 @@
   "sectors": [
     {
       "sector": "Software",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
       "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Oil & Gas",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Crude prices gain after Iranian strikes directed at U.S. assets in Jordan",
       "note": "As crude prices gain after Iranian strikes directed at U.S. assets in Jordan. Also, President Trump said the U.S. would respond \"hard\" to the attack.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Foundry, Fabricator & Idm Chip",
@@ -157,10 +157,10 @@
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Telecommunications",
@@ -217,8 +217,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$209",
-      "price": 186.56,
-      "upside": 12.0,
+      "price": 189.0,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -231,8 +231,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$282",
-      "price": 259.24,
-      "upside": 8.8,
+      "price": 259.66,
+      "upside": 8.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -245,8 +245,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$216",
-      "price": 186.56,
-      "upside": 15.8,
+      "price": 189.0,
+      "upside": 14.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -259,8 +259,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 313.33,
-      "upside": -10.6,
+      "price": 306.81,
+      "upside": -8.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -273,8 +273,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.7,
-      "upside": -4.1,
+      "price": 41.68,
+      "upside": -4.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -287,8 +287,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 186.56,
-      "upside": 9.9,
+      "price": 189.0,
+      "upside": 8.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -301,8 +301,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 128.58,
-      "upside": 13.5,
+      "price": 128.25,
+      "upside": 13.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -315,8 +315,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 259.24,
-      "upside": 10.7,
+      "price": 259.66,
+      "upside": 10.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -343,8 +343,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 313.33,
-      "upside": -15.9,
+      "price": 306.81,
+      "upside": -14.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -358,7 +358,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -15.9
+      "upside": -14.1
     },
     "PG": {
       "date": "2026-08-07",
@@ -376,7 +376,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.7
+      "upside": 10.5
     },
     "CVX": {
       "date": "2026-08-05",
@@ -385,7 +385,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 9.9
+      "upside": 8.5
     },
     "MRK": {
       "date": "2026-08-05",
@@ -394,7 +394,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "upside": 13.5
+      "upside": 13.8
     },
     "NKE": {
       "date": "2026-08-04",
@@ -403,7 +403,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -4.1
+      "upside": -4.0
     },
     "KO": {
       "date": "2026-07-30",
@@ -421,10 +421,76 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "upside": 6.0
+      "upside": 7.0
     }
   },
   "bz_news": [
+    {
+      "title": "Trump Adviser Sounds Alarm On Fuel Prices, Grocery Inflation As Iran War Keeps Energy Costs High, But Sees US Economy Entering 'Liftoff Stage'",
+      "url": "https://www.benzinga.com/markets/macro-economic-events/26/08/61074679/trump-adviser-sounds-alarm-on-fuel-prices-grocery-inflation-as-iran-war-keeps-energy-costs-high-but-sees-us-economy-entering-liftoff-stage",
+      "ts": 1786368773,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.283
+    },
+    {
+      "title": "Microsoft’s Homegrown AI Chip Effort Shows Signs Of Life After Slow Start; Microsoft Plans To Unveil Its Next-Generation Maia 300 AI Chip In September; Microsoft Is Planning To Ramp Up Its Own Usage Of Maia While Wooing Big Customers; Microsoft Believes Maia Chips Can Run In-House And OpenAI Models At A Lower Cost; Microsoft Has Been In Talks With Chipmaker TSMC To Secure Manufacturing Capacity For Over 300,000 Of Maia Chips For Delivery In 2027",
+      "url": "https://www.benzinga.com/news/26/08/61074328/microsoft-s-homegrown-ai-chip-effort-shows-signs-life-after-slow-start-microsoft-plans-unveil-its-ne",
+      "ts": 1786367953,
+      "tickers": [
+        "MSFT",
+        "TSM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.468
+    },
+    {
+      "title": "Top Economist Says Washington Can’t Fix Its Own Debt Addiction, Calls for Constitutional ‘Debt Brake’ to Stop $40 Trillion Crisis",
+      "url": "https://www.benzinga.com/news/macro-notification/26/08/61074326/top-economist-says-washington-cant-fix-its-own-debt-addiction-calls-for-constitutional-debt-brake-to-stop-40-trillion-crisis",
+      "ts": 1786367948,
+      "tickers": [
+        "COIN",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.221
+    },
+    {
+      "title": "Socket Mobile Partners With 3Eye Technologies To Distribute The Company's Barcode Scanners, Contactless Readers And Mobile Data Capture Solutions In North America",
+      "url": "https://www.benzinga.com/news/26/08/61074088/socket-mobile-partners-3eye-technologies-distribute-company-s-barcode-scanners-contactless-readers-a",
+      "ts": 1786367607,
+      "tickers": [
+        "SCKT",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.336
+    },
+    {
+      "title": "Standard Chartered Targets LINK At $200, Joining Hyperbullish Bitcoin, Ethereum Calls",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61073855/standard-chartered-targets-link-at-200-joining-hyperbullish-bitcoin-ethereum-calls",
+      "ts": 1786367201,
+      "tickers": [
+        "$LINK",
+        "$BTC",
+        "$ETH",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.347
+    },
     {
       "title": "Jefferies Downgrades Apple to Underperform, Lowers Price Target to $263.66",
       "url": "https://www.benzinga.com/news/26/08/61072938/jefferies-downgrades-apple-underperform-lowers-price-target-263-66",
@@ -492,7 +558,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.411
+      "relevance": 0.412
     },
     {
       "title": "How To Earn $500 A Month From Cisco Stock Ahead Of Q4 Earnings",
@@ -567,7 +633,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.276
+      "relevance": 0.275
     },
     {
       "title": "Sony, TSMC Plan $6.3B Image Sensor Plant in Japan as Apple Camera Demand, ‘Physical AI’ Drive Expansion: Report",
@@ -594,7 +660,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.329
+      "relevance": 0.33
     },
     {
       "title": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry",
@@ -696,66 +762,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.368
-    },
-    {
-      "title": "Nvidia-Backed Lumentum Soaring Again: Will It Rise or Fall After Earnings?",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61064193/nvidia-backed-lumentum-stock-is-soaring-again-will-it-rise-or-fall-after-earnings",
-      "ts": 1786306272,
-      "tickers": [
-        "NVDA",
-        "LITE",
-        "AAPL",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.454
-    },
-    {
-      "title": "Investors Rotate to Magnificent 7 Stocks as Bargain Hunting Continues",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61064069/investors-rotate-to-magnificent-7-stocks-as-bargain-hunting-continues",
-      "ts": 1786297697,
-      "tickers": [
-        "TSLA",
-        "META",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.424
-    },
-    {
-      "title": "US-China AI War: Inside the Battle for Global Tech Dominance",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61063847/us-china-ai-war-inside-the-battle-for-global-tech-dominance",
-      "ts": 1786286827,
-      "tickers": [
-        "AAPL",
-        "AVGO",
-        "AMD",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.392
-    },
-    {
-      "title": "Consumer Tech (Aug 3-7): SpaceX Released Strong First Earnings, Meta Sued For Harming Children's Mental Health & More",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61063819/consumer-tech-aug-3-7-spacex-released-strong-first-earnings-meta-sued-for-harming-childrens-mental-health-more",
-      "ts": 1786286424,
-      "tickers": [
-        "NET",
-        "IONQ",
-        "DDOG",
-        "SOUN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.346
     },
     {
       "title": "Apple's OpenAI Lawsuit, Earnings, Senator's Stock Sales and more: This Week in Appleverse",
@@ -974,7 +980,7 @@
     },
     "NOW": {
       "name": "ServiceNow",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 16,
         "buy": 33,
@@ -1007,7 +1013,7 @@
         },
         "insider30d": 0
       },
-      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "UBER": {
       "name": "Uber",
