@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generated_at": "Aug 11, 11:25am ET",
+  "generated_at": "Aug 11, 11:37am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -148,10 +148,10 @@
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Chemical & Coatings",
@@ -202,8 +202,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 306.5,
-      "upside": -8.6,
+      "price": 306.68,
+      "upside": -8.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -216,8 +216,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.23,
-      "upside": -3.0,
+      "price": 41.21,
+      "upside": -2.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -230,7 +230,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 196.56,
+      "price": 196.54,
       "upside": 4.3,
       "held": false,
       "uni": true,
@@ -244,8 +244,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 130.21,
-      "upside": 12.1,
+      "price": 130.18,
+      "upside": 12.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -258,8 +258,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 258.9,
-      "upside": 10.9,
+      "price": 259.06,
+      "upside": 10.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,7 +272,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 144.61,
+      "price": 144.46,
       "upside": null,
       "held": false,
       "uni": true,
@@ -286,7 +286,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 306.5,
+      "price": 306.68,
       "upside": -14.0,
       "held": false,
       "uni": true,
@@ -300,7 +300,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 130.21,
+      "price": 130.18,
       "upside": 11.4,
       "held": false,
       "uni": true,
@@ -314,8 +314,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 355.62,
-      "upside": 12.5,
+      "price": 355.74,
+      "upside": 12.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -338,7 +338,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 12.5
+      "upside": 12.4
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -365,7 +365,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.9
+      "upside": 10.8
     },
     "CVX": {
       "date": "2026-08-05",
@@ -383,7 +383,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -3.0
+      "upside": -2.9
     },
     "KO": {
       "date": "2026-07-30",
@@ -392,10 +392,22 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 12.4
+      "upside": 12.2
     }
   },
   "bz_news": [
+    {
+      "title": "Boeing Delivered 53 Airplanes In July; Booked 38 Gross Orders And Had 8 Cancellations In July; Official Backlog 6,192 As Of July-End Vs 6,202 As Of June-End; Through July, Booked 438 Orders After Cancellations",
+      "url": "https://www.benzinga.com/news/26/08/61115494/boeing-delivered-53-airplanes-july-booked-38-gross-orders-and-had-8-cancellations-july-official-back",
+      "ts": 1786462044,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.24
+    },
     {
       "title": "Disney+ And Unit ESPN To Become Streaming Partner Of The ABB FIA Formula E World Championship From The 2026-27 Season",
       "url": "https://www.benzinga.com/news/26/08/61109418/disney-and-unit-espn-become-streaming-partner-abb-fia-formula-e-world-championship-2026-27-season",
@@ -709,21 +721,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.385
-    },
-    {
-      "title": "Elizabeth Warren Blasts ‘Trump Math’ as Oil Giants That Put $5 Million Into His Inauguration Fund See '$23 Billion in Excess War Profits’",
-      "url": "https://www.benzinga.com/news/politics/26/08/61098931/elizabeth-warren-blasts-trump-math-as-oil-giants-that-put-5-million-into-his-inauguration-fund-see-23-billion-in-excess-war-profits",
-      "ts": 1786423452,
-      "tickers": [
-        "USO",
-        "XOM",
-        "CVX",
-        "COP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.213
     }
   ],
   "portfolio_brief": {
