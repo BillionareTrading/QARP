@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generated_at": "Aug 11, 10:29am ET",
+  "generated_at": "Aug 11, 10:37am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -116,8 +116,8 @@
     "EXE": "2026-10-26",
     "SPGI": "2026-10-28",
     "GILD": "2026-10-28",
-    "SAP": "2026-10-21",
     "AVGO": "2026-09-02",
+    "SAP": "2026-10-21",
     "NVS": "2026-10-27",
     "NBIX": "2026-10-26",
     "VRTX": "2026-11-02",
@@ -202,8 +202,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 306.59,
-      "upside": -8.7,
+      "price": 306.46,
+      "upside": -8.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -216,8 +216,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.27,
-      "upside": -3.1,
+      "price": 41.2,
+      "upside": -2.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -230,8 +230,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 195.88,
-      "upside": 4.7,
+      "price": 195.95,
+      "upside": 4.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +244,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 130.62,
-      "upside": 11.8,
+      "price": 130.18,
+      "upside": 12.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -258,8 +258,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 259.75,
-      "upside": 10.5,
+      "price": 259.56,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,7 +272,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 144.28,
+      "price": 144.12,
       "upside": null,
       "held": false,
       "uni": true,
@@ -286,7 +286,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 306.59,
+      "price": 306.46,
       "upside": -14.0,
       "held": false,
       "uni": true,
@@ -300,8 +300,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 130.62,
-      "upside": 11.0,
+      "price": 130.18,
+      "upside": 11.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -314,7 +314,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 356.68,
+      "price": 356.81,
       "upside": 12.1,
       "held": false,
       "uni": true,
@@ -329,7 +329,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "upside": 11.0
+      "upside": 11.4
     },
     "HD": {
       "date": "2026-08-11",
@@ -365,7 +365,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.5
+      "upside": 10.6
     },
     "CVX": {
       "date": "2026-08-05",
@@ -374,7 +374,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 4.7
+      "upside": 4.6
     },
     "NKE": {
       "date": "2026-08-04",
@@ -383,7 +383,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -3.1
+      "upside": -2.9
     },
     "KO": {
       "date": "2026-07-30",
@@ -392,7 +392,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 12.3
+      "upside": 12.2
     }
   },
   "bz_news": [
@@ -456,7 +456,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.45
+      "relevance": 0.449
     },
     {
       "title": "Fox News Posts On X \"Flames shoot from an American Airlines jet engine moments after it strikes birds during takeoff from Myrtle Beach, forcing the pilot to declare a mayday. The Boeing 737 quickly turns back as crews prepare for an emergency response on the ground. The plane lands safely with all 181 passengers safe after the midair scare.\"",
@@ -506,7 +506,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.45
+      "relevance": 0.449
     },
     {
       "title": "Why Is Intel Stock Falling Tuesday?",
@@ -708,7 +708,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.385
+      "relevance": 0.384
     },
     {
       "title": "Elizabeth Warren Blasts ‘Trump Math’ as Oil Giants That Put $5 Million Into His Inauguration Fund See '$23 Billion in Excess War Profits’",
@@ -1190,35 +1190,6 @@
       },
       "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
-    "SAP": {
-      "name": "SAP",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 8,
-        "buy": 22,
-        "hold": 7,
-        "sell": 1,
-        "strongSell": 1,
-        "total": 39,
-        "bullish": 30,
-        "bearish": 2,
-        "label": "Buy",
-        "score": 0.9,
-        "period": "2026-08-01"
-      },
-      "news": {
-        "title": "Software companies are trading higher amid broader market strength, lifting the industry alongside other tech peers. Investor optimism about Palantir's Q2 financial results could act as a bellwether, indicating broader industry growth.",
-        "ts": 1785784722,
-        "url": "https://www.benzinga.com/quote/RBRK",
-        "wiim": true
-      },
-      "filings": {
-        "latest8k": null,
-        "periodic": null,
-        "insider30d": 0
-      },
-      "explain": "39 analysts cover it — 30 bullish, 7 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-    },
     "AVGO": {
       "name": "Broadcom",
       "qarp": "HOLD-QUAL",
@@ -1255,6 +1226,35 @@
         "insider30d": 2
       },
       "explain": "56 analysts cover it — 51 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "SAP": {
+      "name": "SAP",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 8,
+        "buy": 22,
+        "hold": 7,
+        "sell": 1,
+        "strongSell": 1,
+        "total": 39,
+        "bullish": 30,
+        "bearish": 2,
+        "label": "Buy",
+        "score": 0.9,
+        "period": "2026-08-01"
+      },
+      "news": {
+        "title": "Software companies are trading higher amid broader market strength, lifting the industry alongside other tech peers. Investor optimism about Palantir's Q2 financial results could act as a bellwether, indicating broader industry growth.",
+        "ts": 1785784722,
+        "url": "https://www.benzinga.com/quote/RBRK",
+        "wiim": true
+      },
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 0
+      },
+      "explain": "39 analysts cover it — 30 bullish, 7 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "NVS": {
       "name": "Novartis",
@@ -1629,7 +1629,6 @@
       "margin": -134.5,
       "summary": "Q2 FY2026 — revenue $7.8B (+10.2% YoY), diluted EPS $-8.45 (-641.7% YoY), net margin -134%. (as reported, GAAP)"
     },
-    "SAP": null,
     "AVGO": {
       "period": "Q2 FY2026",
       "filed": "2026-06-09",
@@ -1649,6 +1648,7 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
     },
+    "SAP": null,
     "NVS": null,
     "NBIX": {
       "period": "Q2 FY2026",
