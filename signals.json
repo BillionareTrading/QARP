@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generated_at": "Aug 11, 2:32pm ET",
+  "generated_at": "Aug 11, 3:25pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -106,8 +106,8 @@
     "ABT": "2026-10-13",
     "ZTS": "2026-11-02",
     "BSX": "2026-10-20",
-    "UBER": "2026-11-02",
     "NOW": "2026-10-27",
+    "UBER": "2026-11-02",
     "AZO": "2026-09-21",
     "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
@@ -148,10 +148,10 @@
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Chemical & Coatings",
@@ -174,6 +174,18 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
+    "AVGO": {
+      "title": "Nvidia's Chip Boom Is Spreading: JPMorgan Says These 6 Stocks Could Ride It",
+      "ts": 1786473313,
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61122617/nvidia-chip-boom-spreading-six-stocks-to-watch",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "NVIDIA's Jensen Huang Says AI Isn’t Just Tech Anymore — It’s Infrastructure, and Wall Street Is Financing It",
+      "ts": 1786447512,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61103769/nvidias-jensen-huang-says-ai-isnt-just-tech-anymore-its-infrastructure-and-wall-street-is-financing-it",
+      "wiim": false
+    },
     "UBER": {
       "title": "OpenAI COO Confirms 'Bittersweet' Exit, Has New Venture in Sight",
       "ts": 1786471580,
@@ -184,12 +196,6 @@
       "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
       "ts": 1786469713,
       "url": "https://www.benzinga.com/markets/options/26/08/61120385/10-industrials-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "NVIDIA's Jensen Huang Says AI Isn’t Just Tech Anymore — It’s Infrastructure, and Wall Street Is Financing It",
-      "ts": 1786447512,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61103769/nvidias-jensen-huang-says-ai-isnt-just-tech-anymore-its-infrastructure-and-wall-street-is-financing-it",
       "wiim": false
     }
   },
@@ -202,8 +208,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 302.88,
-      "upside": -7.6,
+      "price": 304.93,
+      "upside": -8.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -216,8 +222,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.02,
-      "upside": -2.5,
+      "price": 41.17,
+      "upside": -2.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -230,8 +236,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 196.33,
-      "upside": 4.4,
+      "price": 196.54,
+      "upside": 4.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +250,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 130.81,
-      "upside": 11.6,
+      "price": 130.53,
+      "upside": 11.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -258,8 +264,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 259.99,
-      "upside": 10.4,
+      "price": 259.7,
+      "upside": 10.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,7 +278,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 145.22,
+      "price": 145.05,
       "upside": null,
       "held": false,
       "uni": true,
@@ -286,8 +292,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 302.88,
-      "upside": -12.9,
+      "price": 304.93,
+      "upside": -13.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -300,8 +306,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 130.81,
-      "upside": 10.8,
+      "price": 130.53,
+      "upside": 11.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -314,8 +320,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 355.75,
-      "upside": 12.4,
+      "price": 354.84,
+      "upside": 12.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -329,7 +335,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "upside": 10.8
+      "upside": 11.1
     },
     "HD": {
       "date": "2026-08-11",
@@ -338,7 +344,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 12.4
+      "upside": 12.7
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -347,7 +353,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -12.9
+      "upside": -13.5
     },
     "PG": {
       "date": "2026-08-07",
@@ -365,7 +371,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.4
+      "upside": 10.5
     },
     "CVX": {
       "date": "2026-08-05",
@@ -374,7 +380,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 4.4
+      "upside": 4.3
     },
     "NKE": {
       "date": "2026-08-04",
@@ -383,7 +389,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -2.5
+      "upside": -2.8
     },
     "KO": {
       "date": "2026-07-30",
@@ -396,6 +402,34 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Archer CEO Says Defense Could Solve Its Air Taxi Problem",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61123051/archer-ceo-says-defense-solve-air-taxi-problem",
+      "ts": 1786474133,
+      "tickers": [
+        "ACHR",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.305
+    },
+    {
+      "title": "Nvidia's Chip Boom Is Spreading: JPMorgan Says These 6 Stocks Could Ride It",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61122617/nvidia-chip-boom-spreading-six-stocks-to-watch",
+      "ts": 1786473313,
+      "tickers": [
+        "INTC",
+        "AVGO",
+        "AMD",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.525
+    },
     {
       "title": "OpenAI COO Confirms 'Bittersweet' Exit, Has New Venture in Sight",
       "url": "https://www.benzinga.com/markets/tech/26/08/61121654/openai-coo-confirms-bittersweet-exit-has-new-venture-in-sight",
@@ -637,7 +671,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.3
+      "relevance": 0.301
     },
     {
       "title": "Argus Research Maintains Buy on Merck & Co, Raises Price Target to $145",
@@ -699,31 +733,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.482
-    },
-    {
-      "title": "Scott Bessent Tells Robert Reich 'McDonald's Problem Is Called Burger King, Professor' Amid Clash Over the 'K-Shaped' Economy: 'No Wonder Bill Clinton...'",
-      "url": "https://www.benzinga.com/news/politics/26/08/61105883/scott-bessent-tells-robert-reich-mcdonalds-problem-is-called-burger-king-professor-amid-clash-over-the-k-shaped-economy-no-wonder-bill-clinton",
-      "ts": 1786450520,
-      "tickers": [
-        "MCD",
-        "QSR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.245
-    },
-    {
-      "title": "IBM Announces Multi-Year $240M Agreement With Together AI To Deploy Large NVIDIA HGX B300 Inference Cluster On IBM Cloud, With Availability Expected In Q1 2027",
-      "url": "https://www.benzinga.com/quote/IBM",
-      "ts": 1786449698,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.449
     }
   ],
   "portfolio_brief": {
@@ -860,43 +869,6 @@
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "UBER": {
-      "name": "Uber",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 15,
-        "buy": 34,
-        "hold": 7,
-        "sell": 1,
-        "strongSell": 0,
-        "total": 57,
-        "bullish": 49,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.11,
-        "period": "2026-08-01"
-      },
-      "news": {
-        "title": "OpenAI COO Confirms 'Bittersweet' Exit, Has New Venture in Sight",
-        "ts": 1786471580,
-        "url": "https://www.benzinga.com/markets/tech/26/08/61121654/openai-coo-confirms-bittersweet-exit-has-new-venture-in-sight",
-        "wiim": false
-      },
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-08-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000414/e26328_uber-8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-08-05",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm"
-        },
-        "insider30d": 9
-      },
-      "explain": "57 analysts cover it — 49 bullish, 7 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "NOW": {
       "name": "ServiceNow",
       "qarp": "HOLD-QUAL",
@@ -933,6 +905,43 @@
         "insider30d": 0
       },
       "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "UBER": {
+      "name": "Uber",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 15,
+        "buy": 34,
+        "hold": 7,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 57,
+        "bullish": 49,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.11,
+        "period": "2026-08-01"
+      },
+      "news": {
+        "title": "OpenAI COO Confirms 'Bittersweet' Exit, Has New Venture in Sight",
+        "ts": 1786471580,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61121654/openai-coo-confirms-bittersweet-exit-has-new-venture-in-sight",
+        "wiim": false
+      },
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-08-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000414/e26328_uber-8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-08-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm"
+        },
+        "insider30d": 9
+      },
+      "explain": "57 analysts cover it — 49 bullish, 7 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "AZO": {
       "name": "AutoZone",
@@ -1240,7 +1249,12 @@
         "score": 1.21,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "Nvidia's Chip Boom Is Spreading: JPMorgan Says These 6 Stocks Could Ride It",
+        "ts": 1786473313,
+        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61122617/nvidia-chip-boom-spreading-six-stocks-to-watch",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1449,25 +1463,6 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $5.4B (+7.5% YoY), diluted EPS $0.61 (+15.1% YoY). (as reported, GAAP)"
     },
-    "UBER": {
-      "period": "Q2 FY2026",
-      "filed": "2026-08-05",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
-      "revenue": {
-        "fmt": "$14.2B",
-        "yoy": 12.2
-      },
-      "eps": {
-        "val": 1.17,
-        "yoy": 85.7
-      },
-      "net_income": {
-        "fmt": "$2.4B"
-      },
-      "margin": 16.9,
-      "summary": "Q2 FY2026 — revenue $14.2B (+12.2% YoY), diluted EPS $1.17 (+85.7% YoY), net margin 17%. (as reported, GAAP)"
-    },
     "NOW": {
       "period": "Q2 FY2026",
       "filed": "2026-07-23",
@@ -1486,6 +1481,25 @@
       },
       "margin": 7.5,
       "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
+    },
+    "UBER": {
+      "period": "Q2 FY2026",
+      "filed": "2026-08-05",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+      "revenue": {
+        "fmt": "$14.2B",
+        "yoy": 12.2
+      },
+      "eps": {
+        "val": 1.17,
+        "yoy": 85.7
+      },
+      "net_income": {
+        "fmt": "$2.4B"
+      },
+      "margin": 16.9,
+      "summary": "Q2 FY2026 — revenue $14.2B (+12.2% YoY), diluted EPS $1.17 (+85.7% YoY), net margin 17%. (as reported, GAAP)"
     },
     "AZO": {
       "period": "Q3 FY2026",
