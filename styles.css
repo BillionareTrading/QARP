@@ -1559,6 +1559,9 @@ tbody tr:hover { background: var(--surface-2); }
 /* trader's read column */
 .cr-read h3 { font-family:"Playfair Display", var(--serif); font-weight:800; font-size:16px; margin-bottom:6px; }
 .cr-read-note { font:italic 11.5px/1.45 "PT Serif", var(--serif); color:var(--ink-3); margin-bottom:8px; }
+/* freshness stamp (2026-08-10): what the plan/read numbers are priced off */
+.cr-fresh { color:var(--ink-3); }
+.cr-fresh b { font-style:normal; color:var(--pos); font-weight:700; }
 .cr-trrow { display:grid; grid-template-columns:84px minmax(0,1fr); gap:8px; padding:7px 0;
   border-bottom:1px solid var(--line); font:13px/1.45 "PT Serif", var(--serif); }
 .cr-trk { font:700 10px var(--sans); letter-spacing:.8px; text-transform:uppercase; color:var(--brass); padding-top:2px; }

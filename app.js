@@ -1812,6 +1812,10 @@ async function liveTick() {
           u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2);
           if (u.mom) patchGateCells(h.ticker, u);   // gate re-evaluates on the live price
         }
+        // Chart Room open on this holding: the SAME quote feeds the live candle, so the
+        // Desk Plan / Trader's Read / RSI re-price each tick at zero extra quota
+        // (2026-08-10 reactivity fix — the chart's own fetch used to lose the 429 race).
+        if (CR.timer && CR.tkr === h.ticker) crApplyQuote(q);
         ok++;
       } else fail++;
     } catch (e) { fail++; }
@@ -3014,6 +3018,7 @@ const CR = {
   range: "6M", scale: "D",
   ovl: { sr: true, ma: true, cost: true, earn: true, vol: true },
   cache: new Map(), timer: null, signals: null, lastGeo: null,
+  pendingRender: false,                // a tick landed while the cursor was on the chart — applied on mouseleave
 };
 const CR_RANGES = { "3M": 63, "6M": 126, "1Y": 251, "2Y": 9999 };
 
@@ -3061,12 +3066,22 @@ function crLevels(bars, look = 190) {
     .map((c) => ({ level: c.level, touches: c.m.length, last: bars.d[Math.max(...c.m.map((x) => x.i))] }));
 }
 async function crLoadBars(tkr) {
-  if (CR.cache.has(tkr)) return CR.cache.get(tkr);
-  const r = await fetch(`charts/${encodeURIComponent(tkr)}.json?v=${(DATA.meta && DATA.meta.date) || ""}`, { cache: "no-store" });
-  if (!r.ok) throw new Error("no chart data");
-  const j = await r.json();
-  CR.cache.set(tkr, j);
-  return j;
+  // cache is PAYLOAD-DATE versioned (2026-08-10): a tab left open across sessions used to
+  // serve day-old bars forever — when softRefresh rolls DATA.meta.date, bars refetch once.
+  const ver = (DATA.meta && DATA.meta.date) || "";
+  const hit = CR.cache.get(tkr);
+  if (hit && hit._ver === ver) return hit;
+  try {
+    const r = await fetch(`charts/${encodeURIComponent(tkr)}.json?v=${ver}`, { cache: "no-store" });
+    if (!r.ok) throw new Error("no chart data");
+    const j = await r.json();
+    j._ver = ver;
+    CR.cache.set(tkr, j);
+    return j;
+  } catch (e) {
+    if (hit) return hit;               // refetch failed on a roll (HTTP error OR network reject) — keep the old bars
+    throw e;
+  }
 }
 async function crSignals() {
   if (CR.signals) return CR.signals;
@@ -3253,6 +3268,18 @@ function crFeatures(tkr, view) {
   return feats;
 }
 
+// The freshness stamp (2026-08-10, promised fix): says exactly what the numbers are priced
+// off — settled levels date + whether the price leg is live, today's session, or a close.
+function crFreshStamp() {
+  const asof = (CR.bars && CR.bars.asof) || "";
+  let px;
+  CR.stampLive = !!(CR.live && marketOpenNow());  // read by crLiveCandle: one rerender at the close so "price live" can't outlive the session
+  if (CR.stampLive) px = "<b>price live</b>";
+  else if (CR.live) px = `price from ${CR.live.d}’s session`;
+  else px = `price at ${asof} close`;
+  return `<span class="cr-fresh">levels from ${asof} close · ${px}</span>`;
+}
+
 function crTradersRead(tkr, view, feats) {
   const n = view.c.length, px = feats.px;
   const above = feats.levels.filter((c) => c.level >= px).sort((a, b) => a.level - b.level);
@@ -3309,7 +3336,7 @@ function crTradersRead(tkr, view, feats) {
     Across 50 of our own names, the only entry timing that stayed positive everywhere: <b>buy weakness after it stabilizes</b> —
     RSI crossing back above 30 ran ≈ +2–4% vs untimed entry over the next quarter (fails ~1 name in 3; suggestive, not proven). Chasing strength tested at zero.</div>`;
   return `<h3>the Trader’s Read</h3>
-    <div class="cr-read-note">Auto-written from this chart’s computed features — education, not a signal. Levels are rule-drawn (swing clusters, touch-counted).</div>
+    <div class="cr-read-note">Auto-written from this chart’s computed features — education, not a signal. Levels are rule-drawn (swing clusters, touch-counted). ${crFreshStamp()}</div>
     ${html}<h3 style="margin-top:16px">Entry structures</h3>${pb}`;
 }
 
@@ -3324,8 +3351,13 @@ function crRenderRoom() {
   const u = crRowFor(tkr), h = crHolding(tkr);
   const name = (u && u.name) || (h && h.name) || "";
   const sect = (u && u.sector) || "";
-  const px = (h && h.price) || (u && u.price) || feats.px;
-  const dp = (h && h.day_pct) != null ? h.day_pct : (u && u.day_pct);
+  // live candle close first: for non-holdings the payload price can lag the candle the
+  // plan below just priced — the header must agree with the plan (2026-08-10 fix)
+  const px = (CR.live && CR.live.c) || (h && h.price) || (u && u.price) || feats.px;
+  // day% follows the same source as the price — a live candle close next to a payload-stale
+  // day% chip read as a contradiction on non-holdings
+  const dp = (CR.live && CR.live.dp != null) ? CR.live.dp
+    : (h && h.day_pct) != null ? h.day_pct : (u && u.day_pct);
   const verd = (u && u.verdict) || (h && h.verdict) || "";
   const wt = h ? ` · ${h.weight_pct}% of book` : "";
   const svg = crBuildSvg(view, feats);
@@ -3391,37 +3423,89 @@ function crWireCrosshair(view) {
     const xh = document.getElementById("cr-xhair");
     if (xh) xh.style.display = "none";
     ro.style.display = "none";
+    if (CR.pendingRender) crRerender();  // a tick landed mid-hover — apply it now
   });
 }
+// Apply a fresh quote to the open chart: sets the live today-candle and re-renders the room,
+// which recomputes EVERYTHING downstream (Desk Plan, Trader's Read, RSI state, R:R) from the
+// live close. Callers: the holdings tick (zero-cost feed) + crLiveCandle (non-holdings).
+function crApplyQuote(q) {
+  if (!CR.bars || !q || !(q.c > 0) || !(q.o > 0) || !q.t) return;
+  const qd = new Date(q.t * 1000).toISOString().slice(0, 10);
+  if (qd <= CR.bars.d[CR.bars.d.length - 1]) return;  // settled bar already covers this session
+  const L = CR.live;
+  if (L && L.d === qd && L.c === q.c && L.h === q.h && L.l === q.l) return; // unchanged tick — skip the rebuild
+  CR.live = { d: qd, o: q.o, h: q.h, l: q.l, c: q.c, dp: typeof q.dp === "number" ? +q.dp.toFixed(2) : null };
+  crRerender();
+}
+// Hover-safe re-render: a full innerHTML swap mid-crosshair would yank the readout out from
+// under the cursor — defer the render until the mouse leaves the chart. Desktop only: touch
+// :hover is sticky after a tap and mouseleave may never fire, which would park renders forever.
+function crRerender() {
+  const svg = document.getElementById("cr-svg");
+  if (svg && matchMedia("(hover: hover)").matches && svg.matches(":hover")) { CR.pendingRender = true; return; }
+  CR.pendingRender = false;
+  crRenderRoom();
+}
 async function crLiveCandle() {
-  // today's candle, live: Finnhub quote carries o/h/l/c for the current session
-  if (!CR.tkr || !CR.bars || !marketOpenNow()) return;
+  if (!CR.tkr || !CR.bars) return;
+  // long-lived tabs: when softRefresh rolls the payload date, refetch settled bars once so
+  // the levels/asof roll forward too (runs market-open or closed — it's a static-file fetch)
+  const ver = (DATA.meta && DATA.meta.date) || "";
+  if (CR.bars._ver !== ver) {
+    const tkr = CR.tkr, prev = CR.bars;
+    try {
+      const bars = await crLoadBars(tkr);
+      if (CR.tkr !== tkr) return;      // user switched charts mid-refetch — same race guard as openChart
+      const advanced = bars.d[bars.d.length - 1] > prev.d[prev.d.length - 1];
+      // a payload roll whose bars did NOT advance = lagging charts/ deploy or a BLD-style
+      // stale hole — don't latch the new version; the next tick retries the fetch
+      if (bars !== prev && !advanced) bars._ver = prev._ver;
+      CR.bars = bars;
+      if (CR.live && CR.live.d <= CR.bars.d[CR.bars.d.length - 1]) CR.live = null; // candle settled into the bars
+      if (advanced) crRerender();
+    } catch (e) { /* keep the old bars — the freshness stamp says what they are */ }
+  }
+  if (!marketOpenNow()) {
+    // one-shot rerender at the open->closed transition so a rendered "price live" stamp
+    // can't outlive the session (crFreshStamp resets CR.stampLive on that render)
+    if (CR.stampLive) crRerender();
+    return;
+  }
   if (Date.now() < throttleUntil) return;
+  // holdings are fed by the holdings tick's own quotes (crApplyQuote hook) — once a candle
+  // exists, a second fetch here would just double-spend the 429 budget. First candle after
+  // chart-open still fetches directly so the room doesn't sit candle-less for up to 60s.
+  if (CR.live && crHolding(CR.tkr)) return;
   try {
-    const q = await fetchQuote(CR.tkr);
-    if (q && q.c > 0 && q.o > 0 && q.t) {
-      const qd = new Date(q.t * 1000).toISOString().slice(0, 10);
-      if (qd > CR.bars.d[CR.bars.d.length - 1]) {
-        CR.live = { d: qd, o: q.o, h: q.h, l: q.l, c: q.c };
-        crRenderRoom();
-      }
-    }
-  } catch (e) { /* quiet — the settled chart is already honest */ }
+    const tkr = CR.tkr;
+    const q = await fetchQuote(tkr);
+    if (CR.tkr !== tkr) return;        // switched mid-flight — never paint one name's quote on another's chart
+    crApplyQuote(q);
+  } catch (e) { /* quiet — the stamp reads "at close" until a quote lands */ }
 }
 async function openChart(tkr) {
   const btn = document.querySelector('.tab[data-tab="charts"]');
   if (btn && !btn.classList.contains("active")) btn.click();
   crShowSub("room");
-  CR.tkr = tkr; CR.live = null;
+  // CR.bars nulls too: leaving the OLD name's bars up during the await let a mid-load tick
+  // render the new header over the old levels (the chimera the race guard below closes)
+  CR.tkr = tkr; CR.live = null; CR.bars = null;
   try { localStorage.setItem("jc_chart_tkr", tkr); } catch (e) {}
   const el = document.getElementById("cr-room-body");
   el.innerHTML = `<div class="cr-empty">Loading ${esc(tkr)}…</div>`;
   try {
     await crSignals();
-    CR.bars = await crLoadBars(tkr);
+    const bars = await crLoadBars(tkr);
+    // race guard (2026-08-10): two overlapping openCharts (auto-open + a chip click) used to
+    // let the LAST resolver own CR.bars regardless of CR.tkr — one name's header over another
+    // name's levels. If a later open superseded this one, stand down.
+    if (CR.tkr !== tkr) return;
+    CR.bars = bars;
     crRenderRoom();
     crLiveCandle();
   } catch (e) {
+    if (CR.tkr !== tkr) return;
     CR.bars = null;
     el.innerHTML = `<div class="cr-empty">No chart data for ${esc(tkr)} yet — bars are baked daily; new names appear after the next cloud build.</div>`;
   }
@@ -3789,7 +3873,7 @@ function crDeskPlan(tkr, view, feats) {
     ? ` <b class="cr-plan-warn">⚠ Earnings ${earn} (${earnDays === 0 ? "today" : earnDays + "d"}) — halve size into the print or wait for it; gaps ignore levels.</b>` : "";
   return `<div class="cr-plan">
     <div class="cr-plan-head"><h3>the Desk Plan</h3>
-      <span class="cr-plan-note">my advisory read of this chart — you hold the wheel · not licensed advice</span></div>
+      <span class="cr-plan-note">${crFreshStamp()} · my advisory read of this chart — you hold the wheel · not licensed advice</span></div>
     <div class="cr-plan-grid">
       <div class="cr-pbox${entryTone ? " " + entryTone : ""}"><div class="cr-pbox-k">Enter</div>
         <div class="cr-pbox-v">${entryTxt}</div><div class="cr-pbox-s">${entrySub}</div></div>
