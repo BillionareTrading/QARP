@@ -447,12 +447,25 @@ function peCell(x) {
 }
 
 /* ---------- render: Universe table ---------- */
+// Extended-hours chip (2026-08-11): the payload bakes row.ext = {s:"pre"|"post", p, dp, t}
+// only while Yahoo's session state IS pre/post (server-side wrong-day guard). Client-side:
+// show it only while fresh (<=90 min — cloud re-bakes every 30 min) and never during RTH,
+// when the live day% owns the cell. dp is vs the regular close, per Yahoo.
+function extChip(x) {
+  const e = x && x.ext;
+  if (!e || !e.p || !e.t) return "";
+  if (marketOpenNow()) return "";
+  if (Date.now() - e.t * 1000 > 90 * 60000) return "";
+  const lab = e.s === "pre" ? "PRE" : "AH";
+  return ` <span class="ext-chip" title="${e.s === "pre" ? "pre-market" : "after-hours"} quote vs the regular close">${lab} ${fmtUSD(e.p, 2)} <span class="${signClass(e.dp)}">${fmtPct(e.dp)}</span></span>`;
+}
+
 const U_COLS = [
   { key: "rank", label: "#", align: "left", fmt: (x) => `<span class="muted">${x.rank}</span>` },
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
   { key: "sector", label: "Sector", align: "left", fmt: (x) => `<span class="muted" title="${esc(x.sector || "")}">${sectorGroup(x.sector)}</span>`, sortVal: (x) => sectorGroup(x.sector) },
   { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
-  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>${extChip(x)}` },
   { key: "div", label: "Dividends", fmt: (x) => x.div_rate
       ? `<span class="div-rate">${fmtUSD(x.div_rate, 2)}<span class="div-unit">/sh</span></span><span class="div-yld">${x.div_yield != null ? x.div_yield + "%" : ""}</span>`
       : `<span class="muted">N/A</span>`,
@@ -574,7 +587,7 @@ const P_COLS = [
   // avg cost is PER-SHARE (scale-free) — published as avg_cost so it survives the privacy
   // split; the shares/cost fallback keeps working after the owner unlock merges them in.
   { key: "avgcost", label: "Avg Cost", fmt: (x) => `<span class="muted">${fmtUSD(x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : null), 2)}</span>`, sortVal: (x) => (x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : 0)) },
-  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>${extChip(x)}` },
   { key: "shares", label: "Shares", fmt: (x) => (x.shares == null && !privUnlocked() ? lockSH() : fmtNum(x.shares, 2)), sortVal: (x) => (x.shares != null ? x.shares : x.weight_pct || 0) },
   { key: "value", label: "Value", fmt: (x) => pUSD(x.value, 0), sortVal: (x) => (x.value != null ? x.value : x.weight_pct || 0) },
   { key: "gain", label: "Unrlzd $", fmt: (x) => (x.gain == null && !privUnlocked() ? lockUSD() : `<span class="${signClass(x.gain)}">${fmtUSD(x.gain, 0)}</span>`), sortVal: (x) => (x.gain != null ? x.gain : x.gain_pct || 0) },
@@ -804,7 +817,7 @@ function openDrawer(ticker) {
       ${has(d.dcf) ? `<span class="chip">DCF ${fmtNum(d.dcf, 1)}/5</span>` : ""}
       ${has(d.mech) ? `<span class="chip">Quality ${d.mech}/105</span>` : ""}
       ${has(d.sector) ? `<span class="chip">${d.sector}</span>` : ""}
-      ${has(d.price) ? `<span class="chip">${fmtUSD(d.price, 2)}${has(d.day_pct) ? ` · <span class="${signClass(d.day_pct)}">${fmtPct(d.day_pct)}</span>` : ""}</span>` : ""}
+      ${has(d.price) ? `<span class="chip">${fmtUSD(d.price, 2)}${has(d.day_pct) ? ` · <span class="${signClass(d.day_pct)}">${fmtPct(d.day_pct)}</span>` : ""}</span>` : ""}${extChip(d)}
       <span class="chip" style="cursor:pointer;color:var(--brand);font-weight:700" onclick="closeDrawer();openChart('${ticker}')">Open chart →</span>
       ${(DATA.estimates && (DATA.estimates.docket || []).some((x) => x.tk === ticker))
         ? `<span class="chip" style="cursor:pointer;color:var(--brass);font-weight:700" onclick="closeDrawer();openEstimates('${ticker}')">Estimates →</span>` : ""}
@@ -1784,7 +1797,18 @@ async function fetchQuote(ticker) {
 async function liveTick() {
   const key = DATA.meta && DATA.meta.quote_proxy;
   if (!key) return;
-  if (!marketOpenNow()) { setLivePill("closed", "Market closed"); return; }
+  if (!marketOpenNow()) {
+    // extended-hours honesty (2026-08-11): when the payload carries a fresh pre/post quote,
+    // the pill says which session the numbers are from instead of a bare "closed"
+    const _eh = DATA.portfolio.find((x) => x.ext && x.ext.t && Date.now() - x.ext.t * 1000 <= 90 * 60000);
+    if (_eh) {
+      const _e = _eh.ext;
+      const _clk = new Date(_e.t * 1000).toLocaleTimeString("en-US",
+        { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" });
+      setLivePill("closed", `${_e.s === "pre" ? "Pre-market" : "After hours"} · quotes ${_clk} ET`);
+    } else setLivePill("closed", "Market closed");
+    return;
+  }
   // Backing off after a 429 (throttleUntil was SET but never READ before 2026-07-27 —
   // the dead throttle let ticks keep burning quota mid-rate-limit, so the holdings
   // tick could stay starved forever, pinning the pill on "connecting…").
@@ -3368,7 +3392,7 @@ function crRenderRoom() {
         <span class="cr-px">${fmtUSD(px, 2)}</span>
         ${dp != null ? `<span class="cr-dd ${signClass(dp)}">${fmtPct(dp)}</span>` : ""}
         ${verd ? verdictBadge(verd) : ""}
-        <span class="cr-chip52">52w ${feats.lo52 >= 100 ? feats.lo52.toFixed(0) : feats.lo52.toFixed(1)} — ${feats.hi52 >= 100 ? feats.hi52.toFixed(0) : feats.hi52.toFixed(1)}</span>
+        <span class="cr-chip52">52w ${feats.lo52 >= 100 ? feats.lo52.toFixed(0) : feats.lo52.toFixed(1)} — ${feats.hi52 >= 100 ? feats.hi52.toFixed(0) : feats.hi52.toFixed(1)}</span>${extChip(h || u)}
       </div>
       <div class="cr-ctl">
         <div class="cr-ranges">

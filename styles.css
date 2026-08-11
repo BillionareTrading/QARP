@@ -1562,6 +1562,10 @@ tbody tr:hover { background: var(--surface-2); }
 /* freshness stamp (2026-08-10): what the plan/read numbers are priced off */
 .cr-fresh { color:var(--ink-3); }
 .cr-fresh b { font-style:normal; color:var(--pos); font-weight:700; }
+/* extended-hours quote chip (2026-08-11): fresh pre/post-market price next to the day% */
+.ext-chip { display:inline-block; font:700 9.5px var(--sans); letter-spacing:.4px; padding:1px 6px;
+  margin-left:4px; border:1px solid var(--line-2); border-radius:4px; color:var(--ink-2);
+  background:var(--surface); white-space:nowrap; vertical-align:middle; }
 .cr-trrow { display:grid; grid-template-columns:84px minmax(0,1fr); gap:8px; padding:7px 0;
   border-bottom:1px solid var(--line); font:13px/1.45 "PT Serif", var(--serif); }
 .cr-trk { font:700 10px var(--sans); letter-spacing:.8px; text-transform:uppercase; color:var(--brass); padding-top:2px; }
