@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generated_at": "Aug 11, 11:49am ET",
+  "generated_at": "Aug 11, 12:32pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -134,10 +134,10 @@
     },
     {
       "sector": "Software",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
       "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Foundry, Fabricator & Idm Chip",
@@ -148,10 +148,10 @@
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Chemical & Coatings",
@@ -202,8 +202,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 307.35,
-      "upside": -8.9,
+      "price": 306.82,
+      "upside": -8.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -216,8 +216,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.07,
-      "upside": -2.6,
+      "price": 41.02,
+      "upside": -2.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -230,8 +230,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 197.31,
-      "upside": 3.9,
+      "price": 196.69,
+      "upside": 4.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +244,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 130.26,
-      "upside": 12.1,
+      "price": 130.01,
+      "upside": 12.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -258,8 +258,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 259.31,
-      "upside": 10.7,
+      "price": 258.88,
+      "upside": 10.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,7 +272,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 144.62,
+      "price": 145.18,
       "upside": null,
       "held": false,
       "uni": true,
@@ -286,8 +286,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 307.35,
-      "upside": -14.2,
+      "price": 306.82,
+      "upside": -14.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -300,8 +300,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 130.26,
-      "upside": 11.3,
+      "price": 130.01,
+      "upside": 11.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -314,8 +314,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 356.01,
-      "upside": 12.4,
+      "price": 356.85,
+      "upside": 12.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -329,7 +329,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "upside": 11.3
+      "upside": 11.5
     },
     "HD": {
       "date": "2026-08-11",
@@ -338,7 +338,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 12.4
+      "upside": 12.1
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -347,7 +347,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -14.2
+      "upside": -14.1
     },
     "PG": {
       "date": "2026-08-07",
@@ -365,7 +365,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.7
+      "upside": 10.9
     },
     "CVX": {
       "date": "2026-08-05",
@@ -374,7 +374,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 3.9
+      "upside": 4.2
     },
     "NKE": {
       "date": "2026-08-04",
@@ -383,7 +383,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -2.6
+      "upside": -2.5
     },
     "KO": {
       "date": "2026-07-30",
@@ -392,10 +392,60 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 12.0
+      "upside": 11.7
     }
   },
   "bz_news": [
+    {
+      "title": "ZoomInfo Launches GTM MCP Connector For Microsoft Copilot, Bringing B2B Intelligence Into Dynamics 365, Excel And Word",
+      "url": "https://www.benzinga.com/news/26/08/61117949/zoominfo-launches-gtm-mcp-connector-microsoft-copilot-bringing-b2b-intelligence-dynamics-365-excel-a",
+      "ts": 1786465574,
+      "tickers": [
+        "GTM",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.286
+    },
+    {
+      "title": "Cisco Q4 Preview: Stock Up 60% in 2026, Market Expert Sees 64% More Upside After Earnings",
+      "url": "https://www.benzinga.com/trading-ideas/previews/26/08/61117788/cisco-q4-preview-stock-up-60-in-2026-market-expert-sees-64-more-upside-after-earnings",
+      "ts": 1786465310,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.471
+    },
+    {
+      "title": "WZL-1, WCKBT And Boeing Sign Offset Agreements To Support Poland’s AH-64E Apache Helicopter Fleet",
+      "url": "https://www.benzinga.com/news/26/08/61117103/wzl-1-wckbt-and-boeing-sign-offset-agreements-support-poland-s-ah-64e-apache-helicopter-fleet",
+      "ts": 1786464333,
+      "tickers": [
+        "EPOL",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.25
+    },
+    {
+      "title": "$1000 Invested In Amgen 15 Years Ago Would Be Worth This Much Today",
+      "url": "https://www.benzinga.com/news/26/08/61116887/1000-invested-amgen-15-years-ago-would-be-worth-much-today",
+      "ts": 1786464022,
+      "tickers": [
+        "AMGN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.348
+    },
     {
       "title": "Boeing Delivered 53 Airplanes In July; Booked 38 Gross Orders And Had 8 Cancellations In July; Official Backlog 6,192 As Of July-End Vs 6,202 As Of June-End; Through July, Booked 438 Orders After Cancellations",
       "url": "https://www.benzinga.com/news/26/08/61115494/boeing-delivered-53-airplanes-july-booked-38-gross-orders-and-had-8-cancellations-july-official-back",
@@ -576,7 +626,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.338
+      "relevance": 0.337
     },
     {
       "title": "Assessing Microsoft's Performance Against Competitors In Software Industry",
@@ -644,7 +694,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.273
+      "relevance": 0.274
     },
     {
       "title": "Trump Secretly Switched From Air Force One Via Catering Truck Amid Iranian Threat: Report",
@@ -669,58 +719,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.241
-    },
-    {
-      "title": "Intel Upsizes Stock Offering to $20 Billion: Dan Niles Predicts ‘Major' Foundry Deals Are Near",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61099809/intel-upsizes-stock-offering-to-20-billion-dan-niles-predicts-major-foundry-deals-are-near",
-      "ts": 1786433634,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.4
-    },
-    {
-      "title": "Intel Prices Upsized $20B Offering Of 210,526,315 Shares At $95 Per Share, Increased From $15B",
-      "url": "https://www.benzinga.com/news/26/08/61099532/intel-prices-upsized-20b-offering-210-526-315-shares-95-share-increased-15b",
-      "ts": 1786430605,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.375
-    },
-    {
-      "title": "Archer Aviation Exec Says Boeing Deal Will ‘Significantly Change the Profile’ as $200 Million Insitu Business Joins Portfolio",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61099348/archer-aviation-exec-says-boeing-deal-will-significantly-change-the-profile-as-200-million-insitu-business-joins-portfolio",
-      "ts": 1786428900,
-      "tickers": [
-        "ACHR",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.36
-    },
-    {
-      "title": "Ming-Chi Kuo Challenges Report of $1 Billion in Apple Chips Stuck at TSMC: 'Tight Memory Supply is Real,' But This Doesn't Add Up",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61099010/ming-chi-kuo-apple-chips-tsmc-1-billion-memory-supply",
-      "ts": 1786425676,
-      "tickers": [
-        "AAPL",
-        "TSM",
-        "SSNLF",
-        "AMD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.385
     }
   ],
   "portfolio_brief": {
