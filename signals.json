@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-10",
-  "generated_at": "Aug 10, 7:14pm ET",
+  "date": "2026-08-11",
+  "generated_at": "Aug 11, 5:05am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,14 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Aug 10",
-      "what": "RKLB earnings",
-      "affects": "RKLB",
-      "dir": "two-sided",
-      "why": "Q-results for RKLB — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Aug 26",
       "what": "NVDA earnings",
       "affects": "NVDA",
@@ -93,7 +85,15 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 10",
+      "when": "Sep 10",
+      "what": "ADBE earnings",
+      "affects": "ADBE",
+      "dir": "two-sided",
+      "why": "Q-results for Adobe — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Aug 11",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -102,7 +102,7 @@
     }
   ],
   "earnings_next": {
-    "RKLB": "2026-08-10",
+    "RKLB": "2026-11-09",
     "ABT": "2026-10-13",
     "ZTS": "2026-11-02",
     "BSX": "2026-10-20",
@@ -174,6 +174,12 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
+    "NVDA": {
+      "title": "Nvidia CEO Jensen Huang Says 'First Time' That Chips Have Become An Investable Asset Class as BlackRock, Blackstone and Others Join $500 Billion AI Push",
+      "ts": 1786419772,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61098798/nvidia-jensen-huang-chips-investable-asset-class-500-billion-ai",
+      "wiim": false
+    },
     "AVGO": {
       "title": "Retail Investors Bought the July Dip in These 5 Stocks: Schwab Data",
       "ts": 1786387084,
@@ -185,63 +191,9 @@
       "ts": 1786387084,
       "url": "https://www.benzinga.com/markets/equities/26/08/61087700/schwab-retail-investors-july-stax-stocks-five-dips",
       "wiim": false
-    },
-    "NVDA": {
-      "title": "'Wall Street Giants Partner With NVIDIA On $500B AI Financing Deal; A Consortium Including Apollo, Blackstone, BlackRock’s Unit, Brookfield , Goldman Sachs & KKR Entering A Partnership With NVIDIA' - Financial Times",
-      "ts": 1786379287,
-      "url": "https://www.benzinga.com/news/26/08/61082575/wall-street-giants-partner-nvidia-500b-ai-financing-deal-consortium-including-apollo-blackstone-blac",
-      "wiim": false
-    },
-    "UBER": {
-      "title": "Scott Bessent Says America's 'K-Shaped' Economy Is Dead, But Robert Reich Fires Back With a McDonald's Warning: 'Very Much Alive, Even CEOs are Admitting It's a Problem'",
-      "ts": 1786364819,
-      "url": "https://www.benzinga.com/markets/macro-economic-events/26/08/61072486/k-shaped-economy-scott-bessent-economists-consumer-spending",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-03",
-      "ticker": "CVX",
-      "firm": "Bernstein",
-      "action": "Maintains",
-      "rating": "Market Perform",
-      "stance": "neutral",
-      "pt": "$209",
-      "price": 194.91,
-      "upside": 7.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-03",
-      "ticker": "JNJ",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$282",
-      "price": 261.81,
-      "upside": 7.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-03",
-      "ticker": "CVX",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$216",
-      "price": 194.91,
-      "upside": 10.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-04",
       "ticker": "AAPL",
@@ -404,18 +356,174 @@
       "stance": "bullish",
       "pt": "$97",
       "upside": 11.7
-    },
-    "HD": {
-      "date": "2026-07-27",
-      "firm": "DA Davidson",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$377",
-      "upside": 7.5
     }
   },
   "bz_news": [
+    {
+      "title": "Elon Musk’s Terafab Construction Plan: A Semiconductor Factory Bigger Than The World’s Largest Building",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61100344/elon-musks-terafab-construction-plan-a-semiconductor-factory-bigger-than-the-worlds-largest-building",
+      "ts": 1786438154,
+      "tickers": [
+        "SPCX",
+        "TSLA",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.336
+    },
+    {
+      "title": "Taylor Farms Recalls Jalapeño Products Amid Salmonella Outbreak—  Chuck Schumer Says Trump Is Doing Everything to ‘Make America Sick Again’",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61100334/taylor-farms-recalls-jalapeno-products-amid-salmonella-outbreak-chuck-schumer-says-trump-is-doing-everything-to-make-america-sick-again",
+      "ts": 1786438139,
+      "tickers": [
+        "WMT",
+        "KR",
+        "TGT",
+        "YUM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.198
+    },
+    {
+      "title": "Mark Cuban Urges Investors to Pressure Health Insurers Over Healthcare Costs: ‘You Can Make a Difference’",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61100165/mark-cuban-calls-on-investors-to-pressure-health-insurers-over-costs",
+      "ts": 1786436911,
+      "tickers": [
+        "UNH",
+        "HUM",
+        "CI",
+        "CVS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.274
+    },
+    {
+      "title": "Trump Secretly Switched From Air Force One Via Catering Truck Amid Iranian Threat: Report",
+      "url": "https://www.benzinga.com/news/politics/26/08/61099942/trump-secretly-switched-from-air-force-one-via-catering-truck-amid-iranian-threat-report",
+      "ts": 1786434339,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.215
+    },
+    {
+      "title": "'Apple’s Glass-Centric 20th-Anniversary iPhone Remains on Track for 2027' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/08/61099870/apple-s-glass-centric-20th-anniversary-iphone-remains-track-2027-bloomberg",
+      "ts": 1786434214,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.241
+    },
+    {
+      "title": "Intel Upsizes Stock Offering to $20 Billion: Dan Niles Predicts ‘Major' Foundry Deals Are Near",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61099809/intel-upsizes-stock-offering-to-20-billion-dan-niles-predicts-major-foundry-deals-are-near",
+      "ts": 1786433634,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.4
+    },
+    {
+      "title": "Intel Prices Upsized $20B Offering Of 210,526,315 Shares At $95 Per Share, Increased From $15B",
+      "url": "https://www.benzinga.com/news/26/08/61099532/intel-prices-upsized-20b-offering-210-526-315-shares-95-share-increased-15b",
+      "ts": 1786430605,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.375
+    },
+    {
+      "title": "Archer Aviation Exec Says Boeing Deal Will ‘Significantly Change the Profile’ as $200 Million Insitu Business Joins Portfolio",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61099348/archer-aviation-exec-says-boeing-deal-will-significantly-change-the-profile-as-200-million-insitu-business-joins-portfolio",
+      "ts": 1786428900,
+      "tickers": [
+        "ACHR",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.36
+    },
+    {
+      "title": "Ming-Chi Kuo Challenges Report of $1 Billion in Apple Chips Stuck at TSMC: 'Tight Memory Supply is Real,' But This Doesn't Add Up",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61099010/ming-chi-kuo-apple-chips-tsmc-1-billion-memory-supply",
+      "ts": 1786425676,
+      "tickers": [
+        "AAPL",
+        "TSM",
+        "SSNLF",
+        "AMD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.384
+    },
+    {
+      "title": "Elizabeth Warren Blasts ‘Trump Math’ as Oil Giants That Put $5 Million Into His Inauguration Fund See '$23 Billion in Excess War Profits’",
+      "url": "https://www.benzinga.com/news/politics/26/08/61098931/elizabeth-warren-blasts-trump-math-as-oil-giants-that-put-5-million-into-his-inauguration-fund-see-23-billion-in-excess-war-profits",
+      "ts": 1786423452,
+      "tickers": [
+        "USO",
+        "XOM",
+        "CVX",
+        "COP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.213
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang Says 'First Time' That Chips Have Become An Investable Asset Class as BlackRock, Blackstone and Others Join $500 Billion AI Push",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61098798/nvidia-jensen-huang-chips-investable-asset-class-500-billion-ai",
+      "ts": 1786419772,
+      "tickers": [
+        "NVDA",
+        "APO",
+        "GS",
+        "BLK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.501
+    },
+    {
+      "title": "Trump Cuts Core Childhood Vaccine Recommendations to 11, Bill Cassidy Says 'This Executive Order Is Wrong'",
+      "url": "https://www.benzinga.com/news/politics/26/08/61098721/trump-childhood-vaccine-recommendations-bill-cassidy",
+      "ts": 1786417287,
+      "tickers": [
+        "MRK",
+        "SNY",
+        "GSK",
+        "KVUE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.168
+    },
     {
       "title": "If You Invested $100 In Travelers Companies Stock 5 Years Ago, You Would Have This Much Today",
       "url": "https://www.benzinga.com/news/26/08/61096695/if-you-invested-100-travelers-companies-stock-5-years-ago-you-would-have-much-today",
@@ -582,18 +690,6 @@
       "relevance": 0.404
     },
     {
-      "title": "Apple Stock Slides After Analyst Downgrade",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61084173/apple-stock-slides-after-analyst-downgrade",
-      "ts": 1786381721,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.533
-    },
-    {
       "title": "S&P 500 Earnings Growth May Be Less Impressive Than It Looks; SpaceX Short Squeeze; Inflation Data Ahead",
       "url": "https://www.benzinga.com/Opinion/26/08/61084117/sp500-earnings-growth-may-be-less-impressive-than-it-looks-spacex-short-squeeze-inflation-data-ahead",
       "ts": 1786381658,
@@ -607,157 +703,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.45
-    },
-    {
-      "title": "OpenAI Introduces Premium Seats For ChatGPT Business; Premium Seats Cost $125 Per User Per Month, Or $100 Per User Per Month When Billed Annually",
-      "url": "https://www.benzinga.com/news/26/08/61083558/openai-introduces-premium-seats-chatgpt-business-premium-seats-cost-125-user-month-or-100-user-month",
-      "ts": 1786380825,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.307
-    },
-    {
-      "title": "Microsoft Stock Rises 2%: Upcoming Maia 300 Chip Launch Targets Reduced Nvidia Reliance",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61083050/microsoft-stock-rises-2-upcoming-maia-300-chip-launch-targets-reduced-nvidia-reliance",
-      "ts": 1786380089,
-      "tickers": [
-        "MSFT",
-        "AMZN",
-        "GOOGL",
-        "TSM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.516
-    },
-    {
-      "title": "'Wall Street Giants Partner With NVIDIA On $500B AI Financing Deal; A Consortium Including Apollo, Blackstone, BlackRock’s Unit, Brookfield , Goldman Sachs & KKR Entering A Partnership With NVIDIA' - Financial Times",
-      "url": "https://www.benzinga.com/news/26/08/61082575/wall-street-giants-partner-nvidia-500b-ai-financing-deal-consortium-including-apollo-blackstone-blac",
-      "ts": 1786379287,
-      "tickers": [
-        "NVDA",
-        "APO",
-        "BX",
-        "BLK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.495
-    },
-    {
-      "title": "TSMC Is Pumping $64B Into Expansion — Intel Needs a $15B Stock Sale to Do It",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61082475/tsmc-pumping-64-billion-intel-raises-15-billion-for-expansion",
-      "ts": 1786379131,
-      "tickers": [
-        "TSM",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.409
-    },
-    {
-      "title": "Apple shares are trading lower after Jefferies downgraded the stock from Hold to Underperform and lowered its price target on the stock from $285.56 to $263.66.",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1786378747,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.464
-    },
-    {
-      "title": "QUICK SPARK: Microsoft Price Target Raised — 'Not Building Too Fast' Given Demand",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61081922/quick-spark-microsoft-price-target-raised-not-building-too-fast-given-demand",
-      "ts": 1786378333,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.42
-    },
-    {
-      "title": "Home Depot Realigns Leadership to Capture Bigger Share of $1.2 Trillion Home Improvement Market",
-      "url": "https://www.benzinga.com/markets/large-cap/26/08/61081496/home-depot-realigns-leadership-to-capture-bigger-share-of-1-2-trillion-home-improvement-market",
-      "ts": 1786377773,
-      "tickers": [
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.387
-    },
-    {
-      "title": "Boeing, Archer Join Forces in Major Autonomous Aviation Deal",
-      "url": "https://www.benzinga.com/markets/large-cap/26/08/61081416/boeing-archer-join-forces-in-major-autonomous-aviation-deal",
-      "ts": 1786377660,
-      "tickers": [
-        "BA",
-        "LMT",
-        "NOC",
-        "ITA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.4
-    },
-    {
-      "title": "Boeing and Airbus Need More Engines. GE and RTX Are Racing to Supply Them",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61081109/ge-rtx-race-to-supply-engines-boeing-airbus",
-      "ts": 1786377138,
-      "tickers": [
-        "RTX",
-        "GE",
-        "BA",
-        "EADSY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.332
-    },
-    {
-      "title": "US-Japan Yen Intervention Signals Bond Market Fear",
-      "url": "https://www.benzinga.com/Opinion/26/08/61080332/us-japan-yen-intervention-signals-bond-market-fear",
-      "ts": 1786375897,
-      "tickers": [
-        "GS",
-        "MS",
-        "SONY",
-        "TM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.336
-    },
-    {
-      "title": "Shares of integrated oil and gas companies are trading higher amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
-      "url": "https://www.benzinga.com/quote/EC",
-      "ts": 1786373262,
-      "tickers": [
-        "XOM",
-        "CVX",
-        "CVE",
-        "IMO"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.35
     }
   ],
   "portfolio_brief": {
@@ -942,12 +887,7 @@
         "score": 1.11,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "Scott Bessent Says America's 'K-Shaped' Economy Is Dead, But Robert Reich Fires Back With a McDonald's Warning: 'Very Much Alive, Even CEOs are Admitting It's a Problem'",
-        "ts": 1786364819,
-        "url": "https://www.benzinga.com/markets/macro-economic-events/26/08/61072486/k-shaped-economy-scott-bessent-economists-consumer-spending",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1044,9 +984,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "'Wall Street Giants Partner With NVIDIA On $500B AI Financing Deal; A Consortium Including Apollo, Blackstone, BlackRock’s Unit, Brookfield , Goldman Sachs & KKR Entering A Partnership With NVIDIA' - Financial Times",
-        "ts": 1786379287,
-        "url": "https://www.benzinga.com/news/26/08/61082575/wall-street-giants-partner-nvidia-500b-ai-financing-deal-consortium-including-apollo-blackstone-blac",
+        "title": "Nvidia CEO Jensen Huang Says 'First Time' That Chips Have Become An Investable Asset Class as BlackRock, Blackstone and Others Join $500 Billion AI Push",
+        "ts": 1786419772,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61098798/nvidia-jensen-huang-chips-investable-asset-class-500-billion-ai",
         "wiim": false
       },
       "filings": {
