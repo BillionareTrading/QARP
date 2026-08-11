@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generated_at": "Aug 11, 9:45am ET",
+  "generated_at": "Aug 11, 10:29am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -106,8 +106,8 @@
     "ABT": "2026-10-13",
     "ZTS": "2026-11-02",
     "BSX": "2026-10-20",
-    "UBER": "2026-11-02",
     "NOW": "2026-10-27",
+    "UBER": "2026-11-02",
     "AZO": "2026-09-21",
     "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
@@ -116,8 +116,8 @@
     "EXE": "2026-10-26",
     "SPGI": "2026-10-28",
     "GILD": "2026-10-28",
-    "AVGO": "2026-09-02",
     "SAP": "2026-10-21",
+    "AVGO": "2026-09-02",
     "NVS": "2026-10-27",
     "NBIX": "2026-10-26",
     "VRTX": "2026-11-02",
@@ -134,10 +134,10 @@
     },
     {
       "sector": "Software",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
       "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Foundry, Fabricator & Idm Chip",
@@ -148,10 +148,10 @@
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Chemical & Coatings",
@@ -202,8 +202,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 306.39,
-      "upside": -8.6,
+      "price": 306.59,
+      "upside": -8.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -216,8 +216,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 41.25,
-      "upside": -3.0,
+      "price": 41.27,
+      "upside": -3.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -230,8 +230,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 195.1,
-      "upside": 5.1,
+      "price": 195.88,
+      "upside": 4.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +244,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 131.87,
-      "upside": 10.7,
+      "price": 130.62,
+      "upside": 11.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -258,8 +258,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 261.74,
-      "upside": 9.7,
+      "price": 259.75,
+      "upside": 10.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,7 +272,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 145.04,
+      "price": 144.28,
       "upside": null,
       "held": false,
       "uni": true,
@@ -286,8 +286,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 306.39,
-      "upside": -13.9,
+      "price": 306.59,
+      "upside": -14.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -300,8 +300,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 131.87,
-      "upside": 10.0,
+      "price": 130.62,
+      "upside": 11.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -314,8 +314,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 354.71,
-      "upside": 12.8,
+      "price": 356.68,
+      "upside": 12.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -329,7 +329,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "upside": 10.0
+      "upside": 11.0
     },
     "HD": {
       "date": "2026-08-11",
@@ -338,7 +338,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 12.8
+      "upside": 12.1
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -347,7 +347,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -13.9
+      "upside": -14.0
     },
     "PG": {
       "date": "2026-08-07",
@@ -365,7 +365,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 9.7
+      "upside": 10.5
     },
     "CVX": {
       "date": "2026-08-05",
@@ -374,7 +374,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 5.1
+      "upside": 4.7
     },
     "NKE": {
       "date": "2026-08-04",
@@ -383,7 +383,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -3.0
+      "upside": -3.1
     },
     "KO": {
       "date": "2026-07-30",
@@ -392,7 +392,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.8
+      "upside": 12.3
     }
   },
   "bz_news": [
@@ -456,7 +456,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.449
+      "relevance": 0.45
     },
     {
       "title": "Fox News Posts On X \"Flames shoot from an American Airlines jet engine moments after it strikes birds during takeoff from Myrtle Beach, forcing the pilot to declare a mayday. The Boeing 737 quickly turns back as crews prepare for an emergency response on the ground. The plane lands safely with all 181 passengers safe after the midair scare.\"",
@@ -506,7 +506,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.449
+      "relevance": 0.45
     },
     {
       "title": "Why Is Intel Stock Falling Tuesday?",
@@ -708,7 +708,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.384
+      "relevance": 0.385
     },
     {
       "title": "Elizabeth Warren Blasts ‘Trump Math’ as Oil Giants That Put $5 Million Into His Inauguration Fund See '$23 Billion in Excess War Profits’",
@@ -855,38 +855,6 @@
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "UBER": {
-      "name": "Uber",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 15,
-        "buy": 34,
-        "hold": 7,
-        "sell": 1,
-        "strongSell": 0,
-        "total": 57,
-        "bullish": 49,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.11,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-08-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000414/e26328_uber-8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-08-05",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm"
-        },
-        "insider30d": 9
-      },
-      "explain": "57 analysts cover it — 49 bullish, 7 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "NOW": {
       "name": "ServiceNow",
       "qarp": "HOLD-QUAL",
@@ -923,6 +891,38 @@
         "insider30d": 0
       },
       "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "UBER": {
+      "name": "Uber",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 15,
+        "buy": 34,
+        "hold": 7,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 57,
+        "bullish": 49,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.11,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-08-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000414/e26328_uber-8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-08-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm"
+        },
+        "insider30d": 9
+      },
+      "explain": "57 analysts cover it — 49 bullish, 7 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "AZO": {
       "name": "AutoZone",
@@ -1190,6 +1190,35 @@
       },
       "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
+    "SAP": {
+      "name": "SAP",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 8,
+        "buy": 22,
+        "hold": 7,
+        "sell": 1,
+        "strongSell": 1,
+        "total": 39,
+        "bullish": 30,
+        "bearish": 2,
+        "label": "Buy",
+        "score": 0.9,
+        "period": "2026-08-01"
+      },
+      "news": {
+        "title": "Software companies are trading higher amid broader market strength, lifting the industry alongside other tech peers. Investor optimism about Palantir's Q2 financial results could act as a bellwether, indicating broader industry growth.",
+        "ts": 1785784722,
+        "url": "https://www.benzinga.com/quote/RBRK",
+        "wiim": true
+      },
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 0
+      },
+      "explain": "39 analysts cover it — 30 bullish, 7 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
     "AVGO": {
       "name": "Broadcom",
       "qarp": "HOLD-QUAL",
@@ -1226,35 +1255,6 @@
         "insider30d": 2
       },
       "explain": "56 analysts cover it — 51 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-    },
-    "SAP": {
-      "name": "SAP",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 8,
-        "buy": 22,
-        "hold": 7,
-        "sell": 1,
-        "strongSell": 1,
-        "total": 39,
-        "bullish": 30,
-        "bearish": 2,
-        "label": "Buy",
-        "score": 0.9,
-        "period": "2026-08-01"
-      },
-      "news": {
-        "title": "Software companies are trading higher amid broader market strength, lifting the industry alongside other tech peers. Investor optimism about Palantir's Q2 financial results could act as a bellwether, indicating broader industry growth.",
-        "ts": 1785784722,
-        "url": "https://www.benzinga.com/quote/RBRK",
-        "wiim": true
-      },
-      "filings": {
-        "latest8k": null,
-        "periodic": null,
-        "insider30d": 0
-      },
-      "explain": "39 analysts cover it — 30 bullish, 7 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "NVS": {
       "name": "Novartis",
@@ -1449,25 +1449,6 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $5.4B (+7.5% YoY), diluted EPS $0.61 (+15.1% YoY). (as reported, GAAP)"
     },
-    "UBER": {
-      "period": "Q2 FY2026",
-      "filed": "2026-08-05",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
-      "revenue": {
-        "fmt": "$14.2B",
-        "yoy": 12.2
-      },
-      "eps": {
-        "val": 1.17,
-        "yoy": 85.7
-      },
-      "net_income": {
-        "fmt": "$2.4B"
-      },
-      "margin": 16.9,
-      "summary": "Q2 FY2026 — revenue $14.2B (+12.2% YoY), diluted EPS $1.17 (+85.7% YoY), net margin 17%. (as reported, GAAP)"
-    },
     "NOW": {
       "period": "Q2 FY2026",
       "filed": "2026-07-23",
@@ -1486,6 +1467,25 @@
       },
       "margin": 7.5,
       "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
+    },
+    "UBER": {
+      "period": "Q2 FY2026",
+      "filed": "2026-08-05",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+      "revenue": {
+        "fmt": "$14.2B",
+        "yoy": 12.2
+      },
+      "eps": {
+        "val": 1.17,
+        "yoy": 85.7
+      },
+      "net_income": {
+        "fmt": "$2.4B"
+      },
+      "margin": 16.9,
+      "summary": "Q2 FY2026 — revenue $14.2B (+12.2% YoY), diluted EPS $1.17 (+85.7% YoY), net margin 17%. (as reported, GAAP)"
     },
     "AZO": {
       "period": "Q3 FY2026",
@@ -1629,6 +1629,7 @@
       "margin": -134.5,
       "summary": "Q2 FY2026 — revenue $7.8B (+10.2% YoY), diluted EPS $-8.45 (-641.7% YoY), net margin -134%. (as reported, GAAP)"
     },
+    "SAP": null,
     "AVGO": {
       "period": "Q2 FY2026",
       "filed": "2026-06-09",
@@ -1648,7 +1649,6 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
     },
-    "SAP": null,
     "NVS": null,
     "NBIX": {
       "period": "Q2 FY2026",
