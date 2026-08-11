@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generated_at": "Aug 11, 8:47am ET",
+  "generated_at": "Aug 11, 9:45am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -106,8 +106,8 @@
     "ABT": "2026-10-13",
     "ZTS": "2026-11-02",
     "BSX": "2026-10-20",
-    "NOW": "2026-10-27",
     "UBER": "2026-11-02",
+    "NOW": "2026-10-27",
     "AZO": "2026-09-21",
     "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
@@ -134,17 +134,17 @@
     },
     {
       "sector": "Software",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
       "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Foundry, Fabricator & Idm Chip",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Risk assets enjoy a tailwind",
       "note": "As risk assets enjoy a tailwind. Also, financial results and commentary from companies such as ON Semiconductor and Palantir may help support the ongoing themes of chip supply shortages and growing demand from an expansionary AI services sector.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Banks & Financial Services",
@@ -202,8 +202,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$280",
-      "price": 308.26,
-      "upside": -9.2,
+      "price": 306.39,
+      "upside": -8.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -216,8 +216,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "price": 42.11,
-      "upside": -5.0,
+      "price": 41.25,
+      "upside": -3.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -230,8 +230,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 194.91,
-      "upside": 5.2,
+      "price": 195.1,
+      "upside": 5.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +244,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 130.92,
-      "upside": 11.5,
+      "price": 131.87,
+      "upside": 10.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -258,8 +258,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 261.81,
-      "upside": 9.6,
+      "price": 261.74,
+      "upside": 9.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,7 +272,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 146.44,
+      "price": 145.04,
       "upside": null,
       "held": false,
       "uni": true,
@@ -286,14 +286,60 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 308.26,
-      "upside": -14.5,
+      "price": 306.39,
+      "upside": -13.9,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-11",
+      "ticker": "MRK",
+      "firm": "Argus Research",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$145",
+      "price": 131.87,
+      "upside": 10.0,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-08-11",
+      "ticker": "HD",
+      "firm": "Wells Fargo",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$400",
+      "price": 354.71,
+      "upside": 12.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "MRK": {
+      "date": "2026-08-11",
+      "firm": "Argus Research",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$145",
+      "upside": 10.0
+    },
+    "HD": {
+      "date": "2026-08-11",
+      "firm": "Wells Fargo",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$400",
+      "upside": 12.8
+    },
     "AAPL": {
       "date": "2026-08-10",
       "firm": "Jefferies",
@@ -301,7 +347,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -14.5
+      "upside": -13.9
     },
     "PG": {
       "date": "2026-08-07",
@@ -319,16 +365,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 9.6
-    },
-    "MRK": {
-      "date": "2026-08-05",
-      "firm": "Guggenheim",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$146",
-      "upside": 11.5
+      "upside": 9.7
     },
     "CVX": {
       "date": "2026-08-05",
@@ -337,7 +374,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 5.2
+      "upside": 5.1
     },
     "NKE": {
       "date": "2026-08-04",
@@ -346,7 +383,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -5.0
+      "upside": -3.0
     },
     "KO": {
       "date": "2026-07-30",
@@ -355,10 +392,85 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.7
+      "upside": 11.8
     }
   },
   "bz_news": [
+    {
+      "title": "Disney+ And Unit ESPN To Become Streaming Partner Of The ABB FIA Formula E World Championship From The 2026-27 Season",
+      "url": "https://www.benzinga.com/news/26/08/61109418/disney-and-unit-espn-become-streaming-partner-abb-fia-formula-e-world-championship-2026-27-season",
+      "ts": 1786455091,
+      "tickers": [
+        "FWONK",
+        "FWONA",
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.284
+    },
+    {
+      "title": "Rand Paul Inspects Fort Knox Gold, Says Dollar’s 97% Collapse Since 1913 Is Behind America’s 'Affordability' Crisis: 'The Real Point Is...'",
+      "url": "https://www.benzinga.com/markets/macro-economic-events/26/08/61108939/rand-paul-inspects-fort-knox-gold-says-dollars-97-collapse-since-1913-is-behind-americas-affordability-crisis-the-real-point-is",
+      "ts": 1786454516,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.301
+    },
+    {
+      "title": "Argus Research Maintains Buy on Merck & Co, Raises Price Target to $145",
+      "url": "https://www.benzinga.com/news/26/08/61108144/argus-research-maintains-buy-merck-co-raises-price-target-145",
+      "ts": 1786453477,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.462
+    },
+    {
+      "title": "Argus Research Upgrades Boeing to Buy, Announces $265 Price Target",
+      "url": "https://www.benzinga.com/news/26/08/61107554/argus-research-upgrades-boeing-buy-announces-265-price-target",
+      "ts": 1786453060,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.483
+    },
+    {
+      "title": "Wells Fargo Maintains Overweight on Home Depot, Raises Price Target to $400",
+      "url": "https://www.benzinga.com/news/26/08/61107466/wells-fargo-maintains-overweight-home-depot-raises-price-target-400",
+      "ts": 1786452935,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.449
+    },
+    {
+      "title": "Fox News Posts On X \"Flames shoot from an American Airlines jet engine moments after it strikes birds during takeoff from Myrtle Beach, forcing the pilot to declare a mayday. The Boeing 737 quickly turns back as crews prepare for an emergency response on the ground. The plane lands safely with all 181 passengers safe after the midair scare.\"",
+      "url": "https://www.benzinga.com/news/26/08/61107206/fox-news-posts-x-flames-shoot-american-airlines-jet-engine-moments-after-it-strikes-birds-during-tak",
+      "ts": 1786452575,
+      "tickers": [
+        "AAL",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.21
+    },
     {
       "title": "Evercore ISI Group Maintains Outperform on Caterpillar, Lowers Price Target to $1045",
       "url": "https://www.benzinga.com/news/26/08/61106784/evercore-isi-group-maintains-outperform-caterpillar-lowers-price-target-1045",
@@ -612,87 +724,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.213
-    },
-    {
-      "title": "Nvidia CEO Jensen Huang Says 'First Time' That Chips Have Become An Investable Asset Class as BlackRock, Blackstone and Others Join $500 Billion AI Push",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61098798/nvidia-jensen-huang-chips-investable-asset-class-500-billion-ai",
-      "ts": 1786419772,
-      "tickers": [
-        "NVDA",
-        "APO",
-        "GS",
-        "BLK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.5
-    },
-    {
-      "title": "Trump Cuts Core Childhood Vaccine Recommendations to 11, Bill Cassidy Says 'This Executive Order Is Wrong'",
-      "url": "https://www.benzinga.com/news/politics/26/08/61098721/trump-childhood-vaccine-recommendations-bill-cassidy",
-      "ts": 1786417287,
-      "tickers": [
-        "MRK",
-        "SNY",
-        "GSK",
-        "KVUE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.168
-    },
-    {
-      "title": "If You Invested $100 In Travelers Companies Stock 5 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/08/61096695/if-you-invested-100-travelers-companies-stock-5-years-ago-you-would-have-much-today",
-      "ts": 1786397438,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.303
-    },
-    {
-      "title": "Nike Johanna Nielsen To Resign As Chief Accounting Officer And Corporate Controller; David Denton To Assume Role Of Interim Corporate Controller As Of Sept 4, 2026",
-      "url": "https://www.benzinga.com/news/26/08/61095602/nike-johanna-nielsen-resign-chief-accounting-officer-and-corporate-controller-david-denton-assume-ro",
-      "ts": 1786395803,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.318
-    },
-    {
-      "title": "'OpenAI Buys Back $7 Billion of Employee Shares in Tender Offer' - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/08/61094512/openai-buys-back-7-billion-employee-shares-tender-offer-bloomberg-news",
-      "ts": 1786394529,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.353
-    },
-    {
-      "title": "Bill Ackman Backs Vivek Ramaswamy’s Data-Center Plan: 'Interesting Idea'",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61090338/bill-ackman-backs-vivek-ramaswamys-data-center-plan-interesting-idea",
-      "ts": 1786391719,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.376
     }
   ],
   "portfolio_brief": {
@@ -824,6 +855,38 @@
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "UBER": {
+      "name": "Uber",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 15,
+        "buy": 34,
+        "hold": 7,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 57,
+        "bullish": 49,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.11,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-08-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000414/e26328_uber-8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-08-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm"
+        },
+        "insider30d": 9
+      },
+      "explain": "57 analysts cover it — 49 bullish, 7 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "NOW": {
       "name": "ServiceNow",
       "qarp": "HOLD-QUAL",
@@ -860,38 +923,6 @@
         "insider30d": 0
       },
       "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-    },
-    "UBER": {
-      "name": "Uber",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 15,
-        "buy": 34,
-        "hold": 7,
-        "sell": 1,
-        "strongSell": 0,
-        "total": 57,
-        "bullish": 49,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.11,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-08-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000414/e26328_uber-8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-08-05",
-          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm"
-        },
-        "insider30d": 9
-      },
-      "explain": "57 analysts cover it — 49 bullish, 7 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "AZO": {
       "name": "AutoZone",
@@ -1418,25 +1449,6 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $5.4B (+7.5% YoY), diluted EPS $0.61 (+15.1% YoY). (as reported, GAAP)"
     },
-    "NOW": {
-      "period": "Q2 FY2026",
-      "filed": "2026-07-23",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm",
-      "revenue": {
-        "fmt": "$4.0B",
-        "yoy": 24.0
-      },
-      "eps": {
-        "val": 0.29,
-        "yoy": -21.6
-      },
-      "net_income": {
-        "fmt": "$298M"
-      },
-      "margin": 7.5,
-      "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
-    },
     "UBER": {
       "period": "Q2 FY2026",
       "filed": "2026-08-05",
@@ -1455,6 +1467,25 @@
       },
       "margin": 16.9,
       "summary": "Q2 FY2026 — revenue $14.2B (+12.2% YoY), diluted EPS $1.17 (+85.7% YoY), net margin 17%. (as reported, GAAP)"
+    },
+    "NOW": {
+      "period": "Q2 FY2026",
+      "filed": "2026-07-23",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm",
+      "revenue": {
+        "fmt": "$4.0B",
+        "yoy": 24.0
+      },
+      "eps": {
+        "val": 0.29,
+        "yoy": -21.6
+      },
+      "net_income": {
+        "fmt": "$298M"
+      },
+      "margin": 7.5,
+      "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
     },
     "AZO": {
       "period": "Q3 FY2026",
