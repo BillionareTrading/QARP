@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generated_at": "Aug 11, 4:28pm ET",
+  "generated_at": "Aug 11, 5:15pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,12 +174,6 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
-    "AVGO": {
-      "title": "Nvidia's Chip Boom Is Spreading: JPMorgan Says These 6 Stocks Could Ride It",
-      "ts": 1786473313,
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61122617/nvidia-chip-boom-spreading-six-stocks-to-watch",
-      "wiim": false
-    },
     "NVDA": {
       "title": "NVIDIA's Jensen Huang Says AI Isn’t Just Tech Anymore — It’s Infrastructure, and Wall Street Is Financing It",
       "ts": 1786447512,
@@ -190,6 +184,12 @@
       "title": "OpenAI COO Confirms 'Bittersweet' Exit, Has New Venture in Sight",
       "ts": 1786471580,
       "url": "https://www.benzinga.com/markets/tech/26/08/61121654/openai-coo-confirms-bittersweet-exit-has-new-venture-in-sight",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Nvidia's Chip Boom Is Spreading: JPMorgan Says These 6 Stocks Could Ride It",
+      "ts": 1786473313,
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61122617/nvidia-chip-boom-spreading-six-stocks-to-watch",
       "wiim": false
     },
     "RKLB": {
@@ -403,6 +403,21 @@
   },
   "bz_news": [
     {
+      "title": "Nebius Earnings Preview: Michael Burry Is Short but Prediction Markets See Nvidia, Meta Taking Center Stage",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61129443/nebius-earnings-prediction-market-preview",
+      "ts": 1786482144,
+      "tickers": [
+        "META",
+        "GOOGL",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.531
+    },
+    {
       "title": "Archer CEO Says Defense Could Solve Its Air Taxi Problem",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61123051/archer-ceo-says-defense-solve-air-taxi-problem",
       "ts": 1786474133,
@@ -413,7 +428,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.305
+      "relevance": 0.303
     },
     {
       "title": "Nvidia's Chip Boom Is Spreading: JPMorgan Says These 6 Stocks Could Ride It",
@@ -468,7 +483,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.366
+      "relevance": 0.368
     },
     {
       "title": "IBM Lands $240 Million AI Deal with Together AI to Scale Inference",
@@ -556,7 +571,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.488
+      "relevance": 0.489
     },
     {
       "title": "S&P 500 Eyes Records, Fed Hike Odds Near 51% Before CPI: Stock Market Today",
@@ -721,18 +736,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.21
-    },
-    {
-      "title": "Evercore ISI Group Maintains Outperform on Caterpillar, Lowers Price Target to $1045",
-      "url": "https://www.benzinga.com/news/26/08/61106784/evercore-isi-group-maintains-outperform-caterpillar-lowers-price-target-1045",
-      "ts": 1786452035,
-      "tickers": [
-        "CAT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.482
     }
   ],
   "portfolio_brief": {
@@ -833,7 +836,7 @@
           "date": "2026-08-06",
           "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000040/zts-20260630.htm"
         },
-        "insider30d": 9
+        "insider30d": 10
       },
       "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -865,7 +868,7 @@
           "date": "2026-08-03",
           "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000053/bsx-20260630.htm"
         },
-        "insider30d": 5
+        "insider30d": 6
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1200,7 +1203,7 @@
           "date": "2026-08-06",
           "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm"
         },
-        "insider30d": 3
+        "insider30d": 4
       },
       "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
