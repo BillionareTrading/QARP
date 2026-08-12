@@ -1566,10 +1566,13 @@ tbody tr:hover { background: var(--surface-2); }
 .ext-chip { display:inline-block; font:700 9.5px var(--sans); letter-spacing:.4px; padding:1px 6px;
   margin-left:4px; border:1px solid var(--line-2); border-radius:4px; color:var(--ink-2);
   background:var(--surface); white-space:nowrap; vertical-align:middle; }
-/* inline session tag (2026-08-12 redesign): tiny brass PRE/AH marker inside price/day cells */
-.ext-tag { font:700 8.5px var(--sans); letter-spacing:.6px; color:var(--brass); margin:0 3px 0 0;
-  vertical-align:1px; }
-.cell-px .ext-tag { margin:0 0 0 3px; }
+/* extended-hours column + two-line as-of box (2026-08-12 v3, user design) */
+.cell-ext { white-space:nowrap; }
+.pt-asof { display:inline-flex; flex-direction:column; align-items:flex-start; gap:2px; }
+.pt-ext { font:italic 10.5px "PT Serif", var(--serif); color:var(--ink-3); }
+.ext-dot { display:inline-block; width:6px; height:6px; border-radius:50%; margin:0 5px 1px 0;
+  vertical-align:middle; background:var(--brass); }
+.ext-dot.post { background:var(--brand); }
 .cr-trrow { display:grid; grid-template-columns:84px minmax(0,1fr); gap:8px; padding:7px 0;
   border-bottom:1px solid var(--line); font:13px/1.45 "PT Serif", var(--serif); }
 .cr-trk { font:700 10px var(--sans); letter-spacing:.8px; text-transform:uppercase; color:var(--brass); padding-top:2px; }

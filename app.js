@@ -38,6 +38,7 @@ function verdictBadge(v) {
 
 /* ---------- header tooltips (tap the ⓘ) ---------- */
 const TIPS = {
+  ext: { t: "Pre-Mkt / After Hrs", d: "The stock's price OUTSIDE regular trading (pre-market 4:00–9:30 AM ET, after-hours 4:00–8:00 PM ET) and its move vs. the last regular close. Thinner trading than the regular session — treat it as an indication, not a fill price. The Day column always stays the last regular session's move. This column appears only while a fresh extended-session quote exists and disappears when the market opens." },
   qarp: { t: "QARP", d: "Quality At a Reasonable Price — a 0–100 score blending business quality (60%) with value/DCF (40%). Higher is better; 72+ is a Strong Buy. See the Framework tab for the full method." },
   dcf: { t: "DCF score (1–5)", d: "How cheap the stock is vs. an estimate of its fair value. 5 = deep value (>30% upside), 3 = fairly priced, 1 = expensive." },
   pe: { t: "P/E — trailing → forward", d: "Price ÷ earnings on the last 12 months (trailing) vs. the next 12 months' estimate (forward). Shown side by side so the trailing-vs-forward gap is visible at a glance. A big drop (e.g. 23 → 7) means earnings are expected to surge — trailing understates how cheap it is; a rise means earnings are expected to fall. ↻ marks a CYCLICAL: for those, the DCF is anchored on forward / through-cycle earnings, not the distorted trailing number. N/A = no positive earnings on that basis (a loss). Not part of the QARP score — a read-through for auditing the valuation." },
@@ -464,19 +465,23 @@ function extClock(e) {
     { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" });
 }
 function extWord(e) { return e.s === "pre" ? "pre-market" : "after-hours"; }
-function extTag(e) { return `<span class="ext-tag">${e.s === "pre" ? "PRE" : "AH"}</span>`; }
-function dayCell(x) {
-  const e = extFresh(x);
-  if (e) return `<span class="cell-day ${signClass(e.dp)}" title="${extWord(e)} move vs the last close (quote ${extClock(e)} ET) · last session ${fmtPct(x.day_pct)}">${extTag(e)}${fmtPct(e.dp)}</span>`;
-  return `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>`;
+// v3 (2026-08-12, user design): the settled Day column NEVER changes — extended-hours
+// quotes get their OWN column that only exists while a fresh ext is on the board.
+function extLead() {
+  const p = ((typeof DATA !== "undefined" && DATA && DATA.portfolio) || []).find((x) => extFresh(x));
+  if (p) return extFresh(p);
+  const u = ((typeof DATA !== "undefined" && DATA && DATA.universe) || []).find((x) => extFresh(x));
+  return u ? extFresh(u) : null;
 }
-function daySort(x) { const e = extFresh(x); return e ? e.dp : x.day_pct; }
-function pxCell(x) {
+function extColOn() { return !!extLead(); }
+function extColLabel() { const e = extLead(); return e && e.s === "post" ? "After Hrs" : "Pre-Mkt"; }
+function extCell(x) {
   const e = extFresh(x);
-  if (e) return `<span class="cell-px" title="${extWord(e)} quote ${extClock(e)} ET · last close ${fmtUSD(x.price, 2)}">${fmtUSD(e.p, 2)}${extTag(e)}</span>`;
-  return `<span class="cell-px">${fmtUSD(x.price, 2)}</span>`;
+  if (!e) return `<span class="muted">—</span>`;
+  return `<span class="cell-ext" title="${extWord(e)} quote ${extClock(e)} ET · vs the ${fmtUSD(x.price, 2)} close">${fmtUSD(e.p, 2)} <span class="${signClass(e.dp)}">${fmtPct(e.dp)}</span></span>`;
 }
-// small pill form for the chart tickhead (a full price+% reads fine next to the 52w chip)
+function extSort(x) { const e = extFresh(x); return e ? e.dp : -1e9; }
+// small pill form for the chart tickhead + drawer
 function extChip(x) {
   const e = extFresh(x);
   if (!e) return "";
@@ -487,8 +492,9 @@ const U_COLS = [
   { key: "rank", label: "#", align: "left", fmt: (x) => `<span class="muted">${x.rank}</span>` },
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
   { key: "sector", label: "Sector", align: "left", fmt: (x) => `<span class="muted" title="${esc(x.sector || "")}">${sectorGroup(x.sector)}</span>`, sortVal: (x) => sectorGroup(x.sector) },
-  { key: "price", label: "Price", fmt: (x) => pxCell(x) },
-  { key: "day_pct", label: "Day", fmt: (x) => dayCell(x), sortVal: (x) => daySort(x) },
+  { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
+  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "ext", label: () => extColLabel(), when: () => extColOn(), fmt: (x) => extCell(x), sortVal: (x) => extSort(x) },
   { key: "div", label: "Dividends", fmt: (x) => x.div_rate
       ? `<span class="div-rate">${fmtUSD(x.div_rate, 2)}<span class="div-unit">/sh</span></span><span class="div-yld">${x.div_yield != null ? x.div_yield + "%" : ""}</span>`
       : `<span class="muted">N/A</span>`,
@@ -580,12 +586,15 @@ function renderUniverseTable() {
     return uSort.dir * (va - vb);
   });
 
-  document.querySelector("#u-table thead").innerHTML = `<tr>${U_COLS.map((c) => {
+  // dynamic columns (2026-08-12): a column with when() renders only while it's on —
+  // the Pre-Mkt/After-Hrs column exists only during a fresh extended session
+  const uCols = U_COLS.filter((c) => !c.when || c.when());
+  document.querySelector("#u-table thead").innerHTML = `<tr>${uCols.map((c) => {
     const arrow = uSort.key === c.key ? `<span class="arrow">${uSort.dir > 0 ? "▲" : "▼"}</span>` : "";
-    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}${infoBtn(c.key)}</th>`;
+    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${typeof c.label === "function" ? c.label() : c.label}${arrow}${infoBtn(c.key)}</th>`;
   }).join("")}</tr>`;
   document.querySelector("#u-table tbody").innerHTML = rows.map((x) => `
-    <tr data-ticker="${x.ticker}">${U_COLS.map((c) =>
+    <tr data-ticker="${x.ticker}">${uCols.map((c) =>
       `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
 
   document.getElementById("u-count").textContent = `${rows.length} of ${list.length}`;
@@ -606,11 +615,12 @@ function renderUniverseTable() {
 /* ---------- render: Portfolio ---------- */
 const P_COLS = [
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
-  { key: "price", label: "Price", fmt: (x) => pxCell(x) },
+  { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
   // avg cost is PER-SHARE (scale-free) — published as avg_cost so it survives the privacy
   // split; the shares/cost fallback keeps working after the owner unlock merges them in.
   { key: "avgcost", label: "Avg Cost", fmt: (x) => `<span class="muted">${fmtUSD(x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : null), 2)}</span>`, sortVal: (x) => (x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : 0)) },
-  { key: "day_pct", label: "Day", fmt: (x) => dayCell(x), sortVal: (x) => daySort(x) },
+  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "ext", label: () => extColLabel(), when: () => extColOn(), fmt: (x) => extCell(x), sortVal: (x) => extSort(x) },
   { key: "shares", label: "Shares", fmt: (x) => (x.shares == null && !privUnlocked() ? lockSH() : fmtNum(x.shares, 2)), sortVal: (x) => (x.shares != null ? x.shares : x.weight_pct || 0) },
   { key: "value", label: "Value", fmt: (x) => pUSD(x.value, 0), sortVal: (x) => (x.value != null ? x.value : x.weight_pct || 0) },
   { key: "gain", label: "Unrlzd $", fmt: (x) => (x.gain == null && !privUnlocked() ? lockUSD() : `<span class="${signClass(x.gain)}">${fmtUSD(x.gain, 0)}</span>`), sortVal: (x) => (x.gain != null ? x.gain : x.gain_pct || 0) },
@@ -761,12 +771,13 @@ function renderPortfolioTable() {
     if (typeof va === "string") return pSort.dir * va.localeCompare(vb);
     return pSort.dir * (va - vb);
   });
-  document.querySelector("#p-table thead").innerHTML = `<tr>${P_COLS.map((c) => {
+  const pCols = P_COLS.filter((c) => !c.when || c.when());
+  document.querySelector("#p-table thead").innerHTML = `<tr>${pCols.map((c) => {
     const arrow = pSort.key === c.key ? `<span class="arrow">${pSort.dir > 0 ? "▲" : "▼"}</span>` : "";
-    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}${infoBtn(c.key)}</th>`;
+    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${typeof c.label === "function" ? c.label() : c.label}${arrow}${infoBtn(c.key)}</th>`;
   }).join("")}</tr>`;
   document.querySelector("#p-table tbody").innerHTML = rows.map((x) => `
-    <tr data-ticker="${x.ticker}">${P_COLS.map((c) =>
+    <tr data-ticker="${x.ticker}">${pCols.map((c) =>
       `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
   document.querySelectorAll("#p-table thead th").forEach((th) =>
     th.addEventListener("click", (e) => {
@@ -840,9 +851,7 @@ function openDrawer(ticker) {
       ${has(d.dcf) ? `<span class="chip">DCF ${fmtNum(d.dcf, 1)}/5</span>` : ""}
       ${has(d.mech) ? `<span class="chip">Quality ${d.mech}/105</span>` : ""}
       ${has(d.sector) ? `<span class="chip">${d.sector}</span>` : ""}
-      ${(() => { const e = extFresh(d);
-        if (e) return `<span class="chip" title="${extWord(e)} quote ${extClock(e)} ET · last close ${fmtUSD(d.price, 2)} (${fmtPct(d.day_pct)})">${extTag(e)} ${fmtUSD(e.p, 2)} · <span class="${signClass(e.dp)}">${fmtPct(e.dp)}</span></span>`;
-        return has(d.price) ? `<span class="chip">${fmtUSD(d.price, 2)}${has(d.day_pct) ? ` · <span class="${signClass(d.day_pct)}">${fmtPct(d.day_pct)}</span>` : ""}</span>` : ""; })()}
+      ${has(d.price) ? `<span class="chip">${fmtUSD(d.price, 2)}${has(d.day_pct) ? ` · <span class="${signClass(d.day_pct)}">${fmtPct(d.day_pct)}</span>` : ""}</span>` : ""}${extChip(d)}
       <span class="chip" style="cursor:pointer;color:var(--brand);font-weight:700" onclick="closeDrawer();openChart('${ticker}')">Open chart →</span>
       ${(DATA.estimates && (DATA.estimates.docket || []).some((x) => x.tk === ticker))
         ? `<span class="chip" style="cursor:pointer;color:var(--brass);font-weight:700" onclick="closeDrawer();openEstimates('${ticker}')">Estimates →</span>` : ""}
@@ -1754,13 +1763,12 @@ async function renderDailyTicker() {
       return `<span class="pt-item"><b>${esc(ix.l)}</b> <span class="${up ? "pos" : "neg"}">${up ? "▲" : "▼"} ${Math.abs(q.dp).toFixed(2)}%</span></span>`;
     } catch (e) { return `<span class="pt-item"><b>${esc(ix.l)}</b> <span class="muted">—</span></span>`; }
   }));
-  // "as of X's close" confused the desk once pre-market chips existed (2026-08-12): when a
-  // fresh extended quote is on the board, say BOTH truths — values sit at the close, the
-  // tagged quotes are the extended session.
-  const _eh = ((DATA.portfolio || []).map(extFresh).find(Boolean)) || null;
-  const asof = marketOpenNow() ? "" : `<span class="pt-item pt-asof">${_eh
-    ? `values at ${fullDayName(DATA.meta.date)}’s close · ${extWord(_eh)} quotes ${extClock(_eh)} ET`
-    : `as of ${fullDayName(DATA.meta.date)}'s close`}</span>`;
+  // Two-line as-of box (2026-08-12, user design): line 1 = the settled close the values
+  // sit at; line 2 (smaller, with a session dot) = the live extended session, when fresh.
+  const _eh = extLead();
+  const asof = marketOpenNow() ? "" : `<span class="pt-item pt-asof">
+    <span>as of ${fullDayName(DATA.meta.date)}'s close</span>
+    ${_eh ? `<span class="pt-ext"><span class="ext-dot ${_eh.s}"></span>${extWord(_eh)} · quotes ${extClock(_eh)} ET</span>` : ""}</span>`;
   el.innerHTML = cards.join("") + asof;
 }
 
