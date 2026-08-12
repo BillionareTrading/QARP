@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "generated_at": "Aug 12, 10:43am ET",
+  "generated_at": "Aug 12, 11:05am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -214,8 +214,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 196.69,
-      "upside": 4.2,
+      "price": 196.58,
+      "upside": 4.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -228,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 131.83,
-      "upside": 10.7,
+      "price": 132.52,
+      "upside": 10.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -242,8 +242,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 259.46,
-      "upside": 10.6,
+      "price": 260.37,
+      "upside": 10.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -256,7 +256,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 144.28,
+      "price": 144.24,
       "upside": null,
       "held": false,
       "uni": true,
@@ -270,8 +270,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 302.45,
-      "upside": -12.8,
+      "price": 302.88,
+      "upside": -12.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -284,8 +284,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 131.83,
-      "upside": 10.0,
+      "price": 132.52,
+      "upside": 9.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -298,8 +298,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 345.57,
-      "upside": 15.8,
+      "price": 344.3,
+      "upside": 16.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -312,8 +312,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 345.57,
-      "upside": -0.7,
+      "price": 344.3,
+      "upside": -0.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -326,8 +326,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 192.34,
-      "upside": 9.2,
+      "price": 193.01,
+      "upside": 8.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -340,8 +340,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 192.34,
-      "upside": 6.6,
+      "price": 193.01,
+      "upside": 6.2,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -355,7 +355,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 9.2
+      "upside": 8.8
     },
     "HD": {
       "date": "2026-08-12",
@@ -364,7 +364,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "upside": -0.7
+      "upside": -0.4
     },
     "MRK": {
       "date": "2026-08-11",
@@ -373,7 +373,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "upside": 10.0
+      "upside": 9.4
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -382,7 +382,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -12.8
+      "upside": -12.9
     },
     "PG": {
       "date": "2026-08-07",
@@ -400,7 +400,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.6
+      "upside": 10.2
     },
     "CVX": {
       "date": "2026-08-05",
@@ -409,7 +409,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 4.2
+      "upside": 4.3
     },
     "NKE": {
       "date": "2026-08-04",
@@ -418,7 +418,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -1.7
+      "upside": -1.5
     },
     "KO": {
       "date": "2026-07-30",
@@ -427,10 +427,22 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 12.3
+      "upside": 12.1
     }
   },
   "bz_news": [
+    {
+      "title": "Amy Montagne Takes Money Off The Table, Sells $204K In Nike Stock",
+      "url": "https://www.benzinga.com/news/26/08/61146685/amy-montagne-takes-money-table-sells-204k-nike-stock",
+      "ts": 1786546939,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.342
+    },
     {
       "title": "What's Going On With Boeing Stock Wednesday?",
       "url": "https://www.benzinga.com/markets/large-cap/26/08/61145215/whats-going-on-with-boeing-stock-wednesday-2",
@@ -730,21 +742,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.401
-    },
-    {
-      "title": "Quantinuum Strikes Oracle Deal as Quantum Cloud Race Heats Up: ‘Next Phase of Enterprise Computing’",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61135132/oracle-bets-big-on-quantum-computing-with-quantinuum-deal",
-      "ts": 1786529198,
-      "tickers": [
-        "ORCL",
-        "AMZN",
-        "MSFT",
-        "QNT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.425
     },
     {
       "title": "Why Is CoreWeave Stock Soaring Wednesday?",
@@ -1105,7 +1102,7 @@
     },
     "LULU": {
       "name": "Lululemon",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 1,
         "buy": 1,
@@ -1133,7 +1130,7 @@
         },
         "insider30d": 0
       },
-      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: HOLD-QUAL."
+      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
     },
     "EXE": {
       "name": "Expand Energy",
