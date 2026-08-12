@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "generated_at": "Aug 12, 3:24pm ET",
+  "generated_at": "Aug 12, 3:45pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -134,10 +134,10 @@
     },
     {
       "sector": "Oil & Gas",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Energy price gains due to concerns that the U.S. and Iran aren't making …",
       "note": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Software",
@@ -208,8 +208,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 196.84,
-      "upside": 4.1,
+      "price": 196.52,
+      "upside": 4.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -222,8 +222,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 133.78,
-      "upside": 9.1,
+      "price": 133.98,
+      "upside": 9.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -236,8 +236,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 260.95,
-      "upside": 10.0,
+      "price": 261.14,
+      "upside": 9.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,7 +250,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 144.43,
+      "price": 144.47,
       "upside": null,
       "held": false,
       "uni": true,
@@ -278,8 +278,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 133.78,
-      "upside": 8.4,
+      "price": 133.98,
+      "upside": 8.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -292,8 +292,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 344.89,
-      "upside": 16.0,
+      "price": 345.01,
+      "upside": 15.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -306,8 +306,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 133.78,
-      "upside": 6.9,
+      "price": 133.98,
+      "upside": 6.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -320,8 +320,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 344.89,
-      "upside": -0.5,
+      "price": 345.01,
+      "upside": -0.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -372,7 +372,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 6.9
+      "upside": 6.7
     },
     "HD": {
       "date": "2026-08-12",
@@ -381,7 +381,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "upside": -0.5
+      "upside": -0.6
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -408,7 +408,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.0
+      "upside": 9.9
     },
     "CVX": {
       "date": "2026-08-05",
@@ -417,7 +417,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 4.1
+      "upside": 4.3
     },
     "NKE": {
       "date": "2026-08-04",
@@ -435,10 +435,37 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.7
+      "upside": 11.8
     }
   },
   "bz_news": [
+    {
+      "title": "Tesla, Palantir Fall as CPI Sends September Fed Hike Odds to 33%",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61156417/tesla-palantir-july-cpi-fed-hike-odds",
+      "ts": 1786563225,
+      "tickers": [
+        "TSLA",
+        "MSFT",
+        "PLTR",
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.368
+    },
+    {
+      "title": "Microsoft Stock is Falling: What's Going On Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61156185/microsoft-stock-is-falling-whats-going-on-today",
+      "ts": 1786562713,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.51
+    },
     {
       "title": "Shares of foundry, fabricator and IDM chip companies are trading higher after AI cloud providers CoreWeave and Nebius reported better-than-expected Q2 results and server and storage maker Super Micro Computer reported better-than-expected Q4 financial results, all of which may help bolster the demand outlook for the sector.",
       "url": "https://www.benzinga.com/quote/TSEM",
@@ -584,7 +611,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.444
+      "relevance": 0.443
     },
     {
       "title": "How To Earn $500 A Month From Home Depot Stock Ahead Of Q2 Earnings",
@@ -745,7 +772,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.365
+      "relevance": 0.364
     },
     {
       "title": "Salesforce shares are trading lower after UBS maintained its Neutral rating on the stock and Wells Fargo maintained its Equal-Weight rating.",
@@ -758,33 +785,6 @@
       "wiim": true,
       "rel": true,
       "relevance": 0.446
-    },
-    {
-      "title": "RBC Capital Reiterates Outperform on Walmart, Maintains $137 Price Target",
-      "url": "https://www.benzinga.com/news/26/08/61143604/rbc-capital-reiterates-outperform-walmart-maintains-137-price-target",
-      "ts": 1786543249,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.413
-    },
-    {
-      "title": "Neocloud Stocks Catch Fire As CoreWeave Doubles Revenue",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61143384/neocloud-stocks-catch-fire-as-coreweave-doubles-revenue",
-      "ts": 1786543038,
-      "tickers": [
-        "IREN",
-        "NBIS",
-        "CRWV",
-        "$BTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.33
     }
   ],
   "portfolio_brief": {
