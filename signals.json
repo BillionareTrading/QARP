@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-11",
-  "generated_at": "Aug 11, 7:24pm ET",
+  "date": "2026-08-12",
+  "generated_at": "Aug 12, 5:18am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 11",
+      "when": "Aug 12",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -175,9 +175,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "NVIDIA's Jensen Huang Says AI Isn’t Just Tech Anymore — It’s Infrastructure, and Wall Street Is Financing It",
-      "ts": 1786447512,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61103769/nvidias-jensen-huang-says-ai-isnt-just-tech-anymore-its-infrastructure-and-wall-street-is-financing-it",
+      "title": "Jensen Huang’s $500 Billion Nvidia AI Financing Bet Faces a China Problem—Could Cheaper Chinese Chips Sink GPU Values?",
+      "ts": 1786526026,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61134143/jensen-huangs-500-billion-nvidia-ai-financing-bet-faces-a-china-problem-could-cheaper-chinese-chips-sink-gpu-values",
       "wiim": false
     },
     "UBER": {
@@ -200,34 +200,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-04",
-      "ticker": "AAPL",
-      "firm": "China Renaissance",
-      "action": "Downgrades",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$280",
-      "price": 304.91,
-      "upside": -8.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-04",
-      "ticker": "NKE",
-      "firm": "JP Morgan",
-      "action": "Downgrades",
-      "rating": "Underweight",
-      "stance": "bearish",
-      "pt": "$40",
-      "price": 41.32,
-      "upside": -3.2,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
     {
       "date": "2026-08-05",
       "ticker": "CVX",
@@ -403,6 +375,94 @@
   },
   "bz_news": [
     {
+      "title": "Jensen Huang’s $500 Billion Nvidia AI Financing Bet Faces a China Problem—Could Cheaper Chinese Chips Sink GPU Values?",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61134143/jensen-huangs-500-billion-nvidia-ai-financing-bet-faces-a-china-problem-could-cheaper-chinese-chips-sink-gpu-values",
+      "ts": 1786526026,
+      "tickers": [
+        "NVDA",
+        "APO",
+        "GS",
+        "BLK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.498
+    },
+    {
+      "title": "Performance Food Group, Super Micro Computer and 3 Stocks to Watch Heading Into Wednesday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61133181/performance-food-group-super-micro-computer-and-3-stocks-to-watch-heading-into-wednesday",
+      "ts": 1786518674,
+      "tickers": [
+        "SMCI",
+        "CSCO",
+        "EAT",
+        "PFGC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.402
+    },
+    {
+      "title": "S&P 500 Falls for Second Session Ahead of Inflation Report: Investor Sentiment Weakens, Fear & Greed Index Remains in ‘Greed’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/61133100/sp-500-falls-for-second-session-ahead-of-inflation-report-investor-sentiment-weakens-fear-greed-index-remains-in-greed-zone",
+      "ts": 1786517847,
+      "tickers": [
+        "CAH",
+        "CSCO",
+        "EAT",
+        "PFGC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.445
+    },
+    {
+      "title": "Elizabeth Warren Probes 'Cartoonish Corruption' After Accusing Belgium Diamond Industry of Gifting Trump a Diamond-Encrusted Ring",
+      "url": "https://www.benzinga.com/news/politics/26/08/61132923/elizabeth-warren-probes-belgium-1m-gold-ring-gift-to-trump",
+      "ts": 1786516354,
+      "tickers": [
+        "AAPL",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.221
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61132537/stock-market-will-sp-500-open-up-or-down-today-14",
+      "ts": 1786511873,
+      "tickers": [
+        "$POL",
+        "TSM",
+        "CSCO",
+        "COHR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Jim Cramer Asks if Wall Street's 'Long Knives' for Nvidia Should Stay Sheathed as CoreWeave Powers Neocloud Optimism",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61132472/jim-cramer-nvidia-long-knives-coreweave-neocloud-ai-optimism",
+      "ts": 1786511111,
+      "tickers": [
+        "CRWV",
+        "GS",
+        "NVDA",
+        "BLK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.494
+    },
+    {
       "title": "If You Invested $1000 In JPMorgan Chase Stock 10 Years Ago, You Would Have This Much Today",
       "url": "https://www.benzinga.com/news/26/08/61131129/if-you-invested-1000-jpmorgan-chase-stock-10-years-ago-you-would-have-much-today",
       "ts": 1786488331,
@@ -520,7 +580,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.368
+      "relevance": 0.366
     },
     {
       "title": "IBM Lands $240 Million AI Deal with Together AI to Scale Inference",
@@ -651,91 +711,19 @@
       "relevance": 0.286
     },
     {
-      "title": "Cisco Q4 Preview: Stock Up 60% in 2026, Market Expert Sees 64% More Upside After Earnings",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/08/61117788/cisco-q4-preview-stock-up-60-in-2026-market-expert-sees-64-more-upside-after-earnings",
-      "ts": 1786465310,
+      "title": "Trump Cuts Core Childhood Vaccine Recommendations to 11, Bill Cassidy Says 'This Executive Order Is Wrong' (UPDATED)",
+      "url": "https://www.benzinga.com/news/politics/26/08/61098721/trump-childhood-vaccine-recommendations-bill-cassidy",
+      "ts": 1786417280,
       "tickers": [
-        "CSCO"
+        "MRK",
+        "SNY",
+        "GSK",
+        "KVUE"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.471
-    },
-    {
-      "title": "WZL-1, WCKBT And Boeing Sign Offset Agreements To Support Poland’s AH-64E Apache Helicopter Fleet",
-      "url": "https://www.benzinga.com/news/26/08/61117103/wzl-1-wckbt-and-boeing-sign-offset-agreements-support-poland-s-ah-64e-apache-helicopter-fleet",
-      "ts": 1786464333,
-      "tickers": [
-        "EPOL",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.249
-    },
-    {
-      "title": "$1000 Invested In Amgen 15 Years Ago Would Be Worth This Much Today",
-      "url": "https://www.benzinga.com/news/26/08/61116887/1000-invested-amgen-15-years-ago-would-be-worth-much-today",
-      "ts": 1786464022,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.348
-    },
-    {
-      "title": "Boeing Delivered 53 Airplanes In July; Booked 38 Gross Orders And Had 8 Cancellations In July; Official Backlog 6,192 As Of July-End Vs 6,202 As Of June-End; Through July, Booked 438 Orders After Cancellations",
-      "url": "https://www.benzinga.com/news/26/08/61115494/boeing-delivered-53-airplanes-july-booked-38-gross-orders-and-had-8-cancellations-july-official-back",
-      "ts": 1786462044,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.24
-    },
-    {
-      "title": "Disney+ And Unit ESPN To Become Streaming Partner Of The ABB FIA Formula E World Championship From The 2026-27 Season",
-      "url": "https://www.benzinga.com/news/26/08/61109418/disney-and-unit-espn-become-streaming-partner-abb-fia-formula-e-world-championship-2026-27-season",
-      "ts": 1786455091,
-      "tickers": [
-        "FWONK",
-        "FWONA",
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.284
-    },
-    {
-      "title": "Rand Paul Inspects Fort Knox Gold, Says Dollar’s 97% Collapse Since 1913 Is Behind America’s 'Affordability' Crisis: 'The Real Point Is...'",
-      "url": "https://www.benzinga.com/markets/macro-economic-events/26/08/61108939/rand-paul-inspects-fort-knox-gold-says-dollars-97-collapse-since-1913-is-behind-americas-affordability-crisis-the-real-point-is",
-      "ts": 1786454516,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.301
-    },
-    {
-      "title": "Argus Research Maintains Buy on Merck & Co, Raises Price Target to $145",
-      "url": "https://www.benzinga.com/news/26/08/61108144/argus-research-maintains-buy-merck-co-raises-price-target-145",
-      "ts": 1786453477,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.462
+      "relevance": 0.171
     }
   ],
   "portfolio_brief": {
@@ -1027,9 +1015,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "NVIDIA's Jensen Huang Says AI Isn’t Just Tech Anymore — It’s Infrastructure, and Wall Street Is Financing It",
-        "ts": 1786447512,
-        "url": "https://www.benzinga.com/markets/tech/26/08/61103769/nvidias-jensen-huang-says-ai-isnt-just-tech-anymore-its-infrastructure-and-wall-street-is-financing-it",
+        "title": "Jensen Huang’s $500 Billion Nvidia AI Financing Bet Faces a China Problem—Could Cheaper Chinese Chips Sink GPU Values?",
+        "ts": 1786526026,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61134143/jensen-huangs-500-billion-nvidia-ai-financing-bet-faces-a-china-problem-could-cheaper-chinese-chips-sink-gpu-values",
         "wiim": false
       },
       "filings": {
