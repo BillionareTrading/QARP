@@ -1767,7 +1767,15 @@ function renderEarnings() {
     const f = h.sec_fin;
     const name = (pb[h.ticker] || {}).name || h.name || h.ticker;
     if (!f) {
-      return `<article class="er-row na"><div class="er-head"><span class="er-tk">${esc(h.ticker)}</span><span class="er-name">${esc(name)}</span></div><div class="er-na">Not available via SEC EDGAR (foreign filer — files 20-F/6-K).</div></article>`;
+      // Say only what we KNOW (2026-08-12, the ABT lesson: a US 10-Q filer briefly lost
+      // its data to an EDGAR hiccup and this line blamed "foreign filer" — never assert a
+      // reason the data doesn't establish). Foreign wording only for actual non-US rows.
+      const uRow = (DATA.universe || []).find((x) => x.ticker === h.ticker);
+      const isForeign = !!(uRow && (uRow.index === "Global" || (uRow.country && uRow.country !== "USA")));
+      const why = isForeign
+        ? "Files with the SEC as a foreign issuer (20-F/6-K) — quarterly XBRL isn't published the same way."
+        : "SEC filing data didn't load this build — EDGAR hiccup; it retries automatically on coming builds.";
+      return `<article class="er-row na"><div class="er-head"><span class="er-tk">${esc(h.ticker)}</span><span class="er-name">${esc(name)}</span></div><div class="er-na">${why}</div></article>`;
     }
     const link = f.url
       ? `<a href="${esc(safeUrl(f.url))}" target="_blank" rel="noopener noreferrer" class="er-link">${esc(f.form)} · filed ${esc(fdate(f.filed))} <i class="ti ti-external-link" aria-hidden="true"></i></a>`
@@ -2532,7 +2540,7 @@ function renderFilings() {
       <td class="left">${f.url ? `<a class="er-link" href="${esc(safeUrl(f.url))}" target="_blank" rel="noopener noreferrer" onclick="openSecDoc(event, this)">${esc(f.form || "")} · ${esc(f.filed || "")}</a>` : esc(f.filed || "")}</td>
     </tr>`; }).join("")}
   </tbody></table></div>
-  ${naRows.length ? `<p class="muted" style="margin-top:10px;font-size:12px">${naRows.length} name${naRows.length > 1 ? "s" : ""} without SEC XBRL (foreign filers / recent listings): ${naRows.map((r) => r.ticker).join(", ")}.</p>` : ""}`;
+  ${naRows.length ? `<p class="muted" style="margin-top:10px;font-size:12px">${naRows.length} name${naRows.length > 1 ? "s" : ""} without SEC XBRL quarters (foreign issuers, or a data gap that retries): ${naRows.map((r) => r.ticker).join(", ")}.</p>` : ""}`;
   host.querySelectorAll("th[data-fk]").forEach((th) => th.addEventListener("click", () => {
     const k = th.dataset.fk;
     if (filingsSort.key === k) filingsSort.dir *= -1;
