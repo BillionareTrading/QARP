@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "generated_at": "Aug 12, 7:41am ET",
+  "generated_at": "Aug 12, 8:16am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -178,6 +178,12 @@
       "title": "Jensen Huang’s $500 Billion Nvidia AI Financing Bet Faces a China Problem—Could Cheaper Chinese Chips Sink GPU Values?",
       "ts": 1786526026,
       "url": "https://www.benzinga.com/markets/tech/26/08/61134143/jensen-huangs-500-billion-nvidia-ai-financing-bet-faces-a-china-problem-could-cheaper-chinese-chips-sink-gpu-values",
+      "wiim": false
+    },
+    "SPGI": {
+      "title": "S&P Global Announces Expanded Collaboration With Microsoft To Integrate AI-Ready Data Into Microsoft 365 Copilot, Including Copilot In Excel Connector",
+      "ts": 1786536343,
+      "url": "https://www.benzinga.com/quote/MSFT",
       "wiim": false
     },
     "UBER": {
@@ -375,6 +381,58 @@
   },
   "bz_news": [
     {
+      "title": "Elon Musk's SpaceX Lands $1.22 Billion Investment From Norway’s $2.3 Trillion Sovereign Wealth Fund",
+      "url": "https://www.benzinga.com/news/space/26/08/61138978/elon-musks-spacex-lands-1-22-billion-investment-from-norways-2-3-trillion-sovereign-wealth-fund",
+      "ts": 1786536809,
+      "tickers": [
+        "AAPL",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.329
+    },
+    {
+      "title": "S&P Global Announces Expanded Collaboration With Microsoft To Integrate AI-Ready Data Into Microsoft 365 Copilot, Including Copilot In Excel Connector",
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "ts": 1786536343,
+      "tickers": [
+        "SPGI",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.403
+    },
+    {
+      "title": "Cisco Earnings Are Imminent; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61138434/cisco-earnings-are-imminent-these-most-accurate-analysts-revise-forecasts-ahead-of-earnings-call-6",
+      "ts": 1786536007,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.5
+    },
+    {
+      "title": "'Goldman Sachs to Acquire ETF Provider Neos in $2.3 Billion Deal' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/08/61138420/goldman-sachs-acquire-etf-provider-neos-2-3-billion-deal-bloomberg",
+      "ts": 1786536003,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.39
+    },
+    {
       "title": "Mark Warner Says ‘We Can’t Put AI Back in the Bottle,’ Urges Congress to Act on Jobs, National Security and US Competitiveness",
       "url": "https://www.benzinga.com/markets/tech/26/08/61135949/mark-warner-says-we-cant-put-ai-back-in-the-bottle-urges-congress-to-act-on-jobs-national-security-and-us-competitiveness",
       "ts": 1786531063,
@@ -400,7 +458,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.409
+      "relevance": 0.408
     },
     {
       "title": "Reported Earlier, Amgen To Open New Science And Innovation Center At Genome Valley In Hyderabad",
@@ -466,7 +524,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.438
+      "relevance": 0.437
     },
     {
       "title": "Why Is CoreWeave Stock Soaring Wednesday?",
@@ -651,59 +709,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.531
-    },
-    {
-      "title": "Archer CEO Says Defense Could Solve Its Air Taxi Problem",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61123051/archer-ceo-says-defense-solve-air-taxi-problem",
-      "ts": 1786474133,
-      "tickers": [
-        "ACHR",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.305
-    },
-    {
-      "title": "Nvidia's Chip Boom Is Spreading: JPMorgan Says These 6 Stocks Could Ride It",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61122617/nvidia-chip-boom-spreading-six-stocks-to-watch",
-      "ts": 1786473313,
-      "tickers": [
-        "INTC",
-        "AVGO",
-        "AMD",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.525
-    },
-    {
-      "title": "OpenAI COO Confirms 'Bittersweet' Exit, Has New Venture in Sight",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61121654/openai-coo-confirms-bittersweet-exit-has-new-venture-in-sight",
-      "ts": 1786471580,
-      "tickers": [
-        "MSFT",
-        "UBER"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.278
-    },
-    {
-      "title": "'Apple Executive in Charge of Pay and Wallet Services Is Leaving' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/08/61121120/apple-executive-charge-pay-and-wallet-services-leaving-bloomberg",
-      "ts": 1786470723,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.256
     },
     {
       "title": "Trump Cuts Core Childhood Vaccine Recommendations to 11, Bill Cassidy Says 'This Executive Order Is Wrong' (UPDATED)",
@@ -1142,7 +1147,12 @@
         "score": 1.18,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "S&P Global Announces Expanded Collaboration With Microsoft To Integrate AI-Ready Data Into Microsoft 365 Copilot, Including Copilot In Excel Connector",
+        "ts": 1786536343,
+        "url": "https://www.benzinga.com/quote/MSFT",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
