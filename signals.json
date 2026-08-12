@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "generated_at": "Aug 12, 5:00pm ET",
+  "generated_at": "Aug 12, 5:58pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,28 +174,22 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
-    "NVS": {
-      "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
-      "ts": 1786556115,
-      "url": "https://www.benzinga.com/markets/options/26/08/61152680/10-health-care-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
     "NVDA": {
       "title": "Dan Ives Says CoreWeave, Cisco Earnings ‘Pieces of the Puzzle’ for AI Trade: ‘Get the Popcorn Out’",
       "ts": 1786553637,
       "url": "https://www.benzinga.com/markets/tech/26/08/61151182/dan-ives-says-coreweave-cisco-earnings-pieces-of-the-puzzle-for-ai-trade-get-the-popcorn-out",
       "wiim": false
     },
+    "NVS": {
+      "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
+      "ts": 1786556115,
+      "url": "https://www.benzinga.com/markets/options/26/08/61152680/10-health-care-stocks-whale-alerts-today-s-session",
+      "wiim": false
+    },
     "UBER": {
       "title": "Stock Market Today: Nasdaq 100 Rises on Strong AI Earnings, Benign Inflation",
       "ts": 1786554865,
       "url": "https://www.benzinga.com/markets/equities/26/08/61151837/stock-market-today-nasdaq-100-rises-on-strong-ai-earnings-benign-inflation",
-      "wiim": false
-    },
-    "SPGI": {
-      "title": "S&P Global Announces Expanded Collaboration With Microsoft To Integrate AI-Ready Data Into Microsoft 365 Copilot, Including Copilot In Excel Connector",
-      "ts": 1786536343,
-      "url": "https://www.benzinga.com/quote/MSFT",
       "wiim": false
     }
   },
@@ -440,6 +434,48 @@
   },
   "bz_news": [
     {
+      "title": "Congressman Violates Stock Act: Reports 22 Trades After Deadline, Including Some Nearly Two Years Old",
+      "url": "https://www.benzinga.com/news/politics/26/08/61161946/congressman-violates-stock-act-reports-22-trades-after-deadline",
+      "ts": 1786569134,
+      "tickers": [
+        "AAPL",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.348
+    },
+    {
+      "title": "Cisco CEO Says Have Line Of Sight To Multiple AI Design Wins Expected Over Next 6 Months Across G300, G200, P200 Silicon One Chip Designs And Optics; AI Infrastructure Revenue Is Projected To Grow To $7.5B In Fiscal Year 2027",
+      "url": "https://www.benzinga.com/news/26/08/61161927/cisco-ceo-says-have-line-sight-multiple-ai-design-wins-expected-over-next-6-months-across-g300-g200-",
+      "ts": 1786569101,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.522
+    },
+    {
+      "title": "Goldman Sachs Gains Bitcoin, Ethereum ETFs in $2.25B Deal: Could It 'Leapfrog' BlackRock?",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61161352/goldman-sachs-gains-bitcoin-ethereum-etfs-in-2-25b-deal-could-it-leapfrog-blackrock",
+      "ts": 1786568467,
+      "tickers": [
+        "GS",
+        "$BTC",
+        "$ETH",
+        "BLK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.333
+    },
+    {
       "title": "Here’s How Much You Would Have Made Owning UnitedHealth Group Stock In The Last 20 Years",
       "url": "https://www.benzinga.com/news/26/08/61161295/here-s-how-much-you-would-have-made-owning-unitedhealth-group-stock-last-20-years",
       "ts": 1786568440,
@@ -592,7 +628,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.37
+      "relevance": 0.369
     },
     {
       "title": "Why Is Archer Aviation Stock Falling on Wednesday?",
@@ -695,7 +731,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.443
+      "relevance": 0.444
     },
     {
       "title": "How To Earn $500 A Month From Home Depot Stock Ahead Of Q2 Earnings",
@@ -708,47 +744,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.395
-    },
-    {
-      "title": "Super Micro, Lumentum, CoreWeave Earnings Highlight AI Infrastructure Demand; CPI Data Shows Stagflation Risks Remain",
-      "url": "https://www.benzinga.com/Opinion/26/08/61151495/super-micro-lumentum-coreweave-highlight-ai-infrastructure-demand-cpi-data-shows-stagflation-risks",
-      "ts": 1786554177,
-      "tickers": [
-        "SPY",
-        "NVDA",
-        "TSLA",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.565
-    },
-    {
-      "title": "Dan Ives Says CoreWeave, Cisco Earnings ‘Pieces of the Puzzle’ for AI Trade: ‘Get the Popcorn Out’",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61151182/dan-ives-says-coreweave-cisco-earnings-pieces-of-the-puzzle-for-ai-trade-get-the-popcorn-out",
-      "ts": 1786553637,
-      "tickers": [
-        "CSCO",
-        "CRWV",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.403
-    },
-    {
-      "title": "'Apple Taps American Airlines Veteran Nate Gatten As Government Affairs Head' - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/08/61151098/apple-taps-american-airlines-veteran-nate-gatten-government-affairs-head-bloomberg-news",
-      "ts": 1786553439,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.284
     }
   ],
   "portfolio_brief": {
@@ -1019,7 +1014,7 @@
           "date": "2026-05-20",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
         },
-        "insider30d": 1
+        "insider30d": 2
       },
       "explain": "68 analysts cover it — 64 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1167,12 +1162,7 @@
         "score": 1.18,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "S&P Global Announces Expanded Collaboration With Microsoft To Integrate AI-Ready Data Into Microsoft 365 Copilot, Including Copilot In Excel Connector",
-        "ts": 1786536343,
-        "url": "https://www.benzinga.com/quote/MSFT",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
