@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "generated_at": "Aug 12, 8:16am ET",
+  "generated_at": "Aug 12, 9:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -175,9 +175,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Jensen Huang’s $500 Billion Nvidia AI Financing Bet Faces a China Problem—Could Cheaper Chinese Chips Sink GPU Values?",
-      "ts": 1786526026,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61134143/jensen-huangs-500-billion-nvidia-ai-financing-bet-faces-a-china-problem-could-cheaper-chinese-chips-sink-gpu-values",
+      "title": "Tech Veteran Warns Nvidia Is Playing Intel’s Old Game Against AMD — and It Could Become a Dangerous Trap",
+      "ts": 1786539355,
+      "url": "https://www.benzinga.com/markets/equities/26/08/61140468/tech-veteran-warns-nvidia-is-playing-intels-old-game-against-amd-and-it-could-become-a-dangerous-trap",
       "wiim": false
     },
     "SPGI": {
@@ -303,9 +303,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-12",
+      "ticker": "CRM",
+      "firm": "Wells Fargo",
+      "action": "Maintains",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$205",
+      "price": 197.47,
+      "upside": 3.8,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "rating_moves": {
+    "CRM": {
+      "date": "2026-08-12",
+      "firm": "Wells Fargo",
+      "action": "Maintains",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$205",
+      "upside": 3.8
+    },
     "MRK": {
       "date": "2026-08-11",
       "firm": "Argus Research",
@@ -380,6 +403,86 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Home Depot Announces CEO Ted Decker To Take Temporary Medical Leave, Expected To Return Within Next Few Months; Ann-Marie Campbell And Richard McPhail To Oversee Office Of The CEO",
+      "url": "https://www.benzinga.com/quote/HD",
+      "ts": 1786539749,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.326
+    },
+    {
+      "title": "Why This Investor Bought Intel’s Post-Offering Dip",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61140580/why-this-investor-bought-intels-post-offering-dip",
+      "ts": 1786539597,
+      "tickers": [
+        "INTC",
+        "SOXX",
+        "MTUM",
+        "XNTK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.378
+    },
+    {
+      "title": "Tech Veteran Warns Nvidia Is Playing Intel’s Old Game Against AMD — and It Could Become a Dangerous Trap",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61140468/tech-veteran-warns-nvidia-is-playing-intels-old-game-against-amd-and-it-could-become-a-dangerous-trap",
+      "ts": 1786539355,
+      "tickers": [
+        "AMD",
+        "INTC",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.407
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow,Nasdaq 100 Futures Gain as July CPI Comes In-Line With Expectations—CoreWeave, Nebius, Super Micro, Lumentum in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61134588/stock-market-today-sp-500-nasdaq-100-futures-rise-ahead-of-july-cpi-print-coreweave-nebius-super-micro-lumentum-in-focus",
+      "ts": 1786538495,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "CSCO",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.466
+    },
+    {
+      "title": "Wells Fargo Maintains Equal-Weight on Salesforce, Raises Price Target to $205",
+      "url": "https://www.benzinga.com/news/26/08/61139380/wells-fargo-maintains-equal-weight-salesforce-raises-price-target-205",
+      "ts": 1786537721,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.451
+    },
+    {
+      "title": "Wells Fargo Maintains Overweight on Microsoft, Raises Price Target to $700",
+      "url": "https://www.benzinga.com/news/26/08/61139305/wells-fargo-maintains-overweight-microsoft-raises-price-target-700",
+      "ts": 1786537573,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.451
+    },
     {
       "title": "Elon Musk's SpaceX Lands $1.22 Billion Investment From Norway’s $2.3 Trillion Sovereign Wealth Fund",
       "url": "https://www.benzinga.com/news/space/26/08/61138978/elon-musks-spacex-lands-1-22-billion-investment-from-norways-2-3-trillion-sovereign-wealth-fund",
@@ -497,7 +600,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.333
+      "relevance": 0.332
     },
     {
       "title": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors",
@@ -510,21 +613,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.383
-    },
-    {
-      "title": "Stock Market Today: S&P 500, Nasdaq 100 Futures Rise Ahead of July CPI Print—CoreWeave, Nebius, Super Micro, Lumentum in Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61134588/stock-market-today-sp-500-nasdaq-100-futures-rise-ahead-of-july-cpi-print-coreweave-nebius-super-micro-lumentum-in-focus",
-      "ts": 1786528703,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "CSCO",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.437
     },
     {
       "title": "Why Is CoreWeave Stock Soaring Wednesday?",
@@ -657,73 +745,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.494
-    },
-    {
-      "title": "If You Invested $1000 In JPMorgan Chase Stock 10 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/08/61131129/if-you-invested-1000-jpmorgan-chase-stock-10-years-ago-you-would-have-much-today",
-      "ts": 1786488331,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.267
-    },
-    {
-      "title": "If You Invested $1000 In Goldman Sachs Group Stock 15 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/08/61131074/if-you-invested-1000-goldman-sachs-group-stock-15-years-ago-you-would-have-much-today",
-      "ts": 1786487420,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.332
-    },
-    {
-      "title": "OpenAI Says Daybreak Models Are Now Available On AWS",
-      "url": "https://www.benzinga.com/news/26/08/61130786/openai-says-daybreak-models-are-now-available-aws",
-      "ts": 1786485144,
-      "tickers": [
-        "MSFT",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.295
-    },
-    {
-      "title": "Nebius Earnings Preview: Michael Burry Is Short but Prediction Markets See Nvidia, Meta Taking Center Stage",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61129443/nebius-earnings-prediction-market-preview",
-      "ts": 1786482144,
-      "tickers": [
-        "META",
-        "GOOGL",
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.531
-    },
-    {
-      "title": "Trump Cuts Core Childhood Vaccine Recommendations to 11, Bill Cassidy Says 'This Executive Order Is Wrong' (UPDATED)",
-      "url": "https://www.benzinga.com/news/politics/26/08/61098721/trump-childhood-vaccine-recommendations-bill-cassidy",
-      "ts": 1786417280,
-      "tickers": [
-        "MRK",
-        "SNY",
-        "GSK",
-        "KVUE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.172
     }
   ],
   "portfolio_brief": {
@@ -1015,9 +1036,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Jensen Huang’s $500 Billion Nvidia AI Financing Bet Faces a China Problem—Could Cheaper Chinese Chips Sink GPU Values?",
-        "ts": 1786526026,
-        "url": "https://www.benzinga.com/markets/tech/26/08/61134143/jensen-huangs-500-billion-nvidia-ai-financing-bet-faces-a-china-problem-could-cheaper-chinese-chips-sink-gpu-values",
+        "title": "Tech Veteran Warns Nvidia Is Playing Intel’s Old Game Against AMD — and It Could Become a Dangerous Trap",
+        "ts": 1786539355,
+        "url": "https://www.benzinga.com/markets/equities/26/08/61140468/tech-veteran-warns-nvidia-is-playing-intels-old-game-against-amd-and-it-could-become-a-dangerous-trap",
         "wiim": false
       },
       "filings": {
