@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "generated_at": "Aug 12, 11:05am ET",
+  "generated_at": "Aug 12, 11:41am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -214,8 +214,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 196.58,
-      "upside": 4.3,
+      "price": 196.7,
+      "upside": 4.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -228,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 132.52,
-      "upside": 10.2,
+      "price": 132.8,
+      "upside": 9.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -242,8 +242,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 260.37,
-      "upside": 10.2,
+      "price": 260.24,
+      "upside": 10.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -256,7 +256,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 144.24,
+      "price": 144.35,
       "upside": null,
       "held": false,
       "uni": true,
@@ -270,8 +270,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 302.88,
-      "upside": -12.9,
+      "price": 301.49,
+      "upside": -12.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -284,8 +284,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 132.52,
-      "upside": 9.4,
+      "price": 132.8,
+      "upside": 9.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -298,11 +298,25 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 344.3,
-      "upside": 16.2,
+      "price": 345.89,
+      "upside": 15.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-12",
+      "ticker": "MRK",
+      "firm": "Daiwa Capital",
+      "action": "Upgrades",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$143",
+      "price": 132.8,
+      "upside": 7.7,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-08-12",
@@ -312,8 +326,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 344.3,
-      "upside": -0.4,
+      "price": 345.89,
+      "upside": -0.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -326,8 +340,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 193.01,
-      "upside": 8.8,
+      "price": 192.55,
+      "upside": 9.1,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -340,8 +354,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 193.01,
-      "upside": 6.2,
+      "price": 192.55,
+      "upside": 6.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -355,7 +369,16 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 8.8
+      "upside": 9.1
+    },
+    "MRK": {
+      "date": "2026-08-12",
+      "firm": "Daiwa Capital",
+      "action": "Upgrades",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$143",
+      "upside": 7.7
     },
     "HD": {
       "date": "2026-08-12",
@@ -364,16 +387,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "upside": -0.4
-    },
-    "MRK": {
-      "date": "2026-08-11",
-      "firm": "Argus Research",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$145",
-      "upside": 9.4
+      "upside": -0.8
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -382,7 +396,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -12.9
+      "upside": -12.5
     },
     "PG": {
       "date": "2026-08-07",
@@ -400,7 +414,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.2
+      "upside": 10.3
     },
     "CVX": {
       "date": "2026-08-05",
@@ -409,7 +423,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 4.3
+      "upside": 4.2
     },
     "NKE": {
       "date": "2026-08-04",
@@ -418,7 +432,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -1.5
+      "upside": -1.6
     },
     "KO": {
       "date": "2026-07-30",
@@ -427,7 +441,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 12.1
+      "upside": 11.9
     }
   },
   "bz_news": [
@@ -1102,7 +1116,7 @@
     },
     "LULU": {
       "name": "Lululemon",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 1,
         "buy": 1,
@@ -1130,7 +1144,7 @@
         },
         "insider30d": 0
       },
-      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
+      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: HOLD-QUAL."
     },
     "EXE": {
       "name": "Expand Energy",
