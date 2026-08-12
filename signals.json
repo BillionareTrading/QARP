@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "generated_at": "Aug 12, 12:03pm ET",
+  "generated_at": "Aug 12, 12:28pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -208,7 +208,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 196.54,
+      "price": 196.55,
       "upside": 4.3,
       "held": false,
       "uni": true,
@@ -222,8 +222,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 133.03,
-      "upside": 9.7,
+      "price": 133.7,
+      "upside": 9.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -236,8 +236,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 260.64,
-      "upside": 10.1,
+      "price": 261.26,
+      "upside": 9.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -264,8 +264,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 300.89,
-      "upside": -12.4,
+      "price": 301.2,
+      "upside": -12.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -278,8 +278,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 133.03,
-      "upside": 9.0,
+      "price": 133.7,
+      "upside": 8.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -292,8 +292,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 346.04,
-      "upside": 15.6,
+      "price": 347.26,
+      "upside": 15.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -306,8 +306,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 133.03,
-      "upside": 7.5,
+      "price": 133.7,
+      "upside": 7.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -320,8 +320,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 346.04,
-      "upside": -0.9,
+      "price": 347.26,
+      "upside": -1.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +334,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 192.49,
-      "upside": 9.1,
+      "price": 192.11,
+      "upside": 9.3,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -348,8 +348,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 192.49,
-      "upside": 6.5,
+      "price": 192.11,
+      "upside": 6.7,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -363,7 +363,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 9.1
+      "upside": 9.3
     },
     "MRK": {
       "date": "2026-08-12",
@@ -372,7 +372,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 7.5
+      "upside": 7.0
     },
     "HD": {
       "date": "2026-08-12",
@@ -381,7 +381,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "upside": -0.9
+      "upside": -1.2
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -390,7 +390,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -12.4
+      "upside": -12.5
     },
     "PG": {
       "date": "2026-08-07",
@@ -408,7 +408,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.1
+      "upside": 9.9
     },
     "CVX": {
       "date": "2026-08-05",
@@ -426,7 +426,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -1.6
+      "upside": -1.7
     },
     "KO": {
       "date": "2026-07-30",
@@ -435,10 +435,22 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.5
+      "upside": 11.3
     }
   },
   "bz_news": [
+    {
+      "title": "Piper Sandler Maintains Overweight on American Express, Raises Price Target to $405",
+      "url": "https://www.benzinga.com/news/26/08/61149901/piper-sandler-maintains-overweight-american-express-raises-price-target-405",
+      "ts": 1786551466,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.443
+    },
     {
       "title": "What's Going On With AMD Stock Wednesday?",
       "url": "https://www.benzinga.com/markets/tech/26/08/61148782/whats-going-on-with-amd-stock-wednesday-9",
@@ -752,19 +764,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.39
-    },
-    {
-      "title": "Mark Warner Says ‘We Can’t Put AI Back in the Bottle,’ Urges Congress to Act on Jobs, National Security and US Competitiveness",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61135949/mark-warner-says-we-cant-put-ai-back-in-the-bottle-urges-congress-to-act-on-jobs-national-security-and-us-competitiveness",
-      "ts": 1786531063,
-      "tickers": [
-        "META",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.348
     }
   ],
   "portfolio_brief": {
