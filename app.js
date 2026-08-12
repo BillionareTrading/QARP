@@ -1311,21 +1311,80 @@ function renderDaily() {
   renderLeadMore();    // fills the space under the lead with more market news (catalysts + risk)
 }
 
-// "Across the Market" — secondary news column under the lead, built from the live
-// event-driven signals (catalysts + risk flags). Self-contained, no external links.
+// "The Earnings Slate" + "Across the Market" (elevated 2026-08-12, user: the template
+// "guidance is the catalyst" entries were "very weak... useless"). Upcoming prints now
+// render from the Estimates Desk docket — frozen calls with conviction dots, the take's
+// opening line, Street consensus, and tape context — instead of boilerplate. Non-earnings
+// catalysts + curated risk keep the old Across-the-Market form below the slate.
+function esSlateItem(d) {
+  const c = d.calls || {};
+  const dts = new Date(d.print_date + "T00:00:00Z")
+    .toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+  const callBit = (lab, v, conf) => (v && v !== "NO CALL")
+    ? `<span class="es-call">${lab} <b>${esc(v)}</b><span class="es-dots">${edDots(conf)}</span></span>` : "";
+  let thesis = "";
+  if (d.take && d.take.html) {
+    const txt = String(d.take.html).replace(/<[^>]+>/g, "").trim();
+    const m = txt.match(/^.*?[.!?](?=\s|$)/);
+    thesis = (m ? m[0] : txt).trim();
+    if (thesis.length > 200) thesis = thesis.slice(0, 197).trimEnd() + "…";
+  }
+  const eps = d.eps && d.eps.avg != null ? `$${fmtNum(d.eps.avg, 2)} EPS` : "";
+  const yy = d.rev && d.rev.growth != null ? ` (${d.rev.growth >= 0 ? "+" : ""}${Math.round(d.rev.growth * 100)}% y/y)` : "";
+  const rev = d.rev && d.rev.avg ? `${edMoney(d.rev.avg)} rev${yy}` : "";
+  const street = (eps || rev) ? `Street: ${[eps, rev].filter(Boolean).join(" · ")}` : "";
+  const run = d.runup && d.runup.d5 != null ? `${d.runup.d5 >= 0 ? "+" : ""}${d.runup.d5}% into the print` : "";
+  const re0 = d.reactions && d.reactions.rows && d.reactions.rows[0];
+  const tape = [run, re0 ? `last reaction ${fmtPct(re0.close)}` : ""].filter(Boolean).join(" · ");
+  const meta = [dts + (d.hour ? " " + d.hour.toUpperCase() : ""), tape, d.verdict].filter(Boolean).join("  ·  ");
+  const when = d.days_to_print === 0
+    ? (d.hour === "bmo" ? "printed this morning" : "prints tonight" + (d.hour ? " " + d.hour.toUpperCase() : ""))
+    : `prints ${dts}${d.hour ? " " + d.hour.toUpperCase() : ""}`;
+  return `<article class="lm-item es-item" data-goto-est="${esc(d.tk)}">
+    <h3 class="lm-h">${esc(d.tk)} — ${when}</h3>
+    <div class="es-calls">${callBit("PRINT", c.print, c.print_conf)}${callBit("GUIDE", c.guide, c.guide_conf)}${callBit("TAPE", c.tape, c.tape_conf)}</div>
+    ${thesis ? `<p class="lm-body">${esc(thesis)}</p>` : ""}
+    ${street ? `<div class="es-street">${esc(street)}</div>` : ""}
+    <div class="lm-meta">${esc(meta)}</div></article>`;
+}
 function renderLeadMore() {
   const el = document.getElementById("paper-lead-more");
   if (!el) return;
   const S = (typeof SIGNALS !== "undefined" && SIGNALS) || null;
   const strip = (s) => String(s || "").replace(/<[^>]+>/g, "");
+  // the slate: upcoming docket prints, nearest first
+  const est = (typeof DATA !== "undefined" && DATA && DATA.estimates) || null;
+  const slate = ((est && est.docket) || [])
+    .filter((d) => d.print_date && d.days_to_print != null && d.days_to_print >= 0 && d.calls)
+    .sort((a, b) => (a.print_date < b.print_date ? -1 : 1))
+    .slice(0, 6);
+  const slateTks = new Set(slate.map((d) => d.tk));
   const items = [];
-  ((S && S.catalysts) || []).forEach((c) => items.push({ h: c.what, b: strip(c.why), meta: [c.when, c.affects].filter(Boolean).join(" · ") }));
+  ((S && S.catalysts) || []).forEach((c) => {
+    // an earnings catalyst for a name the slate already covers would just repeat it, worse
+    if (slateTks.has(c.affects) && /earnings/i.test(String(c.what || ""))) return;
+    let body = strip(c.why);
+    // far-out earnings entries: the old "guidance is the catalyst" template is filler —
+    // say what actually happens: the name joins the desk docket and its calls freeze there
+    if (/earnings/i.test(String(c.what || "")) && /guidance is the catalyst/i.test(body)) {
+      body = `On the calendar${c.when ? " for " + c.when : ""} — outside the desk’s 21-day window for now; it joins the Estimates docket closer in, where the calls freeze and get graded.`;
+    }
+    items.push({ h: c.what, b: body, meta: [c.when, c.affects].filter(Boolean).join(" · ") });
+  });
   ((S && S.risk) || []).forEach((r) => items.push({ h: `${r.ticker} — ${r.tag}`, b: strip(r.detail), meta: r.next ? "Next: " + r.next : "" }));
   const list = items.filter((x) => x.h && x.b).slice(0, 8);
-  if (!list.length) { el.innerHTML = ""; return; }
-  el.innerHTML = `<div class="lm-rule"></div><div class="lm-head">Across the Market</div><div class="lm-grid">`
-    + list.map((it) => `<article class="lm-item"><h3 class="lm-h">${esc(it.h)}</h3><p class="lm-body">${esc(it.b)}</p>${it.meta ? `<div class="lm-meta">${esc(it.meta)}</div>` : ""}</article>`).join("")
-    + `</div>`;
+  if (!slate.length && !list.length) { el.innerHTML = ""; return; }
+  el.innerHTML =
+    (slate.length ? `<div class="lm-rule"></div><div class="lm-head">The Earnings Slate <span class="es-note">the desk’s frozen calls — graded in public on the Estimates tab</span></div><div class="lm-grid">`
+      + slate.map(esSlateItem).join("") + `</div>` : "")
+    + (list.length ? `<div class="lm-rule"></div><div class="lm-head">Across the Market</div><div class="lm-grid">`
+      + list.map((it) => `<article class="lm-item"><h3 class="lm-h">${esc(it.h)}</h3><p class="lm-body">${esc(it.b)}</p>${it.meta ? `<div class="lm-meta">${esc(it.meta)}</div>` : ""}</article>`).join("")
+      + `</div>` : "");
+  // a slate card opens the Estimates tab (the full dossier lives there)
+  el.querySelectorAll("[data-goto-est]").forEach((a) => a.addEventListener("click", () => {
+    const b = document.querySelector('.tab[data-tab="estimates"]');
+    if (b) { b.click(); window.scrollTo(0, 0); }
+  }));
 }
 
 // The Daily page's written content comes from daily_brief.json — an original market column plus

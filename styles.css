@@ -1566,6 +1566,17 @@ tbody tr:hover { background: var(--surface-2); }
 .ext-chip { display:inline-block; font:700 9.5px var(--sans); letter-spacing:.4px; padding:1px 6px;
   margin-left:4px; border:1px solid var(--line-2); border-radius:4px; color:var(--ink-2);
   background:var(--surface); white-space:nowrap; vertical-align:middle; }
+/* the Earnings Slate (2026-08-12): desk-fed print cards under the lead */
+.es-note { font:italic 11px "PT Serif", var(--serif); color:var(--ink-3); text-transform:none;
+  letter-spacing:0; margin-left:8px; }
+.es-item { cursor:pointer; }
+.es-item:hover .lm-h { text-decoration:underline; }
+.es-calls { display:flex; flex-wrap:wrap; gap:4px 12px; margin:4px 0 6px; }
+.es-call { font:600 10px var(--sans); letter-spacing:.6px; color:var(--ink-3); white-space:nowrap; }
+.es-call b { color:var(--ink); font-weight:800; }
+.es-dots { color:var(--brass); letter-spacing:1px; margin-left:4px; font-size:9px; }
+.es-street { font:600 10.5px var(--sans); color:var(--ink-2); margin-bottom:4px; }
+
 /* extended-hours column + two-line as-of box (2026-08-12 v3, user design) */
 .cell-ext { white-space:nowrap; }
 .pt-asof { display:inline-flex; flex-direction:column; align-items:flex-start; gap:2px; }
