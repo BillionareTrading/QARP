@@ -447,25 +447,48 @@ function peCell(x) {
 }
 
 /* ---------- render: Universe table ---------- */
-// Extended-hours chip (2026-08-11): the payload bakes row.ext = {s:"pre"|"post", p, dp, t}
-// only while Yahoo's session state IS pre/post (server-side wrong-day guard). Client-side:
-// show it only while fresh (<=90 min — cloud re-bakes every 30 min) and never during RTH,
-// when the live day% owns the cell. dp is vs the regular close, per Yahoo.
-function extChip(x) {
+// Extended-hours quotes (2026-08-11, redesigned 2026-08-12 after user feedback "I don't
+// understand it"): the payload bakes row.ext = {s:"pre"|"post", p, dp, t} only while
+// Yahoo's session state IS pre/post (server-side wrong-day guard). PRESENTATION RULE:
+// one number per cell — when a fresh ext exists the Day/Price cells SHOW the extended
+// quote (tagged PRE/AH) and the settled session moves into the tooltip; never both at once.
+function extFresh(x) {
   const e = x && x.ext;
-  if (!e || !e.p || !e.t) return "";
-  if (marketOpenNow()) return "";
-  if (Date.now() - e.t * 1000 > 90 * 60000) return "";
-  const lab = e.s === "pre" ? "PRE" : "AH";
-  return ` <span class="ext-chip" title="${e.s === "pre" ? "pre-market" : "after-hours"} quote vs the regular close">${lab} ${fmtUSD(e.p, 2)} <span class="${signClass(e.dp)}">${fmtPct(e.dp)}</span></span>`;
+  if (!e || !e.p || !e.t) return null;
+  if (marketOpenNow()) return null;                    // RTH: live day% owns the cells
+  if (Date.now() - e.t * 1000 > 90 * 60000) return null; // stale quote: fall back to the close
+  return e;
+}
+function extClock(e) {
+  return new Date(e.t * 1000).toLocaleTimeString("en-US",
+    { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" });
+}
+function extWord(e) { return e.s === "pre" ? "pre-market" : "after-hours"; }
+function extTag(e) { return `<span class="ext-tag">${e.s === "pre" ? "PRE" : "AH"}</span>`; }
+function dayCell(x) {
+  const e = extFresh(x);
+  if (e) return `<span class="cell-day ${signClass(e.dp)}" title="${extWord(e)} move vs the last close (quote ${extClock(e)} ET) · last session ${fmtPct(x.day_pct)}">${extTag(e)}${fmtPct(e.dp)}</span>`;
+  return `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>`;
+}
+function daySort(x) { const e = extFresh(x); return e ? e.dp : x.day_pct; }
+function pxCell(x) {
+  const e = extFresh(x);
+  if (e) return `<span class="cell-px" title="${extWord(e)} quote ${extClock(e)} ET · last close ${fmtUSD(x.price, 2)}">${fmtUSD(e.p, 2)}${extTag(e)}</span>`;
+  return `<span class="cell-px">${fmtUSD(x.price, 2)}</span>`;
+}
+// small pill form for the chart tickhead (a full price+% reads fine next to the 52w chip)
+function extChip(x) {
+  const e = extFresh(x);
+  if (!e) return "";
+  return ` <span class="ext-chip" title="${extWord(e)} quote ${extClock(e)} ET vs the last close">${e.s === "pre" ? "PRE" : "AH"} ${fmtUSD(e.p, 2)} <span class="${signClass(e.dp)}">${fmtPct(e.dp)}</span></span>`;
 }
 
 const U_COLS = [
   { key: "rank", label: "#", align: "left", fmt: (x) => `<span class="muted">${x.rank}</span>` },
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
   { key: "sector", label: "Sector", align: "left", fmt: (x) => `<span class="muted" title="${esc(x.sector || "")}">${sectorGroup(x.sector)}</span>`, sortVal: (x) => sectorGroup(x.sector) },
-  { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
-  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>${extChip(x)}` },
+  { key: "price", label: "Price", fmt: (x) => pxCell(x) },
+  { key: "day_pct", label: "Day", fmt: (x) => dayCell(x), sortVal: (x) => daySort(x) },
   { key: "div", label: "Dividends", fmt: (x) => x.div_rate
       ? `<span class="div-rate">${fmtUSD(x.div_rate, 2)}<span class="div-unit">/sh</span></span><span class="div-yld">${x.div_yield != null ? x.div_yield + "%" : ""}</span>`
       : `<span class="muted">N/A</span>`,
@@ -583,11 +606,11 @@ function renderUniverseTable() {
 /* ---------- render: Portfolio ---------- */
 const P_COLS = [
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
-  { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
+  { key: "price", label: "Price", fmt: (x) => pxCell(x) },
   // avg cost is PER-SHARE (scale-free) — published as avg_cost so it survives the privacy
   // split; the shares/cost fallback keeps working after the owner unlock merges them in.
   { key: "avgcost", label: "Avg Cost", fmt: (x) => `<span class="muted">${fmtUSD(x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : null), 2)}</span>`, sortVal: (x) => (x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : 0)) },
-  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>${extChip(x)}` },
+  { key: "day_pct", label: "Day", fmt: (x) => dayCell(x), sortVal: (x) => daySort(x) },
   { key: "shares", label: "Shares", fmt: (x) => (x.shares == null && !privUnlocked() ? lockSH() : fmtNum(x.shares, 2)), sortVal: (x) => (x.shares != null ? x.shares : x.weight_pct || 0) },
   { key: "value", label: "Value", fmt: (x) => pUSD(x.value, 0), sortVal: (x) => (x.value != null ? x.value : x.weight_pct || 0) },
   { key: "gain", label: "Unrlzd $", fmt: (x) => (x.gain == null && !privUnlocked() ? lockUSD() : `<span class="${signClass(x.gain)}">${fmtUSD(x.gain, 0)}</span>`), sortVal: (x) => (x.gain != null ? x.gain : x.gain_pct || 0) },
@@ -817,7 +840,9 @@ function openDrawer(ticker) {
       ${has(d.dcf) ? `<span class="chip">DCF ${fmtNum(d.dcf, 1)}/5</span>` : ""}
       ${has(d.mech) ? `<span class="chip">Quality ${d.mech}/105</span>` : ""}
       ${has(d.sector) ? `<span class="chip">${d.sector}</span>` : ""}
-      ${has(d.price) ? `<span class="chip">${fmtUSD(d.price, 2)}${has(d.day_pct) ? ` · <span class="${signClass(d.day_pct)}">${fmtPct(d.day_pct)}</span>` : ""}</span>` : ""}${extChip(d)}
+      ${(() => { const e = extFresh(d);
+        if (e) return `<span class="chip" title="${extWord(e)} quote ${extClock(e)} ET · last close ${fmtUSD(d.price, 2)} (${fmtPct(d.day_pct)})">${extTag(e)} ${fmtUSD(e.p, 2)} · <span class="${signClass(e.dp)}">${fmtPct(e.dp)}</span></span>`;
+        return has(d.price) ? `<span class="chip">${fmtUSD(d.price, 2)}${has(d.day_pct) ? ` · <span class="${signClass(d.day_pct)}">${fmtPct(d.day_pct)}</span>` : ""}</span>` : ""; })()}
       <span class="chip" style="cursor:pointer;color:var(--brand);font-weight:700" onclick="closeDrawer();openChart('${ticker}')">Open chart →</span>
       ${(DATA.estimates && (DATA.estimates.docket || []).some((x) => x.tk === ticker))
         ? `<span class="chip" style="cursor:pointer;color:var(--brass);font-weight:700" onclick="closeDrawer();openEstimates('${ticker}')">Estimates →</span>` : ""}
@@ -1729,7 +1754,13 @@ async function renderDailyTicker() {
       return `<span class="pt-item"><b>${esc(ix.l)}</b> <span class="${up ? "pos" : "neg"}">${up ? "▲" : "▼"} ${Math.abs(q.dp).toFixed(2)}%</span></span>`;
     } catch (e) { return `<span class="pt-item"><b>${esc(ix.l)}</b> <span class="muted">—</span></span>`; }
   }));
-  const asof = marketOpenNow() ? "" : `<span class="pt-item pt-asof">as of ${fullDayName(DATA.meta.date)}'s close</span>`;
+  // "as of X's close" confused the desk once pre-market chips existed (2026-08-12): when a
+  // fresh extended quote is on the board, say BOTH truths — values sit at the close, the
+  // tagged quotes are the extended session.
+  const _eh = ((DATA.portfolio || []).map(extFresh).find(Boolean)) || null;
+  const asof = marketOpenNow() ? "" : `<span class="pt-item pt-asof">${_eh
+    ? `values at ${fullDayName(DATA.meta.date)}’s close · ${extWord(_eh)} quotes ${extClock(_eh)} ET`
+    : `as of ${fullDayName(DATA.meta.date)}'s close`}</span>`;
   el.innerHTML = cards.join("") + asof;
 }
 
