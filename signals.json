@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "generated_at": "Aug 12, 9:04am ET",
+  "generated_at": "Aug 12, 9:49am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -115,9 +115,9 @@
     "LULU": "2026-09-02",
     "EXE": "2026-10-26",
     "SPGI": "2026-10-28",
+    "AVGO": "2026-09-02",
     "GILD": "2026-10-28",
     "SAP": "2026-10-21",
-    "AVGO": "2026-09-02",
     "NVS": "2026-10-27",
     "NBIX": "2026-10-26",
     "VRTX": "2026-11-02",
@@ -148,10 +148,10 @@
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Chemical & Coatings",
@@ -242,8 +242,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 259.8,
-      "upside": 10.5,
+      "price": 256.25,
+      "upside": 12.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -270,7 +270,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 304.91,
+      "price": 304.72,
       "upside": -13.5,
       "held": false,
       "uni": true,
@@ -307,27 +307,41 @@
     {
       "date": "2026-08-12",
       "ticker": "CRM",
+      "firm": "UBS",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$210",
+      "price": 194.09,
+      "upside": 8.2,
+      "held": false,
+      "uni": true,
+      "qarp": "BUY"
+    },
+    {
+      "date": "2026-08-12",
+      "ticker": "CRM",
       "firm": "Wells Fargo",
       "action": "Maintains",
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 197.47,
-      "upside": 3.8,
+      "price": 194.09,
+      "upside": 5.6,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "BUY"
     }
   ],
   "rating_moves": {
     "CRM": {
       "date": "2026-08-12",
-      "firm": "Wells Fargo",
+      "firm": "UBS",
       "action": "Maintains",
-      "rating": "Equal-Weight",
+      "rating": "Neutral",
       "stance": "neutral",
-      "pt": "$205",
-      "upside": 3.8
+      "pt": "$210",
+      "upside": 8.2
     },
     "MRK": {
       "date": "2026-08-11",
@@ -372,7 +386,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.5
+      "upside": 12.0
     },
     "CVX": {
       "date": "2026-08-05",
@@ -390,7 +404,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -3.2
+      "upside": -2.4
     },
     "KO": {
       "date": "2026-07-30",
@@ -399,10 +413,60 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 12.2
+      "upside": 13.0
     }
   },
   "bz_news": [
+    {
+      "title": "'Lightspeed Seeks $600 Million for Anthropic, OpenAI Wagers' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/08/61142499/lightspeed-seeks-600-million-anthropic-openai-wagers-bloomberg",
+      "ts": 1786542206,
+      "tickers": [
+        "MSFT",
+        "AMZN",
+        "DXYZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.334
+    },
+    {
+      "title": "UBS Maintains Neutral on Intel, Lowers Price Target to $112",
+      "url": "https://www.benzinga.com/news/26/08/61142371/ubs-maintains-neutral-intel-lowers-price-target-112",
+      "ts": 1786542051,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.497
+    },
+    {
+      "title": "Cisco Stock Edges Higher Ahead of Q4 Print: Can AI Demand Drive a Breakout?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61141571/cisco-stock-edges-higher-ahead-of-q4-print-can-ai-demand-drive-a-breakout",
+      "ts": 1786541065,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.515
+    },
+    {
+      "title": "UBS Maintains Neutral on Salesforce, Raises Price Target to $210",
+      "url": "https://www.benzinga.com/news/26/08/61141445/ubs-maintains-neutral-salesforce-raises-price-target-210",
+      "ts": 1786540779,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.51
+    },
     {
       "title": "Home Depot Announces CEO Ted Decker To Take Temporary Medical Leave, Expected To Return Within Next Few Months; Ann-Marie Campbell And Richard McPhail To Oversee Office Of The CEO",
       "url": "https://www.benzinga.com/quote/HD",
@@ -561,7 +625,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.408
+      "relevance": 0.409
     },
     {
       "title": "Reported Earlier, Amgen To Open New Science And Innovation Center At Genome Valley In Hyderabad",
@@ -600,7 +664,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.332
+      "relevance": 0.333
     },
     {
       "title": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors",
@@ -687,64 +751,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.402
-    },
-    {
-      "title": "S&P 500 Falls for Second Session Ahead of Inflation Report: Investor Sentiment Weakens, Fear & Greed Index Remains in ‘Greed’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61133100/sp-500-falls-for-second-session-ahead-of-inflation-report-investor-sentiment-weakens-fear-greed-index-remains-in-greed-zone",
-      "ts": 1786517847,
-      "tickers": [
-        "CAH",
-        "CSCO",
-        "EAT",
-        "PFGC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.445
-    },
-    {
-      "title": "Elizabeth Warren Probes 'Cartoonish Corruption' After Accusing Belgium Diamond Industry of Gifting Trump a Diamond-Encrusted Ring",
-      "url": "https://www.benzinga.com/news/politics/26/08/61132923/elizabeth-warren-probes-belgium-1m-gold-ring-gift-to-trump",
-      "ts": 1786516354,
-      "tickers": [
-        "AAPL",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.221
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61132537/stock-market-will-sp-500-open-up-or-down-today-14",
-      "ts": 1786511873,
-      "tickers": [
-        "$POL",
-        "TSM",
-        "CSCO",
-        "COHR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Jim Cramer Asks if Wall Street's 'Long Knives' for Nvidia Should Stay Sheathed as CoreWeave Powers Neocloud Optimism",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61132472/jim-cramer-nvidia-long-knives-coreweave-neocloud-ai-optimism",
-      "ts": 1786511111,
-      "tickers": [
-        "CRWV",
-        "GS",
-        "NVDA",
-        "BLK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.494
     }
   ],
   "portfolio_brief": {
@@ -1189,6 +1195,43 @@
       },
       "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "AVGO": {
+      "name": "Broadcom",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 17,
+        "buy": 34,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 56,
+        "bullish": 51,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.21,
+        "period": "2026-08-01"
+      },
+      "news": {
+        "title": "Nvidia's Chip Boom Is Spreading: JPMorgan Says These 6 Stocks Could Ride It",
+        "ts": 1786473313,
+        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61122617/nvidia-chip-boom-spreading-six-stocks-to-watch",
+        "wiim": false
+      },
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526295589/d84378d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
+        },
+        "insider30d": 2
+      },
+      "explain": "56 analysts cover it — 51 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
     "GILD": {
       "name": "Gilead Sciences",
       "qarp": "HOLD-QUAL",
@@ -1249,43 +1292,6 @@
         "insider30d": 0
       },
       "explain": "39 analysts cover it — 30 bullish, 7 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "AVGO": {
-      "name": "Broadcom",
-      "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 17,
-        "buy": 34,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 56,
-        "bullish": 51,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.21,
-        "period": "2026-08-01"
-      },
-      "news": {
-        "title": "Nvidia's Chip Boom Is Spreading: JPMorgan Says These 6 Stocks Could Ride It",
-        "ts": 1786473313,
-        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61122617/nvidia-chip-boom-spreading-six-stocks-to-watch",
-        "wiim": false
-      },
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526295589/d84378d8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-06-09",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
-        },
-        "insider30d": 2
-      },
-      "explain": "56 analysts cover it — 51 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "NVS": {
       "name": "Novartis",
@@ -1641,6 +1647,25 @@
       "margin": null,
       "summary": "Q3 FY2018 — revenue $1.5B (+2.2% YoY). (as reported, GAAP)"
     },
+    "AVGO": {
+      "period": "Q2 FY2026",
+      "filed": "2026-06-09",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm",
+      "revenue": {
+        "fmt": "$22.2B",
+        "yoy": 47.9
+      },
+      "eps": {
+        "val": 1.91,
+        "yoy": 85.4
+      },
+      "net_income": {
+        "fmt": "$5.9B"
+      },
+      "margin": null,
+      "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
+    },
     "GILD": {
       "period": "Q2 FY2026",
       "filed": "2026-08-06",
@@ -1661,25 +1686,6 @@
       "summary": "Q2 FY2026 — revenue $7.8B (+10.2% YoY), diluted EPS $-8.45 (-641.7% YoY), net margin -134%. (as reported, GAAP)"
     },
     "SAP": null,
-    "AVGO": {
-      "period": "Q2 FY2026",
-      "filed": "2026-06-09",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm",
-      "revenue": {
-        "fmt": "$22.2B",
-        "yoy": 47.9
-      },
-      "eps": {
-        "val": 1.91,
-        "yoy": 85.4
-      },
-      "net_income": {
-        "fmt": "$5.9B"
-      },
-      "margin": null,
-      "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
-    },
     "NVS": null,
     "NBIX": {
       "period": "Q2 FY2026",
