@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "generated_at": "Aug 12, 9:49am ET",
+  "generated_at": "Aug 12, 10:43am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -106,17 +106,17 @@
     "ABT": "2026-10-13",
     "ZTS": "2026-11-02",
     "BSX": "2026-10-20",
-    "NOW": "2026-10-27",
     "UBER": "2026-11-02",
+    "NOW": "2026-10-27",
     "AZO": "2026-09-21",
-    "DHR": "2026-10-19",
     "NVDA": "2026-08-26",
+    "DHR": "2026-10-19",
     "ADBE": "2026-09-10",
     "LULU": "2026-09-02",
     "EXE": "2026-10-26",
     "SPGI": "2026-10-28",
-    "AVGO": "2026-09-02",
     "GILD": "2026-10-28",
+    "AVGO": "2026-09-02",
     "SAP": "2026-10-21",
     "NVS": "2026-10-27",
     "NBIX": "2026-10-26",
@@ -127,10 +127,10 @@
   "sectors": [
     {
       "sector": "Oil & Gas",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Energy price gains due to concerns that the U.S. and Iran aren't making …",
       "note": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Software",
@@ -214,7 +214,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "price": 196.66,
+      "price": 196.69,
       "upside": 4.2,
       "held": false,
       "uni": true,
@@ -228,8 +228,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$146",
-      "price": 130.42,
-      "upside": 11.9,
+      "price": 131.83,
+      "upside": 10.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -242,8 +242,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 256.25,
-      "upside": 12.0,
+      "price": 259.46,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -256,7 +256,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 145.21,
+      "price": 144.28,
       "upside": null,
       "held": false,
       "uni": true,
@@ -270,8 +270,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 304.72,
-      "upside": -13.5,
+      "price": 302.45,
+      "upside": -12.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -284,8 +284,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 130.42,
-      "upside": 11.2,
+      "price": 131.83,
+      "upside": 10.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -298,8 +298,22 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 354.48,
-      "upside": 12.8,
+      "price": 345.57,
+      "upside": 15.8,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-12",
+      "ticker": "HD",
+      "firm": "RBC Capital",
+      "action": "Maintains",
+      "rating": "Sector Perform",
+      "stance": "neutral",
+      "pt": "$343",
+      "price": 345.57,
+      "upside": -0.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -312,8 +326,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 194.09,
-      "upside": 8.2,
+      "price": 192.34,
+      "upside": 9.2,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -326,8 +340,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 194.09,
-      "upside": 5.6,
+      "price": 192.34,
+      "upside": 6.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -341,7 +355,16 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 8.2
+      "upside": 9.2
+    },
+    "HD": {
+      "date": "2026-08-12",
+      "firm": "RBC Capital",
+      "action": "Maintains",
+      "rating": "Sector Perform",
+      "stance": "neutral",
+      "pt": "$343",
+      "upside": -0.7
     },
     "MRK": {
       "date": "2026-08-11",
@@ -350,16 +373,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "upside": 11.2
-    },
-    "HD": {
-      "date": "2026-08-11",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$400",
-      "upside": 12.8
+      "upside": 10.0
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -368,7 +382,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -13.5
+      "upside": -12.8
     },
     "PG": {
       "date": "2026-08-07",
@@ -386,7 +400,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 12.0
+      "upside": 10.6
     },
     "CVX": {
       "date": "2026-08-05",
@@ -404,7 +418,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -2.4
+      "upside": -1.7
     },
     "KO": {
       "date": "2026-07-30",
@@ -413,10 +427,88 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 13.0
+      "upside": 12.3
     }
   },
   "bz_news": [
+    {
+      "title": "What's Going On With Boeing Stock Wednesday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/08/61145215/whats-going-on-with-boeing-stock-wednesday-2",
+      "ts": 1786544965,
+      "tickers": [
+        "BA",
+        "ITA",
+        "PPA",
+        "ACHR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.389
+    },
+    {
+      "title": "Home Depot shares are trading lower after the company announced that CEO Ted Decker will take a temporary medical leave and is expected to return within the next few months.",
+      "url": "https://www.benzinga.com/quote/HD",
+      "ts": 1786543839,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.364
+    },
+    {
+      "title": "Salesforce shares are trading lower after UBS maintained its Neutral rating on the stock and Wells Fargo maintained its Equal-Weight rating.",
+      "url": "https://www.benzinga.com/quote/CRM",
+      "ts": 1786543682,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.446
+    },
+    {
+      "title": "RBC Capital Reiterates Outperform on Walmart, Maintains $137 Price Target",
+      "url": "https://www.benzinga.com/news/26/08/61143604/rbc-capital-reiterates-outperform-walmart-maintains-137-price-target",
+      "ts": 1786543249,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.413
+    },
+    {
+      "title": "RBC Capital Maintains Sector Perform on Home Depot, Raises Price Target to $343",
+      "url": "https://www.benzinga.com/news/26/08/61143324/rbc-capital-maintains-sector-perform-home-depot-raises-price-target-343",
+      "ts": 1786543046,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.473
+    },
+    {
+      "title": "Neocloud Stocks Catch Fire As CoreWeave Doubles Revenue",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61143384/neocloud-stocks-catch-fire-as-coreweave-doubles-revenue",
+      "ts": 1786543038,
+      "tickers": [
+        "IREN",
+        "NBIS",
+        "CRWV",
+        "$BTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.33
+    },
     {
       "title": "'Lightspeed Seeks $600 Million for Anthropic, OpenAI Wagers' - Bloomberg",
       "url": "https://www.benzinga.com/news/26/08/61142499/lightspeed-seeks-600-million-anthropic-openai-wagers-bloomberg",
@@ -655,30 +747,6 @@
       "relevance": 0.425
     },
     {
-      "title": "Exploring The Competitive Space: Microsoft Versus Industry Peers In Software",
-      "url": "https://www.benzinga.com/news/26/08/61134602/exploring-competitive-space-microsoft-versus-industry-peers-software",
-      "ts": 1786528721,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.333
-    },
-    {
-      "title": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors",
-      "url": "https://www.benzinga.com/news/26/08/61134600/investigating-apple-s-standing-technology-hardware-storage-amp-peripherals-industry-compared-competi",
-      "ts": 1786528718,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.383
-    },
-    {
       "title": "Why Is CoreWeave Stock Soaring Wednesday?",
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61134422/why-is-coreweave-stock-soaring-wednesday",
       "ts": 1786527623,
@@ -692,65 +760,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.35
-    },
-    {
-      "title": "Delta Probes Unauthorized Wi-Fi Network on Flight Carrying DEF CON Passengers: Report",
-      "url": "https://www.benzinga.com/news/travel/26/08/61134360/delta-probes-unauthorized-wi-fi-network-on-flight-carrying-def-con-passengers-report",
-      "ts": 1786527264,
-      "tickers": [
-        "DAL",
-        "BA",
-        "AAL",
-        "UAL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.227
-    },
-    {
-      "title": "Google Gemini Hits 1 Billion Monthly Users, Closing the Gap With ChatGPT—Sundar Pichai Calls it ‘Fastest-Growing’ Product Ever",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61134283/google-gemini-hits-1-billion-monthly-users-closing-the-gap-with-chatgpt-sundar-pichai-calls-it-fastest-growing-product-ever",
-      "ts": 1786526709,
-      "tickers": [
-        "GOOGL",
-        "AAPL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.284
-    },
-    {
-      "title": "Jensen Huang’s $500 Billion Nvidia AI Financing Bet Faces a China Problem—Could Cheaper Chinese Chips Sink GPU Values?",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61134143/jensen-huangs-500-billion-nvidia-ai-financing-bet-faces-a-china-problem-could-cheaper-chinese-chips-sink-gpu-values",
-      "ts": 1786526026,
-      "tickers": [
-        "NVDA",
-        "APO",
-        "GS",
-        "BLK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.498
-    },
-    {
-      "title": "Performance Food Group, Super Micro Computer and 3 Stocks to Watch Heading Into Wednesday",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61133181/performance-food-group-super-micro-computer-and-3-stocks-to-watch-heading-into-wednesday",
-      "ts": 1786518674,
-      "tickers": [
-        "SMCI",
-        "CSCO",
-        "EAT",
-        "PFGC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.402
     }
   ],
   "portfolio_brief": {
@@ -887,43 +896,6 @@
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "NOW": {
-      "name": "ServiceNow",
-      "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 16,
-        "buy": 33,
-        "hold": 4,
-        "sell": 2,
-        "strongSell": 0,
-        "total": 55,
-        "bullish": 49,
-        "bearish": 2,
-        "label": "Strong Buy",
-        "score": 1.15,
-        "period": "2026-08-01"
-      },
-      "news": {
-        "title": "Software companies are trading higher amid broader market strength, lifting the industry alongside other tech peers. Investor optimism about Palantir's Q2 financial results could act as a bellwether, indicating broader industry growth.",
-        "ts": 1785784722,
-        "url": "https://www.benzinga.com/quote/RBRK",
-        "wiim": true
-      },
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-22",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000072/now-20260722.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-23",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm"
-        },
-        "insider30d": 6
-      },
-      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-    },
     "UBER": {
       "name": "Uber",
       "qarp": "BUY",
@@ -961,6 +933,43 @@
       },
       "explain": "57 analysts cover it — 49 bullish, 7 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "NOW": {
+      "name": "ServiceNow",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 16,
+        "buy": 33,
+        "hold": 4,
+        "sell": 2,
+        "strongSell": 0,
+        "total": 55,
+        "bullish": 49,
+        "bearish": 2,
+        "label": "Strong Buy",
+        "score": 1.15,
+        "period": "2026-08-01"
+      },
+      "news": {
+        "title": "Software companies are trading higher amid broader market strength, lifting the industry alongside other tech peers. Investor optimism about Palantir's Q2 financial results could act as a bellwether, indicating broader industry growth.",
+        "ts": 1785784722,
+        "url": "https://www.benzinga.com/quote/RBRK",
+        "wiim": true
+      },
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000072/now-20260722.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm"
+        },
+        "insider30d": 6
+      },
+      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "AZO": {
       "name": "AutoZone",
       "qarp": "STRONG BUY",
@@ -992,38 +1001,6 @@
         "insider30d": 3
       },
       "explain": "31 analysts cover it — 25 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "DHR": {
-      "name": "Danaher",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 12,
-        "buy": 15,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 32,
-        "bullish": 27,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.22,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-08-03",
-          "url": "https://www.sec.gov/Archives/edgar/data/313616/000119312526330652/d161342d8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
-        },
-        "insider30d": 19
-      },
-      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NVDA": {
       "name": "NVIDIA",
@@ -1061,6 +1038,38 @@
         "insider30d": 1
       },
       "explain": "68 analysts cover it — 64 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "DHR": {
+      "name": "Danaher",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 12,
+        "buy": 15,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 32,
+        "bullish": 27,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.22,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-08-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000119312526330652/d161342d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
+        },
+        "insider30d": 19
+      },
+      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ADBE": {
       "name": "Adobe",
@@ -1195,6 +1204,38 @@
       },
       "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "GILD": {
+      "name": "Gilead Sciences",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 9,
+        "buy": 21,
+        "hold": 7,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 37,
+        "bullish": 30,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.05,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-08-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000028/gild-20260804.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-08-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm"
+        },
+        "insider30d": 4
+      },
+      "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
     "AVGO": {
       "name": "Broadcom",
       "qarp": "HOLD-QUAL",
@@ -1231,38 +1272,6 @@
         "insider30d": 2
       },
       "explain": "56 analysts cover it — 51 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-    },
-    "GILD": {
-      "name": "Gilead Sciences",
-      "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 9,
-        "buy": 21,
-        "hold": 7,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 37,
-        "bullish": 30,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.05,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-08-04",
-          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000028/gild-20260804.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-08-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm"
-        },
-        "insider30d": 4
-      },
-      "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "SAP": {
       "name": "SAP",
@@ -1486,25 +1495,6 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $5.4B (+7.5% YoY), diluted EPS $0.61 (+15.1% YoY). (as reported, GAAP)"
     },
-    "NOW": {
-      "period": "Q2 FY2026",
-      "filed": "2026-07-23",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm",
-      "revenue": {
-        "fmt": "$4.0B",
-        "yoy": 24.0
-      },
-      "eps": {
-        "val": 0.29,
-        "yoy": -21.6
-      },
-      "net_income": {
-        "fmt": "$298M"
-      },
-      "margin": 7.5,
-      "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
-    },
     "UBER": {
       "period": "Q2 FY2026",
       "filed": "2026-08-05",
@@ -1523,6 +1513,25 @@
       },
       "margin": 16.9,
       "summary": "Q2 FY2026 — revenue $14.2B (+12.2% YoY), diluted EPS $1.17 (+85.7% YoY), net margin 17%. (as reported, GAAP)"
+    },
+    "NOW": {
+      "period": "Q2 FY2026",
+      "filed": "2026-07-23",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm",
+      "revenue": {
+        "fmt": "$4.0B",
+        "yoy": 24.0
+      },
+      "eps": {
+        "val": 0.29,
+        "yoy": -21.6
+      },
+      "net_income": {
+        "fmt": "$298M"
+      },
+      "margin": 7.5,
+      "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
     },
     "AZO": {
       "period": "Q3 FY2026",
@@ -1543,25 +1552,6 @@
       "margin": 13.3,
       "summary": "Q3 FY2026 — revenue $4.8B (+8.4% YoY), diluted EPS $38.07 (+7.7% YoY), net margin 13%. (as reported, GAAP)"
     },
-    "DHR": {
-      "period": "Q2 FY2026",
-      "filed": "2026-07-21",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm",
-      "revenue": {
-        "fmt": "$6.3B",
-        "yoy": 5.5
-      },
-      "eps": {
-        "val": 1.23,
-        "yoy": 59.7
-      },
-      "net_income": {
-        "fmt": "$870M"
-      },
-      "margin": 13.9,
-      "summary": "Q2 FY2026 — revenue $6.3B (+5.5% YoY), diluted EPS $1.23 (+59.7% YoY), net margin 14%. (as reported, GAAP)"
-    },
     "NVDA": {
       "period": "Q1 FY2027",
       "filed": "2026-05-20",
@@ -1580,6 +1570,25 @@
       },
       "margin": 71.5,
       "summary": "Q1 FY2027 — revenue $81.6B (+85.2% YoY), diluted EPS $2.39 (+214.5% YoY), net margin 72%. (as reported, GAAP)"
+    },
+    "DHR": {
+      "period": "Q2 FY2026",
+      "filed": "2026-07-21",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm",
+      "revenue": {
+        "fmt": "$6.3B",
+        "yoy": 5.5
+      },
+      "eps": {
+        "val": 1.23,
+        "yoy": 59.7
+      },
+      "net_income": {
+        "fmt": "$870M"
+      },
+      "margin": 13.9,
+      "summary": "Q2 FY2026 — revenue $6.3B (+5.5% YoY), diluted EPS $1.23 (+59.7% YoY), net margin 14%. (as reported, GAAP)"
     },
     "ADBE": {
       "period": "Q2 FY2026",
@@ -1647,25 +1656,6 @@
       "margin": null,
       "summary": "Q3 FY2018 — revenue $1.5B (+2.2% YoY). (as reported, GAAP)"
     },
-    "AVGO": {
-      "period": "Q2 FY2026",
-      "filed": "2026-06-09",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm",
-      "revenue": {
-        "fmt": "$22.2B",
-        "yoy": 47.9
-      },
-      "eps": {
-        "val": 1.91,
-        "yoy": 85.4
-      },
-      "net_income": {
-        "fmt": "$5.9B"
-      },
-      "margin": null,
-      "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
-    },
     "GILD": {
       "period": "Q2 FY2026",
       "filed": "2026-08-06",
@@ -1684,6 +1674,25 @@
       },
       "margin": -134.5,
       "summary": "Q2 FY2026 — revenue $7.8B (+10.2% YoY), diluted EPS $-8.45 (-641.7% YoY), net margin -134%. (as reported, GAAP)"
+    },
+    "AVGO": {
+      "period": "Q2 FY2026",
+      "filed": "2026-06-09",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm",
+      "revenue": {
+        "fmt": "$22.2B",
+        "yoy": 47.9
+      },
+      "eps": {
+        "val": 1.91,
+        "yoy": 85.4
+      },
+      "net_income": {
+        "fmt": "$5.9B"
+      },
+      "margin": null,
+      "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
     },
     "SAP": null,
     "NVS": null,
