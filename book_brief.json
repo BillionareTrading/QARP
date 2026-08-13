@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Wednesday was a split session for Jaleel's book — a handful of positions pulled their weight while the broader holding set gave ground. NVIDIA led the day, gaining 3.0% and reinforcing its thesis as AI-capex sentiment got a boost from CoreWeave and Cisco earnings commentary; Abbott added 1.1% on a quiet day, and Rocket Lab tacked on 1.5% despite carrying an AVOID verdict and a QARP score of just 39.6 — the lowest in the book by a wide margin. The overall book is sitting on an unrealized gain of 6.96%, but the day's breadth was notably negative.</p><p>The sharpest pain Wednesday came from Uber, off 4.1%, and Lululemon, down 3.8% — both meaningful weights and both already flagged. LULU is in outright loss territory (−5.5% unrealized) with a guidance-cut flag still live ahead of a September 2 print; the thesis is eroding with five straight negative Americas comp quarters. Zoetis slid 2.4% and sits at a −6.6% unrealized loss despite a STRONG BUY verdict and a top QARP score of 84.6 — that is a clean case of price and thesis diverging, and one worth watching closely. NBIX dropped 3.4% and is also underwater at −4.0%, while SAP gave back 2.6%.</p><p>The drift to watch most carefully is the RKLB position: it is the single largest weight at 16.0%, yet it carries the book's only AVOID verdict and its weakest QARP by far. Conviction and sizing are pointing in opposite directions. Separately, S&P Global's Microsoft AI-data collaboration announcement is a quiet positive for SPGI, which remains slightly underwater at −4.9% — worth monitoring whether that partnership narrative starts to move the stock ahead of the next catalyst.</p>",
+  "your_book": "<p>Jaleel's book had a mixed Thursday, August 13, with the headline mover being <strong>Adobe (ADBE)</strong>, up +4.54% on the day — the session's strongest performer. The gain appears macro-driven rather than company-specific: easing oil prices and encouraging economic data cooled rate-hike fears, lifting software broadly, and M&A speculation around Workday (Silver Lake talks per Reuters) added a sympathetic bid to the sector. <strong>ServiceNow (NOW)</strong> (+1.85%) and <strong>SAP</strong> (+2.51%) rode the same current. On the positive side, <strong>Zoetis (ZTS)</strong> surged +3.13% and <strong>S&P Global (SPGI)</strong> added +3.07%, both meaningful moves for names that had been sitting in modest losses on an unrealized basis. ZTS in particular — down -3.7% overall — still has ground to recover, but today's price action is at least moving in the right thesis direction.</p><p>The drag came from <strong>RKLB (Rocket Lab)</strong>, the book's largest single weight at 15.7%, which slipped another -1.32%. With an AVOID verdict and a QARP of just 39.7, price and thesis are firmly diverging here — the position is the elephant in the room for a capital-preservation mandate. <strong>Expand Energy (EXE)</strong> fell -1.66% despite a STRONG BUY rating, and <strong>Neurocrine Biosciences (NBIX)</strong> dropped -3.62% — the sharpest single-name decline in the book — against a STRONG BUY and an 81.1 QARP, suggesting the selloff is noise or sector pressure rather than a fundamental change, but the -7.5% cumulative loss demands monitoring. <strong>Lululemon (LULU)</strong> slid another -1.08%, extending a -6.5% unrealized loss that sits alongside a live guidance-cut risk flag.</p><p>To watch: NVDA reports a key risk update on August 26 (export controls / AI-capex sentiment); ADBE's next catalyst is September 10, where the AI-disruption narrative — not the numbers — will likely set tone. BSX carries a slashed guidance flag with the next read not until October 20, meaning that elevated-severity risk sits quietly in the background for weeks. Overall the book is up 7.53% unrealized, but the concentration of weight in an AVOID-rated name (RKLB) and several names with open risk flags keeps the risk picture uneven.</p>",
   "attention": [
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "Largest position carries an AVOID verdict and the book's lowest QARP (39.6)",
-      "note": "At 16% of the book, RKLB is outsized relative to every other holding and the fundamental scoring explicitly signals avoidance — size and conviction are in direct conflict, demanding a sizing review."
+      "headline": "Largest weight carries AVOID verdict and bottom-tier QARP (39.7)",
+      "note": "At 15.7% of the book, RKLB is the dominant position yet scores AVOID with a QARP of 39.7 — the lowest in the portfolio — and is down another -1.32% today; the size-to-conviction mismatch is the single biggest structural risk to a capital-preservation mandate."
+    },
+    {
+      "ticker": "NBIX",
+      "severity": "watch",
+      "headline": "Neurocrine dropped -3.62% today against a STRONG BUY / 81.1 QARP — find the catalyst",
+      "note": "The magnitude of today's move conflicts sharply with the highest-conviction rating in the pharma sleeve; the drug-pricing policy overhang flagged across the pharma cluster (GILD·NVS·NBIX·VRTX) is a plausible culprit and needs to be ruled in or out before the gap widens further."
     },
     {
       "ticker": "LULU",
       "severity": "watch",
-      "headline": "Down 3.8% today; −5.5% unrealized with guidance-cut flag still live",
-      "note": "Five consecutive negative Americas comp quarters, margin pressure from tariffs, and a September 2 earnings date mean the next catalyst could deepen the loss before any recovery — the BUY verdict needs to be stress-tested against the deteriorating fundamentals."
+      "headline": "Guidance-cut risk flag active; -6.5% unrealized and sliding again today",
+      "note": "With Americas comps down five straight quarters, margins pressured by tariffs, China stalled, and the next read on September 2, Lululemon's BUY verdict is increasingly in tension with the deteriorating fundamental picture — the thesis needs a hard re-check ahead of that date."
     },
     {
       "ticker": "ZTS",
-      "severity": "watch",
-      "headline": "STRONG BUY / QARP 84.6 yet −6.6% unrealized and falling — thesis-price divergence widening",
-      "note": "Today's 2.4% drop extends an already negative position in the book's highest-conviction name by quality score; if the thesis is intact, this is an accumulation flag, but the divergence needs an explanation before acting."
-    },
-    {
-      "ticker": "UBER",
-      "severity": "watch",
-      "headline": "Dropped 4.1% on a broadly positive tape for tech",
-      "note": "A BUY-rated name falling sharply while the Nasdaq rose on strong AI earnings is an idiosyncratic red flag that warrants checking for any company-specific news or order-flow signal behind the move."
+      "severity": "note",
+      "headline": "Zoetis +3.13% today but still -3.7% overall — STRONG BUY thesis beginning to show up in price",
+      "note": "Today's move is the first meaningful price-thesis alignment for ZTS; worth confirming whether the session's gain was broad-market / sector driven or stock-specific before treating it as a trend."
     }
   ],
-  "date": "2026-08-12",
-  "generated_at": "Aug 12, 4:45pm ET"
+  "date": "2026-08-13",
+  "generated_at": "Aug 13, 4:13pm ET"
 }
