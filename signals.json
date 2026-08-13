@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "generated_at": "Aug 13, 11:35am ET",
+  "generated_at": "Aug 13, 11:48am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -134,17 +134,17 @@
     },
     {
       "sector": "Oil & Gas",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Energy price gains due to concerns that the U.S. and Iran aren't making …",
       "note": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Software",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
       "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Banks & Financial Services",
@@ -175,9 +175,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "‘The Big Short’ Investor Michael Burry Says Stock Market’s Unusually Long Stretch Without a Broad Selloff Could Be a Warning Sign — And He Has One Simple Message for Investors: ‘Avoid the Leverage’ (UPDATED)",
-      "ts": 1786624097,
-      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
+      "title": "AI Demand Is Booming. So Why Are CBRS and CSCO Sinking?",
+      "ts": 1786635705,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61182401/cerebras-cisco-stocks-ai-demand",
       "wiim": false
     },
     "UBER": {
@@ -216,7 +216,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 144.19,
+      "price": 144.16,
       "upside": null,
       "held": false,
       "uni": true,
@@ -230,8 +230,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 303.67,
-      "upside": -13.2,
+      "price": 303.54,
+      "upside": -13.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,7 +244,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 134.68,
+      "price": 134.58,
       "upside": 7.7,
       "held": false,
       "uni": true,
@@ -258,8 +258,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 341.33,
-      "upside": 17.2,
+      "price": 340.51,
+      "upside": 17.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,8 +272,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 134.68,
-      "upside": 6.2,
+      "price": 134.58,
+      "upside": 6.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -286,8 +286,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 341.33,
-      "upside": 0.5,
+      "price": 340.51,
+      "upside": 0.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -300,8 +300,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 192.0,
-      "upside": 9.4,
+      "price": 192.1,
+      "upside": 9.3,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -314,11 +314,25 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 192.0,
-      "upside": 6.8,
+      "price": 192.1,
+      "upside": 6.7,
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "CSCO",
+      "firm": "Truist Securities",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$140",
+      "price": 113.17,
+      "upside": 23.7,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-13",
@@ -328,7 +342,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$123",
-      "price": 113.19,
+      "price": 113.17,
       "upside": 8.7,
       "held": false,
       "uni": true,
@@ -342,7 +356,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 113.19,
+      "price": 113.17,
       "upside": 32.5,
       "held": false,
       "uni": true,
@@ -356,7 +370,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 113.19,
+      "price": 113.17,
       "upside": 19.3,
       "held": false,
       "uni": true,
@@ -370,7 +384,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 113.19,
+      "price": 113.17,
       "upside": 45.8,
       "held": false,
       "uni": true,
@@ -384,7 +398,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 113.19,
+      "price": 113.17,
       "upside": 19.3,
       "held": false,
       "uni": true,
@@ -394,12 +408,12 @@
   "rating_moves": {
     "CSCO": {
       "date": "2026-08-13",
-      "firm": "Barclays",
+      "firm": "Truist Securities",
       "action": "Maintains",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$123",
-      "upside": 8.7
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$140",
+      "upside": 23.7
     },
     "CRM": {
       "date": "2026-08-12",
@@ -408,7 +422,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 9.4
+      "upside": 9.3
     },
     "MRK": {
       "date": "2026-08-12",
@@ -417,7 +431,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 6.2
+      "upside": 6.3
     },
     "HD": {
       "date": "2026-08-12",
@@ -426,7 +440,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "upside": 0.5
+      "upside": 0.7
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -435,7 +449,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -13.2
+      "upside": -13.1
     },
     "PG": {
       "date": "2026-08-07",
@@ -462,7 +476,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 4.0
+      "upside": 3.9
     },
     "NKE": {
       "date": "2026-08-04",
@@ -480,14 +494,54 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.1
+      "upside": 11.0
     }
   },
   "bz_news": [
     {
+      "title": "Truist Securities Maintains Buy on Cisco Systems, Raises Price Target to $140",
+      "url": "https://www.benzinga.com/news/26/08/61182687/truist-securities-maintains-buy-cisco-systems-raises-price-target-140",
+      "ts": 1786636067,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.433
+    },
+    {
+      "title": "AI Demand Is Booming. So Why Are CBRS and CSCO Sinking?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61182401/cerebras-cisco-stocks-ai-demand",
+      "ts": 1786635705,
+      "tickers": [
+        "CBRS",
+        "CSCO",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.483
+    },
+    {
+      "title": "IREN Hands Microsoft Its First AI Cloud Deployment",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61182170/iren-hands-microsoft-its-first-ai-cloud-deployment",
+      "ts": 1786635421,
+      "tickers": [
+        "IREN",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.392
+    },
+    {
       "title": "Smart Money Sells #1 Dow Stock; Hidden Inflation In PPI; Applied Materials Earnings To Tell A Key AI Story",
       "url": "https://www.benzinga.com/Opinion/26/08/61182104/smart-money-sells-no-1-dow-stock-hidden-inflation-in-ppi-applied-materials-earnings-to-tell-a-key-ai-story",
-      "ts": 1786635348,
+      "ts": 1786635346,
       "tickers": [
         "SPY",
         "NVDA",
@@ -791,47 +845,6 @@
       "wiim": true,
       "rel": true,
       "relevance": 0.396
-    },
-    {
-      "title": "Market-Moving News for August 13th",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61169292/market-moving-news-august-13th",
-      "ts": 1786619640,
-      "tickers": [
-        "CSCO",
-        "CBRS",
-        "FGI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.467
-    },
-    {
-      "title": "‘Never Happened in History,’ Ex-Bridgewater Exec Warns AI Market Is Priced to Perfection",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61169158/never-happened-in-history-ex-bridgewater-exec-warns-ai-market-is-priced-to-perfection",
-      "ts": 1786619207,
-      "tickers": [
-        "GOOG",
-        "MSFT",
-        "QQQ",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.319
-    },
-    {
-      "title": "Cisco Says AI Boom Is Forcing Companies to Upgrade Networks — ‘It’s Just Not Optional’",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61167501/cisco-says-ai-boom-is-forcing-companies-to-upgrade-networks-its-just-not-optional",
-      "ts": 1786616400,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.459
     }
   ],
   "portfolio_brief": {
@@ -933,7 +946,7 @@
     },
     "BSX": {
       "name": "Boston Scientific",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 11,
         "buy": 19,
@@ -1086,9 +1099,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "‘The Big Short’ Investor Michael Burry Says Stock Market’s Unusually Long Stretch Without a Broad Selloff Could Be a Warning Sign — And He Has One Simple Message for Investors: ‘Avoid the Leverage’ (UPDATED)",
-        "ts": 1786624097,
-        "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
+        "title": "AI Demand Is Booming. So Why Are CBRS and CSCO Sinking?",
+        "ts": 1786635705,
+        "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61182401/cerebras-cisco-stocks-ai-demand",
         "wiim": false
       },
       "filings": {
