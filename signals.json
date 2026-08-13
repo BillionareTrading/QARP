@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "generated_at": "Aug 13, 5:53am ET",
+  "generated_at": "Aug 13, 6:23am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -325,9 +325,32 @@
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "CSCO",
+      "firm": "Morgan Stanley",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$135",
+      "price": 123.88,
+      "upside": 9.0,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "CSCO": {
+      "date": "2026-08-13",
+      "firm": "Morgan Stanley",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$135",
+      "upside": 9.0
+    },
     "CRM": {
       "date": "2026-08-12",
       "firm": "UBS",
@@ -412,6 +435,67 @@
   },
   "bz_news": [
     {
+      "title": "Cisco Says AI Boom Is Forcing Companies to Upgrade Networks — ‘It’s Just Not Optional’",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61167501/cisco-says-ai-boom-is-forcing-companies-to-upgrade-networks-its-just-not-optional",
+      "ts": 1786616407,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.459
+    },
+    {
+      "title": "Morgan Stanley Maintains Overweight on Cisco Systems, Raises Price Target to $135",
+      "url": "https://www.benzinga.com/news/26/08/61166948/morgan-stanley-maintains-overweight-cisco-systems-raises-price-target-135",
+      "ts": 1786615599,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.448
+    },
+    {
+      "title": "IBM Partners With OpenAI To Deploy AI At Scale Across Core Business Operations And Complex Workflows While Improving Cyber Defense",
+      "url": "https://www.benzinga.com/news/26/08/61166846/ibm-partners-openai-deploy-ai-scale-across-core-business-operations-and-complex-workflows-while-impr",
+      "ts": 1786615483,
+      "tickers": [
+        "IBM",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.393
+    },
+    {
+      "title": "Insights Into Microsoft's Performance Versus Peers In Software Sector",
+      "url": "https://www.benzinga.com/news/26/08/61166492/insights-microsoft-s-performance-versus-peers-software-sector",
+      "ts": 1786615127,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.373
+    },
+    {
+      "title": "Performance Comparison: Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/08/61166489/performance-comparison-apple-and-competitors-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1786615123,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.364
+    },
+    {
       "title": "Oracle Weighs Another Round of Job Cuts This Month as AI Infrastructure Spending Drives Debt: Report",
       "url": "https://www.benzinga.com/markets/tech/26/08/61166275/oracle-weighs-another-round-of-job-cuts-this-month-as-ai-infrastructure-spending-drives-debt-report",
       "ts": 1786614128,
@@ -468,7 +552,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.445
+      "relevance": 0.446
     },
     {
       "title": "Cisco CFO Mark Patterson Calls Price Hikes ‘a Last Resort’ That Fuel Revenue Growth, Says Customers ‘Understand It’s an Industry Issue’",
@@ -578,7 +662,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.353
+      "relevance": 0.354
     },
     {
       "title": "Michael Burry Smells Trouble in the Market's Unusual Calm: 'Big Short' Fame Investor Has a 'Trick' to 'Avoid the Folly'",
@@ -608,7 +692,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.431
+      "relevance": 0.432
     },
     {
       "title": "Here’s How Much You Would Have Made Owning Cisco Systems Stock In The Last 5 Years",
@@ -620,7 +704,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.298
+      "relevance": 0.297
     },
     {
       "title": "Congressman Violates Stock Act: Reports 22 Trades After Deadline, Including Some Nearly Two Years Old",
@@ -647,7 +731,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.522
+      "relevance": 0.521
     },
     {
       "title": "Goldman Sachs Gains Bitcoin, Ethereum ETFs in $2.25B Deal: Could It 'Leapfrog' BlackRock?",
@@ -675,54 +759,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.303
-    },
-    {
-      "title": "Cisco Systems shares are trading lower as the stock sells off following its Q4 financial results.",
-      "url": "https://www.benzinga.com/quote/CSCO",
-      "ts": 1786568293,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.396
-    },
-    {
-      "title": "Cisco Delivers Q4 Double Beat, Strong Guidance Driven by 'Networking Supercycle'",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61160526/cisco-delivers-q4-double-beat-strong-guidance-driven-by-networking-supercycle",
-      "ts": 1786567381,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.466
-    },
-    {
-      "title": "$1000 Invested In American Express 10 Years Ago Would Be Worth This Much Today",
-      "url": "https://www.benzinga.com/news/26/08/61159852/1000-invested-american-express-10-years-ago-would-be-worth-much-today",
-      "ts": 1786566658,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.309
-    },
-    {
-      "title": "Cisco Systems Sees FY2027 Adj EPS $5.05-$5.11 vs $4.80 Est; Sees Sales $72.200B-$73.400B vs $68.691B Est",
-      "url": "https://www.benzinga.com/news/26/08/61158128/cisco-systems-sees-fy2027-adj-eps-5-05-5-11-vs-4-80-est-sees-sales-72-200b-73-400b-vs-68-691b-est",
-      "ts": 1786565321,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.431
     },
     {
       "title": "Delta Probes Unauthorized Wi-Fi Network on Flight Carrying DEF CON Passengers: Report (UPDATED)",
@@ -761,8 +797,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-08-10",
-          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000061/rklb-20260810.htm"
+          "date": "2026-08-13",
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000175392626001454/g085841_8k.htm"
         },
         "periodic": {
           "form": "10-Q",
