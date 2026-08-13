@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "generated_at": "Aug 13, 9:43am ET",
+  "generated_at": "Aug 13, 10:28am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,6 +174,12 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
+    "NVDA": {
+      "title": "‘The Big Short’ Investor Michael Burry Says Stock Market’s Unusually Long Stretch Without a Broad Selloff Could Be a Warning Sign — And He Has One Simple Message for Investors: ‘Avoid the Leverage’ (UPDATED)",
+      "ts": 1786624097,
+      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
+      "wiim": false
+    },
     "UBER": {
       "title": "Bill Ackman Lost $400 Million on NFLX Stock in 2022 — Now He’s Back With a 3.15M-Share Bet, Saying Netflix Has ‘Won the Streaming Wars’ (UPDATED)",
       "ts": 1786627190,
@@ -184,12 +190,6 @@
       "title": "Bill Ackman Lost $400 Million on NFLX Stock in 2022 — Now He’s Back With a 3.15M-Share Bet, Saying Netflix Has ‘Won the Streaming Wars’ (UPDATED)",
       "ts": 1786627190,
       "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "‘The Big Short’ Investor Michael Burry Says Stock Market’s Unusually Long Stretch Without a Broad Selloff Could Be a Warning Sign — And He Has One Simple Message for Investors: ‘Avoid the Leverage’ (UPDATED)",
-      "ts": 1786624097,
-      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
       "wiim": false
     }
   },
@@ -202,8 +202,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 261.24,
-      "upside": 9.9,
+      "price": 260.74,
+      "upside": 10.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -216,7 +216,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 145.19,
+      "price": 145.37,
       "upside": null,
       "held": false,
       "uni": true,
@@ -230,8 +230,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 304.56,
-      "upside": -13.4,
+      "price": 304.75,
+      "upside": -13.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +244,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 133.86,
-      "upside": 8.3,
+      "price": 134.68,
+      "upside": 7.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -258,8 +258,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 344.29,
-      "upside": 16.2,
+      "price": 345.17,
+      "upside": 15.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,8 +272,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 133.86,
-      "upside": 6.8,
+      "price": 134.68,
+      "upside": 6.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -286,8 +286,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 344.29,
-      "upside": -0.4,
+      "price": 345.17,
+      "upside": -0.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -300,8 +300,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 194.72,
-      "upside": 7.8,
+      "price": 195.66,
+      "upside": 7.3,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -314,11 +314,39 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 194.72,
-      "upside": 5.3,
+      "price": 195.66,
+      "upside": 4.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "CSCO",
+      "firm": "Barclays",
+      "action": "Maintains",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$123",
+      "price": 114.98,
+      "upside": 7.0,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "CSCO",
+      "firm": "Wells Fargo",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$150",
+      "price": 114.98,
+      "upside": 30.5,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-13",
@@ -328,8 +356,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 112.83,
-      "upside": 19.6,
+      "price": 114.98,
+      "upside": 17.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -342,8 +370,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 112.83,
-      "upside": 46.2,
+      "price": 114.98,
+      "upside": 43.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -356,8 +384,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 112.83,
-      "upside": 19.6,
+      "price": 114.98,
+      "upside": 17.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -366,12 +394,12 @@
   "rating_moves": {
     "CSCO": {
       "date": "2026-08-13",
-      "firm": "Keybanc",
+      "firm": "Barclays",
       "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$135",
-      "upside": 19.6
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$123",
+      "upside": 7.0
     },
     "CRM": {
       "date": "2026-08-12",
@@ -380,7 +408,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 7.8
+      "upside": 7.3
     },
     "MRK": {
       "date": "2026-08-12",
@@ -389,7 +417,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 6.8
+      "upside": 6.2
     },
     "HD": {
       "date": "2026-08-12",
@@ -398,7 +426,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "upside": -0.4
+      "upside": -0.6
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -407,7 +435,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -13.4
+      "upside": -13.5
     },
     "PG": {
       "date": "2026-08-07",
@@ -425,7 +453,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 9.9
+      "upside": 10.1
     },
     "CVX": {
       "date": "2026-08-05",
@@ -434,7 +462,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 4.9
+      "upside": 4.5
     },
     "NKE": {
       "date": "2026-08-04",
@@ -443,7 +471,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -1.6
+      "upside": -2.1
     },
     "KO": {
       "date": "2026-07-30",
@@ -452,10 +480,50 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.3
+      "upside": 10.7
     }
   },
   "bz_news": [
+    {
+      "title": "IREN Jumps 10% as Microsoft Accepts First AI Data Center Under $9.7 Billion Deal",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61177758/iren-microsoft-ai-data-center-9-7-billion-deal",
+      "ts": 1786630614,
+      "tickers": [
+        "IREN",
+        "$BTC",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.439
+    },
+    {
+      "title": "Cisco Says It's Taking Customers From Rivals. Is Arista's Lead Narrowing?",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61176340/cisco-says-taking-customers-from-rival-arista-lead-narrowing",
+      "ts": 1786629233,
+      "tickers": [
+        "CSCO",
+        "ANET"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.359
+    },
+    {
+      "title": "Wells Fargo Maintains Overweight on Cisco Systems, Raises Price Target to $150",
+      "url": "https://www.benzinga.com/news/26/08/61176214/wells-fargo-maintains-overweight-cisco-systems-raises-price-target-150",
+      "ts": 1786629123,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.443
+    },
     {
       "title": "Bill Ackman Lost $400 Million on NFLX Stock in 2022 — Now He’s Back With a 3.15M-Share Bet, Saying Netflix Has ‘Won the Streaming Wars’ (UPDATED)",
       "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
@@ -523,7 +591,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.49
+      "relevance": 0.489
     },
     {
       "title": "Stock Market Today: S&P 500, Dow Futures Rise, Nasdaq Falls as July Inflation Cools—Cisco Systems, Netflix, Applied Materials in Focus (UPDATED)",
@@ -741,51 +809,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.413
-    },
-    {
-      "title": "Apple, Samsung Can Absorb the Smartphone Cost Shock — Smaller Rivals May Not Be so Lucky",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61166199/apple-samsung-can-absorb-the-smartphone-cost-shock-smaller-rivals-may-not-be-so-lucky",
-      "ts": 1786613585,
-      "tickers": [
-        "AAPL",
-        "GOOGL",
-        "SSNLF",
-        "XIACY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.327
-    },
-    {
-      "title": "Jensen Huang Says Nvidia’s 2020 A100 GPUs Can Stay ‘Mission-Capable’ Through 2029—Here’s Why It Matters for the AI Boom",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61166040/jensen-huang-says-nvidias-2020-a100-gpus-can-stay-mission-capable-through-2029-heres-why-it-matters-for-the-ai-boom",
-      "ts": 1786612688,
-      "tickers": [
-        "NVDA",
-        "APO",
-        "GS",
-        "BLK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.446
-    },
-    {
-      "title": "Bill Gates’ Daughter Under Fire Over Reported ‘Cookie Stuffing’ Scheme at Her E-Commerce Startup—What Is It?",
-      "url": "https://www.benzinga.com/news/retail-sales/26/08/61165673/bill-gates-daughter-under-fire-over-reported-cookie-stuffing-scheme-at-her-e-commerce-startup-what-is-it",
-      "ts": 1786609323,
-      "tickers": [
-        "NKE",
-        "MSFT",
-        "GAP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.24
+      "relevance": 0.412
     }
   ],
   "portfolio_brief": {
@@ -887,7 +911,7 @@
     },
     "BSX": {
       "name": "Boston Scientific",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 11,
         "buy": 19,
@@ -919,7 +943,7 @@
     },
     "NOW": {
       "name": "ServiceNow",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 16,
         "buy": 33,
@@ -952,7 +976,7 @@
         },
         "insider30d": 6
       },
-      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "UBER": {
       "name": "Uber",
@@ -993,7 +1017,7 @@
     },
     "AZO": {
       "name": "AutoZone",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 9,
         "buy": 16,
@@ -1126,7 +1150,7 @@
     },
     "LULU": {
       "name": "Lululemon",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 1,
         "buy": 1,
@@ -1154,7 +1178,7 @@
         },
         "insider30d": 0
       },
-      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: HOLD-QUAL."
+      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
     },
     "EXE": {
       "name": "Expand Energy",
