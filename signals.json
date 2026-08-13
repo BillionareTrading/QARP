@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "generated_at": "Aug 13, 7:59am ET",
+  "generated_at": "Aug 13, 8:54am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -175,27 +175,21 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Michael Burry Smells Trouble in the Market's Unusual Calm: 'Big Short' Fame Investor Has a 'Trick' to 'Avoid the Folly'",
-      "ts": 1786588185,
+      "title": "‘The Big Short’ Investor Michael Burry Says Stock Market’s Unusually Long Stretch Without a Broad Selloff Could Be a Warning Sign — And He Has One Simple Message for Investors: ‘Avoid the Leverage’ (UPDATED)",
+      "ts": 1786624097,
       "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
       "wiim": false
     },
     "UBER": {
-      "title": "Stock Market Today: Nasdaq 100 Rises on Strong AI Earnings, Benign Inflation",
-      "ts": 1786554865,
-      "url": "https://www.benzinga.com/markets/equities/26/08/61151837/stock-market-today-nasdaq-100-rises-on-strong-ai-earnings-benign-inflation",
+      "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
+      "ts": 1786604551,
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
       "wiim": false
     },
     "SPGI": {
       "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
       "ts": 1786604551,
       "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
-      "wiim": false
-    },
-    "NVS": {
-      "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
-      "ts": 1786556115,
-      "url": "https://www.benzinga.com/markets/options/26/08/61152680/10-health-care-stocks-whale-alerts-today-s-session",
       "wiim": false
     }
   },
@@ -329,6 +323,34 @@
     {
       "date": "2026-08-13",
       "ticker": "CSCO",
+      "firm": "Keybanc",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$135",
+      "price": 123.88,
+      "upside": 9.0,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "CSCO",
+      "firm": "Rosenblatt",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$165",
+      "price": 123.88,
+      "upside": 33.2,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "CSCO",
       "firm": "Morgan Stanley",
       "action": "Maintains",
       "rating": "Overweight",
@@ -344,7 +366,7 @@
   "rating_moves": {
     "CSCO": {
       "date": "2026-08-13",
-      "firm": "Morgan Stanley",
+      "firm": "Keybanc",
       "action": "Maintains",
       "rating": "Overweight",
       "stance": "bullish",
@@ -435,6 +457,118 @@
   },
   "bz_news": [
     {
+      "title": "AMD’s 2027 Server Revenue Outlook Is Already 20% Bigger Than the Entire 2025 Market",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61172863/amds-2027-server-revenue-outlook-is-already-20-bigger-than-the-entire-2025-market",
+      "ts": 1786625396,
+      "tickers": [
+        "AMD",
+        "META",
+        "MSFT",
+        "TSM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.447
+    },
+    {
+      "title": "Keybanc Maintains Overweight on Cisco Systems, Raises Price Target to $135",
+      "url": "https://www.benzinga.com/news/26/08/61172527/keybanc-maintains-overweight-cisco-systems-raises-price-target-135",
+      "ts": 1786624904,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.489
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow Futures Rise, Nasdaq Falls as July Inflation Cools—Cisco Systems, Netflix, Applied Materials in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61166181/stock-market-today-sp-500-dow-futures-rise-as-july-inflation-cools-cisco-systems-netflix-applied-materials-in-focus",
+      "ts": 1786624621,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "CSCO",
+        "NFLX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.487
+    },
+    {
+      "title": "‘The Big Short’ Investor Michael Burry Says Stock Market’s Unusually Long Stretch Without a Broad Selloff Could Be a Warning Sign — And He Has One Simple Message for Investors: ‘Avoid the Leverage’ (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
+      "ts": 1786624097,
+      "tickers": [
+        "NVDA",
+        "TSLA",
+        "PLTR",
+        "ORCL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.379
+    },
+    {
+      "title": "Cisco Says Hardware Price Hikes Are ‘Last Resort’ as Memory Costs Rise: CSCO Stock Falls Over 6% (UPDATED)",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61165866/cisco-cfo-calls-price-hikes-a-last-resort-as-rising-memory-costs-fuel-revenue-growth",
+      "ts": 1786623661,
+      "tickers": [
+        "CSCO",
+        "SNDK",
+        "CRWV",
+        "SKHY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.383
+    },
+    {
+      "title": "Gary Black Warns Elon Musk: Tesla Can’t Match Apple's Marketing Relying Only on ‘Word-of-Mouth and the CEO’s Posts on X’",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61171755/gary-black-warns-elon-musk-tesla-cant-match-apples-marketing-relying-only-on-word-of-mouth-and-the-ceos-posts-on-x",
+      "ts": 1786623345,
+      "tickers": [
+        "TSLA",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.245
+    },
+    {
+      "title": "Rosenblatt Maintains Buy on Cisco Systems, Raises Price Target to $165",
+      "url": "https://www.benzinga.com/news/26/08/61171701/rosenblatt-maintains-buy-cisco-systems-raises-price-target-165",
+      "ts": 1786623220,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.457
+    },
+    {
+      "title": "Cerebras Systems, Securitize, Stubhub Holdings And Other Big Stocks Moving Lower In Thursday’s Pre-Market Session",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61171200/cerebras-systems-securitize-stubhub-holdings-and-other-big-stocks-moving-lower-in-thursdays-pre-market-session",
+      "ts": 1786622583,
+      "tickers": [
+        "CSCO",
+        "SPCE",
+        "PAAS",
+        "SPIR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.44
+    },
+    {
       "title": "Brinker International To Rally Around 22%? Here Are 10 Top Analyst Forecasts For Thursday",
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61170375/brinker-international-to-rally-around-22-here-are-10-top-analyst-forecasts-for-thursday",
       "ts": 1786621315,
@@ -514,19 +648,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.459
-    },
-    {
-      "title": "Morgan Stanley Maintains Overweight on Cisco Systems, Raises Price Target to $135",
-      "url": "https://www.benzinga.com/news/26/08/61166948/morgan-stanley-maintains-overweight-cisco-systems-raises-price-target-135",
-      "ts": 1786615599,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.448
+      "relevance": 0.458
     },
     {
       "title": "IBM Partners With OpenAI To Deploy AI At Scale Across Core Business Operations And Complex Workflows While Improving Cyber Defense",
@@ -577,7 +699,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.412
+      "relevance": 0.413
     },
     {
       "title": "Apple, Samsung Can Absorb the Smartphone Cost Shock — Smaller Rivals May Not Be so Lucky",
@@ -595,21 +717,6 @@
       "relevance": 0.327
     },
     {
-      "title": "Stock Market Today: S&P 500, Dow Futures Rise as July Inflation Cools—Cisco Systems, Netflix, Applied Materials in Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61166181/stock-market-today-sp-500-dow-futures-rise-as-july-inflation-cools-cisco-systems-netflix-applied-materials-in-focus",
-      "ts": 1786613427,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "CSCO",
-        "NFLX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.467
-    },
-    {
       "title": "Jensen Huang Says Nvidia’s 2020 A100 GPUs Can Stay ‘Mission-Capable’ Through 2029—Here’s Why It Matters for the AI Boom",
       "url": "https://www.benzinga.com/markets/tech/26/08/61166040/jensen-huang-says-nvidias-2020-a100-gpus-can-stay-mission-capable-through-2029-heres-why-it-matters-for-the-ai-boom",
       "ts": 1786612688,
@@ -623,21 +730,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.446
-    },
-    {
-      "title": "Cisco CFO Mark Patterson Calls Price Hikes ‘a Last Resort’ That Fuel Revenue Growth, Says Customers ‘Understand It’s an Industry Issue’",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61165866/cisco-cfo-calls-price-hikes-a-last-resort-as-rising-memory-costs-fuel-revenue-growth",
-      "ts": 1786611429,
-      "tickers": [
-        "CSCO",
-        "SNDK",
-        "CRWV",
-        "SKHY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.409
     },
     {
       "title": "Bill Gates’ Daughter Under Fire Over Reported ‘Cookie Stuffing’ Scheme at Her E-Commerce Startup—What Is It?",
@@ -694,90 +786,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.321
-    },
-    {
-      "title": "Magic Johnson Congratulates Good Friends Bob Iger and Josh Kushner on Buying the Lakers: Is the Franchise Headed for a Shakeup?",
-      "url": "https://www.benzinga.com/news/sports/26/08/61164495/magic-johnson-bob-iger-josh-kushner-lakers-ownership-shakeup",
-      "ts": 1786598206,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.276
-    },
-    {
-      "title": "Lip-Bu Tan Investing $12 Million of His Own Money into Intel Raise: Daniel Newman Calls It a ‘Strong Sign of Confidence’ in Chipmaker’s Future",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61164181/lip-bu-tan-intel-12-million-investment-confidence-chipmaker",
-      "ts": 1786591275,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.392
-    },
-    {
-      "title": "Big Pharma's Future Growth Rests on Chinese Science? Expert Says: 'We Can't Ban Our Way Out of This'",
-      "url": "https://www.benzinga.com/markets/biotech/26/08/61164070/china-biotech-drug-trials-us",
-      "ts": 1786588862,
-      "tickers": [
-        "PFE",
-        "MRK",
-        "BMY",
-        "REGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.354
-    },
-    {
-      "title": "Michael Burry Smells Trouble in the Market's Unusual Calm: 'Big Short' Fame Investor Has a 'Trick' to 'Avoid the Folly'",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
-      "ts": 1786588185,
-      "tickers": [
-        "NVDA",
-        "TSLA",
-        "PLTR",
-        "ORCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.306
-    },
-    {
-      "title": "Cisco, SpaceX, Cerebras, Infleqtion and Coherent: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61163862/cisco-spacex-cerebras-infleqtion-and-coherent-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1786585595,
-      "tickers": [
-        "CSCO",
-        "COHR",
-        "INFQ",
-        "CBRS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.432
-    },
-    {
-      "title": "Delta Probes Unauthorized Wi-Fi Network on Flight Carrying DEF CON Passengers: Report (UPDATED)",
-      "url": "https://www.benzinga.com/news/travel/26/08/61134360/delta-probes-unauthorized-wi-fi-network-on-flight-carrying-def-con-passengers-report",
-      "ts": 1786527256,
-      "tickers": [
-        "DAL",
-        "BA",
-        "AAL",
-        "UAL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.236
     }
   ],
   "portfolio_brief": {
@@ -963,9 +971,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Stock Market Today: Nasdaq 100 Rises on Strong AI Earnings, Benign Inflation",
-        "ts": 1786554865,
-        "url": "https://www.benzinga.com/markets/equities/26/08/61151837/stock-market-today-nasdaq-100-rises-on-strong-ai-earnings-benign-inflation",
+        "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
+        "ts": 1786604551,
+        "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
         "wiim": false
       },
       "filings": {
@@ -1032,8 +1040,8 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Michael Burry Smells Trouble in the Market's Unusual Calm: 'Big Short' Fame Investor Has a 'Trick' to 'Avoid the Folly'",
-        "ts": 1786588185,
+        "title": "‘The Big Short’ Investor Michael Burry Says Stock Market’s Unusually Long Stretch Without a Broad Selloff Could Be a Warning Sign — And He Has One Simple Message for Investors: ‘Avoid the Leverage’ (UPDATED)",
+        "ts": 1786624097,
         "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
         "wiim": false
       },
@@ -1326,12 +1334,7 @@
         "score": 0.53,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
-        "ts": 1786556115,
-        "url": "https://www.benzinga.com/markets/options/26/08/61152680/10-health-care-stocks-whale-alerts-today-s-session",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": null,
         "periodic": null,
