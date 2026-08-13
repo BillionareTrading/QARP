@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "generated_at": "Aug 13, 8:54am ET",
+  "generated_at": "Aug 13, 9:43am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -141,10 +141,10 @@
     },
     {
       "sector": "Software",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
       "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Banks & Financial Services",
@@ -174,22 +174,22 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
-    "NVDA": {
-      "title": "‘The Big Short’ Investor Michael Burry Says Stock Market’s Unusually Long Stretch Without a Broad Selloff Could Be a Warning Sign — And He Has One Simple Message for Investors: ‘Avoid the Leverage’ (UPDATED)",
-      "ts": 1786624097,
-      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
-      "wiim": false
-    },
     "UBER": {
-      "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
-      "ts": 1786604551,
+      "title": "Bill Ackman Lost $400 Million on NFLX Stock in 2022 — Now He’s Back With a 3.15M-Share Bet, Saying Netflix Has ‘Won the Streaming Wars’ (UPDATED)",
+      "ts": 1786627190,
       "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
       "wiim": false
     },
     "SPGI": {
-      "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
-      "ts": 1786604551,
+      "title": "Bill Ackman Lost $400 Million on NFLX Stock in 2022 — Now He’s Back With a 3.15M-Share Bet, Saying Netflix Has ‘Won the Streaming Wars’ (UPDATED)",
+      "ts": 1786627190,
       "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "‘The Big Short’ Investor Michael Burry Says Stock Market’s Unusually Long Stretch Without a Broad Selloff Could Be a Warning Sign — And He Has One Simple Message for Investors: ‘Avoid the Leverage’ (UPDATED)",
+      "ts": 1786624097,
+      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
       "wiim": false
     }
   },
@@ -202,8 +202,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 260.86,
-      "upside": 10.0,
+      "price": 261.24,
+      "upside": 9.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -216,7 +216,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 144.08,
+      "price": 145.19,
       "upside": null,
       "held": false,
       "uni": true,
@@ -230,8 +230,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 302.25,
-      "upside": -12.8,
+      "price": 304.56,
+      "upside": -13.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +244,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 132.92,
-      "upside": 9.1,
+      "price": 133.86,
+      "upside": 8.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -258,8 +258,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 343.43,
-      "upside": 16.5,
+      "price": 344.29,
+      "upside": 16.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,8 +272,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 132.92,
-      "upside": 7.6,
+      "price": 133.86,
+      "upside": 6.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -286,8 +286,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 343.43,
-      "upside": -0.1,
+      "price": 344.29,
+      "upside": -0.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -300,8 +300,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 193.32,
-      "upside": 8.6,
+      "price": 194.72,
+      "upside": 7.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -314,8 +314,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 193.32,
-      "upside": 6.0,
+      "price": 194.72,
+      "upside": 5.3,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -328,8 +328,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 123.88,
-      "upside": 9.0,
+      "price": 112.83,
+      "upside": 19.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -342,8 +342,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 123.88,
-      "upside": 33.2,
+      "price": 112.83,
+      "upside": 46.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -356,8 +356,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 123.88,
-      "upside": 9.0,
+      "price": 112.83,
+      "upside": 19.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -371,7 +371,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "upside": 9.0
+      "upside": 19.6
     },
     "CRM": {
       "date": "2026-08-12",
@@ -380,7 +380,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 8.6
+      "upside": 7.8
     },
     "MRK": {
       "date": "2026-08-12",
@@ -389,7 +389,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 7.6
+      "upside": 6.8
     },
     "HD": {
       "date": "2026-08-12",
@@ -398,7 +398,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "upside": -0.1
+      "upside": -0.4
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -407,7 +407,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -12.8
+      "upside": -13.4
     },
     "PG": {
       "date": "2026-08-07",
@@ -425,7 +425,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.0
+      "upside": 9.9
     },
     "CVX": {
       "date": "2026-08-05",
@@ -434,7 +434,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 4.3
+      "upside": 4.9
     },
     "NKE": {
       "date": "2026-08-04",
@@ -443,7 +443,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -1.3
+      "upside": -1.6
     },
     "KO": {
       "date": "2026-07-30",
@@ -452,10 +452,52 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$97",
-      "upside": 11.9
+      "upside": 11.3
     }
   },
   "bz_news": [
+    {
+      "title": "Bill Ackman Lost $400 Million on NFLX Stock in 2022 — Now He’s Back With a 3.15M-Share Bet, Saying Netflix Has ‘Won the Streaming Wars’ (UPDATED)",
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
+      "ts": 1786627190,
+      "tickers": [
+        "NFLX",
+        "META",
+        "MSFT",
+        "MA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.316
+    },
+    {
+      "title": "These Analysts Raise Their Forecasts On Cisco Following Upbeat Q4 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61173539/these-analysts-raise-their-forecasts-on-cisco-following-upbeat-q4-earnings",
+      "ts": 1786626112,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.483
+    },
+    {
+      "title": "How To Trade SPY, QQQ, AAPL, MSFT, NVDA, GOOGL, META, And TSLA Using Technical Analysis",
+      "url": "https://www.benzinga.com/Opinion/26/08/61173233/how-to-trade-spy-qqq-aapl-msft-nvda-googl-meta-and-tsla-using-technical-analysis-5",
+      "ts": 1786625979,
+      "tickers": [
+        "SPY",
+        "NVDA",
+        "TSLA",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.445
+    },
     {
       "title": "AMD’s 2027 Server Revenue Outlook Is Already 20% Bigger Than the Entire 2025 Market",
       "url": "https://www.benzinga.com/markets/tech/26/08/61172863/amds-2027-server-revenue-outlook-is-already-20-bigger-than-the-entire-2025-market",
@@ -481,7 +523,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.489
+      "relevance": 0.49
     },
     {
       "title": "Stock Market Today: S&P 500, Dow Futures Rise, Nasdaq Falls as July Inflation Cools—Cisco Systems, Netflix, Applied Materials in Focus (UPDATED)",
@@ -511,7 +553,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.379
+      "relevance": 0.38
     },
     {
       "title": "Cisco Says Hardware Price Hikes Are ‘Last Resort’ as Memory Costs Rise: CSCO Stock Falls Over 6% (UPDATED)",
@@ -607,7 +649,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.468
+      "relevance": 0.467
     },
     {
       "title": "‘Never Happened in History,’ Ex-Bridgewater Exec Warns AI Market Is Priced to Perfection",
@@ -648,7 +690,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.458
+      "relevance": 0.459
     },
     {
       "title": "IBM Partners With OpenAI To Deploy AI At Scale Across Core Business Operations And Complex Workflows While Improving Cyber Defense",
@@ -744,48 +786,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.24
-    },
-    {
-      "title": "Cisco Systems, Applied Materials and 3 Stocks to Watch Heading Into Thursday",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61165662/cisco-systems-applied-materials-and-3-stocks-to-watch-heading-into-thursday",
-      "ts": 1786609279,
-      "tickers": [
-        "CSCO",
-        "AMAT",
-        "DDS",
-        "HLIT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.419
-    },
-    {
-      "title": "'Apple in Talks to Pay Publishers to Improve AI-Powered Siri' - WSJ",
-      "url": "https://www.benzinga.com/news/26/08/61165525/apple-talks-pay-publishers-improve-ai-powered-siri-wsj",
-      "ts": 1786607511,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.316
-    },
-    {
-      "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
-      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
-      "ts": 1786604551,
-      "tickers": [
-        "NFLX",
-        "META",
-        "MSFT",
-        "MA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.321
     }
   ],
   "portfolio_brief": {
@@ -919,7 +919,7 @@
     },
     "NOW": {
       "name": "ServiceNow",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 16,
         "buy": 33,
@@ -952,7 +952,7 @@
         },
         "insider30d": 6
       },
-      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "UBER": {
       "name": "Uber",
@@ -971,8 +971,8 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
-        "ts": 1786604551,
+        "title": "Bill Ackman Lost $400 Million on NFLX Stock in 2022 — Now He’s Back With a 3.15M-Share Bet, Saying Netflix Has ‘Won the Streaming Wars’ (UPDATED)",
+        "ts": 1786627190,
         "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
         "wiim": false
       },
@@ -993,7 +993,7 @@
     },
     "AZO": {
       "name": "AutoZone",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 9,
         "buy": 16,
@@ -1126,7 +1126,7 @@
     },
     "LULU": {
       "name": "Lululemon",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 1,
         "buy": 1,
@@ -1154,7 +1154,7 @@
         },
         "insider30d": 0
       },
-      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
+      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: HOLD-QUAL."
     },
     "EXE": {
       "name": "Expand Energy",
@@ -1205,8 +1205,8 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
-        "ts": 1786604551,
+        "title": "Bill Ackman Lost $400 Million on NFLX Stock in 2022 — Now He’s Back With a 3.15M-Share Bet, Saying Netflix Has ‘Won the Streaming Wars’ (UPDATED)",
+        "ts": 1786627190,
         "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
         "wiim": false
       },
