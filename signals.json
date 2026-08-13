@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "generated_at": "Aug 13, 5:13am ET",
+  "generated_at": "Aug 13, 5:53am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,6 +174,12 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
+    "NVDA": {
+      "title": "Michael Burry Smells Trouble in the Market's Unusual Calm: 'Big Short' Fame Investor Has a 'Trick' to 'Avoid the Folly'",
+      "ts": 1786588185,
+      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
+      "wiim": false
+    },
     "UBER": {
       "title": "Stock Market Today: Nasdaq 100 Rises on Strong AI Earnings, Benign Inflation",
       "ts": 1786554865,
@@ -184,12 +190,6 @@
       "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
       "ts": 1786604551,
       "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "Michael Burry Smells Trouble in the Market's Unusual Calm: 'Big Short' Fame Investor Has a 'Trick' to 'Avoid the Folly'",
-      "ts": 1786588185,
-      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
       "wiim": false
     },
     "NVS": {
@@ -412,6 +412,65 @@
   },
   "bz_news": [
     {
+      "title": "Oracle Weighs Another Round of Job Cuts This Month as AI Infrastructure Spending Drives Debt: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61166275/oracle-weighs-another-round-of-job-cuts-this-month-as-ai-infrastructure-spending-drives-debt-report",
+      "ts": 1786614128,
+      "tickers": [
+        "ORCL",
+        "META",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.412
+    },
+    {
+      "title": "Apple, Samsung Can Absorb the Smartphone Cost Shock — Smaller Rivals May Not Be so Lucky",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61166199/apple-samsung-can-absorb-the-smartphone-cost-shock-smaller-rivals-may-not-be-so-lucky",
+      "ts": 1786613585,
+      "tickers": [
+        "AAPL",
+        "GOOGL",
+        "SSNLF",
+        "XIACY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.327
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow Futures Rise as July Inflation Cools—Cisco Systems, Netflix, Applied Materials in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61166181/stock-market-today-sp-500-dow-futures-rise-as-july-inflation-cools-cisco-systems-netflix-applied-materials-in-focus",
+      "ts": 1786613427,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "CSCO",
+        "NFLX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.467
+    },
+    {
+      "title": "Jensen Huang Says Nvidia’s 2020 A100 GPUs Can Stay ‘Mission-Capable’ Through 2029—Here’s Why It Matters for the AI Boom",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61166040/jensen-huang-says-nvidias-2020-a100-gpus-can-stay-mission-capable-through-2029-heres-why-it-matters-for-the-ai-boom",
+      "ts": 1786612688,
+      "tickers": [
+        "NVDA",
+        "APO",
+        "GS",
+        "BLK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.445
+    },
+    {
       "title": "Cisco CFO Mark Patterson Calls Price Hikes ‘a Last Resort’ That Fuel Revenue Growth, Says Customers ‘Understand It’s an Industry Issue’",
       "url": "https://www.benzinga.com/markets/earnings/26/08/61165866/cisco-cfo-calls-price-hikes-a-last-resort-as-rising-memory-costs-fuel-revenue-growth",
       "ts": 1786611429,
@@ -519,7 +578,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.354
+      "relevance": 0.353
     },
     {
       "title": "Michael Burry Smells Trouble in the Market's Unusual Calm: 'Big Short' Fame Investor Has a 'Trick' to 'Avoid the Folly'",
@@ -561,7 +620,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.297
+      "relevance": 0.298
     },
     {
       "title": "Congressman Violates Stock Act: Reports 22 Trades After Deadline, Including Some Nearly Two Years Old",
@@ -576,7 +635,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.349
+      "relevance": 0.348
     },
     {
       "title": "Cisco CEO Says Have Line Of Sight To Multiple AI Design Wins Expected Over Next 6 Months Across G300, G200, P200 Silicon One Chip Designs And Optics; AI Infrastructure Revenue Is Projected To Grow To $7.5B In Fiscal Year 2027",
@@ -588,7 +647,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.521
+      "relevance": 0.522
     },
     {
       "title": "Goldman Sachs Gains Bitcoin, Ethereum ETFs in $2.25B Deal: Could It 'Leapfrog' BlackRock?",
@@ -663,46 +722,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.43
-    },
-    {
-      "title": "Cisco Systems Sees Q1 GAAP EPS $1.08-$1.10 vs $0.90 Est",
-      "url": "https://www.benzinga.com/news/26/08/61157935/cisco-systems-sees-q1-gaap-eps-1-08-1-10-vs-0-90-est",
-      "ts": 1786565251,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.468
-    },
-    {
-      "title": "Cisco Systems Q4 Adj. EPS $1.22 Beats $1.17 Estimate, Sales $17.252B Beat $16.823B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61157857/cisco-systems-q4-adj-eps-1-22-beats-1-17-estimate-sales-17-252b-beat-16-823b-estimate",
-      "ts": 1786565219,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Tesla, Palantir Fall as CPI Sends September Fed Hike Odds to 33%",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61156417/tesla-palantir-july-cpi-fed-hike-odds",
-      "ts": 1786563225,
-      "tickers": [
-        "TSLA",
-        "MSFT",
-        "PLTR",
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.368
+      "relevance": 0.431
     },
     {
       "title": "Delta Probes Unauthorized Wi-Fi Network on Flight Carrying DEF CON Passengers: Report (UPDATED)",
