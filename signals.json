@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "generated_at": "Aug 13, 5:04pm ET",
+  "generated_at": "Aug 13, 5:28pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,6 +168,12 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
+    "AVGO": {
+      "title": "QUICK SPARK: Dell, JPMorgan, Merck All Mark New All-Time Highs",
+      "ts": 1786655989,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61197258/dell-jpmorgan-merck-all-mark-new-all-time-highs",
+      "wiim": false
+    },
     "UBER": {
       "title": "OpenAI Taps Ex-Wiz Executive to Lead Its Global Sales Push",
       "ts": 1786650799,
@@ -323,6 +329,20 @@
     {
       "date": "2026-08-13",
       "ticker": "CSCO",
+      "firm": "UBS",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$138",
+      "price": 113.47,
+      "upside": 21.6,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "CSCO",
       "firm": "Truist Securities",
       "action": "Maintains",
       "rating": "Buy",
@@ -408,12 +428,12 @@
   "rating_moves": {
     "CSCO": {
       "date": "2026-08-13",
-      "firm": "Truist Securities",
+      "firm": "UBS",
       "action": "Maintains",
       "rating": "Buy",
       "stance": "bullish",
-      "pt": "$140",
-      "upside": 23.4
+      "pt": "$138",
+      "upside": 21.6
     },
     "CRM": {
       "date": "2026-08-12",
@@ -498,6 +518,33 @@
     }
   },
   "bz_news": [
+    {
+      "title": "QUICK SPARK: Dell, JPMorgan, Merck All Mark New All-Time Highs",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61197258/dell-jpmorgan-merck-all-mark-new-all-time-highs",
+      "ts": 1786655989,
+      "tickers": [
+        "DELL",
+        "AVGO",
+        "JPM",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.42
+    },
+    {
+      "title": "UBS Maintains Buy on Cisco Systems, Raises Price Target to $138",
+      "url": "https://www.benzinga.com/news/26/08/61196624/ubs-maintains-buy-cisco-systems-raises-price-target-138",
+      "ts": 1786655222,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.471
+    },
     {
       "title": "QUICK SPARK: Trump's Tariff Refunds Are Massive — And Hitting Balance Sheets",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61193502/quick-spark-trumps-tariff-refunds-are-massive-and-hitting-balance-sheets",
@@ -584,7 +631,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.485
+      "relevance": 0.486
     },
     {
       "title": "Oracle Has 30% Upside, JPMorgan Says. The Market May Be Missing Its AI Transformation.",
@@ -614,7 +661,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.334
+      "relevance": 0.335
     },
     {
       "title": "Why Is SK Hynix Stock Surging Thursday?",
@@ -656,7 +703,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.357
+      "relevance": 0.356
     },
     {
       "title": "UnitedHealth’s Crisis Deepens: Lawsuit Alleges Medicare Fraud, Algorithmic Care Denials and $237 Million Insider Sales",
@@ -725,7 +772,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.405
+      "relevance": 0.404
     },
     {
       "title": "AI Was Supposed to Push Everything to the Cloud: Cisco Sees the Opposite",
@@ -826,33 +873,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.439
-    },
-    {
-      "title": "Gold Down 2%; Cisco Shares Tumble After Q4 Results",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61183945/gold-down-2-cisco-shares-tumble-after-q4-results",
-      "ts": 1786637544,
-      "tickers": [
-        "CSCO",
-        "DFSC",
-        "ARX",
-        "SECZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.383
-    },
-    {
-      "title": "'OpenAI Hires New Chief Revenue Officer After Less Than a Year'- Bloomberg",
-      "url": "https://www.benzinga.com/news/26/08/61183710/openai-hires-new-chief-revenue-officer-after-less-year-bloomberg",
-      "ts": 1786637258,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.296
     }
   ],
   "portfolio_brief": {
@@ -916,7 +936,7 @@
           "date": "2026-07-28",
           "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
         },
-        "insider30d": 0
+        "insider30d": 1
       },
       "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1369,7 +1389,12 @@
         "score": 1.21,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "QUICK SPARK: Dell, JPMorgan, Merck All Mark New All-Time Highs",
+        "ts": 1786655989,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61197258/dell-jpmorgan-merck-all-mark-new-all-time-highs",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
