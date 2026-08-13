@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-12",
-  "generated_at": "Aug 12, 6:55pm ET",
+  "date": "2026-08-13",
+  "generated_at": "Aug 13, 5:13am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 12",
+      "when": "Aug 13",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -174,10 +174,22 @@
       "url": "https://www.benzinga.com/quote/RBRK",
       "wiim": true
     },
+    "UBER": {
+      "title": "Stock Market Today: Nasdaq 100 Rises on Strong AI Earnings, Benign Inflation",
+      "ts": 1786554865,
+      "url": "https://www.benzinga.com/markets/equities/26/08/61151837/stock-market-today-nasdaq-100-rises-on-strong-ai-earnings-benign-inflation",
+      "wiim": false
+    },
+    "SPGI": {
+      "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
+      "ts": 1786604551,
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
+      "wiim": false
+    },
     "NVDA": {
-      "title": "Dan Ives Says CoreWeave, Cisco Earnings ‘Pieces of the Puzzle’ for AI Trade: ‘Get the Popcorn Out’",
-      "ts": 1786553637,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61151182/dan-ives-says-coreweave-cisco-earnings-pieces-of-the-puzzle-for-ai-trade-get-the-popcorn-out",
+      "title": "Michael Burry Smells Trouble in the Market's Unusual Calm: 'Big Short' Fame Investor Has a 'Trick' to 'Avoid the Folly'",
+      "ts": 1786588185,
+      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
       "wiim": false
     },
     "NVS": {
@@ -185,43 +197,9 @@
       "ts": 1786556115,
       "url": "https://www.benzinga.com/markets/options/26/08/61152680/10-health-care-stocks-whale-alerts-today-s-session",
       "wiim": false
-    },
-    "UBER": {
-      "title": "Stock Market Today: Nasdaq 100 Rises on Strong AI Earnings, Benign Inflation",
-      "ts": 1786554865,
-      "url": "https://www.benzinga.com/markets/equities/26/08/61151837/stock-market-today-nasdaq-100-rises-on-strong-ai-earnings-benign-inflation",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-05",
-      "ticker": "CVX",
-      "firm": "TD Cowen",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$205",
-      "price": 196.6,
-      "upside": 4.3,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-05",
-      "ticker": "MRK",
-      "firm": "Guggenheim",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$146",
-      "price": 132.92,
-      "upside": 9.8,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
     {
       "date": "2026-08-06",
       "ticker": "JNJ",
@@ -434,6 +412,146 @@
   },
   "bz_news": [
     {
+      "title": "Cisco CFO Mark Patterson Calls Price Hikes ‘a Last Resort’ That Fuel Revenue Growth, Says Customers ‘Understand It’s an Industry Issue’",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61165866/cisco-cfo-calls-price-hikes-a-last-resort-as-rising-memory-costs-fuel-revenue-growth",
+      "ts": 1786611429,
+      "tickers": [
+        "CSCO",
+        "SNDK",
+        "CRWV",
+        "SKHY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.409
+    },
+    {
+      "title": "Bill Gates’ Daughter Under Fire Over Reported ‘Cookie Stuffing’ Scheme at Her E-Commerce Startup—What Is It?",
+      "url": "https://www.benzinga.com/news/retail-sales/26/08/61165673/bill-gates-daughter-under-fire-over-reported-cookie-stuffing-scheme-at-her-e-commerce-startup-what-is-it",
+      "ts": 1786609323,
+      "tickers": [
+        "NKE",
+        "MSFT",
+        "GAP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.24
+    },
+    {
+      "title": "Cisco Systems, Applied Materials and 3 Stocks to Watch Heading Into Thursday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61165662/cisco-systems-applied-materials-and-3-stocks-to-watch-heading-into-thursday",
+      "ts": 1786609279,
+      "tickers": [
+        "CSCO",
+        "AMAT",
+        "DDS",
+        "HLIT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.419
+    },
+    {
+      "title": "'Apple in Talks to Pay Publishers to Improve AI-Powered Siri' - WSJ",
+      "url": "https://www.benzinga.com/news/26/08/61165525/apple-talks-pay-publishers-improve-ai-powered-siri-wsj",
+      "ts": 1786607511,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.316
+    },
+    {
+      "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
+      "ts": 1786604551,
+      "tickers": [
+        "NFLX",
+        "META",
+        "MSFT",
+        "MA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.321
+    },
+    {
+      "title": "Magic Johnson Congratulates Good Friends Bob Iger and Josh Kushner on Buying the Lakers: Is the Franchise Headed for a Shakeup?",
+      "url": "https://www.benzinga.com/news/sports/26/08/61164495/magic-johnson-bob-iger-josh-kushner-lakers-ownership-shakeup",
+      "ts": 1786598206,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.276
+    },
+    {
+      "title": "Lip-Bu Tan Investing $12 Million of His Own Money into Intel Raise: Daniel Newman Calls It a ‘Strong Sign of Confidence’ in Chipmaker’s Future",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61164181/lip-bu-tan-intel-12-million-investment-confidence-chipmaker",
+      "ts": 1786591275,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.392
+    },
+    {
+      "title": "Big Pharma's Future Growth Rests on Chinese Science? Expert Says: 'We Can't Ban Our Way Out of This'",
+      "url": "https://www.benzinga.com/markets/biotech/26/08/61164070/china-biotech-drug-trials-us",
+      "ts": 1786588862,
+      "tickers": [
+        "PFE",
+        "MRK",
+        "BMY",
+        "REGN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.354
+    },
+    {
+      "title": "Michael Burry Smells Trouble in the Market's Unusual Calm: 'Big Short' Fame Investor Has a 'Trick' to 'Avoid the Folly'",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
+      "ts": 1786588185,
+      "tickers": [
+        "NVDA",
+        "TSLA",
+        "PLTR",
+        "ORCL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.306
+    },
+    {
+      "title": "Cisco, SpaceX, Cerebras, Infleqtion and Coherent: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61163862/cisco-spacex-cerebras-infleqtion-and-coherent-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1786585595,
+      "tickers": [
+        "CSCO",
+        "COHR",
+        "INFQ",
+        "CBRS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.431
+    },
+    {
       "title": "Here’s How Much You Would Have Made Owning Cisco Systems Stock In The Last 5 Years",
       "url": "https://www.benzinga.com/news/26/08/61163029/here-s-how-much-you-would-have-made-owning-cisco-systems-stock-last-5-years",
       "ts": 1786572917,
@@ -443,7 +561,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.298
+      "relevance": 0.297
     },
     {
       "title": "Congressman Violates Stock Act: Reports 22 Trades After Deadline, Including Some Nearly Two Years Old",
@@ -458,7 +576,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.348
+      "relevance": 0.349
     },
     {
       "title": "Cisco CEO Says Have Line Of Sight To Multiple AI Design Wins Expected Over Next 6 Months Across G300, G200, P200 Silicon One Chip Designs And Optics; AI Infrastructure Revenue Is Projected To Grow To $7.5B In Fiscal Year 2027",
@@ -470,7 +588,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.522
+      "relevance": 0.521
     },
     {
       "title": "Goldman Sachs Gains Bitcoin, Ethereum ETFs in $2.25B Deal: Could It 'Leapfrog' BlackRock?",
@@ -545,7 +663,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.431
+      "relevance": 0.43
     },
     {
       "title": "Cisco Systems Sees Q1 GAAP EPS $1.08-$1.10 vs $0.90 Est",
@@ -587,163 +705,19 @@
       "relevance": 0.368
     },
     {
-      "title": "Microsoft Stock is Falling: What's Going On Today?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61156185/microsoft-stock-is-falling-whats-going-on-today",
-      "ts": 1786562713,
+      "title": "Delta Probes Unauthorized Wi-Fi Network on Flight Carrying DEF CON Passengers: Report (UPDATED)",
+      "url": "https://www.benzinga.com/news/travel/26/08/61134360/delta-probes-unauthorized-wi-fi-network-on-flight-carrying-def-con-passengers-report",
+      "ts": 1786527256,
       "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.51
-    },
-    {
-      "title": "Shares of foundry, fabricator and IDM chip companies are trading higher after AI cloud providers CoreWeave and Nebius reported better-than-expected Q2 results and server and storage maker Super Micro Computer reported better-than-expected Q4 financial results, all of which may help bolster the demand outlook for the sector.",
-      "url": "https://www.benzinga.com/quote/TSEM",
-      "ts": 1786561820,
-      "tickers": [
-        "INTC",
-        "GFS",
-        "TSEM"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.572
-    },
-    {
-      "title": "Can The AI Adoption Boom Send S&P 500 To 9,000?",
-      "url": "https://www.benzinga.com/Opinion/26/08/61154819/can-the-ai-adoption-boom-send-sp500-to-9000",
-      "ts": 1786560352,
-      "tickers": [
-        "AMZN",
-        "GOOG",
-        "META",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.396
-    },
-    {
-      "title": "Walmart Could Return to Its Beat-And-Raise Playbook This Quarter, Analyst Says",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61154613/walmart-could-return-to-its-beat-and-raise-playbook-this-quarter-analyst-says",
-      "ts": 1786559885,
-      "tickers": [
-        "WMT",
-        "XYLD",
-        "KXI",
-        "XYLG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.37
-    },
-    {
-      "title": "Why Is Archer Aviation Stock Falling on Wednesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61153644/why-is-archer-aviation-stock-falling-on-wednesday",
-      "ts": 1786558061,
-      "tickers": [
-        "ACHR",
+        "DAL",
         "BA",
-        "ARCX",
-        "JEDI"
+        "AAL",
+        "UAL"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.396
-    },
-    {
-      "title": "QUICK SPARK: Micron Reclaims $1 Trillion Valuation on Broad AI Stock Rally",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61153003/micron-stock-reclaims-1-trillion-market-cap-memory",
-      "ts": 1786556761,
-      "tickers": [
-        "INTC",
-        "SSNLF",
-        "MU",
-        "LITE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.436
-    },
-    {
-      "title": "Home Depot Stock Slips as Leadership Shift Lands Ahead of Earnings",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61152864/home-depot-stock-slips-as-leadership-shift-lands-ahead-of-earnings",
-      "ts": 1786556463,
-      "tickers": [
-        "HD",
-        "XLY",
-        "VCR",
-        "HDV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.418
-    },
-    {
-      "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61152680/10-health-care-stocks-whale-alerts-today-s-session",
-      "ts": 1786556115,
-      "tickers": [
-        "LQDA",
-        "SLS",
-        "ELV",
-        "ABVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61152679/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1786556114,
-      "tickers": [
-        "MU",
-        "INTC",
-        "NBIS",
-        "NOK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "Wolfspeed 13G Shows Goldman Sachs Reports 6.8% Stake In Co, With 3.56M Shares Owned As Of June 30, 2026",
-      "url": "https://www.benzinga.com/m/26/08/61152464/wolfspeed-13g-shows-goldman-sachs-reports-6-8-stake-co-3-56m-shares-owned-june-30-2026",
-      "ts": 1786555751,
-      "tickers": [
-        "WOLF",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.433
-    },
-    {
-      "title": "Stock Market Today: Nasdaq 100 Rises on Strong AI Earnings, Benign Inflation",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61151837/stock-market-today-nasdaq-100-rises-on-strong-ai-earnings-benign-inflation",
-      "ts": 1786554865,
-      "tickers": [
-        "QQQ",
-        "VOO",
-        "META",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.443
+      "relevance": 0.236
     }
   ],
   "portfolio_brief": {
@@ -998,9 +972,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Dan Ives Says CoreWeave, Cisco Earnings ‘Pieces of the Puzzle’ for AI Trade: ‘Get the Popcorn Out’",
-        "ts": 1786553637,
-        "url": "https://www.benzinga.com/markets/tech/26/08/61151182/dan-ives-says-coreweave-cisco-earnings-pieces-of-the-puzzle-for-ai-trade-get-the-popcorn-out",
+        "title": "Michael Burry Smells Trouble in the Market's Unusual Calm: 'Big Short' Fame Investor Has a 'Trick' to 'Avoid the Folly'",
+        "ts": 1786588185,
+        "url": "https://www.benzinga.com/markets/equities/26/08/61164055/michael-burry-warns-historic-market-calm-is-a-red-flag-for-investors",
         "wiim": false
       },
       "filings": {
@@ -1162,7 +1136,12 @@
         "score": 1.18,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "Bill Ackman's Pershing Square Re-Enters Netflix Four Years After Losing More Than $400 Million, Says NFLX Has ‘Won the Streaming Wars’",
+        "ts": 1786604551,
+        "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61165106/bill-ackmans-pershing-square-re-enters-netflix-four-years-after-losing-more-than-400-million-says-nflx-has-won-the-streaming-wars",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1328,7 +1307,7 @@
           "date": "2026-07-31",
           "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000037/nbix-20260630.htm"
         },
-        "insider30d": 4
+        "insider30d": 2
       },
       "explain": "36 analysts cover it — 31 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
