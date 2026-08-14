@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-13",
-  "generated_at": "Aug 13, 7:24pm ET",
+  "date": "2026-08-14",
+  "generated_at": "Aug 14, 5:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 13",
+      "when": "Aug 14",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -168,6 +168,12 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
+    "NOW": {
+      "title": "'Silver Lake in talks to buy Workday, sources say' - Reuters",
+      "ts": 1786646535,
+      "url": "https://www.benzinga.com/news/26/08/61189131/silver-lake-in-talks-to-buy-workday-sources-say-reuters",
+      "wiim": false
+    },
     "ABT": {
       "title": "Congressman Ditches Blue Chip Stocks for Municipal Bonds: Here Are the Sales",
       "ts": 1786657526,
@@ -186,12 +192,6 @@
       "url": "https://www.benzinga.com/markets/private-markets/26/08/61191167/openai-taps-ex-wiz-executive-to-lead-its-global-sales-push",
       "wiim": false
     },
-    "NOW": {
-      "title": "'Silver Lake in talks to buy Workday, sources say' - Reuters",
-      "ts": 1786646535,
-      "url": "https://www.benzinga.com/news/26/08/61189131/silver-lake-in-talks-to-buy-workday-sources-say-reuters",
-      "wiim": false
-    },
     "SPGI": {
       "title": "Bill Ackman’s New Stock Picks Are Here. These ETFs Could Be Worth Watching",
       "ts": 1786645879,
@@ -206,20 +206,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-06",
-      "ticker": "JNJ",
-      "firm": "Guggenheim",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$287",
-      "price": 262.08,
-      "upside": 9.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-07",
       "ticker": "PG",
@@ -512,18 +498,103 @@
       "stance": "bearish",
       "pt": "$40",
       "upside": -3.0
-    },
-    "KO": {
-      "date": "2026-07-30",
-      "firm": "Argus Research",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$97",
-      "upside": 11.0
     }
   },
   "bz_news": [
+    {
+      "title": "Silver Lake's Workday Buyout Talks Could Be the First 'SaaSpocalypse' Opportunity: Analyst Says 'You've Got Data, You've Got Distribution, You're Still Gonna Win'",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61201878/silver-lakes-43-billion-workday-bid-marks-first-saaspocalypse-casualty",
+      "ts": 1786697540,
+      "tickers": [
+        "WDAY",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.33
+    },
+    {
+      "title": "Luigi Mangione to Reportedly Plead Guilty in Federal Case Over UnitedHealthcare CEO Brian Thompson’s Killing: UNH Stock in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61201762/unitedhealth-luigi-mangione-plea",
+      "ts": 1786697192,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.3
+    },
+    {
+      "title": "JBIC, Citibank, And JPMorgan Chase Co-Finance $2.397B For Pennsylvania Natural Gas Plant Powering AI Data Centers",
+      "url": "https://www.benzinga.com/quote/JPM",
+      "ts": 1786690683,
+      "tickers": [
+        "C",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.403
+    },
+    {
+      "title": "S&P 500 Hits New Record High Following PPI Data: Investor Sentiment Improves, Fear Index Remains In ‘Greed’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/61201145/sp-500-hits-new-record-high-following-ppi-data-investor-sentiment-improves-fear-index-remains-in-greed-zone",
+      "ts": 1786689942,
+      "tickers": [
+        "BALY",
+        "CSCO",
+        "OTLK",
+        "SNDK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.473
+    },
+    {
+      "title": "Apple Makes Major AI Strategy Shift in China, Develops Own LLM With Alibaba’s Support in Bid to Counter Huawei: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61201134/apple-makes-major-ai-strategy-shift-in-china-develops-own-llm-with-alibabas-support-in-bid-to-counter-huawei-report",
+      "ts": 1786689897,
+      "tickers": [
+        "AAPL",
+        "BABA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.382
+    },
+    {
+      "title": "'Apple Trains Its Own AI Model For China Market With Alibaba's Support, Sources Say' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/08/61200749/apple-trains-its-own-ai-model-china-market-alibaba-s-support-sources-say-reuters-exclusive",
+      "ts": 1786685270,
+      "tickers": [
+        "AAPL",
+        "BABA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.349
+    },
+    {
+      "title": "Trump Wanted Advanced Tech Made in America, Tim Cook Brought Mac Mini Production to Texas: 'Thank You' for the $600 Billion Commitment, Says Howard Lutnick",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61200047/trump-tim-cook-mac-mini-production-texas-thank-you-commitment",
+      "ts": 1786673269,
+      "tickers": [
+        "AAPL",
+        "TSM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.261
+    },
     {
       "title": "'OpenAI’s Revenue Run Rate Tops $40B Ahead of IPO'- Bloomberg",
       "url": "https://www.benzinga.com/news/26/08/61198356/openai-s-revenue-run-rate-tops-40b-ahead-ipo-bloomberg",
@@ -563,7 +634,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.42
+      "relevance": 0.421
     },
     {
       "title": "UBS Maintains Buy on Cisco Systems, Raises Price Target to $138",
@@ -605,7 +676,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.473
+      "relevance": 0.472
     },
     {
       "title": "OpenAI Taps Ex-Wiz Executive to Lead Its Global Sales Push",
@@ -618,7 +689,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.291
+      "relevance": 0.29
     },
     {
       "title": "Shares of software companies are trading higher, possibly amid broader market strength as promising economic data and easing oil prices reduce rate-hike concerns. Reports suggesting Silver Lake is in talks to acquire Workday may be lifting related peers.",
@@ -735,7 +806,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.356
+      "relevance": 0.357
     },
     {
       "title": "UnitedHealth’s Crisis Deepens: Lawsuit Alleges Medicare Fraud, Algorithmic Care Denials and $237 Million Insider Sales",
@@ -747,7 +818,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.314
+      "relevance": 0.313
     },
     {
       "title": "CNBC Reports Tim Cook, Secretary Lutnick To Speak At Opening Of Apple Manufacturing Facility In Houston",
@@ -775,108 +846,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.391
-    },
-    {
-      "title": "Bill Ackman Vs. Buffett Successor: Mastercard, Visa Stock Battle Lines Drawn — Who Wins?",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61187305/bill-ackman-vs-buffett-successor-mastercard-visa-stock-battle-lines-drawn-who-wins",
-      "ts": 1786643205,
-      "tickers": [
-        "MA",
-        "V",
-        "NFLX",
-        "PSUS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.321
-    },
-    {
-      "title": "Berkshire Hathaway 13F Preview: What Stock Moves Did Buffett Successor Greg Abel Make?",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61187293/berkshire-hathaway-13f-preview-what-stock-moves-did-buffett-successor-greg-abel-make",
-      "ts": 1786643189,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "KHC",
-        "BAC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.404
-    },
-    {
-      "title": "AI Was Supposed to Push Everything to the Cloud: Cisco Sees the Opposite",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61187247/cisco-on-premise-ai-infrastructure-next-wave-enterprise-ai",
-      "ts": 1786643121,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.489
-    },
-    {
-      "title": "10 Communication Services Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61186973/10-communication-services-stocks-whale-activity-today-s-session",
-      "ts": 1786642537,
-      "tickers": [
-        "SPCX",
-        "GOOGL",
-        "STUB",
-        "NFLX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.381
-    },
-    {
-      "title": "AMD Prepares Record $5B Bond Sale to Fuel Massive AI Expansion",
-      "url": "https://www.benzinga.com/markets/offerings/26/08/61186347/amd-prepares-record-5b-bond-sale-to-fuel-massive-ai-expansion",
-      "ts": 1786641273,
-      "tickers": [
-        "AMD",
-        "MSFT",
-        "TSM",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.464
-    },
-    {
-      "title": "'Anthropic CFO Krishna Rao is leading early IPO meetings with investors and has not discussed valuation, sources say'- CNBC",
-      "url": "https://www.benzinga.com/news/26/08/61186290/anthropic-cfo-krishna-rao-leading-early-ipo-meetings-investors-and-has-not-discussed-valuation-sourc",
-      "ts": 1786641136,
-      "tickers": [
-        "AMZN",
-        "GOOG",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.363
-    },
-    {
-      "title": "Chip Stocks Power S&P 500 to Record Highs, SanDisk Soars 15%: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61186049/chips-power-sp-500-record-cisco-sinks-gold-miners-crack-markets-thursday",
-      "ts": 1786640717,
-      "tickers": [
-        "XLK",
-        "CSCO",
-        "QQQ",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.466
     }
   ],
   "portfolio_brief": {
@@ -977,7 +946,7 @@
           "date": "2026-08-06",
           "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000040/zts-20260630.htm"
         },
-        "insider30d": 10
+        "insider30d": 1
       },
       "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1083,7 +1052,7 @@
           "date": "2026-08-05",
           "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm"
         },
-        "insider30d": 9
+        "insider30d": 6
       },
       "explain": "57 analysts cover it — 49 bullish, 7 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1115,7 +1084,7 @@
           "date": "2026-06-12",
           "url": "https://www.sec.gov/Archives/edgar/data/866787/000110465926073525/azo-20260509x10q.htm"
         },
-        "insider30d": 3
+        "insider30d": 1
       },
       "explain": "31 analysts cover it — 25 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1415,7 +1384,7 @@
           "date": "2026-06-09",
           "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
         },
-        "insider30d": 2
+        "insider30d": 0
       },
       "explain": "56 analysts cover it — 51 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
