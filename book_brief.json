@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Jaleel's book had a mixed Thursday, August 13, with the headline mover being <strong>Adobe (ADBE)</strong>, up +4.54% on the day — the session's strongest performer. The gain appears macro-driven rather than company-specific: easing oil prices and encouraging economic data cooled rate-hike fears, lifting software broadly, and M&A speculation around Workday (Silver Lake talks per Reuters) added a sympathetic bid to the sector. <strong>ServiceNow (NOW)</strong> (+1.85%) and <strong>SAP</strong> (+2.51%) rode the same current. On the positive side, <strong>Zoetis (ZTS)</strong> surged +3.13% and <strong>S&P Global (SPGI)</strong> added +3.07%, both meaningful moves for names that had been sitting in modest losses on an unrealized basis. ZTS in particular — down -3.7% overall — still has ground to recover, but today's price action is at least moving in the right thesis direction.</p><p>The drag came from <strong>RKLB (Rocket Lab)</strong>, the book's largest single weight at 15.7%, which slipped another -1.32%. With an AVOID verdict and a QARP of just 39.7, price and thesis are firmly diverging here — the position is the elephant in the room for a capital-preservation mandate. <strong>Expand Energy (EXE)</strong> fell -1.66% despite a STRONG BUY rating, and <strong>Neurocrine Biosciences (NBIX)</strong> dropped -3.62% — the sharpest single-name decline in the book — against a STRONG BUY and an 81.1 QARP, suggesting the selloff is noise or sector pressure rather than a fundamental change, but the -7.5% cumulative loss demands monitoring. <strong>Lululemon (LULU)</strong> slid another -1.08%, extending a -6.5% unrealized loss that sits alongside a live guidance-cut risk flag.</p><p>To watch: NVDA reports a key risk update on August 26 (export controls / AI-capex sentiment); ADBE's next catalyst is September 10, where the AI-disruption narrative — not the numbers — will likely set tone. BSX carries a slashed guidance flag with the next read not until October 20, meaning that elevated-severity risk sits quietly in the background for weeks. Overall the book is up 7.53% unrealized, but the concentration of weight in an AVOID-rated name (RKLB) and several names with open risk flags keeps the risk picture uneven.</p>",
+  "your_book": "<p>Friday, August 14 was a mixed but broadly resilient session for Jaleel's book, which sits on an unrealized gain of 6.74% overall. The damage was concentrated in a handful of names: Broadcom (AVGO) was the sharpest loser at –5.93% on the day, though at roughly 1.5% of the book the portfolio-level impact was contained. Zoetis (ZTS) fell –2.7%, ServiceNow (NOW) –2.55%, Adobe (ADBE) –2.39%, and Vertex (VRTX) –2.07% — tech and high-multiple software were clearly under pressure even as the headline on NOW's session included an analyst defending the software sector against AI-displacement fears. On the positive side, Neurocrine Biosciences (NBIX) added +1.26%, Boston Scientific (BSX) +0.27%, and the book's largest single weight, Rocket Lab (RKLB, 15.8%), was nearly flat at +0.19%.</p><p>The drift worth flagging is the divergence between ratings and price action in two places. ZTS carries a STRONG BUY and a QARP of 84.6 — the highest quality score in the book — yet it's down –6.3% in total and fell nearly 3% today; thesis and price are moving in opposite directions, which is either an opportunity or an early signal that the thesis needs retesting. Similarly, LULU sits on a –6.5% unrealized loss with a BUY verdict, but the guidance-cut flag (Americas comps –5%, fifth straight quarter) is a structural concern the rating hasn't fully absorbed. RKLB remains the elephant: a 15.8% weight — by far the largest position — rated AVOID with a QARP of just 36.6 and only a 2.4% gain to show for it.</p><p>Watch NVDA into August 26 (next catalyst), where export-control headlines and AI-capex sentiment can swing the chip complex quickly. ADBE's session headline was modestly positive — a Workday M&A rumor lifting peers — but the AI-narrative overhang and CFO exit remain unresolved heading into the September 10 report. The pharma cluster (GILD, NVS, NBIX, VRTX) carries a standing MFN/tariff policy flag that hasn't moved today but doesn't go away.</p>",
   "attention": [
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "Largest weight carries AVOID verdict and bottom-tier QARP (39.7)",
-      "note": "At 15.7% of the book, RKLB is the dominant position yet scores AVOID with a QARP of 39.7 — the lowest in the portfolio — and is down another -1.32% today; the size-to-conviction mismatch is the single biggest structural risk to a capital-preservation mandate."
+      "headline": "Largest weight, lowest quality — AVOID rating unresolved",
+      "note": "At 15.8% of the book, RKLB is nearly 6 points heavier than the next largest holding, yet it carries an AVOID verdict and a QARP of 36.6 — the weakest score in the portfolio — creating a significant concentration risk that contradicts Jaleel's capital-preservation mandate."
     },
     {
-      "ticker": "NBIX",
+      "ticker": "AVGO",
       "severity": "watch",
-      "headline": "Neurocrine dropped -3.62% today against a STRONG BUY / 81.1 QARP — find the catalyst",
-      "note": "The magnitude of today's move conflicts sharply with the highest-conviction rating in the pharma sleeve; the drug-pricing policy overhang flagged across the pharma cluster (GILD·NVS·NBIX·VRTX) is a plausible culprit and needs to be ruled in or out before the gap widens further."
+      "headline": "–5.93% single-session drop on a HOLD-QUAL name",
+      "note": "Broadcom's near-6% selloff today is the steepest single-day move in the book; with a HOLD-QUAL verdict and a QARP of only 64.9, the session warrants checking whether a specific catalyst (earnings, export-control news, or index rebalancing) drove the move before treating it as noise."
+    },
+    {
+      "ticker": "ZTS",
+      "severity": "watch",
+      "headline": "Highest QARP in the book, but –6.3% unrealized and falling",
+      "note": "Zoetis's STRONG BUY / QARP 84.6 thesis is diverging sharply from its price trend — down another 2.7% today and –6.3% overall — warranting a fresh check on whether the fundamental case remains intact or the market is seeing something the model isn't."
     },
     {
       "ticker": "LULU",
       "severity": "watch",
-      "headline": "Guidance-cut risk flag active; -6.5% unrealized and sliding again today",
-      "note": "With Americas comps down five straight quarters, margins pressured by tariffs, China stalled, and the next read on September 2, Lululemon's BUY verdict is increasingly in tension with the deteriorating fundamental picture — the thesis needs a hard re-check ahead of that date."
-    },
-    {
-      "ticker": "ZTS",
-      "severity": "note",
-      "headline": "Zoetis +3.13% today but still -3.7% overall — STRONG BUY thesis beginning to show up in price",
-      "note": "Today's move is the first meaningful price-thesis alignment for ZTS; worth confirming whether the session's gain was broad-market / sector driven or stock-specific before treating it as a trend."
+      "headline": "Guidance-cut flag active; –6.5% unrealized on a BUY-rated name",
+      "note": "With Americas comps negative for a fifth straight quarter, tariff margin pressure, and a stalled China business, the BUY verdict and the deteriorating fundamentals are in tension — the September 2 catalyst date is the next moment to reassess whether the rating still holds."
     }
   ],
-  "date": "2026-08-13",
-  "generated_at": "Aug 13, 4:13pm ET"
+  "date": "2026-08-14",
+  "generated_at": "Aug 14, 4:10pm ET"
 }
