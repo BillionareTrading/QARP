@@ -1,6 +1,6 @@
 {
   "date": "2026-08-14",
-  "generated_at": "Aug 14, 5:21am ET",
+  "generated_at": "Aug 14, 6:23am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,6 +168,12 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
+    "NVDA": {
+      "title": "AI Demand Is Booming. So Why Are CBRS and CSCO Sinking?",
+      "ts": 1786635705,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61182401/cerebras-cisco-stocks-ai-demand",
+      "wiim": false
+    },
     "NOW": {
       "title": "'Silver Lake in talks to buy Workday, sources say' - Reuters",
       "ts": 1786646535,
@@ -196,12 +202,6 @@
       "title": "Bill Ackman’s New Stock Picks Are Here. These ETFs Could Be Worth Watching",
       "ts": 1786645879,
       "url": "https://www.benzinga.com/etfs/specialty-etfs/26/08/61188697/bill-ackman-new-stock-picks-are-here-these-etfs-could-be-worth-watching",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "AI Demand Is Booming. So Why Are CBRS and CSCO Sinking?",
-      "ts": 1786635705,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61182401/cerebras-cisco-stocks-ai-demand",
       "wiim": false
     }
   },
@@ -502,6 +502,60 @@
   },
   "bz_news": [
     {
+      "title": "Market Analysis: Microsoft And Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/08/61202395/market-analysis-microsoft-and-competitors-software-industry",
+      "ts": 1786701521,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.363
+    },
+    {
+      "title": "Exploring The Competitive Space: Apple Versus Industry Peers In Technology Hardware, Storage &amp; Peripherals",
+      "url": "https://www.benzinga.com/news/26/08/61202394/exploring-competitive-space-apple-versus-industry-peers-technology-hardware-storage-amp-peripherals",
+      "ts": 1786701518,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.396
+    },
+    {
+      "title": "Lam Research to Spend More Than $3 Billion Expanding Its Global Chip R&D Network, CEO Tim Archer Says 'The Pace of Innovation Is Relentless'",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61202382/lam-research-to-invest-more-than-3-billion-to-expand-its-global-rd-lab-network-and-speed-up-ai-chip-development",
+      "ts": 1786701331,
+      "tickers": [
+        "LRCX",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.401
+    },
+    {
+      "title": "Goldman Sachs Courts Investors to Join Nvidia's $500 Billion AI Financing Initiative: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61202346/goldman-sachs-nvidia-500-billion-ai-financing",
+      "ts": 1786701086,
+      "tickers": [
+        "GS",
+        "APO",
+        "NVDA",
+        "BLK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.548
+    },
+    {
       "title": "Silver Lake's Workday Buyout Talks Could Be the First 'SaaSpocalypse' Opportunity: Analyst Says 'You've Got Data, You've Got Distribution, You're Still Gonna Win'",
       "url": "https://www.benzinga.com/markets/equities/26/08/61201878/silver-lakes-43-billion-workday-bid-marks-first-saaspocalypse-casualty",
       "ts": 1786697540,
@@ -689,7 +743,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.291
+      "relevance": 0.29
     },
     {
       "title": "Shares of software companies are trading higher, possibly amid broader market strength as promising economic data and easing oil prices reduce rate-hike concerns. Reports suggesting Silver Lake is in talks to acquire Workday may be lifting related peers.",
@@ -792,60 +846,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.319
-    },
-    {
-      "title": "Bill Ackman’s New Stock Picks Are Here. These ETFs Could Be Worth Watching",
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/08/61188697/bill-ackman-new-stock-picks-are-here-these-etfs-could-be-worth-watching",
-      "ts": 1786645879,
-      "tickers": [
-        "NFLX",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.357
-    },
-    {
-      "title": "UnitedHealth’s Crisis Deepens: Lawsuit Alleges Medicare Fraud, Algorithmic Care Denials and $237 Million Insider Sales",
-      "url": "https://www.benzinga.com/news/health-care/26/08/61188605/unitedhealths-crisis-deepens-lawsuit-alleges-medicare-fraud-algorithmic-care-denials-and-237-million-insider-sales",
-      "ts": 1786645678,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.314
-    },
-    {
-      "title": "CNBC Reports Tim Cook, Secretary Lutnick To Speak At Opening Of Apple Manufacturing Facility In Houston",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1786644684,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.255
-    },
-    {
-      "title": "IBM, OpenAI Target Legacy Systems Holding Back Enterprise AI",
-      "url": "https://www.benzinga.com/markets/large-cap/26/08/61187569/ibm-openai-target-legacy-systems-holding-back-enterprise-ai",
-      "ts": 1786643757,
-      "tickers": [
-        "IBM",
-        "SKYY",
-        "TDIV",
-        "TDVI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.391
     }
   ],
   "portfolio_brief": {
