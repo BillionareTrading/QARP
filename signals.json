@@ -1,6 +1,6 @@
 {
   "date": "2026-08-14",
-  "generated_at": "Aug 14, 8:00am ET",
+  "generated_at": "Aug 14, 8:53am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -415,17 +415,31 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "CSCO",
+      "firm": "HSBC",
+      "action": "Downgrades",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$120",
+      "price": 113.47,
+      "upside": 5.8,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
     "CSCO": {
-      "date": "2026-08-13",
-      "firm": "UBS",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$138",
-      "upside": 21.6
+      "date": "2026-08-14",
+      "firm": "HSBC",
+      "action": "Downgrades",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$120",
+      "upside": 5.8
     },
     "CRM": {
       "date": "2026-08-12",
@@ -501,6 +515,63 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Cisco, Netflix, CrowdStrike And An Industrial Stock On CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61206932/cisco-netflix-crowdstrike-and-an-industrial-stock-on-cnbcs-final-trades",
+      "ts": 1786711555,
+      "tickers": [
+        "CSCO",
+        "NFLX",
+        "UNP",
+        "CRWD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.378
+    },
+    {
+      "title": "HSBC Downgrades Cisco Systems to Hold, Lowers Price Target to $120",
+      "url": "https://www.benzinga.com/news/26/08/61206751/hsbc-downgrades-cisco-systems-hold-lowers-price-target-120",
+      "ts": 1786711273,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.484
+    },
+    {
+      "title": "NVIDIA Says ‘Free AI’ Is Great For Chips — Jensen Huang’s Open-Source Bet Could Fuel GPU Demand",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61205810/nvidia-says-free-ai-is-great-for-chips-jensen-huangs-open-source-bet-could-fuel-gpu-demand",
+      "ts": 1786709774,
+      "tickers": [
+        "NVDA",
+        "META",
+        "MSFT",
+        "FFOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.512
+    },
+    {
+      "title": "Boeing And RTX Enter Agreements With The Pentagon To Increase Production Of Key Components Of Standard Missile-3 Block IB And Increase Production Of Components For Standard Missile-3 Block IIA Suface-To-Air Interceptors",
+      "url": "https://www.benzinga.com/news/26/08/61205578/boeing-and-rtx-enter-agreements-pentagon-increase-production-key-components-standard-missile-3-block",
+      "ts": 1786709374,
+      "tickers": [
+        "BA",
+        "LMT",
+        "RTX",
+        "WAR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.282
+    },
     {
       "title": "MSFT Could Emerge as Big Tech's Free Cash Flow King in 2027 While GOOGL, META Stay Negative: Analyst",
       "url": "https://www.benzinga.com/markets/equities/26/08/61203409/msft-could-emerge-as-big-techs-free-cash-flow-king-in-2027-while-googl-meta-stay-negative-analyst",
@@ -652,7 +723,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.474
+      "relevance": 0.473
     },
     {
       "title": "Apple Makes Major AI Strategy Shift in China, Develops Own LLM With Alibaba’s Support in Bid to Counter Huawei: Report",
@@ -774,7 +845,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.473
+      "relevance": 0.472
     },
     {
       "title": "OpenAI Taps Ex-Wiz Executive to Lead Its Global Sales Push",
@@ -788,66 +859,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.29
-    },
-    {
-      "title": "Shares of software companies are trading higher, possibly amid broader market strength as promising economic data and easing oil prices reduce rate-hike concerns. Reports suggesting Silver Lake is in talks to acquire Workday may be lifting related peers.",
-      "url": "https://www.benzinga.com/quote/FTNT",
-      "ts": 1786648895,
-      "tickers": [
-        "IVDA",
-        "EXOD",
-        "QMLS",
-        "UPLD"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.402
-    },
-    {
-      "title": "Nebius Has Found a New Way to Finance AI Infrastructure",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61189751/nebius-new-way-finance-ai-infrastructure-build-up",
-      "ts": 1786647792,
-      "tickers": [
-        "NBIS",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.398
-    },
-    {
-      "title": "Shares of semiconductor companies are trading higher, possibly amid overall market strength as promising economic data reduces rate-hike concerns. South Korea's KOSPI, which initiated a chip selloff last month, rebounded and entered a bull market.",
-      "url": "https://www.benzinga.com/quote/ALAB",
-      "ts": 1786647633,
-      "tickers": [
-        "PENG",
-        "COHU",
-        "ICHR",
-        "LRCX"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.486
-    },
-    {
-      "title": "'Silver Lake in talks to buy Workday, sources say' - Reuters",
-      "url": "https://www.benzinga.com/news/26/08/61189131/silver-lake-in-talks-to-buy-workday-sources-say-reuters",
-      "ts": 1786646535,
-      "tickers": [
-        "WDAY",
-        "CRM",
-        "DOCU",
-        "ORCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.335
     }
   ],
   "portfolio_brief": {
