@@ -1,6 +1,6 @@
 {
   "date": "2026-08-14",
-  "generated_at": "Aug 14, 8:53am ET",
+  "generated_at": "Aug 14, 9:40am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -127,31 +127,31 @@
   "sectors": [
     {
       "sector": "Foundry, Fabricator & Idm Chip",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "AI cloud providers CoreWeave and Nebius reported better-than-expected Q2…",
       "note": "After AI cloud providers CoreWeave and Nebius reported better-than-expected Q2 results and server and storage maker Super Micro Computer reported better-than-expected Q4 financial results, all of which may help bolster the demand outlook for the sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Energy price gains due to concerns that the U.S. and Iran aren't making …",
       "note": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Software",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
       "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Chemical & Coatings",
@@ -169,9 +169,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "AI Demand Is Booming. So Why Are CBRS and CSCO Sinking?",
-      "ts": 1786635705,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61182401/cerebras-cisco-stocks-ai-demand",
+      "title": "NVIDIA Says ‘Free AI’ Is Great For Chips — Jensen Huang’s Open-Source Bet Could Fuel GPU Demand",
+      "ts": 1786709774,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61205810/nvidia-says-free-ai-is-great-for-chips-jensen-huangs-open-source-bet-could-fuel-gpu-demand",
       "wiim": false
     },
     "NOW": {
@@ -214,7 +214,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 144.26,
+      "price": 144.34,
       "upside": null,
       "held": false,
       "uni": true,
@@ -228,8 +228,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 305.26,
-      "upside": -13.6,
+      "price": 306.58,
+      "upside": -14.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -242,8 +242,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 135.55,
-      "upside": 7.0,
+      "price": 134.03,
+      "upside": 8.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -256,8 +256,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 341.7,
-      "upside": 17.1,
+      "price": 339.46,
+      "upside": 17.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -270,8 +270,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 135.55,
-      "upside": 5.5,
+      "price": 134.03,
+      "upside": 6.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -284,8 +284,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 341.7,
-      "upside": 0.4,
+      "price": 339.46,
+      "upside": 1.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -298,8 +298,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 201.37,
-      "upside": 4.3,
+      "price": 199.19,
+      "upside": 5.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -312,8 +312,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 201.37,
-      "upside": 1.8,
+      "price": 199.19,
+      "upside": 2.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -326,8 +326,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$138",
-      "price": 113.47,
-      "upside": 21.6,
+      "price": 112.45,
+      "upside": 22.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -340,8 +340,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$140",
-      "price": 113.47,
-      "upside": 23.4,
+      "price": 112.45,
+      "upside": 24.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -354,8 +354,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$123",
-      "price": 113.47,
-      "upside": 8.4,
+      "price": 112.45,
+      "upside": 9.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -368,8 +368,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 113.47,
-      "upside": 32.2,
+      "price": 112.45,
+      "upside": 33.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -382,8 +382,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 113.47,
-      "upside": 19.0,
+      "price": 112.45,
+      "upside": 20.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -396,8 +396,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 113.47,
-      "upside": 45.4,
+      "price": 112.45,
+      "upside": 46.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -410,8 +410,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 113.47,
-      "upside": 19.0,
+      "price": 112.45,
+      "upside": 20.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -424,8 +424,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "price": 113.47,
-      "upside": 5.8,
+      "price": 112.45,
+      "upside": 6.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -439,7 +439,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "upside": 5.8
+      "upside": 6.7
     },
     "CRM": {
       "date": "2026-08-12",
@@ -448,7 +448,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 4.3
+      "upside": 5.4
     },
     "MRK": {
       "date": "2026-08-12",
@@ -457,7 +457,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 5.5
+      "upside": 6.7
     },
     "HD": {
       "date": "2026-08-12",
@@ -466,7 +466,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "upside": 0.4
+      "upside": 1.0
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -475,7 +475,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -13.6
+      "upside": -14.0
     },
     "PG": {
       "date": "2026-08-07",
@@ -493,7 +493,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 9.5
+      "upside": 10.2
     },
     "CVX": {
       "date": "2026-08-05",
@@ -502,7 +502,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 3.7
+      "upside": 3.0
     },
     "NKE": {
       "date": "2026-08-04",
@@ -511,10 +511,67 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -3.0
+      "upside": -2.8
     }
   },
   "bz_news": [
+    {
+      "title": "The ‘Right Tail’ for Stocks Just Got Better: Here’s the Number Behind It",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61207886/22v-research-right-tail-equities-cpi-ppi-inflation-gauge",
+      "ts": 1786712853,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "WMT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.349
+    },
+    {
+      "title": "Luigi Mangione Reportedly Set to Plead Guilty in Federal Case Over UnitedHealthcare CEO Brian Thompson’s Killing: UNH Stock in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61201762/unitedhealth-luigi-mangione-plea",
+      "ts": 1786712778,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.288
+    },
+    {
+      "title": "This Cisco Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Friday",
+      "url": "https://www.benzinga.com/news/26/08/61207746/this-cisco-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-friday-2",
+      "ts": 1786712640,
+      "tickers": [
+        "CSCO",
+        "TMUS",
+        "CNK",
+        "ARX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.502
+    },
+    {
+      "title": "What's Going On With AMD Stock Friday?",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61207465/whats-going-on-with-amd-stock-friday-6",
+      "ts": 1786712354,
+      "tickers": [
+        "AMD",
+        "META",
+        "MSFT",
+        "ORCL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.408
+    },
     {
       "title": "Cisco, Netflix, CrowdStrike And An Industrial Stock On CNBC’s ‘Final Trades’",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61206932/cisco-netflix-crowdstrike-and-an-industrial-stock-on-cnbcs-final-trades",
@@ -528,7 +585,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.378
+      "relevance": 0.379
     },
     {
       "title": "HSBC Downgrades Cisco Systems to Hold, Lowers Price Target to $120",
@@ -686,18 +743,6 @@
       "relevance": 0.33
     },
     {
-      "title": "Luigi Mangione to Reportedly Plead Guilty in Federal Case Over UnitedHealthcare CEO Brian Thompson’s Killing: UNH Stock in Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61201762/unitedhealth-luigi-mangione-plea",
-      "ts": 1786697192,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.3
-    },
-    {
       "title": "JBIC, Citibank, And JPMorgan Chase Co-Finance $2.397B For Pennsylvania Natural Gas Plant Powering AI Data Centers",
       "url": "https://www.benzinga.com/quote/JPM",
       "ts": 1786690683,
@@ -803,7 +848,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.42
+      "relevance": 0.421
     },
     {
       "title": "UBS Maintains Buy on Cisco Systems, Raises Price Target to $138",
@@ -816,49 +861,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.471
-    },
-    {
-      "title": "QUICK SPARK: Trump's Tariff Refunds Are Massive — And Hitting Balance Sheets",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61193502/quick-spark-trumps-tariff-refunds-are-massive-and-hitting-balance-sheets",
-      "ts": 1786652230,
-      "tickers": [
-        "AAPL",
-        "AMZN",
-        "NKE",
-        "GM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.309
-    },
-    {
-      "title": "SK Hynix Is Surging. Here’s How ETF Traders Are Playing the AI Memory Boom",
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/08/61193424/sk-hynix-is-surging-heres-how-etf-traders-are-playing-the-ai-memory-boom",
-      "ts": 1786652172,
-      "tickers": [
-        "SKHY",
-        "INTC",
-        "MU",
-        "STX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.472
-    },
-    {
-      "title": "OpenAI Taps Ex-Wiz Executive to Lead Its Global Sales Push",
-      "url": "https://www.benzinga.com/markets/private-markets/26/08/61191167/openai-taps-ex-wiz-executive-to-lead-its-global-sales-push",
-      "ts": 1786650799,
-      "tickers": [
-        "MSFT",
-        "UBER"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.29
     }
   ],
   "portfolio_brief": {
@@ -965,7 +967,7 @@
     },
     "BSX": {
       "name": "Boston Scientific",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 11,
         "buy": 19,
@@ -1118,9 +1120,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "AI Demand Is Booming. So Why Are CBRS and CSCO Sinking?",
-        "ts": 1786635705,
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61182401/cerebras-cisco-stocks-ai-demand",
+        "title": "NVIDIA Says ‘Free AI’ Is Great For Chips — Jensen Huang’s Open-Source Bet Could Fuel GPU Demand",
+        "ts": 1786709774,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61205810/nvidia-says-free-ai-is-great-for-chips-jensen-huangs-open-source-bet-could-fuel-gpu-demand",
         "wiim": false
       },
       "filings": {
@@ -1403,7 +1405,7 @@
     },
     "NVS": {
       "name": "Novartis",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 6,
         "buy": 10,
@@ -1423,7 +1425,7 @@
         "periodic": null,
         "insider30d": 0
       },
-      "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
