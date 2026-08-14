@@ -1,6 +1,6 @@
 {
   "date": "2026-08-14",
-  "generated_at": "Aug 14, 12:30pm ET",
+  "generated_at": "Aug 14, 1:24pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -127,10 +127,10 @@
   "sectors": [
     {
       "sector": "Foundry, Fabricator & Idm Chip",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "AI cloud providers CoreWeave and Nebius reported better-than-expected Q2…",
       "note": "After AI cloud providers CoreWeave and Nebius reported better-than-expected Q2 results and server and storage maker Super Micro Computer reported better-than-expected Q4 financial results, all of which may help bolster the demand outlook for the sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
@@ -168,6 +168,12 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
+    "AVGO": {
+      "title": "QUICK SPARK: Dell, JPMorgan, Merck All Mark New All-Time Highs",
+      "ts": 1786655989,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61197258/dell-jpmorgan-merck-all-mark-new-all-time-highs",
+      "wiim": false
+    },
     "NVDA": {
       "title": "NVIDIA Says ‘Free AI’ Is Great For Chips — Jensen Huang’s Open-Source Bet Could Fuel GPU Demand",
       "ts": 1786709774,
@@ -175,21 +181,15 @@
       "wiim": false
     },
     "NOW": {
-      "title": "'Silver Lake in talks to buy Workday, sources say' - Reuters",
-      "ts": 1786646535,
-      "url": "https://www.benzinga.com/news/26/08/61189131/silver-lake-in-talks-to-buy-workday-sources-say-reuters",
+      "title": "AI Killing Software? Analyst Says ‘I Don’t See a Software Apocalypse’",
+      "ts": 1786704105,
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61203396/ai-killing-software-analyst-says-i-dont-see-a-software-apocalypse",
       "wiim": false
     },
     "ABT": {
       "title": "Congressman Ditches Blue Chip Stocks for Municipal Bonds: Here Are the Sales",
       "ts": 1786657526,
       "url": "https://www.benzinga.com/news/politics/26/08/61198103/congressman-ditches-blue-chip-stocks-for-municipal-bonds-here-are-the-sales",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "QUICK SPARK: Dell, JPMorgan, Merck All Mark New All-Time Highs",
-      "ts": 1786655989,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61197258/dell-jpmorgan-merck-all-mark-new-all-time-highs",
       "wiim": false
     },
     "UBER": {
@@ -208,7 +208,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 144.4,
+      "price": 144.34,
       "upside": null,
       "held": false,
       "uni": true,
@@ -222,7 +222,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 305.19,
+      "price": 305.31,
       "upside": -13.6,
       "held": false,
       "uni": true,
@@ -236,8 +236,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 134.4,
-      "upside": 7.9,
+      "price": 134.89,
+      "upside": 7.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -250,7 +250,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 338.69,
+      "price": 338.83,
       "upside": 18.1,
       "held": false,
       "uni": true,
@@ -264,8 +264,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 134.4,
-      "upside": 6.4,
+      "price": 134.89,
+      "upside": 6.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -278,8 +278,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 338.69,
-      "upside": 1.3,
+      "price": 338.83,
+      "upside": 1.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,8 +320,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$138",
-      "price": 111.13,
-      "upside": 24.2,
+      "price": 111.27,
+      "upside": 24.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +334,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$140",
-      "price": 111.13,
-      "upside": 26.0,
+      "price": 111.27,
+      "upside": 25.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +348,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$123",
-      "price": 111.13,
-      "upside": 10.7,
+      "price": 111.27,
+      "upside": 10.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -362,8 +362,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 111.13,
-      "upside": 35.0,
+      "price": 111.27,
+      "upside": 34.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -376,8 +376,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 111.13,
-      "upside": 21.5,
+      "price": 111.27,
+      "upside": 21.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -390,8 +390,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 111.13,
-      "upside": 48.5,
+      "price": 111.27,
+      "upside": 48.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -404,8 +404,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 111.13,
-      "upside": 21.5,
+      "price": 111.27,
+      "upside": 21.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -418,8 +418,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "price": 111.13,
-      "upside": 8.0,
+      "price": 111.27,
+      "upside": 7.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -433,7 +433,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "upside": 8.0
+      "upside": 7.8
     },
     "CRM": {
       "date": "2026-08-12",
@@ -451,7 +451,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 6.4
+      "upside": 6.0
     },
     "HD": {
       "date": "2026-08-12",
@@ -460,7 +460,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "upside": 1.3
+      "upside": 1.2
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -487,7 +487,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.1
+      "upside": 9.9
     },
     "CVX": {
       "date": "2026-08-05",
@@ -496,7 +496,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$205",
-      "upside": 2.0
+      "upside": 1.8
     },
     "NKE": {
       "date": "2026-08-04",
@@ -505,10 +505,66 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -2.1
+      "upside": -2.2
     }
   },
   "bz_news": [
+    {
+      "title": "Russell 2000 Extends Records, SanDisk Rallies 7%: Stock Market Today",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/61220081/russell-2000-record-highs-sandisk-corp-stocks-rallies-friday",
+      "ts": 1786728170,
+      "tickers": [
+        "NU",
+        "AVGO",
+        "QQQ",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.505
+    },
+    {
+      "title": "CNBC Halftime Report Final Trades: Visa, UnitedHealth Group, Lockheed Martin",
+      "url": "https://www.benzinga.com/quote/LMT",
+      "ts": 1786726857,
+      "tickers": [
+        "UNH",
+        "V",
+        "LMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.467
+    },
+    {
+      "title": "Forget Bitcoin, S&P 500: Pokémon Cards Are Up 28% In 2026 and Beating Them Both",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61219196/forget-bitcoin-sp-500-pokemon-cards-are-up-28-in-2026-and-beating-them-both",
+      "ts": 1786726546,
+      "tickers": [
+        "$BTC",
+        "SPY",
+        "WMT",
+        "EBAY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.374
+    },
+    {
+      "title": "'Struggling Airline Norse Atlantic in Talks to Lease Boeing 787s' - Bloomberg News",
+      "url": "https://www.benzinga.com/news/26/08/61218420/struggling-airline-norse-atlantic-talks-lease-boeing-787s-bloomberg-news",
+      "ts": 1786725488,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.301
+    },
     {
       "title": "Live On CNBC, Kevin Simpson Announces Bought More Goldman Sachs Group",
       "url": "https://www.benzinga.com/quote/GS",
@@ -783,63 +839,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.379
-    },
-    {
-      "title": "HSBC Downgrades Cisco Systems to Hold, Lowers Price Target to $120",
-      "url": "https://www.benzinga.com/news/26/08/61206751/hsbc-downgrades-cisco-systems-hold-lowers-price-target-120",
-      "ts": 1786711273,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.484
-    },
-    {
-      "title": "NVIDIA Says ‘Free AI’ Is Great For Chips — Jensen Huang’s Open-Source Bet Could Fuel GPU Demand",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61205810/nvidia-says-free-ai-is-great-for-chips-jensen-huangs-open-source-bet-could-fuel-gpu-demand",
-      "ts": 1786709774,
-      "tickers": [
-        "NVDA",
-        "META",
-        "MSFT",
-        "FFOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.512
-    },
-    {
-      "title": "Boeing And RTX Enter Agreements With The Pentagon To Increase Production Of Key Components Of Standard Missile-3 Block IB And Increase Production Of Components For Standard Missile-3 Block IIA Suface-To-Air Interceptors",
-      "url": "https://www.benzinga.com/news/26/08/61205578/boeing-and-rtx-enter-agreements-pentagon-increase-production-key-components-standard-missile-3-block",
-      "ts": 1786709374,
-      "tickers": [
-        "BA",
-        "LMT",
-        "RTX",
-        "WAR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.282
-    },
-    {
-      "title": "MSFT Could Emerge as Big Tech's Free Cash Flow King in 2027 While GOOGL, META Stay Negative: Analyst",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61203409/msft-could-emerge-as-big-techs-free-cash-flow-king-in-2027-while-googl-meta-stay-negative-analyst",
-      "ts": 1786704149,
-      "tickers": [
-        "MSFT",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.346
     }
   ],
   "portfolio_brief": {
@@ -993,9 +992,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "'Silver Lake in talks to buy Workday, sources say' - Reuters",
-        "ts": 1786646535,
-        "url": "https://www.benzinga.com/news/26/08/61189131/silver-lake-in-talks-to-buy-workday-sources-say-reuters",
+        "title": "AI Killing Software? Analyst Says ‘I Don’t See a Software Apocalypse’",
+        "ts": 1786704105,
+        "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61203396/ai-killing-software-analyst-says-i-dont-see-a-software-apocalypse",
         "wiim": false
       },
       "filings": {
