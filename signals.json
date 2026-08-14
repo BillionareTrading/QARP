@@ -1,6 +1,6 @@
 {
   "date": "2026-08-14",
-  "generated_at": "Aug 14, 5:55pm ET",
+  "generated_at": "Aug 14, 6:37pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -167,6 +167,18 @@
       "ts": 1786648895,
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
+    },
+    "UBER": {
+      "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
+      "ts": 1786746736,
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
+      "wiim": false
+    },
+    "SPGI": {
+      "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
+      "ts": 1786746736,
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
+      "wiim": false
     },
     "AVGO": {
       "title": "Russell 2000 Extends Records, SanDisk Rallies 7%: Stock Market Today",
@@ -492,6 +504,21 @@
   },
   "bz_news": [
     {
+      "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
+      "ts": 1786746736,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.381
+    },
+    {
       "title": "Epic Games App Store Fight Takes New Turn as Apple Seeks Settlement Talks",
       "url": "https://www.benzinga.com/markets/private-markets/26/08/61232093/epic-games-app-store-fight-takes-new-turn-as-apple-seeks-settlement-talks",
       "ts": 1786742820,
@@ -501,7 +528,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.204
+      "relevance": 0.205
     },
     {
       "title": "'Anthropic Revenue Surges to Over $11.5B in Second Quarter'- Bloomberg",
@@ -790,18 +817,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.376
-    },
-    {
-      "title": "Tiger Global Management Decreases Stake In Microsoft Corp By 9% To 2,266,913 Shares",
-      "url": "https://www.benzinga.com/quote/MSFT",
-      "ts": 1786731441,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.363
     }
   ],
   "portfolio_brief": {
@@ -981,7 +996,12 @@
         "score": 1.11,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
+        "ts": 1786746736,
+        "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1215,7 +1235,12 @@
         "score": 1.18,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
+        "ts": 1786746736,
+        "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
