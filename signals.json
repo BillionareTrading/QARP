@@ -1,6 +1,6 @@
 {
   "date": "2026-08-15",
-  "generated_at": "Aug 15, 9:49am ET",
+  "generated_at": "Aug 15, 9:58am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,22 +168,28 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
-    "AVGO": {
-      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
-      "ts": 1786783480,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
-      "wiim": false
-    },
     "NVDA": {
       "title": "'Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center' - WSJ Exclusive",
       "ts": 1786752113,
       "url": "https://www.benzinga.com/news/contracts/26/08/61233167/nvidia-downsizes-plans-for-250-billion-guarantee-of-openai-data-center-wsj-exclusive",
       "wiim": false
     },
+    "RKLB": {
+      "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
+      "ts": 1786801915,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
+      "wiim": false
+    },
     "UBER": {
-      "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
-      "ts": 1786746736,
-      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
+      "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
+      "ts": 1786801915,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
+      "ts": 1786783480,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
       "wiim": false
     },
     "SPGI": {
@@ -490,6 +496,21 @@
   },
   "bz_news": [
     {
+      "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
+      "ts": 1786801915,
+      "tickers": [
+        "BA",
+        "NVDA",
+        "AMAT",
+        "RKLB"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.419
+    },
+    {
       "title": "Earnings Volatility Watch: Wolfspeed and 9 Other Stocks Could Swing Up to 17% this Week",
       "url": "https://www.benzinga.com/markets/market-summary/26/08/61234405/earnings-volatility-watch-wolfspeed-implied-moves-august-2026",
       "ts": 1786798851,
@@ -569,7 +590,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.205
+      "relevance": 0.204
     },
     {
       "title": "'Anthropic Revenue Surges to Over $11.5B in Second Quarter'- Bloomberg",
@@ -673,7 +694,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.332
+      "relevance": 0.333
     },
     {
       "title": "Coatue Management Raises Share Stake In Microsoft By 18.4% To 2.9M Shares",
@@ -794,21 +815,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.374
-    },
-    {
-      "title": "S&P 500 Set Records, SanDisk Jumped 60% Off July's Lows: This Week on Wall Street",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61228030/sp500-record-close-sandisk-storage-rally-week-review",
-      "ts": 1786738791,
-      "tickers": [
-        "WMT",
-        "FSLR",
-        "STX",
-        "TGT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.485
     }
   ],
   "portfolio_brief": {
@@ -828,7 +834,12 @@
         "score": 1.04,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
+        "ts": 1786801915,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -989,9 +1000,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
-        "ts": 1786746736,
-        "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
+        "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
+        "ts": 1786801915,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
         "wiim": false
       },
       "filings": {
