@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-14",
-  "generated_at": "Aug 14, 6:56pm ET",
+  "date": "2026-08-15",
+  "generated_at": "Aug 15, 6:03am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 14",
+      "when": "Aug 15",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -168,6 +168,18 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
+    "AVGO": {
+      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
+      "ts": 1786783480,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "'Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center' - WSJ Exclusive",
+      "ts": 1786752113,
+      "url": "https://www.benzinga.com/news/contracts/26/08/61233167/nvidia-downsizes-plans-for-250-billion-guarantee-of-openai-data-center-wsj-exclusive",
+      "wiim": false
+    },
     "UBER": {
       "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
       "ts": 1786746736,
@@ -179,35 +191,9 @@
       "ts": 1786746736,
       "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
       "wiim": false
-    },
-    "AVGO": {
-      "title": "Russell 2000 Extends Records, SanDisk Rallies 7%: Stock Market Today",
-      "ts": 1786728170,
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61220081/russell-2000-record-highs-sandisk-corp-stocks-rallies-friday",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "Applied Materials Has Better Growth Prospects Than It Did 32% Ago; Retail Sales Stumble",
-      "ts": 1786720868,
-      "url": "https://www.benzinga.com/Opinion/26/08/61214732/applied-materials-has-better-growth-prospects-than-it-did-32-percent-ago-retail-sales-stumble",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-07",
-      "ticker": "PG",
-      "firm": "Argus Research",
-      "action": "Downgrades",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "",
-      "price": 144.55,
-      "upside": null,
-      "held": false,
-      "uni": true,
-      "qarp": "BUY"
-    },
     {
       "date": "2026-08-10",
       "ticker": "AAPL",
@@ -504,6 +490,46 @@
   },
   "bz_news": [
     {
+      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
+      "ts": 1786783480,
+      "tickers": [
+        "AMZN",
+        "AMD",
+        "GOOGL",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.449
+    },
+    {
+      "title": "Luigi Mangione Says ‘I Shot Mr. Thompson’ in Court as He Pleads Guilty Over UnitedHealthcare CEO’s Killing",
+      "url": "https://www.benzinga.com/news/legal/26/08/61233632/luigi-mangione-says-i-shot-mr-thompson-in-court-as-he-pleads-guilty-over-unitedhealthcare-ceos-killing",
+      "ts": 1786761386,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.186
+    },
+    {
+      "title": "'Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center' - WSJ Exclusive",
+      "url": "https://www.benzinga.com/news/contracts/26/08/61233167/nvidia-downsizes-plans-for-250-billion-guarantee-of-openai-data-center-wsj-exclusive",
+      "ts": 1786752113,
+      "tickers": [
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.497
+    },
+    {
       "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
       "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
       "ts": 1786746736,
@@ -780,43 +806,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.359
-    },
-    {
-      "title": "Apple Stock: 64% of Benzinga Viewers Have Owned It. Here’s How Many Still Do",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61223517/apple-stock-64-of-benzinga-viewers-have-owned-it-heres-how-many-still-do",
-      "ts": 1786732581,
-      "tickers": [
-        "AAPL",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.388
-    },
-    {
-      "title": "Tiger Global Management Takes New Stake In Visa Inc With 798,697 Shares",
-      "url": "https://www.benzinga.com/quote/V",
-      "ts": 1786731750,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.407
-    },
-    {
-      "title": "Tiger Global Management Decreases Stake In Unitedhealth Group Inc By 15% To 297,452 Shares",
-      "url": "https://www.benzinga.com/quote/UNH",
-      "ts": 1786731596,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.376
     }
   ],
   "portfolio_brief": {
@@ -1066,9 +1055,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Applied Materials Has Better Growth Prospects Than It Did 32% Ago; Retail Sales Stumble",
-        "ts": 1786720868,
-        "url": "https://www.benzinga.com/Opinion/26/08/61214732/applied-materials-has-better-growth-prospects-than-it-did-32-percent-ago-retail-sales-stumble",
+        "title": "'Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center' - WSJ Exclusive",
+        "ts": 1786752113,
+        "url": "https://www.benzinga.com/news/contracts/26/08/61233167/nvidia-downsizes-plans-for-250-billion-guarantee-of-openai-data-center-wsj-exclusive",
         "wiim": false
       },
       "filings": {
@@ -1329,9 +1318,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Russell 2000 Extends Records, SanDisk Rallies 7%: Stock Market Today",
-        "ts": 1786728170,
-        "url": "https://www.benzinga.com/markets/market-summary/26/08/61220081/russell-2000-record-highs-sandisk-corp-stocks-rallies-friday",
+        "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
+        "ts": 1786783480,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
         "wiim": false
       },
       "filings": {
