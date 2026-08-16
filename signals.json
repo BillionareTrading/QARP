@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-15",
-  "generated_at": "Aug 15, 6:54pm ET",
+  "date": "2026-08-16",
+  "generated_at": "Aug 16, 6:03am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 15",
+      "when": "Aug 16",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -168,6 +168,12 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
+    "AVGO": {
+      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
+      "ts": 1786783480,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
+      "wiim": false
+    },
     "NVDA": {
       "title": "'Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center' - WSJ Exclusive",
       "ts": 1786752113,
@@ -184,12 +190,6 @@
       "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
       "ts": 1786801915,
       "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
-      "ts": 1786783480,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
       "wiim": false
     },
     "SPGI": {
@@ -496,6 +496,18 @@
   },
   "bz_news": [
     {
+      "title": "Ray Dalio Champions 'Radical Transparency' in the Workplace, Says 'Important Issues Are Apparent Instead of Hidden'",
+      "url": "https://www.benzinga.com/personal-finance/financial-advisors/26/08/61236245/ray-dalio-champions-radical-transparency-in-the-workplace-says-important-issues-are-apparent-instead-of-hidden",
+      "ts": 1786868264,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.303
+    },
+    {
       "title": "These Three Metrics Explain Why S&P 500 Index Has Hit Record High",
       "url": "https://www.benzinga.com/markets/equities/26/08/61235562/these-three-metrics-explain-why-the-sp-500-index-has-hit-a-record-high",
       "ts": 1786812680,
@@ -537,7 +549,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.42
+      "relevance": 0.419
     },
     {
       "title": "Earnings Volatility Watch: Wolfspeed and 9 Other Stocks Could Swing Up to 17% this Week",
@@ -568,6 +580,21 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.449
+    },
+    {
+      "title": "Anthropic’s Revenue Could Soar From $47 Billion to $200 Billion by 2028 as Bankers Build a Massive AI Valuation Case Ahead of Its IPO: Report (UPDATED)",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61233673/anthropic-200-billion-2028-revenue-2-trillion-valuation",
+      "ts": 1786762635,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "MSFT",
+        "PLTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.358
     },
     {
       "title": "Luigi Mangione Says ‘I Shot Mr. Thompson’ in Court as He Pleads Guilty Over UnitedHealthcare CEO’s Killing",
@@ -619,7 +646,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.204
+      "relevance": 0.205
     },
     {
       "title": "'Anthropic Revenue Surges to Over $11.5B in Second Quarter'- Bloomberg",
@@ -672,7 +699,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.35
+      "relevance": 0.349
     },
     {
       "title": "Berkshire Hathaway Doubles Down on Homebuilders, Makes Alphabet Top 3 Holding",
@@ -699,7 +726,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.352
+      "relevance": 0.353
     },
     {
       "title": "Coatue Management Reports Share Stake Of 12.1M Shares In Intel",
@@ -723,7 +750,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.333
+      "relevance": 0.332
     },
     {
       "title": "Coatue Management Raises Share Stake In Microsoft By 18.4% To 2.9M Shares",
@@ -783,7 +810,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.382
+      "relevance": 0.381
     },
     {
       "title": "Lone Pine Capital Raises Share Stake In Visa By 78.9% To 165,960 Class A Shares",
@@ -796,30 +823,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.373
-    },
-    {
-      "title": "Lone Pine Capital Reports Share Stake Of 2.6M Shares In Home Depot",
-      "url": "https://www.benzinga.com/m/26/08/61228798/lone-pine-capital-reports-share-stake-2-6m-shares-home-depot",
-      "ts": 1786739298,
-      "tickers": [
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.371
-    },
-    {
-      "title": "Viking Global Investors Raises Share Stake In Boeing Co By 2.5% To 3.3 Mln Shares",
-      "url": "https://www.benzinga.com/m/26/08/61228787/viking-global-investors-raises-share-stake-boeing-co-2-5-3-3-mln-shares",
-      "ts": 1786739282,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.403
     }
   ],
   "portfolio_brief": {
@@ -1122,7 +1125,7 @@
           "date": "2026-07-21",
           "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
         },
-        "insider30d": 19
+        "insider30d": 16
       },
       "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
@@ -1292,7 +1295,7 @@
           "date": "2026-08-06",
           "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm"
         },
-        "insider30d": 4
+        "insider30d": 2
       },
       "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
