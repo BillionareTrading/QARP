@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at": "Aug 17, 6:51am ET",
+  "generated_at": "Aug 17, 7:40am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -174,16 +174,16 @@
       "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
       "wiim": false
     },
-    "AVGO": {
-      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
-      "ts": 1786783480,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
-      "wiim": false
-    },
     "NVDA": {
       "title": "'Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center' - WSJ Exclusive",
       "ts": 1786752113,
       "url": "https://www.benzinga.com/news/contracts/26/08/61233167/nvidia-downsizes-plans-for-250-billion-guarantee-of-openai-data-center-wsj-exclusive",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
+      "ts": 1786783480,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
       "wiim": false
     },
     "UBER": {
@@ -496,6 +496,51 @@
   },
   "bz_news": [
     {
+      "title": "Bill Gates’ Foundation Cut $800 Million in Q2 From Warren Buffett’s Berkshire Hathaway — Here’s Where It Put the Money Instead",
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61242416/bill-gates-foundation-cut-800-million-in-q2-from-warren-buffetts-berkshire-hathaway-heres-where-it-put-the-money-instead",
+      "ts": 1786966474,
+      "tickers": [
+        "HD",
+        "MSFT",
+        "WM",
+        "FDXF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.249
+    },
+    {
+      "title": "Michael Burry Takes Victory Lap as Big Tech’s $3 Trillion AI Spending Tab Comes Into Focus",
+      "url": "https://www.benzinga.com/news/26/08/61241596/michael-burry-takes-victory-lap-as-big-techs-3-trillion-ai-spending-tab-comes-into-focus",
+      "ts": 1786964485,
+      "tickers": [
+        "GOOG",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.382
+    },
+    {
+      "title": "What Makes the AI Music Stop: a $1.5 Trillion Mountain of Hidden Leverage",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61241373/what-makes-the-ai-music-stop-a-1-5-trillion-mountain-of-hidden-leverage",
+      "ts": 1786964094,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.323
+    },
+    {
       "title": "Alibaba’s AI Pivot Deepens, Plans to Offload Gaming Business For at Least $1.5 Billion: Report",
       "url": "https://www.benzinga.com/m-a/26/08/61241112/alibabas-ai-pivot-deepens-plans-to-offload-gaming-business-for-at-least-1-5-billion-report",
       "ts": 1786963125,
@@ -535,9 +580,9 @@
       "relevance": 0.19
     },
     {
-      "title": "Stock Market Today: Dow Futures Slip, S&P 500 Rises as September Fed Hike Odds Fall to 30% — SanDisk, Micron, HIVE in Focus",
+      "title": "Stock Market Today: Dow Futures Slip, S&P 500 Rises as September Fed Hike Odds Fall to 30%—SanDisk, Micron, HIVE in Focus",
       "url": "https://www.benzinga.com/markets/equities/26/08/61240267/stock-market-today-dow-futures-slip-sp-500-rises-as-september-fed-hike-odds-fall-to-30-sandisk-micron-hive-in-focus",
-      "ts": 1786960941,
+      "ts": 1786960935,
       "tickers": [
         "SPY",
         "$BTC",
@@ -547,7 +592,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.5
+      "relevance": 0.502
     },
     {
       "title": "Comparing Microsoft With Industry Competitors In Software Industry",
@@ -790,48 +835,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.433
-    },
-    {
-      "title": "Apple's 'Ted Lasso' Breaks Records, Trump Thanks Tim Cook and More: This Week In Appleverse",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61236399/top-tech-entertainment-stories-apple-ai-tesla",
-      "ts": 1786878075,
-      "tickers": [
-        "AAPL",
-        "TSLA",
-        "BABA",
-        "SSNLF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.277
-    },
-    {
-      "title": "Ray Dalio Champions 'Radical Transparency' in the Workplace, Says 'Important Issues Are Apparent Instead of Hidden'",
-      "url": "https://www.benzinga.com/personal-finance/financial-advisors/26/08/61236245/ray-dalio-champions-radical-transparency-in-the-workplace-says-important-issues-are-apparent-instead-of-hidden",
-      "ts": 1786868264,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.303
-    },
-    {
-      "title": "Anthropic’s Revenue Could Soar From $47 Billion to $200 Billion by 2028 as Bankers Build a Massive AI Valuation Case Ahead of Its IPO: Report (UPDATED)",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61233673/anthropic-200-billion-2028-revenue-2-trillion-valuation",
-      "ts": 1786762635,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "MSFT",
-        "PLTR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.359
     }
   ],
   "portfolio_brief": {
