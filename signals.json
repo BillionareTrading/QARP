@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at": "Aug 17, 5:57am ET",
+  "generated_at": "Aug 17, 6:45am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,6 +168,12 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
+    "RKLB": {
+      "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
+      "ts": 1786801915,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
+      "wiim": false
+    },
     "AVGO": {
       "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
       "ts": 1786783480,
@@ -178,12 +184,6 @@
       "title": "'Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center' - WSJ Exclusive",
       "ts": 1786752113,
       "url": "https://www.benzinga.com/news/contracts/26/08/61233167/nvidia-downsizes-plans-for-250-billion-guarantee-of-openai-data-center-wsj-exclusive",
-      "wiim": false
-    },
-    "RKLB": {
-      "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
-      "ts": 1786801915,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
       "wiim": false
     },
     "UBER": {
@@ -496,6 +496,84 @@
   },
   "bz_news": [
     {
+      "title": "Alibaba’s AI Pivot Deepens, Plans to Offload Gaming Business For at Least $1.5 Billion: Report",
+      "url": "https://www.benzinga.com/m-a/26/08/61241112/alibabas-ai-pivot-deepens-plans-to-offload-gaming-business-for-at-least-1-5-billion-report",
+      "ts": 1786963125,
+      "tickers": [
+        "AAPL",
+        "META",
+        "GOOG",
+        "BABA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.368
+    },
+    {
+      "title": "Home Depot Gears Up For Q2 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61240805/home-depot-gears-up-for-q2-print-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts-2",
+      "ts": 1786962172,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.444
+    },
+    {
+      "title": "Rick Scott Declares ‘We Are the World’s Innovators,’ Warns Socialists ‘Undermine Our American Dream’",
+      "url": "https://www.benzinga.com/news/politics/26/08/61240739/rick-scott-declares-we-are-the-worlds-innovators-warns-socialists-undermine-our-american-dream",
+      "ts": 1786961831,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.19
+    },
+    {
+      "title": "Stock Market Today: Dow Futures Slip, S&P 500 Rises as September Fed Hike Odds Fall to 30% — SanDisk, Micron, HIVE in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61240267/stock-market-today-dow-futures-slip-sp-500-rises-as-september-fed-hike-odds-fall-to-30-sandisk-micron-hive-in-focus",
+      "ts": 1786960941,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "HIVE",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.5
+    },
+    {
+      "title": "Comparing Microsoft With Industry Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/08/61240148/comparing-microsoft-industry-competitors-software-industry",
+      "ts": 1786960711,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.328
+    },
+    {
+      "title": "Assessing Apple's Performance Against Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/08/61240147/assessing-apple-s-performance-against-competitors-technology-hardware-storage-amp-peripherals-indust",
+      "ts": 1786960707,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.377
+    },
+    {
       "title": "Top Economist Warns Trump’s Immigration Policies Are Hurting American Workers: ‘Only Reason Economy Isn’t in Complete Shambles Is...’",
       "url": "https://www.benzinga.com/markets/macro-economic-events/26/08/61240004/top-economist-warns-trumps-immigration-policies-are-hurting-american-workers-only-reason-economy-isnt-in-complete-shambles-is",
       "ts": 1786960186,
@@ -584,7 +662,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.269
+      "relevance": 0.27
     },
     {
       "title": "Americans Are Pulling Back on Spending as US Retail Sales Fell 0.6% in July: Amazon, Non-Store Retailers Hit Hardest",
@@ -656,7 +734,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.301
+      "relevance": 0.3
     },
     {
       "title": "S&P 500/Dow Jones Outlook: Top Stock Market News To Watch This Week",
@@ -671,7 +749,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.49
+      "relevance": 0.489
     },
     {
       "title": "More Than 30% of Americans 80 and Older Still Carry Mortgage Debt. The Number Climbs to 41% for Those 65 to 79, Visa Says",
@@ -738,81 +816,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.303
-    },
-    {
-      "title": "These Three Metrics Explain Why S&P 500 Index Has Hit Record High",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61235562/these-three-metrics-explain-why-the-sp-500-index-has-hit-a-record-high",
-      "ts": 1786812680,
-      "tickers": [
-        "AMZN",
-        "NVDA",
-        "JPM",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.428
-    },
-    {
-      "title": "EXCLUSIVE: Ross Gerber Says SPCX Valuation Reflects the ‘Elon Premium,’ But Remains Skeptical of Musk’s Timelines: ‘I Don’t Trust…’",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61235361/exclusive-ross-gerber-says-spcx-valuation-reflects-the-elon-premium-but-remains-skeptical-of-musks-timelines-i-dont-trust",
-      "ts": 1786804283,
-      "tickers": [
-        "SPCX",
-        "AAPL",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.384
-    },
-    {
-      "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
-      "ts": 1786801915,
-      "tickers": [
-        "BA",
-        "NVDA",
-        "AMAT",
-        "RKLB"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.42
-    },
-    {
-      "title": "Earnings Volatility Watch: Wolfspeed and 9 Other Stocks Could Swing Up to 17% this Week",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61234405/earnings-volatility-watch-wolfspeed-implied-moves-august-2026",
-      "ts": 1786798851,
-      "tickers": [
-        "WMT",
-        "WOLF",
-        "BILL",
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.423
-    },
-    {
-      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
-      "ts": 1786783480,
-      "tickers": [
-        "AMZN",
-        "AMD",
-        "GOOGL",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.449
+      "relevance": 0.302
     },
     {
       "title": "Anthropic’s Revenue Could Soar From $47 Billion to $200 Billion by 2028 as Bankers Build a Massive AI Valuation Case Ahead of Its IPO: Report (UPDATED)",
@@ -828,18 +832,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.359
-    },
-    {
-      "title": "Luigi Mangione Says ‘I Shot Mr. Thompson’ in Court as He Pleads Guilty Over UnitedHealthcare CEO’s Killing",
-      "url": "https://www.benzinga.com/news/legal/26/08/61233632/luigi-mangione-says-i-shot-mr-thompson-in-court-as-he-pleads-guilty-over-unitedhealthcare-ceos-killing",
-      "ts": 1786761386,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.186
     }
   ],
   "portfolio_brief": {
