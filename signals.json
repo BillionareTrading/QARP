@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at": "Aug 17, 7:40am ET",
+  "generated_at": "Aug 17, 8:33am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -409,9 +409,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-17",
+      "ticker": "HD",
+      "firm": "Stifel",
+      "action": "Maintains",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$340",
+      "price": 338.86,
+      "upside": 0.3,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "HD": {
+      "date": "2026-08-17",
+      "firm": "Stifel",
+      "action": "Maintains",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$340",
+      "upside": 0.3
+    },
     "CSCO": {
       "date": "2026-08-14",
       "firm": "HSBC",
@@ -438,15 +461,6 @@
       "stance": "bullish",
       "pt": "$143",
       "upside": 5.3
-    },
-    "HD": {
-      "date": "2026-08-12",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Sector Perform",
-      "stance": "neutral",
-      "pt": "$343",
-      "upside": 1.2
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -496,6 +510,31 @@
   },
   "bz_news": [
     {
+      "title": "Bitcoin ETFs See Largest Outflow in Six Weeks: What's Going On?",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61243545/bitcoin-etfs-see-largest-outflow-in-six-weeks-whats-going-on",
+      "ts": 1786968672,
+      "tickers": [
+        "$BTC",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.397
+    },
+    {
+      "title": "Stifel Maintains Hold on Home Depot, Raises Price Target to $340",
+      "url": "https://www.benzinga.com/news/26/08/61242671/stifel-maintains-hold-home-depot-raises-price-target-340",
+      "ts": 1786967404,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.451
+    },
+    {
       "title": "Bill Gates’ Foundation Cut $800 Million in Q2 From Warren Buffett’s Berkshire Hathaway — Here’s Where It Put the Money Instead",
       "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61242416/bill-gates-foundation-cut-800-million-in-q2-from-warren-buffetts-berkshire-hathaway-heres-where-it-put-the-money-instead",
       "ts": 1786966474,
@@ -508,7 +547,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.249
+      "relevance": 0.248
     },
     {
       "title": "Michael Burry Takes Victory Lap as Big Tech’s $3 Trillion AI Spending Tab Comes Into Focus",
@@ -807,34 +846,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.201
-    },
-    {
-      "title": "Gary Black Says Tesla Bulls Are Ignoring Valuation: ‘Loving the Product Doesn’t Mean You Should Love the Stock’",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61237036/gary-black-says-tesla-bulls-are-ignoring-valuation-loving-the-product-doesnt-mean-you-should-love-the-stock",
-      "ts": 1786890393,
-      "tickers": [
-        "TSLA",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.324
-    },
-    {
-      "title": "CoreWeave Jumped After Earnings, But Key Risks Could Derail Rally",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61236924/coreweave-stock-jumped-after-earnings-but-key-risks-could-derail-the-rally",
-      "ts": 1786889516,
-      "tickers": [
-        "CRWV",
-        "SPCX",
-        "META",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.433
     }
   ],
   "portfolio_brief": {
