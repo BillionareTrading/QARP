@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at": "Aug 17, 8:33am ET",
+  "generated_at": "Aug 17, 9:07am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -168,16 +168,16 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
+    "NVDA": {
+      "title": "NVIDIA Says OpenAI Committed To Substantial Deployments Of NVIDIA AI Infrastructure Through 2030; Each Generation Of NVIDIA AI Factory Systems Deployed At Ports-Pike Could Represent About 1.5M NVIDIA GPUs, Or About $150B To $200B In NVIDIA Revenue; Guarantee At Ports-Pike Effective In Phases As Data Centers Open 2028-2030; OpenAI Commitments Represents Roughly $600B Of NVIDIA Compute Through 2030",
+      "ts": 1786971200,
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "wiim": false
+    },
     "RKLB": {
       "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
       "ts": 1786801915,
       "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "'Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center' - WSJ Exclusive",
-      "ts": 1786752113,
-      "url": "https://www.benzinga.com/news/contracts/26/08/61233167/nvidia-downsizes-plans-for-250-billion-guarantee-of-openai-data-center-wsj-exclusive",
       "wiim": false
     },
     "AVGO": {
@@ -510,6 +510,103 @@
   },
   "bz_news": [
     {
+      "title": "Viking Global Bets Big On SpaceX While Ditching CoreWeave, Alphabet in Q2",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61245245/viking-global-bets-big-on-spacex-while-ditching-coreweave-alphabet-in-q2",
+      "ts": 1786971848,
+      "tickers": [
+        "CRWV",
+        "SPCX",
+        "TSLA",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.418
+    },
+    {
+      "title": "Veeva Systems To Rally Around 13%? Here Are 10 Top Analyst Forecasts For Monday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61245089/veeva-systems-to-rally-around-13-here-are-10-top-analyst-forecasts-for-monday",
+      "ts": 1786971700,
+      "tickers": [
+        "INTU",
+        "HD",
+        "AEP",
+        "PGR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.497
+    },
+    {
+      "title": "Live On CNBC, OpenAI’s Co-Founder And President Greg Brockman Says You Can See The Depth Of Usage Is Growing Incredibly Fast; Do Think It Is Possible The U.S. And China Will Strike An Al Deal; Open-Weight Models Are An Important Part Of The Al Ecosystem",
+      "url": "https://www.benzinga.com/quote/FXI",
+      "ts": 1786971222,
+      "tickers": [
+        "SPY",
+        "MSFT",
+        "FXI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.312
+    },
+    {
+      "title": "NVIDIA Says OpenAI Committed To Substantial Deployments Of NVIDIA AI Infrastructure Through 2030; Each Generation Of NVIDIA AI Factory Systems Deployed At Ports-Pike Could Represent About 1.5M NVIDIA GPUs, Or About $150B To $200B In NVIDIA Revenue; Guarantee At Ports-Pike Effective In Phases As Data Centers Open 2028-2030; OpenAI Commitments Represents Roughly $600B Of NVIDIA Compute Through 2030",
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "ts": 1786971200,
+      "tickers": [
+        "NVDA",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.447
+    },
+    {
+      "title": "Live On CNBC, OpenAI’s Co-Founder And President Greg Brockman Says We Must Take This Moment On Security Seriously; We Believe The Defenders Can Win On Security; We Have Had Too Lax Of A Standard On Security In The Industry, Security Has To Be A Top Level Priority In The Industry; Every Departure Here Gets Scrutinized Because We're In The Limelight",
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "ts": 1786970872,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.273
+    },
+    {
+      "title": "Stock Market Futures Mixed: Dow Futures Slips, Nasdaq 100, S&P 500 Rises as Fed Rate Hike Odds Drop to 30% for September—SanDisk, Micron, HIVE Digital in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61240267/stock-market-today-dow-futures-slip-sp-500-rises-as-september-fed-hike-odds-fall-to-30-sandisk-micron-hive-in-focus",
+      "ts": 1786970811,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "HIVE",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.508
+    },
+    {
+      "title": "Nvidia Secures Land, Power And Shell Capacity To Host Compute Capacity Via Partnership With SB Energy At The PORTS-Pike Technology Campus In Ohio For Customer OpenAI",
+      "url": "https://www.benzinga.com/news/26/08/61244396/nvidia-secures-land-power-and-shell-capacity-host-compute-capacity-partnership-sb-energy-ports-pike-",
+      "ts": 1786970372,
+      "tickers": [
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.435
+    },
+    {
       "title": "Bitcoin ETFs See Largest Outflow in Six Weeks: What's Going On?",
       "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61243545/bitcoin-etfs-see-largest-outflow-in-six-weeks-whats-going-on",
       "ts": 1786968672,
@@ -617,21 +714,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.19
-    },
-    {
-      "title": "Stock Market Today: Dow Futures Slip, S&P 500 Rises as September Fed Hike Odds Fall to 30%—SanDisk, Micron, HIVE in Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61240267/stock-market-today-dow-futures-slip-sp-500-rises-as-september-fed-hike-odds-fall-to-30-sandisk-micron-hive-in-focus",
-      "ts": 1786960935,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "HIVE",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.502
     },
     {
       "title": "Comparing Microsoft With Industry Competitors In Software Industry",
@@ -762,90 +844,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.286
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61238641/stock-market-will-sp-500-open-up-or-down-today-17",
-      "ts": 1786947723,
-      "tickers": [
-        "$POL",
-        "SPY",
-        "QQQ",
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Justin Wolfers Says AI Won't Kill Your Job — but It Will Change What It's Worth: 'Lab-Grown Diamonds Didn't Abolish Diamonds",
-      "url": "https://www.benzinga.com/markets/economic-data/26/08/61238598/justin-wolfers-ai-jobs-value-lab-grown-diamonds",
-      "ts": 1786947281,
-      "tickers": [
-        "META",
-        "AMZN",
-        "MSFT",
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.316
-    },
-    {
-      "title": "Ross Gerber Says 'Now Is a Good Time' to Buy iPhone 17 as Apple Prepares for Potential Price Hike With Next Model: 'If You're Looking…'",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61238487/ross-gerber-says-now-is-a-good-time-to-buy-iphone-17",
-      "ts": 1786944929,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.276
-    },
-    {
-      "title": "Ross Gerber Questions Bitcoin's Everyday Use Despite 'Endless Promise' Of Its Utility: Tesla Investor Says Haven't Sold Any BTC Unlike Michael Saylor",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61238339/ross-gerber-bitcoin-everyday-use-tesla-investor-michael-saylor",
-      "ts": 1786941956,
-      "tickers": [
-        "$BTC",
-        "MSTR",
-        "MA",
-        "$ZEC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.3
-    },
-    {
-      "title": "S&P 500/Dow Jones Outlook: Top Stock Market News To Watch This Week",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61237187/sp-500-and-dow-jones-outlook-top-stock-market-news-for-the-week",
-      "ts": 1786899710,
-      "tickers": [
-        "WMT",
-        "TGT",
-        "HD",
-        "TJX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.489
-    },
-    {
-      "title": "More Than 30% of Americans 80 and Older Still Carry Mortgage Debt. The Number Climbs to 41% for Those 65 to 79, Visa Says",
-      "url": "https://www.benzinga.com/news/topics/26/08/61237165/more-than-30-of-americans-80-and-older-still-carry-mortgage-debt-the-number-climbs-to-41-for-those-65-to-79-visa-says",
-      "ts": 1786897913,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.201
     }
   ],
   "portfolio_brief": {
@@ -1100,16 +1098,16 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "'Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center' - WSJ Exclusive",
-        "ts": 1786752113,
-        "url": "https://www.benzinga.com/news/contracts/26/08/61233167/nvidia-downsizes-plans-for-250-billion-guarantee-of-openai-data-center-wsj-exclusive",
+        "title": "NVIDIA Says OpenAI Committed To Substantial Deployments Of NVIDIA AI Infrastructure Through 2030; Each Generation Of NVIDIA AI Factory Systems Deployed At Ports-Pike Could Represent About 1.5M NVIDIA GPUs, Or About $150B To $200B In NVIDIA Revenue; Guarantee At Ports-Pike Effective In Phases As Data Centers Open 2028-2030; OpenAI Commitments Represents Roughly $600B Of NVIDIA Compute Through 2030",
+        "ts": 1786971200,
+        "url": "https://www.benzinga.com/quote/MSFT",
         "wiim": false
       },
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-07-02",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm"
+          "date": "2026-08-17",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm"
         },
         "periodic": {
           "form": "10-Q",
