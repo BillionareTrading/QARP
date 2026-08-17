@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at": "Aug 17, 9:40am ET",
+  "generated_at": "Aug 17, 9:51am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -106,8 +106,8 @@
     "ABT": "2026-10-13",
     "ZTS": "2026-11-02",
     "BSX": "2026-10-20",
-    "NOW": "2026-10-27",
     "UBER": "2026-11-02",
+    "NOW": "2026-10-27",
     "AZO": "2026-09-21",
     "NVDA": "2026-08-26",
     "DHR": "2026-10-19",
@@ -168,6 +168,12 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
+    "AVGO": {
+      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
+      "ts": 1786783480,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
+      "wiim": false
+    },
     "NVDA": {
       "title": "OpenAI Says Ports-Pike Project Expected To Create 35,000 Construction Jobs During Six-year Buildout Through 2032 & 2,500 Long-Term Operating Jobs",
       "ts": 1786972214,
@@ -178,12 +184,6 @@
       "title": "Consumer Tech (Aug 10-14): Trump Faces Federal Lawsuits, Apple & Alibaba To Create AI Model For China & More",
       "ts": 1786801915,
       "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
-      "ts": 1786783480,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
       "wiim": false
     },
     "UBER": {
@@ -208,8 +208,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 306.84,
-      "upside": -14.1,
+      "price": 305.24,
+      "upside": -13.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -222,8 +222,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 134.75,
-      "upside": 7.6,
+      "price": 135.8,
+      "upside": 6.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -236,8 +236,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 335.45,
-      "upside": 19.2,
+      "price": 334.17,
+      "upside": 19.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,8 +250,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 134.75,
-      "upside": 6.1,
+      "price": 135.8,
+      "upside": 5.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -264,8 +264,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 335.45,
-      "upside": 2.3,
+      "price": 334.17,
+      "upside": 2.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -278,8 +278,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 193.69,
-      "upside": 8.4,
+      "price": 191.24,
+      "upside": 9.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -292,8 +292,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 193.69,
-      "upside": 5.8,
+      "price": 191.24,
+      "upside": 7.2,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -306,8 +306,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$138",
-      "price": 111.33,
-      "upside": 24.0,
+      "price": 112.76,
+      "upside": 22.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,8 +320,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$140",
-      "price": 111.33,
-      "upside": 25.8,
+      "price": 112.76,
+      "upside": 24.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +334,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$123",
-      "price": 111.33,
-      "upside": 10.5,
+      "price": 112.76,
+      "upside": 9.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +348,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 111.33,
-      "upside": 34.7,
+      "price": 112.76,
+      "upside": 33.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -362,8 +362,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 111.33,
-      "upside": 21.3,
+      "price": 112.76,
+      "upside": 19.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -376,8 +376,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 111.33,
-      "upside": 48.2,
+      "price": 112.76,
+      "upside": 46.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -390,8 +390,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 111.33,
-      "upside": 21.3,
+      "price": 112.76,
+      "upside": 19.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -404,8 +404,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "price": 111.33,
-      "upside": 7.8,
+      "price": 112.76,
+      "upside": 6.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -418,8 +418,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "price": 200.0,
-      "upside": 4.0,
+      "price": 201.29,
+      "upside": 3.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -432,8 +432,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "price": 335.45,
-      "upside": 1.4,
+      "price": 334.17,
+      "upside": 1.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -447,7 +447,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "upside": 4.0
+      "upside": 3.3
     },
     "HD": {
       "date": "2026-08-17",
@@ -456,7 +456,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "upside": 1.4
+      "upside": 1.7
     },
     "CSCO": {
       "date": "2026-08-14",
@@ -465,7 +465,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "upside": 7.8
+      "upside": 6.4
     },
     "CRM": {
       "date": "2026-08-12",
@@ -474,7 +474,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 8.4
+      "upside": 9.8
     },
     "MRK": {
       "date": "2026-08-12",
@@ -483,7 +483,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 6.1
+      "upside": 5.3
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -492,7 +492,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -14.1
+      "upside": -13.6
     },
     "PG": {
       "date": "2026-08-07",
@@ -510,7 +510,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.9
+      "upside": 10.2
     },
     "NKE": {
       "date": "2026-08-04",
@@ -519,10 +519,25 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": -0.4
+      "upside": -0.2
     }
   },
   "bz_news": [
+    {
+      "title": "David Tepper's Latest AI Bet Is CoreWeave",
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61246987/david-tepper-coreweave-q2-13f",
+      "ts": 1786974207,
+      "tickers": [
+        "CRWV",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.39
+    },
     {
       "title": "'Big Short' Investor Steve Eisman Says AI Has an 'Achilles' Heel' — But It's Too Early to Short the Boom",
       "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61246697/steve-eisman-ai-achilles-heel",
@@ -618,7 +633,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.497
+      "relevance": 0.496
     },
     {
       "title": "Live On CNBC, OpenAI’s Co-Founder And President Greg Brockman Says You Can See The Depth Of Usage Is Growing Incredibly Fast; Do Think It Is Possible The U.S. And China Will Strike An Al Deal; Open-Weight Models Are An Important Part Of The Al Ecosystem",
@@ -725,7 +740,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.249
+      "relevance": 0.248
     },
     {
       "title": "Michael Burry Takes Victory Lap as Big Tech’s $3 Trillion AI Spending Tab Comes Into Focus",
@@ -843,18 +858,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.274
-    },
-    {
-      "title": "JPMorgan Says Hormuz Tensions and a Possible Super El Nino Could Trigger a Global Food Crisis by 2027",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61239423/jpmorgan-says-food-inflation-could-double-by-2027-as-hormuz-tensions-and-el-nino-collide",
-      "ts": 1786955071,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.26
     }
   ],
   "portfolio_brief": {
@@ -897,7 +900,7 @@
     },
     "ABT": {
       "name": "Abbott Laboratories",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 11,
         "buy": 13,
@@ -925,7 +928,7 @@
         },
         "insider30d": 1
       },
-      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ZTS": {
       "name": "Zoetis",
@@ -991,38 +994,6 @@
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "NOW": {
-      "name": "ServiceNow",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 16,
-        "buy": 33,
-        "hold": 4,
-        "sell": 2,
-        "strongSell": 0,
-        "total": 55,
-        "bullish": 49,
-        "bearish": 2,
-        "label": "Strong Buy",
-        "score": 1.15,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-22",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000072/now-20260722.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-23",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm"
-        },
-        "insider30d": 6
-      },
-      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "UBER": {
       "name": "Uber",
       "qarp": "BUY",
@@ -1059,6 +1030,38 @@
         "insider30d": 6
       },
       "explain": "57 analysts cover it — 49 bullish, 7 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "NOW": {
+      "name": "ServiceNow",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 16,
+        "buy": 33,
+        "hold": 4,
+        "sell": 2,
+        "strongSell": 0,
+        "total": 55,
+        "bullish": 49,
+        "bearish": 2,
+        "label": "Strong Buy",
+        "score": 1.15,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000072/now-20260722.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm"
+        },
+        "insider30d": 6
+      },
+      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "AZO": {
       "name": "AutoZone",
@@ -1131,7 +1134,7 @@
     },
     "DHR": {
       "name": "Danaher",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 12,
         "buy": 15,
@@ -1159,7 +1162,7 @@
         },
         "insider30d": 16
       },
-      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "ADBE": {
       "name": "Adobe",
@@ -1394,7 +1397,7 @@
     },
     "NVS": {
       "name": "Novartis",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 6,
         "buy": 10,
@@ -1414,7 +1417,7 @@
         "periodic": null,
         "insider30d": 0
       },
-      "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
@@ -1585,25 +1588,6 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $5.4B (+7.5% YoY), diluted EPS $0.61 (+15.1% YoY). (as reported, GAAP)"
     },
-    "NOW": {
-      "period": "Q2 FY2026",
-      "filed": "2026-07-23",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm",
-      "revenue": {
-        "fmt": "$4.0B",
-        "yoy": 24.0
-      },
-      "eps": {
-        "val": 0.29,
-        "yoy": -21.6
-      },
-      "net_income": {
-        "fmt": "$298M"
-      },
-      "margin": 7.5,
-      "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
-    },
     "UBER": {
       "period": "Q2 FY2026",
       "filed": "2026-08-05",
@@ -1622,6 +1606,25 @@
       },
       "margin": 16.9,
       "summary": "Q2 FY2026 — revenue $14.2B (+12.2% YoY), diluted EPS $1.17 (+85.7% YoY), net margin 17%. (as reported, GAAP)"
+    },
+    "NOW": {
+      "period": "Q2 FY2026",
+      "filed": "2026-07-23",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm",
+      "revenue": {
+        "fmt": "$4.0B",
+        "yoy": 24.0
+      },
+      "eps": {
+        "val": 0.29,
+        "yoy": -21.6
+      },
+      "net_income": {
+        "fmt": "$298M"
+      },
+      "margin": 7.5,
+      "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
     },
     "AZO": {
       "period": "Q3 FY2026",
