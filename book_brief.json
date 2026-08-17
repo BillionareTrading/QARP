@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Friday was a mixed-to-soft session for Jaleel's book, with the overall unrealized gain sitting at +6.74% but several meaningful intraday drags pulling against that cushion. The heaviest single-day hit came from <strong>Broadcom (AVGO)</strong>, which fell nearly 6% on the session — newsflow flagging that Stanley Druckenmiller dumped AVGO in Q2 is a credibility headwind even for a small weight. <strong>Zoetis (ZTS)</strong> shed 2.7% and remains in the red overall at −6.3%, despite carrying a STRONG BUY verdict and the portfolio's highest QARP score among its peer set; that divergence between the model's conviction and price action is widening and deserves honest scrutiny. <strong>ServiceNow (NOW)</strong> and <strong>Adobe (ADBE)</strong> each dropped roughly 2.4–2.6%, the former purely on rate/multiple sensitivity and the latter still haunted by AI-disruption narrative rather than numbers.</p><p>On the positive side, the book's largest position, <strong>Rocket Lab (RKLB)</strong> at 15.8% weight, was essentially flat (+0.19%) — which is notable given it carries an AVOID verdict and a QARP of just 36.6, the weakest in the book. That concentration in a flagged name remains the structural tension here. <strong>Neurocrine Biosciences (NBIX)</strong> was the day's bright spot at +1.26%, although it too sits in the red overall (−6.3%). <strong>Boston Scientific (BSX)</strong> and <strong>Uber (UBER)</strong> held steady with negligible moves.</p><p>What to watch: the tech cluster (NOW, ADBE, AVGO) is under simultaneous pressure from valuation, narrative, and smart-money exits — three separate vectors converging. NVDA's report on August 26 is the next hard catalyst; the WSJ story about Nvidia downsizing its OpenAI data-center commitment is precisely the kind of AI-capex-doubt headline the risk flag warned about. LULU and AZO are both underwater with September and October catalysts ahead. The book is not in distress, but the drift between model verdicts and price reality — particularly in ZTS, LULU, and RKLB — is getting harder to ignore.</p>",
+  "your_book": "<p>Monday was a rough session for Jaleel's book, with the portfolio's overall unrealized gain sitting at 5.95% and most of the heavier holdings giving ground. The two biggest drags by weight were ServiceNow (NOW, ~6.1% of the book), which fell 5.08% — the sharpest single-day loss in the portfolio — and Adobe (ADBE, ~5.0%), which dropped 3.78%. Lululemon (LULU, ~4.1%) and On Holding (ONON, ~4.3%) both shed roughly 3% as well, continuing a soft stretch for the consumer-apparel sleeve. On the positive side, Rocket Lab (RKLB, ~8.1%) added 2.28%, Vertex Pharma (VRTX) gained 1.94%, and Neurocrine (NBIX) ticked up 1.16%, though none of those are large enough weights to offset the damage from NOW and ADBE.</p><p>Drift is the real concern in two spots. LULU is down 9.5% overall and carries an elevated risk flag for consecutive Americas comp declines and margin compression — the BUY verdict increasingly needs justification as price and thesis pull apart. Similarly, ZTS (Zoetis, ~9.5% weight — the second-largest position) is down 7.3% in total and slipped another 1.11% today, yet the system rates it STRONG BUY with a solid QARP of 76.2; that divergence needs watching closely. RKLB remains the structural oddity: it's the third-largest position by weight at 8.1%, bounced today, but carries an AVOID verdict and a QARP of just 36.6 — the lowest in the book by a wide margin.</p><p>Watch three upcoming catalysts: NVDA reports August 26, carrying export-control overhang; ADBE's next read comes September 10, where the AI-moat narrative rather than fundamentals will likely drive the reaction; and LULU's next event is September 2, which could either stabilize or deepen what is now the book's worst unrealized loss. The pharma cluster (GILD, NVS, NBIX, VRTX) got a small bid today but remains under a drug-pricing policy cloud.</p>",
   "attention": [
+    {
+      "ticker": "NOW",
+      "severity": "act",
+      "headline": "Fell 5.08% today — largest single-day loss in the book",
+      "note": "No fresh negative catalyst is visible in the provided data, making this a potentially sentiment- or macro-driven flush, but at ~6.1% weight a continued de-rate of high-multiple software would accelerate drawdown; the thesis and price need to be reconciled before the Oct 27 earnings date."
+    },
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "Largest position carries AVOID verdict and lowest QARP in the book",
-      "note": "At 15.8% weight — nearly double the next largest holding — Rocket Lab's AVOID flag and QARP of 36.6 represent a structural mismatch with a capital-preservation mandate that demands an explicit size or exit decision."
+      "headline": "Third-largest position carries an AVOID verdict and the book's lowest QARP (36.6)",
+      "note": "An 8.1% weight in a capital-preservation book rated AVOID is a structural mismatch that today's 2.28% bounce does nothing to resolve — a sizing decision is overdue."
     },
     {
-      "ticker": "AVGO",
+      "ticker": "LULU",
       "severity": "watch",
-      "headline": "−5.94% Friday; Druckenmiller exit adds narrative pressure",
-      "note": "A high-profile Q2 dump by Druckenmiller is a sentiment overhang on top of an already borderline HOLD-QUAL verdict and the lowest QARP among the tech names; worth monitoring whether the selling is isolated or signals broader institutional rotation out of the stock."
+      "headline": "Down 9.5% overall, elevated risk flag, next read September 2",
+      "note": "Five straight quarters of negative Americas comps, tariff-driven margin pressure, and a stalled China business mean the BUY verdict is increasingly unsupported by price action, and the September 2 event is a binary risk."
     },
     {
       "ticker": "ZTS",
       "severity": "watch",
-      "headline": "STRONG BUY / highest QARP yet −6.3% overall and falling",
-      "note": "The widening gap between the model's top conviction and persistent price weakness in Zoetis is a classic thesis-vs.-price divergence — either the model is early, or something structural in animal-health fundamentals is being mispriced; the August 26 NVDA report won't clarify this, so ZTS needs its own independent re-underwrite."
-    },
-    {
-      "ticker": "NVDA",
-      "severity": "watch",
-      "headline": "WSJ: Nvidia downsizing OpenAI data-center commitment ahead of Aug 26 earnings",
-      "note": "The existing export-control risk flag now has a second vector — AI-capex scaling doubt — and the August 26 report is the next hard test of whether the STRONG BUY verdict survives contact with guidance."
+      "headline": "Second-largest position down 7.3% overall despite STRONG BUY rating",
+      "note": "The widening gap between a 76.2 QARP / STRONG BUY verdict and a deepening unrealized loss demands a reassessment of whether the thesis is intact or the rating is lagging deteriorating fundamentals."
     }
   ],
-  "date": "2026-08-16",
-  "generated_at": "Aug 16, 4:57pm ET"
+  "date": "2026-08-17",
+  "generated_at": "Aug 17, 4:47pm ET"
 }
