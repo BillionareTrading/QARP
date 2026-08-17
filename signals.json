@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at": "Aug 17, 9:59am ET",
+  "generated_at": "Aug 17, 10:40am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -102,9 +102,9 @@
     }
   ],
   "earnings_next": {
-    "RKLB": "2026-11-09",
     "ABT": "2026-10-13",
     "ZTS": "2026-11-02",
+    "RKLB": "2026-11-09",
     "BSX": "2026-10-20",
     "UBER": "2026-11-02",
     "NOW": "2026-10-27",
@@ -134,10 +134,10 @@
     },
     {
       "sector": "Oil & Gas",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Energy price gains due to concerns that the U.S. and Iran aren't making …",
       "note": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Software",
@@ -168,16 +168,16 @@
       "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
-    "AVGO": {
-      "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
-      "ts": 1786783480,
-      "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
+    "NVDA": {
+      "title": "'Nvidia To Invest $100B For OpenAI Data Centre In Ohio' - Financial Times",
+      "ts": 1786975482,
+      "url": "https://www.benzinga.com/news/26/08/61248274/nvidia-invest-100b-openai-data-centre-ohio-financial-times",
       "wiim": false
     },
-    "NVDA": {
-      "title": "OpenAI Says Ports-Pike Project Expected To Create 35,000 Construction Jobs During Six-year Buildout Through 2032 & 2,500 Long-Term Operating Jobs",
-      "ts": 1786972214,
-      "url": "https://www.benzinga.com/quote/MSFT",
+    "AVGO": {
+      "title": "David Tepper's Latest AI Bet Is CoreWeave",
+      "ts": 1786974207,
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61246987/david-tepper-coreweave-q2-13f",
       "wiim": false
     },
     "RKLB": {
@@ -191,12 +191,6 @@
       "ts": 1786801915,
       "url": "https://www.benzinga.com/markets/tech/26/08/61235292/consumer-tech-aug-10-14-trump-faces-federal-lawsuits-apple-alibaba-to-create-ai-model-for-china-more",
       "wiim": false
-    },
-    "SPGI": {
-      "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
-      "ts": 1786746736,
-      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
-      "wiim": false
     }
   },
   "ratings": [
@@ -208,8 +202,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "price": 305.69,
-      "upside": -13.7,
+      "price": 304.48,
+      "upside": -13.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -222,11 +216,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 135.62,
-      "upside": 6.9,
+      "price": 136.26,
+      "upside": 6.4,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-11",
@@ -236,8 +230,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 334.04,
-      "upside": 19.7,
+      "price": 336.43,
+      "upside": 18.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,11 +244,11 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 135.62,
-      "upside": 5.4,
+      "price": 136.26,
+      "upside": 4.9,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-12",
@@ -264,8 +258,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 334.04,
-      "upside": 2.7,
+      "price": 336.43,
+      "upside": 2.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -278,8 +272,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 190.52,
-      "upside": 10.2,
+      "price": 192.9,
+      "upside": 8.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -292,8 +286,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 190.52,
-      "upside": 7.6,
+      "price": 192.9,
+      "upside": 6.3,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -306,8 +300,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$138",
-      "price": 113.53,
-      "upside": 21.6,
+      "price": 113.12,
+      "upside": 22.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,8 +314,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$140",
-      "price": 113.53,
-      "upside": 23.3,
+      "price": 113.12,
+      "upside": 23.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +328,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$123",
-      "price": 113.53,
-      "upside": 8.3,
+      "price": 113.12,
+      "upside": 8.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +342,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 113.53,
-      "upside": 32.1,
+      "price": 113.12,
+      "upside": 32.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -362,8 +356,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 113.53,
-      "upside": 18.9,
+      "price": 113.12,
+      "upside": 19.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -376,8 +370,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 113.53,
-      "upside": 45.3,
+      "price": 113.12,
+      "upside": 45.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -390,8 +384,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 113.53,
-      "upside": 18.9,
+      "price": 113.12,
+      "upside": 19.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -404,8 +398,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "price": 113.53,
-      "upside": 5.7,
+      "price": 113.12,
+      "upside": 6.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -418,8 +412,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "price": 200.85,
-      "upside": 3.6,
+      "price": 201.96,
+      "upside": 3.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -432,8 +426,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "price": 334.04,
-      "upside": 1.8,
+      "price": 336.43,
+      "upside": 1.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -447,7 +441,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "upside": 3.6
+      "upside": 3.0
     },
     "HD": {
       "date": "2026-08-17",
@@ -456,7 +450,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "upside": 1.8
+      "upside": 1.1
     },
     "CSCO": {
       "date": "2026-08-14",
@@ -465,7 +459,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "upside": 5.7
+      "upside": 6.1
     },
     "CRM": {
       "date": "2026-08-12",
@@ -474,7 +468,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 10.2
+      "upside": 8.9
     },
     "MRK": {
       "date": "2026-08-12",
@@ -483,7 +477,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 5.4
+      "upside": 4.9
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -492,7 +486,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -13.7
+      "upside": -13.4
     },
     "PG": {
       "date": "2026-08-07",
@@ -510,7 +504,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.2
+      "upside": 9.4
     },
     "NKE": {
       "date": "2026-08-04",
@@ -519,10 +513,77 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": 0.3
+      "upside": 1.4
     }
   },
   "bz_news": [
+    {
+      "title": "Reported Aug. 14: 'U.S. Urges Apple Not to Buy Chinese Memory Chips' - WSJ Exclusive",
+      "url": "https://www.benzinga.com/news/26/08/61249755/reported-aug-14-u-s-urges-apple-not-buy-chinese-memory-chips-wsj-exclusive",
+      "ts": 1786977446,
+      "tickers": [
+        "AAPL",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.325
+    },
+    {
+      "title": "QUICK SPARK: Intel Stock Rises After CEO Spends $10 Million on Shares",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61249603/quick-spark-intel-stock-rises-after-ceo-spends-10-million-on-shares",
+      "ts": 1786977257,
+      "tickers": [
+        "INTC",
+        "AMD",
+        "ARM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.397
+    },
+    {
+      "title": "If You Invested $1000 In Caterpillar Stock 5 Years Ago, You Would Have This Much Today",
+      "url": "https://www.benzinga.com/news/26/08/61248743/if-you-invested-1000-caterpillar-stock-5-years-ago-you-would-have-much-today",
+      "ts": 1786976147,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.213
+    },
+    {
+      "title": "What's Going On With Intel Stock Monday?",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61248576/whats-going-on-with-intel-stock-monday-6",
+      "ts": 1786975901,
+      "tickers": [
+        "INTC",
+        "SOXX",
+        "MTUM",
+        "XNTK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.395
+    },
+    {
+      "title": "'Nvidia To Invest $100B For OpenAI Data Centre In Ohio' - Financial Times",
+      "url": "https://www.benzinga.com/news/26/08/61248274/nvidia-invest-100b-openai-data-centre-ohio-financial-times",
+      "ts": 1786975482,
+      "tickers": [
+        "NVDA",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.508
+    },
     {
       "title": "David Tepper's Latest AI Bet Is CoreWeave",
       "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61246987/david-tepper-coreweave-q2-13f",
@@ -798,69 +859,73 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.444
-    },
-    {
-      "title": "Rick Scott Declares ‘We Are the World’s Innovators,’ Warns Socialists ‘Undermine Our American Dream’",
-      "url": "https://www.benzinga.com/news/politics/26/08/61240739/rick-scott-declares-we-are-the-worlds-innovators-warns-socialists-undermine-our-american-dream",
-      "ts": 1786961831,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.19
-    },
-    {
-      "title": "Comparing Microsoft With Industry Competitors In Software Industry",
-      "url": "https://www.benzinga.com/news/26/08/61240148/comparing-microsoft-industry-competitors-software-industry",
-      "ts": 1786960711,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.328
-    },
-    {
-      "title": "Assessing Apple's Performance Against Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
-      "url": "https://www.benzinga.com/news/26/08/61240147/assessing-apple-s-performance-against-competitors-technology-hardware-storage-amp-peripherals-indust",
-      "ts": 1786960707,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.377
-    },
-    {
-      "title": "Top Economist Warns Trump’s Immigration Policies Are Hurting American Workers: ‘Only Reason Economy Isn’t in Complete Shambles Is...’",
-      "url": "https://www.benzinga.com/markets/macro-economic-events/26/08/61240004/top-economist-warns-trumps-immigration-policies-are-hurting-american-workers-only-reason-economy-isnt-in-complete-shambles-is",
-      "ts": 1786960186,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.254
-    },
-    {
-      "title": "Jamie Dimon Warns UK Bank Tax Hikes Could Trigger a New York-Style Finance Exodus: Report",
-      "url": "https://www.benzinga.com/news/politics/26/08/61239482/jamie-dimon-warns-uk-bank-tax-hikes-could-trigger-a-new-york-style-finance-exodus-report",
-      "ts": 1786956419,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.274
     }
   ],
   "portfolio_brief": {
+    "ABT": {
+      "name": "Abbott Laboratories",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 13,
+        "hold": 9,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 33,
+        "bullish": 24,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.06,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "ZTS": {
+      "name": "Zoetis",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 5,
+        "buy": 8,
+        "hold": 11,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 24,
+        "bullish": 13,
+        "bearish": 0,
+        "label": "Buy",
+        "score": 0.75,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-08-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000119312526338080/d166736d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-08-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000040/zts-20260630.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
     "RKLB": {
       "name": "Rocket Lab",
       "qarp": "AVOID",
@@ -897,70 +962,6 @@
         "insider30d": 0
       },
       "explain": "27 analysts cover it — 21 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
-    },
-    "ABT": {
-      "name": "Abbott Laboratories",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 13,
-        "hold": 9,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 33,
-        "bullish": 24,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.06,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-16",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026048377/abt-20260716.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
-        },
-        "insider30d": 1
-      },
-      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "ZTS": {
-      "name": "Zoetis",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 5,
-        "buy": 8,
-        "hold": 11,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 24,
-        "bullish": 13,
-        "bearish": 0,
-        "label": "Buy",
-        "score": 0.75,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-08-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000119312526338080/d166736d8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-08-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000040/zts-20260630.htm"
-        },
-        "insider30d": 1
-      },
-      "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "BSX": {
       "name": "Boston Scientific",
@@ -1112,9 +1113,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "OpenAI Says Ports-Pike Project Expected To Create 35,000 Construction Jobs During Six-year Buildout Through 2032 & 2,500 Long-Term Operating Jobs",
-        "ts": 1786972214,
-        "url": "https://www.benzinga.com/quote/MSFT",
+        "title": "'Nvidia To Invest $100B For OpenAI Data Centre In Ohio' - Financial Times",
+        "ts": 1786975482,
+        "url": "https://www.benzinga.com/news/26/08/61248274/nvidia-invest-100b-openai-data-centre-ohio-financial-times",
         "wiim": false
       },
       "filings": {
@@ -1281,12 +1282,7 @@
         "score": 1.18,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "Bill Ackman Exits Alphabet, Raises Bets on Microsoft & Meta",
-        "ts": 1786746736,
-        "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61232824/bill-ackman-exits-alphabet-raises-bets-on-microsoft-meta",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1375,9 +1371,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Stanley Druckenmiller Bets Big on AMZN, AMD — Dumps AVGO, INTC and MU in Q2",
-        "ts": 1786783480,
-        "url": "https://www.benzinga.com/markets/tech/26/08/61234175/stanley-druckenmiller-bets-big-on-amzn-amd-dumps-avgo-intc-and-mu-in-q2",
+        "title": "David Tepper's Latest AI Bet Is CoreWeave",
+        "ts": 1786974207,
+        "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61246987/david-tepper-coreweave-q2-13f",
         "wiim": false
       },
       "filings": {
@@ -1517,25 +1513,6 @@
     }
   },
   "financials": {
-    "RKLB": {
-      "period": "Q2 FY2026",
-      "filed": "2026-08-10",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
-      "revenue": {
-        "fmt": "$234M",
-        "yoy": 62.0
-      },
-      "eps": {
-        "val": -0.08,
-        "yoy": 38.5
-      },
-      "net_income": {
-        "fmt": "$-49M"
-      },
-      "margin": -21.0,
-      "summary": "Q2 FY2026 — revenue $234M (+62.0% YoY), diluted EPS $-0.08 (+38.5% YoY), net margin -21%. (as reported, GAAP)"
-    },
     "ABT": {
       "period": "FY2017",
       "filed": "2018-02-16",
@@ -1568,6 +1545,25 @@
       },
       "margin": 28.0,
       "summary": "Q2 FY2026 — revenue $2.5B (-0.2% YoY), diluted EPS $1.65 (+1.2% YoY), net margin 28%. (as reported, GAAP)"
+    },
+    "RKLB": {
+      "period": "Q2 FY2026",
+      "filed": "2026-08-10",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+      "revenue": {
+        "fmt": "$234M",
+        "yoy": 62.0
+      },
+      "eps": {
+        "val": -0.08,
+        "yoy": 38.5
+      },
+      "net_income": {
+        "fmt": "$-49M"
+      },
+      "margin": -21.0,
+      "summary": "Q2 FY2026 — revenue $234M (+62.0% YoY), diluted EPS $-0.08 (+38.5% YoY), net margin -21%. (as reported, GAAP)"
     },
     "BSX": {
       "period": "Q2 FY2026",
