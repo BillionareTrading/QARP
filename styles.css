@@ -339,6 +339,23 @@ tbody tr:hover { background: var(--surface-2); }
 .cat-weak { background: var(--line); color: var(--ink-2); }
 .cat-none { background: var(--neg-bg); color: var(--neg); }
 .cat-warn { color: #b45309; font-weight: 800; margin-left: 3px; cursor: help; }
+/* Catalyst Desk (2026-08-18): dated event beside the pill; click = inline breakdown row */
+.cat-cell { cursor: pointer; white-space: nowrap; }
+.cat-cell:hover .cat { filter: brightness(.96); }
+.cat-ev { font-size: 12px; font-weight: 600; color: var(--ink-2); margin-left: 2px; }
+.cat-date { font-size: 12px; color: var(--ink); }
+.cat-in, .cat-win { font-size: 11px; color: var(--ink-3); }
+.cat-win { font-style: italic; }
+tr.u-bd td { background: var(--news-page, #fbfbf7); border-top: 1px dashed var(--line);
+  padding: 10px 14px 12px; cursor: default; }
+.u-bd-grid { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; line-height: 1.5; }
+.u-bd-col { flex: 1 1 150px; min-width: 130px; }
+.u-bd-col.wide { flex: 2 1 260px; }
+.u-bd-h { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink-3); margin-bottom: 3px; }
+.u-bd-why { font-family: var(--serif); font-style: italic; color: var(--ink-2); }
+.u-bd-when { font-weight: 700; color: var(--ink); margin-top: 2px; }
+.u-bd-asof { font-size: 11px; color: var(--ink-3); margin-top: 4px; }
 /* Performance by sector + allocation-vs-performance fit */
 .sec-sub { font-size: 13px; margin: 18px 0 10px; color: var(--ink); }
 .sp-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; font-size: 12.5px; }

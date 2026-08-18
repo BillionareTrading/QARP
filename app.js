@@ -158,13 +158,66 @@ function patchGateCells(ticker, u) {
 }
 // Catalyst tag (PREVIEW / shadow — does not affect QARP yet). Colour by strength; ⚠ = the
 // proposed DCF cap would downgrade this name's "cheap" score (cheap with no catalyst = value trap).
+function catMD(iso) { const d = new Date(iso + "T12:00:00"); return `${d.getMonth() + 1}/${d.getDate()}`; }
 function catalystCell(x) {
   const c = x.catalyst;
   if (!c) return `<span class="muted">—</span>`;
   const cls = { SET: "cat-set", WATCH: "cat-watch", WEAK: "cat-weak", NONE: "cat-none" }[c.label] || "cat-weak";
   const note = esc(c.note || `Catalyst ${c.label}`);   // per-company explanation on hover
   const warn = c.would_cut ? `<span class="cat-warn" title="${note}">⚠</span>` : "";
-  return `<span class="cat ${cls}" title="${note}">${c.label}</span>${warn}`;
+  const pill = `<span class="cat ${cls}" title="${note}">${c.label}</span>`;
+  // Catalyst Desk (2026-08-18): the dated event beside the pill; click = inline breakdown
+  let ev = "";
+  if (c.event) {
+    let when = "";
+    if (c.event_date) {
+      const days = Math.round((new Date(c.event_date + "T12:00:00") - new Date(asOfDate(DATA.meta.date) + "T12:00:00")) / 86400000);
+      when = ` <b class="cat-date">${catMD(c.event_date)}</b>${days >= 0 ? `<span class="cat-in"> in ${days}d</span>` : ""}`;
+    } else if (c.window) {
+      when = ` <span class="cat-win">${esc(c.window)}</span>`;
+    }
+    ev = ` <span class="cat-ev">${esc(c.event)}</span>${when}`;
+  } else if (c.next_print) {
+    ev = ` <span class="cat-win">print ${catMD(c.next_print)}</span>`;
+  }
+  return `<span class="cat-cell" data-ticker="${x.ticker}">${pill}${ev}${warn}</span>`;
+}
+
+function catBreakdownHtml(x) {
+  const c = x.catalyst || {};
+  const when = c.event_date
+    ? `${catMD(c.event_date)} — ${Math.round((new Date(c.event_date + "T12:00:00") - new Date(asOfDate(DATA.meta.date) + "T12:00:00")) / 86400000)} days out`
+    : (c.window || "no date");
+  const legacyOnly = !c.why && !c.risk && !c.event;
+  if (legacyOnly) {
+    return `<div class="u-bd-grid"><div class="u-bd-col wide"><div class="u-bd-h">Catalyst read</div>
+      <div class="u-bd-why">${esc(c.note || "No catalyst data for this name.")}</div>
+      <div class="u-bd-asof">Full breakdown lands with the next Catalyst Desk pass (covered set: holdings + unheld Strong Buys).</div></div></div>`;
+  }
+  return `<div class="u-bd-grid">
+    <div class="u-bd-col"><div class="u-bd-h">The event</div><div>${esc(c.event || "No catalyst on the calendar")}</div>
+      <div class="u-bd-when">${esc(when)}</div></div>
+    <div class="u-bd-col wide"><div class="u-bd-h">Why it moves the stock</div><div class="u-bd-why">${esc(c.why || c.note || "")}</div></div>
+    ${c.risk ? `<div class="u-bd-col wide"><div class="u-bd-h">What kills it</div><div>${esc(c.risk)}</div></div>` : ""}
+    <div class="u-bd-col"><div class="u-bd-h">Next print</div><div>${c.next_print ? catMD(c.next_print) : "—"}</div>
+      ${c.news_72h ? `<div class="u-bd-h" style="margin-top:6px">Fresh</div><div>${esc(c.news_72h)}</div>` : ""}
+      <div class="u-bd-asof">Catalyst Desk · as of ${esc((c.as_of || "").slice(0, 10) || DATA.meta.date)}${c.confidence ? ` · conf ${esc(c.confidence)}` : ""}</div></div>
+  </div>`;
+}
+
+function toggleCatBreakdown(ticker, tr) {
+  const open = document.querySelector("tr.u-bd");
+  const was = open && open.dataset.ticker === ticker;
+  document.querySelectorAll("tr.u-bd").forEach((r) => r.remove());
+  if (was) return;
+  const x = uList().find((u) => u.ticker === ticker) || DATA.universe.find((u) => u.ticker === ticker);
+  if (!x) return;
+  const bd = document.createElement("tr");
+  bd.className = "u-bd";
+  bd.dataset.ticker = ticker;
+  bd.innerHTML = `<td colspan="${tr.children.length}">${catBreakdownHtml(x)}</td>`;
+  bd.addEventListener("click", (e) => e.stopPropagation());
+  tr.after(bd);
 }
 
 /* ---------- SVG donut ---------- */
@@ -609,6 +662,12 @@ function renderUniverseTable() {
     }));
   document.querySelectorAll("#u-table tbody tr").forEach((tr) =>
     tr.addEventListener("click", () => openDrawer(tr.dataset.ticker)));
+  // catalyst cell click = inline breakdown (stops the row's drawer click)
+  document.querySelectorAll("#u-table .cat-cell").forEach((el) =>
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleCatBreakdown(el.dataset.ticker, el.closest("tr"));
+    }));
   syncUniverseHScroll();
 }
 
