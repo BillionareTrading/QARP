@@ -1,6 +1,6 @@
 {
   "date": "2026-08-18",
-  "generated_at": "Aug 18, 10:44am ET",
+  "generated_at": "Aug 18, 11:44am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -106,8 +106,8 @@
     "ZTS": "2026-11-02",
     "RKLB": "2026-11-09",
     "BSX": "2026-10-20",
-    "NOW": "2026-10-27",
     "AZO": "2026-09-21",
+    "NOW": "2026-10-27",
     "NVDA": "2026-08-26",
     "DHR": "2026-10-19",
     "ADBE": "2026-09-10",
@@ -126,11 +126,11 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
-      "sector": "Foundry, Fabricator & Idm Chip",
-      "dir": "mixed",
-      "driver": "AI cloud providers CoreWeave and Nebius reported better-than-expected Q2…",
-      "note": "After AI cloud providers CoreWeave and Nebius reported better-than-expected Q2 results and server and storage maker Super Micro Computer reported better-than-expected Q4 financial results, all of which may help bolster the demand outlook for the sector.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "sector": "Semiconductor & Chip",
+      "dir": "down",
+      "driver": "Rising oil prices and bond yields",
+      "note": "Amid rising oil prices and bond yields, prompting inflation concerns. Also, declining memory chip companies may weigh on the broader industry.",
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Oil & Gas",
@@ -162,6 +162,12 @@
     }
   ],
   "holding_news": {
+    "AVGO": {
+      "title": "Shares of semiconductor and chip companies are trading lower amid rising oil prices and bond yields, prompting inflation concerns. Also, declining memory chip companies may weigh on the broader industry.",
+      "ts": 1787066959,
+      "url": "https://www.benzinga.com/quote/QCOM",
+      "wiim": true
+    },
     "ADBE": {
       "title": "Shares of software companies are trading higher, possibly amid broader market strength as promising economic data and easing oil prices reduce rate-hike concerns. Reports suggesting Silver Lake is in talks to acquire Workday may be lifting related peers.",
       "ts": 1786648895,
@@ -179,12 +185,6 @@
       "ts": 1787023836,
       "url": "https://www.benzinga.com/markets/equities/26/08/61264409/rocket-lab-boeing-lockheed-northrop-space-force-981-million",
       "wiim": false
-    },
-    "AVGO": {
-      "title": "Nvidia Is the Best S&P 500 Stock of the Past 10, 15, 20 Years — but 4 Stocks Beat It Over the Past 5 Years",
-      "ts": 1786996395,
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61259954/nvidia-is-the-best-sp-500-stock-of-the-past-10-15-20-years-but-4-stocks-beat-it-over-the-past-5-years",
-      "wiim": false
     }
   },
   "ratings": [
@@ -196,11 +196,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 136.84,
-      "upside": 6.0,
+      "price": 135.84,
+      "upside": 6.7,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-08-11",
@@ -210,8 +210,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 342.42,
-      "upside": 16.8,
+      "price": 340.9,
+      "upside": 17.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -224,11 +224,11 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 136.84,
-      "upside": 4.5,
+      "price": 135.84,
+      "upside": 5.3,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-08-12",
@@ -238,8 +238,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 342.42,
-      "upside": 0.2,
+      "price": 340.9,
+      "upside": 0.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -252,11 +252,11 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 196.17,
-      "upside": 7.1,
+      "price": 197.34,
+      "upside": 6.4,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-08-12",
@@ -266,11 +266,11 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 196.17,
-      "upside": 4.5,
+      "price": 197.34,
+      "upside": 3.9,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-08-13",
@@ -280,8 +280,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$138",
-      "price": 111.11,
-      "upside": 24.2,
+      "price": 110.87,
+      "upside": 24.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -294,8 +294,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$140",
-      "price": 111.11,
-      "upside": 26.0,
+      "price": 110.87,
+      "upside": 26.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -308,8 +308,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$123",
-      "price": 111.11,
-      "upside": 10.7,
+      "price": 110.87,
+      "upside": 10.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -322,8 +322,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 111.11,
-      "upside": 35.0,
+      "price": 110.87,
+      "upside": 35.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -336,8 +336,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 111.11,
-      "upside": 21.5,
+      "price": 110.87,
+      "upside": 21.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -350,8 +350,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 111.11,
-      "upside": 48.5,
+      "price": 110.87,
+      "upside": 48.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -364,8 +364,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 111.11,
-      "upside": 21.5,
+      "price": 110.87,
+      "upside": 21.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -378,8 +378,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "price": 111.11,
-      "upside": 8.0,
+      "price": 110.87,
+      "upside": 8.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -392,8 +392,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "price": 204.31,
-      "upside": 1.8,
+      "price": 203.94,
+      "upside": 2.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -406,8 +406,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "price": 342.42,
-      "upside": -0.7,
+      "price": 340.9,
+      "upside": -0.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -421,7 +421,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "upside": 1.8
+      "upside": 2.0
     },
     "HD": {
       "date": "2026-08-17",
@@ -430,7 +430,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "upside": -0.7
+      "upside": -0.3
     },
     "CSCO": {
       "date": "2026-08-14",
@@ -439,7 +439,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "upside": 8.0
+      "upside": 8.2
     },
     "CRM": {
       "date": "2026-08-12",
@@ -448,7 +448,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 7.1
+      "upside": 6.4
     },
     "MRK": {
       "date": "2026-08-12",
@@ -457,7 +457,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 4.5
+      "upside": 5.3
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -466,7 +466,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -15.2
+      "upside": -15.0
     },
     "PG": {
       "date": "2026-08-07",
@@ -484,7 +484,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 6.5
+      "upside": 6.1
     },
     "NKE": {
       "date": "2026-08-04",
@@ -493,10 +493,38 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": 0.3
+      "upside": -0.3
     }
   },
   "bz_news": [
+    {
+      "title": "Shares of semiconductor and chip companies are trading lower amid rising oil prices and bond yields, prompting inflation concerns. Also, declining memory chip companies may weigh on the broader industry.",
+      "url": "https://www.benzinga.com/quote/QCOM",
+      "ts": 1787066959,
+      "tickers": [
+        "MOBX",
+        "AEHR",
+        "MXL",
+        "CBRS"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.494
+    },
+    {
+      "title": "Equinor Signs Deal With Chevron's Harmattan Energy Subsidiary To Acquire 17.4% Stake In Petroleum Exploration Licence 90 Offshore Namibia; Financial Terms Undisclosed",
+      "url": "https://www.benzinga.com/m/26/08/61277889/equinor-signs-deal-chevron-s-harmattan-energy-subsidiary-acquire-17-4-stake-petroleum-exploration-li",
+      "ts": 1787065862,
+      "tickers": [
+        "EQNR",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.315
+    },
     {
       "title": "Home Depot Q2 2026 Earnings Call Transcript",
       "url": "https://www.benzinga.com/news/26/08/61275683/home-depot-q2-2026-earnings-call-transcript",
@@ -522,7 +550,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.484
+      "relevance": 0.483
     },
     {
       "title": "Buy Now, Pay Later Giant Klarna Sounds Alarm On German Shoppers, Cuts 2026 Volume Outlook",
@@ -550,7 +578,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.377
+      "relevance": 0.376
     },
     {
       "title": "Why Is Walmart Stock Trading Higher on Tuesday?",
@@ -563,7 +591,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.322
+      "relevance": 0.321
     },
     {
       "title": "Home Depot Customers Make Fewer Trips but Spend More",
@@ -599,7 +627,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.429
+      "relevance": 0.428
     },
     {
       "title": "NKE Stock Has Crashed Nearly 80% From Its 2021 Peak — Wall Street Warns of ‘Stage 4’ Breakdown (UPDATED)",
@@ -611,7 +639,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.409
+      "relevance": 0.413
     },
     {
       "title": "J.P. Morgan’s Bill Eigen Sounds 2008 Crash Alarm Over AI Boom — Says Investors Are Missing One Warning Sign That Could Change Everything: ‘What I’m Terrified of Is…’ (UPDATED)",
@@ -626,7 +654,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.317
+      "relevance": 0.316
     },
     {
       "title": "What's Going On With Intel Stock Tuesday?",
@@ -653,7 +681,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.482
+      "relevance": 0.481
     },
     {
       "title": "Apple’s Foldable iPhone is an ‘Underappreciated’ Opportunity That Could Send AAPL Stock Soaring, Says Analyst — 14 Million Units Seen Selling by 2027",
@@ -679,7 +707,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.405
+      "relevance": 0.406
     },
     {
       "title": "Costco Is Getting Into Medicare — Here’s What Its New Health Insurance Plans Could Mean for Seniors",
@@ -787,33 +815,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.313
-    },
-    {
-      "title": "Market-Moving News for August 18th",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61268417/market-moving-news-august-18th",
-      "ts": 1787051946,
-      "tickers": [
-        "XOS",
-        "AMLX",
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.462
-    },
-    {
-      "title": "OpenAI Launches ChatGPT For Teens And Partners With CodeAI To Prepare The First AI Generation",
-      "url": "https://www.benzinga.com/news/26/08/61268385/openai-launches-chatgpt-teens-and-partners-codeai-prepare-first-ai-generation",
-      "ts": 1787051731,
-      "tickers": [
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.268
     }
   ],
   "portfolio_brief": {
@@ -950,38 +951,6 @@
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "NOW": {
-      "name": "ServiceNow",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 16,
-        "buy": 33,
-        "hold": 4,
-        "sell": 2,
-        "strongSell": 0,
-        "total": 55,
-        "bullish": 49,
-        "bearish": 2,
-        "label": "Strong Buy",
-        "score": 1.15,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-22",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000072/now-20260722.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-23",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm"
-        },
-        "insider30d": 7
-      },
-      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "AZO": {
       "name": "AutoZone",
       "qarp": "BUY",
@@ -1013,6 +982,38 @@
         "insider30d": 1
       },
       "explain": "31 analysts cover it — 25 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "NOW": {
+      "name": "ServiceNow",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 16,
+        "buy": 33,
+        "hold": 4,
+        "sell": 2,
+        "strongSell": 0,
+        "total": 55,
+        "bullish": 49,
+        "bearish": 2,
+        "label": "Strong Buy",
+        "score": 1.15,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000072/now-20260722.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm"
+        },
+        "insider30d": 7
+      },
+      "explain": "55 analysts cover it — 49 bullish, 4 hold, 2 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NVDA": {
       "name": "NVIDIA",
@@ -1053,7 +1054,7 @@
     },
     "DHR": {
       "name": "Danaher",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 12,
         "buy": 15,
@@ -1081,7 +1082,7 @@
         },
         "insider30d": 16
       },
-      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ADBE": {
       "name": "Adobe",
@@ -1337,10 +1338,10 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Nvidia Is the Best S&P 500 Stock of the Past 10, 15, 20 Years — but 4 Stocks Beat It Over the Past 5 Years",
-        "ts": 1786996395,
-        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61259954/nvidia-is-the-best-sp-500-stock-of-the-past-10-15-20-years-but-4-stocks-beat-it-over-the-past-5-years",
-        "wiim": false
+        "title": "Shares of semiconductor and chip companies are trading lower amid rising oil prices and bond yields, prompting inflation concerns. Also, declining memory chip companies may weigh on the broader industry.",
+        "ts": 1787066959,
+        "url": "https://www.benzinga.com/quote/QCOM",
+        "wiim": true
       },
       "filings": {
         "latest8k": {
@@ -1526,25 +1527,6 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $5.4B (+7.5% YoY), diluted EPS $0.61 (+15.1% YoY). (as reported, GAAP)"
     },
-    "NOW": {
-      "period": "Q2 FY2026",
-      "filed": "2026-07-23",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm",
-      "revenue": {
-        "fmt": "$4.0B",
-        "yoy": 24.0
-      },
-      "eps": {
-        "val": 0.29,
-        "yoy": -21.6
-      },
-      "net_income": {
-        "fmt": "$298M"
-      },
-      "margin": 7.5,
-      "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
-    },
     "AZO": {
       "period": "Q3 FY2026",
       "filed": "2026-06-12",
@@ -1563,6 +1545,25 @@
       },
       "margin": 13.3,
       "summary": "Q3 FY2026 — revenue $4.8B (+8.4% YoY), diluted EPS $38.07 (+7.7% YoY), net margin 13%. (as reported, GAAP)"
+    },
+    "NOW": {
+      "period": "Q2 FY2026",
+      "filed": "2026-07-23",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm",
+      "revenue": {
+        "fmt": "$4.0B",
+        "yoy": 24.0
+      },
+      "eps": {
+        "val": 0.29,
+        "yoy": -21.6
+      },
+      "net_income": {
+        "fmt": "$298M"
+      },
+      "margin": 7.5,
+      "summary": "Q2 FY2026 — revenue $4.0B (+24.0% YoY), diluted EPS $0.29 (-21.6% YoY), net margin 8%. (as reported, GAAP)"
     },
     "NVDA": {
       "period": "Q1 FY2027",
