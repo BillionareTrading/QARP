@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-17",
-  "generated_at": "Aug 17, 6:05pm ET",
+  "date": "2026-08-18",
+  "generated_at": "Aug 18, 5:24am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 17",
+      "when": "Aug 18",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -174,6 +174,12 @@
       "url": "https://www.benzinga.com/news/26/08/61248274/nvidia-invest-100b-openai-data-centre-ohio-financial-times",
       "wiim": false
     },
+    "RKLB": {
+      "title": "Rocket Lab Joins Boeing, Lockheed Martin and Northrop Grumman in $981M Space Force Program to Build Advanced Test Infrastructure",
+      "ts": 1787023836,
+      "url": "https://www.benzinga.com/markets/equities/26/08/61264409/rocket-lab-boeing-lockheed-northrop-space-force-981-million",
+      "wiim": false
+    },
     "AVGO": {
       "title": "Nvidia Is the Best S&P 500 Stock of the Past 10, 15, 20 Years — but 4 Stocks Beat It Over the Past 5 Years",
       "ts": 1786996395,
@@ -197,29 +203,9 @@
       "ts": 1786981418,
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61252587/why-is-netflix-stock-falling-on-monday",
       "wiim": false
-    },
-    "RKLB": {
-      "title": "Stock Market Futures Mixed: Dow Futures Slips, Nasdaq 100, S&P 500 Rises as Fed Rate Hike Odds Drop to 30% for September—SanDisk, Micron, HIVE Digital in Focus (UPDATED)",
-      "ts": 1786970811,
-      "url": "https://www.benzinga.com/markets/equities/26/08/61240267/stock-market-today-dow-futures-slip-sp-500-rises-as-september-fed-hike-odds-fall-to-30-sandisk-micron-hive-in-focus",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-10",
-      "ticker": "AAPL",
-      "firm": "Jefferies",
-      "action": "Downgrades",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$264",
-      "price": 305.59,
-      "upside": -13.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-11",
       "ticker": "MRK",
@@ -530,6 +516,194 @@
   },
   "bz_news": [
     {
+      "title": "Palmer Luckey Fires Back at Former Taco Bell CEO Greg Creed Over McDonald’s Drinks Criticism: ‘What a Loser’",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61266022/palmer-luckey-fires-back-at-former-taco-bell-ceo-greg-creed-over-mcdonalds-drinks-criticism-what-a-loser",
+      "ts": 1787043905,
+      "tickers": [
+        "MCD",
+        "YUM",
+        "SBUX",
+        "QSR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.239
+    },
+    {
+      "title": "NKE Stock Erases $200 Billion in Market Cap Since 2021 Peak: Arvy CIO Warns of a ‘Stage 4’ Decline",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61265732/nke-stock-erases-200-billion-in-market-cap-since-2021-peak-arvy-cio-warns-of-a-stage-4-decline",
+      "ts": 1787042045,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.381
+    },
+    {
+      "title": "JPMorgan's Bill Eigen Warns the AI Boom Is Starting to Resemble the 2008 Housing Crash: 'What I'm Terrified of Is…'",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61265641/jp-morgans-bill-eigen-says-ai-boom-is-a-real-estate-cycle-not-a-tech-cycle",
+      "ts": 1787041464,
+      "tickers": [
+        "NVDA",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.319
+    },
+    {
+      "title": "Kevin O’Leary Says ‘Salary Can Make It Very Easy to Forget About Your Dreams,’ Calls Fear of Failure an ‘Incredible Motivator’",
+      "url": "https://www.benzinga.com/personal-finance/financial-advisors/26/08/61265537/kevin-oleary-says-salary-can-make-it-very-easy-to-forget-about-your-dreams-calls-fear-of-failure-an-incredible-motivator",
+      "ts": 1787039894,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.205
+    },
+    {
+      "title": "Dow Tumbles Over 250 Points Amid Rising Iran Concerns: Investor Sentiment Weakens, But Fear Index Remains In ‘Greed’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/61265422/dow-tumbles-over-250-points-amid-rising-iran-concerns-investor-sentiment-weakens-but-fear-index-remains-in-greed-zone",
+      "ts": 1787038322,
+      "tickers": [
+        "TOL",
+        "HD",
+        "AS",
+        "IVF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.458
+    },
+    {
+      "title": "Google Plans to Pull All Pixel Production Out of China by 2027 Amid US-China Tensions: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61265398/google-plans-to-pull-all-pixel-production-out-of-china-by-2027-amid-us-china-tensions-report",
+      "ts": 1787038046,
+      "tickers": [
+        "GOOGL",
+        "AAPL",
+        "GOOG",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.275
+    },
+    {
+      "title": "Home Depot, Toll Brothers And 3 Stocks To Watch Heading Into Tuesday",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61265304/home-depot-toll-brothers-and-3-stocks-to-watch-heading-into-tuesday-2",
+      "ts": 1787037550,
+      "tickers": [
+        "HD",
+        "TOL",
+        "FLXS",
+        "AS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.383
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61265010/stock-market-will-sp-500-open-up-or-down-today-18",
+      "ts": 1787034229,
+      "tickers": [
+        "$POL",
+        "SPY",
+        "BIDU",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "China's Chip Revenue Hits Record $245 Billion As SMIC and CXMT Lead the Pack: ETFs to Watch",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61264862/chinas-chip-industry-is-booming-despite-washingtons-best-efforts",
+      "ts": 1787032933,
+      "tickers": [
+        "DRAM",
+        "AAPL",
+        "TSM",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.424
+    },
+    {
+      "title": "TGS Partners With Chevron, Combining Imaging AnyWare Platform With Chevron's Proprietary Algorithms For Subsurface Imaging",
+      "url": "https://www.benzinga.com/quote/CVX",
+      "ts": 1787032788,
+      "tickers": [
+        "TGSNF",
+        "TGSGY",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.309
+    },
+    {
+      "title": "Rocket Lab Joins Boeing, Lockheed Martin and Northrop Grumman in $981M Space Force Program to Build Advanced Test Infrastructure",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61264409/rocket-lab-boeing-lockheed-northrop-space-force-981-million",
+      "ts": 1787023836,
+      "tickers": [
+        "RKLB",
+        "LMT",
+        "BA",
+        "NOC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.458
+    },
+    {
+      "title": "Nike, Meta Platforms, INVO Fertility, EyePoint Pharmaceuticals, and Micron: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61264084/nike-meta-platforms-invo-fertility-eyepoint-pharmaceuticals-and-micron-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1787017150,
+      "tickers": [
+        "MU",
+        "META",
+        "NKE",
+        "EYPT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.435
+    },
+    {
+      "title": "Walmart Could Swing $42.1 Billion In Value After Earnings",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61263779/walmart-could-swing-42-1-billion-in-value-after-earnings",
+      "ts": 1787013029,
+      "tickers": [
+        "WMT",
+        "DE",
+        "HD",
+        "TJX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.314
+    },
+    {
       "title": "Here’s How Much You Would Have Made Owning JPMorgan Chase Stock In The Last 5 Years",
       "url": "https://www.benzinga.com/news/26/08/61261940/here-s-how-much-you-would-have-made-owning-jpmorgan-chase-stock-last-5-years",
       "ts": 1787000434,
@@ -635,7 +809,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.334
+      "relevance": 0.335
     },
     {
       "title": "Caterpillar Launches $3M Workforce Initiative In Arkansas To Prepare Workers For Modern Manufacturing Careers",
@@ -692,188 +866,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.387
-    },
-    {
-      "title": "Chevron Makes Major Oil Discovery in Angola’s Offshore Block",
-      "url": "https://www.benzinga.com/markets/large-cap/26/08/61256260/chevron-makes-major-oil-discovery-in-angolas-offshore-block",
-      "ts": 1786987644,
-      "tickers": [
-        "CVX",
-        "FDL",
-        "NANR",
-        "HDV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.24
-    },
-    {
-      "title": "SanDisk Rips 10%, Micron Rises 6% as AI Memory Frenzy Builds: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61255493/sandisk-micron-ai-memory-frenzy-lutnick-china-dram-stock-market-today",
-      "ts": 1786986272,
-      "tickers": [
-        "UWMC",
-        "QQQ",
-        "WMT",
-        "ADBE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.458
-    },
-    {
-      "title": "CNBC Halftime Report Final Trades: Cisco Systems, Cheniere Energy, iShares U.S. Utilities ETF, Merck",
-      "url": "https://www.benzinga.com/quote/MRK",
-      "ts": 1786986033,
-      "tickers": [
-        "CSCO",
-        "LNG",
-        "IDU",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.405
-    },
-    {
-      "title": "Nike shares are trading lower as the company hits a 12-year low. Continued weakness may be a result of sympathy with On Holding's recently reported Q2 sales miss and a JPMorgan downgrade earlier this month.",
-      "url": "https://www.benzinga.com/quote/NKE",
-      "ts": 1786985433,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.383
-    },
-    {
-      "title": "Bill Ackman Bets Big on Magnificent 7 Stocks, But Only Loves 3 of Them",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61254396/bill-ackman-bets-big-on-magnificent-7-stocks-but-only-loves-3-of-them",
-      "ts": 1786984236,
-      "tickers": [
-        "META",
-        "AMZN",
-        "MSFT",
-        "PSUS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.302
-    },
-    {
-      "title": "New York’s Factory Activity Expands to 4-Year Highs: Is AI Powering a Manufacturing Boom?",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61254054/new-york-manufacturing-four-year-high-ai-boom",
-      "ts": 1786983828,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.402
-    },
-    {
-      "title": "American Express USCS Card Member Loans 30 Days Past Due Loans As A % Of Total 1.1 % At July End, Card Member Loans Net Write-Off Rate-Principal Only 1.7% At July End; U.S. Small Business Card Member Loans 30 Days Past Due Loans As A% Of Total 1.3% At July End, Card Member Loans Net Write-Off Rate-Principal Only 2.6% At July End",
-      "url": "https://www.benzinga.com/news/26/08/61253430/american-express-uscs-card-member-loans-30-days-past-due-loans-total-1-1-july-end-card-member-loans-",
-      "ts": 1786982763,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.319
-    },
-    {
-      "title": "Why Is Nike Stock Falling on Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61253196/why-is-nike-stock-falling-on-monday",
-      "ts": 1786982343,
-      "tickers": [
-        "NKE",
-        "ONON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.362
-    },
-    {
-      "title": "Micron’s AI Boom Could Unlock a $640 Billion Cash Flow Machine, But the Market Barely Sees It",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61253042/micron-640-billion-cash-flow-2030-bofa",
-      "ts": 1786982113,
-      "tickers": [
-        "AAPL",
-        "NVDA",
-        "MU",
-        "SNDK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.426
-    },
-    {
-      "title": "Why Is Netflix Stock Falling on Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61252587/why-is-netflix-stock-falling-on-monday",
-      "ts": 1786981418,
-      "tickers": [
-        "NFLX",
-        "META",
-        "MSFT",
-        "MA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.355
-    },
-    {
-      "title": "Visa, Lockheed Martin And A Health Care Stock On CNBC’s ‘Final Trades’",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61252387/visa-lockheed-martin-and-a-health-care-stock-on-cnbcs-final-trades",
-      "ts": 1786981104,
-      "tickers": [
-        "LMT",
-        "UNH",
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.442
-    },
-    {
-      "title": "Boeing, Lockheed Joint Venture Appoints Mark Peller President, CEO, Effectively Immediately",
-      "url": "https://www.benzinga.com/news/26/08/61252005/boeing-lockheed-joint-venture-appoints-mark-peller-president-ceo-effectively-immediately",
-      "ts": 1786980514,
-      "tickers": [
-        "BA",
-        "LMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.281
-    },
-    {
-      "title": "Synchrony Partners With OpenAI To Enhance Its Services In Shopping, Payments",
-      "url": "https://www.benzinga.com/news/26/08/61250918/synchrony-partners-openai-enhance-its-services-shopping-payments",
-      "ts": 1786978914,
-      "tickers": [
-        "SYF",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.317
     }
   ],
   "portfolio_brief": {
@@ -958,9 +950,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Stock Market Futures Mixed: Dow Futures Slips, Nasdaq 100, S&P 500 Rises as Fed Rate Hike Odds Drop to 30% for September—SanDisk, Micron, HIVE Digital in Focus (UPDATED)",
-        "ts": 1786970811,
-        "url": "https://www.benzinga.com/markets/equities/26/08/61240267/stock-market-today-dow-futures-slip-sp-500-rises-as-september-fed-hike-odds-fall-to-30-sandisk-micron-hive-in-focus",
+        "title": "Rocket Lab Joins Boeing, Lockheed Martin and Northrop Grumman in $981M Space Force Program to Build Advanced Test Infrastructure",
+        "ts": 1787023836,
+        "url": "https://www.benzinga.com/markets/equities/26/08/61264409/rocket-lab-boeing-lockheed-northrop-space-force-981-million",
         "wiim": false
       },
       "filings": {
