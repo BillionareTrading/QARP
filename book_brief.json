@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Monday was a rough session for Jaleel's book, with the portfolio's overall unrealized gain sitting at 5.95% and most of the heavier holdings giving ground. The two biggest drags by weight were ServiceNow (NOW, ~6.1% of the book), which fell 5.08% — the sharpest single-day loss in the portfolio — and Adobe (ADBE, ~5.0%), which dropped 3.78%. Lululemon (LULU, ~4.1%) and On Holding (ONON, ~4.3%) both shed roughly 3% as well, continuing a soft stretch for the consumer-apparel sleeve. On the positive side, Rocket Lab (RKLB, ~8.1%) added 2.28%, Vertex Pharma (VRTX) gained 1.94%, and Neurocrine (NBIX) ticked up 1.16%, though none of those are large enough weights to offset the damage from NOW and ADBE.</p><p>Drift is the real concern in two spots. LULU is down 9.5% overall and carries an elevated risk flag for consecutive Americas comp declines and margin compression — the BUY verdict increasingly needs justification as price and thesis pull apart. Similarly, ZTS (Zoetis, ~9.5% weight — the second-largest position) is down 7.3% in total and slipped another 1.11% today, yet the system rates it STRONG BUY with a solid QARP of 76.2; that divergence needs watching closely. RKLB remains the structural oddity: it's the third-largest position by weight at 8.1%, bounced today, but carries an AVOID verdict and a QARP of just 36.6 — the lowest in the book by a wide margin.</p><p>Watch three upcoming catalysts: NVDA reports August 26, carrying export-control overhang; ADBE's next read comes September 10, where the AI-moat narrative rather than fundamentals will likely drive the reaction; and LULU's next event is September 2, which could either stabilize or deepen what is now the book's worst unrealized loss. The pharma cluster (GILD, NVS, NBIX, VRTX) got a small bid today but remains under a drug-pricing policy cloud.</p>",
+  "your_book": "<p>Jaleel's book had a mixed Tuesday, with the headline number — a 6.2% overall unrealized gain — holding steady beneath a split tape. Abbott (ABT, 10.7% weight) was the standout mover, up 2.09% on the session and sitting on a 30.3% gain; it remains the largest position and continues to earn its keep despite the mild EPS-guide trim flagged earlier this summer. Adobe (ADBE, 5.2%) surged 3.58% — the best day-move in the book — likely carried by broader software sentiment and M&A chatter around peers like Workday. Gilead (GILD) added 3.25% and Equifax (EFX) 2.85%, though both are small weights so their contribution is limited. On the other side, Rocket Lab (RKLB, 7.8%) fell 3.56% and NVIDIA (NVDA, 5.7%) dropped 2.34%, with AVGO off 3.17% — the semiconductor complex taking heat from rising yields and inflation jitters. Boston Scientific (BSX, 9.5%) slid 1.87%, a name already carrying an elevated risk flag after its FY26 growth guide was slashed to 7–8.5%.</p><p>The drift story worth watching: BSX is rated STRONG BUY with a QARP of 73, yet the thesis — durable med-device comps — is being actively undermined by management's own flat-through-Q3 guidance. Price and thesis are pulling in opposite directions, and Tuesday's decline adds to a gain of only 3.0% from cost. Similarly, LULU bounced 2.83% today but is still underwater at –6.9% and carries a guidance-cut flag with Americas comps down five straight quarters. A single green session doesn't repair that thesis. RKLB remains the most glaring structural mismatch: an AVOID verdict and a QARP of 36.7 at 7.8% of the book — the second-largest weight in a capital-preservation mandate — with another –3.56% session to show for it.</p><p>Looking ahead, NVDA's next catalyst is August 26 — less than two weeks out — and the stock is already rattled by export-control headlines and an opinion piece openly questioning AI-capex sustainability. The ServiceNow (NOW) headline flagging business-model risk is noise until proven otherwise, but at 6.1% weight and a high multiple, it warrants monitoring ahead of its October 27 print. ADBE's next report is September 10; the narrative risk (AI disruption, CFO exit) hasn't gone away even after today's pop.</p>",
   "attention": [
-    {
-      "ticker": "NOW",
-      "severity": "act",
-      "headline": "Fell 5.08% today — largest single-day loss in the book",
-      "note": "No fresh negative catalyst is visible in the provided data, making this a potentially sentiment- or macro-driven flush, but at ~6.1% weight a continued de-rate of high-multiple software would accelerate drawdown; the thesis and price need to be reconciled before the Oct 27 earnings date."
-    },
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "Third-largest position carries an AVOID verdict and the book's lowest QARP (36.6)",
-      "note": "An 8.1% weight in a capital-preservation book rated AVOID is a structural mismatch that today's 2.28% bounce does nothing to resolve — a sizing decision is overdue."
+      "headline": "AVOID-rated name at near-top weight, down again today",
+      "note": "RKLB carries the book's lowest QARP (36.7), an explicit AVOID verdict, and shed another 3.56% Tuesday — yet at 7.8% it is the second-largest single position in a capital-preservation book, a direct contradiction that demands resolution."
     },
     {
-      "ticker": "LULU",
+      "ticker": "BSX",
       "severity": "watch",
-      "headline": "Down 9.5% overall, elevated risk flag, next read September 2",
-      "note": "Five straight quarters of negative Americas comps, tariff-driven margin pressure, and a stalled China business mean the BUY verdict is increasingly unsupported by price action, and the September 2 event is a binary risk."
+      "headline": "Guidance slashed; price and thesis diverging",
+      "note": "Management guided flat through Q3 after cutting FY26 growth to 7–8.5%, yet the STRONG BUY verdict and 9.5% weight assume a durable growth story — Tuesday's –1.87% move and a cumulative gain of only 3.0% suggest the market is not buying that story."
     },
     {
-      "ticker": "ZTS",
+      "ticker": "NVDA",
       "severity": "watch",
-      "headline": "Second-largest position down 7.3% overall despite STRONG BUY rating",
-      "note": "The widening gap between a 76.2 QARP / STRONG BUY verdict and a deepening unrealized loss demands a reassessment of whether the thesis is intact or the rating is lagging deteriorating fundamentals."
+      "headline": "Earnings eight days out; export-control and AI-capex narrative heating up",
+      "note": "NVDA fell 2.34% Tuesday against a backdrop of tightening China export licenses and a prominent 'AI bubble' headline — with the August 26 print imminent, the risk flag could crystallize quickly."
+    },
+    {
+      "ticker": "ADBE",
+      "severity": "note",
+      "headline": "Big pop today, but AI-disruption narrative unresolved ahead of Sep 10 report",
+      "note": "Today's 3.58% gain looks like sentiment relief rather than a fundamental reset — the CFO exit, AI-moat concerns, and ARR de-emphasis haven't been answered, and September 10 will force the issue."
     }
   ],
-  "date": "2026-08-17",
-  "generated_at": "Aug 17, 4:47pm ET"
+  "date": "2026-08-18",
+  "generated_at": "Aug 18, 4:46pm ET"
 }
