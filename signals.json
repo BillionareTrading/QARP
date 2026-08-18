@@ -1,6 +1,6 @@
 {
   "date": "2026-08-18",
-  "generated_at": "Aug 18, 5:45am ET",
+  "generated_at": "Aug 18, 6:45am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -169,9 +169,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "'Nvidia To Invest $100B For OpenAI Data Centre In Ohio' - Financial Times",
-      "ts": 1786975482,
-      "url": "https://www.benzinga.com/news/26/08/61248274/nvidia-invest-100b-openai-data-centre-ohio-financial-times",
+      "title": "JPMorgan's Bill Eigen Warns the AI Boom Is Starting to Resemble the 2008 Housing Crash: 'What I'm Terrified of Is…'",
+      "ts": 1787041464,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61265641/jp-morgans-bill-eigen-says-ai-boom-is-a-real-estate-cycle-not-a-tech-cycle",
       "wiim": false
     },
     "RKLB": {
@@ -516,6 +516,110 @@
   },
   "bz_news": [
     {
+      "title": "Home Depot CFO Says Homeowners Are Willing To Tackle Smaller Projects, While Remaining Frozen On Large Renovations",
+      "url": "https://www.benzinga.com/quote/XHB",
+      "ts": 1787048621,
+      "tickers": [
+        "HD",
+        "LOW",
+        "XHB"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.259
+    },
+    {
+      "title": "Elizabeth Warren Targets Defense Contractors’ $100 Billion Shareholder Payouts: ‘This Needs to Stop’",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61267051/elizabeth-warren-blasts-top-defense-contractors-over-100-billion-in-stock-buybacks-since-2020",
+      "ts": 1787047735,
+      "tickers": [
+        "RTX",
+        "LMT",
+        "GE",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.277
+    },
+    {
+      "title": "Home Depot Q2 Comparable Sales +1.7%, Comparable Sales US +1.3%",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61266726/home-depot-q2-comparable-sales-1-7-comparable-sales-us-1-3",
+      "ts": 1787047385,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.394
+    },
+    {
+      "title": "Home Depot Affirms FY2026 Adj EPS Guidance of $14.69-$15.28 vs $14.96 Est; Affirm FY2026 Sales Guidance of $168.800B-$172.093B vs $170.958B Est",
+      "url": "https://www.benzinga.com/news/26/08/61266676/home-depot-affirms-fy2026-adj-eps-guidance-14-69-15-28-vs-14-96-est-affirm-fy2026-sales-guidance-168",
+      "ts": 1787047347,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.425
+    },
+    {
+      "title": "Home Depot Q2 Adj. EPS $4.92 Beats $4.73 Estimate, Sales $47.861B Beat $47.271B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61266630/home-depot-q2-adj-eps-4-92-beats-4-73-estimate-sales-47-861b-beat-47-271b-estimate",
+      "ts": 1787047244,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.432
+    },
+    {
+      "title": "In-Depth Analysis: Microsoft Versus Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/08/61266556/depth-analysis-microsoft-versus-competitors-software-industry",
+      "ts": 1787047118,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.344
+    },
+    {
+      "title": "Assessing Apple's Performance Against Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/08/61266555/assessing-apple-s-performance-against-competitors-technology-hardware-storage-amp-peripherals-indust",
+      "ts": 1787047113,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.377
+    },
+    {
+      "title": "Stock Market Today: Dow Jones, S&P 500 Futures Fall as Trump Rejects Extending Ceasefire With Iran—Home Depot, Super League, Flexsteel in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61266417/stock-market-today-dow-jones-sp-500-futures-fall-as-trump-rejects-extending-ceasefire-with-iran-home-depot-super-league-flexsteel-in-focus",
+      "ts": 1787046821,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "QQQ",
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.478
+    },
+    {
       "title": "Palmer Luckey Fires Back at Former Taco Bell CEO Greg Creed Over McDonald’s Drinks Criticism: ‘What a Loser’",
       "url": "https://www.benzinga.com/markets/tech/26/08/61266022/palmer-luckey-fires-back-at-former-taco-bell-ceo-greg-creed-over-mcdonalds-drinks-criticism-what-a-loser",
       "ts": 1787043905,
@@ -540,7 +644,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.38
+      "relevance": 0.381
     },
     {
       "title": "JPMorgan's Bill Eigen Warns the AI Boom Is Starting to Resemble the 2008 Housing Crash: 'What I'm Terrified of Is…'",
@@ -686,7 +790,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.435
+      "relevance": 0.436
     },
     {
       "title": "Walmart Could Swing $42.1 Billion In Value After Earnings",
@@ -744,128 +848,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.369
-    },
-    {
-      "title": "Could Apple Stock Be Headed to $400?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61259595/could-apple-stock-be-headed-to-400",
-      "ts": 1786995595,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.33
-    },
-    {
-      "title": "Home Depot Could Swing $14.6 Billion After Earnings",
-      "url": "https://www.benzinga.com/markets/options/26/08/61259446/home-depot-could-swing-14-6-billion-after-earnings",
-      "ts": 1786995065,
-      "tickers": [
-        "HD",
-        "LZB",
-        "JKHY",
-        "TOL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.409
-    },
-    {
-      "title": "Home Depot Q2 Preview: Data Shows Visits Down, Will Earnings Say Otherwise?",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/08/61258996/home-depot-q2-preview-data-shows-visits-down-will-earnings-say-otherwise",
-      "ts": 1786994103,
-      "tickers": [
-        "HD",
-        "LOW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.442
-    },
-    {
-      "title": "Home Depot Earnings Prediction Market Preview: Will CEO Ted Decker Talk About Tariffs?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61257876/home-depot-earnings-preview-tariffs-mexico-housing",
-      "ts": 1786991286,
-      "tickers": [
-        "HD",
-        "GOOGL",
-        "LOW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.408
-    },
-    {
-      "title": "The Slow-Motion Memecoin: Why Nike’s Multi-Year Unwind Is Taking So Long to Fix",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61257654/the-slow-motion-memecoin-why-nikes-multi-year-unwind-is-taking-so-long-to-fix",
-      "ts": 1786990765,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.335
-    },
-    {
-      "title": "Caterpillar Launches $3M Workforce Initiative In Arkansas To Prepare Workers For Modern Manufacturing Careers",
-      "url": "https://www.benzinga.com/news/26/08/61257379/caterpillar-launches-3m-workforce-initiative-arkansas-prepare-workers-modern-manufacturing-careers",
-      "ts": 1786990115,
-      "tickers": [
-        "CAT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.235
-    },
-    {
-      "title": "Why Is Target Stock Falling on Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61257111/why-is-target-stock-falling-on-monday",
-      "ts": 1786989396,
-      "tickers": [
-        "TGT",
-        "AMZN",
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.367
-    },
-    {
-      "title": "Anthropic's Revenue Jumps 14x; Chinese AI Targets Nvidia's Moat",
-      "url": "https://www.benzinga.com/Opinion/26/08/61256549/anthropic-revenue-jumps-14x-chinese-ai-targets-nvidias-moat",
-      "ts": 1786988266,
-      "tickers": [
-        "SPY",
-        "NVDA",
-        "TSLA",
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.473
-    },
-    {
-      "title": "4 Health Care Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61256448/4-health-care-stocks-whale-alerts-today-s-session",
-      "ts": 1786988116,
-      "tickers": [
-        "UNH",
-        "PFE",
-        "HUM",
-        "NVO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.387
     }
   ],
   "portfolio_brief": {
@@ -1088,9 +1070,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "'Nvidia To Invest $100B For OpenAI Data Centre In Ohio' - Financial Times",
-        "ts": 1786975482,
-        "url": "https://www.benzinga.com/news/26/08/61248274/nvidia-invest-100b-openai-data-centre-ohio-financial-times",
+        "title": "JPMorgan's Bill Eigen Warns the AI Boom Is Starting to Resemble the 2008 Housing Crash: 'What I'm Terrified of Is…'",
+        "ts": 1787041464,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61265641/jp-morgans-bill-eigen-says-ai-boom-is-a-real-estate-cycle-not-a-tech-cycle",
         "wiim": false
       },
       "filings": {
