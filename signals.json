@@ -1,6 +1,6 @@
 {
   "date": "2026-08-18",
-  "generated_at": "Aug 18, 8:44am ET",
+  "generated_at": "Aug 18, 9:44am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -117,8 +117,8 @@
     "SPGI": "2026-10-28",
     "GILD": "2026-10-28",
     "SAP": "2026-10-21",
-    "AVGO": "2026-09-02",
     "NVS": "2026-10-27",
+    "AVGO": "2026-09-02",
     "NBIX": "2026-10-26",
     "VRTX": "2026-11-02",
     "EFX": "2026-10-19"
@@ -127,10 +127,10 @@
   "sectors": [
     {
       "sector": "Foundry, Fabricator & Idm Chip",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "AI cloud providers CoreWeave and Nebius reported better-than-expected Q2…",
       "note": "After AI cloud providers CoreWeave and Nebius reported better-than-expected Q2 results and server and storage maker Super Micro Computer reported better-than-expected Q4 financial results, all of which may help bolster the demand outlook for the sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
@@ -141,17 +141,17 @@
     },
     {
       "sector": "Software",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
       "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Banks & Financial Services",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Softer oil prices have driven a decline in Treasury yields",
       "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Chemical & Coatings",
@@ -169,9 +169,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "OpenAI Launches ChatGPT For Teens And Partners With CodeAI To Prepare The First AI Generation",
-      "ts": 1787051731,
-      "url": "https://www.benzinga.com/news/26/08/61268385/openai-launches-chatgpt-teens-and-partners-codeai-prepare-first-ai-generation",
+      "title": "J.P. Morgan’s Bill Eigen Sounds 2008 Crash Alarm Over AI Boom — Says Investors Are Missing One Warning Sign That Could Change Everything: ‘What I’m Terrified of Is…’ (UPDATED)",
+      "ts": 1787058607,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61265641/jp-morgans-bill-eigen-says-ai-boom-is-a-real-estate-cycle-not-a-tech-cycle",
       "wiim": false
     },
     "RKLB": {
@@ -185,12 +185,6 @@
       "ts": 1786996395,
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61259954/nvidia-is-the-best-sp-500-stock-of-the-past-10-15-20-years-but-4-stocks-beat-it-over-the-past-5-years",
       "wiim": false
-    },
-    "NOW": {
-      "title": "SanDisk Rips 10%, Micron Rises 6% as AI Memory Frenzy Builds: Stock Market Today",
-      "ts": 1786986272,
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61255493/sandisk-micron-ai-memory-frenzy-lutnick-china-dram-stock-market-today",
-      "wiim": false
     }
   },
   "ratings": [
@@ -202,11 +196,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$145",
-      "price": 135.97,
-      "upside": 6.6,
+      "price": 137.34,
+      "upside": 5.6,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-11",
@@ -216,8 +210,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$400",
-      "price": 337.88,
-      "upside": 18.4,
+      "price": 332.62,
+      "upside": 20.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -230,11 +224,11 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 135.97,
-      "upside": 5.2,
+      "price": 137.34,
+      "upside": 4.1,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-12",
@@ -244,8 +238,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 337.88,
-      "upside": 1.5,
+      "price": 332.62,
+      "upside": 3.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -258,8 +252,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 190.97,
-      "upside": 10.0,
+      "price": 195.21,
+      "upside": 7.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -272,8 +266,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 190.97,
-      "upside": 7.3,
+      "price": 195.21,
+      "upside": 5.0,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -286,8 +280,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$138",
-      "price": 112.9,
-      "upside": 22.2,
+      "price": 112.39,
+      "upside": 22.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -300,8 +294,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$140",
-      "price": 112.9,
-      "upside": 24.0,
+      "price": 112.39,
+      "upside": 24.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -314,8 +308,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$123",
-      "price": 112.9,
-      "upside": 8.9,
+      "price": 112.39,
+      "upside": 9.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -328,8 +322,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 112.9,
-      "upside": 32.9,
+      "price": 112.39,
+      "upside": 33.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -342,8 +336,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 112.9,
-      "upside": 19.6,
+      "price": 112.39,
+      "upside": 20.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -356,8 +350,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 112.9,
-      "upside": 46.1,
+      "price": 112.39,
+      "upside": 46.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -370,8 +364,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 112.9,
-      "upside": 19.6,
+      "price": 112.39,
+      "upside": 20.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -384,8 +378,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "price": 112.9,
-      "upside": 6.3,
+      "price": 112.39,
+      "upside": 6.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -398,8 +392,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "price": 202.7,
-      "upside": 2.6,
+      "price": 205.0,
+      "upside": 1.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -412,8 +406,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "price": 337.88,
-      "upside": 0.6,
+      "price": 332.62,
+      "upside": 2.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -427,7 +421,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "upside": 2.6
+      "upside": 1.5
     },
     "HD": {
       "date": "2026-08-17",
@@ -436,7 +430,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "upside": 0.6
+      "upside": 2.2
     },
     "CSCO": {
       "date": "2026-08-14",
@@ -445,7 +439,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "upside": 6.3
+      "upside": 6.8
     },
     "CRM": {
       "date": "2026-08-12",
@@ -454,7 +448,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "upside": 10.0
+      "upside": 7.6
     },
     "MRK": {
       "date": "2026-08-12",
@@ -463,7 +457,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": 5.2
+      "upside": 4.1
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -472,7 +466,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -13.7
+      "upside": -14.0
     },
     "PG": {
       "date": "2026-08-07",
@@ -490,7 +484,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 9.4
+      "upside": 6.8
     },
     "NKE": {
       "date": "2026-08-04",
@@ -499,10 +493,143 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$40",
-      "upside": 2.3
+      "upside": 1.7
     }
   },
   "bz_news": [
+    {
+      "title": "Home Depot Exec Says Co. Received $730M In Tariff Refunds In Q2",
+      "url": "https://www.benzinga.com/news/26/08/61272872/home-depot-exec-says-co-received-730m-tariff-refunds-q2",
+      "ts": 1787059772,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.364
+    },
+    {
+      "title": "Home Depot shares are trading higher after the company reported better-than-expected Q2 financial results and reaffirmed its FY26 adjusted and GAAP EPS and sales guidance.",
+      "url": "https://www.benzinga.com/quote/HD",
+      "ts": 1787059151,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.428
+    },
+    {
+      "title": "Cisco, Nvidia, Amazon and Nokia: The Customer List Behind Fabrinet's AI Boom",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61272428/cisco-nvidia-amazon-nokia-fabrinet-ai-boom",
+      "ts": 1787058982,
+      "tickers": [
+        "FN",
+        "AMZN",
+        "CSCO",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.501
+    },
+    {
+      "title": "NKE Stock Has Crashed Nearly 80% From Its 2021 Peak — Wall Street Warns of ‘Stage 4’ Breakdown (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61265732/nke-stock-erases-200-billion-in-market-cap-since-2021-peak-arvy-cio-warns-of-a-stage-4-decline",
+      "ts": 1787058841,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.409
+    },
+    {
+      "title": "J.P. Morgan’s Bill Eigen Sounds 2008 Crash Alarm Over AI Boom — Says Investors Are Missing One Warning Sign That Could Change Everything: ‘What I’m Terrified of Is…’ (UPDATED)",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61265641/jp-morgans-bill-eigen-says-ai-boom-is-a-real-estate-cycle-not-a-tech-cycle",
+      "ts": 1787058607,
+      "tickers": [
+        "NVDA",
+        "META",
+        "SPY",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.317
+    },
+    {
+      "title": "What's Going On With Intel Stock Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61272008/whats-going-on-with-intel-stock-tuesday-9",
+      "ts": 1787058226,
+      "tickers": [
+        "INTC",
+        "SOXX",
+        "MTUM",
+        "XNTK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.395
+    },
+    {
+      "title": "RBC Capital Maintains Outperform on Honeywell Intl, Lowers Price Target to $293",
+      "url": "https://www.benzinga.com/news/26/08/61271803/rbc-capital-maintains-outperform-honeywell-intl-lowers-price-target-293",
+      "ts": 1787058062,
+      "tickers": [
+        "HON"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.481
+    },
+    {
+      "title": "Apple’s Foldable iPhone is an ‘Underappreciated’ Opportunity That Could Send AAPL Stock Soaring, Says Analyst — 14 Million Units Seen Selling by 2027",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61271771/apples-foldable-iphone-is-an-underappreciated-opportunity-that-could-send-aapl-stock-soaring-says-analyst-14-million-units-seen-selling-by-2027",
+      "ts": 1787058041,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.32
+    },
+    {
+      "title": "CBRS Stock Popped Nearly 10% Over 5 Sessions, IREN Jumped 15% — Here’s the ‘Situational Awareness’ Strategy Connecting Them",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61271534/cbrs-stock-popped-nearly-10-over-5-sessions-iren-jumped-15-heres-the-situational-awareness-strategy-connecting-them",
+      "ts": 1787057877,
+      "tickers": [
+        "CBRS",
+        "MSFT",
+        "IREN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.405
+    },
+    {
+      "title": "Costco Is Getting Into Medicare — Here’s What Its New Health Insurance Plans Could Mean for Seniors",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61271221/costco-medicare-plans",
+      "ts": 1787057304,
+      "tickers": [
+        "COST",
+        "UNH",
+        "CVS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.211
+    },
     {
       "title": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Fall as Trump Rejects Extending Ceasefire With Iran—Home Depot, Super League, Flexsteel in Focus (UPDATED)",
       "url": "https://www.benzinga.com/markets/equities/26/08/61266417/stock-market-today-dow-jones-sp-500-futures-fall-as-trump-rejects-extending-ceasefire-with-iran-home-depot-super-league-flexsteel-in-focus",
@@ -621,7 +748,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.267
+      "relevance": 0.268
     },
     {
       "title": "Cantor Fitzgerald Maintains Neutral on Amgen, Raises Price Target to $400",
@@ -674,7 +801,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.394
+      "relevance": 0.395
     },
     {
       "title": "Home Depot Affirms FY2026 Adj EPS Guidance of $14.69-$15.28 vs $14.96 Est; Affirm FY2026 Sales Guidance of $168.800B-$172.093B vs $170.958B Est",
@@ -687,147 +814,12 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.425
-    },
-    {
-      "title": "Home Depot Q2 Adj. EPS $4.92 Beats $4.73 Estimate, Sales $47.861B Beat $47.271B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61266630/home-depot-q2-adj-eps-4-92-beats-4-73-estimate-sales-47-861b-beat-47-271b-estimate",
-      "ts": 1787047244,
-      "tickers": [
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.432
-    },
-    {
-      "title": "In-Depth Analysis: Microsoft Versus Competitors In Software Industry",
-      "url": "https://www.benzinga.com/news/26/08/61266556/depth-analysis-microsoft-versus-competitors-software-industry",
-      "ts": 1787047118,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.344
-    },
-    {
-      "title": "Assessing Apple's Performance Against Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
-      "url": "https://www.benzinga.com/news/26/08/61266555/assessing-apple-s-performance-against-competitors-technology-hardware-storage-amp-peripherals-indust",
-      "ts": 1787047113,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.377
-    },
-    {
-      "title": "Palmer Luckey Fires Back at Former Taco Bell CEO Greg Creed Over McDonald’s Drinks Criticism: ‘What a Loser’",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61266022/palmer-luckey-fires-back-at-former-taco-bell-ceo-greg-creed-over-mcdonalds-drinks-criticism-what-a-loser",
-      "ts": 1787043905,
-      "tickers": [
-        "MCD",
-        "YUM",
-        "SBUX",
-        "QSR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.239
-    },
-    {
-      "title": "NKE Stock Erases $200 Billion in Market Cap Since 2021 Peak: Arvy CIO Warns of a ‘Stage 4’ Decline",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61265732/nke-stock-erases-200-billion-in-market-cap-since-2021-peak-arvy-cio-warns-of-a-stage-4-decline",
-      "ts": 1787042045,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.381
-    },
-    {
-      "title": "JPMorgan's Bill Eigen Warns the AI Boom Is Starting to Resemble the 2008 Housing Crash: 'What I'm Terrified of Is…'",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61265641/jp-morgans-bill-eigen-says-ai-boom-is-a-real-estate-cycle-not-a-tech-cycle",
-      "ts": 1787041464,
-      "tickers": [
-        "NVDA",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.319
-    },
-    {
-      "title": "Kevin O’Leary Says ‘Salary Can Make It Very Easy to Forget About Your Dreams,’ Calls Fear of Failure an ‘Incredible Motivator’",
-      "url": "https://www.benzinga.com/personal-finance/financial-advisors/26/08/61265537/kevin-oleary-says-salary-can-make-it-very-easy-to-forget-about-your-dreams-calls-fear-of-failure-an-incredible-motivator",
-      "ts": 1787039894,
-      "tickers": [
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.205
-    },
-    {
-      "title": "Dow Tumbles Over 250 Points Amid Rising Iran Concerns: Investor Sentiment Weakens, But Fear Index Remains In ‘Greed’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61265422/dow-tumbles-over-250-points-amid-rising-iran-concerns-investor-sentiment-weakens-but-fear-index-remains-in-greed-zone",
-      "ts": 1787038322,
-      "tickers": [
-        "TOL",
-        "HD",
-        "AS",
-        "IVF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.458
-    },
-    {
-      "title": "Google Plans to Pull All Pixel Production Out of China by 2027 Amid US-China Tensions: Report",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61265398/google-plans-to-pull-all-pixel-production-out-of-china-by-2027-amid-us-china-tensions-report",
-      "ts": 1787038046,
-      "tickers": [
-        "GOOGL",
-        "AAPL",
-        "GOOG",
-        "SSNLF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.275
-    },
-    {
-      "title": "Home Depot, Toll Brothers And 3 Stocks To Watch Heading Into Tuesday",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61265304/home-depot-toll-brothers-and-3-stocks-to-watch-heading-into-tuesday-2",
-      "ts": 1787037550,
-      "tickers": [
-        "HD",
-        "TOL",
-        "FLXS",
-        "AS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.383
     }
   ],
   "portfolio_brief": {
     "ABT": {
       "name": "Abbott Laboratories",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 11,
         "buy": 13,
@@ -855,7 +847,7 @@
         },
         "insider30d": 1
       },
-      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "ZTS": {
       "name": "Zoetis",
@@ -974,12 +966,7 @@
         "score": 1.15,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "SanDisk Rips 10%, Micron Rises 6% as AI Memory Frenzy Builds: Stock Market Today",
-        "ts": 1786986272,
-        "url": "https://www.benzinga.com/markets/market-summary/26/08/61255493/sandisk-micron-ai-memory-frenzy-lutnick-china-dram-stock-market-today",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1044,9 +1031,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "OpenAI Launches ChatGPT For Teens And Partners With CodeAI To Prepare The First AI Generation",
-        "ts": 1787051731,
-        "url": "https://www.benzinga.com/news/26/08/61268385/openai-launches-chatgpt-teens-and-partners-codeai-prepare-first-ai-generation",
+        "title": "J.P. Morgan’s Bill Eigen Sounds 2008 Crash Alarm Over AI Boom — Says Investors Are Missing One Warning Sign That Could Change Everything: ‘What I’m Terrified of Is…’ (UPDATED)",
+        "ts": 1787058607,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61265641/jp-morgans-bill-eigen-says-ai-boom-is-a-real-estate-cycle-not-a-tech-cycle",
         "wiim": false
       },
       "filings": {
@@ -1309,9 +1296,33 @@
       },
       "explain": "39 analysts cover it — 30 bullish, 7 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
+    "NVS": {
+      "name": "Novartis",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 6,
+        "buy": 10,
+        "hold": 14,
+        "sell": 4,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 16,
+        "bearish": 4,
+        "label": "Buy",
+        "score": 0.53,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 0
+      },
+      "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
     "AVGO": {
       "name": "Broadcom",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 17,
         "buy": 34,
@@ -1344,31 +1355,7 @@
         },
         "insider30d": 0
       },
-      "explain": "56 analysts cover it — 51 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-    },
-    "NVS": {
-      "name": "Novartis",
-      "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 6,
-        "buy": 10,
-        "hold": 14,
-        "sell": 4,
-        "strongSell": 0,
-        "total": 34,
-        "bullish": 16,
-        "bearish": 4,
-        "label": "Buy",
-        "score": 0.53,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": null,
-        "periodic": null,
-        "insider30d": 0
-      },
-      "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "56 analysts cover it — 51 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
@@ -1702,6 +1689,7 @@
       "summary": "Q2 FY2026 — revenue $7.8B (+10.2% YoY), diluted EPS $-8.45 (-641.7% YoY), net margin -134%. (as reported, GAAP)"
     },
     "SAP": null,
+    "NVS": null,
     "AVGO": {
       "period": "Q2 FY2026",
       "filed": "2026-06-09",
@@ -1721,7 +1709,6 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
     },
-    "NVS": null,
     "NBIX": {
       "period": "Q2 FY2026",
       "filed": "2026-07-31",
