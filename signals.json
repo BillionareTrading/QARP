@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "generated_at": "Aug 19, 10:44am ET",
+  "generated_at": "Aug 19, 11:45am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -147,17 +147,17 @@
       "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
-      "sector": "Banks & Financial Services",
-      "dir": "up",
-      "driver": "Softer oil prices have driven a decline in Treasury yields",
-      "note": "As softer oil prices have driven a decline in Treasury yields, helping ease inflation concerns and support expectations for a more favorable rate environment. The improved macro backdrop has lifted sentiment across the financial sector.",
-      "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
       "sector": "Chemical & Coatings",
       "dir": "up",
       "driver": "Reports suggesting that the Iranian government will try to delay a deal …",
       "note": "After reports suggesting that the Iranian government will try to delay a deal with the U.S. An impasse may mean that bottlenecking of feedstock cargoes may continue with limited Strait of Hormuz marine passage.",
+      "src": "Benzinga WIIM · market-wide"
+    },
+    {
+      "sector": "Telecommunications",
+      "dir": "down",
+      "driver": "SpaceX President Gwynne Shotwell said on a conference call that it antic…",
+      "note": "After SpaceX President Gwynne Shotwell said on a conference call that it anticipates acquiring \"quite a few\" customers from AT&T, T-Mobile and Verizon.",
       "src": "Benzinga WIIM · market-wide"
     }
   ],
@@ -179,12 +179,6 @@
       "ts": 1787074640,
       "url": "https://www.benzinga.com/markets/tech/26/08/61282793/youre-already-funding-the-ai-bubble-and-youll-pay-for-the-bust",
       "wiim": false
-    },
-    "NOW": {
-      "title": "Salesforce's and ServiceNow’s Business Models Are in Danger, Expert Cautions: What Does It Mean For CRM and NOW?",
-      "ts": 1787067982,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61279331/salesforce-servicenow-business-model-danger",
-      "wiim": false
     }
   },
   "ratings": [
@@ -196,7 +190,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 149.93,
+      "price": 149.86,
       "upside": -4.6,
       "held": false,
       "uni": true,
@@ -210,8 +204,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 347.57,
-      "upside": -1.3,
+      "price": 344.46,
+      "upside": -0.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -224,8 +218,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 203.5,
-      "upside": 3.2,
+      "price": 206.39,
+      "upside": 1.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -238,8 +232,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 203.5,
-      "upside": 0.7,
+      "price": 206.39,
+      "upside": -0.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -252,8 +246,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$138",
-      "price": 111.59,
-      "upside": 23.7,
+      "price": 111.44,
+      "upside": 23.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -266,8 +260,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$140",
-      "price": 111.59,
-      "upside": 25.5,
+      "price": 111.44,
+      "upside": 25.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -280,8 +274,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$123",
-      "price": 111.59,
-      "upside": 10.2,
+      "price": 111.44,
+      "upside": 10.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -294,8 +288,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 111.59,
-      "upside": 34.4,
+      "price": 111.44,
+      "upside": 34.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -308,8 +302,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 111.59,
-      "upside": 21.0,
+      "price": 111.44,
+      "upside": 21.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -322,8 +316,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 111.59,
-      "upside": 47.9,
+      "price": 111.44,
+      "upside": 48.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -336,8 +330,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 111.59,
-      "upside": 21.0,
+      "price": 111.44,
+      "upside": 21.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -350,8 +344,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "price": 111.59,
-      "upside": 7.5,
+      "price": 111.44,
+      "upside": 7.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -364,8 +358,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "price": 207.18,
-      "upside": 0.4,
+      "price": 206.97,
+      "upside": 0.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -378,8 +372,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "price": 347.57,
-      "upside": -2.2,
+      "price": 344.46,
+      "upside": -1.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -392,11 +386,39 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$204",
-      "price": 203.5,
-      "upside": 0.2,
+      "price": 206.39,
+      "upside": -1.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-08-19",
+      "ticker": "HD",
+      "firm": "UBS",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$420",
+      "price": 344.46,
+      "upside": 21.9,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-19",
+      "ticker": "HD",
+      "firm": "Truist Securities",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$373",
+      "price": 344.46,
+      "upside": 8.3,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     },
     {
       "date": "2026-08-19",
@@ -406,7 +428,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 347.57,
+      "price": 344.46,
       "upside": null,
       "held": false,
       "uni": true,
@@ -420,8 +442,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 347.57,
-      "upside": 15.1,
+      "price": 344.46,
+      "upside": 16.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -434,8 +456,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$342",
-      "price": 347.57,
-      "upside": -1.6,
+      "price": 344.46,
+      "upside": -0.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -448,8 +470,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 347.57,
-      "upside": 22.3,
+      "price": 344.46,
+      "upside": 23.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -458,12 +480,12 @@
   "rating_moves": {
     "HD": {
       "date": "2026-08-19",
-      "firm": "Keybanc",
-      "action": "Reiterates",
-      "rating": "Sector Weight",
-      "stance": "neutral",
-      "pt": "",
-      "upside": null
+      "firm": "UBS",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$420",
+      "upside": 21.9
     },
     "CRM": {
       "date": "2026-08-18",
@@ -472,7 +494,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$204",
-      "upside": 0.2
+      "upside": -1.2
     },
     "CVX": {
       "date": "2026-08-17",
@@ -481,7 +503,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "upside": 0.4
+      "upside": 0.5
     },
     "CSCO": {
       "date": "2026-08-14",
@@ -490,7 +512,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "upside": 7.5
+      "upside": 7.7
     },
     "MRK": {
       "date": "2026-08-12",
@@ -508,7 +530,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -16.7
+      "upside": -16.8
     },
     "PG": {
       "date": "2026-08-07",
@@ -526,10 +548,109 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 4.6
+      "upside": 4.9
     }
   },
   "bz_news": [
+    {
+      "title": "UBS Maintains Buy on Home Depot, Lowers Price Target to $420",
+      "url": "https://www.benzinga.com/news/26/08/61305693/ubs-maintains-buy-home-depot-lowers-price-target-420",
+      "ts": 1787152589,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.451
+    },
+    {
+      "title": "Moderna's Cancer Vaccine Win Is Merck's Story Too",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61305527/modernas-cancer-vaccine-win-is-mercks-story-too",
+      "ts": 1787152336,
+      "tickers": [
+        "MRNA",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.385
+    },
+    {
+      "title": "Moderna Stock Jumps 150%, Best Day Ever On Cancer Vaccine Win",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61305255/moderna-stock-best-day-ever-interpath-001-melanoma-merck",
+      "ts": 1787152006,
+      "tickers": [
+        "MRNA",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.406
+    },
+    {
+      "title": "EVP At Johnson & Johnson Exercises Options Worth $2.38M",
+      "url": "https://www.benzinga.com/news/26/08/61305056/evp-johnson-johnson-exercises-options-worth-2-38m",
+      "ts": 1787151675,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.444
+    },
+    {
+      "title": "These Analysts Revise Their Forecasts On Home Depot After Q2 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61304997/these-analysts-revise-their-forecasts-on-home-depot-after-q2-earnings",
+      "ts": 1787151635,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.469
+    },
+    {
+      "title": "Alphabet Raises $3.9B in First Australian Bond Sale as AI Spending Surges",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61304970/alphabet-raises-3-9b-in-first-australian-bond-sale-as-ai-spending-surges",
+      "ts": 1787151615,
+      "tickers": [
+        "AAPL",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.386
+    },
+    {
+      "title": "Amgen shares are trading higher after Argus Research raised its price target on the stock from $375 to $460.",
+      "url": "https://www.benzinga.com/quote/AMGN",
+      "ts": 1787151418,
+      "tickers": [
+        "AMGN"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.418
+    },
+    {
+      "title": "Truist Securities Maintains Buy on Home Depot, Raises Price Target to $373",
+      "url": "https://www.benzinga.com/news/26/08/61304248/truist-securities-maintains-buy-home-depot-raises-price-target-373",
+      "ts": 1787150748,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.436
+    },
     {
       "title": "Replit Rolling Out GPT-5.6 Luna-Powered Free Mode",
       "url": "https://www.benzinga.com/news/26/08/61303660/replit-rolling-out-gpt-5-6-luna-powered-free-mode",
@@ -540,7 +661,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.302
+      "relevance": 0.303
     },
     {
       "title": "Keybanc Reiterates Sector Weight on Home Depotto Sector Weight",
@@ -606,7 +727,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.561
+      "relevance": 0.559
     },
     {
       "title": "RBC Capital Maintains Sector Perform on Home Depot, Lowers Price Target to $342",
@@ -630,7 +751,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.418
+      "relevance": 0.419
     },
     {
       "title": "Amazon Bets Big on Drone Delivery — Prime Air Targets 500 US Cities as Competition From Wing, Zipline Heats Up",
@@ -669,7 +790,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.321
+      "relevance": 0.32
     },
     {
       "title": "3 Sectors Investors Should Buy Now as S&P 500 Stumbles — Strategist Sees 15%-18% Upside",
@@ -753,108 +874,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.411
-    },
-    {
-      "title": "Klarna Stock Tries to Stabilize After 23% Plunge As German Shoppers Spoil the Party",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61295420/klarna-stock-tries-to-stabilize-after-23-plunge-as-german-shoppers-spoil-the-party",
-      "ts": 1787136972,
-      "tickers": [
-        "KLAR",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.314
-    },
-    {
-      "title": "Merck And Moderna Announce Topline Results From The Phase 3 Interpath-001 Trial Evaluating Adjuvant Treatment With Intismeran Autogene In Combination With KEYTRUDA In Patients With Completely Resected Stage IIB-IV Melanoma; At A Pre-specified Interim Analysis, Intismeran In Combination With KEYTRUDA As Adjuvant Therapy Demonstrated Statistically Significant And Clinically Meaningful Improvements In RFS And DMFS Compared To KEYTRUDA Alone",
-      "url": "https://www.benzinga.com/news/26/08/61295298/merck-and-moderna-announce-topline-results-from-the-phase-3-interpath-001-trial-evaluating-adjuvant-treatment-with-intismeran-autogene-in-combination-with-keytruda-in-patients-with-completely-resected",
-      "ts": 1787136447,
-      "tickers": [
-        "MRNA",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.353
-    },
-    {
-      "title": "IBM Announces Successful Joining And Cooling Down Of Two Cryogenic Modules, A Precursor To Scaling Into The Ultra-Cold System Required To Link Hundreds Of Quantum Chips",
-      "url": "https://www.benzinga.com/news/26/08/61294499/ibm-announces-successful-joining-and-cooling-down-two-cryogenic-modules-precursor-scaling-ultra-cold",
-      "ts": 1787134064,
-      "tickers": [
-        "IBM",
-        "QTUM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.369
-    },
-    {
-      "title": "Comparative Study: Microsoft And Industry Competitors In Software Industry",
-      "url": "https://www.benzinga.com/news/26/08/61294107/comparative-study-microsoft-and-industry-competitors-software-industry",
-      "ts": 1787133520,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.309
-    },
-    {
-      "title": "Comparing Apple With Industry Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
-      "url": "https://www.benzinga.com/news/26/08/61294106/comparing-apple-industry-competitors-technology-hardware-storage-amp-peripherals-industry",
-      "ts": 1787133515,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.379
-    },
-    {
-      "title": "Intel Eyes an Opening in Taiwan Semiconductor’s AI Packaging Fortress",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61293733/intel-eyes-an-opening-in-taiwan-semiconductors-ai-packaging-fortress",
-      "ts": 1787131502,
-      "tickers": [
-        "INTC",
-        "SFTBY",
-        "TSM",
-        "SOXX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.517
-    },
-    {
-      "title": "Disney Takes Trump’s FCC to Court Over ABC Probe as Mouse House Alleges ‘Extraordinary Assault’ on Free Speech — Adam Schiff Warns of First Amendment Harm",
-      "url": "https://www.benzinga.com/news/legal/26/08/61293721/disney-takes-trumps-fcc-to-court-over-abc-probe-as-mouse-house-alleges-extraordinary-assault-on-free-speech-adam-schiff-warns-of-first-amendment-harm",
-      "ts": 1787131324,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.252
-    },
-    {
-      "title": "Reported Earlier, \"OpenAI’s Second-Quarter Sales Show Tepid Growth Compared With Anthropic\" - WSJ",
-      "url": "https://www.benzinga.com/news/26/08/61292887/reported-earlier-openai-s-second-quarter-sales-show-tepid-growth-compared-anthropic-wsj",
-      "ts": 1787123583,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.35
     }
   ],
   "portfolio_brief": {
@@ -1002,12 +1021,7 @@
         "score": 1.15,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "Salesforce's and ServiceNow’s Business Models Are in Danger, Expert Cautions: What Does It Mean For CRM and NOW?",
-        "ts": 1787067982,
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61279331/salesforce-servicenow-business-model-danger",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
