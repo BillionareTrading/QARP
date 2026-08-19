@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "generated_at": "Aug 19, 3:44pm ET",
+  "generated_at": "Aug 19, 4:44pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -126,6 +126,13 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Software",
+      "dir": "up",
+      "driver": "B of A Securities raised its price targets on several stocks",
+      "note": "After B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Semiconductor",
       "dir": "down",
       "driver": "Concerns that OpenAI's Q2 earnings may weigh on AI growth",
@@ -138,13 +145,6 @@
       "driver": "Energy price gains due to concerns that the U.S. and Iran aren't making …",
       "note": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Software",
-      "dir": "mixed",
-      "driver": "Multiple earnings-related catalysts across the sector including weak Hub…",
-      "note": "Amid multiple earnings-related catalysts across the sector including weak Hubspot FY26 sales and Q3 EPS guidance, Datadog Q3 adjusted EPS and sales guidance that was only slightly above estimates, and Applovi's worse-than-expected Q2 sales results.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Chemical & Coatings",
@@ -162,16 +162,22 @@
     }
   ],
   "holding_news": {
+    "ADBE": {
+      "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
+      "ts": 1787168795,
+      "url": "https://www.benzinga.com/quote/SAP",
+      "wiim": true
+    },
+    "SAP": {
+      "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
+      "ts": 1787168795,
+      "url": "https://www.benzinga.com/quote/SAP",
+      "wiim": true
+    },
     "AVGO": {
       "title": "Shares of semiconductor companies are trading lower amid concerns that OpenAI's Q2 earnings may weigh on AI growth. Today's Fed minutes revealed that many participants assessed that higher rates would likely be necessary if inflation did not fall.",
       "ts": 1787167424,
       "url": "https://www.benzinga.com/quote/ASYS",
-      "wiim": true
-    },
-    "ADBE": {
-      "title": "Shares of software companies are trading higher, possibly amid broader market strength as promising economic data and easing oil prices reduce rate-hike concerns. Reports suggesting Silver Lake is in talks to acquire Workday may be lifting related peers.",
-      "ts": 1786648895,
-      "url": "https://www.benzinga.com/quote/FTNT",
       "wiim": true
     },
     "NVDA": {
@@ -190,8 +196,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "price": 152.49,
-      "upside": -6.2,
+      "price": 152.2,
+      "upside": -6.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -204,8 +210,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$343",
-      "price": 344.87,
-      "upside": -0.5,
+      "price": 344.3,
+      "upside": -0.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -218,8 +224,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$210",
-      "price": 206.81,
-      "upside": 1.5,
+      "price": 206.09,
+      "upside": 1.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -232,8 +238,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$205",
-      "price": 206.81,
-      "upside": -0.9,
+      "price": 206.09,
+      "upside": -0.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -246,8 +252,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$138",
-      "price": 111.28,
-      "upside": 24.0,
+      "price": 110.55,
+      "upside": 24.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -260,8 +266,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$140",
-      "price": 111.28,
-      "upside": 25.8,
+      "price": 110.55,
+      "upside": 26.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -274,8 +280,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$123",
-      "price": 111.28,
-      "upside": 10.5,
+      "price": 110.55,
+      "upside": 11.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -288,8 +294,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$150",
-      "price": 111.28,
-      "upside": 34.8,
+      "price": 110.55,
+      "upside": 35.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -302,8 +308,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 111.28,
-      "upside": 21.3,
+      "price": 110.55,
+      "upside": 22.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -316,8 +322,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$165",
-      "price": 111.28,
-      "upside": 48.3,
+      "price": 110.55,
+      "upside": 49.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -330,8 +336,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$135",
-      "price": 111.28,
-      "upside": 21.3,
+      "price": 110.55,
+      "upside": 22.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -344,8 +350,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "price": 111.28,
-      "upside": 7.8,
+      "price": 110.55,
+      "upside": 8.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -358,8 +364,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "price": 205.59,
-      "upside": 1.2,
+      "price": 205.76,
+      "upside": 1.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -372,8 +378,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "price": 344.87,
-      "upside": -1.4,
+      "price": 344.3,
+      "upside": -1.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -386,8 +392,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$204",
-      "price": 206.81,
-      "upside": -1.4,
+      "price": 206.09,
+      "upside": -1.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -400,8 +406,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$390",
-      "price": 344.87,
-      "upside": 13.1,
+      "price": 344.3,
+      "upside": 13.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -414,8 +420,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$218",
-      "price": 205.59,
-      "upside": 6.0,
+      "price": 205.76,
+      "upside": 5.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -428,8 +434,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 344.87,
-      "upside": 9.3,
+      "price": 344.3,
+      "upside": 9.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -442,8 +448,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$420",
-      "price": 344.87,
-      "upside": 21.8,
+      "price": 344.3,
+      "upside": 22.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -456,8 +462,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$373",
-      "price": 344.87,
-      "upside": 8.2,
+      "price": 344.3,
+      "upside": 8.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -470,7 +476,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 344.87,
+      "price": 344.3,
       "upside": null,
       "held": false,
       "uni": true,
@@ -484,8 +490,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 344.87,
-      "upside": 16.0,
+      "price": 344.3,
+      "upside": 16.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -498,8 +504,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$342",
-      "price": 344.87,
-      "upside": -0.8,
+      "price": 344.3,
+      "upside": -0.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -512,8 +518,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 344.87,
-      "upside": 23.2,
+      "price": 344.3,
+      "upside": 23.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -527,7 +533,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$390",
-      "upside": 13.1
+      "upside": 13.3
     },
     "CVX": {
       "date": "2026-08-19",
@@ -536,7 +542,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$218",
-      "upside": 6.0
+      "upside": 5.9
     },
     "CRM": {
       "date": "2026-08-18",
@@ -545,7 +551,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$204",
-      "upside": -1.4
+      "upside": -1.0
     },
     "CSCO": {
       "date": "2026-08-14",
@@ -554,7 +560,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "upside": 7.8
+      "upside": 8.5
     },
     "MRK": {
       "date": "2026-08-12",
@@ -563,7 +569,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$143",
-      "upside": -6.2
+      "upside": -6.0
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -572,7 +578,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -16.5
+      "upside": -16.8
     },
     "PG": {
       "date": "2026-08-07",
@@ -590,10 +596,63 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 4.7
+      "upside": 5.0
     }
   },
   "bz_news": [
+    {
+      "title": "Walmart Earnings Prediction Market Preview: What Will New CEO John Furner Say?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61316709/walmart-earnings-john-furner",
+      "ts": 1787172008,
+      "tickers": [
+        "WMT",
+        "TGT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.447
+    },
+    {
+      "title": "Trump Adds to Wealth With Moderna Stock Gains: Here’s How Much President Made",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61315705/trump-wealth-moderna-stock-gains-heres-how-much-made",
+      "ts": 1787170414,
+      "tickers": [
+        "MRNA",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.32
+    },
+    {
+      "title": "\"OpenAI ‘Will Be A Public Company In 2027’ Or Sooner, CFO Friar Tells Employees\" - CNBC",
+      "url": "https://www.benzinga.com/news/26/08/61314706/openai-will-be-public-company-2027-or-sooner-cfo-friar-tells-employees-cnbc",
+      "ts": 1787169000,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.357
+    },
+    {
+      "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
+      "url": "https://www.benzinga.com/quote/SAP",
+      "ts": 1787168795,
+      "tickers": [
+        "BTCT",
+        "PWCM",
+        "EXOD",
+        "BTCS"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.519
+    },
     {
       "title": "Walmart Could Swing $41.4 Billion In Value After Earnings",
       "url": "https://www.benzinga.com/markets/options/26/08/61314087/walmart-could-swing-41-4-billion-in-value-after-earnings",
@@ -664,7 +723,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.408
+      "relevance": 0.407
     },
     {
       "title": "Deere Q3 Preview: Is Tractor Maker an AI Data Center Play? Earnings Report Could Tell Investors 'Yes'",
@@ -677,7 +736,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.447
+      "relevance": 0.448
     },
     {
       "title": "3 Industrials Stocks With Whale Alerts In Today’s Session",
@@ -868,59 +927,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.36
-    },
-    {
-      "title": "Meta Stock Climbs as Landmark Trial Threatens $1.4 Trillion Penalties",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61307070/meta-stock-climbs-as-landmark-trial-threatens-1-4-trillion-penalties",
-      "ts": 1787154891,
-      "tickers": [
-        "META",
-        "MSFT",
-        "FDN",
-        "PNQI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.435
-    },
-    {
-      "title": "UBS Maintains Buy on Home Depot, Lowers Price Target to $420",
-      "url": "https://www.benzinga.com/news/26/08/61305693/ubs-maintains-buy-home-depot-lowers-price-target-420",
-      "ts": 1787152589,
-      "tickers": [
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.451
-    },
-    {
-      "title": "Moderna's Cancer Vaccine Win Is Merck's Story Too",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61305527/modernas-cancer-vaccine-win-is-mercks-story-too",
-      "ts": 1787152336,
-      "tickers": [
-        "MRNA",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.404
-    },
-    {
-      "title": "Moderna Stock Jumps 150%, Best Day Ever On Cancer Vaccine Win",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61305255/moderna-stock-best-day-ever-interpath-001-melanoma-merck",
-      "ts": 1787152006,
-      "tickers": [
-        "MRNA",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.425
     },
     {
       "title": "Keybanc Reiterates Sector Weight on Home Depot Sector Weight",
@@ -1206,9 +1212,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Shares of software companies are trading higher, possibly amid broader market strength as promising economic data and easing oil prices reduce rate-hike concerns. Reports suggesting Silver Lake is in talks to acquire Workday may be lifting related peers.",
-        "ts": 1786648895,
-        "url": "https://www.benzinga.com/quote/FTNT",
+        "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
+        "ts": 1787168795,
+        "url": "https://www.benzinga.com/quote/SAP",
         "wiim": true
       },
       "filings": {
@@ -1394,7 +1400,12 @@
         "score": 0.9,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
+        "ts": 1787168795,
+        "url": "https://www.benzinga.com/quote/SAP",
+        "wiim": true
+      },
       "filings": {
         "latest8k": null,
         "periodic": null,
