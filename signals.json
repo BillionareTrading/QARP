@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-18",
-  "generated_at": "Aug 18, 6:45pm ET",
+  "date": "2026-08-19",
+  "generated_at": "Aug 19, 5:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 18",
+      "when": "Aug 19",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -188,34 +188,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-11",
-      "ticker": "MRK",
-      "firm": "Argus Research",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$145",
-      "price": 135.17,
-      "upside": 7.3,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-08-11",
-      "ticker": "HD",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$400",
-      "price": 337.49,
-      "upside": 18.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-12",
       "ticker": "MRK",
@@ -499,18 +471,46 @@
       "stance": "bullish",
       "pt": "$287",
       "upside": 5.9
-    },
-    "NKE": {
-      "date": "2026-08-04",
-      "firm": "JP Morgan",
-      "action": "Downgrades",
-      "rating": "Underweight",
-      "stance": "bearish",
-      "pt": "$40",
-      "upside": -0.1
     }
   },
   "bz_news": [
+    {
+      "title": "Reported Earlier, \"OpenAI’s Second-Quarter Sales Show Tepid Growth Compared With Anthropic\" - WSJ",
+      "url": "https://www.benzinga.com/news/26/08/61292887/reported-earlier-openai-s-second-quarter-sales-show-tepid-growth-compared-anthropic-wsj",
+      "ts": 1787123583,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.35
+    },
+    {
+      "title": "Gene Munster on Meta Stock Slide: Teen Safety, Social Media Addiction Woes Are Just the 'Tip of The Iceberg'",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61291896/gene-munster-meta-stock-slide-teen-safety-social-media-addiction",
+      "ts": 1787111417,
+      "tickers": [
+        "META",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.279
+    },
+    {
+      "title": "Here’s How Much You Would Have Made Owning Visa Stock In The Last 10 Years",
+      "url": "https://www.benzinga.com/news/26/08/61290909/here-s-how-much-you-would-have-made-owning-visa-stock-last-10-years",
+      "ts": 1787096729,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.374
+    },
     {
       "title": "Amgen To Terminate Research Collaboration And License Agreement With TScan Therapeutics; Termination Of Collaboration Agreement Effective November 10, 2026",
       "url": "https://www.benzinga.com/news/26/08/61289522/amgen-terminate-research-collaboration-and-license-agreement-tscan-therapeutics-termination-collabor",
@@ -560,7 +560,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.385
+      "relevance": 0.384
     },
     {
       "title": "US Debt Nearing $40T; Home Depot earnings Better Than Expected",
@@ -803,61 +803,19 @@
       "relevance": 0.333
     },
     {
-      "title": "Salesforce's and ServiceNow’s Business Models Are in Danger, Expert Cautions: What Does It Mean For CRM and NOW?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61279331/salesforce-servicenow-business-model-danger",
-      "ts": 1787067982,
+      "title": "Anthropic’s Revenue Could Soar From $47 Billion to $200 Billion by 2028 as Bankers Build a Massive AI Valuation Case Ahead of Its IPO: Report (UPDATED)",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61233673/anthropic-200-billion-2028-revenue-2-trillion-valuation",
+      "ts": 1786762635,
       "tickers": [
-        "CRM",
         "GOOGL",
-        "NOW"
+        "GOOG",
+        "MSFT",
+        "PLTR"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.47
-    },
-    {
-      "title": "Citadel Advisors and Millennium Boosted Fabrinet Stakes in Q2 as AI Demand Accelerated",
-      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61279266/citadel-millennium-fabrinet-stakes-q2-ai-demand",
-      "ts": 1787067909,
-      "tickers": [
-        "FN",
-        "AMZN",
-        "CSCO",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.481
-    },
-    {
-      "title": "Shares of semiconductor and chip companies are trading lower amid rising oil prices and bond yields, prompting inflation concerns. Also, declining memory chip companies may weigh on the broader industry.",
-      "url": "https://www.benzinga.com/quote/QCOM",
-      "ts": 1787066959,
-      "tickers": [
-        "MOBX",
-        "AEHR",
-        "MXL",
-        "CBRS"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.494
-    },
-    {
-      "title": "Equinor Signs Deal With Chevron's Harmattan Energy Subsidiary To Acquire 17.4% Stake In Petroleum Exploration Licence 90 Offshore Namibia; Financial Terms Undisclosed",
-      "url": "https://www.benzinga.com/m/26/08/61277889/equinor-signs-deal-chevron-s-harmattan-energy-subsidiary-acquire-17-4-stake-petroleum-exploration-li",
-      "ts": 1787065862,
-      "tickers": [
-        "EQNR",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.315
+      "relevance": 0.359
     }
   ],
   "portfolio_brief": {
@@ -1312,7 +1270,7 @@
           "date": "2026-08-06",
           "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm"
         },
-        "insider30d": 2
+        "insider30d": 4
       },
       "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
