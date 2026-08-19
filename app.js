@@ -9,6 +9,9 @@ let DATA = null;
 const fmtUSD = (n, dp = 0) =>
   n == null ? "—" : (n < 0 ? "-" : "") + "$" + Math.abs(Number(n)).toLocaleString("en-US", { minimumFractionDigits: dp, maximumFractionDigits: dp });
 const fmtNum = (n, dp = 2) => (n == null ? "—" : Number(n).toLocaleString("en-US", { minimumFractionDigits: dp, maximumFractionDigits: dp }));
+// Share counts display like the broker app: snap to the integer when the exact
+// fractional count is within 0.02 of it (10.9919 -> "11"), else keep 2dp.
+const fmtShares = (n) => (n == null ? "—" : Math.abs(n - Math.round(n)) < 0.02 ? Math.round(n).toLocaleString("en-US") : fmtNum(n, 2));
 const fmtPct = (n, dp = 1) => (n == null ? "—" : (n >= 0 ? "+" : "") + Number(n).toFixed(dp) + "%");
 const signClass = (n) => (n == null ? "" : n > 0 ? "pos" : n < 0 ? "neg" : "muted");
 
@@ -621,7 +624,7 @@ const P_COLS = [
   { key: "avgcost", label: "Avg Cost", fmt: (x) => `<span class="muted">${fmtUSD(x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : null), 2)}</span>`, sortVal: (x) => (x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : 0)) },
   { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
   { key: "ext", label: () => extColLabel(), when: () => extColOn(), fmt: (x) => extCell(x), sortVal: (x) => extSort(x) },
-  { key: "shares", label: "Shares", fmt: (x) => (x.shares == null && !privUnlocked() ? lockSH() : fmtNum(x.shares, 2)), sortVal: (x) => (x.shares != null ? x.shares : x.weight_pct || 0) },
+  { key: "shares", label: "Shares", fmt: (x) => (x.shares == null && !privUnlocked() ? lockSH() : fmtShares(x.shares)), sortVal: (x) => (x.shares != null ? x.shares : x.weight_pct || 0) },
   { key: "value", label: "Value", fmt: (x) => pUSD(x.value, 0), sortVal: (x) => (x.value != null ? x.value : x.weight_pct || 0) },
   { key: "gain", label: "Unrlzd $", fmt: (x) => (x.gain == null && !privUnlocked() ? lockUSD() : `<span class="${signClass(x.gain)}">${fmtUSD(x.gain, 0)}</span>`), sortVal: (x) => (x.gain != null ? x.gain : x.gain_pct || 0) },
   { key: "gain_pct", label: "Unrlzd %", fmt: (x) => `<span class="${signClass(x.gain_pct)}">${fmtPct(x.gain_pct)}</span>` },
@@ -731,7 +734,7 @@ function renderRealized() {
   document.querySelector("#realized-table tbody").innerHTML = rows.map((r) => `
     <tr>
       <td class="left"><b>${r.ticker}</b> <span class="realized-name">${r.name}</span>
-        <span class="realized-sh">${r.shares == null ? lockSH() : (+r.shares).toLocaleString(undefined, {maximumFractionDigits: 2}) + " sh"}</span></td>
+        <span class="realized-sh">${r.shares == null ? lockSH() : fmtShares(+r.shares) + " sh"}</span></td>
       <td>${r.buy_est ? '<span class="realized-approx">~</span>' : ""}${d(r.date_bought)} · $${r.buy_px.toFixed(2)}</td>
       <td>${d(r.date_sold)} · $${r.sell_px.toFixed(2)}</td>
       <td>${held(r)}</td>
@@ -831,7 +834,7 @@ function openDrawer(ticker) {
   if (has(d.insider)) kv.push(["Insider (6-mo Form 4)", d.insider]);
   if (has(d.buzz)) kv.push(["Buzz", `${d.buzz} — ${d.buzz_signal || ""}`]);
   if (p) {
-    kv.push(["Jaleel's position", privUnlocked() ? `${fmtNum(p.shares, 2)} sh · ${fmtUSD(p.value, 0)}` : `${lockSH()} · ${lockUSD()}`]);
+    kv.push(["Jaleel's position", privUnlocked() ? `${fmtShares(p.shares)} sh · ${fmtUSD(p.value, 0)}` : `${lockSH()} · ${lockUSD()}`]);
     kv.push(["Jaleel's gain", `${privUnlocked() ? fmtUSD(p.gain, 0) : lockUSD()} (${fmtPct(p.gain_pct)})`]);
     kv.push(["Weight", fmtNum(p.weight_pct, 1) + "%"]);
   }
@@ -1011,7 +1014,7 @@ function buildCreadContext(ticker) {
     u.insider ? `Insider activity: ${u.insider}.` : "",
     u.mktcap_b != null ? `Market cap ~$${fmtNum(u.mktcap_b, 1)}B.` : "",
     news && news.title ? `Latest headline (Benzinga): ${news.title}` : "",
-    p ? (privUnlocked() ? `User OWNS this: ${fmtNum(p.shares, 2)} sh, ${fmtPct(p.gain_pct)} unrealized.`
+    p ? (privUnlocked() ? `User OWNS this: ${fmtShares(p.shares)} sh, ${fmtPct(p.gain_pct)} unrealized.`
                         : `User OWNS this: ${fmtPct(p.gain_pct)} unrealized (size owner-private).`) : "Not currently held.",
     pulse ? `Live X social pulse: ${pulse.sentiment_label} ${pulse.sentiment_score}/100, buzz ${pulse.buzz}. ${pulse.theme || ""}` : "",
   ].filter(Boolean).join("\n");
@@ -1498,7 +1501,7 @@ function renderSignals() {
 
 function sigRiskRow(r) {
   const held = DATA.portfolio.find((h) => h.ticker === r.ticker);
-  const sub = held ? (held.shares != null ? `${fmtNum(held.shares, 2)} sh` : `${fmtNum(held.weight_pct, 1)}% wt`) : (r.sub || "cluster");
+  const sub = held ? (held.shares != null ? `${fmtShares(held.shares)} sh` : `${fmtNum(held.weight_pct, 1)}% wt`) : (r.sub || "cluster");
   return `<div class="sig-row sev-${r.sev}">
     <div class="sig-tk"><span class="tk">${esc(r.ticker)}</span><span class="sig-sh">${esc(sub)}</span></div>
     <div class="sig-mid">
