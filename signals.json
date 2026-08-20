@@ -1,6 +1,6 @@
 {
   "date": "2026-08-20",
-  "generated_at": "Aug 20, 6:44am ET",
+  "generated_at": "Aug 20, 7:45am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -470,6 +470,20 @@
     },
     {
       "date": "2026-08-20",
+      "ticker": "CRM",
+      "firm": "Cantor Fitzgerald",
+      "action": "Reiterates",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$250",
+      "price": 206.09,
+      "upside": 21.3,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-08-20",
       "ticker": "MRK",
       "firm": "Morgan Stanley",
       "action": "Upgrades",
@@ -484,6 +498,15 @@
     }
   ],
   "rating_moves": {
+    "CRM": {
+      "date": "2026-08-20",
+      "firm": "Cantor Fitzgerald",
+      "action": "Reiterates",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$250",
+      "upside": 21.3
+    },
     "MRK": {
       "date": "2026-08-20",
       "firm": "Morgan Stanley",
@@ -510,15 +533,6 @@
       "stance": "bullish",
       "pt": "$218",
       "upside": 5.9
-    },
-    "CRM": {
-      "date": "2026-08-18",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$204",
-      "upside": -1.0
     },
     "CSCO": {
       "date": "2026-08-14",
@@ -558,6 +572,162 @@
     }
   },
   "bz_news": [
+    {
+      "title": "‘It’s Done’: Investor Warns Warren Buffett’s Berkshire Can’t Beat the S&P 500 — Bets on PayPal and Intel Instead",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61325109/its-done-investor-warns-warren-buffetts-berkshire-cant-beat-the-sp-500-bets-on-paypal-and-intel-instead",
+      "ts": 1787226241,
+      "tickers": [
+        "INTC",
+        "PYPL",
+        "SPCX",
+        "BRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.345
+    },
+    {
+      "title": "Walmart shares are trading lower after the company reported Q2 financial results and issued Q3 guidance below estimates",
+      "url": "https://www.benzinga.com/quote/WMT",
+      "ts": 1787225468,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.462
+    },
+    {
+      "title": "Walmart Q2 Comparable Sales Miss Estimates; Gross Profit Rate +96bps YoY To 25.4%, Led By Walmart U.S., Primarily Driven By Tariff Refunds, Partially Offset By Price Investments And Higher Fuel Costs In Distribution And Fulfillment; Inventory +6.3% YoY, Increase Is Due Primarily To Strategic Initiatives And Inflation",
+      "url": "https://www.benzinga.com/quote/WMT",
+      "ts": 1787224676,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.403
+    },
+    {
+      "title": "Robinhood CEO Says Trump Accounts Give Kids a Simple Way Into S&P 500 — ‘See the Magic of Compound Interest’",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61324392/robinhood-ceo-says-trump-accounts-give-kids-a-simple-way-into-sp-500-see-the-magic-of-compound-interest",
+      "ts": 1787224377,
+      "tickers": [
+        "HOOD",
+        "MSTR",
+        "COIN",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.31
+    },
+    {
+      "title": "Walmart Q2 Global Ecommerce Sales Rise 23%, Driven By Store-Fulfilled Pickup, Delivery And Marketplace Growth",
+      "url": "https://www.benzinga.com/quote/WMT",
+      "ts": 1787224279,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.315
+    },
+    {
+      "title": "Walmart Says Q2 Global Advertising Business Rises 38%, Membership Fee Revenue Up 17% Globally",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61324354/walmart-says-q2-global-advertising-business-rises-38-membership-fee-revenue-17-globally",
+      "ts": 1787224220,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.348
+    },
+    {
+      "title": "Walmart Sees Q3 Adjusted EPS Of $0.62 To $0.64",
+      "url": "https://www.benzinga.com/quote/WMT",
+      "ts": 1787223970,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.438
+    },
+    {
+      "title": "Bernie Sanders Warns AI Billionaires Could ‘Obliterate’ Jobs and ‘Destroy the Environment,’ Calls for Data Center Moratorium",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61324167/bernie-sanders-warns-ai-billionaires-could-obliterate-jobs-and-destroy-the-environment-calls-for-data-center-moratorium",
+      "ts": 1787223881,
+      "tickers": [
+        "MSFT",
+        "TSLA",
+        "NVDA",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.341
+    },
+    {
+      "title": "Walmart Raises FY2027 Adj EPS Guidance from $2.75-$2.85 to $2.80-$2.87 vs $2.90 Est; Raises FY2027 Sales Guidance from $731.124B-$738.188B to $734.656B-$741.720B vs $752.250B Est",
+      "url": "https://www.benzinga.com/news/26/08/61324106/walmart-raises-fy2027-adj-eps-guidance-2-75-2-85-2-80-2-87-vs-2-90-est-raises-fy2027-sales-guidance-",
+      "ts": 1787223787,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.462
+    },
+    {
+      "title": "Cantor Fitzgerald Reiterates Overweight on Salesforce, Maintains $250 Price Target",
+      "url": "https://www.benzinga.com/news/26/08/61324078/cantor-fitzgerald-reiterates-overweight-salesforce-maintains-250-price-target",
+      "ts": 1787223720,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.432
+    },
+    {
+      "title": "Walmart Q2 Adj. EPS $0.81 Beats $0.74 Estimate, Sales $187.937B Beat $186.794B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61324035/walmart-q2-adj-eps-0-81-beats-0-74-estimate-sales-187-937b-beat-186-794b-estimate",
+      "ts": 1787223651,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.436
+    },
+    {
+      "title": "'Exxon Warns Kazakhstan’s Top Oil Field to Peak Within Years' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/08/61323832/exxon-warns-kazakhstan-s-top-oil-field-peak-within-years-bloomberg",
+      "ts": 1787223527,
+      "tickers": [
+        "CVX",
+        "XOM",
+        "E",
+        "SHEL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.298
+    },
     {
       "title": "Top 3 Industrials Stocks You'll Regret Missing This Quarter",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61323230/top-3-industrials-stocks-youll-regret-missing-this-quarter-2",
@@ -624,7 +794,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.332
+      "relevance": 0.333
     },
     {
       "title": "Evaluating Apple Against Peers In Technology Hardware, Storage &amp; Peripherals Industry",
@@ -712,9 +882,9 @@
       "relevance": 0.373
     },
     {
-      "title": "Is Fortnite Down? Here’s Why Servers Are Offline as Season 4: Override Arrives",
+      "title": "Is Fortnite Down? Here’s Why Servers Are Offline as Season 4: Override Arrives (UPDATED)",
       "url": "https://www.benzinga.com/news/gaming/26/08/61321364/is-fortnite-down-heres-why-servers-are-offline-as-season-4-override-arrives",
-      "ts": 1787210920,
+      "ts": 1787210911,
       "tickers": [
         "AAPL",
         "U"
@@ -722,192 +892,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.141
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61320693/stock-market-will-sp-500-open-up-or-down-today-20",
-      "ts": 1787204708,
-      "tickers": [
-        "$POL",
-        "SPY",
-        "BABA",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Mohamed El-Erian Warns US Treasury's Bond Buyback Is Just a 'Band-Aid,' Not a Fix For a $40 Trillion Debt Problem",
-      "url": "https://www.benzinga.com/markets/bonds/26/08/61320646/mohamed-el-erian-treasury-bond-buybacks-financial-engineering",
-      "ts": 1787203945,
-      "tickers": [
-        "GLD",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.227
-    },
-    {
-      "title": "Walmart Gears Up For Q2 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61320566/walmart-gears-up-for-q2-print-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts",
-      "ts": 1787203760,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.45
-    },
-    {
-      "title": "Jensen Huang Said AI Could 'Destroy and Eliminate' Jobs in Radiology, but Mark Cuban Says 'No Chance'",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61320275/jensen-huang-ai-radiology-jobs-mark-cuban",
-      "ts": 1787200983,
-      "tickers": [
-        "META",
-        "MSFT",
-        "NVDA",
-        "ORCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.35
-    },
-    {
-      "title": "Moderna Stock Cools Off After-Hours, Following Massive 177% Cancer Vaccine Rally — Merck, Pfizer and BioNTech Among mRNA Names Trending Tonight",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61319875/healthcare-stocks-after-hours-moderna-merck-cancer-trial",
-      "ts": 1787196565,
-      "tickers": [
-        "PFE",
-        "MRNA",
-        "CRSP",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.457
-    },
-    {
-      "title": "Elon Musk Says mRNA Has 'Tremendous Promise,' Turning Disease Into a 'Software Problem,' as Moderna Stock Rockets 177% on Cancer Vaccine Breakthrough",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61319848/elon-musk-mrna-promise-moderna-stock-177-percent-cancer-vaccine",
-      "ts": 1787195909,
-      "tickers": [
-        "MRNA",
-        "MRK",
-        "TMO",
-        "ARCT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.356
-    },
-    {
-      "title": "Moderna, Webull, Bitmine Immersion, Strategy and Merck: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61319428/moderna-webull-bitmine-immersion-strategy-and-merck-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1787189685,
-      "tickers": [
-        "MRNA",
-        "$BTC",
-        "$ETH",
-        "MSTR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.438
-    },
-    {
-      "title": "Merck, Moderna Cancer Vaccine Breakthrough Could Be Catalyst the mRNA ETF Trade Has Been Waiting For",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61318160/merck-moderna-cancer-vaccine-breakthrough-could-be-catalyst-the-mrna-etf-trade-has-been-waiting-for",
-      "ts": 1787176148,
-      "tickers": [
-        "MRK",
-        "IDNA",
-        "ARKG",
-        "IBB"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.428
-    },
-    {
-      "title": "Walmart Earnings Prediction Market Preview: What Will New CEO John Furner Say?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61316709/walmart-earnings-john-furner",
-      "ts": 1787172008,
-      "tickers": [
-        "WMT",
-        "TGT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.447
-    },
-    {
-      "title": "Trump Adds to Wealth With Moderna Stock Gains: Here’s How Much President Made",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61315705/trump-wealth-moderna-stock-gains-heres-how-much-made",
-      "ts": 1787170414,
-      "tickers": [
-        "MRNA",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.32
-    },
-    {
-      "title": "\"OpenAI ‘Will Be A Public Company In 2027’ Or Sooner, CFO Friar Tells Employees\" - CNBC",
-      "url": "https://www.benzinga.com/news/26/08/61314706/openai-will-be-public-company-2027-or-sooner-cfo-friar-tells-employees-cnbc",
-      "ts": 1787169000,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.357
-    },
-    {
-      "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
-      "url": "https://www.benzinga.com/quote/SAP",
-      "ts": 1787168795,
-      "tickers": [
-        "BTCT",
-        "PWCM",
-        "EXOD",
-        "BTCS"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.518
-    },
-    {
-      "title": "Walmart Could Swing $41.4 Billion In Value After Earnings",
-      "url": "https://www.benzinga.com/markets/options/26/08/61314087/walmart-could-swing-41-4-billion-in-value-after-earnings",
-      "ts": 1787167866,
-      "tickers": [
-        "WMT",
-        "DE",
-        "ROST",
-        "AAP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.309
+      "relevance": 0.146
     }
   ],
   "portfolio_brief": {
