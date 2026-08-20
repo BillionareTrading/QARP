@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-19",
-  "generated_at": "Aug 19, 6:03pm ET",
+  "date": "2026-08-20",
+  "generated_at": "Aug 20, 5:04am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 19",
+      "when": "Aug 20",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -188,62 +188,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-12",
-      "ticker": "MRK",
-      "firm": "Daiwa Capital",
-      "action": "Upgrades",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$143",
-      "price": 152.2,
-      "upside": -6.0,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-12",
-      "ticker": "HD",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Sector Perform",
-      "stance": "neutral",
-      "pt": "$343",
-      "price": 344.3,
-      "upside": -0.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-12",
-      "ticker": "CRM",
-      "firm": "UBS",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$210",
-      "price": 206.09,
-      "upside": 1.9,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-08-12",
-      "ticker": "CRM",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$205",
-      "price": 206.09,
-      "upside": -0.5,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
     {
       "date": "2026-08-13",
       "ticker": "CSCO",
@@ -601,6 +545,151 @@
   },
   "bz_news": [
     {
+      "title": "Dow Gains Over 100 Points: Investor Sentiment Improves, Fear Index In ‘Greed’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/61321501/dow-gains-over-100-points-investor-sentiment-improves-fear-index-in-greed-zone",
+      "ts": 1787212184,
+      "tickers": [
+        "AAP",
+        "WMT",
+        "MRNA",
+        "DE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.48
+    },
+    {
+      "title": "Walmart, Deere And 3 Stocks To Watch Heading Into Thursday",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61321471/walmart-deere-stocks-to-watch",
+      "ts": 1787211259,
+      "tickers": [
+        "WMT",
+        "DE",
+        "AAP",
+        "COTY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.373
+    },
+    {
+      "title": "Is Fortnite Down? Here’s Why Servers Are Offline as Season 4: Override Arrives",
+      "url": "https://www.benzinga.com/news/gaming/26/08/61321364/is-fortnite-down-heres-why-servers-are-offline-as-season-4-override-arrives",
+      "ts": 1787210920,
+      "tickers": [
+        "AAPL",
+        "U"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.141
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61320693/stock-market-will-sp-500-open-up-or-down-today-20",
+      "ts": 1787204708,
+      "tickers": [
+        "$POL",
+        "SPY",
+        "BABA",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Mohamed El-Erian Warns US Treasury's Bond Buyback Is Just a 'Band-Aid,' Not a Fix For a $40 Trillion Debt Problem",
+      "url": "https://www.benzinga.com/markets/bonds/26/08/61320646/mohamed-el-erian-treasury-bond-buybacks-financial-engineering",
+      "ts": 1787203945,
+      "tickers": [
+        "GLD",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.227
+    },
+    {
+      "title": "Walmart Gears Up For Q2 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61320566/walmart-gears-up-for-q2-print-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts",
+      "ts": 1787203760,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.45
+    },
+    {
+      "title": "Jensen Huang Said AI Could 'Destroy and Eliminate' Jobs in Radiology, but Mark Cuban Says 'No Chance'",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61320275/jensen-huang-ai-radiology-jobs-mark-cuban",
+      "ts": 1787200983,
+      "tickers": [
+        "META",
+        "MSFT",
+        "NVDA",
+        "ORCL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.35
+    },
+    {
+      "title": "Moderna Stock Cools Off After-Hours, Following Massive 177% Cancer Vaccine Rally — Merck, Pfizer and BioNTech Among mRNA Names Trending Tonight",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61319875/healthcare-stocks-after-hours-moderna-merck-cancer-trial",
+      "ts": 1787196565,
+      "tickers": [
+        "PFE",
+        "MRNA",
+        "CRSP",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.457
+    },
+    {
+      "title": "Elon Musk Says mRNA Has 'Tremendous Promise,' Turning Disease Into a 'Software Problem,' as Moderna Stock Rockets 177% on Cancer Vaccine Breakthrough",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61319848/elon-musk-mrna-promise-moderna-stock-177-percent-cancer-vaccine",
+      "ts": 1787195909,
+      "tickers": [
+        "MRNA",
+        "MRK",
+        "TMO",
+        "ARCT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.356
+    },
+    {
+      "title": "Moderna, Webull, Bitmine Immersion, Strategy and Merck: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61319428/moderna-webull-bitmine-immersion-strategy-and-merck-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1787189685,
+      "tickers": [
+        "MRNA",
+        "$BTC",
+        "$ETH",
+        "MSTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.438
+    },
+    {
       "title": "Merck, Moderna Cancer Vaccine Breakthrough Could Be Catalyst the mRNA ETF Trade Has Been Waiting For",
       "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61318160/merck-moderna-cancer-vaccine-breakthrough-could-be-catalyst-the-mrna-etf-trade-has-been-waiting-for",
       "ts": 1787176148,
@@ -613,7 +702,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.429
+      "relevance": 0.428
     },
     {
       "title": "Walmart Earnings Prediction Market Preview: What Will New CEO John Furner Say?",
@@ -666,7 +755,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.519
+      "relevance": 0.518
     },
     {
       "title": "Walmart Could Swing $41.4 Billion In Value After Earnings",
@@ -738,7 +827,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.407
+      "relevance": 0.408
     },
     {
       "title": "Deere Q3 Preview: Is Tractor Maker an AI Data Center Play? Earnings Report Could Tell Investors 'Yes'",
@@ -765,7 +854,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.417
+      "relevance": 0.418
     },
     {
       "title": "4 Financials Stocks Whale Activity In Today’s Session",
@@ -795,43 +884,6 @@
       "relevance": 0.455
     },
     {
-      "title": "'Goldman Sounds Out Investors for CoreWeave-Tied Data Center Bond' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/08/61310295/goldman-sounds-out-investors-coreweave-tied-data-center-bond-bloomberg",
-      "ts": 1787160583,
-      "tickers": [
-        "GS",
-        "CRWV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.355
-    },
-    {
-      "title": "OpenAI Announces Its Offering Zero Data Retention For Frontier Models",
-      "url": "https://www.benzinga.com/news/26/08/61310008/openai-announces-its-offering-zero-data-retention-frontier-models",
-      "ts": 1787160082,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.254
-    },
-    {
-      "title": "Johnson & Johnson Expands Robotic Bronchoscopy Push With AI, 3D Navigation Upgrade",
-      "url": "https://www.benzinga.com/news/fda/26/08/61309599/johnson-johnson-expands-robotic-bronchoscopy-push-with-ai-3d-navigation-upgrade",
-      "ts": 1787159419,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.362
-    },
-    {
       "title": "Moderna Doubles, Gold Rallies To $4,500 As Dollar Sinks: Stock Market Today",
       "url": "https://www.benzinga.com/markets/equities/26/08/61309609/moderna-doubles-gold-nears-4500-dollar-sinks-treasury-buyback-markets-wednesday",
       "ts": 1787159412,
@@ -845,103 +897,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.489
-    },
-    {
-      "title": "Investors Should Position For Humanoid Robot Boom—Here's A Picks-And-Shovels Play; First mRNA Cancer Vaccine Succeeds",
-      "url": "https://www.benzinga.com/Opinion/26/08/61309587/investors-should-position-for-humanoid-robot-boom-heres-a-picks-and-shovels-play-first-mrna-cancer-vaccine-succeeds",
-      "ts": 1787159395,
-      "tickers": [
-        "USO",
-        "SPY",
-        "NVDA",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.376
-    },
-    {
-      "title": "Tariff Refunds Did the Heavy Lifting in Home Depot's Q2, Analysts Say",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61308943/tariff-refunds-did-the-heavy-lifting-in-home-depots-q2-analysts-say",
-      "ts": 1787158189,
-      "tickers": [
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.354
-    },
-    {
-      "title": "What's Going On With IREN Stock Wednesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61308764/whats-going-on-with-iren-stock-wednesday",
-      "ts": 1787157878,
-      "tickers": [
-        "IREN",
-        "MSFT",
-        "NVDA",
-        "APLD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.351
-    },
-    {
-      "title": "Why Is BioNTech Stock Surging on Wednesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61308634/why-is-biontech-stock-surging-on-wednesday",
-      "ts": 1787157556,
-      "tickers": [
-        "BNTX",
-        "MRNA",
-        "MRK",
-        "RHHBY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.409
-    },
-    {
-      "title": "Apple Is The Most Underappreciated AI Mega-Cap, Analyst Says",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61308458/apple-is-the-most-underappreciated-ai-mega-cap-analyst-says",
-      "ts": 1787157261,
-      "tickers": [
-        "AAPL",
-        "OEF",
-        "USNZ",
-        "RECI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.388
-    },
-    {
-      "title": "Walmart Q2 Preview: Retailer Beats Revenue 25 Straight Quarters, Could Streak Extension Help Close Gap with Target Stock?",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/08/61308426/walmart-q2-preview-retailer-beats-revenue-25-straight-quarters-could-streak-extension-help-close-gap-with-target-stock",
-      "ts": 1787157221,
-      "tickers": [
-        "WMT",
-        "TGT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.424
-    },
-    {
-      "title": "Keybanc Reiterates Sector Weight on Home Depot Sector Weight",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/08/61303127/keybanc-reiterates-sector-weight-on-home-depot-sector-weight",
-      "ts": 1787149561,
-      "tickers": [
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.421
     }
   ],
   "portfolio_brief": {
