@@ -1,6 +1,6 @@
 {
   "date": "2026-08-20",
-  "generated_at": "Aug 20, 5:47am ET",
+  "generated_at": "Aug 20, 6:44am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -467,9 +467,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-20",
+      "ticker": "MRK",
+      "firm": "Morgan Stanley",
+      "action": "Upgrades",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$179",
+      "price": 152.2,
+      "upside": 17.6,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "MRK": {
+      "date": "2026-08-20",
+      "firm": "Morgan Stanley",
+      "action": "Upgrades",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$179",
+      "upside": 17.6
+    },
     "HD": {
       "date": "2026-08-19",
       "firm": "Mizuho",
@@ -506,15 +529,6 @@
       "pt": "$120",
       "upside": 8.5
     },
-    "MRK": {
-      "date": "2026-08-12",
-      "firm": "Daiwa Capital",
-      "action": "Upgrades",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$143",
-      "upside": -6.0
-    },
     "AAPL": {
       "date": "2026-08-10",
       "firm": "Jefferies",
@@ -544,6 +558,101 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Top 3 Industrials Stocks You'll Regret Missing This Quarter",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61323230/top-3-industrials-stocks-youll-regret-missing-this-quarter-2",
+      "ts": 1787221386,
+      "tickers": [
+        "HON",
+        "RTO",
+        "LMB"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.376
+    },
+    {
+      "title": "'Muon Space Raises $250 Million With Google, Salesforce Backing' - Bloomberg",
+      "url": "https://www.benzinga.com/etfs/new-etfs/26/08/61323100/muon-space-raises-250-million-google-salesforce-backing-bloomberg",
+      "ts": 1787220885,
+      "tickers": [
+        "NASA",
+        "MARS",
+        "GOOG",
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.311
+    },
+    {
+      "title": "Morgan Stanley Upgrades Merck & Co to Overweight, Raises Price Target to $179",
+      "url": "https://www.benzinga.com/news/26/08/61322883/morgan-stanley-upgrades-merck-co-overweight-raises-price-target-179",
+      "ts": 1787220427,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.514
+    },
+    {
+      "title": "Recursion, Novavax and Crispr Stocks Trending in Pre-Market—Here's Why",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61322461/recursion-novavax-crispr-stocks-premarket-cancer-therapy-rally",
+      "ts": 1787219950,
+      "tickers": [
+        "RXRX",
+        "MRNA",
+        "NVAX",
+        "CRSP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.462
+    },
+    {
+      "title": "Exploring The Competitive Space: Microsoft Versus Industry Peers In Software",
+      "url": "https://www.benzinga.com/news/26/08/61322440/exploring-competitive-space-microsoft-versus-industry-peers-software",
+      "ts": 1787219912,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.332
+    },
+    {
+      "title": "Evaluating Apple Against Peers In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/08/61322439/evaluating-apple-against-peers-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1787219909,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.366
+    },
+    {
+      "title": "Viking Global Shifts Gears: Andreas Halvorsen Makes $817 Million Bet on Ferrari, Slashes Tesla Stake by 78% in Q2",
+      "url": "https://www.benzinga.com/markets/hedge-funds/26/08/61322372/viking-global-shifts-gears-andreas-halvorsen-makes-817-million-bet-on-ferrari-slashes-tesla-stake-by-78-in-q2",
+      "ts": 1787219415,
+      "tickers": [
+        "TSLA",
+        "AAPL",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.399
+    },
     {
       "title": "JPMorgan Says Tesla Is Confident of Scaling Cybercab Operations, Touts Future Models Based on Platform—FSD V15 a ‘Step-Change’ From Previous Versions",
       "url": "https://www.benzinga.com/markets/tech/26/08/61322276/jpmorgan-says-tesla-is-confident-of-scaling-cybercab-operations-touts-future-models-based-on-platform-fsd-v15-a-step-change-from-previous-versions",
@@ -643,7 +752,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.228
+      "relevance": 0.227
     },
     {
       "title": "Walmart Gears Up For Q2 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
@@ -685,7 +794,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.456
+      "relevance": 0.457
     },
     {
       "title": "Elon Musk Says mRNA Has 'Tremendous Promise,' Turning Disease Into a 'Software Problem,' as Moderna Stock Rockets 177% on Cancer Vaccine Breakthrough",
@@ -730,7 +839,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.429
+      "relevance": 0.428
     },
     {
       "title": "Walmart Earnings Prediction Market Preview: What Will New CEO John Furner Say?",
@@ -783,7 +892,7 @@
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.519
+      "relevance": 0.518
     },
     {
       "title": "Walmart Could Swing $41.4 Billion In Value After Earnings",
@@ -799,105 +908,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.309
-    },
-    {
-      "title": "Shares of semiconductor companies are trading lower amid concerns that OpenAI's Q2 earnings may weigh on AI growth. Today's Fed minutes revealed that many participants assessed that higher rates would likely be necessary if inflation did not fall.",
-      "url": "https://www.benzinga.com/quote/ASYS",
-      "ts": 1787167424,
-      "tickers": [
-        "ASML",
-        "IONQ",
-        "STM",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.557
-    },
-    {
-      "title": "Merck Just Raised the Stakes for Pfizer's Cancer Vaccine Ambitions",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61312407/merck-pfizer-cancer-vaccine-ambitions",
-      "ts": 1787164275,
-      "tickers": [
-        "PFE",
-        "MRNA",
-        "MRK",
-        "BNTX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.435
-    },
-    {
-      "title": "Mizuho Maintains Outperform on Home Depot, Raises Price Target to $390",
-      "url": "https://www.benzinga.com/news/26/08/61311359/mizuho-maintains-outperform-home-depot-raises-price-target-390",
-      "ts": 1787162298,
-      "tickers": [
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.46
-    },
-    {
-      "title": "Pfizer Stock Rises Wednesday: What's Going On?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61311287/pfizer-stock-rises-wednesday-whats-going-on",
-      "ts": 1787162174,
-      "tickers": [
-        "PFE",
-        "MRNA",
-        "MRK",
-        "BNTX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.407
-    },
-    {
-      "title": "Deere Q3 Preview: Is Tractor Maker an AI Data Center Play? Earnings Report Could Tell Investors 'Yes'",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/08/61310715/deere-q3-preview-is-tractor-maker-an-ai-data-center-play-earnings-report-could-tell-investors-yes",
-      "ts": 1787161204,
-      "tickers": [
-        "DE",
-        "CAT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.448
-    },
-    {
-      "title": "3 Industrials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61310499/3-industrials-stocks-whale-alerts-today-s-session",
-      "ts": 1787160916,
-      "tickers": [
-        "BE",
-        "EOSE",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.417
-    },
-    {
-      "title": "Moderna Doubles, Gold Rallies To $4,500 As Dollar Sinks: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61309609/moderna-doubles-gold-nears-4500-dollar-sinks-treasury-buyback-markets-wednesday",
-      "ts": 1787159412,
-      "tickers": [
-        "GLD",
-        "$BTC",
-        "MSTR",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.489
     }
   ],
   "portfolio_brief": {
