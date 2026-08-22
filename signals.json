@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-21",
-  "generated_at": "Aug 21, 4:58pm ET",
+  "date": "2026-08-22",
+  "generated_at": "Aug 22, 6:37am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 21",
+      "when": "Aug 22",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -181,9 +181,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "ts": 1787333718,
-      "url": "https://www.benzinga.com/markets/options/26/08/61363395/10-information-technology-stocks-whale-activity-today-s-session",
+      "title": "MRNA, SPCX, MSTR and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week",
+      "ts": 1787349633,
+      "url": "https://www.benzinga.com/markets/equities/26/08/61370247/mrna-spcx-mstr-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
       "wiim": false
     },
     "EFX": {
@@ -194,20 +194,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-14",
-      "ticker": "CSCO",
-      "firm": "HSBC",
-      "action": "Downgrades",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$120",
-      "price": 111.04,
-      "upside": 8.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-17",
       "ticker": "CVX",
@@ -543,18 +529,24 @@
       "stance": "bearish",
       "pt": "$264",
       "upside": -14.8
-    },
-    "PG": {
-      "date": "2026-08-07",
-      "firm": "Argus Research",
-      "action": "Downgrades",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "",
-      "upside": null
     }
   },
   "bz_news": [
+    {
+      "title": "MRNA, SPCX, MSTR and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61370247/mrna-spcx-mstr-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
+      "ts": 1787349633,
+      "tickers": [
+        "MRNA",
+        "$BTC",
+        "GOOGL",
+        "MSTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.398
+    },
     {
       "title": "Boeing SPEEA Members Reject Contract Offers, Authorize Strike By Large Margin",
       "url": "https://www.benzinga.com/news/26/08/61368315/boeing-speea-members-reject-contract-offers-authorize-strike-large-margin",
@@ -806,7 +798,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.237
+      "relevance": 0.238
     },
     {
       "title": "Bond Buyback Is Simply A Band-Aid for $40T US Debt; Warsh Faces Jackson Hole Test",
@@ -859,7 +851,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.43
+      "relevance": 0.431
     },
     {
       "title": "UBS Maintains Buy on Walmart, Lowers Price Target to $130",
@@ -872,20 +864,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.433
-    },
-    {
-      "title": "Recent Report Shows That Rep. David Taylor Sold Up to $50K Worth of Microsoft Stock",
-      "url": "https://www.benzinga.com/government/26/08/61358143/recent-report-shows-rep-david-taylor-sold-50k-worth-microsoft-stock",
-      "ts": 1787324420,
-      "tickers": [
-        "MSFT",
-        "IBP",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.286
     }
   ],
   "portfolio_brief": {
@@ -1002,9 +980,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-        "ts": 1787333718,
-        "url": "https://www.benzinga.com/markets/options/26/08/61363395/10-information-technology-stocks-whale-activity-today-s-session",
+        "title": "MRNA, SPCX, MSTR and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week",
+        "ts": 1787349633,
+        "url": "https://www.benzinga.com/markets/equities/26/08/61370247/mrna-spcx-mstr-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
         "wiim": false
       },
       "filings": {
@@ -1327,7 +1305,7 @@
           "date": "2026-08-06",
           "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm"
         },
-        "insider30d": 4
+        "insider30d": 5
       },
       "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
