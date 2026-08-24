@@ -1,6 +1,6 @@
 {
   "date": "2026-08-24",
-  "generated_at": "Aug 24, 6:00am ET",
+  "generated_at": "Aug 24, 8:20am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -467,9 +467,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-08-24",
+      "ticker": "CRM",
+      "firm": "BTIG",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$255",
+      "price": 209.17,
+      "upside": 21.9,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "rating_moves": {
+    "CRM": {
+      "date": "2026-08-24",
+      "firm": "BTIG",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$255",
+      "upside": 21.9
+    },
     "MRK": {
       "date": "2026-08-21",
       "firm": "Goldman Sachs",
@@ -478,15 +501,6 @@
       "stance": "bullish",
       "pt": "$160",
       "upside": 4.9
-    },
-    "CRM": {
-      "date": "2026-08-20",
-      "firm": "BMO Capital",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$230",
-      "upside": 10.0
     },
     "HD": {
       "date": "2026-08-19",
@@ -527,6 +541,60 @@
   },
   "bz_news": [
     {
+      "title": "AI's Next Bottleneck Isn't Chips, It's Power, With Demand Expected to Soar 1,100% by 2033: Why CEG, VST, GEV Stocks Are in Focus",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61378018/ai-power-demand-could-explode-by-2033-as-the-us-grid-struggles-to-keep-pace",
+      "ts": 1787570310,
+      "tickers": [
+        "CEG",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.583
+    },
+    {
+      "title": "IBM Unveils First Dual‑Architecture Mainframe Processor To Support IBM And Arm Platforms In Future IBM Z And LinuxONE Systems",
+      "url": "https://www.benzinga.com/news/26/08/61377776/ibm-unveils-first-dual-architecture-mainframe-processor-support-ibm-and-arm-platforms-future-ibm-z-a",
+      "ts": 1787569842,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.342
+    },
+    {
+      "title": "BTIG Reiterates Buy on Salesforce, Maintains $255 Price Target",
+      "url": "https://www.benzinga.com/news/26/08/61376778/btig-reiterates-buy-salesforce-maintains-255-price-target",
+      "ts": 1787567029,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.432
+    },
+    {
+      "title": "Cathie Wood Says Analysts Can’t ‘Fathom’ Circle, Calls It a ‘Prime Beneficiary’ of Payments Disruption",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61376191/cathie-wood-crcl-stock-circle-disruption",
+      "ts": 1787565693,
+      "tickers": [
+        "CRCL",
+        "$BTC",
+        "MA",
+        "ARKF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.322
+    },
+    {
       "title": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry",
       "url": "https://www.benzinga.com/news/26/08/61376097/inquiry-apple-s-competitor-dynamics-technology-hardware-storage-amp-peripherals-industry",
       "ts": 1787565509,
@@ -548,7 +616,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.326
+      "relevance": 0.327
     },
     {
       "title": "Nvidia’s AI Servers Are About to Get Even More Expensive as Rising Memory Costs Push Prices Up More Than 15%: Report",
@@ -662,7 +730,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.428
+      "relevance": 0.427
     },
     {
       "title": "Alibaba Stock Flashes a Bearish Pattern as a $10 Billion Risk Looms",
@@ -760,7 +828,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.291
+      "relevance": 0.292
     },
     {
       "title": "Ro Khanna Urges AI CEOs to Follow Pope Leo XIV’s Warning: AI Must Not 'Diminishes Humanity' and Should Serve the Common Good",
@@ -813,60 +881,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.333
-    },
-    {
-      "title": "Benzinga Bulls and Bears: Ross, Moderna, Webull",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61371513/benzinga-bulls-and-bears-ross-moderna-webull",
-      "ts": 1787400073,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "MRNA",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.45
-    },
-    {
-      "title": "MRNA, SPCX, MSTR and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61370247/mrna-spcx-mstr-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
-      "ts": 1787349633,
-      "tickers": [
-        "MRNA",
-        "$BTC",
-        "GOOGL",
-        "MSTR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.398
-    },
-    {
-      "title": "Boeing SPEEA Members Reject Contract Offers, Authorize Strike By Large Margin",
-      "url": "https://www.benzinga.com/news/26/08/61368315/boeing-speea-members-reject-contract-offers-authorize-strike-large-margin",
-      "ts": 1787344210,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.295
-    },
-    {
-      "title": "Telsey Advisory Group Maintains Outperform on Walmart, Lowers Price Target to $130",
-      "url": "https://www.benzinga.com/news/26/08/61367744/telsey-advisory-group-maintains-outperform-walmart-lowers-price-target-130",
-      "ts": 1787342957,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.467
     }
   ],
   "portfolio_brief": {
