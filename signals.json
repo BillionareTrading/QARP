@@ -1,6 +1,6 @@
 {
   "date": "2026-08-24",
-  "generated_at": "Aug 24, 11:57am ET",
+  "generated_at": "Aug 24, 5:05pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -91,14 +91,6 @@
       "dir": "two-sided",
       "why": "Q-results for Adobe — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
-      "when": "Aug 24",
-      "what": "Energy & geopolitics — today's read",
-      "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
-      "affects": "Energy · growth",
-      "dir": "two-sided",
-      "src": "Benzinga WIIM (live)"
     }
   ],
   "earnings_next": {
@@ -140,13 +132,6 @@
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
-      "sector": "Oil & Gas",
-      "dir": "mixed",
-      "driver": "Energy price gains due to concerns that the U.S. and Iran aren't making …",
-      "note": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
-    },
-    {
       "sector": "Chemical & Coatings",
       "dir": "up",
       "driver": "Fading expectations for further U.S.-Iran negotiations on free maritime …",
@@ -162,6 +147,12 @@
     }
   ],
   "holding_news": {
+    "NVDA": {
+      "title": "Shares of semiconductor and chip companies are trading lower. The industry may be pulling back ahead of Nvidia's Q2 earnings report due August, 26.",
+      "ts": 1787600404,
+      "url": "https://www.benzinga.com/quote/SMTK",
+      "wiim": true
+    },
     "ADBE": {
       "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
       "ts": 1787168795,
@@ -180,10 +171,16 @@
       "url": "https://www.benzinga.com/quote/ASYS",
       "wiim": true
     },
-    "NVDA": {
-      "title": "Perplexity Deal Highlights a Pattern in Nvidia's AI Investments",
-      "ts": 1787580171,
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61383040/nvidia-perplexity-investment-ai-strategy",
+    "NBIX": {
+      "title": "10 Health Care Stocks Whale Activity In Today’s Session",
+      "ts": 1787592924,
+      "url": "https://www.benzinga.com/markets/options/26/08/61391269/10-health-care-stocks-whale-activity-today-s-session",
+      "wiim": false
+    },
+    "GILD": {
+      "title": "10 Health Care Stocks Whale Activity In Today’s Session",
+      "ts": 1787592924,
+      "url": "https://www.benzinga.com/markets/options/26/08/61391269/10-health-care-stocks-whale-activity-today-s-session",
       "wiim": false
     }
   },
@@ -196,8 +193,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$208",
-      "price": 202.12,
-      "upside": 2.9,
+      "price": 203.09,
+      "upside": 2.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -210,8 +207,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$340",
-      "price": 336.74,
-      "upside": 1.0,
+      "price": 337.43,
+      "upside": 0.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -224,8 +221,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$204",
-      "price": 209.88,
-      "upside": -2.8,
+      "price": 209.06,
+      "upside": -2.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -238,8 +235,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$390",
-      "price": 336.74,
-      "upside": 15.8,
+      "price": 337.43,
+      "upside": 15.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -252,8 +249,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$218",
-      "price": 202.12,
-      "upside": 7.9,
+      "price": 203.09,
+      "upside": 7.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -266,8 +263,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$377",
-      "price": 336.74,
-      "upside": 12.0,
+      "price": 337.43,
+      "upside": 11.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -280,8 +277,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$420",
-      "price": 336.74,
-      "upside": 24.7,
+      "price": 337.43,
+      "upside": 24.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -294,8 +291,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$373",
-      "price": 336.74,
-      "upside": 10.8,
+      "price": 337.43,
+      "upside": 10.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -308,7 +305,7 @@
       "rating": "Sector Weight",
       "stance": "neutral",
       "pt": "",
-      "price": 336.74,
+      "price": 337.43,
       "upside": null,
       "held": false,
       "uni": true,
@@ -322,8 +319,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 336.74,
-      "upside": 18.8,
+      "price": 337.43,
+      "upside": 18.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -336,8 +333,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$342",
-      "price": 336.74,
-      "upside": 1.6,
+      "price": 337.43,
+      "upside": 1.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -350,8 +347,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$425",
-      "price": 336.74,
-      "upside": 26.2,
+      "price": 337.43,
+      "upside": 26.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -364,8 +361,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$230",
-      "price": 209.88,
-      "upside": 9.6,
+      "price": 209.06,
+      "upside": 10.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -378,8 +375,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$170",
-      "price": 150.62,
-      "upside": 12.9,
+      "price": 150.66,
+      "upside": 12.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -392,7 +389,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$175",
-      "price": 150.62,
+      "price": 150.66,
       "upside": 16.2,
       "held": false,
       "uni": true,
@@ -406,7 +403,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$150",
-      "price": 150.62,
+      "price": 150.66,
       "upside": -0.4,
       "held": false,
       "uni": true,
@@ -420,8 +417,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$228",
-      "price": 209.88,
-      "upside": 8.6,
+      "price": 209.06,
+      "upside": 9.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -434,8 +431,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$250",
-      "price": 209.88,
-      "upside": 19.1,
+      "price": 209.06,
+      "upside": 19.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -448,7 +445,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$179",
-      "price": 150.62,
+      "price": 150.66,
       "upside": 18.8,
       "held": false,
       "uni": true,
@@ -462,7 +459,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$160",
-      "price": 150.62,
+      "price": 150.66,
       "upside": 6.2,
       "held": false,
       "uni": true,
@@ -476,8 +473,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$255",
-      "price": 209.88,
-      "upside": 21.5,
+      "price": 209.06,
+      "upside": 22.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -491,7 +488,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$255",
-      "upside": 21.5
+      "upside": 22.0
     },
     "MRK": {
       "date": "2026-08-21",
@@ -509,7 +506,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$390",
-      "upside": 15.8
+      "upside": 15.6
     },
     "CVX": {
       "date": "2026-08-19",
@@ -518,7 +515,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$218",
-      "upside": 7.9
+      "upside": 7.3
     },
     "CSCO": {
       "date": "2026-08-14",
@@ -527,7 +524,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$120",
-      "upside": 8.2
+      "upside": 8.9
     },
     "AAPL": {
       "date": "2026-08-10",
@@ -536,10 +533,278 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$264",
-      "upside": -15.5
+      "upside": -15.0
     }
   },
   "bz_news": [
+    {
+      "title": "Walmart Heirs Lose $9.4 Billion in Wealth in 2026: Stock Drop Hurts Odds of Making Top 10 Richest",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61397128/walmart-heirs-lose-9-4-billion-in-wealth-in-2026-stock-drop-hurts-odds-of-making-top-10-richest",
+      "ts": 1787604306,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.289
+    },
+    {
+      "title": "Shares of semiconductor and chip companies are trading lower. The industry may be pulling back ahead of Nvidia's Q2 earnings report due August, 26.",
+      "url": "https://www.benzinga.com/quote/SMTK",
+      "ts": 1787600404,
+      "tickers": [
+        "NVDA",
+        "INTC",
+        "TER",
+        "MRVL"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.484
+    },
+    {
+      "title": "Nancy Pelosi Discloses Up to $13.5 Million in Stock, Options Trades — 77.6x Her Annual Salary",
+      "url": "https://www.benzinga.com/news/politics/26/08/61394899/nancy-pelosi-discloses-up-to-13-5-million-in-stock-options-trades-77-6x-her-annual-salary",
+      "ts": 1787600035,
+      "tickers": [
+        "INTC",
+        "BE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.267
+    },
+    {
+      "title": "Magnificent 7 Built The AI Boom, 'Munificent Seven' Wants to Power It",
+      "url": "https://www.benzinga.com/etfs/new-etfs/26/08/61394783/magnificent-7-built-the-ai-boom-munificent-seven-wants-to-power-it",
+      "ts": 1787599872,
+      "tickers": [
+        "BBLS",
+        "XOM",
+        "NVDA",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.279
+    },
+    {
+      "title": "Why Is Mastercard Stock Surging on Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61392563/why-is-mastercard-stock-surging-on-monday",
+      "ts": 1787595633,
+      "tickers": [
+        "MA",
+        "CTAS",
+        "VIG",
+        "BRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.35
+    },
+    {
+      "title": "Visa Stock Climbs After Trump Buys Millions in Stock",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61392434/visa-stock-climbs-after-trump-buys-millions-in-stock",
+      "ts": 1787595328,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.378
+    },
+    {
+      "title": "Trump’s 50% Canada Auto Tariff Shock: These ETFs Could Be in the Crosshairs",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61392396/trumps-50-percent-canada-auto-tariff-shock-these-etfs-could-be-in-the-crosshairs",
+      "ts": 1787595264,
+      "tickers": [
+        "F",
+        "TSLA",
+        "AAPL",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.343
+    },
+    {
+      "title": "What’s Going On With Tempus AI Stock on Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61392115/whats-going-on-with-tempus-ai-stock-on-monday",
+      "ts": 1787594571,
+      "tickers": [
+        "TEM",
+        "ARKK",
+        "MRNA",
+        "ARKG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.376
+    },
+    {
+      "title": "'Disney Offering Voluntary Early Retirement Packages To Executives' - Deadline",
+      "url": "https://www.benzinga.com/news/26/08/61391927/disney-offering-voluntary-early-retirement-packages-executives-deadline",
+      "ts": 1787594225,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.269
+    },
+    {
+      "title": "Why Is Intel Stock Falling on Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61391801/why-is-intel-stock-falling-on-monday",
+      "ts": 1787593961,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.374
+    },
+    {
+      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/08/61391270/10-industrials-stocks-whale-activity-today-s-session",
+      "ts": 1787592925,
+      "tickers": [
+        "SBLK",
+        "TXT",
+        "UBER",
+        "FERG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.415
+    },
+    {
+      "title": "10 Health Care Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/08/61391269/10-health-care-stocks-whale-activity-today-s-session",
+      "ts": 1787592924,
+      "tickers": [
+        "MRNA",
+        "RARE",
+        "UNH",
+        "UNCY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.382
+    },
+    {
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/08/61391268/10-information-technology-stocks-whale-activity-today-s-session",
+      "ts": 1787592924,
+      "tickers": [
+        "MU",
+        "INTC",
+        "FLEX",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.394
+    },
+    {
+      "title": "Memory Stocks Slide as Trump Threatens 50% Tariffs on Canadian Autos, Steel in 2027: Stock Market Today",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/61390668/memory-stocks-crater-trump-50-percent-canada-tariffs-markets-monday",
+      "ts": 1787591816,
+      "tickers": [
+        "$BTC",
+        "MSTR",
+        "ETSY",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.375
+    },
+    {
+      "title": "CRCL Could Hit $140, Says Bernstein as Cathie Wood Praises Circle's Disruption",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61390197/crcl-could-hit-140-says-bernstein-as-cathie-wood-praises-circles-disruption",
+      "ts": 1787591076,
+      "tickers": [
+        "CRCL",
+        "MA",
+        "$USDC",
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.42
+    },
+    {
+      "title": "Samsung Crash Brings Semi Selling; Nvidia Earnings Ahead; $1T Treasury Firepower To Buy Bonds",
+      "url": "https://www.benzinga.com/Opinion/26/08/61389951/samsung-crash-brings-semi-selling-nvidia-earnings-ahead-1t-treasury-firepower-to-buy-bonds",
+      "ts": 1787590640,
+      "tickers": [
+        "SLV",
+        "GLD",
+        "USO",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.408
+    },
+    {
+      "title": "Visa shares are trading higher after a filing indicated that President Trump purchased millions of dollars worth of the company's stock during June 2026.",
+      "url": "https://www.benzinga.com/quote/V",
+      "ts": 1787589380,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.416
+    },
+    {
+      "title": "What's Going on With Nebius Shares on Monday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/08/61388992/whats-going-on-with-nebius-shares-on-monday",
+      "ts": 1787588882,
+      "tickers": [
+        "NBIS",
+        "MSFT",
+        "XLK",
+        "NBIG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.478
+    },
+    {
+      "title": "Analyst Calls Marvell A Top Chip Pick As AI Demand Builds",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/08/61388796/analyst-calls-marvell-a-top-chip-pick-as-ai-demand-builds",
+      "ts": 1787588563,
+      "tickers": [
+        "MRVL",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.575
+    },
     {
       "title": "Salesforce To Report Mixed Q2; Investors Remain Skeptical About H2 Acceleration",
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61386508/salesforce-q2-investors-remain-skeptical-about-h2-acceleration",
@@ -610,7 +875,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.471
+      "relevance": 0.472
     },
     {
       "title": "Libya Signs Production-Sharing Agreement With Chevron",
@@ -622,273 +887,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.248
-    },
-    {
-      "title": "JPMorgan's Top Consumer Tech Picks: 5 Stocks It Likes Right Now",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61380904/jpmorgan-top-consumer-tech-picks-5-stocks",
-      "ts": 1787577484,
-      "tickers": [
-        "SHOP",
-        "TTWO",
-        "YOU",
-        "EVER"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.351
-    },
-    {
-      "title": "Jim Cramer Pushes Back on Nvidia Skeptics Ahead of Earnings — Dan Ives Says Chip Demand Is Crushing Supply 15-To-1",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61380531/jim-cramer-pushes-back-on-nvidia-skeptics-ahead-of-earnings-dan-ives-says-chip-demand-is-crushing-supply-15-to-1",
-      "ts": 1787576699,
-      "tickers": [
-        "NVDA",
-        "GOOGL",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.505
-    },
-    {
-      "title": "Google Cloud Collaborates With Verizon To Deploy Its Full-Stake AI Into Verizon Operations",
-      "url": "https://www.benzinga.com/news/26/08/61380516/google-cloud-collaborates-verizon-deploy-its-full-stake-ai-verizon-operations",
-      "ts": 1787576691,
-      "tickers": [
-        "VZ",
-        "GOOG",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.394
-    },
-    {
-      "title": "Trump ETF Strategy Emerges as $2B Income Report Highlights Shift to Blue-Chip Stocks",
-      "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/08/61380051/trumps-etf-strategy-reveal-typical-etf-playbook",
-      "ts": 1787575806,
-      "tickers": [
-        "VIG",
-        "SPY",
-        "MA",
-        "XLF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.392
-    },
-    {
-      "title": "Nvidia Could Swing $282 Billion In Value After Earnings",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61379652/nvidia-could-swing-282-billion-in-value-after-earnings",
-      "ts": 1787574792,
-      "tickers": [
-        "NVDA",
-        "CRWD",
-        "INTU",
-        "MRVL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.577
-    },
-    {
-      "title": "AI's Next Bottleneck Isn't Chips, It's Power, With Demand Expected to Soar 1,100% by 2033: Why CEG, VST, GEV Stocks Are in Focus",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61378018/ai-power-demand-could-explode-by-2033-as-the-us-grid-struggles-to-keep-pace",
-      "ts": 1787570310,
-      "tickers": [
-        "CEG",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.583
-    },
-    {
-      "title": "IBM Unveils First Dual‑Architecture Mainframe Processor To Support IBM And Arm Platforms In Future IBM Z And LinuxONE Systems",
-      "url": "https://www.benzinga.com/news/26/08/61377776/ibm-unveils-first-dual-architecture-mainframe-processor-support-ibm-and-arm-platforms-future-ibm-z-a",
-      "ts": 1787569842,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.343
-    },
-    {
-      "title": "BTIG Reiterates Buy on Salesforce, Maintains $255 Price Target",
-      "url": "https://www.benzinga.com/news/26/08/61376778/btig-reiterates-buy-salesforce-maintains-255-price-target",
-      "ts": 1787567029,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.432
-    },
-    {
-      "title": "Cathie Wood Says Analysts Can’t ‘Fathom’ Circle, Calls It a ‘Prime Beneficiary’ of Payments Disruption",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61376191/cathie-wood-crcl-stock-circle-disruption",
-      "ts": 1787565693,
-      "tickers": [
-        "CRCL",
-        "$BTC",
-        "MA",
-        "ARKF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.321
-    },
-    {
-      "title": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry",
-      "url": "https://www.benzinga.com/news/26/08/61376097/inquiry-apple-s-competitor-dynamics-technology-hardware-storage-amp-peripherals-industry",
-      "ts": 1787565509,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.404
-    },
-    {
-      "title": "Competitor Analysis: Evaluating Microsoft And Competitors In Software Industry",
-      "url": "https://www.benzinga.com/news/26/08/61376096/competitor-analysis-evaluating-microsoft-and-competitors-software-industry",
-      "ts": 1787565505,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.327
-    },
-    {
-      "title": "Nvidia’s AI Servers Are About to Get Even More Expensive as Rising Memory Costs Push Prices Up More Than 15%: Report",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61375602/nvidias-ai-servers-are-about-to-get-even-more-expensive-as-rising-memory-costs-push-prices-up-more-than-15-report",
-      "ts": 1787562448,
-      "tickers": [
-        "NVDA",
-        "AAPL",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.476
-    },
-    {
-      "title": "Claude Turns 2-Year Wi-Fi Headache Into 10-Minute Fix After Finding 3 Hidden Problems, Boosting Speeds From 90 Mbps to 292 Mbps",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61375432/claude-turns-2-year-wi-fi-headache-into-10-minute-fix-after-finding-3-hidden-problems-boosting-speeds-from-90-mbps-to-292-mbps",
-      "ts": 1787560638,
-      "tickers": [
-        "CSCO",
-        "AAPL",
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.216
-    },
-    {
-      "title": "Trump Says Communities Rejecting Data Centers Are ‘Making a Mistake,’ Says US Leads China In AI ‘By a Lot’",
-      "url": "https://www.benzinga.com/news/politics/26/08/61374613/trump-says-communities-rejecting-data-centers-are-making-a-mistake-says-us-leads-china-in-ai-by-a-lot",
-      "ts": 1787552188,
-      "tickers": [
-        "AMZN",
-        "META",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.346
-    },
-    {
-      "title": "Nvidia in Talks to Back Jeff Bezos-Funded Perplexity at Over $30 Billion Valuation As AI Startup's Revenue Explodes to $750 Million: Report",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61374579/nvidia-perplexity-30-billion-valuation-750-million-revenue-bezos",
-      "ts": 1787552001,
-      "tickers": [
-        "NVDA",
-        "AMZN",
-        "MSFT",
-        "SFTBY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.48
-    },
-    {
-      "title": "IBM And USTA Launch New AI-Powered Fan Features Including Serve Quality, Key Moments And Enhanced Match Chat For 2026 US Open",
-      "url": "https://www.benzinga.com/quote/IBM",
-      "ts": 1787551973,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.318
-    },
-    {
-      "title": "Dr. Oz Says The MMR Vaccine Is Not 'Lethal' as Trump Administration Faces Questions Over Vaccine Policy",
-      "url": "https://www.benzinga.com/news/health-care/26/08/61374304/dr-oz-mmr-vaccine-trump-administration-policy",
-      "ts": 1787548790,
-      "tickers": [
-        "MRK",
-        "SNY",
-        "GSK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.199
-    },
-    {
-      "title": "Remember Hugging Face? The AI Hub Hit by an OpenAI Security Breach Is Reportedly Exploring a $13 Billion Sale",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61374037/hugging-face-thirteen-billion-sale-openai-security-breach",
-      "ts": 1787540424,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "NVDA",
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.318
-    },
-    {
-      "title": "Zoom Communications Stock Rally Faces Its Biggest Test",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61373242/zoom-communications-stock-rally-faces-its-biggest-test-q2-earnings-preview",
-      "ts": 1787521840,
-      "tickers": [
-        "ZM",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.428
+      "relevance": 0.247
     }
   ],
   "portfolio_brief": {
@@ -1005,10 +1004,10 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Perplexity Deal Highlights a Pattern in Nvidia's AI Investments",
-        "ts": 1787580171,
-        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61383040/nvidia-perplexity-investment-ai-strategy",
-        "wiim": false
+        "title": "Shares of semiconductor and chip companies are trading lower. The industry may be pulling back ahead of Nvidia's Q2 earnings report due August, 26.",
+        "ts": 1787600404,
+        "url": "https://www.benzinga.com/quote/SMTK",
+        "wiim": true
       },
       "filings": {
         "latest8k": {
@@ -1059,7 +1058,7 @@
     },
     "AZN": {
       "name": "AstraZeneca",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 13,
         "buy": 16,
@@ -1109,7 +1108,7 @@
           "date": "2026-07-21",
           "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
         },
-        "insider30d": 16
+        "insider30d": 17
       },
       "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
@@ -1318,7 +1317,12 @@
         "score": 1.05,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "10 Health Care Stocks Whale Activity In Today’s Session",
+        "ts": 1787592924,
+        "url": "https://www.benzinga.com/markets/options/26/08/61391269/10-health-care-stocks-whale-activity-today-s-session",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1440,7 +1444,12 @@
         "score": 1.25,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "10 Health Care Stocks Whale Activity In Today’s Session",
+        "ts": 1787592924,
+        "url": "https://www.benzinga.com/markets/options/26/08/61391269/10-health-care-stocks-whale-activity-today-s-session",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",

@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Jaleel's book had a solid Friday, with the healthcare and medtech names doing the heavy lifting. Abbott (ABT, ~10.9% weight) added 2.19% and now sits on a 34.9% unrealized gain, while Zoetis (ZTS, ~10.0%) was the day's standout, up 3.61% — though notably it remains slightly underwater on a total-return basis at –1.3%. Boston Scientific (BSX, ~9.4%) tacked on 2.03% despite carrying an elevated risk flag after its FY26 growth guidance was slashed to 7–8.5%. Lululemon (LULU) popped 4.65% on the session, but that single-day bounce barely dents a –5.3% unrealized loss on a name already flagged for a guidance cut and five straight quarters of negative Americas comps. The software cluster got a lift from a B of A price-target sweep — Adobe (ADBE, +1.13%) and SAP (SAP, +0.73%) both benefited — though ADBE's narrative risk around AI disruption and a CFO exit hasn't gone away.</p><p>The drag side was narrow but worth noting. NVIDIA (NVDA, ~9.2% weight, –0.98%) slipped on a mixed session for semis; OpenAI earnings anxiety and lingering export-control headlines are the cited headwinds, with the company reporting next week on August 26. RKLB (–0.52%) continues its quiet bleed — down 7.4% on an unrealized basis — and remains the only AVOID verdict in the book at a 7.1% weight, the largest mismatch between conviction and sizing in the portfolio. AZO (–0.14%) was effectively flat; it carries a –3.1% unrealized loss against a STRONG BUY verdict, a divergence that bears watching.</p><p>The portfolio's overall unrealized gain sits at 5.37%, a healthy buffer for a capital-preservation mandate, but the concentration of risk flags in the top positions — BSX with slashed guidance, NVDA with an imminent catalyst, LULU still structurally challenged — means Friday's green close shouldn't breed complacency. The pharma cluster (GILD, NVS, NBIX, VRTX) faces a persistent MFN drug-pricing overhang; next material read on that arrives October 28. Watch BSX and NVDA most closely into their next report dates.</p>",
+  "your_book": "<p>Monday, August 24 was a rough session for Jaleel's book, with the bulk of the damage concentrated in the higher-conviction tech and growth names. NVDA fell 2.91% — the market pulling back ahead of its Q2 earnings report due Wednesday, August 26 — while BSX shed 2.7% and AVGO dropped 2.63%, the latter hit by overlapping concerns around AI-capex sentiment and Fed minutes signaling that higher rates may still be on the table. RKLB was the session's worst performer, off 5.91%, compounding an already painful unrealized loss of 12.9%; that position carries an AVOID verdict and the weakest QARP score in the book at 38.3, making it the sharpest divergence between where the thesis has landed and where the price is going. On the other side, AZO added 1.74% and LULU gained 1.41%, while ADBE and SAP both edged higher after B of A lifted price targets across software on easing AI-disruption fears — a modest but welcome narrative shift for ADBE given its persistent sentiment headwind.</p><p>The drift to watch is BSX: down 2.7% today, essentially flat on the unrealized gain (0.0%), yet still rated STRONG BUY with a QARP of 75.8. That's a textbook case of price and thesis pulling in opposite directions — management already guided flat through Q3 after slashing FY26 growth expectations, and the next catalyst isn't until October 20. The book's overall unrealized gain sits at 4.31%, but with nearly 27% of weight in names that are underwater (ZTS, RKLB, LULU, ONON, AVGO, NVS) and a semiconductor complex bracing for a binary event Wednesday, that cushion is thinner than it looks.</p><p>The NVDA earnings print on August 26 is the single most consequential near-term event — it touches not just the 9% NVDA weight directly but sets the tone for AVGO and broader AI-capex sentiment. The drug-pricing overhang (MFN deals, tariffs) continues to hang quietly over the pharma cluster — GILD, NVS, NBIX, and VRTX combined represent a modest slice of the book, but policy risk there is real and ongoing. RKLB remains the position most in need of a hard re-examination.</p>",
   "attention": [
-    {
-      "ticker": "RKLB",
-      "severity": "act",
-      "headline": "Largest AVOID in the book at ~7.1% weight, down 7.4% unrealized",
-      "note": "RKLB carries the lowest QARP score (37.6) and the sole AVOID verdict, yet it is the fifth-largest position — the sizing is flatly inconsistent with a capital-preservation mandate and warrants a sizing or exit decision."
-    },
     {
       "ticker": "NVDA",
       "severity": "act",
-      "headline": "Export-control catalyst arrives August 26 — four days away",
-      "note": "At ~9.2% weight with an active watch flag on China export-license tightening and Senate scrutiny, Jaleel's book has meaningful exposure heading into a binary near-term event with no buffer time to reposition."
+      "headline": "Q2 earnings Wednesday Aug 26 — binary event with export-control overhang",
+      "note": "At 9% weight, down 2.91% today on pre-earnings jitters and ongoing China export-license tightening, the Wednesday print will either validate the STRONG BUY thesis or accelerate the pullback — Jaleel's book needs a clear stance on sizing before the report drops."
+    },
+    {
+      "ticker": "RKLB",
+      "severity": "act",
+      "headline": "AVOID-rated position down 5.91% today, -12.9% unrealized — thesis has broken",
+      "note": "With the lowest QARP in the book at 38.3 and an explicit AVOID verdict, today's 5.91% drop makes continued holding a decision in itself; the gap between the system's rating and the current position needs to be resolved."
     },
     {
       "ticker": "BSX",
       "severity": "watch",
-      "headline": "STRONG BUY verdict vs. guidance slashed to 7–8.5% and flat Q3 guided",
-      "note": "BSX rose 2.03% today but the elevated risk flag — FY26 growth cut and management guiding flat through Q3 — is diverging from the STRONG BUY conviction; next read is October 20 and the thesis needs to be stress-tested before then."
+      "headline": "STRONG BUY vs. flat unrealized gain and slashed guidance — drift widening",
+      "note": "Down 2.7% today and essentially breakeven on the position despite a 9.3% weight, BSX's price action is increasingly disconnected from the STRONG BUY rating, and with management guiding flat through Q3 and the next catalyst not until October 20, the risk is that the thesis re-rating comes too late."
     },
     {
-      "ticker": "LULU",
+      "ticker": "ADBE",
       "severity": "watch",
-      "headline": "Single-day +4.65% bounce does not fix –5.3% unrealized loss or the structural story",
-      "note": "Five straight quarters of negative Americas comps, tariff margin pressure, and a guidance cut make today's pop look tactical rather than a trend reversal; the next earnings read is September 2 and is a genuine inflection test."
+      "headline": "B of A target raise helps sentiment, but CFO exit and AI-moat fear persist into Sep 10 earnings",
+      "note": "Today's software tailwind is real but the underlying narrative risk — AI disruption, CFO departure, ARR de-emphasis — hasn't resolved, and September 10 earnings will be the next moment of truth for whether the re-rating sticks."
     }
   ],
-  "date": "2026-08-21",
-  "generated_at": "Aug 21, 5:00pm ET"
+  "date": "2026-08-24",
+  "generated_at": "Aug 24, 5:07pm ET"
 }
