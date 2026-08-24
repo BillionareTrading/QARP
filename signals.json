@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-23",
-  "generated_at": "Aug 23, 6:38am ET",
+  "date": "2026-08-24",
+  "generated_at": "Aug 24, 6:00am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Aug 23",
+      "when": "Aug 24",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid energy price gains due to concerns that the U.S. and Iran aren't making meaningful headway in negotiations to reopen the Strait of Hormuz peacefully and without transit fees.",
       "affects": "Energy · growth",
@@ -181,15 +181,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Billionaire Activist Investor Dan Loeb’s Anti-Buffett Trade — Third Point Buys This Stock as Berkshire Hathaway Slashes Its Major Stake",
-      "ts": 1787403676,
-      "url": "https://www.benzinga.com/markets/equities/26/08/61371589/dan-loeb-capital-one-berkshire-hathaway-stake",
-      "wiim": false
-    },
-    "EFX": {
-      "title": "Ross Stores To Rally Around 18%? Here Are 10 Top Analyst Forecasts For Friday",
-      "ts": 1787315070,
-      "url": "https://www.benzinga.com/news/26/08/61352782/ross-stores-to-rally-around-18-here-are-10-top-analyst-forecasts-for-friday",
+      "title": "Nvidia’s AI Servers Are About to Get Even More Expensive as Rising Memory Costs Push Prices Up More Than 15%: Report",
+      "ts": 1787562448,
+      "url": "https://www.benzinga.com/markets/tech/26/08/61375602/nvidias-ai-servers-are-about-to-get-even-more-expensive-as-rising-memory-costs-push-prices-up-more-than-15-report",
       "wiim": false
     }
   },
@@ -533,6 +527,228 @@
   },
   "bz_news": [
     {
+      "title": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/08/61376097/inquiry-apple-s-competitor-dynamics-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1787565509,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.404
+    },
+    {
+      "title": "Competitor Analysis: Evaluating Microsoft And Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/08/61376096/competitor-analysis-evaluating-microsoft-and-competitors-software-industry",
+      "ts": 1787565505,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.326
+    },
+    {
+      "title": "Nvidia’s AI Servers Are About to Get Even More Expensive as Rising Memory Costs Push Prices Up More Than 15%: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61375602/nvidias-ai-servers-are-about-to-get-even-more-expensive-as-rising-memory-costs-push-prices-up-more-than-15-report",
+      "ts": 1787562448,
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.476
+    },
+    {
+      "title": "Claude Turns 2-Year Wi-Fi Headache Into 10-Minute Fix After Finding 3 Hidden Problems, Boosting Speeds From 90 Mbps to 292 Mbps",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61375432/claude-turns-2-year-wi-fi-headache-into-10-minute-fix-after-finding-3-hidden-problems-boosting-speeds-from-90-mbps-to-292-mbps",
+      "ts": 1787560638,
+      "tickers": [
+        "CSCO",
+        "AAPL",
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.216
+    },
+    {
+      "title": "Trump Says Communities Rejecting Data Centers Are ‘Making a Mistake,’ Says US Leads China In AI ‘By a Lot’",
+      "url": "https://www.benzinga.com/news/politics/26/08/61374613/trump-says-communities-rejecting-data-centers-are-making-a-mistake-says-us-leads-china-in-ai-by-a-lot",
+      "ts": 1787552188,
+      "tickers": [
+        "AMZN",
+        "META",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.346
+    },
+    {
+      "title": "Nvidia in Talks to Back Jeff Bezos-Funded Perplexity at Over $30 Billion Valuation As AI Startup's Revenue Explodes to $750 Million: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61374579/nvidia-perplexity-30-billion-valuation-750-million-revenue-bezos",
+      "ts": 1787552001,
+      "tickers": [
+        "NVDA",
+        "AMZN",
+        "MSFT",
+        "SFTBY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.48
+    },
+    {
+      "title": "IBM And USTA Launch New AI-Powered Fan Features Including Serve Quality, Key Moments And Enhanced Match Chat For 2026 US Open",
+      "url": "https://www.benzinga.com/quote/IBM",
+      "ts": 1787551973,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.318
+    },
+    {
+      "title": "Dr. Oz Says The MMR Vaccine Is Not 'Lethal' as Trump Administration Faces Questions Over Vaccine Policy",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61374304/dr-oz-mmr-vaccine-trump-administration-policy",
+      "ts": 1787548790,
+      "tickers": [
+        "MRK",
+        "SNY",
+        "GSK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.199
+    },
+    {
+      "title": "Remember Hugging Face? The AI Hub Hit by an OpenAI Security Breach Is Reportedly Exploring a $13 Billion Sale",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61374037/hugging-face-thirteen-billion-sale-openai-security-breach",
+      "ts": 1787540424,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "NVDA",
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.318
+    },
+    {
+      "title": "Zoom Communications Stock Rally Faces Its Biggest Test",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61373242/zoom-communications-stock-rally-faces-its-biggest-test-q2-earnings-preview",
+      "ts": 1787521840,
+      "tickers": [
+        "ZM",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.428
+    },
+    {
+      "title": "Alibaba Stock Flashes a Bearish Pattern as a $10 Billion Risk Looms",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61373215/alibaba-stock-flashes-a-bearish-pattern-as-a-10-billion-risk-looms",
+      "ts": 1787520675,
+      "tickers": [
+        "BABA",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.377
+    },
+    {
+      "title": "Top S&P 500 Stocks to Watch This Week: CrowdStrike, Salesforce, Workday",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/61373202/top-sp-500-index-stocks-to-watch-this-week-crowdstrike-salesforce-workday",
+      "ts": 1787520069,
+      "tickers": [
+        "CRWD",
+        "CRM",
+        "WDAY",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.406
+    },
+    {
+      "title": "Salesforce Earnings Preview: Will the Stock Rally Continue?",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61373153/salesforce-earnings-preview-will-the-stock-rally-continue",
+      "ts": 1787518631,
+      "tickers": [
+        "CRM",
+        "WDAY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.479
+    },
+    {
+      "title": "IREN Stock Gears Up for a Pivotal Week as Earnings Meet a Bitcoin Rally",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61373014/iren-stock-gears-up-for-a-pivotal-week-as-earnings-meet-a-bitcoin-rally",
+      "ts": 1787509025,
+      "tickers": [
+        "BTC",
+        "IREN",
+        "$BTC",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.387
+    },
+    {
+      "title": "This Week in Tesla: Ross Gerber's Self-Driving Question, Cybercab Boost And More",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61372801/this-week-in-tesla-ross-gerbers-self-driving-question-cybercab-boost-and-more",
+      "ts": 1787494279,
+      "tickers": [
+        "TSLA",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.339
+    },
+    {
+      "title": "Congressman’s Buying Spree, AAPL Stock Gains and More: This Week in Appleverse",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61372557/apple-weekend-news-steve-jobs-stock-upgrade",
+      "ts": 1787482876,
+      "tickers": [
+        "AAPL",
+        "SKHY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.362
+    },
+    {
       "title": "JPMorgan Predicts Global Food Crisis, Scott Bessent's Budget Deficit Forecast and More: This Week in Economy",
       "url": "https://www.benzinga.com/markets/macro-economic-events/26/08/61372503/jpmorgan-treasury-jim-cramer-weekend-market-news",
       "ts": 1787479271,
@@ -581,7 +797,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.258
+      "relevance": 0.257
     },
     {
       "title": "Billionaire Activist Investor Dan Loeb’s Anti-Buffett Trade — Third Point Buys This Stock as Berkshire Hathaway Slashes Its Major Stake",
@@ -596,7 +812,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.331
+      "relevance": 0.333
     },
     {
       "title": "Benzinga Bulls and Bears: Ross, Moderna, Webull",
@@ -651,222 +867,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.467
-    },
-    {
-      "title": "'Anthropic Taps Google Chip Veteran as Part of Push Into Hardware'- Bloomberg",
-      "url": "https://www.benzinga.com/news/26/08/61367701/anthropic-taps-google-chip-veteran-part-push-hardware-bloomberg",
-      "ts": 1787342911,
-      "tickers": [
-        "GOOG",
-        "GOOGL",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.398
-    },
-    {
-      "title": "Bessent's Bond Band-Aid, Bitcoin's Best Week Since 2023: This Week on Wall Street",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61367390/bessent-bond-intervention-bitcoin-walmart-moderna-the-week-on-wall-street",
-      "ts": 1787342501,
-      "tickers": [
-        "$BTC",
-        "COIN",
-        "WMT",
-        "MRNA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.387
-    },
-    {
-      "title": "Citigroup Maintains Buy on Walmart, Lowers Price Target to $132",
-      "url": "https://www.benzinga.com/news/26/08/61367062/citigroup-maintains-buy-walmart-lowers-price-target-132",
-      "ts": 1787341842,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.405
-    },
-    {
-      "title": "OpenAI Reducing GPT-5.6 Sol's API Prices By 20% For Next Three Months",
-      "url": "https://www.benzinga.com/news/26/08/61366821/openai-reducing-gpt-5-6-sol-s-api-prices-20-next-three-months",
-      "ts": 1787341452,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.308
-    },
-    {
-      "title": "'Apple Cuts Jobs in Siri, Vision Pro Immersive Video and Gaming Teams' - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/08/61365485/apple-cuts-jobs-siri-vision-pro-immersive-video-and-gaming-teams-bloomberg-news",
-      "ts": 1787338338,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.321
-    },
-    {
-      "title": "Centers For Disease Control And Prevention: Investigating A Multistate Outbreak Of E. Coli And Salmonella Infections Linked To Alfalfa Sprouts",
-      "url": "https://www.benzinga.com/quote/TGT",
-      "ts": 1787336450,
-      "tickers": [
-        "SYY",
-        "SFM",
-        "KR",
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.247
-    },
-    {
-      "title": "BNP Paribas Reiterates Outperform on Walmart, Lowers Price Target to $137",
-      "url": "https://www.benzinga.com/news/26/08/61363995/bnp-paribas-reiterates-outperform-walmart-lowers-price-target-137",
-      "ts": 1787334987,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.429
-    },
-    {
-      "title": "Goldman Sachs Maintains Buy on Merck & Co, Raises Price Target to $160",
-      "url": "https://www.benzinga.com/news/26/08/61363856/goldman-sachs-maintains-buy-merck-co-raises-price-target-160",
-      "ts": 1787334662,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.438
-    },
-    {
-      "title": "Stock of the Day: Will CrowdStrike Reverse off of this Important Level?",
-      "url": "https://www.benzinga.com/trading-ideas/technicals/26/08/61363628/stock-of-the-day-will-crowdstrike-reverse-off-of-this-important-level",
-      "ts": 1787334274,
-      "tickers": [
-        "WMT",
-        "CRWD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.414
-    },
-    {
-      "title": "10 Financials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61363396/10-financials-stocks-whale-alerts-today-s-session",
-      "ts": 1787333718,
-      "tickers": [
-        "COIN",
-        "BNY",
-        "BULL",
-        "HOOD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.39
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61363395/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1787333718,
-      "tickers": [
-        "MSFT",
-        "BMNR",
-        "SNDK",
-        "NVTS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "Truist Securities Maintains Buy on Walmart, Lowers Price Target to $114",
-      "url": "https://www.benzinga.com/news/26/08/61363321/truist-securities-maintains-buy-walmart-lowers-price-target-114",
-      "ts": 1787333550,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.401
-    },
-    {
-      "title": "Deal Dispatch: MunichRe Buys At-Bay, Mavis Tire Closes Pep Boys Purchase, Werewolf Merges With Ambros",
-      "url": "https://www.benzinga.com/m-a/26/08/61363130/deal-dispatch-munichre-buys-at-bay-mavis-tire-closes-pep-boys-purchase-werewolf-merges-with-ambros",
-      "ts": 1787333159,
-      "tickers": [
-        "NXGL",
-        "GS",
-        "OPTT",
-        "SCSC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.444
-    },
-    {
-      "title": "If You Invested $1,000 In Moderna Stock at IPO, Here's How Much You'd Have Now",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61362710/if-you-invested-1000-in-moderna-stock-at-ipo-heres-how-much-youd-have-now",
-      "ts": 1787332164,
-      "tickers": [
-        "MRNA",
-        "SPY",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.334
-    },
-    {
-      "title": "Bitcoin Jumps Above $77,000, Gold Hits 3-Month Highs: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61362531/stock-market-today-btc-bitcoin-770000-gold-3-month-high",
-      "ts": 1787331812,
-      "tickers": [
-        "BTC",
-        "$BTC",
-        "MSTR",
-        "COIN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.393
-    },
-    {
-      "title": "Piper Sandler Reiterates Overweight on Walmart, Lowers Price Target to $128",
-      "url": "https://www.benzinga.com/news/26/08/61362481/piper-sandler-reiterates-overweight-walmart-lowers-price-target-128",
-      "ts": 1787331724,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.409
     }
   ],
   "portfolio_brief": {
@@ -983,9 +983,9 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Billionaire Activist Investor Dan Loeb’s Anti-Buffett Trade — Third Point Buys This Stock as Berkshire Hathaway Slashes Its Major Stake",
-        "ts": 1787403676,
-        "url": "https://www.benzinga.com/markets/equities/26/08/61371589/dan-loeb-capital-one-berkshire-hathaway-stake",
+        "title": "Nvidia’s AI Servers Are About to Get Even More Expensive as Rising Memory Costs Push Prices Up More Than 15%: Report",
+        "ts": 1787562448,
+        "url": "https://www.benzinga.com/markets/tech/26/08/61375602/nvidias-ai-servers-are-about-to-get-even-more-expensive-as-rising-memory-costs-push-prices-up-more-than-15-report",
         "wiim": false
       },
       "filings": {
@@ -1482,12 +1482,7 @@
         "score": 0.93,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "Ross Stores To Rally Around 18%? Here Are 10 Top Analyst Forecasts For Friday",
-        "ts": 1787315070,
-        "url": "https://www.benzinga.com/news/26/08/61352782/ross-stores-to-rally-around-18-here-are-10-top-analyst-forecasts-for-friday",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
