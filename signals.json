@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-24",
-  "generated_at": "Aug 24, 5:05pm ET",
+  "date": "2026-08-25",
+  "generated_at": "Aug 25, 5:59am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -185,34 +185,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-17",
-      "ticker": "CVX",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$208",
-      "price": 203.09,
-      "upside": 2.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-17",
-      "ticker": "HD",
-      "firm": "Stifel",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$340",
-      "price": 337.43,
-      "upside": 0.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-18",
       "ticker": "CRM",
@@ -525,18 +497,196 @@
       "stance": "neutral",
       "pt": "$120",
       "upside": 8.9
-    },
-    "AAPL": {
-      "date": "2026-08-10",
-      "firm": "Jefferies",
-      "action": "Downgrades",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$264",
-      "upside": -15.0
     }
   },
   "bz_news": [
+    {
+      "title": "Competitor Analysis: Evaluating Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/08/61402012/competitor-analysis-evaluating-apple-and-competitors-technology-hardware-storage-amp-peripherals-ind",
+      "ts": 1787651914,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.378
+    },
+    {
+      "title": "Understanding Microsoft's Position In Software Industry Compared To Competitors",
+      "url": "https://www.benzinga.com/news/26/08/61402011/understanding-microsoft-s-position-software-industry-compared-competitors",
+      "ts": 1787651909,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.306
+    },
+    {
+      "title": "Bitcoin Beats Nvidia to Become Top-Performing Major Asset Over 10 Years as BTC Surges Above $80,000",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61401997/bitcoin-nvidia-10-year-returns",
+      "ts": 1787651803,
+      "tickers": [
+        "$BTC",
+        "AMZN",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.426
+    },
+    {
+      "title": "Top Analyst Says Nvidia Earnings Could Reveal If AI Infrastructure Boom Has Finally Peaked: ‘The Biggest Thing I Am Watching…’",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61401219/top-analyst-says-nvidia-earnings-could-reveal-if-ai-infrastructure-boom-has-finally-peaked-the-biggest-thing-i-am-watching",
+      "ts": 1787646191,
+      "tickers": [
+        "NVDA",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.538
+    },
+    {
+      "title": "Trump Administration Proposes Over $100,000 H-1B Fee After Court Struck Down $100,000 Levy",
+      "url": "https://www.benzinga.com/news/politics/26/08/61401078/trump-administration-proposes-over-100000-h-1b-fee-after-court-struck-down-100000-levy",
+      "ts": 1787644019,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.179
+    },
+    {
+      "title": "Reported Earlier, FDA Approves Johnson & Johnson's IMAAVY (Nipocalimab-Aahu) As First-Ever Treatment For Warm Autoimmune Hemolytic Anemia, Based On Pivotal Phase 2/3 ENERGY Study",
+      "url": "https://www.benzinga.com/news/26/08/61400922/reported-earlier-fda-approves-johnson-johnson-s-imaavy-nipocalimab-aahu-first-ever-treatment-warm-au",
+      "ts": 1787642771,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.348
+    },
+    {
+      "title": "'Apple Gears Up to Launch Its First New Mac Mini in Two Years' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/08/61400711/apple-gears-launch-its-first-new-mac-mini-two-years-bloomberg",
+      "ts": 1787641281,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.272
+    },
+    {
+      "title": "'JPMorgan Eases Approach On Lending Against Shares To Court AI’s New Wealth' - FT",
+      "url": "https://www.benzinga.com/news/26/08/61400692/jpmorgan-eases-approach-lending-against-shares-court-ai-s-new-wealth-ft",
+      "ts": 1787641223,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.313
+    },
+    {
+      "title": "Trump Snapped Up SpaceX Shares 11 Days After $1.77 Trillion IPO: Here's What Else He Purchased",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61399929/trump-spacex-shares-11-days-after-ipo-other-stock-purchases",
+      "ts": 1787628907,
+      "tickers": [
+        "SPCX",
+        "TSLA",
+        "AAPL",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.323
+    },
+    {
+      "title": "Nvidia, Bloom Energy, SanDisk, Expion Energy and Visa: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61399582/nvidia-bloom-energy-sandisk-expion-energy-and-visa-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1787621836,
+      "tickers": [
+        "NVDA",
+        "V",
+        "BE",
+        "XPON"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.542
+    },
+    {
+      "title": "Congressman Buys Magnificent Seven Stock, Blue Chip Stock — And a Stock You’ve Never Heard Of",
+      "url": "https://www.benzinga.com/news/politics/26/08/61398673/congressman-buys-magnificent-seven-stock-blue-chip-stock-and-a-stock-youve-never-heard-of",
+      "ts": 1787610799,
+      "tickers": [
+        "IBP",
+        "GOOGL",
+        "MSFT",
+        "PG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.334
+    },
+    {
+      "title": "Cowell Remains Tethered To Apple But Investors Cheer Strong Earnings",
+      "url": "https://www.benzinga.com/Opinion/26/08/61398415/cowell-remains-tethered-to-apple-but-investors-cheer-strong-earnings",
+      "ts": 1787608332,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.376
+    },
+    {
+      "title": "Boeing Wins $131.23B Ceiling, Indefinite-Delivery/Indefinite-Quantity Contract For The F-15 Eagle Crest In Support Of The F-15 Program Office",
+      "url": "https://www.benzinga.com/news/26/08/61398106/boeing-wins-131-23b-ceiling-indefinite-delivery-indefinite-quantity-contract-f-15-eagle-crest-suppor",
+      "ts": 1787606751,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.243
+    },
+    {
+      "title": "'JPMorgan, Santander Lead Financing of up to $15B for Argentina LNG Project'- Bloomberg",
+      "url": "https://www.benzinga.com/news/26/08/61398018/jpmorgan-santander-lead-financing-15b-argentina-lng-project-bloomberg",
+      "ts": 1787606391,
+      "tickers": [
+        "JPM",
+        "SAN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.317
+    },
     {
       "title": "Walmart Heirs Lose $9.4 Billion in Wealth in 2026: Stock Drop Hurts Odds of Making Top 10 Richest",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61397128/walmart-heirs-lose-9-4-billion-in-wealth-in-2026-stock-drop-hurts-odds-of-making-top-10-richest",
@@ -575,7 +725,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.267
+      "relevance": 0.266
     },
     {
       "title": "Magnificent 7 Built The AI Boom, 'Munificent Seven' Wants to Power It",
@@ -687,207 +837,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.415
-    },
-    {
-      "title": "10 Health Care Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61391269/10-health-care-stocks-whale-activity-today-s-session",
-      "ts": 1787592924,
-      "tickers": [
-        "MRNA",
-        "RARE",
-        "UNH",
-        "UNCY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.382
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61391268/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1787592924,
-      "tickers": [
-        "MU",
-        "INTC",
-        "FLEX",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "Memory Stocks Slide as Trump Threatens 50% Tariffs on Canadian Autos, Steel in 2027: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61390668/memory-stocks-crater-trump-50-percent-canada-tariffs-markets-monday",
-      "ts": 1787591816,
-      "tickers": [
-        "$BTC",
-        "MSTR",
-        "ETSY",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "CRCL Could Hit $140, Says Bernstein as Cathie Wood Praises Circle's Disruption",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61390197/crcl-could-hit-140-says-bernstein-as-cathie-wood-praises-circles-disruption",
-      "ts": 1787591076,
-      "tickers": [
-        "CRCL",
-        "MA",
-        "$USDC",
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.42
-    },
-    {
-      "title": "Samsung Crash Brings Semi Selling; Nvidia Earnings Ahead; $1T Treasury Firepower To Buy Bonds",
-      "url": "https://www.benzinga.com/Opinion/26/08/61389951/samsung-crash-brings-semi-selling-nvidia-earnings-ahead-1t-treasury-firepower-to-buy-bonds",
-      "ts": 1787590640,
-      "tickers": [
-        "SLV",
-        "GLD",
-        "USO",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.408
-    },
-    {
-      "title": "Visa shares are trading higher after a filing indicated that President Trump purchased millions of dollars worth of the company's stock during June 2026.",
-      "url": "https://www.benzinga.com/quote/V",
-      "ts": 1787589380,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.416
-    },
-    {
-      "title": "What's Going on With Nebius Shares on Monday?",
-      "url": "https://www.benzinga.com/markets/large-cap/26/08/61388992/whats-going-on-with-nebius-shares-on-monday",
-      "ts": 1787588882,
-      "tickers": [
-        "NBIS",
-        "MSFT",
-        "XLK",
-        "NBIG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.478
-    },
-    {
-      "title": "Analyst Calls Marvell A Top Chip Pick As AI Demand Builds",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/08/61388796/analyst-calls-marvell-a-top-chip-pick-as-ai-demand-builds",
-      "ts": 1787588563,
-      "tickers": [
-        "MRVL",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.575
-    },
-    {
-      "title": "Salesforce To Report Mixed Q2; Investors Remain Skeptical About H2 Acceleration",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61386508/salesforce-q2-investors-remain-skeptical-about-h2-acceleration",
-      "ts": 1787585081,
-      "tickers": [
-        "CRM",
-        "MSFT",
-        "HUBS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.479
-    },
-    {
-      "title": "Recent Filing Shows That Rep. Nancy Pelosi Bought Over $4.25M Worth of Bloom Energy Stock",
-      "url": "https://www.benzinga.com/government/26/08/61385680/recent-filing-shows-rep-nancy-pelosi-bought-over-4-25m-worth-bloom-energy-stock",
-      "ts": 1787583624,
-      "tickers": [
-        "BE",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.303
-    },
-    {
-      "title": "What's Going On With Apple Stock Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61383598/whats-going-on-with-apple-stock-monday-2",
-      "ts": 1787580784,
-      "tickers": [
-        "AAPL",
-        "SSNLF",
-        "OEF",
-        "HECA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.424
-    },
-    {
-      "title": "Why Is IREN Stock Sliding on Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61383068/why-is-iren-stock-sliding-on-monday",
-      "ts": 1787580197,
-      "tickers": [
-        "IREN",
-        "$BTC",
-        "META",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.353
-    },
-    {
-      "title": "Perplexity Deal Highlights a Pattern in Nvidia's AI Investments",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61383040/nvidia-perplexity-investment-ai-strategy",
-      "ts": 1787580171,
-      "tickers": [
-        "NVDA",
-        "INTC",
-        "NOK",
-        "SNPS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.472
-    },
-    {
-      "title": "Libya Signs Production-Sharing Agreement With Chevron",
-      "url": "https://www.benzinga.com/news/26/08/61380970/libya-signs-production-sharing-agreement-chevron",
-      "ts": 1787577638,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.247
     }
   ],
   "portfolio_brief": {
@@ -1020,7 +969,7 @@
           "date": "2026-05-20",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
         },
-        "insider30d": 2
+        "insider30d": 3
       },
       "explain": "68 analysts cover it — 64 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
