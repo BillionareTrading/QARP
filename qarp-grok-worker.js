@@ -34,8 +34,16 @@ export default {
       // ---- Catalyst Desk v2: dated events, breakdown fields, the earnings rule ----
       tools = [{ type: "web_search" }, { type: "x_search" }];
       prompt =
-        `You are a catalyst analyst for a value desk. Search the live web (and X only if it surfaces ` +
-        `something material) for ${name} ($${symbol}). Run AT MOST 2 searches total. Find:\n` +
+        `You are a catalyst analyst for a value desk. Your PRIMARY source is live X (Twitter) — ` +
+        `that is the entire reason this desk uses Grok. Work ${name} ($${symbol}) like this:\n` +
+        `STEP 1 — X SWEEP (2-3 searches, ALWAYS run these): the $${symbol} cashtag flow, the ` +
+        `company's official/IR account, and credible finance accounts discussing upcoming dated ` +
+        `events for this name (conference presentations, PDUFA/adcom chatter, product launch dates, ` +
+        `contract announcements, activist letters, guidance whispers with substance).\n` +
+        `STEP 2 — WEB VERIFY (1-2 searches): any material lead from X MUST be verified against a ` +
+        `primary source (company PR, filing, official docket) before you report it — X finds, the ` +
+        `web confirms. Never report an X rumor as an event.\n` +
+        `Run up to 5 searches total. Find:\n` +
         `1. The NEAREST REAL upcoming catalyst: a dated or credibly-windowed event with asymmetric ` +
         `re-rating potential — regulatory/clinical decisions, product launches, investor days, ` +
         `announced deal closings, activist deadlines, macro rulings that hit THIS name.\n` +
