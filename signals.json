@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-25",
-  "generated_at": "Aug 25, 5:02pm ET",
+  "date": "2026-08-26",
+  "generated_at": "Aug 26, 5:58am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -100,7 +100,7 @@
     "NVDA": "2026-08-26",
     "AZN": "2026-10-30",
     "RKLB": "2026-11-09",
-    "AZO": "2026-09-21",
+    "AZO": "2026-09-22",
     "DHR": "2026-10-19",
     "ADBE": "2026-09-10",
     "LULU": "2026-09-02",
@@ -182,29 +182,9 @@
       "ts": 1787655925,
       "url": "https://www.benzinga.com/quote/AS",
       "wiim": false
-    },
-    "RKLB": {
-      "title": "Jim Cramer: Williams Companies Is 'Terrific,' This Tech Company Had An ‘Amazing’ Quarter",
-      "ts": 1787657648,
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61404270/jim-cramer-williams-companies-is-terrific-this-tech-company-had-an-amazing-quarter",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-18",
-      "ticker": "CRM",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$204",
-      "price": 205.69,
-      "upside": -0.8,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
     {
       "date": "2026-08-19",
       "ticker": "HD",
@@ -595,6 +575,181 @@
   },
   "bz_news": [
     {
+      "title": "Evaluating Apple Against Peers In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/08/61427639/evaluating-apple-against-peers-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1787738309,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.366
+    },
+    {
+      "title": "Comparing Microsoft With Industry Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/08/61427638/comparing-microsoft-industry-competitors-software-industry",
+      "ts": 1787738305,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.328
+    },
+    {
+      "title": "iPhone Buyers Rush in Before Potential Apple Price Increases",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61427577/iphone-buyers-rush-in-before-potential-apple-price-increases",
+      "ts": 1787737778,
+      "tickers": [
+        "AAPL",
+        "TMUS",
+        "OEF",
+        "LRND"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.315
+    },
+    {
+      "title": "Jason Calacanis Says TSLA's Optimus Will Eclipse AAPL's iPhone, Predicts 1 Billion Robots By 2036",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61427362/jason-calacanis-says-tslas-optimus-will-eclipse-aapls-iphone-predicts-1-billion-robots-by-2036",
+      "ts": 1787736060,
+      "tickers": [
+        "TSLA",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.354
+    },
+    {
+      "title": "Elizabeth Warren Slams Trump for ‘Holding Millions’ in Oil and Gas Stocks as Iran War Sends XOM, COP, OXY Higher",
+      "url": "https://www.benzinga.com/news/politics/26/08/61427165/elizabeth-warren-slams-trump-for-holding-millions-in-oil-and-gas-stocks-as-iran-war-sends-xom-cop-oxy-higher",
+      "ts": 1787735132,
+      "tickers": [
+        "XOM",
+        "CVX",
+        "OXY",
+        "COP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.285
+    },
+    {
+      "title": "Microsoft And HUMAIN Announce Long-Term AI Collaboration To Bring ALLAM Models To Microsoft Foundry And M365 Copilot",
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "ts": 1787733401,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.313
+    },
+    {
+      "title": "Apple Unveils New Mac mini and Mac Studio With M6 and M5 Ultra Chips—There’s a Surprising $9 Twist Too",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61426957/apple-unveils-new-mac-mini-and-mac-studio-with-m6-and-m5-ultra-chips-theres-a-surprising-9-twist-too",
+      "ts": 1787732650,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.307
+    },
+    {
+      "title": "'China's Moonshot In Talks With Microsoft, Amazon, Google Over K3 Revenue Sharing, Sources Say' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/08/61426922/china-s-moonshot-talks-microsoft-amazon-google-over-k3-revenue-sharing-sources-say-reuters-exclusive",
+      "ts": 1787732109,
+      "tickers": [
+        "FXI",
+        "MSFT",
+        "AMZN",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.305
+    },
+    {
+      "title": "Microsoft’s Internal Pay Spreadsheet Shows Cloud and AI Workers Reporting Stock Awards as High as $1.4 Million: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61426839/microsofts-internal-pay-spreadsheet-shows-cloud-and-ai-workers-reporting-stock-awards-as-high-as-1-4-million-report",
+      "ts": 1787731455,
+      "tickers": [
+        "MSFT",
+        "META",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.33
+    },
+    {
+      "title": "Mike Johnson Says Prescription Drug Prices Are at 'Lowest Levels' in 60 Years, Credits Trump and Republicans for Lower Costs",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61426790/mike-johnson-says-prescription-drug-prices-are-at-lowest-levels-in-60-years-credits-trump-and-republicans-for-lower-costs",
+      "ts": 1787731000,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.243
+    },
+    {
+      "title": "Warren Buffett-Style Cash Flow Stocks Could Face Heavy Downside in OpenAI Era, Warns Dwarkesh Patel",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61426644/warren-buffett-style-cash-flow-stocks-could-face-heavy-downside-in-openai-era-warns-dwarkesh-patel",
+      "ts": 1787728764,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.387
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61425878/stock-market-will-sp-500-open-up-or-down-today-24",
+      "ts": 1787720736,
+      "tickers": [
+        "$POL",
+        "SPY",
+        "QQQ",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Nike Stock Drop Hits Founder’s Net Worth: Phil Knight Nears Exit of Top 100 Richest",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61423799/nike-stock-drop-hits-founders-net-worth-phil-knight-nears-exit-of-top-100-richest",
+      "ts": 1787693277,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.279
+    },
+    {
       "title": "$100 Invested In UnitedHealth Group 15 Years Ago Would Be Worth This Much Today",
       "url": "https://www.benzinga.com/news/26/08/61422969/100-invested-unitedhealth-group-15-years-ago-would-be-worth-much-today",
       "ts": 1787690743,
@@ -662,7 +817,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.281
+      "relevance": 0.28
     },
     {
       "title": "Salesforce Q2 Preview: Stock Has Fallen After 5 of Last 8 Earnings Reports, Will This One Be Different?",
@@ -760,173 +915,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.394
-    },
-    {
-      "title": "Nike Stock Slides After Dick's Disappointing Q2 Results",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61417347/nike-stock-slides-after-dicks-disappointing-q2-results",
-      "ts": 1787679309,
-      "tickers": [
-        "NKE",
-        "DKS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "Merck shares are trading higher after Argus Research and Wolfe Research raised their respective price targets on the stock.",
-      "url": "https://www.benzinga.com/quote/MRK",
-      "ts": 1787677269,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.459
-    },
-    {
-      "title": "Live On CNBC, Josh Brown Host Segment Titled “Josh’s Best Stocks In The Market: Merck\"",
-      "url": "https://www.benzinga.com/quote/MRK",
-      "ts": 1787675997,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.405
-    },
-    {
-      "title": "Here’s How Much You Would Have Made Owning Amgen Stock In The Last 15 Years",
-      "url": "https://www.benzinga.com/news/26/08/61414283/here-s-how-much-you-would-have-made-owning-amgen-stock-last-15-years",
-      "ts": 1787673659,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.358
-    },
-    {
-      "title": "Salesforce Q2: AI Is Growing Fast, CRM Needs New Customers To Catch Up",
-      "url": "https://www.benzinga.com/news/26/08/61413912/salesforce-q2-ai-is-growing-fast-crm-needs-new-customers-to-catch-up",
-      "ts": 1787672750,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.423
-    },
-    {
-      "title": "What's Going On With Dell Technologies Stock Tuesday?",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61413880/whats-going-on-with-dell-technologies-stock-tuesday",
-      "ts": 1787672671,
-      "tickers": [
-        "DELL",
-        "MSFT",
-        "INTC",
-        "AMD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.414
-    },
-    {
-      "title": "Wolfe Research Maintains Outperform on Merck & Co, Raises Price Target to $180",
-      "url": "https://www.benzinga.com/news/26/08/61413281/wolfe-research-maintains-outperform-merck-co-raises-price-target-180",
-      "ts": 1787671654,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.47
-    },
-    {
-      "title": "Wolfe Research Maintains Outperform on Visa, Raises Price Target to $460",
-      "url": "https://www.benzinga.com/news/26/08/61413159/wolfe-research-maintains-outperform-visa-raises-price-target-460",
-      "ts": 1787671535,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.458
-    },
-    {
-      "title": "Dick's Sporting Goods Stock Plunges 25% on $31.9M Foot Locker Investment Loss",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61412349/dicks-stock-foot-locker-losses",
-      "ts": 1787670431,
-      "tickers": [
-        "DKS",
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.378
-    },
-    {
-      "title": "President Of Visa Makes $6.65M Sale",
-      "url": "https://www.benzinga.com/news/26/08/61412102/president-visa-makes-6-65m-sale",
-      "ts": 1787670099,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.342
-    },
-    {
-      "title": "Cisco Expands Rack-Scale AI Computing With Nvidia, Supermicro",
-      "url": "https://www.benzinga.com/markets/large-cap/26/08/61411585/cisco-expands-rack-scale-ai-computing-with-nvidia-supermicro",
-      "ts": 1787669169,
-      "tickers": [
-        "CSCO",
-        "NVDA",
-        "HACK",
-        "SMCI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.452
-    },
-    {
-      "title": "Nike shares are trading lower amid sympathy with Dick's Sporting Goods after the company reported worse-than-expected Q2 financial results and noted challenging athletic footwear and apparel markets.",
-      "url": "https://www.benzinga.com/quote/NKE",
-      "ts": 1787667139,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.348
-    },
-    {
-      "title": "Dick's Sporting Goods Notes Challenging Athletic Footwear And Apparel Market Conditions",
-      "url": "https://www.benzinga.com/quote/AS",
-      "ts": 1787655925,
-      "tickers": [
-        "LULU",
-        "NKE",
-        "UA",
-        "ONON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.355
     }
   ],
   "portfolio_brief": {
@@ -1103,12 +1091,7 @@
         "score": 1.04,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "Jim Cramer: Williams Companies Is 'Terrific,' This Tech Company Had An ‘Amazing’ Quarter",
-        "ts": 1787657648,
-        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61404270/jim-cramer-williams-companies-is-terrific-this-tech-company-had-an-amazing-quarter",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
