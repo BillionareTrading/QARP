@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-26",
-  "generated_at": "Aug 26, 8:06pm ET",
+  "date": "2026-08-27",
+  "generated_at": "Aug 27, 9:05am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -34,7 +34,7 @@
       "sev": "watch",
       "tag": "Export controls + AI-capex doubt",
       "detail": "China export-license tightening + Senate scrutiny; the memory/chip complex swings on AI-spending sentiment.",
-      "next": "Aug 26"
+      "next": "Nov 17"
     },
     {
       "ticker": "NOW",
@@ -61,14 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Aug 26",
-      "what": "NVDA earnings",
-      "affects": "NVDA",
-      "dir": "two-sided",
-      "why": "Q-results for NVIDIA — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Sep 2",
       "what": "LULU earnings",
       "affects": "LULU",
@@ -91,13 +83,21 @@
       "dir": "two-sided",
       "why": "Q-results for Adobe — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Sep 22",
+      "what": "AZO earnings",
+      "affects": "AZO",
+      "dir": "two-sided",
+      "why": "Q-results for AutoZone — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
     }
   ],
   "earnings_next": {
     "ABT": "2026-10-13",
     "ZTS": "2026-11-02",
     "BSX": "2026-10-20",
-    "NVDA": "2026-08-26",
+    "NVDA": "2026-11-17",
     "AZN": "2026-10-30",
     "RKLB": "2026-11-09",
     "DHR": "2026-10-19",
@@ -170,135 +170,15 @@
       "ts": 1787167424,
       "url": "https://www.benzinga.com/quote/ASYS",
       "wiim": true
+    },
+    "AZN": {
+      "title": "AstraZeneca, Amgen Report Phase III Results For TEZSPIRE In Eosinophilic Esophagitis; TEZSPIRE Meets Key Endpoints In Phase III CROSSING Trial",
+      "ts": 1787828756,
+      "url": "https://www.benzinga.com/news/26/08/61456771/astrazeneca-amgen-report-phase-iii-results-tezspire-eosinophilic-esophagitis-tezspire-meets-key-endp",
+      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-19",
-      "ticker": "HD",
-      "firm": "Mizuho",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$390",
-      "price": 334.85,
-      "upside": 16.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-19",
-      "ticker": "CVX",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$218",
-      "price": 200.21,
-      "upside": 8.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-19",
-      "ticker": "HD",
-      "firm": "DA Davidson",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$377",
-      "price": 334.85,
-      "upside": 12.6,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-19",
-      "ticker": "HD",
-      "firm": "UBS",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$420",
-      "price": 334.85,
-      "upside": 25.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-19",
-      "ticker": "HD",
-      "firm": "Truist Securities",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$373",
-      "price": 334.85,
-      "upside": 11.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-19",
-      "ticker": "HD",
-      "firm": "Keybanc",
-      "action": "Reiterates",
-      "rating": "Sector Weight",
-      "stance": "neutral",
-      "pt": "",
-      "price": 334.85,
-      "upside": null,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-19",
-      "ticker": "HD",
-      "firm": "Argus Research",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$400",
-      "price": 334.85,
-      "upside": 19.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-19",
-      "ticker": "HD",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Sector Perform",
-      "stance": "neutral",
-      "pt": "$342",
-      "price": 334.85,
-      "upside": 2.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-19",
-      "ticker": "HD",
-      "firm": "Guggenheim",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$425",
-      "price": 334.85,
-      "upside": 26.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-20",
       "ticker": "CRM",
@@ -508,9 +388,88 @@
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-08-27",
+      "ticker": "CRM",
+      "firm": "Truist Securities",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$300",
+      "price": 205.62,
+      "upside": 45.9,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-08-27",
+      "ticker": "CRM",
+      "firm": "Evercore ISI Group",
+      "action": "Maintains",
+      "rating": "Outperform",
+      "stance": "bullish",
+      "pt": "$290",
+      "price": 205.62,
+      "upside": 41.0,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-08-27",
+      "ticker": "CRM",
+      "firm": "BTIG",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$300",
+      "price": 205.62,
+      "upside": 45.9,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-08-27",
+      "ticker": "CRM",
+      "firm": "Needham",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$400",
+      "price": 205.62,
+      "upside": 94.5,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-08-27",
+      "ticker": "CRM",
+      "firm": "Cantor Fitzgerald",
+      "action": "Reiterates",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$250",
+      "price": 205.62,
+      "upside": 21.6,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "rating_moves": {
+    "CRM": {
+      "date": "2026-08-27",
+      "firm": "Truist Securities",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$300",
+      "upside": 45.9
+    },
     "NKE": {
       "date": "2026-08-26",
       "firm": "Truist Securities",
@@ -519,15 +478,6 @@
       "stance": "neutral",
       "pt": "$42",
       "upside": 8.8
-    },
-    "CRM": {
-      "date": "2026-08-25",
-      "firm": "Citizens",
-      "action": "Reiterates",
-      "rating": "Market Outperform",
-      "stance": "bullish",
-      "pt": "$315",
-      "upside": 53.2
     },
     "MRK": {
       "date": "2026-08-25",
@@ -577,99 +527,99 @@
   },
   "bz_news": [
     {
-      "title": "$100 Invested In Salesforce 20 Years Ago Would Be Worth This Much Today",
-      "url": "https://www.benzinga.com/news/26/08/61450973/100-invested-salesforce-20-years-ago-would-be-worth-much-today",
-      "ts": 1787782559,
+      "title": "Truist Securities Reiterates Buy on Salesforce, Raises Price Target to $300",
+      "url": "https://www.benzinga.com/news/26/08/61460803/truist-securities-reiterates-buy-salesforce-raises-price-target-300",
+      "ts": 1787835852,
       "tickers": [
         "CRM"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.304
+      "relevance": 0.42
     },
     {
-      "title": "Here’s How Much You Would Have Made Owning Microsoft Stock In The Last 20 Years",
-      "url": "https://www.benzinga.com/news/26/08/61450437/here-s-how-much-you-would-have-made-owning-microsoft-stock-last-20-years",
-      "ts": 1787780728,
+      "title": "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Following NVDA Blockbuster Q2 Report— CRM, CRWD, HPQ in Focus (UPDATED)",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61454942/stock-market-today-sp-500-nasdaq-100-futures-gain-while-dow-slips-following-nvda-blockbuster-q2-report-crm-crwd-hpq-in-focus",
+      "ts": 1787835597,
       "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.291
-    },
-    {
-      "title": "NVIDIA CFO Says We Have Invested $50B In Frontier Labs; OpenAI's Existing, Planned Commitments Represent Around 12GW Of NVIDIA Compute",
-      "url": "https://www.benzinga.com/news/26/08/61450162/nvidia-cfo-says-we-have-invested-50b-frontier-labs-openai-s-existing-planned-commitments-represent-a",
-      "ts": 1787779419,
-      "tickers": [
-        "NVDA",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.511
-    },
-    {
-      "title": "12 Information Technology Stocks Moving In Wednesday's After-Market Session",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61449752/12-information-technology-stocks-moving-wednesday-s-after-market-session",
-      "ts": 1787778448,
-      "tickers": [
-        "OKTA",
-        "DAIC",
-        "LTRX",
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.449
-    },
-    {
-      "title": "IREN Q4 Preview: Stock Down 48% From Highs, Will Data Center Monetization Shine Through in Earnings?",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/08/61449177/iren-q4-preview-data-center-growth-spark-rebound",
-      "ts": 1787776818,
-      "tickers": [
-        "IREN",
+        "SPY",
         "$BTC",
+        "QQQ",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.544
+    },
+    {
+      "title": "Evercore ISI Group Maintains Outperform on Salesforce, Raises Price Target to $290",
+      "url": "https://www.benzinga.com/news/26/08/61459423/evercore-isi-group-maintains-outperform-salesforce-raises-price-target-290",
+      "ts": 1787834016,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.499
+    },
+    {
+      "title": "BTIG Maintains Buy on Salesforce, Raises Price Target to $300",
+      "url": "https://www.benzinga.com/news/26/08/61458784/btig-maintains-buy-salesforce-raises-price-target-300",
+      "ts": 1787832757,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.447
+    },
+    {
+      "title": "Needham Reiterates Buy on Salesforce, Maintains $400 Price Target",
+      "url": "https://www.benzinga.com/news/26/08/61458409/needham-reiterates-buy-salesforce-maintains-400-price-target",
+      "ts": 1787832377,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "AstraZeneca, Amgen Score Phase 3 Win in Debilitating Swallowing Disease",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61458158/astrazeneca-amgen-score-phase-3-win-in-debilitating-swallowing-disease",
+      "ts": 1787832128,
+      "tickers": [
+        "AMGN",
+        "AZN",
+        "PLC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.581
+    },
+    {
+      "title": "ChronoScale Announces Plans With Microsoft For 50-MW AI Compute Deployment In North America",
+      "url": "https://www.benzinga.com/news/26/08/61458123/chronoscale-announces-plans-microsoft-50-mw-ai-compute-deployment-north-america",
+      "ts": 1787832113,
+      "tickers": [
+        "CHRN",
         "MSFT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.516
-    },
-    {
-      "title": "Salesforce Stock Soars On Q2 Double Beat, 'Claudeforce' Anthropic Partnership",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61449146/salesforce-stock-soars-on-q2-double-beat-claudeforce-anthropic-partnership",
-      "ts": 1787776746,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.359
-    },
-    {
-      "title": "Salesforce Says Final Settlement Of $25B Accelerated Share Repurchase Expected In October 2026; With U.S. Dollar Strengthening In Q2, Salesforce Now Expects Reduced Currency Tailwind For Business Relative To Prior Guidance; On Track For Second-Half Organic Revenue Reacceleration",
-      "url": "https://www.benzinga.com/quote/CRM",
-      "ts": 1787775955,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.437
+      "relevance": 0.42
     },
     {
       "title": "Salesforce shares are trading higher after the company reported better-than-expected Q2 financial results and issued Q3 guidance above estimates. Also, the company raised its FY27 guidance.",
       "url": "https://www.benzinga.com/quote/CRM",
-      "ts": 1787775461,
+      "ts": 1787830899,
       "tickers": [
         "CRM"
       ],
@@ -679,203 +629,221 @@
       "relevance": 0.517
     },
     {
-      "title": "Salesforce, Anthropic Announcing Claudeforce Collaboration",
-      "url": "https://www.benzinga.com/news/26/08/61447671/salesforce-anthropic-announcing-claudeforce-collaboration",
-      "ts": 1787775052,
+      "title": "Market-Moving News for August 27th",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61457024/market-moving-news-august-27th",
+      "ts": 1787829387,
       "tickers": [
+        "NVDA",
         "CRM",
+        "OKTA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.464
+    },
+    {
+      "title": "AstraZeneca, Amgen Report Phase III Results For TEZSPIRE In Eosinophilic Esophagitis; TEZSPIRE Meets Key Endpoints In Phase III CROSSING Trial",
+      "url": "https://www.benzinga.com/news/26/08/61456771/astrazeneca-amgen-report-phase-iii-results-tezspire-eosinophilic-esophagitis-tezspire-meets-key-endp",
+      "ts": 1787828756,
+      "tickers": [
+        "AZN",
+        "AMGN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.571
+    },
+    {
+      "title": "Reported Earlier, Trump Administration Weighing New Round Of Sweeping Tariffs On Semiconductors - Politico Exclusive",
+      "url": "https://www.benzinga.com/news/26/08/61456425/reported-earlier-trump-administration-weighing-new-round-sweeping-tariffs-semiconductors-politico-ex",
+      "ts": 1787828327,
+      "tickers": [
+        "SKHY",
+        "SOXX",
+        "SMX",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.427
+    },
+    {
+      "title": "Trump Weighs New Semiconductor Tariffs That Could Hit AI Data Center Servers, Laptops and Gaming Consoles: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61456385/trump-weighs-new-semiconductor-tariffs-that-could-hit-ai-data-center-servers-laptops-and-gaming-consoles-report",
+      "ts": 1787828012,
+      "tickers": [
+        "GOOGL",
         "AMZN",
         "GOOG",
-        "GOOGL"
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.539
+    },
+    {
+      "title": "Nike's Jordan Brand Basketball Introduces Air Jordan 41; To Be Released In China On August 28, Followed By Global Launch",
+      "url": "https://www.benzinga.com/news/26/08/61455486/nike-s-jordan-brand-basketball-introduces-air-jordan-41-be-released-china-august-28-followed-global-",
+      "ts": 1787826044,
+      "tickers": [
+        "NKE"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.3
+      "relevance": 0.207
     },
     {
-      "title": "Salesforce Raises FY2027 GAAP EPS Guidance from $7.93-$7.99 to $10.21-$10.25 vs $8.16 Est",
-      "url": "https://www.benzinga.com/news/26/08/61447088/salesforce-raises-fy2027-gaap-eps-guidance-7-93-7-99-10-21-10-25-vs-8-16-est",
-      "ts": 1787774695,
+      "title": "AI Arms Race Fuels More Cyberattacks — and More Spending, CrowdStrike Says",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61455262/ai-arms-race-fuels-more-cyberattacks-and-more-spending-crowdstrike-says",
+      "ts": 1787825805,
       "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.477
-    },
-    {
-      "title": "Salesforce Sees Q3 GAAP EPS $1.81-$1.83 vs $1.90 Est",
-      "url": "https://www.benzinga.com/news/26/08/61447069/salesforce-sees-q3-gaap-eps-1-81-1-83-vs-1-90-est",
-      "ts": 1787774674,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.508
-    },
-    {
-      "title": "Salesforce Q2 Adj. EPS $5.90 Beats $3.27 Estimate, Sales $11.345B Beat $11.320B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61446866/salesforce-q2-adj-eps-5-90-beats-3-27-estimate-sales-11-345b-beat-11-320b-estimate",
-      "ts": 1787774533,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.505
-    },
-    {
-      "title": "Banks Fought Stablecoins For Years, JPMorgan Now Evaluates Its Own: 'We Would Evaluate All Options'",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61445584/banks-fought-stablecoins-for-years-jpmorgan-now-evaluates-its-own-we-would-evaluate-all-options",
-      "ts": 1787771774,
-      "tickers": [
-        "JPM",
-        "$ETH",
+        "CRWD",
+        "AMZN",
         "GOOGL",
-        "DASH"
+        "MSFT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.267
+      "relevance": 0.37
     },
     {
-      "title": "'Boeing Fails to Overturn Revived $72 Million Trade Secrets Loss' - Bloomberg Law",
-      "url": "https://www.benzinga.com/news/26/08/61444962/boeing-fails-overturn-revived-72-million-trade-secrets-loss-bloomberg-law",
-      "ts": 1787770521,
+      "title": "Comparative Study: Apple And Industry Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/08/61454740/comparative-study-apple-and-industry-competitors-technology-hardware-storage-amp-peripherals-industr",
+      "ts": 1787824712,
       "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.297
-    },
-    {
-      "title": "FDA Issues Early Alert On Abiomed Heart Pump Controller Purge Cassette Issue",
-      "url": "https://www.benzinga.com/general/biotech/26/08/61443477/fda-issues-early-alert-abiomed-heart-pump-controller-purge-cassette-issue",
-      "ts": 1787767114,
-      "tickers": [
-        "JNJ"
+        "AAPL"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.343
+      "relevance": 0.373
     },
     {
-      "title": "Intel CFO, David Zinsner At Deutsche Bank Technology Conference Says \"We Are Going To Need To Make Investments In Substrates Consider The Significant Demand\"",
-      "url": "https://www.benzinga.com/news/26/08/61442893/intel-cfo-david-zinsner-deutsche-bank-technology-conference-says-we-are-going-need-make-investments-",
-      "ts": 1787766164,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.497
-    },
-    {
-      "title": "Bringing ChatGPT For Teachers To More U.S. School Districts; Data Privacy Agreement Spanning 16 States; Data Privacy Agreement Provides Common Framework For Districts To Evaluate ChatGPT For Teachers Against Student Data Privacy Requirements",
-      "url": "https://www.benzinga.com/news/26/08/61442832/bringing-chatgpt-teachers-more-u-s-school-districts-data-privacy-agreement-spanning-16-states-data-p",
-      "ts": 1787766052,
+      "title": "Understanding Microsoft's Position In Software Industry Compared To Competitors",
+      "url": "https://www.benzinga.com/news/26/08/61454739/understanding-microsoft-s-position-software-industry-compared-competitors",
+      "ts": 1787824707,
       "tickers": [
         "MSFT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.231
+      "relevance": 0.306
     },
     {
-      "title": "4 Financials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61442620/4-financials-stocks-whale-alerts-today-s-session",
-      "ts": 1787765718,
+      "title": "Why Salesforce Shares Are Trading Higher By Over 11%; Here Are 20 Stocks Moving Premarket",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61454724/why-salesforce-shares-are-trading-higher-by-over-11-here-are-20-stocks-moving-premarket",
+      "ts": 1787824574,
       "tickers": [
-        "PYPL",
-        "HOOD",
-        "GS",
-        "BLK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.392
-    },
-    {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/08/61442618/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1787765718,
-      "tickers": [
-        "NOK",
-        "MSFT",
-        "MSTR",
-        "MU"
+        "CRM",
+        "HPQ",
+        "WEN",
+        "OKTA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.375
+      "relevance": 0.433
     },
     {
-      "title": "Why Is Nike Stock Falling on Wednesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61441990/why-is-nike-stock-falling-on-wednesday",
-      "ts": 1787764224,
+      "title": "FBI, NSA Take Down China-Linked Hacking Network Targeting U.S. Critical Infrastructure: NASA, Fed Among Targets",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61454568/china-linked-qtfy-hacking-network",
+      "ts": 1787823507,
       "tickers": [
-        "NKE",
-        "DKS"
+        "CRWD",
+        "JPM"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.35
+      "relevance": 0.276
     },
     {
-      "title": "The Fed Faces A Dangerous Choice For Investors; Nvidia Earnings Ahead",
-      "url": "https://www.benzinga.com/Opinion/26/08/61441545/the-fed-faces-a-dangerous-choice-for-investors-nvidia-earnings-ahead",
-      "ts": 1787763409,
+      "title": "Why Is Salesforce Stock Soaring Thursday?",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61454526/why-is-salesforce-stock-soaring-wednesday",
+      "ts": 1787823217,
       "tickers": [
-        "SLV",
-        "GLD",
-        "USO",
-        "SPY"
+        "CRM",
+        "FDN",
+        "IGV",
+        "MRAD"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.557
+      "relevance": 0.358
     },
     {
-      "title": "Microsoft, Amazon, Google Court Kimi K3 Maker Despite Bessent Blacklist Threat",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61441382/kimi-k3-microsoft-amazon-google-bessent",
-      "ts": 1787762992,
+      "title": "Nvidia Stock Climbs Over 7% in Thursday Pre-Market: What’s Lifting Micron, Intel and Other Chip Stocks?",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61454195/nvidia-micron-intel-climb-in-thursday-pre-market-whats-going-on",
+      "ts": 1787823117,
       "tickers": [
-        "AMZN",
-        "GOOGL",
-        "MSFT",
-        "NVDA"
+        "NVDA",
+        "TSM",
+        "INTC",
+        "AVGO"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.289
+      "relevance": 0.529
     },
     {
-      "title": "Salesforce Stock Is Down 24% From Its High: Can Q2 Earnings Turn The Tide?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61441297/salesforce-stock-is-down-24-from-its-high",
-      "ts": 1787762777,
+      "title": "CRM Stock Surges Over 11% in Thursday Pre-Market: What's Going On?",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61454301/crm-stock-surges-over-11-in-thursday-pre-market-whats-going-on",
+      "ts": 1787821550,
       "tickers": [
         "CRM"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.459
+      "relevance": 0.444
+    },
+    {
+      "title": "Apple CEO Tim Cook Pays Tribute to Yayoi Kusama, the Legendary Artist Behind Iconic Pumpkin Sculptures and Polka-Dots",
+      "url": "https://www.benzinga.com/news/26/08/61454024/apple-ceo-tim-cook-pays-tribute-to-yayoi-kusama-the-legendary-artist-behind-iconic-pumpkin-sculptures-and-polka-dots",
+      "ts": 1787819141,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.214
+    },
+    {
+      "title": "Salesforce CEO Dismisses ‘SaaSpocalypse’ Fears as ‘Nonsense’ After CRM’s Record Q2: ‘Time for It to Stop’",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61453735/salesforce-ceo-dismisses-saaspocalypse-fears-as-nonsense-after-crms-record-q2-time-for-it-to-stop",
+      "ts": 1787815411,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.31
+    },
+    {
+      "title": "Nvidia Agrees to Acquire Hugging Face For $12.9 Billion In One of Its Largest Acquisitions So Far As It Expands Control Of Open-Source AI Models: Report",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61453368/nvidia-agrees-to-acquire-hugging-face-for-12-9-billion-in-one-of-its-largest-acquisitions-so-far-as-it-expands-control-of-open-source-ai-models-report",
+      "ts": 1787812242,
+      "tickers": [
+        "NVDA",
+        "GOOGL",
+        "GOOG",
+        "BABA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.507
     }
   ],
   "portfolio_brief": {
@@ -1028,7 +996,12 @@
         "score": 1.17,
         "period": "2026-08-01"
       },
-      "news": null,
+      "news": {
+        "title": "AstraZeneca, Amgen Report Phase III Results For TEZSPIRE In Eosinophilic Esophagitis; TEZSPIRE Meets Key Endpoints In Phase III CROSSING Trial",
+        "ts": 1787828756,
+        "url": "https://www.benzinga.com/news/26/08/61456771/astrazeneca-amgen-report-phase-iii-results-tezspire-eosinophilic-esophagitis-tezspire-meets-key-endp",
+        "wiim": false
+      },
       "filings": {
         "latest8k": null,
         "periodic": null,
