@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-27",
-  "generated_at": "Aug 27, 8:26pm ET",
+  "date": "2026-08-28",
+  "generated_at": "Aug 28, 12:30am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -191,104 +191,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-20",
-      "ticker": "CRM",
-      "firm": "BMO Capital",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$230",
-      "price": 252.05,
-      "upside": -8.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-20",
-      "ticker": "MRK",
-      "firm": "BMO Capital",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$170",
-      "price": 149.54,
-      "upside": 13.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-20",
-      "ticker": "MRK",
-      "firm": "UBS",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$175",
-      "price": 149.54,
-      "upside": 17.0,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-20",
-      "ticker": "MRK",
-      "firm": "RBC Capital",
-      "action": "Downgrades",
-      "rating": "Sector Perform",
-      "stance": "neutral",
-      "pt": "$150",
-      "price": 149.54,
-      "upside": 0.3,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-20",
-      "ticker": "CRM",
-      "firm": "Guggenheim",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$228",
-      "price": 252.05,
-      "upside": -9.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-20",
-      "ticker": "CRM",
-      "firm": "Cantor Fitzgerald",
-      "action": "Reiterates",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$250",
-      "price": 252.05,
-      "upside": -0.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-20",
-      "ticker": "MRK",
-      "firm": "Morgan Stanley",
-      "action": "Upgrades",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$179",
-      "price": 149.54,
-      "upside": 19.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-21",
       "ticker": "MRK",
@@ -791,6 +693,36 @@
   },
   "bz_news": [
     {
+      "title": "Rivian Stock Slips After Hours as CFO Claire McDonough Steps Down After Nearly 6 Years",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61485267/rivian-stock-slips-after-hours-cfo-claire-mcdonough-departure",
+      "ts": 1787888517,
+      "tickers": [
+        "RIVN",
+        "AAPL",
+        "AMZN",
+        "UBER"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.343
+    },
+    {
+      "title": "YouTube Faces Potential Lawsuit from FTC As Regulator Probes Whether It Broke Its Own Policies on Suspended Accounts: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61485240/youtube-ftc-lawsuit-suspended-accounts-content-policies",
+      "ts": 1787887934,
+      "tickers": [
+        "GOOGL",
+        "AAPL",
+        "META",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.261
+    },
+    {
       "title": "Here's How Much $100 Invested In Travelers Companies 15 Years Ago Would Be Worth Today",
       "url": "https://www.benzinga.com/news/26/08/61483781/here-s-how-much-100-invested-travelers-companies-15-years-ago-would-be-worth-today",
       "ts": 1787868056,
@@ -878,7 +810,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.435
+      "relevance": 0.436
     },
     {
       "title": "GTA 6 Leaker Cashes Out $250,000 Meme Coin Hours Before Rockstar's Reveal",
@@ -920,7 +852,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.383
+      "relevance": 0.382
     },
     {
       "title": "BMO Capital Maintains Outperform on Salesforce, Raises Price Target to $260",
@@ -998,7 +930,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.415
+      "relevance": 0.416
     },
     {
       "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
@@ -1057,7 +989,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.325
+      "relevance": 0.326
     },
     {
       "title": "Why Is Adobe Stock Surging on Thursday?",
@@ -1098,36 +1030,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.469
-    },
-    {
-      "title": "ServiceNow Stock Jumps on Enterprise AI Momentum",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61473602/servicenow-stock-jumps-on-enterprise-ai-momentum",
-      "ts": 1787850251,
-      "tickers": [
-        "NOW",
-        "CRM",
-        "IGV",
-        "CLOU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.405
-    },
-    {
-      "title": "CNBC Halftime Report Final Trades: Marriott International, American Express, Global X Cybersecurity ETF, CrowdStrike",
-      "url": "https://www.benzinga.com/quote/CRWD",
-      "ts": 1787850123,
-      "tickers": [
-        "MAR",
-        "AXP",
-        "BUG",
-        "CRWD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.413
     }
   ],
   "portfolio_brief": {
