@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-28",
-  "generated_at": "Aug 28, 10:57pm ET",
+  "date": "2026-08-29",
+  "generated_at": "Aug 29, 11:15am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -179,20 +179,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-21",
-      "ticker": "MRK",
-      "firm": "Goldman Sachs",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$160",
-      "price": 148.35,
-      "upside": 7.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-24",
       "ticker": "CRM",
@@ -668,18 +654,53 @@
       "stance": "bullish",
       "pt": "$400",
       "upside": 25.1
-    },
-    "CSCO": {
-      "date": "2026-08-14",
-      "firm": "HSBC",
-      "action": "Downgrades",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$120",
-      "upside": 9.2
     }
   },
   "bz_news": [
+    {
+      "title": "5 Stocks Investors Couldn't Stop Buzzing About This Week: NVDA, MRVL, CRM and More",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61510973/5-stocks-investors-couldnt-stop-buzzing-about-this-week-nvda-mrvl-crm-and-more",
+      "ts": 1788008434,
+      "tickers": [
+        "NVDA",
+        "$BTC",
+        "CRWD",
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.555
+    },
+    {
+      "title": "Benzinga Bulls and Bears: Nvidia, CrowdStrike, Intuit",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/61510910/benzinga-bulls-and-bears-nvidia-crowdstrike-intuit",
+      "ts": 1788004873,
+      "tickers": [
+        "NVDA",
+        "CRWD",
+        "CRM",
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.57
+    },
+    {
+      "title": "Walmart Agrees to $50 Million Settlement With DOJ Over Alleged Opioid Prescription Violations, Calls Payout ‘Immaterial’",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61510406/walmart-50-million-opioid-settlement",
+      "ts": 1787976073,
+      "tickers": [
+        "WMT",
+        "CVS",
+        "COR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.294
+    },
     {
       "title": "Here’s How Much You Would Have Made Owning Home Depot Stock In The Last 15 Years",
       "url": "https://www.benzinga.com/news/26/08/61509232/here-s-how-much-you-would-have-made-owning-home-depot-stock-last-15-years",
@@ -958,33 +979,6 @@
       "relevance": 0.464
     },
     {
-      "title": "Stock of the Day: Where is the Top for Salesforce?",
-      "url": "https://www.benzinga.com/trading-ideas/technicals/26/08/61494554/stock-of-the-day-where-is-the-top-for-salesforce",
-      "ts": 1787927305,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.39
-    },
-    {
-      "title": "Nvidia Warns Of AI Power Bottleneck — And Bloom Energy Could Benefit",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61493971/nvidia-ai-power-bloom-energy",
-      "ts": 1787926595,
-      "tickers": [
-        "NVDA",
-        "INTC",
-        "ORCL",
-        "CEG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.474
-    },
-    {
       "title": "What's Going on With Salesforce Stock on Friday?",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61493751/whats-going-on-with-salesforce-stock-on-friday",
       "ts": 1787926399,
@@ -995,20 +989,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.406
-    },
-    {
-      "title": "'Chevron, Other U.S. Firms Near Deal to Invest Billions in Venezuelan Oil Fields'- WSJ",
-      "url": "https://www.benzinga.com/news/26/08/61492188/chevron-other-u-s-firms-near-deal-to-invest-billions-in-venezuelan-oil-fields-wsj",
-      "ts": 1787924714,
-      "tickers": [
-        "SPY",
-        "CVX",
-        "HAL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.334
     }
   ],
   "portfolio_brief": {
