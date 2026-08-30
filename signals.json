@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-29",
-  "generated_at": "Aug 29, 11:15am ET",
+  "date": "2026-08-30",
+  "generated_at": "Aug 30, 10:54am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -153,28 +153,16 @@
       "url": "https://www.benzinga.com/quote/SMTK",
       "wiim": true
     },
-    "ADBE": {
-      "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
-      "ts": 1787168795,
-      "url": "https://www.benzinga.com/quote/SAP",
-      "wiim": true
-    },
-    "SAP": {
-      "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
-      "ts": 1787168795,
-      "url": "https://www.benzinga.com/quote/SAP",
-      "wiim": true
-    },
-    "AVGO": {
-      "title": "Shares of semiconductor companies are trading lower amid concerns that OpenAI's Q2 earnings may weigh on AI growth. Today's Fed minutes revealed that many participants assessed that higher rates would likely be necessary if inflation did not fall.",
-      "ts": 1787167424,
-      "url": "https://www.benzinga.com/quote/ASYS",
-      "wiim": true
-    },
     "GILD": {
       "title": "World Health Organization Director General Determined That The Ebola Epidemic In DRC Still Meets Criteria Of Public Health Emergency Of International Concern, But Not Those Of A Pandemic Emergency",
       "ts": 1787935402,
       "url": "https://www.benzinga.com/general/biotech/26/08/61501069/world-health-organization-director-general-determined-ebola-epidemic-drc-still-meets-criteria-public",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "Cathie Wood Trims AMD After a 120% Rally — Is the AI Trade Getting Too Crowded?",
+      "ts": 1787933484,
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61499522/cathie-wood-trims-amd-after-a-120-rally-is-the-ai-trade-getting-too-crowded",
       "wiim": false
     }
   },
@@ -658,6 +646,129 @@
   },
   "bz_news": [
     {
+      "title": "G20 Finance Chiefs To Meet In US as Canada Tariff Rift, Venezuela Oil Deal Dents Cohesion",
+      "url": "https://www.benzinga.com/news/26/08/61512311/g20-finance-chiefs-to-meet-in-us-as-canada-tariff-rift-venezuela-oil-deal-dents-cohesion",
+      "ts": 1788099945,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.293
+    },
+    {
+      "title": "Weekend Tech Roundup: CXMT's 874% Revenue Surge, Apple's New Macs, Nvidia's Q2 Beat and More",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61512168/weekend-tech-roundup-cxmts-874-revenue-surge-apples-new-macs-nvidias-q2-beat-and-more",
+      "ts": 1788093019,
+      "tickers": [
+        "AAPL",
+        "NVDA",
+        "CRWD",
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.399
+    },
+    {
+      "title": "Consumer Tech (Aug. 24-28): Nvidia Q2 Earnings, Salesforce Rally, Trump Tariff Fears Rise & More",
+      "url": "https://www.benzinga.com/news/26/08/61512094/consumer-tech-aug-24-28-nvidia-q2-earnings-salesforce-rally-trump-tariff-fears-rise-more",
+      "ts": 1788089512,
+      "tickers": [
+        "TSLA",
+        "AAPL",
+        "META",
+        "RIVN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.461
+    },
+    {
+      "title": "iPhone Shipments Rise, Mac's AI Struggle and a Pikachu Visit: This Week in Appleverse",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61512064/apple-weekend-roundup-iphone-18-mac-pikachu",
+      "ts": 1788087696,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.379
+    },
+    {
+      "title": "Elizabeth Warren Says ‘A Handful of CEOs’ Dictate Americans’ Choices: ‘We Need to Block Mega-Mergers’",
+      "url": "https://www.benzinga.com/news/politics/26/08/61511869/elizabeth-warren-says-a-handful-of-ceos-dictate-americans-choices-we-need-to-block-mega-mergers",
+      "ts": 1788078759,
+      "tickers": [
+        "CVS",
+        "JPM",
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.359
+    },
+    {
+      "title": "Venezuela's Delcy Rodriguez Unveils 25-Year US Oil Deal Targeting 1.5 Million Barrels a Day, $209 Billion Revenue",
+      "url": "https://www.benzinga.com/markets/commodities/26/08/61511855/venezuela-us-25-year-energy-deal-oil-production",
+      "ts": 1788077674,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.236
+    },
+    {
+      "title": "Greg Abbott Pushes Back on Foreign Influence Claims Over Data Centers: ‘I Haven't Done It Because of Anything Said by China’",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61511730/greg-abbott-data-center-moratorium-china-disinformation",
+      "ts": 1788066442,
+      "tickers": [
+        "META",
+        "MSFT",
+        "BABA",
+        "BIDU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.328
+    },
+    {
+      "title": "HP Enterprise Stock at a Crossroads: Earnings Could Trigger a Big Move",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61511384/hp-enterprise-stock-at-a-crossroads-earnings-could-trigger-a-big-move",
+      "ts": 1788033847,
+      "tickers": [
+        "GOOG",
+        "MSFT",
+        "HPE",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.438
+    },
+    {
+      "title": "Steve Ballmer is $65 Billion Richer than Bill Gates. Here’s Why.",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61511355/steve-ballmer-is-65-billion-richer-than-bill-gates-heres-why",
+      "ts": 1788030964,
+      "tickers": [
+        "MSFT",
+        "NYT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.24
+    },
+    {
       "title": "5 Stocks Investors Couldn't Stop Buzzing About This Week: NVDA, MRVL, CRM and More",
       "url": "https://www.benzinga.com/markets/equities/26/08/61510973/5-stocks-investors-couldnt-stop-buzzing-about-this-week-nvda-mrvl-crm-and-more",
       "ts": 1788008434,
@@ -869,126 +980,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.394
-    },
-    {
-      "title": "Cisco Stock Slips as Investors Weigh AI Growth, Guidance, Tech Weakness",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61502069/cisco-stock-slips-as-investors-weigh-ai-growth-guidance-tech-weakness",
-      "ts": 1787937223,
-      "tickers": [
-        "CSCO",
-        "HACK",
-        "SMCI",
-        "CIBR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.49
-    },
-    {
-      "title": "Boeing, Union Negotiators To Meet Monday To Resume Stalled Contract Negotiations",
-      "url": "https://www.benzinga.com/news/26/08/61501808/boeing-union-negotiators-meet-monday-resume-stalled-contract-negotiations",
-      "ts": 1787936892,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.237
-    },
-    {
-      "title": "World Health Organization Director General Determined That The Ebola Epidemic In DRC Still Meets Criteria Of Public Health Emergency Of International Concern, But Not Those Of A Pandemic Emergency",
-      "url": "https://www.benzinga.com/general/biotech/26/08/61501069/world-health-organization-director-general-determined-ebola-epidemic-drc-still-meets-criteria-public",
-      "ts": 1787935402,
-      "tickers": [
-        "SPY",
-        "JNJ",
-        "EBS",
-        "CODX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.203
-    },
-    {
-      "title": "Cathie Wood Trims AMD After a 120% Rally — Is the AI Trade Getting Too Crowded?",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61499522/cathie-wood-trims-amd-after-a-120-rally-is-the-ai-trade-getting-too-crowded",
-      "ts": 1787933484,
-      "tickers": [
-        "MSFT",
-        "PLTR",
-        "TSM",
-        "AVGO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.405
-    },
-    {
-      "title": "QUICK SPARK: Jim Cramer Says 'Worst is Over' for Salesforce Stock",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61498790/quick-spark-jim-cramer-says-worst-is-over-for-salesforce-stock",
-      "ts": 1787932415,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.35
-    },
-    {
-      "title": "Atlassian Stock Hits New 52-Week High: What's Going On?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61498588/atlassian-stock-hits-new-52-week-high-whats-going-on",
-      "ts": 1787932101,
-      "tickers": [
-        "TEAM",
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.367
-    },
-    {
-      "title": "McDonald's Stock Bounces Off Two-Year Low: What's Going On?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61495955/mcdonalds-stock-bounces-off-two-year-low-whats-going-on",
-      "ts": 1787928854,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.41
-    },
-    {
-      "title": "Microsoft Runs On It, Nvidia Validates It: IREN CEO Says the Real Edge Is Owning the Entire AI Stack",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61495044/iren-ai-stack-strategy",
-      "ts": 1787927913,
-      "tickers": [
-        "IREN",
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.464
-    },
-    {
-      "title": "What's Going on With Salesforce Stock on Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61493751/whats-going-on-with-salesforce-stock-on-friday",
-      "ts": 1787926399,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.406
     }
   ],
   "portfolio_brief": {
@@ -1261,12 +1252,7 @@
         "score": 0.43,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
-        "ts": 1787168795,
-        "url": "https://www.benzinga.com/quote/SAP",
-        "wiim": true
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1455,12 +1441,7 @@
         "score": 0.9,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "Shares of software companies are trading higher after B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
-        "ts": 1787168795,
-        "url": "https://www.benzinga.com/quote/SAP",
-        "wiim": true
-      },
+      "news": null,
       "filings": {
         "latest8k": null,
         "periodic": null,
@@ -1509,10 +1490,10 @@
         "period": "2026-08-01"
       },
       "news": {
-        "title": "Shares of semiconductor companies are trading lower amid concerns that OpenAI's Q2 earnings may weigh on AI growth. Today's Fed minutes revealed that many participants assessed that higher rates would likely be necessary if inflation did not fall.",
-        "ts": 1787167424,
-        "url": "https://www.benzinga.com/quote/ASYS",
-        "wiim": true
+        "title": "Cathie Wood Trims AMD After a 120% Rally — Is the AI Trade Getting Too Crowded?",
+        "ts": 1787933484,
+        "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61499522/cathie-wood-trims-amd-after-a-120-rally-is-the-ai-trade-getting-too-crowded",
+        "wiim": false
       },
       "filings": {
         "latest8k": {
@@ -1557,7 +1538,7 @@
           "date": "2026-07-31",
           "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000037/nbix-20260630.htm"
         },
-        "insider30d": 2
+        "insider30d": 1
       },
       "explain": "36 analysts cover it — 31 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
