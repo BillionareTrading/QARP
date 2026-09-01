@@ -1,6 +1,6 @@
 {
   "date": "2026-09-01",
-  "generated_at": "Sep 1, 9:43am ET",
+  "generated_at": "Sep 1, 10:32am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -100,11 +100,11 @@
     "BSX": "2026-10-28",
     "AZN": "2026-10-30",
     "RKLB": "2026-11-09",
-    "AZO": "2026-09-22",
     "DHR": "2026-10-19",
+    "AZO": "2026-09-22",
     "ADBE": "2026-09-10",
-    "LULU": "2026-09-03",
     "EXE": "2026-10-26",
+    "LULU": "2026-09-03",
     "ONON": "2026-11-10",
     "SPGI": "2026-10-28",
     "GILD": "2026-10-28",
@@ -119,17 +119,17 @@
   "sectors": [
     {
       "sector": "Software",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "B of A Securities raised its price targets on several stocks",
       "note": "After B of A Securities raised its price targets on several stocks. The analyst attributed the raise to a combination of strong earnings, accelerated growth across several names and a re-rating of valuations as concerns about AI-related disruption ease.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Semiconductor",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Concerns that OpenAI's Q2 earnings may weigh on AI growth",
       "note": "Amid concerns that OpenAI's Q2 earnings may weigh on AI growth. Today's Fed minutes revealed that many participants assessed that higher rates would likely be necessary if inflation did not fall.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Chemical & Coatings",
@@ -152,12 +152,6 @@
       "ts": 1787600404,
       "url": "https://www.benzinga.com/quote/SMTK",
       "wiim": true
-    },
-    "AVGO": {
-      "title": "Stock Market Today: S&P 500, Nasdaq 100, Dow Jones Futures Fall as US-Iran Tensions Flare Up—WMT, RZLV, FNGR in Focus (UPDATED)",
-      "ts": 1788179334,
-      "url": "https://www.benzinga.com/markets/equities/26/08/61515170/stock-market-today-sp-500-dow-futures-fall-as-us-iran-tensions-flare-up-wmt-rzlv-fngr-in-focus",
-      "wiim": false
     }
   },
   "ratings": [
@@ -169,8 +163,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$180",
-      "price": 147.76,
-      "upside": 21.8,
+      "price": 149.97,
+      "upside": 20.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -183,8 +177,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$45",
-      "price": 39.06,
-      "upside": 15.2,
+      "price": 38.3,
+      "upside": 17.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -197,8 +191,8 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "price": 257.54,
-      "upside": 22.3,
+      "price": 258.26,
+      "upside": 22.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -211,8 +205,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$225",
-      "price": 257.54,
-      "upside": -12.6,
+      "price": 258.26,
+      "upside": -12.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -225,8 +219,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$170",
-      "price": 147.76,
-      "upside": 15.1,
+      "price": 149.97,
+      "upside": 13.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -239,8 +233,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$42",
-      "price": 39.06,
-      "upside": 7.5,
+      "price": 38.3,
+      "upside": 9.7,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -253,8 +247,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$233",
-      "price": 257.54,
-      "upside": -9.5,
+      "price": 258.26,
+      "upside": -9.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -267,8 +261,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$265",
-      "price": 257.54,
-      "upside": 2.9,
+      "price": 258.26,
+      "upside": 2.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -281,8 +275,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$265",
-      "price": 257.54,
-      "upside": 2.9,
+      "price": 258.26,
+      "upside": 2.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -295,8 +289,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$260",
-      "price": 257.54,
-      "upside": 1.0,
+      "price": 258.26,
+      "upside": 0.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -309,8 +303,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 257.54,
-      "upside": 16.5,
+      "price": 258.26,
+      "upside": 16.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -323,8 +317,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 257.54,
-      "upside": 4.8,
+      "price": 258.26,
+      "upside": 4.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -337,8 +331,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$225",
-      "price": 257.54,
-      "upside": -12.6,
+      "price": 258.26,
+      "upside": -12.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -351,8 +345,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$276",
-      "price": 257.54,
-      "upside": 7.2,
+      "price": 258.26,
+      "upside": 6.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -365,8 +359,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$280",
-      "price": 257.54,
-      "upside": 8.7,
+      "price": 258.26,
+      "upside": 8.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -379,8 +373,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$195",
-      "price": 257.54,
-      "upside": -24.3,
+      "price": 258.26,
+      "upside": -24.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -393,8 +387,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$275",
-      "price": 257.54,
-      "upside": 6.8,
+      "price": 258.26,
+      "upside": 6.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -407,8 +401,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$250",
-      "price": 257.54,
-      "upside": -2.9,
+      "price": 258.26,
+      "upside": -3.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -421,8 +415,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$240",
-      "price": 257.54,
-      "upside": -6.8,
+      "price": 258.26,
+      "upside": -7.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -435,8 +429,8 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "price": 257.54,
-      "upside": 22.3,
+      "price": 258.26,
+      "upside": 22.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -449,8 +443,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$230",
-      "price": 257.54,
-      "upside": -10.7,
+      "price": 258.26,
+      "upside": -10.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -463,8 +457,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$270",
-      "price": 257.54,
-      "upside": 4.8,
+      "price": 258.26,
+      "upside": 4.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -477,8 +471,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$235",
-      "price": 257.54,
-      "upside": -8.8,
+      "price": 258.26,
+      "upside": -9.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -491,8 +485,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$200",
-      "price": 257.54,
-      "upside": -22.3,
+      "price": 258.26,
+      "upside": -22.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -505,8 +499,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 257.54,
-      "upside": 16.5,
+      "price": 258.26,
+      "upside": 16.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -519,8 +513,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$290",
-      "price": 257.54,
-      "upside": 12.6,
+      "price": 258.26,
+      "upside": 12.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -533,8 +527,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 257.54,
-      "upside": 16.5,
+      "price": 258.26,
+      "upside": 16.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -547,8 +541,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 257.54,
-      "upside": 55.3,
+      "price": 258.26,
+      "upside": 54.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -561,8 +555,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$250",
-      "price": 257.54,
-      "upside": -2.9,
+      "price": 258.26,
+      "upside": -3.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -575,8 +569,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 257.54,
-      "upside": 16.5,
+      "price": 258.26,
+      "upside": 16.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -589,8 +583,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 257.54,
-      "upside": 16.5,
+      "price": 258.26,
+      "upside": 16.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -603,8 +597,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$303",
-      "price": 316.85,
-      "upside": -4.4,
+      "price": 322.75,
+      "upside": -6.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -618,7 +612,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "upside": 16.5
+      "upside": 16.2
     },
     "AAPL": {
       "date": "2026-09-01",
@@ -627,7 +621,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$303",
-      "upside": -4.4
+      "upside": -6.1
     },
     "NKE": {
       "date": "2026-08-26",
@@ -636,7 +630,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$42",
-      "upside": 7.5
+      "upside": 9.7
     },
     "MRK": {
       "date": "2026-08-25",
@@ -645,7 +639,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$180",
-      "upside": 21.8
+      "upside": 20.0
     },
     "HD": {
       "date": "2026-08-19",
@@ -654,7 +648,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$390",
-      "upside": 19.0
+      "upside": 20.9
     },
     "CVX": {
       "date": "2026-08-19",
@@ -663,10 +657,34 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$218",
-      "upside": 5.8
+      "upside": 4.3
     }
   },
   "bz_news": [
+    {
+      "title": "'Chevron Nears Deal to Run Two Fields in Venezuela’s Orinoco Belt' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/09/61549247/chevron-nears-deal-run-two-fields-venezuela-s-orinoco-belt-bloomberg",
+      "ts": 1788271853,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.306
+    },
+    {
+      "title": "B of A Securities Maintains Buy on Microsoft, Raises Price Target to $600",
+      "url": "https://www.benzinga.com/news/26/09/61549046/b-securities-maintains-buy-microsoft-raises-price-target-600",
+      "ts": 1788271587,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.479
+    },
     {
       "title": "TD Cowen Maintains Buy on Salesforce, Raises Price Target to $300",
       "url": "https://www.benzinga.com/news/26/09/61547389/td-cowen-maintains-buy-salesforce-raises-price-target-300",
@@ -904,7 +922,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.45
+      "relevance": 0.451
     },
     {
       "title": "Reuters Reported Anthropic Signed ~$35B Cloud Deal With Lambda",
@@ -976,40 +994,12 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.341
-    },
-    {
-      "title": "Tim Cook Leaves Apple 13 Times Bigger Than He Found It: 5 Milestones From His 15 Years",
-      "url": "https://www.benzinga.com/markets/large-cap/26/08/61533519/tim-cook-leaves-apple-13-times-bigger-than-he-found-it-5-milestones-from-his-15-years",
-      "ts": 1788205266,
-      "tickers": [
-        "AAPL",
-        "DIA",
-        "BRK/A",
-        "BRK/B"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.229
-    },
-    {
-      "title": "Amazon Web Services, Microsoft Collaborate On Multicloud Networking",
-      "url": "https://www.benzinga.com/news/26/08/61532306/amazon-web-services-microsoft-collaborate-multicloud-networking",
-      "ts": 1788202605,
-      "tickers": [
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.386
     }
   ],
   "portfolio_brief": {
     "ABT": {
       "name": "Abbott Laboratories",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 11,
         "buy": 13,
@@ -1037,7 +1027,7 @@
         },
         "insider30d": 2
       },
-      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "ZTS": {
       "name": "Zoetis",
@@ -1196,38 +1186,6 @@
       },
       "explain": "27 analysts cover it — 21 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
-    "AZO": {
-      "name": "AutoZone",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 9,
-        "buy": 16,
-        "hold": 6,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 31,
-        "bullish": 25,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-07-14",
-          "url": "https://www.sec.gov/Archives/edgar/data/866787/000110465926083528/tm2620403d1_8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-06-12",
-          "url": "https://www.sec.gov/Archives/edgar/data/866787/000110465926073525/azo-20260509x10q.htm"
-        },
-        "insider30d": 1
-      },
-      "explain": "31 analysts cover it — 25 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "DHR": {
       "name": "Danaher",
       "qarp": "HOLD-QUAL",
@@ -1259,6 +1217,38 @@
         "insider30d": 17
       },
       "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
+    "AZO": {
+      "name": "AutoZone",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 9,
+        "buy": 16,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 31,
+        "bullish": 25,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.1,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-07-14",
+          "url": "https://www.sec.gov/Archives/edgar/data/866787/000110465926083528/tm2620403d1_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-12",
+          "url": "https://www.sec.gov/Archives/edgar/data/866787/000110465926073525/azo-20260509x10q.htm"
+        },
+        "insider30d": 1
+      },
+      "explain": "31 analysts cover it — 25 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ADBE": {
       "name": "Adobe",
@@ -1292,38 +1282,6 @@
       },
       "explain": "46 analysts cover it — 18 bullish, 23 hold, 5 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
-    "LULU": {
-      "name": "Lululemon",
-      "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 1,
-        "buy": 1,
-        "hold": 31,
-        "sell": 5,
-        "strongSell": 2,
-        "total": 40,
-        "bullish": 2,
-        "bearish": 7,
-        "label": "Hold",
-        "score": -0.15,
-        "period": "2026-08-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-08-13",
-          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000120/lulu-20260813.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-06-04",
-          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm"
-        },
-        "insider30d": 0
-      },
-      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: HOLD-QUAL."
-    },
     "EXE": {
       "name": "Expand Energy",
       "qarp": "STRONG BUY",
@@ -1355,6 +1313,38 @@
         "insider30d": 0
       },
       "explain": "30 analysts cover it — 24 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "LULU": {
+      "name": "Lululemon",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 1,
+        "buy": 1,
+        "hold": 31,
+        "sell": 5,
+        "strongSell": 2,
+        "total": 40,
+        "bullish": 2,
+        "bearish": 7,
+        "label": "Hold",
+        "score": -0.15,
+        "period": "2026-08-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-08-13",
+          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000120/lulu-20260813.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-06-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000078/lulu-20260503.htm"
+        },
+        "insider30d": 0
+      },
+      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: HOLD-QUAL."
     },
     "ONON": {
       "name": "On Holding",
@@ -1508,12 +1498,7 @@
         "score": 1.21,
         "period": "2026-08-01"
       },
-      "news": {
-        "title": "Stock Market Today: S&P 500, Nasdaq 100, Dow Jones Futures Fall as US-Iran Tensions Flare Up—WMT, RZLV, FNGR in Focus (UPDATED)",
-        "ts": 1788179334,
-        "url": "https://www.benzinga.com/markets/equities/26/08/61515170/stock-market-today-sp-500-dow-futures-fall-as-us-iran-tensions-flare-up-wmt-rzlv-fngr-in-focus",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1718,25 +1703,6 @@
       "margin": -21.0,
       "summary": "Q2 FY2026 — revenue $234M (+62.0% YoY), diluted EPS $-0.08 (+38.5% YoY), net margin -21%. (as reported, GAAP)"
     },
-    "AZO": {
-      "period": "Q3 FY2026",
-      "filed": "2026-06-12",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/866787/000110465926073525/azo-20260509x10q.htm",
-      "revenue": {
-        "fmt": "$4.8B",
-        "yoy": 8.4
-      },
-      "eps": {
-        "val": 38.07,
-        "yoy": 7.7
-      },
-      "net_income": {
-        "fmt": "$641M"
-      },
-      "margin": 13.3,
-      "summary": "Q3 FY2026 — revenue $4.8B (+8.4% YoY), diluted EPS $38.07 (+7.7% YoY), net margin 13%. (as reported, GAAP)"
-    },
     "DHR": {
       "period": "Q2 FY2026",
       "filed": "2026-07-21",
@@ -1755,6 +1721,25 @@
       },
       "margin": 13.9,
       "summary": "Q2 FY2026 — revenue $6.3B (+5.5% YoY), diluted EPS $1.23 (+59.7% YoY), net margin 14%. (as reported, GAAP)"
+    },
+    "AZO": {
+      "period": "Q3 FY2026",
+      "filed": "2026-06-12",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/866787/000110465926073525/azo-20260509x10q.htm",
+      "revenue": {
+        "fmt": "$4.8B",
+        "yoy": 8.4
+      },
+      "eps": {
+        "val": 38.07,
+        "yoy": 7.7
+      },
+      "net_income": {
+        "fmt": "$641M"
+      },
+      "margin": 13.3,
+      "summary": "Q3 FY2026 — revenue $4.8B (+8.4% YoY), diluted EPS $38.07 (+7.7% YoY), net margin 13%. (as reported, GAAP)"
     },
     "ADBE": {
       "period": "Q2 FY2026",
@@ -1775,6 +1760,20 @@
       "margin": 25.9,
       "summary": "Q2 FY2026 — revenue $6.6B (+12.7% YoY), diluted EPS $4.25 (+7.9% YoY), net margin 26%. (as reported, GAAP)"
     },
+    "EXE": {
+      "period": "FY2020",
+      "filed": "2021-03-01",
+      "form": "10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/895126/000089512626000047/exe-20260630.htm",
+      "revenue": {
+        "fmt": "$2.7B",
+        "yoy": -39.2
+      },
+      "eps": null,
+      "net_income": null,
+      "margin": null,
+      "summary": "FY2020 — revenue $2.7B (-39.2% YoY). (as reported, GAAP)"
+    },
     "LULU": {
       "period": "Q1 FY2026",
       "filed": "2026-06-04",
@@ -1793,20 +1792,6 @@
       },
       "margin": 7.9,
       "summary": "Q1 FY2026 — revenue $2.5B (+4.3% YoY), diluted EPS $1.69 (-35.0% YoY), net margin 8%. (as reported, GAAP)"
-    },
-    "EXE": {
-      "period": "FY2020",
-      "filed": "2021-03-01",
-      "form": "10-K",
-      "url": "https://www.sec.gov/Archives/edgar/data/895126/000089512626000047/exe-20260630.htm",
-      "revenue": {
-        "fmt": "$2.7B",
-        "yoy": -39.2
-      },
-      "eps": null,
-      "net_income": null,
-      "margin": null,
-      "summary": "FY2020 — revenue $2.7B (-39.2% YoY). (as reported, GAAP)"
     },
     "ONON": null,
     "SPGI": {
