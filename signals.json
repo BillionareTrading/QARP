@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-01",
-  "generated_at": "Sep 1, 7:08pm ET",
+  "date": "2026-09-02",
+  "generated_at": "Sep 2, 7:12am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -153,6 +153,12 @@
       "url": "https://www.benzinga.com/quote/SMTK",
       "wiim": true
     },
+    "AVGO": {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "ts": 1788330136,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61567010/stock-market-will-sp-500-open-up-or-down-today-29",
+      "wiim": false
+    },
     "SPGI": {
       "title": "9 Financials Stocks With Whale Alerts In Today’s Session",
       "ts": 1788284119,
@@ -161,76 +167,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-25",
-      "ticker": "MRK",
-      "firm": "Wolfe Research",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$180",
-      "price": 149.86,
-      "upside": 20.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-25",
-      "ticker": "NKE",
-      "firm": "RBC Capital",
-      "action": "Reiterates",
-      "rating": "Sector Perform",
-      "stance": "neutral",
-      "pt": "$45",
-      "price": 38.12,
-      "upside": 18.0,
-      "held": false,
-      "uni": true,
-      "qarp": "BUY"
-    },
-    {
-      "date": "2026-08-25",
-      "ticker": "CRM",
-      "firm": "Citizens",
-      "action": "Reiterates",
-      "rating": "Market Outperform",
-      "stance": "bullish",
-      "pt": "$315",
-      "price": 258.11,
-      "upside": 22.0,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-25",
-      "ticker": "CRM",
-      "firm": "Canaccord Genuity",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$225",
-      "price": 258.11,
-      "upside": -12.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-25",
-      "ticker": "MRK",
-      "firm": "Argus Research",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$170",
-      "price": 149.86,
-      "upside": 13.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-26",
       "ticker": "NKE",
@@ -622,14 +558,42 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-09-02",
+      "ticker": "CRM",
+      "firm": "Cantor Fitzgerald",
+      "action": "Maintains",
+      "rating": "Overweight",
+      "stance": "bullish",
+      "pt": "$300",
+      "price": 258.11,
+      "upside": 16.2,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-09-02",
+      "ticker": "CRM",
+      "firm": "BTIG",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$300",
+      "price": 258.11,
+      "upside": 16.2,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
     "CRM": {
-      "date": "2026-09-01",
-      "firm": "TD Cowen",
+      "date": "2026-09-02",
+      "firm": "Cantor Fitzgerald",
       "action": "Maintains",
-      "rating": "Buy",
+      "rating": "Overweight",
       "stance": "bullish",
       "pt": "$300",
       "upside": 16.2
@@ -690,6 +654,213 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Cantor Fitzgerald Maintains Overweight on Salesforce, Raises Price Target to $300",
+      "url": "https://www.benzinga.com/news/26/09/61570168/cantor-fitzgerald-maintains-overweight-salesforce-raises-price-target-300",
+      "ts": 1788347199,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.474
+    },
+    {
+      "title": "Dan Ives Says M&A Is the ‘Missing Piece’ for Apple in AI Arms Race — New CEO John Ternus Could Finally Shake Up Tim Cook’s Playbook",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61569421/dan-ives-says-ma-is-the-missing-piece-for-apple-in-ai-arms-race-new-ceo-john-ternus-could-finally-shake-up-tim-cooks-playbook",
+      "ts": 1788345257,
+      "tickers": [
+        "AAPL",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.347
+    },
+    {
+      "title": "Chevron Unveils Updated Venezuela Joint Venture Terms, Plans $7B Investment Over The Next Five Years To Double Oil Production To 600,000 Barrels Per Day",
+      "url": "https://www.benzinga.com/quote/CVX",
+      "ts": 1788344329,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.291
+    },
+    {
+      "title": "Anthony Scaramucci Warns Scott Bessent and Howard Lutnick Have Caught the Same 'Potomac Fever' That Ended His White House Career",
+      "url": "https://www.benzinga.com/news/politics/26/09/61568988/anthony-scaramucci-admits-he-caught-potomac-fever-in-the-white-house-and-says-scott-bessent-and-howard-lutnick-have-it-too",
+      "ts": 1788343761,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.17
+    },
+    {
+      "title": "Opera Once Helped Trigger a €561M Microsoft Fine. Now It Just Lost Its EU Antitrust Fight Over Edge",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61568964/opera-loses-antitrust-challenge-microsoft-edge-eu-court",
+      "ts": 1788343686,
+      "tickers": [
+        "OPRA",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.284
+    },
+    {
+      "title": "BTIG Reiterates Buy on Salesforce, Maintains $300 Price Target",
+      "url": "https://www.benzinga.com/news/26/09/61568951/btig-reiterates-buy-salesforce-maintains-300-price-target",
+      "ts": 1788343665,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.433
+    },
+    {
+      "title": "Performance Comparison: Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/09/61568521/performance-comparison-apple-and-competitors-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1788343107,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.364
+    },
+    {
+      "title": "Comparing Microsoft With Industry Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/09/61568520/comparing-microsoft-industry-competitors-software-industry",
+      "ts": 1788343103,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.328
+    },
+    {
+      "title": "Jim Cramer Calls NVIDIA ‘Radically Cheap,’ Urges Blockbuster $500 Billion Buyback",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61568170/jim-cramer-calls-nvidia-radically-cheap-urges-blockbuster-500-billion-buyback",
+      "ts": 1788341123,
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "HUT",
+        "FFOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.548
+    },
+    {
+      "title": "Gene Munster Says Apple Has the ‘Upper Hand’ in OpenAI Lawsuit After ‘Shocking Evidence’ Emerges — ‘Would Be a Reckless Move’",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61568045/gene-munster-apple-upper-hand-openai-trade-secrets-fight-new-evidence",
+      "ts": 1788340621,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.258
+    },
+    {
+      "title": "NIO CEO William Li Touts ‘iPhone-Like’ Firefly Strategy as EV Maker Plots New Tech Upgrades, Battery Swapping for Robotaxis",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61567800/nio-ceo-william-li-touts-iphone-like-firefly-strategy-as-ev-maker-plots-new-tech-upgrades-battery-swapping-for-robotaxis",
+      "ts": 1788338477,
+      "tickers": [
+        "NIO",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.322
+    },
+    {
+      "title": "Jensen Huang Sees a $50 Trillion Physical AI Opportunity — Here Are 4 ‘Picks and Shovels’ Stocks That Should Be on Investors’ Radar",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61567697/jensen-huang-sees-a-50-trillion-physical-ai-opportunity-here-are-4-picks-and-shovels-stocks-that-should-be-on-investors-radar",
+      "ts": 1788337098,
+      "tickers": [
+        "MP",
+        "WMT",
+        "NVDA",
+        "SYM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.466
+    },
+    {
+      "title": "Gene Munster Gives AAPL's New CEO John Ternus a $50 Million Challenge on Day One — ‘The Payoff Would Be Immediate on Multiple Levels'",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61567479/gene-munster-gives-aapls-new-ceo-john-ternus-a-50-million-challenge-on-day-one-the-payoff-would-be-immediate-on-multiple-levels",
+      "ts": 1788335570,
+      "tickers": [
+        "AAPL",
+        "APPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.287
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61567010/stock-market-will-sp-500-open-up-or-down-today-29",
+      "ts": 1788330136,
+      "tickers": [
+        "$POL",
+        "SPY",
+        "AVGO",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Hewlett Packard Enterprise Pops Nearly 4% After Hours as Dell's AI Boom Boosts Hardware Sentiment: HPE Stock Trends",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61566426/hewlett-packard-enterprise-pops-nearly-4-after-hours-as-dells-ai-boom-boosts-hardware-sentiment-hpe-stock-trends",
+      "ts": 1788326055,
+      "tickers": [
+        "INTC",
+        "HPE",
+        "DELL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.465
+    },
+    {
+      "title": "Tim Cook Gets $47 Million to Stick Around as Apple Chair: His New Pay Check Nearly Matches New CEO John Ternus’ Package",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61566277/tim-cook-47-million-apple-chair-pay-nearly-matches-john-ternus-ceo-package",
+      "ts": 1788322346,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.242
+    },
     {
       "title": "Tim Cook’s Greatest Contribution Wasn’t Apple Stock Gains But This, Says Market Expert",
       "url": "https://www.benzinga.com/markets/tech/26/09/61564915/tim-cooks-greatest-contribution-wasnt-apple-stock-gains-but-this-says-market-expert",
@@ -813,223 +984,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.217
-    },
-    {
-      "title": "5 Things You Might Not Know About Former Apple CEO Tim Cook",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61558261/5-things-you-might-not-know-about-former-apple-ceo-tim-cook",
-      "ts": 1788286009,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.194
-    },
-    {
-      "title": "FDA Says It Has Received 990 Adverse Event Reports Tied To Compounded Semaglutide And More Than 730 Tied To Compounded Tirzepatide; Establishes Import Alert For Compounded GLP-1 Active Pharmaceutical Ingredients",
-      "url": "https://www.benzinga.com/government/26/09/61558178/fda-says-it-has-received-990-adverse-event-reports-tied-compounded-semaglutide-and-more-730-tied-com",
-      "ts": 1788285864,
-      "tickers": [
-        "HIMS",
-        "LFMD",
-        "WW",
-        "TDOC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.348
-    },
-    {
-      "title": "Deutsche Bank Initiates Coverage On Cisco Systems with Buy Rating, Announces Price Target of $135",
-      "url": "https://www.benzinga.com/news/26/09/61557836/deutsche-bank-initiates-coverage-cisco-systems-buy-rating-announces-price-target-135",
-      "ts": 1788285318,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.442
-    },
-    {
-      "title": "Bank Of America, Goldman Sachs, Citi Join Push to Launch Global Stablecoin",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/09/61557504/bank-of-america-goldman-sachs-citi-join-push-to-launch-global-stablecoin",
-      "ts": 1788284712,
-      "tickers": [
-        "BAC",
-        "JPM",
-        "GS",
-        "WFC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.289
-    },
-    {
-      "title": "9 Financials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61557183/9-financials-stocks-whale-alerts-today-s-session",
-      "ts": 1788284119,
-      "tickers": [
-        "JEF",
-        "BX",
-        "NU",
-        "WAL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.389
-    },
-    {
-      "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61557182/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
-      "ts": 1788284119,
-      "tickers": [
-        "NCLH",
-        "AMZN",
-        "VIK",
-        "RIVN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.363
-    },
-    {
-      "title": "OpenAI Rolling Out New Electronic Health Record Integration That Brings Authorized Patient Context From Epic Into ChatGPT For Healthcare",
-      "url": "https://www.benzinga.com/news/26/09/61556299/openai-rolling-out-new-electronic-health-record-integration-brings-authorized-patient-context-epic-c",
-      "ts": 1788282338,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.234
-    },
-    {
-      "title": "CNBC Halftime Report Final Trades: Apple, SLB, Goldman Sachs Group",
-      "url": "https://www.benzinga.com/quote/GS",
-      "ts": 1788281991,
-      "tickers": [
-        "AAPL",
-        "SLB",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.391
-    },
-    {
-      "title": "Long Bond Again Dips Into Danger Zone—Highest Yield in Japan Since 1996—AI Trade Under Pressure",
-      "url": "https://www.benzinga.com/Opinion/26/09/61555756/long-bond-again-dips-in-danger-zone-highest-yield-in-japan-since-1996-ai-trade-under-pressure",
-      "ts": 1788281273,
-      "tickers": [
-        "SPY",
-        "NVDA",
-        "TSLA",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.321
-    },
-    {
-      "title": "Stock of the Day: Will IBM Break Out and Head Higher?",
-      "url": "https://www.benzinga.com/trading-ideas/technicals/26/09/61555659/stock-of-the-day-will-ibm-break-out-and-head-higher",
-      "ts": 1788281162,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.404
-    },
-    {
-      "title": "Next Phase Of Talks Regarding Transition In Venezuela To Resume Middle Of Month; We Continue To Push For Private Sector U.s. Investment; Chevron To Announce Expanding Operations In Venezuela",
-      "url": "https://www.benzinga.com/news/26/09/61555532/next-phase-talks-regarding-transition-venezuela-resume-middle-month-we-continue-push-private-sector-",
-      "ts": 1788280984,
-      "tickers": [
-        "SPY",
-        "CVX",
-        "USO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.248
-    },
-    {
-      "title": "Elon Musk's X Money Is Taking Aim at Something Bigger Than PayPal",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61555250/x-money-bigger-than-paypal",
-      "ts": 1788280466,
-      "tickers": [
-        "PYPL",
-        "SPCX",
-        "V",
-        "EBAY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.3
-    },
-    {
-      "title": "Next Biotech Boom May Be Cancer Vaccines: Watch These ETFs",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/61554918/next-biotech-boom-may-be-cancer-vaccines-watch-these-etfs",
-      "ts": 1788279912,
-      "tickers": [
-        "MRNA",
-        "IDNA",
-        "ARKG",
-        "CRSP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.452
-    },
-    {
-      "title": "Apple New CEO John Ternus Creates Official X Account @johnternus",
-      "url": "https://www.benzinga.com/news/26/09/61554272/apple-new-ceo-john-ternus-creates-official-x-account-johnternus",
-      "ts": 1788278971,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.258
-    },
-    {
-      "title": "What's Going On With Salesforce Stock?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61554150/whats-going-on-with-salesforce-stock-2",
-      "ts": 1788278781,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.381
-    },
-    {
-      "title": "Apple shares are trading higher. Today marks John Ternus' first day as CEO.",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1788278558,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.333
     }
   ],
   "portfolio_brief": {
@@ -1037,17 +991,17 @@
       "name": "Abbott Laboratories",
       "qarp": "BUY",
       "consensus": {
-        "strongBuy": 11,
+        "strongBuy": 12,
         "buy": 13,
-        "hold": 9,
+        "hold": 8,
         "sell": 0,
         "strongSell": 0,
         "total": 33,
-        "bullish": 24,
+        "bullish": 25,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.06,
-        "period": "2026-08-01"
+        "score": 1.12,
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1063,23 +1017,23 @@
         },
         "insider30d": 2
       },
-      "explain": "33 analysts cover it — 24 bullish, 9 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "33 analysts cover it — 25 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ZTS": {
       "name": "Zoetis",
       "qarp": "BUY",
       "consensus": {
-        "strongBuy": 5,
+        "strongBuy": 4,
         "buy": 8,
-        "hold": 11,
+        "hold": 12,
         "sell": 0,
         "strongSell": 0,
         "total": 24,
-        "bullish": 13,
+        "bullish": 12,
         "bearish": 0,
         "label": "Buy",
-        "score": 0.75,
-        "period": "2026-08-01"
+        "score": 0.67,
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1095,23 +1049,23 @@
         },
         "insider30d": 1
       },
-      "explain": "24 analysts cover it — 13 bullish, 11 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "24 analysts cover it — 12 bullish, 12 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "NVDA": {
       "name": "NVIDIA",
       "qarp": "STRONG BUY",
       "consensus": {
-        "strongBuy": 23,
+        "strongBuy": 24,
         "buy": 41,
         "hold": 3,
         "sell": 1,
         "strongSell": 0,
-        "total": 68,
-        "bullish": 64,
+        "total": 69,
+        "bullish": 65,
         "bearish": 1,
         "label": "Strong Buy",
-        "score": 1.26,
-        "period": "2026-08-01"
+        "score": 1.28,
+        "period": "2026-09-01"
       },
       "news": {
         "title": "Shares of semiconductor and chip companies are trading lower. The industry may be pulling back ahead of Nvidia's Q2 earnings report due August, 26.",
@@ -1132,7 +1086,7 @@
         },
         "insider30d": 3
       },
-      "explain": "68 analysts cover it — 64 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "69 analysts cover it — 65 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "BSX": {
       "name": "Boston Scientific",
@@ -1148,7 +1102,7 @@
         "bearish": 0,
         "label": "Strong Buy",
         "score": 1.08,
-        "period": "2026-08-01"
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1171,16 +1125,16 @@
       "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 13,
-        "buy": 16,
-        "hold": 5,
+        "buy": 15,
+        "hold": 6,
         "sell": 1,
         "strongSell": 0,
         "total": 35,
-        "bullish": 29,
+        "bullish": 28,
         "bearish": 1,
         "label": "Strong Buy",
-        "score": 1.17,
-        "period": "2026-08-01"
+        "score": 1.14,
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1188,7 +1142,7 @@
         "periodic": null,
         "insider30d": 1
       },
-      "explain": "35 analysts cover it — 29 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "35 analysts cover it — 28 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "RKLB": {
       "name": "Rocket Lab",
@@ -1196,15 +1150,15 @@
       "consensus": {
         "strongBuy": 7,
         "buy": 14,
-        "hold": 6,
+        "hold": 5,
         "sell": 0,
         "strongSell": 0,
-        "total": 27,
+        "total": 26,
         "bullish": 21,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.04,
-        "period": "2026-08-01"
+        "score": 1.08,
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1220,23 +1174,23 @@
         },
         "insider30d": 8
       },
-      "explain": "27 analysts cover it — 21 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+      "explain": "26 analysts cover it — 21 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
     "AZO": {
       "name": "AutoZone",
       "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 9,
-        "buy": 16,
+        "buy": 17,
         "hold": 6,
         "sell": 0,
         "strongSell": 0,
-        "total": 31,
-        "bullish": 25,
+        "total": 32,
+        "bullish": 26,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.1,
-        "period": "2026-08-01"
+        "score": 1.09,
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1252,7 +1206,7 @@
         },
         "insider30d": 2
       },
-      "explain": "31 analysts cover it — 25 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "32 analysts cover it — 26 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "DHR": {
       "name": "Danaher",
@@ -1268,7 +1222,7 @@
         "bearish": 0,
         "label": "Strong Buy",
         "score": 1.22,
-        "period": "2026-08-01"
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1300,7 +1254,7 @@
         "bearish": 5,
         "label": "Buy",
         "score": 0.43,
-        "period": "2026-08-01"
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1332,7 +1286,7 @@
         "bearish": 0,
         "label": "Strong Buy",
         "score": 1.1,
-        "period": "2026-08-01"
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1364,7 +1318,7 @@
         "bearish": 7,
         "label": "Hold",
         "score": -0.15,
-        "period": "2026-08-01"
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1386,8 +1340,8 @@
       "name": "On Holding",
       "qarp": "STRONG BUY",
       "consensus": {
-        "strongBuy": 13,
-        "buy": 17,
+        "strongBuy": 11,
+        "buy": 19,
         "hold": 5,
         "sell": 0,
         "strongSell": 1,
@@ -1395,8 +1349,8 @@
         "bullish": 30,
         "bearish": 1,
         "label": "Strong Buy",
-        "score": 1.14,
-        "period": "2026-08-01"
+        "score": 1.08,
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1411,16 +1365,16 @@
       "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 10,
-        "buy": 20,
-        "hold": 4,
+        "buy": 19,
+        "hold": 5,
         "sell": 0,
         "strongSell": 0,
         "total": 34,
-        "bullish": 30,
+        "bullish": 29,
         "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.18,
-        "period": "2026-08-01"
+        "score": 1.15,
+        "period": "2026-09-01"
       },
       "news": {
         "title": "9 Financials Stocks With Whale Alerts In Today’s Session",
@@ -1441,7 +1395,7 @@
         },
         "insider30d": 1
       },
-      "explain": "34 analysts cover it — 30 bullish, 4 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "34 analysts cover it — 29 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "GILD": {
       "name": "Gilead Sciences",
@@ -1457,7 +1411,7 @@
         "bearish": 0,
         "label": "Strong Buy",
         "score": 1.05,
-        "period": "2026-08-01"
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1489,7 +1443,7 @@
         "bearish": 2,
         "label": "Buy",
         "score": 0.9,
-        "period": "2026-08-01"
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1513,7 +1467,7 @@
         "bearish": 4,
         "label": "Buy",
         "score": 0.53,
-        "period": "2026-08-01"
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1528,18 +1482,23 @@
       "qarp": "BUY",
       "consensus": {
         "strongBuy": 17,
-        "buy": 34,
+        "buy": 35,
         "hold": 5,
         "sell": 0,
         "strongSell": 0,
-        "total": 56,
-        "bullish": 51,
+        "total": 57,
+        "bullish": 52,
         "bearish": 0,
         "label": "Strong Buy",
         "score": 1.21,
-        "period": "2026-08-01"
+        "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+        "ts": 1788330136,
+        "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61567010/stock-market-will-sp-500-open-up-or-down-today-29",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1553,7 +1512,7 @@
         },
         "insider30d": 0
       },
-      "explain": "56 analysts cover it — 51 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
@@ -1569,7 +1528,7 @@
         "bearish": 0,
         "label": "Strong Buy",
         "score": 1.25,
-        "period": "2026-08-01"
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1592,16 +1551,16 @@
       "qarp": "BUY",
       "consensus": {
         "strongBuy": 11,
-        "buy": 19,
+        "buy": 18,
         "hold": 6,
         "sell": 0,
         "strongSell": 1,
-        "total": 37,
-        "bullish": 30,
+        "total": 36,
+        "bullish": 29,
         "bearish": 1,
         "label": "Strong Buy",
-        "score": 1.05,
-        "period": "2026-08-01"
+        "score": 1.06,
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1617,23 +1576,23 @@
         },
         "insider30d": 2
       },
-      "explain": "37 analysts cover it — 30 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "36 analysts cover it — 29 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "EFX": {
       "name": "Equifax",
       "qarp": "BUY",
       "consensus": {
         "strongBuy": 8,
-        "buy": 12,
-        "hold": 10,
+        "buy": 13,
+        "hold": 9,
         "sell": 0,
         "strongSell": 0,
         "total": 30,
-        "bullish": 20,
+        "bullish": 21,
         "bearish": 0,
         "label": "Buy",
-        "score": 0.93,
-        "period": "2026-08-01"
+        "score": 0.97,
+        "period": "2026-09-01"
       },
       "news": null,
       "filings": {
@@ -1649,7 +1608,7 @@
         },
         "insider30d": 1
       },
-      "explain": "30 analysts cover it — 20 bullish, 10 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "30 analysts cover it — 21 bullish, 9 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     }
   },
   "financials": {
