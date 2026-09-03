@@ -672,7 +672,33 @@ function renderPortfolio() {
 
   renderSectorPerformance();
   renderPortfolioTable();
+  renderEtfSleeve();
   renderRealized();
+}
+
+// ETF sleeve — satellite positions below the book (user order 2026-09-02): performance
+// columns ONLY. No verdict, no gate, no Shariah row — unscored by design, so QARP fields
+// never render here. Absolutes (shares/value/P&L $) are owner-tier like everywhere else.
+function renderEtfSleeve() {
+  const el = document.getElementById("etf-sleeve");
+  if (!el) return;
+  const rows = DATA.etf_sleeve || [];
+  if (!rows.length) { el.hidden = true; return; }
+  el.hidden = false;
+  const unlocked = privUnlocked();
+  const cols = [
+    { label: "Company", left: true, fmt: (s) => `<b>${s.ticker}</b> <span class="muted">${esc(s.name || "")}</span>` },
+    { label: "Bought", fmt: (s) => s.buy_date || "—" },
+    { label: "Price", fmt: (s) => (s.price == null ? "—" : fmtUSD(s.price, 2)) },
+    { label: "Day", fmt: (s) => `<span class="cell-day ${signClass(s.day_pct)}">${fmtPct(s.day_pct)}</span>` },
+    { label: "Return", fmt: (s) => `<span class="${signClass(s.gain_pct)}">${fmtPct(s.gain_pct)}</span>` },
+    { label: "Value", fmt: (s) => (unlocked ? (s.value == null ? "—" : fmtUSD(s.value, 0)) : lockUSD()) },
+    { label: "P&L", fmt: (s) => (unlocked ? (s.gain == null ? "—" : `<span class="${signClass(s.gain)}">${fmtUSD(s.gain, 0)}</span>`) : lockUSD()) },
+  ];
+  document.querySelector("#etf-sleeve-table thead").innerHTML =
+    `<tr>${cols.map((c) => `<th class="${c.left ? "left" : ""}">${c.label}</th>`).join("")}</tr>`;
+  document.querySelector("#etf-sleeve-table tbody").innerHTML = rows.map((s) =>
+    `<tr>${cols.map((c) => `<td class="${c.left ? "left" : ""}">${c.fmt(s)}</td>`).join("")}</tr>`).join("");
 }
 
 // Realized — closed trades from the Abyan records. Sortable (pSort/uSort pattern),
@@ -2786,6 +2812,10 @@ function mergePrivate(priv) {
   (DATA.portfolio || []).forEach((h) => {
     const m = priv.portfolio && priv.portfolio[h.ticker];
     if (m) Object.assign(h, m);
+  });
+  (DATA.etf_sleeve || []).forEach((s) => {
+    const m = priv.etf_sleeve && priv.etf_sleeve[s.ticker];
+    if (m) Object.assign(s, m);
   });
   if (priv.totals && DATA.meta && DATA.meta.portfolio_totals) Object.assign(DATA.meta.portfolio_totals, priv.totals);
   const R = DATA.realized || [], PR = priv.realized || [];
