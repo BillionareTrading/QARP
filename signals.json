@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-02",
-  "generated_at": "Sep 2, 7:12pm ET",
+  "date": "2026-09-03",
+  "generated_at": "Sep 3, 8:12am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,14 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Sep 2",
-      "what": "AVGO earnings",
-      "affects": "AVGO",
-      "dir": "two-sided",
-      "why": "Q-results for Broadcom — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Sep 3",
       "what": "LULU earnings",
       "affects": "LULU",
@@ -91,6 +83,14 @@
       "dir": "two-sided",
       "why": "Q-results for AutoZone — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Oct 13",
+      "what": "ABT earnings",
+      "affects": "ABT",
+      "dir": "two-sided",
+      "why": "Q-results for Abbott Laboratories — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
     }
   ],
   "earnings_next": {
@@ -110,7 +110,7 @@
     "GILD": "2026-10-28",
     "SAP": "2026-10-21",
     "NVS": "2026-10-27",
-    "AVGO": "2026-09-02",
+    "AVGO": "2026-12-09",
     "NBIX": "2026-10-26",
     "VRTX": "2026-11-02",
     "EFX": "2026-10-19"
@@ -161,20 +161,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-26",
-      "ticker": "NKE",
-      "firm": "Truist Securities",
-      "action": "Downgrades",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$42",
-      "price": 38.24,
-      "upside": 9.8,
-      "held": false,
-      "uni": true,
-      "qarp": "BUY"
-    },
     {
       "date": "2026-08-27",
       "ticker": "CRM",
@@ -692,27 +678,115 @@
       "stance": "bullish",
       "pt": "$180",
       "upside": 18.7
-    },
-    "HD": {
-      "date": "2026-08-19",
-      "firm": "Mizuho",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$390",
-      "upside": 22.4
-    },
-    "CVX": {
-      "date": "2026-08-19",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$218",
-      "upside": 2.9
     }
   },
   "bz_news": [
+    {
+      "title": "GOP Nominee Steve Hilton Says He Will 'Ban AI From Deciding Who Gets Fired' Amid AI-Firing Row in California",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61598398/gop-nominee-steve-hilton-says-he-will-ban-ai-from-deciding-who-gets-fired-amid-ai-firing-row-in-california",
+      "ts": 1788436126,
+      "tickers": [
+        "AMZN",
+        "JPM",
+        "ACN",
+        "UPWK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.296
+    },
+    {
+      "title": "Albany International’s Unit Albany Engineered Composites Reaches Agreement With Boeing To Continue Composite Fuselage Frame Manufacturing For 787 Dreamliner",
+      "url": "https://www.benzinga.com/quote/BA",
+      "ts": 1788433743,
+      "tickers": [
+        "AIN",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.309
+    },
+    {
+      "title": "Assessing Apple's Performance Against Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/09/61596064/assessing-apple-s-performance-against-competitors-technology-hardware-storage-amp-peripherals-indust",
+      "ts": 1788429509,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.377
+    },
+    {
+      "title": "Inquiry Into Microsoft's Competitor Dynamics In Software Industry",
+      "url": "https://www.benzinga.com/news/26/09/61596063/inquiry-microsoft-s-competitor-dynamics-software-industry",
+      "ts": 1788429504,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.345
+    },
+    {
+      "title": "Boeing Pays $3.1M After FAA Uncovers Hundreds of Safety Violations — And a MAX 9 Was Involved: Report",
+      "url": "https://www.benzinga.com/news/politics/26/09/61596048/boeing-pays-3-1m-after-faa-uncovers-hundreds-of-safety-violations-and-a-max-9-was-involved-report",
+      "ts": 1788429215,
+      "tickers": [
+        "BA",
+        "ALK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.249
+    },
+    {
+      "title": "Trump's DOJ Expands Beef Price Probe to Walmart, Costco, Amazon and 5 Other Retail Giants — Calls it a 'Critical Concern'",
+      "url": "https://www.benzinga.com/news/legal/26/09/61595385/trumps-doj-expands-beef-price-probe-to-walmart-costco-amazon-and-5-other-retail-giants-calls-it-a-critical-concern",
+      "ts": 1788425646,
+      "tickers": [
+        "WMT",
+        "AMZN",
+        "COST"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.355
+    },
+    {
+      "title": "Trump Wants More Refineries Amid Iran War Oil Shocks, $4 Gas—It May Not Be As Simple",
+      "url": "https://www.benzinga.com/markets/commodities/26/09/61594650/trump-wants-more-refineries-amid-iran-war-oil-shocks-4-gas-it-may-not-be-as-simple",
+      "ts": 1788419612,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.239
+    },
+    {
+      "title": "Nvidia's 8% Grip on the S&P 500 Is Unlike Anything Wall Street Has Seen: Jensen Huang-Led Chipmaker is 'Making History,' Says This Commentator",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61594124/nvidia-8-percent-sp-500-grip-jensen-huang-making-history-commentator",
+      "ts": 1788413656,
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "SPY",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.52
+    },
     {
       "title": "'JPMorgan curbed lending to Jane Street as trading firm muscled into bond market'- Financial Times",
       "url": "https://www.benzinga.com/news/26/09/61591153/jpmorgan-curbed-lending-jane-street-trading-firm-muscled-bond-market-financial-times",
@@ -857,7 +931,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.426
+      "relevance": 0.425
     },
     {
       "title": "Recent Filing Shows That Rep. Kevin Hern Sold Over $224K Worth of Home Depot Stock",
@@ -943,110 +1017,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.293
-    },
-    {
-      "title": "'Southwest Airlines Jumps Into the Airport Lounge Competition' - Wall Street Journal",
-      "url": "https://www.benzinga.com/news/26/09/61576388/southwest-airlines-jumps-airport-lounge-competition-wall-street-journal",
-      "ts": 1788357850,
-      "tickers": [
-        "LUV",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.284
-    },
-    {
-      "title": "Ethiopian Airlines Nearing A Deal To Buy Up To 10 Boeing 777 Freighters Including Two Of The Current-Generation 777F Model",
-      "url": "https://www.benzinga.com/news/26/09/61575541/ethiopian-airlines-nearing-deal-buy-10-boeing-777-freighters-including-two-current-generation-777f-m",
-      "ts": 1788356904,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.279
-    },
-    {
-      "title": "UBS Maintains Buy on Johnson & Johnson, Raises Price Target to $320",
-      "url": "https://www.benzinga.com/news/26/09/61575125/ubs-maintains-buy-johnson-johnson-raises-price-target-320",
-      "ts": 1788356490,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.436
-    },
-    {
-      "title": "Caterpillar Partnering With FieldAI Over Advancement Of Physical AI, Autonomy And Robotics For Jobsites, Factories",
-      "url": "https://www.benzinga.com/news/26/09/61574342/caterpillar-partnering-fieldai-over-advancement-physical-ai-autonomy-and-robotics-jobsites-factories",
-      "ts": 1788355202,
-      "tickers": [
-        "CAT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.313
-    },
-    {
-      "title": "ADVASA Upgrades Visa Card With USDC Payment Support, Expands Digital Payment Infrastructure And Eyes Real-World Asset Tokenization Market",
-      "url": "https://www.benzinga.com/news/26/09/61574086/advasa-upgrades-visa-card-usdc-payment-support-expands-digital-payment-infrastructure-and-eyes-real-",
-      "ts": 1788354776,
-      "tickers": [
-        "ADBT",
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.379
-    },
-    {
-      "title": "Can Apple's New CEO Pull Off a Premium-Only iPhone Launch?",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/61573414/apple-premium-iphone-launch",
-      "ts": 1788353904,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.257
-    },
-    {
-      "title": "Bill Ackman Backs Mark Cuban's Drug Pricing Model: These Healthcare Stocks Could Win—Or Lose",
-      "url": "https://www.benzinga.com/news/health-care/26/09/61573089/ackman-cuban-drug-pricing",
-      "ts": 1788353351,
-      "tickers": [
-        "HUM",
-        "UNH",
-        "CI",
-        "CVS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.389
-    },
-    {
-      "title": "Salesforce To Rally More Than 16%? Here Are 10 Top Analyst Forecasts For Wednesday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/61572451/salesforce-to-rally-more-than-16-here-are-10-top-analyst-forecasts-for-wednesday",
-      "ts": 1788352049,
-      "tickers": [
-        "HOOD",
-        "CRM",
-        "MDB",
-        "GTLB"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.43
     }
   ],
   "portfolio_brief": {
@@ -1139,8 +1109,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-08-26",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm"
+          "date": "2026-09-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -1179,7 +1149,7 @@
           "date": "2026-08-03",
           "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000053/bsx-20260630.htm"
         },
-        "insider30d": 8
+        "insider30d": 6
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
