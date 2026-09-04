@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-03",
-  "generated_at": "Sep 3, 6:57pm ET",
+  "date": "2026-09-04",
+  "generated_at": "Sep 4, 8:10am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -13,7 +13,7 @@
       "sev": "elevated",
       "tag": "Guidance cut",
       "detail": "FY guide <b>cut</b> (Jun 4): Americas comps −5% (5th straight), tariffs gutted margins, China stalled.",
-      "next": "Sep 3"
+      "next": "Dec 9"
     },
     {
       "ticker": "BSX",
@@ -56,18 +56,10 @@
       "sev": "mild",
       "tag": "EPS outlook trimmed",
       "detail": "FY EPS guide cut on deal financing + a weak flu season; revenue raised. Defensive — a yellow flag, not a red one.",
-      "next": "~Jul 17"
+      "next": "Oct 13"
     }
   ],
   "catalysts": [
-    {
-      "when": "Sep 3",
-      "what": "LULU earnings",
-      "affects": "LULU",
-      "dir": "two-sided",
-      "why": "Q-results for Lululemon — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
     {
       "when": "Sep 10",
       "what": "ADBE earnings",
@@ -85,6 +77,14 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
+      "when": "Oct 13",
+      "what": "ABT earnings",
+      "affects": "ABT",
+      "dir": "two-sided",
+      "why": "Q-results for Abbott Laboratories — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
       "when": "Oct 19",
       "what": "DHR earnings",
       "affects": "DHR",
@@ -94,21 +94,26 @@
     }
   ],
   "earnings_next": {
+    "ABT": "2026-10-13",
+    "ZTS": "2026-11-02",
     "NVDA": "2026-11-17",
     "BSX": "2026-10-28",
     "AZN": "2026-10-30",
+    "RKLB": "2026-11-09",
     "AZO": "2026-09-22",
     "DHR": "2026-10-19",
     "ADBE": "2026-09-10",
-    "LULU": "2026-09-03",
+    "LULU": "2026-12-09",
     "EXE": "2026-10-26",
     "ONON": "2026-11-10",
+    "SPGI": "2026-10-28",
     "GILD": "2026-10-28",
     "SAP": "2026-10-21",
     "NVS": "2026-10-27",
     "AVGO": "2026-12-09",
     "NBIX": "2026-10-26",
-    "VRTX": "2026-11-02"
+    "VRTX": "2026-11-02",
+    "EFX": "2026-10-19"
   },
   "risk_asof": "2026-07-05",
   "sectors": [
@@ -154,6 +159,18 @@
       "url": "https://www.benzinga.com/news/26/09/61609188/nvidia-s-new-rtx-spark-laptops-launch-october-two-different-configs-nvidia-s-n1x-laptop-will-ship-tw",
       "wiim": false
     },
+    "ADBE": {
+      "title": "ADBE Stock Declines Nearly 3% in Friday Pre-Market: What's Going On?",
+      "ts": 1788515943,
+      "url": "https://www.benzinga.com/markets/tech/26/09/61622557/adbe-stock-declines-nearly-3-in-friday-pre-market-whats-going-on",
+      "wiim": false
+    },
+    "EFX": {
+      "title": "FICO Stock Falls Pre-Market After Bill Pulte Declares ‘No More’ to FICO’s Mortgage Scoring Monopoly — Orders Fannie Mae, Freddie Mac to Open Door to VantageScore",
+      "ts": 1788512264,
+      "url": "https://www.benzinga.com/news/politics/26/09/61622054/fico-stock-falls-pre-market-after-bill-pulte-declares-no-more-to-ficos-mortgage-scoring-monopoly-orders-fannie-mae-freddie-mac-to-open-door-to-vantagescore",
+      "wiim": false
+    },
     "AVGO": {
       "title": "Wall Street Rallies as Fed’s Waller Hints at September Rate Hold: Stock Market Today",
       "ts": 1788457665,
@@ -162,328 +179,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$233",
-      "price": 264.43,
-      "upside": -11.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$265",
-      "price": 264.43,
-      "upside": 0.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Mizuho",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$265",
-      "price": 264.43,
-      "upside": 0.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "BMO Capital",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$260",
-      "price": 264.43,
-      "upside": -1.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Jefferies",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$300",
-      "price": 264.43,
-      "upside": 13.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Canaccord Genuity",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$270",
-      "price": 264.43,
-      "upside": 2.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Macquarie",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$225",
-      "price": 264.43,
-      "upside": -14.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$276",
-      "price": 264.43,
-      "upside": 4.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "TD Cowen",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$280",
-      "price": 264.43,
-      "upside": 5.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Bernstein",
-      "action": "Maintains",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$195",
-      "price": 264.43,
-      "upside": -26.3,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Oppenheimer",
-      "action": "Reiterates",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$275",
-      "price": 264.43,
-      "upside": 4.0,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Sector Perform",
-      "stance": "neutral",
-      "pt": "$250",
-      "price": 264.43,
-      "upside": -5.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "UBS",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$240",
-      "price": 264.43,
-      "upside": -9.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Citizens",
-      "action": "Reiterates",
-      "rating": "Market Outperform",
-      "stance": "bullish",
-      "pt": "$315",
-      "price": 264.43,
-      "upside": 19.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$230",
-      "price": 264.43,
-      "upside": -13.0,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Guggenheim",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$270",
-      "price": 264.43,
-      "upside": 2.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$235",
-      "price": 264.43,
-      "upside": -11.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "DA Davidson",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$200",
-      "price": 264.43,
-      "upside": -24.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Truist Securities",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$300",
-      "price": 264.43,
-      "upside": 13.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Evercore ISI Group",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$290",
-      "price": 264.43,
-      "upside": 9.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "BTIG",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$300",
-      "price": 264.43,
-      "upside": 13.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Needham",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$400",
-      "price": 264.43,
-      "upside": 51.3,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "CRM",
-      "firm": "Cantor Fitzgerald",
-      "action": "Reiterates",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$250",
-      "price": 264.43,
-      "upside": -5.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-08-31",
       "ticker": "CRM",
@@ -734,6 +429,87 @@
   },
   "bz_news": [
     {
+      "title": "Reported Earlier: 'Early foldable iPhone production limited to a few hundred per day: sources' - Nikkei Asia",
+      "url": "https://www.benzinga.com/news/26/09/61623943/reported-earlier-early-foldable-iphone-production-limited-few-hundred-day-sources-nikkei-asia",
+      "ts": 1788521423,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.289
+    },
+    {
+      "title": "ADBE Stock Declines Nearly 3% in Friday Pre-Market: What's Going On?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61622557/adbe-stock-declines-nearly-3-in-friday-pre-market-whats-going-on",
+      "ts": 1788515943,
+      "tickers": [
+        "ADBE",
+        "GOOG",
+        "CRM",
+        "FIG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.684
+    },
+    {
+      "title": "Market Analysis: Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/09/61622533/market-analysis-apple-and-competitors-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1788515917,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.422
+    },
+    {
+      "title": "Assessing Microsoft's Performance Against Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/09/61622532/assessing-microsoft-s-performance-against-competitors-software-industry",
+      "ts": 1788515909,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.338
+    },
+    {
+      "title": "FICO Stock Falls Pre-Market After Bill Pulte Declares ‘No More’ to FICO’s Mortgage Scoring Monopoly — Orders Fannie Mae, Freddie Mac to Open Door to VantageScore",
+      "url": "https://www.benzinga.com/news/politics/26/09/61622054/fico-stock-falls-pre-market-after-bill-pulte-declares-no-more-to-ficos-mortgage-scoring-monopoly-orders-fannie-mae-freddie-mac-to-open-door-to-vantagescore",
+      "ts": 1788512264,
+      "tickers": [
+        "FICO",
+        "EFX",
+        "FNMA",
+        "FMCC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.414
+    },
+    {
+      "title": "Mark Zuckerberg Opposes Federal AI Watchdog in Call With Trump: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61620790/mark-zuckerberg-opposes-federal-ai-watchdog-trump-call-report",
+      "ts": 1788496638,
+      "tickers": [
+        "META",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.261
+    },
+    {
       "title": "If You Invested $100 In Caterpillar Stock 20 Years Ago, You Would Have This Much Today",
       "url": "https://www.benzinga.com/news/26/09/61619434/if-you-invested-100-caterpillar-stock-20-years-ago-you-would-have-much-today",
       "ts": 1788475520,
@@ -807,7 +583,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.309
+      "relevance": 0.31
     },
     {
       "title": "If You Invested $1000 In Travelers Companies Stock 15 Years Ago, You Would Have This Much Today",
@@ -982,78 +758,25 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.298
-    },
-    {
-      "title": "OpenAI Says Issue Causing Elevated Errors Across ChatGPT And Codex Has Been Resolved",
-      "url": "https://www.benzinga.com/quote/MSFT",
-      "ts": 1788454886,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.236
-    },
-    {
-      "title": "If You Invested $1000 In Walmart Stock 5 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/09/61610165/if-you-invested-1000-walmart-stock-5-years-ago-you-would-have-much-today",
-      "ts": 1788453929,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.251
-    },
-    {
-      "title": "Snowflake Signals Surging AI Data Cloud Demand; Broadcom Sees Strong Chip Demand Through 2028; Yen Strengthens",
-      "url": "https://www.benzinga.com/Opinion/26/09/61609642/snowflake-signals-surging-ai-data-cloud-demand-broadcom-sees-strong-chip-demand-through-2028-yen-strengthens",
-      "ts": 1788452804,
-      "tickers": [
-        "SPY",
-        "NVDA",
-        "TSLA",
-        "AVGO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.605
-    },
-    {
-      "title": "'Nvidia’s New RTX Spark Laptops Launch In October With Two Different Configs; Nvidia’s N1X Laptop Will Ship In Two Different Configurations For Laptops And Mini PCs' - The Verge",
-      "url": "https://www.benzinga.com/news/26/09/61609188/nvidia-s-new-rtx-spark-laptops-launch-october-two-different-configs-nvidia-s-n1x-laptop-will-ship-tw",
-      "ts": 1788452102,
-      "tickers": [
-        "NVDA",
-        "ARM",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.401
-    },
-    {
-      "title": "What Do Tepper, Tudor See in Boeing That the Market Doesn't?",
-      "url": "https://www.benzinga.com/trading-ideas/technicals/26/09/61607097/tepper-tudor-boeing-stock",
-      "ts": 1788448524,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.364
     }
   ],
   "portfolio_brief": {
     "ABT": {
       "name": "Abbott Laboratories",
       "qarp": "BUY",
-      "consensus": null,
+      "consensus": {
+        "strongBuy": 12,
+        "buy": 13,
+        "hold": 8,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 33,
+        "bullish": 25,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.12,
+        "period": "2026-09-01"
+      },
       "news": null,
       "filings": {
         "latest8k": {
@@ -1068,7 +791,7 @@
         },
         "insider30d": 4
       },
-      "explain": "No analyst-consensus data; our QARP view: BUY."
+      "explain": "33 analysts cover it — 25 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "ZTS": {
       "name": "Zoetis",
@@ -1105,7 +828,19 @@
     "NVDA": {
       "name": "NVIDIA",
       "qarp": "STRONG BUY",
-      "consensus": null,
+      "consensus": {
+        "strongBuy": 24,
+        "buy": 41,
+        "hold": 3,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 69,
+        "bullish": 65,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.28,
+        "period": "2026-09-01"
+      },
       "news": {
         "title": "'Nvidia’s New RTX Spark Laptops Launch In October With Two Different Configs; Nvidia’s N1X Laptop Will Ship In Two Different Configurations For Laptops And Mini PCs' - The Verge",
         "ts": 1788452102,
@@ -1125,7 +860,7 @@
         },
         "insider30d": 5
       },
-      "explain": "No analyst-consensus data; our QARP view: STRONG BUY."
+      "explain": "69 analysts cover it — 65 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "BSX": {
       "name": "Boston Scientific",
@@ -1275,7 +1010,7 @@
           "date": "2026-07-21",
           "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
         },
-        "insider30d": 17
+        "insider30d": 10
       },
       "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
@@ -1295,7 +1030,12 @@
         "score": 0.43,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "ADBE Stock Declines Nearly 3% in Friday Pre-Market: What's Going On?",
+        "ts": 1788515943,
+        "url": "https://www.benzinga.com/markets/tech/26/09/61622557/adbe-stock-declines-nearly-3-in-friday-pre-market-whats-going-on",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1427,7 +1167,7 @@
           "date": "2026-07-28",
           "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm"
         },
-        "insider30d": 1
+        "insider30d": 0
       },
       "explain": "34 analysts cover it — 29 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
@@ -1459,7 +1199,7 @@
           "date": "2026-08-06",
           "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm"
         },
-        "insider30d": 7
+        "insider30d": 6
       },
       "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
@@ -1581,7 +1321,7 @@
           "date": "2026-07-31",
           "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000037/nbix-20260630.htm"
         },
-        "insider30d": 1
+        "insider30d": 2
       },
       "explain": "36 analysts cover it — 31 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1633,7 +1373,12 @@
         "score": 0.97,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "FICO Stock Falls Pre-Market After Bill Pulte Declares ‘No More’ to FICO’s Mortgage Scoring Monopoly — Orders Fannie Mae, Freddie Mac to Open Door to VantageScore",
+        "ts": 1788512264,
+        "url": "https://www.benzinga.com/news/politics/26/09/61622054/fico-stock-falls-pre-market-after-bill-pulte-declares-no-more-to-ficos-mortgage-scoring-monopoly-orders-fannie-mae-freddie-mac-to-open-door-to-vantagescore",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
