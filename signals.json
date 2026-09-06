@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-05",
-  "generated_at": "Sep 5, 9:36am ET",
+  "date": "2026-09-06",
+  "generated_at": "Sep 6, 10:02am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -154,21 +154,15 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Shares of semiconductor and chip companies are trading lower, possibly after Federal Reserve Chairman Warsh's comments on inflation and prices raised rate-hike concerns. The sector may be facing pressure from peer Marvell Technology, as the company pulls back after its FY28 guidance may have failed to meet investor expectations.",
-      "ts": 1787939365,
-      "url": "https://www.benzinga.com/quote/NVTS",
-      "wiim": true
-    },
-    "LULU": {
-      "title": "Lululemon Stock Hits 8-Year Low Days Before New CEO Walks in — Gary Black Points to the 4-Month Mistake",
-      "ts": 1788539150,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61634490/lululemon-stock-hits-8-year-low-days-before-new-ceo-walks-in-gary-black-points-to-the-4-month-mistake",
+      "title": "Foxconn Says Q3 Will Beat Expectations As AI Demand Surges, August Revenue Hits Record",
+      "ts": 1788661936,
+      "url": "https://www.benzinga.com/markets/tech/26/09/61644059/foxconn-q3-results-ai-demand-revenue",
       "wiim": false
     },
-    "RKLB": {
-      "title": "9 Industrials Stocks Whale Activity In Today’s Session",
-      "ts": 1788543313,
-      "url": "https://www.benzinga.com/markets/options/26/09/61636575/9-industrials-stocks-whale-activity-today-s-session",
+    "AVGO": {
+      "title": "Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More",
+      "ts": 1788701492,
+      "url": "https://www.benzinga.com/markets/tech/26/09/61644590/consumer-tech-aug-31-sep-4-nvidia-buys-worlds-largest-open-ai-developer-trump-claims-total-control-on-hormuz-more",
       "wiim": false
     },
     "ADBE": {
@@ -183,10 +177,16 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61636492/sandisk-jumps-10-lululemon-crashes-17-stock-market-today",
       "wiim": false
     },
-    "AVGO": {
-      "title": "Wall Street Rallies as Fed’s Waller Hints at September Rate Hold: Stock Market Today",
-      "ts": 1788457665,
-      "url": "https://www.benzinga.com/markets/market-summary/26/09/61611969/waller-cools-rate-hike-bets-bitcoin-tops-80000-whats-moving-markets-thursday",
+    "LULU": {
+      "title": "Lululemon Stock Hits 8-Year Low Days Before New CEO Walks in — Gary Black Points to the 4-Month Mistake",
+      "ts": 1788539150,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61634490/lululemon-stock-hits-8-year-low-days-before-new-ceo-walks-in-gary-black-points-to-the-4-month-mistake",
+      "wiim": false
+    },
+    "RKLB": {
+      "title": "9 Industrials Stocks Whale Activity In Today’s Session",
+      "ts": 1788543313,
+      "url": "https://www.benzinga.com/markets/options/26/09/61636575/9-industrials-stocks-whale-activity-today-s-session",
       "wiim": false
     }
   },
@@ -455,6 +455,120 @@
   },
   "bz_news": [
     {
+      "title": "Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61644590/consumer-tech-aug-31-sep-4-nvidia-buys-worlds-largest-open-ai-developer-trump-claims-total-control-on-hormuz-more",
+      "ts": 1788701492,
+      "tickers": [
+        "MSFT",
+        "PLTR",
+        "AVGO",
+        "NIO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.462
+    },
+    {
+      "title": "Tim Cook's Apple Exit, Congressman's $1 Million Apple Stock and More: This Week in Appleverse",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61644452/tim-cooks-apple-exit-congressmans-1-million-apple-stock-and-more-this-week-in-appleverse",
+      "ts": 1788692417,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.336
+    },
+    {
+      "title": "AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61644239/ai-adoption-spreads-beyond-tech-as-finance-manufacturing-businesses-race-to-catch-up",
+      "ts": 1788678104,
+      "tickers": [
+        "JPM",
+        "GS",
+        "NVDA",
+        "BAC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.434
+    },
+    {
+      "title": "Foxconn Says Q3 Will Beat Expectations As AI Demand Surges, August Revenue Hits Record",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61644059/foxconn-q3-results-ai-demand-revenue",
+      "ts": 1788661936,
+      "tickers": [
+        "NVDA",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.475
+    },
+    {
+      "title": "Anthropic's $2 Trillion IPO Approaches: The Companies Poised to Benefit",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61643961/anthropics-2-trillion-ipo-approaches-the-companies-poised-to-benefit",
+      "ts": 1788643993,
+      "tickers": [
+        "AMZN",
+        "NVDA",
+        "GOOG",
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.358
+    },
+    {
+      "title": "Michael Dell’s Net Worth Up $110 Billion So Far 2026: Why the Surge May Continue",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61643940/michael-dells-net-worth-is-up-110-billion-in-2026-why-the-surge-may-continue",
+      "ts": 1788640805,
+      "tickers": [
+        "MSFT",
+        "DELL",
+        "AMZN",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.338
+    },
+    {
+      "title": "Venice Token, Near Protocol, Worldcoin Tokens Jump as AI Tailwinds Rise",
+      "url": "https://www.benzinga.com/crypto/26/09/61643806/venice-token-near-protocol-worldcoin-tokens-jump-as-ai-tailwinds-rise",
+      "ts": 1788632417,
+      "tickers": [
+        "NEAR",
+        "VVV",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.378
+    },
+    {
+      "title": "Republican Congressman Bearish on Stocks? $7 Million+ Sold in 2026, Including 28 Recent Moves",
+      "url": "https://www.benzinga.com/news/politics/26/09/61643565/republican-congressman-bearish-on-stocks-7-million-sold-in-2026-including-28-recent-moves",
+      "ts": 1788618971,
+      "tickers": [
+        "PG",
+        "MSFT",
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.444
+    },
+    {
       "title": "Trump Says Tariff-Free Beef From Brazil, Argentina Coming — Also Targets 'Monopoly' in Industry",
       "url": "https://www.benzinga.com/news/politics/26/09/61642939/trump-tariff-free-beef-imports-argentina-brazil",
       "ts": 1788580632,
@@ -613,7 +727,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.505
+      "relevance": 0.506
     },
     {
       "title": "Sensodyne Maker Haleon Leverages Eye-Level Shelf Placement To Outpace Rivals-Report",
@@ -643,7 +757,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.423
+      "relevance": 0.424
     },
     {
       "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
@@ -673,122 +787,22 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.576
+      "relevance": 0.575
     },
     {
-      "title": "Stifel Maintains Hold on Microsoft, Raises Price Target to $530",
-      "url": "https://www.benzinga.com/news/26/09/61635685/stifel-maintains-hold-microsoft-raises-price-target-530",
-      "ts": 1788541508,
+      "title": "FICO Stock Falls Pre-Market After Bill Pulte Declares ‘No More’ to FICO’s Mortgage Scoring Monopoly — Orders Fannie Mae, Freddie Mac to Open Door to VantageScore (UPDATED)",
+      "url": "https://www.benzinga.com/news/politics/26/09/61622054/fico-stock-falls-pre-market-after-bill-pulte-declares-no-more-to-ficos-mortgage-scoring-monopoly-orders-fannie-mae-freddie-mac-to-open-door-to-vantagescore",
+      "ts": 1788512258,
       "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.46
-    },
-    {
-      "title": "Live On CNBC, Bil Baruch Announces Bought Walmart",
-      "url": "https://www.benzinga.com/quote/WMT",
-      "ts": 1788540048,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.316
-    },
-    {
-      "title": "Lululemon Stock Hits 8-Year Low Days Before New CEO Walks in — Gary Black Points to the 4-Month Mistake",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61634490/lululemon-stock-hits-8-year-low-days-before-new-ceo-walks-in-gary-black-points-to-the-4-month-mistake",
-      "ts": 1788539150,
-      "tickers": [
-        "LULU",
-        "NKE"
+        "FICO",
+        "HD",
+        "EFX",
+        "FNMA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.644
-    },
-    {
-      "title": "Reported Earlier: \"Apple Poised To Unveil Most Expensive iPhone Yet, Fuelled By Memory Price Surge; TrendForce Says 20 Per Cent Increase Is “Moderate”, With Memory Costs For 256-Gigabyte iPhone 18 Pro Model Up Nearly 400 Per Cent In A Year\"- SCMP",
-      "url": "https://www.benzinga.com/news/26/09/61634273/reported-earlier-apple-poised-unveil-most-expensive-iphone-yet-fuelled-memory-price-surge-trendforce",
-      "ts": 1788538674,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.338
-    },
-    {
-      "title": "'Trump Expected To Sign A Beef-Related Executive Order On Friday' - Reuters News",
-      "url": "https://www.benzinga.com/news/26/09/61634212/trump-expected-sign-beef-related-executive-order-friday-reuters-news",
-      "ts": 1788538592,
-      "tickers": [
-        "SPY",
-        "TSN",
-        "HRL",
-        "JBS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.23
-    },
-    {
-      "title": "Microsoft Stock: Why Satya Nadella's $44 Million Sale May Not Spook Investors",
-      "url": "https://www.benzinga.com/trading-ideas/insider-trades/26/09/61633915/microsoft-stock-nadella-sale",
-      "ts": 1788538113,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.383
-    },
-    {
-      "title": "Mizuho Maintains Neutral on Intel, Lowers Price Target to $92",
-      "url": "https://www.benzinga.com/news/26/09/61633398/mizuho-maintains-neutral-intel-lowers-price-target-92",
-      "ts": 1788537367,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.465
-    },
-    {
-      "title": "'Anthropic’s In-House Payments Tech Push Could Chip Away at Stripe' - The Information",
-      "url": "https://www.benzinga.com/news/26/09/61632568/anthropic-s-house-payments-tech-push-could-chip-away-stripe-information",
-      "ts": 1788536021,
-      "tickers": [
-        "GOOG",
-        "GOOGL",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.296
-    },
-    {
-      "title": "MARK PARKER Sees Potential Growth And Acquires Nike Stock Options Worth $28K",
-      "url": "https://www.benzinga.com/news/26/09/61631405/mark-parker-sees-potential-growth-and-acquires-nike-stock-options-worth-28k",
-      "ts": 1788534079,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.356
+      "relevance": 0.419
     }
   ],
   "portfolio_brief": {
@@ -841,10 +855,10 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Shares of semiconductor and chip companies are trading lower, possibly after Federal Reserve Chairman Warsh's comments on inflation and prices raised rate-hike concerns. The sector may be facing pressure from peer Marvell Technology, as the company pulls back after its FY28 guidance may have failed to meet investor expectations.",
-        "ts": 1787939365,
-        "url": "https://www.benzinga.com/quote/NVTS",
-        "wiim": true
+        "title": "Foxconn Says Q3 Will Beat Expectations As AI Demand Surges, August Revenue Hits Record",
+        "ts": 1788661936,
+        "url": "https://www.benzinga.com/markets/tech/26/09/61644059/foxconn-q3-results-ai-demand-revenue",
+        "wiim": false
       },
       "filings": {
         "latest8k": {
@@ -1046,7 +1060,7 @@
           "date": "2026-07-21",
           "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
         },
-        "insider30d": 10
+        "insider30d": 1
       },
       "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
@@ -1314,9 +1328,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Wall Street Rallies as Fed’s Waller Hints at September Rate Hold: Stock Market Today",
-        "ts": 1788457665,
-        "url": "https://www.benzinga.com/markets/market-summary/26/09/61611969/waller-cools-rate-hike-bets-bitcoin-tops-80000-whats-moving-markets-thursday",
+        "title": "Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More",
+        "ts": 1788701492,
+        "url": "https://www.benzinga.com/markets/tech/26/09/61644590/consumer-tech-aug-31-sep-4-nvidia-buys-worlds-largest-open-ai-developer-trump-claims-total-control-on-hormuz-more",
         "wiim": false
       },
       "filings": {
