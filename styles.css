@@ -1839,3 +1839,13 @@ table.ed-ledger td { padding: 5px 8px; border-bottom: 1px dotted var(--line-2); 
 .pd-date { font-size: 11.5px; font-weight: 700; margin: 4px 0 2px; color: var(--news-ink); }
 .pd-date i { color: var(--news-ink-2); font-weight: 400; }
 .pd-why { font-size: 12px; color: var(--news-ink-2); line-height: 1.45; }
+
+/* ===== X Pulse column cell (2026-09-07) ===== */
+.xp-cell { display: inline-block; min-width: 76px; text-align: left; }
+.xp-bar { display: flex; height: 6px; border-radius: 4px; overflow: hidden; width: 72px; }
+.xp-bar.xp-quiet { opacity: .5; }
+.xp-b { background: var(--pos); }
+.xp-n { background: var(--line); }
+.xp-r { background: var(--neg); }
+.xp-sub { font-size: 10px; color: var(--ink-3); margin-top: 2px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.xp-ev { font-size: 10.5px; font-weight: 700; color: var(--brass); margin-top: 2px; white-space: nowrap; }
