@@ -191,8 +191,42 @@ function catalystCell(x) {
     const dt = daysToDate(ev.event_date);
     evLine = `<div class="xp-ev">● ${paperDate(ev.event_date)}${dt != null && dt >= 0 ? ` · ${dt === 0 ? "today" : dt + "d"}` : ""}</div>`;
   }
-  if (!bar && !evLine) return `<span class="muted">—</span>`;
+  if (!bar) {
+    // No pulse data yet (uncovered name, or the daily pass hasn't reached it):
+    // never an empty dash — a click fetches the live X read on demand (same
+    // user-initiated, costs-cents pattern as the drawer's Social Pulse).
+    bar = `<button class="xp-go" onclick="event.stopPropagation();fetchPulseInline('${esc(x.ticker)}', this)" title="Tap to read the live X pulse for ${esc(x.ticker)} — real posts, right now">
+      <svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path d="M1 8h3l2-5 4 10 2-5h3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>pulse</button>`;
+  }
   return `<div class="xp-cell"${hover ? ` title="${hover}"` : ""}>${bar}${evLine}</div>`;
+}
+
+// On-demand X pulse for any name (2026-09-07, user: "the other companies — don't leave
+// them empty... a possibility to click on them"). One click = one live worker read,
+// attached to the row for the rest of the session.
+async function fetchPulseInline(tk, btn) {
+  btn.disabled = true;
+  btn.innerHTML = "reading…";
+  try {
+    const row = (DATA.universe || []).find((u) => u.ticker === tk)
+             || (DATA.portfolio || []).find((p) => p.ticker === tk) || {};
+    const res = await fetch(GROK_PROXY, {
+      method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ symbol: tk, name: row.name || tk }),
+    });
+    const j = await res.json();
+    const p = j.pulse;
+    if (!p || !p.sentiment_label) throw new Error("no pulse");
+    row.pulse = { label: p.sentiment_label, score: p.sentiment_score,
+                  b: p.bullish_n || 0, n: p.neutral_n || 0, r: p.bearish_n || 0,
+                  buzz: p.buzz || "flat", posts: p.posts_24h, theme: p.theme,
+                  as_of: "live · just now" };
+    renderUniverseTable();
+  } catch (e) {
+    btn.disabled = false;
+    btn.innerHTML = "retry";
+    btn.title = "The X read didn't come back — tap to retry";
+  }
 }
 
 /* ---------- SVG donut ---------- */
@@ -560,7 +594,7 @@ function renderUniverseControls() {
   Object.entries(secCounts).sort((a, b) => b[1] - a[1])
     .forEach(([g, n]) => secSel.add(new Option(`${g} (${n})`, g)));
   if (!renderUniverseControls._wired) {
-    ["u-search", "u-verdict", "u-sector"].forEach((id) =>
+    ["u-search", "u-verdict", "u-sector", "u-pulse"].forEach((id) =>
       document.getElementById(id).addEventListener("input", renderUniverseTable));
     renderUniverseControls._wired = true;
   }
@@ -601,10 +635,23 @@ function renderUniverseTable() {
   const q = document.getElementById("u-search").value.trim().toLowerCase();
   const fv = document.getElementById("u-verdict").value;
   const fs = document.getElementById("u-sector").value;
+  const fp = (document.getElementById("u-pulse") || {}).value || "";
+  const pulseMatch = (x) => {
+    if (!fp) return true;
+    if (fp === "event") return !!openLedgerEvent(x.ticker);
+    const pu = x.pulse;
+    if (!pu) return false;
+    const lbl = pu.label || "";
+    if (fp === "bull") return lbl === "Bullish" || lbl === "Leaning bullish";
+    if (fp === "bear") return lbl === "Bearish" || lbl === "Leaning bearish";
+    if (fp === "contested") return lbl === "Contested";
+    if (fp === "active") return pu.buzz === "rising" || pu.buzz === "surging";
+    return true;
+  };
   const list = uList();
   let rows = list.filter((x) =>
     (!q || x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q)) &&
-    (!fv || x.verdict === fv) && (!fs || sectorGroup(x.sector) === fs));
+    (!fv || x.verdict === fv) && (!fs || sectorGroup(x.sector) === fs) && pulseMatch(x));
 
   const col = U_COLS.find((c) => c.key === uSort.key);
   const val = col.sortVal || ((x) => x[uSort.key]);
