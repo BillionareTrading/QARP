@@ -888,7 +888,7 @@ function openDrawer(ticker) {
     ${x ? `<h4>Quality dimensions</h4><div class="dims">${dims.map(([l, v, m]) => `
       <div class="dim"><div class="dl">${l}</div><div class="dv">${has(v) ? v : "—"}<span class="muted" style="font-size:12px;font-weight:500"> /${m}</span></div>
       <div class="dbar"><div class="dfill" style="width:${has(v) ? (v / m * 100).toFixed(0) : 0}%"></div></div></div>`).join("")}</div>` : ""}
-    ${catalystCardHtml(d.catalyst || (p && p.catalyst))}
+    ${catalystCardHtml(d.catalyst || (p && p.catalyst), ticker)}
     ${kv.length ? `<div class="kv">${kv.map(([k, v]) => `<span class="k">${k}</span><span class="vv">${v}</span>`).join("")}</div>` : ""}
     ${d.sec_fin ? `<h4>Latest filed quarter <span class="muted" style="font-weight:400">(SEC · as-reported)</span></h4>
       <div class="drawer-fin">
@@ -916,13 +916,22 @@ function openDrawer(ticker) {
 // Renders the fields the daily Grok pass already ships: dated event + countdown, the
 // mechanism, the kill-case, next print, fresh-72h line, confidence and the X-verified
 // stamp. Honest NONE stays one quiet line — no empty card theater.
-function catalystCardHtml(c) {
+function catalystCardHtml(c, tk) {
   if (!c || !c.label) return "";
+  // Weekend/staleness heal: when the live entry has no event (the Grok read went stale
+  // or flapped to NONE) but the persisted ledger still holds an OPEN dated event for
+  // this name, render the card from the ledger — same contract as the Docket.
+  if (!c.event && tk) {
+    const led = (DATA.docket || []).find((r) => r.ticker === tk && r.status === "open" && r.event_date);
+    if (led) c = { ...c, label: led.label || c.label, event: led.event, event_date: led.event_date,
+                   event_type: led.event_type, why: led.why, risk: led.risk,
+                   confidence: led.confidence, as_of: led.first_flagged || c.as_of, _ledger: true };
+  }
   const pill = `<span class="cat cat-${String(c.label || "none").toLowerCase()}">${esc(c.label)}</span>`;
   const kvBits = `
       ${c.next_print ? `<span class="k">Next print</span><span class="vv">${esc(c.next_print)}</span>` : ""}
       ${c.news_72h ? `<span class="k">Fresh 72h</span><span class="vv ccd-news">${esc(c.news_72h)}</span>` : ""}
-      ${c.as_of ? `<span class="k">As of</span><span class="vv">${esc(String(c.as_of).slice(0, 10))} · X + web verified</span>` : ""}`;
+      ${c.as_of ? `<span class="k">As of</span><span class="vv">${esc(String(c.as_of).slice(0, 10))} · ${c._ledger ? "first flagged, event ledger" : "X + web verified"}</span>` : ""}`;
   if (!c.event) {
     return `<h4>Catalyst Desk</h4><div class="ccd">
       <div class="ccd-top">${pill}<span class="ccd-ev muted">No dated catalyst on the tape</span></div>
