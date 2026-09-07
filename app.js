@@ -856,7 +856,7 @@ function openDrawer(ticker) {
   }
   if (has(d.first_date)) kv.push(["Scored / re-scored", `${d.first_date} <span class="muted">(current call opened)</span>`]);
   if (has(d.confidence)) kv.push(["Confidence", d.confidence]);
-  if (d.catalyst) kv.push(["Catalyst (preview)", `<b>${d.catalyst.label}</b> — ${esc(d.catalyst.note || "")}`]);
+  // catalyst renders as its own card below the dims (2026-09-07) — no kv line any more
   if (has(d.insider)) kv.push(["Insider (6-mo Form 4)", d.insider]);
   if (has(d.buzz)) kv.push(["Buzz", `${d.buzz} — ${d.buzz_signal || ""}`]);
   if (p) {
@@ -888,6 +888,7 @@ function openDrawer(ticker) {
     ${x ? `<h4>Quality dimensions</h4><div class="dims">${dims.map(([l, v, m]) => `
       <div class="dim"><div class="dl">${l}</div><div class="dv">${has(v) ? v : "—"}<span class="muted" style="font-size:12px;font-weight:500"> /${m}</span></div>
       <div class="dbar"><div class="dfill" style="width:${has(v) ? (v / m * 100).toFixed(0) : 0}%"></div></div></div>`).join("")}</div>` : ""}
+    ${catalystCardHtml(d.catalyst || (p && p.catalyst))}
     ${kv.length ? `<div class="kv">${kv.map(([k, v]) => `<span class="k">${k}</span><span class="vv">${v}</span>`).join("")}</div>` : ""}
     ${d.sec_fin ? `<h4>Latest filed quarter <span class="muted" style="font-weight:400">(SEC · as-reported)</span></h4>
       <div class="drawer-fin">
@@ -911,6 +912,34 @@ function openDrawer(ticker) {
   document.querySelector(".drawer-close").addEventListener("click", closeDrawer);
   document.querySelector(".drawer-bg").addEventListener("click", closeDrawer);
 }
+// Full Catalyst Desk card for the drawer (2026-09-07, replaces the one-line preview).
+// Renders the fields the daily Grok pass already ships: dated event + countdown, the
+// mechanism, the kill-case, next print, fresh-72h line, confidence and the X-verified
+// stamp. Honest NONE stays one quiet line — no empty card theater.
+function catalystCardHtml(c) {
+  if (!c || !c.label) return "";
+  const pill = `<span class="cat cat-${String(c.label || "none").toLowerCase()}">${esc(c.label)}</span>`;
+  const kvBits = `
+      ${c.next_print ? `<span class="k">Next print</span><span class="vv">${esc(c.next_print)}</span>` : ""}
+      ${c.news_72h ? `<span class="k">Fresh 72h</span><span class="vv ccd-news">${esc(c.news_72h)}</span>` : ""}
+      ${c.as_of ? `<span class="k">As of</span><span class="vv">${esc(String(c.as_of).slice(0, 10))} · X + web verified</span>` : ""}`;
+  if (!c.event) {
+    return `<h4>Catalyst Desk</h4><div class="ccd">
+      <div class="ccd-top">${pill}<span class="ccd-ev muted">No dated catalyst on the tape</span></div>
+      <div class="ccd-kv kv">${kvBits}</div></div>`;
+  }
+  const dt = daysToDate(c.event_date);
+  const when = c.event_date
+    ? `<span class="ccd-date">${esc(c.event_date)}</span>${dt != null && dt >= 0 ? `<span class="ccd-count">${dt === 0 ? "today" : `in ${dt} day${dt === 1 ? "" : "s"}`}</span>` : ""}`
+    : (c.window ? `<span class="ccd-date">${esc(c.window)}</span>` : "");
+  return `<h4>Catalyst Desk</h4><div class="ccd">
+    <div class="ccd-top">${pill}<span class="ccd-ev">${esc(c.event)}</span></div>
+    <div class="ccd-when">${when}${c.confidence ? `<span class="ccd-conf">confidence ${esc(c.confidence)}</span>` : ""}</div>
+    ${c.why ? `<div class="ccd-lbl">Why it re-rates</div><div class="ccd-txt">${esc(c.why)}</div>` : ""}
+    ${c.risk ? `<div class="ccd-lbl">What kills it</div><div class="ccd-txt ccd-risk">${esc(c.risk)}</div>` : ""}
+    <div class="ccd-kv kv">${kvBits}</div></div>`;
+}
+
 function closeDrawer() { document.getElementById("drawer").hidden = true; }
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
 
@@ -1338,6 +1367,44 @@ function renderDaily() {
   loadDailyBrief();    // original lead column + briefs from daily_brief.json (NO external links)
   renderSectorSignals(); // sector-level event-driven signals (uses cached SIGNALS)
   renderLeadMore();    // fills the space under the lead with more market news (catalysts + risk)
+  renderPaperDocket(); // dated catalysts ahead (persisted event ledger, rail box)
+}
+
+// The Docket — dated catalysts ahead, from the persisted event ledger (DATA.docket).
+// Events are frozen at first sighting and survive Grok's day-to-day SET/NONE flapping;
+// a row leaves only when its date passes (then shows struck-through for a few days).
+function daysToDate(iso) {
+  if (!iso) return null;
+  return Math.round((new Date(iso + "T12:00:00") - new Date(new Date().toDateString())) / 86400000);
+}
+function paperDate(iso) {
+  if (!iso) return "";
+  return new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+function renderPaperDocket() {
+  const el = document.getElementById("paper-docket");
+  if (!el) return;
+  const rows = DATA.docket || [];
+  const open = rows.filter((r) => r.status === "open" && r.event_date).slice(0, 6);
+  const done = rows.filter((r) => r.status !== "open").slice(-2);
+  if (!open.length && !done.length) { el.hidden = true; return; }
+  el.hidden = false;
+  const tag = (r) => (r.event_type === "macro" ? "MACRO" : (r.label || "SET"));
+  el.innerHTML = `<div class="side-head">The Docket <span class="side-sub">— dated catalysts ahead</span></div>`
+    + open.map((r) => {
+      const dt = daysToDate(r.event_date);
+      return `<div class="pd-row" data-ticker="${esc(r.ticker)}">
+        <div class="pd-top"><span class="pd-name">${esc(r.ticker)} · ${esc(r.event || "")}</span><span class="pd-tag">${tag(r)}</span></div>
+        <div class="pd-date">${paperDate(r.event_date)}${dt != null && dt >= 0 ? ` <i>— ${dt === 0 ? "today" : `in ${dt} day${dt === 1 ? "" : "s"}`}</i>` : ""}</div>
+        ${r.why ? `<div class="pd-why">${esc(r.why)}</div>` : ""}
+      </div>`;
+    }).join("")
+    + done.map((r) => `<div class="pd-row">
+        <div class="pd-top"><span class="pd-name pd-done">${esc(r.ticker)} · ${esc(r.event || "")}</span><span class="pd-tag">RESOLVED</span></div>
+        <div class="pd-date"><i>${paperDate(r.event_date)} — passed${r.move_since_flag_pct != null ? `, ${r.move_since_flag_pct >= 0 ? "+" : ""}${r.move_since_flag_pct}% since flag` : ""}</i></div>
+      </div>`).join("");
+  el.querySelectorAll(".pd-row[data-ticker]").forEach((rw) =>
+    rw.addEventListener("click", () => openDrawer(rw.dataset.ticker)));
 }
 
 // "The Earnings Slate" + "Across the Market" (elevated 2026-08-12, user: the template

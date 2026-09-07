@@ -1810,3 +1810,32 @@ table.ed-ledger td { padding: 5px 8px; border-bottom: 1px dotted var(--line-2); 
   background: transparent; color: var(--ink-2); font-size: 14.5px; cursor: pointer;
 }
 #owner-gate .og-err { margin: 10px 0 0; color: #a33; font-size: 13px; font-weight: 600; }
+
+/* ===== Catalyst Desk card (drawer, 2026-09-07) ===== */
+.ccd { background: var(--surface-2); border-radius: 10px; padding: 13px 14px; }
+.ccd-top { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.ccd-ev { font-size: 14px; font-weight: 700; }
+.ccd-when { display: flex; align-items: baseline; gap: 8px; margin-top: 7px; }
+.ccd-date { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.ccd-count { font-size: 11.5px; font-weight: 700; color: var(--brass); }
+.ccd-conf { font-size: 11px; color: var(--ink-3); margin-left: auto; }
+.ccd-lbl { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-3); font-weight: 700; margin: 10px 0 3px; }
+.ccd-lbl:first-of-type { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 11px; }
+.ccd-txt { font-size: 13px; line-height: 1.55; color: var(--ink); }
+.ccd-txt.ccd-risk { color: var(--ink-2); }
+.ccd .ccd-kv { margin-top: 11px; padding-top: 9px; border-top: 1px solid var(--line); font-size: 12.5px; }
+.ccd .ccd-kv .vv { font-weight: 600; }
+.ccd .ccd-kv .ccd-news { font-weight: 500; text-align: right; }
+
+/* ===== The Docket — Times rail (2026-09-07) ===== */
+.paper-docket { font-family: "PT Serif", Georgia, serif; }
+.pd-row { border-bottom: 1px solid var(--news-rule); padding: 10px 0; }
+.pd-row:last-child { border-bottom: 0; }
+.pd-row[data-ticker] { cursor: pointer; }
+.pd-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.pd-name { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 14px; color: var(--news-ink); min-width: 0; }
+.pd-name.pd-done { color: var(--news-ink-2); text-decoration: line-through; }
+.pd-tag { font-size: 9px; font-weight: 700; color: var(--news-ink-2); border: 1px solid var(--news-rule); padding: 1px 5px; white-space: nowrap; flex: none; }
+.pd-date { font-size: 11.5px; font-weight: 700; margin: 4px 0 2px; color: var(--news-ink); }
+.pd-date i { color: var(--news-ink-2); font-weight: 400; }
+.pd-why { font-size: 12px; color: var(--news-ink-2); line-height: 1.45; }
