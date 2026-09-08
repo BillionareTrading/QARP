@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-07",
-  "generated_at": "Sep 7, 7:03pm ET",
+  "date": "2026-09-08",
+  "generated_at": "Sep 8, 8:05am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -153,16 +153,22 @@
       "url": "https://www.benzinga.com/quote/DDOG",
       "wiim": true
     },
+    "NVS": {
+      "title": "Novartis, Ionis Pharmaceuticals And Other Big Stocks Moving Lower In Tuesday’s Pre-Market Session",
+      "ts": 1788868874,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61654808/novartis-ionis-pharmaceuticals-and-other-big-stocks-moving-lower-in-tuesdays-pre-market-session",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "5 Stock Picks Last Week From Wall Street's Most Accurate Analysts",
+      "ts": 1788861022,
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/61651907/5-stock-picks-last-week-from-wall-streets-most-accurate-analysts-37",
+      "wiim": false
+    },
     "NVDA": {
       "title": "Foxconn Says Q3 Will Beat Expectations As AI Demand Surges, August Revenue Hits Record",
       "ts": 1788661936,
       "url": "https://www.benzinga.com/markets/tech/26/09/61644059/foxconn-q3-results-ai-demand-revenue",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More",
-      "ts": 1788701492,
-      "url": "https://www.benzinga.com/markets/tech/26/09/61644590/consumer-tech-aug-31-sep-4-nvidia-buys-worlds-largest-open-ai-developer-trump-claims-total-control-on-hormuz-more",
       "wiim": false
     },
     "ADBE": {
@@ -172,39 +178,13 @@
       "wiim": false
     },
     "EFX": {
-      "title": "SanDisk Jumps 10%, Lululemon Crashes 17%: Stock Market Today",
-      "ts": 1788543151,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61636492/sandisk-jumps-10-lululemon-crashes-17-stock-market-today",
-      "wiim": false
-    },
-    "LULU": {
-      "title": "Lululemon Stock Hits 8-Year Low Days Before New CEO Walks in — Gary Black Points to the 4-Month Mistake",
-      "ts": 1788539150,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61634490/lululemon-stock-hits-8-year-low-days-before-new-ceo-walks-in-gary-black-points-to-the-4-month-mistake",
-      "wiim": false
-    },
-    "RKLB": {
-      "title": "9 Industrials Stocks Whale Activity In Today’s Session",
-      "ts": 1788543313,
-      "url": "https://www.benzinga.com/markets/options/26/09/61636575/9-industrials-stocks-whale-activity-today-s-session",
+      "title": "FICO Stock Falls Pre-Market After Bill Pulte Declares ‘No More’ to FICO’s Mortgage Scoring Monopoly — Orders Fannie Mae, Freddie Mac to Open Door to VantageScore (UPDATED)",
+      "ts": 1788512258,
+      "url": "https://www.benzinga.com/news/politics/26/09/61622054/fico-stock-falls-pre-market-after-bill-pulte-declares-no-more-to-ficos-mortgage-scoring-monopoly-orders-fannie-mae-freddie-mac-to-open-door-to-vantagescore",
       "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-08-31",
-      "ticker": "CRM",
-      "firm": "Argus Research",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$300",
-      "price": 259.23,
-      "upside": 15.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-09-01",
       "ticker": "CSCO",
@@ -386,9 +366,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-09-08",
+      "ticker": "AAPL",
+      "firm": "Needham",
+      "action": "Reiterates",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "",
+      "price": 319.97,
+      "upside": null,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "AAPL": {
+      "date": "2026-09-08",
+      "firm": "Needham",
+      "action": "Reiterates",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "",
+      "upside": null
+    },
     "MRK": {
       "date": "2026-09-04",
       "firm": "Wells Fargo",
@@ -425,15 +428,6 @@
       "pt": "$320",
       "upside": 16.3
     },
-    "AAPL": {
-      "date": "2026-09-02",
-      "firm": "Morgan Stanley",
-      "action": "Reiterates",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$360",
-      "upside": 12.5
-    },
     "CSCO": {
       "date": "2026-09-01",
       "firm": "Deutsche Bank",
@@ -454,6 +448,264 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Johnson & Johnson To Present Data Across Its Neuropsychiatry Portfolio at 2026 Psych Congress Annual Meeting",
+      "url": "https://www.benzinga.com/news/26/09/61654908/johnson-johnson-present-data-across-its-neuropsychiatry-portfolio-2026-psych-congress-annual-meeting",
+      "ts": 1788868994,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.413
+    },
+    {
+      "title": "Novartis, Ionis Pharmaceuticals And Other Big Stocks Moving Lower In Tuesday’s Pre-Market Session",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61654808/novartis-ionis-pharmaceuticals-and-other-big-stocks-moving-lower-in-tuesdays-pre-market-session",
+      "ts": 1788868874,
+      "tickers": [
+        "BIDU",
+        "SGML",
+        "AMGN",
+        "NVS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.547
+    },
+    {
+      "title": "Needham Reiterates Hold on Appleto Hold",
+      "url": "https://www.benzinga.com/news/26/09/61653716/needham-reiterates-hold-appleto-hold",
+      "ts": 1788866010,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.479
+    },
+    {
+      "title": "Cantor Fitzgerald Reiterates Neutral on Amgen, Maintains $400 Price Target",
+      "url": "https://www.benzinga.com/news/26/09/61653121/cantor-fitzgerald-reiterates-neutral-amgen-maintains-400-price-target",
+      "ts": 1788865102,
+      "tickers": [
+        "AMGN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.467
+    },
+    {
+      "title": "Top Economist Slams Trump’s Venezuela Oil Deal ‘Theft’ — ‘Toppled Their Leader’ and ‘Had Him Sign Over Billions’",
+      "url": "https://www.benzinga.com/news/politics/26/09/61653110/top-economist-slams-trumps-venezuela-oil-deal-theft-toppled-their-leader-and-had-him-sign-over-billions",
+      "ts": 1788865088,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.175
+    },
+    {
+      "title": "Box CEO Aaron Levie Says 'Best Opportunities' In AI are Products That are 'Barely Only Possible' Today",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61652639/box-ceo-aaron-levie-says-best-opportunities-in-ai-are-products-that-are-barely-only-possible-today",
+      "ts": 1788863098,
+      "tickers": [
+        "BOX",
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.405
+    },
+    {
+      "title": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/09/61651958/inquiry-apple-s-competitor-dynamics-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1788861509,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.404
+    },
+    {
+      "title": "Performance Comparison: Microsoft And Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/09/61651957/performance-comparison-microsoft-and-competitors-software-industry",
+      "ts": 1788861504,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.333
+    },
+    {
+      "title": "5 Stock Picks Last Week From Wall Street's Most Accurate Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/61651907/5-stock-picks-last-week-from-wall-streets-most-accurate-analysts-37",
+      "ts": 1788861022,
+      "tickers": [
+        "INTC",
+        "AVGO",
+        "DOCU",
+        "AMBA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.382
+    },
+    {
+      "title": "Intel Hits 1 Million-Wafer Milestone With ASML’s Next-Gen Chip Technology",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61651774/intel-hits-1-million-wafer-milestone-with-asmls-next-gen-chip-technology",
+      "ts": 1788860387,
+      "tickers": [
+        "INTC",
+        "ASML",
+        "SOXX",
+        "FEPI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.456
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow Futures Fall as Oil Tops $99 Despite Trump’s Price Drop Prediction — ASML, NVS, CASY in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61651732/stock-market-today-sp-500-dow-futures-fall-as-oil-tops-99-despite-trumps-price-drop-prediction-asml-nvs-casy-in-focus",
+      "ts": 1788859954,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "AAPL",
+        "TSM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.503
+    },
+    {
+      "title": "Apple's 'Surprise and Shine' Launch: From iPhone 18 Pro to the First Foldable iPhone and Next-Gen Apple Watch, Here's What to Expect",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61651680/apples-surprise-and-shine-launch-from-iphone-18-pro-to-the-first-foldable-iphone-and-next-gen-apple-watch-heres-what-to-expect",
+      "ts": 1788859568,
+      "tickers": [
+        "AAPL",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.261
+    },
+    {
+      "title": "Canada Claps Back at Trump With Retaliatory Tariffs on More Than $20 Billion of US Goods, Hitting Steel, Milk and More",
+      "url": "https://www.benzinga.com/news/macro-notification/26/09/61651457/canada-claps-back-at-trump-with-retaliatory-tariffs-on-more-than-20-billion-of-us-goods-hitting-steel-milk-and-more",
+      "ts": 1788858376,
+      "tickers": [
+        "WMT",
+        "DE",
+        "CAT",
+        "TGT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.212
+    },
+    {
+      "title": "Apple’s First Foldable iPhone Could Be Huge—but Should You Be an Early Buyer?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61651228/apples-first-foldable-iphone-could-be-huge-but-should-you-be-an-early-buyer",
+      "ts": 1788856050,
+      "tickers": [
+        "AAPL",
+        "TSM",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.224
+    },
+    {
+      "title": "Intel Foundry And ASML Highlighted Continued Progress In Bringing High Numerical Aperture Extreme Ultraviolet  Lithography Into Production And Advancing The Technologies That Will Shape Its Future Adoption",
+      "url": "https://www.benzinga.com/quote/INTC",
+      "ts": 1788854467,
+      "tickers": [
+        "INTC",
+        "ASML"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.439
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61650780/stock-market-will-sp-500-open-up-or-down-today-32",
+      "ts": 1788853497,
+      "tickers": [
+        "$POL",
+        "AAPL",
+        "GME",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "NTSB Chair Calls Amazon ‘Prime Air’ Crash Scene ‘Utter Devastation,’ Says Boeing 767 Traveled 1,300 Feet Beyond Runway",
+      "url": "https://www.benzinga.com/news/travel/26/09/61650660/ntsb-chair-calls-amazon-prime-air-crash-scene-utter-devastation-says-boeing-767-traveled-1300-feet-beyond-runway",
+      "ts": 1788852253,
+      "tickers": [
+        "AMZN",
+        "BA",
+        "TM",
+        "F"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.198
+    },
+    {
+      "title": "We Can’t Allow a Handful of Greedy People to Play God’: Bernie Sanders Takes Aim at Big Tech Billionaires Over AI Power",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61649902/bernie-sanders-big-tech-billionaires-ai-power-greedy-people-play-god",
+      "ts": 1788840021,
+      "tickers": [
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.282
+    },
+    {
+      "title": "Nvidia's 3-Year-Old H100 Chip Is Still Getting the Market to Pay Up, Jensen Huang Says Compute Is 'Fungible, Durable and Highly Rentable'",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61649815/nvidia-h100-3-year-old-chip-jensen-huang-compute-fungible-durable-rentable",
+      "ts": 1788835441,
+      "tickers": [
+        "NVDA",
+        "APO",
+        "GS",
+        "BLK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.467
+    },
     {
       "title": "Dollar-Yen Falls To Seven-Month Lows: Is the Carry Trade Now Broken?",
       "url": "https://www.benzinga.com/markets/forex/26/09/61648997/dollar-yen-7-month-low-carry-trade-broken",
@@ -535,268 +787,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.277
-    },
-    {
-      "title": "OpenAI, Anthropic IPOs Could Spark a Selloff in These Struggling Stocks — IBM, Tesla, AppLovin Among Names at Risk",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61647784/openai-anthropic-ipos-could-spark-a-selloff-in-these-struggling-stocks-ibm-tesla-applovin-among-names-at-risk",
-      "ts": 1788785378,
-      "tickers": [
-        "TSLA",
-        "MCD",
-        "FSLR",
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.404
-    },
-    {
-      "title": "Exclusive: Coursera, Microsoft and Steve Hanke on the Future of Jobs — AI Could Be a ‘Net Job Creator’",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61647374/exclusive-coursera-microsoft-and-steve-hanke-on-the-future-of-jobs-ai-could-be-a-net-job-creator",
-      "ts": 1788777703,
-      "tickers": [
-        "COUR",
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.378
-    },
-    {
-      "title": "Evaluating Apple Against Peers In Technology Hardware, Storage &amp; Peripherals Industry",
-      "url": "https://www.benzinga.com/news/26/09/61647096/evaluating-apple-against-peers-technology-hardware-storage-amp-peripherals-industry",
-      "ts": 1788775114,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.366
-    },
-    {
-      "title": "Industry Comparison: Evaluating Microsoft Against Competitors In Software Industry",
-      "url": "https://www.benzinga.com/news/26/09/61647094/industry-comparison-evaluating-microsoft-against-competitors-software-industry",
-      "ts": 1788775110,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.32
-    },
-    {
-      "title": "The College Degree Was Supposed to Be the Advantage. The Job Market Is Telling a Different Story",
-      "url": "https://www.benzinga.com/markets/macro-economic-events/26/09/61646676/us-job-market-education-college-graduates-non-degree-workers",
-      "ts": 1788770601,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.215
-    },
-    {
-      "title": "Is the Stock Market Open on Labor Day 2026? Here's What's Open and What's Closed",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61646501/is-stock-market-open-today-labor-day-2026-september-7",
-      "ts": 1788767268,
-      "tickers": [
-        "SPY",
-        "MCD",
-        "QQQ",
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.365
-    },
-    {
-      "title": "Kevin O'Leary Says Entrepreneurs Must Do One Thing to Survive: Listen to the Market",
-      "url": "https://www.benzinga.com/personal-finance/financial-advisors/26/09/61646218/kevin-oleary-warns-entrepreneurs-if-you-cant-pivot-you-will-fail",
-      "ts": 1788764143,
-      "tickers": [
-        "MSFT",
-        "COIN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.262
-    },
-    {
-      "title": "Prime Air Boeing 767 Crashes While Landing at Miami Airport, Killing 5: Amazon Says 'Heartbroken' by Accident",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61645587/prime-air-boeing-767-crash-miami-airport-5-killed-amazon-heartbroken-accident",
-      "ts": 1788748771,
-      "tickers": [
-        "AMZN",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.21
-    },
-    {
-      "title": "Trump Says He's Made 'Hundreds of Billions' on Stocks, But Not for Himself: 'I Do This for Our Country'",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61645526/trump-intel-stock-trade-billions-made-for-usa",
-      "ts": 1788746557,
-      "tickers": [
-        "INTC",
-        "MU",
-        "DELL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.257
-    },
-    {
-      "title": "Salesforce Stock Has Surged as AI and Anthropic Bets Pay Off, But Technical Risks Remain",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61644995/salesforce-stock-has-surged-as-ai-and-anthropic-bets-pay-off-but-technical-risks-remain",
-      "ts": 1788726026,
-      "tickers": [
-        "MSFT",
-        "NVDA",
-        "CRM",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.393
-    },
-    {
-      "title": "Joby and Archer Aviation Are Falling Just as Air Taxis Near Reality",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61644983/why-joby-and-archer-aviation-stocks-are-falling-just-as-air-taxis-near-reality",
-      "ts": 1788725409,
-      "tickers": [
-        "JOBY",
-        "ACHR",
-        "BA",
-        "TM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.275
-    },
-    {
-      "title": "America's Housing Market Is Going K-Shaped — AI Millionaires Are Buying While Everyone Else Sits Out",
-      "url": "https://www.benzinga.com/real-estate/26/09/61644895/k-shaped-housing-market-wealthy-buyers",
-      "ts": 1788721302,
-      "tickers": [
-        "HD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.301
-    },
-    {
-      "title": "Jensen Huang's Net Worth Up $36 Billion as Nvidia Stock Eyes Surge to Record High",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61644761/jensen-huang-net-worth-is-up-36-billion-as-nvidia-stock-eyes-a-surge-to-record-high",
-      "ts": 1788713680,
-      "tickers": [
-        "NVDA",
-        "INTC",
-        "NBIS",
-        "CRWV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.513
-    },
-    {
-      "title": "Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61644590/consumer-tech-aug-31-sep-4-nvidia-buys-worlds-largest-open-ai-developer-trump-claims-total-control-on-hormuz-more",
-      "ts": 1788701492,
-      "tickers": [
-        "MSFT",
-        "PLTR",
-        "AVGO",
-        "NIO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.462
-    },
-    {
-      "title": "Tim Cook's Apple Exit, Congressman's $1 Million Apple Stock and More: This Week in Appleverse",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61644452/tim-cooks-apple-exit-congressmans-1-million-apple-stock-and-more-this-week-in-appleverse",
-      "ts": 1788692417,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.336
-    },
-    {
-      "title": "AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61644239/ai-adoption-spreads-beyond-tech-as-finance-manufacturing-businesses-race-to-catch-up",
-      "ts": 1788678104,
-      "tickers": [
-        "JPM",
-        "GS",
-        "NVDA",
-        "BAC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.434
-    },
-    {
-      "title": "Foxconn Says Q3 Will Beat Expectations As AI Demand Surges, August Revenue Hits Record",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61644059/foxconn-q3-results-ai-demand-revenue",
-      "ts": 1788661936,
-      "tickers": [
-        "NVDA",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.475
-    },
-    {
-      "title": "Anthropic's $2 Trillion IPO Approaches: The Companies Poised to Benefit",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61643961/anthropics-2-trillion-ipo-approaches-the-companies-poised-to-benefit",
-      "ts": 1788643993,
-      "tickers": [
-        "AMZN",
-        "NVDA",
-        "GOOG",
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.358
-    },
-    {
-      "title": "FICO Stock Falls Pre-Market After Bill Pulte Declares ‘No More’ to FICO’s Mortgage Scoring Monopoly — Orders Fannie Mae, Freddie Mac to Open Door to VantageScore (UPDATED)",
-      "url": "https://www.benzinga.com/news/politics/26/09/61622054/fico-stock-falls-pre-market-after-bill-pulte-declares-no-more-to-ficos-mortgage-scoring-monopoly-orders-fannie-mae-freddie-mac-to-open-door-to-vantagescore",
-      "ts": 1788512258,
-      "tickers": [
-        "FICO",
-        "HD",
-        "EFX",
-        "FNMA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.418
     }
   ],
   "portfolio_brief": {
@@ -921,8 +911,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-08-26",
-          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000056/bsx-20260826.htm"
+          "date": "2026-09-08",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000059/bsx-20260907.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -973,12 +963,7 @@
         "score": 1.08,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "9 Industrials Stocks Whale Activity In Today’s Session",
-        "ts": 1788543313,
-        "url": "https://www.benzinga.com/markets/options/26/09/61636575/9-industrials-stocks-whale-activity-today-s-session",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1167,12 +1152,7 @@
         "score": -0.15,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Lululemon Stock Hits 8-Year Low Days Before New CEO Walks in — Gary Black Points to the 4-Month Mistake",
-        "ts": 1788539150,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61634490/lululemon-stock-hits-8-year-low-days-before-new-ceo-walks-in-gary-black-points-to-the-4-month-mistake",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1297,7 +1277,12 @@
         "score": 0.53,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Novartis, Ionis Pharmaceuticals And Other Big Stocks Moving Lower In Tuesday’s Pre-Market Session",
+        "ts": 1788868874,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61654808/novartis-ionis-pharmaceuticals-and-other-big-stocks-moving-lower-in-tuesdays-pre-market-session",
+        "wiim": false
+      },
       "filings": {
         "latest8k": null,
         "periodic": null,
@@ -1322,9 +1307,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More",
-        "ts": 1788701492,
-        "url": "https://www.benzinga.com/markets/tech/26/09/61644590/consumer-tech-aug-31-sep-4-nvidia-buys-worlds-largest-open-ai-developer-trump-claims-total-control-on-hormuz-more",
+        "title": "5 Stock Picks Last Week From Wall Street's Most Accurate Analysts",
+        "ts": 1788861022,
+        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/61651907/5-stock-picks-last-week-from-wall-streets-most-accurate-analysts-37",
         "wiim": false
       },
       "filings": {
@@ -1423,9 +1408,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "SanDisk Jumps 10%, Lululemon Crashes 17%: Stock Market Today",
-        "ts": 1788543151,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61636492/sandisk-jumps-10-lululemon-crashes-17-stock-market-today",
+        "title": "FICO Stock Falls Pre-Market After Bill Pulte Declares ‘No More’ to FICO’s Mortgage Scoring Monopoly — Orders Fannie Mae, Freddie Mac to Open Door to VantageScore (UPDATED)",
+        "ts": 1788512258,
+        "url": "https://www.benzinga.com/news/politics/26/09/61622054/fico-stock-falls-pre-market-after-bill-pulte-declares-no-more-to-ficos-mortgage-scoring-monopoly-orders-fannie-mae-freddie-mac-to-open-door-to-vantagescore",
         "wiim": false
       },
       "filings": {
