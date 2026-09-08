@@ -1958,6 +1958,15 @@ function renderEarnings() {
   const holds = [...DATA.portfolio].sort((a, b) => (b.value || 0) - (a.value || 0));
   const yoy = (y) => (y == null ? "" : `<span class="er-yoy ${y >= 0 ? "pos" : "neg"}">${y >= 0 ? "+" : ""}${y}% YoY</span>`);
   const stat = (label, val, y) => `<div class="er-stat"><div class="er-l">${label}</div><div class="er-v">${val} ${yoy(y)}</div></div>`;
+  // Net margin vs compliant peers (2026-09-08, grill-session spec): median of the
+  // same-group names, tooltip carries the provenance, delta colored like YoY.
+  const statMargin = (f) => {
+    const pm = f.peer_margin;
+    if (!pm || pm.med == null) return stat("Net margin", f.margin + "%", null);
+    const d = Math.round((f.margin - pm.med) * 10) / 10;
+    const click = pm.gkey ? ` onclick="peerPop(event,'${esc(pm.gkey)}')" role="button"` : "";
+    return `<div class="er-stat"><div class="er-l">Net margin</div><div class="er-v">${f.margin}% <span class="er-peer"${click} title="Median of ${pm.n} compliant ${esc(pm.group)} names, latest filed quarters — click for the list">· peers ${pm.med}%</span> <i class="${d >= 0 ? "pos" : "neg"}">${d >= 0 ? "+" : "−"}${Math.abs(d)}pp</i></div></div>`;
+  };
   const fdate = (d) => { try { return new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); } catch (e) { return d; } };
   el.innerHTML = holds.map((h) => {
     const f = h.sec_fin;
@@ -1982,11 +1991,40 @@ function renderEarnings() {
         ${f.revenue ? stat("Revenue", esc(f.revenue.fmt), f.revenue.yoy) : ""}
         ${f.eps ? stat("Diluted EPS", (f.eps.val < 0 ? "−$" + Math.abs(f.eps.val) : "$" + f.eps.val), f.eps.yoy) : ""}
         ${f.net_income ? stat("Net income", esc(f.net_income.fmt), null) : ""}
-        ${f.margin != null ? stat("Net margin", f.margin + "%", null) : ""}
+        ${f.margin != null ? statMargin(f) : ""}
       </div>
       <div class="er-note">As reported (GAAP) — may differ from the “adjusted” figures quoted in headlines.</div>
     </article>`;
   }).join("");
+}
+
+// Peer-group popover (2026-09-08, user: "when we hover on peers or click on them, show
+// me who we are comparing to"): click the peers figure -> the actual comparison list,
+// each member with its own latest-quarter margin, sorted, tap-through to its drawer.
+function peerPop(ev, gkey) {
+  ev.stopPropagation();
+  document.querySelectorAll(".peer-pop").forEach((p) => p.remove());
+  const members = ((DATA.peer_groups || {})[gkey] || []);
+  if (!members.length) return;
+  const rows = members
+    .map((tk) => {
+      const u = (DATA.universe || []).find((x) => x.ticker === tk) || {};
+      return { tk, name: u.name || tk, m: ((u.sec_fin || {}).margin != null) ? u.sec_fin.margin : null };
+    })
+    .sort((a, b) => (b.m == null ? -1e9 : b.m) - (a.m == null ? -1e9 : a.m));
+  const pop = document.createElement("div");
+  pop.className = "peer-pop";
+  pop.innerHTML = `<div class="peer-pop-h">Comparing against ${rows.length} compliant names <span class="muted">· net margin, latest filed Q</span></div>`
+    + rows.map((r) => `<div class="peer-pop-row" data-ticker="${esc(r.tk)}"><b>${esc(r.tk)}</b><span class="peer-pop-nm">${esc(r.name)}</span><span class="peer-pop-m ${r.m != null && r.m < 0 ? "neg" : ""}">${r.m != null ? r.m + "%" : "—"}</span></div>`).join("");
+  document.body.appendChild(pop);
+  const r = ev.target.getBoundingClientRect();
+  pop.style.left = Math.min(r.left, window.innerWidth - pop.offsetWidth - 12) + "px";
+  pop.style.top = (r.bottom + window.scrollY + 6) + "px";
+  pop.querySelectorAll(".peer-pop-row").forEach((row) =>
+    row.addEventListener("click", (e) => { e.stopPropagation(); pop.remove(); openDrawer(row.dataset.ticker); }));
+  setTimeout(() => document.addEventListener("click", function _c() {
+    pop.remove(); document.removeEventListener("click", _c);
+  }), 0);
 }
 
 const STANCE_TXT = { bullish: "Bullish", neutral: "Neutral", bearish: "Bearish" };
