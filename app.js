@@ -707,6 +707,11 @@ const P_COLS = [
     sortVal: (x) => (x.div_income != null ? x.div_income : x.div_rate || 0) },
   { key: "qarp", label: "QARP", fmt: (x) => `<span class="qarp-cell">${fmtNum(x.qarp, 1)}</span>` },
   { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
+  // Gate + X Pulse joined the holdings table 2026-09-08 (user ask) — same renderers and
+  // sort logic as the universe table; portfolio rows already carry mom/catalyst/pulse.
+  { key: "gate", label: "Gate", fmt: (x) => momGate(x),
+    sortVal: (x) => { const m = gateNow(x); return m ? { GO: 2, TURN: 1, WAIT: 0 }[m.state] : -1; } },
+  { key: "catalyst", label: "X Pulse", fmt: (x) => catalystCell(x), sortVal: (x) => ((x.catalyst ? x.catalyst.score : 0) * 100) + (x.pulse ? ((x.pulse.b || 0) - (x.pulse.r || 0)) : -1) },
   { key: "calls", label: "Calls", align: "left", fmt: (x) => callsCell(x.ticker, x.price),
     sortVal: (x) => openCallReturn(x.ticker, x.price) },
 ];
