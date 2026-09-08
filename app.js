@@ -49,7 +49,7 @@ const TIPS = {
   verdict: { t: "Verdict", d: "The QARP score turned into a call: ≥85 Strongest, ≥72 Strong Buy, ≥66 Buy, ≥60 Hold-Qual, 35–59 Avoid, <35 Strong Avoid." },
   gate: { t: "Momentum gate", d: "Value decides WHAT to buy; the tape decides WHEN. GO = price above its 50-day average (uptrend — a Buy verdict is actionable). TURN = reclaimed the 20-day but still under the 50-day (bottoming attempt, early). WAIT = below both — the knife is still falling; the verdict stands but acting on it means fighting the tape. Kept beside QARP, never mixed into the score." },
   calls: { t: "Calls", d: "Every verdict this name has received, as dated calls. Each call locks its entry price when issued: closed calls (🔒) show the return locked when the verdict changed on a re-score; the open call (→) marks to the live price. Daily price moves never change a call — only deliberate re-scores do." },
-  catalyst: { t: "X Pulse & Event", d: "Two real signals, nothing invented. THE BAR: today's X (Twitter) post mix on covered names (holdings + strong buys) — green bullish / gray neutral / red bearish, from actual posts Grok read; a thin gray 'quiet' bar means under 5 substantive posts, which is a finding, not a default. THE DOT: a dated event from the desk's ledger (● date · countdown), frozen when first verified and kept until it passes. Hover = the crowd's theme + freshest headline. Click the row for the full catalyst card. Names outside coverage show a dash — honest empty beats fabricated prose." },
+  catalyst: { t: "X Pulse & Event", d: "Two real signals, nothing invented. THE BAR: today's X (Twitter) post mix on covered names (holdings + strong buys) — green bullish / gray neutral / red bearish, from actual posts Grok read; a thin gray 'quiet' bar means under 5 substantive posts, which is a finding, not a default. THE DOT: a dated event from the desk's ledger (● date · countdown), frozen when first verified and kept until it passes. Hover = the crowd's theme + freshest headline. Click the row for the full catalyst card. Every name carries a date: brass ● = a verified catalyst from the desk ledger; muted ○ = the next scheduled print (a calendar item, not a catalyst). No data at all = the tap-to-read chip." },
   div: { t: "Dividends", d: "Forward annual dividend per share, with the yield (rate ÷ current price) beneath. N/A = the company pays no dividend. Refreshed in the daily build." },
   div_income: { t: "Dividend income", d: "What Jaleel's position pays per year: shares × annual dividend rate. N/A = non-payer. The KPI strip shows the portfolio total." },
   gain: { t: "Unrealized P/L", d: "Paper profit/loss on positions you still hold (current value minus cost basis). It is NOT money in the bank — it changes with every tick and excludes anything already sold. Realized profits from completed sells will be tracked separately." },
@@ -190,6 +190,20 @@ function catalystCell(x) {
   if (ev) {
     const dt = daysToDate(ev.event_date);
     evLine = `<div class="xp-ev">● ${paperDate(ev.event_date)}${dt != null && dt >= 0 ? ` · ${dt === 0 ? "today" : dt + "d"}` : ""}</div>`;
+  } else if (x.next_print) {
+    // universal fallback (2026-09-08, user: "have it on all stocks"): no verified
+    // catalyst -> the next scheduled print, muted ○ so it never impersonates a brass ●.
+    const dt = daysToDate(x.next_print);
+    if (dt != null && dt >= 0) {
+      evLine = `<div class="xp-ev xp-print" title="Next scheduled earnings — a calendar date, not a verified catalyst">○ ${paperDate(x.next_print)}${` · ${dt === 0 ? "today" : dt + "d"}`}</div>`;
+    }
+  } else if (x.next_print_est) {
+    // Yahoo only confirms dates a few weeks out; the rest get last-print + ~91d,
+    // marked "~ est" — an estimate never dresses up as a confirmed date.
+    const dt = daysToDate(x.next_print_est);
+    if (dt != null && dt >= 0) {
+      evLine = `<div class="xp-ev xp-print" title="Estimated from the last report (~91-day cycle) — not yet confirmed by the company">○ ~${paperDate(x.next_print_est)} · est</div>`;
+    }
   }
   if (!bar) {
     // No pulse data yet (uncovered name, or the daily pass hasn't reached it):
