@@ -1910,3 +1910,20 @@ tr.mv2-up .cell-day { background: var(--pos); }
 .ledger-lesson { font-size: 12.5px; font-style: italic; color: #3a352c; border-top: 1px solid #cdc7b6;
   padding-top: 8px; max-width: 62ch; }
 
+
+/* ===== The Weather — regime strip (Times left column, 2026-09-10) ===== */
+.paper-weather { margin-top: 18px; font-family: "PT Serif", Georgia, serif; }
+.wx-call { font-size: 14px; font-weight: 700; line-height: 1.45; border: 1px solid var(--news-ink);
+  background: #f4efe0; padding: 9px 12px; margin: 0 0 10px; }
+.wx-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 18px; }
+.wx-strip:has(.wx-tile:nth-child(6)) { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+@media (max-width: 900px) { .wx-strip, .wx-strip:has(.wx-tile:nth-child(6)) { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 16px; } }
+@media (max-width: 560px) { .wx-strip, .wx-strip:has(.wx-tile:nth-child(6)) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.wx-tile { border-top: 1px solid var(--news-rule); padding-top: 6px; min-width: 0; }
+.wx-top { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
+.wx-name { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 13px; color: var(--news-ink); }
+.wx-state { font-size: 9px; font-weight: 700; border: 1px solid var(--news-rule); padding: 1px 5px; white-space: nowrap; color: var(--news-ink-2); }
+.wx-state.wx-good { color: #1a6b39; }
+.wx-state.wx-bad { color: #a82e1e; }
+.wx-note { font-size: 11px; color: var(--news-ink-2); line-height: 1.4; margin-top: 3px; }
+.wx-foot { font-size: 10px; font-style: italic; color: var(--news-ink-2); border-top: 1px solid var(--news-rule); margin-top: 10px; padding-top: 5px; }

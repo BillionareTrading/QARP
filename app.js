@@ -1518,6 +1518,46 @@ function renderDaily() {
   renderSectorSignals(); // sector-level event-driven signals (uses cached SIGNALS)
   renderLeadMore();    // fills the space under the lead with more market news (catalysts + risk)
   renderPaperDocket(); // dated catalysts ahead (persisted event ledger, rail box)
+  renderWeather();     // regime report strip under Across the Market
+}
+
+// The Weather — regime report (2026-09-10, user placement: left column under Across
+// the Market). Desk-written weekly call + live needles; a missing number renders as a
+// dash, never a stale value dressed as live. Oil self-promotes to a needle when armed.
+function renderWeather() {
+  const el = document.getElementById("paper-weather");
+  if (!el) return;
+  const rg = DATA.regime;
+  if (!rg || !rg.call) { el.hidden = true; return; }
+  el.hidden = false;
+  const n = rg.needles || {};
+  const st = n.stress || {}, rt = n.rates || {}, dl = n.dollar || {}, oil = n.oil || {};
+  const chip = (state, tone) => state
+    ? `<span class="wx-state wx-${tone || "flat"}">${esc(state)}</span>` : `<span class="wx-state">—</span>`;
+  const toneFor = (s) => ({ QUIET: "good", EASING: "good", CALM: "good",
+                            INVERTED: "bad", STRESSED: "bad", HEAVY: "bad", COOLING: "bad",
+                            FIRMING: "flat", PINNED: "flat", MIXED: "flat" })[s] || "flat";
+  const tiles = [
+    { name: "Growth", state: (n.growth || {}).state, note: (n.growth || {}).note || "" },
+    { name: "Stress", state: st.state,
+      note: `${st.curve_bp != null ? "2s10s " + (st.curve_bp >= 0 ? "+" : "") + st.curve_bp + "bp" : "curve —"} · ${st.hy_oas != null ? "HY " + st.hy_oas + "%" : "credit —"}` },
+    { name: "Rates", state: rt.state,
+      note: `${rt.y10 != null ? "10Y " + fmtNum(rt.y10, 2) + "%" : "10Y —"}${rt.note ? " · " + rt.note : ""}` },
+    { name: "Dollar", state: dl.state,
+      note: `${dl.dxy != null ? "DXY " + fmtNum(dl.dxy, 1) : "DXY —"}${dl.note ? " · " + dl.note : ""}` },
+    { name: "AI capex", state: (n.ai_capex || {}).state, note: (n.ai_capex || {}).note || "" },
+  ];
+  if (oil.armed) tiles.push({ name: "Oil→CPI", state: "ARMED",
+    note: `WTI $${fmtNum(oil.wti, 0)} — above the $${rg.oil_trigger || 100} trigger, loop live` });
+  el.innerHTML = `<div class="lm-rule"></div>
+    <div class="lm-head">The Weather <span class="side-sub">— regime report</span></div>
+    <div class="wx-call">${esc(rg.call)}</div>
+    <div class="wx-strip">${tiles.map((t) => `
+      <div class="wx-tile">
+        <div class="wx-top"><span class="wx-name">${esc(t.name)}</span>${chip(t.state, toneFor(t.state))}</div>
+        <div class="wx-note">${esc(t.note)}</div>
+      </div>`).join("")}</div>
+    <div class="wx-foot">desk read as of ${esc(rg.asof || "—")} · needles live${!oil.armed && oil.wti != null ? ` · oil loop dormant (WTI $${fmtNum(oil.wti, 0)})` : ""}</div>`;
 }
 
 // The Docket — dated catalysts ahead, from the persisted event ledger (DATA.docket).
