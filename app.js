@@ -1524,6 +1524,77 @@ function renderDaily() {
 // The Weather — regime report (2026-09-10, user placement: left column under Across
 // the Market). Desk-written weekly call + live needles; a missing number renders as a
 // dash, never a stale value dressed as live. Oil self-promotes to a needle when armed.
+// Needle school (2026-09-10, user: "a hover or clickable feature... what each thing
+// means"): click any Weather tile -> the full explainer. Static education ships with
+// the code; the dynamic line on top reads the live needle.
+const WX_SCHOOL = {
+  growth: { name: "Growth — ISM new orders",
+    what: "A monthly survey of purchasing managers at US manufacturers; the new-orders sub-index counts whether order books are growing. Above 50 = expansion, below 50 = contraction.",
+    why: "Orders placed today become revenues one to two quarters out — it is the cleanest early read on the earnings cycle that every QARP score ultimately leans on.",
+    read: "EXPANDING = above 50 and rising. MIXED = straddling 50 or diverging across industries. COOLING = below 50 for consecutive months — earnings estimates usually follow it down.",
+    src: "ISM's monthly print, read by the desk on the Saturday pass.",
+    flips: "A sustained cross of the 50 line, in either direction." },
+  stress: { name: "Stress — yield curve + credit spreads",
+    what: "Two gauges in one needle. The 2s10s curve: the 10-year Treasury yield minus the 2-year — when it goes negative (inverts), short money pays more than long money. High-yield OAS: the extra yield junk-rated borrowers pay over Treasuries.",
+    why: "The inverted curve has preceded essentially every US recession since the 1950s — the single best-documented macro warning there is. Credit spreads are the market's smoke detector: equities rarely crash while spreads are calm, and spreads usually smell trouble first.",
+    read: "QUIET = curve positive, spreads under ~4%. STRESSED = spreads pushing 4.5%+ — credit is smelling smoke. INVERTED = the curve has flipped negative; the clock some recessions run on has started before.",
+    src: "FRED (St. Louis Fed official data), series T10Y2Y and BAMLH0A0HYM2 — daily closes, 1-2 day official lag.",
+    flips: "Curve crossing zero, or HY spreads through 4.5%." },
+  rates: { name: "Rates — the 10-year yield",
+    what: "The yield on the 10-year US Treasury — the risk-free rate that every stock valuation on this site discounts against.",
+    why: "It is the gravity in every DCF: when it falls, multiples get room to expand; when it is high and pinned, returns must come from the earnings themselves — the desk's valuation leg does the lifting, not re-rating hope.",
+    read: "PINNED = markets price no policy change. SPLIT = pricing is contested across sources (the honest state when futures and forecasters disagree). EASING/RISING when a path is actually priced.",
+    src: "Live from the same quote feed as your stock prices, cross-checked against FRED's official series. The written path-read is weekly and must be verified same-day or say 'contested'.",
+    flips: "An FOMC decision or a decisive repricing in futures." },
+  dollar: { name: "Dollar — DXY",
+    what: "The dollar index: the dollar's value against a basket of major currencies (euro-heavy).",
+    why: "A third of this book earns in euros, francs and pounds — SAP, AZN, NVS. A strengthening dollar mechanically shrinks those earnings in dollar terms and pressures the ADRs regardless of the business; a softening dollar is a tailwind for exactly those names.",
+    read: "EASING = dollar softening (tailwind for the ADRs). FIRMING = strengthening (headwind).",
+    src: "Live quote feed, every bake.",
+    flips: "Trend, not ticks — the weekly read judges whether a move is regime or noise." },
+  ai_capex: { name: "AI capex — the hyperscaler cycle",
+    what: "What Microsoft, Google, Amazon and Meta are spending on data centers — disclosed in their quarterly guides and prints.",
+    why: "It is the single demand firehose behind NVDA and AVGO and, one step removed, SNPS and the semis complex — the largest concentration in this book. Their revenue IS this line item.",
+    read: "HEAVY = spending accelerating, order books full — great for revenue now, but hot cycles end in 'digestion' quarters where the same stocks derate hard on a mere pause. HEAVY reads as: enjoy it, do not extrapolate it. COOLING = guides flattening — respect it fast.",
+    src: "Hyperscaler earnings guides, read by the desk weekly.",
+    flips: "One hyperscaler guiding capex flat is a warning; two is a regime change." },
+  oil: { name: "Oil → CPI loop",
+    what: "A conditional transmission chain: oil above ~$100 feeds headline inflation within a couple of months, which pushes rate-cut expectations out, which compresses every multiple on the board.",
+    why: "Dormant, it is just a sector story (good for EXE and EQT, which hedge this book). Armed, it attacks every valuation here at once — that is why it earns a tile only when live.",
+    read: "Dormant = WTI below the trigger; footer only. ARMED = WTI through $100 — the loop is live and the regime call must reckon with it.",
+    src: "WTI live on the quote feed; the $100 trigger comes from the desk's July 2026 regime study.",
+    flips: "WTI crossing $100, either direction." },
+};
+function wxPop(ev, key) {
+  ev.stopPropagation();
+  document.querySelectorAll(".peer-pop").forEach((p) => p.remove());
+  const s = WX_SCHOOL[key];
+  if (!s) return;
+  const rg = DATA.regime || {}, n = (rg.needles || {})[key === "oil" ? "oil" : key] || {};
+  const nowBits = [];
+  if (n.state) nowBits.push(`state ${n.state}`);
+  if (n.y10 != null) nowBits.push(`10Y ${fmtNum(n.y10, 2)}%`);
+  if (n.curve_bp != null) nowBits.push(`2s10s ${n.curve_bp >= 0 ? "+" : ""}${n.curve_bp}bp`);
+  if (n.hy_oas != null) nowBits.push(`HY ${n.hy_oas}%`);
+  if (n.dxy != null) nowBits.push(`DXY ${fmtNum(n.dxy, 1)}`);
+  if (n.wti != null) nowBits.push(`WTI $${fmtNum(n.wti, 0)}`);
+  const pop = document.createElement("div");
+  pop.className = "peer-pop wx-school";
+  pop.innerHTML = `<div class="peer-pop-h">${esc(s.name)}${nowBits.length ? ` <span class="muted">· now: ${esc(nowBits.join(" · "))}</span>` : ""}</div>
+    <div class="wxs-b"><b>What it is.</b> ${esc(s.what)}</div>
+    <div class="wxs-b"><b>Why it matters to this book.</b> ${esc(s.why)}</div>
+    <div class="wxs-b"><b>Reading the states.</b> ${esc(s.read)}</div>
+    <div class="wxs-b"><b>Source & cadence.</b> ${esc(s.src)}</div>
+    <div class="wxs-b"><b>What flips it.</b> ${esc(s.flips)}</div>`;
+  document.body.appendChild(pop);
+  const r = ev.currentTarget.getBoundingClientRect();
+  pop.style.left = Math.max(8, Math.min(r.left, window.innerWidth - pop.offsetWidth - 12)) + "px";
+  pop.style.top = (r.bottom + window.scrollY + 6) + "px";
+  setTimeout(() => document.addEventListener("click", function _c() {
+    pop.remove(); document.removeEventListener("click", _c);
+  }), 0);
+}
+
 function renderWeather() {
   const el = document.getElementById("paper-weather");
   if (!el) return;
@@ -1538,26 +1609,28 @@ function renderWeather() {
                             INVERTED: "bad", STRESSED: "bad", HEAVY: "bad", COOLING: "bad",
                             FIRMING: "flat", PINNED: "flat", MIXED: "flat" })[s] || "flat";
   const tiles = [
-    { name: "Growth", state: (n.growth || {}).state, note: (n.growth || {}).note || "" },
-    { name: "Stress", state: st.state,
+    { key: "growth", name: "Growth", state: (n.growth || {}).state, note: (n.growth || {}).note || "" },
+    { key: "stress", name: "Stress", state: st.state,
       note: `${st.curve_bp != null ? "2s10s " + (st.curve_bp >= 0 ? "+" : "") + st.curve_bp + "bp" : "curve —"} · ${st.hy_oas != null ? "HY " + st.hy_oas + "%" : "credit —"}` },
-    { name: "Rates", state: rt.state,
+    { key: "rates", name: "Rates", state: rt.state,
       note: `${rt.y10 != null ? "10Y " + fmtNum(rt.y10, 2) + "%" : "10Y —"}${rt.note ? " · " + rt.note : ""}` },
-    { name: "Dollar", state: dl.state,
+    { key: "dollar", name: "Dollar", state: dl.state,
       note: `${dl.dxy != null ? "DXY " + fmtNum(dl.dxy, 1) : "DXY —"}${dl.note ? " · " + dl.note : ""}` },
-    { name: "AI capex", state: (n.ai_capex || {}).state, note: (n.ai_capex || {}).note || "" },
+    { key: "ai_capex", name: "AI capex", state: (n.ai_capex || {}).state, note: (n.ai_capex || {}).note || "" },
   ];
-  if (oil.armed) tiles.push({ name: "Oil→CPI", state: "ARMED",
+  if (oil.armed) tiles.push({ key: "oil", name: "Oil→CPI", state: "ARMED",
     note: `WTI $${fmtNum(oil.wti, 0)} — above the $${rg.oil_trigger || 100} trigger, loop live` });
   el.innerHTML = `<div class="lm-rule"></div>
     <div class="lm-head">The Weather <span class="side-sub">— regime report</span></div>
     <div class="wx-call">${esc(rg.call)}</div>
     <div class="wx-strip">${tiles.map((t) => `
-      <div class="wx-tile">
+      <div class="wx-tile" data-wx="${esc(t.key)}" title="Tap for what ${esc(t.name)} means and why the desk watches it">
         <div class="wx-top"><span class="wx-name">${esc(t.name)}</span>${chip(t.state, toneFor(t.state))}</div>
         <div class="wx-note">${esc(t.note)}</div>
       </div>`).join("")}</div>
-    <div class="wx-foot">desk read as of ${esc(rg.asof || "—")} · needles live${!oil.armed && oil.wti != null ? ` · oil loop dormant (WTI $${fmtNum(oil.wti, 0)})` : ""}</div>`;
+    <div class="wx-foot">desk read as of ${esc(rg.asof || "—")} · needles live${!oil.armed && oil.wti != null ? ` · <span class="wx-oillink" data-wx="oil" title="Tap for the oil→CPI loop explainer">oil loop dormant (WTI $${fmtNum(oil.wti, 0)})</span>` : ""} · tap any needle to learn it</div>`;
+  el.querySelectorAll("[data-wx]").forEach((tl) =>
+    tl.addEventListener("click", (e) => wxPop({ stopPropagation: () => e.stopPropagation(), currentTarget: tl }, tl.dataset.wx)));
 }
 
 // The Docket — dated catalysts ahead, from the persisted event ledger (DATA.docket).

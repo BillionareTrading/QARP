@@ -1927,3 +1927,11 @@ tr.mv2-up .cell-day { background: var(--pos); }
 .wx-state.wx-bad { color: #a82e1e; }
 .wx-note { font-size: 11px; color: var(--news-ink-2); line-height: 1.4; margin-top: 3px; }
 .wx-foot { font-size: 10px; font-style: italic; color: var(--news-ink-2); border-top: 1px solid var(--news-rule); margin-top: 10px; padding-top: 5px; }
+
+/* needle-school popover flavor (2026-09-10) */
+.peer-pop.wx-school { max-width: 380px; font-family: "PT Serif", Georgia, serif; }
+.wx-school .wxs-b { font-size: 12.5px; line-height: 1.55; padding: 5px 2px; border-bottom: 1px dotted var(--line-2); }
+.wx-school .wxs-b:last-child { border-bottom: 0; }
+.wx-tile { cursor: pointer; }
+.wx-tile:hover .wx-name { color: var(--brass); }
+.wx-oillink { cursor: pointer; text-decoration: underline dotted; }
