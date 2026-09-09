@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "Sep 9, 8:06am ET",
+  "generated_at": "Sep 9, 9:45am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -187,8 +187,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "price": 316.22,
-      "upside": 13.8,
+      "price": 315.92,
+      "upside": 14.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -201,8 +201,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 249.12,
-      "upside": 60.6,
+      "price": 251.69,
+      "upside": 58.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -215,8 +215,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$270",
-      "price": 316.22,
-      "upside": -14.6,
+      "price": 315.92,
+      "upside": -14.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -229,8 +229,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "price": 269.12,
-      "upside": 18.9,
+      "price": 268.57,
+      "upside": 19.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -243,8 +243,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$300",
-      "price": 249.12,
-      "upside": 20.4,
+      "price": 251.69,
+      "upside": 19.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -257,8 +257,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 249.12,
-      "upside": 20.4,
+      "price": 251.69,
+      "upside": 19.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -271,8 +271,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$235",
-      "price": 209.8,
-      "upside": 12.0,
+      "price": 214.91,
+      "upside": 9.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -285,8 +285,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$243",
-      "price": 209.8,
-      "upside": 15.8,
+      "price": 214.91,
+      "upside": 13.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -299,8 +299,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$230",
-      "price": 209.8,
-      "upside": 9.6,
+      "price": 214.91,
+      "upside": 7.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -313,8 +313,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$170",
-      "price": 148.46,
-      "upside": 14.5,
+      "price": 148.7,
+      "upside": 14.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -327,8 +327,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 316.22,
-      "upside": 15.7,
+      "price": 315.92,
+      "upside": 15.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -341,8 +341,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$170",
-      "price": 148.46,
-      "upside": 14.5,
+      "price": 148.7,
+      "upside": 14.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -355,14 +355,37 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 316.22,
+      "price": 315.92,
       "upside": null,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-09-09",
+      "ticker": "NKE",
+      "firm": "BMO Capital",
+      "action": "Initiates Coverage On",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$30",
+      "price": 37.26,
+      "upside": -19.5,
+      "held": false,
+      "uni": true,
+      "qarp": "BUY"
     }
   ],
   "rating_moves": {
+    "NKE": {
+      "date": "2026-09-09",
+      "firm": "BMO Capital",
+      "action": "Initiates Coverage On",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$30",
+      "upside": -19.5
+    },
     "MRK": {
       "date": "2026-09-08",
       "firm": "Guggenheim",
@@ -370,7 +393,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$170",
-      "upside": 14.5
+      "upside": 14.3
     },
     "AAPL": {
       "date": "2026-09-08",
@@ -379,7 +402,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "upside": 15.7
+      "upside": 15.9
     },
     "CVX": {
       "date": "2026-09-03",
@@ -388,7 +411,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$235",
-      "upside": 12.0
+      "upside": 9.3
     },
     "CRM": {
       "date": "2026-09-02",
@@ -397,7 +420,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 60.6
+      "upside": 58.9
     },
     "JNJ": {
       "date": "2026-09-02",
@@ -406,7 +429,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "upside": 18.9
+      "upside": 19.1
     },
     "CSCO": {
       "date": "2026-09-01",
@@ -415,19 +438,102 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$135",
-      "upside": 23.7
-    },
-    "NKE": {
-      "date": "2026-08-26",
-      "firm": "Truist Securities",
-      "action": "Downgrades",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$42",
-      "upside": 10.2
+      "upside": 23.3
     }
   },
   "bz_news": [
+    {
+      "title": "Brent Tops $100 as Morgan Stanley Warns Oil, Rates Are ‘Main Risks’ to Stocks",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61686144/brent-100-morgan-stanley-stock-risks",
+      "ts": 1788961014,
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.365
+    },
+    {
+      "title": "Oil Hits $100: Which Stocks And ETFs Win Or Lose?",
+      "url": "https://www.benzinga.com/markets/commodities/26/09/61685641/oil-100-barrel-winners-losers-stocks-etfs",
+      "ts": 1788960339,
+      "tickers": [
+        "XLE",
+        "XOM",
+        "SPY",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.395
+    },
+    {
+      "title": "Apple Is Chasing Elon Musk's Neuralink Vision—Differently",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61685603/apple-neuralink-vision",
+      "ts": 1788960278,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.348
+    },
+    {
+      "title": "Bernie Sanders Slams Big Tech as AI Industry Spends $300 Million to Crush Tougher Regulation — ‘81% of Americans’ Say Congress Isn’t Doing Enough",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61685051/bernie-sanders-slams-big-tech-as-ai-industry-spends-300-million-to-crush-tougher-regulation-81-of-americans-say-congress-isnt-doing-enough",
+      "ts": 1788959426,
+      "tickers": [
+        "AMD",
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.318
+    },
+    {
+      "title": "BMO Capital Initiates Coverage On Nike with Underperform Rating, Announces Price Target of $30",
+      "url": "https://www.benzinga.com/news/26/09/61684267/bmo-capital-initiates-coverage-nike-underperform-rating-announces-price-target-30",
+      "ts": 1788958565,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.485
+    },
+    {
+      "title": "Corning Lands Multi-Billion Verizon Fiber Deal Supporting Broadband and AI",
+      "url": "https://www.benzinga.com/markets/large-cap/26/09/61684217/corning-lands-multi-billion-verizon-fiber-deal-supporting-broadband-and-ai",
+      "ts": 1788958492,
+      "tickers": [
+        "GLW",
+        "VZ",
+        "JOET",
+        "EUV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.405
+    },
+    {
+      "title": "Medicare’s $2,000 Drug Cap Is Getting Expensive — More Than 1 in 5 Seniors Hit It as Drug Spending Heads Toward $346 Billion",
+      "url": "https://www.benzinga.com/news/health-care/26/09/61683744/medicares-2000-drug-cap-is-getting-expensive-more-than-1-in-5-seniors-hit-it-as-drug-spending-heads-toward-346-billion",
+      "ts": 1788957565,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.261
+    },
     {
       "title": "Amazon Gives Qualcomm a Major AI Boost With $60B Custom Chip Deal — Analyst Calls It a ‘Huge $QCOM Win’",
       "url": "https://www.benzinga.com/markets/equities/26/09/61682116/amazon-gives-qualcomm-a-major-ai-boost-with-60b-custom-chip-deal-analyst-calls-it-a-huge-qcom-win",
@@ -525,7 +631,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.326
+      "relevance": 0.327
     },
     {
       "title": "Evaluating Apple Against Peers In Technology Hardware, Storage &amp; Peripherals Industry",
@@ -642,7 +748,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.481
+      "relevance": 0.48
     },
     {
       "title": "To Bend the Future, Apple May Have to Step Back in Time: Can a Foldable iPhone Survive Without These Two Major Features",
@@ -670,106 +776,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.447
-    },
-    {
-      "title": "Apple's Weird iPhone Curse: AAPL Stock Drops on Launch Day, Jumps the Next — Every Year for Almost 20 Years",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61677101/apple-aapl-stock-iphone-launch-day-next-day-20-year-pattern",
-      "ts": 1788934308,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.342
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61676904/stock-market-will-sp-500-open-up-or-down-today-33",
-      "ts": 1788932883,
-      "tickers": [
-        "SPY",
-        "AAPL",
-        "QQQ",
-        "CHWY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Apple Might Be Planning to 'Surprise and Shine' at iPhone 18 Launch Event, but Crypto Bettors Are Already Betting on Foldables and More",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61676659/apple-iphone-18-surprise-and-shine-launch-crypto-bettors-foldable-iphone-bets",
-      "ts": 1788928609,
-      "tickers": [
-        "$POL",
-        "$BTC",
-        "AAPL",
-        "$ZEC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.31
-    },
-    {
-      "title": "Jimmy Kimmel's 24-Year 'Jimmy Kimmel Live' Run Could End in 2027, ABC Says Reports on Future of Show 'Speculative'",
-      "url": "https://www.benzinga.com/news/politics/26/09/61676643/jimmy-kimmel-live-2027-ending-24-year-run-abc-calls-report-speculative",
-      "ts": 1788928183,
-      "tickers": [
-        "DIS",
-        "PARA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.166
-    },
-    {
-      "title": "Intel, NuScale Power, Casey's General Stores, Qualcomm and SpaceX: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/news/26/09/61676120/intel-nuscale-power-caseys-general-stores-qualcomm-and-spacex-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1788917468,
-      "tickers": [
-        "INTC",
-        "SPY",
-        "QCOM",
-        "CASY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.433
-    },
-    {
-      "title": "'FDA’s Acting Drug, Vaccine Regulators Tapped for Permanent Roles'- Bloomberg",
-      "url": "https://www.benzinga.com/news/26/09/61673042/fda-s-acting-drug-vaccine-regulators-tapped-permanent-roles-bloomberg",
-      "ts": 1788898854,
-      "tickers": [
-        "CMPS",
-        "DFTX",
-        "MRK",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.305
-    },
-    {
-      "title": "NTSB Chair Calls Amazon ‘Prime Air’ Crash Scene ‘Utter Devastation,’ Says Boeing 767 Traveled 1,300 Feet Beyond Runway (UPDATED)",
-      "url": "https://www.benzinga.com/news/travel/26/09/61650660/ntsb-chair-calls-amazon-prime-air-crash-scene-utter-devastation-says-boeing-767-traveled-1300-feet-beyond-runway",
-      "ts": 1788852243,
-      "tickers": [
-        "AMZN",
-        "BA",
-        "TM",
-        "F"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.207
     }
   ],
   "portfolio_brief": {
@@ -1120,13 +1126,13 @@
       "filings": {
         "latest8k": null,
         "periodic": null,
-        "insider30d": 2
+        "insider30d": 4
       },
       "explain": "36 analysts cover it — 30 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "LULU": {
       "name": "Lululemon",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 1,
         "buy": 1,
@@ -1154,7 +1160,7 @@
         },
         "insider30d": 0
       },
-      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
+      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: STRONG BUY."
     },
     "SPGI": {
       "name": "S&P Global",
