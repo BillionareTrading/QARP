@@ -174,8 +174,10 @@ function moveRowCls(x) {
 }
 function moveRowTitle(x) {
   if (!moveRowCls(x)) return "";
-  const why = (x.catalyst && x.catalyst.news_72h) || (x.pulse && x.pulse.theme) || "";
-  return esc(why ? `Why: ${why}` : `Moved ${fmtPct(x.day_pct)} today — no fresh news line on the desk yet`);
+  const mw = x.mover_why;
+  const why = (x.catalyst && x.catalyst.news_72h) || (x.pulse && x.pulse.theme)
+           || (mw && mw.h ? `${mw.h}${mw.src ? " — " + mw.src : ""}${mw.t ? ", " + mw.t : ""}` : "");
+  return esc(why ? `Why: ${why}` : `Moved ${fmtPct(x.day_pct)} today — no headline found yet (wire re-checks each bake)`);
 }
 
 // Column cell v3 (2026-09-07, user: "a bar — green/red/neutral (its twitter
@@ -768,6 +770,57 @@ function renderTopHoldings() {
   el.innerHTML = `<div class="hbar-list">${bars}</div><div class="hbar-logos">${logos}</div>`;
 }
 
+// Zakat panel (2026-09-09, owner-tier): hawl = 1 Muharram; the panel computes both
+// standard methods and rules on neither. Renders only when the owner blob is unlocked.
+function nextHawlDate() {
+  try {
+    const fmt = new Intl.DateTimeFormat("en-u-ca-islamic-umalqura", { day: "numeric", month: "numeric" });
+    const d = new Date();
+    for (let i = 0; i < 400; i++) {
+      const parts = fmt.formatToParts(d);
+      const day = +parts.find((p) => p.type === "day").value;
+      const mon = +parts.find((p) => p.type === "month").value;
+      if (day === 1 && mon === 1 && i > 0) return new Date(d);
+      d.setDate(d.getDate() + 1);
+    }
+  } catch (e) {}
+  return null;
+}
+let zakatMethod = "market";
+function renderZakat() {
+  const el = document.getElementById("zakat-panel");
+  if (!el) return;
+  if (!privUnlocked()) { el.hidden = true; return; }
+  const t = (DATA.meta && DATA.meta.portfolio_totals) || {};
+  if (t.positions == null) { el.hidden = true; return; }
+  el.hidden = false;
+  const eq = t.positions || 0, sleeve = t.etf_value || 0, cash = t.cash || 0;
+  const base = zakatMethod === "market" ? eq + sleeve + cash : (eq + sleeve) * 0.30 + cash;
+  const due = base * 0.025;
+  const hawl = nextHawlDate();
+  const hawlStr = hawl ? hawl.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "—";
+  const days = hawl ? Math.round((hawl - new Date()) / 86400000) : null;
+  el.innerHTML = `<div class="card zakat-card">
+    <div class="zk-top"><h3>Zakat on the book</h3>
+      <span class="zk-hawl">hawl: 1 Muharram · next ${hawlStr}${days != null ? ` · in ${days}d` : ""}</span></div>
+    <div class="zk-tabs">
+      <button class="zk-tab ${zakatMethod === "market" ? "on" : ""}" data-m="market">Market-value method</button>
+      <button class="zk-tab ${zakatMethod === "assets" ? "on" : ""}" data-m="assets">Zakatable-assets method</button>
+    </div>
+    <div class="kv zk-kv">
+      <span class="k">Equities at market</span><span class="vv">${fmtUSD(eq, 2)}</span>
+      <span class="k">ETF sleeve</span><span class="vv">${fmtUSD(sleeve, 2)}</span>
+      <span class="k">Cash</span><span class="vv">${fmtUSD(cash, 2)}</span>
+      ${zakatMethod === "assets" ? `<span class="k">Equity proxy (30%)</span><span class="vv">${fmtUSD((eq + sleeve) * 0.30, 2)}</span>` : ""}
+      <span class="k zk-line">Zakatable base</span><span class="vv zk-line"><b>${fmtUSD(base, 2)}</b></span>
+      <span class="k">Rate (lunar year)</span><span class="vv">2.5%</span>
+    </div>
+    <div class="zk-due"><span>Zakat due</span><b>${fmtUSD(due, 2)} <i>≈ SAR ${(due * 3.75).toLocaleString("en-US", { maximumFractionDigits: 0 })}</i></b></div>
+    <div class="zk-note">Market-value method treats the whole position as zakatable (common for actively managed books). The zakatable-assets method uses a 30% underlying-assets proxy plus cash, for long-term intent. Your scholar's guidance decides — the panel computes, it does not rule.</div>
+  </div>`;
+  el.querySelectorAll(".zk-tab").forEach((b) => b.addEventListener("click", () => { zakatMethod = b.dataset.m; renderZakat(); }));
+}
+
 function renderPortfolio() {
   renderKpis(); // KPI strip lives inside this panel now
   renderTopHoldings();
@@ -781,6 +834,7 @@ function renderPortfolio() {
   renderSectorPerformance();
   renderPortfolioTable();
   renderEtfSleeve();
+  renderZakat();
   renderRealized();
 }
 
@@ -822,12 +876,41 @@ const R_COLS = [
   { key: "gain", label: "Gain", sortVal: (r) => (r.gain != null ? r.gain : r.gain_pct || 0) },
   { key: "gain_pct", label: "Return", sortVal: (r) => r.gain_pct == null ? -1e9 : r.gain_pct },
 ];
+function ledgerDispatchesHtml() {
+  // The Ledger (2026-09-09): hand-written dispatch per full exit, %-only public text;
+  // vitals join the realized row — $ figures stay owner-tier via the existing split.
+  const stories = DATA.ledger_stories || [];
+  if (!stories.length) return "";
+  const unlocked = privUnlocked();
+  return `<div class="ledger">
+    <div class="ledger-head">The Ledger <span class="ledger-sub">— every exit, on the record</span></div>
+    ${stories.map((s) => {
+      const r = (DATA.realized || []).find((x) => x.ticker === s.ticker && x.date_sold === s.exit_date) || {};
+      const vit = [];
+      if (r.date_bought) vit.push(`<span><b>In</b> ${paperDate(r.date_bought)} · ${fmtUSD(r.buy_px, 2)}</span>`);
+      if (r.date_sold) vit.push(`<span><b>Out</b> ${paperDate(r.date_sold)} · ${fmtUSD(r.sell_px, 2)}</span>`);
+      vit.push(`<span>${r.shares != null ? fmtShares(r.shares) + " sh" : lockSH()}</span>`);
+      vit.push(`<span class="pos"><b>${fmtPct(r.gain_pct)}</b>${unlocked && r.gain != null ? ` · ${fmtUSD(r.gain, 2)} gross` : ""}</span>`);
+      return `<article class="ledger-story">
+        <div class="ledger-kicker">${esc(s.kicker || "")}</div>
+        <h3 class="ledger-hl">${esc(s.headline || "")}</h3>
+        <div class="ledger-vitals">${vit.join("")}</div>
+        <p class="ledger-body">${esc(s.story || "")}</p>
+        <div class="ledger-lesson">${esc(s.lesson || "")}</div>
+      </article>`;
+    }).join("")}
+  </div>`;
+}
+
 function renderRealized() {
   const el = document.getElementById("realized");
   if (!el) return;
   const all = DATA.realized || [];
   if (!all.length) { el.hidden = true; return; }
   el.hidden = false;
+  const oldLedger = el.querySelector(".ledger");
+  if (oldLedger) oldLedger.remove();
+  el.insertAdjacentHTML("afterbegin", ledgerDispatchesHtml());
 
   // ---- stats band (computed live from the rows, so future sells update it) ----
   // Locked: gain $ is owner-tier, but wins/best are decidable from gain_pct (public).
