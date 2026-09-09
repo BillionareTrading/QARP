@@ -1869,3 +1869,13 @@ table.ed-ledger td { padding: 5px 8px; border-bottom: 1px dotted var(--line-2); 
 .peer-pop-nm { color: var(--ink-3); font-size: 11.5px; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .peer-pop-m { font-weight: 700; font-variant-numeric: tabular-nums; }
 .peer-pop-m.neg { color: var(--neg); }
+
+/* ===== Big-move row lighting + drawdown flag (2026-09-09) ===== */
+tr.mv1-dn td { background: rgba(190, 18, 60, .07); }
+tr.mv1-up td { background: rgba(21, 128, 61, .07); }
+tr.mv2-dn td { background: rgba(190, 18, 60, .16); }
+tr.mv2-up td { background: rgba(21, 128, 61, .16); }
+tr.mv2-dn .cell-day, tr.mv2-up .cell-day { font-weight: 800; font-size: 13.5px; }
+/* standing drawdown flag: position >=10% below desk basis — thin red inset on the name
+   cell, independent of the day wash (a bleed is not an event) */
+tr.dd-row td:first-child { box-shadow: inset 3px 0 0 var(--neg); }

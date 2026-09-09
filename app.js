@@ -161,6 +161,23 @@ function patchGateCells(ticker, u) {
 }
 // Catalyst tag (PREVIEW / shadow — does not affect QARP yet). Colour by strength; ⚠ = the
 // proposed DCF cap would downgrade this name's "cheap" score (cheap with no catalyst = value trap).
+// Big-move row lighting (2026-09-09, user GO after preview): tier 1 = |day| 5-10%
+// (soft wash), tier 2 = |day| >= 10% (brighter + bold day cell). Hover answers WHY
+// with the freshest news/theme line already on the row. Quiet days stay quiet.
+function moveRowCls(x) {
+  const d = x.day_pct;
+  if (d == null) return "";
+  const a = Math.abs(d);
+  if (a >= 10) return d >= 0 ? "mv2-up" : "mv2-dn";
+  if (a >= 5) return d >= 0 ? "mv1-up" : "mv1-dn";
+  return "";
+}
+function moveRowTitle(x) {
+  if (!moveRowCls(x)) return "";
+  const why = (x.catalyst && x.catalyst.news_72h) || (x.pulse && x.pulse.theme) || "";
+  return esc(why ? `Why: ${why}` : `Moved ${fmtPct(x.day_pct)} today — no fresh news line on the desk yet`);
+}
+
 // Column cell v3 (2026-09-07, user: "a bar — green/red/neutral (its twitter
 // impressions) — and major news"): X-sentiment micro-bar + dated-event line.
 // The legacy insider/MA prose is dead server-side; no data = an honest dash.
@@ -683,7 +700,7 @@ function renderUniverseTable() {
     return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${typeof c.label === "function" ? c.label() : c.label}${arrow}${infoBtn(c.key)}</th>`;
   }).join("")}</tr>`;
   document.querySelector("#u-table tbody").innerHTML = rows.map((x) => `
-    <tr data-ticker="${x.ticker}">${uCols.map((c) =>
+    <tr data-ticker="${x.ticker}" class="${moveRowCls(x)}"${moveRowTitle(x) ? ` title="${moveRowTitle(x)}"` : ""}>${uCols.map((c) =>
       `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
 
   document.getElementById("u-count").textContent = `${rows.length} of ${list.length}`;
@@ -897,7 +914,7 @@ function renderPortfolioTable() {
     return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${typeof c.label === "function" ? c.label() : c.label}${arrow}${infoBtn(c.key)}</th>`;
   }).join("")}</tr>`;
   document.querySelector("#p-table tbody").innerHTML = rows.map((x) => `
-    <tr data-ticker="${x.ticker}">${pCols.map((c) =>
+    <tr data-ticker="${x.ticker}" class="${moveRowCls(x)}${x.gain_pct != null && x.gain_pct <= -10 ? " dd-row" : ""}"${moveRowTitle(x) ? ` title="${moveRowTitle(x)}"` : ""}>${pCols.map((c) =>
       `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
   document.querySelectorAll("#p-table thead th").forEach((th) =>
     th.addEventListener("click", (e) => {
