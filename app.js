@@ -914,7 +914,7 @@ function renderPortfolioTable() {
     return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${typeof c.label === "function" ? c.label() : c.label}${arrow}${infoBtn(c.key)}</th>`;
   }).join("")}</tr>`;
   document.querySelector("#p-table tbody").innerHTML = rows.map((x) => `
-    <tr data-ticker="${x.ticker}" class="${moveRowCls(x)}${x.gain_pct != null && x.gain_pct <= -10 ? " dd-row" : ""}"${moveRowTitle(x) ? ` title="${moveRowTitle(x)}"` : ""}>${pCols.map((c) =>
+    <tr data-ticker="${x.ticker}" class="${moveRowCls(x)}"${moveRowTitle(x) ? ` title="${moveRowTitle(x)}"` : ""}>${pCols.map((c) =>
       `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
   document.querySelectorAll("#p-table thead th").forEach((th) =>
     th.addEventListener("click", (e) => {

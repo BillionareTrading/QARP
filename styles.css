@@ -1876,6 +1876,3 @@ tr.mv1-up td { background: rgba(21, 128, 61, .07); }
 tr.mv2-dn td { background: rgba(190, 18, 60, .16); }
 tr.mv2-up td { background: rgba(21, 128, 61, .16); }
 tr.mv2-dn .cell-day, tr.mv2-up .cell-day { font-weight: 800; font-size: 13.5px; }
-/* standing drawdown flag: position >=10% below desk basis — thin red inset on the name
-   cell, independent of the day wash (a bleed is not an event) */
-tr.dd-row td:first-child { box-shadow: inset 3px 0 0 var(--neg); }
