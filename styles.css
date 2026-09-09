@@ -1935,3 +1935,8 @@ tr.mv2-up .cell-day { background: var(--pos); }
 .wx-tile { cursor: pointer; }
 .wx-tile:hover .wx-name { color: var(--brass); }
 .wx-oillink { cursor: pointer; text-decoration: underline dotted; }
+
+/* bull/bear case blocks in the drawer pulse (2026-09-11) */
+.pulse-case { margin-top: 9px; background: var(--surface-2); border-radius: 9px; padding: 9px 11px; }
+.pulse-case-h { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; font-weight: 800; margin-bottom: 3px; }
+.pulse-case-t { font-size: 13px; line-height: 1.55; }

@@ -1104,7 +1104,18 @@ function renderDrawerPulse(ticker, name) {
   const el = document.getElementById("drawer-pulse");
   if (!el) return;
   const cached = PULSE_CACHE[ticker];
+  const row = (DATA.universe || []).find((x) => x.ticker === ticker)
+           || (DATA.portfolio || []).find((x) => x.ticker === ticker) || {};
+  const dp = row.pulse;
   if (cached) { el.innerHTML = PULSE_HEAD + pulseBodyHtml(cached.data, cached.ts); }
+  else if (dp && dp.label) {
+    // the daily pass already paid for this read — show it, live refresh stays one tap away
+    el.innerHTML = PULSE_HEAD + pulseBodyHtml({
+      sentiment_label: dp.label, sentiment_score: dp.score, bullish_n: dp.b,
+      bearish_n: dp.r, neutral_n: dp.n, posts_24h: dp.posts, buzz: dp.buzz,
+      theme: dp.theme, bull_case: dp.bull_case, bear_case: dp.bear_case,
+    }, null, `From today's pass · as of ${dp.as_of || "—"}`);
+  }
   else {
     el.innerHTML = PULSE_HEAD
       + `<button type="button" class="pulse-btn" data-act="get">Get live read from X</button>`
@@ -1126,6 +1137,7 @@ async function fetchPulse(ticker, name) {
   const fail = () => { el.innerHTML = PULSE_HEAD + `<div class="pulse-err">Couldn't reach X right now. <button type="button" class="pulse-link" data-act="get">Try again</button></div>`; wirePulse(ticker, name); };
   try {
     const u = (DATA.universe || []).find((x) => x.ticker === ticker) || {};
+    const row = u.ticker ? u : ((DATA.portfolio || []).find((x) => x.ticker === ticker) || null);
     const S = (typeof SIGNALS !== "undefined" && SIGNALS) || {};
     const hn = S.holding_news && S.holding_news[ticker];
     // Search strategy rides in context: without it Grok issues 1-2 narrow queries, retrieves
@@ -1141,12 +1153,26 @@ async function fetchPulse(ticker, name) {
     const j = await res.json().catch(() => ({}));
     if (!res.ok || !j || j.error || !j.pulse) return fail();
     PULSE_CACHE[ticker] = { data: j.pulse, ts: Date.now() };
+    if (row && j.pulse.sentiment_label) row.pulse = {
+      label: j.pulse.sentiment_label, score: j.pulse.sentiment_score,
+      b: j.pulse.bullish_n || 0, n: j.pulse.neutral_n || 0, r: j.pulse.bearish_n || 0,
+      buzz: j.pulse.buzz || "flat", posts: j.pulse.posts_24h, theme: j.pulse.theme,
+      bull_case: j.pulse.bull_case, bear_case: j.pulse.bear_case, as_of: "live · just now" };
     el.innerHTML = PULSE_HEAD + pulseBodyHtml(j.pulse, Date.now());
     wirePulse(ticker, name);
   } catch (e) { fail(); }
 }
 
-function pulseBodyHtml(p, ts) {
+function pulseCasesHtml(p) {
+  // (2026-09-11, user: "can you summarize the 12 bullish, 1 bearish") — the crowd's
+  // actual ARGUMENTS, split by side, straight from the pass. Renders only when the
+  // worker (v4+) returned them; counts ride the headers.
+  const bits = [];
+  if (p.bull_case) bits.push(`<div class="pulse-case"><div class="pulse-case-h pos">What the bulls say${p.bullish_n != null ? ` (${p.bullish_n})` : ""}</div><div class="pulse-case-t">${esc(p.bull_case)}</div></div>`);
+  if (p.bear_case) bits.push(`<div class="pulse-case"><div class="pulse-case-h neg">What the bears say${p.bearish_n != null ? ` (${p.bearish_n})` : ""}</div><div class="pulse-case-t">${esc(p.bear_case)}</div></div>`);
+  return bits.join("");
+}
+function pulseBodyHtml(p, ts, srcNote) {
   const lbl = p.sentiment_label || "Quiet";
   const quiet = p.sentiment_score == null || /quiet/i.test(lbl);
   const cls = /bull/i.test(lbl) ? "pos" : /bear/i.test(lbl) ? "neg" : "muted";
@@ -1162,8 +1188,9 @@ function pulseBodyHtml(p, ts) {
     return `
       <div class="pulse-top"><span class="pulse-score muted">Quiet on X</span><span class="pulse-buzz">no crowd signal${vol}</span></div>
       <div class="pulse-theme">${esc(p.theme || "No meaningful chatter in the last 24h — normal for a name like this between catalysts; buzz tends to spike around earnings and news.")}</div>
-      ${postsHtml}
-      <div class="pulse-foot">Fetched ${pulseAgo(ts)} · social signal, not advice · <button type="button" class="pulse-link" data-act="get">refresh</button></div>`;
+      ${pulseCasesHtml(p)}
+    ${postsHtml}
+      <div class="pulse-foot">${srcNote ? esc(srcNote) : `${srcNote ? esc(srcNote) : `Fetched ${pulseAgo(ts)}`}`} · social signal, not advice · <button type="button" class="pulse-link" data-act="get">${srcNote ? "refresh live from X" : "refresh"}</button></div>`;
   }
   const score = Math.max(0, Math.min(100, Math.round(p.sentiment_score)));
   return `
@@ -1175,7 +1202,7 @@ function pulseBodyHtml(p, ts) {
     <div class="pulse-bar"><div class="pulse-fill ${cls}" style="width:${score}%"></div></div>
     ${p.theme ? `<div class="pulse-theme">${esc(p.theme)}</div>` : ""}
     <div class="pulse-posts">${postsHtml}</div>
-    <div class="pulse-foot">Fetched ${pulseAgo(ts)} · social signal, not advice · <button type="button" class="pulse-link" data-act="get">refresh</button></div>`;
+    <div class="pulse-foot">${srcNote ? esc(srcNote) : `Fetched ${pulseAgo(ts)}`} · social signal, not advice · <button type="button" class="pulse-link" data-act="get">refresh</button></div>`;
 }
 
 function pulseAgo(ts) {
