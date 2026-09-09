@@ -770,57 +770,6 @@ function renderTopHoldings() {
   el.innerHTML = `<div class="hbar-list">${bars}</div><div class="hbar-logos">${logos}</div>`;
 }
 
-// Zakat panel (2026-09-09, owner-tier): hawl = 1 Muharram; the panel computes both
-// standard methods and rules on neither. Renders only when the owner blob is unlocked.
-function nextHawlDate() {
-  try {
-    const fmt = new Intl.DateTimeFormat("en-u-ca-islamic-umalqura", { day: "numeric", month: "numeric" });
-    const d = new Date();
-    for (let i = 0; i < 400; i++) {
-      const parts = fmt.formatToParts(d);
-      const day = +parts.find((p) => p.type === "day").value;
-      const mon = +parts.find((p) => p.type === "month").value;
-      if (day === 1 && mon === 1 && i > 0) return new Date(d);
-      d.setDate(d.getDate() + 1);
-    }
-  } catch (e) {}
-  return null;
-}
-let zakatMethod = "market";
-function renderZakat() {
-  const el = document.getElementById("zakat-panel");
-  if (!el) return;
-  if (!privUnlocked()) { el.hidden = true; return; }
-  const t = (DATA.meta && DATA.meta.portfolio_totals) || {};
-  if (t.positions == null) { el.hidden = true; return; }
-  el.hidden = false;
-  const eq = t.positions || 0, sleeve = t.etf_value || 0, cash = t.cash || 0;
-  const base = zakatMethod === "market" ? eq + sleeve + cash : (eq + sleeve) * 0.30 + cash;
-  const due = base * 0.025;
-  const hawl = nextHawlDate();
-  const hawlStr = hawl ? hawl.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "—";
-  const days = hawl ? Math.round((hawl - new Date()) / 86400000) : null;
-  el.innerHTML = `<div class="card zakat-card">
-    <div class="zk-top"><h3>Zakat on the book</h3>
-      <span class="zk-hawl">hawl: 1 Muharram · next ${hawlStr}${days != null ? ` · in ${days}d` : ""}</span></div>
-    <div class="zk-tabs">
-      <button class="zk-tab ${zakatMethod === "market" ? "on" : ""}" data-m="market">Market-value method</button>
-      <button class="zk-tab ${zakatMethod === "assets" ? "on" : ""}" data-m="assets">Zakatable-assets method</button>
-    </div>
-    <div class="kv zk-kv">
-      <span class="k">Equities at market</span><span class="vv">${fmtUSD(eq, 2)}</span>
-      <span class="k">ETF sleeve</span><span class="vv">${fmtUSD(sleeve, 2)}</span>
-      <span class="k">Cash</span><span class="vv">${fmtUSD(cash, 2)}</span>
-      ${zakatMethod === "assets" ? `<span class="k">Equity proxy (30%)</span><span class="vv">${fmtUSD((eq + sleeve) * 0.30, 2)}</span>` : ""}
-      <span class="k zk-line">Zakatable base</span><span class="vv zk-line"><b>${fmtUSD(base, 2)}</b></span>
-      <span class="k">Rate (lunar year)</span><span class="vv">2.5%</span>
-    </div>
-    <div class="zk-due"><span>Zakat due</span><b>${fmtUSD(due, 2)} <i>≈ SAR ${(due * 3.75).toLocaleString("en-US", { maximumFractionDigits: 0 })}</i></b></div>
-    <div class="zk-note">Market-value method treats the whole position as zakatable (common for actively managed books). The zakatable-assets method uses a 30% underlying-assets proxy plus cash, for long-term intent. Your scholar's guidance decides — the panel computes, it does not rule.</div>
-  </div>`;
-  el.querySelectorAll(".zk-tab").forEach((b) => b.addEventListener("click", () => { zakatMethod = b.dataset.m; renderZakat(); }));
-}
-
 function renderPortfolio() {
   renderKpis(); // KPI strip lives inside this panel now
   renderTopHoldings();
@@ -834,7 +783,6 @@ function renderPortfolio() {
   renderSectorPerformance();
   renderPortfolioTable();
   renderEtfSleeve();
-  renderZakat();
   renderRealized();
 }
 
@@ -884,6 +832,7 @@ function ledgerDispatchesHtml() {
   const unlocked = privUnlocked();
   return `<div class="ledger">
     <div class="ledger-head">The Ledger <span class="ledger-sub">— every exit, on the record</span></div>
+    <div class="ledger-stories">
     ${stories.map((s) => {
       const r = (DATA.realized || []).find((x) => x.ticker === s.ticker && x.date_sold === s.exit_date) || {};
       const vit = [];
@@ -899,6 +848,7 @@ function ledgerDispatchesHtml() {
         <div class="ledger-lesson">${esc(s.lesson || "")}</div>
       </article>`;
     }).join("")}
+    </div>
   </div>`;
 }
 
@@ -910,7 +860,7 @@ function renderRealized() {
   el.hidden = false;
   const oldLedger = el.querySelector(".ledger");
   if (oldLedger) oldLedger.remove();
-  el.insertAdjacentHTML("afterbegin", ledgerDispatchesHtml());
+  el.insertAdjacentHTML("beforeend", ledgerDispatchesHtml());
 
   // ---- stats band (computed live from the rows, so future sells update it) ----
   // Locked: gain $ is owner-tier, but wins/best are decidable from gain_pct (public).
