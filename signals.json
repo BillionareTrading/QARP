@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-08",
-  "generated_at": "Sep 8, 7:01pm ET",
+  "date": "2026-09-09",
+  "generated_at": "Sep 9, 8:06am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -159,16 +159,16 @@
       "url": "https://www.benzinga.com/quote/DDOG",
       "wiim": true
     },
+    "NVDA": {
+      "title": "AI Will Transform the World, but Legendary Investor Warns Its Arms Race Has a Familiar Trap",
+      "ts": 1788951366,
+      "url": "https://www.benzinga.com/markets/tech/26/09/61680468/ai-will-transform-the-world-but-legendary-investor-warns-its-arms-race-has-a-familiar-trap",
+      "wiim": false
+    },
     "NVS": {
       "title": "QUICK SPARK: Amgen Stock Eyes Worst Day Since October 2000",
       "ts": 1788887853,
       "url": "https://www.benzinga.com/markets/biotech/26/09/61667421/amgen-stock-worst-day-since-2016-novartis-lpa-trial-failure-bmo-downgrade",
-      "wiim": false
-    },
-    "NVDA": {
-      "title": "S&P 500, Nasdaq Slip as $98 Brent Reignites Inflation Fears: Stock Market Today",
-      "ts": 1788887596,
-      "url": "https://www.benzinga.com/markets/equities/26/09/61667277/oil-lifts-treasury-yields-three-year-highs-dow-drops-578-points-markets-tuesday",
       "wiim": false
     },
     "AZN": {
@@ -176,57 +176,9 @@
       "ts": 1788882463,
       "url": "https://www.benzinga.com/news/fda/26/09/61664531/astrazeneca-secures-fda-approval-for-new-breast-cancer-treatment",
       "wiim": false
-    },
-    "AVGO": {
-      "title": "5 Stock Picks Last Week From Wall Street's Most Accurate Analysts",
-      "ts": 1788861022,
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/61651907/5-stock-picks-last-week-from-wall-streets-most-accurate-analysts-37",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-01",
-      "ticker": "CSCO",
-      "firm": "Deutsche Bank",
-      "action": "Initiates Coverage On",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$135",
-      "price": 109.17,
-      "upside": 23.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-01",
-      "ticker": "CRM",
-      "firm": "TD Cowen",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$300",
-      "price": 249.12,
-      "upside": 20.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-01",
-      "ticker": "AAPL",
-      "firm": "Rosenblatt",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$303",
-      "price": 316.22,
-      "upside": -4.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-09-02",
       "ticker": "AAPL",
@@ -477,6 +429,319 @@
   },
   "bz_news": [
     {
+      "title": "Amazon Gives Qualcomm a Major AI Boost With $60B Custom Chip Deal — Analyst Calls It a ‘Huge $QCOM Win’",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61682116/amazon-gives-qualcomm-a-major-ai-boost-with-60b-custom-chip-deal-analyst-calls-it-a-huge-qcom-win",
+      "ts": 1788954507,
+      "tickers": [
+        "QCOM",
+        "AAPL",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.457
+    },
+    {
+      "title": "'Dow Said to Weigh Exit From $20 Billion Saudi Chemicals Venture' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/09/61682037/dow-said-to-weigh-exit-from-20-billion-saudi-chemicals-venture-bloomberg",
+      "ts": 1788954314,
+      "tickers": [
+        "DOW",
+        "KSA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.374
+    },
+    {
+      "title": "Elon Musk Backs Moving NASA SLS Workforce Elsewhere, Says ‘Better To Repurpose’ Workers As Multibillion-Dollar Rocket Faces Cost Questions",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61681886/elon-musk-backs-moving-nasa-sls-workforce-elsewhere-says-better-to-repurpose-workers-as-multibillion-dollar-rocket-faces-cost-questions",
+      "ts": 1788954165,
+      "tickers": [
+        "BA",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.284
+    },
+    {
+      "title": "Google Raises Its Investments in Finland to Support AI Infrastructure Growth",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61681439/google-raises-its-investments-in-finland-to-support-ai-infrastructure-growth",
+      "ts": 1788952919,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "AAPL",
+        "XLC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.389
+    },
+    {
+      "title": "Apple Bucks Smartphone Chip Slump As iPhone 17 Pro Demand Powers Gains",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61681412/apple-bucks-smartphone-chip-slump-as-iphone-17-pro-demand-powers-gains",
+      "ts": 1788952758,
+      "tickers": [
+        "AAPL",
+        "SSNLF",
+        "QCOM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.425
+    },
+    {
+      "title": "AI Will Transform the World, but Legendary Investor Warns Its Arms Race Has a Familiar Trap",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61680468/ai-will-transform-the-world-but-legendary-investor-warns-its-arms-race-has-a-familiar-trap",
+      "ts": 1788951366,
+      "tickers": [
+        "SPY",
+        "TSLA",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.307
+    },
+    {
+      "title": "SpaceX Doesn’t Need to Beat Verizon, AT&T or T-Mobile to Disrupt Wireless, Analyst Says",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61679790/spacex-doesnt-need-to-beat-verizon-att-or-t-mobile-to-disrupt-wireless-analyst-says",
+      "ts": 1788949552,
+      "tickers": [
+        "SPCX",
+        "TMUS",
+        "ARKK",
+        "ARKQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.326
+    },
+    {
+      "title": "Evaluating Apple Against Peers In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/09/61679060/evaluating-apple-against-peers-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1788947906,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.366
+    },
+    {
+      "title": "Insights Into Microsoft's Performance Versus Peers In Software Sector",
+      "url": "https://www.benzinga.com/news/26/09/61679059/insights-microsoft-s-performance-versus-peers-software-sector",
+      "ts": 1788947903,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.373
+    },
+    {
+      "title": "Visa, IFC Announce Initiative To Share Credit Settlement Risk For Approximately 50 Below-Investment Grade Financial Institutions",
+      "url": "https://www.benzinga.com/quote/V",
+      "ts": 1788947381,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.389
+    },
+    {
+      "title": "NTSB Says Amazon Boeing Pilots Appeared to Consider Aborting Landing Before Deadly Miami Crash",
+      "url": "https://www.benzinga.com/news/travel/26/09/61678779/ntsb-says-amazon-boeing-pilots-appeared-to-consider-aborting-landing-before-deadly-miami-crash",
+      "ts": 1788946162,
+      "tickers": [
+        "AMZN",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.196
+    },
+    {
+      "title": "Strategy's $250 Bitcoin-Themed Air Jordan Sneakers Sell Out — But BTC Isn't Accepted",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/09/61678706/strategys-250-bitcoin-themed-air-jordan-sneakers-sell-out-but-btc-isnt-accepted",
+      "ts": 1788945350,
+      "tickers": [
+        "$BTC",
+        "MSTR",
+        "NKE",
+        "$ZEC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.243
+    },
+    {
+      "title": "Apple and Google Face UK Mandate to Block Explicit Content on Children’s Phones as Talks Stall",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61678293/apple-and-google-face-uk-mandate-to-block-explicit-content-on-childrens-phones-as-talks-stall",
+      "ts": 1788943563,
+      "tickers": [
+        "AAPL",
+        "META",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.21
+    },
+    {
+      "title": "Dr. Mehmet Oz Says 'We're Closing That Door' as CMS Bans 11 Medical Suppliers Over $3.4 Billion in Suspected Fraudulent Medicare Billing",
+      "url": "https://www.benzinga.com/news/health-care/26/09/61678113/cms-3-4-billion-medical-equipment-fraud-11-suppliers",
+      "ts": 1788942176,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.273
+    },
+    {
+      "title": "'UnitedHealth Sells Interest in Florida WellMed Clinics to TPG' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/09/61677958/unitedhealth-sells-interest-florida-wellmed-clinics-tpg-bloomberg",
+      "ts": 1788941544,
+      "tickers": [
+        "UNH",
+        "TPG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.39
+    },
+    {
+      "title": "Pyxis Oncology Stock Soars Over 5% Overnight: Here's What You Need to Know",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61677895/pyxis-oncology-shares-gain-after-hours-leadership-clinical-data",
+      "ts": 1788940918,
+      "tickers": [
+        "PYXS",
+        "AMGN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.481
+    },
+    {
+      "title": "To Bend the Future, Apple May Have to Step Back in Time: Can a Foldable iPhone Survive Without These Two Major Features",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61677806/apple-foldable-iphone-future-two-major-features",
+      "ts": 1788939881,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.253
+    },
+    {
+      "title": "Dow Tumbles Over 600 Points Ahead of Inflation Data: Investor Sentiment Weakens, Greed Index Remains in ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/09/61677277/dow-tumbles-over-600-points-ahead-of-inflation-data-investor-sentiment-weakens-greed-index-remains-in-fear-zone",
+      "ts": 1788935907,
+      "tickers": [
+        "INTC",
+        "SIG",
+        "AEO",
+        "BE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.447
+    },
+    {
+      "title": "Apple's Weird iPhone Curse: AAPL Stock Drops on Launch Day, Jumps the Next — Every Year for Almost 20 Years",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61677101/apple-aapl-stock-iphone-launch-day-next-day-20-year-pattern",
+      "ts": 1788934308,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.342
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61676904/stock-market-will-sp-500-open-up-or-down-today-33",
+      "ts": 1788932883,
+      "tickers": [
+        "SPY",
+        "AAPL",
+        "QQQ",
+        "CHWY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Apple Might Be Planning to 'Surprise and Shine' at iPhone 18 Launch Event, but Crypto Bettors Are Already Betting on Foldables and More",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61676659/apple-iphone-18-surprise-and-shine-launch-crypto-bettors-foldable-iphone-bets",
+      "ts": 1788928609,
+      "tickers": [
+        "$POL",
+        "$BTC",
+        "AAPL",
+        "$ZEC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.31
+    },
+    {
+      "title": "Jimmy Kimmel's 24-Year 'Jimmy Kimmel Live' Run Could End in 2027, ABC Says Reports on Future of Show 'Speculative'",
+      "url": "https://www.benzinga.com/news/politics/26/09/61676643/jimmy-kimmel-live-2027-ending-24-year-run-abc-calls-report-speculative",
+      "ts": 1788928183,
+      "tickers": [
+        "DIS",
+        "PARA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.166
+    },
+    {
+      "title": "Intel, NuScale Power, Casey's General Stores, Qualcomm and SpaceX: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/news/26/09/61676120/intel-nuscale-power-caseys-general-stores-qualcomm-and-spacex-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1788917468,
+      "tickers": [
+        "INTC",
+        "SPY",
+        "QCOM",
+        "CASY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.433
+    },
+    {
       "title": "'FDA’s Acting Drug, Vaccine Regulators Tapped for Permanent Roles'- Bloomberg",
       "url": "https://www.benzinga.com/news/26/09/61673042/fda-s-acting-drug-vaccine-regulators-tapped-permanent-roles-bloomberg",
       "ts": 1788898854,
@@ -492,330 +757,19 @@
       "relevance": 0.305
     },
     {
-      "title": "Nancy Pelosi Bought the Dip on Bloom Energy Stock: Gains are 7x Congressional Salary in Two Months",
-      "url": "https://www.benzinga.com/news/politics/26/09/61672535/nancy-pelosi-bought-the-dip-on-bloom-energy-stock-gains-are-7x-congressional-salary-in-two-months",
-      "ts": 1788898317,
+      "title": "NTSB Chair Calls Amazon ‘Prime Air’ Crash Scene ‘Utter Devastation,’ Says Boeing 767 Traveled 1,300 Feet Beyond Runway (UPDATED)",
+      "url": "https://www.benzinga.com/news/travel/26/09/61650660/ntsb-chair-calls-amazon-prime-air-crash-scene-utter-devastation-says-boeing-767-traveled-1300-feet-beyond-runway",
+      "ts": 1788852243,
       "tickers": [
-        "BE",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.318
-    },
-    {
-      "title": "Intel shares are trading higher after Northland Securities upgraded the stock from Market Perform to Outperform and announced a $120 price target.",
-      "url": "https://www.benzinga.com/quote/INTC",
-      "ts": 1788896107,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.486
-    },
-    {
-      "title": "Shares of software companies are trading lower, possibly in response to escalating tensions in the Middle East and renewed inflation concerns that may shift the Fed towards a rate hike. Concerns about key economic data due later this week may prompt traders to rotate out of growth stocks.",
-      "url": "https://www.benzinga.com/quote/SGRX",
-      "ts": 1788895459,
-      "tickers": [
-        "ADBE",
-        "CRM",
-        "ZS",
-        "SAIL"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.442
-    },
-    {
-      "title": "Federal Communications Commission Proposing To Open More Wireless Spectrum That Can Be Used For Faster Broadband Service From Space",
-      "url": "https://www.benzinga.com/news/26/09/61669899/federal-communications-commission-proposing-open-more-wireless-spectrum-can-be-used-faster-broadband",
-      "ts": 1788893101,
-      "tickers": [
-        "SPCX",
-        "VZ",
-        "TMUS",
-        "T"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.286
-    },
-    {
-      "title": "OpenAI Says Images 2.5 Is Available To All ChatGPT, ChatGPT Work, & Codex Users Across Desktop, Mobile, & Web; For Developers, We’re Introducing Two New Models In API, GPT‑Image‑2.5 Flare & GPT‑Image‑2.5 Sunburst",
-      "url": "https://www.benzinga.com/news/26/09/61669704/openai-says-images-2-5-available-all-chatgpt-chatgpt-work-codex-users-across-desktop-mobile-web-deve",
-      "ts": 1788892646,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.246
-    },
-    {
-      "title": "OpenAI Introduces ChatGPT Images 2.5",
-      "url": "https://www.benzinga.com/news/26/09/61669681/openai-introduces-chatgpt-images-2-5",
-      "ts": 1788892606,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.246
-    },
-    {
-      "title": "Why Is Lumentum Stock Surging on Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61668462/why-is-lumentum-stock-surging-on-tuesday",
-      "ts": 1788889903,
-      "tickers": [
-        "LITE",
-        "VZ",
-        "GLW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.48
-    },
-    {
-      "title": "QUICK SPARK: Amgen Stock Eyes Worst Day Since October 2000",
-      "url": "https://www.benzinga.com/markets/biotech/26/09/61667421/amgen-stock-worst-day-since-2016-novartis-lpa-trial-failure-bmo-downgrade",
-      "ts": 1788887853,
-      "tickers": [
-        "AMGN",
-        "NVS",
-        "IBB"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.426
-    },
-    {
-      "title": "S&P 500, Nasdaq Slip as $98 Brent Reignites Inflation Fears: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61667277/oil-lifts-treasury-yields-three-year-highs-dow-drops-578-points-markets-tuesday",
-      "ts": 1788887596,
-      "tickers": [
-        "AMGN",
-        "TSLA",
-        "AAPL",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.469
-    },
-    {
-      "title": "Intel Jumps 10% as Analyst Says Musk’s Terafab Could Give Foundry Much-Needed Scale",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61667076/intel-terafab-foundry-upgrade",
-      "ts": 1788887311,
-      "tickers": [
-        "INTC",
-        "TSLA",
-        "NVDA",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.447
-    },
-    {
-      "title": "Boeing Delivers 51 Aircraft In August",
-      "url": "https://www.benzinga.com/news/26/09/61666859/boeing-delivers-51-aircraft-august",
-      "ts": 1788886903,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.236
-    },
-    {
-      "title": "What's Going On With Amgen Stock Tuesday?",
-      "url": "https://www.benzinga.com/markets/biotech/26/09/61666572/whats-going-on-with-amgen-stock-tuesday",
-      "ts": 1788886211,
-      "tickers": [
-        "AMGN",
-        "NVS",
-        "IBB",
-        "PJP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.473
-    },
-    {
-      "title": "Chevron CFO Eimear Bonner Says Co. Will Double The Number Of Rigs In Venezuela As Part Of Five-Year Plan To Grow Production",
-      "url": "https://www.benzinga.com/news/26/09/61666541/chevron-cfo-eimear-bonner-says-co-will-double-number-rigs-venezuela-part-five-year-plan-grow-product",
-      "ts": 1788886154,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.283
-    },
-    {
-      "title": "Why Is Applied Optoelectronics Stock Surging Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61666003/why-is-applied-optoelectronics-stock-surging-tuesday",
-      "ts": 1788885202,
-      "tickers": [
-        "AAOI",
-        "VZ",
-        "GLW",
-        "PTF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.415
-    },
-    {
-      "title": "Microsoft Breaks Out Azure Sales at $100 Billion Annualized Pace, Reorganizes AI Segments",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61665885/microsoft-breaks-out-azure-sales-at-100-billion-annualized-pace-reorganizes-ai-segments",
-      "ts": 1788885030,
-      "tickers": [
-        "MSFT",
-        "META",
         "AMZN",
-        "GOOGL"
+        "BA",
+        "TM",
+        "F"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.378
-    },
-    {
-      "title": "Qualcomm CFO Says Deal With Amazon Positions Qualcomm To Deliver Strong YoY Rev Growth From FY27 To FY28",
-      "url": "https://www.benzinga.com/news/26/09/61664802/qualcomm-cfo-says-deal-amazon-positions-qualcomm-deliver-strong-yoy-rev-growth-fy27-fy28",
-      "ts": 1788883058,
-      "tickers": [
-        "QCOM",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.444
-    },
-    {
-      "title": "HSBC Reiterates Buy on Apple, Maintains $366 Price Target",
-      "url": "https://www.benzinga.com/news/26/09/61664580/hsbc-reiterates-buy-apple-maintains-366-price-target",
-      "ts": 1788882554,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.46
-    },
-    {
-      "title": "Astrazeneca Secures FDA Approval for New Breast Cancer Treatment",
-      "url": "https://www.benzinga.com/news/fda/26/09/61664531/astrazeneca-secures-fda-approval-for-new-breast-cancer-treatment",
-      "ts": 1788882463,
-      "tickers": [
-        "AZN",
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.611
-    },
-    {
-      "title": "Visa Brings Onchain Lending Closer to Everyday Stablecoin Payments",
-      "url": "https://www.benzinga.com/markets/large-cap/26/09/61664469/visa-brings-onchain-lending-closer-to-everyday-stablecoin-payments",
-      "ts": 1788882392,
-      "tickers": [
-        "V",
-        "XLF",
-        "AKRE",
-        "KYC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.289
-    },
-    {
-      "title": "Can Visa's Agentic Ready Program Answer The Citrini Bear Case?",
-      "url": "https://www.benzinga.com/Opinion/26/09/61664203/can-visas-agentic-ready-program-answer-the-citrini-bear-case",
-      "ts": 1788882076,
-      "tickers": [
-        "DASH",
-        "MA",
-        "AXP",
-        "DBSDF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.277
-    },
-    {
-      "title": "Here's How Much $1000 Invested In American Express 5 Years Ago Would Be Worth Today",
-      "url": "https://www.benzinga.com/news/26/09/61663888/here-s-how-much-1000-invested-american-express-5-years-ago-would-be-worth-today",
-      "ts": 1788881437,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.315
-    },
-    {
-      "title": "Inhibrx Biosciences Plans Head and Neck Cancer Trial Expansion Following High Response Rates",
-      "url": "https://www.benzinga.com/markets/biotech/26/09/61663840/inhibrx-biosciences-plans-head-and-neck-cancer-trial-expansion-following-high-response-rates",
-      "ts": 1788881363,
-      "tickers": [
-        "INBX",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.514
-    },
-    {
-      "title": "Healthcare ETFs Were Left Behind. JPMorgan Sees the Money Coming Back",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/61663775/healthcare-etfs-were-left-behind-jpmorgan-sees-the-money-coming-back",
-      "ts": 1788881255,
-      "tickers": [
-        "LLY",
-        "JNJ",
-        "GLD",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.314
-    },
-    {
-      "title": "Northland Capital Markets Upgrades Intel to Outperform, Announces $120 Price Target",
-      "url": "https://www.benzinga.com/news/26/09/61663690/northland-capital-markets-upgrades-intel-outperform-announces-120-price-target",
-      "ts": 1788881100,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.468
+      "relevance": 0.207
     }
   ],
   "portfolio_brief": {
@@ -868,9 +822,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "S&P 500, Nasdaq Slip as $98 Brent Reignites Inflation Fears: Stock Market Today",
-        "ts": 1788887596,
-        "url": "https://www.benzinga.com/markets/equities/26/09/61667277/oil-lifts-treasury-yields-three-year-highs-dow-drops-578-points-markets-tuesday",
+        "title": "AI Will Transform the World, but Legendary Investor Warns Its Arms Race Has a Familiar Trap",
+        "ts": 1788951366,
+        "url": "https://www.benzinga.com/markets/tech/26/09/61680468/ai-will-transform-the-world-but-legendary-investor-warns-its-arms-race-has-a-familiar-trap",
         "wiim": false
       },
       "filings": {
@@ -1311,12 +1265,7 @@
         "score": 1.21,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "5 Stock Picks Last Week From Wall Street's Most Accurate Analysts",
-        "ts": 1788861022,
-        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/61651907/5-stock-picks-last-week-from-wall-streets-most-accurate-analysts-37",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
