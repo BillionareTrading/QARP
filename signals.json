@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-09",
-  "generated_at": "Sep 9, 6:48pm ET",
+  "date": "2026-09-10",
+  "generated_at": "Sep 10, 8:19am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -167,9 +167,15 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Forget 5X ETFs. Nvidia, Tesla, SpaceX and Palantir Could Soon Get Hourly 2X Bets",
-      "ts": 1788971728,
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/09/61693689/forget-5x-etfs-nvidia-tesla-spacex-and-palantir-could-soon-get-hourly-2x-bets",
+      "title": "Ray Dalio Warns 'We Are Now in a Bubble': Here's Why the Billionaire Investor Says AI Boom Mirrors 1920s Crash",
+      "ts": 1789018134,
+      "url": "https://www.benzinga.com/markets/tech/26/09/61704630/ray-dalio-ai-bubble-warning-miracle-versus-investment-big-tech-capex",
+      "wiim": false
+    },
+    "NVS": {
+      "title": "Nvidia, FAA Join Palantir’s AI Expansion as Cyber Push Takes Off",
+      "ts": 1789034782,
+      "url": "https://www.benzinga.com/markets/tech/26/09/61706991/nvidia-faa-join-palantirs-ai-expansion-as-cyber-push-takes-off",
       "wiim": false
     },
     "AVGO": {
@@ -180,90 +186,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-02",
-      "ticker": "AAPL",
-      "firm": "Morgan Stanley",
-      "action": "Reiterates",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$360",
-      "price": 315.34,
-      "upside": 14.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-02",
-      "ticker": "CRM",
-      "firm": "Needham",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$400",
-      "price": 244.16,
-      "upside": 63.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-02",
-      "ticker": "AAPL",
-      "firm": "DA Davidson",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$270",
-      "price": 315.34,
-      "upside": -14.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-02",
-      "ticker": "JNJ",
-      "firm": "UBS",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$320",
-      "price": 267.08,
-      "upside": 19.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-02",
-      "ticker": "CRM",
-      "firm": "Cantor Fitzgerald",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$300",
-      "price": 244.16,
-      "upside": 22.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-02",
-      "ticker": "CRM",
-      "firm": "BTIG",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$300",
-      "price": 244.16,
-      "upside": 22.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-09-03",
       "ticker": "CVX",
@@ -403,17 +325,68 @@
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-09-10",
+      "ticker": "AAPL",
+      "firm": "Rosenblatt",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$303",
+      "price": 315.34,
+      "upside": -3.9,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-09-10",
+      "ticker": "NKE",
+      "firm": "Morgan Stanley",
+      "action": "Reinstates",
+      "rating": "Underweight",
+      "stance": "bearish",
+      "pt": "$31",
+      "price": 37.35,
+      "upside": -17.0,
+      "held": false,
+      "uni": true,
+      "qarp": "BUY"
+    },
+    {
+      "date": "2026-09-10",
+      "ticker": "AAPL",
+      "firm": "B of A Securities",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$370",
+      "price": 315.34,
+      "upside": 17.3,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
     "NKE": {
-      "date": "2026-09-09",
-      "firm": "BMO Capital",
-      "action": "Initiates Coverage On",
-      "rating": "Underperform",
+      "date": "2026-09-10",
+      "firm": "Morgan Stanley",
+      "action": "Reinstates",
+      "rating": "Underweight",
       "stance": "bearish",
-      "pt": "$30",
-      "upside": -19.7
+      "pt": "$31",
+      "upside": -17.0
+    },
+    "AAPL": {
+      "date": "2026-09-10",
+      "firm": "Rosenblatt",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$303",
+      "upside": -3.9
     },
     "MRK": {
       "date": "2026-09-09",
@@ -432,15 +405,6 @@
       "stance": "neutral",
       "pt": "$344",
       "upside": 10.8
-    },
-    "AAPL": {
-      "date": "2026-09-08",
-      "firm": "HSBC",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$366",
-      "upside": 16.1
     },
     "CVX": {
       "date": "2026-09-03",
@@ -481,6 +445,312 @@
   },
   "bz_news": [
     {
+      "title": "Freedom Broker Upgrades Caterpillar to Buy, Announces $980 Price Target",
+      "url": "https://www.benzinga.com/news/26/09/61710300/freedom-broker-upgrades-caterpillar-buy-announces-980-price-target",
+      "ts": 1789042528,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.458
+    },
+    {
+      "title": "IBM, NASA Announces Availability Of Open-Source Release Of NASA-IBM Lunar Foundation Model",
+      "url": "https://www.benzinga.com/news/26/09/61710013/ibm-nasa-announces-availability-open-source-release-nasa-ibm-lunar-foundation-model",
+      "ts": 1789041915,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.305
+    },
+    {
+      "title": "What's Going On With IBM Stock Thursday?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61709943/whats-going-on-with-ibm-stock-thursday-3",
+      "ts": 1789041768,
+      "tickers": [
+        "LMT",
+        "IBM",
+        "TDIV",
+        "TDVI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.39
+    },
+    {
+      "title": "Microsoft Signs ‘Iron-Clad’ AI Safety Deal — Schools Can Seek Damages if Student Data Is Misused",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61709897/microsoft-signs-iron-clad-ai-safety-deal-schools-can-seek-damages-if-student-data-is-misused",
+      "ts": 1789041705,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.32
+    },
+    {
+      "title": "Morgan Stanley Reinstates Underweight on Nike, Announces $31 Price Target",
+      "url": "https://www.benzinga.com/news/26/09/61709485/morgan-stanley-reinstates-underweight-nike-announces-31-price-target",
+      "ts": 1789041158,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.469
+    },
+    {
+      "title": "What's Going On With AMD Stock Thursday?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61709423/whats-going-on-with-amd-stock-thursday-9",
+      "ts": 1789040917,
+      "tickers": [
+        "AMD",
+        "GOOGL",
+        "GOOG",
+        "ARKW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.418
+    },
+    {
+      "title": "Johnson & Johnson Receives CE Marking For ACUVUE OASYS MAX 2-Week, New Reusable Contact Lens Featuring Proprietary MAX Technologies To Deliver Lasting Comfort And Clear Vision, Even At Day 14",
+      "url": "https://www.benzinga.com/news/26/09/61709412/johnson-johnson-receives-ce-marking-acuvue-oasys-max-2-week-new-reusable-contact-lens-featuring-prop",
+      "ts": 1789040910,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.32
+    },
+    {
+      "title": "Jim Cramer: This Tech Stock Is ‘Terrific’, Home Depot Takes Beating",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61709062/jim-cramer-this-tech-stock-is-terrific-home-depot-takes-beating",
+      "ts": 1789040096,
+      "tickers": [
+        "HD",
+        "AKAM",
+        "APLD",
+        "BLDR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.348
+    },
+    {
+      "title": "B of A Securities Maintains Buy on Apple, Lowers Price Target to $370",
+      "url": "https://www.benzinga.com/news/26/09/61708991/b-securities-maintains-buy-apple-lowers-price-target-370",
+      "ts": 1789039977,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.484
+    },
+    {
+      "title": "Nvidia, FAA Join Palantir’s AI Expansion as Cyber Push Takes Off",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61706991/nvidia-faa-join-palantirs-ai-expansion-as-cyber-push-takes-off",
+      "ts": 1789034782,
+      "tickers": [
+        "PLTR",
+        "CSCO",
+        "NVDA",
+        "CRWD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.471
+    },
+    {
+      "title": "Anthropic Pulls $450,000 Meta Sales Role as AI Rivalry With Facebook Parent Intensifies: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61706760/anthropic-meta-sales-role-ai-rival-customer",
+      "ts": 1789034471,
+      "tickers": [
+        "META",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.318
+    },
+    {
+      "title": "Competitor Analysis: Evaluating Microsoft And Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/09/61706674/competitor-analysis-evaluating-microsoft-and-competitors-software-industry",
+      "ts": 1789034310,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.326
+    },
+    {
+      "title": "Evaluating Apple Against Peers In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/09/61706673/evaluating-apple-against-peers-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1789034306,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.366
+    },
+    {
+      "title": "iPhone 17 Makes Apple History With Record First-Year Revenue",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61706400/iphone-17-makes-apple-history-with-record-first-year-revenue",
+      "ts": 1789033104,
+      "tickers": [
+        "AAPL",
+        "OEF",
+        "LRND",
+        "QQH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.302
+    },
+    {
+      "title": "Reported Earlier, OpenAI Urges Congress To Pass Mandatory National AI Safety Regulation While Backing Four New California Bills",
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "ts": 1789028302,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.341
+    },
+    {
+      "title": "IBM, Lockheed Martin Establish Quantum Hub Via Armasuisse Offset Agreement, Deploying Quantum Computer By End Of 2026",
+      "url": "https://www.benzinga.com/quote/LMT",
+      "ts": 1789026688,
+      "tickers": [
+        "IBM",
+        "LMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.348
+    },
+    {
+      "title": "Reported Earlier, Ant International, Mastercard, Visa Unite On KYA Framework As AI Agents Projected To Orchestrate Up To $5T In Commerce By 2030",
+      "url": "https://www.benzinga.com/quote/V",
+      "ts": 1789026088,
+      "tickers": [
+        "MA",
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.362
+    },
+    {
+      "title": "iPhone 18 Pro Debuts C2 Modem As Apple Keeps Weaning Off Qualcomm — Pro Max Isn't Ready to Let Go",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61705356/iphone-18-pro-c2-modem-pro-max-qualcomm-apple-weaning-off",
+      "ts": 1789025364,
+      "tickers": [
+        "AAPL",
+        "INTC",
+        "QCOM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.262
+    },
+    {
+      "title": "Cathie Wood is Optimistic About Blockchains — Ark Analyst Explains Why The Tech Underpinning Bitcoin Has Parallels With Fast Food Chains",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/09/61705304/cathie-wood-blockchain-bitcoin-fast-food-chains-ark-analyst",
+      "ts": 1789024871,
+      "tickers": [
+        "$ETH",
+        "$BTC",
+        "MCD",
+        "$SOL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.271
+    },
+    {
+      "title": "Ray Dalio Warns 'We Are Now in a Bubble': Here's Why the Billionaire Investor Says AI Boom Mirrors 1920s Crash",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61704630/ray-dalio-ai-bubble-warning-miracle-versus-investment-big-tech-capex",
+      "ts": 1789018134,
+      "tickers": [
+        "NVDA",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.324
+    },
+    {
+      "title": "NTSB Says Amazon Plane Pilot Warned It Was ‘Too Fast’ Before Fatal Miami Crash",
+      "url": "https://www.benzinga.com/news/travel/26/09/61704596/ntsb-says-amazon-plane-pilot-warned-it-was-too-fast-before-fatal-miami-crash",
+      "ts": 1789017411,
+      "tickers": [
+        "AMZN",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.174
+    },
+    {
+      "title": "Gene Munster Says Apple Regained 'Device Design Mojo' With $1,999 iPhone Duo: 'They're Going to Sell More Than I Thought'",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61704086/gene-munster-apple-iphone-duo-1999-device-design-mojo-sales",
+      "ts": 1789005989,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.273
+    },
+    {
+      "title": "Apple, Meta, AeroVironment, SUNation Energy and American Eagle Outfitters: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61704026/apple-meta-aerovironment-sunation-energy-and-american-eagle-outfitters-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1789004543,
+      "tickers": [
+        "AAPL",
+        "META",
+        "AVAV",
+        "AEO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.427
+    },
+    {
       "title": "Want in on Anthropic Before the IPO? Buy These 8 Stocks",
       "url": "https://www.benzinga.com/markets/equities/26/09/61703261/want-in-on-anthropic-before-the-ipo-buy-these-8-stocks",
       "ts": 1788991677,
@@ -507,284 +777,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.417
-    },
-    {
-      "title": "Here’s How Much You Would Have Made Owning Salesforce Stock In The Last 20 Years",
-      "url": "https://www.benzinga.com/news/26/09/61700078/here-s-how-much-you-would-have-made-owning-salesforce-stock-last-20-years",
-      "ts": 1788984023,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.294
-    },
-    {
-      "title": "'TPG Working With JPMorgan Chase Bankers To Explore Potential $5 Billion Sale Of Healthcare Payments Software Firm Lyric, Sources Said' - Reuters Exclusive",
-      "url": "https://www.benzinga.com/news/26/09/61699934/tpg-working-jpmorgan-chase-bankers-explore-potential-5-billion-sale-healthcare-payments-software-fir",
-      "ts": 1788983684,
-      "tickers": [
-        "TPG",
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.391
-    },
-    {
-      "title": "South Park Vs. Trump (And Google & Apple): Hit Animated Show Switches Name in Nod to President’s Map Changes",
-      "url": "https://www.benzinga.com/news/entertainment/26/09/61699567/south-park-vs-trump-and-google-apple-hit-animated-show-switches-name-in-nod-to-presidents-map-changes",
-      "ts": 1788982906,
-      "tickers": [
-        "PSKY",
-        "AAPL",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.224
-    },
-    {
-      "title": "QUICK SPARK: Apple Stock Rises on iPhone Duo Launch at $1,999",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61699396/apple-stock-iphone-duo-foldable-launch-1999-price-preorder-october",
-      "ts": 1788982522,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.347
-    },
-    {
-      "title": "Nvidia and Meta Are Hungry for HBM. SK Hynix Is on the Menu — These ETFs Could Cash In",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/61698742/nvidia-and-meta-are-hungry-for-hbm-sk-hynix-is-on-the-menu-these-etfs-could-cash-in",
-      "ts": 1788981099,
-      "tickers": [
-        "SKHY",
-        "META",
-        "MSFT",
-        "TSM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.484
-    },
-    {
-      "title": "Disney CFO Says Company Is Prioritizing Revenue Growth With A Strong Content Slate Ahead, Wants To Continue Delivering Double-Digit Earnings Performance",
-      "url": "https://www.benzinga.com/news/26/09/61698659/disney-cfo-says-company-prioritizing-revenue-growth-strong-content-slate-ahead-wants-continue-delive",
-      "ts": 1788980966,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.46
-    },
-    {
-      "title": "Walt Disney CFO Says Streaming, Experiences Account For About 85% Of Company's Earnings And Are Growing Strongly",
-      "url": "https://www.benzinga.com/news/26/09/61698589/walt-disney-cfo-says-streaming-experiences-account-about-85-company-s-earnings-and-are-growing-stron",
-      "ts": 1788980786,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.39
-    },
-    {
-      "title": "Disney CFO Says Cruise Ships Continue To Sell Out With Capacity Utilization Remaining High Despite 50% Increase In Guest Rooms",
-      "url": "https://www.benzinga.com/news/26/09/61698480/disney-cfo-says-cruise-ships-continue-sell-out-capacity-utilization-remaining-high-despite-50-increa",
-      "ts": 1788980558,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.24
-    },
-    {
-      "title": "Walt Disney CFO Says Co. Has Pretty Solid Slate As It Pivots Toward 2028",
-      "url": "https://www.benzinga.com/news/26/09/61698273/walt-disney-cfo-says-co-has-pretty-solid-slate-it-pivots-toward-2028",
-      "ts": 1788980219,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.401
-    },
-    {
-      "title": "Apple iPhone Duo Starts at $1,999 With 7.6-Inch Foldable Display: AAPL CEO John Ternus Says No More ‘Two Phones Awkwardly Stuck Together’",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61698045/apple-iphone-duo-starts-at-1999-with-7-6-inch-foldable-display-aapl-ceo-john-ternus-says-no-more-two-phones-awkwardly-stuck-together",
-      "ts": 1788979834,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.271
-    },
-    {
-      "title": "Disney CFO Says Disney+ Had 13% Margin Last Quarter, Expects Double-Digit Margins For Full Year; Says Company Created 'One Fan, One Account Ecosystem' Linking Hulu And Disney Profiles",
-      "url": "https://www.benzinga.com/news/26/09/61697891/disney-cfo-says-disney-had-13-margin-last-quarter-expects-double-digit-margins-full-year-says-compan",
-      "ts": 1788979521,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.317
-    },
-    {
-      "title": "Barclays Sees S&P 500 at 7,950 in 2026: What Do Prediction Markets Say?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61697782/barclays-sp-500-target-7950",
-      "ts": 1788979277,
-      "tickers": [
-        "SPY",
-        "AMZN",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.445
-    },
-    {
-      "title": "Apple iPhone Duo Will Have One Fusion Camera Lens And One Telephoto Lens; Apple Says iPhone Duo Starts At $1,999, Storage From 256 GB To 2 TB; iPhone Duo Pre-Orders Begin October 16, And It Will Be Available On October 23",
-      "url": "https://www.benzinga.com/news/26/09/61697128/apple-iphone-duo-will-have-one-fusion-camera-lens-and-one-telephoto-lens-apple-says-iphone-duo-start",
-      "ts": 1788977812,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.211
-    },
-    {
-      "title": "Apple iPhone 18 Pro Launched With New A20 Pro Chip, Siri AI, Camera Upgrades and $1,199 Starting Price",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61696979/apple-iphone-18-pro-launched-with-new-a20-pro-chip-siri-ai-camera-upgrades-and-1199-starting-price",
-      "ts": 1788977573,
-      "tickers": [
-        "AAPL",
-        "TSM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.263
-    },
-    {
-      "title": "Apple Says iPhone Duo Can Be Used Partially Folded; Says New Display Engine On A20 Pro Chip Will Power iPhone Duo; Says iPhone Duo Is eSIM Only Worldwide; Apple Says C2 Modem Chip Will Have 5G Millimeter Wave Support In United States",
-      "url": "https://www.benzinga.com/news/26/09/61696941/apple-says-iphone-duo-can-be-used-partially-folded-says-new-display-engine-a20-pro-chip-will-power-i",
-      "ts": 1788977469,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.28
-    },
-    {
-      "title": "Chevron CFO Says Oil Giant Is ‘Bigger, Better and Stronger Than We’ve Ever Been’",
-      "url": "https://www.benzinga.com/markets/large-cap/26/09/61696823/chevron-cfo-says-oil-giant-is-bigger-better-and-stronger-than-weve-ever-been",
-      "ts": 1788977216,
-      "tickers": [
-        "CVX",
-        "FDL",
-        "NANR",
-        "HDV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.318
-    },
-    {
-      "title": "Apple AirPods 5, Watch Ultra 4 and Watch Series 12 Are Here: Price, Features and Pre-Order Details",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61696812/apple-announced-airpods-5-watch-ultra-4-and-watch-series-12",
-      "ts": 1788977205,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.224
-    },
-    {
-      "title": "Apple iPhone Duo Outer Display Will Be 5.4 Inches; Apple Says iPhone Duo Will Work With Apple Pencil; Apple Says iPhone Duo Will Support Multiple Apps At Once In Separate Windows For Productivity",
-      "url": "https://www.benzinga.com/news/26/09/61696745/apple-iphone-duo-outer-display-will-be-5-4-inches-apple-says-iphone-duo-will-work-apple-pencil-apple",
-      "ts": 1788977041,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.263
-    },
-    {
-      "title": "Apple Says iPhone Duo When Open Is Thinnest iPhone Ever; iPhone Duo Opens To A 7.6-Inch Super Retina XDR Display That Is 50% Larger Than iPhone 18 Pro Max",
-      "url": "https://www.benzinga.com/news/26/09/61696596/apple-says-iphone-duo-when-open-thinnest-iphone-ever-iphone-duo-opens-7-6-inch-super-retina-xdr-disp",
-      "ts": 1788976803,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.217
-    },
-    {
-      "title": "- Apple: Announces Foldable Design Of iPhone; Apple Says Foldable Design Will Have Two Cameras; Announces Foldable iPhone Named iPhone Duo",
-      "url": "https://www.benzinga.com/news/26/09/61696474/apple-announces-foldable-design-iphone-apple-says-foldable-design-will-have-two-cameras-announces-fo",
-      "ts": 1788976536,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.258
-    },
-    {
-      "title": "Apple Watch Series 12 Starts At The Same Price Of $399, And Apple Watch Ultra 4 Remains At $799; Says Apple Watch Series 12 And Apple Watch Ultra 4 Can Be Pre-Ordered Starting Today, Available On September 18th",
-      "url": "https://www.benzinga.com/news/26/09/61696346/apple-watch-series-12-starts-same-price-399-and-apple-watch-ultra-4-remains-799-says-apple-watch-ser",
-      "ts": 1788976330,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.207
-    },
-    {
-      "title": "Apple Introduces Audio Intelligence; Introduces Live Rewind Feature To Transcribe 15 Seconds Of Recent Audio; Apple Introduces Siri Recap To Summarize Conversations; Apple Says Audio Intelligence Features Do Not Create Or Store Audio Files; Introducing Audio Intelligence To Bring Sound Recognition To Apple Watch",
-      "url": "https://www.benzinga.com/news/26/09/61696203/apple-introduces-audio-intelligence-introduces-live-rewind-feature-transcribe-15-seconds-recent-audi",
-      "ts": 1788976032,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.324
     }
   ],
   "portfolio_brief": {
@@ -837,9 +829,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Forget 5X ETFs. Nvidia, Tesla, SpaceX and Palantir Could Soon Get Hourly 2X Bets",
-        "ts": 1788971728,
-        "url": "https://www.benzinga.com/etfs/specialty-etfs/26/09/61693689/forget-5x-etfs-nvidia-tesla-spacex-and-palantir-could-soon-get-hourly-2x-bets",
+        "title": "Ray Dalio Warns 'We Are Now in a Bubble': Here's Why the Billionaire Investor Says AI Boom Mirrors 1920s Crash",
+        "ts": 1789018134,
+        "url": "https://www.benzinga.com/markets/tech/26/09/61704630/ray-dalio-ai-bubble-warning-miracle-versus-investment-big-tech-capex",
         "wiim": false
       },
       "filings": {
@@ -1005,7 +997,7 @@
           "date": "2026-06-12",
           "url": "https://www.sec.gov/Archives/edgar/data/866787/000110465926073525/azo-20260509x10q.htm"
         },
-        "insider30d": 2
+        "insider30d": 1
       },
       "explain": "32 analysts cover it — 26 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1289,8 +1281,8 @@
         },
         "periodic": {
           "form": "10-Q",
-          "date": "2026-06-09",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
+          "date": "2026-09-10",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm"
         },
         "insider30d": 0
       },
@@ -1312,7 +1304,12 @@
         "score": 0.53,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Nvidia, FAA Join Palantir’s AI Expansion as Cyber Push Takes Off",
+        "ts": 1789034782,
+        "url": "https://www.benzinga.com/markets/tech/26/09/61706991/nvidia-faa-join-palantirs-ai-expansion-as-cyber-push-takes-off",
+        "wiim": false
+      },
       "filings": {
         "latest8k": null,
         "periodic": null,
@@ -1635,23 +1632,23 @@
     },
     "SAP": null,
     "AVGO": {
-      "period": "Q2 FY2026",
-      "filed": "2026-06-09",
+      "period": "Q3 FY2026",
+      "filed": "2026-09-10",
       "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
       "revenue": {
-        "fmt": "$22.2B",
-        "yoy": 47.9
+        "fmt": "$29.6B",
+        "yoy": 85.5
       },
       "eps": {
-        "val": 1.91,
-        "yoy": 85.4
+        "val": 2.68,
+        "yoy": 215.3
       },
       "net_income": {
         "fmt": "$5.9B"
       },
       "margin": null,
-      "summary": "Q2 FY2026 — revenue $22.2B (+47.9% YoY), diluted EPS $1.91 (+85.4% YoY). (as reported, GAAP)"
+      "summary": "Q3 FY2026 — revenue $29.6B (+85.5% YoY), diluted EPS $2.68 (+215.3% YoY). (as reported, GAAP)"
     },
     "NVS": null,
     "NBIX": {
