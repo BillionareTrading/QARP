@@ -92,6 +92,8 @@ export default {
         `"sentiment_score":<0-100 or null>,"bullish_n":<int>,"bearish_n":<int>,"neutral_n":<int>,` +
         `"buzz":"surging|rising|flat|quiet","posts_24h":<int or null>,` +
         `"theme":"<one sentence: WHAT the crowd is actually talking about>",` +
+        `"bull_case":"<2-3 sentences: what the bullish posts are ACTUALLY ARGUING — their specific claims, numbers, catalysts. Empty string if no substantive bull posts.>",` +
+        `"bear_case":"<2-3 sentences: what the bearish posts are ACTUALLY ARGUING. Empty string if no substantive bear posts.>",` +
         `"posts":[{"handle":"@...","text":"<short paraphrase, never verbatim>"}],"as_of":"<ISO time>"}`;
     }
 
