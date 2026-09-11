@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Thursday was a broad down day for Jaleel's book, with only AstraZeneca (+1.72%), Expand Energy (+0.26%), On Holding (+0.04%), and Neurocrine Biosciences (+0.92%) managing any green. The heaviest damage came from Boston Scientific, which shed another 4.14% — the largest single-day drag — compounding a position already sitting at a –12.1% unrealized loss under an elevated guidance-cut flag. NVIDIA fell 2.37%, ADBE fell 2.37%, and LULU dropped 2.85%, adding to what are already the book's deepest underwater names (LULU at –24.2%, RKLB at –20.9%). ABT, the largest single weight at 10.5%, gave back 1.78% despite still sitting on a healthy +19.5% gain. The macro backdrop explained much of the software weakness: geopolitical tensions and renewed inflation fears drove rotation out of growth stocks, pressuring ADBE and peers, even as SAP's headline pointed to mixed software sentiment on the day.</p><p>The drift problem is concentrated in three names. BSX carries an elevated flag — guidance slashed to 7–8.5% growth, flat through Q3 guided — yet still carries a Strong Buy verdict; price and thesis are clearly pulling apart, with the next catalyst not until October 28. LULU is a similar story: five straight quarters of negative Americas comps, tariff margin pressure, China stalled, and a guide cut in June, yet the model rates it Strong Buy — that conviction needs to be stress-tested, not accepted at face value. RKLB is the outlier in a different direction: rated AVOID with a QARP score of 39.5 (the weakest in the book by a wide margin), –20.9% in the hole, and still carrying a 6.5% weight. There is no constructive thesis visible in the data to justify that weight at that rating.</p><p>Watch ADBE closely — its earnings call falls today (Sep 10 next-event flag), and the headline risk around AI-moat fears and CFO departure means the narrative, not just the numbers, could move the stock sharply. The SPGI headline around OpenAI's ChatGPT for Financial Services integrating with S&amp;P Global is a genuine strategic development worth monitoring for whether it adds to or complicates SPGI's moat. AZN's +1.72% was a rare bright spot and its Strong Buy rating with QARP of 74.1 looks defensively sound; it is one of the few positions behaving in line with thesis.</p>",
+  "your_book": "<p>Jaleel's book had a mixed but mostly quiet Friday, September 11. The clearest drag came from Expand Energy (EXE), off 2.11% on the session despite sitting on a small unrealized gain — energy names were the weak spot. Abbott (ABT), the book's largest weight at 10.3%, slipped 1.36%, adding to the friction; the EPS-guide trim flagged back in FY remains a live overhang ahead of its October 13 report. On the positive side, the consumer discretionary names — On Holding (ONON, +2.09%), Lululemon (LULU, +2.16%), and Adobe (ADBE, +1.37%) — provided a partial offset, though both ONON and LULU are still nursing double-digit unrealized losses and LULU carries an elevated risk flag for guidance cuts and margin pressure.</p><p>The drift that deserves the most scrutiny is Boston Scientific (BSX): rated Strong Buy, an 8.7% weight, yet down 12.3% unrealized with a guidance slash on record — FY26 growth cut from 10.5% to 7–8.5%, flat through Q3. Price and thesis are moving in opposite directions, and the next catalyst isn't until October 28. Similarly, Rocket Lab (RKLB) is the book's only AVOID-rated name yet holds a 6.6% weight and sits nearly 20% in the red — the 1.6% pop today doesn't resolve the structural concern.</p><p>Headline noise around NVDA (AI-capex doubt, export controls) and ADBE (AI-disruption fear, macro rotation out of growth) is worth monitoring into next week. Both names barely moved Friday, suggesting the market is in a wait-and-see posture rather than pricing in a new negative — but the risk flags are active.</p>",
   "attention": [
-    {
-      "ticker": "BSX",
-      "severity": "act",
-      "headline": "Guidance slashed, –12.1% loss, and another 4.14% drop today — thesis-price gap is widening",
-      "note": "FY26 growth cut to 7–8.5% with flat guidance through Q3, yet the position remains rated Strong Buy and carries an 8.7% weight; with the next catalyst not until Oct 28, Jaleel needs to decide whether to reduce exposure now or explicitly accept the drawdown risk through earnings."
-    },
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "AVOID-rated name at 6.5% weight, –20.9% unrealized loss — no constructive case in the data",
-      "note": "RKLB is the only AVOID in the book, carries the lowest QARP score (39.5) by a significant margin, and is the third-deepest underwater position; a 6.5% weight in a name the model explicitly flags to avoid is a direct conflict that needs a resolution, not monitoring."
+      "headline": "Only AVOID-rated name sits at 6.6% weight, down ~20% unrealized",
+      "note": "With a QARP of 39.3 — the lowest in the book by a wide margin — and no verdict upgrade in sight, the position's size is inconsistent with a capital-preservation mandate and warrants a sizing decision."
     },
     {
-      "ticker": "ADBE",
-      "severity": "act",
-      "headline": "Earnings event flagged for today (Sep 10) — AI-moat narrative risk is live",
-      "note": "The risk flag notes that the last print (beat-and-raise) still sold off due to narrative fears around Claude Design and CFO exit; today's report could reprice the stock sharply in either direction regardless of the underlying numbers, and the position needs a pre-earnings stance."
+      "ticker": "BSX",
+      "severity": "watch",
+      "headline": "Strong Buy conviction vs. guidance slash and −12.3% unrealized loss diverging sharply",
+      "note": "FY26 growth cut to 7–8.5% with flat guidance through Q3 means the thesis is being stress-tested in real time; next read is October 28 and the price continues to lag."
     },
     {
       "ticker": "LULU",
       "severity": "watch",
-      "headline": "–24.2% loss, five straight negative comps, guidance cut — Strong Buy verdict needs a challenge",
-      "note": "Americas comps –5% for a fifth consecutive quarter, tariffs gutting margins, and China stalled; the Strong Buy rating with a next catalyst not until Dec 9 means Jaleel is carrying a significant underwater weight through a long information vacuum with deteriorating fundamentals."
+      "headline": "Elevated risk flag (5th straight Americas comp decline) with −22.6% unrealized loss",
+      "note": "Today's 2.16% bounce is welcome but doesn't change the fundamental picture — tariff margin pressure and China stall mean the December 9 earnings report is a binary event for this position."
+    },
+    {
+      "ticker": "EXE",
+      "severity": "note",
+      "headline": "Expand Energy dropped 2.11% — sharpest single-day move in the book today",
+      "note": "The session loss is the largest in the portfolio on Friday; worth checking whether this reflects sector-wide energy weakness or something company-specific before the move extends."
     }
   ],
-  "date": "2026-09-10",
-  "generated_at": "Sep 10, 6:50pm ET"
+  "date": "2026-09-11",
+  "generated_at": "Sep 11, 6:52pm ET"
 }
