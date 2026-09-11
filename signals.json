@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "Sep 11, 9:34am ET",
+  "generated_at": "Sep 11, 2:34pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -95,11 +95,11 @@
   ],
   "earnings_next": {
     "ABT": "2026-10-13",
-    "ZTS": "2026-11-02",
     "NVDA": "2026-11-17",
+    "ZTS": "2026-11-02",
     "BSX": "2026-10-28",
-    "AZN": "2026-10-30",
     "RKLB": "2026-11-09",
+    "AZN": "2026-10-30",
     "AZO": "2026-09-22",
     "DHR": "2026-10-19",
     "ADBE": "2026-12-08",
@@ -118,18 +118,25 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
-      "sector": "Foundry, Fabricator & Idm Chip",
-      "dir": "down",
-      "driver": "Investor concerns over Fed rate hikes and higher bond yields affect grow…",
-      "note": "As investor concerns over Fed rate hikes and higher bond yields affect growth-oriented stocks that rely on demand from highly leveraged customers.",
+      "sector": "Semiconductor & Chip",
+      "dir": "up",
+      "driver": "A broader market rally as oil prices retreat",
+      "note": "Amid a broader market rally as oil prices retreat, bond yields stabilize and U.S. CPI data confirms investor expectations that the Fed will hike rates at its September meeting.",
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Software",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Sympathy with Snowflake after the company reported better-than-expected …",
       "note": "Amid sympathy with Snowflake after the company reported better-than-expected Q2 financial results, boosting sentiment across the sector. Falling Treasury yields and Fed's Waller's comments that he is inclined to support holding interest rates steady may also be supporting growth stocks by easing concerns about tighter monetary policy and improving risk appetite.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Server",
+      "dir": "up",
+      "driver": "Stabilizing bond yields and oil price retracement",
+      "note": "Amid stabilizing bond yields and oil price retracement. Also, Oracle executives on the Q1 conference call noted a high capex commitment to server infrastructure and continued sector-wide server demand.",
+      "src": "Benzinga WIIM · market-wide"
     },
     {
       "sector": "Mobile Communications & Broadband Connectivity",
@@ -143,13 +150,6 @@
       "dir": "down",
       "driver": "Optimism regarding the U.S.-Iran dispute and improved transport through …",
       "note": "Amid optimism regarding the U.S.-Iran dispute and improved transport through the Strait of Hormuz. More chemicals and feedstocks exiting the Persian Gulf may hinder pricing power and margins for companies that benefited from recent product shortages.",
-      "src": "Benzinga WIIM · market-wide"
-    },
-    {
-      "sector": "Defense",
-      "dir": "down",
-      "driver": "Reports suggesting that the Pentagon is considering the use of software …",
-      "note": "After reports suggesting that the Pentagon is considering the use of software to draw data directly from contractors' internal financial records to get a better view of production costs.",
       "src": "Benzinga WIIM · market-wide"
     }
   ],
@@ -166,22 +166,16 @@
       "url": "https://www.benzinga.com/quote/DDOG",
       "wiim": true
     },
-    "NVDA": {
-      "title": "Jim Cramer Says He’s ‘Not Going to Give Up on Nvidia’ Stock: Here’s His Suggestion for CEO Jensen Huang",
-      "ts": 1789070817,
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61727129/jim-cramer-says-hes-not-going-to-give-up-on-nvidia-stock-heres-his-suggestion-for-ceo-jensen-huang",
-      "wiim": false
-    },
     "AVGO": {
       "title": "Nvidia Stock Sits in 82% of Portfolios, But Hedge Funds Are Making Other AI Bets",
       "ts": 1789072164,
       "url": "https://www.benzinga.com/markets/equities/26/09/61728117/most-owned-semiconductor-stocks-nvda-micron-sndk-stx-hedge-funds",
       "wiim": false
     },
-    "SPGI": {
-      "title": "OpenAI Launches ChatGPT For Financial Services With GPT-6 Astra Reasoning; ChatGPT For Financial Services Developed With Morgan Stanley & Evercore Partnership; Working With Factset, S&P Global, Preqin & Datasite On Shared Sign-In & Entitlement Integrations For ChatGPT For Financial Services",
-      "ts": 1789061383,
-      "url": "https://www.benzinga.com/news/26/09/61722859/openai-launches-chatgpt-financial-services-gpt-6-astra-reasoning-chatgpt-financial-services-develope",
+    "NVDA": {
+      "title": "Sam Altman Weighs AI Slowdown as Bridgewater Co-CIO Warns AI Will Kill People Before Anyone Acts",
+      "ts": 1789144374,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61745315/sam-altman-ai-slowdown-safety",
       "wiim": false
     }
   },
@@ -194,8 +188,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$170",
-      "price": 144.71,
-      "upside": 17.5,
+      "price": 144.42,
+      "upside": 17.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -208,8 +202,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 326.57,
-      "upside": 12.1,
+      "price": 332.82,
+      "upside": 10.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -222,8 +216,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$170",
-      "price": 144.71,
-      "upside": 17.5,
+      "price": 144.42,
+      "upside": 17.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -236,7 +230,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 326.57,
+      "price": 332.82,
       "upside": null,
       "held": false,
       "uni": true,
@@ -250,8 +244,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$161",
-      "price": 144.71,
-      "upside": 11.3,
+      "price": 144.42,
+      "upside": 11.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -264,8 +258,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$344",
-      "price": 305.69,
-      "upside": 12.5,
+      "price": 308.83,
+      "upside": 11.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -278,8 +272,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 36.62,
-      "upside": -18.1,
+      "price": 36.87,
+      "upside": -18.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -292,8 +286,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "price": 266.35,
-      "upside": 20.1,
+      "price": 265.59,
+      "upside": 20.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -306,8 +300,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$172",
-      "price": 144.71,
-      "upside": 18.9,
+      "price": 144.42,
+      "upside": 19.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,8 +314,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 326.57,
-      "upside": 22.5,
+      "price": 332.82,
+      "upside": 20.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +328,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$303",
-      "price": 326.57,
-      "upside": -7.2,
+      "price": 332.82,
+      "upside": -9.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,8 +342,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$31",
-      "price": 36.62,
-      "upside": -15.3,
+      "price": 36.87,
+      "upside": -15.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -362,8 +356,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 326.57,
-      "upside": 13.3,
+      "price": 332.82,
+      "upside": 11.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -377,7 +371,7 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$31",
-      "upside": -15.3
+      "upside": -15.9
     },
     "MRK": {
       "date": "2026-09-10",
@@ -386,7 +380,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$172",
-      "upside": 18.9
+      "upside": 19.1
     },
     "JNJ": {
       "date": "2026-09-10",
@@ -395,7 +389,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "upside": 20.1
+      "upside": 20.5
     },
     "AAPL": {
       "date": "2026-09-10",
@@ -404,7 +398,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 22.5
+      "upside": 20.2
     },
     "HD": {
       "date": "2026-09-09",
@@ -413,7 +407,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$344",
-      "upside": 12.5
+      "upside": 11.4
     },
     "CVX": {
       "date": "2026-09-03",
@@ -422,7 +416,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$235",
-      "upside": 10.5
+      "upside": 9.9
     },
     "CRM": {
       "date": "2026-09-02",
@@ -431,7 +425,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 64.6
+      "upside": 61.5
     },
     "CSCO": {
       "date": "2026-09-01",
@@ -440,10 +434,306 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$135",
-      "upside": 25.7
+      "upside": 20.8
     }
   },
   "bz_news": [
+    {
+      "title": "9 Financials Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/09/61746897/9-financials-stocks-whale-activity-today-s-session",
+      "ts": 1789148112,
+      "tickers": [
+        "NU",
+        "HOOD",
+        "COIN",
+        "OSCR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.408
+    },
+    {
+      "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/09/61746896/10-health-care-stocks-whale-alerts-today-s-session",
+      "ts": 1789148112,
+      "tickers": [
+        "SLS",
+        "HUM",
+        "RYTM",
+        "LLY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.375
+    },
+    {
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/09/61746895/10-information-technology-stocks-whale-activity-today-s-session",
+      "ts": 1789148111,
+      "tickers": [
+        "AAPL",
+        "PLTR",
+        "ORCL",
+        "RIOT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.394
+    },
+    {
+      "title": "UnitedHealth CFO Says ‘We Didn’t Need the Dollars’ As TPG Joins Optum Overhaul",
+      "url": "https://www.benzinga.com/markets/large-cap/26/09/61746845/unitedhealth-cfo-says-we-didnt-need-the-dollars-as-tpg-joins-optum-overhaul",
+      "ts": 1789148031,
+      "tickers": [
+        "UNH",
+        "WFC",
+        "TPG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.366
+    },
+    {
+      "title": "Shares of server-related companies are trading higher amid stabilizing bond yields and oil price retracement. Also, Oracle executives on the Q1 conference call noted a high capex commitment to server infrastructure and continued sector-wide server demand.",
+      "url": "https://www.benzinga.com/quote/CSCO",
+      "ts": 1789147806,
+      "tickers": [
+        "HPE",
+        "DELL",
+        "SMCI",
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.418
+    },
+    {
+      "title": "Houthi Victory Raises Risks; Hotter CPI Pushes Fed Rate-Hike Odds To 88%",
+      "url": "https://www.benzinga.com/Opinion/26/09/61746710/houthi-victory-raises-risks-hotter-cpi-pushes-fed-rate-hike-odds-to-88-percent",
+      "ts": 1789147672,
+      "tickers": [
+        "USO",
+        "SPY",
+        "NVDA",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.341
+    },
+    {
+      "title": "'Estee Lauder Advances Lawsuit Against Walmart Over Counterfeits' - Bloomberg Law",
+      "url": "https://www.benzinga.com/news/26/09/61746696/estee-lauder-advances-lawsuit-against-walmart-over-counterfeits-bloomberg-law",
+      "ts": 1789147667,
+      "tickers": [
+        "EL",
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.306
+    },
+    {
+      "title": "Live On CNBC, Kevin Simpson Announces Bought UnitedHealth Group",
+      "url": "https://www.benzinga.com/quote/UNH",
+      "ts": 1789145858,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.379
+    },
+    {
+      "title": "Watching Salesforce; Hearing Investor Business Daily SwingTrader Buys Stock",
+      "url": "https://www.benzinga.com/quote/CRM",
+      "ts": 1789144688,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.435
+    },
+    {
+      "title": "\"Lutnick Says Trump’s $5,000 Checks For Americans Wouldn’t Rely On Taxpayer Funds; Claims That The Administration Could 'Earn The Money That Donald Trump Wants To Pay Out, Not From The Deficit, And Not From Taxpayers.'\" - NBC News",
+      "url": "https://www.benzinga.com/news/26/09/61745416/lutnick-says-trump-s-5-000-checks-americans-wouldn-t-rely-taxpayer-funds-claims-administration-could",
+      "ts": 1789144643,
+      "tickers": [
+        "SPY",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.179
+    },
+    {
+      "title": "Sam Altman Weighs AI Slowdown as Bridgewater Co-CIO Warns AI Will Kill People Before Anyone Acts",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61745315/sam-altman-ai-slowdown-safety",
+      "ts": 1789144374,
+      "tickers": [
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.347
+    },
+    {
+      "title": "Shares of semiconductor and chip companies are trading higher amid a broader market rally as oil prices retreat, bond yields stabilize and U.S. CPI data confirms investor expectations that the Fed will hike rates at its September meeting.",
+      "url": "https://www.benzinga.com/quote/ARM",
+      "ts": 1789144122,
+      "tickers": [
+        "SWKS",
+        "MXL",
+        "HIMX",
+        "SMTC"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.504
+    },
+    {
+      "title": "Apple Passes Less Inflation to iPhone Buyers Than Trump Mobile's 50% Price Jump",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61745009/apple-passes-less-inflation-iphone-buyers-trump-mobiles-50-price-jump",
+      "ts": 1789143682,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.249
+    },
+    {
+      "title": "Apple Announces Customers Can Pre-Order iPhone 18 Pro, Pro Max, Effective 5 AM PT Sept. 12 On Web, Apple Store App",
+      "url": "https://www.benzinga.com/news/26/09/61744646/apple-announces-customers-can-pre-order-iphone-18-pro-pro-max-effective-5-am-pt-sept-12-web-apple-st",
+      "ts": 1789143043,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.22
+    },
+    {
+      "title": "Microsoft’s AI Crunch Forced It to Turn Away Business, Now It Wants to Triple Computing Power",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61743885/microsofts-ai-crunch-forced-it-to-turn-away-business-now-it-wants-to-triple-computing-power",
+      "ts": 1789141359,
+      "tickers": [
+        "MSFT",
+        "XLK",
+        "IGV",
+        "IUSG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.474
+    },
+    {
+      "title": "Jollibee Ditches US IPO, Calls Hong Kong A Natural Market For Listing International Business",
+      "url": "https://www.benzinga.com/Opinion/26/09/61743759/jollibee-ditches-us-ipo-calls-hong-kong-a-natural-market-for-listing-international-business",
+      "ts": 1789141044,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.319
+    },
+    {
+      "title": "Jensen Huang Calls NVIDIA the ‘World’s First and Only Growth Value Stock’",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61743332/jensen-huang-calls-nvidia-the-worlds-first-and-only-growth-value-stock",
+      "ts": 1789140268,
+      "tickers": [
+        "NVDA",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.527
+    },
+    {
+      "title": "Apple CEO John Ternus Enters Role More Like Steve Jobs Than Tim Cook: Here's How",
+      "url": "https://www.benzinga.com/markets/large-cap/26/09/61742105/apple-ceo-john-ternus-enters-role-more-like-steve-jobs-than-tim-cook-heres-how",
+      "ts": 1789138139,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.259
+    },
+    {
+      "title": "Jensen Huang Mocks Nvidia ‘Circular Financing’ Fears: ‘If That Is, Let’s Do More of That’",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61740701/nvidia-circular-financing-jensen-huang",
+      "ts": 1789136398,
+      "tickers": [
+        "NVDA",
+        "INTC",
+        "IREN",
+        "CRWV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.46
+    },
+    {
+      "title": "Chevron CEO Speaking At Energy Symposium Says Trump Administration Spoke With Ukraine About Attacks On Black Sea Oil Infrastructure",
+      "url": "https://www.benzinga.com/news/26/09/61739102/chevron-ceo-speaking-energy-symposium-says-trump-administration-spoke-ukraine-about-attacks-black-se",
+      "ts": 1789134526,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.227
+    },
+    {
+      "title": "Chevron CEO Speaking At Energy Symposium Says $7B Venezuelan Investment Over Five Years Will Come From Cash Generated By Three Joint Ventures; Says Impacts On Kazakhstan Operations Have Reduced",
+      "url": "https://www.benzinga.com/news/26/09/61739063/chevron-ceo-speaking-energy-symposium-says-7b-venezuelan-investment-over-five-years-will-come-cash-g",
+      "ts": 1789134502,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.345
+    },
+    {
+      "title": "Watching Microsoft; Hearing Investor Business Daily SwingTrader Buys Stock",
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "ts": 1789134259,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.406
+    },
     {
       "title": "Chevron CEO Speaking At Energy Symposium Says Early Buffers In Oil Market Have 'Played Out', Price Risk From Iran War Is Now Higher",
       "url": "https://www.benzinga.com/news/26/09/61737930/chevron-ceo-speaking-energy-symposium-says-early-buffers-oil-market-have-played-out-price-risk-iran-",
@@ -485,305 +775,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.243
-    },
-    {
-      "title": "ServiceNow To Rally More Than 18%? Here Are 10 Top Analyst Forecasts For Friday",
-      "url": "https://www.benzinga.com/news/26/09/61736269/servicenow-to-rally-more-than-18-here-are-10-top-analyst-forecasts-for-friday",
-      "ts": 1789129317,
-      "tickers": [
-        "MCD",
-        "HOOD",
-        "NOW",
-        "WING"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.428
-    },
-    {
-      "title": "Kroger Exec Says SNAP Benefit Cuts, Higher Fuel Prices Are Pressuring Household Budgets; Customers Buying More On Need",
-      "url": "https://www.benzinga.com/quote/ACI",
-      "ts": 1789128930,
-      "tickers": [
-        "KR",
-        "WMT",
-        "COST",
-        "BJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.304
-    },
-    {
-      "title": "Kroger CEO Says Cyclospora Outbreak Hit Q2 Identical Sales By About 35 Basis Points; Says Customers Remain Under Pressure, Unit Growth Has Slowed Since Start Of Year",
-      "url": "https://www.benzinga.com/quote/BJ",
-      "ts": 1789128903,
-      "tickers": [
-        "KR",
-        "ACI",
-        "WMT",
-        "COST"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.356
-    },
-    {
-      "title": "'InterDigital Seeks $118 Million from Disney in Patent Fight' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/09/61735352/interdigital-seeks-118-million-disney-patent-fight-bloomberg",
-      "ts": 1789127225,
-      "tickers": [
-        "IDCC",
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.33
-    },
-    {
-      "title": "Apple’s Customers Can Take a Price Hike, Analyst Says Retention Hardly Moves",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61734994/apples-customers-can-take-a-price-hike-analyst-says-retention-hardly-moves",
-      "ts": 1789126006,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.422
-    },
-    {
-      "title": "OpenAI’s Fidji Simo To Join Board Of Cloud Provider Nscale Ahead Of IPO - WSJ",
-      "url": "https://www.benzinga.com/news/26/09/61734952/openai-s-fidji-simo-join-board-cloud-provider-nscale-ahead-ipo-wsj",
-      "ts": 1789125750,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.372
-    },
-    {
-      "title": "TD Cowen Maintains Hold on McDonald's, Lowers Price Target to $282",
-      "url": "https://www.benzinga.com/news/26/09/61733995/td-cowen-maintains-hold-mcdonald-s-lowers-price-target-282",
-      "ts": 1789121717,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.42
-    },
-    {
-      "title": "Kalshi Eyes 24/7 Leveraged Bets on TSLA, NVDA and AAPL With New Perpetual Futures Push: Report",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61733955/kalshi-eyes-24-7-leveraged-bets-on-tsla-nvda-and-aapl-with-new-perpetual-futures-push-report",
-      "ts": 1789121595,
-      "tickers": [
-        "NVDA",
-        "TSLA",
-        "AAPL",
-        "COIN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.474
-    },
-    {
-      "title": "Market Analysis: Microsoft And Competitors In Software Industry",
-      "url": "https://www.benzinga.com/news/26/09/61733486/market-analysis-microsoft-and-competitors-software-industry",
-      "ts": 1789120709,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.363
-    },
-    {
-      "title": "In-Depth Analysis: Apple Versus Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
-      "url": "https://www.benzinga.com/news/26/09/61733485/depth-analysis-apple-versus-competitors-technology-hardware-storage-amp-peripherals-industry",
-      "ts": 1789120704,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.379
-    },
-    {
-      "title": "Keybanc Initiates Coverage On Dow with Sector Weight Rating",
-      "url": "https://www.benzinga.com/news/26/09/61733123/keybanc-initiates-coverage-dow-sector-weight-rating",
-      "ts": 1789119651,
-      "tickers": [
-        "DOW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.49
-    },
-    {
-      "title": "Apple Watch Is Winning in a Shrinking Market",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61733003/apple-watch-is-winning-in-a-shrinking-market",
-      "ts": 1789118889,
-      "tickers": [
-        "AAPL",
-        "GRMN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.287
-    },
-    {
-      "title": "Gavin Newsom Takes the Fight to Big Tech With New Curbs on Social Media, AI Use to Protect Kids: ‘Unregulated Technology Puts Our Children at Risk’",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61732855/gavin-newsom-takes-the-fight-to-big-tech-with-new-curbs-on-social-media-ai-use-to-protect-kids-unregulated-technology-puts-our-children-at-risk",
-      "ts": 1789117732,
-      "tickers": [
-        "META",
-        "AAPL",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.242
-    },
-    {
-      "title": "Apple Is Coming for Samsung’s Foldable Phone Crown: iPhone Duo Could Capture Nearly 25% of the Market With 5 Million Shipments in 2026, Says Report",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61732360/apple-is-coming-for-samsungs-foldable-phone-crown-iphone-duo-could-capture-nearly-25-of-the-market-with-5-million-shipments-in-2026-says-report",
-      "ts": 1789112012,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.293
-    },
-    {
-      "title": "Trump's Surgeon General Pick Has Tobacco, Cola Stocks In Portfolio Even as Robert Kennedy Jr. Wages War On Sugary Drinks, Processed Food",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61732320/trumps-surgeon-general-pick-to-divest-stake-in-tobacco-soda-if-appointed",
-      "ts": 1789111446,
-      "tickers": [
-        "PM",
-        "AAPL",
-        "META",
-        "XOM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.254
-    },
-    {
-      "title": "Nvidia CEO Jensen Huang Said Nvidia Compute Is 'Fungible, Durable and Highly Rentable' — Now Oracle CEO Stands Impressed as 4-Year Old GPUs Fetch 20% Premium",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61732096/nvidia-jensen-huang-compute-fungible-durable-rentable-oracle",
-      "ts": 1789109272,
-      "tickers": [
-        "ORCL",
-        "APO",
-        "GS",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.505
-    },
-    {
-      "title": "SpaceX Closes $1.11 Billion-a-Month Compute Deal as CFO Doubles Down on $100 Billion ARR Target",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61731919/spacex-closes-1-11-billion-a-month-compute-deal-as-cfo-doubles-down-on-100-billion-arr-target",
-      "ts": 1789108773,
-      "tickers": [
-        "SPCX",
-        "GOOGL",
-        "GOOG",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.35
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61731435/stock-market-will-sp-500-open-up-or-down-today-35",
-      "ts": 1789104124,
-      "tickers": [
-        "SPY",
-        "AAPL",
-        "TSM",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Crypto Billionaire Finds iPhone Duo Pretty 'Good' For Gawking at  Financial Charts — Crypto Prediction Market is Already Betting on The Next Big Apple Gadget",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61731289/crypto-billionaire-iphone-duo-financial-charts-apple-gadget-prediction-market",
-      "ts": 1789101321,
-      "tickers": [
-        "AAPL",
-        "$BTC",
-        "$BNB",
-        "$ZEC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.314
-    },
-    {
-      "title": "Congresswoman Bets on Elon Musk, Warren Buffett: Here’s the Latest Stock Transactions",
-      "url": "https://www.benzinga.com/news/politics/26/09/61730264/congresswoman-bets-on-elon-musk-warren-buffett-heres-the-latest-stock-transactions",
-      "ts": 1789081434,
-      "tickers": [
-        "SPCX",
-        "MRNA",
-        "MRK",
-        "BRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.356
-    },
-    {
-      "title": "'Microsoft Plans Data Center Push To Triple Its Computing Power; Shortages Forced The Company To Turn Away Some AI And Cloud Business. Now It’s Planning For 38 Gigawatts Of Data Center Capacity To Meet Demand' - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/09/61729223/microsoft-plans-data-center-push-triple-its-computing-power-shortages-forced-company-turn-away-some-",
-      "ts": 1789074494,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.517
-    },
-    {
-      "title": "OpenAI's Thibault Sottiaux Posts On X \"To make sure our current users have an incredible experience and continued access to Astra, we are going to pause subscriptions to our $200 Pro plan. These put the most strain on our systems and we wanted to take the smallest step that allows us to continue giving the broadest access possible. All other plans and the api remain available...\"",
-      "url": "https://www.benzinga.com/news/26/09/61729204/openai-s-thibault-sottiaux-posts-x-make-sure-our-current-users-have-incredible-experience-and-contin",
-      "ts": 1789074449,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.323
     }
   ],
   "portfolio_brief": {
@@ -819,6 +810,43 @@
       },
       "explain": "33 analysts cover it — 25 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "NVDA": {
+      "name": "NVIDIA",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 24,
+        "buy": 41,
+        "hold": 3,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 69,
+        "bullish": 65,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.28,
+        "period": "2026-09-01"
+      },
+      "news": {
+        "title": "Sam Altman Weighs AI Slowdown as Bridgewater Co-CIO Warns AI Will Kill People Before Anyone Acts",
+        "ts": 1789144374,
+        "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61745315/sam-altman-ai-slowdown-safety",
+        "wiim": false
+      },
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-09-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-08-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
+        },
+        "insider30d": 6
+      },
+      "explain": "69 analysts cover it — 65 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "ZTS": {
       "name": "Zoetis",
       "qarp": "STRONG BUY",
@@ -850,43 +878,6 @@
         "insider30d": 1
       },
       "explain": "24 analysts cover it — 12 bullish, 12 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "NVDA": {
-      "name": "NVIDIA",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 24,
-        "buy": 41,
-        "hold": 3,
-        "sell": 1,
-        "strongSell": 0,
-        "total": 69,
-        "bullish": 65,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.28,
-        "period": "2026-09-01"
-      },
-      "news": {
-        "title": "Jim Cramer Says He’s ‘Not Going to Give Up on Nvidia’ Stock: Here’s His Suggestion for CEO Jensen Huang",
-        "ts": 1789070817,
-        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61727129/jim-cramer-says-hes-not-going-to-give-up-on-nvidia-stock-heres-his-suggestion-for-ceo-jensen-huang",
-        "wiim": false
-      },
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-09-03",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-08-26",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
-        },
-        "insider30d": 6
-      },
-      "explain": "69 analysts cover it — 65 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "BSX": {
       "name": "Boston Scientific",
@@ -920,30 +911,6 @@
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "AZN": {
-      "name": "AstraZeneca",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 13,
-        "buy": 15,
-        "hold": 6,
-        "sell": 1,
-        "strongSell": 0,
-        "total": 35,
-        "bullish": 28,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.14,
-        "period": "2026-09-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": null,
-        "periodic": null,
-        "insider30d": 0
-      },
-      "explain": "35 analysts cover it — 28 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "RKLB": {
       "name": "Rocket Lab",
       "qarp": "AVOID",
@@ -975,6 +942,30 @@
         "insider30d": 10
       },
       "explain": "26 analysts cover it — 21 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+    },
+    "AZN": {
+      "name": "AstraZeneca",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 13,
+        "buy": 15,
+        "hold": 6,
+        "sell": 1,
+        "strongSell": 0,
+        "total": 35,
+        "bullish": 28,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.14,
+        "period": "2026-09-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 0
+      },
+      "explain": "35 analysts cover it — 28 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "AZO": {
       "name": "AutoZone",
@@ -1181,12 +1172,7 @@
         "score": 1.15,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "OpenAI Launches ChatGPT For Financial Services With GPT-6 Astra Reasoning; ChatGPT For Financial Services Developed With Morgan Stanley & Evercore Partnership; Working With Factset, S&P Global, Preqin & Datasite On Shared Sign-In & Entitlement Integrations For ChatGPT For Financial Services",
-        "ts": 1789061383,
-        "url": "https://www.benzinga.com/news/26/09/61722859/openai-launches-chatgpt-financial-services-gpt-6-astra-reasoning-chatgpt-financial-services-develope",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1436,25 +1422,6 @@
       "margin": null,
       "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
     },
-    "ZTS": {
-      "period": "Q2 FY2026",
-      "filed": "2026-08-06",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000040/zts-20260630.htm",
-      "revenue": {
-        "fmt": "$2.5B",
-        "yoy": -0.2
-      },
-      "eps": {
-        "val": 1.65,
-        "yoy": 1.2
-      },
-      "net_income": {
-        "fmt": "$691M"
-      },
-      "margin": 28.0,
-      "summary": "Q2 FY2026 — revenue $2.5B (-0.2% YoY), diluted EPS $1.65 (+1.2% YoY), net margin 28%. (as reported, GAAP)"
-    },
     "NVDA": {
       "period": "Q2 FY2027",
       "filed": "2026-08-26",
@@ -1473,6 +1440,25 @@
       },
       "margin": 62.0,
       "summary": "Q2 FY2027 — revenue $96.2B (+105.9% YoY), diluted EPS $2.46 (+127.8% YoY), net margin 62%. (as reported, GAAP)"
+    },
+    "ZTS": {
+      "period": "Q2 FY2026",
+      "filed": "2026-08-06",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000040/zts-20260630.htm",
+      "revenue": {
+        "fmt": "$2.5B",
+        "yoy": -0.2
+      },
+      "eps": {
+        "val": 1.65,
+        "yoy": 1.2
+      },
+      "net_income": {
+        "fmt": "$691M"
+      },
+      "margin": 28.0,
+      "summary": "Q2 FY2026 — revenue $2.5B (-0.2% YoY), diluted EPS $1.65 (+1.2% YoY), net margin 28%. (as reported, GAAP)"
     },
     "BSX": {
       "period": "Q2 FY2026",
@@ -1493,7 +1479,6 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $5.4B (+7.5% YoY), diluted EPS $0.61 (+15.1% YoY). (as reported, GAAP)"
     },
-    "AZN": null,
     "RKLB": {
       "period": "Q2 FY2026",
       "filed": "2026-08-10",
@@ -1513,6 +1498,7 @@
       "margin": -21.0,
       "summary": "Q2 FY2026 — revenue $234M (+62.0% YoY), diluted EPS $-0.08 (+38.5% YoY), net margin -21%. (as reported, GAAP)"
     },
+    "AZN": null,
     "AZO": {
       "period": "Q3 FY2026",
       "filed": "2026-06-12",
