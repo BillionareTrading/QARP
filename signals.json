@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-11",
-  "generated_at": "Sep 11, 6:51pm ET",
+  "date": "2026-09-12",
+  "generated_at": "Sep 12, 9:40am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -166,34 +166,20 @@
       "url": "https://www.benzinga.com/quote/DDOG",
       "wiim": true
     },
+    "NVDA": {
+      "title": "David Sacks Slams 'Whistleblower' Jacob Coxon’s Claims on AI Risk to Humans, Raises Questions Ahead of Anthropic IPO",
+      "ts": 1789205374,
+      "url": "https://www.benzinga.com/markets/tech/26/09/61753920/david-sacks-jacob-coxon-anthropic-ai-safety",
+      "wiim": false
+    },
     "AVGO": {
       "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
       "ts": 1789148111,
       "url": "https://www.benzinga.com/markets/options/26/09/61746895/10-information-technology-stocks-whale-activity-today-s-session",
       "wiim": false
-    },
-    "NVDA": {
-      "title": "Sam Altman Weighs AI Slowdown as Bridgewater Co-CIO Warns AI Will Kill People Before Anyone Acts",
-      "ts": 1789144374,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61745315/sam-altman-ai-slowdown-safety",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-04",
-      "ticker": "MRK",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$170",
-      "price": 143.93,
-      "upside": 18.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-09-08",
       "ticker": "AAPL",
@@ -439,6 +425,61 @@
   },
   "bz_news": [
     {
+      "title": "GameStop, Oracle, Apple and More: Five Stocks Investors Couldn't Stop Buzzing About This Week",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61754055/gamestop-oracle-apple-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
+      "ts": 1789217459,
+      "tickers": [
+        "ORCL",
+        "AAPL",
+        "GME",
+        "ADBE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.396
+    },
+    {
+      "title": "Benzinga Bulls and Bears: GameStop, Marvell, Robinhood",
+      "url": "https://www.benzinga.com/markets/market-summary/26/09/61754044/benzinga-bulls-and-bears-gamestop-marvell-robinhood",
+      "ts": 1789217383,
+      "tickers": [
+        "AAPL",
+        "GME",
+        "PLTR",
+        "HOOD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.456
+    },
+    {
+      "title": "David Sacks Slams 'Whistleblower' Jacob Coxon’s Claims on AI Risk to Humans, Raises Questions Ahead of Anthropic IPO",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61753920/david-sacks-jacob-coxon-anthropic-ai-safety",
+      "ts": 1789205374,
+      "tickers": [
+        "GS",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.257
+    },
+    {
+      "title": "Peter Schiff Questions Trump’s $5,000 Dividend As US 'Debt Has Grown by Almost $4 Trillion' — Howard Lutnick Says the Payout Won’t Come From Taxpayers",
+      "url": "https://www.benzinga.com/news/politics/26/09/61752858/peter-schiff-questions-trumps-5000-dividend-as-us-debt-has-grown-by-almost-4-trillion-howard-lutnick-says-the-payout-wont-come-from-taxpayers",
+      "ts": 1789190007,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.265
+    },
+    {
       "title": "Here’s How Much You Would Have Made Owning Home Depot Stock In The Last 15 Years",
       "url": "https://www.benzinga.com/news/26/09/61751895/here-s-how-much-you-would-have-made-owning-home-depot-stock-last-15-years",
       "ts": 1789162230,
@@ -615,7 +656,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.366
+      "relevance": 0.365
     },
     {
       "title": "Shares of server-related companies are trading higher amid stabilizing bond yields and oil price retracement. Also, Oracle executives on the Q1 conference call noted a high capex commitment to server infrastructure and continued sector-wide server demand.",
@@ -670,7 +711,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.38
+      "relevance": 0.379
     },
     {
       "title": "Watching Salesforce; Hearing Investor Business Daily SwingTrader Buys Stock",
@@ -724,60 +765,6 @@
       "wiim": true,
       "rel": true,
       "relevance": 0.504
-    },
-    {
-      "title": "Apple Passes Less Inflation to iPhone Buyers Than Trump Mobile's 50% Price Jump",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61745009/apple-passes-less-inflation-iphone-buyers-trump-mobiles-50-price-jump",
-      "ts": 1789143682,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.249
-    },
-    {
-      "title": "Apple Announces Customers Can Pre-Order iPhone 18 Pro, Pro Max, Effective 5 AM PT Sept. 12 On Web, Apple Store App",
-      "url": "https://www.benzinga.com/news/26/09/61744646/apple-announces-customers-can-pre-order-iphone-18-pro-pro-max-effective-5-am-pt-sept-12-web-apple-st",
-      "ts": 1789143043,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.22
-    },
-    {
-      "title": "Microsoft’s AI Crunch Forced It to Turn Away Business, Now It Wants to Triple Computing Power",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61743885/microsofts-ai-crunch-forced-it-to-turn-away-business-now-it-wants-to-triple-computing-power",
-      "ts": 1789141359,
-      "tickers": [
-        "MSFT",
-        "XLK",
-        "IGV",
-        "IUSG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.474
-    },
-    {
-      "title": "Jensen Huang Calls NVIDIA the ‘World’s First and Only Growth Value Stock’",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61743332/jensen-huang-calls-nvidia-the-worlds-first-and-only-growth-value-stock",
-      "ts": 1789140268,
-      "tickers": [
-        "NVDA",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.527
     }
   ],
   "portfolio_brief": {
@@ -862,9 +849,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Sam Altman Weighs AI Slowdown as Bridgewater Co-CIO Warns AI Will Kill People Before Anyone Acts",
-        "ts": 1789144374,
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61745315/sam-altman-ai-slowdown-safety",
+        "title": "David Sacks Slams 'Whistleblower' Jacob Coxon’s Claims on AI Risk to Humans, Raises Questions Ahead of Anthropic IPO",
+        "ts": 1789205374,
+        "url": "https://www.benzinga.com/markets/tech/26/09/61753920/david-sacks-jacob-coxon-anthropic-ai-safety",
         "wiim": false
       },
       "filings": {
@@ -878,7 +865,7 @@
           "date": "2026-08-26",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
         },
-        "insider30d": 7
+        "insider30d": 6
       },
       "explain": "69 analysts cover it — 65 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -910,7 +897,7 @@
           "date": "2026-08-03",
           "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000053/bsx-20260630.htm"
         },
-        "insider30d": 3
+        "insider30d": 2
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1405,7 +1392,7 @@
           "date": "2026-07-21",
           "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000028/efx-20260630.htm"
         },
-        "insider30d": 2
+        "insider30d": 1
       },
       "explain": "30 analysts cover it — 21 bullish, 9 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     }
