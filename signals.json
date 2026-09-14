@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "Sep 14, 5:19am ET",
+  "generated_at": "Sep 14, 12:05pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -109,8 +109,8 @@
     "SPGI": "2026-10-28",
     "GILD": "2026-10-28",
     "SAP": "2026-10-21",
-    "AVGO": "2026-12-09",
     "NVS": "2026-10-27",
+    "AVGO": "2026-12-09",
     "NBIX": "2026-10-26",
     "VRTX": "2026-11-02",
     "EFX": "2026-10-19"
@@ -119,17 +119,17 @@
   "sectors": [
     {
       "sector": "Semiconductor & Chip",
-      "dir": "up",
-      "driver": "A broader market rally as oil prices retreat",
-      "note": "Amid a broader market rally as oil prices retreat, bond yields stabilize and U.S. CPI data confirms investor expectations that the Fed will hike rates at its September meeting.",
+      "dir": "down",
+      "driver": "AI executives signaled that the industry's growth may need to be slowed",
+      "note": "After AI executives signaled that the industry's growth may need to be slowed. The industry is also facing pressure as oil prices spike in reaction to the escalating conflict in the Middle East which can lead to inflation, tighter lending and reduced demand.",
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Software",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Sympathy with Snowflake after the company reported better-than-expected …",
       "note": "Amid sympathy with Snowflake after the company reported better-than-expected Q2 financial results, boosting sentiment across the sector. Falling Treasury yields and Fed's Waller's comments that he is inclined to support holding interest rates steady may also be supporting growth stocks by easing concerns about tighter monetary policy and improving risk appetite.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Server",
@@ -154,23 +154,23 @@
     }
   ],
   "holding_news": {
+    "NVDA": {
+      "title": "Shares of semiconductor and chip-related companies are trading lower after AI executives signaled that the industry's growth may need to be slowed. The industry is also facing pressure as oil prices spike in reaction to the escalating conflict in the Middle East which can lead to inflation, tighter lending and reduced demand.",
+      "ts": 1789401795,
+      "url": "https://www.benzinga.com/quote/SIMO",
+      "wiim": true
+    },
+    "AVGO": {
+      "title": "Shares of semiconductor and chip-related companies are trading lower after AI executives signaled that the industry's growth may need to be slowed. The industry is also facing pressure as oil prices spike in reaction to the escalating conflict in the Middle East which can lead to inflation, tighter lending and reduced demand.",
+      "ts": 1789401795,
+      "url": "https://www.benzinga.com/quote/SIMO",
+      "wiim": true
+    },
     "ADBE": {
       "title": "Shares of software companies are trading lower, possibly in response to escalating tensions in the Middle East and renewed inflation concerns that may shift the Fed towards a rate hike. Concerns about key economic data due later this week may prompt traders to rotate out of growth stocks.",
       "ts": 1788895459,
       "url": "https://www.benzinga.com/quote/SGRX",
       "wiim": true
-    },
-    "NVDA": {
-      "title": "Business Insider Reported Earlier Sunday, Anthropic Selected The Nasdaq For Its IPO Listing",
-      "ts": 1789332641,
-      "url": "https://www.benzinga.com/news/26/09/61755597/business-insider-reported-earlier-sunday-anthropic-selected-nasdaq-its-ipo-listing",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "ts": 1789148111,
-      "url": "https://www.benzinga.com/markets/options/26/09/61746895/10-information-technology-stocks-whale-activity-today-s-session",
-      "wiim": false
     }
   },
   "ratings": [
@@ -182,8 +182,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 332.27,
-      "upside": 10.2,
+      "price": 334.66,
+      "upside": 9.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -196,8 +196,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$170",
-      "price": 143.93,
-      "upside": 18.1,
+      "price": 145.15,
+      "upside": 17.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -210,7 +210,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 332.27,
+      "price": 334.66,
       "upside": null,
       "held": false,
       "uni": true,
@@ -224,8 +224,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$161",
-      "price": 143.93,
-      "upside": 11.9,
+      "price": 145.15,
+      "upside": 10.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -238,8 +238,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$344",
-      "price": 308.74,
-      "upside": 11.4,
+      "price": 311.07,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -252,8 +252,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 36.8,
-      "upside": -18.5,
+      "price": 37.26,
+      "upside": -19.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -266,8 +266,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "price": 265.58,
-      "upside": 20.5,
+      "price": 268.6,
+      "upside": 19.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -280,8 +280,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$172",
-      "price": 143.93,
-      "upside": 19.5,
+      "price": 145.15,
+      "upside": 18.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -294,8 +294,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 332.27,
-      "upside": 20.4,
+      "price": 334.66,
+      "upside": 19.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -308,8 +308,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$303",
-      "price": 332.27,
-      "upside": -8.8,
+      "price": 334.66,
+      "upside": -9.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -322,8 +322,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$31",
-      "price": 36.8,
-      "upside": -15.8,
+      "price": 37.26,
+      "upside": -16.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -336,22 +336,36 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 332.27,
-      "upside": 11.4,
+      "price": 334.66,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-09-14",
+      "ticker": "NKE",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$39",
+      "price": 37.26,
+      "upside": 4.7,
+      "held": false,
+      "uni": true,
+      "qarp": "BUY"
     }
   ],
   "rating_moves": {
     "NKE": {
-      "date": "2026-09-10",
-      "firm": "Morgan Stanley",
-      "action": "Reinstates",
-      "rating": "Underweight",
-      "stance": "bearish",
-      "pt": "$31",
-      "upside": -15.8
+      "date": "2026-09-14",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$39",
+      "upside": 4.7
     },
     "MRK": {
       "date": "2026-09-10",
@@ -360,7 +374,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$172",
-      "upside": 19.5
+      "upside": 18.5
     },
     "JNJ": {
       "date": "2026-09-10",
@@ -369,7 +383,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "upside": 20.5
+      "upside": 19.1
     },
     "AAPL": {
       "date": "2026-09-10",
@@ -378,7 +392,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 20.4
+      "upside": 19.5
     },
     "HD": {
       "date": "2026-09-09",
@@ -387,7 +401,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$344",
-      "upside": 11.4
+      "upside": 10.6
     },
     "CVX": {
       "date": "2026-09-03",
@@ -396,7 +410,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$235",
-      "upside": 9.8
+      "upside": 9.5
     },
     "CRM": {
       "date": "2026-09-02",
@@ -405,7 +419,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 61.5
+      "upside": 55.8
     },
     "CSCO": {
       "date": "2026-09-01",
@@ -414,172 +428,235 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$135",
-      "upside": 20.4
+      "upside": 21.5
     }
   },
   "bz_news": [
     {
-      "title": "Sam Altman Warns AI Race With China Can’t Justify ‘Recklessness’—‘No Reason Any of Us Should Come to Work’ Without Safety Accountability",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61757958/sam-altman-says-no-amount-of-competitive-pressure-justifies-recklessness-in-ai-development",
-      "ts": 1789377097,
+      "title": "Anthropic's AI Warning Is 'Noise' in a 'Secular Bull Market:' Bank of America Says",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/61770221/bofa-ai-slowdown-noise-semiconductor-stocks-upside-secular-bull-market",
+      "ts": 1789401929,
       "tickers": [
-        "META",
+        "NVDA",
+        "INTC",
+        "AMD",
+        "ON"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.34
+    },
+    {
+      "title": "Shares of semiconductor and chip-related companies are trading lower after AI executives signaled that the industry's growth may need to be slowed. The industry is also facing pressure as oil prices spike in reaction to the escalating conflict in the Middle East which can lead to inflation, tighter lending and reduced demand.",
+      "url": "https://www.benzinga.com/quote/SIMO",
+      "ts": 1789401795,
+      "tickers": [
+        "UMC",
+        "NVDA",
+        "TSM",
+        "MCHP"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.605
+    },
+    {
+      "title": "'OpenAI may have violated California’s AI safety law with latest model releases, AI watchdog says' - Fortune",
+      "url": "https://www.benzinga.com/news/26/09/61769787/openai-may-have-violated-california-s-ai-safety-law-latest-model-releases-ai-watchdog-says-fortune",
+      "ts": 1789401036,
+      "tickers": [
         "MSFT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.279
+      "relevance": 0.306
     },
     {
-      "title": "The Information Reported Sunday, Anthropic Signs $13.7B Six-Year Compute Deal With Trump-Linked Rum Group",
-      "url": "https://www.benzinga.com/news/26/09/61757892/information-reported-sunday-anthropic-signs-13-7b-six-year-compute-deal-trump-linked-rum-group",
-      "ts": 1789376592,
+      "title": "Apple Stock Trades Near 52-Week High as Analyst Tracks iPhone 18 Demand Signals",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61769496/apple-stock-trades-near-52-week-high-as-analyst-tracks-iphone-18-demand-signals",
+      "ts": 1789400584,
       "tickers": [
-        "RUM",
-        "GOOGL",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.381
+    },
+    {
+      "title": "What's Going On With Boeing Stock Monday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/09/61769329/whats-going-on-with-boeing-stock-monday-6",
+      "ts": 1789400315,
+      "tickers": [
+        "BA",
+        "AAL",
+        "ITA",
+        "PPA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.388
+    },
+    {
+      "title": "Caterpillar Stock Falls Monday: What's Happening?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61768683/caterpillar-stock-falls-monday-whats-happening",
+      "ts": 1789399063,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.379
+    },
+    {
+      "title": "Perplexity Portable Computer Is Now Available On Windows, Powered By NVIDIA RTX",
+      "url": "https://www.benzinga.com/news/26/09/61768589/perplexity-portable-computer-now-available-windows-powered-nvidia-rtx",
+      "ts": 1789398892,
+      "tickers": [
+        "NVDA",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.348
+    },
+    {
+      "title": "Senate Spokesperson Says Anthropic's Amodei, OpenAI's Altman Spoke With U.S. Senator Mark Warner Over The Weekend About AI Risks",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/09/61768502/senate-spokesperson-says-anthropic-s-amodei-openai-s-altman-spoke-u-s-senator-mark-warner-over-weeke",
+      "ts": 1789398730,
+      "tickers": [
         "GOOG",
+        "GOOGL",
+        "MSFT",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.306
+    },
+    {
+      "title": "Tech Bosses Call For AI Slowdown—Should Investors Worry—Key Saudi Pipeline Hit",
+      "url": "https://www.benzinga.com/Opinion/26/09/61768470/tech-bosses-call-for-ai-slowdown-should-investors-worry-key-saudi-pipeline-hit",
+      "ts": 1789398667,
+      "tickers": [
+        "USO",
+        "SPY",
+        "NVDA",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.377
+    },
+    {
+      "title": "Morgan Stanley Maintains Equal-Weight on McDonald's, Lowers Price Target to $308",
+      "url": "https://www.benzinga.com/news/26/09/61768433/morgan-stanley-maintains-equal-weight-mcdonald-s-lowers-price-target-308",
+      "ts": 1789398614,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.483
+    },
+    {
+      "title": "$1000 Invested In Visa 15 Years Ago Would Be Worth This Much Today",
+      "url": "https://www.benzinga.com/news/26/09/61767550/1000-invested-visa-15-years-ago-would-be-worth-much-today",
+      "ts": 1789397143,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.322
+    },
+    {
+      "title": "Salesforce's AI Business Is Booming, Why Isn't CRM Stock?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61766095/salesforce-ai-revenue-crm-rally",
+      "ts": 1789394737,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.368
+    },
+    {
+      "title": "President Trump Posts On X \"... We already have tremendous CRIMINAL and REGULATORY power over these companies! There is a SICK conspiracy going on against AI and Data Centers, and the only one that is happy about it is China. WHOEVER WINS AI, WINS! We are leading China, and all others, and will continue to do so. Conspiracy Theorists, Treasonists, Traitors, and Leakers, BEWARE!\"",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/09/61765960/president-trump-posts-x-we-already-have-tremendous-criminal-and-regulatory-power-over-these-companie",
+      "ts": 1789394557,
+      "tickers": [
+        "SPY",
+        "GOOG",
+        "GOOGL",
         "AMZN"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.333
+      "relevance": 0.317
     },
     {
-      "title": "Patrick Bet-David Warns Monday Could Be a ‘Bloodbath’ for Stocks as AI Safety Debate Rattles Markets: Samsung, SK Hynix, SoftBank Lead Asian Selloff",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61757665/patrick-bet-david-warns-of-a-stock-market-bloodbath-amid-ai-safety-jitters",
-      "ts": 1789373972,
+      "title": "Intel Stock Slides Monday: What's Happening?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61765410/intel-stock-slides-monday-whats-happening",
+      "ts": 1789393931,
       "tickers": [
-        "NVDA",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.431
-    },
-    {
-      "title": "Jim Cramer Calls This Cybersecurity Stock a 'Must Buy' Amid Emerging AI Threats: Here's Why",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61757038/jim-cramer-cybersecurity-stock-must-buy-ai-threats",
-      "ts": 1789367150,
-      "tickers": [
-        "CRWD",
-        "META",
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.421
-    },
-    {
-      "title": "'Anthropic Tells Investors It Will Be Profitable For Second Straight Quarter' - FT",
-      "url": "https://www.benzinga.com/news/26/09/61756821/anthropic-tells-investors-it-will-be-profitable-second-straight-quarter-ft",
-      "ts": 1789365706,
-      "tickers": [
-        "MSFT"
+        "INTC"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.412
+      "relevance": 0.463
     },
     {
-      "title": "Reported Earlier, Johnson & Johnson Says Rybrevant Plus Chemotherapy Cuts Risk Of Death By 43% Versus Chemotherapy Alone When Adjusted For Crossover In Final PAPILLON Overall Survival Analysis",
-      "url": "https://www.benzinga.com/news/26/09/61756561/reported-earlier-johnson-johnson-says-rybrevant-plus-chemotherapy-cuts-risk-death-43-versus-chemothe",
-      "ts": 1789364097,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.347
-    },
-    {
-      "title": "Anthropic Picks Nasdaq for Its $2 Trillion IPO, Tells Investors It Expects a Second Consecutive Profitable Quarter: Reports",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61756404/anthropic-nasdaq-2-trillion-ipo-second-consecutive-profitable-quarter",
-      "ts": 1789361025,
-      "tickers": [
-        "AMZN",
-        "MSFT",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.424
-    },
-    {
-      "title": "Trump Pushes Back on AI Slowdown, Says 'Whoever Wins With AI Wins,' Microsoft CEO Satya Nadella Says Tech Must Stay 'Under Human Control'",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61756286/trump-ai-slowdown-whoever-wins-microsoft-satya-nadella-human-control",
-      "ts": 1789355967,
+      "title": "Reported Earlier, 'Anthropic Data Fears Prompt Nvidia, Palantir and Booz Allen to Restrict Model Use' - The Information",
+      "url": "https://www.benzinga.com/news/26/09/61765368/reported-earlier-anthropic-data-fears-prompt-nvidia-palantir-and-booz-allen-restrict-model-use-infor",
+      "ts": 1789393873,
       "tickers": [
         "MSFT",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.349
-    },
-    {
-      "title": "Energy Stocks Surge Past Tech Companies Amid Escalating US-Iran Conflict",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61755635/energy-stocks-surge-past-tech-companies-amid-escalating-us-iran-conflict",
-      "ts": 1789334678,
-      "tickers": [
-        "XLE",
-        "XLK",
-        "XOM",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.406
-    },
-    {
-      "title": "President Trump On Sunday, Said U.S. Is Leading China In AI, Wants To Keep It That Way; Trump Said “Whoever Wins AI, Wins”",
-      "url": "https://www.benzinga.com/news/26/09/61755610/president-trump-sunday-said-u-s-leading-china-ai-wants-keep-it-way-trump-said-whoever-wins-ai-wins",
-      "ts": 1789333000,
-      "tickers": [
-        "AI",
-        "LPSN",
+        "PLTR",
         "NVDA",
-        "IBM"
+        "BAH"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.3
+      "relevance": 0.387
     },
     {
-      "title": "Business Insider Reported Earlier Sunday, Anthropic Selected The Nasdaq For Its IPO Listing",
-      "url": "https://www.benzinga.com/news/26/09/61755597/business-insider-reported-earlier-sunday-anthropic-selected-nasdaq-its-ipo-listing",
-      "ts": 1789332641,
+      "title": "OpenAI, Anthropic Call for AI Slowdown: Chips Sink, Cybersecurity Stocks Jump",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61765308/openai-anthropic-ai-slowdown-cybersecurity-stocks-chips",
+      "ts": 1789393831,
       "tickers": [
+        "INTC",
+        "AMD",
         "NVDA",
-        "BX",
-        "GOOGL",
-        "GOOG"
+        "PANW"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.41
+      "relevance": 0.496
     },
     {
-      "title": "Micron Stock Has Stalled, But One Catalyst Could Bring the Momentum Back",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61755503/micron-stock-has-stalled-but-one-catalyst-could-bring-the-momentum-back",
-      "ts": 1789327585,
+      "title": "Why Is Super Micro Computer Stock Falling Monday?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61765144/why-is-super-micro-computer-stock-falling-monday",
+      "ts": 1789393747,
       "tickers": [
-        "MU",
-        "META",
-        "MSFT",
+        "SMCI",
+        "INTC",
+        "AVGO",
         "AMD"
       ],
       "source": "Benzinga",
@@ -588,192 +665,111 @@
       "relevance": 0.379
     },
     {
-      "title": "Nebius Stock Stuck in Bear Market as Risks to Its Growth Story Build",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61755502/nebius-stock-stuck-in-bear-market-as-risks-to-its-growth-story-build",
-      "ts": 1789327582,
+      "title": "Citigroup Maintains Neutral on Nike, Lowers Price Target to $39",
+      "url": "https://www.benzinga.com/news/26/09/61764818/citigroup-maintains-neutral-nike-lowers-price-target-39",
+      "ts": 1789393373,
       "tickers": [
-        "NBIS",
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.454
+    },
+    {
+      "title": "Musk’s X Corp And XAI Resolve Antitrust Lawsuit Against Apple",
+      "url": "https://www.benzinga.com/news/26/09/61764214/musk-s-x-corp-and-xai-resolve-antitrust-lawsuit-against-apple",
+      "ts": 1789392942,
+      "tickers": [
+        "SPCX",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.321
+    },
+    {
+      "title": "Top Analyst Warns AI Slowdown Could ‘Crimp’ Microsoft, Alphabet, Meta, Amazon and Other Earnings — S&P 500 Rally Faces New Threat",
+      "url": "https://www.benzinga.com/markets/private-markets/26/09/61763929/top-analyst-warns-ai-slowdown-could-crimp-microsoft-alphabet-meta-amazon-and-other-earnings-sp-500-rally-faces-new-threat",
+      "ts": 1789392482,
+      "tickers": [
         "META",
+        "AMZN",
         "GOOG",
         "MSFT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.402
+      "relevance": 0.424
     },
     {
-      "title": "Dow Jones Index Outlook: Top Stock Market News This Week",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61755472/dow-jones-index-outlook-top-3-stock-market-news-this-week",
-      "ts": 1789326923,
+      "title": "Why Is Broadcom Stock Falling Monday?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61763900/why-is-broadcom-stock-falling-monday",
+      "ts": 1789392382,
       "tickers": [
-        "NVDA",
-        "SPCX",
-        "MSFT",
-        "CVX"
+        "AVGO",
+        "INTC",
+        "AMD",
+        "SOXX"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.498
+      "relevance": 0.569
     },
     {
-      "title": "'XRP Could Flip Bitcoin,' Exec Said: 4 Reasons Why Investors Are Piling In Now",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/09/61755433/xrp-could-flip-bitcoin-exec-said-4-reasons-why-investors-are-piling-in-now",
-      "ts": 1789324220,
-      "tickers": [
-        "$XRP",
-        "$BTC",
-        "$ETH",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.281
-    },
-    {
-      "title": "Top Three Undervalued S&P 500 Stocks the Market Rally Left Behind",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61755151/top-3-undervalued-sp-500-stocks-the-market-rally-left-behind",
-      "ts": 1789306225,
-      "tickers": [
-        "CMCSA",
-        "PYPL",
-        "HON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.456
-    },
-    {
-      "title": "Foldable iPhone, Bitcoin's iPhone Ratio, New CEO and More: This Week in Apple",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61755009/top-tech-stories-apple-bitcoin-grindr-week",
-      "ts": 1789297248,
+      "title": "Five Years From Now, the World Could Be Completely Different Because of AI. Who Will Actually Be the Long-Term AI Winners?",
+      "url": "https://www.benzinga.com/markets/market-summary/26/09/61763549/five-years-from-now-the-world-could-be-completely-different-because-of-ai-who-will-actually-be-the-long-term-ai-winners",
+      "ts": 1789391785,
       "tickers": [
         "AAPL",
-        "$BTC",
-        "NVDA",
-        "GRND"
+        "AMZN",
+        "MSFT",
+        "NVDA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.311
+      "relevance": 0.345
     },
     {
-      "title": "This Week in Tesla: Democratic Lawmaker Demands Self-Driving Scrutiny, Cybercab Production, and More",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61754914/this-week-in-tesla-democrat-lawmaker-demands-self-driving-scrutiny-cybercab-production-and-more",
-      "ts": 1789293617,
+      "title": "Amgen Says FDA Approved Prescribing Information Update Cutting IMDELLTRA Monitoring Time For First Two Doses To 6 To 8 Hours From 22 To 24 Hours",
+      "url": "https://www.benzinga.com/quote/AMGN",
+      "ts": 1789391258,
       "tickers": [
-        "TSLA",
-        "GS",
-        "ABNB",
-        "UBER"
+        "AMGN"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true,
-      "relevance": 0.332
+      "rel": false,
+      "relevance": 0.368
     },
     {
-      "title": "Jamie Dimon Called Mark Carney’s ‘Middle Powers’ Plan a ‘Fantasy’—‘They Did That, It’s Called Europe’",
-      "url": "https://www.benzinga.com/markets/macro-economic-events/26/09/61754798/jamie-dimon-called-mark-carneys-middle-powers-plan-a-fantasy-they-did-that-its-called-europe",
-      "ts": 1789280064,
+      "title": "Boeing And American Airlines Announce Completion Of First Landing Gear Exchange For 737 MAX",
+      "url": "https://www.benzinga.com/news/26/09/61763320/boeing-and-american-airlines-announce-completion-first-landing-gear-exchange-737-max",
+      "ts": 1789391221,
+      "tickers": [
+        "BA",
+        "AAL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.215
+    },
+    {
+      "title": "Top Bank Warns 12 Million Small Businesses Could Change Hands Over the Next Decade — 70% of Owners Are Still in Early Succession Planning",
+      "url": "https://www.benzinga.com/news/financing/26/09/61762717/top-bank-warns-12-million-small-businesses-could-change-hands-over-the-next-decade-70-of-owners-are-still-in-early-succession-planning",
+      "ts": 1789390347,
       "tickers": [
         "JPM"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.229
-    },
-    {
-      "title": "Consumer Tech (Sep 7-11): Apple Launches First Foldable iPhone, XPeng Commissioned IRON Humanoid Robot Production & More",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61754574/consumer-tech-sep-7-11-apple-launches-first-foldable-iphone-xpeng-commissioned-iron-humanoid-robot-production-more",
-      "ts": 1789247222,
-      "tickers": [
-        "TSLA",
-        "AAPL",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.393
-    },
-    {
-      "title": "Bitcoin's iPhone Ratio Crashed 99.99% Since 2011: Here's How Much 1 iPhone Cost Back Then",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/09/61754277/bitcoins-iphone-ratio-crashed-99-99-since-2011-heres-how-much-1-iphone-cost-back-then",
-      "ts": 1789228830,
-      "tickers": [
-        "$BTC",
-        "AAPL",
-        "COIN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.251
-    },
-    {
-      "title": "A Dating App Is Outperforming Apple, Meta and Microsoft on This Metric— Only Nvidia Can Claim a Higher Number",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61754145/a-dating-app-is-outperforming-apple-meta-and-microsoft-on-this-metric-only-nvidia-can-claim-a-higher-number",
-      "ts": 1789221618,
-      "tickers": [
-        "GRND",
-        "TSLA",
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.443
-    },
-    {
-      "title": "GameStop, Oracle, Apple and More: Five Stocks Investors Couldn't Stop Buzzing About This Week",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61754055/gamestop-oracle-apple-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
-      "ts": 1789217459,
-      "tickers": [
-        "ORCL",
-        "AAPL",
-        "GME",
-        "ADBE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.396
-    },
-    {
-      "title": "Benzinga Bulls and Bears: GameStop, Marvell, Robinhood",
-      "url": "https://www.benzinga.com/markets/market-summary/26/09/61754044/benzinga-bulls-and-bears-gamestop-marvell-robinhood",
-      "ts": 1789217383,
-      "tickers": [
-        "AAPL",
-        "GME",
-        "PLTR",
-        "HOOD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.456
-    },
-    {
-      "title": "David Sacks Slams 'Whistleblower' Jacob Coxon’s Claims on AI Risk to Humans, Raises Questions Ahead of Anthropic IPO",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61753920/david-sacks-jacob-coxon-anthropic-ai-safety",
-      "ts": 1789205374,
-      "tickers": [
-        "GS",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.257
+      "relevance": 0.316
     }
   ],
   "portfolio_brief": {
@@ -858,10 +854,10 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Business Insider Reported Earlier Sunday, Anthropic Selected The Nasdaq For Its IPO Listing",
-        "ts": 1789332641,
-        "url": "https://www.benzinga.com/news/26/09/61755597/business-insider-reported-earlier-sunday-anthropic-selected-nasdaq-its-ipo-listing",
-        "wiim": false
+        "title": "Shares of semiconductor and chip-related companies are trading lower after AI executives signaled that the industry's growth may need to be slowed. The industry is also facing pressure as oil prices spike in reaction to the escalating conflict in the Middle East which can lead to inflation, tighter lending and reduced demand.",
+        "ts": 1789401795,
+        "url": "https://www.benzinga.com/quote/SIMO",
+        "wiim": true
       },
       "filings": {
         "latest8k": {
@@ -1125,7 +1121,7 @@
     },
     "LULU": {
       "name": "Lululemon",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 1,
         "buy": 1,
@@ -1153,7 +1149,7 @@
         },
         "insider30d": 1
       },
-      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: STRONG BUY."
+      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
     },
     "SPGI": {
       "name": "S&P Global",
@@ -1243,43 +1239,6 @@
       },
       "explain": "39 analysts cover it — 30 bullish, 7 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
-    "AVGO": {
-      "name": "Broadcom",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 17,
-        "buy": 35,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 57,
-        "bullish": 52,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.21,
-        "period": "2026-09-01"
-      },
-      "news": {
-        "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-        "ts": 1789148111,
-        "url": "https://www.benzinga.com/markets/options/26/09/61746895/10-information-technology-stocks-whale-activity-today-s-session",
-        "wiim": false
-      },
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-09-02",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-20260902.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-09-10",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm"
-        },
-        "insider30d": 0
-      },
-      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "NVS": {
       "name": "Novartis",
       "qarp": "BUY",
@@ -1303,6 +1262,43 @@
         "insider30d": 0
       },
       "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 17,
+        "buy": 35,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 57,
+        "bullish": 52,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.21,
+        "period": "2026-09-01"
+      },
+      "news": {
+        "title": "Shares of semiconductor and chip-related companies are trading lower after AI executives signaled that the industry's growth may need to be slowed. The industry is also facing pressure as oil prices spike in reaction to the escalating conflict in the Middle East which can lead to inflation, tighter lending and reduced demand.",
+        "ts": 1789401795,
+        "url": "https://www.benzinga.com/quote/SIMO",
+        "wiim": true
+      },
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-09-02",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-20260902.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-09-10",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm"
+        },
+        "insider30d": 0
+      },
+      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
@@ -1618,6 +1614,7 @@
       "summary": "Q2 FY2026 — revenue $7.8B (+10.2% YoY), diluted EPS $-8.45 (-641.7% YoY), net margin -134%. (as reported, GAAP)"
     },
     "SAP": null,
+    "NVS": null,
     "AVGO": {
       "period": "Q3 FY2026",
       "filed": "2026-09-10",
@@ -1637,7 +1634,6 @@
       "margin": null,
       "summary": "Q3 FY2026 — revenue $29.6B (+85.5% YoY), diluted EPS $2.68 (+215.3% YoY). (as reported, GAAP)"
     },
-    "NVS": null,
     "NBIX": {
       "period": "Q2 FY2026",
       "filed": "2026-07-31",
