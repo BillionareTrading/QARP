@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "Sep 15, 8:47am ET",
+  "generated_at": "Sep 15, 10:24am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -119,24 +119,24 @@
   "sectors": [
     {
       "sector": "Data Center Infrastructure",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "AI executives from firms including Anthropic",
       "note": "After AI executives from firms including Anthropic, OpenAI and SpaceXAI signaled that the industry's growth may have to be slowed, which may lead to curtailed demand for providers of electrical equipment and services, HVAC systems, and power generation capacity.",
-      "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Banks",
-      "dir": "mixed",
-      "driver": "Bank of America CEO Brian Moynihan said at an industry conference that t…",
-      "note": "After Bank of America CEO Brian Moynihan said at an industry conference that the company's Q3 sales and trading will be flat, and that investment banking fees will come in at $1.6 billion to $1.8 billion, down from $2 billion in Q3 2025.",
       "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
+      "sector": "Banks",
+      "dir": "down",
+      "driver": "Bank of America CEO Brian Moynihan said at an industry conference that t…",
+      "note": "After Bank of America CEO Brian Moynihan said at an industry conference that the company's Q3 sales and trading will be flat, and that investment banking fees will come in at $1.6 billion to $1.8 billion, down from $2 billion in Q3 2025.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Enterprise Software",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "AI executives from firms including Anthropic",
       "note": "After AI executives from firms including Anthropic, OpenAI and SpaceXAI signaled that the industry's growth may have to be slowed, which may limit or slow threats to software vendors.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Communications Services",
@@ -194,8 +194,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$366",
-      "price": 333.08,
-      "upside": 9.9,
+      "price": 329.54,
+      "upside": 11.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -208,8 +208,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$170",
-      "price": 144.85,
-      "upside": 17.4,
+      "price": 143.23,
+      "upside": 18.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -222,7 +222,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 333.08,
+      "price": 329.54,
       "upside": null,
       "held": false,
       "uni": true,
@@ -236,8 +236,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$161",
-      "price": 144.85,
-      "upside": 11.1,
+      "price": 143.23,
+      "upside": 12.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,8 +250,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$344",
-      "price": 310.87,
-      "upside": 10.7,
+      "price": 307.36,
+      "upside": 11.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -264,8 +264,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 37.05,
-      "upside": -19.0,
+      "price": 36.38,
+      "upside": -17.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -278,8 +278,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "price": 266.32,
-      "upside": 20.2,
+      "price": 262.79,
+      "upside": 21.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -292,8 +292,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$172",
-      "price": 144.85,
-      "upside": 18.7,
+      "price": 143.23,
+      "upside": 20.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -306,8 +306,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 333.08,
-      "upside": 20.1,
+      "price": 329.54,
+      "upside": 21.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,8 +320,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$303",
-      "price": 333.08,
-      "upside": -9.0,
+      "price": 329.54,
+      "upside": -8.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +334,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$31",
-      "price": 37.05,
-      "upside": -16.3,
+      "price": 36.38,
+      "upside": -14.8,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -348,8 +348,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 333.08,
-      "upside": 11.1,
+      "price": 329.54,
+      "upside": 12.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -362,8 +362,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$44",
-      "price": 37.05,
-      "upside": 18.8,
+      "price": 36.38,
+      "upside": 20.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -376,8 +376,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$39",
-      "price": 37.05,
-      "upside": 5.3,
+      "price": 36.38,
+      "upside": 7.2,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -391,7 +391,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$44",
-      "upside": 18.8
+      "upside": 20.9
     },
     "MRK": {
       "date": "2026-09-10",
@@ -400,7 +400,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$172",
-      "upside": 18.7
+      "upside": 20.1
     },
     "JNJ": {
       "date": "2026-09-10",
@@ -409,7 +409,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "upside": 20.2
+      "upside": 21.8
     },
     "AAPL": {
       "date": "2026-09-10",
@@ -418,7 +418,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 20.1
+      "upside": 21.4
     },
     "HD": {
       "date": "2026-09-09",
@@ -427,7 +427,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$344",
-      "upside": 10.7
+      "upside": 11.9
     },
     "CVX": {
       "date": "2026-09-03",
@@ -436,7 +436,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$235",
-      "upside": 10.8
+      "upside": 9.1
     },
     "CRM": {
       "date": "2026-09-02",
@@ -445,7 +445,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "upside": 54.2
+      "upside": 55.9
     },
     "CSCO": {
       "date": "2026-09-01",
@@ -454,10 +454,49 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$135",
-      "upside": 22.7
+      "upside": 21.3
     }
   },
   "bz_news": [
+    {
+      "title": "What's Going On With Apple Stock Tuesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61792123/whats-going-on-with-apple-stock-tuesday-2",
+      "ts": 1789481932,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.422
+    },
+    {
+      "title": "Sam Altman’s AI Nightmare Splits ETF Trade: Build Vs. Control",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/61789611/sam-altman-ai-nightmare-splits-etf-trade-build-ai-vs-control-ai",
+      "ts": 1789478911,
+      "tickers": [
+        "PANW",
+        "INTC",
+        "AVGO",
+        "AMD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.339
+    },
+    {
+      "title": "Stock of the Day: Did IBM Just Break Out?",
+      "url": "https://www.benzinga.com/trading-ideas/technicals/26/09/61789316/stock-of-the-day-did-ibm-just-break-out",
+      "ts": 1789478442,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.402
+    },
     {
       "title": "Citizens Reiterates Market Outperform on Microsoft, Maintains $550 Price Target",
       "url": "https://www.benzinga.com/news/26/09/61787371/citizens-reiterates-market-outperform-microsoft-maintains-550-price-target",
@@ -483,7 +522,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.414
+      "relevance": 0.415
     },
     {
       "title": "Salesforce And Nvidia Announce Koa CRM Reasoning Model For Agentforce, Built On Nvidia Nemotron 3 Super; In Customer Pilots Now, General Availability Expected Winter 2026 In US Regions",
@@ -653,7 +692,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.279
+      "relevance": 0.278
     },
     {
       "title": "CrowdStrike, Bank of America, Microsoft, Zscaler and Corning: Why These 5 Stocks Are on Investors' Radars Today",
@@ -680,7 +719,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.275
+      "relevance": 0.276
     },
     {
       "title": "If You Invested $100 In Microsoft Stock 20 Years Ago, You Would Have This Much Today",
@@ -746,50 +785,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.344
-    },
-    {
-      "title": "Epic Games’ Private Market Value Slides as Fortnite Struggles to Deliver its Next Growth Spurt",
-      "url": "https://www.benzinga.com/markets/private-markets/26/09/61776955/epic-games-private-market-value-slides-as-fortnite-struggles-to-deliver-its-next-growth-spurt",
-      "ts": 1789416288,
-      "tickers": [
-        "DIS",
-        "SONY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.308
-    },
-    {
-      "title": "Trump Calls AI Backlash a ‘Sick Conspiracy.’ China Is the Only One Happy, He Says",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61776607/trump-ai-china-stocks",
-      "ts": 1789415929,
-      "tickers": [
-        "SMH",
-        "SOXX",
-        "INTC",
-        "AMD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.282
-    },
-    {
-      "title": "Coinbase Says Its Tokenized Stocks Set the Standard — But Nasdaq Is Backing a Rival",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/09/61776332/coinbase-nasdaq-tokenized-stocks",
-      "ts": 1789415347,
-      "tickers": [
-        "COIN",
-        "NDAQ",
-        "AAPL",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.353
+      "relevance": 0.345
     }
   ],
   "portfolio_brief": {
