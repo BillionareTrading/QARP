@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-14",
-  "generated_at": "Sep 14, 7:27pm ET",
+  "date": "2026-09-15",
+  "generated_at": "Sep 15, 8:47am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -177,6 +177,12 @@
       "ts": 1789401795,
       "url": "https://www.benzinga.com/quote/SIMO",
       "wiim": true
+    },
+    "AZO": {
+      "title": "Costco Nearly Doubles Motor Oil Prices, Limits Purchases to '1 Transaction Per Membership' as Iran War Squeezes Supply",
+      "ts": 1789450899,
+      "url": "https://www.benzinga.com/markets/equities/26/09/61781264/costco-motor-oil-prices-double-one-transaction-membership-iran-war",
+      "wiim": false
     }
   },
   "ratings": [
@@ -453,6 +459,218 @@
   },
   "bz_news": [
     {
+      "title": "Citizens Reiterates Market Outperform on Microsoft, Maintains $550 Price Target",
+      "url": "https://www.benzinga.com/news/26/09/61787371/citizens-reiterates-market-outperform-microsoft-maintains-550-price-target",
+      "ts": 1789475879,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.458
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang Says Elon Musk’s Terafab May Look Audacious, But ‘If Anybody Could Do It, He Can’",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61786998/nvidia-ceo-jensen-huang-says-elon-musks-terafab-may-look-audacious-but-if-anybody-could-do-it-he-can",
+      "ts": 1789475317,
+      "tickers": [
+        "TSLA",
+        "INTC",
+        "NVDA",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.414
+    },
+    {
+      "title": "Salesforce And Nvidia Announce Koa CRM Reasoning Model For Agentforce, Built On Nvidia Nemotron 3 Super; In Customer Pilots Now, General Availability Expected Winter 2026 In US Regions",
+      "url": "https://www.benzinga.com/news/26/09/61786986/salesforce-and-nvidia-announce-koa-crm-reasoning-model-agentforce-built-nvidia-nemotron-3-super-cust",
+      "ts": 1789475273,
+      "tickers": [
+        "CRM",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.429
+    },
+    {
+      "title": "Top 3 Stocks Dan Ives Says Will Lead the Next Tech Boom",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61785283/top-3-stocks-dan-ives-says-will-lead-the-next-tech-boom",
+      "ts": 1789471698,
+      "tickers": [
+        "PLTR",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.407
+    },
+    {
+      "title": "Comparing Microsoft With Industry Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/09/61783217/comparing-microsoft-industry-competitors-software-industry",
+      "ts": 1789466312,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.328
+    },
+    {
+      "title": "Performance Comparison: Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/09/61783216/performance-comparison-apple-and-competitors-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1789466307,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.364
+    },
+    {
+      "title": "NVIDIA Isn’t ‘so Expensive,’ but Crowded AI Trade Could Unwind Quickly, Fund Manager Warns",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61783152/nvidia-isnt-so-expensive-but-crowded-ai-trade-could-unwind-quickly-fund-manager-warns",
+      "ts": 1789465906,
+      "tickers": [
+        "NVDA",
+        "MSFT",
+        "INTC",
+        "AVGO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.557
+    },
+    {
+      "title": "Apple's iOS 27 Is Here: 8 New Features You Should Know About in This Major Software Update",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61782995/apples-ios-27-is-here-8-new-features-you-should-know-about-in-this-major-software-update",
+      "ts": 1789465318,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.213
+    },
+    {
+      "title": "What's Going On With Micron Technology Stock Tuesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61782945/whats-going-on-with-micron-technology-stock-tuesday-6",
+      "ts": 1789464819,
+      "tickers": [
+        "MU",
+        "MSFT",
+        "INTU",
+        "SAP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.355
+    },
+    {
+      "title": "Apple Gives Siri AI Makeover With iOS 27, Caps Usage; Gene Munster Flags 'Way to Long, 5-15 Seconds' Response Time",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61782921/apple-gives-siri-ai-makeover-with-ios-27-caps-usage-gene-munster-flags-way-to-long-5-15-seconds-response-time",
+      "ts": 1789464460,
+      "tickers": [
+        "AAPL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.252
+    },
+    {
+      "title": "Reuters Reported India Consumer Regulator Investigates Apple Software Warranty Terms, Says Apple Charged “Exorbitant Amounts” For Repairs Prompted By Its Own Software Updates; Apple Says No-Warranty Terms Are Global Industry Practice",
+      "url": "https://www.benzinga.com/quote/INDA",
+      "ts": 1789463487,
+      "tickers": [
+        "AAPL",
+        "INDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.233
+    },
+    {
+      "title": "'Microsoft CEO Satya Nadella Posts an Internal Warning to Employees About AI Safety' - Business Insider",
+      "url": "https://www.benzinga.com/news/26/09/61782334/microsoft-ceo-satya-nadella-posts-internal-warning-employees-about-ai-safety-business-insider",
+      "ts": 1789459313,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.342
+    },
+    {
+      "title": "Reported Earlier, J&J's Subcutaneous RYBREVANT FASPRO Plus LAZCLUZE Shows Lower Rash, Administration-Related Reaction, Venous Thromboembolism Rates Than Intravenous MARIPOSA Regimen",
+      "url": "https://www.benzinga.com/news/26/09/61782053/reported-earlier-j-j-s-subcutaneous-rybrevant-faspro-plus-lazcluze-shows-lower-rash-administration-r",
+      "ts": 1789457431,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.375
+    },
+    {
+      "title": "Gene Munster Says iPhone 18 Pre-Order Wait Times Are Climbing, Calls It a 'Favorable Sign for Demand'",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61781763/gene-munster-iphone-18-preorder-wait-times-demand",
+      "ts": 1789455318,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.273
+    },
+    {
+      "title": "Costco Nearly Doubles Motor Oil Prices, Limits Purchases to '1 Transaction Per Membership' as Iran War Squeezes Supply",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61781264/costco-motor-oil-prices-double-one-transaction-membership-iran-war",
+      "ts": 1789450899,
+      "tickers": [
+        "COST",
+        "AMZN",
+        "WMT",
+        "AZO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.279
+    },
+    {
+      "title": "CrowdStrike, Bank of America, Microsoft, Zscaler and Corning: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61780564/crowdstrike-bank-of-america-microsoft-zscaler-and-corning-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1789434750,
+      "tickers": [
+        "CRWD",
+        "MSFT",
+        "ZS",
+        "BAC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.399
+    },
+    {
       "title": "If You Invested $100 In Chevron Stock 5 Years Ago, You Would Have This Much Today",
       "url": "https://www.benzinga.com/news/26/09/61780056/if-you-invested-100-chevron-stock-5-years-ago-you-would-have-much-today",
       "ts": 1789426833,
@@ -556,7 +774,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.283
+      "relevance": 0.282
     },
     {
       "title": "Coinbase Says Its Tokenized Stocks Set the Standard — But Nasdaq Is Backing a Rival",
@@ -572,229 +790,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.353
-    },
-    {
-      "title": "Merck & Co Exec Says Timing For Raising The $70B Forecast Is \"To Be Determined\" Adds \"It's Coming\"",
-      "url": "https://www.benzinga.com/news/26/09/61776285/merck-co-exec-says-timing-raising-70b-forecast-be-determined-adds-it-s-coming",
-      "ts": 1789415267,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.4
-    },
-    {
-      "title": "Merck Exec Speaking At Morgan Stanley Conference Says Potential 340B And Policy Changes Would Create Tailwinds But Are Not Material To The Business",
-      "url": "https://www.benzinga.com/news/26/09/61775993/merck-exec-speaking-morgan-stanley-conference-says-potential-340b-and-policy-changes-would-create-ta",
-      "ts": 1789414506,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.405
-    },
-    {
-      "title": "Billionaire Investor Adds To ASML, Exits Rivals KLA and Lam — Plus Nvidia, Broadcom",
-      "url": "https://www.benzinga.com/markets/large-cap/26/09/61775732/billionaire-investor-adds-to-asml-exits-rivals-kla-and-lam-plus-nvidia-broadcom",
-      "ts": 1789413886,
-      "tickers": [
-        "ASML",
-        "TSM",
-        "RIOT",
-        "XLK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.534
-    },
-    {
-      "title": "'UK banks kick off fundraising in bid to create new payments giant' - Sky News",
-      "url": "https://www.benzinga.com/news/26/09/61775219/uk-banks-kick-fundraising-bid-create-new-payments-giant-sky-news",
-      "ts": 1789412602,
-      "tickers": [
-        "V",
-        "MA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.282
-    },
-    {
-      "title": "ASML Eyes 110+ EUV Machines as JPM Stresses 'Strong' AI Demand",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61775072/asml-euv-2028-ai-demand",
-      "ts": 1789412168,
-      "tickers": [
-        "ASML",
-        "TSM",
-        "INTC",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.575
-    },
-    {
-      "title": "'OpenAI Buys Startup Developing Smartphone Camera' - Wall Street Journal",
-      "url": "https://www.benzinga.com/m/26/09/61774579/openai-buys-startup-developing-smartphone-camera-wall-street-journal",
-      "ts": 1789410793,
-      "tickers": [
-        "MSFT",
-        "AAPL",
-        "ORCL",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.314
-    },
-    {
-      "title": "Shares of data center infrastructure-related companies are trading lower after AI executives from firms including Anthropic, OpenAI and SpaceXAI signaled that the industry's growth may have to be slowed, which may lead to curtailed demand for providers of electrical equipment and services, HVAC systems, and power generation capacity.",
-      "url": "https://www.benzinga.com/quote/MAIR",
-      "ts": 1789409089,
-      "tickers": [
-        "CAT",
-        "VICR",
-        "GNRC",
-        "CMI"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.546
-    },
-    {
-      "title": "Deutsche Bank Maintains Buy on McDonald's, Lowers Price Target to $300",
-      "url": "https://www.benzinga.com/news/26/09/61773466/deutsche-bank-maintains-buy-mcdonald-s-lowers-price-target-300",
-      "ts": 1789408408,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.401
-    },
-    {
-      "title": "Shares of communications services are trading higher after AI executives from firms including Anthropic, OpenAI and SpaceXAI signaled that the industry's growth may have to be slowed, which may limit competition in content creation, advertising sales and other areas. The sector's cash flow from ads and subscription revenue may also be attractive to investors amid elevated bond yields, inflation fears and interest rate expectations.",
-      "url": "https://www.benzinga.com/quote/VSME",
-      "ts": 1789407716,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "META",
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.461
-    },
-    {
-      "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61772875/10-industrials-stocks-whale-alerts-today-s-session",
-      "ts": 1789407321,
-      "tickers": [
-        "VRT",
-        "QXO",
-        "CAT",
-        "BE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.398
-    },
-    {
-      "title": "10 Communication Services Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61772874/10-communication-services-stocks-whale-activity-today-s-session",
-      "ts": 1789407320,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "CMCSA",
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.381
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61772873/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1789407320,
-      "tickers": [
-        "NVDA",
-        "MU",
-        "SNDK",
-        "CRWD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "Baird Downgrades Nike to Neutral, Lowers Price Target to $44",
-      "url": "https://www.benzinga.com/news/26/09/61772810/baird-downgrades-nike-neutral-lowers-price-target-44",
-      "ts": 1789407151,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.504
-    },
-    {
-      "title": "Shares of banks are trading lower after Bank of America CEO Brian Moynihan said at an industry conference that the company's Q3 sales and trading will be flat, and that investment banking fees will come in at $1.6 billion to $1.8 billion, down from $2 billion in Q3 2025.",
-      "url": "https://www.benzinga.com/quote/LPLA",
-      "ts": 1789407065,
-      "tickers": [
-        "GS",
-        "C",
-        "BCS",
-        "MS"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.412
-    },
-    {
-      "title": "Apple Announces Siri AI Rollout Begins Today In Beta; Expanding To French, Japanese, Korean, Portuguese, And Spanish Next Month; Not Available Initially In EU or China On iOS, iPadOS, watchOS",
-      "url": "https://www.benzinga.com/news/26/09/61772377/apple-announces-siri-ai-rollout-begins-today-beta-expanding-french-japanese-korean-portuguese-and-sp",
-      "ts": 1789406193,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.274
-    },
-    {
-      "title": "Microsoft’s New AI Safety Rules Trigger Surge in 3 Cybersecurity Stocks",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61771074/microsoft-ai-safety-cyber-stocks",
-      "ts": 1789403562,
-      "tickers": [
-        "MSFT",
-        "PANW",
-        "CRWD",
-        "NET"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.447
     }
   ],
   "portfolio_brief": {
@@ -975,8 +970,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-08-13",
-          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000175392626001463/g085846_8k.htm"
+          "date": "2026-09-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000175392626001769/g085951_8k.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -1003,7 +998,12 @@
         "score": 1.09,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Costco Nearly Doubles Motor Oil Prices, Limits Purchases to '1 Transaction Per Membership' as Iran War Squeezes Supply",
+        "ts": 1789450899,
+        "url": "https://www.benzinga.com/markets/equities/26/09/61781264/costco-motor-oil-prices-double-one-transaction-membership-iran-war",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
