@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-15",
-  "generated_at": "Sep 15, 7:14pm ET",
+  "date": "2026-09-16",
+  "generated_at": "Sep 16, 8:27am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -167,9 +167,9 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "NVIDIA CEO, On AI Safety, Says Companies Should Pace Themselves Until They Are Are Confident They Are Releasing Something The Market Would Appreciate",
-      "ts": 1789497427,
-      "url": "https://www.benzinga.com/news/26/09/61801228/nvidia-ceo-ai-safety-says-companies-should-pace-themselves-until-they-are-are-confident-they-are-rel",
+      "title": "'OpenAI's rogue agents probed Hugging Face for weaknesses two months before major hack' - Reuters Exclusive",
+      "ts": 1789553465,
+      "url": "https://www.benzinga.com/news/26/09/61810175/openai-s-rogue-agents-probed-hugging-face-weaknesses-two-months-major-hack-reuters-exclusive",
       "wiim": false
     },
     "AVGO": {
@@ -186,48 +186,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-08",
-      "ticker": "AAPL",
-      "firm": "HSBC",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$366",
-      "price": 331.34,
-      "upside": 10.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-08",
-      "ticker": "MRK",
-      "firm": "Guggenheim",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$170",
-      "price": 143.79,
-      "upside": 18.2,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-08",
-      "ticker": "AAPL",
-      "firm": "Needham",
-      "action": "Reiterates",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "",
-      "price": 331.34,
-      "upside": null,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-09-09",
       "ticker": "MRK",
@@ -460,18 +418,298 @@
       "stance": "bullish",
       "pt": "$400",
       "upside": 56.5
-    },
-    "CSCO": {
-      "date": "2026-09-01",
-      "firm": "Deutsche Bank",
-      "action": "Initiates Coverage On",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$135",
-      "upside": 22.6
     }
   },
   "bz_news": [
+    {
+      "title": "Coca-Cola Plans $10 Billion US Investment Through 2030 — Here's Where the Beverage Giant Will Build Out its Network",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61812486/coca-cola-plans-10-billion-us-investment-through-2030-heres-where-the-beverage-giant-will-build-out-its-network",
+      "ts": 1789561152,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.291
+    },
+    {
+      "title": "This Brinker Analyst Begins Coverage On A Bullish Note; Here Are Top 5 Initiations For Wednesday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/09/61812442/this-brinker-analyst-begins-coverage-on-a-bullish-note-here-are-top-5-initiations-for-wednesday",
+      "ts": 1789560857,
+      "tickers": [
+        "EAT",
+        "MCD",
+        "GOLF",
+        "MOVE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.47
+    },
+    {
+      "title": "IBM's Anderon Announces Finalization Of $1B CHIPS Act Award With US Department Of Commerce To Accelerate Quantum Wafer Manufacturing R&D",
+      "url": "https://www.benzinga.com/quote/IBM",
+      "ts": 1789556595,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.464
+    },
+    {
+      "title": "Samsung Retakes Smartphone Throne, Apple Scores Record Share",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61810760/samsung-retakes-smartphone-throne-apple-scores-record-share",
+      "ts": 1789556284,
+      "tickers": [
+        "AAPL",
+        "SSNLF",
+        "XIACF",
+        "XIACY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.28
+    },
+    {
+      "title": "Satya Nadella Warns AI Could 'Fake My Books' — Says Companies Need More Control, Testing and Transparency as Agents Take on More Tasks",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61810676/satya-nadella-warns-ai-could-fake-my-books-says-companies-need-more-control-testing-and-transparency-as-agents-take-on-more-tasks",
+      "ts": 1789555530,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.344
+    },
+    {
+      "title": "SK Hynix, Intel Mull Memory Chip Making Deal in Ohio as US Pushes Semiconductor Production: Report (UPDATED)",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61809557/sk-hynix-intel-mull-memory-chip-making-deal-in-ohio-as-us-pushes-semiconductor-production-report",
+      "ts": 1789554981,
+      "tickers": [
+        "SKHY",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.441
+    },
+    {
+      "title": "Elon Musk’s X And SpaceXAI Dropped Apple From Their Antitrust Fight Without Explaining Why — Now a Federal Judge Wants to See the Deal",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61810380/elon-musks-x-and-spacexai-dropped-apple-from-their-antitrust-fight-without-explaining-why-now-a-federal-judge-wants-to-see-the-deal",
+      "ts": 1789554187,
+      "tickers": [
+        "AAPL",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.284
+    },
+    {
+      "title": "What's Going On With SK hynix Stock Wednesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61810277/sk-hynix-eyes-intels-ohio-fabs-as-ai-memory-crunch-intensifies",
+      "ts": 1789553724,
+      "tickers": [
+        "SKHY",
+        "INTC",
+        "EGGY",
+        "SKUU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.347
+    },
+    {
+      "title": "'OpenAI's rogue agents probed Hugging Face for weaknesses two months before major hack' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/09/61810175/openai-s-rogue-agents-probed-hugging-face-weaknesses-two-months-major-hack-reuters-exclusive",
+      "ts": 1789553465,
+      "tickers": [
+        "NVDA",
+        "MSFT",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.247
+    },
+    {
+      "title": "SK Hynix Says No Plans Have Been Confirmed Regarding Reports Suggesting Discussions Between The Company And Intel On Memory Chip Production In The U.S.; Company Is Exploring Various Options To Strengthen Its Global Competitiveness, But No Specific Plans Or Arrangements Have Been Finalized",
+      "url": "https://www.benzinga.com/news/26/09/61810027/sk-hynix-says-no-plans-have-been-confirmed-regarding-reports-suggesting-discussions-between-company-",
+      "ts": 1789553082,
+      "tickers": [
+        "SKHY",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.328
+    },
+    {
+      "title": "BTIG Reiterates Buy on McDonald's, Maintains $350 Price Target",
+      "url": "https://www.benzinga.com/news/26/09/61809825/btig-reiterates-buy-mcdonald-s-maintains-350-price-target",
+      "ts": 1789552957,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.438
+    },
+    {
+      "title": "Reported Earlier, 'OpenAI Considers Pre-IPO Funding Round at More Than $1.2 Trillion Valuation' - WSJ Exclusive",
+      "url": "https://www.benzinga.com/news/26/09/61809720/reported-earlier-openai-considers-pre-ipo-funding-round-more-1-2-trillion-valuation-wsj-exclusive",
+      "ts": 1789552776,
+      "tickers": [
+        "MSFT",
+        "NVDA",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.293
+    },
+    {
+      "title": "Investigating Microsoft's Standing In Software Industry Compared To Competitors",
+      "url": "https://www.benzinga.com/news/26/09/61809672/investigating-microsoft-s-standing-software-industry-compared-competitors",
+      "ts": 1789552705,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.336
+    },
+    {
+      "title": "Understanding Apple's Position In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors",
+      "url": "https://www.benzinga.com/news/26/09/61809671/understanding-apple-s-position-technology-hardware-storage-amp-peripherals-industry-compared-competi",
+      "ts": 1789552701,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.35
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow Jones Futures Gain Ahead of FOMC's Interest Rate Decision — INTC, SKHY, LEN, TCOM in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61809430/stock-market-today-sp-500-dow-jones-futures-gain-ahead-of-fomcs-interest-rate-decision-intc-skhy-len-tcom-in-focus",
+      "ts": 1789551321,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "INTC",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.475
+    },
+    {
+      "title": "Seaport Global Initiates Coverage On McDonald's with Neutral Rating",
+      "url": "https://www.benzinga.com/news/26/09/61809330/seaport-global-initiates-coverage-mcdonald-s-neutral-rating",
+      "ts": 1789550842,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.45
+    },
+    {
+      "title": "OpenAI, Anthropic Slowdown Call Won't Derail AI Infrastructure Demand, Why One Fund Manager Sees No Spending Pause in Sight",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61808976/openai-anthropic-slowdown-call-wont-derail-ai-infrastructure-demand-why-one-fund-manager-sees-no-spending-pause-in-sight",
+      "ts": 1789548068,
+      "tickers": [
+        "INTC",
+        "QCOM",
+        "AMD",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.449
+    },
+    {
+      "title": "Univar Solutions Expands Dow Partnership To Distribute SupraCare Homecare and Industrial Cleaning Ingredients Across North America",
+      "url": "https://www.benzinga.com/quote/DOW",
+      "ts": 1789546399,
+      "tickers": [
+        "DOW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.38
+    },
+    {
+      "title": "Reported Earlier, Microsoft Raises Quarterly Dividend 8% To $0.98 Per Share, Payable December 10, 2026",
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "ts": 1789545728,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.424
+    },
+    {
+      "title": "Satya Nadella Says Xi Jinping ‘Should Also Deeply Care’ About AI Safety — ‘It Doesn’t Make Sense’ for Risks to Concern Only Americans",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61808452/satya-nadella-says-xi-jinping-should-also-deeply-care-about-ai-safety-it-doesnt-make-sense-for-risks-to-concern-only-americans",
+      "ts": 1789543088,
+      "tickers": [
+        "META",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.297
+    },
+    {
+      "title": "Boeing, Korean Air Announce Finalized 103-Jet Order Across Widebody And Single-Aisle Families, Commemorated At Seoul Event",
+      "url": "https://www.benzinga.com/quote/BA",
+      "ts": 1789542694,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.27
+    },
+    {
+      "title": "'SK Hynix In Talks With Intel About Deal To Make Memory Chips In The US For The First Time, Sources Say' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/09/61808321/sk-hynix-talks-intel-about-deal-make-memory-chips-us-first-time-sources-say-reuters-exclusive",
+      "ts": 1789542395,
+      "tickers": [
+        "INTC",
+        "SKHY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.353
+    },
     {
       "title": "Senator Bets on Small Cap Stocks Ahead of Likely Rate Hike: Why That Could be Risky",
       "url": "https://www.benzinga.com/news/politics/26/09/61805145/senator-bets-on-small-cap-stocks-ahead-of-likely-rate-hike-why-that-could-be-risky",
@@ -512,293 +750,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.456
-    },
-    {
-      "title": "'OpenAI Backs Bipartisan Push To Address AI Biothreats; The Company Is Endorsing Three Bills To Standardize Biological Data And Defend Against Threats Amplified By Advanced Artificial Intelligence' - Politico",
-      "url": "https://www.benzinga.com/news/26/09/61803628/openai-backs-bipartisan-push-address-ai-biothreats-company-endorsing-three-bills-standardize-biologi",
-      "ts": 1789502662,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.308
-    },
-    {
-      "title": "Salesforce CEO Marc Benioff On AI Safety, Says We Must Hold Companies And Technology Executives Responsible For The Technology They Build",
-      "url": "https://www.benzinga.com/news/26/09/61803204/salesforce-ceo-marc-benioff-ai-safety-says-we-must-hold-companies-and-technology-executives-responsi",
-      "ts": 1789502018,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.332
-    },
-    {
-      "title": "'Salesforce Unveils New AI Model, Agent Security Tools at Dreamforce' - The Information",
-      "url": "https://www.benzinga.com/news/26/09/61802988/salesforce-unveils-new-ai-model-agent-security-tools-dreamforce-information",
-      "ts": 1789501543,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.322
-    },
-    {
-      "title": "JPMorgan Co-President Doug Petno Says Do Not Really Expect Inorganic Growth To Be A Growth Opportunity For The CIB Business As The Bar Is Very, Very High",
-      "url": "https://www.benzinga.com/news/26/09/61802443/jpmorgan-co-president-doug-petno-says-do-not-really-expect-inorganic-growth-be-growth-opportunity-ci",
-      "ts": 1789500363,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.324
-    },
-    {
-      "title": "JPMorgan Co-President Doug Petno Says Competition For High Quality Deposits Is Intense; We Are Being Very Selective With AI Financing; We Are Maintaining Our Underwriting Discipline With AI Financing And Being Very Deliberate About It",
-      "url": "https://www.benzinga.com/news/26/09/61802321/jpmorgan-co-president-doug-petno-says-competition-high-quality-deposits-intense-we-are-being-very-se",
-      "ts": 1789500006,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.291
-    },
-    {
-      "title": "JPMorgan Co-President Doug Petno Says We Dont See A Lot Of Institutional Demand For Stablecoins",
-      "url": "https://www.benzinga.com/markets/cryptocurrency/26/09/61802216/jpmorgan-co-president-doug-petno-says-we-dont-see-lot-institutional-demand-stablecoins",
-      "ts": 1789499760,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.259
-    },
-    {
-      "title": "JPMorgan Co-President Doug Petno Says We Still Worry About Private Credit But The Asset Class Is In A Decent Place Compared To Earlier In The Year",
-      "url": "https://www.benzinga.com/news/26/09/61802080/jpmorgan-co-president-doug-petno-says-we-still-worry-about-private-credit-asset-class-decent-place-c",
-      "ts": 1789499449,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.326
-    },
-    {
-      "title": "JPMorgan Co-President Doug Petno Says Private Equity Activity Is Back To Normal",
-      "url": "https://www.benzinga.com/news/26/09/61801903/jpmorgan-co-president-doug-petno-says-private-equity-activity-back-normal",
-      "ts": 1789499041,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.323
-    },
-    {
-      "title": "JPMorgan Co-President Doug Petno Says We Are Seeing Broad Based Strength Across Investment Banking And Across All Geographies; We Would Expect Investment Banking Fees In Third Quarter To Be Up Mid To High Teens; We Would Expect Trading Fees In Third Quarter To Be Up Mid To High Teens",
-      "url": "https://www.benzinga.com/news/26/09/61801643/jpmorgan-co-president-doug-petno-says-we-are-seeing-broad-based-strength-across-investment-banking-a",
-      "ts": 1789498364,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.409
-    },
-    {
-      "title": "JPMorgan Co-President Doug Petno At Barclays Global Financial Services Conference, Says Jamie Dimon Is Not Stepping Back; We Dont See Anything Flashing Red Or Very Little Flashing Yellow In The Economy For The U.S. Consumer And Corporates; We Dont See Anything Systemic That Is Concerning Us At The Moment; Deal Activity Is Quite Robust",
-      "url": "https://www.benzinga.com/news/26/09/61801540/jpmorgan-co-president-doug-petno-barclays-global-financial-services-conference-says-jamie-dimon-not-",
-      "ts": 1789498139,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.319
-    },
-    {
-      "title": "Telsey Advisory Group Maintains Market Perform on Nike, Lowers Price Target to $44",
-      "url": "https://www.benzinga.com/news/26/09/61801385/telsey-advisory-group-maintains-market-perform-nike-lowers-price-target-44",
-      "ts": 1789497814,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.497
-    },
-    {
-      "title": "NVIDIA CEO, On AI Safety, Says Companies Should Pace Themselves Until They Are Are Confident They Are Releasing Something The Market Would Appreciate",
-      "url": "https://www.benzinga.com/news/26/09/61801228/nvidia-ceo-ai-safety-says-companies-should-pace-themselves-until-they-are-are-confident-they-are-rel",
-      "ts": 1789497427,
-      "tickers": [
-        "NVDA",
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.507
-    },
-    {
-      "title": "NVIDIA CEO Jensen Huang, At Dreamforce, Says Do Not Need New Laws Or Regulations For AI Safety",
-      "url": "https://www.benzinga.com/news/26/09/61801133/nvidia-ceo-jensen-huang-dreamforce-says-do-not-need-new-laws-or-regulations-ai-safety",
-      "ts": 1789497181,
-      "tickers": [
-        "NVDA",
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.446
-    },
-    {
-      "title": "Goldman Sachs Targets Middle-Market Deals After Raising $11.7B",
-      "url": "https://www.benzinga.com/markets/private-markets/26/09/61800661/goldman-sachs-targets-middle-market-deals-after-raising-11-7b",
-      "ts": 1789496055,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.395
-    },
-    {
-      "title": "Oil Crisis Worsens, Diesel Hits Record High: Here's How to Trade It",
-      "url": "https://www.benzinga.com/markets/commodities/26/09/61800450/oil-crisis-worsens-diesel-hits-record-high-heres-how-to-trade-it",
-      "ts": 1789495624,
-      "tickers": [
-        "XOM",
-        "CVX",
-        "USO",
-        "XLE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.326
-    },
-    {
-      "title": "8 Industrials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61799540/8-industrials-stocks-whale-alerts-today-s-session",
-      "ts": 1789493719,
-      "tickers": [
-        "BE",
-        "GEV",
-        "CAT",
-        "LMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61799538/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1789493719,
-      "tickers": [
-        "INTC",
-        "AMD",
-        "AAPL",
-        "ZS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "They Bought Starbucks Stock in the '90s and Held Onto It. Now, They're Living Off the Dividends While People Spend a Fortune on Coffee",
-      "url": "https://www.benzinga.com/markets/market-summary/26/09/61799392/they-bought-starbucks-stock-in-the-90s-and-held-onto-it-now-theyre-living-off-the-dividends-while-people-spend-a-fortune-on-coffee",
-      "ts": 1789493420,
-      "tickers": [
-        "AAPL",
-        "MCD",
-        "KO",
-        "SBUX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.249
-    },
-    {
-      "title": "Nike Stock Hits 52-Week Low as Consumer Discretionary Lags",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61799131/nike-stock-hits-52-week-low-as-consumer-discretionary-lags",
-      "ts": 1789492915,
-      "tickers": [
-        "NKE",
-        "LULU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.396
-    },
-    {
-      "title": "10-Year Treasury Yield At Highest Level Since 2007 As Fed Decision Looms",
-      "url": "https://www.benzinga.com/Opinion/26/09/61798307/10-year-treasury-yield-at-highest-level-since-2007-as-fed-decision-looms",
-      "ts": 1789491562,
-      "tickers": [
-        "USO",
-        "SPY",
-        "NVDA",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.373
-    },
-    {
-      "title": "Elon Musk Just Gave Nvidia’s Supply Chain A New Headache",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61797716/elon-musk-nvidia-chip-supply",
-      "ts": 1789490523,
-      "tickers": [
-        "NVDA",
-        "TSLA",
-        "TSM",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.429
-    },
-    {
-      "title": "Steve Eisman's 'Big Short' Partners Warn Anthropic, SpaceX IPOs Could Hurt Stocks",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61797441/ipo-flood-stocks-big-short-gold",
-      "ts": 1789489972,
-      "tickers": [
-        "SPCX",
-        "GS",
-        "GLD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.405
     }
   ],
   "portfolio_brief": {
@@ -883,9 +834,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "NVIDIA CEO, On AI Safety, Says Companies Should Pace Themselves Until They Are Are Confident They Are Releasing Something The Market Would Appreciate",
-        "ts": 1789497427,
-        "url": "https://www.benzinga.com/news/26/09/61801228/nvidia-ceo-ai-safety-says-companies-should-pace-themselves-until-they-are-are-confident-they-are-rel",
+        "title": "'OpenAI's rogue agents probed Hugging Face for weaknesses two months before major hack' - Reuters Exclusive",
+        "ts": 1789553465,
+        "url": "https://www.benzinga.com/news/26/09/61810175/openai-s-rogue-agents-probed-hugging-face-weaknesses-two-months-major-hack-reuters-exclusive",
         "wiim": false
       },
       "filings": {
@@ -1112,8 +1063,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-07-30",
-          "url": "https://www.sec.gov/Archives/edgar/data/895126/000110465926088451/tm2621424d1_8k.htm"
+          "date": "2026-09-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/895126/000110465926108003/tm2625334d2_8k.htm"
         },
         "periodic": {
           "form": "10-Q",
