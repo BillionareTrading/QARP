@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "Sep 17, 10:39am ET",
+  "generated_at": "Sep 17, 3:25pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -118,18 +118,18 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
+      "sector": "Chip",
+      "dir": "up",
+      "driver": "Overall market strength",
+      "note": "Amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
       "sector": "Financial",
       "dir": "down",
       "driver": "Overall market weakness after Fed Chairman Warsh took a hawkish tone in …",
       "note": "Amid overall market weakness after Fed Chairman Warsh took a hawkish tone in his press conference and Q&A session after the FOMC rate hike.",
       "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
-      "sector": "Data Center Infrastructure",
-      "dir": "mixed",
-      "driver": "AI executives from firms including Anthropic",
-      "note": "After AI executives from firms including Anthropic, OpenAI and SpaceXAI signaled that the industry's growth may have to be slowed, which may lead to curtailed demand for providers of electrical equipment and services, HVAC systems, and power generation capacity.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Enterprise Software",
@@ -154,6 +154,18 @@
     }
   ],
   "holding_news": {
+    "NVDA": {
+      "title": "Shares of chip companies are trading higher amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
+      "ts": 1789672874,
+      "url": "https://www.benzinga.com/quote/AVGO",
+      "wiim": true
+    },
+    "AVGO": {
+      "title": "Shares of chip companies are trading higher amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
+      "ts": 1789672874,
+      "url": "https://www.benzinga.com/quote/AVGO",
+      "wiim": true
+    },
     "ADBE": {
       "title": "Shares of software companies are trading lower, possibly in response to escalating tensions in the Middle East and renewed inflation concerns that may shift the Fed towards a rate hike. Concerns about key economic data due later this week may prompt traders to rotate out of growth stocks.",
       "ts": 1788895459,
@@ -164,18 +176,6 @@
       "title": "Shares of enterprise software companies are trading higher after AI executives from firms including Anthropic, OpenAI and SpaceXAI signaled that the industry's growth may have to be slowed, which may limit or slow threats to software vendors.",
       "ts": 1789403508,
       "url": "https://www.benzinga.com/quote/PTC",
-      "wiim": true
-    },
-    "NVDA": {
-      "title": "Ross Gerber Sees Jensen Huang’s Charisma As Part Of Nvidia’s Edge, Says ‘This Is Why I Own Nvidia’ After Dreamforce Exchange With Marc Benioff: 'Big is Unnecessary'",
-      "ts": 1789635968,
-      "url": "https://www.benzinga.com/markets/tech/26/09/61834744/ross-gerber-sees-jensen-huangs-charisma-as-part-of-nvidias-edge-says-this-is-why-i-own-nvidia-after-dreamforce-exchange-with-marc-benioff-big-is-unnecessary",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "Shares of semiconductor and chip-related companies are trading lower after AI executives signaled that the industry's growth may need to be slowed. The industry is also facing pressure as oil prices spike in reaction to the escalating conflict in the Middle East which can lead to inflation, tighter lending and reduced demand.",
-      "ts": 1789401795,
-      "url": "https://www.benzinga.com/quote/SIMO",
       "wiim": true
     },
     "RKLB": {
@@ -194,8 +194,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "price": 268.23,
-      "upside": 19.3,
+      "price": 269.58,
+      "upside": 18.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -208,8 +208,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$172",
-      "price": 145.85,
-      "upside": 17.9,
+      "price": 147.22,
+      "upside": 16.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -222,8 +222,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$400",
-      "price": 333.09,
-      "upside": 20.1,
+      "price": 336.18,
+      "upside": 19.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -236,8 +236,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$303",
-      "price": 333.09,
-      "upside": -9.0,
+      "price": 336.18,
+      "upside": -9.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -250,11 +250,11 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$31",
-      "price": 35.89,
-      "upside": -13.6,
+      "price": 36.37,
+      "upside": -14.8,
       "held": false,
       "uni": true,
-      "qarp": "STRONG BUY"
+      "qarp": "BUY"
     },
     {
       "date": "2026-09-10",
@@ -264,8 +264,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 333.09,
-      "upside": 11.1,
+      "price": 336.18,
+      "upside": 10.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -278,11 +278,11 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$44",
-      "price": 35.89,
-      "upside": 22.6,
+      "price": 36.37,
+      "upside": 21.0,
       "held": false,
       "uni": true,
-      "qarp": "STRONG BUY"
+      "qarp": "BUY"
     },
     {
       "date": "2026-09-14",
@@ -292,11 +292,11 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$39",
-      "price": 35.89,
-      "upside": 8.7,
+      "price": 36.37,
+      "upside": 7.2,
       "held": false,
       "uni": true,
-      "qarp": "STRONG BUY"
+      "qarp": "BUY"
     },
     {
       "date": "2026-09-15",
@@ -306,11 +306,11 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$44",
-      "price": 35.89,
-      "upside": 22.6,
+      "price": 36.37,
+      "upside": 21.0,
       "held": false,
       "uni": true,
-      "qarp": "STRONG BUY"
+      "qarp": "BUY"
     },
     {
       "date": "2026-09-16",
@@ -320,8 +320,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$275",
-      "price": 243.04,
-      "upside": 13.2,
+      "price": 244.96,
+      "upside": 12.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,8 +334,22 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$280",
-      "price": 243.04,
-      "upside": 15.2,
+      "price": 244.96,
+      "upside": 14.3,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-09-17",
+      "ticker": "AAPL",
+      "firm": "B of A Securities",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$370",
+      "price": 336.18,
+      "upside": 10.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -348,11 +362,11 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$42",
-      "price": 35.89,
-      "upside": 17.0,
+      "price": 36.37,
+      "upside": 15.5,
       "held": false,
       "uni": true,
-      "qarp": "STRONG BUY"
+      "qarp": "BUY"
     },
     {
       "date": "2026-09-17",
@@ -362,8 +376,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 243.04,
-      "upside": 23.4,
+      "price": 244.96,
+      "upside": 22.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -376,8 +390,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$263",
-      "price": 243.04,
-      "upside": 8.2,
+      "price": 244.96,
+      "upside": 7.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -390,8 +404,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$250",
-      "price": 243.04,
-      "upside": 2.9,
+      "price": 244.96,
+      "upside": 2.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -404,8 +418,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$285",
-      "price": 243.04,
-      "upside": 17.3,
+      "price": 244.96,
+      "upside": 16.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -418,8 +432,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 243.04,
-      "upside": 23.4,
+      "price": 244.96,
+      "upside": 22.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -432,8 +446,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 243.04,
-      "upside": 23.4,
+      "price": 244.96,
+      "upside": 22.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -446,8 +460,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$300",
-      "price": 243.04,
-      "upside": 23.4,
+      "price": 244.96,
+      "upside": 22.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -461,7 +475,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$42",
-      "upside": 17.0
+      "upside": 15.5
     },
     "CRM": {
       "date": "2026-09-17",
@@ -470,7 +484,16 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "upside": 23.4
+      "upside": 22.5
+    },
+    "AAPL": {
+      "date": "2026-09-17",
+      "firm": "B of A Securities",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$370",
+      "upside": 10.1
     },
     "MRK": {
       "date": "2026-09-10",
@@ -479,7 +502,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$172",
-      "upside": 17.9
+      "upside": 16.8
     },
     "JNJ": {
       "date": "2026-09-10",
@@ -488,16 +511,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "upside": 19.3
-    },
-    "AAPL": {
-      "date": "2026-09-10",
-      "firm": "TD Cowen",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$400",
-      "upside": 20.1
+      "upside": 18.7
     },
     "HD": {
       "date": "2026-09-09",
@@ -506,7 +520,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$344",
-      "upside": 12.2
+      "upside": 13.5
     },
     "CVX": {
       "date": "2026-09-03",
@@ -515,84 +529,57 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$235",
-      "upside": 11.6
+      "upside": 11.2
     }
   },
   "bz_news": [
     {
-      "title": "Salesforce shares are trading lower after the company raised its FY27 sales guidance to the higher end of its previous range, which may be disappointing investors who were expecting a stronger upgrade. Also, RBC Capital reiterated its Sector Perform rating and maintained its $250 price target.",
-      "url": "https://www.benzinga.com/quote/CRM",
-      "ts": 1789655874,
+      "title": "Shares of chip companies are trading higher amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
+      "url": "https://www.benzinga.com/quote/AVGO",
+      "ts": 1789672874,
       "tickers": [
-        "CRM"
+        "GSIT",
+        "IONQ",
+        "INTC",
+        "MXL"
       ],
       "source": "Benzinga",
       "wiim": true,
       "rel": true,
-      "relevance": 0.471
+      "relevance": 0.45
     },
     {
-      "title": "Huawei Takes Aim at Nvidia, AMD with Over 10 new AI Chipsets — But Can the Chinese Tech Giant Close the Gap?",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61845505/huawei-takes-aim-at-nvidia-amd-with-over-10-new-ai-chipsets-but-can-the-chinese-tech-giant-close-the-gap",
-      "ts": 1789655158,
+      "title": "Trump's Inflation Approval Slumps to 19%: What Do Prediction Markets Say About the Midterms?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61854623/trump-inflation-approval-midterms-democrats-polymarket",
+      "ts": 1789672715,
       "tickers": [
-        "INTC",
-        "AMD",
-        "NVDA",
-        "TCEHY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.488
-    },
-    {
-      "title": "'OpenAI Is Close To Solving Another Millennium Prize Math Problem' - The Information",
-      "url": "https://www.benzinga.com/news/26/09/61844443/openai-close-solving-another-millennium-prize-math-problem-information",
-      "ts": 1789653989,
-      "tickers": [
-        "MSFT",
-        "AMZN",
-        "GOOG",
-        "GOOGL"
+        "SPY",
+        "QQQ",
+        "GS"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.231
+      "relevance": 0.35
     },
     {
-      "title": "AI Could Threaten Nuclear Command Systems, Warn US-China Experts— Urge Human Control and Emergency Hotline",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61844153/ai-could-threaten-nuclear-command-systems-warn-us-china-experts-urge-human-control-and-emergency-hotline",
-      "ts": 1789653700,
+      "title": "'McDonald’s Is Planning to Revamp Its Value Strategy to Revive US Sales' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/09/61854487/mcdonald-s-planning-revamp-its-value-strategy-revive-us-sales-bloomberg",
+      "ts": 1789672316,
       "tickers": [
-        "MSFT"
+        "MCD"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.278
+      "relevance": 0.347
     },
     {
-      "title": "SpaceX Is Worth $2 Trillion. Why Does Its Stock Swing Like a Small-Cap?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61844008/spacex-stock-volatility-small-cap-float",
-      "ts": 1789653611,
+      "title": "B of A Securities Reiterates Buy on Apple, Maintains $370 Price Target",
+      "url": "https://www.benzinga.com/news/26/09/61852883/b-securities-reiterates-buy-apple-maintains-370-price-target",
+      "ts": 1789668221,
       "tickers": [
-        "SPCX",
-        "MSFT",
-        "RKLB"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.341
-    },
-    {
-      "title": "UBS Maintains Neutral on Nike, Lowers Price Target to $42",
-      "url": "https://www.benzinga.com/news/26/09/61843812/ubs-maintains-neutral-nike-lowers-price-target-42",
-      "ts": 1789653434,
-      "tickers": [
-        "NKE"
+        "AAPL"
       ],
       "source": "Benzinga",
       "wiim": false,
@@ -600,246 +587,292 @@
       "relevance": 0.479
     },
     {
-      "title": "Stifel Maintains Buy on Salesforce, Raises Price Target to $300",
-      "url": "https://www.benzinga.com/news/26/09/61843664/stifel-maintains-buy-salesforce-raises-price-target-300",
-      "ts": 1789653275,
+      "title": "Apple’s iPhone Upgrade Cycle Looks Strong As Carrier Incentives Hit $1,200",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/61852348/apples-iphone-upgrade-cycle-looks-strong-as-carrier-incentives-hit-1200",
+      "ts": 1789667046,
       "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.462
-    },
-    {
-      "title": "Bond King Jeffrey Gundlach Wants Out of the AI 'Epicenter': Inside His Zero-Exposure Portfolio",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61843217/bond-king-jeffrey-gundlach-wants-out-of-the-ai-epicenter-inside-his-zero-exposure-portfolio",
-      "ts": 1789652809,
-      "tickers": [
-        "NVDA",
-        "META",
-        "SPY",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.336
-    },
-    {
-      "title": "Citigroup Maintains Buy on McDonald's, Lowers Price Target to $310",
-      "url": "https://www.benzinga.com/news/26/09/61842531/citigroup-maintains-buy-mcdonald-s-lowers-price-target-310",
-      "ts": 1789652253,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.427
-    },
-    {
-      "title": "Citigroup Maintains Neutral on Salesforce, Raises Price Target to $263",
-      "url": "https://www.benzinga.com/news/26/09/61842279/citigroup-maintains-neutral-salesforce-raises-price-target-263",
-      "ts": 1789652020,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.467
-    },
-    {
-      "title": "RBC Capital Reiterates Sector Perform on Salesforce, Maintains $250 Price Target",
-      "url": "https://www.benzinga.com/news/26/09/61842154/rbc-capital-reiterates-sector-perform-salesforce-maintains-250-price-target",
-      "ts": 1789651763,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.46
-    },
-    {
-      "title": "Marvell Technology, Microsoft, And Utimaco Announce Azure Payment HSM v2 Combining LiquidSecurity HSMs And Atalla Payments Module; Public Preview Begins September 17 In Western U.S. And Western Europe",
-      "url": "https://www.benzinga.com/quote/MSFT",
-      "ts": 1789650187,
-      "tickers": [
-        "MRVL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.372
-    },
-    {
-      "title": "SK Hynix Stock Rises as Intel Ohio Talks Reignite Memory Trade",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61841131/sk-hynix-intel-ohio-memory-fab-talks-micron",
-      "ts": 1789650077,
-      "tickers": [
-        "SKHY",
-        "INTC",
-        "MU",
-        "SNDK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.402
-    },
-    {
-      "title": "What's Going On With Western Digital Stock Thursday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61840792/whats-going-on-with-western-digital-stock-thursday-5",
-      "ts": 1789649635,
-      "tickers": [
-        "WDC",
-        "INTC",
-        "PTF",
-        "ATFV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.355
-    },
-    {
-      "title": "Dow Partners With Amcor To Advance Adoption Of Low-Carbon Packaging Solutions",
-      "url": "https://www.benzinga.com/news/26/09/61840756/dow-partners-amcor-advance-adoption-low-carbon-packaging-solutions",
-      "ts": 1789649557,
-      "tickers": [
-        "DOW",
-        "AMCR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.323
-    },
-    {
-      "title": "Salesforce To Rally Around 20%? Here Are 10 Top Analyst Forecasts For Thursday",
-      "url": "https://www.benzinga.com/news/26/09/61840691/salesforce-to-rally-around-20-here-are-10-top-analyst-forecasts-for-thursday",
-      "ts": 1789649402,
-      "tickers": [
-        "CRWD",
-        "CRM",
-        "ON",
-        "LYFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.432
-    },
-    {
-      "title": "Stock Market Today: S&P 500, Dow, Nasdaq 100 Futures Gain Despite 25 Bps Fed Rate Hike— SNAP, LEN, GNRC in Focus (UPDATED)",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61834756/stock-market-today-sp-500-nasdaq-100-futures-rise-despite-25-bps-fed-rate-hike-snap-len-gnrc-in-focus",
-      "ts": 1789649014,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "AMZN",
-        "SNAP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.504
-    },
-    {
-      "title": "Nokia Stock Jumps as Microsoft Deal Deepens Its AI Network Push",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61840411/nokia-stock-jumps-as-microsoft-deal-deepens-its-ai-network-push",
-      "ts": 1789648843,
-      "tickers": [
-        "MSFT",
-        "NOK",
-        "NVDA",
-        "SPRX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.427
-    },
-    {
-      "title": "Intel Stock Could Nearly Double to $200 in 2 Years, Analyst Says — Potential Apple, Tesla, and AI Chip Deals Could Fuel the Rally",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61839701/intel-stock-could-nearly-double-to-200-in-2-years-analyst-says-potential-apple-tesla-and-ai-chip-deals-could-fuel-the-rally",
-      "ts": 1789647957,
-      "tickers": [
-        "TSLA",
         "AAPL",
+        "OEF",
+        "OMAH",
+        "TMFC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.351
+    },
+    {
+      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/09/61852090/10-information-technology-stocks-whale-alerts-today-s-session",
+      "ts": 1789666523,
+      "tickers": [
+        "NVDA",
+        "AMD",
+        "SMCI",
+        "CORZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.375
+    },
+    {
+      "title": "Nasdaq 100 Rallies as Oil Slides, Yields Retreat: Stock Market Today",
+      "url": "https://www.benzinga.com/news/26/09/61851798/nasdaq-100-rallies-as-oil-slides-yields-retreat-stock-market-today",
+      "ts": 1789665755,
+      "tickers": [
+        "SPY",
+        "LMT",
+        "TMUS",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.532
+    },
+    {
+      "title": "Triple Witching, Falling Oil, and Fed Hopium Drive Up Stocks, But Downside Risks Remain",
+      "url": "https://www.benzinga.com/Opinion/26/09/61851724/triple-witching-falling-oil-and-fed-hopium-drive-up-stocks-but-downside-risks-remain",
+      "ts": 1789665525,
+      "tickers": [
+        "SPY",
+        "NVDA",
+        "TSLA",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.474
+    },
+    {
+      "title": "Why Is Salesforce Stock Falling Thursday?",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/61851358/why-is-salesforce-stock-falling-thursday",
+      "ts": 1789664801,
+      "tickers": [
+        "CRM",
+        "FDN",
+        "IGV",
+        "PKW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.388
+    },
+    {
+      "title": "Moderna Stock Is Surging: What's Going On?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61851165/moderna-stock-is-surging-whats-going-on",
+      "ts": 1789664547,
+      "tickers": [
+        "MRNA",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.4
+    },
+    {
+      "title": "CNBC Halftime Report Final Trades: UnitedHealth Group, The Goldman Sachs Group, Teradyne",
+      "url": "https://www.benzinga.com/quote/TER",
+      "ts": 1789664443,
+      "tickers": [
+        "UNH",
+        "GS",
+        "TER"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.447
+    },
+    {
+      "title": "Moderna Stock More Than Doubled in a Month. Now Comes the Hard Part",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61851053/moderna-stock-cancer-vaccine",
+      "ts": 1789664363,
+      "tickers": [
+        "MRNA",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.357
+    },
+    {
+      "title": "What's Going On With Apple Stock Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61850736/whats-going-on-with-apple-stock-today-5",
+      "ts": 1789663541,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.414
+    },
+    {
+      "title": "Amazon Is Coming After Walmart’s Biggest Delivery Advantage",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/09/61850431/amazon-is-coming-after-walmarts-biggest-delivery-advantage",
+      "ts": 1789662941,
+      "tickers": [
+        "AMZN",
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.269
+    },
+    {
+      "title": "Salesforce's Anthropic Bet Likely Worth 'Tens of Billions' — And Benioff Plans to Cash In",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61850399/salesforce-anthropic-stake-worth-tens-of-billions-benioff-plans-to-cash-in",
+      "ts": 1789662835,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.312
+    },
+    {
+      "title": "Watching Salesforce; Hearing Investor Business Daily SwingTrader Sells Stock",
+      "url": "https://www.benzinga.com/quote/CRM",
+      "ts": 1789662801,
+      "tickers": [
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.438
+    },
+    {
+      "title": "Announced September 16, FAA Grants Boeing Exemption From 2028 Emissions Rules For Up To 35 777F Freighters Through January 1, 2031",
+      "url": "https://www.benzinga.com/government/26/09/61850049/announced-september-16-faa-grants-boeing-exemption-2028-emissions-rules-35-777f-freighters-through-j",
+      "ts": 1789662168,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.263
+    },
+    {
+      "title": "Snap Just Turned Its $2,195 Glasses Into an Nvidia AI Story",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61849887/snap-nvidia-ai-glasses",
+      "ts": 1789661945,
+      "tickers": [
+        "SNAP",
+        "NVDA",
+        "AMZN",
+        "CRM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.454
+    },
+    {
+      "title": "Here’s How Much You Would Have Made Owning Intel Stock In The Last 5 Years",
+      "url": "https://www.benzinga.com/news/26/09/61849806/here-s-how-much-you-would-have-made-owning-intel-stock-last-5-years",
+      "ts": 1789661830,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.313
+    },
+    {
+      "title": "The Fed Just Raised Rates–How To Cash In On The Hike",
+      "url": "https://www.benzinga.com/Opinion/26/09/61849656/the-fed-just-raised-rates-how-to-cash-in-on-the-hike",
+      "ts": 1789661547,
+      "tickers": [
+        "JPM",
+        "XLF",
+        "CVX",
+        "XOM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.434
+    },
+    {
+      "title": "Vicor, Arm Holdings, Micron Technology And Other Big Stocks Moving Higher On Thursday",
+      "url": "https://www.benzinga.com/news/26/09/61849074/vicor-arm-holdings-micron-technology-and-other-big-stocks-moving-higher-on-thursday",
+      "ts": 1789660726,
+      "tickers": [
         "INTC",
+        "VICR",
+        "SDGR",
+        "VERA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.415
+    },
+    {
+      "title": "Lufthansa Announces Exercise Of Options For 20 Boeing 737 MAX 10 Aircraft, Lifting Total 737 MAX Order To 60; Deliveries Begin Early 2030s",
+      "url": "https://www.benzinga.com/news/26/09/61848815/lufthansa-announces-exercise-options-20-boeing-737-max-10-aircraft-lifting-total-737-max-order-60-de",
+      "ts": 1789660361,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.254
+    },
+    {
+      "title": "Micron Jumps 5% as Intel CEO Says Memory Prices Have Surged Over 500%",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61848172/micron-stock-memory-prices-intel-ai-shortage",
+      "ts": 1789659484,
+      "tickers": [
+        "MU",
+        "INTC",
+        "NVDA",
         "SKHY"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.508
+      "relevance": 0.434
     },
     {
-      "title": "BMO Capital Maintains Outperform on Salesforce, Raises Price Target to $285",
-      "url": "https://www.benzinga.com/news/26/09/61839493/bmo-capital-maintains-outperform-salesforce-raises-price-target-285",
-      "ts": 1789647456,
+      "title": "Nvidia Is an ‘Awesome Company,’ but Its Stock Is Priced as ‘Greatest Company Ever,’ Damodaran Says",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61847834/nvidia-stock-valuation-aswath-damodaran-ai-growth",
+      "ts": 1789658927,
       "tickers": [
-        "CRM"
+        "NVDA",
+        "AAPL"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.462
+      "relevance": 0.566
     },
     {
-      "title": "Guggenheim Maintains Buy on Salesforce, Raises Price Target to $300",
-      "url": "https://www.benzinga.com/news/26/09/61839404/guggenheim-maintains-buy-salesforce-raises-price-target-300",
-      "ts": 1789647387,
+      "title": "NVIDIA Boss Slams AI Doom Mongers, Stock Bounces",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61846924/nvidia-boss-slams-ai-doom-mongers-stock-bounces",
+      "ts": 1789657378,
       "tickers": [
-        "CRM"
+        "NVDA",
+        "CRM",
+        "TRFK",
+        "SQS"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.412
-    },
-    {
-      "title": "'Mastercard Inks Deal as Payment Giants Brace for New Era of AI Shopping' - Wall Street Journal",
-      "url": "https://www.benzinga.com/news/26/09/61839278/mastercard-inks-deal-as-payment-giants-brace-for-new-era-of-ai-shopping-wall-street-journal",
-      "ts": 1789647169,
-      "tickers": [
-        "JPM",
-        "WFC",
-        "MA",
-        "BAC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.368
-    },
-    {
-      "title": "Salesforce Affirms FY2030 Sales Guidance of $63.000B",
-      "url": "https://www.benzinga.com/news/26/09/61838126/salesforce-affirms-fy2030-sales-guidance-63-000b",
-      "ts": 1789645397,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.428
-    },
-    {
-      "title": "Salesforce Raises FY2027 Sales Guidance from $46.100B-$46.400B to $46.400B vs $46.113B Est",
-      "url": "https://www.benzinga.com/news/26/09/61838117/salesforce-raises-fy2027-sales-guidance-46-100b-46-400b-46-400b-vs-46-113b-est",
-      "ts": 1789645390,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.431
+      "relevance": 0.593
     }
   ],
   "portfolio_brief": {
@@ -892,10 +925,10 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Ross Gerber Sees Jensen Huang’s Charisma As Part Of Nvidia’s Edge, Says ‘This Is Why I Own Nvidia’ After Dreamforce Exchange With Marc Benioff: 'Big is Unnecessary'",
-        "ts": 1789635968,
-        "url": "https://www.benzinga.com/markets/tech/26/09/61834744/ross-gerber-sees-jensen-huangs-charisma-as-part-of-nvidias-edge-says-this-is-why-i-own-nvidia-after-dreamforce-exchange-with-marc-benioff-big-is-unnecessary",
-        "wiim": false
+        "title": "Shares of chip companies are trading higher amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
+        "ts": 1789672874,
+        "url": "https://www.benzinga.com/quote/AVGO",
+        "wiim": true
       },
       "filings": {
         "latest8k": {
@@ -1345,7 +1378,7 @@
     },
     "AVGO": {
       "name": "Broadcom",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 17,
         "buy": 35,
@@ -1360,9 +1393,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Shares of semiconductor and chip-related companies are trading lower after AI executives signaled that the industry's growth may need to be slowed. The industry is also facing pressure as oil prices spike in reaction to the escalating conflict in the Middle East which can lead to inflation, tighter lending and reduced demand.",
-        "ts": 1789401795,
-        "url": "https://www.benzinga.com/quote/SIMO",
+        "title": "Shares of chip companies are trading higher amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
+        "ts": 1789672874,
+        "url": "https://www.benzinga.com/quote/AVGO",
         "wiim": true
       },
       "filings": {
