@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-20",
-  "generated_at": "Sep 20, 10:35am ET",
+  "date": "2026-09-21",
+  "generated_at": "Sep 21, 5:24am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -178,6 +178,12 @@
       "url": "https://www.benzinga.com/quote/PTC",
       "wiim": true
     },
+    "ONON": {
+      "title": "Nike Stock Hits New Low as On Holding Competition Heats Up, Yields Spike, and S&P 500 Removal Nears",
+      "ts": 1789932608,
+      "url": "https://www.benzinga.com/markets/equities/26/09/61885788/nike-stock-hits-new-low-as-on-holding-competition-heats-up-yields-spike-and-sp-500-removal-nears",
+      "wiim": false
+    },
     "AZN": {
       "title": "9 Health Care Stocks Whale Activity In Today’s Session",
       "ts": 1789752914,
@@ -188,12 +194,6 @@
       "title": "Bitcoin Tops $80,000, S&P 500 Slips as Yields Reclaim 5%: Stock Market Today",
       "ts": 1789750521,
       "url": "https://www.benzinga.com/markets/equities/26/09/61875543/bitcoin-tops-80000-crypto-stocks-soar-yields-reclaim-5-percent-markets-friday",
-      "wiim": false
-    },
-    "ONON": {
-      "title": "'Mbappé Signs for On’s Push Into Football in Blow for Nike' - Bloomberg",
-      "ts": 1789733409,
-      "url": "https://www.benzinga.com/news/26/09/61865341/mbapp-signs-s-push-football-blow-nike-bloomberg",
       "wiim": false
     }
   },
@@ -523,6 +523,131 @@
   },
   "bz_news": [
     {
+      "title": "Hilton Gets 15,000 Applications for Early-Career Jobs as AI Fuels Hiring Frenzy: ‘Double-Edged Sword’",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61887939/hilton-gets-15000-applications-for-early-career-jobs-as-ai-fuels-hiring-frenzy-double-edged-sword",
+      "ts": 1789977086,
+      "tickers": [
+        "HLT",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.359
+    },
+    {
+      "title": "Will Howie Buffett Keep Berkshire Ahead of the S&P 500? What Retail Investors Need to Know",
+      "url": "https://www.benzinga.com/markets/market-summary/26/09/61887725/will-howie-buffett-keep-berkshire-ahead-of-the-sp-500-what-retail-investors-need-to-know",
+      "ts": 1789975979,
+      "tickers": [
+        "SPY",
+        "GOOG",
+        "STZ",
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.39
+    },
+    {
+      "title": "Iran’s Ghalibaf Warns Trump Over Strait of Hormuz: ‘Trying to Suffocate Iran Without Blowback’ Is ‘Impossible’",
+      "url": "https://www.benzinga.com/news/politics/26/09/61886742/irans-ghalibaf-warns-trump-over-strait-of-hormuz-trying-to-suffocate-iran-without-blowback-is-impossible",
+      "ts": 1789966935,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.13
+    },
+    {
+      "title": "Boeing Stock Falls Again Ahead of Trump and Xi Talks and a Possible Big China Order",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61885927/boeing-stock-falls-again-ahead-of-trump-and-xi-talks-and-a-possible-big-china-order",
+      "ts": 1789937233,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.336
+    },
+    {
+      "title": "Nvidia Stock Keeps Failing to Retest Its Record High as Headwinds Rise",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61885915/nvidia-stock-keeps-failing-to-retest-its-record-high-as-headwinds-rise",
+      "ts": 1789937154,
+      "tickers": [
+        "AMZN",
+        "MSFT",
+        "AVGO",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.521
+    },
+    {
+      "title": "If You Invested $1,000 In Coca-Cola Stock When Warren Buffett Did, Here's How Much You'd Have Today",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61885856/if-you-invested-1000-in-coca-cola-stock-when-warren-buffett-did-heres-how-much-youd-have-today-2",
+      "ts": 1789934406,
+      "tickers": [
+        "KO",
+        "BRK/A",
+        "BRK/B",
+        "BRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.248
+    },
+    {
+      "title": "Bessent Meets Chinese Vice Premier He Lifeng Ahead of High-Stakes Trump-Xi Summit",
+      "url": "https://www.benzinga.com/news/politics/26/09/61885837/bessent-meets-chinese-vice-premier-he-lifeng-ahead-of-high-stakes-trump-xi-summit",
+      "ts": 1789933665,
+      "tickers": [
+        "JPM",
+        "NVDA",
+        "C"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.19
+    },
+    {
+      "title": "Top Four Catalysts for the S&P 500 and Dow Jones This Week",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61885803/top-4-catalysts-for-the-sp-500-and-dow-jones-this-week",
+      "ts": 1789933508,
+      "tickers": [
+        "VOO",
+        "BA",
+        "NVDA",
+        "COST"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.481
+    },
+    {
+      "title": "Nike Stock Hits New Low as On Holding Competition Heats Up, Yields Spike, and S&P 500 Removal Nears",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61885788/nike-stock-hits-new-low-as-on-holding-competition-heats-up-yields-spike-and-sp-500-removal-nears",
+      "ts": 1789932608,
+      "tickers": [
+        "NKE",
+        "ONON",
+        "UA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.518
+    },
+    {
       "title": "iPhone 18 Pro Hits Stores, Samsung Retakes Smartphone Throne and More: This Week in Appleverse",
       "url": "https://www.benzinga.com/markets/tech/26/09/61885260/apple-aapl-weekly-recap-iphone-18-pro-nvidia-ai-server-musk-lawsuit",
       "ts": 1789902021,
@@ -607,7 +732,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.447
+      "relevance": 0.446
     },
     {
       "title": "Benzinga Bulls and Bears: Generac, Salesforce, Netflix",
@@ -745,135 +870,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.359
-    },
-    {
-      "title": "'Anthropic Moves Ahead With I.P.O. Plans Amid A.I. Safety Debate' - Wall Street Journal",
-      "url": "https://www.benzinga.com/news/26/09/61881165/anthropic-moves-ahead-i-p-o-plans-amid-i-safety-debate-wall-street-journal",
-      "ts": 1789762194,
-      "tickers": [
-        "GOOG",
-        "GOOGL",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.331
-    },
-    {
-      "title": "NScale Announces IPO Of Ordinary Shares; To On NYSE Under Symbol 'NSCL'; Goldman Sachs, J.P. Morgan, Morgan Stanley Lead Bookrunners; Says For The 6-Months Ended June 30, 2026 And 2025, We Generated Revenues Of $140.6M And $10.4M, Respectively; Says Do Not Anticipate Paying Any Cash Dividends On Our Ordinary Shares In The Foreseeable Future; As Of August 31, About $2.6B Of Active, $103.4B Of Active And Contracted TCV Under Long-Term Take-Or-Pay Contracts With Customers",
-      "url": "https://www.benzinga.com/news/26/09/61880364/nscale-announces-ipo-ordinary-shares-nyse-under-symbol-nscl-goldman-sachs-j-p-morgan-morgan-stanley-",
-      "ts": 1789761227,
-      "tickers": [
-        "JPM",
-        "MS",
-        "GS",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.463
-    },
-    {
-      "title": "'NASA In Talks For Boeing’s Starliner To Handle New Missions; Spacecraft Hasn’t Flown Since Failures Left Two Astronauts Stuck On International Space Station For Months' - WSJ Exclusive",
-      "url": "https://www.benzinga.com/news/26/09/61879504/nasa-talks-boeing-s-starliner-handle-new-missions-spacecraft-hasn-t-flown-failures-left-two-astronau",
-      "ts": 1789759347,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.245
-    },
-    {
-      "title": "Brad Gerstner Says AI Labs Need $180B Revenue Run Rate to Keep Nvidia Trade Alive",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61878548/ai-labs-180-billion-revenue-gerstner",
-      "ts": 1789756969,
-      "tickers": [
-        "NVDA",
-        "SPCX",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.503
-    },
-    {
-      "title": "Goldman Says Sky-High Profits Aren't A Bubble, Just A Cyclical Peak",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61878323/goldman-sachs-profits-bubble-cyclical-peak",
-      "ts": 1789756538,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.293
-    },
-    {
-      "title": "Japan Outpaces S&P 500 By 81%—Yen Drops After BOJ Hike, Raising Spillover Risks For The US",
-      "url": "https://www.benzinga.com/Opinion/26/09/61877591/japan-outpaces-sp500-by-81-percent-yen-drops-after-boj-hike-raising-spillover-risks-for-us",
-      "ts": 1789754608,
-      "tickers": [
-        "SPY",
-        "NVDA",
-        "TSLA",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.378
-    },
-    {
-      "title": "B of A Securities Reiterates Buy on Boeing, Maintains $270 Price Target",
-      "url": "https://www.benzinga.com/news/26/09/61877567/b-securities-reiterates-buy-boeing-maintains-270-price-target",
-      "ts": 1789754562,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.443
-    },
-    {
-      "title": "9 Health Care Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61876626/9-health-care-stocks-whale-activity-today-s-session",
-      "ts": 1789752914,
-      "tickers": [
-        "BMY",
-        "AZN",
-        "HELP",
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.39
-    },
-    {
-      "title": "10 Financials Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61876625/10-financials-stocks-whale-activity-today-s-session",
-      "ts": 1789752913,
-      "tickers": [
-        "HOOD",
-        "KKR",
-        "COIN",
-        "HAPN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.414
     }
   ],
   "portfolio_brief": {
@@ -1226,9 +1222,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "'Mbappé Signs for On’s Push Into Football in Blow for Nike' - Bloomberg",
-        "ts": 1789733409,
-        "url": "https://www.benzinga.com/news/26/09/61865341/mbapp-signs-s-push-football-blow-nike-bloomberg",
+        "title": "Nike Stock Hits New Low as On Holding Competition Heats Up, Yields Spike, and S&P 500 Removal Nears",
+        "ts": 1789932608,
+        "url": "https://www.benzinga.com/markets/equities/26/09/61885788/nike-stock-hits-new-low-as-on-holding-competition-heats-up-yields-spike-and-sp-500-removal-nears",
         "wiim": false
       },
       "filings": {
@@ -1330,7 +1326,7 @@
           "date": "2026-08-06",
           "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm"
         },
-        "insider30d": 10
+        "insider30d": 9
       },
       "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
