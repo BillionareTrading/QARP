@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "Sep 21, 12:16pm ET",
+  "generated_at": "Sep 21, 4:20pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -103,8 +103,8 @@
     "DHR": "2026-10-19",
     "AZO": "2026-09-22",
     "ADBE": "2026-12-08",
-    "ONON": "2026-11-10",
     "EXE": "2026-10-26",
+    "ONON": "2026-11-10",
     "LULU": "2026-12-09",
     "SPGI": "2026-10-28",
     "GILD": "2026-10-28",
@@ -118,10 +118,10 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
-      "sector": "Chip",
+      "sector": "Semiconductor",
       "dir": "up",
-      "driver": "Overall market strength",
-      "note": "Amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
+      "driver": "Overall market strength and easing inflation concerns as investors retur…",
+      "note": "Amid overall market strength and easing inflation concerns as investors return to AI-related companies.",
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
@@ -178,16 +178,28 @@
       "url": "https://www.benzinga.com/quote/PTC",
       "wiim": true
     },
+    "LULU": {
+      "title": "Beneath Lululemon’s Stock Slump Lies a Broader Spending Squeeze",
+      "ts": 1790021659,
+      "url": "https://www.benzinga.com/markets/large-cap/26/09/61908710/lululemon-stock-collapse-broader-spending-squeeze",
+      "wiim": false
+    },
+    "AZO": {
+      "title": "Nasdaq 100 Rallies, Intel Soars 14%: Stock Market Today",
+      "ts": 1790013085,
+      "url": "https://www.benzinga.com/news/26/09/61904615/nasdaq-100-rallies-intel-soars-14-stock-market-today",
+      "wiim": false
+    },
+    "BSX": {
+      "title": "10 Health Care Stocks Whale Activity In Today’s Session",
+      "ts": 1790012117,
+      "url": "https://www.benzinga.com/markets/options/26/09/61904159/10-health-care-stocks-whale-activity-today-s-session",
+      "wiim": false
+    },
     "RKLB": {
       "title": "Stock Market Today: S&P 500, Nasdaq 100, Dow Jones Futures Gain as Trump Issues Fresh Warning to Iran — MRVL, AAPL, ACN in Focus (UPDATED)",
       "ts": 1789984941,
       "url": "https://www.benzinga.com/markets/equities/26/09/61889124/stock-market-today-sp-500-nasdaq-100-futures-gain-as-trump-issues-fresh-warning-to-iran-mrvl-aapl-acn-in-focus",
-      "wiim": false
-    },
-    "ONON": {
-      "title": "Nike Stock Hits New Low as On Holding Competition Heats Up, Yields Spike, and S&P 500 Removal Nears",
-      "ts": 1789932608,
-      "url": "https://www.benzinga.com/markets/equities/26/09/61885788/nike-stock-hits-new-low-as-on-holding-competition-heats-up-yields-spike-and-sp-500-removal-nears",
       "wiim": false
     }
   },
@@ -200,7 +212,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$44",
-      "price": 36.19,
+      "price": 36.17,
       "upside": 21.6,
       "held": false,
       "uni": true,
@@ -214,7 +226,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$39",
-      "price": 36.19,
+      "price": 36.17,
       "upside": 7.8,
       "held": false,
       "uni": true,
@@ -228,7 +240,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$44",
-      "price": 36.19,
+      "price": 36.17,
       "upside": 21.6,
       "held": false,
       "uni": true,
@@ -242,11 +254,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$275",
-      "price": 238.21,
-      "upside": 15.4,
+      "price": 236.53,
+      "upside": 16.3,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-16",
@@ -256,11 +268,11 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$280",
-      "price": 238.21,
-      "upside": 17.5,
+      "price": 236.53,
+      "upside": 18.4,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-17",
@@ -270,11 +282,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$295",
-      "price": 238.21,
-      "upside": 23.8,
+      "price": 236.53,
+      "upside": 24.7,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-17",
@@ -284,8 +296,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 338.33,
-      "upside": 9.4,
+      "price": 339.2,
+      "upside": 9.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -298,7 +310,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$42",
-      "price": 36.19,
+      "price": 36.17,
       "upside": 16.1,
       "held": false,
       "uni": true,
@@ -312,11 +324,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 238.21,
-      "upside": 25.9,
+      "price": 236.53,
+      "upside": 26.8,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-17",
@@ -326,11 +338,11 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$263",
-      "price": 238.21,
-      "upside": 10.4,
+      "price": 236.53,
+      "upside": 11.2,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-17",
@@ -340,11 +352,11 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$250",
-      "price": 238.21,
-      "upside": 4.9,
+      "price": 236.53,
+      "upside": 5.7,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-17",
@@ -354,11 +366,11 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$285",
-      "price": 238.21,
-      "upside": 19.6,
+      "price": 236.53,
+      "upside": 20.5,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-17",
@@ -368,11 +380,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 238.21,
-      "upside": 25.9,
+      "price": 236.53,
+      "upside": 26.8,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-17",
@@ -382,11 +394,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$300",
-      "price": 238.21,
-      "upside": 25.9,
+      "price": 236.53,
+      "upside": 26.8,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-17",
@@ -396,11 +408,11 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$300",
-      "price": 238.21,
-      "upside": 25.9,
+      "price": 236.53,
+      "upside": 26.8,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-18",
@@ -410,11 +422,11 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "price": 238.21,
-      "upside": 32.2,
+      "price": 236.53,
+      "upside": 33.2,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-18",
@@ -424,11 +436,11 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$289",
-      "price": 238.21,
-      "upside": 21.3,
+      "price": 236.53,
+      "upside": 22.2,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-18",
@@ -438,11 +450,11 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$250",
-      "price": 238.21,
-      "upside": 4.9,
+      "price": 236.53,
+      "upside": 5.7,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-18",
@@ -452,8 +464,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$380",
-      "price": 338.33,
-      "upside": 12.3,
+      "price": 339.2,
+      "upside": 12.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -466,8 +478,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$40",
-      "price": 36.19,
-      "upside": 10.5,
+      "price": 36.17,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -481,7 +493,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$40",
-      "upside": 10.5
+      "upside": 10.6
     },
     "CRM": {
       "date": "2026-09-18",
@@ -490,7 +502,7 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "upside": 32.2
+      "upside": 33.2
     },
     "AAPL": {
       "date": "2026-09-18",
@@ -499,7 +511,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$380",
-      "upside": 12.3
+      "upside": 12.0
     },
     "MRK": {
       "date": "2026-09-10",
@@ -508,7 +520,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$172",
-      "upside": 15.3
+      "upside": 14.8
     },
     "JNJ": {
       "date": "2026-09-10",
@@ -517,7 +529,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$320",
-      "upside": 17.8
+      "upside": 18.6
     },
     "HD": {
       "date": "2026-09-09",
@@ -526,10 +538,246 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$344",
-      "upside": 15.5
+      "upside": 15.6
     }
   },
   "bz_news": [
+    {
+      "title": "Beneath Lululemon’s Stock Slump Lies a Broader Spending Squeeze",
+      "url": "https://www.benzinga.com/markets/large-cap/26/09/61908710/lululemon-stock-collapse-broader-spending-squeeze",
+      "ts": 1790021659,
+      "tickers": [
+        "LULU",
+        "NKE",
+        "RH",
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.658
+    },
+    {
+      "title": "Meta's Muse Hits No. 1, Carrying AMD Into the $1-Trillion Club",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61908373/meta-muse-app-store-amd-stock-trillion-ai-agents",
+      "ts": 1790020973,
+      "tickers": [
+        "META",
+        "AMD",
+        "INTC",
+        "QCOM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.354
+    },
+    {
+      "title": "'McDonald’s Tests Placing Ads for Other Brands on Menu Screens' - Bloomberg News",
+      "url": "https://www.benzinga.com/news/26/09/61908225/mcdonald-s-tests-placing-ads-other-brands-menu-screens-bloomberg-news",
+      "ts": 1790020817,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.331
+    },
+    {
+      "title": "Shares of semiconductor companies are trading higher amid overall market strength and easing inflation concerns as investors return to AI-related companies.",
+      "url": "https://www.benzinga.com/quote/TER",
+      "ts": 1790017594,
+      "tickers": [
+        "ARM",
+        "AXTI",
+        "MRAM",
+        "RMBS"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.576
+    },
+    {
+      "title": "Stocks Jump On Iran, China, and Bitcoin Hopium—But The Big Conflicts Have Not Gone Away",
+      "url": "https://www.benzinga.com/Opinion/26/09/61906130/stocks-jump-on-iran-china-and-bitcoin-hopium-but-the-big-conflicts-have-not-gone-away",
+      "ts": 1790016133,
+      "tickers": [
+        "USO",
+        "SPY",
+        "NVDA",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.419
+    },
+    {
+      "title": "Billionaire Investor More Than Doubles Live Nation Stake",
+      "url": "https://www.benzinga.com/markets/large-cap/26/09/61905979/billionaire-investor-more-than-doubles-live-nation-stake",
+      "ts": 1790015821,
+      "tickers": [
+        "LYV",
+        "CRM",
+        "XLC",
+        "RSPC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.321
+    },
+    {
+      "title": "Intel Shares Rise Over 5% After Key Trading Signal",
+      "url": "https://www.benzinga.com/news/26/09/61905876/intel-shares-rise-over-5-percent-after-key-trading-signal",
+      "ts": 1790015566,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.4
+    },
+    {
+      "title": "OpenAI Announces Formation Of An Advisory Group On Mathematics And AI",
+      "url": "https://www.benzinga.com/news/26/09/61904849/openai-announces-formation-advisory-group-mathematics-and-ai",
+      "ts": 1790013438,
+      "tickers": [
+        "AMZN",
+        "NVDA",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.274
+    },
+    {
+      "title": "Nasdaq 100 Rallies, Intel Soars 14%: Stock Market Today",
+      "url": "https://www.benzinga.com/news/26/09/61904615/nasdaq-100-rallies-intel-soars-14-stock-market-today",
+      "ts": 1790013085,
+      "tickers": [
+        "INTC",
+        "$BTC",
+        "META",
+        "XOM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.524
+    },
+    {
+      "title": "10 Health Care Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/09/61904159/10-health-care-stocks-whale-activity-today-s-session",
+      "ts": 1790012117,
+      "tickers": [
+        "MRNA",
+        "NVO",
+        "RGEN",
+        "CLOV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.382
+    },
+    {
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/09/61904158/10-information-technology-stocks-whale-activity-today-s-session",
+      "ts": 1790012117,
+      "tickers": [
+        "NVDA",
+        "INTC",
+        "ALGM",
+        "TSM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.394
+    },
+    {
+      "title": "Microsoft’s Azure Has Another Growth Lever Waiting in the Wings, Analyst Says",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/61904100/microsofts-azure-has-another-growth-lever-waiting-in-the-wings-analyst-says",
+      "ts": 1790012007,
+      "tickers": [
+        "MSFT",
+        "XLK",
+        "VUG",
+        "MGK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.386
+    },
+    {
+      "title": "Why Is Chevron Stock Falling on Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61903773/why-is-chevron-stock-falling-on-monday",
+      "ts": 1790011264,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.351
+    },
+    {
+      "title": "Johnson & Johnson Drug Shows Improved Mania Symptoms in Bipolar Patients",
+      "url": "https://www.benzinga.com/news/health-care/26/09/61903377/johnson-johnson-drug-shows-improved-mania-symptoms-in-bipolar-patients",
+      "ts": 1790010529,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.332
+    },
+    {
+      "title": "Evercore ISI Group Maintains In-Line on Travelers Companies, Raises Price Target to $342",
+      "url": "https://www.benzinga.com/news/26/09/61903265/evercore-isi-group-maintains-line-travelers-companies-raises-price-target-342",
+      "ts": 1790010409,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.495
+    },
+    {
+      "title": "JPMorgan Lands $20 Billion Qatar Investment Mandate",
+      "url": "https://www.benzinga.com/markets/large-cap/26/09/61902874/jpmorgan-lands-20-billion-qatar-investment-mandate",
+      "ts": 1790009782,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.298
+    },
+    {
+      "title": "This Analyst Raises Price Targets For Microsoft And This AI Infrastructure Stock",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/61901669/this-analyst-raises-price-targets-for-microsoft-and-this-ai-infrastructure-stock",
+      "ts": 1790007592,
+      "tickers": [
+        "MSFT",
+        "NOW",
+        "MRVL",
+        "SOX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.476
+    },
     {
       "title": "Nike Faces $300M World Cup Boost — But Stifel Sees A Bigger Margin Squeeze",
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/61901577/nike-faces-300m-world-cup-boost-but-stifel-sees-a-bigger-margin-squeeze",
@@ -639,238 +887,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.258
-    },
-    {
-      "title": "Critical Metals, Priority Technology, Meta Platforms And Other Big Stocks Moving Higher On Monday",
-      "url": "https://www.benzinga.com/news/26/09/61896983/critical-metals-priority-technology-meta-platforms-and-other-big-stocks-moving-higher-on-monday",
-      "ts": 1789999754,
-      "tickers": [
-        "META",
-        "MSTR",
-        "INTC",
-        "AMD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.407
-    },
-    {
-      "title": "Why Is Nokia Stock Surging Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61896484/why-is-nokia-stock-surging-monday",
-      "ts": 1789999294,
-      "tickers": [
-        "NOK",
-        "MSFT",
-        "SPRX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.358
-    },
-    {
-      "title": "'OpenAI and Anthropic Neared Deal to Stress-Test Each Other’s AI' - The Information",
-      "url": "https://www.benzinga.com/news/26/09/61896402/openai-and-anthropic-neared-deal-stress-test-each-other-s-ai-information",
-      "ts": 1789999229,
-      "tickers": [
-        "MSFT",
-        "GOOG",
-        "GOOGL",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.27
-    },
-    {
-      "title": "The Insider Report: A Bull Market for the Taking",
-      "url": "https://www.benzinga.com/opinion/26/09/61895850/the-insider-report-a-bull-market-for-the-taking",
-      "ts": 1789998543,
-      "tickers": [
-        "DIS",
-        "PM",
-        "ESTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.422
-    },
-    {
-      "title": "Stifel Maintains Hold on Nike, Lowers Price Target to $40",
-      "url": "https://www.benzinga.com/news/26/09/61894404/stifel-maintains-hold-nike-lowers-price-target-40",
-      "ts": 1789997214,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.439
-    },
-    {
-      "title": "UBS Maintains Buy on McDonald's, Lowers Price Target to $320",
-      "url": "https://www.benzinga.com/news/26/09/61894391/ubs-maintains-buy-mcdonald-s-lowers-price-target-320",
-      "ts": 1789997179,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.442
-    },
-    {
-      "title": "Microsoft To Rally Over 23%? Here Are 10 Top Analyst Forecasts For Monday",
-      "url": "https://www.benzinga.com/news/26/09/61893682/microsoft-to-rally-over-23-here-are-10-top-analyst-forecasts-for-monday",
-      "ts": 1789995839,
-      "tickers": [
-        "MSFT",
-        "TMUS",
-        "CLF",
-        "CRDO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.43
-    },
-    {
-      "title": "What's Going On With Intel Stock Monday?",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61891827/whats-going-on-with-intel-stock-monday-7",
-      "ts": 1789992377,
-      "tickers": [
-        "INTC",
-        "SOXX",
-        "XNTK",
-        "ESN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.395
-    },
-    {
-      "title": "Johnson & Johnson Announces CAPLYTA Demonstrates Reduction In Signs, Symptoms Of Acute Manic Episodes Associated With Bipolar I Disorder In Phase 3 Trial",
-      "url": "https://www.benzinga.com/news/26/09/61891800/johnson-johnson-announces-caplyta-demonstrates-reduction-signs-symptoms-acute-manic-episodes-associa",
-      "ts": 1789992360,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.339
-    },
-    {
-      "title": "Broadcom, Cisco, Arista Networks And A Financial Stock On CNBC’s ‘Final Trades’",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61891752/cisco-broadcom-arista-networks-financial-stock-on-cnbcs-final-trades",
-      "ts": 1789992276,
-      "tickers": [
-        "AVGO",
-        "CSCO",
-        "ANET",
-        "ITUB"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.559
-    },
-    {
-      "title": "'JPMorgan, Qatar’s QIA Target $20 Billion Investment Partnership' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/09/61890836/jpmorgan-qatar-s-qia-target-20-billion-investment-partnership-bloomberg",
-      "ts": 1789990042,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.343
-    },
-    {
-      "title": "Cantor Fitzgerald Maintains Overweight on Microsoft, Raises Price Target to $608",
-      "url": "https://www.benzinga.com/news/26/09/61890493/cantor-fitzgerald-maintains-overweight-microsoft-raises-price-target-608",
-      "ts": 1789988875,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.494
-    },
-    {
-      "title": "Merck's Subcutaneous KEYTRUDA QLEX Approved In Japan For All Existing KEYTRUDA Indications",
-      "url": "https://www.benzinga.com/news/26/09/61890010/merck-s-subcutaneous-keytruda-qlex-approved-japan-all-existing-keytruda-indications",
-      "ts": 1789987675,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.365
-    },
-    {
-      "title": "AI Investment Boom Is 'Massive' — Top Economist Says US Spending Is Moving Away From Homes and Toward Data Centers",
-      "url": "https://www.benzinga.com/real-estate/26/09/61889508/ai-investment-boom-is-massive-top-economist-says-us-spending-is-moving-away-from-homes-and-toward-data-centers",
-      "ts": 1789985834,
-      "tickers": [
-        "AMZN",
-        "META",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.447
-    },
-    {
-      "title": "Stock Market Today: S&P 500, Nasdaq 100, Dow Jones Futures Gain as Trump Issues Fresh Warning to Iran — MRVL, AAPL, ACN in Focus (UPDATED)",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61889124/stock-market-today-sp-500-nasdaq-100-futures-gain-as-trump-issues-fresh-warning-to-iran-mrvl-aapl-acn-in-focus",
-      "ts": 1789984941,
-      "tickers": [
-        "SPY",
-        "$BTC",
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.501
-    },
-    {
-      "title": "Inquiry Into Microsoft's Competitor Dynamics In Software Industry",
-      "url": "https://www.benzinga.com/news/26/09/61888978/inquiry-microsoft-s-competitor-dynamics-software-industry",
-      "ts": 1789984710,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.345
-    },
-    {
-      "title": "This Analyst Loves Apple’s Duo, but Says the Stock Is ‘Relatively Rich’",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61888941/this-analyst-loves-apples-duo-but-says-the-stock-is-relatively-rich",
-      "ts": 1789984543,
-      "tickers": [
-        "AAPL",
-        "TECL",
-        "OMAH",
-        "TMFC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.393
     }
   ],
   "portfolio_brief": {
@@ -991,7 +1007,12 @@
         "score": 1.08,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "10 Health Care Stocks Whale Activity In Today’s Session",
+        "ts": 1790012117,
+        "url": "https://www.benzinga.com/markets/options/26/09/61904159/10-health-care-stocks-whale-activity-today-s-session",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1116,7 +1137,12 @@
         "score": 1.09,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Nasdaq 100 Rallies, Intel Soars 14%: Stock Market Today",
+        "ts": 1790013085,
+        "url": "https://www.benzinga.com/news/26/09/61904615/nasdaq-100-rallies-intel-soars-14-stock-market-today",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1169,35 +1195,6 @@
       },
       "explain": "46 analysts cover it — 18 bullish, 23 hold, 5 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
-    "ONON": {
-      "name": "On Holding",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 19,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 1,
-        "total": 36,
-        "bullish": 30,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.08,
-        "period": "2026-09-01"
-      },
-      "news": {
-        "title": "Nike Stock Hits New Low as On Holding Competition Heats Up, Yields Spike, and S&P 500 Removal Nears",
-        "ts": 1789932608,
-        "url": "https://www.benzinga.com/markets/equities/26/09/61885788/nike-stock-hits-new-low-as-on-holding-competition-heats-up-yields-spike-and-sp-500-removal-nears",
-        "wiim": false
-      },
-      "filings": {
-        "latest8k": null,
-        "periodic": null,
-        "insider30d": 2
-      },
-      "explain": "36 analysts cover it — 30 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "EXE": {
       "name": "Expand Energy",
       "qarp": "STRONG BUY",
@@ -1230,6 +1227,30 @@
       },
       "explain": "30 analysts cover it — 24 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "ONON": {
+      "name": "On Holding",
+      "qarp": "STRONG BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 19,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 1,
+        "total": 36,
+        "bullish": 30,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.08,
+        "period": "2026-09-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 2
+      },
+      "explain": "36 analysts cover it — 30 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "LULU": {
       "name": "Lululemon",
       "qarp": "BUY",
@@ -1246,7 +1267,12 @@
         "score": -0.15,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Beneath Lululemon’s Stock Slump Lies a Broader Spending Squeeze",
+        "ts": 1790021659,
+        "url": "https://www.benzinga.com/markets/large-cap/26/09/61908710/lululemon-stock-collapse-broader-spending-squeeze",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1662,7 +1688,6 @@
       "margin": 25.9,
       "summary": "Q2 FY2026 — revenue $6.6B (+12.7% YoY), diluted EPS $4.25 (+7.9% YoY), net margin 26%. (as reported, GAAP)"
     },
-    "ONON": null,
     "EXE": {
       "period": "Q2 FY2026",
       "filed": "2026-07-28",
@@ -1682,6 +1707,7 @@
       "margin": 17.6,
       "summary": "Q2 FY2026 — revenue $3.0B (-19.8% YoY), diluted EPS $2.19 (-45.5% YoY), net margin 18%. (as reported, GAAP)"
     },
+    "ONON": null,
     "LULU": {
       "period": "Q2 FY2026",
       "filed": "2026-09-03",
