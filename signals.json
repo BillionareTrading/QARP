@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-22",
-  "generated_at": "Sep 22, 7:36pm ET",
+  "date": "2026-09-23",
+  "generated_at": "Sep 23, 8:46am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -27,7 +27,7 @@
       "sev": "watch",
       "tag": "AI-disruption fear",
       "detail": "Beat & raised (Jun 11) yet sold off; AI-moat fear (Claude Design), CFO exit, ARR de-emphasis — the narrative, not the numbers, drives it.",
-      "next": "Dec 8"
+      "next": "Dec 9"
     },
     {
       "ticker": "NVDA",
@@ -49,7 +49,7 @@
       "sub": "+ NBIX, VRTX",
       "tag": "Drug-pricing policy",
       "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.",
-      "next": "Oct 22"
+      "next": "Oct 28"
     },
     {
       "ticker": "ABT",
@@ -60,14 +60,6 @@
     }
   ],
   "catalysts": [
-    {
-      "when": "Sep 22",
-      "what": "AZO earnings",
-      "affects": "AZO",
-      "dir": "two-sided",
-      "why": "Q-results for AutoZone — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
     {
       "when": "Oct 13",
       "what": "ABT earnings",
@@ -91,6 +83,14 @@
       "dir": "two-sided",
       "why": "Q-results for SAP — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Oct 21",
+      "what": "EFX earnings",
+      "affects": "EFX",
+      "dir": "two-sided",
+      "why": "Q-results for Equifax — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
     }
   ],
   "earnings_next": {
@@ -101,13 +101,13 @@
     "RKLB": "2026-11-09",
     "AZN": "2026-10-30",
     "DHR": "2026-10-19",
-    "AZO": "2026-09-22",
-    "ADBE": "2026-12-08",
+    "AZO": "2026-12-07",
+    "ADBE": "2026-12-09",
     "ONON": "2026-11-10",
     "EXE": "2026-10-26",
     "LULU": "2026-12-09",
     "SPGI": "2026-10-22",
-    "GILD": "2026-10-22",
+    "GILD": "2026-10-28",
     "SAP": "2026-10-21",
     "AVGO": "2026-12-09",
     "NVS": "2026-10-27",
@@ -192,20 +192,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-15",
-      "ticker": "NKE",
-      "firm": "Telsey Advisory Group",
-      "action": "Maintains",
-      "rating": "Market Perform",
-      "stance": "neutral",
-      "pt": "$44",
-      "price": 36.1,
-      "upside": 21.9,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
     {
       "date": "2026-09-16",
       "ticker": "CRM",
@@ -471,17 +457,31 @@
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-09-23",
+      "ticker": "NKE",
+      "firm": "BTIG",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$55",
+      "price": 36.1,
+      "upside": 52.4,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
     }
   ],
   "rating_moves": {
     "NKE": {
-      "date": "2026-09-22",
-      "firm": "StoneX",
-      "action": "Initiates Coverage On",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "",
-      "upside": null
+      "date": "2026-09-23",
+      "firm": "BTIG",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$55",
+      "upside": 52.4
     },
     "CSCO": {
       "date": "2026-09-22",
@@ -540,346 +540,334 @@
   },
   "bz_news": [
     {
-      "title": "'Microsoft To Consider Shareholder Proposals Through 2027, Even As SEC Proposes To End Oversight Of Such Votes' - Reuters Exclusive",
-      "url": "https://www.benzinga.com/news/26/09/61933587/microsoft-consider-shareholder-proposals-through-2027-even-sec-proposes-end-oversight-such-votes-reu",
-      "ts": 1790107206,
+      "title": "'Verizon to invest $70 million in AI training effort' - Reuters",
+      "url": "https://www.benzinga.com/news/26/09/61943809/verizon-invest-70-million-ai-training-effort-reuters",
+      "ts": 1790167555,
       "tickers": [
-        "MSFT"
+        "VZ"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.319
+      "relevance": 0.393
     },
     {
-      "title": "Apple Takes Aim at Nvidia’s AI Economics: New Macs Have ‘No Cost per Token,’ Hardware Chief Says",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61932828/apple-macs-ai-no-cost-per-token-nvidia",
-      "ts": 1790105570,
+      "title": "Stock of the Day: Is Intel About to Reverse?",
+      "url": "https://www.benzinga.com/trading-ideas/technicals/26/09/61943210/stock-of-the-day-is-intel-about-to-reverse",
+      "ts": 1790166597,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.406
+    },
+    {
+      "title": "McDonald's Targets Operating Margin In Low-To-Mid 50% Range By 2030; Plans $8.5B In Franchisee Support Through 2036",
+      "url": "https://www.benzinga.com/quote/MCD",
+      "ts": 1790165088,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.392
+    },
+    {
+      "title": "Reap Partners With Visa To Roll Out Stable-Linked Visa Credit Program To More Than 100 Global Markets",
+      "url": "https://www.benzinga.com/news/26/09/61942127/reap-partners-visa-roll-out-stable-linked-visa-credit-program-more-100-global-markets",
+      "ts": 1790164023,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.338
+    },
+    {
+      "title": "Amazon Turns To Former Employees, Including Those Laid-Off, For AI, Cloud Jobs Amid ‘Boomerang’ Hiring Push: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61942006/amazon-turns-to-former-employees-including-those-laid-off-for-ai-cloud-jobs-amid-boomerang-hiring-push-report",
+      "ts": 1790163586,
       "tickers": [
         "AAPL",
+        "ORCL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.402
+    },
+    {
+      "title": "Elon Musk-led SpaceX's Starlink Faces New Military Connectivity Alternative as Boeing Drone Unit Tests Gogo Link",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61941942/elon-musk-led-spacexs-starlink-faces-new-military-connectivity-alternative-as-boeing-drone-unit-tests-gogo-link",
+      "ts": 1790163437,
+      "tickers": [
+        "SPCX",
+        "BA",
+        "EADSY",
+        "GOGO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.348
+    },
+    {
+      "title": "Amazon, Apple, Micron, Check Point Software On CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61941558/apple-micron-check-point-software-cnbc-final-trades",
+      "ts": 1790162416,
+      "tickers": [
+        "AAPL",
+        "AMZN",
+        "CHKP",
+        "MU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.429
+    },
+    {
+      "title": "Chuck Schumer Says Senate Heard ‘Nothing But Crickets’ on AI Risk Briefing Request: ‘Maybe Trump’s Not Worried Because…’",
+      "url": "https://www.benzinga.com/news/politics/26/09/61940730/chuck-schumer-says-senate-heard-nothing-but-crickets-on-ai-risk-briefing-request-maybe-trumps-not-worried-because",
+      "ts": 1790160433,
+      "tickers": [
+        "AMZN",
+        "MSFT",
+        "AMD",
         "NVDA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.449
+      "relevance": 0.235
     },
     {
-      "title": "EXCLUSIVE: Nvidia Is a Stock And a Token — When ‘Retail No Longer Distinguishes Between Ticker and Rail’",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/09/61931658/nvidia-stock-token-crypto",
-      "ts": 1790102902,
+      "title": "BTIG Reiterates Buy on Nike, Maintains $55 Price Target",
+      "url": "https://www.benzinga.com/news/26/09/61940313/btig-reiterates-buy-nike-maintains-55-price-target",
+      "ts": 1790159001,
       "tickers": [
-        "NVDA",
-        "AAPL",
-        "GOOGL",
-        "GOOG"
+        "NKE"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.51
+      "relevance": 0.432
     },
     {
-      "title": "QUICK SPARK: Nasdaq 100 on Track for Best 4-Year Rally Since 1999",
-      "url": "https://www.benzinga.com/news/26/09/61931324/nasdaq-100-best-four-year-rally-since-1999-memory-chips-lead",
-      "ts": 1790102037,
+      "title": "Microsoft Chases Mass Copilot Adoption With Deep Discounts for Large Companies",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61940208/microsoft-chases-mass-copilot-adoption-with-deep-discounts-for-large-companies",
+      "ts": 1790158556,
       "tickers": [
-        "SNDK",
-        "INTC",
-        "QQQ",
-        "INTU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.442
-    },
-    {
-      "title": "Stock of the Day: Is Apple Breaking Out?",
-      "url": "https://www.benzinga.com/trading-ideas/technicals/26/09/61931124/stock-of-the-day-is-apple-breaking-out",
-      "ts": 1790101634,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.413
-    },
-    {
-      "title": "Nasdaq 100 Flirts with Records, Oil Sinks for Fifth Day: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61930818/nasdaq-record-banks-fall-oil-fifth-decline-whats-moving-markets-tuesday",
-      "ts": 1790100904,
-      "tickers": [
-        "QQQ",
-        "JPM",
-        "WFC",
-        "MS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.498
-    },
-    {
-      "title": "'OpenAI launches GPT-6 Sol and Luna' - Tech Crunch",
-      "url": "https://www.benzinga.com/news/26/09/61930641/openai-launches-gpt-6-sol-and-luna-tech-crunch",
-      "ts": 1790100535,
-      "tickers": [
-        "AMZN",
         "MSFT",
-        "ORCL",
+        "XLK",
+        "VUG",
+        "IUSG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.369
+    },
+    {
+      "title": "Assessing Microsoft's Performance Against Competitors In Software Industry",
+      "url": "https://www.benzinga.com/news/26/09/61939691/assessing-microsoft-s-performance-against-competitors-software-industry",
+      "ts": 1790157508,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.338
+    },
+    {
+      "title": "Comparing Apple With Industry Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/09/61939688/comparing-apple-industry-competitors-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1790157501,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.379
+    },
+    {
+      "title": "AI Chip Boom Peaking in 2028? Analyst Says That’s ‘Utterly Wrong’ As Shortage Could Last Until 2030",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61939663/ai-chip-boom-peaking-in-2028-analyst-says-thats-utterly-wrong-as-shortage-could-last-until-2030",
+      "ts": 1790157213,
+      "tickers": [
+        "AAPL",
+        "META",
+        "MSFT",
+        "BABA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.459
+    },
+    {
+      "title": "Stifel Upgrades Microsoft to Buy, Raises Price Target to $575",
+      "url": "https://www.benzinga.com/news/26/09/61939646/stifel-upgrades-microsoft-buy-raises-price-target-575",
+      "ts": 1790157122,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.483
+    },
+    {
+      "title": "China Business Delegation’s Trump-Xi Visit In Doubt Over US Investment Disputes: Report",
+      "url": "https://www.benzinga.com/news/politics/26/09/61939620/china-business-delegations-trump-xi-visit-in-doubt-over-us-investment-disputes-report",
+      "ts": 1790156769,
+      "tickers": [
+        "AAPL",
+        "AMZN",
+        "GOOGL",
         "GOOG"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false,
-      "relevance": 0.258
+      "rel": true,
+      "relevance": 0.225
     },
     {
-      "title": "Cisco Stock Falls as Piper Sandler Cuts Price Target",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61930538/cisco-stock-falls-as-piper-sandler-cuts-price-target",
-      "ts": 1790100259,
+      "title": "Qualcomm Comes For Apple’s A20 Pro With New AI-First Snapdragon Chips",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61939524/qualcomm-comes-for-apples-a20-pro-with-new-ai-first-snapdragon-chips",
+      "ts": 1790156214,
       "tickers": [
-        "CSCO"
+        "QCOM",
+        "AAPL",
+        "TSM",
+        "ROYA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.471
+      "relevance": 0.421
     },
     {
-      "title": "'Apple settlement offers eligible iPhone owners up to $95' - CBS News",
-      "url": "https://www.benzinga.com/news/26/09/61930378/apple-settlement-offers-eligible-iphone-owners-95-cbs-news",
-      "ts": 1790099993,
+      "title": "SPEEA Bargaining Committees Endorse Boeing Contract Offer After Winning Gains In Compensation, Benefits And Workforce Development",
+      "url": "https://www.benzinga.com/news/26/09/61939090/speea-bargaining-committees-endorse-boeing-contract-offer-after-winning-gains-compensation-benefits-",
+      "ts": 1790152551,
       "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.229
-    },
-    {
-      "title": "Amgen Hits Primary Endpoint In Sjögren's Trial, But Approval Filing Awaits Another Trial Data",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/61930224/amgen-hits-primary-endpoint-in-sjogrens-trial-but-approval-filing-awaits-another-trial-data",
-      "ts": 1790099779,
-      "tickers": [
-        "AMGN"
+        "BA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.429
+      "relevance": 0.297
     },
     {
-      "title": "JPMorgan Stock Slips as Traders Shift to Tech Sector",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61930209/jpmorgan-stock-slips-as-traders-shift-to-tech-sector",
-      "ts": 1790099764,
+      "title": "AI Trade Is ‘Dead Money’: Fidelity Strategist Warns $3.3 Trillion Buildout Is Inflationary With ‘Unknown Returns’",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61939050/ai-is-dead-money-right-now-jurrien-timmer-says-could-a-productivity-miracle-still-be-coming",
+      "ts": 1790152120,
       "tickers": [
-        "JPM",
+        "QQQ",
         "META",
-        "SHOP",
-        "PYPL"
+        "AMZN",
+        "GOOGL"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true,
-      "relevance": 0.39
+      "rel": false,
+      "relevance": 0.313
     },
     {
-      "title": "Unconfirmed Social Media Reports Suggest The ShinyHunters Hacking Group Claims To Have Breached The FBI, Stating The Attack Is \"Not Financially Motivated.\" The FBI Has Not Yet Commented.",
-      "url": "https://www.benzinga.com/quote/SPY",
-      "ts": 1790098730,
+      "title": "'Private-Credit Firms Are Buzzing About Getting In on JPMorgan’s Card Empire' - WSJ",
+      "url": "https://www.benzinga.com/news/26/09/61938964/private-credit-firms-are-buzzing-about-getting-jpmorgan-s-card-empire-wsj",
+      "ts": 1790151214,
       "tickers": [
-        "CHKP",
-        "CRWD",
-        "FTNT",
-        "PANW"
+        "JPM"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true,
-      "relevance": 0.306
+      "rel": false,
+      "relevance": 0.311
     },
     {
-      "title": "Cognex Buys Intel-Spun RealSense For $500 Million",
-      "url": "https://www.benzinga.com/m-a/26/09/61928794/cognex-buys-intel-spun-realsense-for-500-million",
-      "ts": 1790096859,
+      "title": "'Microsoft to Boost Copilot Discounts as It Launches AI ‘Super App' - The Information",
+      "url": "https://www.benzinga.com/news/26/09/61938891/microsoft-boost-copilot-discounts-it-launches-ai-super-app-information",
+      "ts": 1790150979,
       "tickers": [
-        "CGNX",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.349
+    },
+    {
+      "title": "Disney Consumer Products Restructuring Splits Licensing/Publishing Into Studios While Retail Remains With Disney Experiences Under Mazloum And Bergman",
+      "url": "https://www.benzinga.com/quote/DIS",
+      "ts": 1790150561,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.312
+    },
+    {
+      "title": "Broadcom Faces China Data Center Threat as Beijing Finds Its Switches in Up to 90% of State-Owned Firms: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61938821/broadcom-faces-china-data-center-threat-as-beijing-finds-its-switches-in-up-to-90-of-state-owned-firms-report",
+      "ts": 1790150321,
+      "tickers": [
         "INTC",
-        "BOTZ",
-        "RSHO"
+        "AVGO",
+        "AMD",
+        "NVDA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.385
+      "relevance": 0.414
     },
     {
-      "title": "CNBC Halftime Report Final Trades: Amazon, Check Point Software Technologies, Micron Technology, Apple",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1790096481,
+      "title": "Eli Lilly Could Be a ‘$2,000 Stock’ in the Next 3 to 4 Years, Says Home Depot Co-Founder Ken Langone",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61938783/eli-lilly-could-be-a-2000-stock-in-the-next-3-to-4-years-says-home-depot-co-founder-ken-langone",
+      "ts": 1790149816,
       "tickers": [
-        "AMZN",
-        "CHKP",
-        "MU",
-        "AAPL"
+        "LLY",
+        "HD"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.404
-    },
-    {
-      "title": "Commodity ETF Delivers Double Nvidia’s YTD Returns; Muse Ignites CPU Fever",
-      "url": "https://www.benzinga.com/Opinion/26/09/61928535/commodity-etf-delivers-double-nvidias-ytd-returns-muse-ignites-cpu-fever",
-      "ts": 1790096370,
-      "tickers": [
-        "USO",
-        "SPY",
-        "NVDA",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.476
-    },
-    {
-      "title": "Shares of financial companies are trading lower. The sector may be under pressure as traders rotate into the tech space after recent e-commerce and payments partnerships with Meta's Muse AI agent threaten to disrupt traditional financial companies.",
-      "url": "https://www.benzinga.com/quote/SECZ",
-      "ts": 1790095898,
-      "tickers": [
-        "JPM",
-        "SCHW",
-        "WFC",
-        "BAC"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.412
-    },
-    {
-      "title": "Oppenheimer Maintains Outperform on Microsoft, Raises Price Target to $570",
-      "url": "https://www.benzinga.com/news/26/09/61928290/oppenheimer-maintains-outperform-microsoft-raises-price-target-570",
-      "ts": 1790095819,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.457
-    },
-    {
-      "title": "Cisco Systems shares are trading lower after Piper Sandler maintained its Neutral rating on the stock and lowered its price target from $132 to $125.",
-      "url": "https://www.benzinga.com/quote/CSCO",
-      "ts": 1790095055,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.463
-    },
-    {
-      "title": "Apple’s New Macs Are Faster, Smarter and Built for AI",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61927717/apples-new-macs-are-faster-smarter-and-built-for-ai",
-      "ts": 1790094907,
-      "tickers": [
-        "AAPL",
-        "TECL",
-        "OMAH",
-        "TMFC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.405
-    },
-    {
-      "title": "Anthropic Introduces Claude Opus 5.5, Now Available On All Platforms, Including AWS, Google Cloud & Microsoft Azure; Claude Opus 5.5 Performs At Level Of Claude Fable 5.1 On Most Work, Costs Around 40% Less To Run Than Opus 5; Says Over Coming Weeks, We'll Also Be Launching Claude Sonnet 5.5 & Haiku 5.5",
-      "url": "https://www.benzinga.com/news/26/09/61927696/anthropic-introduces-claude-opus-5-5-now-available-all-platforms-including-aws-google-cloud-microsof",
-      "ts": 1790094885,
-      "tickers": [
-        "GOOG",
-        "GOOGL",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.254
-    },
-    {
-      "title": "'Apple Is Developing New Fitness Tracker Aimed at Rivaling Whoop' - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/09/61927432/apple-developing-new-fitness-tracker-aimed-rivaling-whoop-bloomberg-news",
-      "ts": 1790094366,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.321
-    },
-    {
-      "title": "Piper Sandler Maintains Neutral on Cisco Systems, Lowers Price Target to $125",
-      "url": "https://www.benzinga.com/news/26/09/61926872/piper-sandler-maintains-neutral-cisco-systems-lowers-price-target-125",
-      "ts": 1790093397,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.45
-    },
-    {
-      "title": "Why Billionaire Tim Draper Calls Apple, Meta 'Irresponsible' for Not Holding Bitcoin",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/09/61925516/tim-draper-calls-apple-meta-irresposible-for-not-holding-bitcoin",
-      "ts": 1790091039,
-      "tickers": [
-        "$BTC",
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.26
-    },
-    {
-      "title": "Smart Money Move: David B. Kirk Grabs $999K Worth Of Salesforce Stock",
-      "url": "https://www.benzinga.com/news/26/09/61924276/smart-money-move-david-b-kirk-grabs-999k-worth-salesforce-stock",
-      "ts": 1790089272,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.352
-    },
-    {
-      "title": "Goldman, Morgan Stanley Ride $17.2B China Tech Boom as AI Truce Odds Sit at 10%",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61923813/goldman-morgan-stanley-china-tech-17-billion",
-      "ts": 1790088696,
-      "tickers": [
-        "JPM",
-        "GS",
-        "MS",
-        "C"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
       "relevance": 0.401
+    },
+    {
+      "title": "InnovAge (INNV) Shares Tumble 9% After Hours: Here's Why",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61938340/innovage-shares-fall-after-hours-secondary-offering",
+      "ts": 1790146098,
+      "tickers": [
+        "INNV",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.466
+    },
+    {
+      "title": "Apple Pendant? Tim Cook, Eddy Cue Also Reportedly Throwing Weight Behind Another Mystery Device, Says This Analyst",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61938327/apple-pendant-tim-cook-eddy-cue-mystery-device-analyst",
+      "ts": 1790145940,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.342
     }
   ],
   "portfolio_brief": {
@@ -1004,8 +992,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-09-08",
-          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000059/bsx-20260907.htm"
+          "date": "2026-09-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000061/bsx-20260921.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -1203,7 +1191,7 @@
       "filings": {
         "latest8k": null,
         "periodic": null,
-        "insider30d": 2
+        "insider30d": 7
       },
       "explain": "36 analysts cover it — 30 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
