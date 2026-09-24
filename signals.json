@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-23",
-  "generated_at": "Sep 23, 7:24pm ET",
+  "date": "2026-09-24",
+  "generated_at": "Sep 24, 8:42am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -49,7 +49,7 @@
       "sub": "+ NBIX, VRTX",
       "tag": "Drug-pricing policy",
       "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.",
-      "next": "Oct 28"
+      "next": "Oct 22"
     },
     {
       "ticker": "ABT",
@@ -69,7 +69,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Oct 19",
+      "when": "Oct 21",
       "what": "DHR earnings",
       "affects": "DHR",
       "dir": "two-sided",
@@ -100,14 +100,14 @@
     "BSX": "2026-10-28",
     "RKLB": "2026-11-09",
     "AZN": "2026-10-30",
-    "DHR": "2026-10-19",
+    "DHR": "2026-10-21",
     "AZO": "2026-12-07",
     "ADBE": "2026-12-09",
     "ONON": "2026-11-10",
     "EXE": "2026-10-26",
     "LULU": "2026-12-09",
     "SPGI": "2026-10-22",
-    "GILD": "2026-10-28",
+    "GILD": "2026-10-22",
     "SAP": "2026-10-21",
     "NVS": "2026-10-27",
     "AVGO": "2026-12-09",
@@ -183,49 +183,9 @@
       "ts": 1790184918,
       "url": "https://www.benzinga.com/markets/options/26/09/61954153/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
       "wiim": false
-    },
-    "ONON": {
-      "title": "Microsoft To Rally More Than 15%? Here Are 10 Top Analyst Forecasts For Wednesday",
-      "ts": 1790168260,
-      "url": "https://www.benzinga.com/news/26/09/61944154/microsoft-to-rally-more-than-15-here-are-10-top-analyst-forecasts-for-wednesday",
-      "wiim": false
-    },
-    "AZO": {
-      "title": "Microsoft To Rally More Than 15%? Here Are 10 Top Analyst Forecasts For Wednesday",
-      "ts": 1790168260,
-      "url": "https://www.benzinga.com/news/26/09/61944154/microsoft-to-rally-more-than-15-here-are-10-top-analyst-forecasts-for-wednesday",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-16",
-      "ticker": "CRM",
-      "firm": "Stifel",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$275",
-      "price": 237.58,
-      "upside": 15.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-16",
-      "ticker": "CRM",
-      "firm": "Mizuho",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$280",
-      "price": 237.58,
-      "upside": 17.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-09-17",
       "ticker": "CRM",
@@ -575,18 +535,291 @@
       "stance": "bullish",
       "pt": "$320",
       "upside": 18.9
-    },
-    "HD": {
-      "date": "2026-09-09",
-      "firm": "Bernstein",
-      "action": "Maintains",
-      "rating": "Market Perform",
-      "stance": "neutral",
-      "pt": "$344",
-      "upside": 15.9
     }
   },
   "bz_news": [
+    {
+      "title": "Microsoft, Howmet Aerospace, FTAI Aviation And An Energy Stock On CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61968253/microsoft-howmet-aerospace-ftai-aviation-and-an-energy-stock-on-cnbcs-final-trades",
+      "ts": 1790251967,
+      "tickers": [
+        "MSFT",
+        "LNG",
+        "HWM",
+        "FTAI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.37
+    },
+    {
+      "title": "Qualcomm Renew Global Patent License Deal With Apple, Effective April 1, 2027",
+      "url": "https://www.benzinga.com/content/61966922/qualcomm-renew-global-patent-license-deal-apple-effective-april-1-2027",
+      "ts": 1790249461,
+      "tickers": [
+        "QCOM",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.36
+    },
+    {
+      "title": "AI’s Deflationary Product Cannot Support the $5 Trillion Bill",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61966491/ais-deflationary-product-cannot-support-the-5-trillion-bill",
+      "ts": 1790247911,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.326
+    },
+    {
+      "title": "'DeepSeek Aims to Close $7.5 Billion Funding Round by End-October' - The Information",
+      "url": "https://www.benzinga.com/news/26/09/61966195/deepseek-aims-to-close-7-5-billion-funding-round-by-end-october-the-in",
+      "ts": 1790247353,
+      "tickers": [
+        "AMZN",
+        "GOOG",
+        "MSFT",
+        "BABA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.336
+    },
+    {
+      "title": "Merck Says Topline Data From Phase 2b/3 BRUNELLO Trial Of Remigromig (MK-3000, Formerly EYE103) For Diabetic Macular Edema Met Its Primary Endpoint",
+      "url": "https://www.benzinga.com/general/biotech/26/09/61966130/merck-says-topline-data-phase-2b-3-brunello-trial-remigromig-mk-3000-formerly-eye103-diabetic-macula",
+      "ts": 1790246911,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.367
+    },
+    {
+      "title": "IonQ Removes Major Quantum Barrier, Driving Investor Debate Over Commercial Timelines",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61966117/ionq-removes-major-quantum-barrier-driving-investor-debate-over-commercial-timelines",
+      "ts": 1790246746,
+      "tickers": [
+        "IONQ",
+        "GOOGL",
+        "IBM",
+        "QBTS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.351
+    },
+    {
+      "title": "Nike Gears Up For Q1 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/61966042/nike-gears-up-for-q1-print-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts-2",
+      "ts": 1790246264,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.449
+    },
+    {
+      "title": "Paid ATM Fees? Visa, Mastercard’s $167.5 Million Settlement Could Put Money Back in Your Pocket: Who Qualifies, Claim Deadline and Potential Payout",
+      "url": "https://www.benzinga.com/news/legal/26/09/61965843/paid-atm-fees-visa-mastercards-167-5-million-settlement-could-put-money-back-in-your-pocket-who-qualifies-claim-deadline-and-potential-payout",
+      "ts": 1790245596,
+      "tickers": [
+        "MA",
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.281
+    },
+    {
+      "title": "IBM Announces Its Digital Asset Haven Clients Can Now Connect To Permissioned Blockchain Networks, Including Swift's; Also Extending Its Digital Asset Haven To An On-Premises Beta Deployment Option For Clients To Manage Digital Asset Operations Entirely Within Their Own Data Centers",
+      "url": "https://www.benzinga.com/news/26/09/61965775/ibm-announces-its-digital-asset-haven-clients-can-now-connect-permissioned-blockchain-networks-inclu",
+      "ts": 1790245099,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.338
+    },
+    {
+      "title": "BTIG Maintains Buy on McDonald's, Lowers Price Target to $295",
+      "url": "https://www.benzinga.com/news/26/09/61965609/btig-maintains-buy-mcdonald-s-lowers-price-target-295",
+      "ts": 1790244570,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.439
+    },
+    {
+      "title": "Evaluating Apple Against Peers In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/09/61965158/evaluating-apple-against-peers-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1790243950,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.366
+    },
+    {
+      "title": "TSMC Set to Raise Chip Prices Up to 6% as AI Boom Keeps Foundry Capacity Tight Through 2030: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61964879/tsmc-reportedly-plans-to-hike-wafer-price-next-year",
+      "ts": 1790242464,
+      "tickers": [
+        "TSM",
+        "INTC",
+        "SSNLF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.52
+    },
+    {
+      "title": "TD Cowen Maintains Hold on McDonald's, Lowers Price Target to $270",
+      "url": "https://www.benzinga.com/news/26/09/61964852/td-cowen-maintains-hold-mcdonald-s-lowers-price-target-270",
+      "ts": 1790242355,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.414
+    },
+    {
+      "title": "Fed's Kevin Warsh Says 2% Is 'Firm, Fixed Target,' McDonald’s CEO Sees Years of Elevated Inflation — Peter Schiff Asks ‘Who Do You Believe?’",
+      "url": "https://www.benzinga.com/markets/economic-data/26/09/61964344/peter-schiff-pits-mcdonalds-ceos-inflation-warning-against-kevin-warsh",
+      "ts": 1790238577,
+      "tickers": [
+        "UCO",
+        "MCD",
+        "USO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.435
+    },
+    {
+      "title": "Trump Hails Boeing’s 111-Plane Deals With Türkiye, Bangladesh, Says They’ll Support ‘Tens of Thousands’ of American Jobs: ‘Big Day’ for US Manufacturing",
+      "url": "https://www.benzinga.com/news/politics/26/09/61964301/trump-hails-boeings-111-plane-deals-with-turkiye-bangladesh-says-theyll-support-tens-of-thousands-of-american-jobs-big-day-for-us-manufacturing",
+      "ts": 1790237653,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.23
+    },
+    {
+      "title": "Elizabeth Warren Slams Trump as $6.9 Billion in Russia-Linked Payments Reportedly Slipped Through Global Banks Despite Sanctions (UPDATED)",
+      "url": "https://www.benzinga.com/markets/forex/26/09/61912764/6-9-billion-in-russia-linked-payments-reportedly-slipped-through-global-banks-despite-sanctions-elizabeth-warren-slams-trump-as-citi-deutsche-bank-and-jpmorgan-get-caught-in-the-money-trai",
+      "ts": 1790234301,
+      "tickers": [
+        "JPM",
+        "DB",
+        "DBSDY",
+        "SCBFY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.225
+    },
+    {
+      "title": "Disney+ Subscription Prices Nearly Doubled Since 2023 as Company Raises Ad-Free Plan Again to $21.49 a Month",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61963864/disney-plus-subscription-price-increase-ad-free-21-49-month",
+      "ts": 1790234281,
+      "tickers": [
+        "DIS",
+        "AAPL",
+        "NFLX",
+        "CMCSA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.3
+    },
+    {
+      "title": "Reported Earlier, Boeing Secures 11-Jet Follow-On Order From Biman Bangladesh Airlines, Building On Earlier 14-Aircraft Deal This Year",
+      "url": "https://www.benzinga.com/quote/BA",
+      "ts": 1790233521,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.242
+    },
+    {
+      "title": "Bill Ackman Calls AI’s Rare-Disease Breakthrough ‘Incredible’ After Model Finds Drug Combination for Dying Patient",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61963098/bill-ackman-ai-rare-disease-drug-combination-breakthrough",
+      "ts": 1790225084,
+      "tickers": [
+        "MSFT",
+        "LLY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.431
+    },
+    {
+      "title": "Meta Stock Expected to be 'Flat to Down' on 'Connect' Keynote, Says Gene Munster: Muse is 'Bad News' for Google, Says Analyst",
+      "url": "https://www.benzinga.com/markets/tech/26/09/61962894/meta-stock-gene-munster-connect-keynote-google-bad-news",
+      "ts": 1790220188,
+      "tickers": [
+        "META",
+        "AAPL",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.38
+    },
+    {
+      "title": "Meta Platforms, McDonald's, Beneficient, Palantir and Palo Alto Networks: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/09/61962559/meta-mcdonalds-beneficient-palantir-palo-alto-networks-stocks-investors-radar",
+      "ts": 1790213104,
+      "tickers": [
+        "META",
+        "PLTR",
+        "MCD",
+        "PANW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.388
+    },
     {
       "title": "If You Invested $100 In Home Depot Stock 15 Years Ago, You Would Have This Much Today",
       "url": "https://www.benzinga.com/news/26/09/61960802/if-you-invested-100-home-depot-stock-15-years-ago-you-would-have-much-today",
@@ -639,286 +872,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.221
-    },
-    {
-      "title": "'Prime Minister Anthony Albanese Has Revealed That An Artificial Intelligence Agent Developed By OpenAI Infiltrated An Australian Government Website In June, Accessing Public And Non-Public Files' - Sydney Morning Herald",
-      "url": "https://www.benzinga.com/news/26/09/61959145/prime-minister-anthony-albanese-has-revealed-artificial-intelligence-agent-developed-openai-infiltra",
-      "ts": 1790195999,
-      "tickers": [
-        "MSFT",
-        "EWA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.265
-    },
-    {
-      "title": "Here's How Much $1000 Invested In Apple 20 Years Ago Would Be Worth Today",
-      "url": "https://www.benzinga.com/news/26/09/61958804/here-s-how-much-1000-invested-apple-20-years-ago-would-be-worth-today",
-      "ts": 1790195419,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.276
-    },
-    {
-      "title": "U.S. Judge Deciding Case Over Media Ban At The White House Ends Hearing Without Saying When He Would Rule",
-      "url": "https://www.benzinga.com/news/26/09/61958704/u-s-judge-deciding-case-over-media-ban-white-house-ends-hearing-without-saying-when-he-would-rule",
-      "ts": 1790195134,
-      "tickers": [
-        "SPY",
-        "WBD",
-        "DIS",
-        "VSNT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.2
-    },
-    {
-      "title": "Airbnb Announces Broader Access To OpenAI Frontier Models For Its Engineering, Product Development Teams",
-      "url": "https://www.benzinga.com/news/26/09/61958438/airbnb-announces-broader-access-openai-frontier-models-its-engineering-product-development-teams",
-      "ts": 1790194428,
-      "tickers": [
-        "ABNB",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.274
-    },
-    {
-      "title": "'Hellman & Friedman Explores Sale Of Applied Systems At Up To $10B; Hellman & Friedman Is Working With JPMorgan, Goldman Sachs On The Sale, Sources Say' - Reuters Exclusive",
-      "url": "https://www.benzinga.com/news/26/09/61958248/hellman-friedman-explores-sale-applied-systems-10b-hellman-friedman-working-jpmorgan-goldman-sachs-s",
-      "ts": 1790194032,
-      "tickers": [
-        "JPM",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.341
-    },
-    {
-      "title": "OpenAI Announces MentalHealthBench, Open Benchmark For Evaluating AI Responses In Mental Health Conversations, Built With More Than 80 Licensed Experts",
-      "url": "https://www.benzinga.com/news/26/09/61957908/openai-announces-mentalhealthbench-open-benchmark-evaluating-ai-responses-mental-health-conversation",
-      "ts": 1790193661,
-      "tickers": [
-        "MSFT",
-        "TDOC",
-        "GOOGL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.275
-    },
-    {
-      "title": "Meta’s Muse ‘A Game Changer’ Says Dan Ives: ‘Investors Discounted Meta and Zuckerberg'",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61957441/metas-muse-a-game-changer-says-dan-ives-investors-discounted-meta-and-zuckerberg",
-      "ts": 1790192742,
-      "tickers": [
-        "META",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.346
-    },
-    {
-      "title": "QUICK SPARK: McDonald's CEO Shares Grim Inflation Outlook — 'Not Expecting Things to Change'",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61957346/quick-spark-mcdonalds-ceo-shares-grim-inflation-outlook-not-expecting-things-to-change",
-      "ts": 1790192500,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.35
-    },
-    {
-      "title": "'Trump Officials Weigh Rolling Back Beef Import Plan As GOP Midterm Panic Spreads' - Politico Exclusive",
-      "url": "https://www.benzinga.com/news/26/09/61957119/trump-officials-weigh-rolling-back-beef-import-plan-as-gop-midterm-panic-spreads-politico-exclusive",
-      "ts": 1790191914,
-      "tickers": [
-        "SPY",
-        "AMZN",
-        "WMT",
-        "COST"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.256
-    },
-    {
-      "title": "Apple’s AI Bet Is Getting Bigger. So Is the Valuation Risk Hiding Inside These ETFs",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/61956571/apples-ai-bet-is-getting-bigger-so-is-the-valuation-risk-hiding-inside-these-etfs",
-      "ts": 1790190418,
-      "tickers": [
-        "AAPL",
-        "MSFT",
-        "QQQ",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.416
-    },
-    {
-      "title": "'Microsoft President Backs Deployment of AI Safety Evaluators' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/09/61956169/microsoft-president-backs-deployment-ai-safety-evaluators-bloomberg",
-      "ts": 1790189419,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.335
-    },
-    {
-      "title": "Microsoft Upgraded as Analyst Sees Steady Margins Even Without Heavy AI Model Spending",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/09/61956084/microsoft-upgraded-as-analyst-sees-steady-margins-even-without-heavy-ai-model-spending",
-      "ts": 1790189207,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.428
-    },
-    {
-      "title": "What Is Going on With Snap Stock on Wednesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61955854/what-is-going-on-with-snap-stock-on-wednesday",
-      "ts": 1790188520,
-      "tickers": [
-        "SNAP",
-        "AMZN",
-        "NVDA",
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.396
-    },
-    {
-      "title": "QUICK SPARK: McDonald's Stock Slumps to 4-Year Lows, Eyes 7th Week of Losses",
-      "url": "https://www.benzinga.com/news/restaurants/26/09/61955279/mcdonalds-stock-4-year-lows-seventh-week-losses",
-      "ts": 1790187160,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.379
-    },
-    {
-      "title": "Goldman Sachs Exec Says We Continue To Expect Uncertainty Around Critical Minerals Tariffs To Persist; Expect Much Of The Metal Already In The U.S. To Remain Trapped, While Periodic Increases In Tariff Risk Could Encourage Further Stockbuilding",
-      "url": "https://www.benzinga.com/news/26/09/61954905/goldman-sachs-exec-says-we-continue-expect-uncertainty-around-critical-minerals-tariffs-persist-expe",
-      "ts": 1790186654,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.347
-    },
-    {
-      "title": "McDonald’s Admits It Is ‘Falling Short’ On Execution",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61954620/mcdonalds-admits-it-is-falling-short-on-execution",
-      "ts": 1790185916,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.281
-    },
-    {
-      "title": "McDonald's shares are trading lower after the company unveiled its strategy targets to 2030 and committed up to $8.5 billion for franchisee support and investments by 2036. Also, CEO Chris Kempczinski told CNBC in an interview that the chain expects inflation and flat customer footfall to persist.",
-      "url": "https://www.benzinga.com/quote/MCD",
-      "ts": 1790185431,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.394
-    },
-    {
-      "title": "Oppenheimer Maintains Outperform on Nike, Lowers Price Target to $52",
-      "url": "https://www.benzinga.com/news/26/09/61954311/oppenheimer-maintains-outperform-nike-lowers-price-target-52",
-      "ts": 1790185174,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.459
-    },
-    {
-      "title": "10 Health Care Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61954154/10-health-care-stocks-whale-activity-today-s-session",
-      "ts": 1790184918,
-      "tickers": [
-        "ORKA",
-        "AXSM",
-        "MDT",
-        "PURR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.382
-    },
-    {
-      "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61954153/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
-      "ts": 1790184918,
-      "tickers": [
-        "LTH",
-        "ASO",
-        "MCD",
-        "KSS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.363
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/61954152/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1790184918,
-      "tickers": [
-        "U",
-        "MSTR",
-        "CRWD",
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
     }
   ],
   "portfolio_brief": {
@@ -987,7 +940,7 @@
           "date": "2026-08-26",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
         },
-        "insider30d": 13
+        "insider30d": 12
       },
       "explain": "69 analysts cover it — 65 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1139,7 +1092,7 @@
           "date": "2026-07-21",
           "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
         },
-        "insider30d": 1
+        "insider30d": 0
       },
       "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
@@ -1159,12 +1112,7 @@
         "score": 1.09,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Microsoft To Rally More Than 15%? Here Are 10 Top Analyst Forecasts For Wednesday",
-        "ts": 1790168260,
-        "url": "https://www.benzinga.com/news/26/09/61944154/microsoft-to-rally-more-than-15-here-are-10-top-analyst-forecasts-for-wednesday",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1233,12 +1181,7 @@
         "score": 1.08,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Microsoft To Rally More Than 15%? Here Are 10 Top Analyst Forecasts For Wednesday",
-        "ts": 1790168260,
-        "url": "https://www.benzinga.com/news/26/09/61944154/microsoft-to-rally-more-than-15-here-are-10-top-analyst-forecasts-for-wednesday",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": null,
         "periodic": null,
