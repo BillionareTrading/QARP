@@ -4350,8 +4350,11 @@ function renderSchool() {
    the framework: the verdict decides WHAT deserves capital; this strip advises WHERE. */
 function crDeskPlan(tkr, view, feats) {
   const n = view.c.length, px = feats.px;
+  // No dead band (fixed 2026-09-25): the old ±0.5% filters dropped a shelf the price was
+  // SITTING ON from both lists, so the read above said "support $X" while this strip said
+  // "no tested floor". Anything not clearly overhead is structure beneath.
   const above = feats.levels.filter((c) => c.level >= px * 1.005).sort((a, b) => a.level - b.level);
-  const below = feats.levels.filter((c) => c.level < px * 0.995).sort((a, b) => b.level - a.level);
+  const below = feats.levels.filter((c) => c.level < px * 1.005).sort((a, b) => b.level - a.level);
   const s1 = below[0], s2 = below[1], r1 = above[0], r2 = above[1];
   const rsi = feats.rsi[n - 1], ma50 = feats.ma50[n - 1], ma20 = feats.ma20[n - 1];
   const fp = (p) => "$" + (p >= 1000 ? p.toFixed(0) : p >= 100 ? p.toFixed(1) : p.toFixed(2));
@@ -4374,8 +4377,14 @@ function crDeskPlan(tkr, view, feats) {
   } else if (ma50 && ma50 < px * 0.995) {
     entry = ma50; entryTxt = fp(ma50);
     entrySub = `No tested shelf in range — the rising 50-day average (${fp(ma50)}) is the fallback bid.`;
+  } else if (feats.lo52 && feats.lo52 < px * 0.995) {
+    // Symmetric with the SELL card's 52-week-high fallback (2026-09-25): a name that has
+    // broken below every tested cluster still has one rule-drawn mark beneath it.
+    entry = feats.lo52; entryTxt = fp(feats.lo52);
+    entrySub = `No tested shelf beneath — the 52-week low (${fp(feats.lo52)}, ${((feats.lo52 / px - 1) * 100).toFixed(1)}% below) is the last mark on the map. One low, untested: half size until it holds twice.`;
   } else {
-    entrySub = "No tested floor beneath the price — stand aside until one forms.";
+    entryTxt = "not yet";
+    entrySub = "Printing the 52-week low — nothing rule-drawn exists beneath this price yet. The first higher low becomes the level; until it prints there is nothing to bid.";
     entryTone = "wait";
   }
   // ---- STOP ----
