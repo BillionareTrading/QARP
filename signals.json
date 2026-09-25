@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "Sep 25, 10:56am ET",
+  "generated_at": "Sep 25, 2:08pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -139,17 +139,17 @@
       "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
+      "sector": "Chemical & Coatings",
+      "dir": "down",
+      "driver": "Iran's Foreign Minister confirmed that Iran has submitted to the U.S. a …",
+      "note": "After Iran's Foreign Minister confirmed that Iran has submitted to the U.S. a seven-day plan to reopen the Strait of Hormuz and start discussions on Iran's nuclear program. The return of restricted Gulf-region exports to global markets may pressure margins.",
+      "src": "Benzinga WIIM · market-wide"
+    },
+    {
       "sector": "Communications Services",
       "dir": "up",
       "driver": "AI executives from firms including Anthropic",
       "note": "After AI executives from firms including Anthropic, OpenAI and SpaceXAI signaled that the industry's growth may have to be slowed, which may limit competition in content creation, advertising sales and other areas. The sector's cash flow from ads and subscription revenue may also be attractive to investors amid elevated bond yields, inflation fears and interest rate expectations.",
-      "src": "Benzinga WIIM · market-wide"
-    },
-    {
-      "sector": "Server",
-      "dir": "up",
-      "driver": "Stabilizing bond yields and oil price retracement",
-      "note": "Amid stabilizing bond yields and oil price retracement. Also, Oracle executives on the Q1 conference call noted a high capex commitment to server infrastructure and continued sector-wide server demand.",
       "src": "Benzinga WIIM · market-wide"
     }
   ],
@@ -166,16 +166,10 @@
       "url": "https://www.benzinga.com/quote/AVGO",
       "wiim": true
     },
-    "RKLB": {
-      "title": "Redwire, Rocket Lab, Firefly Split a $981 Million Space Force Pie",
-      "ts": 1790262234,
-      "url": "https://www.benzinga.com/markets/tech/26/09/61975075/redwire-rocket-lab-firefly-split-a-981-million-space-force-pie",
-      "wiim": false
-    },
-    "ADBE": {
-      "title": "Citrini’s New Short List: 90 Subscription Stocks at Risk From The ‘Agentic Cancellation Wave’",
-      "ts": 1790257961,
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/61971690/citrini-ai-short-list-90-subscription-stocks-agentic-cancellation",
+    "ONON": {
+      "title": "Akamai Jumps on Anthropic Deal, 30-Year Yields Top 5.5%: Stock Market Today (CORRECTED)",
+      "ts": 1790354912,
+      "url": "https://www.benzinga.com/markets/equities/26/09/62001141/oil-slips-treasury-yields-19-year-high-akamai-anthropic-markets-friday",
       "wiim": false
     }
   },
@@ -188,8 +182,8 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "price": 237.01,
-      "upside": 32.9,
+      "price": 234.7,
+      "upside": 34.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -202,8 +196,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$289",
-      "price": 237.01,
-      "upside": 21.9,
+      "price": 234.7,
+      "upside": 23.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -216,8 +210,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$250",
-      "price": 237.01,
-      "upside": 5.5,
+      "price": 234.7,
+      "upside": 6.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -230,8 +224,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$380",
-      "price": 336.82,
-      "upside": 12.8,
+      "price": 340.11,
+      "upside": 11.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +238,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$40",
-      "price": 35.7,
-      "upside": 12.0,
+      "price": 35.95,
+      "upside": 11.3,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -258,8 +252,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "price": 107.69,
-      "upside": 16.1,
+      "price": 107.56,
+      "upside": 16.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -272,7 +266,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 35.7,
+      "price": 35.95,
       "upside": null,
       "held": false,
       "uni": true,
@@ -286,8 +280,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$52",
-      "price": 35.7,
-      "upside": 45.7,
+      "price": 35.95,
+      "upside": 44.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -300,8 +294,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 336.82,
-      "upside": 9.9,
+      "price": 340.11,
+      "upside": 8.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -314,8 +308,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$48",
-      "price": 35.7,
-      "upside": 34.5,
+      "price": 35.95,
+      "upside": 33.5,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -328,8 +322,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 35.7,
-      "upside": 54.1,
+      "price": 35.95,
+      "upside": 53.0,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -342,8 +336,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$250",
-      "price": 205.4,
-      "upside": 21.7,
+      "price": 203.72,
+      "upside": 22.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -356,8 +350,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "price": 168.76,
-      "upside": 15.5,
+      "price": 169.87,
+      "upside": 14.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -370,8 +364,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$171",
-      "price": 168.76,
-      "upside": 1.3,
+      "price": 169.87,
+      "upside": 0.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -384,8 +378,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 35.7,
-      "upside": -16.0,
+      "price": 35.95,
+      "upside": -16.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -399,7 +393,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "upside": -16.0
+      "upside": -16.6
     },
     "CVX": {
       "date": "2026-09-25",
@@ -408,7 +402,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$250",
-      "upside": 21.7
+      "upside": 22.7
     },
     "MMM": {
       "date": "2026-09-25",
@@ -417,7 +411,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "upside": 15.5
+      "upside": 14.8
     },
     "AAPL": {
       "date": "2026-09-23",
@@ -426,7 +420,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "upside": 9.9
+      "upside": 8.8
     },
     "CSCO": {
       "date": "2026-09-22",
@@ -435,7 +429,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "upside": 16.1
+      "upside": 16.2
     },
     "CRM": {
       "date": "2026-09-18",
@@ -444,10 +438,317 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "upside": 32.9
+      "upside": 34.2
     }
   },
   "bz_news": [
+    {
+      "title": "'Converse Pauses Social Media Ads, Marketing After Racism Uproar' - Bloomberg News",
+      "url": "https://www.benzinga.com/news/26/09/62004133/converse-pauses-social-media-ads-marketing-after-racism-uproar-bloomberg-news",
+      "ts": 1790358130,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.315
+    },
+    {
+      "title": "Shares of chemical and coatings companies are trading lower after Iran's Foreign Minister confirmed that Iran has submitted to the U.S. a seven-day plan to reopen the Strait of Hormuz and start discussions on Iran's nuclear program. The return of restricted Gulf-region exports to global markets may pressure margins.",
+      "url": "https://www.benzinga.com/quote/DOW",
+      "ts": 1790357927,
+      "tickers": [
+        "LYB",
+        "DOW"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.369
+    },
+    {
+      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/09/62003902/10-industrials-stocks-whale-activity-today-s-session",
+      "ts": 1790357711,
+      "tickers": [
+        "DAL",
+        "BETA",
+        "BE",
+        "VRT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.415
+    },
+    {
+      "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/09/62003901/10-health-care-stocks-whale-alerts-today-s-session",
+      "ts": 1790357711,
+      "tickers": [
+        "ABUS",
+        "NVO",
+        "ABBV",
+        "HIMS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.375
+    },
+    {
+      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/09/62003900/10-information-technology-stocks-whale-alerts-today-s-session",
+      "ts": 1790357711,
+      "tickers": [
+        "AAPL",
+        "RIOT",
+        "IREN",
+        "ORCL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.375
+    },
+    {
+      "title": "'JPMorgan Tweaks Data-Sharing Notices in Battle With Fintechs' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/09/62003337/jpmorgan-tweaks-data-sharing-notices-battle-fintechs-bloomberg",
+      "ts": 1790356359,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.353
+    },
+    {
+      "title": "CNBC Halftime Report Final Trades: Hewlett Packard Enterprise, Natera, UnitedHealth Group",
+      "url": "https://www.benzinga.com/quote/UNH",
+      "ts": 1790355718,
+      "tickers": [
+        "HPE",
+        "NTRA",
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.442
+    },
+    {
+      "title": "What Is Going on With Qualcomm Stock on Friday?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62002905/what-is-going-on-with-qualcomm-stock-on-friday",
+      "ts": 1790355678,
+      "tickers": [
+        "QCOM",
+        "AAPL",
+        "TSM",
+        "ROYA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.406
+    },
+    {
+      "title": "Reported Earlier: 'Germany's SCHMID Says It Is in Talks With Suppliers to Nvidia, Intel and AMD; Glass Boosts Speed and Cuts Power Use Compared With Plastic Substrates; Jensen Huang Discussed Glass Substrates With Chey Tae-won' - Seoul Economic Daily",
+      "url": "https://www.benzinga.com/news/26/09/62002860/reported-earlier-germany-s-schmid-says-it-talks-suppliers-nvidia-intel-and-amd-glass-boosts-speed-an",
+      "ts": 1790355628,
+      "tickers": [
+        "SHMD",
+        "NVDA",
+        "INTC",
+        "AMD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.436
+    },
+    {
+      "title": "FTC Chair Says Will Resist Anthropomorphizing Of AI Agent Tools As Long As Chairman; Says Use Of Substantial Personal Data In Non-Traditional Products Should Be Disclosed",
+      "url": "https://www.benzinga.com/news/26/09/62002672/ftc-chair-says-will-resist-anthropomorphizing-ai-agent-tools-long-chairman-says-use-substantial-pers",
+      "ts": 1790355220,
+      "tickers": [
+        "SPY",
+        "MSFT",
+        "GOOG",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.309
+    },
+    {
+      "title": "Akamai Jumps on Anthropic Deal, 30-Year Yields Top 5.5%: Stock Market Today (CORRECTED)",
+      "url": "https://www.benzinga.com/markets/equities/26/09/62001141/oil-slips-treasury-yields-19-year-high-akamai-anthropic-markets-friday",
+      "ts": 1790354912,
+      "tickers": [
+        "VOO",
+        "META",
+        "GME",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.371
+    },
+    {
+      "title": "Nvidia GPU Demand Is So Extreme, Even Bad Cloud Infrastructure Is Selling, SemiAnalysis Says",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/62002304/nvidia-gpu-demand-bad-cloud-infrastructure",
+      "ts": 1790354602,
+      "tickers": [
+        "NVDA",
+        "AMZN",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.559
+    },
+    {
+      "title": "Microsoft Gives Copilot A Major AI Makeover",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62001645/microsoft-gives-copilot-a-major-ai-makeover",
+      "ts": 1790353552,
+      "tickers": [
+        "MSFT",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.31
+    },
+    {
+      "title": "UBS Maintains Neutral on Dow, Lowers Price Target to $30",
+      "url": "https://www.benzinga.com/news/26/09/62001252/ubs-maintains-neutral-dow-lowers-price-target-30",
+      "ts": 1790352755,
+      "tickers": [
+        "DOW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.482
+    },
+    {
+      "title": "Boeing Could Land 200-Plus Jet Order From India’s Akasa Air",
+      "url": "https://www.benzinga.com/markets/large-cap/26/09/62000913/boeing-could-land-200-plus-jet-order-from-indias-akasa-air",
+      "ts": 1790352353,
+      "tickers": [
+        "BA",
+        "ITA",
+        "PPA",
+        "AV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.284
+    },
+    {
+      "title": "Slop Economy Warning: VC Expects Another 'Vastly Larger' 2008 — Blame AI",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61999781/paul-kedrosky-ai-boom-2008-debt",
+      "ts": 1790350367,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.41
+    },
+    {
+      "title": "Why Is Nike Stock Falling on Friday?",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/61999736/why-is-nike-stock-falling-on-friday",
+      "ts": 1790350268,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.376
+    },
+    {
+      "title": "Why Is Atlas Energy Stock Gaining Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61999513/why-is-atlas-energy-stock-gaining-friday",
+      "ts": 1790349849,
+      "tickers": [
+        "AESI",
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.382
+    },
+    {
+      "title": "$100 Invested In Travelers Companies 5 Years Ago Would Be Worth This Much Today",
+      "url": "https://www.benzinga.com/news/26/09/61999162/100-invested-travelers-companies-5-years-ago-would-be-worth-much-today",
+      "ts": 1790349322,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.287
+    },
+    {
+      "title": "9 Of 11 Sectors Fall In Friday Trading As Cyclicals Lead",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61998944/9-of-11-sectors-fall-in-friday-trading-as-cyclicals-lead",
+      "ts": 1790348984,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "DIA",
+        "IWM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.425
+    },
+    {
+      "title": "Johnson & Johnson Clinical Trials Show Progress Across Key Therapies",
+      "url": "https://www.benzinga.com/news/health-care/26/09/61998704/johnson-johnson-clinical-trials-show-progress-across-key-therapies",
+      "ts": 1790348598,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.385
+    },
+    {
+      "title": "We Asked 3 AI Chatbots for Next Week's Top Stock Picks. They All Said Micron.",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/61998518/we-asked-3-ai-chatbots-for-next-weeks-top-stock-picks-they-all-said-micron",
+      "ts": 1790348223,
+      "tickers": [
+        "MU",
+        "NKE",
+        "CCL",
+        "ACN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.407
+    },
     {
       "title": "Everyone Bought Nvidia for AI: Now AMD Could Win the $211 Billion CPU Race, Bank Of America Says",
       "url": "https://www.benzinga.com/markets/tech/26/09/61998240/amd-price-target-720-bofa-agentic-ai-cpu-market",
@@ -489,289 +790,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.466
-    },
-    {
-      "title": "Wells Fargo Initiates Coverage On Honeywell Intl with Equal-Weight Rating, Announces Price Target of $231",
-      "url": "https://www.benzinga.com/news/26/09/61994387/wells-fargo-initiates-coverage-honeywell-intl-equal-weight-rating-announces-price-target-231",
-      "ts": 1790342834,
-      "tickers": [
-        "HON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.466
-    },
-    {
-      "title": "HSBC Maintains Buy on Chevron, Raises Price Target to $250",
-      "url": "https://www.benzinga.com/news/26/09/61994337/hsbc-maintains-buy-chevron-raises-price-target-250",
-      "ts": 1790342607,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.448
-    },
-    {
-      "title": "'Trump Tells OpenAI, Anthropic to Withhold Models From UK Agency' - Bloomberg",
-      "url": "https://www.benzinga.com/government/26/09/61994216/trump-tells-openai-anthropic-withhold-models-uk-agency-bloomberg",
-      "ts": 1790342067,
-      "tickers": [
-        "SPY",
-        "EWU",
-        "MSFT",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.225
-    },
-    {
-      "title": "Wells Fargo Initiates Coverage On 3M with Equal-Weight Rating, Announces Price Target of $195",
-      "url": "https://www.benzinga.com/news/26/09/61993913/wells-fargo-initiates-coverage-3m-equal-weight-rating-announces-price-target-195",
-      "ts": 1790341396,
-      "tickers": [
-        "MMM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.481
-    },
-    {
-      "title": "'Goldman Sees Hyperscaler AI Capex Rising 50% to $1.2 Trillion' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/09/61992890/goldman-sees-hyperscaler-ai-capex-rising-50-1-2-trillion-bloomberg",
-      "ts": 1790338967,
-      "tickers": [
-        "AMZN",
-        "GOOG",
-        "MSFT",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.514
-    },
-    {
-      "title": "Microsoft Announces New Copilot With Home, Code, And Autopilot Agent; Says Cowork, Code, And Autopilot Run On Usage-Based Billing",
-      "url": "https://www.benzinga.com/news/26/09/61992596/microsoft-announces-new-copilot-home-code-and-autopilot-agent-says-cowork-code-and-autopilot-run-usa",
-      "ts": 1790338115,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.294
-    },
-    {
-      "title": "Bernstein Upgrades 3M to Market Perform, Raises Price Target to $171",
-      "url": "https://www.benzinga.com/news/26/09/61992399/bernstein-upgrades-3m-market-perform-raises-price-target-171",
-      "ts": 1790337814,
-      "tickers": [
-        "MMM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.55
-    },
-    {
-      "title": "Reported Earlier, 'US Fed plans to raise bank oversight thresholds, sources say' - Reuters Exclusive",
-      "url": "https://www.benzinga.com/news/26/09/61991780/reported-earlier-us-fed-plans-raise-bank-oversight-thresholds-sources-say-reuters-exclusive",
-      "ts": 1790336181,
-      "tickers": [
-        "SPY",
-        "GS",
-        "JPM",
-        "C"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.342
-    },
-    {
-      "title": "Johnson & Johnson Announces That TREMFYA Met Primary And Major Secondary Endpoints Demonstrating Both Improvement In Axial Symptoms And Reduction In Inflammation By MRI Assessment In The Phase 4 STAR Study Evaluating Biologic-Naïve Adults With Active Psoriatic Arthritis And Axial Involvement",
-      "url": "https://www.benzinga.com/news/26/09/61991739/johnson-johnson-announces-tremfya-met-primary-and-major-secondary-endpoints-demonstrating-both-impro",
-      "ts": 1790335968,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.335
-    },
-    {
-      "title": "Italian Regulator Closes Investigation Into Procter & Gamble's Hair Removal Device",
-      "url": "https://www.benzinga.com/news/26/09/61991688/italian-regulator-closes-investigation-procter-gamble-s-hair-removal-device",
-      "ts": 1790335826,
-      "tickers": [
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.35
-    },
-    {
-      "title": "JD Vance Warns Companies Against 'Cheap' H-1B Replacements: 'We're Not Going to Let You Lay Off American Workers'",
-      "url": "https://www.benzinga.com/news/politics/26/09/61991625/jd-vance-warns-companies-against-cheap-h-1b-replacements-were-not-going-to-let-you-lay-off-american-workers",
-      "ts": 1790335694,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.257
-    },
-    {
-      "title": "Big Tech’s Data Center Boom Could Be Stopped by One Scarce Resource",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61991451/big-techs-data-center-boom-could-be-stopped-by-one-scarce-resource",
-      "ts": 1790334858,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.382
-    },
-    {
-      "title": "Johnson & Johnson Says 50% Of Patients Progression-Free At Five Years After Single Carvykti Infusion In Phase 2 Multiple Myeloma Trial",
-      "url": "https://www.benzinga.com/quote/JNJ",
-      "ts": 1790334583,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.36
-    },
-    {
-      "title": "Merck Receives FDA Approval For Its Dual Oral Regimen Of WELIREG Plus LENMIVA For The Treatment Of Adult Patients With Advanced Renal Cell Carcinoma With A Clear Cell Component",
-      "url": "https://www.benzinga.com/news/26/09/61991035/merck-receives-fda-approval-its-dual-oral-regimen-welireg-plus-lenmiva-treatment-adult-patients-adva",
-      "ts": 1790333474,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.329
-    },
-    {
-      "title": "B of A Securities Downgrades Nike to Underperform, Lowers Price Target to $30",
-      "url": "https://www.benzinga.com/news/26/09/61990705/b-securities-downgrades-nike-underperform-lowers-price-target-30",
-      "ts": 1790331839,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.487
-    },
-    {
-      "title": "Understanding Apple's Position In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors",
-      "url": "https://www.benzinga.com/news/26/09/61990122/understanding-apple-s-position-technology-hardware-storage-amp-peripherals-industry-compared-competi",
-      "ts": 1790330318,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.35
-    },
-    {
-      "title": "Meta’s AI Spending Suddenly Makes Sense",
-      "url": "https://www.benzinga.com/markets/tech/26/09/61990039/metas-ai-spending-suddenly-makes-sense",
-      "ts": 1790329676,
-      "tickers": [
-        "META",
-        "AAPL",
-        "IGPT",
-        "PNQI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.392
-    },
-    {
-      "title": "US Airlines Oppose More China-US Flights as Xi Jinping Pushes for Expanded Air Links: Report",
-      "url": "https://www.benzinga.com/news/travel/26/09/61988801/us-airlines-oppose-more-china-us-flights-as-xi-jinping-pushes-for-expanded-air-links-report",
-      "ts": 1790318228,
-      "tickers": [
-        "DAL",
-        "BA",
-        "AAL",
-        "UAL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.209
-    },
-    {
-      "title": "Elizabeth Warren Says Walmart Patent Could Jack Up Mayo Price the Second Tuna Hits Your Cart: Patented Tech Makes 'Surveillance Pricing' Possible",
-      "url": "https://www.benzinga.com/markets/economic-data/26/09/61988516/elizabeth-warren-walmart-patent-surveillance-pricing-mayo-tuna",
-      "ts": 1790313230,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.253
-    },
-    {
-      "title": "Why is Moderna (MRNA) Stock Trending After Hours?",
-      "url": "https://www.benzinga.com/markets/equities/26/09/61988182/moderna-mrna-stock-after-hours-esmo-oncology-data",
-      "ts": 1790304873,
-      "tickers": [
-        "MRNA",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.366
-    },
-    {
-      "title": "Here's How Much $1000 Invested In Microsoft 20 Years Ago Would Be Worth Today",
-      "url": "https://www.benzinga.com/news/26/09/61987658/here-s-how-much-1000-invested-microsoft-20-years-ago-would-be-worth-today",
-      "ts": 1790293520,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.3
-    },
-    {
-      "title": "Here’s How Much You Would Have Made Owning JPMorgan Chase Stock In The Last 20 Years",
-      "url": "https://www.benzinga.com/news/26/09/61987404/here-s-how-much-you-would-have-made-owning-jpmorgan-chase-stock-last-20-years",
-      "ts": 1790289921,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.268
     }
   ],
   "portfolio_brief": {
@@ -924,12 +942,7 @@
         "score": 1.08,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Redwire, Rocket Lab, Firefly Split a $981 Million Space Force Pie",
-        "ts": 1790262234,
-        "url": "https://www.benzinga.com/markets/tech/26/09/61975075/redwire-rocket-lab-firefly-split-a-981-million-space-force-pie",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -947,7 +960,7 @@
     },
     "AZN": {
       "name": "AstraZeneca",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 13,
         "buy": 15,
@@ -1049,12 +1062,7 @@
         "score": 0.43,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Citrini’s New Short List: 90 Subscription Stocks at Risk From The ‘Agentic Cancellation Wave’",
-        "ts": 1790257961,
-        "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/61971690/citrini-ai-short-list-90-subscription-stocks-agentic-cancellation",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1086,7 +1094,12 @@
         "score": 1.08,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Akamai Jumps on Anthropic Deal, 30-Year Yields Top 5.5%: Stock Market Today (CORRECTED)",
+        "ts": 1790354912,
+        "url": "https://www.benzinga.com/markets/equities/26/09/62001141/oil-slips-treasury-yields-19-year-high-akamai-anthropic-markets-friday",
+        "wiim": false
+      },
       "filings": {
         "latest8k": null,
         "periodic": null,
