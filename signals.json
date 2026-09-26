@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-25",
-  "generated_at": "Sep 25, 7:47pm ET",
+  "date": "2026-09-26",
+  "generated_at": "Sep 26, 10:58am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -166,6 +166,12 @@
       "url": "https://www.benzinga.com/quote/AVGO",
       "wiim": true
     },
+    "RKLB": {
+      "title": "Benzinga Bulls and Bears: Costco, KB Home, McDonald’s",
+      "ts": 1790424012,
+      "url": "https://www.benzinga.com/markets/market-summary/26/09/62010895/benzinga-bulls-and-bears-costco-kb-home-mcdonalds",
+      "wiim": false
+    },
     "ONON": {
       "title": "Akamai Jumps on Anthropic Deal, 30-Year Yields Top 5.5%: Stock Market Today (CORRECTED)",
       "ts": 1790354912,
@@ -174,62 +180,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-18",
-      "ticker": "CRM",
-      "firm": "Citizens",
-      "action": "Reiterates",
-      "rating": "Market Outperform",
-      "stance": "bullish",
-      "pt": "$315",
-      "price": 234.02,
-      "upside": 34.6,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-09-18",
-      "ticker": "CRM",
-      "firm": "Stephens & Co.",
-      "action": "Reiterates",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$289",
-      "price": 234.02,
-      "upside": 23.5,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-09-18",
-      "ticker": "CRM",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$250",
-      "price": 234.02,
-      "upside": 6.8,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-09-18",
-      "ticker": "AAPL",
-      "firm": "Evercore ISI Group",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$380",
-      "price": 341.07,
-      "upside": 11.4,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-09-21",
       "ticker": "NKE",
@@ -443,6 +393,35 @@
   },
   "bz_news": [
     {
+      "title": "Benzinga Bulls and Bears: Costco, KB Home, McDonald’s",
+      "url": "https://www.benzinga.com/markets/market-summary/26/09/62010895/benzinga-bulls-and-bears-costco-kb-home-mcdonalds",
+      "ts": 1790424012,
+      "tickers": [
+        "META",
+        "MCD",
+        "AMD",
+        "COST"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.42
+    },
+    {
+      "title": "SK Hynix's Solidigm Eyes 2027 IPO at up to $150 Billion Valuation, in Potential Record-Breaking US Chip Listing: Report",
+      "url": "https://www.benzinga.com/markets/ipos/26/09/62010641/solidigm-ipo-sk-hynix-150-billion-valuation",
+      "ts": 1790409064,
+      "tickers": [
+        "INTC",
+        "ARM",
+        "CBRS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.379
+    },
+    {
       "title": "Here’s How Much You Would Have Made Owning Merck & Co Stock In The Last 5 Years",
       "url": "https://www.benzinga.com/news/26/09/62009860/here-s-how-much-you-would-have-made-owning-merck-co-stock-last-5-years",
       "ts": 1790374523,
@@ -527,7 +506,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.431
+      "relevance": 0.432
     },
     {
       "title": "This 3M Analyst Is No Longer Bearish; Here Are Top 5 Upgrades For Friday",
@@ -557,7 +536,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.497
+      "relevance": 0.498
     },
     {
       "title": "'Converse Pauses Social Media Ads, Marketing After Racism Uproar' - Bloomberg News",
@@ -653,7 +632,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.441
+      "relevance": 0.442
     },
     {
       "title": "What Is Going on With Qualcomm Stock on Friday?",
@@ -668,7 +647,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.405
+      "relevance": 0.406
     },
     {
       "title": "Reported Earlier: 'Germany's SCHMID Says It Is in Talks With Suppliers to Nvidia, Intel and AMD; Glass Boosts Speed and Cuts Power Use Compared With Plastic Substrates; Jensen Huang Discussed Glass Substrates With Chey Tae-won' - Seoul Economic Daily",
@@ -743,7 +722,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.31
+      "relevance": 0.311
     },
     {
       "title": "UBS Maintains Neutral on Dow, Lowers Price Target to $30",
@@ -755,37 +734,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.481
-    },
-    {
-      "title": "Boeing Could Land 200-Plus Jet Order From India’s Akasa Air",
-      "url": "https://www.benzinga.com/markets/large-cap/26/09/62000913/boeing-could-land-200-plus-jet-order-from-indias-akasa-air",
-      "ts": 1790352353,
-      "tickers": [
-        "BA",
-        "ITA",
-        "PPA",
-        "AV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.284
-    },
-    {
-      "title": "Slop Economy Warning: VC Expects Another 'Vastly Larger' 2008 — Blame AI",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61999781/paul-kedrosky-ai-boom-2008-debt",
-      "ts": 1790350367,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.41
+      "relevance": 0.482
     }
   ],
   "portfolio_brief": {
@@ -918,7 +867,7 @@
           "date": "2026-08-03",
           "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000053/bsx-20260630.htm"
         },
-        "insider30d": 2
+        "insider30d": 1
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -938,7 +887,12 @@
         "score": 1.08,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Benzinga Bulls and Bears: Costco, KB Home, McDonald’s",
+        "ts": 1790424012,
+        "url": "https://www.benzinga.com/markets/market-summary/26/09/62010895/benzinga-bulls-and-bears-costco-kb-home-mcdonalds",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -950,7 +904,7 @@
           "date": "2026-08-10",
           "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm"
         },
-        "insider30d": 9
+        "insider30d": 4
       },
       "explain": "26 analysts cover it — 21 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
