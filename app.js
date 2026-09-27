@@ -1397,8 +1397,8 @@ function renderDcaSim() {
   const edge = fwPct - spPct;
   return `<div class="card dca-card">
     <h3>The $1,000 test <span class="fw-sub">same dollars, same days — only the picks differ</span></h3>
-    <p class="dca-intro">Take <b>$1,000</b> and split it into equal daily installments since the ledger began
-      (<b>${esc(s.since)}</b>, ${s.days} sessions). Each day, buy that day's <b>STRONG&nbsp;BUY</b> list,
+    <p class="dca-intro">Take <b>$1,000</b> and split it into equal daily installments over the last
+      <b>${s.days} trading sessions</b> (since <b>${esc(s.since)}</b>). Each day, buy that day's <b>STRONG&nbsp;BUY</b> list,
       equal-weight, at the closing price — stop buying a name the day its verdict changes, never sell.
       Then do the identical thing with the <b>S&amp;P&nbsp;500</b>.</p>
     <div class="dca-race">
@@ -1417,7 +1417,8 @@ function renderDcaSim() {
     <div class="dca-edge">${edge >= 0 ? "The framework is ahead by" : "The framework trails by"}
       <b class="${signClass(edge)}">${fmtPct(Math.abs(edge), 1).replace("+", "")}</b> over this stretch.</div>
     <p class="dca-foot">Simulated at daily adjusted closes (split-safe), no costs or taxes, verdicts from the
-      calls ledger exactly as they stood each day. A short window — read the trend, not one snapshot.
+      calls ledger exactly as they stood each day. Real NYSE sessions only; both lanes invest on the same
+      days. A short window — read the trend, not one snapshot.
       Informational only, not advice.</p>
   </div>`;
 }
