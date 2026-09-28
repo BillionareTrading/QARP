@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "Sep 28, 5:23am ET",
+  "generated_at": "Sep 28, 11:29am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -119,17 +119,17 @@
   "sectors": [
     {
       "sector": "Semiconductor",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Overall market strength and easing inflation concerns as investors retur…",
       "note": "Amid overall market strength and easing inflation concerns as investors return to AI-related companies.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Financial",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Overall market weakness after Fed Chairman Warsh took a hawkish tone in …",
       "note": "Amid overall market weakness after Fed Chairman Warsh took a hawkish tone in his press conference and Q&A session after the FOMC rate hike.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Enterprise Software",
@@ -154,28 +154,22 @@
     }
   ],
   "holding_news": {
+    "AVGO": {
+      "title": "8 Of 11 Sectors Fall In Monday Trading As Defensives Lead",
+      "ts": 1790607958,
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/62026085/8-of-11-sectors-fall-in-monday-trading-as-defensives-lead",
+      "wiim": false
+    },
     "NVDA": {
-      "title": "Nvidia GPU Demand Is So Extreme, Even Bad Cloud Infrastructure Is Selling, SemiAnalysis Says",
-      "ts": 1790354602,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/62002304/nvidia-gpu-demand-bad-cloud-infrastructure",
+      "title": "Nvidia's $5.4 Trillion Market Cap 'Seems Crazy' Next to $3.5 Trillion Russell 2000 Total, Says Charlie Bilello",
+      "ts": 1790592001,
+      "url": "https://www.benzinga.com/markets/equities/26/09/62016564/nvidias-5-4-trillion-market-cap-seems-crazy-next-to-3-5-trillion-russell-2000-total-says-charlie-bilello",
       "wiim": false
     },
     "RKLB": {
-      "title": "Benzinga Bulls and Bears: Costco, KB Home, McDonald’s",
-      "ts": 1790424012,
-      "url": "https://www.benzinga.com/markets/market-summary/26/09/62010895/benzinga-bulls-and-bears-costco-kb-home-mcdonalds",
-      "wiim": false
-    },
-    "ONON": {
-      "title": "Akamai Jumps on Anthropic Deal, 30-Year Yields Top 5.5%: Stock Market Today (CORRECTED)",
-      "ts": 1790354912,
-      "url": "https://www.benzinga.com/markets/equities/26/09/62001141/oil-slips-treasury-yields-19-year-high-akamai-anthropic-markets-friday",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "9 Of 11 Sectors Fall In Friday Trading As Cyclicals Lead",
-      "ts": 1790348984,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61998944/9-of-11-sectors-fall-in-friday-trading-as-cyclicals-lead",
+      "title": "Why Is Rocket Lab Stock Falling Today?",
+      "ts": 1790602457,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62021213/why-is-rocket-lab-stock-falling-today",
       "wiim": false
     }
   },
@@ -188,8 +182,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$40",
-      "price": 35.75,
-      "upside": 11.9,
+      "price": 36.12,
+      "upside": 10.7,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -202,8 +196,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "price": 106.7,
-      "upside": 17.2,
+      "price": 106.84,
+      "upside": 17.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -216,7 +210,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 35.75,
+      "price": 36.12,
       "upside": null,
       "held": false,
       "uni": true,
@@ -230,8 +224,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$52",
-      "price": 35.75,
-      "upside": 45.5,
+      "price": 36.12,
+      "upside": 44.0,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -244,8 +238,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 341.07,
-      "upside": 8.5,
+      "price": 340.13,
+      "upside": 8.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -258,8 +252,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$48",
-      "price": 35.75,
-      "upside": 34.3,
+      "price": 36.12,
+      "upside": 32.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -272,8 +266,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 35.75,
-      "upside": 53.8,
+      "price": 36.12,
+      "upside": 52.3,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -286,8 +280,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$250",
-      "price": 204.45,
-      "upside": 22.3,
+      "price": 207.94,
+      "upside": 20.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -300,8 +294,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "price": 169.55,
-      "upside": 15.0,
+      "price": 168.62,
+      "upside": 15.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -314,8 +308,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$171",
-      "price": 169.55,
-      "upside": 0.9,
+      "price": 168.62,
+      "upside": 1.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -328,31 +322,59 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 35.75,
-      "upside": -16.1,
+      "price": 36.12,
+      "upside": -16.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-09-28",
+      "ticker": "NKE",
+      "firm": "Evercore ISI Group",
+      "action": "Maintains",
+      "rating": "In-Line",
+      "stance": "neutral",
+      "pt": "$34",
+      "price": 36.12,
+      "upside": -5.9,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-09-28",
+      "ticker": "CVX",
+      "firm": "TD Cowen",
+      "action": "Maintains",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$215",
+      "price": 207.94,
+      "upside": 3.4,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
     "NKE": {
-      "date": "2026-09-25",
-      "firm": "B of A Securities",
-      "action": "Downgrades",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$30",
-      "upside": -16.1
+      "date": "2026-09-28",
+      "firm": "Evercore ISI Group",
+      "action": "Maintains",
+      "rating": "In-Line",
+      "stance": "neutral",
+      "pt": "$34",
+      "upside": -5.9
     },
     "CVX": {
-      "date": "2026-09-25",
-      "firm": "HSBC",
+      "date": "2026-09-28",
+      "firm": "TD Cowen",
       "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$250",
-      "upside": 22.3
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$215",
+      "upside": 3.4
     },
     "MMM": {
       "date": "2026-09-25",
@@ -361,7 +383,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "upside": 15.0
+      "upside": 15.6
     },
     "AAPL": {
       "date": "2026-09-23",
@@ -370,7 +392,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "upside": 8.5
+      "upside": 8.8
     },
     "CSCO": {
       "date": "2026-09-22",
@@ -379,7 +401,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "upside": 17.2
+      "upside": 17.0
     },
     "CRM": {
       "date": "2026-09-18",
@@ -388,282 +410,46 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "upside": 34.6
+      "upside": 37.0
     }
   },
   "bz_news": [
     {
-      "title": "Bill Gates Tells Trump Not to Slow AI Innovation, Slams ‘Kill Switch’ Debate — Warns ‘A Billion Deaths’ Could Be Possible Without Safeguards",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62014119/bill-gates-tells-trump-not-to-slow-ai-innovation-slams-kill-switch-debate-warns-a-billion-deaths-could-be-possible-without-safeguards",
-      "ts": 1790580779,
+      "title": "8 Of 11 Sectors Fall In Monday Trading As Defensives Lead",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/62026085/8-of-11-sectors-fall-in-monday-trading-as-defensives-lead",
+      "ts": 1790607958,
       "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.279
-    },
-    {
-      "title": "Trump Invites Anthropic CEO Dario Amodei to Dinner as AI Safety Debate Rages, Says US Can't Slow Down: 'Why Should We Give That Up?'",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62013063/trump-anthropic-ceo-dario-amodei-ai-safety-debate-dinner",
-      "ts": 1790560687,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "MSFT",
-        "NVDA"
+        "SPY",
+        "QQQ",
+        "DIA",
+        "IWM"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.289
+      "relevance": 0.425
     },
     {
-      "title": "Big Tech Workers Speak Out After Getting Laid Off: 'I Applied to Work Cashier at Target and I Was Denied'",
-      "url": "https://www.benzinga.com/markets/offerings/26/09/62012402/big-tech-workers-speak-out-after-getting-laid-off-i-applied-to-work-cashier-at-target-and-i-was-denied",
-      "ts": 1790535618,
-      "tickers": [
-        "META",
-        "MSFT",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.204
-    },
-    {
-      "title": "Dow Jones and Nasdaq 100 Outlook: Three Catalysts to Watch This Week",
-      "url": "https://www.benzinga.com/markets/equities/26/09/62012315/dow-jones-and-nasdaq-100-outlook-3-catalysts-to-watch-this-week",
-      "ts": 1790529664,
-      "tickers": [
-        "NKE",
-        "MU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.49
-    },
-    {
-      "title": "Top Three S&P 500 Stocks to Watch This Week: Micron, Accenture, Tesla",
-      "url": "https://www.benzinga.com/markets/equities/26/09/62012300/top-3-sp-500-stocks-to-watch-this-week-micron-accenture-tesla",
-      "ts": 1790529047,
-      "tickers": [
-        "TSLA",
-        "MU",
-        "ACN",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "White House Has Few Options Left as Diesel Prices Surge Toward $7",
-      "url": "https://www.benzinga.com/markets/commodities/26/09/62012192/diesel-prices-surge-towards-7-continues-with-few-white-house-options-left",
-      "ts": 1790523013,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.233
-    },
-    {
-      "title": "Earnings Volatility Watch: Micron Sets The Week, But Six Other Stocks Are Priced To Swing More",
-      "url": "https://www.benzinga.com/markets/market-summary/26/09/62012052/earnings-volatility-watch-micron-implied-moves-september-2026",
-      "ts": 1790512223,
-      "tickers": [
-        "NKE",
-        "CCL",
-        "MU",
-        "JBL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.42
-    },
-    {
-      "title": "Qualcomm Takes on Apple's New Chip, Fitness Tracker, Updated Macs and More: This Week in Appleverse",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62011935/qualcomm-takes-on-apples-new-chip-fitness-tracker-updated-macs-and-more-this-week-in-appleverse",
-      "ts": 1790506821,
-      "tickers": [
-        "AAPL",
-        "QCOM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.358
-    },
-    {
-      "title": "Apple Hit With $5.7 Billion Patent Verdict Over iPhone, Apple Watch Haptics",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62011847/apple-hit-with-5-7-billion-patent-verdict-over-iphone-apple-watch-haptics",
-      "ts": 1790501135,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.286
-    },
-    {
-      "title": "Mark Zuckerberg Loses Nearly $9 Billion in One Day as Meta Stock Slides 4% After Goldman Questions AI Spending Payoff",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62011625/mark-zuckerberg-loses-nearly-9-billion-in-one-day-as-meta-stock-slides-4-after-goldman-questions-ai-spending-payoff",
-      "ts": 1790481048,
-      "tickers": [
-        "META",
-        "AAPL",
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.349
-    },
-    {
-      "title": "Nike Stock Has Become Oversold. Will Upcoming Earnings Lead to a Reversal?",
-      "url": "https://www.benzinga.com/markets/equities/26/09/62011229/nike-stock-has-become-oversold-will-its-upcoming-earnings-lead-to-a-reversal",
-      "ts": 1790436666,
+      "title": "Evercore ISI Group Maintains In-Line on Nike, Lowers Price Target to $34",
+      "url": "https://www.benzinga.com/news/26/09/62025668/evercore-isi-group-maintains-line-nike-lowers-price-target-34",
+      "ts": 1790607309,
       "tickers": [
         "NKE"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.428
+      "relevance": 0.494
     },
     {
-      "title": "Benzinga Bulls and Bears: Costco, KB Home, McDonald’s",
-      "url": "https://www.benzinga.com/markets/market-summary/26/09/62010895/benzinga-bulls-and-bears-costco-kb-home-mcdonalds",
-      "ts": 1790424012,
+      "title": "Nvidia Tops $5.4T, Outvalues Russell 2000: Michael Burry’s AI Warning Raises ETF Questions",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/62025654/nvidia-tops-5-4t-outvalues-russell-2000-michael-burrys-ai-warning-raises-etf-questions",
+      "ts": 1790607291,
       "tickers": [
-        "META",
-        "MCD",
-        "AMD",
-        "COST"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.42
-    },
-    {
-      "title": "SK Hynix's Solidigm Eyes 2027 IPO at up to $150 Billion Valuation, in Potential Record-Breaking US Chip Listing: Report",
-      "url": "https://www.benzinga.com/markets/ipos/26/09/62010641/solidigm-ipo-sk-hynix-150-billion-valuation",
-      "ts": 1790409064,
-      "tickers": [
-        "INTC",
-        "ARM",
-        "CBRS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.379
-    },
-    {
-      "title": "Here’s How Much You Would Have Made Owning Merck & Co Stock In The Last 5 Years",
-      "url": "https://www.benzinga.com/news/26/09/62009860/here-s-how-much-you-would-have-made-owning-merck-co-stock-last-5-years",
-      "ts": 1790374523,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.361
-    },
-    {
-      "title": "'OpenAI Says Its Agents Leaked Some User Images; openAI Still Working To Understand Scope Of Rogue Activity; Says OpenAI Had Identified About Two Dozen Rogue AI Incidents By Mid-September, Source Says'",
-      "url": "https://www.benzinga.com/news/26/09/62007998/openai-says-its-agents-leaked-some-user-images-openai-still-working-understand-scope-rogue-activity-",
-      "ts": 1790368572,
-      "tickers": [
+        "QQQ",
+        "AAPL",
+        "GOOGL",
         "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.205
-    },
-    {
-      "title": "Merck, Daiichi Sankyo Voluntarily Withdraw Biologics License Application Approval In U.S. For Ifinatamab Deruxtecan To Treat Small Cell Lung Cancer After Discussions With FDA",
-      "url": "https://www.benzinga.com/general/biotech/26/09/62007939/merck-daiichi-sankyo-voluntarily-withdraw-biologics-license-application-approval-u-s-ifinatamab-deru",
-      "ts": 1790368421,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.432
-    },
-    {
-      "title": "Here's How Much $100 Invested In Salesforce 15 Years Ago Would Be Worth Today",
-      "url": "https://www.benzinga.com/news/26/09/62007762/here-s-how-much-100-invested-salesforce-15-years-ago-would-be-worth-today",
-      "ts": 1790367327,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.302
-    },
-    {
-      "title": "AMD Hits $1 Trillion, Muse Spooks Subscription Stocks: This Week on Wall Street",
-      "url": "https://www.benzinga.com/markets/equities/26/09/62007539/amd-1-trillion-meta-muse-week-in-review",
-      "ts": 1790366525,
-      "tickers": [
-        "META",
-        "AMD",
-        "CMCSA",
-        "MRNA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.385
-    },
-    {
-      "title": "OpenAI Says It Carried Out Broader Review Of Actions After Hugging Face Incident; Vast Majority Of Actions Reviewed Were Completions Of Mundane Research Tasks; Most Cases Identified So Far Have Been Lower Severity, With Limited Or No Evidence Of Meaningful Impact To The Third-party Service; Review Anticipated To Take Months For Completion",
-      "url": "https://www.benzinga.com/news/26/09/62007056/openai-says-it-carried-out-broader-review-actions-after-hugging-face-incident-vast-majority-actions-",
-      "ts": 1790365266,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.246
-    },
-    {
-      "title": "Dow Stock Drops Following UBS Price Target Cut",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62006800/dow-stock-drops-following-ubs-price-target-cut",
-      "ts": 1790364429,
-      "tickers": [
-        "DOW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.432
-    },
-    {
-      "title": "This 3M Analyst Is No Longer Bearish; Here Are Top 5 Upgrades For Friday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/09/62005957/this-3m-analyst-is-no-longer-bearish-here-are-top-5-upgrades-for-friday",
-      "ts": 1790362021,
-      "tickers": [
-        "MMM",
-        "DG",
-        "FFBC",
-        "OMER"
       ],
       "source": "Benzinga",
       "wiim": false,
@@ -671,59 +457,295 @@
       "relevance": 0.543
     },
     {
-      "title": "This Nike Analyst Turns Bearish; Here Are Top 5 Downgrades For Friday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/09/62005901/this-nike-analyst-turns-bearish-here-are-top-5-downgrades-for-friday",
-      "ts": 1790361845,
+      "title": "TD Cowen Maintains Hold on Chevron, Raises Price Target to $215",
+      "url": "https://www.benzinga.com/news/26/09/62023703/td-cowen-maintains-hold-chevron-raises-price-target-215",
+      "ts": 1790604799,
       "tickers": [
-        "NKE",
-        "CMCSA",
-        "QSR",
-        "PCG"
+        "CVX"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.498
+      "relevance": 0.424
     },
     {
-      "title": "'Converse Pauses Social Media Ads, Marketing After Racism Uproar' - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/09/62004133/converse-pauses-social-media-ads-marketing-after-racism-uproar-bloomberg-news",
-      "ts": 1790358130,
+      "title": "'Top AI Researchers Call for Urgent Oversight of Self-Improving Systems' - WSJ Exclusive",
+      "url": "https://www.benzinga.com/government/26/09/62023168/top-ai-researchers-call-urgent-oversight-self-improving-systems-wsj-exclusive",
+      "ts": 1790604245,
       "tickers": [
-        "NKE"
+        "META",
+        "MSFT",
+        "AMZN",
+        "GOOG"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true,
-      "relevance": 0.315
+      "rel": false,
+      "relevance": 0.344
     },
     {
-      "title": "Shares of chemical and coatings companies are trading lower after Iran's Foreign Minister confirmed that Iran has submitted to the U.S. a seven-day plan to reopen the Strait of Hormuz and start discussions on Iran's nuclear program. The return of restricted Gulf-region exports to global markets may pressure margins.",
-      "url": "https://www.benzinga.com/quote/DOW",
-      "ts": 1790357927,
+      "title": "Why Is Boeing Stock Falling Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62023166/why-is-boeing-stock-falling-monday",
+      "ts": 1790604244,
       "tickers": [
-        "LYB",
-        "DOW"
+        "BA",
+        "ITA",
+        "PPA",
+        "AV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.322
+    },
+    {
+      "title": "Morgan Stanley Maintains Equal-Weight on McDonald's, Lowers Price Target to $297",
+      "url": "https://www.benzinga.com/news/26/09/62023136/morgan-stanley-maintains-equal-weight-mcdonald-s-lowers-price-target-297",
+      "ts": 1790604224,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.481
+    },
+    {
+      "title": "Boeing shares are trading lower after reports suggesting that a software glitch in the company's 737 MAX aircraft may cause an automated navigation tool to fail under certain landing scenarios.",
+      "url": "https://www.benzinga.com/quote/BA",
+      "ts": 1790604160,
+      "tickers": [
+        "BA"
       ],
       "source": "Benzinga",
       "wiim": true,
       "rel": false,
-      "relevance": 0.369
+      "relevance": 0.295
     },
     {
-      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/62003902/10-industrials-stocks-whale-activity-today-s-session",
-      "ts": 1790357711,
+      "title": "HSBC Maintains Hold on JPMorgan Chase, Raises Price Target to $377",
+      "url": "https://www.benzinga.com/news/26/09/62022777/hsbc-maintains-hold-jpmorgan-chase-raises-price-target-377",
+      "ts": 1790603884,
       "tickers": [
-        "DAL",
-        "BETA",
-        "BE",
-        "VRT"
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.444
+    },
+    {
+      "title": "HSBC Maintains Hold on Goldman Sachs Group, Raises Price Target to $1007",
+      "url": "https://www.benzinga.com/news/26/09/62022522/hsbc-maintains-hold-goldman-sachs-group-raises-price-target-1007",
+      "ts": 1790603543,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.45
+    },
+    {
+      "title": "Reported September 26, 2026: 'New Boeing 737 MAX Software Glitch Could Disrupt Navigation Feature; Aerospace Giant Working On Procedure For Pilots And Software Fix; FAA Investigation Could Affect Approval Of New Plane Model' - WSJ",
+      "url": "https://www.benzinga.com/news/26/09/62021951/reported-september-26-2026-new-boeing-737-max-software-glitch-could-disrupt-navigation-feature-aeros",
+      "ts": 1790602983,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.202
+    },
+    {
+      "title": "Why Is Rocket Lab Stock Falling Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62021213/why-is-rocket-lab-stock-falling-today",
+      "ts": 1790602457,
+      "tickers": [
+        "RKLB",
+        "BA",
+        "ARKQ",
+        "ARKX"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.415
+      "relevance": 0.586
+    },
+    {
+      "title": "Options Overpriced A Whole Summer Of Earnings, Here's The Report Card",
+      "url": "https://www.benzinga.com/Opinion/26/09/62020804/options-overpriced-a-whole-summer-of-earnings-heres-the-report-card",
+      "ts": 1790601170,
+      "tickers": [
+        "CRM",
+        "LRCX",
+        "MCO",
+        "ACI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.371
+    },
+    {
+      "title": "Billionaire Investor Warns Young Workers Not to Forget These 3 Skills as AI Reshapes Jobs — ‘Probably Not Going to Go Away’",
+      "url": "https://www.benzinga.com/news/26/09/62020648/billionaire-investor-warns-young-workers-not-to-forget-these-3-skills-as-ai-reshapes-jobs-probably-not-going-to-go-away",
+      "ts": 1790600995,
+      "tickers": [
+        "CG",
+        "MSFT",
+        "COUR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.348
+    },
+    {
+      "title": "Satya Nadella Says Xbox Is on Track for a Comeback After Major Layoffs — ‘I Feel Fantastic’ About Its Gaming IP",
+      "url": "https://www.benzinga.com/markets/equities/26/09/62020149/satya-nadella-says-xbox-is-on-track-for-a-comeback-after-major-layoffs-i-feel-fantastic-about-its-gaming-ip",
+      "ts": 1790600207,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.258
+    },
+    {
+      "title": "Stock of the Week: Is This the Bottom for McDonalds?",
+      "url": "https://www.benzinga.com/trading-ideas/technicals/26/09/62019946/stock-of-the-week-is-this-the-bottom-for-mcdonalds",
+      "ts": 1790599879,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.325
+    },
+    {
+      "title": "Guggenheim Reiterates Buy on Walt Disney, Maintains $120 Price Target",
+      "url": "https://www.benzinga.com/news/26/09/62019030/guggenheim-reiterates-buy-walt-disney-maintains-120-price-target",
+      "ts": 1790598438,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.39
+    },
+    {
+      "title": "'Meta, Google, Amazon, Microsoft draw Sen. Warren questions about AI tax subsidies' - CNBC",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/09/62018868/meta-google-amazon-microsoft-draw-sen-warren-questions-about-ai-tax-subsidies-cnbc",
+      "ts": 1790598002,
+      "tickers": [
+        "META",
+        "GOOG",
+        "GOOGL",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.42
+    },
+    {
+      "title": "Merck's CAPVAXIVE Added To Ontario's Publicly Funded Adult Immunization Program",
+      "url": "https://www.benzinga.com/news/26/09/62018619/merck-s-capvaxive-added-ontario-s-publicly-funded-adult-immunization-program",
+      "ts": 1790597375,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.333
+    },
+    {
+      "title": "Natera, UnitedHealth Group And A Tech Stock On CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/62017616/natera-unitedhealth-group-and-a-tech-stock-on-cnbcs-final-trades",
+      "ts": 1790595489,
+      "tickers": [
+        "UNH",
+        "HPE",
+        "NTRA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.433
+    },
+    {
+      "title": "Fusemachines Announces Access To IBM Fusion Infrastructure Through ModulAlre",
+      "url": "https://www.benzinga.com/news/26/09/62017462/fusemachines-announces-access-ibm-fusion-infrastructure-through-modulalre",
+      "ts": 1790595125,
+      "tickers": [
+        "FUSE",
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.332
+    },
+    {
+      "title": "Why Meta’s 13% Stock Gain Last Week Could Be Just the Start — Gene Munster Sees $11 Billion Revenue Opportunity That Could ‘Blow Us Away’",
+      "url": "https://www.benzinga.com/markets/equities/26/09/62017309/why-metas-13-stock-gain-last-week-could-be-just-the-start-gene-munster-sees-11-billion-revenue-opportunity-that-could-blow-us-away",
+      "ts": 1790594441,
+      "tickers": [
+        "META",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.352
+    },
+    {
+      "title": "Merck Signs Exclusive Global License Agreement With SciBrunch Therapeutics For SPR2015, An Investigational Preclinical Oral KRAS G12D Inhibitor, For $400M Up Front Plus Payments; Company To Record Pre-Tax Charge Of $0.13 Per Share In Q3",
+      "url": "https://www.benzinga.com/news/26/09/62016740/merck-signs-exclusive-global-license-agreement-scibrunch-therapeutics-spr2015-investigational-precli",
+      "ts": 1790592480,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.448
+    },
+    {
+      "title": "Nvidia's $5.4 Trillion Market Cap 'Seems Crazy' Next to $3.5 Trillion Russell 2000 Total, Says Charlie Bilello",
+      "url": "https://www.benzinga.com/markets/equities/26/09/62016564/nvidias-5-4-trillion-market-cap-seems-crazy-next-to-3-5-trillion-russell-2000-total-says-charlie-bilello",
+      "ts": 1790592001,
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.491
+    },
+    {
+      "title": "Nvidia Unveils AI Safety Platform to Keep AI Agents Under Control, Partners With Anthropic",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62016478/nvidia-unveils-ai-safety-platform-to-keep-ai-agents-under-control-partners-with-anthropic",
+      "ts": 1790591690,
+      "tickers": [
+        "NVDA",
+        "MSFT",
+        "CSCO",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.409
     }
   ],
   "portfolio_brief": {
@@ -744,9 +766,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Nvidia GPU Demand Is So Extreme, Even Bad Cloud Infrastructure Is Selling, SemiAnalysis Says",
-        "ts": 1790354602,
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/09/62002304/nvidia-gpu-demand-bad-cloud-infrastructure",
+        "title": "Nvidia's $5.4 Trillion Market Cap 'Seems Crazy' Next to $3.5 Trillion Russell 2000 Total, Says Charlie Bilello",
+        "ts": 1790592001,
+        "url": "https://www.benzinga.com/markets/equities/26/09/62016564/nvidias-5-4-trillion-market-cap-seems-crazy-next-to-3-5-trillion-russell-2000-total-says-charlie-bilello",
         "wiim": false
       },
       "filings": {
@@ -877,9 +899,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Benzinga Bulls and Bears: Costco, KB Home, McDonald’s",
-        "ts": 1790424012,
-        "url": "https://www.benzinga.com/markets/market-summary/26/09/62010895/benzinga-bulls-and-bears-costco-kb-home-mcdonalds",
+        "title": "Why Is Rocket Lab Stock Falling Today?",
+        "ts": 1790602457,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62021213/why-is-rocket-lab-stock-falling-today",
         "wiim": false
       },
       "filings": {
@@ -987,7 +1009,7 @@
     },
     "ADBE": {
       "name": "Adobe",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 7,
         "buy": 11,
@@ -1033,16 +1055,11 @@
         "score": 1.08,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Akamai Jumps on Anthropic Deal, 30-Year Yields Top 5.5%: Stock Market Today (CORRECTED)",
-        "ts": 1790354912,
-        "url": "https://www.benzinga.com/markets/equities/26/09/62001141/oil-slips-treasury-yields-19-year-high-akamai-anthropic-markets-friday",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": null,
         "periodic": null,
-        "insider30d": 7
+        "insider30d": 10
       },
       "explain": "36 analysts cover it — 30 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1080,7 +1097,7 @@
     },
     "LULU": {
       "name": "Lululemon",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 1,
         "buy": 1,
@@ -1108,7 +1125,7 @@
         },
         "insider30d": 1
       },
-      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
+      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: STRONG BUY."
     },
     "SPGI": {
       "name": "S&P Global",
@@ -1239,9 +1256,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "9 Of 11 Sectors Fall In Friday Trading As Cyclicals Lead",
-        "ts": 1790348984,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61998944/9-of-11-sectors-fall-in-friday-trading-as-cyclicals-lead",
+        "title": "8 Of 11 Sectors Fall In Monday Trading As Defensives Lead",
+        "ts": 1790607958,
+        "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/62026085/8-of-11-sectors-fall-in-monday-trading-as-defensives-lead",
         "wiim": false
       },
       "filings": {
