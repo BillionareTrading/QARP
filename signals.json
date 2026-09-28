@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "Sep 28, 1:57pm ET",
+  "generated_at": "Sep 28, 3:46pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -100,13 +100,13 @@
     "BSX": "2026-10-28",
     "RKLB": "2026-11-09",
     "AZN": "2026-10-30",
-    "DHR": "2026-10-21",
     "AZO": "2026-12-07",
     "ADBE": "2026-12-09",
     "ONON": "2026-11-10",
     "EXE": "2026-10-26",
     "LULU": "2026-12-09",
     "SPGI": "2026-10-22",
+    "DHR": "2026-10-21",
     "GILD": "2026-10-22",
     "SAP": "2026-10-21",
     "NVS": "2026-10-27",
@@ -119,10 +119,10 @@
   "sectors": [
     {
       "sector": "Semiconductor",
-      "dir": "mixed",
-      "driver": "Overall market strength and easing inflation concerns as investors retur…",
-      "note": "Amid overall market strength and easing inflation concerns as investors return to AI-related companies.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "dir": "down",
+      "driver": "Growing inflation concerns and rate-hike expectations as oil prices and …",
+      "note": "Amid growing inflation concerns and rate-hike expectations as oil prices and rising yields weigh on growth stocks.",
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Financial",
@@ -160,6 +160,18 @@
       "url": "https://www.benzinga.com/markets/prediction-markets/26/09/62029668/jensen-huang-runaway-ai-engineering-problem",
       "wiim": false
     },
+    "VRTX": {
+      "title": "Alphabet To Rally More Than 16%? Here Are 10 Top Analyst Forecasts For Monday",
+      "ts": 1790621213,
+      "url": "https://www.benzinga.com/news/26/09/62033428/alphabet-to-rally-more-than-16-here-are-10-top-analyst-forecasts-for-monday",
+      "wiim": false
+    },
+    "AZO": {
+      "title": "Alphabet To Rally More Than 16%? Here Are 10 Top Analyst Forecasts For Monday",
+      "ts": 1790621213,
+      "url": "https://www.benzinga.com/news/26/09/62033428/alphabet-to-rally-more-than-16-here-are-10-top-analyst-forecasts-for-monday",
+      "wiim": false
+    },
     "AVGO": {
       "title": "8 Of 11 Sectors Fall In Monday Trading As Defensives Lead",
       "ts": 1790607958,
@@ -182,8 +194,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$40",
-      "price": 36.4,
-      "upside": 9.9,
+      "price": 36.38,
+      "upside": 10.0,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -196,8 +208,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "price": 107.14,
-      "upside": 16.7,
+      "price": 106.85,
+      "upside": 17.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -210,7 +222,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 36.4,
+      "price": 36.38,
       "upside": null,
       "held": false,
       "uni": true,
@@ -224,7 +236,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$52",
-      "price": 36.4,
+      "price": 36.38,
       "upside": 42.9,
       "held": false,
       "uni": true,
@@ -238,8 +250,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 340.15,
-      "upside": 8.8,
+      "price": 338.6,
+      "upside": 9.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -252,7 +264,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$48",
-      "price": 36.4,
+      "price": 36.38,
       "upside": 31.9,
       "held": false,
       "uni": true,
@@ -266,8 +278,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 36.4,
-      "upside": 51.1,
+      "price": 36.38,
+      "upside": 51.2,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -280,8 +292,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$250",
-      "price": 206.44,
-      "upside": 21.1,
+      "price": 205.9,
+      "upside": 21.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -294,7 +306,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "price": 169.17,
+      "price": 169.11,
       "upside": 15.3,
       "held": false,
       "uni": true,
@@ -308,7 +320,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$171",
-      "price": 169.17,
+      "price": 169.11,
       "upside": 1.1,
       "held": false,
       "uni": true,
@@ -322,8 +334,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 36.4,
-      "upside": -17.6,
+      "price": 36.38,
+      "upside": -17.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -336,8 +348,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 87.07,
-      "upside": 9.1,
+      "price": 87.43,
+      "upside": 8.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -350,8 +362,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$37",
-      "price": 36.4,
-      "upside": 1.6,
+      "price": 36.38,
+      "upside": 1.7,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -364,8 +376,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$38",
-      "price": 36.4,
-      "upside": 4.4,
+      "price": 36.38,
+      "upside": 4.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -378,8 +390,8 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$34",
-      "price": 36.4,
-      "upside": -6.6,
+      "price": 36.38,
+      "upside": -6.5,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -392,8 +404,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "price": 206.44,
-      "upside": 4.1,
+      "price": 205.9,
+      "upside": 4.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -407,7 +419,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$37",
-      "upside": 1.6
+      "upside": 1.7
     },
     "KO": {
       "date": "2026-09-28",
@@ -416,7 +428,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "upside": 9.1
+      "upside": 8.7
     },
     "CVX": {
       "date": "2026-09-28",
@@ -425,7 +437,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "upside": 4.1
+      "upside": 4.4
     },
     "MMM": {
       "date": "2026-09-25",
@@ -443,7 +455,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "upside": 8.8
+      "upside": 9.3
     },
     "CSCO": {
       "date": "2026-09-22",
@@ -452,7 +464,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "upside": 16.7
+      "upside": 17.0
     },
     "CRM": {
       "date": "2026-09-18",
@@ -461,10 +473,117 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "upside": 37.5
+      "upside": 37.9
     }
   },
   "bz_news": [
+    {
+      "title": "President Trump, Vice President JD Vance, Secretary Of State Marco Rubio, Huang And SpaceX And Tesla Executive Elon Musk Will Attend Event For America.gov, A New AI-Powered Government Website Intended To Consolidate Services And Information From Across Agencies’ Websites",
+      "url": "https://www.benzinga.com/news/26/09/62034646/president-trump-vice-president-jd-vance-secretary-state-marco-rubio-huang-and-spacex-and-tesla-execu",
+      "ts": 1790624323,
+      "tickers": [
+        "SPY",
+        "NVDA",
+        "SPCX",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.276
+    },
+    {
+      "title": "NASA's Dana Weigel Says Boeing Has Implemented Fixes On Starliner-1 After Identifying The Cause Of The Spacecraft's Helium Leaks",
+      "url": "https://www.benzinga.com/news/26/09/62034132/nasa-s-dana-weigel-says-boeing-has-implemented-fixes-starliner-1-after-identifying-cause-spacecraft-",
+      "ts": 1790622900,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.248
+    },
+    {
+      "title": "NASA Chief Jared Isaacman Says Parts Of Boeing Starliner Spacecraft Will Be Redesigned Ahead Of A Crewed Flight In 2028; Boeing's Starliner To Fly Up To 5 Crewed Missions To The International Space Station For NASA",
+      "url": "https://www.benzinga.com/news/26/09/62033954/nasa-chief-jared-isaacman-says-parts-boeing-starliner-spacecraft-will-be-redesigned-ahead-crewed-fli",
+      "ts": 1790622466,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.252
+    },
+    {
+      "title": "Shares of semiconductor companies are trading lower amid growing inflation concerns and rate-hike expectations as oil prices and rising yields weigh on growth stocks.",
+      "url": "https://www.benzinga.com/quote/CRDO",
+      "ts": 1790621971,
+      "tickers": [
+        "CBRS",
+        "LSCC",
+        "MRVL",
+        "ALAB"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.467
+    },
+    {
+      "title": "Alphabet To Rally More Than 16%? Here Are 10 Top Analyst Forecasts For Monday",
+      "url": "https://www.benzinga.com/news/26/09/62033428/alphabet-to-rally-more-than-16-here-are-10-top-analyst-forecasts-for-monday",
+      "ts": 1790621213,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "MCD",
+        "VRTX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.445
+    },
+    {
+      "title": "'FAA Administrator Says Software Issue Will Delay Max 10 Certification, Not Sure How Long' - Reuters News",
+      "url": "https://www.benzinga.com/news/26/09/62032887/faa-administrator-says-software-issue-will-delay-max-10-certification-not-sure-how-long-reuters-news",
+      "ts": 1790620080,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.214
+    },
+    {
+      "title": "OpenAI President Greg Brockman Will Be Going To The White House AI Meeting",
+      "url": "https://www.benzinga.com/news/26/09/62032752/openai-president-greg-brockman-will-be-going-white-house-ai-meeting",
+      "ts": 1790619679,
+      "tickers": [
+        "MSFT",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.244
+    },
+    {
+      "title": "Strong Refining Will Drive Chevron, ExxonMobil Q3 Results: Analyst",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/62032652/strong-refining-will-drive-chevron-exxonmobil-q3-results-analyst",
+      "ts": 1790619399,
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.447
+    },
     {
       "title": "Melius Research Maintains Sell on McDonald's, Lowers Price Target to $230",
       "url": "https://www.benzinga.com/news/26/09/62031941/melius-research-maintains-sell-mcdonald-s-lowers-price-target-230",
@@ -520,7 +639,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.37
+      "relevance": 0.369
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Lowers Price Target to $95",
@@ -532,7 +651,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.428
+      "relevance": 0.427
     },
     {
       "title": "What Is Going on With Amazon Stock on Monday?",
@@ -589,7 +708,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.398
+      "relevance": 0.399
     },
     {
       "title": "UnitedHealthcare Government Programs CEO Bobby Hunter Says In LinkedIn Post He Is Stepping Into Role As President Of UnitedHealthcare",
@@ -696,116 +815,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.354
-    },
-    {
-      "title": "Apple, Amazon Face UK Regulator Lawsuit Against Alleged Unlawful Anticompetitive Agreements",
-      "url": "https://www.benzinga.com/news/26/09/62028960/apple-amazon-face-uk-regulator-lawsuit-against-alleged-unlawful-anticompetitive-agreements",
-      "ts": 1790612486,
-      "tickers": [
-        "AAPL",
-        "AMZN",
-        "VGK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.378
-    },
-    {
-      "title": "'An AI Operating System, Not a Chatbot': Oppenheimer Hails Microsoft's Enterprise Advantage",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62027202/an-ai-operating-system-not-a-chatbot-oppenheimer-hails-microsofts-enterprise-advantage",
-      "ts": 1790609802,
-      "tickers": [
-        "MSFT",
-        "XLK",
-        "VUG",
-        "IUSG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.332
-    },
-    {
-      "title": "Piper Sandler Maintains Neutral on Nike, Lowers Price Target to $38",
-      "url": "https://www.benzinga.com/news/26/09/62027040/piper-sandler-maintains-neutral-nike-lowers-price-target-38",
-      "ts": 1790609509,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.448
-    },
-    {
-      "title": "8 Of 11 Sectors Fall In Monday Trading As Defensives Lead",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/62026085/8-of-11-sectors-fall-in-monday-trading-as-defensives-lead",
-      "ts": 1790607958,
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA",
-        "IWM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.425
-    },
-    {
-      "title": "Evercore ISI Group Maintains In-Line on Nike, Lowers Price Target to $34",
-      "url": "https://www.benzinga.com/news/26/09/62025668/evercore-isi-group-maintains-line-nike-lowers-price-target-34",
-      "ts": 1790607309,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.494
-    },
-    {
-      "title": "Nvidia Tops $5.4T, Outvalues Russell 2000: Michael Burry’s AI Warning Raises ETF Questions",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/62025654/nvidia-tops-5-4t-outvalues-russell-2000-michael-burrys-ai-warning-raises-etf-questions",
-      "ts": 1790607291,
-      "tickers": [
-        "QQQ",
-        "AAPL",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.543
-    },
-    {
-      "title": "TD Cowen Maintains Hold on Chevron, Raises Price Target to $215",
-      "url": "https://www.benzinga.com/news/26/09/62023703/td-cowen-maintains-hold-chevron-raises-price-target-215",
-      "ts": 1790604799,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.424
-    },
-    {
-      "title": "'Top AI Researchers Call for Urgent Oversight of Self-Improving Systems' - WSJ Exclusive",
-      "url": "https://www.benzinga.com/government/26/09/62023168/top-ai-researchers-call-urgent-oversight-self-improving-systems-wsj-exclusive",
-      "ts": 1790604245,
-      "tickers": [
-        "META",
-        "MSFT",
-        "AMZN",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.344
     }
   ],
   "portfolio_brief": {
@@ -1003,38 +1012,6 @@
       },
       "explain": "35 analysts cover it — 28 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "DHR": {
-      "name": "Danaher",
-      "qarp": "HOLD-QUAL",
-      "consensus": {
-        "strongBuy": 12,
-        "buy": 15,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 32,
-        "bullish": 27,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.22,
-        "period": "2026-09-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-08-03",
-          "url": "https://www.sec.gov/Archives/edgar/data/313616/000119312526330652/d161342d8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
-        },
-        "insider30d": 0
-      },
-      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-    },
     "AZO": {
       "name": "AutoZone",
       "qarp": "STRONG BUY",
@@ -1051,7 +1028,12 @@
         "score": 1.09,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Alphabet To Rally More Than 16%? Here Are 10 Top Analyst Forecasts For Monday",
+        "ts": 1790621213,
+        "url": "https://www.benzinga.com/news/26/09/62033428/alphabet-to-rally-more-than-16-here-are-10-top-analyst-forecasts-for-monday",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1219,6 +1201,38 @@
       },
       "explain": "34 analysts cover it — 29 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "DHR": {
+      "name": "Danaher",
+      "qarp": "HOLD-QUAL",
+      "consensus": {
+        "strongBuy": 12,
+        "buy": 15,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 32,
+        "bullish": 27,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.22,
+        "period": "2026-09-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-08-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000119312526330652/d161342d8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm"
+        },
+        "insider30d": 0
+      },
+      "explain": "32 analysts cover it — 27 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+    },
     "GILD": {
       "name": "Gilead Sciences",
       "qarp": "HOLD-QUAL",
@@ -1384,7 +1398,12 @@
         "score": 1.06,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Alphabet To Rally More Than 16%? Here Are 10 Top Analyst Forecasts For Monday",
+        "ts": 1790621213,
+        "url": "https://www.benzinga.com/news/26/09/62033428/alphabet-to-rally-more-than-16-here-are-10-top-analyst-forecasts-for-monday",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1525,25 +1544,6 @@
       "summary": "Q2 FY2026 — revenue $234M (+62.0% YoY), diluted EPS $-0.08 (+38.5% YoY), net margin -21%. (as reported, GAAP)"
     },
     "AZN": null,
-    "DHR": {
-      "period": "Q2 FY2026",
-      "filed": "2026-07-21",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm",
-      "revenue": {
-        "fmt": "$6.3B",
-        "yoy": 5.5
-      },
-      "eps": {
-        "val": 1.23,
-        "yoy": 59.7
-      },
-      "net_income": {
-        "fmt": "$870M"
-      },
-      "margin": 13.9,
-      "summary": "Q2 FY2026 — revenue $6.3B (+5.5% YoY), diluted EPS $1.23 (+59.7% YoY), net margin 14%. (as reported, GAAP)"
-    },
     "AZO": {
       "period": "Q3 FY2026",
       "filed": "2026-06-12",
@@ -1634,6 +1634,25 @@
       "net_income": null,
       "margin": null,
       "summary": "Q3 FY2018 — revenue $1.5B (+2.2% YoY). (as reported, GAAP)"
+    },
+    "DHR": {
+      "period": "Q2 FY2026",
+      "filed": "2026-07-21",
+      "form": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000161/dhr-20260626.htm",
+      "revenue": {
+        "fmt": "$6.3B",
+        "yoy": 5.5
+      },
+      "eps": {
+        "val": 1.23,
+        "yoy": 59.7
+      },
+      "net_income": {
+        "fmt": "$870M"
+      },
+      "margin": 13.9,
+      "summary": "Q2 FY2026 — revenue $6.3B (+5.5% YoY), diluted EPS $1.23 (+59.7% YoY), net margin 14%. (as reported, GAAP)"
     },
     "GILD": {
       "period": "Q2 FY2026",
