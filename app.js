@@ -297,13 +297,42 @@ function legend(items) {
 // Single source of truth for the portfolio's day P&L. EXACT: each holding's day change is today's
 // value minus yesterday's (value / (1 + day%/100)) — NOT value*day%, which OVERSTATES when a holding
 // has a big % move (RKLB +16% made the front page read +$139 vs the true +$103). Used everywhere.
+// THE FUNDS ARE PART OF THE PORTFOLIO (owner order 2026-09-28). Every total, the day's move and
+// every weight include them. Before this the browser re-added the account as stocks + cash,
+// so the funds vanished from Account Value even when they were priced.
+function fundRows() { return DATA.etf_sleeve || []; }
+function repriceFund(s) {
+  if (s.shares != null && s.price != null) {
+    s.value = +(s.shares * s.price).toFixed(2);
+    if (s.cost != null) { s.gain = +(s.value - s.cost).toFixed(2); if (s.cost) s.gain_pct = +((s.gain / s.cost) * 100).toFixed(2); }
+  } else if (s.avg_cost && s.price != null) {
+    s.gain_pct = +((s.price / s.avg_cost - 1) * 100).toFixed(2);
+  }
+}
+function retotalAccount() {
+  const t = DATA.meta && DATA.meta.portfolio_totals;
+  if (!t || t.cash == null) return;
+  const stocks = (DATA.portfolio || []).reduce((a, h) => a + (h.value || 0), 0);
+  if (!stocks) return;
+  const funds = fundRows().reduce((a, r) => a + (r.value || 0), 0);
+  const fundCost = fundRows().reduce((a, r) => a + (r.cost || 0), 0);
+  // older payloads carried a stock-only cost; newer ones flag the funds' share as etf_cost
+  if (t._costAll == null) t._costAll = (t.etf_cost != null) ? t.cost : +(((t.cost || 0) + fundCost).toFixed(2));
+  t.cost = t._costAll;
+  t.positions = +stocks.toFixed(2);
+  t.etf_value = +funds.toFixed(2);
+  t.account = +(stocks + funds + t.cash).toFixed(2);
+  if (t.cost) { t.gain = +(stocks + funds - t.cost).toFixed(2); t.gain_pct = +((t.gain / t.cost) * 100).toFixed(2); }
+  (DATA.portfolio || []).forEach((h) => { if (h.value != null) h.weight_pct = +(h.value / t.account * 100).toFixed(1); });
+  fundRows().forEach((r) => { if (r.value != null) r.weight_pct = +(r.value / t.account * 100).toFixed(1); });
+}
 function portfolioDayPnl() {
   if (!privUnlocked()) {
     // Locked: dollar values are absent, but the SAME exact math survives in weight space —
     // prev_i ∝ w_i/(1+d_i), so pct = Σ(wPrev·d)/ΣwPrev is identical to the $ version
     // (the account denominator cancels). The $ figure itself stays owner-only (null).
     let acc = 0, wsum = 0;
-    (DATA.portfolio || []).forEach((h) => {
+    (DATA.portfolio || []).concat(fundRows()).forEach((h) => {
       if (typeof h.day_pct !== "number" || typeof h.weight_pct !== "number") return;
       const wPrev = h.weight_pct / (1 + h.day_pct / 100);
       acc += wPrev * h.day_pct; wsum += wPrev;
@@ -311,8 +340,8 @@ function portfolioDayPnl() {
     return { usd: null, pct: wsum ? acc / wsum : 0 };
   }
   let prev = 0, now = 0;
-  (DATA.portfolio || []).forEach((h) => {
-    if (typeof h.day_pct !== "number") return;
+  (DATA.portfolio || []).concat(fundRows()).forEach((h) => {
+    if (typeof h.day_pct !== "number" || typeof h.value !== "number") return;
     prev += h.value / (1 + h.day_pct / 100);
     now += h.value;
   });
@@ -335,7 +364,7 @@ function renderKpis() {
     { label: "Account Value", value: pUSD(t.account, 0), delta: privUnlocked() ? `${fmtUSD(t.cash, 2)} cash` : "owner-locked", dClass: "muted" },
     { label: todayLabel, note: todayNote, value: privUnlocked() ? fmtUSD(dayChg, 0) : fmtPct(dayPct), delta: privUnlocked() ? fmtPct(dayPct) : "book move", dClass: dayCls },
     { label: "Unrealized P/L", note: "open holdings only", value: privUnlocked() ? fmtUSD(t.gain, 0) : fmtPct(t.gain_pct), delta: privUnlocked() ? fmtPct(t.gain_pct) : "on cost", dClass: privUnlocked() ? signClass(t.gain) : signClass(t.gain_pct) },
-    { label: "Cost Basis", value: pUSD(t.cost, 0), delta: `${DATA.portfolio.length} holdings`, dClass: "muted" },
+    { label: "Cost Basis", value: pUSD(t.cost, 0), delta: `${DATA.portfolio.length + fundRows().length} holdings`, dClass: "muted" },
   ];
   if (t.div_income_yr || !privUnlocked()) cards.push({ label: "Dividends", note: "annual", value: pUSD(t.div_income_yr, 0) + "/yr",
     delta: privUnlocked() && t.positions ? fmtPct(t.div_income_yr / t.positions * 100, 2).replace("+", "") + " yield" : "", dClass: "muted" });
@@ -799,11 +828,14 @@ function renderEtfSleeve() {
   const cols = [
     { label: "Company", left: true, fmt: (s) => `<b>${s.ticker}</b> <span class="muted">${esc(s.name || "")}</span>` },
     { label: "Bought", fmt: (s) => s.buy_date || "—" },
-    { label: "Price", fmt: (s) => (s.price == null ? "—" : fmtUSD(s.price, 2)) },
+    { label: "Shares", fmt: (s) => (unlocked ? (s.shares == null ? "—" : (s.shares % 1 ? s.shares.toFixed(2) : s.shares)) : lockUSD()) },
+    { label: "Avg cost", fmt: (s) => (s.avg_cost == null ? "—" : fmtUSD(s.avg_cost, 2)) },
+    { label: "Price", fmt: (s) => (s.price == null ? "—" : `<span${s.price_asof ? ` title="last quote ${esc(String(s.price_asof))}"` : ""}>${fmtUSD(s.price, 2)}</span>`) },
     { label: "Day", fmt: (s) => `<span class="cell-day ${signClass(s.day_pct)}">${fmtPct(s.day_pct)}</span>` },
     { label: "Return", fmt: (s) => `<span class="${signClass(s.gain_pct)}">${fmtPct(s.gain_pct)}</span>` },
     { label: "Value", fmt: (s) => (unlocked ? (s.value == null ? "—" : fmtUSD(s.value, 0)) : lockUSD()) },
     { label: "P&L", fmt: (s) => (unlocked ? (s.gain == null ? "—" : `<span class="${signClass(s.gain)}">${fmtUSD(s.gain, 0)}</span>`) : lockUSD()) },
+    { label: "Weight", fmt: (s) => (s.weight_pct == null ? "—" : s.weight_pct.toFixed(1) + "%") },
   ];
   document.querySelector("#etf-sleeve-table thead").innerHTML =
     `<tr>${cols.map((c) => `<th class="${c.left ? "left" : ""}">${c.label}</th>`).join("")}</tr>`;
@@ -2376,16 +2408,22 @@ async function liveTick() {
     } catch (e) { fail++; }
   }));
 
+  // the funds ride the same live feed as the stocks — a blank fund row heals on the next tick
+  await Promise.all(fundRows().map(async (r) => {
+    try {
+      const q = await fetchQuote(r.ticker, key);
+      if (q && typeof q.c === "number" && q.c > 0) {
+        r.price = q.c; r.price_asof = null;
+        if (typeof q.dp === "number") r.day_pct = +q.dp.toFixed(2);
+        repriceFund(r);
+      }
+    } catch (e) { /* keep the last good fund quote */ }
+  }));
+
   if (ok > 0) {
     if (privUnlocked()) {   // dollar totals only exist on the owner tier
-      const positions = DATA.portfolio.reduce((s, h) => s + h.value, 0);
-      DATA.portfolio.forEach((h) => (h.weight_pct = +(h.value / positions * 100).toFixed(1)));
-      const t = DATA.meta.portfolio_totals;
-      t.positions = +positions.toFixed(2);
-      t.account = +(positions + t.cash).toFixed(2);
-      t.gain = +(positions - t.cost).toFixed(2);
-      t.gain_pct = +((t.gain / t.cost) * 100).toFixed(2);
-      flashAccount(t.account);
+      retotalAccount();
+      flashAccount(DATA.meta.portfolio_totals.account);
     }
     renderPortfolio();      // re-renders the KPI strip (inside this panel) + donut + table
     patchLivePrices();      // reflect holdings' live price/day in the Universe + Overview tabs
@@ -3230,11 +3268,8 @@ function mergePrivate(priv) {
     }
     positions += h.value || 0;
   });
-  if (positions && t.cash != null) {
-    t.positions = +positions.toFixed(2);
-    t.account = +(positions + t.cash).toFixed(2);
-    if (t.cost) { t.gain = +(positions - t.cost).toFixed(2); t.gain_pct = +((t.gain / t.cost) * 100).toFixed(2); }
-  }
+  fundRows().forEach(repriceFund);
+  if (positions && t.cash != null) retotalAccount();
 }
 // Fetch + decrypt private.enc with the remembered owner passcode and merge it in.
 // Wrong stored passcode (rotated) -> forget it and stay locked; network trouble -> keep
