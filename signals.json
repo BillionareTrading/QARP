@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-27",
-  "generated_at": "Sep 27, 11:31am ET",
+  "date": "2026-09-28",
+  "generated_at": "Sep 28, 5:23am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -155,16 +155,10 @@
   ],
   "holding_news": {
     "NVDA": {
-      "title": "Shares of chip companies are trading higher amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
-      "ts": 1789672874,
-      "url": "https://www.benzinga.com/quote/AVGO",
-      "wiim": true
-    },
-    "AVGO": {
-      "title": "Shares of chip companies are trading higher amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
-      "ts": 1789672874,
-      "url": "https://www.benzinga.com/quote/AVGO",
-      "wiim": true
+      "title": "Nvidia GPU Demand Is So Extreme, Even Bad Cloud Infrastructure Is Selling, SemiAnalysis Says",
+      "ts": 1790354602,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/62002304/nvidia-gpu-demand-bad-cloud-infrastructure",
+      "wiim": false
     },
     "RKLB": {
       "title": "Benzinga Bulls and Bears: Costco, KB Home, McDonald’s",
@@ -176,6 +170,12 @@
       "title": "Akamai Jumps on Anthropic Deal, 30-Year Yields Top 5.5%: Stock Market Today (CORRECTED)",
       "ts": 1790354912,
       "url": "https://www.benzinga.com/markets/equities/26/09/62001141/oil-slips-treasury-yields-19-year-high-akamai-anthropic-markets-friday",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "9 Of 11 Sectors Fall In Friday Trading As Cyclicals Lead",
+      "ts": 1790348984,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61998944/9-of-11-sectors-fall-in-friday-trading-as-cyclicals-lead",
       "wiim": false
     }
   },
@@ -393,6 +393,75 @@
   },
   "bz_news": [
     {
+      "title": "Bill Gates Tells Trump Not to Slow AI Innovation, Slams ‘Kill Switch’ Debate — Warns ‘A Billion Deaths’ Could Be Possible Without Safeguards",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62014119/bill-gates-tells-trump-not-to-slow-ai-innovation-slams-kill-switch-debate-warns-a-billion-deaths-could-be-possible-without-safeguards",
+      "ts": 1790580779,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.279
+    },
+    {
+      "title": "Trump Invites Anthropic CEO Dario Amodei to Dinner as AI Safety Debate Rages, Says US Can't Slow Down: 'Why Should We Give That Up?'",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62013063/trump-anthropic-ceo-dario-amodei-ai-safety-debate-dinner",
+      "ts": 1790560687,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.289
+    },
+    {
+      "title": "Big Tech Workers Speak Out After Getting Laid Off: 'I Applied to Work Cashier at Target and I Was Denied'",
+      "url": "https://www.benzinga.com/markets/offerings/26/09/62012402/big-tech-workers-speak-out-after-getting-laid-off-i-applied-to-work-cashier-at-target-and-i-was-denied",
+      "ts": 1790535618,
+      "tickers": [
+        "META",
+        "MSFT",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.204
+    },
+    {
+      "title": "Dow Jones and Nasdaq 100 Outlook: Three Catalysts to Watch This Week",
+      "url": "https://www.benzinga.com/markets/equities/26/09/62012315/dow-jones-and-nasdaq-100-outlook-3-catalysts-to-watch-this-week",
+      "ts": 1790529664,
+      "tickers": [
+        "NKE",
+        "MU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.49
+    },
+    {
+      "title": "Top Three S&P 500 Stocks to Watch This Week: Micron, Accenture, Tesla",
+      "url": "https://www.benzinga.com/markets/equities/26/09/62012300/top-3-sp-500-stocks-to-watch-this-week-micron-accenture-tesla",
+      "ts": 1790529047,
+      "tickers": [
+        "TSLA",
+        "MU",
+        "ACN",
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.394
+    },
+    {
       "title": "White House Has Few Options Left as Diesel Prices Surge Toward $7",
       "url": "https://www.benzinga.com/markets/commodities/26/09/62012192/diesel-prices-surge-towards-7-continues-with-few-white-house-options-left",
       "ts": 1790523013,
@@ -456,7 +525,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.35
+      "relevance": 0.349
     },
     {
       "title": "Nike Stock Has Become Oversold. Will Upcoming Earnings Lead to a Reversal?",
@@ -545,7 +614,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.303
+      "relevance": 0.302
     },
     {
       "title": "AMD Hits $1 Trillion, Muse Spooks Subscription Stocks: This Week on Wall Street",
@@ -626,7 +695,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.314
+      "relevance": 0.315
     },
     {
       "title": "Shares of chemical and coatings companies are trading lower after Iran's Foreign Minister confirmed that Iran has submitted to the U.S. a seven-day plan to reopen the Strait of Hormuz and start discussions on Iran's nuclear program. The return of restricted Gulf-region exports to global markets may pressure margins.",
@@ -655,77 +724,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.415
-    },
-    {
-      "title": "10 Health Care Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/62003901/10-health-care-stocks-whale-alerts-today-s-session",
-      "ts": 1790357711,
-      "tickers": [
-        "ABUS",
-        "NVO",
-        "ABBV",
-        "HIMS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/62003900/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1790357711,
-      "tickers": [
-        "AAPL",
-        "RIOT",
-        "IREN",
-        "ORCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "'JPMorgan Tweaks Data-Sharing Notices in Battle With Fintechs' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/09/62003337/jpmorgan-tweaks-data-sharing-notices-battle-fintechs-bloomberg",
-      "ts": 1790356359,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.353
-    },
-    {
-      "title": "CNBC Halftime Report Final Trades: Hewlett Packard Enterprise, Natera, UnitedHealth Group",
-      "url": "https://www.benzinga.com/quote/UNH",
-      "ts": 1790355718,
-      "tickers": [
-        "HPE",
-        "NTRA",
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.441
-    },
-    {
-      "title": "What Is Going on With Qualcomm Stock on Friday?",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62002905/what-is-going-on-with-qualcomm-stock-on-friday",
-      "ts": 1790355678,
-      "tickers": [
-        "QCOM",
-        "AAPL",
-        "TSM",
-        "ROYA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.406
     }
   ],
   "portfolio_brief": {
@@ -746,10 +744,10 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Shares of chip companies are trading higher amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
-        "ts": 1789672874,
-        "url": "https://www.benzinga.com/quote/AVGO",
-        "wiim": true
+        "title": "Nvidia GPU Demand Is So Extreme, Even Bad Cloud Infrastructure Is Selling, SemiAnalysis Says",
+        "ts": 1790354602,
+        "url": "https://www.benzinga.com/markets/prediction-markets/26/09/62002304/nvidia-gpu-demand-bad-cloud-infrastructure",
+        "wiim": false
       },
       "filings": {
         "latest8k": {
@@ -895,7 +893,7 @@
           "date": "2026-08-10",
           "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm"
         },
-        "insider30d": 4
+        "insider30d": 2
       },
       "explain": "26 analysts cover it — 21 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
@@ -1241,10 +1239,10 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Shares of chip companies are trading higher amid overall market strength, falling yields and declining oil prices. The industry may be boosted by recent talks between Intel and SK Hynix regarding U.S. chip manufacturing.",
-        "ts": 1789672874,
-        "url": "https://www.benzinga.com/quote/AVGO",
-        "wiim": true
+        "title": "9 Of 11 Sectors Fall In Friday Trading As Cyclicals Lead",
+        "ts": 1790348984,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/09/61998944/9-of-11-sectors-fall-in-friday-trading-as-cyclicals-lead",
+        "wiim": false
       },
       "filings": {
         "latest8k": {
