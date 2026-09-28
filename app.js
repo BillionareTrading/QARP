@@ -1539,7 +1539,7 @@ function renderDaily() {
     const ups = uni.filter((x) => x.day_pct > 0).length, downs = uni.filter((x) => x.day_pct < 0).length;
     ndEl.innerHTML = `<div class="numday-label">Number of the Day ${sessionSub()}</div>`
       + `<div class="numday-fig ${signClass(g.day_pct)}">${fmtPct(g.day_pct)}</div>`
-      + `<div class="numday-cap">${esc(g.name || g.ticker)} (${esc(g.ticker)}) led the Shariah universe. Breadth ran <b>${ups}</b> advancing to <b>${downs}</b> declining across ${uni.length} names.</div>`;
+      + `<div class="numday-cap">${esc(g.name || g.ticker)} (${esc(g.ticker)}) led the Shariah universe. <b>${ups}</b> stocks rose and <b>${downs}</b> fell across ${uni.length} names.</div>`;
   }
   renderDailyTicker();
   loadDailyBrief();    // original lead column + briefs from daily_brief.json (NO external links)
@@ -1816,7 +1816,7 @@ function autoBriefs() {
     const by = {};
     uni.forEach((x) => { const g = sectorGroup(x.sector); (by[g] = by[g] || []).push(x.day_pct); });
     const sm = Object.entries(by).map(([s, a]) => ({ s, avg: a.reduce((p, q) => p + q, 0) / a.length })).sort((a, b) => b.avg - a.avg);
-    if (sm.length) out.push({ headline: `Breadth: ${ups} up, ${downs} down`, body: `Across the ${uni.length}-name Shariah universe, ${sm[0].s} led on average (${fmtPct(sm[0].avg)}) while ${sm[sm.length - 1].s} lagged (${fmtPct(sm[sm.length - 1].avg)}).` });
+    if (sm.length) out.push({ headline: `${ups} stocks up, ${downs} down`, body: `Across the ${uni.length}-name Shariah universe, ${sm[0].s} led on average (${fmtPct(sm[0].avg)}) while ${sm[sm.length - 1].s} lagged (${fmtPct(sm[sm.length - 1].avg)}).` });
     const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct), g = sorted[0], l = sorted[sorted.length - 1];
     out.push({ headline: `${g.ticker} ${fmtPct(g.day_pct)} · ${l.ticker} ${fmtPct(l.day_pct)}`, body: `${g.name || g.ticker} led the board; ${l.name || l.ticker} was the weakest name on the day.` });
   }
