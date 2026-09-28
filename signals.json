@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "Sep 28, 4:17pm ET",
+  "generated_at": "Sep 28, 5:33pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -118,13 +118,6 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
-      "sector": "Software",
-      "dir": "down",
-      "driver": "Rising oil prices and Treasury yields weigh on broader market sentiment",
-      "note": "As rising oil prices and Treasury yields weigh on broader market sentiment. Elevated energy prices are fueling inflation concerns and expectations for interest rates to remain elevated, potentially pressuring growth-oriented stocks.",
-      "src": "Benzinga WIIM · price-confirmed"
-    },
-    {
       "sector": "Semiconductor",
       "dir": "down",
       "driver": "Growing inflation concerns and rate-hike expectations as oil prices and …",
@@ -137,6 +130,13 @@
       "driver": "Overall market weakness after Fed Chairman Warsh took a hawkish tone in …",
       "note": "Amid overall market weakness after Fed Chairman Warsh took a hawkish tone in his press conference and Q&A session after the FOMC rate hike.",
       "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Enterprise Software",
+      "dir": "mixed",
+      "driver": "AI executives from firms including Anthropic",
+      "note": "After AI executives from firms including Anthropic, OpenAI and SpaceXAI signaled that the industry's growth may have to be slowed, which may limit or slow threats to software vendors.",
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Chemical & Coatings",
@@ -194,8 +194,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$40",
-      "price": 36.45,
-      "upside": 9.7,
+      "price": 36.39,
+      "upside": 9.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -208,8 +208,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "price": 106.5,
-      "upside": 17.4,
+      "price": 106.74,
+      "upside": 17.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -222,7 +222,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 36.45,
+      "price": 36.39,
       "upside": null,
       "held": false,
       "uni": true,
@@ -236,8 +236,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$52",
-      "price": 36.45,
-      "upside": 42.7,
+      "price": 36.39,
+      "upside": 42.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -250,7 +250,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 338.55,
+      "price": 338.4,
       "upside": 9.3,
       "held": false,
       "uni": true,
@@ -264,8 +264,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$48",
-      "price": 36.45,
-      "upside": 31.7,
+      "price": 36.39,
+      "upside": 31.9,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -278,8 +278,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 36.45,
-      "upside": 50.9,
+      "price": 36.39,
+      "upside": 51.1,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -292,8 +292,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$250",
-      "price": 206.27,
-      "upside": 21.2,
+      "price": 206.37,
+      "upside": 21.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -306,8 +306,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "price": 169.51,
-      "upside": 15.0,
+      "price": 169.48,
+      "upside": 15.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,7 +320,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$171",
-      "price": 169.51,
+      "price": 169.48,
       "upside": 0.9,
       "held": false,
       "uni": true,
@@ -334,8 +334,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 36.45,
-      "upside": -17.7,
+      "price": 36.39,
+      "upside": -17.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -348,8 +348,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 87.36,
-      "upside": 8.7,
+      "price": 87.18,
+      "upside": 9.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -362,8 +362,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$37",
-      "price": 36.45,
-      "upside": 1.5,
+      "price": 36.39,
+      "upside": 1.7,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -376,8 +376,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$38",
-      "price": 36.45,
-      "upside": 4.3,
+      "price": 36.39,
+      "upside": 4.4,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -390,8 +390,8 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$34",
-      "price": 36.45,
-      "upside": -6.7,
+      "price": 36.39,
+      "upside": -6.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -404,7 +404,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "price": 206.27,
+      "price": 206.37,
       "upside": 4.2,
       "held": false,
       "uni": true,
@@ -419,7 +419,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$37",
-      "upside": 1.5
+      "upside": 1.7
     },
     "KO": {
       "date": "2026-09-28",
@@ -428,7 +428,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "upside": 8.7
+      "upside": 9.0
     },
     "CVX": {
       "date": "2026-09-28",
@@ -446,7 +446,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "upside": 15.0
+      "upside": 15.1
     },
     "AAPL": {
       "date": "2026-09-23",
@@ -464,7 +464,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "upside": 17.4
+      "upside": 17.1
     },
     "CRM": {
       "date": "2026-09-18",
@@ -473,7 +473,7 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "upside": 38.5
+      "upside": 38.6
     }
   },
   "bz_news": [
@@ -488,7 +488,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.369
+      "relevance": 0.368
     },
     {
       "title": "President Trump, Vice President JD Vance, Secretary Of State Marco Rubio, Huang And SpaceX And Tesla Executive Elon Musk Will Attend Event For America.gov, A New AI-Powered Government Website Intended To Consolidate Services And Information From Across Agencies’ Websites",
@@ -607,7 +607,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.443
+      "relevance": 0.442
     },
     {
       "title": "AI’s $1 Trillion Funding Problem Is Moving From Stocks to Bonds",
@@ -652,7 +652,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.369
+      "relevance": 0.37
     },
     {
       "title": "JP Morgan Maintains Overweight on Coca-Cola, Lowers Price Target to $95",
@@ -707,21 +707,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.296
-    },
-    {
-      "title": "Oil Rises; Meta’s Muse Trade Extends To CPU Stocks Like Intel, AMD, Arm, Qualcomm",
-      "url": "https://www.benzinga.com/Opinion/26/09/62031079/oil-rises-meta-muse-trade-extends-to-cpu-stocks-like-intel-amd-arm-qualcomm",
-      "ts": 1790615528,
-      "tickers": [
-        "USO",
-        "SPY",
-        "NVDA",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.398
     },
     {
       "title": "UnitedHealthcare Government Programs CEO Bobby Hunter Says In LinkedIn Post He Is Stepping Into Role As President Of UnitedHealthcare",
@@ -802,19 +787,32 @@
       "relevance": 0.377
     },
     {
-      "title": "Shares of software companies are trading lower as rising oil prices and Treasury yields weigh on broader market sentiment. Elevated energy prices are fueling inflation concerns and expectations for interest rates to remain elevated, potentially pressuring growth-oriented stocks.",
-      "url": "https://www.benzinga.com/quote/DSC",
-      "ts": 1790610203,
+      "title": "What Is Going on With Qualcomm Stock on Monday?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62029711/what-is-going-on-with-qualcomm-stock-on-monday-2",
+      "ts": 1790613423,
       "tickers": [
-        "CRM",
-        "MNDY",
-        "ORCL",
-        "BILL"
+        "QCOM",
+        "AAPL",
+        "ROYA",
+        "FTXL"
       ],
       "source": "Benzinga",
-      "wiim": true,
+      "wiim": false,
       "rel": true,
-      "relevance": 0.425
+      "relevance": 0.413
+    },
+    {
+      "title": "Jensen Huang Says Runaway AI Is an Engineering Problem: ‘We All Need to Hope’",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/62029668/jensen-huang-runaway-ai-engineering-problem",
+      "ts": 1790613348,
+      "tickers": [
+        "NVDA",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.354
     }
   ],
   "portfolio_brief": {
@@ -1370,8 +1368,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-07-30",
-          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000035/nbix-20260730.htm"
+          "date": "2026-09-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000045/nbix-20260925.htm"
         },
         "periodic": {
           "form": "10-Q",
