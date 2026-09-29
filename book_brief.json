@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Monday was a split session for Jaleel's book, with the overall portfolio sitting at a –1.22% unrealized loss. The headline mover was <strong>NVDA</strong> (+1.68%), the largest position at 12% of the book, continuing to carry its weight with a +12.8% open gain — Jensen Huang's public comments on AI safety kept the name in focus without denting sentiment. <strong>AZO</strong> (+1.43%) and <strong>DHR</strong> (+1.27%) also contributed positively, while <strong>NBIX</strong> popped +1.47% despite sitting –13.8% in the hole — a welcome day but not a trend yet. On the negative side, <strong>RKLB</strong> slid another –2.38%, deepening a –7.9% loss on a position the model already flags AVOID; there was a specific headline asking why the stock was falling today, which is never a good sign. <strong>ADBE</strong> dropped –1.89% and <strong>SPGI</strong> –1.83%, both adding to existing open losses.</p><p>The drift problem is real across several names. <strong>BSX</strong> (8.6% weight, STRONG BUY, QARP 80.1) is down –10.0% with a risk flag noting guidance was slashed and management is guiding flat through Q3 — price and thesis are clearly not aligned yet. <strong>ZTS</strong> (9.5%, STRONG BUY) is –9.3% in the red. <strong>LULU</strong> carries the most painful divergence: rated BUY with a QARP of 71.9 yet sitting –21.3% with five straight quarters of negative Americas comps and a guidance cut — conviction needs to be stress-tested, not assumed. <strong>EXE</strong> dropped –1.76% today and is –8.8% overall on a STRONG BUY rating; energy names are sensitive to macro and commodity shifts that can move faster than thesis updates.</p><p>Watch the pharma cluster into October 22, when drug-pricing policy risk is flagged for <strong>GILD</strong>, <strong>NVS</strong>, <strong>NBIX</strong>, and <strong>VRTX</strong> — MFN pricing deals and import tariffs create an overhang across ~5.7% of the book. <strong>ABT</strong> reports October 13 with an EPS guide already trimmed; it edged down –0.31% today and remains the book's second-largest position at 9.8%.</p>",
+  "your_book": "<p>Tuesday was a broad-based down day for Jaleel's book, with the portfolio's overall unrealized loss deepening to –2.21%. Only two holdings finished in the green: Broadcom (+1.59%) and Adobe (+0.81%), both smaller positions. The damage was led by Equifax (–3.66%), Lululemon (–3.61%), and Rocket Lab (–3.44%) — three names already carrying meaningful unrealized losses of –18.3%, –24.2%, and –11.0% respectively. Lululemon's slide is particularly pointed: a guidance cut (Americas comps –5% for five straight quarters, tariff pressure, China stalled) is an active thesis-breaker, yet the position still carries a STRONG BUY verdict. That gap between the framework's conviction and the deteriorating fundamentals is the clearest tension in the book right now. Defense stocks broadly entered bear-market territory, dragging Rocket Lab lower, which compounded an already-troubled position rated AVOID.</p><p>The two largest weights — NVIDIA (12.0%) and Abbott (9.9%) — held relatively steady, down just –0.74% and –0.09% respectively. AstraZeneca's –1.14% dip came despite the headline that it committed $2 billion to Summit Therapeutics' cancer drug ivonescimab, a pipeline-building move that supports the long-term thesis even if it weighed on shares today. Boston Scientific (–0.88%) and Zoetis (–1.62%) both sit at –10.8% unrealized losses with active guidance-cut risk flags, meaning the market has already repriced them once and the thesis needs to hold on execution alone.</p><p>The drift zone to watch: BSX and ZTS are both rated STRONG BUY while sitting on double-digit unrealized losses and elevated risk flags with upcoming earnings. NBIX (–1.41% today, –15.1% unrealized, STRONG BUY) and NVS (–0.93%, –10.6%) add to the pharma cluster's drag, where drug-pricing policy headwinds remain unresolved. Equifax's –3.66% single-session move on a small weight is worth monitoring — one day doesn't rewrite a thesis, but a –18.3% unrealized loss on an 81.1 QARP name deserves a closer look at what's driving persistent underperformance.</p>",
   "attention": [
-    {
-      "ticker": "RKLB",
-      "severity": "act",
-      "headline": "AVOID-rated name falling again with no thesis support",
-      "note": "RKLB dropped –2.38% today, is –7.9% in the hole, carries a QARP of 37.7, and is explicitly rated AVOID — there is no data-supported case for continuing to hold this position in a capital-preservation book."
-    },
     {
       "ticker": "LULU",
       "severity": "act",
-      "headline": "–21.3% loss with deteriorating fundamentals demands a conviction reset",
-      "note": "Five straight quarters of negative Americas comps, a guidance cut, tariff margin pressure, and China stalling make the BUY rating look increasingly aspirational — the next catalyst isn't until December 9, a long time to remain this far offside."
+      "headline": "Thesis vs. reality gap is widest in the book",
+      "note": "A –24.2% unrealized loss, an active guidance-cut flag (Americas comps –5% for five consecutive quarters, tariff margin erosion, China stalled), and today's –3.61% session loss together make the STRONG BUY verdict the most challenged call in the portfolio — next catalyst isn't until Dec 9, leaving the position exposed for months."
+    },
+    {
+      "ticker": "RKLB",
+      "severity": "act",
+      "headline": "AVOID-rated position deepens losses as defense enters bear market",
+      "note": "Rocket Lab is the only holding explicitly rated AVOID, carries a –11.0% unrealized loss, dropped –3.44% today amid a record losing streak for defense stocks, and has the lowest QARP score (38.1) in the book — the case for continued holding is not visible in the data provided."
     },
     {
       "ticker": "BSX",
       "severity": "watch",
-      "headline": "Guidance slashed, flat growth guided through Q3, –10% open loss",
-      "note": "Despite an 80.1 QARP and STRONG BUY verdict, price is disconnecting from thesis — management's own guidance cut to 7–8.5% growth and flat Q3 outlook means the earnings print on October 28 is a critical re-rating moment."
+      "headline": "Guidance slashed; Oct 28 earnings are a near-term verdict on the thesis",
+      "note": "FY26 growth was cut from 10.5% to 7–8.5%, management guided flat through Q3, and the position sits at –10.8% unrealized — Oct 28 earnings will either validate the STRONG BUY conviction or confirm the market's skepticism."
     },
     {
-      "ticker": "ADBE",
+      "ticker": "EFX",
       "severity": "watch",
-      "headline": "–1.89% today; narrative risk overriding solid numbers",
-      "note": "The risk flag notes that beat-and-raise wasn't enough to stop the selloff — AI-moat fears, a CFO exit, and ARR de-emphasis mean sentiment can keep dragging price lower regardless of fundamentals, and the next look isn't until December 9."
+      "headline": "–3.66% single-session drop on a –18.3% unrealized loss warrants scrutiny",
+      "note": "Equifax has the second-deepest unrealized loss in the book and one of the highest QARP scores (81.1), suggesting a quality name persistently mispriced — but the gap between framework conviction and price action needs a clear explanation before it can be dismissed as noise."
     }
   ],
-  "date": "2026-09-28",
-  "generated_at": "Sep 28, 5:34pm ET"
+  "date": "2026-09-29",
+  "generated_at": "Sep 29, 4:22pm ET"
 }
