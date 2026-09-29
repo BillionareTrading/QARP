@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-28",
-  "generated_at": "Sep 28, 8:54pm ET",
+  "date": "2026-09-29",
+  "generated_at": "Sep 29, 9:59am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -119,10 +119,10 @@
   "sectors": [
     {
       "sector": "Semiconductor",
-      "dir": "down",
+      "dir": "mixed",
       "driver": "Growing inflation concerns and rate-hike expectations as oil prices and …",
       "note": "Amid growing inflation concerns and rate-hike expectations as oil prices and rising yields weigh on growth stocks.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Financial",
@@ -154,6 +154,12 @@
     }
   ],
   "holding_news": {
+    "AZN": {
+      "title": "Summit Therapeutics Soars Nearly 20% After AstraZeneca Bets $2 Billion on Cancer Drug Ivonescimab",
+      "ts": 1790679430,
+      "url": "https://www.benzinga.com/news/health-care/26/09/62043821/summit-therapeutics-soars-nearly-20-after-astrazeneca-bets-2-billion-on-cancer-drug-ivonescimab",
+      "wiim": false
+    },
     "NVDA": {
       "title": "Jensen Huang Says Runaway AI Is an Engineering Problem: ‘We All Need to Hope’",
       "ts": 1790613348,
@@ -171,35 +177,9 @@
       "ts": 1790621213,
       "url": "https://www.benzinga.com/news/26/09/62033428/alphabet-to-rally-more-than-16-here-are-10-top-analyst-forecasts-for-monday",
       "wiim": false
-    },
-    "AVGO": {
-      "title": "8 Of 11 Sectors Fall In Monday Trading As Defensives Lead",
-      "ts": 1790607958,
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/62026085/8-of-11-sectors-fall-in-monday-trading-as-defensives-lead",
-      "wiim": false
-    },
-    "RKLB": {
-      "title": "Why Is Rocket Lab Stock Falling Today?",
-      "ts": 1790602457,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62021213/why-is-rocket-lab-stock-falling-today",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-21",
-      "ticker": "NKE",
-      "firm": "Stifel",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$40",
-      "price": 36.39,
-      "upside": 9.9,
-      "held": false,
-      "uni": true,
-      "qarp": "BUY"
-    },
     {
       "date": "2026-09-22",
       "ticker": "CSCO",
@@ -208,8 +188,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "price": 106.74,
-      "upside": 17.1,
+      "price": 106.55,
+      "upside": 17.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -222,11 +202,11 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 36.39,
+      "price": 35.98,
       "upside": null,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-09-23",
@@ -236,11 +216,11 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$52",
-      "price": 36.39,
-      "upside": 42.9,
+      "price": 35.98,
+      "upside": 44.5,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-09-23",
@@ -250,8 +230,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 338.4,
-      "upside": 9.3,
+      "price": 333.5,
+      "upside": 10.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -264,11 +244,11 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$48",
-      "price": 36.39,
-      "upside": 31.9,
+      "price": 35.98,
+      "upside": 33.4,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-09-23",
@@ -278,11 +258,11 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 36.39,
-      "upside": 51.1,
+      "price": 35.98,
+      "upside": 52.9,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-09-25",
@@ -292,8 +272,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$250",
-      "price": 206.37,
-      "upside": 21.1,
+      "price": 203.72,
+      "upside": 22.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -306,8 +286,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "price": 169.48,
-      "upside": 15.1,
+      "price": 170.42,
+      "upside": 14.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -320,8 +300,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$171",
-      "price": 169.48,
-      "upside": 0.9,
+      "price": 170.42,
+      "upside": 0.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -334,11 +314,11 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 36.39,
-      "upside": -17.6,
+      "price": 35.98,
+      "upside": -16.6,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-09-28",
@@ -348,8 +328,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 87.18,
-      "upside": 9.0,
+      "price": 87.04,
+      "upside": 9.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -362,11 +342,11 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$37",
-      "price": 36.39,
-      "upside": 1.7,
+      "price": 35.98,
+      "upside": 2.8,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-09-28",
@@ -376,11 +356,11 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$38",
-      "price": 36.39,
-      "upside": 4.4,
+      "price": 35.98,
+      "upside": 5.6,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-09-28",
@@ -390,11 +370,11 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$34",
-      "price": 36.39,
-      "upside": -6.6,
+      "price": 35.98,
+      "upside": -5.5,
       "held": false,
       "uni": true,
-      "qarp": "BUY"
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-09-28",
@@ -404,22 +384,59 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "price": 206.37,
-      "upside": 4.2,
+      "price": 203.72,
+      "upside": 5.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-09-29",
+      "ticker": "JNJ",
+      "firm": "JP Morgan",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$285",
+      "price": 271.29,
+      "upside": 5.1,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-09-29",
+      "ticker": "NKE",
+      "firm": "RBC Capital",
+      "action": "Maintains",
+      "rating": "Sector Perform",
+      "stance": "neutral",
+      "pt": "$40",
+      "price": 35.98,
+      "upside": 11.2,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
     }
   ],
   "rating_moves": {
     "NKE": {
-      "date": "2026-09-28",
-      "firm": "Deutsche Bank",
+      "date": "2026-09-29",
+      "firm": "RBC Capital",
       "action": "Maintains",
-      "rating": "Hold",
+      "rating": "Sector Perform",
       "stance": "neutral",
-      "pt": "$37",
-      "upside": 1.7
+      "pt": "$40",
+      "upside": 11.2
+    },
+    "JNJ": {
+      "date": "2026-09-29",
+      "firm": "JP Morgan",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$285",
+      "upside": 5.1
     },
     "KO": {
       "date": "2026-09-28",
@@ -428,7 +445,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "upside": 9.0
+      "upside": 9.1
     },
     "CVX": {
       "date": "2026-09-28",
@@ -437,7 +454,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "upside": 4.2
+      "upside": 5.5
     },
     "MMM": {
       "date": "2026-09-25",
@@ -446,7 +463,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "upside": 15.1
+      "upside": 14.4
     },
     "AAPL": {
       "date": "2026-09-23",
@@ -455,7 +472,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "upside": 9.3
+      "upside": 10.9
     },
     "CSCO": {
       "date": "2026-09-22",
@@ -464,7 +481,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "upside": 17.1
+      "upside": 17.3
     },
     "CRM": {
       "date": "2026-09-18",
@@ -473,10 +490,300 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "upside": 38.6
+      "upside": 39.8
     }
   },
   "bz_news": [
+    {
+      "title": "Jefferies Maintains Overweight on McDonald's, Lowers Price Target to $250",
+      "url": "https://www.benzinga.com/news/26/09/62050527/jefferies-maintains-overweight-mcdonald-s-lowers-price-target-250",
+      "ts": 1790690356,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.431
+    },
+    {
+      "title": "Jamie Dimon Proposes 'Big, Beautiful' Free Trade Pact Between US and Europe to Counter China: 'An Economic and Geopolitical Game Changer'",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/62050088/jamie-dimon-proposes-big-beautiful-free-trade-pact-between-us-and-europe-to-counter-china-an-economic-and-geopolitical-game-changer",
+      "ts": 1790689863,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.31
+    },
+    {
+      "title": "'Elon Musk, CEOs Of Palantir, Amazon, Service Now, Altimeter To Attend White House Meeting On AI; Microsoft CEO Satya Nadella To Attend White House Meeting On AI' - Axios",
+      "url": "https://www.benzinga.com/news/26/09/62050039/elon-musk-ceos-palantir-amazon-service-now-altimeter-attend-white-house-meeting-ai-microsoft-ceo-sat",
+      "ts": 1790689782,
+      "tickers": [
+        "TSLA",
+        "PLTR",
+        "AMZN",
+        "NOW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.403
+    },
+    {
+      "title": "JP Morgan Maintains Neutral on Johnson & Johnson, Raises Price Target to $285",
+      "url": "https://www.benzinga.com/news/26/09/62049048/jp-morgan-maintains-neutral-johnson-johnson-raises-price-target-285",
+      "ts": 1790688626,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.425
+    },
+    {
+      "title": "Goldman Sachs Earnings Are Imminent; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/62047419/goldman-sachs-earnings-are-imminent-these-most-accurate-analysts-revise-forecasts-ahead-of-earnings-call-3",
+      "ts": 1790685907,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.419
+    },
+    {
+      "title": "Mizuho Maintains Outperform on Walmart, Lowers Price Target to $125",
+      "url": "https://www.benzinga.com/news/26/09/62047373/mizuho-maintains-outperform-walmart-lowers-price-target-125",
+      "ts": 1790685796,
+      "tickers": [
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.423
+    },
+    {
+      "title": "RBC Capital Maintains Sector Perform on Nike, Lowers Price Target to $40",
+      "url": "https://www.benzinga.com/news/26/09/62046854/rbc-capital-maintains-sector-perform-nike-lowers-price-target-40",
+      "ts": 1790685149,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Johnson & Johnson To Present New Findings On IMAAVY For Treatment Of Generalized Myasthenia Gravis Across 15 Novel Abstracts At 2026 MGFA Scientific Session And AANEM Annual Meeting",
+      "url": "https://www.benzinga.com/news/26/09/62046321/johnson-johnson-present-new-findings-imaavy-treatment-generalized-myasthenia-gravis-across-15-novel-",
+      "ts": 1790683744,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.374
+    },
+    {
+      "title": "Caterpillar To Acquire The Fabick Chain Of Equipment Dealers With A Presence Across Four Midwestern States; Terms Not Disclosed",
+      "url": "https://www.benzinga.com/m/26/09/62045970/caterpillar-acquire-fabick-chain-equipment-dealers-presence-across-four-midwestern-states-terms-not-",
+      "ts": 1790683634,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.362
+    },
+    {
+      "title": "Anthropic Eyes Monster $2 Trillion IPO, Yet Deal Veteran Says It Won’t Be a Market Catalyst",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62044458/anthropic-eyes-monster-2-trillion-ipo-yet-deal-veteran-says-it-wont-be-a-market-catalyst",
+      "ts": 1790680722,
+      "tickers": [
+        "AAPL",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.349
+    },
+    {
+      "title": "Summit Therapeutics Soars Nearly 20% After AstraZeneca Bets $2 Billion on Cancer Drug Ivonescimab",
+      "url": "https://www.benzinga.com/news/health-care/26/09/62043821/summit-therapeutics-soars-nearly-20-after-astrazeneca-bets-2-billion-on-cancer-drug-ivonescimab",
+      "ts": 1790679430,
+      "tickers": [
+        "AZN",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.577
+    },
+    {
+      "title": "Boeing 737 MAX 10 Certification Delayed Over New Software Issue",
+      "url": "https://www.benzinga.com/markets/large-cap/26/09/62043724/boeing-737-max-10-certification-delayed-over-new-software-issue",
+      "ts": 1790678768,
+      "tickers": [
+        "BA",
+        "ITA",
+        "PPA",
+        "AV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.224
+    },
+    {
+      "title": "MU Stock Is ‘Absolutely in a Bubble,’ But Bulls Can Still Make Money, Says Analyst: ‘Best Cycle Anyone’ Has Ever Seen",
+      "url": "https://www.benzinga.com/markets/equities/26/09/62043659/micron-is-in-the-best-cycle-anyone-has-ever-seen-mu-stock-is-in-a-bubble-but-bulls-can-still-profit-says-analyst",
+      "ts": 1790678378,
+      "tickers": [
+        "MU",
+        "AAPL",
+        "NVDA",
+        "DELL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.398
+    },
+    {
+      "title": "Exploring The Competitive Space: Apple Versus Industry Peers In Technology Hardware, Storage &amp; Peripherals",
+      "url": "https://www.benzinga.com/news/26/09/62042510/exploring-competitive-space-apple-versus-industry-peers-technology-hardware-storage-amp-peripherals",
+      "ts": 1790675918,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.396
+    },
+    {
+      "title": "NASA Chief Gives Boeing Starliner Second Chance After 2024 Mishap — Uncrewed Flight Could Come By Early 2027: ‘Fastest Path to Preserving Reliable Crewed Access’ to LEO",
+      "url": "https://www.benzinga.com/news/space/26/09/62042448/nasa-chief-gives-boeing-starliner-second-chance-after-2024-mishap-uncrewed-flight-could-come-by-early-2027-fastest-path-to-preserving-reliable-crewed-access-to-leo",
+      "ts": 1790675544,
+      "tickers": [
+        "BA",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.297
+    },
+    {
+      "title": "Cyprumed's Oral Peptide Tablet Technology Enters Human Clinical Development As MSD Initiates Phase I Trial, Triggering Milestone Payment For Up To $493M From MSD",
+      "url": "https://www.benzinga.com/news/26/09/62041861/cyprumed-s-oral-peptide-tablet-technology-enters-human-clinical-development-msd-initiates-phase-i-tr",
+      "ts": 1790671697,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.414
+    },
+    {
+      "title": "SK Hynix's Solidigm Eyes 2027 IPO at up to $150 Billion Valuation, in Potential Record-Breaking US Chip Listing: Report (UPDATED)",
+      "url": "https://www.benzinga.com/markets/ipos/26/09/62010641/solidigm-ipo-sk-hynix-150-billion-valuation",
+      "ts": 1790669918,
+      "tickers": [
+        "INTC",
+        "ARM",
+        "CBRS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.371
+    },
+    {
+      "title": "Alexandr Wang Praises Meta's Muse for Tackling an Everyday Neighborhood Problem: 'Seriously Awesome Use Case'",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62041013/alexandr-wang-meta-muse-neighborhood-problem-ai-use-case",
+      "ts": 1790665606,
+      "tickers": [
+        "META",
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.16
+    },
+    {
+      "title": "Reported September 28, 'OpenAI Scraps Release of New AI Model Over Safety Concerns' - WSJ Exclusive",
+      "url": "https://www.benzinga.com/news/26/09/62040812/reported-september-28-openai-scraps-release-new-ai-model-over-safety-concerns-wsj-exclusive",
+      "ts": 1790663796,
+      "tickers": [
+        "MSFT",
+        "NVDA",
+        "META",
+        "ORCL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.228
+    },
+    {
+      "title": "Anthropic Bets Big On AI, Bleeds Billions: Key Details From The Reported IPO Prospectus",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62038979/anthropic-ipo-prospectus-ai-losses-billions-key-details",
+      "ts": 1790659271,
+      "tickers": [
+        "TSLA",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.356
+    },
+    {
+      "title": "Goldman Sachs Board Reportedly Discussed Plan for CEO David Solomon to Step Down, Hand the Top Job to President John Waldron",
+      "url": "https://www.benzinga.com/markets/equities/26/09/62038069/goldman-sachs-david-solomon-john-waldron-ceo-succession-plan",
+      "ts": 1790645657,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.249
+    },
+    {
+      "title": "MongoDB, Kodiak Sciences, Navitas Semiconductor, Boeing and Nvidia: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/09/62038042/mongodb-kodiak-sciences-navitas-semiconductor-boeing-and-nvidia-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1790644817,
+      "tickers": [
+        "NVDA",
+        "BA",
+        "MDB",
+        "NVTS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.482
+    },
     {
       "title": "The Wall Street Journal Reported Earlier,  Goldman Sachs Board Has Discussed Plan For John Waldron To Become CEO At End Of 2027 Or In 2028, With David Solomon Likely To Become Executive Chair After Stepping Down As CEO",
       "url": "https://www.benzinga.com/news/26/09/62037728/wall-street-journal-reported-earlier-goldman-sachs-board-has-discussed-plan-john-waldron-become-ceo-",
@@ -516,302 +823,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.369
-    },
-    {
-      "title": "President Trump, Vice President JD Vance, Secretary Of State Marco Rubio, Huang And SpaceX And Tesla Executive Elon Musk Will Attend Event For America.gov, A New AI-Powered Government Website Intended To Consolidate Services And Information From Across Agencies’ Websites",
-      "url": "https://www.benzinga.com/news/26/09/62034646/president-trump-vice-president-jd-vance-secretary-state-marco-rubio-huang-and-spacex-and-tesla-execu",
-      "ts": 1790624323,
-      "tickers": [
-        "SPY",
-        "NVDA",
-        "SPCX",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.275
-    },
-    {
-      "title": "NASA's Dana Weigel Says Boeing Has Implemented Fixes On Starliner-1 After Identifying The Cause Of The Spacecraft's Helium Leaks",
-      "url": "https://www.benzinga.com/news/26/09/62034132/nasa-s-dana-weigel-says-boeing-has-implemented-fixes-starliner-1-after-identifying-cause-spacecraft-",
-      "ts": 1790622900,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.248
-    },
-    {
-      "title": "NASA Chief Jared Isaacman Says Parts Of Boeing Starliner Spacecraft Will Be Redesigned Ahead Of A Crewed Flight In 2028; Boeing's Starliner To Fly Up To 5 Crewed Missions To The International Space Station For NASA",
-      "url": "https://www.benzinga.com/news/26/09/62033954/nasa-chief-jared-isaacman-says-parts-boeing-starliner-spacecraft-will-be-redesigned-ahead-crewed-fli",
-      "ts": 1790622466,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.252
-    },
-    {
-      "title": "Shares of semiconductor companies are trading lower amid growing inflation concerns and rate-hike expectations as oil prices and rising yields weigh on growth stocks.",
-      "url": "https://www.benzinga.com/quote/CRDO",
-      "ts": 1790621971,
-      "tickers": [
-        "CBRS",
-        "LSCC",
-        "MRVL",
-        "ALAB"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.467
-    },
-    {
-      "title": "Alphabet To Rally More Than 16%? Here Are 10 Top Analyst Forecasts For Monday",
-      "url": "https://www.benzinga.com/news/26/09/62033428/alphabet-to-rally-more-than-16-here-are-10-top-analyst-forecasts-for-monday",
-      "ts": 1790621213,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "MCD",
-        "VRTX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.445
-    },
-    {
-      "title": "'FAA Administrator Says Software Issue Will Delay Max 10 Certification, Not Sure How Long' - Reuters News",
-      "url": "https://www.benzinga.com/news/26/09/62032887/faa-administrator-says-software-issue-will-delay-max-10-certification-not-sure-how-long-reuters-news",
-      "ts": 1790620080,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.214
-    },
-    {
-      "title": "OpenAI President Greg Brockman Will Be Going To The White House AI Meeting",
-      "url": "https://www.benzinga.com/news/26/09/62032752/openai-president-greg-brockman-will-be-going-white-house-ai-meeting",
-      "ts": 1790619679,
-      "tickers": [
-        "MSFT",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.244
-    },
-    {
-      "title": "Strong Refining Will Drive Chevron, ExxonMobil Q3 Results: Analyst",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/62032652/strong-refining-will-drive-chevron-exxonmobil-q3-results-analyst",
-      "ts": 1790619399,
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.447
-    },
-    {
-      "title": "Melius Research Maintains Sell on McDonald's, Lowers Price Target to $230",
-      "url": "https://www.benzinga.com/news/26/09/62031941/melius-research-maintains-sell-mcdonald-s-lowers-price-target-230",
-      "ts": 1790617623,
-      "tickers": [
-        "MCD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.443
-    },
-    {
-      "title": "AI’s $1 Trillion Funding Problem Is Moving From Stocks to Bonds",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62031654/ai-trillion-funding-problem-moves-stocks-to-bonds",
-      "ts": 1790616999,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.341
-    },
-    {
-      "title": "5 Industrials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/62031627/5-industrials-stocks-whale-alerts-today-s-session",
-      "ts": 1790616908,
-      "tickers": [
-        "ENVX",
-        "EOSE",
-        "PL",
-        "LYFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.4
-    },
-    {
-      "title": "9 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/62031626/9-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1790616908,
-      "tickers": [
-        "SNOW",
-        "BBAI",
-        "CIFR",
-        "LAES"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.369
-    },
-    {
-      "title": "JP Morgan Maintains Overweight on Coca-Cola, Lowers Price Target to $95",
-      "url": "https://www.benzinga.com/news/26/09/62031563/jp-morgan-maintains-overweight-coca-cola-lowers-price-target-95",
-      "ts": 1790616729,
-      "tickers": [
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.427
-    },
-    {
-      "title": "What Is Going on With Amazon Stock on Monday?",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62031537/what-is-going-on-with-amazon-stock-on-monday-2",
-      "ts": 1790616653,
-      "tickers": [
-        "AMZN",
-        "WMT",
-        "FDN",
-        "FFOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.388
-    },
-    {
-      "title": "Meta Is Coming for Europe’s Bond Market: AI Debt Is Going Global",
-      "url": "https://www.benzinga.com/markets/bonds/26/09/62031534/meta-ai-debt-europe",
-      "ts": 1790616641,
-      "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.34
-    },
-    {
-      "title": "Robert (Bobby) Hunter Posts On LinkedIn \"I'm excited and grateful to share that I am stepping into a new role as President of UnitedHealthcare...\"",
-      "url": "https://www.benzinga.com/news/26/09/62031213/robert-bobby-hunter-posts-linkedin-i-m-excited-and-grateful-share-i-am-stepping-new-role-president-u",
-      "ts": 1790615808,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.296
-    },
-    {
-      "title": "UnitedHealthcare Government Programs CEO Bobby Hunter Says In LinkedIn Post He Is Stepping Into Role As President Of UnitedHealthcare",
-      "url": "https://www.benzinga.com/news/26/09/62030996/unitedhealthcare-government-programs-ceo-bobby-hunter-says-linkedin-post-he-stepping-role-president-",
-      "ts": 1790615499,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.289
-    },
-    {
-      "title": "CNBC Halftime Report Final Trades: Okta, AbbVie, UnitedHealth Group",
-      "url": "https://www.benzinga.com/quote/UNH",
-      "ts": 1790614860,
-      "tickers": [
-        "OKTA",
-        "ABBV",
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.509
-    },
-    {
-      "title": "FTAI Acquires 27 Boeing 737-700s to Expand Aviation Businesses",
-      "url": "https://www.benzinga.com/markets/large-cap/26/09/62030506/ftai-acquires-27-boeing-737-700s-to-expand-aviation-businesses",
-      "ts": 1790614609,
-      "tickers": [
-        "FTAI",
-        "BA",
-        "SFY",
-        "SSMG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.313
-    },
-    {
-      "title": "Why Is Intel Stock Falling on Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62030357/why-is-intel-stock-falling-on-monday-2",
-      "ts": 1790614377,
-      "tickers": [
-        "INTC",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.374
-    },
-    {
-      "title": "Deutsche Bank Maintains Hold on Nike, Lowers Price Target to $37",
-      "url": "https://www.benzinga.com/news/26/09/62030089/deutsche-bank-maintains-hold-nike-lowers-price-target-37",
-      "ts": 1790613894,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.393
-    },
-    {
-      "title": "Merck, Daiichi Sankyo Scrap FDA Application for Lung Cancer Drug",
-      "url": "https://www.benzinga.com/news/fda/26/09/62030058/merck-and-daiichi-sankyo-fda-application-lung-cancer-drug",
-      "ts": 1790613866,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.377
     }
   ],
   "portfolio_brief": {
@@ -964,12 +975,7 @@
         "score": 1.08,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Why Is Rocket Lab Stock Falling Today?",
-        "ts": 1790602457,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62021213/why-is-rocket-lab-stock-falling-today",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1001,7 +1007,12 @@
         "score": 1.14,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Summit Therapeutics Soars Nearly 20% After AstraZeneca Bets $2 Billion on Cancer Drug Ivonescimab",
+        "ts": 1790679430,
+        "url": "https://www.benzinga.com/news/health-care/26/09/62043821/summit-therapeutics-soars-nearly-20-after-astrazeneca-bets-2-billion-on-cancer-drug-ivonescimab",
+        "wiim": false
+      },
       "filings": {
         "latest8k": null,
         "periodic": null,
@@ -1136,7 +1147,7 @@
     },
     "LULU": {
       "name": "Lululemon",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 1,
         "buy": 1,
@@ -1164,7 +1175,7 @@
         },
         "insider30d": 1
       },
-      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: BUY."
+      "explain": "40 analysts cover it — 2 bullish, 31 hold, 7 bearish (consensus <b>Hold</b>). Our QARP view: STRONG BUY."
     },
     "SPGI": {
       "name": "S&P Global",
@@ -1326,12 +1337,7 @@
         "score": 1.21,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "8 Of 11 Sectors Fall In Monday Trading As Defensives Lead",
-        "ts": 1790607958,
-        "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/62026085/8-of-11-sectors-fall-in-monday-trading-as-defensives-lead",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
