@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "Sep 29, 4:20pm ET",
+  "generated_at": "Sep 29, 8:17pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -133,10 +133,10 @@
     },
     {
       "sector": "Enterprise Software",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "AI executives from firms including Anthropic",
       "note": "After AI executives from firms including Anthropic, OpenAI and SpaceXAI signaled that the industry's growth may have to be slowed, which may limit or slow threats to software vendors.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Chemical & Coatings",
@@ -154,28 +154,22 @@
     }
   ],
   "holding_news": {
+    "AVGO": {
+      "title": "Donald Trump, Cathie Wood Bet on the Same 32 Stocks – Some Might Surprise You",
+      "ts": 1790713923,
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/62066420/donald-trump-cathie-wood-same-32-stocks",
+      "wiim": false
+    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1790703313,
       "url": "https://www.benzinga.com/markets/options/26/09/62059836/10-information-technology-stocks-whale-alerts-today-s-session",
       "wiim": false
     },
-    "AVGO": {
-      "title": "'Anthropic Discloses up to $84.5 Billion in SpaceX Compute Agreements' - The Information",
-      "ts": 1790695905,
-      "url": "https://www.benzinga.com/news/26/09/62055011/anthropic-discloses-84-5-billion-spacex-compute-agreements-information",
-      "wiim": false
-    },
     "RKLB": {
       "title": "Defense Stocks Enter Bear Market, Hit Longest Losing Streak on Record",
       "ts": 1790694714,
       "url": "https://www.benzinga.com/etfs/specialty-etfs/26/09/62054200/defense-stocks-7-straight-weeks-xar-record-losing-streak",
-      "wiim": false
-    },
-    "AZN": {
-      "title": "Summit Therapeutics Soars Nearly 20% After AstraZeneca Bets $2 Billion on Cancer Drug Ivonescimab",
-      "ts": 1790679430,
-      "url": "https://www.benzinga.com/news/health-care/26/09/62043821/summit-therapeutics-soars-nearly-20-after-astrazeneca-bets-2-billion-on-cancer-drug-ivonescimab",
       "wiim": false
     }
   },
@@ -188,8 +182,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "price": 106.86,
-      "upside": 17.0,
+      "price": 106.94,
+      "upside": 16.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -202,7 +196,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 35.86,
+      "price": 35.84,
       "upside": null,
       "held": false,
       "uni": true,
@@ -216,8 +210,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$52",
-      "price": 35.86,
-      "upside": 45.0,
+      "price": 35.84,
+      "upside": 45.1,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -230,7 +224,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 329.43,
+      "price": 329.4,
       "upside": 12.3,
       "held": false,
       "uni": true,
@@ -244,7 +238,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$48",
-      "price": 35.86,
+      "price": 35.84,
       "upside": 33.9,
       "held": false,
       "uni": true,
@@ -258,8 +252,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 35.86,
-      "upside": 53.4,
+      "price": 35.84,
+      "upside": 53.5,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -272,8 +266,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$250",
-      "price": 204.24,
-      "upside": 22.4,
+      "price": 204.38,
+      "upside": 22.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -286,7 +280,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "price": 168.59,
+      "price": 168.49,
       "upside": 15.7,
       "held": false,
       "uni": true,
@@ -300,8 +294,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$171",
-      "price": 168.59,
-      "upside": 1.4,
+      "price": 168.49,
+      "upside": 1.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -314,7 +308,7 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 35.86,
+      "price": 35.84,
       "upside": -16.3,
       "held": false,
       "uni": true,
@@ -328,7 +322,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 86.86,
+      "price": 86.84,
       "upside": 9.4,
       "held": false,
       "uni": true,
@@ -342,7 +336,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$37",
-      "price": 35.86,
+      "price": 35.84,
       "upside": 3.2,
       "held": false,
       "uni": true,
@@ -356,7 +350,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$38",
-      "price": 35.86,
+      "price": 35.84,
       "upside": 6.0,
       "held": false,
       "uni": true,
@@ -370,8 +364,8 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$34",
-      "price": 35.86,
-      "upside": -5.2,
+      "price": 35.84,
+      "upside": -5.1,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -384,8 +378,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "price": 204.24,
-      "upside": 5.3,
+      "price": 204.38,
+      "upside": 5.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -398,7 +392,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "price": 329.43,
+      "price": 329.4,
       "upside": 9.3,
       "held": false,
       "uni": true,
@@ -412,8 +406,8 @@
       "rating": "Sector Outperform",
       "stance": "bullish",
       "pt": "$180",
-      "price": 149.12,
-      "upside": 20.7,
+      "price": 149.28,
+      "upside": 20.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -426,7 +420,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$285",
-      "price": 267.51,
+      "price": 267.57,
       "upside": 6.5,
       "held": false,
       "uni": true,
@@ -440,8 +434,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$40",
-      "price": 35.86,
-      "upside": 11.5,
+      "price": 35.84,
+      "upside": 11.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -455,7 +449,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$40",
-      "upside": 11.5
+      "upside": 11.6
     },
     "MRK": {
       "date": "2026-09-29",
@@ -464,7 +458,7 @@
       "rating": "Sector Outperform",
       "stance": "bullish",
       "pt": "$180",
-      "upside": 20.7
+      "upside": 20.6
     },
     "JNJ": {
       "date": "2026-09-29",
@@ -500,7 +494,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "upside": 5.3
+      "upside": 5.2
     },
     "MMM": {
       "date": "2026-09-25",
@@ -518,7 +512,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$125",
-      "upside": 17.0
+      "upside": 16.9
     },
     "CRM": {
       "date": "2026-09-18",
@@ -527,10 +521,106 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "upside": 39.6
+      "upside": 39.8
     }
   },
   "bz_news": [
+    {
+      "title": "If You Invested $1000 In Visa Stock 15 Years Ago, You Would Have This Much Today",
+      "url": "https://www.benzinga.com/news/26/09/62068696/if-you-invested-1000-visa-stock-15-years-ago-you-would-have-much-today",
+      "ts": 1790724635,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.36
+    },
+    {
+      "title": "Here's How Much $100 Invested In UnitedHealth Group 15 Years Ago Would Be Worth Today",
+      "url": "https://www.benzinga.com/news/26/09/62068318/here-s-how-much-100-invested-unitedhealth-group-15-years-ago-would-be-worth-today",
+      "ts": 1790720119,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.326
+    },
+    {
+      "title": "'Boeing wins Navy next-gen fighter F/A-XX competition'- Breaking Defense",
+      "url": "https://www.benzinga.com/news/26/09/62068094/boeing-wins-navy-next-gen-fighter-f-xx-competition-breaking-defense",
+      "ts": 1790718035,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.279
+    },
+    {
+      "title": "Meta’s Muse Has Found Apple’s Weak Spot, Bank of America Warns",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62067675/apple-stock-meta-muse-siri-ai-intent-layer",
+      "ts": 1790716711,
+      "tickers": [
+        "META",
+        "AAPL",
+        "AMZN",
+        "SHOP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.358
+    },
+    {
+      "title": "'Anthropic IPO prospectus lays bare deep dependence on Big Tech partners; Sales through Amazon and Google were $2.16B  in 2025, filing seen by Reuters shows'- Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/09/62067121/anthropic-ipo-prospectus-lays-bare-deep-dependence-big-tech-partners-sales-through-amazon-and-google",
+      "ts": 1790715527,
+      "tickers": [
+        "AMZN",
+        "GOOG",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.374
+    },
+    {
+      "title": "Microsoft Brings OpenAI’s Autonomous ‘Dots’ AI Workers Into the Enterprise",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/62066468/microsoft-openai-dots-ai-workers-enterprise",
+      "ts": 1790713974,
+      "tickers": [
+        "MSFT",
+        "$BTC",
+        "META",
+        "MSTR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.342
+    },
+    {
+      "title": "Donald Trump, Cathie Wood Bet on the Same 32 Stocks – Some Might Surprise You",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/62066420/donald-trump-cathie-wood-same-32-stocks",
+      "ts": 1790713923,
+      "tickers": [
+        "ARKK",
+        "ARKW",
+        "ARKF",
+        "ARKQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.305
+    },
     {
       "title": "Salesforce Announces Deal To Acquire AI Customer Research Platform Listen Labs; Terms Not Disclosed, Expects Close In Fiscal Q4 2027",
       "url": "https://www.benzinga.com/m/26/09/62065195/salesforce-announces-deal-acquire-ai-customer-research-platform-listen-labs-terms-not-disclosed-expe",
@@ -541,7 +631,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.376
+      "relevance": 0.375
     },
     {
       "title": "President Trump Says Will Be Naming AI Czar In Next Three Or Four Days",
@@ -679,7 +769,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.388
+      "relevance": 0.387
     },
     {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
@@ -735,7 +825,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.31
+      "relevance": 0.309
     },
     {
       "title": "OpenAI Unveils Dots Always-On Autonomous Agents Across Paid Tiers",
@@ -759,7 +849,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.51
+      "relevance": 0.511
     },
     {
       "title": "Disney's Q4 Should Look Healthy. Its 2027 Film Slate Is the Harder Setup, Analyst Says",
@@ -772,94 +862,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.388
-    },
-    {
-      "title": "'Disney Makes More Job Cuts, Laying Off Several Hundred Employees' - Variety",
-      "url": "https://www.benzinga.com/news/26/09/62057934/disney-makes-more-job-cuts-laying-several-hundred-employees-variety",
-      "ts": 1790700025,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.244
-    },
-    {
-      "title": "Steve Eisman Says AI Boom Is ‘For Real’ as Cisco Growth Hits 18%: Here’s What Could Derail It",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/62057909/steve-eisman-cisco-ai-growth-price-war",
-      "ts": 1790699996,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.492
-    },
-    {
-      "title": "Live On CNBC, OpenAI CEO Sam Altman Says Not Threatened About Meta's Zuckerberg; No IPO Timeline In Mind; Latest Model Was Held Back Out Of An Abundance Of Caution",
-      "url": "https://www.benzinga.com/quote/META",
-      "ts": 1790698994,
-      "tickers": [
-        "MSFT",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.313
-    },
-    {
-      "title": "Live On CNBC, Sam Altman Says We Are Pacing Our Progress; Not Aware Of Anything That Is As Serious As The Hugging Face Incident",
-      "url": "https://www.benzinga.com/quote/MSFT",
-      "ts": 1790698661,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.275
-    },
-    {
-      "title": "Live On CNBC, OpenAI CEO Sam Altman Says We Will Have Many Great New Models To Come; Alignment, Safety, Monitoring, Security Have To Stay Way Ahead Of Capabilities",
-      "url": "https://www.benzinga.com/quote/MSFT",
-      "ts": 1790698377,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.36
-    },
-    {
-      "title": "Oil Near $100 Should Lift Energy. Instead XLE ETF Is Falling — Here's Why",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/62056334/oil-near-100-should-lift-energy-instead-xle-etf-is-falling-heres-why",
-      "ts": 1790697890,
-      "tickers": [
-        "XLE",
-        "XOM",
-        "NVDA",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.395
-    },
-    {
-      "title": "OpenAI B2B Revenue Grows More Than 100% In Q3; Annualized Revenue Run Rate Has Grown More Than 70% Since The Beginning Of Q3",
-      "url": "https://www.benzinga.com/news/26/09/62055462/openai-b2b-revenue-grows-more-100-q3-annualized-revenue-run-rate-has-grown-more-70-beginning-q3",
-      "ts": 1790696495,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.376
     }
   ],
   "portfolio_brief": {
@@ -1049,12 +1051,7 @@
         "score": 1.14,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Summit Therapeutics Soars Nearly 20% After AstraZeneca Bets $2 Billion on Cancer Drug Ivonescimab",
-        "ts": 1790679430,
-        "url": "https://www.benzinga.com/news/health-care/26/09/62043821/summit-therapeutics-soars-nearly-20-after-astrazeneca-bets-2-billion-on-cancer-drug-ivonescimab",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": null,
         "periodic": null,
@@ -1375,9 +1372,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "'Anthropic Discloses up to $84.5 Billion in SpaceX Compute Agreements' - The Information",
-        "ts": 1790695905,
-        "url": "https://www.benzinga.com/news/26/09/62055011/anthropic-discloses-84-5-billion-spacex-compute-agreements-information",
+        "title": "Donald Trump, Cathie Wood Bet on the Same 32 Stocks – Some Might Surprise You",
+        "ts": 1790713923,
+        "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/62066420/donald-trump-cathie-wood-same-32-stocks",
         "wiim": false
       },
       "filings": {
