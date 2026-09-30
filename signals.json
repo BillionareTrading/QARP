@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-29",
-  "generated_at": "Sep 29, 8:17pm ET",
+  "date": "2026-09-30",
+  "generated_at": "Sep 30, 9:34am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -154,54 +154,26 @@
     }
   ],
   "holding_news": {
+    "GILD": {
+      "title": "Bill Clinton Sounds Alarm on HIV Funding: ‘Cheaper Medicines Mean Nothing If They Never Reach People’",
+      "ts": 1790760382,
+      "url": "https://www.benzinga.com/news/health-care/26/09/62071762/bill-clinton-sounds-alarm-on-hiv-funding-cheaper-medicines-mean-nothing-if-they-never-reach-people",
+      "wiim": false
+    },
+    "NVDA": {
+      "title": "Bill Gates Pushes Back Against Trump, Jensen Huang's Approach to AI Safety: ‘You Can’t Rely on the Industry to Self-Regulate’",
+      "ts": 1790757535,
+      "url": "https://www.benzinga.com/markets/tech/26/09/62071334/bill-gates-pushes-back-against-trump-jensen-huangs-approach-to-ai-safety-you-cant-rely-on-the-industry-to-self-regulate",
+      "wiim": false
+    },
     "AVGO": {
       "title": "Donald Trump, Cathie Wood Bet on the Same 32 Stocks – Some Might Surprise You",
       "ts": 1790713923,
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/62066420/donald-trump-cathie-wood-same-32-stocks",
       "wiim": false
-    },
-    "NVDA": {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "ts": 1790703313,
-      "url": "https://www.benzinga.com/markets/options/26/09/62059836/10-information-technology-stocks-whale-alerts-today-s-session",
-      "wiim": false
-    },
-    "RKLB": {
-      "title": "Defense Stocks Enter Bear Market, Hit Longest Losing Streak on Record",
-      "ts": 1790694714,
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/09/62054200/defense-stocks-7-straight-weeks-xar-record-losing-streak",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-22",
-      "ticker": "CSCO",
-      "firm": "Piper Sandler",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$125",
-      "price": 106.94,
-      "upside": 16.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-22",
-      "ticker": "NKE",
-      "firm": "StoneX",
-      "action": "Initiates Coverage On",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "",
-      "price": 35.84,
-      "upside": null,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
     {
       "date": "2026-09-23",
       "ticker": "NKE",
@@ -439,9 +411,55 @@
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-09-30",
+      "ticker": "PG",
+      "firm": "TD Cowen",
+      "action": "Reiterates",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$150",
+      "price": 148.32,
+      "upside": 1.1,
+      "held": false,
+      "uni": true,
+      "qarp": "BUY"
+    },
+    {
+      "date": "2026-09-30",
+      "ticker": "CSCO",
+      "firm": "Bernstein",
+      "action": "Initiates Coverage On",
+      "rating": "Market Perform",
+      "stance": "neutral",
+      "pt": "$110",
+      "price": 106.94,
+      "upside": 2.9,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "PG": {
+      "date": "2026-09-30",
+      "firm": "TD Cowen",
+      "action": "Reiterates",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$150",
+      "upside": 1.1
+    },
+    "CSCO": {
+      "date": "2026-09-30",
+      "firm": "Bernstein",
+      "action": "Initiates Coverage On",
+      "rating": "Market Perform",
+      "stance": "neutral",
+      "pt": "$110",
+      "upside": 2.9
+    },
     "NKE": {
       "date": "2026-09-29",
       "firm": "RBC Capital",
@@ -505,15 +523,6 @@
       "pt": "$195",
       "upside": 15.7
     },
-    "CSCO": {
-      "date": "2026-09-22",
-      "firm": "Piper Sandler",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$125",
-      "upside": 16.9
-    },
     "CRM": {
       "date": "2026-09-18",
       "firm": "Citizens",
@@ -526,152 +535,106 @@
   },
   "bz_news": [
     {
-      "title": "If You Invested $1000 In Visa Stock 15 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/09/62068696/if-you-invested-1000-visa-stock-15-years-ago-you-would-have-much-today",
-      "ts": 1790724635,
+      "title": "Caterpillar Plans About $1B Investment In North Carolina, Including New Sanford Plant For Compact Track Loaders And Telehandlers",
+      "url": "https://www.benzinga.com/quote/CAT",
+      "ts": 1790773396,
       "tickers": [
-        "V"
+        "CAT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.36
+      "relevance": 0.249
     },
     {
-      "title": "Here's How Much $100 Invested In UnitedHealth Group 15 Years Ago Would Be Worth Today",
-      "url": "https://www.benzinga.com/news/26/09/62068318/here-s-how-much-100-invested-unitedhealth-group-15-years-ago-would-be-worth-today",
-      "ts": 1790720119,
+      "title": "RBC Capital Maintains Sector Perform on Dow, Lowers Price Target to $29",
+      "url": "https://www.benzinga.com/news/26/09/62077316/rbc-capital-maintains-sector-perform-dow-lowers-price-target-29",
+      "ts": 1790773192,
       "tickers": [
-        "UNH"
+        "DOW"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.326
+      "relevance": 0.481
     },
     {
-      "title": "'Boeing wins Navy next-gen fighter F/A-XX competition'- Breaking Defense",
-      "url": "https://www.benzinga.com/news/26/09/62068094/boeing-wins-navy-next-gen-fighter-f-xx-competition-breaking-defense",
-      "ts": 1790718035,
+      "title": "SpaceX’s Starlink Just Got More Powerful, and Cable Giants Comcast, Charter May Feel the Heat",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62077217/spacexs-starlink-just-got-more-powerful-and-cable-giants-comcast-charter-may-feel-the-heat",
+      "ts": 1790773011,
       "tickers": [
-        "BA"
+        "SPCX",
+        "CMCSA",
+        "VZ",
+        "CHTR"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.279
+      "relevance": 0.304
     },
     {
-      "title": "Meta’s Muse Has Found Apple’s Weak Spot, Bank of America Warns",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62067675/apple-stock-meta-muse-siri-ai-intent-layer",
-      "ts": 1790716711,
+      "title": "This Dow Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Wednesday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/09/62077130/this-dow-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-wednesday",
+      "ts": 1790772889,
       "tickers": [
-        "META",
-        "AAPL",
-        "AMZN",
-        "SHOP"
+        "DOW",
+        "MRNA",
+        "MBLY",
+        "PCG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.508
+    },
+    {
+      "title": "TD Cowen Reiterates Hold on Procter & Gamble, Maintains $150 Price Target",
+      "url": "https://www.benzinga.com/news/26/09/62076566/td-cowen-reiterates-hold-procter-gamble-maintains-150-price-target",
+      "ts": 1790771841,
+      "tickers": [
+        "PG"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.358
+      "relevance": 0.433
     },
     {
-      "title": "'Anthropic IPO prospectus lays bare deep dependence on Big Tech partners; Sales through Amazon and Google were $2.16B  in 2025, filing seen by Reuters shows'- Reuters Exclusive",
-      "url": "https://www.benzinga.com/news/26/09/62067121/anthropic-ipo-prospectus-lays-bare-deep-dependence-big-tech-partners-sales-through-amazon-and-google",
-      "ts": 1790715527,
+      "title": "Microsoft To Rally Around 20%? Here Are 10 Top Analyst Forecasts For Wednesday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/62076005/microsoft-to-rally-around-20-here-are-10-top-analyst-forecasts-for-wednesday",
+      "ts": 1790770928,
       "tickers": [
-        "AMZN",
-        "GOOG",
-        "GOOGL",
+        "MSFT",
+        "MRNA",
+        "KMX",
+        "RACE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.417
+    },
+    {
+      "title": "What's Going on With Nebius Stock on Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62075977/whats-going-on-with-nebius-stock-on-wednesday",
+      "ts": 1790770794,
+      "tickers": [
+        "NBIS",
+        "META",
         "MSFT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.374
+      "relevance": 0.506
     },
     {
-      "title": "Microsoft Brings OpenAI’s Autonomous ‘Dots’ AI Workers Into the Enterprise",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/09/62066468/microsoft-openai-dots-ai-workers-enterprise",
-      "ts": 1790713974,
+      "title": "Merck’s Tulisokibart Meets Phase 2b Primary Endpoint In Hidradenitis Suppurativa, Achieves HiSCR50 of 72% And 64% Vs 35% for Placebo At Week 16",
+      "url": "https://www.benzinga.com/news/26/09/62075951/merck-s-tulisokibart-meets-phase-2b-primary-endpoint-hidradenitis-suppurativa-achieves-hiscr50-72-an",
+      "ts": 1790770728,
       "tickers": [
-        "MSFT",
-        "$BTC",
-        "META",
-        "MSTR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.342
-    },
-    {
-      "title": "Donald Trump, Cathie Wood Bet on the Same 32 Stocks – Some Might Surprise You",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/62066420/donald-trump-cathie-wood-same-32-stocks",
-      "ts": 1790713923,
-      "tickers": [
-        "ARKK",
-        "ARKW",
-        "ARKF",
-        "ARKQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.305
-    },
-    {
-      "title": "Salesforce Announces Deal To Acquire AI Customer Research Platform Listen Labs; Terms Not Disclosed, Expects Close In Fiscal Q4 2027",
-      "url": "https://www.benzinga.com/m/26/09/62065195/salesforce-announces-deal-acquire-ai-customer-research-platform-listen-labs-terms-not-disclosed-expe",
-      "ts": 1790712266,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "President Trump Says Will Be Naming AI Czar In Next Three Or Four Days",
-      "url": "https://www.benzinga.com/news/26/09/62065015/president-trump-says-will-be-naming-ai-czar-next-three-or-four-days",
-      "ts": 1790712058,
-      "tickers": [
-        "SPY",
-        "TSLA",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.307
-    },
-    {
-      "title": "President Trump On Meeting With AI Leaders, Says Signed AI Document That Is A Form Of Protection, I Think Document Is Morally Binding; Think We Are Seeing Tremendous Self-Policing, AI Leaders Understand That; We Are Thking Of Creating Committee To Watch Over",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/09/62064747/president-trump-meeting-ai-leaders-says-signed-ai-document-form-protection-i-think-document-morally-",
-      "ts": 1790711648,
-      "tickers": [
-        "SPY",
-        "TSLA",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.257
-    },
-    {
-      "title": "U.S. House Speaker Johnson On Meeting With AI Leaders, Says We Discussed Striking Right Balance; Discussed AI Companies Ensuring Safety; AI Providers Committed To Building Trust; We Just Signed Accord On AI, Which Is A Statement Of Standards; We'll Continue To Assess And Deliberate In Coming Days; We Can Keep Edge In A Safe Way",
-      "url": "https://www.benzinga.com/news/26/09/62064377/u-s-house-speaker-johnson-on-meeting-with-ai-leaders-says-we-discussed-striking-right-balance-discussed-ai-companies-ensuring-safety-ai-providers-committed-to-building-trust-we-just-signed-accord-2",
-      "ts": 1790710883,
-      "tickers": [
-        "TSLA",
-        "META",
-        "SPY",
-        "AMZN"
+        "MRK"
       ],
       "source": "Benzinga",
       "wiim": false,
@@ -679,131 +642,78 @@
       "relevance": 0.319
     },
     {
-      "title": "Trump Says Self-Regulation Is Very Important In AI After Meeting With AI Leaders; Says US Has Big Lead On AI And Wants To Keep It",
-      "url": "https://www.benzinga.com/news/26/09/62062231/trump-says-self-regulation-very-important-ai-after-meeting-ai-leaders-says-us-has-big-lead-ai-and-wa",
-      "ts": 1790707120,
+      "title": "Anthropic IPO Filing Reveals a Major Vulnerability: Nearly 50% of Sales Flow Through Amazon and Google as Revenue Concentration Raises Risks: Report",
+      "url": "https://www.benzinga.com/markets/private-markets/26/09/62075939/anthropic-ipo-filing-reveals-a-major-vulnerability-nearly-50-of-sales-flow-through-amazon-and-google-as-revenue-concentration-raises-risks-report",
+      "ts": 1790770697,
+      "tickers": [
+        "AMZN",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.334
+    },
+    {
+      "title": "Citigroup Downgrades Dow to Neutral, Lowers Price Target to $30",
+      "url": "https://www.benzinga.com/news/26/09/62074745/citigroup-downgrades-dow-neutral-lowers-price-target-30",
+      "ts": 1790768486,
+      "tickers": [
+        "DOW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.52
+    },
+    {
+      "title": "Moody’s Mark Zandi Warns Wall Street is 'Too Optimistic' About the American Consumer: 'I Am Getting More Nervous...'",
+      "url": "https://www.benzinga.com/markets/economic-data/26/09/62074596/moodys-mark-zandi-warns-wall-street-is-too-optimistic-about-the-american-consumer-i-am-getting-more-nervous",
+      "ts": 1790768240,
       "tickers": [
         "SPY",
-        "MSFT",
-        "AMZN",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.32
-    },
-    {
-      "title": "EXCLUSIVE: Greenland’s Power Bet Is Bigger Than Microsoft’s Nuclear Deal",
-      "url": "https://www.benzinga.com/markets/commodities/26/09/62060858/greenland-hydropower-bet-bigger-than-microsoft-nuclear-deal",
-      "ts": 1790704812,
-      "tickers": [
-        "MSFT",
-        "GRML",
-        "CEG"
+        "QQQ",
+        "DIA",
+        "V"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.323
+      "relevance": 0.355
     },
     {
-      "title": "Morgan Stanley Reiterates Overweight on Apple, Maintains $360 Price Target",
-      "url": "https://www.benzinga.com/news/26/09/62060119/morgan-stanley-reiterates-overweight-apple-maintains-360-price-target",
-      "ts": 1790703675,
+      "title": "Dangote Petroleum Refinery And Petrochemicals FZE Selects Honeywell To Provide Process Technologies, Licensing, Engineering Services, Proprietary Catalysts, Equipment And Digital Solutions For Planned 700K Barrel-Per-Day Refinery In Kenya",
+      "url": "https://www.benzinga.com/news/26/09/62074559/dangote-petroleum-refinery-and-petrochemicals-fze-selects-honeywell-provide-process-technologies-lic",
+      "ts": 1790768044,
       "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.458
-    },
-    {
-      "title": "Disney Is Laying Off A Few Hundred Employees In Human Resources And Tech Departments",
-      "url": "https://www.benzinga.com/news/26/09/62060089/disney-laying-few-hundred-employees-human-resources-and-tech-departments",
-      "ts": 1790703639,
-      "tickers": [
-        "DIS"
+        "HON"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.284
+      "relevance": 0.326
     },
     {
-      "title": "'OpenAI Targets $30 Billion in New Funding at $1.4 Trillion Value' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/09/62060071/openai-targets-30-billion-new-funding-1-4-trillion-value-bloomberg",
-      "ts": 1790703613,
+      "title": "Meta’s Next AI Gold Mine? Muse Targets 200 Million Small Businesses As Zuckerberg Eyes Fees, Subscriptions",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62074469/metas-next-ai-gold-mine-muse-targets-200-million-small-businesses-as-zuckerberg-eyes-fees-subscriptions",
+      "ts": 1790767916,
       "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.343
-    },
-    {
-      "title": "CrowdStrike Launches Its Falcon Platform In OpenAI Marketplace",
-      "url": "https://www.benzinga.com/news/26/09/62059915/crowdstrike-launches-its-falcon-platform-openai-marketplace",
-      "ts": 1790703419,
-      "tickers": [
-        "CRWD",
-        "MSFT"
+        "META",
+        "AAPL",
+        "IGPT",
+        "PNQI"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.332
+      "relevance": 0.331
     },
     {
-      "title": "10 Consumer Discretionary Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/62059837/10-consumer-discretionary-stocks-whale-activity-today-s-session",
-      "ts": 1790703314,
-      "tickers": [
-        "TSLA",
-        "W",
-        "DKNG",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.387
-    },
-    {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/09/62059836/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1790703313,
-      "tickers": [
-        "NVDA",
-        "AMD",
-        "MSFT",
-        "CRWV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "Corning Lands $3 Billion AT&T Fiber Deal",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62059505/corning-lands-3-billion-att-fiber-deal",
-      "ts": 1790702745,
-      "tickers": [
-        "VZ",
-        "GLW",
-        "T"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.343
-    },
-    {
-      "title": "'Beyond Spring and Fall': Apple Prepares Organization Restructure for Accelerating Product Launches",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62059359/beyond-spring-and-fall-apple-prepares-organization-restructure-for-accelerating-product-launches",
-      "ts": 1790702395,
+      "title": "Is Apple's Strategy Paying Off? Strong iPhone 18 Pro China Demand Sparks Revenue Upside",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62074286/is-apples-strategy-paying-off-strong-iphone-18-pro-china-demand-sparks-revenue-upside",
+      "ts": 1790767494,
       "tickers": [
         "AAPL",
         "SCHG",
@@ -813,38 +723,44 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.314
+      "relevance": 0.36
     },
     {
-      "title": "OpenAI Working With Microsoft To Integrate Specialist Dots With Their Enterprise Governance, Security Controls In Agent 365",
-      "url": "https://www.benzinga.com/news/26/09/62059161/openai-working-microsoft-integrate-specialist-dots-their-enterprise-governance-security-controls-age",
-      "ts": 1790701944,
+      "title": "AI’s Semiconductor Boom Has a Clear Center of Gravity: Taiwan Semiconductor",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62074203/ais-semiconductor-boom-has-a-clear-center-of-gravity-taiwan-semiconductor",
+      "ts": 1790766928,
       "tickers": [
-        "MSFT"
+        "TSM",
+        "INTC",
+        "SSNLF",
+        "AMKR"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false,
-      "relevance": 0.309
+      "rel": true,
+      "relevance": 0.562
     },
     {
-      "title": "OpenAI Unveils Dots Always-On Autonomous Agents Across Paid Tiers",
-      "url": "https://www.benzinga.com/news/26/09/62058841/openai-unveils-dots-always-autonomous-agents-across-paid-tiers",
-      "ts": 1790701556,
+      "title": "Mark Zuckerberg's Muse Could Charge You for Saving You Money — META President Reveals AI Agent's Potential Monetization Model",
+      "url": "https://www.benzinga.com/markets/equities/26/09/62073591/mark-zuckerbergs-muse-could-charge-you-for-saving-you-money-meta-president-reveals-ai-agents-potential-monetization-model",
+      "ts": 1790765886,
       "tickers": [
-        "MSFT"
+        "META",
+        "WMT",
+        "SHOP",
+        "CRM"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false,
-      "relevance": 0.325
+      "rel": true,
+      "relevance": 0.278
     },
     {
-      "title": "Johnson & Johnson Q3 Preview: Analyst Projects In-Line Sales, Earnings Miss",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/62058693/johnson-johnson-q3-preview-analyst-projects-in-line-sales-earnings-miss",
-      "ts": 1790701285,
+      "title": "Bernstein Initiates Coverage On Cisco Systems with Market Perform Rating, Announces Price Target of $110",
+      "url": "https://www.benzinga.com/news/26/09/62073390/bernstein-initiates-coverage-cisco-systems-market-perform-rating-announces-price-target-110",
+      "ts": 1790764856,
       "tickers": [
-        "JNJ"
+        "CSCO"
       ],
       "source": "Benzinga",
       "wiim": false,
@@ -852,16 +768,114 @@
       "relevance": 0.511
     },
     {
-      "title": "Disney's Q4 Should Look Healthy. Its 2027 Film Slate Is the Harder Setup, Analyst Says",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/62058115/disneys-q4-should-look-healthy-its-2027-film-slate-is-the-harder-setup-analyst-says",
-      "ts": 1790700217,
+      "title": "'Apple Is Finally Ready to Enter Its Next Big Category: the Smart Home' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/09/62073184/apple-finally-ready-enter-its-next-big-category-smart-home-bloomberg",
+      "ts": 1790764578,
       "tickers": [
-        "DIS"
+        "AAPL",
+        "AMZN",
+        "GOOG"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false,
-      "relevance": 0.388
+      "rel": true,
+      "relevance": 0.289
+    },
+    {
+      "title": "At 5% Yields, Big Tech Marches Onto the Death Ground",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62073107/at-5-yields-big-tech-marches-onto-the-death-ground",
+      "ts": 1790764374,
+      "tickers": [
+        "META",
+        "SPY",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.339
+    },
+    {
+      "title": "Could AI Agents Cut Apple Out of the Checkout? Analyst Flags Meta’s Muse Threat",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62072492/could-ai-agents-cut-apple-out-of-the-checkout-analyst-flags-metas-muse-threat",
+      "ts": 1790762812,
+      "tickers": [
+        "AAPL",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.36
+    },
+    {
+      "title": "Johnson & Johnson Gears Up For Q3 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/62072451/johnson-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts-5",
+      "ts": 1790762710,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.478
+    },
+    {
+      "title": "Top 3 Consumer Stocks That May Rocket Higher In Q3",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/62072234/top-3-consumer-stocks-that-may-rocket-higher-in-q3-2",
+      "ts": 1790762468,
+      "tickers": [
+        "MCD",
+        "HD",
+        "PAG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.41
+    },
+    {
+      "title": "Competitor Analysis: Evaluating Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/09/62072115/competitor-analysis-evaluating-apple-and-competitors-technology-hardware-storage-amp-peripherals-ind",
+      "ts": 1790762346,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.378
+    },
+    {
+      "title": "Micron’s AI Boom Isn’t Done yet, Analysts Say — but Can the Stock Keep Exploding Higher?",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62071978/microns-ai-boom-isnt-done-yet-analysts-say-but-can-the-stock-keep-exploding-higher",
+      "ts": 1790761400,
+      "tickers": [
+        "MU",
+        "AAPL",
+        "SOXX",
+        "SOXQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.415
+    },
+    {
+      "title": "Bill Clinton Sounds Alarm on HIV Funding: ‘Cheaper Medicines Mean Nothing If They Never Reach People’",
+      "url": "https://www.benzinga.com/news/health-care/26/09/62071762/bill-clinton-sounds-alarm-on-hiv-funding-cheaper-medicines-mean-nothing-if-they-never-reach-people",
+      "ts": 1790760382,
+      "tickers": [
+        "GLD",
+        "MSFT",
+        "LLY",
+        "GILD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.299
     }
   ],
   "portfolio_brief": {
@@ -882,9 +896,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-        "ts": 1790703313,
-        "url": "https://www.benzinga.com/markets/options/26/09/62059836/10-information-technology-stocks-whale-alerts-today-s-session",
+        "title": "Bill Gates Pushes Back Against Trump, Jensen Huang's Approach to AI Safety: ‘You Can’t Rely on the Industry to Self-Regulate’",
+        "ts": 1790757535,
+        "url": "https://www.benzinga.com/markets/tech/26/09/62071334/bill-gates-pushes-back-against-trump-jensen-huangs-approach-to-ai-safety-you-cant-rely-on-the-industry-to-self-regulate",
         "wiim": false
       },
       "filings": {
@@ -1014,12 +1028,7 @@
         "score": 1.08,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Defense Stocks Enter Bear Market, Hit Longest Losing Streak on Record",
-        "ts": 1790694714,
-        "url": "https://www.benzinga.com/etfs/specialty-etfs/26/09/62054200/defense-stocks-7-straight-weeks-xar-record-losing-streak",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1291,7 +1300,12 @@
         "score": 1.05,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Bill Clinton Sounds Alarm on HIV Funding: ‘Cheaper Medicines Mean Nothing If They Never Reach People’",
+        "ts": 1790760382,
+        "url": "https://www.benzinga.com/news/health-care/26/09/62071762/bill-clinton-sounds-alarm-on-hiv-funding-cheaper-medicines-mean-nothing-if-they-never-reach-people",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
