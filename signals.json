@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "Sep 30, 9:34am ET",
+  "generated_at": "Sep 30, 12:15pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -119,10 +119,10 @@
   "sectors": [
     {
       "sector": "Semiconductor",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Growing inflation concerns and rate-hike expectations as oil prices and …",
       "note": "Amid growing inflation concerns and rate-hike expectations as oil prices and rising yields weigh on growth stocks.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Financial",
@@ -154,16 +154,16 @@
     }
   ],
   "holding_news": {
-    "GILD": {
-      "title": "Bill Clinton Sounds Alarm on HIV Funding: ‘Cheaper Medicines Mean Nothing If They Never Reach People’",
-      "ts": 1790760382,
-      "url": "https://www.benzinga.com/news/health-care/26/09/62071762/bill-clinton-sounds-alarm-on-hiv-funding-cheaper-medicines-mean-nothing-if-they-never-reach-people",
-      "wiim": false
-    },
     "NVDA": {
       "title": "Bill Gates Pushes Back Against Trump, Jensen Huang's Approach to AI Safety: ‘You Can’t Rely on the Industry to Self-Regulate’",
       "ts": 1790757535,
       "url": "https://www.benzinga.com/markets/tech/26/09/62071334/bill-gates-pushes-back-against-trump-jensen-huangs-approach-to-ai-safety-you-cant-rely-on-the-industry-to-self-regulate",
+      "wiim": false
+    },
+    "GILD": {
+      "title": "Bill Clinton Sounds Alarm on HIV Funding: ‘Cheaper Medicines Mean Nothing If They Never Reach People’",
+      "ts": 1790760382,
+      "url": "https://www.benzinga.com/news/health-care/26/09/62071762/bill-clinton-sounds-alarm-on-hiv-funding-cheaper-medicines-mean-nothing-if-they-never-reach-people",
       "wiim": false
     },
     "AVGO": {
@@ -182,8 +182,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$52",
-      "price": 35.84,
-      "upside": 45.1,
+      "price": 35.6,
+      "upside": 46.1,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -196,8 +196,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$370",
-      "price": 329.4,
-      "upside": 12.3,
+      "price": 337.95,
+      "upside": 9.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -210,8 +210,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$48",
-      "price": 35.84,
-      "upside": 33.9,
+      "price": 35.6,
+      "upside": 34.8,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -224,8 +224,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$55",
-      "price": 35.84,
-      "upside": 53.5,
+      "price": 35.6,
+      "upside": 54.5,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -238,8 +238,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$250",
-      "price": 204.38,
-      "upside": 22.3,
+      "price": 205.95,
+      "upside": 21.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -252,8 +252,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "price": 168.49,
-      "upside": 15.7,
+      "price": 167.06,
+      "upside": 16.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -266,8 +266,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$171",
-      "price": 168.49,
-      "upside": 1.5,
+      "price": 167.06,
+      "upside": 2.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -280,8 +280,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 35.84,
-      "upside": -16.3,
+      "price": 35.6,
+      "upside": -15.7,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -294,7 +294,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 86.84,
+      "price": 86.81,
       "upside": 9.4,
       "held": false,
       "uni": true,
@@ -308,8 +308,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$37",
-      "price": 35.84,
-      "upside": 3.2,
+      "price": 35.6,
+      "upside": 3.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -322,8 +322,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$38",
-      "price": 35.84,
-      "upside": 6.0,
+      "price": 35.6,
+      "upside": 6.7,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -336,8 +336,8 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$34",
-      "price": 35.84,
-      "upside": -5.1,
+      "price": 35.6,
+      "upside": -4.5,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -350,8 +350,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "price": 204.38,
-      "upside": 5.2,
+      "price": 205.95,
+      "upside": 4.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -364,8 +364,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "price": 329.4,
-      "upside": 9.3,
+      "price": 337.95,
+      "upside": 6.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -378,8 +378,8 @@
       "rating": "Sector Outperform",
       "stance": "bullish",
       "pt": "$180",
-      "price": 149.28,
-      "upside": 20.6,
+      "price": 146.78,
+      "upside": 22.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -392,8 +392,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$285",
-      "price": 267.57,
-      "upside": 6.5,
+      "price": 267.83,
+      "upside": 6.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -406,8 +406,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$40",
-      "price": 35.84,
-      "upside": 11.6,
+      "price": 35.6,
+      "upside": 12.4,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -420,8 +420,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$150",
-      "price": 148.32,
-      "upside": 1.1,
+      "price": 146.97,
+      "upside": 2.1,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -434,8 +434,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$110",
-      "price": 106.94,
-      "upside": 2.9,
+      "price": 108.43,
+      "upside": 1.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -449,7 +449,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$150",
-      "upside": 1.1
+      "upside": 2.1
     },
     "CSCO": {
       "date": "2026-09-30",
@@ -458,7 +458,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$110",
-      "upside": 2.9
+      "upside": 1.4
     },
     "NKE": {
       "date": "2026-09-29",
@@ -467,7 +467,7 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$40",
-      "upside": 11.6
+      "upside": 12.4
     },
     "MRK": {
       "date": "2026-09-29",
@@ -476,7 +476,7 @@
       "rating": "Sector Outperform",
       "stance": "bullish",
       "pt": "$180",
-      "upside": 20.6
+      "upside": 22.6
     },
     "JNJ": {
       "date": "2026-09-29",
@@ -485,7 +485,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$285",
-      "upside": 6.5
+      "upside": 6.4
     },
     "AAPL": {
       "date": "2026-09-29",
@@ -494,7 +494,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "upside": 9.3
+      "upside": 6.5
     },
     "KO": {
       "date": "2026-09-28",
@@ -512,7 +512,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "upside": 5.2
+      "upside": 4.4
     },
     "MMM": {
       "date": "2026-09-25",
@@ -521,7 +521,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "upside": 15.7
+      "upside": 16.7
     },
     "CRM": {
       "date": "2026-09-18",
@@ -530,10 +530,108 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "upside": 39.8
+      "upside": 35.6
     }
   },
   "bz_news": [
+    {
+      "title": "Microsoft Stock Is Moving Higher Today: What's Happening?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62084580/microsoft-stock-is-moving-higher-today-whats-happening",
+      "ts": 1790783413,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.51
+    },
+    {
+      "title": "EXCLUSIVE: If AI Capex Cracks, Nvidia Could Feel It Before Meta Does",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/62084519/nvidia-ai-capex-meta",
+      "ts": 1790783328,
+      "tickers": [
+        "META",
+        "NVDA",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.494
+    },
+    {
+      "title": "Growth Leads Sectors In Wednesday Trading As Defensives Trail",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/09/62083340/growth-leads-sectors-in-wednesday-trading-as-defensives-trail",
+      "ts": 1790781173,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "DIA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.4
+    },
+    {
+      "title": "US Transportation Secretary Duffy Says FAA Needs To Do More To Speed Certification Of New Airplanes",
+      "url": "https://www.benzinga.com/news/26/09/62082446/us-transportation-secretary-duffy-says-faa-needs-do-more-speed-certification-new-airplanes",
+      "ts": 1790779684,
+      "tickers": [
+        "BA",
+        "EADSY",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.218
+    },
+    {
+      "title": "Can Nike Just Do It? Analyst Says Turnaround Progress Is Real, but Too Slow",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/09/62082357/can-nike-just-do-it-analyst-says-turnaround-progress-is-real-but-too-slow",
+      "ts": 1790779592,
+      "tickers": [
+        "NKE",
+        "SDY",
+        "STYL",
+        "IINC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.347
+    },
+    {
+      "title": "What's Going On with Boeing Stock Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/09/62080985/whats-going-on-with-boeing-stock-today-5",
+      "ts": 1790777788,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.392
+    },
+    {
+      "title": "'FTC opens sweeping probe of Anthropic, OpenAI and other super intelligence models' - New York Post",
+      "url": "https://www.benzinga.com/government/26/09/62079135/ftc-opens-sweeping-probe-anthropic-openai-and-other-super-intelligence-models-new-york-post",
+      "ts": 1790775584,
+      "tickers": [
+        "SPY",
+        "MSFT",
+        "AMZN",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.28
+    },
     {
       "title": "Caterpillar Plans About $1B Investment In North Carolina, Including New Sanford Plant For Compact Track Loaders And Telehandlers",
       "url": "https://www.benzinga.com/quote/CAT",
@@ -627,7 +725,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.506
+      "relevance": 0.507
     },
     {
       "title": "Merck’s Tulisokibart Meets Phase 2b Primary Endpoint In Hidradenitis Suppurativa, Achieves HiSCR50 of 72% And 64% Vs 35% for Placebo At Week 16",
@@ -693,7 +791,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.326
+      "relevance": 0.327
     },
     {
       "title": "Meta’s Next AI Gold Mine? Muse Targets 200 Million Small Businesses As Zuckerberg Eyes Fees, Subscriptions",
@@ -753,7 +851,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.278
+      "relevance": 0.279
     },
     {
       "title": "Bernstein Initiates Coverage On Cisco Systems with Market Perform Rating, Announces Price Target of $110",
@@ -766,86 +864,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.511
-    },
-    {
-      "title": "'Apple Is Finally Ready to Enter Its Next Big Category: the Smart Home' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/09/62073184/apple-finally-ready-enter-its-next-big-category-smart-home-bloomberg",
-      "ts": 1790764578,
-      "tickers": [
-        "AAPL",
-        "AMZN",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.289
-    },
-    {
-      "title": "At 5% Yields, Big Tech Marches Onto the Death Ground",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62073107/at-5-yields-big-tech-marches-onto-the-death-ground",
-      "ts": 1790764374,
-      "tickers": [
-        "META",
-        "SPY",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.339
-    },
-    {
-      "title": "Could AI Agents Cut Apple Out of the Checkout? Analyst Flags Meta’s Muse Threat",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62072492/could-ai-agents-cut-apple-out-of-the-checkout-analyst-flags-metas-muse-threat",
-      "ts": 1790762812,
-      "tickers": [
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.36
-    },
-    {
-      "title": "Johnson & Johnson Gears Up For Q3 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/09/62072451/johnson-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts-5",
-      "ts": 1790762710,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.478
-    },
-    {
-      "title": "Top 3 Consumer Stocks That May Rocket Higher In Q3",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/09/62072234/top-3-consumer-stocks-that-may-rocket-higher-in-q3-2",
-      "ts": 1790762468,
-      "tickers": [
-        "MCD",
-        "HD",
-        "PAG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.41
-    },
-    {
-      "title": "Competitor Analysis: Evaluating Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
-      "url": "https://www.benzinga.com/news/26/09/62072115/competitor-analysis-evaluating-apple-and-competitors-technology-hardware-storage-amp-peripherals-ind",
-      "ts": 1790762346,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.378
     },
     {
       "title": "Micron’s AI Boom Isn’t Done yet, Analysts Say — but Can the Stock Keep Exploding Higher?",
@@ -861,21 +879,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.415
-    },
-    {
-      "title": "Bill Clinton Sounds Alarm on HIV Funding: ‘Cheaper Medicines Mean Nothing If They Never Reach People’",
-      "url": "https://www.benzinga.com/news/health-care/26/09/62071762/bill-clinton-sounds-alarm-on-hiv-funding-cheaper-medicines-mean-nothing-if-they-never-reach-people",
-      "ts": 1790760382,
-      "tickers": [
-        "GLD",
-        "MSFT",
-        "LLY",
-        "GILD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.299
     }
   ],
   "portfolio_brief": {
