@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Wednesday's session left Jaleel's book fractionally mixed against a backdrop of broad sector rotation. The clearest bright spot was <strong>Adobe (ADBE)</strong>, which surged 3.11% and is now the day's top contributor — meaningful given its ~5% weight, even though the position remains slightly underwater on a cost basis. <strong>Neurocrine Biosciences (NBIX)</strong> added 2.83% and <strong>NVIDIA (NVDA)</strong> ticked up 1.07%, with Bank of America flagging NVDA as a top semiconductor pick into year-end; the position sits at a healthy +13.2% unrealized gain. On the other side, <strong>Abbott (ABT)</strong> fell 2.01% — the steepest decliner by day-move — and its elevated risk flag (EPS guide trimmed, earnings Oct 13) makes that slide worth watching. <strong>Equifax (EFX)</strong> dropped 2.57% on what is already a -20.2% loss, compounding pain in a small but badly underwater slot. <strong>Danaher (DHR)</strong> shed 1.78% despite sitting on the book's second-largest unrealized gain at +23.6%.</p><p>The drift problem in this book remains structural. <strong>LULU</strong> (-24.7%), <strong>EFX</strong> (-20.2%), <strong>NVS</strong> (-12.2%), <strong>NBIX</strong> (-12.7%), <strong>ZTS</strong> (-11.2%), and <strong>BSX</strong> (-10.8%) are all rated Strong Buy or Buy yet are meaningfully offside — price and thesis are diverging across a wide swath of names. The portfolio's overall unrealized loss of -2.42% masks how many individual positions are deeper underwater than that aggregate suggests. <strong>RKLB</strong> at 7.2% weight with an AVOID verdict and a -10.8% loss remains the most structurally awkward position in the book.</p><p>Key catalysts to watch: <strong>ABT</strong> reports October 13, <strong>BSX</strong> October 28, and the pharma cluster (GILD, NVS, NBIX, VRTX) faces drug-pricing policy overhang with a policy date flagged October 22. ADBE's bounce today is encouraging but the AI-disruption narrative — not fundamentals — is driving that name, so don't confuse one good session with thesis vindication.</p>",
+  "your_book": "<p>Thursday's session left Jaleel's book modestly mixed, with the overall portfolio sitting at a –2.98% unrealized loss. The standout movers were on opposite ends of the quality spectrum: Expand Energy (EXE, ~4% weight) led the book with a +2.22% day, while On Holding (ONON, ~4.4%) added +1.99% and NVIDIA (NVDA, ~12.3%) ticked up +1.09% — the latter helped by headlines tying it to SoftBank's $20B final investment round in OpenAI. The drag came from Danaher (DHR), which fell –4.42% on the day despite sitting on a +17.9% unrealized gain, and AstraZeneca (AZN, –2.33%) and Abbott (ABT, –2.17%), both carrying elevated risk flags, both sliding on a day when healthcare broadly softened.</p><p>The drift story is clearest in Zoetis (ZTS) and Boston Scientific (BSX) — both carry STRONG BUY verdicts and top-tier QARP scores (77.9 and 80.7 respectively), yet both sit in double-digit unrealized losses (–12.3% and –11.8%) and gave back ground again today. BSX has an earnings date on October 28 with a guidance-slash flag already on the books; price and thesis are pulling apart. Lululemon (LULU) remains the starkest divergence in the book: a –25.0% unrealized loss against a STRONG BUY verdict, with the next data point not until December 9. RKLB (Rocket Lab, ~7.3% weight, –10.1% unrealized) draws a hard AVOID verdict — a meaningful position that has no fundamental support from the scoring model.</p><p>Watch ABT into its October 21 print — the EPS-guide trim and today's –2.17% move together warrant attention. And keep an eye on Broadcom (AVGO, –2.15% today): headlines suggest the market is re-reading what the AI semiconductor trade actually means post-Micron, and AVGO sits in the book at an –8.9% unrealized loss.</p>",
   "attention": [
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "AVOID-rated at 7.2% weight, down 10.8% — largest misalignment in the book",
-      "note": "At the book's fifth-largest weight, holding a position the model explicitly rates AVOID with a near-11% loss and no risk flag resolution in sight is a direct contradiction of the capital-preservation mandate."
-    },
-    {
-      "ticker": "EFX",
-      "severity": "watch",
-      "headline": "Down 20.2% and falling — -2.57% today adds to a deteriorating loss",
-      "note": "Despite a Strong Buy verdict and the highest QARP score in the book at 81.1, price action keeps punishing this position and there is no catalyst or next-event date provided to anchor a recovery thesis."
+      "headline": "AVOID-rated position at 7.3% weight — no model support",
+      "note": "Rocket Lab carries the book's only AVOID verdict and lowest QARP score (37.9), yet it is the fifth-largest position by weight; the absence of any thesis alignment makes continued sizing here a direct contradiction of the capital-preservation mandate."
     },
     {
       "ticker": "BSX",
+      "severity": "act",
+      "headline": "Guidance-slashed, losing ground, earnings October 28",
+      "note": "Boston Scientific has had FY26 growth cut to 7–8.5%, management guided flat through Q3, the stock is down –11.8% unrealized, and gave back another –0.96% today — with a print in 27 days, the risk/reward on the current weight needs an explicit decision before October 28."
+    },
+    {
+      "ticker": "DHR",
       "severity": "watch",
-      "headline": "Guidance slashed, management guiding flat through Q3, earnings Oct 28",
-      "note": "At 8.6% weight and -10.8% unrealized, the next catalyst is a live earnings print in under four weeks where the bar has already been reset lower — the risk/reward around that date needs to be sized consciously."
+      "headline": "Danaher dropped –4.42% today on no flagged catalyst",
+      "note": "DHR is the book's single sharpest single-day loser on Thursday, yet carries no active risk flag and a HOLD-QUAL verdict with a +17.9% unrealized gain — worth identifying the driver before the cushion erodes further."
     },
     {
       "ticker": "ABT",
-      "severity": "note",
-      "headline": "Dropped 2.01% today with EPS guide already trimmed and earnings Oct 13",
-      "note": "The combination of today's decline, a flagged EPS outlook cut, and an imminent earnings date in 13 days means any further negative revision could accelerate losses in the book's second-largest holding."
+      "severity": "watch",
+      "headline": "–2.17% today with EPS-guide trim flag, earnings October 21",
+      "note": "Abbott's FY EPS guide has already been cut and the stock fell –2.17% Thursday; with the next print on October 21, the book needs a clear view on whether to reduce ahead of potential further downside guidance or hold through."
     }
   ],
-  "date": "2026-09-30",
-  "generated_at": "Sep 30, 4:22pm ET"
+  "date": "2026-10-01",
+  "generated_at": "Oct 1, 4:45pm ET"
 }
