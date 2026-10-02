@@ -1571,6 +1571,720 @@ function initGuide() {
   });
 }
 
+/* FG:BEGIN — front-page graphics: The Map + Your Radar (2026-10-02, owner: "the radar and heat map — both;
+   make them both fit, clearly and visibly; don't make it overlap; the design spotless").
+   They replace The Weather, The Docket, "Across the Market" and the Sector Watch / Movers / Portfolio row:
+   every one of those repeated something these two now show. Each graphic lives in its own shadow root, so
+   its styles cannot leak into the page or be bent by it. Everything is drawn from the payload (public tier:
+   percentages and weights only) — nothing here is hand-written, so nothing can go stale the way The Weather did. */
+const FG = (() => {
+  const FONT_HEAD = '"Playfair Display",Georgia,serif', FONT_BODY = '"PT Serif",Georgia,serif';
+  const FONT_SANS = '-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,system-ui,sans-serif';
+  const FONT_MONO = 'ui-monospace,"SF Mono",Menlo,monospace';
+  const VARS = `--paper:#fbfbf7;--ink:#15181f;--ink2:#454b57;--mute:#8b8e97;--hair:#e2ddcf;--hair2:#d6cfba;--hair3:#bdb59c;
+    --navy:#1a2a55;--brass:#9a6b25;--up:#15803d;--down:#be123c;--wedge:#f3f0e4;
+    --head:${FONT_HEAD};--serif:${FONT_BODY};--sans:${FONT_SANS};--mono:${FONT_MONO};`;
+  const HEAD_CSS = `
+    :host{display:block;${VARS}color:var(--ink);font-family:var(--serif)}
+    *{box-sizing:border-box}[hidden]{display:none!important}
+    .sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:6px}
+    .sec-h h2{font:800 26px/1.1 var(--head);margin:0;letter-spacing:-.01em}
+    .sec-h h2 i{font:italic 400 15px/1 var(--serif);color:var(--ink2);margin-left:8px;letter-spacing:0}
+    .asof{font:600 10px/1.3 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
+    .up{color:var(--up)}.dn{color:var(--down)}.br{color:var(--brass)}
+    button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}`;
+
+  const esc = (s) => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const num = (v) => (typeof v === "number" && isFinite(v) ? v : null);
+  const sgn = (v, dp) => (v > 0 ? "+" : v < 0 ? "\u2212" : "") + Math.abs(v).toFixed(dp == null ? 1 : dp) + "%";
+  const tone = (v) => (v == null ? "" : v > 0 ? "up" : v < 0 ? "dn" : "");
+  const etIso = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(d || new Date());
+  const utc = (iso) => { const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso || "")); return m ? Date.UTC(+m[1], +m[2] - 1, +m[3]) : null; };
+  const isoOfMs = (ms) => new Date(ms).toISOString().slice(0, 10);
+  const DAY = 86400000, DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const fd = (ms, noDow) => { const d = new Date(ms); return (noDow ? "" : DOW[d.getUTCDay()] + " ") + d.getUTCDate() + " " + MON[d.getUTCMonth()]; };
+  const longDay = (iso) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
+  // one calendar for the whole site: the same holiday set marketOpenNow() uses
+  const isSessionMs = (ms) => { const w = new Date(ms).getUTCDay(); return w !== 0 && w !== 6 && !NYSE_HOLIDAYS.has(isoOfMs(ms)); };
+  const tdays = (from, to) => { if (to < from || to - from > 500 * DAY) return null; let n = 0; for (let t = from + DAY; t <= to; t += DAY) if (isSessionMs(t)) n++; return n; };
+  const riyadh = (iso) => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleTimeString("en-GB", { timeZone: "Asia/Riyadh", hour: "numeric", minute: "2-digit", hour12: true }).replace(" ", "\u202f"); };
+
+  /* ---------- one read of the payload for both graphics ---------- */
+  function snap() {
+    const held = {}; (DATA.portfolio || []).forEach((h) => { held[h.ticker] = h; });
+    const sess = (typeof dataSession === "function" ? dataSession() : null) || asOfDate(DATA.meta.date);
+    // after the bell liveTick re-prices the holdings before the first in-session bake lands: their moves belong to the live session
+    const hsess = (typeof holdingsLive === "function" && typeof lastSessionDate === "function" && holdingsLive()) ? lastSessionDate() : sess;
+    const en = (typeof SIGNALS !== "undefined" && SIGNALS && SIGNALS.earnings_next) || {}, nowIso = etIso();
+    // one report date per name, the same as the Portfolio tab: the signals map first, then the payload's own
+    const nextOf = (t, baked) => (typeof en[t] === "string" && en[t] >= nowIso ? en[t] : null) || baked || null;
+    // a wire headline, never the desk's words: whole ones only (the build cuts at 160 characters), with its source
+    const headline = (m) => { const h = m && m.h ? String(m.h).trim() : ""; return h && h.length < 150 ? "\u201c" + h + "\u201d" + (m.src ? " \u2014 " + m.src : "") : null; };
+    const universe = (DATA.universe || []).map((u) => ({
+      t: u.ticker, n: u.name || u.ticker, group: sectorGroup(u.sector), cap: num(u.mktcap_b), day: num(u.day_pct), since: num(u.since_pct),
+      qarp: num(u.qarp), verdict: u.verdict || null, vs50: u.mom ? num(u.mom.vs50) : null, gate: u.mom ? u.mom.state : null,
+      next: nextOf(u.ticker, u.next_print), held: !!held[u.ticker], weight: held[u.ticker] ? num(held[u.ticker].weight_pct) : null,
+      why: headline(u.mover_why), review: !!u.under_review }));
+    const uBy = {}; universe.forEach((u) => { uBy[u.t] = u; });
+    const holdings = (DATA.portfolio || []).map((h) => { const u = uBy[h.ticker] || {};
+      return { t: h.ticker, n: h.name || u.n || h.ticker, w: num(h.weight_pct), day: num(h.day_pct), gain: num(h.gain_pct), verdict: h.verdict && h.verdict !== "NOT SCORED" ? h.verdict : null,
+        score: num(h.qarp), gate: h.mom ? h.mom.state : u.gate || null, vs50: h.mom ? num(h.mom.vs50) : u.vs50 != null ? u.vs50 : null,
+        group: u.group || h.sector || "Other", next: nextOf(h.ticker, h.next_print || u.next), why: u.why || null, onMap: !!uBy[h.ticker] }; });
+    const events = (DATA.docket || []).filter((e) => e && e.ticker && e.event_date && e.status !== "resolved")
+      .map((e) => ({ t: e.ticker, title: e.event || "", type: e.event_type || "other", date: e.event_date, risk: e.risk || null, why: e.why || null }));
+    const mh = DATA.map_history && Array.isArray(DATA.map_history.dates) && DATA.map_history.d ? DATA.map_history : null;
+    const spy = DATA.meta && DATA.meta.index_quotes && DATA.meta.index_quotes.SPY ? num(DATA.meta.index_quotes.SPY.dp) : null;
+    return { sess, hsess, built: DATA.meta.built_at || null, universe, holdings, events, hist: mh, spy: hsess === sess ? spy : null,
+      live: typeof marketOpenNow === "function" && marketOpenNow() && sess === etIso() };
+  }
+
+  /* =====================================  THE MAP  ===================================== */
+  const MAP_CSS = HEAD_CSS + `
+    .deck{font:16px/1.5 var(--serif);margin:10px 0 10px}.deck b{font-weight:700}
+    .ctl{display:flex;flex-wrap:wrap;gap:7px 16px;align-items:center;margin:0 0 9px;font:600 10.5px var(--sans);letter-spacing:.9px;text-transform:uppercase;color:var(--mute)}
+    .seg{display:inline-flex;border:1px solid var(--ink);border-radius:3px;overflow:hidden;vertical-align:middle;margin-left:5px}
+    .seg button{all:unset;cursor:pointer;padding:5px 10px;font:600 11.5px var(--sans);letter-spacing:.2px;text-transform:none;color:var(--ink);border-left:1px solid var(--ink)}
+    .seg button:first-child{border-left:0}.seg button.on{background:var(--ink);color:var(--paper)}
+    .play{all:unset;cursor:pointer;padding:5px 12px;border:1px solid var(--brass);border-radius:3px;font:700 11.5px var(--sans);color:var(--brass);letter-spacing:.2px;text-transform:none}
+    .play.on{background:var(--brass);color:#fff}
+    .scrub{flex:1;min-width:120px;accent-color:var(--brass)}
+    .map{position:relative;width:100%;overflow:hidden;border:1px solid var(--ink);background:var(--paper)}
+    .grp{position:absolute;box-sizing:border-box;font:700 10.5px var(--sans);letter-spacing:.8px;text-transform:uppercase;color:var(--ink);white-space:nowrap;overflow:hidden;padding:2px 4px 0;display:flex;justify-content:space-between;gap:6px;pointer-events:none;transition:left .6s ease,top .6s ease,width .6s ease}
+    .grp span{min-width:0;overflow:hidden;text-overflow:ellipsis}
+    .grp i{flex:none;font-style:normal;font-family:var(--mono);font-weight:600;letter-spacing:0}
+    .tile{position:absolute;overflow:hidden;cursor:default;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.05;
+      transition:left .6s ease,top .6s ease,width .6s ease,height .6s ease,background-color .35s linear,opacity .35s linear}
+    .tile b{font:700 12px var(--sans);letter-spacing:.1px}.tile span{font:500 10px var(--mono);margin-top:1px;opacity:.92}
+    .tile.held{box-shadow:inset 0 0 0 1.5px var(--paper),inset 0 0 0 3.5px var(--ink);z-index:2}
+    .tile.held.sm{box-shadow:inset 0 0 0 1.5px var(--ink)}
+    .tile.dim{opacity:.16}.tile:hover{filter:brightness(1.08);z-index:3}
+    .enter .tile{animation:pop .55s ease both}
+    @keyframes pop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:none}}
+    .stamp{position:absolute;right:10px;top:8px;z-index:5;background:rgba(21,24,31,.92);color:#fbfbf7;padding:7px 12px;border-radius:3px;font:700 20px/1.1 var(--head);text-align:right;pointer-events:none}
+    .stamp small{display:block;font:500 11.5px var(--sans);opacity:.85;margin-top:3px}
+    .legend{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;margin-top:9px;font:12.5px var(--sans);color:var(--ink2)}
+    .scale{display:inline-flex;align-items:center;gap:7px}.scale .bar{display:inline-flex;height:11px;border:1px solid var(--hair)}.scale .bar i{width:17px;height:100%}
+    .key{display:inline-flex;align-items:center;gap:7px}.key .ring{width:17px;height:13px;background:#dcd7c6;box-shadow:inset 0 0 0 1.5px var(--paper),inset 0 0 0 3.5px var(--ink)}
+    .mv{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;margin-top:11px;border-top:1px solid var(--hair);padding-top:9px}
+    .mv h4{margin:0 0 4px;font:700 9.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+    .mv ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:3px 18px;font:13px var(--sans)}
+    .mv li b{font-weight:700;margin-right:5px}.mv li span{font-family:var(--mono);font-size:12.5px}
+    .foot{margin-top:8px;font:italic 12.5px var(--serif);color:var(--mute)}
+    .tip{position:fixed;z-index:60;pointer-events:none;display:none;background:#15181f;color:#f4f2ea;border-radius:4px;padding:10px 12px;font:12.5px/1.5 var(--sans);max-width:280px;box-shadow:0 6px 22px rgba(0,0,0,.25)}
+    .tip h4{margin:0 0 3px;font:700 15px var(--head)}.tip .r{display:flex;justify-content:space-between;gap:14px}.tip .r b{font-family:var(--mono);font-weight:600}
+    .tip .why{margin-top:5px;padding-top:5px;border-top:1px solid #3a3f4b;color:#cfccc0}.tip .mine{color:#e9c47c;font-weight:600}
+    @media(max-width:640px){.sec-h h2{font-size:22px}.deck{font-size:15px}.mv{grid-template-columns:1fr;gap:9px 0}}
+    @media(prefers-reduced-motion:reduce){.tile,.grp{transition:none}.enter .tile{animation:none}}`;
+  const MAP_HTML = `
+    <header class="sec-h"><h2>The Map <i>every compliant stock, in one picture</i></h2><div class="asof" data-r="asof"></div></header>
+    <p class="deck" data-r="deck"></p>
+    <div class="ctl">
+      <span>Colour<span class="seg" data-r="cseg"><button data-c="day" class="on">Latest day</button><button data-c="since">Since scored</button><button data-c="score">QARP score</button></span></span>
+      <span>Size<span class="seg" data-r="sseg"><button data-s="read" class="on">Readable</button><button data-s="true">True size</button></span></span>
+      <span class="seg" data-r="hseg" style="margin-left:0"><button data-h="all" class="on">All stocks</button><button data-h="mine">Your holdings</button></span>
+      <button class="play" data-r="play"></button><input type="range" class="scrub" data-r="scrub" min="0" value="0" aria-label="Day in the replay">
+    </div>
+    <div class="map" data-r="map"><div class="stamp" data-r="stamp" hidden></div></div>
+    <div class="legend" data-r="legend"></div>
+    <div class="mv" data-r="mv"></div>
+    <div class="foot" data-r="foot"></div>
+    <div class="tip" data-r="tip"></div>`;
+  const NEUTRAL = [232, 228, 214], GREEN = [15, 122, 55], RED = [179, 18, 58], NAVY = [26, 42, 85];
+  const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * t));
+  const rgb = (c) => `rgb(${c[0]},${c[1]},${c[2]})`;
+  function squarify(items, x, y, w, h) {
+    const total = items.reduce((a, b) => a + b.v, 0) || 1, k = (w * h) / total, out = [];
+    let rx = x, ry = y, rw = w, rh = h, row = [];
+    const worst = (r, side) => { const s = r.reduce((a, b) => a + b.a, 0); let mx = 0, mn = Infinity; for (const q of r) { mx = Math.max(mx, q.a); mn = Math.min(mn, q.a); } return Math.max((side * side * mx) / (s * s), (s * s) / (side * side * mn)); };
+    const flush = (r) => { const s = r.reduce((a, b) => a + b.a, 0);
+      if (rw >= rh) { const cw = s / rh; let cy = ry; for (const q of r) { const ch = q.a / cw; out.push({ d: q.d, x: rx, y: cy, w: cw, h: ch }); cy += ch; } rx += cw; rw -= cw; }
+      else { const ch = s / rw; let cx = rx; for (const q of r) { const cw = q.a / ch; out.push({ d: q.d, x: cx, y: ry, w: cw, h: ch }); cx += cw; } ry += ch; rh -= ch; } };
+    for (const d of items) { const n = { d, a: Math.max(d.v * k, 0.01) }, side = Math.min(rw, rh);
+      if (row.length && worst(row.concat([n]), side) > worst(row, side)) { flush(row); row = []; }
+      row.push(n); }
+    if (row.length) flush(row);
+    return out;
+  }
+  function mountMap(host) {
+    const sh = host.shadowRoot || host.attachShadow({ mode: "open" });
+    sh.innerHTML = `<style>${MAP_CSS}</style>${MAP_HTML}`;
+    const R = {}; sh.querySelectorAll("[data-r]").forEach((el) => { R[el.dataset.r] = el; });
+    const mapEl = R.map, tip = R.tip;
+    const state = { colour: "day", size: "read", who: "all", day: 0, playing: false };
+    let S = null, U = [], groups = [], HIST = null, LAST = 0, tiles = {}, heads = {}, timer = null, lastW = 0, sigU = "";
+    const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const replaying = () => HIST && state.day < LAST;
+    const value = (x) => (replaying() ? (HIST.d[x.t] ? HIST.d[x.t][state.day] : null) : state.colour === "day" ? x.day : state.colour === "since" ? x.since : x.qarp);
+    function paint(v) {
+      if (v == null || isNaN(v)) return { bg: "#efece2", fg: "#8b8e97" };
+      if (!replaying() && state.colour === "score") { const t = Math.max(0, Math.min(1, (v - 35) / 50)); return { bg: rgb(mix(NEUTRAL, NAVY, Math.pow(t, 0.9))), fg: t > 0.45 ? "#fff" : "#15181f" }; }
+      const clamp = !replaying() && state.colour === "since" ? 40 : 4, t = Math.pow(Math.min(1, Math.abs(v) / clamp), 0.75);
+      return { bg: rgb(mix(NEUTRAL, v >= 0 ? GREEN : RED, t)), fg: t > 0.5 ? "#fff" : "#15181f" };
+    }
+    const sizeOf = (x) => (state.size === "true" ? x.cap : Math.max(Math.sqrt(x.cap), x.held ? 12 : 0));
+    function build() {
+      mapEl.querySelectorAll(".tile,.grp").forEach((el) => el.remove()); tiles = {}; heads = {};
+      U.forEach((x) => { const el = document.createElement("div"); el.className = "tile" + (x.held ? " held" : ""); el.innerHTML = "<b></b><span></span>"; el._d = x; mapEl.appendChild(el); tiles[x.t] = el; });
+      groups.forEach((g) => { const el = document.createElement("div"); el.className = "grp"; el.innerHTML = "<span></span><i></i>"; mapEl.appendChild(el); heads[g] = el; });
+    }
+    function layout() {
+      const W = mapEl.clientWidth; if (!W) { lastW = 0; return; } lastW = W;
+      const H = Math.round(W < 520 ? W * 1.45 : W < 900 ? Math.min(720, W * 0.9) : W * 0.56);
+      mapEl.style.height = H + "px";
+      const G = groups.map((g) => { const m = U.filter((x) => x.g === g).map((x) => ({ x, v: sizeOf(x) })).sort((a, b) => b.v - a.v); return { g, m, v: m.reduce((a, b) => a + b.v, 0) }; }).sort((a, b) => b.v - a.v);
+      squarify(G, 0, 0, W, H).forEach((b) => {
+        const hd = b.w > 62 && b.h > 44 ? 15 : 0, he = heads[b.d.g];
+        he.style.display = hd ? "flex" : "none"; he.style.left = b.x + "px"; he.style.top = b.y + "px"; he.style.width = b.w + "px"; he.firstChild.textContent = b.d.g; he.lastChild.style.display = b.w < 104 ? "none" : ""; he._m = b.d.m;
+        squarify(b.d.m, b.x + 1.5, b.y + hd + 1.5, Math.max(1, b.w - 3), Math.max(1, b.h - hd - 3)).forEach((r) => {
+          const el = tiles[r.d.x.t], w = Math.max(0, r.w - 1), h = Math.max(0, r.h - 1), L = r.d.x.t.length, mine = r.d.x.held;
+          el.style.left = r.x + "px"; el.style.top = r.y + "px"; el.style.width = w + "px"; el.style.height = h + "px"; el.classList.toggle("sm", w < 30 || h < 16);
+          const fs = Math.max(8, Math.min(21, Math.min(w / Math.max(3.4, L * 0.74), h / 2.1)));
+          el.firstChild.style.fontSize = (mine && (w < 26 || h < 13) ? Math.max(6, Math.min(w / (L * 0.74), h / 1.5)) : fs) + "px"; el.lastChild.style.fontSize = Math.max(8, fs * 0.72) + "px";
+          el.firstChild.style.display = (w >= 26 && h >= 13) || (mine && w >= 14 && h >= 9) ? "" : "none"; el.lastChild.style.display = w >= 34 && h >= 27 ? "" : "none";
+        });
+      });
+      colour();
+    }
+    function colour() {
+      let up = 0, dn = 0; const score = !replaying() && state.colour === "score";
+      for (const t in tiles) { const el = tiles[t], x = el._d, v = value(x), p = paint(v);
+        el.style.backgroundColor = p.bg; el.style.color = p.fg; el.firstChild.textContent = x.t;
+        el.lastChild.textContent = v == null ? "" : score ? Math.round(v) : sgn(v, Math.abs(v) >= 10 ? 0 : 1);
+        el.classList.toggle("dim", state.who === "mine" && !x.held);
+        if (v > 0) up++; else if (v < 0) dn++; }
+      for (const g in heads) { const vals = (heads[g]._m || []).map((q) => value(q.x)).filter((v) => v != null && !isNaN(v));
+        const a = vals.length ? vals.reduce((p, c) => p + c, 0) / vals.length : null;
+        heads[g].lastChild.textContent = a == null ? "" : score ? "avg " + Math.round(a) : sgn(a);
+        heads[g].lastChild.style.color = score || a == null ? "#454b57" : a >= 0 ? "#15803d" : "#be123c"; }
+      if (replaying()) { R.stamp.hidden = false; R.stamp.innerHTML = esc(fd(utc(HIST.dates[state.day]))) + `<small>${up} rose \u00b7 ${dn} fell</small>`; } else R.stamp.hidden = true;
+      legend();
+    }
+    function legend() {
+      const score = !replaying() && state.colour === "score", since = !replaying() && state.colour === "since";
+      const stops = score ? [35, 50, 60, 72, 85] : since ? [-40, -20, 0, 20, 40] : [-4, -2, 0, 2, 4];
+      const what = score ? "My score, 35 to 85" : since ? "Move since I first scored it: \u221240% to +40%" : replaying() ? "That day\u2019s move: \u22124% to +4%" : "Move on " + fd(utc(S.sess)) + ": \u22124% to +4%";
+      R.legend.innerHTML = `<span class="scale"><span class="bar">${stops.map((v) => `<i style="background:${paint(v).bg}"></i>`).join("")}</span>${what}</span>`
+        + `<span class="key"><span class="ring"></span>You own it</span><span>Box size = company value${state.size === "true" ? "" : " (large companies shrunk so small ones stay readable)"}</span>`;
+    }
+    function words() {
+      const withDay = U.filter((x) => x.day != null), up = withDay.filter((x) => x.day > 0).length, dn = withDay.filter((x) => x.day < 0).length;
+      const ga = groups.map((g) => { const v = U.filter((x) => x.g === g && x.day != null).map((x) => x.day); return { g, n: v.length, a: v.reduce((p, c) => p + c, 0) / (v.length || 1) }; }).filter((q) => q.n >= 5 && q.g !== "Other").sort((a, b) => b.a - a.a);
+      const mine = S.holdings.filter((h) => h.day != null), mu = mine.filter((h) => h.day > 0).length, md = mine.filter((h) => h.day < 0).length;
+      const best = mine.slice().sort((a, b) => b.day - a.day)[0], worst = mine.slice().sort((a, b) => a.day - b.day)[0];
+      let s = `<b>${esc(longDay(S.sess))}${S.live ? ", so far" : ""}:</b> <b class="up">${up} stocks rose</b> and <b class="dn">${dn} fell</b>.`;
+      if (ga.length > 1) s += ` Strongest group: <b>${esc(ga[0].g)}</b> (<span class="${tone(ga[0].a)}">${sgn(ga[0].a)}</span> on average). Weakest: <b>${esc(ga[ga.length - 1].g)}</b> (<span class="${tone(ga[ga.length - 1].a)}">${sgn(ga[ga.length - 1].a)}</span>).`;
+      if (mine.length) s += ` ${S.hsess !== S.sess ? `Your holdings, live on ${esc(fd(utc(S.hsess)))}: ` : "Of your holdings, "}${mu} rose and ${md} fell${best && worst && best !== worst ? `; best <b>${esc(best.t)}</b> <span class="${tone(best.day)}">${sgn(best.day)}</span>, worst <b>${esc(worst.t)}</b> <span class="${tone(worst.day)}">${sgn(worst.day)}</span>` : ""}.`;
+      R.deck.innerHTML = s;
+      R.asof.textContent = "prices from " + fd(utc(S.sess)) + (S.built ? " \u00b7 updated " + riyadh(S.built) + " Riyadh" : "");
+      const srt = withDay.slice().sort((a, b) => b.day - a.day), li = (x) => `<li><b>${esc(x.t)}</b><span class="${tone(x.day)}">${sgn(x.day)}</span></li>`;
+      R.mv.innerHTML = srt.length >= 8 ? `<div><h4>Biggest rises</h4><ul>${srt.slice(0, 5).map(li).join("")}</ul></div><div><h4>Biggest falls</h4><ul>${srt.slice(-5).reverse().map(li).join("")}</ul></div>` : "";
+      const off = S.holdings.filter((h) => !h.onMap).map((h) => h.t);
+      R.foot.textContent = `${U.length} Shariah-compliant stocks in ${groups.length} groups.`
+        + (HIST ? ` The replay runs ${HIST.dates.length} trading days, ${fd(utc(HIST.dates[0]), 1)} to ${fd(utc(HIST.dates[HIST.dates.length - 1]), 1)}.` : "")
+        + (off.length ? ` ${off.join(", ")} ${off.length === 1 ? "is" : "are"} in your book but not on the compliant list, so ${off.length === 1 ? "it has" : "they have"} no box.` : "");
+    }
+    function stop(toEnd) { state.playing = false; clearInterval(timer); timer = null; R.play.classList.remove("on"); R.play.textContent = "\u25B6 Replay the last " + (HIST ? HIST.dates.length : "") + " trading days"; if (toEnd) { state.day = LAST; R.scrub.value = LAST; } }
+    function seg(el, key, attr) { el.addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return;
+      [...el.children].forEach((c) => c.classList.toggle("on", c === b)); state[key] = b.dataset[attr];
+      if (key === "size") layout(); else { if (key === "colour") stop(true); colour(); } }); }
+    seg(R.cseg, "colour", "c"); seg(R.sseg, "size", "s"); seg(R.hseg, "who", "h");
+    R.play.addEventListener("click", () => {
+      if (!HIST) return; if (state.playing) { stop(false); return; }
+      state.playing = true; R.play.classList.add("on"); R.play.textContent = "\u275A\u275A Pause"; if (state.day >= LAST) state.day = -1;
+      timer = setInterval(() => { state.day++; R.scrub.value = state.day; if (state.day >= LAST) stop(true); colour(); }, 330);
+    });
+    R.scrub.addEventListener("input", (e) => { stop(false); state.day = +e.target.value; colour(); });
+    function showTip(el, ev) {
+      const x = el._d, v = replaying() && HIST.d[x.t] ? HIST.d[x.t][state.day] : null, r = (a, b) => (b === "" || b == null ? "" : `<div class="r"><span>${a}</span><b>${b}</b></div>`);
+      tip.innerHTML = `<h4>${esc(x.n)} <span style="font:600 12px var(--mono);opacity:.75">${esc(x.t)}</span></h4><div style="opacity:.75;margin-bottom:4px">${esc(x.group)}${x.g !== x.group ? " (drawn under Other)" : ""}</div>`
+        + (v != null ? r(esc(fd(utc(HIST.dates[state.day]))), sgn(v)) : "")
+        + r("Move on " + esc(fd(utc(x.held ? S.hsess : S.sess))), x.day == null ? "" : sgn(x.day, 2)) + r("Since scored", x.since == null ? "" : sgn(x.since))
+        + r("QARP score", x.qarp != null ? `${x.qarp} \u00b7 ${esc(x.verdict || "")}${x.review ? " (under review)" : ""}` : "")
+        + r("Company value", x.cap >= 1000 ? "$" + (x.cap / 1000).toFixed(2) + " trillion" : "$" + (x.cap >= 10 ? Math.round(x.cap) : x.cap.toFixed(1)) + " billion")
+        + r("Against its 50-day average", x.vs50 == null ? "" : sgn(x.vs50)) + r("Next report", x.next ? esc(fd(utc(x.next))) : "")
+        + (x.held ? `<div class="r mine"><span>In your book</span><b>${x.weight != null ? x.weight + "% of it" : "yes"}</b></div>` : "")
+        + (x.why && !replaying() ? `<div class="why">${esc(x.why)}</div>` : "");
+      tip.style.display = "block"; const tw = tip.offsetWidth, th = tip.offsetHeight, px = ev.clientX, py = ev.clientY;
+      tip.style.left = Math.max(6, Math.min(innerWidth - tw - 6, px + 14)) + "px"; tip.style.top = Math.max(6, py + 16 + th > innerHeight ? py - th - 12 : py + 16) + "px";
+    }
+    mapEl.addEventListener("pointermove", (e) => { const el = e.target.closest(".tile"); if (el) showTip(el, e); else tip.style.display = "none"; });
+    mapEl.addEventListener("pointerleave", () => { tip.style.display = "none"; });
+    mapEl.addEventListener("click", (e) => { const el = e.target.closest(".tile"); if (el) showTip(el, e); });
+    window.addEventListener("scroll", () => { tip.style.display = "none"; }, { passive: true });
+    document.addEventListener("pointerdown", (e) => { if (!e.composedPath().includes(mapEl)) tip.style.display = "none"; });
+    let rz = null;
+    if (window.ResizeObserver) new ResizeObserver(() => { const w = mapEl.clientWidth; if (!w || w === lastW) return; clearTimeout(rz); if (!lastW) layout(); else rz = setTimeout(() => { if (mapEl.clientWidth !== lastW) layout(); }, 60); }).observe(mapEl);
+    function update(snapshot) {
+      S = snapshot;
+      const rows = S.universe.filter((x) => x.cap > 0), count = {}; rows.forEach((x) => { count[x.group] = (count[x.group] || 0) + 1; });
+      rows.forEach((x) => { x.g = count[x.group] >= 5 ? x.group : "Other"; });
+      const sig = rows.map((x) => x.t + (x.held ? "*" : "") + x.g + Math.round(x.cap)).join("|");
+      U = rows; groups = [...new Set(U.map((x) => x.g))];
+      const hadHist = !!HIST; HIST = S.hist; LAST = HIST ? HIST.dates.length : 0;
+      if (HIST && !hadHist) { state.day = LAST; }
+      if (!state.playing && state.day > LAST) state.day = LAST;
+      R.scrub.max = LAST; if (!state.playing && !replaying()) R.scrub.value = LAST;
+      R.play.hidden = R.scrub.hidden = !HIST; if (!state.playing) R.play.textContent = "\u25B6 Replay the last " + LAST + " trading days";
+      if (sig !== sigU) { sigU = sig; build(); words(); layout();
+        if (!reduce) { mapEl.classList.add("enter"); let i = 0; for (const t in tiles) tiles[t].style.animationDelay = Math.min(900, i++ * 1.6) + "ms"; setTimeout(() => mapEl.classList.remove("enter"), 1700); } }
+      else { for (const x of U) if (tiles[x.t]) tiles[x.t]._d = x;
+        for (const g in heads) (heads[g]._m || []).forEach((q) => { if (tiles[q.x.t]) q.x = tiles[q.x.t]._d; });
+        words(); if (mapEl.clientWidth !== lastW) layout(); else colour(); }
+    }
+    return { update };
+  }
+
+  /* =====================================  YOUR RADAR  ===================================== */
+  const RADAR_CSS = HEAD_CSS + `
+    .hl{font:700 22px/1.22 var(--head);margin:12px 0 4px}
+    .deck{font:italic 14.5px/1.4 var(--serif);color:var(--ink2);margin:0}
+    .deck b{font:700 9px var(--sans);font-style:normal;letter-spacing:.11em;text-transform:uppercase;color:var(--brass);margin-right:6px}
+    .stats{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);margin:10px 0 14px}
+    .st{padding:7px 10px 8px 14px;border-left:1px solid var(--hair);min-width:0}.st:first-child{border-left:0;padding-left:0}
+    .st-l{font:700 8.5px/1.3 var(--sans);letter-spacing:.11em;text-transform:uppercase;color:var(--mute)}
+    .st-v{font:700 19px/1.2 var(--head);font-variant-numeric:lining-nums tabular-nums;margin-top:2px;white-space:nowrap}
+    .st-s{font:400 10.5px/1.3 var(--sans);color:var(--ink2);font-variant-numeric:tabular-nums}
+    .main{display:grid;grid-template-columns:minmax(0,1fr) 256px;column-gap:20px;align-items:start}
+    .scope{margin:0;min-width:0}
+    .svg{display:block;margin:0 auto;overflow:visible;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+    .sbox{position:relative;margin:0 auto}
+    .kc{position:absolute;width:108px;font:10px/1.3 var(--sans);color:var(--ink2);pointer-events:none}
+    .kc b{color:var(--ink);font-weight:700}.kc svg{display:block;margin-bottom:3px}
+    .kc.tl{left:0;top:0}.kc.tr{right:0;top:0;text-align:right}.kc.tr svg{margin-left:auto}.kc.br{right:0;bottom:0;text-align:right}
+    .nokc .kc{display:none}
+    .cap{font:italic 12px/1.4 var(--serif);color:var(--ink2);margin:8px 0 0}
+    .wg{fill:var(--wedge)}.rg{fill:none;stroke:var(--hair2);stroke-width:1}.rg.mo{stroke:var(--hair3)}
+    .rim{fill:none;stroke:var(--ink);stroke-width:1.25}.sp{stroke:var(--hair2);stroke-width:1}.sp.cur{stroke:var(--navy)}
+    .hit{fill:transparent;cursor:pointer}.hit.cur{fill:rgba(26,42,85,.07)}
+    .sa{fill:none;stroke:var(--ink);stroke-width:2}
+    .sl{font:700 8.5px var(--sans);letter-spacing:.14em;fill:var(--ink2)}
+    .rl{font:italic 400 10px var(--serif);fill:var(--ink2);paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+    .sw{pointer-events:none}.sw line{stroke:var(--navy);stroke-width:1.5}.sw path{fill:var(--navy);opacity:.05}
+    .hb,.ev,.tk{cursor:pointer}
+    .dot{stroke:var(--paper);stroke-width:1.25}.dot.nd{fill:var(--paper);stroke:var(--mute);stroke-dasharray:2 2}
+    .dot.far{fill-opacity:.55;stroke:var(--mute);stroke-dasharray:2 2}
+    .hb.cur .dot{stroke:var(--ink);stroke-dasharray:none}
+    .dm{fill:var(--paper);stroke:var(--brass);stroke-width:1.5}.dm.f{fill:var(--brass)}.ev.cur .dm{stroke:var(--ink)}
+    .pg{fill:none;stroke-width:1.5;pointer-events:none}.pl{fill:none;stroke:var(--navy);stroke-width:1.25;pointer-events:none}
+    .hub{fill:var(--paper);stroke:var(--ink);stroke-width:1.25}
+    .hub-a{font:700 7.5px var(--sans);letter-spacing:.14em;fill:var(--mute)}
+    .hub-b{font:700 18px var(--head);fill:var(--ink);font-variant-numeric:lining-nums}
+    .hub-c{font:600 9px var(--sans);fill:var(--ink2)}
+    .tk rect{fill:transparent}.tk text{font:700 10px var(--sans);letter-spacing:.03em;fill:var(--ink2)}
+    .tk.cur rect{fill:var(--navy)}.tk.cur text{fill:var(--paper)}
+    .sm .tk text{font-size:8.5px}.sm .sl{font-size:7.5px;letter-spacing:.1em}.sm .rl{font-size:9px}
+    .first .fly{animation:fly .9s cubic-bezier(.2,.7,.2,1) both}
+    @keyframes fly{from{transform:translate(var(--dx),var(--dy));opacity:0}to{transform:translate(0,0);opacity:1}}
+    .agenda{min-width:0}
+    .agenda h3{font:700 17px/1.2 var(--head);margin:0 0 6px;padding-bottom:5px;border-bottom:1px solid var(--ink)}
+    .agenda h3 i{font:italic 400 12.5px var(--serif);color:var(--mute);margin-left:6px;white-space:nowrap}
+    .ag-head,.ag-row{display:grid;grid-template-columns:66px 24px minmax(0,1fr) 40px;column-gap:7px;align-items:baseline}
+    .ag-head{font:700 8px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);padding-bottom:3px;border-bottom:1px solid var(--hair)}
+    .ag-head span{white-space:nowrap}.ag-head span:nth-child(2),.ag-head span:nth-child(4){text-align:right}
+    .ag-row{position:relative;padding:3px 0 4px;border-bottom:1px solid var(--hair);font:12px/1.35 var(--sans)}
+    .ag-row.on{background:rgba(154,107,37,.11)}
+    .ag-d{font:600 11.5px/1.35 var(--sans);white-space:nowrap}
+    .ag-n{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink2)}
+    .ag-w{display:flex;flex-wrap:wrap;gap:1px 8px;min-width:0}
+    .ag-p{text-align:right;color:var(--navy);font-weight:700;font-size:10.5px;font-variant-numeric:tabular-nums}
+    .ag-bar{position:absolute;left:0;bottom:-1px;height:2px;background:var(--navy)}
+    .tkb{all:unset;cursor:pointer;font:700 11px/1.35 var(--sans);letter-spacing:.02em;color:var(--ink);display:inline-block}
+    .tkb i{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:3px}.tkb i.nd{box-shadow:inset 0 0 0 1px var(--mute)}
+    .tkb em{font:italic 400 11px var(--serif);color:var(--ink2);letter-spacing:0}
+    .tkb.cur{color:var(--navy);text-decoration:underline;text-underline-offset:2px}
+    .dmh{width:6px;height:6px;border:1.5px solid var(--brass);transform:rotate(45deg);display:inline-block;margin:0 5px 1px 1px}.dmh.f{background:var(--brass)}
+    .ev-t{font:400 11px var(--serif);color:var(--ink2);letter-spacing:0}
+    .ag-note{font:italic 11.5px/1.4 var(--serif);color:var(--ink2);margin:6px 0 0}
+    .ag-foot{font:10.5px/1.35 var(--sans);color:var(--mute);margin:6px 0 0}
+    .ro{border-top:2px solid var(--ink);padding:9px 0 0;min-width:0}
+    .ro-k{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font:700 8.5px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+    .ro-k button{all:unset;cursor:pointer;font:700 8.5px/1.3 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink)}
+    .ro-k button:hover{color:var(--navy);border-color:var(--navy)}
+    .ro-t{font:800 34px/1.05 var(--head);letter-spacing:-.01em;margin-top:2px}
+    .ro-n{font:italic 13px/1.25 var(--serif);color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ro-v{font:700 9.5px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;margin-top:7px;min-height:25px}
+    .ro-v span{display:block;color:var(--mute);font-weight:600}
+    .ro-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 14px;margin:12px 0 0;min-height:132px;align-content:start}
+    .ro-facts div{min-width:0}
+    .ro-facts dt{font:700 8px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ro-facts dd{margin:1px 0 0;font:700 16px/1.15 var(--serif);font-variant-numeric:lining-nums tabular-nums}
+    .ro-facts dd small{display:block;font:400 10.5px/1.25 var(--sans);color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ro-more{font:12.5px/1.4 var(--serif);color:var(--ink2);margin-top:10px;min-height:70px}
+    .ro-more b{font-weight:700;color:var(--ink)}
+    .ro-sp{margin-top:10px;min-height:92px}
+    .sp-l{font:700 8px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+    .ro-sp svg{display:block;width:100%;max-width:260px;height:auto;margin:4px 0 3px;overflow:visible}
+    .sp-c{font:400 10.5px/1.3 var(--sans);color:var(--ink2);font-variant-numeric:tabular-nums}.sp-c b{font-weight:700}
+    .key{display:none;flex-wrap:wrap;gap:7px 20px;padding-top:10px;font:11px/1.35 var(--sans);color:var(--ink2)}
+    .nokc .key{display:flex}
+    .key .k{display:inline-flex;align-items:center;gap:7px}.key svg{flex:none}.key b{color:var(--ink);font-weight:700}
+    .watch{font:12.5px/1.5 var(--serif);color:var(--ink2);margin:12px 0 0;border-top:1px solid var(--hair);padding-top:9px}
+    .watch b{font:700 10.5px var(--sans);letter-spacing:.02em;color:var(--ink)}
+    .watch .lab{font:700 8.5px var(--sans);letter-spacing:.11em;text-transform:uppercase;color:var(--mute);margin-right:7px}
+    .miss{font:italic 15px var(--serif);color:var(--ink2);padding:24px 0}
+    /* widths are set from the box the radar actually has, not the window: wl = three columns, wm = two, ws = one */
+    .wl .main{grid-template-columns:520px minmax(0,1fr) 270px;column-gap:28px}
+    .wm .ro,.ws .ro{margin-top:14px}.wm .ro{grid-column:1/-1}
+    .wm .ro-in{display:grid;grid-template-columns:190px minmax(0,1fr) 220px;column-gap:20px}
+    .wm .ro-facts{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:0;min-height:0}.wm .ro-sp{margin-top:0}.wm .ro-more{grid-column:1/-1;min-height:0}
+    .ws .sec-h h2{font-size:22px}.ws .hl{font-size:19px}
+    .ws .stats{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:minmax(0,1fr)}.ws .st{border-left:0;padding-left:0;border-top:1px solid var(--hair)}.ws .st:first-child{border-top:0}
+    .ws .main{grid-template-columns:minmax(0,1fr);row-gap:16px}
+    .ws .ro-t{font-size:30px}
+    @media(prefers-reduced-motion:reduce){.first .fly{animation:none}}`;
+  const RADAR_HTML = `
+    <section class="radar" data-r="root" aria-label="Your Radar">
+      <header class="sec-h"><h2>Your Radar <i>what is coming at your book</i></h2><div class="asof" data-r="asof"></div></header>
+      <div data-r="body">
+        <p class="hl" data-r="hl"></p><p class="deck" data-r="deck"></p>
+        <div class="stats" data-r="stats"></div>
+        <div class="main">
+          <figure class="scope" data-r="scope">
+            <div class="sbox" data-r="sbox"><svg class="svg" data-r="svg" role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
+              <div class="kc tl" data-r="k1"></div><div class="kc tr" data-r="k2"></div><div class="kc br" data-r="k4"></div></div>
+            <figcaption class="cap" data-r="cap"></figcaption>
+          </figure>
+          <aside class="agenda" data-r="agenda" aria-label="The same dates as a list"></aside>
+          <div class="ro" data-r="ro"><div class="ro-k"><span data-r="kick"></span><button type="button" data-r="btn">Pause</button></div>
+            <div class="ro-in"><div data-r="roid"></div><div><dl class="ro-facts" data-r="rofacts"></dl></div><div class="ro-sp" data-r="rosp"></div><div class="ro-more" data-r="romore"></div></div></div>
+        </div>
+        <div class="key" data-r="key"></div>
+        <p class="watch" data-r="watch" hidden></p>
+      </div>
+    </section>`;
+  /* dated events: [short plain label, 1 = it has a yes-or-no outcome] */
+  const EV_TYPE = { regulatory: ["ruling", 1], "deal-close": ["deal close", 1], clinical: ["clinical date", 0], product: ["event", 0], "investor-day": ["investor day", 0], macro: ["policy date", 0], other: ["company date", 0], "earnings-loaded": ["earnings", 0] };
+  const dcol = (d) => (d === null ? null : d <= -1.5 ? "#be123c" : d < -0.25 ? "#e58fa0" : d <= 0.25 ? "#cdc7b3" : d < 1.5 ? "#86c09b" : "#15803d");
+  const norm = (a) => { a = a % 360; return a < 0 ? a + 360 : a; };
+  const strip = (s) => String(s).replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+
+  function mountRadar(host) {
+    const sh = host.shadowRoot || host.attachShadow({ mode: "open" });
+    sh.innerHTML = `<style>${RADAR_CSS}</style>${RADAR_HTML}`;
+    const R = {}; sh.querySelectorAll("[data-r]").forEach((el) => { R[el.dataset.r] = el; });
+    const root = R.root, svg = R.svg, fig = R.scope, btn = R.btn;
+    const mqReduce = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+    let reduce = !!mqReduce.matches;
+    // everything below is rebuilt by update(); the sweep angle and the pinned name survive it
+    let S = null, today = 0, DL = "", ML = "", H = [], byT = {}, N = 0, order = [], seq = [], slot = 0, GAP = 0, LIM = 21, RINGS = [], dlist = [], maxDayW = 0, heavy = null, watch = [], hub = null, hidx = {}, hdates = [], gidx = {};
+    let G = { c: 260, R: 222, k: 1, sw: null, ping: {}, br: {}, pulse: [] }, lastSize = 0, firstDraw = true;
+    let curT = null, pinned = null, hoverT = null, ang = 0, pings = [], looping = false, gen = 0, inView = true, ready = false;
+    const inTd = (td) => (td === 0 ? "today" : td === 1 ? "next trading day" : "in " + td + " trading days");
+    const bail = (msg) => { R.body.innerHTML = `<p class="miss">${esc(msg)}</p>`; ready = false; };
+
+    function prepare() {
+      today = utc(etIso()); const sess = utc(S.sess) || today;
+      if (today < sess) today = sess;
+      DL = fd(today); ML = fd(utc(S.hsess) || sess);
+      // trading days until a date; a weekend/holiday date counts to the next session after it, so only today itself is ever 0
+      const tdTo = (ms) => { if (ms <= today) return 0; let t = ms; while (!isSessionMs(t)) t += DAY; return tdays(today, t); };
+      H = []; byT = {};
+      S.holdings.forEach((h) => { if (!h || !h.t || byT[h.t]) return;
+        const o = { t: String(h.t), n: String(h.n), w: h.w, day: h.day, gain: h.gain, verdict: h.verdict, score: h.score, gate: h.gate, vs50: h.vs50, why: h.why, group: h.group || "Other", marks: [], rep: null, repNote: null };
+        o.below = o.vs50 !== null ? o.vs50 < 0 : o.gate ? o.gate !== "GO" : null;
+        const np = utc(h.next); if (np !== null && np >= today) { const td = tdTo(np); if (td !== null) o.rep = { date: np, td }; }
+        H.push(o); byT[o.t] = o; });
+      N = H.length; watch = [];
+      S.events.forEach((e) => { const d = utc(e.date); if (d === null || d < today) return; const td = tdTo(d); if (td === null) return;
+        const ty = EV_TYPE[e.type] || ["dated event", 0];
+        const m = { date: d, td, title: e.title ? strip(e.title) : ty[0], short: ty[0], hard: ty[1], risk: e.risk ? strip(e.risk) : null };
+        const h = byT[e.t]; if (!h) { m.t = String(e.t); watch.push(m); return; }
+        if (e.type === "earnings-loaded") { if (!h.rep) { h.rep = { date: d, td }; h.repNote = m.title; return; } if (Math.abs(h.rep.date - d) <= 3 * DAY) { h.repNote = m.title; return; } }
+        h.marks.push(m); });
+      H.forEach((h) => h.marks.sort((a, b) => a.date - b.date)); watch.sort((a, b) => a.date - b.date);
+      /* sectors -> wedges; every holding gets its own spoke */
+      const secMap = {}, secs = [];
+      H.forEach((h) => { let s = secMap[h.group]; if (!s) { s = secMap[h.group] = { name: h.group, list: [], w: 0 }; secs.push(s); } s.list.push(h); s.w += h.w || 0; });
+      secs.sort((a, b) => b.list.length - a.list.length || b.w - a.w);
+      order = []; let qi = 0, qj = secs.length - 1;
+      while (qi <= qj) { order.push(secs[qi++]); if (qi <= qj) order.push(secs[qj--]); }   /* big, small, big, small: keeps rim labels apart */
+      const TOP = 16; GAP = order.length > 1 ? 4 : 0; slot = (360 - TOP - GAP * (order.length - 1)) / Math.max(1, N);
+      seq = []; let cursor = -90 + TOP / 2;
+      order.forEach((s) => { s.list.sort((a, b) => (b.w || 0) - (a.w || 0)); s.a0 = cursor;
+        s.list.forEach((h, k) => { h.a = cursor + slot * (k + 0.5); h.i = seq.length; seq.push(h); });
+        cursor += slot * s.list.length; s.a1 = cursor; cursor += GAP; });
+      let far = 0; H.forEach((h) => { if (h.rep) far = Math.max(far, h.rep.td); h.marks.forEach((m) => { far = Math.max(far, m.td); }); });
+      LIM = far <= 21 ? 21 : far <= 42 ? 42 : 63;
+      RINGS = [[5, "1 week", "1 wk"], [10, "2 weeks", "2 wk"], [21, "1 month", "1 mo"], [42, "2 months", "2 mo"], [63, "3 months", "3 mo"]].filter((r) => r[0] <= LIM);
+      /* dates, grouped for the list and the headline */
+      const dmap = {}; dlist = [];
+      const dslot = (ms) => { const k = isoOfMs(ms); if (!dmap[k]) { dmap[k] = { date: ms, td: tdTo(ms), reps: [], evs: [], w: 0 }; dlist.push(dmap[k]); } return dmap[k]; };
+      H.forEach((h) => { if (h.rep) { const s = dslot(h.rep.date); s.reps.push(h); s.w += h.w || 0; } h.marks.forEach((m) => { dslot(m.date).evs.push({ h, m }); }); });
+      dlist.sort((a, b) => a.date - b.date); dlist.forEach((s) => s.reps.sort((a, b) => (b.w || 0) - (a.w || 0)));
+      maxDayW = 0; heavy = null; dlist.forEach((s) => { if (s.w > maxDayW) { maxDayW = s.w; heavy = s; } });
+      /* price paths from the replay data: each holding and its group, 100 = 61 sessions ago */
+      hidx = {}; gidx = {}; hdates = S.hist ? S.hist.dates : [];
+      if (S.hist) {
+        const path = (row) => { let v = 100; const a = [100]; row.forEach((m) => { if (m != null) v *= 1 + m / 100; a.push(v); }); return a; };
+        H.forEach((h) => { if (S.hist.d[h.t]) hidx[h.t] = path(S.hist.d[h.t]); });
+        const by = {}; S.universe.forEach((u) => { if (S.hist.d[u.t]) (by[u.group] = by[u.group] || []).push(S.hist.d[u.t]); });
+        Object.keys(by).forEach((g) => { if (by[g].length < 5) return; const n = by[g][0].length, avg = [];
+          for (let i = 0; i < n; i++) { let s = 0, c = 0; by[g].forEach((r) => { if (r[i] != null) { s += r[i]; c++; } }); avg.push(c ? s / c : null); }
+          gidx[g] = path(avg); });
+      }
+    }
+    const joinNames = (a) => (a.length === 1 ? a[0] : a.slice(0, -1).join(", ") + " and " + a[a.length - 1]);
+    function words() {
+      R.asof.innerHTML = esc("prices from " + ML + (S.built ? " \u00b7 updated " + riyadh(S.built) + " Riyadh" : ""));
+      const reps = H.filter((h) => h.rep).sort((a, b) => a.rep.date - b.rep.date || (b.w || 0) - (a.w || 0));
+      let hl, f0 = null; const deck = [];
+      if (reps.length) { f0 = reps[0].rep; const same = reps.filter((h) => h.rep.date === f0.date);
+        const names = same.length <= 5 ? joinNames(same.map((h) => h.t)) : same.length + " of your names", verb = same.length === 1 ? "reports" : "report", when = fd(f0.date);
+        hl = f0.td === 0 ? `${names} ${verb} today, ${when}.` : f0.td === 1 ? `${names} ${verb} on the next trading day, ${when}.` : f0.td <= 5 ? `${names} ${verb} in ${f0.td} trading days, on ${when}.` : `No earnings for the next ${f0.td - 1} trading days, then ${names} ${verb} on ${when}.`;
+      } else hl = `No earnings dates on the calendar yet for your ${N} ${N === 1 ? "stock" : "stocks"}.`;
+      const evAll = []; H.forEach((h) => h.marks.forEach((m) => evAll.push({ h, m }))); evAll.sort((a, b) => a.m.date - b.m.date);
+      if (evAll.length && (!f0 || evAll[0].m.date < f0.date)) { const x = evAll[0]; deck.push(`${x.h.t} ${x.m.short} on ${fd(x.m.date)}, ${inTd(x.m.td)}: ${x.m.title}.`); }
+      R.hl.textContent = hl;
+      if (deck.length) { R.deck.hidden = false; R.deck.innerHTML = "<b>First on the screen</b>" + esc(deck.join(" ")); } else R.deck.hidden = true;
+      const cells = []; let rose = 0, fell = 0, flat = 0, wsum = 0, wd = 0;
+      H.forEach((h) => { if (h.day === null) return; if (h.day > 0) rose++; else if (h.day < 0) fell++; else flat++; if (h.w) { wsum += h.w; wd += h.w * h.day; } });
+      if (rose + fell + flat > 0) { const sub = []; if (typeof portfolioDayPnl === "function") sub.push("whole book " + sgn(portfolioDayPnl().pct, 2)); else if (wsum > 0) sub.push("by weight " + sgn(wd / wsum, 2)); if (S.spy !== null) sub.push("S&P 500 " + sgn(S.spy, 2));
+        cells.push(["Your stocks on " + ML, `${rose} rose \u00b7 ${fell} fell${flat ? " \u00b7 " + flat + " flat" : ""}`, sub.join(" \u00b7 ")]); }
+      let known = 0, below = 0; H.forEach((h) => { if (h.below !== null) { known++; if (h.below) below++; } });
+      if (known) cells.push(["Below their 50-day average", `${below} of ${known}`, `${known - below} above it`]);
+      let mW = 0, mN = 0; H.forEach((h) => { if (h.rep && h.rep.td <= 21) { mN++; mW += h.w || 0; } });
+      if (reps.length) cells.push(["Reporting within a month", mW > 0 ? Math.round(mW) + "% of your book" : `${mN} of ${N}`, `${mN} of ${N} names${heavy && heavy.w > 0 ? " \u00b7 heaviest " + fd(heavy.date) : ""}`]);
+      R.stats.hidden = !cells.length;
+      R.stats.innerHTML = cells.map((c) => `<div class="st"><div class="st-l">${esc(c[0])}</div><div class="st-v">${esc(c[1])}</div>${c[2] ? `<div class="st-s">${esc(c[2])}</div>` : ""}</div>`).join("");
+      hub = rose + fell + flat > 0 && DL === ML ? [rose, fell] : null;   // the hub shows today's date: only today's tally may sit under it
+      /* the approach list */
+      const o = ['<h3>The approach list <i>same dates, in order</i></h3>'];
+      if (dlist.length) { o.push('<div class="ag-head"><span>Date</span><span>Days</span><span>Who</span><span>% book</span></div>');
+        dlist.forEach((s) => { const who = [];
+          s.reps.forEach((h) => { const c = dcol(h.day); who.push(`<button type="button" class="tkb" data-t="${esc(h.t)}" title="${esc(h.n + " reports earnings " + fd(s.date) + (h.repNote ? " \u2014 " + h.repNote : ""))}"><i${c ? ` style="background:${c}"` : ' class="nd"'}></i>${esc(h.t)}</button>`); });
+          s.evs.forEach((x) => { who.push(`<button type="button" class="tkb" data-t="${esc(x.h.t)}" title="${esc(x.m.title + (x.m.risk ? " \u2014 the catch: " + x.m.risk : ""))}"><span class="dmh${x.m.hard ? " f" : ""}"></span>${esc(x.h.t)} <em>${esc(x.m.short)}</em></button>`); });
+          o.push(`<div class="ag-row"><div class="ag-d">${fd(s.date)}</div><div class="ag-n">${s.td === 0 ? "now" : s.td}</div><div class="ag-w">${who.join("")}</div><div class="ag-p">${s.w > 0 ? s.w.toFixed(1) + "%" : ""}</div>${s.w > 0 && maxDayW > 0 ? `<span class="ag-bar" style="width:${(s.w / maxDayW * 100).toFixed(1)}%"></span>` : ""}</div>`); }); }
+      const undated = H.filter((h) => !h.rep && !h.marks.length);
+      if (undated.length) o.push(`<p class="ag-note">No date on the calendar yet: ${undated.map((h) => `<button type="button" class="tkb" data-t="${esc(h.t)}">${esc(h.t)}</button>`).join(", ")}</p>`);
+      const beyond = H.filter((h) => h.rep && h.rep.td > LIM).map((h) => h.t);
+      if (beyond.length) o.push(`<p class="ag-note">More than three months out, drawn on the outer ring: ${esc(beyond.join(", "))}.</p>`);
+      if (dlist.length) o.push(`<p class="ag-foot">Days = trading days from ${DL}. Navy bar = share of your book reporting that day.</p>`);
+      R.agenda.innerHTML = o.join("");
+      /* keys */
+      const kSize = '<svg width="38" height="16" viewBox="0 0 38 16"><circle cx="3" cy="8" r="2.5" fill="#cdc7b3"/><circle cx="13" cy="8" r="4.5" fill="#cdc7b3"/><circle cx="28" cy="8" r="7.5" fill="#cdc7b3"/></svg>';
+      const kCol = '<svg width="64" height="14" viewBox="0 0 64 14"><circle cx="7" cy="7" r="5.5" fill="#be123c"/><circle cx="19.5" cy="7" r="5.5" fill="#e58fa0"/><circle cx="32" cy="7" r="5.5" fill="#cdc7b3"/><circle cx="44.5" cy="7" r="5.5" fill="#86c09b"/><circle cx="57" cy="7" r="5.5" fill="#15803d"/></svg>';
+      R.k1.innerHTML = kSize + "<b>Dot size</b> weight in your book";
+      R.k2.innerHTML = kCol + `<b>Colour</b> move on ${esc(ML)}; darkest = 1.5% or more`;
+      R.k4.innerHTML = '<span class="dmh f"></span>ruling or deal close<br><span class="dmh"></span>other dated event';
+      R.key.innerHTML = `<span class="k">${kSize}<span><b>Dot size</b> weight in your book</span></span><span class="k">${kCol}<span><b>Dot colour</b> move on ${esc(ML)}</span></span>`
+        + '<span class="k"><span class="dmh f"></span><span><b>Filled diamond</b> ruling or deal close; open is another dated event</span></span>';
+      R.cap.textContent = reduce ? "Each dot sits at its next earnings report; further out is further away. Tap any name, on the radar or in the list, to read it."
+        : `Each dot sits at its next earnings report; further out is further away, and the near weeks are stretched. The sweep reads one holding at a time; the ripple it sets off is as wide as that stock\u2019s move on ${ML}. A navy pulse means within a week. Tap a name to hold it.`;
+      R.watch.hidden = !watch.length;
+      if (watch.length) R.watch.innerHTML = '<span class="lab">Also dated, not in your book</span>' + watch.slice(0, 5).map((m) => `<span><b>${esc(m.t)}</b> ${esc(m.title || m.short)}, ${fd(m.date)}</span>`).join(" \u00b7 ") + (watch.length > 5 ? ` \u00b7 and ${watch.length - 5} more` : "");
+    }
+    /* ---------- the readout ---------- */
+    const fact = (label, value, sub, cls) => `<div><dt>${esc(label)}</dt><dd${cls ? ` class="${cls}"` : ""}>${esc(value)}${sub ? `<small>${esc(sub)}</small>` : ""}</dd></div>`;
+    function spark(h) {
+      const a = hidx[h.t]; if (!Array.isArray(a) || a.length < 6) return "";
+      const W = 240, Ht = 62, px = 4, py = 6, n = a.length - 1; let lo = Infinity, hi = -Infinity;
+      a.forEach((x) => { if (x < lo) lo = x; if (x > hi) hi = x; }); if (hi - lo < 0.01) { hi += 1; lo -= 1; }
+      const X = (i) => px + (W - 2 * px) * i / n, Y = (x) => py + (Ht - 2 * py) * (1 - (x - lo) / (hi - lo));
+      const d = a.map((x, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(x).toFixed(1)).join(""), chg = (a[n] / a[0] - 1) * 100, col = chg >= 0 ? "#15803d" : "#be123c";
+      return `<div class="sp-l">Price path, ${n} trading days</div><svg viewBox="0 0 ${W} ${Ht}" role="img" aria-label="Price path over ${n} trading days"><line x1="${px}" x2="${W - px}" y1="${Y(a[0]).toFixed(1)}" y2="${Y(a[0]).toFixed(1)}" stroke="#bdb59c" stroke-dasharray="2 3"/>`
+        + `<path d="${d}" fill="none" stroke="#15181f" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${X(n).toFixed(1)}" cy="${Y(a[n]).toFixed(1)}" r="3" fill="${col}"/></svg>`
+        + `<div class="sp-c">${hdates.length ? esc(fd(utc(hdates[0]), 1) + " to " + fd(utc(hdates[hdates.length - 1]), 1)) : "over " + n + " trading days"}: <b class="${tone(chg)}">${sgn(chg)}</b> <span>(dotted = where it started)</span></div>`;
+    }
+    function renderRO(h) {
+      let o = `<div class="ro-t">${esc(h.t)}</div><div class="ro-n">${esc(h.n)}</div>`;
+      const vc = h.verdict ? (/AVOID/i.test(h.verdict) ? "dn" : /BUY/i.test(h.verdict) ? "up" : "br") : "";
+      o += `<div class="ro-v">${h.verdict ? `<b class="${vc}">${esc(h.verdict)}</b>${h.score !== null ? `<span>score ${Math.round(h.score)} of 100</span>` : ""}` : "<span>not scored: outside the compliant list</span>"}</div>`;
+      R.roid.innerHTML = o; o = "";
+      if (h.day !== null) o += fact("Move on " + ML, sgn(h.day, 2), "", tone(h.day));
+      if (h.gain !== null) o += fact("Since you bought", sgn(h.gain), "", tone(h.gain));
+      if (h.w !== null) o += fact("Weight in book", h.w.toFixed(1) + "%", "");
+      if (h.rep) o += fact("Earnings report", fd(h.rep.date), inTd(h.rep.td));
+      if (h.vs50 !== null) o += fact("50-day average", Math.abs(h.vs50).toFixed(1) + "% " + (h.vs50 < 0 ? "below" : "above"), h.gate === "TURN" ? "back above its 20-day" : h.gate === "WAIT" ? "and below its 20-day" : "", tone(h.vs50));
+      else if (h.gate) o += fact("50-day average", h.gate === "GO" ? "Above it" : "Below it", h.gate === "TURN" ? "back above its 20-day" : "", h.gate === "GO" ? "up" : "dn");
+      const g = gidx[h.group]; if (g && g.length > 1) { const gc = (g[g.length - 1] / g[0] - 1) * 100; o += fact("Its group, " + (g.length - 1) + " trading days", sgn(gc), h.group, tone(gc)); }
+      R.rofacts.innerHTML = o;
+      const more = [];
+      if (h.repNote) more.push("<b>The report carries</b> " + esc(h.repNote) + ".");
+      if (h.marks.length) more.push("<b>Also dated</b> " + h.marks.map((m) => fd(m.date) + " \u2014 " + esc(m.title) + ", " + inTd(m.td)).join(" \u00b7 ") + ".");
+      if (h.why) more.push("<b>In the news</b> " + esc(strip(h.why)));
+      R.romore.innerHTML = more.length ? more.join(" ") : h.rep ? `<i>Nothing else is dated for ${esc(h.t)} before or after that report.</i>` : `<i>Nothing is dated for ${esc(h.t)} yet.</i>`;
+      R.rosp.innerHTML = spark(h);
+      setKick();
+    }
+    /* ---------- the radar itself ---------- */
+    function draw() {
+      const avail = fig.clientWidth || 506, size = Math.max(280, Math.min(540, Math.floor(avail)));
+      lastSize = size;
+      const small = size < 420, c = size / 2, Rr = c - 38, r0 = Math.max(34, Math.round(size * 0.104)), k = size / 520;
+      const f = (n) => n.toFixed(1), P = (r, a) => { const t = a * Math.PI / 180; return [c + r * Math.cos(t), c + r * Math.sin(t)]; };
+      const rad = (td) => r0 + (Rr - r0) * Math.sqrt(Math.min(td, LIM) / LIM);
+      const arc = (r, a0, a1, sw) => { const p = P(r, a0), q = P(r, a1), lg = Math.abs(a1 - a0) > 180 ? 1 : 0; return `M${f(p[0])} ${f(p[1])}A${f(r)} ${f(r)} 0 ${lg} ${sw} ${f(q[0])} ${f(q[1])}`; };
+      const sector = (rA, rB, a0, a1) => { const a = P(rA, a0), b = P(rB, a0), d = P(rB, a1), e = P(rA, a1), lg = a1 - a0 > 180 ? 1 : 0;
+        return `M${f(a[0])} ${f(a[1])}L${f(b[0])} ${f(b[1])}A${f(rB)} ${f(rB)} 0 ${lg} 1 ${f(d[0])} ${f(d[1])}L${f(e[0])} ${f(e[1])}A${f(rA)} ${f(rA)} 0 ${lg} 0 ${f(a[0])} ${f(a[1])}Z`; };
+      const o = [];
+      order.forEach((s) => { o.push(`<path class="wg" d="${sector(r0, Rr, s.a0, s.a1)}"/>`); });
+      RINGS.forEach((r) => { if (r[0] < LIM) o.push(`<circle class="rg${r[0] >= 21 ? " mo" : ""}" cx="${c}" cy="${c}" r="${f(rad(r[0]))}"/>`); });
+      seq.forEach((h) => { const a = P(r0, h.a), b = P(Rr, h.a);
+        o.push(`<path class="hit" data-t="${esc(h.t)}" d="${sector(r0, Rr, h.a - slot / 2, h.a + slot / 2)}"/>`);
+        o.push(`<line class="sp" data-t="${esc(h.t)}" x1="${f(a[0])}" y1="${f(a[1])}" x2="${f(b[0])}" y2="${f(b[1])}"/>`); });
+      o.push(`<circle class="rim" cx="${c}" cy="${c}" r="${f(Rr)}"/>`);
+      order.forEach((s, si) => { const pad = Math.min(0.6, (s.a1 - s.a0) / 4);
+        o.push(`<path class="sa" d="${arc(Rr + 23, s.a0 + pad, s.a1 - pad, 1)}"/>`);
+        const mid = (s.a0 + s.a1) / 2, bottom = Math.sin(mid * Math.PI / 180) > 0, id = "fgr-sl" + si;
+        o.push(`<path id="${id}" fill="none" d="${bottom ? arc(Rr + 35.5, mid + 75, mid - 75, 0) : arc(Rr + 28, mid - 75, mid + 75, 1)}"/>`);
+        const room = (s.a1 - s.a0 + GAP) * Math.PI / 180 * (Rr + 31), cw = small ? 5.5 : 6.5; let nm = String(s.name); const cut = nm.split(/[\/(]/)[0].trim();
+        if (nm.length * cw > room && cut && cut.length < nm.length) nm = cut;
+        if (nm.length * cw > room) nm = nm.slice(0, Math.max(3, Math.floor(room / cw) - 1)) + ".";
+        o.push(`<text class="sl" text-anchor="middle"><textPath href="#${id}" xlink:href="#${id}" startOffset="50%">${esc(nm.toUpperCase())}</textPath><title>${esc(s.name)}</title></text>`); });
+      o.push(`<g class="sw" data-sw="1" transform="rotate(${ang.toFixed(2)} ${c} ${c})"><path d="${sector(r0, Rr, -30, 0)}"/><path d="${sector(r0, Rr, -12, 0)}"/><line x1="${f(c + r0)}" y1="${c}" x2="${f(c + Rr)}" y2="${c}"/></g>`);
+      RINGS.forEach((r) => { o.push(`<text class="rl" x="${c}" y="${f(c - rad(r[0]))}" dy=".32em" text-anchor="middle">${small ? r[2] : r[1]}</text>`); });
+      const pulseDefs = [], marks = [];
+      seq.forEach((h) => {
+        if (h.rep) { const br = Math.max(3, Math.sqrt(h.w !== null ? h.w : 0.5) * 4.2 * k), p = P(Math.min(rad(h.rep.td), Rr - br - 2.5), h.a); G.br[h.t] = br;
+          o.push(`<circle class="pg" data-p="${esc(h.t)}" cx="${f(p[0])}" cy="${f(p[1])}" r="0" opacity="0"/>`);
+          if (h.rep.td <= 5) pulseDefs.push([p, br]);
+          marks.push({ z: br, h, p, br, far: h.rep.td > LIM }); }
+        h.marks.forEach((m) => { if (m.td > LIM) return; const s = small ? 3.3 : 4.1, r = rad(m.td); let ang = h.a;
+          if (h.rep) { const need = G.br[h.t] + s * 1.42 + 2; if (Math.abs(r - Math.min(rad(h.rep.td), Rr - G.br[h.t] - 2.5)) < need) ang += Math.min(slot * 0.42, Math.asin(Math.min(1, need / r)) * 180 / Math.PI); }
+          const p = P(r, ang); if (m.td <= 5) pulseDefs.push([p, s + 2]); marks.push({ z: 0, h, p, m, s }); });
+      });
+      pulseDefs.forEach((q) => { o.push(`<circle class="pl" data-b="${f(q[1])}" cx="${f(q[0][0])}" cy="${f(q[0][1])}" r="${f(q[1] + 5)}" opacity=".45"/>`); });
+      marks.sort((a, b) => b.z - a.z);
+      marks.forEach((q) => { const h = q.h, rimP = P(Rr, h.a), fly = `<g class="fly" style="--dx:${f(rimP[0] - q.p[0])}px;--dy:${f(rimP[1] - q.p[1])}px;animation-delay:${h.i * 30}ms">`;
+        if (q.m) o.push(`<g class="ev" data-t="${esc(h.t)}" transform="translate(${f(q.p[0])} ${f(q.p[1])})">${fly}<rect class="dm${q.m.hard ? " f" : ""}" x="${f(-q.s)}" y="${f(-q.s)}" width="${f(q.s * 2)}" height="${f(q.s * 2)}" transform="rotate(45)"/></g></g>`);
+        else { const col = dcol(h.day); o.push(`<g class="hb" data-t="${esc(h.t)}" transform="translate(${f(q.p[0])} ${f(q.p[1])})">${fly}${col ? `<circle class="dot${q.far ? " far" : ""}" r="${f(q.br)}" fill="${col}"/>` : `<circle class="dot nd" r="${f(q.br)}"/>`}</g></g>`); } });
+      o.push(`<circle class="hub" cx="${c}" cy="${c}" r="${r0}"/>`);
+      const hubFs = (mx) => Math.min(mx, (2 * r0 - 10) / (DL.length * 0.54)).toFixed(1);
+      if (small) { o.push(`<text class="hub-b" style="font-size:${hubFs(14)}px" x="${c}" y="${f(c + (hub ? 0 : 5))}" text-anchor="middle">${esc(DL)}</text>`);
+        if (hub) o.push(`<text class="hub-c" style="font-size:7.5px" x="${c}" y="${f(c + 13)}" text-anchor="middle">${hub[0]} rose \u00b7 ${hub[1]} fell</text>`); }
+      else { o.push(`<text class="hub-a" x="${c}" y="${f(c - 16)}" text-anchor="middle">COUNTED FROM</text><text class="hub-b" style="font-size:${hubFs(18)}px" x="${c}" y="${f(c + 5)}" text-anchor="middle">${esc(DL)}</text>`);
+        if (hub) o.push(`<text class="hub-c" x="${c}" y="${f(c + 21)}" text-anchor="middle">${hub[0]} rose \u00b7 ${hub[1]} fell</text>`); }
+      seq.forEach((h) => { const lp = P(Rr + 11.5, h.a), bottom = Math.sin(h.a * Math.PI / 180) > 0, rot = bottom ? h.a - 90 : h.a + 90, wd = h.t.length * (small ? 5.7 : 6.6) + 7, hh = small ? 11 : 13;
+        o.push(`<g class="tk" data-t="${esc(h.t)}" transform="translate(${f(lp[0])} ${f(lp[1])}) rotate(${f(rot)})"><rect x="${f(-wd / 2)}" y="${f(-hh / 2)}" width="${f(wd)}" height="${hh}" rx="2"/><text text-anchor="middle" dy=".35em">${esc(h.t)}</text></g>`); });
+      svg.setAttribute("width", size); svg.setAttribute("height", size); svg.setAttribute("viewBox", `0 0 ${size} ${size}`);
+      R.sbox.style.width = size + "px";
+      root.classList.toggle("nokc", size < 470);
+      svg.setAttribute("class", "svg " + (small ? "sm " : "") + (firstDraw && !reduce ? "first" : ""));
+      svg.setAttribute("aria-label", `Radar of your ${N} holdings. Distance from the centre is trading days from ${DL} to each next earnings report. The list beside it gives the same dates in order.`);
+      svg.innerHTML = o.join("");
+      G.c = c; G.R = Rr; G.k = k; G.sw = svg.querySelector("[data-sw]"); G.ping = {}; G.pulse = []; pings = [];
+      svg.querySelectorAll(".pg").forEach((el) => { G.ping[el.getAttribute("data-p")] = el; });
+      svg.querySelectorAll(".pl").forEach((el) => { G.pulse.push({ el, b: parseFloat(el.getAttribute("data-b")) }); });
+      if (firstDraw) { firstDraw = false; setTimeout(() => svg.classList.remove("first"), 2400); }
+      if (curT) mark(curT, true);
+    }
+    const qs = (t) => root.querySelectorAll('[data-t="' + String(t).replace(/["\\]/g, "") + '"]');
+    function mark(t, on) { qs(t).forEach((el) => { el.classList.toggle("cur", on); const row = el.closest ? el.closest(".ag-row") : null; if (row) row.classList.toggle("on", on); }); }
+    const placeSweep = () => { if (G.sw) G.sw.setAttribute("transform", `rotate(${ang.toFixed(2)} ${G.c} ${G.c})`); };
+    function firePing(h) { const el = G.ping[h.t]; if (reduce || !el || h.day === null) return;
+      el.setAttribute("stroke", h.day >= 0 ? "#15803d" : "#be123c");
+      for (let i = 0; i < pings.length; i++) if (pings[i].el === el) { pings.splice(i, 1); break; }
+      const a = G.br[h.t] || 4; pings.push({ el, t0: 0, a, b: a + 4 + Math.min(Math.abs(h.day), 6) * 7 * G.k }); }
+    function select(t, ping) { const h = byT[t]; if (!h) return;
+      if (curT !== t) { if (curT) mark(curT, false); curT = t; mark(t, true); renderRO(h); }
+      if (ping) firePing(h);
+      if (reduce || !looping) { ang = norm(h.a); placeSweep(); } }
+    function setKick() { R.kick.textContent = (pinned && pinned === curT) || (hoverT && hoverT === curT) ? "Held" : reduce ? "Selected" : "On the sweep"; btn.textContent = pinned ? "Resume sweep" : "Pause"; }
+    /* one turn in 150 seconds: about seven seconds on each holding, long enough to read the panel */
+    const SPEED = 360 / 150000;
+    function startLoop() {
+      if (reduce || looping || !inView || !ready) return;
+      looping = true; const g = ++gen; let last = 0;
+      const frame = (ts) => { if (g !== gen) return;
+        const dt = last ? Math.min(64, ts - last) : 16; last = ts; const lock = hoverT || pinned;
+        if (lock && byT[lock]) { const diff = ((norm(byT[lock].a) - ang + 540) % 360) - 180; ang = norm(ang + diff * Math.min(1, dt * 0.012)); }
+        else { const prev = ang, adv = dt * SPEED; ang = norm(ang + adv);
+          for (const h of seq) { let rel = norm(h.a - slot / 2 - prev); if (rel > 0 && rel <= adv) select(h.t, false); rel = norm(h.a - prev); if (rel > 0 && rel <= adv) firePing(h); } }
+        placeSweep();
+        for (let i = pings.length - 1; i >= 0; i--) { const p = pings[i]; if (!p.t0) p.t0 = ts; const u = (ts - p.t0) / 1500;
+          if (u >= 1) { p.el.setAttribute("opacity", "0"); pings.splice(i, 1); } else { const e = 1 - (1 - u) * (1 - u); p.el.setAttribute("r", (p.a + (p.b - p.a) * e).toFixed(1)); p.el.setAttribute("opacity", ((1 - u) * 0.9).toFixed(2)); } }
+        if (G.pulse.length) { const ph = (ts % 2600) / 2600; for (const q of G.pulse) { q.el.setAttribute("r", (q.b + 1 + ph * 12 * G.k).toFixed(1)); q.el.setAttribute("opacity", ((1 - ph) * 0.8).toFixed(2)); } }
+        requestAnimationFrame(frame); };
+      requestAnimationFrame(frame);
+    }
+    const stopLoop = () => { looping = false; gen++; };
+    root.addEventListener("pointerover", (e) => { if (e.pointerType && e.pointerType !== "mouse") return;
+      const el = e.target.closest ? e.target.closest("[data-t]") : null, t = el ? el.getAttribute("data-t") : null;
+      if (t === hoverT) return; hoverT = t; if (t) select(t, true); else if (pinned) select(pinned, false); setKick(); });
+    root.addEventListener("pointerleave", () => { if (hoverT) { hoverT = null; if (pinned) select(pinned, false); setKick(); } });
+    root.addEventListener("click", (e) => { if (e.target === btn) { pinned = pinned ? null : curT; setKick(); return; }
+      const el = e.target.closest ? e.target.closest("[data-t]") : null; if (!el) return;
+      const t = el.getAttribute("data-t"); pinned = pinned === t ? null : t; if (pinned) select(t, true); setKick(); });
+    root.addEventListener("focusin", (e) => { const el = e.target.closest ? e.target.closest(".tkb") : null; if (el && !pinned) { hoverT = el.getAttribute("data-t"); select(hoverT, false); } });
+    root.addEventListener("focusout", (e) => { const el = e.target.closest ? e.target.closest(".tkb") : null; if (el && hoverT === el.getAttribute("data-t")) hoverT = null; });
+    if ("IntersectionObserver" in window) new IntersectionObserver((en) => { inView = en[en.length - 1].isIntersecting; if (inView) startLoop(); else stopLoop(); }, { threshold: 0.05 }).observe(fig);
+    /* layout follows the box the radar has: three columns from 1090px, two from 700, one below */
+    let rz = null, lastHostW = 0;
+    const fit = () => { const w = host.clientWidth; if (!w) return; const cls = w >= 1090 ? "wl" : w >= 700 ? "wm" : "ws";
+      if (!root.classList.contains(cls)) { root.classList.remove("wl", "wm", "ws"); root.classList.add(cls); }
+      const size = Math.max(280, Math.min(540, Math.floor(fig.clientWidth || 506)));
+      if (ready && (size !== lastSize || w !== lastHostW)) { lastHostW = w; draw(); placeSweep(); } };
+    if (window.ResizeObserver) new ResizeObserver(() => { clearTimeout(rz); if (!lastHostW) fit(); else rz = setTimeout(fit, 80); }).observe(host);
+    const onMotion = () => { reduce = !!mqReduce.matches; if (reduce) { stopLoop(); btn.hidden = true; if (ready) { draw(); if (curT) { ang = norm(byT[curT].a); placeSweep(); } } } else { btn.hidden = false; startLoop(); } if (ready) setKick(); };
+    if (mqReduce.addEventListener) mqReduce.addEventListener("change", onMotion); else if (mqReduce.addListener) mqReduce.addListener(onMotion);
+
+    function update(snapshot) {
+      S = snapshot;
+      if (!S.holdings.length) { bail("No holdings came through in the data, so the radar has nothing to show."); return; }
+      const keep = curT; curT = null;
+      prepare(); ready = true;
+      const w = host.clientWidth; root.classList.remove("wl", "wm", "ws"); root.classList.add(w >= 1090 ? "wl" : w >= 700 || !w ? "wm" : "ws"); lastHostW = w;
+      words(); draw();
+      btn.hidden = reduce;
+      if (pinned && !byT[pinned]) pinned = null;
+      const start = (keep && byT[keep]) ? keep : (() => { let soon = null; H.forEach((h) => { let t = h.rep ? h.rep.td : Infinity; h.marks.forEach((m) => { if (m.td < t) t = m.td; }); if (soon === null || t < soon[1]) soon = [h, t]; }); return (soon ? soon[0] : seq[0]).t; })();
+      if (!keep) ang = norm(byT[start].a - slot / 2 + 0.01);
+      select(start, false); placeSweep(); startLoop();
+    }
+    return { update };
+  }
+
+  /* ---------- wiring ---------- */
+  let map = null, radar = null;
+  function render() {
+    const mh = document.getElementById("paper-map"), rh = document.getElementById("paper-radar");
+    if (!mh || !rh || !DATA || !DATA.universe) return;
+    let S; try { S = snap(); } catch (e) { console.error("front graphics: snapshot failed", e); return; }
+    try { mh.hidden = false; if (!map) map = mountMap(mh); map.update(S); } catch (e) { console.error("front graphics: map failed", e); mh.hidden = true; map = null; }
+    try { rh.hidden = false; if (!radar) radar = mountRadar(rh); radar.update(S); } catch (e) { console.error("front graphics: radar failed", e); rh.hidden = true; radar = null; }
+  }
+  return { render };
+})();
+/* FG:END */
+
+// 2026-10-02 (owner: "I want the design to be spotless"): keep the two front-page columns the same length.
+// The lead column's length is set by the article and the Earnings Slate; the rail trims its Sector Signals
+// to match (a button under the cards opens the rest in place), so neither column ends in blank paper.
+let _sigOpen = false;   // he asked for the rest of the cards: stop trimming
+function balanceFront() {
+  const main = document.querySelector(".paper-main"), lead = document.querySelector(".paper-leadcol"), rail = document.querySelector(".paper-rail"), sig = document.getElementById("paper-signals");
+  if (!main || !lead || !rail || !sig) return;
+  const cards = [...sig.querySelectorAll(".ssig-card")];
+  const old = sig.querySelector(".ssig-more"); if (old) old.remove();
+  cards.forEach((c) => { c.hidden = false; c.classList.remove("ssig-brief"); });
+  if (_sigOpen || cards.length < 4 || getComputedStyle(main).gridTemplateColumns.split(" ").length < 2) return;   // opened by him, or one column (phone): show everything
+  rail.style.justifyContent = "flex-start";   // measure the rail packed; the stylesheet's space-between returns at the end
+  const bottom = (col) => { const top = col.getBoundingClientRect().top; let b = 0;
+    for (const c of col.children) { if (c.hidden || !c.offsetHeight) continue; b = Math.max(b, c.getBoundingClientRect().bottom - top); } return b; };
+  const target = bottom(lead); if (target < 300) { rail.style.justifyContent = ""; return; }   // the lead has not painted yet
+  const more = document.createElement("button"); more.type = "button"; more.className = "ssig-more";
+  more.addEventListener("click", () => { _sigOpen = true; balanceFront(); });
+  let shown = cards.length;
+  while (shown > 3 && bottom(rail) > target + 44) {
+    shown--; cards[shown].hidden = true;
+    const cut = cards.length - shown; more.textContent = "Show " + cut + " more sector signal" + (cut === 1 ? "" : "s") + " \u2193";
+    if (!more.isConnected) { const grid = sig.querySelector(".ssig-grid"); if (grid) grid.after(more); }
+  }
+  // a whole card too many, but room to spare: bring the next one back as a one-line brief
+  if (shown < cards.length && target - bottom(rail) > 64) {
+    const c = cards[shown]; c.hidden = false; c.classList.add("ssig-brief");
+    if (bottom(rail) > target + 44) { c.hidden = true; c.classList.remove("ssig-brief"); }
+    else { const cut = cards.length - shown - 1; if (cut) more.textContent = "Show " + cut + " more sector signal" + (cut === 1 ? "" : "s") + " \u2193"; else more.remove(); }
+  }
+  rail.style.justifyContent = "";
+}
+let _balTimer = null, _balObs = null;
+function scheduleBalance() {
+  clearTimeout(_balTimer); _balTimer = setTimeout(balanceFront, 80);
+  if (!_balObs && window.ResizeObserver) { const l = document.getElementById("paper-lead"), m = document.getElementById("paper-lead-more");
+    if (l && m) { _balObs = new ResizeObserver(() => { clearTimeout(_balTimer); _balTimer = setTimeout(balanceFront, 120); }); _balObs.observe(l); _balObs.observe(m); } }
+}
+
 /* ---------- Daily: newspaper-style market front page (data-driven v1) ---------- */
 let dailyTimer = null;
 function enterDaily() {
@@ -1636,48 +2350,23 @@ function renderDaily() {
       + `<div class="lead-byline">By The Market Desk · live data</div>`
       + `<p class="lead-body">The ${uni.length}-name Shariah-compliant universe traded <b>${tone}</b> ${_when} — <b class="pos">${ups} advancing</b>, <b class="neg">${downs} declining</b>. <b>${esc(best.s)}</b> was the strongest sector on average (<span class="${signClass(best.avg)}">${fmtPct(best.avg)}</span>), while <b>${esc(worst.s)}</b> was the weakest (<span class="${signClass(worst.avg)}">${fmtPct(worst.avg)}</span>). ${esc(g.name || g.ticker)} (${esc(g.ticker)}) led all names at <span class="pos">${fmtPct(g.day_pct)}</span>; ${esc(l.name || l.ticker)} (${esc(l.ticker)}) fell <span class="neg">${fmtPct(l.day_pct)}</span>. QARP rankings re-rate on these price moves; the hand-scored verdicts change only on a fundamentals re-score.</p>`;
   }
-  // Your Portfolio Today
-  if (port.length) {
-    const { usd: todayUsd, pct: todayPct } = portfolioDayPnl();   // exact, shared with the KPI strip
-    const pUp = port.filter((h) => h.day_pct > 0).length, pDown = port.filter((h) => h.day_pct < 0).length;
-    const ps = [...port].sort((a, b) => b.day_pct - a.day_pct);
-    const mv = (h) => `<li><span class="mv-tk">${esc(h.ticker)}</span><span class="${signClass(h.day_pct)}">${fmtPct(h.day_pct)}</span></li>`;
-    document.getElementById("paper-portfolio").innerHTML =
-      `<div class="side-head">Jaleel's Portfolio ${sessionSub(holdingsLive())}</div>`
-      + `<p class="side-body">Jaleel's book is <b class="${signClass(todayPct)}">${todayPct >= 0 ? "up" : "down"} ${fmtPct(Math.abs(todayPct))}</b>${todayUsd != null ? ` (${todayUsd >= 0 ? "+" : "−"}${fmtUSD(Math.abs(todayUsd), 0)})` : ""} on the day — ${pUp} green, ${pDown} red.</p>`
-      + `<ul class="mv-list">${ps.slice(0, 3).map(mv).join("")}${ps.slice(-2).reverse().map(mv).join("")}</ul>`;
-  }
-  // Sector Watch
-  if (uni.length) {
-    document.getElementById("paper-sectors").innerHTML =
-      `<div class="side-head">Sector Watch ${sessionSub()}</div>`
-      + `<ul class="mv-list">${secMoves().map((m) => `<li><span class="mv-tk">${esc(m.s)}</span><span class="${signClass(m.avg)}">${fmtPct(m.avg)}</span></li>`).join("")}</ul>`;
-  }
-  // Movers
-  if (uni.length) {
-    const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct);
-    const row = (x) => `<li><span class="mv-tk">${esc(x.ticker)}</span><span class="${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span></li>`;
-    document.getElementById("paper-movers").innerHTML =
-      `<div class="side-head">Movers ${sessionSub()}</div>`
-      + `<div class="mv-cols"><div><div class="mv-lbl pos">Gainers</div><ul class="mv-list">${sorted.slice(0, 4).map(row).join("")}</ul></div>`
-      + `<div><div class="mv-lbl neg">Decliners</div><ul class="mv-list">${sorted.slice(-4).reverse().map(row).join("")}</ul></div></div>`;
-  }
+  // 2026-10-02: the Sector Watch / Movers / Portfolio row is gone — The Map (group averages, biggest
+  // rises and falls) and Your Radar (your stocks today) show all of it once, without repeating it.
   // Number of the Day — NYT-style boxed stat pulled from live data
   const ndEl = document.getElementById("paper-numday");
   if (ndEl && uni.length) {
     const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct);
     const g = sorted[0];
-    const ups = uni.filter((x) => x.day_pct > 0).length, downs = uni.filter((x) => x.day_pct < 0).length;
     ndEl.innerHTML = `<div class="numday-label">Number of the Day ${sessionSub()}</div>`
       + `<div class="numday-fig ${signClass(g.day_pct)}">${fmtPct(g.day_pct)}</div>`
-      + `<div class="numday-cap">${esc(g.name || g.ticker)} (${esc(g.ticker)}) led the Shariah universe. <b>${ups}</b> stocks rose and <b>${downs}</b> fell across ${uni.length} names.</div>`;
+      + `<div class="numday-cap">${esc(g.name || g.ticker)} (${esc(g.ticker)}) led all ${uni.length} stocks on the list.</div>`;
   }
   renderDailyTicker();
   loadDailyBrief();    // original lead column + briefs from daily_brief.json (NO external links)
   renderSectorSignals(); // sector-level event-driven signals (uses cached SIGNALS)
   renderLeadMore();    // fills the space under the lead with more market news (catalysts + risk)
-  renderPaperDocket(); // dated catalysts ahead (persisted event ledger, rail box)
-  renderWeather();     // regime report strip under Across the Market
+  FG.render();         // The Map + Your Radar (replaced The Weather, The Docket and Across the Market, 2026-10-02)
+  balanceFront(); scheduleBalance();   // the rail trims to the lead column's length (now, and again once late layout settles)
 }
 
 // The Weather — regime report (2026-09-10, user placement: left column under Across
@@ -1891,13 +2580,11 @@ function renderLeadMore() {
   });
   ((S && S.risk) || []).forEach((r) => items.push({ h: `${r.ticker} — ${r.tag}`, b: strip(r.detail), meta: r.next ? "Next: " + r.next : "" }));
   const list = items.filter((x) => x.h && x.b).slice(0, 8);
-  if (!slate.length && !list.length) { el.innerHTML = ""; return; }
+  if (!slate.length) { el.innerHTML = ""; return; }
   el.innerHTML =
     (slate.length ? `<div class="lm-rule"></div><div class="lm-head">The Earnings Slate <span class="es-note">the desk’s frozen calls — graded in public on the Estimates tab</span></div><div class="lm-grid">`
       + slate.map(esSlateItem).join("") + `</div>` : "")
-    + (list.length ? `<div class="lm-rule"></div><div class="lm-head">Across the Market</div><div class="lm-grid">`
-      + list.map((it) => `<article class="lm-item"><h3 class="lm-h">${esc(it.h)}</h3><p class="lm-body">${esc(it.b)}</p>${it.meta ? `<div class="lm-meta">${esc(it.meta)}</div>` : ""}</article>`).join("")
-      + `</div>` : "");
+    ;   // 2026-10-02: 'Across the Market' removed - Your Radar carries the dated items
   // a slate card opens the Estimates tab (the full dossier lives there)
   el.querySelectorAll("[data-goto-est]").forEach((a) => a.addEventListener("click", () => {
     const b = document.querySelector('.tab[data-tab="estimates"]');
@@ -1950,7 +2637,7 @@ async function loadDailyBrief() {
   renderBriefs(fresh && Array.isArray(b.briefs) ? b.briefs : null, fresh ? leadLagLabel(b) : "");
 }
 
-// Always-fresh briefs built from live data (sector signals + universe breadth/movers + catalysts),
+// Always-fresh briefs built from live data (sector signals + universe risers-and-fallers/movers + catalysts),
 // used whenever the routine-written briefs aren't current — so the section is NEVER empty/stale.
 function autoBriefs() {
   const strip = (s) => (s || "").replace(/<[^>]+>/g, "");
@@ -2012,6 +2699,7 @@ async function loadSignals() {
   renderEarnings();
   renderCalls();
   renderLeadMore();
+  if (dailyTimer && typeof FG !== "undefined") FG.render();   // the Radar's report dates come from signals.json first: repaint when it lands
 }
 
 function renderSignals() {
@@ -2066,11 +2754,14 @@ function renderSectorSignals() {
   if (!el) return;
   const secs = (SIGNALS && SIGNALS.sectors) || [];
   if (!secs.length) { el.innerHTML = ""; return; }
+  // 2026-10-02: when the driver is only a cut-off copy of the note, print the note once (it read as the same sentence twice).
+  const flat = (x) => String(x || "").toLowerCase().replace(/^amid\s+/, "").replace(/(\.\.\.|\u2026)\s*$/, "").replace(/\s+/g, " ").trim();
   const cards = secs.map((s) => {
     const dir = s.dir || "mixed";
+    const dv = flat(s.driver), at = flat(s.note).indexOf(dv.slice(0, 48)), same = dv.length < 3 || (dv.length > 20 && at >= 0 && at <= 16);   // the note may open with any lead word (Amid / After / Following ...)
     return `<article class="ssig-card dir-${dir}">
       <div class="ssig-top"><i class="ti ${DIR_ICON[dir] || "ti-arrows-up-down"}" aria-hidden="true"></i><span class="ssig-name">${esc(s.sector || "")}</span><span class="ssig-dir d-${dir}">${DIR_LABEL[dir] || dir}</span></div>
-      <div class="ssig-driver">${esc(s.driver || "")}</div>
+      ${same ? "" : `<div class="ssig-driver">${esc(s.driver || "")}</div>`}
       <p class="ssig-note">${esc(s.note || "")}</p>
       ${s.src ? `<div class="ssig-src"><i class="ti ti-circle-check" aria-hidden="true"></i>${esc(s.src)}</div>` : ""}
     </article>`;
@@ -2078,6 +2769,7 @@ function renderSectorSignals() {
   const src = (SIGNALS && SIGNALS.sources) ? `<div class="ssig-foot">${esc(SIGNALS.sources)}</div>` : "";
   el.innerHTML = `<div class="side-head">Sector Signals <span class="side-sub">why, not just how much</span></div>`
     + `<div class="ssig-grid">${cards}</div>${src}`;
+  balanceFront(); scheduleBalance();   // trim in the same task as the repaint, so no frame shows the full list
 }
 
 // Drawer: latest Benzinga "why is it moving" / news for a held name (server-baked, fresh only).
@@ -2584,6 +3276,7 @@ async function liveTick() {
       flashAccount(DATA.meta.portfolio_totals.account);
     }
     renderPortfolio();      // re-renders the KPI strip (inside this panel) + donut + table
+    if (dailyTimer) FG.render();   // front page open: the Map and the Radar follow the live prices
     patchLivePrices();      // reflect holdings' live price/day in the Universe + Overview tabs
     lastGoodTs = Date.now();
     lastGoodClock = nyClock();

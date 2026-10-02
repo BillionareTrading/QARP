@@ -394,6 +394,9 @@ tbody tr:hover { background: var(--surface-2); }
   border-bottom: 2px solid var(--news-ink); padding-bottom: 5px; margin-bottom: 11px; }
 .lm-grid { column-count: 2; column-gap: 26px; column-rule: 1px solid var(--news-rule); }
 @media (max-width: 600px) { .lm-grid { column-count: 1; } }
+/* one card alone takes the full column instead of leaving half the row blank */
+.lm-grid:has(> .lm-item:only-child) { column-count: 1; }
+.lm-grid > .lm-item:only-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
 .lm-grid .lm-item { break-inside: avoid; -webkit-column-break-inside: avoid; margin-bottom: 13px; padding-bottom: 11px; border-bottom: 1px solid var(--news-rule); }
 .lm-h { font-family: "Playfair Display", Georgia, serif; font-size: 15px; line-height: 1.2; font-weight: 700; margin: 0 0 4px; color: var(--news-ink); }
 .lm-body { font-size: 13px; line-height: 1.5; margin: 0; color: #221f18; text-align: justify; hyphens: auto; }
@@ -430,6 +433,15 @@ tbody tr:hover { background: var(--surface-2); }
 
 /* wire (briefs) — multi-column with rules */
 .paper-wire { border-top: 3px double var(--news-ink); margin-top: 24px; padding-top: 15px; }
+/* The Map + Your Radar: full-width bands under the lead (2026-10-02) */
+.paper-band { border-top: 3px double var(--news-ink); margin-top: 24px; padding-top: 16px; min-width: 0; }
+.ssig-more { all: unset; cursor: pointer; display: block; margin-top: 9px; font: italic 12.5px "PT Serif", Georgia, serif; color: var(--news-ink-2); }
+.ssig-more:hover { color: var(--news-ink); text-decoration: underline; }
+.paper-rail .ssig-card.ssig-brief .ssig-note { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.paper-rail .ssig-card.ssig-brief .ssig-driver + .ssig-note { display: none; }
+.paper-rail .ssig-top + .ssig-note { margin-top: 5px; }
+/* the rail is as tall as the lead column; spare paper goes between its blocks, never under the last one */
+@media (min-width: 841px) { .paper-rail { display: flex; flex-direction: column; justify-content: space-between; } }
 .wire-grid { column-count: 3; column-gap: 26px; column-rule: 1px solid var(--news-rule); }
 @media (max-width: 900px) { .wire-grid { column-count: 2; } }
 @media (max-width: 560px) { .wire-grid { column-count: 1; } }
