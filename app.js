@@ -38,6 +38,13 @@ function verdictBadge(v) {
   if (!v || v === "NOT SCORED") return `<span class="badge v-noncompliant">NON-COMPLIANT</span>`;
   return `<span class="badge ${verdictSlug(v)}">${v}</span>`;
 }
+// 2026-10-02 (review): the build ships under_review on a row whose rating is HELD at its earlier
+// level (a 35%+ fall from the scoring price, or a one-session price reset) — the site showed a plain
+// badge with no sign of it. Small tag under the badge; the full sentence is the hover + the drawer.
+function reviewTag(x) {
+  const t = x && x.under_review;
+  return t ? `<span class="rv-tag" title="${esc(t)}">under review</span>` : "";
+}
 
 /* ---------- header tooltips (tap the ⓘ) ---------- */
 const TIPS = {
@@ -172,13 +179,17 @@ function moveRowCls(x) {
   if (a >= 5) return d >= 0 ? "mv1-up" : "mv1-dn";
   return "";
 }
-function moveRowTitle(x) {
+// 2026-10-02 (review): split into a RAW string (moveRowWhy, for setAttribute in the live patch) and
+// the escaped one for innerHTML. The patch used to un-escape by hand with &amp; first, which decoded
+// a headline holding a literal entity twice, so the tooltip changed between a render and a patch.
+function moveRowWhy(x) {
   if (!moveRowCls(x)) return "";
   const mw = x.mover_why;
   const why = (x.catalyst && x.catalyst.news_72h) || (x.pulse && x.pulse.theme)
            || (mw && mw.h ? `${mw.h}${mw.src ? " — " + mw.src : ""}${mw.t ? ", " + mw.t : ""}` : "");
-  return esc(why ? `Why: ${why}` : `Moved ${fmtPct(x.day_pct)} today — no headline found yet (wire re-checks each bake)`);
+  return why ? `Why: ${why}` : `Moved ${fmtPct(x.day_pct)} today — no headline found yet (wire re-checks each bake)`;
 }
+function moveRowTitle(x) { return esc(moveRowWhy(x)); }
 
 // Column cell v3 (2026-09-07, user: "a bar — green/red/neutral (its twitter
 // impressions) — and major news"): X-sentiment micro-bar + dated-event line.
@@ -354,8 +365,11 @@ function renderKpis() {
   const t = DATA.meta.portfolio_totals;
   const { usd: dayChg, pct: dayPct } = portfolioDayPnl();   // exact, shared with the front page
   // "Today · live" during the session; after the bell the card itself switches to the prior close
-  const sessionLive = marketOpenNow() && asOfDate(DATA.meta.date) === lastSessionDate();
-  const todayLabel = sessionLive ? "Today" : `${lastCloseName(DATA.meta.date)} close`;
+  // 2026-10-02 (review): "today" needs either live quotes on the holdings (this session's tick) or
+  // a payload whose PRICES are this session's — the payload's calendar stamp alone is not enough.
+  const live = holdingsLive();
+  const sessionLive = marketOpenNow() && (live || dataSession() === lastSessionDate());
+  const todayLabel = sessionLive ? "Today" : `${lastCloseName(live ? lastSessionDate() : dataSession())} close`;
   const todayNote = sessionLive ? "live" : "";
   // Locked view: every $ tile shows a blurred redaction; %s stay live. The delta under
   // Today/Unrealized is a percent, so those cards stay informative for visitors.
@@ -390,19 +404,32 @@ function fullDayName(iso) {
 }
 // Sidebar qualifier for the front page: "today" while the session is live, else a highlighted
 // "as of <Weekday>'s close" so a glance never mistakes the last close for the current day.
-function sessionSub() {
-  // Say "today" only while the session is live AND the loaded build is actually the current session.
+// 2026-10-02 (review): the test used to be asOfDate(meta.date) === lastSessionDate(). meta.date is the
+// build's CALENDAR date, so a payload baked before the bell is stamped today while its day moves are
+// the prior session's — after 9:30 ET the boxes said "today" over yesterday's numbers until the first
+// in-session payload landed (9:30–11:32 ET on 10-02). The test is now dataSession(), the session the
+// baked PRICES belong to. `live` = this box shows holdings and their live quotes have landed.
+function sessionSub(live) {
+  // Say "today" only while the session is live AND the numbers shown are actually this session's.
   // Before the post-open cloud rebuild lands, the data is still the prior close — label it honestly.
-  const dataIsCurrent = asOfDate(DATA.meta.date) === lastSessionDate();
+  const dataIsCurrent = !!live || dataSession() === lastSessionDate();
   return (marketOpenNow() && dataIsCurrent)
     ? `<span class="side-sub">today</span>`
-    : `<span class="side-sub closed">as of ${fullDayName(DATA.meta.date)}'s close</span>`;
+    : `<span class="side-sub closed">as of ${fullDayName(live ? lastSessionDate() : dataSession())}'s close</span>`;
 }
 // Plain-text version: "today" while live + current, else the prior session's weekday ("Friday").
-function sessionWord() {
-  const dataIsCurrent = asOfDate(DATA.meta.date) === lastSessionDate();
-  return (marketOpenNow() && dataIsCurrent) ? "today" : fullDayName(DATA.meta.date);
+function sessionWord(live) {
+  const dataIsCurrent = !!live || dataSession() === lastSessionDate();
+  return (marketOpenNow() && dataIsCurrent) ? "today" : fullDayName(live ? lastSessionDate() : dataSession());
 }
+// Holdings are re-priced in the browser every 60s (liveTick), so their "today" does not depend on the
+// payload. holdingsLiveDay = the ET session whose live quotes have landed on the holdings rows; it is
+// cleared when softRefresh swaps a new payload in (the baked numbers are back until the next tick),
+// and it stops matching by itself when the next session opens.
+let holdingsLiveDay = null;
+function holdingsLive() { return holdingsLiveDay === lastSessionDate(); }
+// a HELD name's universe row is live-patched by the same tick, so its day move is this session's too
+function heldLive(tk) { return holdingsLive() && ((DATA && DATA.portfolio) || []).some((h) => h.ticker === tk); }
 // US market holidays (NYSE) — kept in sync with daily_update.sh. A "trading day" is a
 // weekday that is NOT one of these, so the price "as of" rolls back over holidays too.
 const NYSE_HOLIDAYS = new Set([
@@ -411,6 +438,26 @@ const NYSE_HOLIDAYS = new Set([
   "2027-01-01", "2027-01-18", "2027-02-15", "2027-03-26", "2027-05-31", "2027-06-18",
   "2027-07-05", "2027-09-06", "2027-11-25", "2027-12-24",
 ]);
+// Half-days: the session closes at 13:00 ET (2026-10-02 review — before this, 13:00–16:00 on these
+// dates read as market hours: LIVE pill, "today" labels, "MARKET HOURS EDITION"). They ARE trading
+// days, only the closing minute differs. Keep in sync with EARLY_CLOSES in market_session.py;
+// extend both lists, with NYSE_HOLIDAYS, for 2028+.
+const NYSE_EARLY_CLOSE = new Set(["2026-11-27", "2026-12-24", "2027-11-26"]);
+const closeMins = (iso) => (NYSE_EARLY_CLOSE.has(iso) ? 780 : 960);   // closing minute of the ET day
+// Which part of the trading day an ET date + minute-of-day falls in (pure — no clock read):
+// "closed" = weekend / full holiday, else "pre" (< 9:30), "open", "post" (from the close on).
+function sessionPhase(etIso, mins) {
+  if (isClosedDay(new Date(etIso + "T12:00:00"))) return "closed";
+  return mins < 570 ? "pre" : mins < closeMins(etIso) ? "open" : "post";
+}
+// New York date + minute-of-day of an instant (default: now), from ONE clock read.
+function etClock(when) {
+  const f = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit",
+    day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false })
+    .formatToParts(when || new Date()).reduce((o, p) => ((o[p.type] = p.value), o), {});
+  let h = parseInt(f.hour, 10); if (h === 24) h = 0;
+  return { iso: `${f.year}-${f.month}-${f.day}`, mins: h * 60 + parseInt(f.minute, 10) };
+}
 function isClosedDay(d) {
   const dow = d.getDay();
   return dow === 0 || dow === 6 || NYSE_HOLIDAYS.has(isoOf(d));
@@ -433,6 +480,28 @@ function asOfDate(iso) {
   // the data is at most as fresh as its stamp AND as the last real session — show the earlier
   const a = lastTradingDate(iso), b = lastSessionDate();
   return a < b ? a : b;
+}
+// The trading session the BAKED prices and day moves belong to (2026-10-02 review). meta.date is the
+// build's calendar date, which is a day ahead of the prices for any bake made before the bell.
+//  1. meta.price_session — the build reads it off the quotes' own timestamps (new payloads).
+//  2. Older payloads / unknown (null): the stamp, stepped back one session when the bake was
+//     pre-market — rows carry ext.s === "pre" only when the quotes were fetched in the pre-market
+//     state, and meta.built_at before 9:30 ET on the stamp day says the same.
+// Never later than the last real session (asOfDate caps it), so a wrong clock cannot say "today".
+function dataSession() {
+  const m = (DATA && DATA.meta) || {};
+  if (typeof m.price_session === "string" && /^\d{4}-\d{2}-\d{2}$/.test(m.price_session)) return asOfDate(m.price_session);
+  if (!m.date) return lastSessionDate();
+  let iso = asOfDate(m.date);
+  if (iso !== m.date) return iso;   // weekend/holiday stamp, or already capped to the prior session
+  let pre = (DATA.universe || []).some((x) => x.ext && x.ext.s === "pre");
+  const b = m.built_at ? new Date(m.built_at) : null;
+  if (!pre && b && !isNaN(b)) {
+    const c = etClock(b);
+    pre = c.iso === iso && c.mins < 570;   // built before the bell on its own stamp day
+  }
+  if (pre) { const d = new Date(iso + "T12:00:00"); d.setDate(d.getDate() - 1); iso = lastTradingDate(isoOf(d)); }
+  return iso;
 }
 
 // Is a cloud-written column/brief recent enough to SHOW (vs the generic data-driven fallback)?
@@ -628,7 +697,7 @@ const U_COLS = [
   { key: "pe", label: "P/E t→f", align: "left", fmt: (x) => peCell(x),
     sortVal: (x) => (x.forward_pe != null ? x.forward_pe : (x.trailing_pe != null ? x.trailing_pe : 1e6)) },
   { key: "mech", label: "Q /105", fmt: (x) => x.mech },
-  { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
+  { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict) + reviewTag(x), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
   { key: "gate", label: "Gate", fmt: (x) => momGate(x),
     sortVal: (x) => { const m = gateNow(x); return m ? { GO: 2, TURN: 1, WAIT: 0 }[m.state] : -1; } },
   { key: "catalyst", label: "X Pulse", fmt: (x) => catalystCell(x), sortVal: (x) => ((x.catalyst ? x.catalyst.score : 0) * 100) + (x.pulse ? ((x.pulse.b || 0) - (x.pulse.r || 0)) : -1) },
@@ -768,7 +837,7 @@ const P_COLS = [
       : (!privUnlocked() && x.div_rate ? lockUSD() : `<span class="muted">N/A</span>`),
     sortVal: (x) => (x.div_income != null ? x.div_income : x.div_rate || 0) },
   { key: "qarp", label: "QARP", fmt: (x) => `<span class="qarp-cell">${fmtNum(x.qarp, 1)}</span>` },
-  { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
+  { key: "verdict", label: "Verdict", align: "left", fmt: (x) => verdictBadge(x.verdict) + reviewTag(x), sortVal: (x) => VERDICT_ORDER.indexOf(x.verdict) },
   // Gate + X Pulse joined the holdings table 2026-09-08 (user ask) — same renderers and
   // sort logic as the universe table; portfolio rows already carry mom/catalyst/pulse.
   { key: "gate", label: "Gate", fmt: (x) => momGate(x),
@@ -1028,6 +1097,8 @@ function openDrawer(ticker) {
     kv.push(["Shariah (Musaffa)", sh]);
   }
   if (has(d.first_date)) kv.push(["Scored / re-scored", `${d.first_date} <span class="muted">(current call opened)</span>`]);
+  // 2026-10-02 (review): a rating held after a 35%+ fall shows the per-share price it was scored at
+  if (d.fall_hold && has(d.fall_hold.anchor_price)) kv.push(["Scored at", `${fmtUSD(d.fall_hold.anchor_price, 2)}${has(d.fall_hold.fall_pct) ? ` <span class="muted">· price now ${Number(d.fall_hold.fall_pct).toFixed(0)}% lower</span>` : ""}`]);
   if (has(d.confidence)) kv.push(["Confidence", d.confidence]);
   // catalyst renders as its own card below the dims (2026-09-07) — no kv line any more
   if (has(d.insider)) kv.push(["Insider (6-mo Form 4)", d.insider]);
@@ -1039,6 +1110,10 @@ function openDrawer(ticker) {
   }
 
   const verdict = d.verdict || (p && p.verdict);
+  // 2026-10-02 (review): under-review flag next to the badge + the build's own sentence. A price-reset
+  // row already carries that sentence as the "[UNDER REVIEW: …]" prefix of its DCF note — not twice.
+  const ur = d.under_review || (p && p.under_review) || "";
+  const urNote = ur && !(d.corp_action && has(d.dcf_note)) ? `<div class="rv-note"><b>Under review.</b> ${esc(ur)}</div>` : "";
   document.getElementById("drawer-panel").innerHTML = `
     <div class="drawer-head">
       <div>
@@ -1048,7 +1123,7 @@ function openDrawer(ticker) {
       <button class="drawer-close" aria-label="Close">×</button>
     </div>
     <div class="drawer-tags">
-      ${verdict ? verdictBadge(verdict) : ""}
+      ${verdict ? verdictBadge(verdict) : ""}${reviewTag({ under_review: ur })}
       ${has(d.qarp) ? `<span class="chip">QARP ${fmtNum(d.qarp, 1)}</span>` : ""}
       ${has(d.dcf) ? `<span class="chip">DCF ${fmtNum(d.dcf, 1)}/5</span>` : ""}
       ${has(d.mech) ? `<span class="chip">Quality ${d.mech}/105</span>` : ""}
@@ -1071,6 +1146,7 @@ function openDrawer(ticker) {
         <span class="fin-src">${d.sec_fin.url ? `<a href="${esc(safeUrl(d.sec_fin.url))}" target="_blank" rel="noopener noreferrer" onclick="openSecDoc(event, this)">${esc(d.sec_fin.form || "")} filed ${esc(d.sec_fin.filed || "")} · EDGAR</a>` : esc(d.sec_fin.period || "")}</span>
       </div>` : ""}
     ${ab && ab.desc ? `<h4>What the company does</h4><div class="dcf-note">${esc(ab.desc)}</div>` : ""}
+    ${urNote}
     ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${d.dcf_note}</div>` : ""}
     ${bzHoldingNewsHtml(ticker)}
     <section id="drawer-pulse" class="drawer-pulse"></section>
@@ -1177,7 +1253,7 @@ async function fetchPulse(ticker, name) {
     // 25+ posts, real counted reads. Verified 2026-07-08 on TSLA (62, 11/6) vs FELE (honest quiet).
     const STRATEGY = "REQUIRED: run 4+ x_search queries (cashtag, bare ticker, company name, name+stock; Top AND Latest, last 24h). Collect 25+ candidate posts before judging; conclude quiet ONLY if all searches together yield <5 substantive posts.";
     const context = [
-      u.day_pct != null ? `stock ${u.day_pct >= 0 ? "up" : "down"} ${Math.abs(u.day_pct).toFixed(1)}% ${sessionWord()}` : "",
+      u.day_pct != null ? `stock ${u.day_pct >= 0 ? "up" : "down"} ${Math.abs(u.day_pct).toFixed(1)}% ${sessionWord(heldLive(ticker))}` : "",
       hn && hn.title ? `headline: ${String(hn.title).slice(0, 80)}` : "",
       STRATEGY,
     ].filter(Boolean).join(" · ").slice(0, 400);
@@ -1271,7 +1347,7 @@ function buildCreadContext(ticker) {
   return [
     `${ticker} — ${u.name || (p && p.name) || ""}${u.sector ? " · " + u.sector : ""}`,
     `QARP ${fmtNum(u.qarp, 1)} (${u.verdict || "n/a"}); Quality ${u.mech || "?"}/105 [Valuation ${u.val}/25 · Growth ${u.grw}/20 · Moat&Returns ${u.qual}/20 · BalanceSheet ${u.bs}/20 · CapitalAlloc ${u.cap}/20]; DCF ${u.dcf}/5 (5=cheap).`,
-    u.gf_value != null ? `GuruFocus fair value ${fmtUSD(u.gf_value, 2)} vs price ${fmtUSD(u.price, 2)}${u.day_pct != null ? ` (${fmtPct(u.day_pct)} ${sessionWord()})` : ""}.` : (u.price != null ? `Price ${fmtUSD(u.price, 2)}.` : ""),
+    u.gf_value != null ? `GuruFocus fair value ${fmtUSD(u.gf_value, 2)} vs price ${fmtUSD(u.price, 2)}${u.day_pct != null ? ` (${fmtPct(u.day_pct)} ${sessionWord(heldLive(ticker))})` : ""}.` : (u.price != null ? `Price ${fmtUSD(u.price, 2)}.` : ""),
     u.dcf_note ? `Valuation/thesis note: ${String(u.dcf_note).replace(/<[^>]+>/g, "")}` : "",
     u.shariah_grade ? `Shariah (Musaffa): ${u.shariah_grade}.` : "",
     u.catalyst ? `Catalyst (shadow factor): ${u.catalyst.label} — ${u.catalyst.note || ""}` : "",
@@ -1500,23 +1576,36 @@ let dailyTimer = null;
 function enterDaily() {
   renderDaily();
   if (dailyTimer) clearInterval(dailyTimer);
-  dailyTimer = setInterval(() => { renderDailyTicker(); loadDailyBrief(); loadSignals(); }, 5 * 60000); // refresh ticker + re-pull the brief + signals
+  // refresh ticker + re-pull the brief + signals. 2026-10-02 (review): the folio line is repainted on
+  // every tick too, and an open/close/date flip repaints the whole page (renderDaily already runs the
+  // ticker + the brief, so nothing is fetched twice) — it used to keep "PRE-MARKET EDITION" after the bell.
+  dailyTimer = setInterval(() => {
+    if (!repaintOnSessionFlip()) { paintFolio(); renderDailyTicker(); loadDailyBrief(); }
+    loadSignals();
+  }, 5 * 60000);
 }
 function leaveDaily() { if (dailyTimer) { clearInterval(dailyTimer); dailyTimer = null; } }
 
-function renderDaily() {
+// The edition word for an ET date + minute-of-day (pure; 13:00 close on half-days via sessionPhase).
+function editionFor(etIso, mins) {
+  return { closed: "MARKET CLOSED", pre: "PRE-MARKET EDITION", open: "MARKET HOURS EDITION", post: "AFTER THE CLOSE" }[sessionPhase(etIso, mins)];
+}
+// The folio line under the masthead. Its own function (2026-10-02 review) so the Daily timer and a
+// session flip can repaint it — it was set once per renderDaily and went stale in an open tab.
+function paintFolio() {
   const fEl = document.getElementById("paper-folio-meta");
-  if (!fEl) return;
+  if (!fEl) return false;
   const now = new Date();
   const fullDate = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", year: "numeric" }).format(now).toUpperCase();
   const doy = Math.ceil((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
   // The edition line follows the New York clock (2026-10-02: it said "LATE MARKET EDITION" at 11 a.m.).
-  const _np = nyParts(); let _nh = parseInt(_np.hour, 10); if (_nh === 24) _nh = 0;
-  const _nm = _nh * 60 + parseInt(_np.minute, 10);
-  const _etIso = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(now);
-  const _closedDay = _np.weekday === "Sat" || _np.weekday === "Sun" || NYSE_HOLIDAYS.has(_etIso);
-  const edition = _closedDay ? "MARKET CLOSED" : _nm < 570 ? "PRE-MARKET EDITION" : _nm < 960 ? "MARKET HOURS EDITION" : "AFTER THE CLOSE";
-  fEl.textContent = `VOL. I · No. ${doy} · NEW YORK, ${fullDate} (ET) · ${edition}`;
+  const _et = etClock(now);
+  fEl.textContent = `VOL. I · No. ${doy} · NEW YORK, ${fullDate} (ET) · ${editionFor(_et.iso, _et.mins)}`;
+  return true;
+}
+
+function renderDaily() {
+  if (!paintFolio()) return;
 
   const uni = (DATA.universe || []).filter((x) => x.day_pct != null);
   const port = (DATA.portfolio || []).filter((h) => h.day_pct != null);
@@ -1528,20 +1617,24 @@ function renderDaily() {
 
   // Lead — The Market Today. On reload, paint the last cached column INSTANTLY (no fallback flash);
   // loadDailyBrief refreshes it below. Only show the data-driven fallback when there's no fresh cache.
+  // 2026-10-02 (review): the cache holds the column's FIELDS, not finished HTML, so the kicker is
+  // re-decided at paint time (a cached "After the Bell" used to repaint over the next day's session).
+  // An old {date, html} entry has no .b: it takes the fallback for one paint and is then overwritten.
   let _cl = null;
   try { _cl = JSON.parse(sessionStorage.getItem("jc_lead") || "null"); } catch (e) {}
-  if (_cl && _cl.html && leadFresh(_cl.date)) {
-    document.getElementById("paper-lead").innerHTML = _cl.html;
+  if (_cl && _cl.b && _cl.b.body_html && leadFresh(_cl.b.date)) {
+    document.getElementById("paper-lead").innerHTML = leadHtml(_cl.b);
   } else if (uni.length) {
     const ups = uni.filter((x) => x.day_pct > 0).length, downs = uni.filter((x) => x.day_pct < 0).length;
     const sorted = [...uni].sort((a, b) => b.day_pct - a.day_pct), g = sorted[0], l = sorted[sorted.length - 1];
     const sm = secMoves(), best = sm[0], worst = sm[sm.length - 1];
     const tone = ups > downs * 1.3 ? "broadly higher" : downs > ups * 1.3 ? "broadly lower" : "mixed";
+    const _sw = sessionWord(), _when = _sw === "today" ? "today" : "on " + _sw;   // 2026-10-02: same session test as the side boxes
     document.getElementById("paper-lead").innerHTML =
       `<div class="lead-kicker">The Market Today</div>`
       + `<h2 class="lead-head">Shariah universe trades ${tone}; ${esc(best.s)} leads, ${esc(worst.s)} lags</h2>`
       + `<div class="lead-byline">By The Market Desk · live data</div>`
-      + `<p class="lead-body">The ${uni.length}-name Shariah-compliant universe traded <b>${tone}</b> today — <b class="pos">${ups} advancing</b>, <b class="neg">${downs} declining</b>. <b>${esc(best.s)}</b> was the strongest sector on average (<span class="${signClass(best.avg)}">${fmtPct(best.avg)}</span>), while <b>${esc(worst.s)}</b> was the weakest (<span class="${signClass(worst.avg)}">${fmtPct(worst.avg)}</span>). ${esc(g.name || g.ticker)} (${esc(g.ticker)}) led all names at <span class="pos">${fmtPct(g.day_pct)}</span>; ${esc(l.name || l.ticker)} (${esc(l.ticker)}) fell <span class="neg">${fmtPct(l.day_pct)}</span>. QARP rankings re-rate on these price moves; the hand-scored verdicts change only on a fundamentals re-score.</p>`;
+      + `<p class="lead-body">The ${uni.length}-name Shariah-compliant universe traded <b>${tone}</b> ${_when} — <b class="pos">${ups} advancing</b>, <b class="neg">${downs} declining</b>. <b>${esc(best.s)}</b> was the strongest sector on average (<span class="${signClass(best.avg)}">${fmtPct(best.avg)}</span>), while <b>${esc(worst.s)}</b> was the weakest (<span class="${signClass(worst.avg)}">${fmtPct(worst.avg)}</span>). ${esc(g.name || g.ticker)} (${esc(g.ticker)}) led all names at <span class="pos">${fmtPct(g.day_pct)}</span>; ${esc(l.name || l.ticker)} (${esc(l.ticker)}) fell <span class="neg">${fmtPct(l.day_pct)}</span>. QARP rankings re-rate on these price moves; the hand-scored verdicts change only on a fundamentals re-score.</p>`;
   }
   // Your Portfolio Today
   if (port.length) {
@@ -1550,7 +1643,7 @@ function renderDaily() {
     const ps = [...port].sort((a, b) => b.day_pct - a.day_pct);
     const mv = (h) => `<li><span class="mv-tk">${esc(h.ticker)}</span><span class="${signClass(h.day_pct)}">${fmtPct(h.day_pct)}</span></li>`;
     document.getElementById("paper-portfolio").innerHTML =
-      `<div class="side-head">Jaleel's Portfolio ${sessionSub()}</div>`
+      `<div class="side-head">Jaleel's Portfolio ${sessionSub(holdingsLive())}</div>`
       + `<p class="side-body">Jaleel's book is <b class="${signClass(todayPct)}">${todayPct >= 0 ? "up" : "down"} ${fmtPct(Math.abs(todayPct))}</b>${todayUsd != null ? ` (${todayUsd >= 0 ? "+" : "−"}${fmtUSD(Math.abs(todayUsd), 0)})` : ""} on the day — ${pUp} green, ${pDown} red.</p>`
       + `<ul class="mv-list">${ps.slice(0, 3).map(mv).join("")}${ps.slice(-2).reverse().map(mv).join("")}</ul>`;
   }
@@ -1815,6 +1908,29 @@ function renderLeadMore() {
 // The Daily page's written content comes from daily_brief.json — an original market column plus
 // short original briefs. Everything is readable on the page; there are no links to click out to.
 // (Non-sensitive market commentary — no holdings or dollar figures.)
+// Is a kept column trailing the live session? "" when it is current; otherwise WHAT it is, by the
+// edition that was actually kept: "Thursday’s close" for an After the Bell / Week Ahead file,
+// "Thursday’s Midday report" for an intraday or pre-market one (2026-10-02 review: every lagging file
+// was headed "<Day>’s close", so intraday copy could be presented as the close).
+function leadLagLabel(b) {
+  if (!b || !b.date) return "";
+  // a real column, but trailing the live session: behind the payload's date, OR written for an
+  // earlier day while today's market is open (2026-10-02: Thursday's "After the Bell" led Friday's session)
+  const laggy = (DATA.meta && b.date < asOfDate(DATA.meta.date)) || (marketOpenNow() && b.date < etClock().iso);
+  if (!laggy) return "";
+  const day = fullDayName(b.date), ed = String(b.kicker || "").trim();
+  return /After the Bell|Week Ahead/i.test(ed) ? `${day}’s close` : ed ? `${day}’s ${ed} report` : `${day}’s report`;
+}
+// The lead column's markup, built from the column's fields at PAINT time — one builder for the fresh
+// fetch and the cached repaint (2026-10-02 review), so the kicker can never be frozen at cache time.
+function leadHtml(b) {
+  const lag = leadLagLabel(b);
+  const kicker = lag ? `${lag} · today’s report is not written yet` : (b.kicker || "The Market Today");
+  return `<div class="lead-kicker">${esc(kicker)}</div>`
+    + `<h2 class="lead-head">${esc(b.headline || "")}</h2>`
+    + `<div class="lead-byline">By The Market Desk${lag ? ` · ${/close$/.test(lag) ? "as of" : "from"} ${esc(lag)}` : (b.generated_at ? " · " + esc(b.generated_at) : "")}</div>`
+    + `<div class="lead-body">${b.body_html}</div>`;
+}
 async function loadDailyBrief() {
   let b = null;
   try {
@@ -1822,22 +1938,16 @@ async function loadDailyBrief() {
     if (res.ok) b = await res.json();
   } catch (e) { /* fall back gracefully */ }
   const fresh = !!(b && b.date && b.body_html && leadFresh(b.date));
-  if (fresh && b.body_html) {
+  if (fresh) {
     const el = document.getElementById("paper-lead");
     if (el) {
-      const etToday = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
-      // a real column, but trailing the live session: behind the payload's date, OR written for an
-      // earlier day while today's market is open (2026-10-02: Thursday's "After the Bell" led Friday's session)
-      const laggy = (DATA.meta && b.date < asOfDate(DATA.meta.date)) || (marketOpenNow() && b.date < etToday);
-      const kicker = laggy ? `${fullDayName(b.date)}’s close · today’s report is not written yet` : (b.kicker || "The Market Today");
-      el.innerHTML = `<div class="lead-kicker">${esc(kicker)}</div>`
-        + `<h2 class="lead-head">${esc(b.headline || "")}</h2>`
-        + `<div class="lead-byline">By The Market Desk${laggy ? ` · as of ${fullDayName(b.date)}’s close` : (b.generated_at ? " · " + esc(b.generated_at) : "")}</div>`
-        + `<div class="lead-body">${b.body_html}</div>`;
-      try { sessionStorage.setItem("jc_lead", JSON.stringify({ date: b.date, html: el.innerHTML })); } catch (e) {}
+      el.innerHTML = leadHtml(b);
+      try { sessionStorage.setItem("jc_lead", JSON.stringify({ b: { date: b.date, kicker: b.kicker, headline: b.headline, generated_at: b.generated_at, body_html: b.body_html } })); } catch (e) {}
     }
   }
-  renderBriefs(fresh && Array.isArray(b.briefs) ? b.briefs : null);
+  // 2026-10-02 (review): the briefs come from the same file as the lead — when it lags, say so on
+  // their header too (they sat under a plain "Market Briefs" while only the lead was labelled).
+  renderBriefs(fresh && Array.isArray(b.briefs) ? b.briefs : null, fresh ? leadLagLabel(b) : "");
 }
 
 // Always-fresh briefs built from live data (sector signals + universe breadth/movers + catalysts),
@@ -1870,13 +1980,13 @@ function autoBriefs() {
 }
 
 // Briefs: routine-written when fresh, else auto-built from live data (never the stale placeholder).
-function renderBriefs(briefs) {
+function renderBriefs(briefs, lagLabel) {
   const el = document.getElementById("paper-wire");
   if (!el) return;
   let auto = false;
   if (!Array.isArray(briefs) || !briefs.length) { briefs = autoBriefs(); auto = true; }
   if (!briefs.length) { el.innerHTML = `<div class="wire-head">Market Briefs</div><p class="muted">Live market briefs update through the session.</p>`; return; }
-  el.innerHTML = `<div class="wire-head">Market Briefs${auto ? ` <span class="wire-auto">live data</span>` : ""}</div><div class="wire-grid">` + briefs.map((br) =>
+  el.innerHTML = `<div class="wire-head">Market Briefs${auto ? ` <span class="wire-auto">live data</span>` : (lagLabel ? ` <span class="side-sub closed">from ${esc(lagLabel)}</span>` : "")}</div><div class="wire-grid">` + briefs.map((br) =>
     `<article class="wire-item"><h4 class="wire-h">${esc(br.headline || "")}</h4><p class="wire-sum">${esc(br.body || "")}</p></article>`).join("") + `</div>`;
 }
 
@@ -2099,6 +2209,10 @@ function fullWeightUsd(verdict) {
   const pct = (verdict === "STRONG BUY" || verdict === "STRONGEST") ? 0.08 : 0.06;
   return Math.max(FULL_WEIGHT_FLOOR, bookValueUsd() * pct);
 }
+// METHOD SWITCH — OFF (2026-10-02 review, finding 15). true = a holding whose rating is under review
+// never gets an ADD call (it reads HOLD until the company is re-scored). This changes what the daily
+// call says by rule, so it stays false until the owner approves it; flip this one constant to enable.
+const UNDER_REVIEW_BLOCKS_ADD = false;
 function holdingCall(tk) {
   const pb = (SIGNALS && SIGNALS.portfolio_brief && SIGNALS.portfolio_brief[tk]) || {};
   const h = DATA.portfolio.find((x) => x.ticker === tk) || {};
@@ -2132,6 +2246,8 @@ function holdingCall(tk) {
   if (hooks.length) bits.push(hooks.join(" + "));
   if (sev) bits.push(`${sev} risk flag`);
   if (eventRisk) bits.push(`earnings ${en} = event risk`);
+  const underReview = !!(h.under_review || row.under_review);
+  if (underReview && UNDER_REVIEW_BLOCKS_ADD) bits.push("rating under review");
   let call = "HOLD", dca = false, extra = "";
   const qpts = Q[qarp] ?? 0;
   if (qpts >= 1) {
@@ -2157,6 +2273,14 @@ function holdingCall(tk) {
     }
   }
   // HOLD-QUAL (qpts 0): always HOLD — flags and catalysts annotate, never flip the badge alone
+  // 2026-10-02 (review): a holding whose rating is UNDER REVIEW (held at its earlier level after a
+  // 35%+ fall or a one-session price reset) could still print ADD off that held rating. Turning the
+  // ADD into a HOLD changes the daily-call METHOD, so it ships switched OFF (see the constant) until
+  // the owner says go. The reason line names the flag either way — that is a fact, not a new rule.
+  if (underReview && UNDER_REVIEW_BLOCKS_ADD && call === "ADD") {
+    call = "HOLD"; dca = false;
+    extra = " No adds until the company is re-scored.";
+  }
   return { call, dca, reason: bits.join(" · ") + "." + extra, qarp, sev };
 }
 function renderCalls() {
@@ -2343,7 +2467,24 @@ function marketOpenNow() {
   if (NYSE_HOLIDAYS.has(etIso)) return false;
   let h = parseInt(p.hour, 10); if (h === 24) h = 0;
   const mins = h * 60 + parseInt(p.minute, 10);
-  return mins >= 570 && mins < 960; // 9:30 .. 16:00 ET
+  return mins >= 570 && mins < closeMins(etIso); // 9:30 .. 16:00 ET (13:00 on half-days, 2026-10-02)
+}
+// Session-flip repaint (2026-10-02 review). Labels that depend on the clock — the edition line, the
+// "today" qualifiers, the KPI card's "Today · live" — were painted once and never followed the open,
+// the close or the ET date roll in a tab left open (softRefresh stops at the close, and the closed
+// branch of liveTick returns before any render). One repaint per flip; the first call only records.
+let _phaseKey = null;
+function sessionPhaseKey() { const c = etClock(); return c.iso + "|" + sessionPhase(c.iso, c.mins); }
+function repaintOnSessionFlip() {
+  const k = sessionPhaseKey();
+  const flipped = _phaseKey !== null && _phaseKey !== k;
+  _phaseKey = k;
+  if (!flipped) return false;
+  const asof = document.getElementById("asof-date");
+  if (asof) asof.textContent = asOfDate(DATA.meta.date);   // same statement as rerenderFromData
+  renderPortfolio();                  // KPI card label
+  if (dailyTimer) renderDaily();      // Daily tab open: folio line + sidebars + lead kicker
+  return true;
 }
 function nyClock() {
   const p = nyParts(); let h = parseInt(p.hour, 10); if (h === 24) h = 0;
@@ -2370,6 +2511,7 @@ async function fetchQuote(ticker) {
 async function liveTick() {
   const key = DATA.meta && DATA.meta.quote_proxy;
   if (!key) return;
+  repaintOnSessionFlip();   // must sit above the closed-market return, or the close/overnight flips are never seen
   if (!marketOpenNow()) {
     // extended-hours honesty (2026-08-11): when the payload carries a fresh pre/post quote,
     // the pill says which session the numbers are from instead of a bare "closed"
@@ -2391,12 +2533,15 @@ async function liveTick() {
   }
 
   let ok = 0, fail = 0;
+  const _d0 = DATA;   // the payload these quotes are patched into (softRefresh can swap DATA mid-await)
   await Promise.all(DATA.portfolio.map(async (h) => {
     try {
       const q = await fetchQuote(h.ticker, key);
       if (q && typeof q.c === "number" && q.c > 0) {
+        const u = DATA.universe.find((x) => x.ticker === h.ticker); // keep universe consistent (silent)
+        const okDp = liveDayOk(h, q.dp) && liveDayOk(u, q.dp);     // corp-action day: keep the build's blank
         h.price = q.c;
-        if (typeof q.dp === "number") h.day_pct = +q.dp.toFixed(2);
+        if (okDp) h.day_pct = +q.dp.toFixed(2);
         if (h.shares != null) {   // owner tier merged: full dollar recompute
           h.value = +(h.shares * q.c).toFixed(2);
           h.gain = +(h.value - h.cost).toFixed(2);
@@ -2404,9 +2549,8 @@ async function liveTick() {
         } else if (h.avg_cost) {  // locked: gain% still tracks live off the public avg cost
           h.gain_pct = +((q.c / h.avg_cost - 1) * 100).toFixed(2);
         }
-        const u = DATA.universe.find((x) => x.ticker === h.ticker); // keep universe consistent (silent)
         if (u) {
-          u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2);
+          u.price = q.c; if (okDp) u.day_pct = +q.dp.toFixed(2);
           if (u.mom) patchGateCells(h.ticker, u);   // gate re-evaluates on the live price
         }
         // Chart Room open on this holding: the SAME quote feeds the live candle, so the
@@ -2431,6 +2575,10 @@ async function liveTick() {
   }));
 
   if (ok > 0) {
+    // 2026-10-02 (review): live quotes are on the holdings — set BEFORE the render so the KPI card reads
+    // "Today · live" on this very tick. Not when a new payload was swapped in while the quotes were in
+    // flight: they patched the OLD rows, and the rows now on screen are baked until the next tick.
+    if (DATA === _d0) holdingsLiveDay = lastSessionDate();
     if (privUnlocked()) {   // dollar totals only exist on the owner tier
       retotalAccount();
       flashAccount(DATA.meta.portfolio_totals.account);
@@ -2450,12 +2598,29 @@ async function liveTick() {
     setLivePill("live", "LIVE · connecting…");
   }
 }
+// Corporate-action guard for LIVE quotes (2026-10-02 review). The build blanks the day move of a name
+// whose price reset 35%+ in one session (spin-off / split / collapse: the quote's change is measured
+// against the pre-event close). The live feed put that bogus move straight back — Day cell, bright-red
+// row, top of Decliners and, for a held name, the book's day move. Same rule as the build: a row that
+// carries corp_action keeps its blank while the quote's move is -35% or worse.
+const liveDayOk = (row, dp) => typeof dp === "number" && !(row && row.corp_action && dp <= -35);
 function patchTickerCells(ticker, price, dp) {
   // Update a single ticker's price/day cells in the Universe table + Overview list,
   // in place (no re-render → sort/scroll/filter preserved).
   document.querySelectorAll(
     `#u-table tr[data-ticker="${ticker}"] .cell-px, #top-names tr[data-ticker="${ticker}"] .cell-px`
   ).forEach((el) => { el.textContent = fmtUSD(price, 2); });
+  // The open call "marks to current price" — keep it on the SAME price as the cell beside it
+  // (2026-10-02 review: it stayed at the render-time price until the next full re-render).
+  // #p-table needs nothing: renderPortfolio() rebuilds it every tick.
+  const oc = callsFor(ticker).find((c) => c.open);
+  if (oc && oc.start_price && price > 0) {
+    const r = (price / oc.start_price - 1) * 100;
+    document.querySelectorAll(`#u-table tr[data-ticker="${ticker}"] .call-line.open b`).forEach((el) => {
+      el.textContent = fmtPct(r, 1);
+      el.className = signClass(r);
+    });
+  }
   if (typeof dp === "number") {
     document.querySelectorAll(`#u-table tr[data-ticker="${ticker}"] .cell-day`).forEach((el) => {
       el.textContent = fmtPct(dp);
@@ -2468,7 +2633,7 @@ function patchTickerCells(ticker, price, dp) {
     document.querySelectorAll(`#u-table tr[data-ticker="${ticker}"]`).forEach((tr) => {
       tr.classList.remove("mv1-up", "mv1-dn", "mv2-up", "mv2-dn");
       const cls = moveRowCls(live);
-      if (cls) { tr.classList.add(cls); tr.setAttribute("title", moveRowTitle(live).replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'")); }
+      if (cls) { tr.classList.add(cls); tr.setAttribute("title", moveRowWhy(live)); }   // raw text: setAttribute does not parse HTML
       else tr.removeAttribute("title");
     });
   }
@@ -2488,11 +2653,12 @@ function universeTick() {
   fetchQuote(ticker, DATA.meta.quote_proxy).then((q) => {
     if (q && typeof q.c === "number" && q.c > 0) {
       const u = DATA.universe.find((x) => x.ticker === ticker);
+      const okDp = liveDayOk(u, q.dp);          // corp-action day: keep the build's blank (2026-10-02)
       if (u) {
-        u.price = q.c; if (typeof q.dp === "number") u.day_pct = +q.dp.toFixed(2);
+        u.price = q.c; if (okDp) u.day_pct = +q.dp.toFixed(2);
         if (u.mom) patchGateCells(ticker, u);   // live gate re-check on every sweep
       }
-      patchTickerCells(ticker, q.c, q.dp);
+      patchTickerCells(ticker, q.c, okDp ? q.dp : null);
       lastGoodTs = Date.now();
     }
   }).catch(() => {});
@@ -3251,7 +3417,10 @@ async function softRefresh() {
     const p = await (await fetch("payload.enc", { cache: "no-store" })).json();
     if (p && p.iv && p.iv === lastPayloadIv) return;   // identical ciphertext -> no new build, skip
     const fresh = await decryptPayload(p, pw);
-    DATA = fresh; lastPayloadIv = p.iv;
+    // 2026-10-02 (review): two caches die with the old payload — the Calls grouping (it kept the first
+    // payload's call list, so a re-scored name showed its old open call against the new price) and the
+    // holdings-live flag (the baked numbers are back until the next live tick).
+    DATA = fresh; _callsByTk = null; holdingsLiveDay = null; lastPayloadIv = p.iv;
     await refreshPrivateIntoData();   // a fresh DATA wiped the merged owner fields — re-merge BEFORE rendering
     rerenderFromData();
   } catch (e) { /* transient (offline / mid-publish) — keep showing the current data */ }
@@ -3387,7 +3556,7 @@ async function boot() {
       btn.disabled = false; btn.textContent = "Unlock"; return;
     }
     try {
-      DATA = await decryptPayload(payload, pw);
+      DATA = await decryptPayload(payload, pw); _callsByTk = null;   // same reset as softRefresh (2026-10-02)
       lastPayloadIv = payload.iv;
       gate.hidden = true; app.hidden = false;
       sessionStorage.setItem("jc_pw", pw);   // remember within this tab session only

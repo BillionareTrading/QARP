@@ -287,6 +287,12 @@ button { font-family: inherit; cursor: pointer; }
 .badge.v-strongavoid { background: var(--v-strongavoid); }
 /* non-compliant / unscored: outlined neutral, visually distinct from the scored verdicts */
 .badge.v-noncompliant { background: #f1f5f9; color: #64748b; border: 1px solid #cbd5e1; }
+/* Under-review tag (2026-10-02): the rating is HELD at its earlier level until a re-score. In the
+   tables it sits on its own line under the badge so the Verdict column does not widen; in the
+   drawer it is a brass-outlined chip beside the badge, with the build's sentence in .rv-note. */
+.rv-tag { display: block; margin-top: 3px; font: 700 9px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); white-space: nowrap; cursor: help; }
+.drawer-tags .rv-tag { display: inline-block; margin: 0; padding: 4px 9px; border: 1px solid var(--brass); border-radius: 8px; font-size: 11px; }
+.rv-note { font-size: 13px; color: var(--ink); line-height: 1.55; background: var(--surface-2); border-left: 4px solid var(--brass); border-radius: 10px; padding: 11px 14px; margin: 10px 0; }
 
 /* ===== Controls ===== */
 .controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
@@ -1471,6 +1477,7 @@ tbody tr:hover { background: var(--surface-2); }
   /* verdict chips + headers: compact so the 5-col core fits 343px exactly */
   #p-table .badge, #u-table .badge, #p-table [class*="v-badge"], #u-table [class*="v-badge"],
   #p-table td span[class*="verdict"], #u-table td span[class*="verdict"] { font-size: 8.5px; padding: 3px 6px; letter-spacing: .02em; }
+  #p-table .rv-tag, #u-table .rv-tag { font-size: 7.5px; }   /* under-review tag (2026-10-02) keeps the 5-col core at 343px */
   #p-table thead th, #u-table thead th { font-size: 10px; padding: 9px 4px; }
   #p-table td { padding: 9px 4px; }
   #u-table td { padding: 9px 4px; }
