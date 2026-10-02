@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-01",
-  "generated_at": "Oct 1, 8:31pm ET",
+  "date": "2026-10-02",
+  "generated_at": "Oct 2, 6:30am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -405,9 +405,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "BTIG",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$50",
+      "price": 35.15,
+      "upside": 42.2,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
     }
   ],
   "rating_moves": {
+    "NKE": {
+      "date": "2026-10-02",
+      "firm": "BTIG",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$50",
+      "upside": 42.2
+    },
     "AAPL": {
       "date": "2026-10-01",
       "firm": "Morgan Stanley",
@@ -434,15 +457,6 @@
       "stance": "neutral",
       "pt": "$110",
       "upside": 1.1
-    },
-    "NKE": {
-      "date": "2026-09-29",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Sector Perform",
-      "stance": "neutral",
-      "pt": "$40",
-      "upside": 13.8
     },
     "MRK": {
       "date": "2026-09-29",
@@ -500,6 +514,187 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Micron Analyst Dismisses Supply Glut Fears As AI Memory Crunch Deepens",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62128369/micron-analyst-dismisses-supply-glut-fears-as-ai-memory-crunch-deepens",
+      "ts": 1790935973,
+      "tickers": [
+        "MU",
+        "GOOGL",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.489
+    },
+    {
+      "title": "Johnson & Johnson Announces Two-year Data From Its Phase 3 ICONIC-TOTAL Study Of ICOTYDE On High-Impact Plaque Psoriasis Sites; 60% Of Patients With Scalp Psoriasis And 89% With Genital Psoriasis Achieved Site-Specific Complete Skin Clearance At Week 112",
+      "url": "https://www.benzinga.com/news/26/10/62128070/johnson-johnson-announces-two-year-data-its-phase-3-iconic-total-study-icotyde-high-impact-plaque-ps",
+      "ts": 1790935395,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.318
+    },
+    {
+      "title": "Amazon Eyes $8 Billion Nvidia Chip Sale to Investors as AI Infrastructure Costs Surge: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62128041/amazon-eyes-8-billion-nvidia-chip-sale-to-investors-as-ai-infrastructure-costs-surge-report",
+      "ts": 1790935240,
+      "tickers": [
+        "AMZN",
+        "MSFT",
+        "NVDA",
+        "CRWV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.556
+    },
+    {
+      "title": "Exploring The Competitive Space: Apple Versus Industry Peers In Technology Hardware, Storage &amp; Peripherals",
+      "url": "https://www.benzinga.com/news/26/10/62127924/exploring-competitive-space-apple-versus-industry-peers-technology-hardware-storage-amp-peripherals",
+      "ts": 1790935119,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.396
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow Jones Futures Gain as Investors Await September's Jobs Report Data — NKE, SYNA, CTVA in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62127902/stock-market-today-sp-500-dow-jones-futures-gain-as-investors-await-septembers-jobs-report-data-nke-syna-ctva-in-focus",
+      "ts": 1790934971,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "QQQ",
+        "ON"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.478
+    },
+    {
+      "title": "BTIG Maintains Buy on Nike, Lowers Price Target to $50",
+      "url": "https://www.benzinga.com/news/26/10/62127723/btig-maintains-buy-nike-lowers-price-target-50",
+      "ts": 1790933846,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.44
+    },
+    {
+      "title": "Exxon, Chevron Head Into Earnings With Venezuela, LNG and Higher Oil Prices in Focus",
+      "url": "https://www.benzinga.com/markets/large-cap/26/10/62127637/exxon-chevron-head-into-earnings-with-venezuela-lng-and-higher-oil-prices-in-focus",
+      "ts": 1790933140,
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.366
+    },
+    {
+      "title": "Jim Cramer Says Investors Who Bet AI Would Destroy Software Stocks ‘Blew Up’ — Salesforce, Veeva and Palantir Led Q3 Comeback: Stocks to Watch Ahead",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62127447/jim-cramer-says-investors-who-bet-ai-would-destroy-software-stocks-blew-up-salesforce-veeva-and-palantir-led-q3-comeback-stocks-to-watch-ahead",
+      "ts": 1790932027,
+      "tickers": [
+        "META",
+        "CRWD",
+        "CRM",
+        "GLW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.412
+    },
+    {
+      "title": "Why Synaptics Shares Are Trading Higher By Over 14%; Here Are 20 Stocks Moving Premarket",
+      "url": "https://www.benzinga.com/news/26/10/62127285/why-synaptics-shares-are-trading-higher-by-over-14-here-are-20-stocks-moving-premarket",
+      "ts": 1790930378,
+      "tickers": [
+        "ON",
+        "NKE",
+        "QSI",
+        "LESL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.425
+    },
+    {
+      "title": "Nike, Synaptics And 3 Stocks To Watch Heading Into Friday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62127210/nike-synaptics-and-3-stocks-to-watch-heading-into-friday",
+      "ts": 1790928963,
+      "tickers": [
+        "NKE",
+        "ON",
+        "MGRX",
+        "EW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.446
+    },
+    {
+      "title": "Nike Just Admitted Its China Problem Is About to Get Worse, With $230 Billion in Market Cap Already Gone — CEO Elliott Hill Warns the Pain Isn't Over",
+      "url": "https://www.benzinga.com/markets/earnings/26/10/62127134/nike-just-admitted-its-china-problem-is-about-to-get-worse-with-230-billion-in-market-cap-already-gone-ceo-elliott-hill-warns-the-pain-isnt-over",
+      "ts": 1790928493,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.328
+    },
+    {
+      "title": "Trump Reportedly Says Government 'Might' Take a Stake in OpenAI, Anthropic, Just Like It Did With Intel: 'I Have Many Deals Like That'",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62125807/trump-government-stake-openai-anthropic-intel-deal-ai",
+      "ts": 1790906061,
+      "tickers": [
+        "INTC",
+        "NVDA",
+        "MP",
+        "LAC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.347
+    },
+    {
+      "title": "Nike, Corteva, Mattel, Accenture and Coherent: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/news/26/10/62125706/nike-corteva-mattel-accenture-and-coherent-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1790903885,
+      "tickers": [
+        "NKE",
+        "MAT",
+        "CTVA",
+        "COHR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.447
+    },
     {
       "title": "Bill Ackman on AI: ‘Massively Increased the Risk of Disruption’",
       "url": "https://www.benzinga.com/markets/tech/26/10/62124979/bill-ackman-on-ai-massively-increased-the-risk-of-disruption",
@@ -621,7 +816,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.333
+      "relevance": 0.332
     },
     {
       "title": "Nike Taking Actions To Reposition Nike Sportswear, Jordan Brand, And Greater China; Announces Pace, An Operating Model Transformation To Scale Success Of The Sport Offense",
@@ -646,185 +841,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.415
-    },
-    {
-      "title": "SPEEA Union Ratifies Four-Year Contract Terms Offered By Boeing",
-      "url": "https://www.benzinga.com/news/26/10/62121794/speea-union-ratifies-four-year-contract-terms-offered-boeing",
-      "ts": 1790885067,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.283
-    },
-    {
-      "title": "'Disney Planning TV Restructuring as Streamlining Continues' - Wall Street Journal",
-      "url": "https://www.benzinga.com/news/26/10/62120545/disney-planning-tv-restructuring-streamlining-continues-wall-street-journal",
-      "ts": 1790882797,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.287
-    },
-    {
-      "title": "Could Trump Ban Diesel Exports? Here's What Prediction Markets Say",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62120343/trump-diesel-export-ban-odds",
-      "ts": 1790882390,
-      "tickers": [
-        "GS",
-        "MPC",
-        "PSX",
-        "VLO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.238
-    },
-    {
-      "title": "Market Reaction To Micron Earnings And Broadcom Deal Signals A Shift In AI Trade",
-      "url": "https://www.benzinga.com/Opinion/26/10/62119909/market-reaction-to-micron-earnings-and-broadcom-deal-signals-a-shift-in-ai-trade",
-      "ts": 1790881498,
-      "tickers": [
-        "SPY",
-        "NVDA",
-        "TSLA",
-        "AVGO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.514
-    },
-    {
-      "title": "Wall Street's Most Accurate Analysts Spotlight On 3 Tech And Telecom Stocks Delivering High-Dividend Yields",
-      "url": "https://www.benzinga.com/trading-ideas/dividends/26/10/62119534/wall-streets-most-accurate-analysts-spotlight-on-3-tech-and-telecom-stocks-delivering-high-dividend-yields-10",
-      "ts": 1790880737,
-      "tickers": [
-        "VZ",
-        "OMC",
-        "GLW",
-        "T"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.369
-    },
-    {
-      "title": "'Nvidia, SoftBank Make Final $20B Investment in OpenAI’s Last Round'- The Information",
-      "url": "https://www.benzinga.com/news/26/10/62118585/nvidia-softbank-make-final-20b-investment-openai-s-last-round-information",
-      "ts": 1790878824,
-      "tickers": [
-        "NVDA",
-        "SFTBY",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.497
-    },
-    {
-      "title": "Apple To $355? Here Are 10 Top Analyst Forecasts For Thursday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62118193/apple-to-355-here-are-10-top-analyst-forecasts-for-thursday",
-      "ts": 1790878208,
-      "tickers": [
-        "AAPL",
-        "NFLX",
-        "WFC",
-        "ZION"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.443
-    },
-    {
-      "title": "Anthropic Introduces Mods, Small TypeScript Functions That Change How Claude Code Works",
-      "url": "https://www.benzinga.com/news/26/10/62118125/anthropic-introduces-mods-small-typescript-functions-change-how-claude-code-works",
-      "ts": 1790878087,
-      "tickers": [
-        "AMZN",
-        "GOOG",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.213
-    },
-    {
-      "title": "'Boeing adds to big week with first full-rate Grey Wolf helicopter order'- DefenseNews",
-      "url": "https://www.benzinga.com/news/26/10/62118012/boeing-adds-big-week-first-full-rate-grey-wolf-helicopter-order-defensenews",
-      "ts": 1790877901,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.287
-    },
-    {
-      "title": "International Business Machine shares are trading higher after the company announced self-hosted deployment for IBM Bob.",
-      "url": "https://www.benzinga.com/quote/IBM",
-      "ts": 1790877446,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.361
-    },
-    {
-      "title": "Walt Disney Stock Dips: What's Going On?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62117310/walt-disney-stock-dips-whats-going-on",
-      "ts": 1790876614,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.382
-    },
-    {
-      "title": "8 Communication Services Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62117006/8-communication-services-stocks-whale-alerts-today-s-session",
-      "ts": 1790876111,
-      "tickers": [
-        "SPCX",
-        "META",
-        "ECHO",
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.357
-    },
-    {
-      "title": "Shares of enterprise software companies are trading higher amid sympathy with Accenture after that company reported better-than-expected Q4 financial results and issued FY27 sales guidance above estimates.",
-      "url": "https://www.benzinga.com/quote/ADBT",
-      "ts": 1790866258,
-      "tickers": [
-        "IT",
-        "ZM",
-        "CRM",
-        "ASAN"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.432
     }
   ],
   "portfolio_brief": {
