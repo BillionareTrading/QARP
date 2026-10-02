@@ -1510,7 +1510,13 @@ function renderDaily() {
   const now = new Date();
   const fullDate = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", year: "numeric" }).format(now).toUpperCase();
   const doy = Math.ceil((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
-  fEl.textContent = `VOL. I · No. ${doy} · NEW YORK, ${fullDate} (ET) · LATE MARKET EDITION`;
+  // The edition line follows the New York clock (2026-10-02: it said "LATE MARKET EDITION" at 11 a.m.).
+  const _np = nyParts(); let _nh = parseInt(_np.hour, 10); if (_nh === 24) _nh = 0;
+  const _nm = _nh * 60 + parseInt(_np.minute, 10);
+  const _etIso = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(now);
+  const _closedDay = _np.weekday === "Sat" || _np.weekday === "Sun" || NYSE_HOLIDAYS.has(_etIso);
+  const edition = _closedDay ? "MARKET CLOSED" : _nm < 570 ? "PRE-MARKET EDITION" : _nm < 960 ? "MARKET HOURS EDITION" : "AFTER THE CLOSE";
+  fEl.textContent = `VOL. I · No. ${doy} · NEW YORK, ${fullDate} (ET) · ${edition}`;
 
   const uni = (DATA.universe || []).filter((x) => x.day_pct != null);
   const port = (DATA.portfolio || []).filter((h) => h.day_pct != null);
@@ -1819,8 +1825,12 @@ async function loadDailyBrief() {
   if (fresh && b.body_html) {
     const el = document.getElementById("paper-lead");
     if (el) {
-      const laggy = DATA.meta && b.date < asOfDate(DATA.meta.date);   // a real column, but trailing the live session
-      el.innerHTML = `<div class="lead-kicker">${esc(b.kicker || "The Market Today")}</div>`
+      const etToday = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+      // a real column, but trailing the live session: behind the payload's date, OR written for an
+      // earlier day while today's market is open (2026-10-02: Thursday's "After the Bell" led Friday's session)
+      const laggy = (DATA.meta && b.date < asOfDate(DATA.meta.date)) || (marketOpenNow() && b.date < etToday);
+      const kicker = laggy ? `${fullDayName(b.date)}’s close · today’s report is not written yet` : (b.kicker || "The Market Today");
+      el.innerHTML = `<div class="lead-kicker">${esc(kicker)}</div>`
         + `<h2 class="lead-head">${esc(b.headline || "")}</h2>`
         + `<div class="lead-byline">By The Market Desk${laggy ? ` · as of ${fullDayName(b.date)}’s close` : (b.generated_at ? " · " + esc(b.generated_at) : "")}</div>`
         + `<div class="lead-body">${b.body_html}</div>`;
