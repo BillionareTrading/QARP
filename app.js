@@ -2451,6 +2451,16 @@ function patchTickerCells(ticker, price, dp) {
       el.textContent = fmtPct(dp);
       el.className = "cell-day " + signClass(dp);
     });
+    // The row's big-move colour must follow the SAME number the cell now shows (2026-10-02:
+    // a row stayed red from the bake's day move while the live cell read +2.4%).
+    const u = (DATA.universe || []).find((x) => x.ticker === ticker) || { ticker };
+    const live = Object.assign({}, u, { day_pct: dp });
+    document.querySelectorAll(`#u-table tr[data-ticker="${ticker}"]`).forEach((tr) => {
+      tr.classList.remove("mv1-up", "mv1-dn", "mv2-up", "mv2-dn");
+      const cls = moveRowCls(live);
+      if (cls) { tr.classList.add(cls); tr.setAttribute("title", moveRowTitle(live).replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'")); }
+      else tr.removeAttribute("title");
+    });
   }
 }
 function patchLivePrices() {
