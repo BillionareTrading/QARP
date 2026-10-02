@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "Oct 2, 6:30am ET",
+  "generated_at": "Oct 2, 11:35am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -109,8 +109,8 @@
     "DHR": "2026-10-21",
     "GILD": "2026-10-22",
     "SAP": "2026-10-21",
-    "NVS": "2026-10-27",
     "AVGO": "2026-12-09",
+    "NVS": "2026-10-27",
     "NBIX": "2026-10-26",
     "VRTX": "2026-11-02",
     "EFX": "2026-10-21"
@@ -119,10 +119,10 @@
   "sectors": [
     {
       "sector": "Enterprise Software",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Sympathy with Accenture after that company reported better-than-expected…",
       "note": "Amid sympathy with Accenture after that company reported better-than-expected Q4 financial results and issued FY27 sales guidance above estimates.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Semiconductor",
@@ -155,15 +155,27 @@
   ],
   "holding_news": {
     "NVDA": {
-      "title": "'Nvidia, SoftBank Make Final $20B Investment in OpenAI’s Last Round'- The Information",
-      "ts": 1790878824,
-      "url": "https://www.benzinga.com/news/26/10/62118585/nvidia-softbank-make-final-20b-investment-openai-s-last-round-information",
+      "title": "This Senator Just Sold Up To $145K In JPMorgan Chase Stock",
+      "ts": 1790953224,
+      "url": "https://www.benzinga.com/government/26/10/62137519/senator-just-sold-145k-jpmorgan-chase-stock",
       "wiim": false
     },
     "AVGO": {
-      "title": "Market Reaction To Micron Earnings And Broadcom Deal Signals A Shift In AI Trade",
-      "ts": 1790881498,
-      "url": "https://www.benzinga.com/Opinion/26/10/62119909/market-reaction-to-micron-earnings-and-broadcom-deal-signals-a-shift-in-ai-trade",
+      "title": "Broadcom Chases NVIDIA With $60 Billion Financing Plan for AI Customers",
+      "ts": 1790945087,
+      "url": "https://www.benzinga.com/markets/tech/26/10/62131358/broadcom-chases-nvidia-with-60-billion-financing-plan-for-ai-customers",
+      "wiim": false
+    },
+    "ABT": {
+      "title": "Abbott To Rally Over 31%? Here Are 10 Top Analyst Forecasts For Friday",
+      "ts": 1790945924,
+      "url": "https://www.benzinga.com/news/26/10/62131686/abbott-to-rally-over-31-here-are-10-top-analyst-forecasts-for-friday",
+      "wiim": false
+    },
+    "EFX": {
+      "title": "Nike Posts Mixed Q1 Results, Joins Mangoceuticals And Other Big Stocks Moving Lower In Friday’s Pre-Market Session",
+      "ts": 1790942527,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62130298/nike-posts-mixed-q1-results-joins-mangoceuticals-and-other-big-stocks-moving-lower-in-fridays-pre-market-session",
       "wiim": false
     }
   },
@@ -176,8 +188,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$250",
-      "price": 207.1,
-      "upside": 20.7,
+      "price": 206.68,
+      "upside": 21.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -190,8 +202,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "price": 163.02,
-      "upside": 19.6,
+      "price": 162.74,
+      "upside": 19.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -204,8 +216,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$171",
-      "price": 163.02,
-      "upside": 4.9,
+      "price": 162.74,
+      "upside": 5.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -218,8 +230,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$30",
-      "price": 35.15,
-      "upside": -14.7,
+      "price": 33.05,
+      "upside": -9.2,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -232,11 +244,11 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "price": 86.1,
-      "upside": 10.3,
+      "price": 85.39,
+      "upside": 11.3,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-09-28",
@@ -246,8 +258,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$37",
-      "price": 35.15,
-      "upside": 5.3,
+      "price": 33.05,
+      "upside": 12.0,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -260,8 +272,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$38",
-      "price": 35.15,
-      "upside": 8.1,
+      "price": 33.05,
+      "upside": 15.0,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -274,8 +286,8 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$34",
-      "price": 35.15,
-      "upside": -3.3,
+      "price": 33.05,
+      "upside": 2.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -288,8 +300,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "price": 207.1,
-      "upside": 3.8,
+      "price": 206.68,
+      "upside": 4.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -302,8 +314,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "price": 330.32,
-      "upside": 9.0,
+      "price": 332.19,
+      "upside": 8.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -316,8 +328,8 @@
       "rating": "Sector Outperform",
       "stance": "bullish",
       "pt": "$180",
-      "price": 143.81,
-      "upside": 25.2,
+      "price": 142.93,
+      "upside": 25.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -330,8 +342,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$285",
-      "price": 258.66,
-      "upside": 10.2,
+      "price": 257.49,
+      "upside": 10.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -344,8 +356,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$40",
-      "price": 35.15,
-      "upside": 13.8,
+      "price": 33.05,
+      "upside": 21.0,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -358,8 +370,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$150",
-      "price": 143.95,
-      "upside": 4.2,
+      "price": 144.2,
+      "upside": 4.0,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -372,8 +384,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$110",
-      "price": 108.76,
-      "upside": 1.1,
+      "price": 111.23,
+      "upside": -1.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -386,8 +398,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$355",
-      "price": 330.32,
-      "upside": 7.5,
+      "price": 332.19,
+      "upside": 6.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -400,11 +412,165 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 330.32,
+      "price": 332.19,
       "upside": null,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "Truist Securities",
+      "action": "Maintains",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$29",
+      "price": 33.05,
+      "upside": -12.3,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "Wells Fargo",
+      "action": "Maintains",
+      "rating": "Equal-Weight",
+      "stance": "neutral",
+      "pt": "$30",
+      "price": 33.05,
+      "upside": -9.2,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "Piper Sandler",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$28",
+      "price": 33.05,
+      "upside": -15.3,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "RBC Capital",
+      "action": "Reiterates",
+      "rating": "Sector Perform",
+      "stance": "neutral",
+      "pt": "$40",
+      "price": 33.05,
+      "upside": 21.0,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "Evercore ISI Group",
+      "action": "Maintains",
+      "rating": "In-Line",
+      "stance": "neutral",
+      "pt": "$28",
+      "price": 33.05,
+      "upside": -15.3,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "Guggenheim",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$50",
+      "price": 33.05,
+      "upside": 51.3,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "StoneX",
+      "action": "Reiterates",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "",
+      "price": 33.05,
+      "upside": null,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "Needham",
+      "action": "Reiterates",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "",
+      "price": 33.05,
+      "upside": null,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "Baird",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$36",
+      "price": 33.05,
+      "upside": 8.9,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "Stifel",
+      "action": "Maintains",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$36",
+      "price": 33.05,
+      "upside": 8.9,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "NKE",
+      "firm": "B of A Securities",
+      "action": "Maintains",
+      "rating": "Underperform",
+      "stance": "bearish",
+      "pt": "$24",
+      "price": 33.05,
+      "upside": -27.4,
+      "held": false,
+      "uni": true,
+      "qarp": "STRONG BUY"
     },
     {
       "date": "2026-10-02",
@@ -414,8 +580,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$50",
-      "price": 35.15,
-      "upside": 42.2,
+      "price": 33.05,
+      "upside": 51.3,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -424,12 +590,12 @@
   "rating_moves": {
     "NKE": {
       "date": "2026-10-02",
-      "firm": "BTIG",
+      "firm": "Truist Securities",
       "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$50",
-      "upside": 42.2
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$29",
+      "upside": -12.3
     },
     "AAPL": {
       "date": "2026-10-01",
@@ -438,7 +604,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$355",
-      "upside": 7.5
+      "upside": 6.9
     },
     "PG": {
       "date": "2026-09-30",
@@ -447,7 +613,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$150",
-      "upside": 4.2
+      "upside": 4.0
     },
     "CSCO": {
       "date": "2026-09-30",
@@ -456,7 +622,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$110",
-      "upside": 1.1
+      "upside": -1.1
     },
     "MRK": {
       "date": "2026-09-29",
@@ -465,7 +631,7 @@
       "rating": "Sector Outperform",
       "stance": "bullish",
       "pt": "$180",
-      "upside": 25.2
+      "upside": 25.9
     },
     "JNJ": {
       "date": "2026-09-29",
@@ -474,7 +640,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$285",
-      "upside": 10.2
+      "upside": 10.7
     },
     "KO": {
       "date": "2026-09-28",
@@ -483,7 +649,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$95",
-      "upside": 10.3
+      "upside": 11.3
     },
     "CVX": {
       "date": "2026-09-28",
@@ -492,7 +658,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "upside": 3.8
+      "upside": 4.0
     },
     "MMM": {
       "date": "2026-09-25",
@@ -501,7 +667,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "upside": 19.6
+      "upside": 19.8
     },
     "CRM": {
       "date": "2026-09-18",
@@ -510,68 +676,301 @@
       "rating": "Market Outperform",
       "stance": "bullish",
       "pt": "$315",
-      "upside": 33.1
+      "upside": 33.8
     }
   },
   "bz_news": [
     {
-      "title": "Micron Analyst Dismisses Supply Glut Fears As AI Memory Crunch Deepens",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62128369/micron-analyst-dismisses-supply-glut-fears-as-ai-memory-crunch-deepens",
-      "ts": 1790935973,
+      "title": "'Disney Licenses Slew of Titles to Netflix, Including All Five ‘Ice Age’ Movies, ‘Percy Jackson and the Olympians,’ ‘Felicity,’ ‘Will Trent,’ ‘Elio’ and More'- Variety",
+      "url": "https://www.benzinga.com/news/26/10/62138360/disney-licenses-slew-titles-netflix-including-all-five-ice-age-movies-percy-jackson-and-olympians-fe",
+      "ts": 1790954172,
       "tickers": [
-        "MU",
-        "GOOGL",
-        "MSFT",
+        "DIS",
+        "NFLX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.24
+    },
+    {
+      "title": "Scotiabank Maintains Sector Outperform on Verizon Communications, Lowers Price Target to $51.5",
+      "url": "https://www.benzinga.com/news/26/10/62137980/scotiabank-maintains-sector-outperform-verizon-communications-lowers-price-target-51-5",
+      "ts": 1790953615,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.454
+    },
+    {
+      "title": "EXCLUSIVE: Top 12 Most-Searched Tickers in September on Benzinga Pro – Meta Rises, SpaceX Falls, Dell & Bloom Energy Join List",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62137835/top-12-most-searched-tickers-in-september-on-benzinga-pro-meta-rises-spacex-falls-dell-bloom-energy-join-list",
+      "ts": 1790953469,
+      "tickers": [
+        "TSLA",
+        "AAPL",
+        "META",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.414
+    },
+    {
+      "title": "8 Of 11 Sectors Rise Friday As Growth Leads",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62137658/8-of-11-sectors-rise-friday-as-growth-leads",
+      "ts": 1790953292,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "DIA",
+        "IWM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.414
+    },
+    {
+      "title": "This Senator Just Sold Up To $145K In JPMorgan Chase Stock",
+      "url": "https://www.benzinga.com/government/26/10/62137519/senator-just-sold-145k-jpmorgan-chase-stock",
+      "ts": 1790953224,
+      "tickers": [
+        "JPM",
         "NVDA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.489
+      "relevance": 0.285
     },
     {
-      "title": "Johnson & Johnson Announces Two-year Data From Its Phase 3 ICONIC-TOTAL Study Of ICOTYDE On High-Impact Plaque Psoriasis Sites; 60% Of Patients With Scalp Psoriasis And 89% With Genital Psoriasis Achieved Site-Specific Complete Skin Clearance At Week 112",
-      "url": "https://www.benzinga.com/news/26/10/62128070/johnson-johnson-announces-two-year-data-its-phase-3-iconic-total-study-icotyde-high-impact-plaque-ps",
-      "ts": 1790935395,
+      "title": "Ohio Rep. David Taylor Bought Up to $45K Worth of Amgen Stock",
+      "url": "https://www.benzinga.com/government/26/10/62137518/ohio-rep-david-taylor-bought-45k-worth-amgen-stock",
+      "ts": 1790953224,
       "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.318
-    },
-    {
-      "title": "Amazon Eyes $8 Billion Nvidia Chip Sale to Investors as AI Infrastructure Costs Surge: Report",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62128041/amazon-eyes-8-billion-nvidia-chip-sale-to-investors-as-ai-infrastructure-costs-surge-report",
-      "ts": 1790935240,
-      "tickers": [
-        "AMZN",
+        "AMGN",
         "MSFT",
-        "NVDA",
-        "CRWV"
+        "HD"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.556
+      "relevance": 0.379
     },
     {
-      "title": "Exploring The Competitive Space: Apple Versus Industry Peers In Technology Hardware, Storage &amp; Peripherals",
-      "url": "https://www.benzinga.com/news/26/10/62127924/exploring-competitive-space-apple-versus-industry-peers-technology-hardware-storage-amp-peripherals",
-      "ts": 1790935119,
+      "title": "Louisiana Rep. Cleo Fields Bought Up to $75K Worth of Alphabet Stock",
+      "url": "https://www.benzinga.com/government/26/10/62137517/louisiana-rep-cleo-fields-bought-75k-worth-alphabet-stock",
+      "ts": 1790953223,
       "tickers": [
-        "AAPL"
+        "GOOG",
+        "NFLX",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.331
+    },
+    {
+      "title": "Truist Securities Maintains Hold on Nike, Lowers Price Target to $29",
+      "url": "https://www.benzinga.com/news/26/10/62137409/truist-securities-maintains-hold-nike-lowers-price-target-29",
+      "ts": 1790953090,
+      "tickers": [
+        "NKE"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.396
+      "relevance": 0.433
     },
     {
-      "title": "Stock Market Today: S&P 500, Dow Jones Futures Gain as Investors Await September's Jobs Report Data — NKE, SYNA, CTVA in Focus",
+      "title": "SEC Censures JPMorgan Over Alleged Failure To Stop Swap Trader Trading In U.S.; No Monetary Fine Imposed",
+      "url": "https://www.benzinga.com/news/26/10/62137153/sec-censures-jpmorgan-over-alleged-failure-stop-swap-trader-trading-u-s-no-monetary-fine-imposed",
+      "ts": 1790952723,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.313
+    },
+    {
+      "title": "Wells Fargo Maintains Equal-Weight on Nike, Lowers Price Target to $30",
+      "url": "https://www.benzinga.com/news/26/10/62136283/wells-fargo-maintains-equal-weight-nike-lowers-price-target-30",
+      "ts": 1790951654,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.441
+    },
+    {
+      "title": "Why ‘Big Short’ Investor Steve Eisman Is Cutting Risk: ‘Everybody’s in Trouble’",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62135661/steve-eisman-ai-risk-everybodys-in-trouble",
+      "ts": 1790950823,
+      "tickers": [
+        "NVDA",
+        "AMZN",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.341
+    },
+    {
+      "title": "Piper Sandler Maintains Neutral on Nike, Lowers Price Target to $28",
+      "url": "https://www.benzinga.com/news/26/10/62135179/piper-sandler-maintains-neutral-nike-lowers-price-target-28",
+      "ts": 1790950194,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.441
+    },
+    {
+      "title": "RBC Capital Reiterates Sector Perform on Nike, Maintains $40 Price Target",
+      "url": "https://www.benzinga.com/news/26/10/62133030/rbc-capital-reiterates-sector-perform-nike-maintains-40-price-target",
+      "ts": 1790948176,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.456
+    },
+    {
+      "title": "Versant Signs Multi-Year Renewal Distribution Deal With Verizon For Its Portfolio Of Products",
+      "url": "https://www.benzinga.com/news/26/10/62132514/versant-signs-multi-year-renewal-distribution-deal-verizon-its-portfolio-products",
+      "ts": 1790947292,
+      "tickers": [
+        "VSNT",
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.384
+    },
+    {
+      "title": "Evercore ISI Group Maintains In-Line on Nike, Lowers Price Target to $28",
+      "url": "https://www.benzinga.com/news/26/10/62132459/evercore-isi-group-maintains-line-nike-lowers-price-target-28",
+      "ts": 1790947162,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.477
+    },
+    {
+      "title": "These Analysts Cut Their Forecasts On Nike Following Q1 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62131936/these-analysts-cut-their-forecasts-on-nike-following-q1-results",
+      "ts": 1790946285,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.441
+    },
+    {
+      "title": "Guggenheim Maintains Buy on Nike, Lowers Price Target to $50",
+      "url": "https://www.benzinga.com/news/26/10/62131828/guggenheim-maintains-buy-nike-lowers-price-target-50",
+      "ts": 1790946131,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.414
+    },
+    {
+      "title": "What's Going On With Disney Stock Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62131814/whats-going-on-with-disney-stock-friday",
+      "ts": 1790946117,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.374
+    },
+    {
+      "title": "US Weighs Tighter Aircraft-Part Controls For China as Trump Administration Turns Up Trade Pressure: Report",
+      "url": "https://www.benzinga.com/news/politics/26/10/62131712/us-weighs-tighter-aircraft-part-controls-for-china-as-trump-administration-turns-up-trade-pressure-report",
+      "ts": 1790945967,
+      "tickers": [
+        "XOM",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.277
+    },
+    {
+      "title": "Abbott To Rally Over 31%? Here Are 10 Top Analyst Forecasts For Friday",
+      "url": "https://www.benzinga.com/news/26/10/62131686/abbott-to-rally-over-31-here-are-10-top-analyst-forecasts-for-friday",
+      "ts": 1790945924,
+      "tickers": [
+        "ABT",
+        "MPC",
+        "NKE",
+        "CSX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.555
+    },
+    {
+      "title": "StoneX Reiterates Hold on Niketo Hold",
+      "url": "https://www.benzinga.com/news/26/10/62131427/stonex-reiterates-hold-niketo-hold",
+      "ts": 1790945319,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.433
+    },
+    {
+      "title": "Broadcom Chases NVIDIA With $60 Billion Financing Plan for AI Customers",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62131358/broadcom-chases-nvidia-with-60-billion-financing-plan-for-ai-customers",
+      "ts": 1790945087,
+      "tickers": [
+        "AVGO",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.537
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow Jones Futures Gain as September Jobs Report Misses Expectations— Nike, Synaptics, Corteva in Focus (UPDATED)",
       "url": "https://www.benzinga.com/markets/equities/26/10/62127902/stock-market-today-sp-500-dow-jones-futures-gain-as-investors-await-septembers-jobs-report-data-nke-syna-ctva-in-focus",
-      "ts": 1790934971,
+      "ts": 1790944816,
       "tickers": [
         "SPY",
         "$BTC",
@@ -581,266 +980,34 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.478
+      "relevance": 0.469
     },
     {
-      "title": "BTIG Maintains Buy on Nike, Lowers Price Target to $50",
-      "url": "https://www.benzinga.com/news/26/10/62127723/btig-maintains-buy-nike-lowers-price-target-50",
-      "ts": 1790933846,
+      "title": "Needham Reiterates Hold on Niketo Hold",
+      "url": "https://www.benzinga.com/news/26/10/62130485/needham-reiterates-hold-niketo-hold",
+      "ts": 1790942804,
       "tickers": [
         "NKE"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.44
+      "relevance": 0.508
     },
     {
-      "title": "Exxon, Chevron Head Into Earnings With Venezuela, LNG and Higher Oil Prices in Focus",
-      "url": "https://www.benzinga.com/markets/large-cap/26/10/62127637/exxon-chevron-head-into-earnings-with-venezuela-lng-and-higher-oil-prices-in-focus",
-      "ts": 1790933140,
+      "title": "12 Consumer Discretionary Stocks Moving In Friday's Pre-Market Session",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62130428/12-consumer-discretionary-stocks-moving-friday-s-pre-market-session",
+      "ts": 1790942757,
       "tickers": [
-        "XOM",
-        "CVX"
+        "SSM",
+        "ZNB",
+        "ORBS",
+        "VENU"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.366
-    },
-    {
-      "title": "Jim Cramer Says Investors Who Bet AI Would Destroy Software Stocks ‘Blew Up’ — Salesforce, Veeva and Palantir Led Q3 Comeback: Stocks to Watch Ahead",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62127447/jim-cramer-says-investors-who-bet-ai-would-destroy-software-stocks-blew-up-salesforce-veeva-and-palantir-led-q3-comeback-stocks-to-watch-ahead",
-      "ts": 1790932027,
-      "tickers": [
-        "META",
-        "CRWD",
-        "CRM",
-        "GLW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.412
-    },
-    {
-      "title": "Why Synaptics Shares Are Trading Higher By Over 14%; Here Are 20 Stocks Moving Premarket",
-      "url": "https://www.benzinga.com/news/26/10/62127285/why-synaptics-shares-are-trading-higher-by-over-14-here-are-20-stocks-moving-premarket",
-      "ts": 1790930378,
-      "tickers": [
-        "ON",
-        "NKE",
-        "QSI",
-        "LESL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.425
-    },
-    {
-      "title": "Nike, Synaptics And 3 Stocks To Watch Heading Into Friday",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62127210/nike-synaptics-and-3-stocks-to-watch-heading-into-friday",
-      "ts": 1790928963,
-      "tickers": [
-        "NKE",
-        "ON",
-        "MGRX",
-        "EW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.446
-    },
-    {
-      "title": "Nike Just Admitted Its China Problem Is About to Get Worse, With $230 Billion in Market Cap Already Gone — CEO Elliott Hill Warns the Pain Isn't Over",
-      "url": "https://www.benzinga.com/markets/earnings/26/10/62127134/nike-just-admitted-its-china-problem-is-about-to-get-worse-with-230-billion-in-market-cap-already-gone-ceo-elliott-hill-warns-the-pain-isnt-over",
-      "ts": 1790928493,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.328
-    },
-    {
-      "title": "Trump Reportedly Says Government 'Might' Take a Stake in OpenAI, Anthropic, Just Like It Did With Intel: 'I Have Many Deals Like That'",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62125807/trump-government-stake-openai-anthropic-intel-deal-ai",
-      "ts": 1790906061,
-      "tickers": [
-        "INTC",
-        "NVDA",
-        "MP",
-        "LAC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.347
-    },
-    {
-      "title": "Nike, Corteva, Mattel, Accenture and Coherent: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/news/26/10/62125706/nike-corteva-mattel-accenture-and-coherent-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1790903885,
-      "tickers": [
-        "NKE",
-        "MAT",
-        "CTVA",
-        "COHR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.447
-    },
-    {
-      "title": "Bill Ackman on AI: ‘Massively Increased the Risk of Disruption’",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62124979/bill-ackman-on-ai-massively-increased-the-risk-of-disruption",
-      "ts": 1790893896,
-      "tickers": [
-        "BN",
-        "META",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.359
-    },
-    {
-      "title": "Full Transcript: Nike Q1 2027 Earnings Call",
-      "url": "https://www.benzinga.com/news/26/10/62124853/full-transcript-nike-q1-2027-earnings-call",
-      "ts": 1790892545,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.493
-    },
-    {
-      "title": "Nike Executive On China Says Expect Some Actions Will Create Pressure On Reported Revenues For The Remainder of FY27;  Says Expect Some Items To Represent Headwind Of ~400 Basis Points To Revenues In The Second Quarter",
-      "url": "https://www.benzinga.com/news/26/10/62124548/nike-executive-china-says-expect-some-actions-will-create-pressure-reported-revenues-remainder-fy27-",
-      "ts": 1790890533,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.479
-    },
-    {
-      "title": "Nike Executive Says Expect Majority Of Pace Program Savings To Be Realized In FY29 And FY30",
-      "url": "https://www.benzinga.com/news/26/10/62124500/nike-executive-says-expect-majority-pace-program-savings-be-realized-fy29-and-fy30",
-      "ts": 1790890244,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.387
-    },
-    {
-      "title": "Nike Stock Sinks to Lowest Level Since 2013 after Q1 Earnings",
-      "url": "https://www.benzinga.com/markets/earnings/26/10/62124308/nike-stock-sinks-to-lowest-level-since-2013-after-q1-earnings",
-      "ts": 1790889607,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.402
-    },
-    {
-      "title": "Nike Executive On China Says We Expect Our Digital Cleanup To Take Multiple Seasons",
-      "url": "https://www.benzinga.com/news/26/10/62124201/nike-executive-china-says-we-expect-our-digital-cleanup-take-multiple-seasons",
-      "ts": 1790889339,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.241
-    },
-    {
-      "title": "Nike Executive Says We Will Deliberately Reduce Volume & Frequency Of Specific Jordan Retro Launches",
-      "url": "https://www.benzinga.com/news/26/10/62124170/nike-executive-says-we-will-deliberately-reduce-volume-frequency-specific-jordan-retro-launches",
-      "ts": 1790889289,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.256
-    },
-    {
-      "title": "Nike Sees FY2027 Adj EPS $1.15-$1.35 vs $1.69 Est",
-      "url": "https://www.benzinga.com/news/26/10/62122553/nike-sees-fy2027-adj-eps-1-15-1-35-vs-1-69-est",
-      "ts": 1790886046,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.403
-    },
-    {
-      "title": "Nike shares are trading lower after the company reported mixed Q1 financial results.",
-      "url": "https://www.benzinga.com/quote/NKE",
-      "ts": 1790886006,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.395
-    },
-    {
-      "title": "Nike Anticipates Pace To Deliver About $2.5B In Cumulative Savings Through Fiscal 2031",
-      "url": "https://www.benzinga.com/quote/NKE",
-      "ts": 1790885998,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.332
-    },
-    {
-      "title": "Nike Taking Actions To Reposition Nike Sportswear, Jordan Brand, And Greater China; Announces Pace, An Operating Model Transformation To Scale Success Of The Sport Offense",
-      "url": "https://www.benzinga.com/news/26/10/62122455/nike-taking-actions-reposition-nike-sportswear-jordan-brand-and-greater-china-announces-pace-operati",
-      "ts": 1790885939,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.306
-    },
-    {
-      "title": "Nike Q1 EPS $0.48 Beats $0.44 Estimate, Sales $11.213B Miss $11.326B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/10/62122430/nike-q1-eps-0-48-beats-0-44-estimate-sales-11-213b-miss-11-326b-estimate",
-      "ts": 1790885884,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.415
+      "relevance": 0.416
     }
   ],
   "portfolio_brief": {
@@ -861,9 +1028,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "'Nvidia, SoftBank Make Final $20B Investment in OpenAI’s Last Round'- The Information",
-        "ts": 1790878824,
-        "url": "https://www.benzinga.com/news/26/10/62118585/nvidia-softbank-make-final-20b-investment-openai-s-last-round-information",
+        "title": "This Senator Just Sold Up To $145K In JPMorgan Chase Stock",
+        "ts": 1790953224,
+        "url": "https://www.benzinga.com/government/26/10/62137519/senator-just-sold-145k-jpmorgan-chase-stock",
         "wiim": false
       },
       "filings": {
@@ -897,7 +1064,12 @@
         "score": 1.12,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Abbott To Rally Over 31%? Here Are 10 Top Analyst Forecasts For Friday",
+        "ts": 1790945924,
+        "url": "https://www.benzinga.com/news/26/10/62131686/abbott-to-rally-over-31-here-are-10-top-analyst-forecasts-for-friday",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1305,6 +1477,43 @@
       },
       "explain": "39 analysts cover it — 30 bullish, 7 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
+    "AVGO": {
+      "name": "Broadcom",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 17,
+        "buy": 35,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 57,
+        "bullish": 52,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.21,
+        "period": "2026-09-01"
+      },
+      "news": {
+        "title": "Broadcom Chases NVIDIA With $60 Billion Financing Plan for AI Customers",
+        "ts": 1790945087,
+        "url": "https://www.benzinga.com/markets/tech/26/10/62131358/broadcom-chases-nvidia-with-60-billion-financing-plan-for-ai-customers",
+        "wiim": false
+      },
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-09-02",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-20260902.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-09-10",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm"
+        },
+        "insider30d": 3
+      },
+      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "NVS": {
       "name": "Novartis",
       "qarp": "BUY",
@@ -1328,43 +1537,6 @@
         "insider30d": 0
       },
       "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "AVGO": {
-      "name": "Broadcom",
-      "qarp": "STRONG BUY",
-      "consensus": {
-        "strongBuy": 17,
-        "buy": 35,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 57,
-        "bullish": 52,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.21,
-        "period": "2026-09-01"
-      },
-      "news": {
-        "title": "Market Reaction To Micron Earnings And Broadcom Deal Signals A Shift In AI Trade",
-        "ts": 1790881498,
-        "url": "https://www.benzinga.com/Opinion/26/10/62119909/market-reaction-to-micron-earnings-and-broadcom-deal-signals-a-shift-in-ai-trade",
-        "wiim": false
-      },
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-09-02",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-20260902.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-09-10",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm"
-        },
-        "insider30d": 3
-      },
-      "explain": "57 analysts cover it — 52 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "NBIX": {
       "name": "Neurocrine Biosciences",
@@ -1446,7 +1618,12 @@
         "score": 0.97,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Nike Posts Mixed Q1 Results, Joins Mangoceuticals And Other Big Stocks Moving Lower In Friday’s Pre-Market Session",
+        "ts": 1790942527,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62130298/nike-posts-mixed-q1-results-joins-mangoceuticals-and-other-big-stocks-moving-lower-in-fridays-pre-market-session",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1685,7 +1862,6 @@
       "summary": "Q2 FY2026 — revenue $7.8B (+10.2% YoY), diluted EPS $-8.45 (-641.7% YoY), net margin -134%. (as reported, GAAP)"
     },
     "SAP": null,
-    "NVS": null,
     "AVGO": {
       "period": "Q3 FY2026",
       "filed": "2026-09-10",
@@ -1705,6 +1881,7 @@
       "margin": null,
       "summary": "Q3 FY2026 — revenue $29.6B (+85.5% YoY), diluted EPS $2.68 (+215.3% YoY). (as reported, GAAP)"
     },
+    "NVS": null,
     "NBIX": {
       "period": "Q2 FY2026",
       "filed": "2026-07-31",
