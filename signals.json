@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-02",
-  "generated_at": "Oct 2, 9:11pm ET",
+  "date": "2026-10-03",
+  "generated_at": "Oct 3, 11:06am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -119,10 +119,10 @@
   "sectors": [
     {
       "sector": "Enterprise Software",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Sympathy with Accenture after that company reported better-than-expected…",
       "note": "Amid sympathy with Accenture after that company reported better-than-expected Q4 financial results and issued FY27 sales guidance above estimates.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Semiconductor",
@@ -154,16 +154,16 @@
     }
   ],
   "holding_news": {
-    "RKLB": {
-      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
-      "ts": 1790962513,
-      "url": "https://www.benzinga.com/markets/options/26/10/62142865/10-industrials-stocks-whale-activity-today-s-session",
-      "wiim": false
-    },
     "NVDA": {
       "title": "This Senator Just Sold Up To $145K In JPMorgan Chase Stock",
       "ts": 1790953224,
       "url": "https://www.benzinga.com/government/26/10/62137519/senator-just-sold-145k-jpmorgan-chase-stock",
+      "wiim": false
+    },
+    "RKLB": {
+      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
+      "ts": 1790962513,
+      "url": "https://www.benzinga.com/markets/options/26/10/62142865/10-industrials-stocks-whale-activity-today-s-session",
       "wiim": false
     },
     "AVGO": {
@@ -177,71 +177,9 @@
       "ts": 1790945924,
       "url": "https://www.benzinga.com/news/26/10/62131686/abbott-to-rally-over-31-here-are-10-top-analyst-forecasts-for-friday",
       "wiim": false
-    },
-    "EFX": {
-      "title": "Nike Posts Mixed Q1 Results, Joins Mangoceuticals And Other Big Stocks Moving Lower In Friday’s Pre-Market Session",
-      "ts": 1790942527,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62130298/nike-posts-mixed-q1-results-joins-mangoceuticals-and-other-big-stocks-moving-lower-in-fridays-pre-market-session",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-25",
-      "ticker": "CVX",
-      "firm": "HSBC",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$250",
-      "price": 206.69,
-      "upside": 21.0,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-25",
-      "ticker": "MMM",
-      "firm": "Wells Fargo",
-      "action": "Initiates Coverage On",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$195",
-      "price": 161.89,
-      "upside": 20.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-25",
-      "ticker": "MMM",
-      "firm": "Bernstein",
-      "action": "Upgrades",
-      "rating": "Market Perform",
-      "stance": "neutral",
-      "pt": "$171",
-      "price": 161.89,
-      "upside": 5.6,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-25",
-      "ticker": "NKE",
-      "firm": "B of A Securities",
-      "action": "Downgrades",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$30",
-      "price": 33.87,
-      "upside": -11.4,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
     {
       "date": "2026-09-28",
       "ticker": "KO",
@@ -786,18 +724,67 @@
       "stance": "neutral",
       "pt": "$195",
       "upside": 20.5
-    },
-    "CRM": {
-      "date": "2026-09-18",
-      "firm": "Citizens",
-      "action": "Reiterates",
-      "rating": "Market Outperform",
-      "stance": "bullish",
-      "pt": "$315",
-      "upside": 34.2
     }
   },
   "bz_news": [
+    {
+      "title": "Micron, Nike, Meta and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62151335/micron-nike-meta-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
+      "ts": 1791030620,
+      "tickers": [
+        "MU",
+        "META",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.369
+    },
+    {
+      "title": "Benzinga Bulls and Bears: Alphabet, Micron, Nike",
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62151294/benzinga-bulls-and-bears-alphabet-micron-nike",
+      "ts": 1791028809,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "NVDA",
+        "ORCL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.44
+    },
+    {
+      "title": "Nvidia-Backed Robotics Startup FieldAI Hits $10 Billion Valuation After $700 Million Raise, More Than Quadrupling Value in Just Over a Year: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62150844/fieldai-700-million-10-billion-valuation-physical-ai",
+      "ts": 1790999199,
+      "tickers": [
+        "META",
+        "INTC",
+        "SSNLF",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.46
+    },
+    {
+      "title": "Apple Takes Aim at AI Agents, Wants Mac Users to Know When Their Data Is Accessed as Meta Tackles Muse Privacy Claims",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62150820/apple-takes-aim-at-ai-agents-wants-mac-users-to-know-when-their-data-is-accessed-as-meta-tackles-muse-privacy-claims",
+      "ts": 1790998313,
+      "tickers": [
+        "META",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.297
+    },
     {
       "title": "If You Invested $100 In Intel Stock 5 Years Ago, You Would Have This Much Today",
       "url": "https://www.benzinga.com/news/26/10/62149246/if-you-invested-100-intel-stock-5-years-ago-you-would-have-much-today",
@@ -1010,7 +997,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.517
+      "relevance": 0.516
     },
     {
       "title": "If You Invested $1000 In Cisco Systems Stock 5 Years Ago, You Would Have This Much Today",
@@ -1048,61 +1035,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.311
-    },
-    {
-      "title": "'Disney Licenses Slew of Titles to Netflix, Including All Five ‘Ice Age’ Movies, ‘Percy Jackson and the Olympians,’ ‘Felicity,’ ‘Will Trent,’ ‘Elio’ and More'- Variety",
-      "url": "https://www.benzinga.com/news/26/10/62138360/disney-licenses-slew-titles-netflix-including-all-five-ice-age-movies-percy-jackson-and-olympians-fe",
-      "ts": 1790954172,
-      "tickers": [
-        "DIS",
-        "NFLX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.24
-    },
-    {
-      "title": "Scotiabank Maintains Sector Outperform on Verizon Communications, Lowers Price Target to $51.5",
-      "url": "https://www.benzinga.com/news/26/10/62137980/scotiabank-maintains-sector-outperform-verizon-communications-lowers-price-target-51-5",
-      "ts": 1790953615,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.454
-    },
-    {
-      "title": "EXCLUSIVE: Top 12 Most-Searched Tickers in September on Benzinga Pro – Meta Rises, SpaceX Falls, Dell & Bloom Energy Join List",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62137835/top-12-most-searched-tickers-in-september-on-benzinga-pro-meta-rises-spacex-falls-dell-bloom-energy-join-list",
-      "ts": 1790953469,
-      "tickers": [
-        "TSLA",
-        "AAPL",
-        "META",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.414
-    },
-    {
-      "title": "8 Of 11 Sectors Rise Friday As Growth Leads",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62137658/8-of-11-sectors-rise-friday-as-growth-leads",
-      "ts": 1790953292,
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA",
-        "IWM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.414
     }
   ],
   "portfolio_brief": {
@@ -1718,12 +1650,7 @@
         "score": 0.97,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Nike Posts Mixed Q1 Results, Joins Mangoceuticals And Other Big Stocks Moving Lower In Friday’s Pre-Market Session",
-        "ts": 1790942527,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62130298/nike-posts-mixed-q1-results-joins-mangoceuticals-and-other-big-stocks-moving-lower-in-fridays-pre-market-session",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
