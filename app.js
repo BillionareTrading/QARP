@@ -1608,6 +1608,10 @@ const FG = (() => {
   const isSessionMs = (ms) => { const w = new Date(ms).getUTCDay(); return w !== 0 && w !== 6 && !NYSE_HOLIDAYS.has(isoOfMs(ms)); };
   const tdays = (from, to) => { if (to < from || to - from > 500 * DAY) return null; let n = 0; for (let t = from + DAY; t <= to; t += DAY) if (isSessionMs(t)) n++; return n; };
   const riyadh = (iso) => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleTimeString("en-GB", { timeZone: "Asia/Riyadh", hour: "numeric", minute: "2-digit", hour12: true }).replace(" ", "\u202f"); };
+  // the bake's time with its weekday when it was not made today in Riyadh: a Saturday bake read on Monday says "Sat"
+  const updated = (iso) => { const d = new Date(iso); if (isNaN(d)) return ""; const day = (x) => x.toLocaleDateString("en-CA", { timeZone: "Asia/Riyadh" });
+    return (day(d) !== day(new Date()) ? d.toLocaleDateString("en-GB", { timeZone: "Asia/Riyadh", weekday: "short" }) + " " : "") + riyadh(iso); };
+  const keep = (s) => s.replace(/ /g, "\u00a0");   // a stamp wraps as one piece on a phone, never leaving "Riyadh" alone on a line
 
   /* ---------- one read of the payload for both graphics ---------- */
   function snap() {
@@ -1775,7 +1779,7 @@ const FG = (() => {
       if (ga.length > 1) s += ` Strongest group: <b>${esc(ga[0].g)}</b> (<span class="${tone(ga[0].a)}">${sgn(ga[0].a)}</span> on average). Weakest: <b>${esc(ga[ga.length - 1].g)}</b> (<span class="${tone(ga[ga.length - 1].a)}">${sgn(ga[ga.length - 1].a)}</span>).`;
       if (mine.length) s += ` ${S.hsess !== S.sess ? `Your holdings, live on ${esc(fd(utc(S.hsess)))}: ` : "Of your holdings, "}${mu} rose and ${md} fell${best && worst && best !== worst ? `; best <b>${esc(best.t)}</b> <span class="${tone(best.day)}">${sgn(best.day)}</span>, worst <b>${esc(worst.t)}</b> <span class="${tone(worst.day)}">${sgn(worst.day)}</span>` : ""}.`;
       R.deck.innerHTML = s;
-      R.asof.textContent = "prices from " + fd(utc(S.sess)) + (S.built ? " \u00b7 updated " + riyadh(S.built) + " Riyadh" : "");
+      R.asof.textContent = "prices from " + fd(utc(S.sess)) + (S.built ? " \u00b7 " + keep("updated " + updated(S.built) + " Riyadh") : "");
       const srt = withDay.slice().sort((a, b) => b.day - a.day), li = (x) => `<li><b>${esc(x.t)}</b><span class="${tone(x.day)}">${sgn(x.day)}</span></li>`;
       R.mv.innerHTML = srt.length >= 8 ? `<div><h4>Biggest rises</h4><ul>${srt.slice(0, 5).map(li).join("")}</ul></div><div><h4>Biggest falls</h4><ul>${srt.slice(-5).reverse().map(li).join("")}</ul></div>` : "";
       const off = S.holdings.filter((h) => !h.onMap).map((h) => h.t);
@@ -2025,7 +2029,9 @@ const FG = (() => {
     }
     const joinNames = (a) => (a.length === 1 ? a[0] : a.slice(0, -1).join(", ") + " and " + a[a.length - 1]);
     function words() {
-      R.asof.innerHTML = esc("prices from " + ML + (S.built ? " \u00b7 updated " + riyadh(S.built) + " Riyadh" : ""));
+      // after the bell liveTick re-prices the holdings before the first in-session bake: stamp that tick, not the pre-bell bake
+      const liveAt = S.hsess !== S.sess && typeof lastGoodTs === "number" && lastGoodTs ? new Date(lastGoodTs).toISOString() : null;
+      R.asof.innerHTML = esc("prices from " + ML + (liveAt ? " \u00b7 " + keep("live " + updated(liveAt) + " Riyadh") : S.built ? " \u00b7 " + keep("updated " + updated(S.built) + " Riyadh") : ""));
       const reps = H.filter((h) => h.rep).sort((a, b) => a.rep.date - b.rep.date || (b.w || 0) - (a.w || 0));
       let hl, f0 = null; const deck = [];
       if (reps.length) { f0 = reps[0].rep; const same = reps.filter((h) => h.rep.date === f0.date);
@@ -3271,6 +3277,9 @@ async function liveTick() {
     // "Today · live" on this very tick. Not when a new payload was swapped in while the quotes were in
     // flight: they patched the OLD rows, and the rows now on screen are baked until the next tick.
     if (DATA === _d0) holdingsLiveDay = lastSessionDate();
+    // the tick's time is set BEFORE the renders too (2026-10-04 review): the Radar's stamp reads it in FG.render below
+    lastGoodTs = Date.now();
+    lastGoodClock = nyClock();
     if (privUnlocked()) {   // dollar totals only exist on the owner tier
       retotalAccount();
       flashAccount(DATA.meta.portfolio_totals.account);
@@ -3278,8 +3287,6 @@ async function liveTick() {
     renderPortfolio();      // re-renders the KPI strip (inside this panel) + donut + table
     if (dailyTimer) FG.render();   // front page open: the Map and the Radar follow the live prices
     patchLivePrices();      // reflect holdings' live price/day in the Universe + Overview tabs
-    lastGoodTs = Date.now();
-    lastGoodClock = nyClock();
     setLivePill("live", `LIVE · ${lastGoodClock}`);
   } else if (lastGoodTs) {
     // Couldn't refresh this tick — just keep showing the last good time. The timestamp is
