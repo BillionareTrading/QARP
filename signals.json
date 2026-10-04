@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-03",
-  "generated_at": "Oct 3, 11:06am ET",
+  "date": "2026-10-04",
+  "generated_at": "Oct 4, 11:53am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -155,27 +155,21 @@
   ],
   "holding_news": {
     "NVDA": {
-      "title": "This Senator Just Sold Up To $145K In JPMorgan Chase Stock",
-      "ts": 1790953224,
-      "url": "https://www.benzinga.com/government/26/10/62137519/senator-just-sold-145k-jpmorgan-chase-stock",
+      "title": "Bernie Sanders Warns AI Could Become Smarter Than Humans: 'Do Not Want to Wait Around'",
+      "ts": 1791103343,
+      "url": "https://www.benzinga.com/markets/tech/26/10/62152178/bernie-sanders-warns-ai-could-become-smarter-than-humans-do-not-want-to-wait-around",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "LinkedIn Cofounder Defends Massive AI Infrastructure Spending, Says AI Capital Is 'the Only Reason We’re Not in a Recession'",
+      "ts": 1791102072,
+      "url": "https://www.benzinga.com/markets/economic-data/26/10/62152166/linkedin-cofounder-defends-massive-ai-infrastructure-spending-says-ai-capital-is-the-only-reason-were-not-in-a-recession",
       "wiim": false
     },
     "RKLB": {
       "title": "10 Industrials Stocks Whale Activity In Today’s Session",
       "ts": 1790962513,
       "url": "https://www.benzinga.com/markets/options/26/10/62142865/10-industrials-stocks-whale-activity-today-s-session",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "Broadcom Chases NVIDIA With $60 Billion Financing Plan for AI Customers",
-      "ts": 1790945087,
-      "url": "https://www.benzinga.com/markets/tech/26/10/62131358/broadcom-chases-nvidia-with-60-billion-financing-plan-for-ai-customers",
-      "wiim": false
-    },
-    "ABT": {
-      "title": "Abbott To Rally Over 31%? Here Are 10 Top Analyst Forecasts For Friday",
-      "ts": 1790945924,
-      "url": "https://www.benzinga.com/news/26/10/62131686/abbott-to-rally-over-31-here-are-10-top-analyst-forecasts-for-friday",
       "wiim": false
     }
   },
@@ -728,6 +722,106 @@
   },
   "bz_news": [
     {
+      "title": "Boeing Avoids Strike As Musk Takes Aim At Delta, Tesla Delays Roadster Reveal and Ford Sales Slide: This Week In Mobility",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62152563/boeing-avoids-strike-as-musk-takes-aim-at-delta-tesla-delays-roadster-reveal-and-ford-sales-slide-this-week-in-mobility",
+      "ts": 1791122425,
+      "tickers": [
+        "TSLA",
+        "BA",
+        "UAL",
+        "DAL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.326
+    },
+    {
+      "title": "President Trump On Sunday, Announced Formation Of Super Intelligence Force To Coordinate Federal Government Super Intelligence Efforts, Led By Jay Clayton, Andrew Ferguson, Emil Michael, Scott Kupor",
+      "url": "https://www.benzinga.com/news/26/10/62152468/president-trump-sunday-announced-formation-super-intelligence-force-coordinate-federal-government-su",
+      "ts": 1791117687,
+      "tickers": [
+        "AI",
+        "LPSN",
+        "NVDA",
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.272
+    },
+    {
+      "title": "Apple, Meta And Jim Cramer Set the Tone for AI, iPhone and Vision Pro Moves: This Week in Apple",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62152341/apple-weekly-tech-headlines-ai-iphone",
+      "ts": 1791111623,
+      "tickers": [
+        "AAPL",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.381
+    },
+    {
+      "title": "Bernie Sanders Warns AI Could Become Smarter Than Humans: 'Do Not Want to Wait Around'",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62152178/bernie-sanders-warns-ai-could-become-smarter-than-humans-do-not-want-to-wait-around",
+      "ts": 1791103343,
+      "tickers": [
+        "NVDA",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.32
+    },
+    {
+      "title": "LinkedIn Cofounder Defends Massive AI Infrastructure Spending, Says AI Capital Is 'the Only Reason We’re Not in a Recession'",
+      "url": "https://www.benzinga.com/markets/economic-data/26/10/62152166/linkedin-cofounder-defends-massive-ai-infrastructure-spending-says-ai-capital-is-the-only-reason-were-not-in-a-recession",
+      "ts": 1791102072,
+      "tickers": [
+        "AVGO",
+        "META",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.406
+    },
+    {
+      "title": "Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62152019/elizabeth-warren-targets-trump-big-tech-over-massive-tax-breaks-for-ai-and-data-centers-people-are-worried-about-ai",
+      "ts": 1791085569,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.333
+    },
+    {
+      "title": "S&P 500 Index Nears Record High as Wall Street Braces for Strong Earnings Season",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62151688/sp-500-index-nears-record-high-as-wall-street-braces-for-strong-earnings-season",
+      "ts": 1791048607,
+      "tickers": [
+        "GS",
+        "NVDA",
+        "MU",
+        "FDS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.429
+    },
+    {
       "title": "Micron, Nike, Meta and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week",
       "url": "https://www.benzinga.com/markets/equities/26/10/62151335/micron-nike-meta-and-more-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
       "ts": 1791030620,
@@ -795,7 +889,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.314
+      "relevance": 0.315
     },
     {
       "title": "Fuel, Freight and Supplier Costs Bite: How Walmart, Costco, Target and Other Retailers Are Fighting Back",
@@ -968,73 +1062,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.309
-    },
-    {
-      "title": "Anthropic invests $100M to train 10,000 engineers and tackle the enterprise AI talent gap",
-      "url": "https://www.benzinga.com/news/26/10/62142049/anthropic-invests-100m-train-10-000-engineers-and-tackle-enterprise-ai-talent-gap",
-      "ts": 1790960868,
-      "tickers": [
-        "AMZN",
-        "GOOG",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.358
-    },
-    {
-      "title": "Weak Jobs Report Lifts Nvidia, Nasdaq 100 to Record Highs: Stock Market Today",
-      "url": "https://www.benzinga.com/news/26/10/62141603/nvidia-nasdaq-100-record-high-western-digital-sinks-soft-jobs-report-fed-hike-bets-markets-friday",
-      "ts": 1790959959,
-      "tickers": [
-        "QQQ",
-        "NVDA",
-        "ON",
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.516
-    },
-    {
-      "title": "If You Invested $1000 In Cisco Systems Stock 5 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/10/62141004/if-you-invested-1000-cisco-systems-stock-5-years-ago-you-would-have-much-today",
-      "ts": 1790958646,
-      "tickers": [
-        "CSCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.295
-    },
-    {
-      "title": "Live On CNBC, Malcolm Ethridge Announces Bought More Goldman Sachs Group; Bought More Morgan Stanley",
-      "url": "https://www.benzinga.com/quote/MS",
-      "ts": 1790958201,
-      "tickers": [
-        "GS",
-        "MS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.349
-    },
-    {
-      "title": "Nike Is Still Searching for Its Turnaround As Wall Street Sees Another Tough Year",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62140704/nike-is-still-searching-for-its-turnaround-as-wall-street-sees-another-tough-year",
-      "ts": 1790958146,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.311
     }
   ],
   "portfolio_brief": {
@@ -1055,9 +1082,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "This Senator Just Sold Up To $145K In JPMorgan Chase Stock",
-        "ts": 1790953224,
-        "url": "https://www.benzinga.com/government/26/10/62137519/senator-just-sold-145k-jpmorgan-chase-stock",
+        "title": "Bernie Sanders Warns AI Could Become Smarter Than Humans: 'Do Not Want to Wait Around'",
+        "ts": 1791103343,
+        "url": "https://www.benzinga.com/markets/tech/26/10/62152178/bernie-sanders-warns-ai-could-become-smarter-than-humans-do-not-want-to-wait-around",
         "wiim": false
       },
       "filings": {
@@ -1091,12 +1118,7 @@
         "score": 1.12,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Abbott To Rally Over 31%? Here Are 10 Top Analyst Forecasts For Friday",
-        "ts": 1790945924,
-        "url": "https://www.benzinga.com/news/26/10/62131686/abbott-to-rally-over-31-here-are-10-top-analyst-forecasts-for-friday",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1108,7 +1130,7 @@
           "date": "2026-07-28",
           "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
         },
-        "insider30d": 8
+        "insider30d": 6
       },
       "explain": "33 analysts cover it — 25 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1172,7 +1194,7 @@
           "date": "2026-08-03",
           "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000053/bsx-20260630.htm"
         },
-        "insider30d": 1
+        "insider30d": 0
       },
       "explain": "38 analysts cover it — 30 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1526,9 +1548,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Broadcom Chases NVIDIA With $60 Billion Financing Plan for AI Customers",
-        "ts": 1790945087,
-        "url": "https://www.benzinga.com/markets/tech/26/10/62131358/broadcom-chases-nvidia-with-60-billion-financing-plan-for-ai-customers",
+        "title": "LinkedIn Cofounder Defends Massive AI Infrastructure Spending, Says AI Capital Is 'the Only Reason We’re Not in a Recession'",
+        "ts": 1791102072,
+        "url": "https://www.benzinga.com/markets/economic-data/26/10/62152166/linkedin-cofounder-defends-massive-ai-infrastructure-spending-says-ai-capital-is-the-only-reason-were-not-in-a-recession",
         "wiim": false
       },
       "filings": {
@@ -1598,7 +1620,7 @@
           "date": "2026-07-31",
           "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000037/nbix-20260630.htm"
         },
-        "insider30d": 12
+        "insider30d": 11
       },
       "explain": "36 analysts cover it — 31 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
