@@ -1596,8 +1596,9 @@ const FG = (() => {
 
   const esc = (s) => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   const num = (v) => (typeof v === "number" && isFinite(v) ? v : null);
-  const sgn = (v, dp) => (v > 0 ? "+" : v < 0 ? "\u2212" : "") + Math.abs(v).toFixed(dp == null ? 1 : dp) + "%";
-  const tone = (v) => (v == null ? "" : v > 0 ? "up" : v < 0 ? "dn" : "");
+  // a move that rounds to zero prints "0.0%" in plain ink, never "\u22120.0%" in red (2026-10-05: "Weakest: Financials (\u22120.0%)")
+  const sgn = (v, dp) => { const r = Math.abs(v).toFixed(dp == null ? 1 : dp); return (+r === 0 ? "" : v > 0 ? "+" : v < 0 ? "\u2212" : "") + r + "%"; };
+  const tone = (v, dp) => (v == null || +Math.abs(v).toFixed(dp == null ? 1 : dp) === 0 ? "" : v > 0 ? "up" : v < 0 ? "dn" : "");
   const etIso = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(d || new Date());
   const utc = (iso) => { const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso || "")); return m ? Date.UTC(+m[1], +m[2] - 1, +m[3]) : null; };
   const isoOfMs = (ms) => new Date(ms).toISOString().slice(0, 10);
@@ -1759,7 +1760,7 @@ const FG = (() => {
       for (const g in heads) { const vals = (heads[g]._m || []).map((q) => value(q.x)).filter((v) => v != null && !isNaN(v));
         const a = vals.length ? vals.reduce((p, c) => p + c, 0) / vals.length : null;
         heads[g].lastChild.textContent = a == null ? "" : score ? "avg " + Math.round(a) : sgn(a);
-        heads[g].lastChild.style.color = score || a == null ? "#454b57" : a >= 0 ? "#15803d" : "#be123c"; }
+        heads[g].lastChild.style.color = score || a == null || !tone(a) ? "#454b57" : a > 0 ? "#15803d" : "#be123c"; }
       if (replaying()) { R.stamp.hidden = false; R.stamp.innerHTML = esc(fd(utc(HIST.dates[state.day]))) + `<small>${up} rose \u00b7 ${dn} fell</small>`; } else R.stamp.hidden = true;
       legend();
     }
@@ -2096,7 +2097,7 @@ const FG = (() => {
       const vc = h.verdict ? (/AVOID/i.test(h.verdict) ? "dn" : /BUY/i.test(h.verdict) ? "up" : "br") : "";
       o += `<div class="ro-v">${h.verdict ? `<b class="${vc}">${esc(h.verdict)}</b>${h.score !== null ? `<span>score ${Math.round(h.score)} of 100</span>` : ""}` : "<span>not scored: outside the compliant list</span>"}</div>`;
       R.roid.innerHTML = o; o = "";
-      if (h.day !== null) o += fact("Move on " + ML, sgn(h.day, 2), "", tone(h.day));
+      if (h.day !== null) o += fact("Move on " + ML, sgn(h.day, 2), "", tone(h.day, 2));
       if (h.gain !== null) o += fact("Since you bought", sgn(h.gain), "", tone(h.gain));
       if (h.w !== null) o += fact("Weight in book", h.w.toFixed(1) + "%", "");
       if (h.rep) o += fact("Earnings report", fd(h.rep.date), inTd(h.rep.td));
