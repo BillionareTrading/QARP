@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-05",
-  "generated_at": "Oct 5, 6:21pm ET",
+  "date": "2026-10-06",
+  "generated_at": "Oct 6, 6:00am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -85,11 +85,11 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Oct 26",
-      "what": "EXE earnings",
-      "affects": "EXE",
+      "when": "Oct 27",
+      "what": "SPGI earnings",
+      "affects": "SPGI",
       "dir": "two-sided",
-      "why": "Q-results for Expand Energy — guidance is the catalyst.",
+      "why": "Q-results for S&P Global — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
     }
   ],
@@ -103,13 +103,13 @@
     "AZO": "2026-12-07",
     "ADBE": "2026-12-09",
     "ONON": "2026-11-10",
-    "EXE": "2026-10-26",
+    "EXE": "2026-11-03",
     "LULU": "2026-12-09",
     "SPGI": "2026-10-27",
     "GILD": "2026-10-22",
     "AVGO": "2026-12-09",
     "NVS": "2026-10-27",
-    "NBIX": "2026-10-26",
+    "NBIX": "2026-11-03",
     "VRTX": "2026-11-02",
     "EFX": "2026-10-21"
   },
@@ -184,76 +184,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-28",
-      "ticker": "KO",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$95",
-      "price": 86.51,
-      "upside": 9.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-28",
-      "ticker": "NKE",
-      "firm": "Deutsche Bank",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$37",
-      "price": 33.96,
-      "upside": 9.0,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-09-28",
-      "ticker": "NKE",
-      "firm": "Piper Sandler",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$38",
-      "price": 33.96,
-      "upside": 11.9,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-09-28",
-      "ticker": "NKE",
-      "firm": "Evercore ISI Group",
-      "action": "Maintains",
-      "rating": "In-Line",
-      "stance": "neutral",
-      "pt": "$34",
-      "price": 33.96,
-      "upside": 0.1,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-09-28",
-      "ticker": "CVX",
-      "firm": "TD Cowen",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$215",
-      "price": 206.47,
-      "upside": 4.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-09-29",
       "ticker": "AAPL",
@@ -788,6 +718,86 @@
   },
   "bz_news": [
     {
+      "title": "Assessing Apple's Performance Against Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/10/62183372/assessing-apple-s-performance-against-competitors-technology-hardware-storage-amp-peripherals-indust",
+      "ts": 1791280712,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.377
+    },
+    {
+      "title": "Robert Kennedy Jr. Pushes New Healthcare Pricing Rules as HHS Says Patients Deserve Clearer Costs: ‘Americans Should Know…’",
+      "url": "https://www.benzinga.com/news/health-care/26/10/62182352/robert-kennedy-jr-pushes-new-healthcare-pricing-rules-as-hhs-says-patients-deserve-clearer-costs-americans-should-know",
+      "ts": 1791275532,
+      "tickers": [
+        "CI",
+        "CVS",
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.262
+    },
+    {
+      "title": "Moderna, Vaxcyte and Novavax Are Trending After-Hours as Suspected Pneumonic Plague In Russia Stirs Anxiety",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62181099/moderna-vaxcyte-novavax-pneumonic-plague-russia-after-hours",
+      "ts": 1791260861,
+      "tickers": [
+        "MRNA",
+        "NVAX",
+        "MRK",
+        "PCVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.408
+    },
+    {
+      "title": "Trump Says Iran Was Behind Foiled Flydubai Attack, But JD Vance Isn’t Convinced — ‘I Wouldn’t Say I’ve Seen Anything Conclusive Just Yet’",
+      "url": "https://www.benzinga.com/news/politics/26/10/62181000/trump-says-iran-was-behind-foiled-flydubai-attack-but-jd-vance-isnt-convinced-i-wouldnt-say-ive-seen-anything-conclusive-just-yet",
+      "ts": 1791259863,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.199
+    },
+    {
+      "title": "Here’s How Much You Would Have Made Owning Goldman Sachs Group Stock In The Last 5 Years",
+      "url": "https://www.benzinga.com/news/26/10/62180129/here-s-how-much-you-would-have-made-owning-goldman-sachs-group-stock-last-5-years",
+      "ts": 1791241215,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.339
+    },
+    {
+      "title": "Congressman Who Loves Magnificent Seven Stocks Buys 3 Mag 7 Names in September",
+      "url": "https://www.benzinga.com/news/politics/26/10/62179941/congressman-who-loves-magnificent-seven-stocks-buys-3-mag-7-names-in-september",
+      "ts": 1791239355,
+      "tickers": [
+        "AAPL",
+        "GOOG",
+        "MSFT",
+        "NFLX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.366
+    },
+    {
       "title": "'Wall Street banks launch record $60B chip deal for Broadcom and Anthropic'- Financial Times",
       "url": "https://www.benzinga.com/news/26/10/62178697/wall-street-banks-launch-record-60b-chip-deal-broadcom-and-anthropic-financial-times",
       "ts": 1791234198,
@@ -812,7 +822,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.317
+      "relevance": 0.318
     },
     {
       "title": "'Private-credit worries spur Fed review'- Semafor",
@@ -966,7 +976,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.38
+      "relevance": 0.379
     },
     {
       "title": "Raymond James Maintains Outperform on Walt Disney, Lowers Price Target to $119",
@@ -1034,90 +1044,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.43
-    },
-    {
-      "title": "JPMorgan’s October Stock Picks Hint at 3 ETF Trades: Value, AI Power, Health Care",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62169116/jpmorgans-october-stock-picks-hint-at-3-etf-trades-value-ai-power-health-care",
-      "ts": 1791217345,
-      "tickers": [
-        "XLF",
-        "SPY",
-        "JPM",
-        "MA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.377
-    },
-    {
-      "title": "Microsoft Could Be SpaceX's Next Big AI Customer: Bernstein Sees AI Revenue Surging Nearly 500%",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62168858/spacex-microsoft-ai-customer",
-      "ts": 1791216999,
-      "tickers": [
-        "SPCX",
-        "GOOGL",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.455
-    },
-    {
-      "title": "Qualcomm Licenses Huawei Chip Tech as Its Push Beyond Smartphones Picks Up Speed",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62168851/qualcomm-licenses-huawei-chip-tech-as-its-push-beyond-smartphones-picks-up-speed",
-      "ts": 1791216985,
-      "tickers": [
-        "QCOM",
-        "AAPL",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.418
-    },
-    {
-      "title": "JP Morgan Maintains Overweight on Merck & Co, Raises Price Target to $165",
-      "url": "https://www.benzinga.com/news/26/10/62168295/jp-morgan-maintains-overweight-merck-co-raises-price-target-165",
-      "ts": 1791216052,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.425
-    },
-    {
-      "title": "Barclays Maintains Overweight on Nike, Lowers Price Target to $37",
-      "url": "https://www.benzinga.com/news/26/10/62166963/barclays-maintains-overweight-nike-lowers-price-target-37",
-      "ts": 1791214074,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.456
-    },
-    {
-      "title": "Why TSMC’s Talks with Elon Musk Are a Direct Threat to Intel’s Chip Ambitions",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62166712/tsmc-intel-terafab",
-      "ts": 1791213709,
-      "tickers": [
-        "TSM",
-        "INTC",
-        "TSLA",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.406
     },
     {
       "title": "Shares of chip foundries are trading lower after Elon Musk confirmed discussions between the Terafab production project and Taiwan Semiconductor, which may crowd other physical semi producers out of the venture.",
