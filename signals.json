@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-06",
-  "generated_at": "Oct 6, 4:43pm ET",
+  "date": "2026-10-07",
+  "generated_at": "Oct 7, 10:06am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,19 +61,19 @@
   ],
   "catalysts": [
     {
+      "when": "Oct 20",
+      "what": "EFX earnings",
+      "affects": "EFX",
+      "dir": "two-sided",
+      "why": "Q-results for Equifax — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
       "when": "Oct 21",
       "what": "ABT earnings",
       "affects": "ABT",
       "dir": "two-sided",
       "why": "Q-results for Abbott Laboratories — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
-      "when": "Oct 21",
-      "what": "EFX earnings",
-      "affects": "EFX",
-      "dir": "two-sided",
-      "why": "Q-results for Equifax — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
@@ -94,15 +94,15 @@
     }
   ],
   "earnings_next": {
-    "ABT": "2026-10-21",
     "ZTS": "2026-11-05",
+    "ABT": "2026-10-21",
     "BSX": "2026-10-28",
     "NVDA": "2026-11-17",
     "RKLB": "2026-11-09",
     "AZN": "2026-10-30",
     "AZO": "2026-12-07",
-    "ADBE": "2026-12-09",
     "ONON": "2026-11-10",
+    "ADBE": "2026-12-09",
     "EXE": "2026-11-03",
     "LULU": "2026-12-09",
     "SPGI": "2026-10-27",
@@ -111,30 +111,30 @@
     "NVS": "2026-10-27",
     "NBIX": "2026-11-03",
     "VRTX": "2026-11-02",
-    "EFX": "2026-10-21"
+    "EFX": "2026-10-20"
   },
   "risk_asof": "2026-07-05",
   "sectors": [
     {
       "sector": "Data Center Infrastructure",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Google and Constellation energy announced a 20-year partnership to bring…",
       "note": "After Google and Constellation energy announced a 20-year partnership to bring 890 MW of nuclear power online, which helps underpin strong demand for future compute buildout. Also, Baird initiating coverage of Modine Manufacturing with an Outperform rating and a $300 price target further supports the sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Enterprise Software",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Sympathy with Accenture after that company reported better-than-expected…",
       "note": "Amid sympathy with Accenture after that company reported better-than-expected Q4 financial results and issued FY27 sales guidance above estimates.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Financial",
-      "dir": "mixed",
+      "dir": "down",
       "driver": "Overall market weakness after Fed Chairman Warsh took a hawkish tone in …",
       "note": "Amid overall market weakness after Fed Chairman Warsh took a hawkish tone in his press conference and Q&A session after the FOMC rate hike.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Chemical & Coatings",
@@ -152,88 +152,26 @@
     }
   ],
   "holding_news": {
-    "NVDA": {
-      "title": "Nvidia Strength Is Masking ‘A Whole Lot of Pain’ in the Broader Market, David Rosenberg Says",
-      "ts": 1791315683,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62203648/nvidia-strength-masks-market-pain",
-      "wiim": false
-    },
-    "AVGO": {
-      "title": "Nvidia Strength Is Masking ‘A Whole Lot of Pain’ in the Broader Market, David Rosenberg Says",
-      "ts": 1791315683,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62203648/nvidia-strength-masks-market-pain",
-      "wiim": false
-    },
     "RKLB": {
       "title": "8 Industrials Stocks With Whale Alerts In Today’s Session",
       "ts": 1791308122,
       "url": "https://www.benzinga.com/markets/options/26/10/62200136/8-industrials-stocks-whale-alerts-today-s-session",
       "wiim": false
     },
-    "ABT": {
-      "title": "General Motors To Rally Around 40%? Here Are 10 Top Analyst Forecasts For Tuesday",
-      "ts": 1791291296,
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62188662/general-motors-to-rally-around-40-here-are-10-top-analyst-forecasts-for-tuesday",
+    "NVDA": {
+      "title": "Ray Dalio Says AI Bubble Is ‘Close’ to Bursting as Debt and Rising Rates Raise Red Flags",
+      "ts": 1791363125,
+      "url": "https://www.benzinga.com/markets/economic-data/26/10/62209975/ray-dalio-ai-classic-bubble-nearing-bursting-point",
+      "wiim": false
+    },
+    "AVGO": {
+      "title": "'Diversification is Dying' — Nvidia, Apple Lead 10 Stocks Taking 41 Cents Of Every Dollar Invested In S&P 500, Says This Commentator",
+      "ts": 1791356627,
+      "url": "https://www.benzinga.com/markets/tech/26/10/62209295/nvidia-apple-sp-500-top-10-stocks-41-percent-diversification",
       "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-29",
-      "ticker": "AAPL",
-      "firm": "Morgan Stanley",
-      "action": "Reiterates",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$360",
-      "price": 333.63,
-      "upside": 7.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-29",
-      "ticker": "MRK",
-      "firm": "Scotiabank",
-      "action": "Maintains",
-      "rating": "Sector Outperform",
-      "stance": "bullish",
-      "pt": "$180",
-      "price": 141.93,
-      "upside": 26.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-29",
-      "ticker": "JNJ",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$285",
-      "price": 254.81,
-      "upside": 11.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-09-29",
-      "ticker": "NKE",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Sector Perform",
-      "stance": "neutral",
-      "pt": "$40",
-      "price": 34.6,
-      "upside": 15.6,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
     {
       "date": "2026-09-30",
       "ticker": "PG",
@@ -242,8 +180,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$150",
-      "price": 148.41,
-      "upside": 1.1,
+      "price": 149.09,
+      "upside": 0.6,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -256,8 +194,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$110",
-      "price": 117.94,
-      "upside": -6.7,
+      "price": 117.1,
+      "upside": -6.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -270,8 +208,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$355",
-      "price": 333.63,
-      "upside": 6.4,
+      "price": 334.78,
+      "upside": 6.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -284,7 +222,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 333.63,
+      "price": 334.78,
       "upside": null,
       "held": false,
       "uni": true,
@@ -298,8 +236,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$51",
-      "price": 34.6,
-      "upside": 47.4,
+      "price": 34.31,
+      "upside": 48.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -312,8 +250,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$34",
-      "price": 34.6,
-      "upside": -1.7,
+      "price": 34.31,
+      "upside": -0.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -326,8 +264,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$35",
-      "price": 34.6,
-      "upside": 1.2,
+      "price": 34.31,
+      "upside": 2.0,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -340,8 +278,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$32",
-      "price": 34.6,
-      "upside": -7.5,
+      "price": 34.31,
+      "upside": -6.7,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -354,8 +292,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$27",
-      "price": 34.6,
-      "upside": -22.0,
+      "price": 34.31,
+      "upside": -21.3,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -368,8 +306,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$19",
-      "price": 34.6,
-      "upside": -45.1,
+      "price": 34.31,
+      "upside": -44.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -382,8 +320,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$30",
-      "price": 34.6,
-      "upside": -13.3,
+      "price": 34.31,
+      "upside": -12.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -396,8 +334,8 @@
       "rating": "Underweight",
       "stance": "bearish",
       "pt": "$33",
-      "price": 34.6,
-      "upside": -4.6,
+      "price": 34.31,
+      "upside": -3.8,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -410,8 +348,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$29",
-      "price": 34.6,
-      "upside": -16.2,
+      "price": 34.31,
+      "upside": -15.5,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -424,8 +362,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$30",
-      "price": 34.6,
-      "upside": -13.3,
+      "price": 34.31,
+      "upside": -12.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -438,8 +376,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$28",
-      "price": 34.6,
-      "upside": -19.1,
+      "price": 34.31,
+      "upside": -18.4,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -452,8 +390,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$40",
-      "price": 34.6,
-      "upside": 15.6,
+      "price": 34.31,
+      "upside": 16.6,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -466,8 +404,8 @@
       "rating": "In-Line",
       "stance": "neutral",
       "pt": "$28",
-      "price": 34.6,
-      "upside": -19.1,
+      "price": 34.31,
+      "upside": -18.4,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -480,8 +418,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$50",
-      "price": 34.6,
-      "upside": 44.5,
+      "price": 34.31,
+      "upside": 45.7,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -494,7 +432,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 34.6,
+      "price": 34.31,
       "upside": null,
       "held": false,
       "uni": true,
@@ -508,7 +446,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "",
-      "price": 34.6,
+      "price": 34.31,
       "upside": null,
       "held": false,
       "uni": true,
@@ -522,8 +460,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$36",
-      "price": 34.6,
-      "upside": 4.0,
+      "price": 34.31,
+      "upside": 4.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -536,8 +474,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$36",
-      "price": 34.6,
-      "upside": 4.0,
+      "price": 34.31,
+      "upside": 4.9,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -550,8 +488,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$24",
-      "price": 34.6,
-      "upside": -30.6,
+      "price": 34.31,
+      "upside": -30.0,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -564,8 +502,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$50",
-      "price": 34.6,
-      "upside": 44.5,
+      "price": 34.31,
+      "upside": 45.7,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -578,8 +516,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$303",
-      "price": 254.81,
-      "upside": 18.9,
+      "price": 257.29,
+      "upside": 17.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -592,8 +530,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$165",
-      "price": 141.93,
-      "upside": 16.3,
+      "price": 142.24,
+      "upside": 16.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -606,8 +544,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$37",
-      "price": 34.6,
-      "upside": 6.9,
+      "price": 34.31,
+      "upside": 7.8,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -620,8 +558,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$90",
-      "price": 86.19,
-      "upside": 4.4,
+      "price": 86.65,
+      "upside": 3.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -634,8 +572,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "price": 148.41,
-      "upside": 11.9,
+      "price": 149.09,
+      "upside": 11.3,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -648,8 +586,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$290",
-      "price": 254.81,
-      "upside": 13.8,
+      "price": 257.29,
+      "upside": 12.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -662,14 +600,37 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "price": 148.41,
-      "upside": 11.9,
+      "price": 149.09,
+      "upside": 11.3,
       "held": false,
       "uni": true,
       "qarp": "BUY"
+    },
+    {
+      "date": "2026-10-07",
+      "ticker": "JNJ",
+      "firm": "Guggenheim",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$287",
+      "price": 257.29,
+      "upside": 11.5,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "JNJ": {
+      "date": "2026-10-07",
+      "firm": "Guggenheim",
+      "action": "Reiterates",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$287",
+      "upside": 11.5
+    },
     "PG": {
       "date": "2026-10-06",
       "firm": "Evercore ISI Group",
@@ -677,16 +638,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "upside": 11.9
-    },
-    "JNJ": {
-      "date": "2026-10-06",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$290",
-      "upside": 13.8
+      "upside": 11.3
     },
     "NKE": {
       "date": "2026-10-05",
@@ -695,7 +647,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$37",
-      "upside": 6.9
+      "upside": 7.8
     },
     "MRK": {
       "date": "2026-10-05",
@@ -704,7 +656,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$165",
-      "upside": 16.3
+      "upside": 16.0
     },
     "KO": {
       "date": "2026-10-05",
@@ -713,7 +665,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$90",
-      "upside": 4.4
+      "upside": 3.9
     },
     "AAPL": {
       "date": "2026-10-01",
@@ -722,7 +674,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$355",
-      "upside": 6.4
+      "upside": 6.0
     },
     "CSCO": {
       "date": "2026-09-30",
@@ -731,7 +683,7 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$110",
-      "upside": -6.7
+      "upside": -6.1
     },
     "CVX": {
       "date": "2026-09-28",
@@ -740,7 +692,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$215",
-      "upside": 3.6
+      "upside": 3.3
     },
     "MMM": {
       "date": "2026-09-25",
@@ -749,259 +701,56 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$195",
-      "upside": 19.1
+      "upside": 19.8
     }
   },
   "bz_news": [
     {
-      "title": "Nvidia Strength Is Masking ‘A Whole Lot of Pain’ in the Broader Market, David Rosenberg Says",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62203648/nvidia-strength-masks-market-pain",
-      "ts": 1791315683,
+      "title": "Reported October 6, FCC Approves SpaceX NGSO MSS System For Direct-To-Device Services",
+      "url": "https://www.benzinga.com/news/26/10/62219131/reported-october-6-fcc-approves-spacex-ngso-mss-system-direct-device-services",
+      "ts": 1791381738,
       "tickers": [
-        "NVDA",
-        "META",
-        "AMZN",
-        "GOOGL"
+        "SPCX",
+        "T",
+        "TMUS",
+        "VZ"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.48
+      "relevance": 0.302
     },
     {
-      "title": "The S&P 500 Is Partying at Record Highs: Only 3% of Its Stocks Were Invited",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62203364/sp-500-record-high-only-3-percent-stocks-invited",
-      "ts": 1791314978,
+      "title": "Cisco Launches Agentic Partnership",
+      "url": "https://www.benzinga.com/news/26/10/62219103/cisco-launches-agentic-partnership",
+      "ts": 1791381715,
       "tickers": [
-        "TSLA",
-        "AAPL",
-        "META",
-        "SPY"
+        "CSCO"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.409
+      "relevance": 0.322
     },
     {
-      "title": "Anthropic Expands Cyber Verification Program With Three-Tier Access To Advanced AI Models For Security Professionals",
-      "url": "https://www.benzinga.com/news/26/10/62202755/anthropic-expands-cyber-verification-program-three-tier-access-advanced-ai-models-security-professio",
-      "ts": 1791313575,
-      "tickers": [
-        "GOOG",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.358
-    },
-    {
-      "title": "Jamie Dimon Says AI Boom Is Competing With Government Borrowing for Capital: ‘Rates Are Going Up’",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62202607/jamie-dimon-ai-capital-crunch-rates",
-      "ts": 1791313208,
-      "tickers": [
-        "JPM",
-        "AMZN",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.382
-    },
-    {
-      "title": "Warren Buffett Said Buy the S&P 500 — But This ETF Is Secretly an AI Powerhouse",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62202508/warren-buffett-said-buy-the-sp-500-but-this-etf-is-secretly-an-ai-powerhouse",
-      "ts": 1791313003,
-      "tickers": [
-        "VOO",
-        "TSLA",
-        "AAPL",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.412
-    },
-    {
-      "title": "Texas AG Targets UnitedHealth: Probe Examines Alleged Bribes, Care Delays and Coverage Denials",
-      "url": "https://www.benzinga.com/news/health-care/26/10/62201393/texas-ag-targets-unitedhealth-probe-examines-alleged-bribes-care-delays-and-coverage-denials",
-      "ts": 1791310593,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.38
-    },
-    {
-      "title": "Shares of data center infrastructure-related companies are trading higher after Google and Constellation energy announced a 20-year partnership to bring 890 MW of nuclear power online, which helps underpin strong demand for future compute buildout. Also, Baird initiating coverage of Modine Manufacturing with an Outperform rating and a $300 price target further supports the sector.",
-      "url": "https://www.benzinga.com/quote/TIC",
-      "ts": 1791309908,
-      "tickers": [
-        "CAT",
-        "RRX",
-        "FIX",
-        "GNRC"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.44
-    },
-    {
-      "title": "Anthropic Announces Claude Now Works With Google Docs, Sheets, And Slides",
-      "url": "https://www.benzinga.com/news/26/10/62200877/anthropic-announces-claude-now-works-google-docs-sheets-and-slides",
-      "ts": 1791309676,
-      "tickers": [
-        "GOOG",
-        "GOOGL",
-        "AMZN",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.307
-    },
-    {
-      "title": "OpenAI Announces Advancing Computer Use With Ironclad",
-      "url": "https://www.benzinga.com/news/26/10/62200416/openai-announces-advancing-computer-use-ironclad",
-      "ts": 1791308814,
-      "tickers": [
-        "DOCU",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.371
-    },
-    {
-      "title": "6 Consumer Discretionary Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62200137/6-consumer-discretionary-stocks-whale-activity-today-s-session",
-      "ts": 1791308122,
-      "tickers": [
-        "NKE",
-        "STLA",
-        "BKNG",
-        "GTX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.387
-    },
-    {
-      "title": "8 Industrials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62200136/8-industrials-stocks-whale-alerts-today-s-session",
-      "ts": 1791308122,
-      "tickers": [
-        "RKLB",
-        "HON",
-        "CAT",
-        "BE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62200135/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1791308122,
-      "tickers": [
-        "WULF",
-        "IREN",
-        "CRM",
-        "NBIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "S&P Eyes Record High, Yet Concentration Risk Looms",
-      "url": "https://www.benzinga.com/Opinion/26/10/62200112/sp-eyes-record-high-yet-concentration-risk-looms",
-      "ts": 1791308074,
-      "tickers": [
-        "USO",
-        "SPY",
-        "QQQ",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.495
-    },
-    {
-      "title": "Nvidia, Apple, Microsoft Now Drive 21% of S&P 500: Here’s How Much ETF Investors Own",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62200101/nvidia-apple-microsoft-now-drive-21-of-sp-500-heres-how-much-etf-investors-own",
-      "ts": 1791308063,
-      "tickers": [
-        "SPY",
-        "AAPL",
-        "XOM",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.475
-    },
-    {
-      "title": "US Judge Concludes Two-Hour Hearing Into Disney Lawsuit Over Federal Communications Commission License Review Without Making a Decision",
-      "url": "https://www.benzinga.com/news/26/10/62199208/us-judge-concludes-two-hour-hearing-disney-lawsuit-over-federal-communications-commission-license-re",
-      "ts": 1791306416,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.212
-    },
-    {
-      "title": "CNBC Halftime Report Final Trades: UnitedHealth Group, EQT, Clearway Energy, Goldman Sachs Nasdaq-100 Premium Income ETF",
-      "url": "https://www.benzinga.com/quote/EQT",
-      "ts": 1791306069,
-      "tickers": [
-        "UNH",
-        "GPIQ",
-        "CWEN",
-        "EQT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.41
-    },
-    {
-      "title": "Microsoft Sets up a Second AI Paycheck as Copilot Shifts To Pay-Per-Use",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/10/62198412/microsoft-sets-up-a-second-ai-paycheck-as-copilot-shifts-to-pay-per-use",
-      "ts": 1791305023,
+      "title": "Nvidia Inside: Microsoft's New Laptop Runs AI Agents Without the Cloud",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62217330/nvidia-inside-microsofts-new-laptop-runs-ai-agents-without-the-cloud",
+      "ts": 1791380653,
       "tickers": [
         "MSFT",
-        "META",
-        "NVDA"
+        "NVDA",
+        "AAPL",
+        "INTC"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.383
+      "relevance": 0.442
     },
     {
-      "title": "Zscaler Says Agentic AI Could Be Its Biggest Opportunity Ever",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62198354/zscaler-says-agentic-ai-could-be-its-biggest-opportunity-ever",
-      "ts": 1791304934,
+      "title": "These Analysts Boost Their Forecasts On Zscaler",
+      "url": "https://www.benzinga.com/news/26/10/62216332/these-analysts-boost-their-forecasts-on-zscaler",
+      "ts": 1791379430,
       "tickers": [
         "ZS",
         "IBM"
@@ -1009,142 +758,296 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.392
+      "relevance": 0.474
     },
     {
-      "title": "Marvell Stock Rallies as Investor Day Targets Smash Wall Street Estimates",
-      "url": "https://www.benzinga.com/news/26/10/62198187/marvell-investor-day-stock-jumps-90-billion-revenue-target",
-      "ts": 1791304541,
+      "title": "Guggenheim Reiterates Buy on Johnson & Johnson, Maintains $287 Price Target",
+      "url": "https://www.benzinga.com/news/26/10/62215749/guggenheim-reiterates-buy-johnson-johnson-maintains-287-price-target",
+      "ts": 1791378223,
       "tickers": [
-        "MRVL",
-        "INTC",
-        "NVDA",
-        "MU"
+        "JNJ"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.422
+      "relevance": 0.428
     },
     {
-      "title": "Boeing, Ford and Warner Bros. Discovery Have Billions in Debt Coming Due as Yields Hit 5.3%",
-      "url": "https://www.benzinga.com/markets/bonds/26/10/62198030/boeing-ford-wbd-debt-wall",
-      "ts": 1791304259,
+      "title": "Evercore ISI Group Maintains Outperform on Microsoft, Raises Price Target to $635",
+      "url": "https://www.benzinga.com/news/26/10/62215105/evercore-isi-group-maintains-outperform-microsoft-raises-price-target-635",
+      "ts": 1791377428,
       "tickers": [
-        "BA",
-        "WBD",
-        "F",
-        "PSKY"
+        "MSFT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.324
+      "relevance": 0.497
     },
     {
-      "title": "Live On CNBC, Kevin Simpson Announces Bought More UnitedHealth Group; Sold IBM",
-      "url": "https://www.benzinga.com/quote/UNH",
-      "ts": 1791304066,
+      "title": "Most Undervalued Chip Stocks In October 2026: Four Are Cheaper Than The S&P 500",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62215069/undervalued-chip-stocks-october-cheaper-than-sp-500",
+      "ts": 1791377390,
+      "tickers": [
+        "MU",
+        "AAPL",
+        "SPY",
+        "QCOM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.361
+    },
+    {
+      "title": "Chevron Swaps Hess Midstream Stake for 50% Lower Bakken Costs — and a $200 Million Payment",
+      "url": "https://www.benzinga.com/markets/large-cap/26/10/62214999/chevron-swaps-hess-midstream-stake-for-50-lower-bakken-costs-and-a-200-million-payment",
+      "ts": 1791377191,
+      "tickers": [
+        "CVX",
+        "HESM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.342
+    },
+    {
+      "title": "Jim Cramer Says Investors Are Overlooking Elon Musk’s $40 Billion ‘Pot of Gold’ For Nvidia — Intel Terafab Exit Rumors ‘Squashed,’ Dismisses ‘Weakness’ In Korea’s Kospi",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62214893/jim-cramer-says-investors-are-overlooking-elon-musks-40-billion-pot-of-gold-for-nvidia-intel-terafab-exit-rumors-squashed-dismisses-we",
+      "ts": 1791377079,
+      "tickers": [
+        "INTC",
+        "TSLA",
+        "NVDA",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.427
+    },
+    {
+      "title": "Halozyme Says Dutch Court Upholds Its Patent, Bars Merck From Making And Selling Keytruda SC In Multiple European Markets",
+      "url": "https://www.benzinga.com/quote/HALO",
+      "ts": 1791376692,
+      "tickers": [
+        "MRK",
+        "HALO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.411
+    },
+    {
+      "title": "Tempus Announces Expanded Collaboration With Merck And Moderna For Potential Commercialization Of Cancer Vaccine Intismeran Autogene; Terms Not Disclosed",
+      "url": "https://www.benzinga.com/quote/MRK",
+      "ts": 1791376510,
+      "tickers": [
+        "TEM",
+        "MRNA",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.429
+    },
+    {
+      "title": "Reported Oct. 6: 'Apple to Launch Doorbell, Lock, Thermostat Developed With LG' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/10/62214090/reported-oct-6-apple-launch-doorbell-lock-thermostat-developed-lg-bloomberg",
+      "ts": 1791375661,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.259
+    },
+    {
+      "title": "EQT, UnitedHealth, Clearway Energy And More On CNBC’s ‘Final Trades’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62212515/eqt-unitedhealth-clearway-energy-cnbc-final-trades",
+      "ts": 1791371894,
+      "tickers": [
+        "EQT",
+        "UNH",
+        "CWEN",
+        "GPIQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.413
+    },
+    {
+      "title": "Cantor Fitzgerald Maintains Overweight on Travelers Companies, Raises Price Target to $378",
+      "url": "https://www.benzinga.com/news/26/10/62212274/cantor-fitzgerald-maintains-overweight-travelers-companies-raises-price-target-378",
+      "ts": 1791371327,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.466
+    },
+    {
+      "title": "IBM Ready Partners With SAP Solutions To Help Customers Accelerate Cloud ERP Modernization, Unify Enterprise Data, And Establish An AI-Ready Digital Core",
+      "url": "https://www.benzinga.com/news/26/10/62210769/ibm-ready-partners-sap-solutions-help-customers-accelerate-cloud-erp-modernization-unify-enterprise-",
+      "ts": 1791367473,
       "tickers": [
         "IBM",
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.384
-    },
-    {
-      "title": "Evercore ISI Group Upgrades Procter & Gamble to Outperform, Raises Price Target to $166",
-      "url": "https://www.benzinga.com/news/26/10/62197666/evercore-isi-group-upgrades-procter-gamble-outperform-raises-price-target-166",
-      "ts": 1791303573,
-      "tickers": [
-        "PG"
+        "SAP"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.491
+      "relevance": 0.36
     },
     {
-      "title": "Atlassian And OpenAI Expand Partnership To Turn Enterprise Knowledge Into Action",
-      "url": "https://www.benzinga.com/news/26/10/62197166/atlassian-and-openai-expand-partnership-turn-enterprise-knowledge-action",
-      "ts": 1791302821,
+      "title": "Performance Comparison: Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/10/62210523/performance-comparison-apple-and-competitors-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1791367134,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.364
+    },
+    {
+      "title": "Robinhood's Investment Chief Says She Prefers Owning Energy Stocks Over ETFs — Should These Stocks Be on Your Radar?",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62210506/robinhoods-investment-chief-says-she-prefers-owning-energy-stocks-over-etfs-should-these-stocks-be-on-your-radar",
+      "ts": 1791366981,
+      "tickers": [
+        "EOG",
+        "XOM",
+        "HOOD",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.34
+    },
+    {
+      "title": "Intel CEO Lip-Bu Tan Says Company Will Keep Working on Terafab — Elon Musk Confirms TSMC May Only Sublease Part of the Fab, Not Own It",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62210012/intel-ceo-lip-bu-tan-says-company-will-keep-working-on-terafab-elon-musk-confirms-tsmc-may-only-sublease-part-of-the-fab-not-own-it",
+      "ts": 1791363728,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.343
+    },
+    {
+      "title": "Ray Dalio Says AI Bubble Is ‘Close’ to Bursting as Debt and Rising Rates Raise Red Flags",
+      "url": "https://www.benzinga.com/markets/economic-data/26/10/62209975/ray-dalio-ai-classic-bubble-nearing-bursting-point",
+      "ts": 1791363125,
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "META",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.371
+    },
+    {
+      "title": "'Godfather of AI' Geoffrey Hinton on Regrets Over Inventing AI: Calls for FDA-Like Rules Before Releasing Models, Says Public Pressure Like Climate Change Could Drive Action",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62209830/godfather-of-ai-geoffrey-hinton-on-regrets-over-inventing-ai-calls-for-fda-like-rules-before-releasing-models-says-public-pressure-like-climate-change-could-drive-action",
+      "ts": 1791361212,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.314
+    },
+    {
+      "title": "Jim Cramer Sees More AI Upside Ahead for Meta, Microsoft and AMD Despite Bubble Fears: ‘They Were Going to Figure Something Out’",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62209518/jim-cramer-sees-more-ai-upside-ahead-for-meta-microsoft-and-amd-despite-bubble-fears-they-were-going-to-figure-something-out",
+      "ts": 1791358847,
       "tickers": [
         "MSFT",
-        "TEAM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.293
-    },
-    {
-      "title": "9 Of 11 Sectors Rise In Tuesday Trading As Defensives Lead",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62195896/9-of-11-sectors-rise-in-tuesday-trading-as-defensives-lead",
-      "ts": 1791300810,
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA",
-        "IWM"
+        "INTC",
+        "AMD",
+        "ABNB"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.42
+      "relevance": 0.443
     },
     {
-      "title": "'McDonald’s Franchisees Balk at $800,000 Bill to Overhaul Stores' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/10/62195240/mcdonald-s-franchisees-balk-800-000-bill-overhaul-stores-bloomberg",
-      "ts": 1791299757,
+      "title": "Dan Ives Names 5 Potential Tech Winners for 2027 as Investors Underestimate $4 Trillion Spending Wave",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62209448/dan-ives-names-5-potential-tech-winners-for-2027-as-investors-underestimate-4-trillion-spending-wave",
+      "ts": 1791357778,
       "tickers": [
-        "MCD"
+        "NVDA",
+        "TSLA",
+        "AAPL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.372
+    },
+    {
+      "title": "Amazon, Google Face New Smart Home Rival as Apple Lines Up Doorbell, Lock and Camera Launches: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62209435/apple-is-coming-for-amazon-and-googles-lunch-with-lg-backed-smart-home-devices",
+      "ts": 1791357724,
+      "tickers": [
+        "AAPL",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.315
+    },
+    {
+      "title": "'Diversification is Dying' — Nvidia, Apple Lead 10 Stocks Taking 41 Cents Of Every Dollar Invested In S&P 500, Says This Commentator",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62209295/nvidia-apple-sp-500-top-10-stocks-41-percent-diversification",
+      "ts": 1791356627,
+      "tickers": [
+        "SPY",
+        "TSLA",
+        "AAPL",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.437
+    },
+    {
+      "title": "Iran’s Security Chief Blasts Scott Bessent as Crude Oil Prices Remain Volatile: ‘Hormuz Will Not Be Opened by Threats or Pressure’",
+      "url": "https://www.benzinga.com/news/politics/26/10/62209272/iran-security-chief-slams-scott-bessent-crude-oil-hormuz-not-opened",
+      "ts": 1791356513,
+      "tickers": [
+        "USO",
+        "GS",
+        "UCO"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.243
+      "relevance": 0.181
     }
   ],
   "portfolio_brief": {
-    "ABT": {
-      "name": "Abbott Laboratories",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 12,
-        "buy": 13,
-        "hold": 8,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 33,
-        "bullish": 25,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.12,
-        "period": "2026-09-01"
-      },
-      "news": {
-        "title": "General Motors To Rally Around 40%? Here Are 10 Top Analyst Forecasts For Tuesday",
-        "ts": 1791291296,
-        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62188662/general-motors-to-rally-around-40-here-are-10-top-analyst-forecasts-for-tuesday",
-        "wiim": false
-      },
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-08-20",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000110465926099247/tm2623675d1_8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
-        },
-        "insider30d": 6
-      },
-      "explain": "33 analysts cover it — 25 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
     "ZTS": {
       "name": "Zoetis",
       "qarp": "STRONG BUY",
@@ -1177,6 +1080,38 @@
       },
       "explain": "24 analysts cover it — 12 bullish, 12 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
+    "ABT": {
+      "name": "Abbott Laboratories",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 12,
+        "buy": 13,
+        "hold": 8,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 33,
+        "bullish": 25,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.12,
+        "period": "2026-09-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-08-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000110465926099247/tm2623675d1_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
+        },
+        "insider30d": 6
+      },
+      "explain": "33 analysts cover it — 25 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "BSX": {
       "name": "Boston Scientific",
       "qarp": "STRONG BUY",
@@ -1197,8 +1132,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-09-23",
-          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000061/bsx-20260921.htm"
+          "date": "2026-10-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000064/bsx-20261001.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -1226,9 +1161,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Nvidia Strength Is Masking ‘A Whole Lot of Pain’ in the Broader Market, David Rosenberg Says",
-        "ts": 1791315683,
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62203648/nvidia-strength-masks-market-pain",
+        "title": "Ray Dalio Says AI Bubble Is ‘Close’ to Bursting as Debt and Rising Rates Raise Red Flags",
+        "ts": 1791363125,
+        "url": "https://www.benzinga.com/markets/economic-data/26/10/62209975/ray-dalio-ai-classic-bubble-nearing-bursting-point",
         "wiim": false
       },
       "filings": {
@@ -1339,6 +1274,30 @@
       },
       "explain": "32 analysts cover it — 26 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
+    "ONON": {
+      "name": "On Holding",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 11,
+        "buy": 19,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 1,
+        "total": 36,
+        "bullish": 30,
+        "bearish": 1,
+        "label": "Strong Buy",
+        "score": 1.08,
+        "period": "2026-09-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 10
+      },
+      "explain": "36 analysts cover it — 30 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "ADBE": {
       "name": "Adobe",
       "qarp": "BUY",
@@ -1370,30 +1329,6 @@
         "insider30d": 4
       },
       "explain": "46 analysts cover it — 18 bullish, 23 hold, 5 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "ONON": {
-      "name": "On Holding",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 11,
-        "buy": 19,
-        "hold": 5,
-        "sell": 0,
-        "strongSell": 1,
-        "total": 36,
-        "bullish": 30,
-        "bearish": 1,
-        "label": "Strong Buy",
-        "score": 1.08,
-        "period": "2026-09-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": null,
-        "periodic": null,
-        "insider30d": 10
-      },
-      "explain": "36 analysts cover it — 30 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "EXE": {
       "name": "Expand Energy",
@@ -1540,9 +1475,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Nvidia Strength Is Masking ‘A Whole Lot of Pain’ in the Broader Market, David Rosenberg Says",
-        "ts": 1791315683,
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62203648/nvidia-strength-masks-market-pain",
+        "title": "'Diversification is Dying' — Nvidia, Apple Lead 10 Stocks Taking 41 Cents Of Every Dollar Invested In S&P 500, Says This Commentator",
+        "ts": 1791356627,
+        "url": "https://www.benzinga.com/markets/tech/26/10/62209295/nvidia-apple-sp-500-top-10-stocks-41-percent-diversification",
         "wiim": false
       },
       "filings": {
@@ -1682,20 +1617,6 @@
     }
   },
   "financials": {
-    "ABT": {
-      "period": "FY2017",
-      "filed": "2018-02-16",
-      "form": "10-K",
-      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
-      "revenue": {
-        "fmt": "$7.6B",
-        "yoy": 42.3
-      },
-      "eps": null,
-      "net_income": null,
-      "margin": null,
-      "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
-    },
     "ZTS": {
       "period": "Q2 FY2026",
       "filed": "2026-08-06",
@@ -1714,6 +1635,20 @@
       },
       "margin": 28.0,
       "summary": "Q2 FY2026 — revenue $2.5B (-0.2% YoY), diluted EPS $1.65 (+1.2% YoY), net margin 28%. (as reported, GAAP)"
+    },
+    "ABT": {
+      "period": "FY2017",
+      "filed": "2018-02-16",
+      "form": "10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
+      "revenue": {
+        "fmt": "$7.6B",
+        "yoy": 42.3
+      },
+      "eps": null,
+      "net_income": null,
+      "margin": null,
+      "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
     },
     "BSX": {
       "period": "Q2 FY2026",
@@ -1792,6 +1727,7 @@
       "margin": 13.3,
       "summary": "Q3 FY2026 — revenue $4.8B (+8.4% YoY), diluted EPS $38.07 (+7.7% YoY), net margin 13%. (as reported, GAAP)"
     },
+    "ONON": null,
     "ADBE": {
       "period": "Q3 FY2026",
       "filed": "2026-09-22",
@@ -1811,7 +1747,6 @@
       "margin": 27.0,
       "summary": "Q3 FY2026 — revenue $6.8B (+12.9% YoY), diluted EPS $4.62 (+10.5% YoY), net margin 27%. (as reported, GAAP)"
     },
-    "ONON": null,
     "EXE": {
       "period": "Q2 FY2026",
       "filed": "2026-07-28",
