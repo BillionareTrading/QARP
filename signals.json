@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-07",
-  "generated_at": "Oct 7, 4:59pm ET",
+  "date": "2026-10-08",
+  "generated_at": "Oct 8, 8:24am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -158,54 +158,20 @@
       "url": "https://www.benzinga.com/news/26/10/62228587/microsoft-exec-says-rtx-spark-based-machines-nvidia-chips-will-begin-shipping-next-week",
       "wiim": false
     },
+    "AVGO": {
+      "title": "'Oracle, Broadcom and SpaceX Seek Blockbuster Debt Deals To Pay for AI Chips'- WSJ Exclusive",
+      "ts": 1791407012,
+      "url": "https://www.benzinga.com/news/26/10/62234456/oracle-broadcom-and-spacex-seek-blockbuster-debt-deals-to-pay-for-ai-chips-wsj-exclusive",
+      "wiim": false
+    },
     "ADBE": {
       "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
       "ts": 1791394511,
       "url": "https://www.benzinga.com/markets/options/26/10/62228073/10-information-technology-stocks-whale-activity-today-s-session",
       "wiim": false
-    },
-    "AVGO": {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "ts": 1791394511,
-      "url": "https://www.benzinga.com/markets/options/26/10/62228073/10-information-technology-stocks-whale-activity-today-s-session",
-      "wiim": false
-    },
-    "RKLB": {
-      "title": "Reported October 6, FCC Approves SpaceX NGSO MSS System For Direct-To-Device Services",
-      "ts": 1791381738,
-      "url": "https://www.benzinga.com/news/26/10/62219131/reported-october-6-fcc-approves-spacex-ngso-mss-system-direct-device-services",
-      "wiim": false
     }
   },
   "ratings": [
-    {
-      "date": "2026-09-30",
-      "ticker": "PG",
-      "firm": "TD Cowen",
-      "action": "Reiterates",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$150",
-      "price": 147.82,
-      "upside": 1.5,
-      "held": false,
-      "uni": true,
-      "qarp": "BUY"
-    },
-    {
-      "date": "2026-09-30",
-      "ticker": "CSCO",
-      "firm": "Bernstein",
-      "action": "Initiates Coverage On",
-      "rating": "Market Perform",
-      "stance": "neutral",
-      "pt": "$110",
-      "price": 117.39,
-      "upside": -6.3,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-10-01",
       "ticker": "AAPL",
@@ -639,17 +605,31 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-10-08",
+      "ticker": "MRK",
+      "firm": "Cantor Fitzgerald",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$145",
+      "price": 142.79,
+      "upside": 1.5,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
     "MRK": {
-      "date": "2026-10-07",
-      "firm": "Morgan Stanley",
+      "date": "2026-10-08",
+      "firm": "Cantor Fitzgerald",
       "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$177",
-      "upside": 24.0
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$145",
+      "upside": 1.5
     },
     "JNJ": {
       "date": "2026-10-07",
@@ -726,6 +706,279 @@
   },
   "bz_news": [
     {
+      "title": "What Is Going on With Palantir Tech Stock on Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62241998/what-is-going-on-with-palantir-tech-stock-on-thursday",
+      "ts": 1791460117,
+      "tickers": [
+        "PLTR",
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.403
+    },
+    {
+      "title": "Cantor Fitzgerald Maintains Neutral on Merck & Co, Raises Price Target to $145",
+      "url": "https://www.benzinga.com/news/26/10/62240455/cantor-fitzgerald-maintains-neutral-merck-co-raises-price-target-145",
+      "ts": 1791456277,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.489
+    },
+    {
+      "title": "Cantor Fitzgerald Maintains Neutral on Amgen, Raises Price Target to $440",
+      "url": "https://www.benzinga.com/news/26/10/62240377/cantor-fitzgerald-maintains-neutral-amgen-raises-price-target-440",
+      "ts": 1791456068,
+      "tickers": [
+        "AMGN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.488
+    },
+    {
+      "title": "Top Wall Street Forecasters Revamp Travelers Expectations Ahead Of Q3 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62240307/top-wall-street-forecasters-revamp-travelers-expectations-ahead-of-q3-earnings",
+      "ts": 1791455825,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.498
+    },
+    {
+      "title": "Broadcom Eyes Over $50 Billion to Fund OpenAI’s Custom AI Chips as Oracle Also Pursues Major Chip Financing: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62240166/broadcom-eyes-over-50-billion-to-fund-openais-custom-ai-chips-as-oracle-also-pursues-major-chip-financing-report",
+      "ts": 1791455559,
+      "tickers": [
+        "APO",
+        "AVGO",
+        "GS",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.488
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Dow Jones Futures Decline as Pentagon Prepares for Potential Military Strikes on Iran — APLD, LEVI, MU in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62239479/stock-market-today-sp-500-dow-jones-futures-decline-as-pentagon-prepares-for-potential-military-strikes-on-iran-apld-levi-mu-in-focus",
+      "ts": 1791453924,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "QQQ",
+        "MU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.467
+    },
+    {
+      "title": "'Russia Denies Report of Second Case of Illness in Siberia' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/10/62239158/russia-denies-report-second-case-illness-siberia-bloomberg",
+      "ts": 1791453597,
+      "tickers": [
+        "MRNA",
+        "NVAX",
+        "PCVX",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.229
+    },
+    {
+      "title": "Elon Musk’s SpaceX Gets Green Light from Trump's FCC for 15,000 Starlink Satellites: Here’s What Comes Next",
+      "url": "https://www.benzinga.com/news/space/26/10/62239097/elon-musks-spacex-gets-green-light-from-trumps-fcc-for-15000-starlink-satellites-heres-what-comes-next",
+      "ts": 1791453560,
+      "tickers": [
+        "SPCX",
+        "GS",
+        "MS",
+        "T"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.284
+    },
+    {
+      "title": "Competitor Analysis: Evaluating Apple And Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/10/62239061/competitor-analysis-evaluating-apple-and-competitors-technology-hardware-storage-amp-peripherals-ind",
+      "ts": 1791453506,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.378
+    },
+    {
+      "title": "Nike Eyes Bringing the Swoosh Back to Formula 1 After More Than 20 Years as Sportswear Giant Hunts for Growth: Report",
+      "url": "https://www.benzinga.com/news/sports/26/10/62238736/nike-eyes-bringing-the-swoosh-back-to-formula-1-after-more-than-20-years-as-sportswear-giant-hunts-for-growth-report",
+      "ts": 1791451812,
+      "tickers": [
+        "NKE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.281
+    },
+    {
+      "title": "Apple's Smart Home Ambitions Hammer REZI, ARLO and ALLE Stocks: Here's What's Happening",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62238712/apple-smart-home-report-resideo-arlo-allegion-stocks-fall",
+      "ts": 1791451783,
+      "tickers": [
+        "AAPL",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.379
+    },
+    {
+      "title": "Trump EPA Moves To Roll Back Biden-Era Methane Rules, Says Changes Could Save Oil and Gas Producers $45 Billion",
+      "url": "https://www.benzinga.com/news/politics/26/10/62238436/trump-epa-moves-to-roll-back-biden-era-methane-rules-says-changes-could-save-oil-and-gas-producers-45-billion",
+      "ts": 1791449686,
+      "tickers": [
+        "CVX",
+        "XOM",
+        "OXY",
+        "FANG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.247
+    },
+    {
+      "title": "Senator Adam Schiff Warns Advanced AI Poses Growing National Security Threat, Calls for Guardrails Before It's Too Late: 'A Pinky Swear Won’t Cut It'",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62238152/senator-adam-schiff-warns-advanced-ai-poses-growing-national-security-threat-calls-for-guardrails-before-its-too-late-a-pinky-swear-wont-cut-it",
+      "ts": 1791447771,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.331
+    },
+    {
+      "title": "King Charles, Tim Cook Launch Apple-Backed Creative Labs for Young People: 'Opportunities to Learn' From Experts",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62237744/tim-cook-honored-to-host-king-charles-as-apple-launches-creative-labs",
+      "ts": 1791444692,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.289
+    },
+    {
+      "title": "Jim Cramer Says SPCX Could Come to Fruition Long Before Tesla After Goldman Sachs Raises Price Target: 'Real Company With Real Numbers'",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62236943/jim-cramer-says-spcx-could-come-to-fruition-long-before-tesla-after-goldman-sachs-raises-price-target-real-company-with-real-numbers",
+      "ts": 1791439104,
+      "tickers": [
+        "SPCX",
+        "TSLA",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.46
+    },
+    {
+      "title": "Elon Musk, Jensen Huang, Satya Nadella Reportedly to Be Awarded Medals By Trump — White House Says They Help America Lead 'the World in Innovation'",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62236616/trump-national-medals-elon-musk-jensen-huang-satya-nadella-tech-ceos",
+      "ts": 1791433388,
+      "tickers": [
+        "SPCX",
+        "TSLA",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.301
+    },
+    {
+      "title": "Applied Digital, Webull Corp., Super Micro Computer, Micron and Caterpillar: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62236166/applied-digital-webull-super-micro-micron-caterpillar-stocks-investors-radar",
+      "ts": 1791421892,
+      "tickers": [
+        "MU",
+        "CAT",
+        "SMCI",
+        "APLD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.451
+    },
+    {
+      "title": "If You Invested $100 In Caterpillar Stock 5 Years Ago, You Would Have This Much Today",
+      "url": "https://www.benzinga.com/news/26/10/62235715/if-you-invested-100-caterpillar-stock-5-years-ago-you-would-have-much-today",
+      "ts": 1791414012,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.215
+    },
+    {
+      "title": "IBM Selected For Stage C, The Third Phase Of The Quantum Benchmarking Initiative Led By DARPA, The United States Defense Advanced Research Projects Agency",
+      "url": "https://www.benzinga.com/news/26/10/62235130/ibm-selected-stage-c-third-phase-quantum-benchmarking-initiative-led-darpa-united-states-defense-adv",
+      "ts": 1791408803,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.374
+    },
+    {
+      "title": "'Oracle, Broadcom and SpaceX Seek Blockbuster Debt Deals To Pay for AI Chips'- WSJ Exclusive",
+      "url": "https://www.benzinga.com/news/26/10/62234456/oracle-broadcom-and-spacex-seek-blockbuster-debt-deals-to-pay-for-ai-chips-wsj-exclusive",
+      "ts": 1791407012,
+      "tickers": [
+        "APO",
+        "AVGO",
+        "GS",
+        "ORCL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.517
+    },
+    {
       "title": "Stock of the Day: Will Home Depot Continue to Trend Lower?",
       "url": "https://www.benzinga.com/trading-ideas/technicals/26/10/62231733/stock-of-the-day-will-home-depot-continue-to-trend-lower",
       "ts": 1791401704,
@@ -788,280 +1041,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.436
-    },
-    {
-      "title": "Anthropic Introduces Claude Haiku 5.5: The Cheapest, Fastest, And Most Capable Small Model We’ve Ever Released",
-      "url": "https://www.benzinga.com/news/26/10/62229518/anthropic-introduces-claude-haiku-5-5-cheapest-fastest-and-most-capable-small-model-we-ve-ever-relea",
-      "ts": 1791396836,
-      "tickers": [
-        "AMZN",
-        "GOOG",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.23
-    },
-    {
-      "title": "Mizuho Maintains Neutral on Travelers Companies, Lowers Price Target to $345",
-      "url": "https://www.benzinga.com/news/26/10/62229406/mizuho-maintains-neutral-travelers-companies-lowers-price-target-345",
-      "ts": 1791396689,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.466
-    },
-    {
-      "title": "Microsoft Exec Says Surface Laptop Ultra Prices Range Up To $5,899 For Most Powerful Model",
-      "url": "https://www.benzinga.com/news/26/10/62228838/microsoft-exec-says-surface-laptop-ultra-prices-range-5-899-most-powerful-model",
-      "ts": 1791395824,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.25
-    },
-    {
-      "title": "Shares of farm equipment companies are trading lower after the U.S. FTC and USDA issued a notice seeking public comment on agricultural equipment manufacturing and distribution market practices, which may give investors pause that the government may pursue further intervention.",
-      "url": "https://www.benzinga.com/quote/AGCO",
-      "ts": 1791395683,
-      "tickers": [
-        "DE",
-        "CNH",
-        "CAT",
-        "AGCO"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.413
-    },
-    {
-      "title": "Microsoft Exec Says RTX Spark-Based Machines With NVIDIA Chips Will Begin Shipping Next Week",
-      "url": "https://www.benzinga.com/news/26/10/62228587/microsoft-exec-says-rtx-spark-based-machines-nvidia-chips-will-begin-shipping-next-week",
-      "ts": 1791395373,
-      "tickers": [
-        "MSFT",
-        "NVDA",
-        "RTX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.395
-    },
-    {
-      "title": "Tempus AI Doubles Down On Moderna and Merck Cancer Vaccine Infrastructure",
-      "url": "https://www.benzinga.com/news/health-care/26/10/62228412/tempus-ai-doubles-down-on-moderna-and-merck-cancer-vaccine-infrastructure",
-      "ts": 1791395092,
-      "tickers": [
-        "TEM",
-        "MRNA",
-        "MRK",
-        "BMY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.442
-    },
-    {
-      "title": "Microsoft Exec Says Call Of Duty Will Come To NVIDIA RTX Spark Machines In 2027",
-      "url": "https://www.benzinga.com/news/26/10/62228309/microsoft-exec-says-call-duty-will-come-nvidia-rtx-spark-machines-2027",
-      "ts": 1791394840,
-      "tickers": [
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "Microsoft Exec Says Co. Introduces Surface Laptop Ultra",
-      "url": "https://www.benzinga.com/news/26/10/62228248/microsoft-exec-says-co-introduces-surface-laptop-ultra",
-      "ts": 1791394746,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.286
-    },
-    {
-      "title": "10 Financials Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62228076/10-financials-stocks-whale-activity-today-s-session",
-      "ts": 1791394511,
-      "tickers": [
-        "STNE",
-        "SOFI",
-        "LIFE",
-        "HOOD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.413
-    },
-    {
-      "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62228074/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
-      "ts": 1791394511,
-      "tickers": [
-        "TSLA",
-        "SHOO",
-        "GME",
-        "RIVN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.363
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62228073/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1791394511,
-      "tickers": [
-        "MU",
-        "SNDK",
-        "DGXX",
-        "ADBE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "Microsoft Exec Says Meta's Muse Is Coming To Windows",
-      "url": "https://www.benzinga.com/news/26/10/62228061/microsoft-exec-says-meta-s-muse-coming-windows",
-      "ts": 1791394506,
-      "tickers": [
-        "MSFT",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.237
-    },
-    {
-      "title": "Microsoft Exec Says Copilot Will Delegate Tasks To Local Models When Cost Or Privacy Are Key Concerns",
-      "url": "https://www.benzinga.com/news/26/10/62228007/microsoft-exec-says-copilot-will-delegate-tasks-local-models-when-cost-or-privacy-are-key-concerns",
-      "ts": 1791394429,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.29
-    },
-    {
-      "title": "PepsiCo Q3 Preview: Stock At Lowest Since 2020, Market Expert Sees 19% Downside On Weak Report",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/10/62228004/pepsico-q3-preview-stock-at-lowest-since-2020-market-expert-sees-19-downside-on-weak-report",
-      "ts": 1791394422,
-      "tickers": [
-        "PEP",
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.412
-    },
-    {
-      "title": "Microsoft Rolls Out AI Coding Model That Can Run On Indivdual Laptops; New Nvidia Nemotron Model Will Run On Individual Laptops, PCs; OpenAI, Anthropic Will Adopt Microsoft Execution Containers For Agent Containment; Microsoft Execution Containers Will Work Across Windows, MacOS, Linux But Have Deeper Integration With Windows",
-      "url": "https://www.benzinga.com/news/26/10/62227817/microsoft-rolls-out-ai-coding-model-can-run-indivdual-laptops-new-nvidia-nemotron-model-will-run-ind",
-      "ts": 1791393924,
-      "tickers": [
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.383
-    },
-    {
-      "title": "Microsoft Rolls Out Microsoft Execution Containers To Block Agents From Unauthorized Data Access",
-      "url": "https://www.benzinga.com/news/26/10/62227599/microsoft-rolls-out-microsoft-execution-containers-block-agents-unauthorized-data-access",
-      "ts": 1791393565,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.283
-    },
-    {
-      "title": "Global Bond Selloff Dents Market Bullishness — Treasury Auction To Test Sentiment",
-      "url": "https://www.benzinga.com/Opinion/26/10/62227573/global-bond-selloff-dents-market-bullishness-treasury-auction-to-test-sentiment",
-      "ts": 1791393530,
-      "tickers": [
-        "USO",
-        "SPY",
-        "NVDA",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.441
-    },
-    {
-      "title": "Stock Market Today: S&P 500, Russell 2000 Fall as 30-Year Yield Hits 5.7%",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62226685/stock-market-today-sp-500-russell-2000-fall-bond-yields-rise",
-      "ts": 1791392017,
-      "tickers": [
-        "QQQ",
-        "DIA",
-        "VOO",
-        "SPOT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.49
-    },
-    {
-      "title": "Live On CNBC, Sarat Sethi Announces Bought More Ferrari; Bought More Walt Disney Company",
-      "url": "https://www.benzinga.com/quote/DIS",
-      "ts": 1791391765,
-      "tickers": [
-        "RACE",
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.37
-    },
-    {
-      "title": "FTC, USDA Seek Public Comment On Agricultural Equipment Manufacturing, Distribution Market Practices",
-      "url": "https://www.benzinga.com/news/26/10/62221705/ftc-usda-seek-public-comment-on-agricultural-equipment-manufacturing-distribution-market-practices",
-      "ts": 1791384744,
-      "tickers": [
-        "SPY",
-        "DE",
-        "CAT",
-        "AGCO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.432
     }
   ],
   "portfolio_brief": {
@@ -1214,12 +1193,7 @@
         "score": 1.08,
         "period": "2026-09-01"
       },
-      "news": {
-        "title": "Reported October 6, FCC Approves SpaceX NGSO MSS System For Direct-To-Device Services",
-        "ts": 1791381738,
-        "url": "https://www.benzinga.com/news/26/10/62219131/reported-october-6-fcc-approves-spacex-ngso-mss-system-direct-device-services",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1255,7 +1229,7 @@
       "filings": {
         "latest8k": null,
         "periodic": null,
-        "insider30d": 1
+        "insider30d": 2
       },
       "explain": "35 analysts cover it — 28 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1497,9 +1471,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-        "ts": 1791394511,
-        "url": "https://www.benzinga.com/markets/options/26/10/62228073/10-information-technology-stocks-whale-activity-today-s-session",
+        "title": "'Oracle, Broadcom and SpaceX Seek Blockbuster Debt Deals To Pay for AI Chips'- WSJ Exclusive",
+        "ts": 1791407012,
+        "url": "https://www.benzinga.com/news/26/10/62234456/oracle-broadcom-and-spacex-seek-blockbuster-debt-deals-to-pay-for-ai-chips-wsj-exclusive",
         "wiim": false
       },
       "filings": {
