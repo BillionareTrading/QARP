@@ -5,6 +5,22 @@
 
 let DATA = null;
 
+// Display names for non-US listings (2026-10-08, his order: "2222.SR — have it named Aramco or remove it").
+// The build keeps the exchange symbol (prices/history key on it); the site shows the name everywhere,
+// and fetchQuote maps it back so the live feed still asks for the real symbol.
+const TICKER_ALIAS = { "2222.SR": "ARAMCO" };
+const TICKER_REAL = Object.fromEntries(Object.entries(TICKER_ALIAS).map(([k, v]) => [v, k]));
+function applyTickerAliases(o) {
+  const swap = (str) => { for (const [k, v] of Object.entries(TICKER_ALIAS)) str = str.split(k).join(v); return str; };
+  if (Array.isArray(o)) return o.map(applyTickerAliases);
+  if (o && typeof o === "object") {
+    const out = {};
+    for (const [k, v] of Object.entries(o)) out[swap(k)] = applyTickerAliases(v);
+    return out;
+  }
+  return typeof o === "string" ? swap(o) : o;
+}
+
 /* ---------- formatting helpers ---------- */
 const fmtUSD = (n, dp = 0) =>
   n == null ? "—" : (n < 0 ? "-" : "") + "$" + Math.abs(Number(n)).toLocaleString("en-US", { minimumFractionDigits: dp, maximumFractionDigits: dp });
@@ -3202,6 +3218,7 @@ function setLivePill(state, text) {
 }
 async function fetchQuote(ticker) {
   const base = DATA.meta && DATA.meta.quote_proxy;
+  ticker = TICKER_REAL[ticker] || ticker;
   const res = await fetch(`${base}/quote?symbol=${encodeURIComponent(ticker)}`, { cache: "no-store" });
   if (res.status === 429) { throttleUntil = Date.now() + THROTTLE_MS; throw new Error("429"); } // rate-limited -> back off
   if (!res.ok) throw new Error("HTTP " + res.status);
@@ -4117,7 +4134,7 @@ async function softRefresh() {
   try {
     const p = await (await fetch("payload.enc", { cache: "no-store" })).json();
     if (p && p.iv && p.iv === lastPayloadIv) return;   // identical ciphertext -> no new build, skip
-    const fresh = await decryptPayload(p, pw);
+    const fresh = applyTickerAliases(await decryptPayload(p, pw));
     // 2026-10-02 (review): two caches die with the old payload — the Calls grouping (it kept the first
     // payload's call list, so a re-scored name showed its old open call against the new price) and the
     // holdings-live flag (the baked numbers are back until the next live tick).
@@ -4172,7 +4189,7 @@ async function refreshPrivateIntoData() {
   catch (e) { if (PRIV) mergePrivate(PRIV); return !!PRIV; }
   try {
     if (p && p.iv && p.iv === lastPrivateIv && PRIV) { mergePrivate(PRIV); return true; }
-    const priv = await decryptPayload(p, opw);
+    const priv = applyTickerAliases(await decryptPayload(p, opw));
     lastPrivateIv = p.iv;
     mergePrivate(priv);
     return true;
@@ -4209,7 +4226,7 @@ function openOwnerGate() {
     btn.disabled = true; btn.textContent = "Unlocking…";
     try {
       const p = await (await fetch("private.enc", { cache: "no-store" })).json();
-      const priv = await decryptPayload(p, pw);
+      const priv = applyTickerAliases(await decryptPayload(p, pw));
       lastPrivateIv = p.iv;
       localStorage.setItem("jc_owner_pw", pw);   // per-device: enter once, stays unlocked
       mergePrivate(priv);
@@ -4257,7 +4274,7 @@ async function boot() {
       btn.disabled = false; btn.textContent = "Unlock"; return;
     }
     try {
-      DATA = await decryptPayload(payload, pw); _callsByTk = null;   // same reset as softRefresh (2026-10-02)
+      DATA = applyTickerAliases(await decryptPayload(payload, pw)); _callsByTk = null;   // same reset as softRefresh (2026-10-02)
       lastPayloadIv = payload.iv;
       gate.hidden = true; app.hidden = false;
       sessionStorage.setItem("jc_pw", pw);   // remember within this tab session only
