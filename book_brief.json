@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Thursday was a split session for Jaleel's book, with the portfolio clocking a modest net positive day on balance across the top weights even as a couple of chip names dragged. The standout movers were ADBE (+3.56%), ONON (+2.47%), AZO (+2.26%), EFX (+2.18%), and ZTS (+2.14%) — a diverse group that held the session together. BSX continued its slow rehabilitation with a +1.11% day, though at –14.2% unrealized it remains one of the deeper underwater positions, and the FY26 guidance cut (flagged to Oct 28 earnings) means the thesis is still being tested against deteriorating fundamentals. On the negative side, RKLB fell another –4.89%, extending its –12.7% unrealized loss on a name the model already rates AVOID — price and thesis are not diverging here, they are aligned in the wrong direction. NVDA shed –2.94% and AVGO –4.35%, both hit by headlines around OpenAI revenue coming in well below prior estimates, which dented AI-capex sentiment across the semiconductor complex.</p><p>The drift worth flagging is ADBE: it popped +3.56% today, yet the risk flag is clear — the narrative (AI-moat erosion, CFO exit) has been overriding solid numbers for months. Today's headline that Adobe is among the IT sourcing firms suspended from a federal labor certification program is a new overhang that deserves monitoring regardless of today's price action. LULU continues to carry a –27.5% unrealized loss on a guidance-cut story; a +0.87% day changes nothing structurally with Americas comps running –5% for a fifth straight quarter. BSX earnings on Oct 28 and ABT on Oct 21 are the near-term catalysts that will either validate or further stress the healthcare cluster.</p><p>Heading into Friday, the items to watch are the chip complex's reaction to any follow-on OpenAI revenue commentary (NVDA, AVGO both sitting on intraday weakness) and whether RKLB's slide continues — at 7.7% weight and AVOID-rated, it is the clearest misalignment between allocation and conviction in the book.</p>",
+  "your_book": "<p>Friday's session was a broadly positive one for Jaleel's book, with the majority of holdings finishing in the green and the healthcare/medtech complex doing most of the heavy lifting. Zoetis (ZTS, ~10.9% of the book) was the standout, adding 2.37% on the day — welcome momentum for a name still sitting 5.0% underwater on an unrealized basis. On Holding (ONON) posted the session's best gain at +3.08%, while Gilead (GILD, +2.77%) and Lululemon (LULU, +1.96%) also contributed. Boston Scientific (BSX, +1.64%) and Abbott (ABT, +1.13%) continued to grind higher in what remains a medtech-heavy book. The lone drags were Expand Energy (EXE, -0.72%) and NVIDIA (NVDA, -0.52%), where headline noise around OpenAI's revenue being overstated weighed on the broader AI-compute complex — Broadcom (AVGO) also saw a muted day in that context.</p><p>The drift-and-divergence list is worth naming honestly. BSX carries an elevated risk flag after its FY26 growth guide was slashed from 10.5% to 7–8.5%, yet the verdict remains STRONG BUY and it holds a ~9.1% weight — price and thesis are moving in opposite directions, and the next update arrives October 28. LULU is the starkest case: down 26.1% since entry, flagged for a guidance cut, Americas comps in a fifth consecutive negative quarter, and China stalled — yet it's rated STRONG BUY. The market is clearly pricing something the model isn't. RKLB sits at -13.0% on the position with an AVOID verdict and a 7.6% weight; that combination is the most direct structural tension in the book.</p><p>Heading into Monday, October 12, the book's overall unrealized loss of -2.33% is concentrated in a handful of names — LULU, BSX, RKLB, and Neurocrine (NBIX, -12.6%) — while the larger-weight winners like ABT and NVDA provide some offset. The pharma cluster (GILD, NVS, NBIX, VRTX) faces a policy-overhang event flagged for October 22; watch for any MFN pricing headlines over the weekend. ABT reports October 21 and BSX on October 28 — those two together represent roughly a fifth of the book.</p>",
   "attention": [
     {
       "ticker": "RKLB",
       "severity": "act",
-      "headline": "AVOID-rated at 7.7% weight, down –4.89% today, –12.7% unrealized",
-      "note": "Price continues to move against the position on a name the model explicitly rates AVOID — the weight is too large for the conviction level and the loss is deepening with no offsetting thesis support."
+      "headline": "AVOID-rated at 7.6% weight, down 13% — why is this still here?",
+      "note": "RKLB is the only holding with a hard AVOID verdict, yet it commands the fifth-largest weight in a capital-preservation book and is already 13% in the red; that combination demands an explicit hold rationale or a sizing decision before Monday."
     },
     {
-      "ticker": "ADBE",
+      "ticker": "LULU",
       "severity": "watch",
-      "headline": "Federal labor certification suspension adds new headline risk to existing narrative overhang",
-      "note": "Today's +3.56% gain is welcome but the suspension of Adobe from a major federal IT sourcing program is a fresh negative catalyst sitting on top of the existing AI-disruption and CFO-exit concerns — the narrative risk is getting louder, not quieter."
+      "headline": "Down 26.1% with a guidance cut flagged — thesis vs. price gap is widening",
+      "note": "Five straight negative Americas comp quarters, tariff margin damage, and a stalled China business have driven a 26% loss on the position, yet the model rates it STRONG BUY; the next catalyst isn't until December 9, leaving the position exposed for two more months without a check-in."
     },
     {
       "ticker": "BSX",
       "severity": "watch",
-      "headline": "Oct 28 earnings will test whether guidance cut is the floor or the start of further resets",
-      "note": "At –14.2% unrealized with FY26 growth already slashed and management guiding flat through Q3, the upcoming print is a binary moment for whether the STRONG BUY thesis can survive another guidance revision."
+      "headline": "Guidance slashed; earnings due October 28 are the next hard test",
+      "note": "Boston Scientific cut FY26 growth guidance to 7–8.5% from 10.5%, management is guiding flat through Q3, and the position is already -12.8% — October 28 earnings will confirm whether the reset is complete or whether another cut is coming."
     },
     {
-      "ticker": "NVDA",
-      "severity": "watch",
-      "headline": "AI-capex sentiment hit by OpenAI revenue shortfall report; –2.94% today",
-      "note": "The headline driving AVGO and NVDA lower today — OpenAI annualized revenue reportedly ~$20B below prior estimates — directly targets the demand narrative underpinning Jaleel's chip exposure, and export-control risk remains live into Nov 17 earnings."
+      "ticker": "GILD·NVS",
+      "severity": "note",
+      "headline": "Drug-pricing policy event flagged for October 22 — pharma cluster at risk",
+      "note": "With MFN pricing deals already signed by Gilead and Novartis and an October 22 policy date on the calendar, any escalation in import tariffs or pricing mandates could move the entire pharma cluster (GILD, NVS, NBIX, VRTX) simultaneously."
     }
   ],
-  "date": "2026-10-08",
-  "generated_at": "Oct 8, 4:36pm ET"
+  "date": "2026-10-09",
+  "generated_at": "Oct 9, 4:28pm ET"
 }
