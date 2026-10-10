@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-09",
-  "generated_at": "Oct 9, 4:27pm ET",
+  "date": "2026-10-10",
+  "generated_at": "Oct 10, 12:14pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Oct 9",
+      "when": "Oct 10",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid multiple catalysts including renewed Iranian focus on striking vessels in the Strait of Hormuz, Tehran's hardline stance on nuclear enrichment limits, and Houthi rebel strikes on Saudi Arabia. Also, elevated refined product prices, refining margins, and tanker day rates are benefiting the wider sector.",
       "affects": "Energy · growth",
@@ -166,6 +166,12 @@
       "url": "https://www.benzinga.com/quote/IONQ",
       "wiim": true
     },
+    "ADBE": {
+      "title": "JD Vance Defends Trump’s Visa Crackdown, Says Bernie Sanders Once Echoed Stephen Miller on Open Borders: ‘It is Ironic’",
+      "ts": 1791648011,
+      "url": "https://www.benzinga.com/news/politics/26/10/62288329/jd-vance-defends-trumps-visa-crackdown-says-bernie-sanders-once-echoed-stephen-miller-on-open-borders-it-is-ironic",
+      "wiim": false
+    },
     "NVDA": {
       "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
       "ts": 1791567310,
@@ -181,286 +187,6 @@
   },
   "ratings": [
     {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Freedom Broker",
-      "action": "Upgrades",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$51",
-      "price": 34.72,
-      "upside": 46.9,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "UBS",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$34",
-      "price": 34.72,
-      "upside": -2.1,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Telsey Advisory Group",
-      "action": "Maintains",
-      "rating": "Market Perform",
-      "stance": "neutral",
-      "pt": "$35",
-      "price": 34.72,
-      "upside": 0.8,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$32",
-      "price": 34.72,
-      "upside": -7.8,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Underweight",
-      "stance": "bearish",
-      "pt": "$27",
-      "price": 34.72,
-      "upside": -22.2,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "BNP Paribas",
-      "action": "Reiterates",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$19",
-      "price": 34.72,
-      "upside": -45.3,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Goldman Sachs",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$30",
-      "price": 34.72,
-      "upside": -13.6,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Underweight",
-      "stance": "bearish",
-      "pt": "$33",
-      "price": 34.72,
-      "upside": -5.0,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Truist Securities",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$29",
-      "price": 34.72,
-      "upside": -16.5,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Equal-Weight",
-      "stance": "neutral",
-      "pt": "$30",
-      "price": 34.72,
-      "upside": -13.6,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Piper Sandler",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$28",
-      "price": 34.72,
-      "upside": -19.4,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "RBC Capital",
-      "action": "Reiterates",
-      "rating": "Sector Perform",
-      "stance": "neutral",
-      "pt": "$40",
-      "price": 34.72,
-      "upside": 15.2,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Evercore ISI Group",
-      "action": "Maintains",
-      "rating": "In-Line",
-      "stance": "neutral",
-      "pt": "$28",
-      "price": 34.72,
-      "upside": -19.4,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Guggenheim",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$50",
-      "price": 34.72,
-      "upside": 44.0,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "StoneX",
-      "action": "Reiterates",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "",
-      "price": 34.72,
-      "upside": null,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Needham",
-      "action": "Reiterates",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "",
-      "price": 34.72,
-      "upside": null,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Baird",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$36",
-      "price": 34.72,
-      "upside": 3.7,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "Stifel",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$36",
-      "price": 34.72,
-      "upside": 3.7,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "B of A Securities",
-      "action": "Maintains",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$24",
-      "price": 34.72,
-      "upside": -30.9,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
-      "date": "2026-10-02",
-      "ticker": "NKE",
-      "firm": "BTIG",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$50",
-      "price": 34.72,
-      "upside": 44.0,
-      "held": false,
-      "uni": true,
-      "qarp": "STRONG BUY"
-    },
-    {
       "date": "2026-10-05",
       "ticker": "JNJ",
       "firm": "Citigroup",
@@ -468,7 +194,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$303",
-      "price": 261.49,
+      "price": 261.44,
       "upside": 15.9,
       "held": false,
       "uni": true,
@@ -482,7 +208,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$165",
-      "price": 145.57,
+      "price": 145.6,
       "upside": 13.3,
       "held": false,
       "uni": true,
@@ -496,7 +222,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$37",
-      "price": 34.72,
+      "price": 34.71,
       "upside": 6.6,
       "held": false,
       "uni": true,
@@ -510,7 +236,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$90",
-      "price": 88.06,
+      "price": 88.05,
       "upside": 2.2,
       "held": false,
       "uni": true,
@@ -524,7 +250,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "price": 151.25,
+      "price": 151.23,
       "upside": 9.8,
       "held": false,
       "uni": true,
@@ -538,7 +264,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$290",
-      "price": 261.49,
+      "price": 261.44,
       "upside": 10.9,
       "held": false,
       "uni": true,
@@ -552,7 +278,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "price": 151.25,
+      "price": 151.23,
       "upside": 9.8,
       "held": false,
       "uni": true,
@@ -566,7 +292,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$177",
-      "price": 145.57,
+      "price": 145.6,
       "upside": 21.6,
       "held": false,
       "uni": true,
@@ -580,7 +306,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 261.49,
+      "price": 261.44,
       "upside": 9.8,
       "held": false,
       "uni": true,
@@ -608,7 +334,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$145",
-      "price": 145.57,
+      "price": 145.6,
       "upside": -0.4,
       "held": false,
       "uni": true,
@@ -622,7 +348,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$185",
-      "price": 159.92,
+      "price": 159.96,
       "upside": 15.7,
       "held": false,
       "uni": true,
@@ -713,6 +439,84 @@
     }
   },
   "bz_news": [
+    {
+      "title": "JD Vance Defends Trump’s Visa Crackdown, Says Bernie Sanders Once Echoed Stephen Miller on Open Borders: ‘It is Ironic’",
+      "url": "https://www.benzinga.com/news/politics/26/10/62288329/jd-vance-defends-trumps-visa-crackdown-says-bernie-sanders-once-echoed-stephen-miller-on-open-borders-it-is-ironic",
+      "ts": 1791648011,
+      "tickers": [
+        "MSFT",
+        "ADBE",
+        "CTSH",
+        "INFY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.193
+    },
+    {
+      "title": "John Moolenaar Urges Defense Department to Add 120 Chinese Schools and Tech Labs to US Research Funding Watchlist",
+      "url": "https://www.benzinga.com/news/politics/26/10/62287169/lawmaker-funding-restrictions-chinese-schools",
+      "ts": 1791611657,
+      "tickers": [
+        "AAPL",
+        "AMD",
+        "NVDA",
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.247
+    },
+    {
+      "title": "Trump Admin Sanctions International Criminal Court Hours After Former Judge Wins Nobel Peace Prize: ‘Ban Transactions With This Rogue Court,’ Rubio Says",
+      "url": "https://www.benzinga.com/news/politics/26/10/62287144/trump-sanctions-international-criminal-court",
+      "ts": 1791609230,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.187
+    },
+    {
+      "title": "Anthropic AI Model Submits Fake Homicide Tip to Philadelphia Police: 'Delay In Detecting and Reporting' Is Unacceptable, Says Department",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62287077/anthropic-ai-false-homicide-tip-philadelphia-police",
+      "ts": 1791604638,
+      "tickers": [
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.181
+    },
+    {
+      "title": "Top Analyst Says iPhone 18 Pro and Pro Max Lead Times Have Dropped, But Apple’s Cycle Is ‘Off to a Solid Start’",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62287034/gene-munster-iphone-lead-times-dropped",
+      "ts": 1791599652,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.301
+    },
+    {
+      "title": "Apple's iPhone Order Cut Is a Fall Tradition — And So Is the Stock Rebound",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62285904/apples-iphone-order-cut-is-a-fall-tradition-and-so-is-the-stock-rebound",
+      "ts": 1791579791,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.388
+    },
     {
       "title": "JP Morgan Maintains Overweight on Honeywell Intl, Lowers Price Target to $240",
       "url": "https://www.benzinga.com/news/26/10/62284117/jp-morgan-maintains-overweight-honeywell-intl-lowers-price-target-240",
@@ -833,7 +637,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.381
+      "relevance": 0.382
     },
     {
       "title": "American Express Has More Room to Run Despite Rising Competition, Analyst Says",
@@ -966,84 +770,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.418
-    },
-    {
-      "title": "Why Is AST SpaceMobile Stock Falling on Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62278646/why-is-ast-spacemobile-stock-falling-on-friday",
-      "ts": 1791565001,
-      "tickers": [
-        "ASTS",
-        "TMUS",
-        "VZ",
-        "T"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.409
-    },
-    {
-      "title": "Chevron Announces It Has Evacuated Majority Of Its Personnel In Gulf Of America; Safely Continuing Production At Four Platforms; Shut-In Production At Remaining Five Facilities; Deploying Processes, Technology Across Gulf Coast",
-      "url": "https://www.benzinga.com/news/26/10/62277807/chevron-announces-it-has-evacuated-majority-its-personnel-gulf-america-safely-continuing-production-",
-      "ts": 1791563251,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.251
-    },
-    {
-      "title": "Apple's Next MacBook Pro Could Help Make OLED the New Premium Laptop Standard",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62277751/apples-next-macbook-pro-could-help-make-oled-the-new-premium-laptop-standard",
-      "ts": 1791563129,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.282
-    },
-    {
-      "title": "If You Invested $1000 In Apple Stock 5 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/10/62277473/if-you-invested-1000-apple-stock-5-years-ago-you-would-have-much-today",
-      "ts": 1791562518,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.271
-    },
-    {
-      "title": "SpaceX Just Spooked Verizon. The Sneaky Winners May Be America's Cell-Tower Owners",
-      "url": "https://www.benzinga.com/m-a/26/10/62277397/spacex-cell-tower-stocks",
-      "ts": 1791562330,
-      "tickers": [
-        "AMT",
-        "SBAC",
-        "CCI",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.32
-    },
-    {
-      "title": "TD Cowen Maintains Hold on UnitedHealth Group, Lowers Price Target to $402",
-      "url": "https://www.benzinga.com/news/26/10/62276890/td-cowen-maintains-hold-unitedhealth-group-lowers-price-target-402",
-      "ts": 1791561394,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.444
     },
     {
       "title": "Shares of mobile and broadband communications companies are trading lower after SpaceX announced that it would purchase Grain Management's 800 MHz spectrum, which will put the satellite communications developer in competition with legacy terrestrial carriers, leading to lower sales and margins.",
@@ -1191,7 +917,7 @@
           "date": "2026-08-26",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
         },
-        "insider30d": 8
+        "insider30d": 9
       },
       "explain": "69 analysts cover it — 65 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1276,8 +1002,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-09-22",
-          "url": "https://www.sec.gov/Archives/edgar/data/866787/000117184326006159/f8k_092126.htm"
+          "date": "2026-10-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/866787/000117184326006565/f8k_100926.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -1308,7 +1034,7 @@
       "filings": {
         "latest8k": null,
         "periodic": null,
-        "insider30d": 10
+        "insider30d": 8
       },
       "explain": "36 analysts cover it — 30 bullish, 5 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1328,7 +1054,12 @@
         "score": 0.43,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "JD Vance Defends Trump’s Visa Crackdown, Says Bernie Sanders Once Echoed Stephen Miller on Open Borders: ‘It is Ironic’",
+        "ts": 1791648011,
+        "url": "https://www.benzinga.com/news/politics/26/10/62288329/jd-vance-defends-trumps-visa-crackdown-says-bernie-sanders-once-echoed-stephen-miller-on-open-borders-it-is-ironic",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
