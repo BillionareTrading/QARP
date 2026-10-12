@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "Oct 12, 3:24pm ET",
+  "generated_at": "Oct 12, 6:53pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -182,8 +182,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$303",
-      "price": 263.46,
-      "upside": 15.0,
+      "price": 263.73,
+      "upside": 14.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -196,8 +196,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$165",
-      "price": 145.62,
-      "upside": 13.3,
+      "price": 145.45,
+      "upside": 13.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -210,8 +210,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$37",
-      "price": 35.12,
-      "upside": 5.4,
+      "price": 35.35,
+      "upside": 4.7,
       "held": false,
       "uni": true,
       "qarp": "STRONG BUY"
@@ -224,8 +224,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$90",
-      "price": 89.44,
-      "upside": 0.6,
+      "price": 89.79,
+      "upside": 0.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -238,8 +238,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "price": 152.84,
-      "upside": 8.6,
+      "price": 153.2,
+      "upside": 8.4,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -252,8 +252,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$290",
-      "price": 263.46,
-      "upside": 10.1,
+      "price": 263.73,
+      "upside": 10.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -266,8 +266,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "price": 152.84,
-      "upside": 8.6,
+      "price": 153.2,
+      "upside": 8.4,
       "held": false,
       "uni": true,
       "qarp": "BUY"
@@ -280,8 +280,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$177",
-      "price": 145.62,
-      "upside": 21.5,
+      "price": 145.45,
+      "upside": 21.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -294,8 +294,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 263.46,
-      "upside": 8.9,
+      "price": 263.73,
+      "upside": 8.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -322,8 +322,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$145",
-      "price": 145.62,
-      "upside": -0.4,
+      "price": 145.45,
+      "upside": -0.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -336,8 +336,22 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$185",
-      "price": 160.92,
+      "price": 160.89,
       "upside": 15.0,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-10-12",
+      "ticker": "MRK",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$145",
+      "price": 145.45,
+      "upside": -0.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -350,8 +364,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "price": 340.0,
-      "upside": 5.9,
+      "price": 340.97,
+      "upside": 5.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -378,8 +392,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$145",
-      "price": 145.62,
-      "upside": -0.4,
+      "price": 145.45,
+      "upside": -0.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -392,14 +406,23 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$285",
-      "price": 232.31,
-      "upside": 22.7,
+      "price": 233.92,
+      "upside": 21.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
     }
   ],
   "rating_moves": {
+    "MRK": {
+      "date": "2026-10-12",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Neutral",
+      "stance": "neutral",
+      "pt": "$145",
+      "upside": -0.3
+    },
     "CVX": {
       "date": "2026-10-12",
       "firm": "TD Cowen",
@@ -409,15 +432,6 @@
       "pt": "$225",
       "upside": 4.7
     },
-    "MRK": {
-      "date": "2026-10-12",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Sector Perform",
-      "stance": "neutral",
-      "pt": "$145",
-      "upside": -0.4
-    },
     "CRM": {
       "date": "2026-10-12",
       "firm": "B of A Securities",
@@ -425,7 +439,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$285",
-      "upside": 22.7
+      "upside": 21.8
     },
     "AAPL": {
       "date": "2026-10-12",
@@ -434,7 +448,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "upside": 5.9
+      "upside": 5.6
     },
     "MMM": {
       "date": "2026-10-09",
@@ -452,7 +466,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 8.9
+      "upside": 8.8
     },
     "PG": {
       "date": "2026-10-06",
@@ -461,7 +475,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "upside": 8.6
+      "upside": 8.4
     },
     "NKE": {
       "date": "2026-10-05",
@@ -470,7 +484,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$37",
-      "upside": 5.4
+      "upside": 4.7
     },
     "KO": {
       "date": "2026-10-05",
@@ -479,7 +493,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$90",
-      "upside": 0.6
+      "upside": 0.2
     },
     "CSCO": {
       "date": "2026-09-30",
@@ -488,10 +502,112 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$110",
-      "upside": -4.8
+      "upside": -4.6
     }
   },
   "bz_news": [
+    {
+      "title": "Citigroup Maintains Buy on Caterpillar, Lowers Price Target to $950",
+      "url": "https://www.benzinga.com/news/26/10/62311883/citigroup-maintains-buy-caterpillar-lowers-price-target-950",
+      "ts": 1791837655,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.433
+    },
+    {
+      "title": "McDonald’s Stock ‘Moderately Undervalued’: Former Hedge Fund Manager Says Good Buying Opportunity",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62311744/mcdonalds-stock-moderately-undervalued-former-hedge-fund-manager-says-good-buying-opportunity",
+      "ts": 1791837341,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.329
+    },
+    {
+      "title": "Citigroup Maintains Neutral on Merck & Co, Raises Price Target to $145",
+      "url": "https://www.benzinga.com/news/26/10/62311474/citigroup-maintains-neutral-merck-co-raises-price-target-145",
+      "ts": 1791836268,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.467
+    },
+    {
+      "title": "Here's How Much $1000 Invested In Cisco Systems 5 Years Ago Would Be Worth Today",
+      "url": "https://www.benzinga.com/news/26/10/62311430/here-s-how-much-1000-invested-cisco-systems-5-years-ago-would-be-worth-today",
+      "ts": 1791836114,
+      "tickers": [
+        "CSCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.317
+    },
+    {
+      "title": "Johnson & Johnson Announces Three-Year Data From Its Phase 3 GALAXI 2, 3 Trials Of TREMFYA Demonstrate Efficacy, Consistent Profile To Treat Crohn's Disease",
+      "url": "https://www.benzinga.com/general/biotech/26/10/62311361/johnson-johnson-announces-three-year-data-its-phase-3-galaxi-2-3-trials-tremfya-demonstrate-efficacy",
+      "ts": 1791835926,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.373
+    },
+    {
+      "title": "S&P 500 Dominated by AI Stocks, Adding SpaceX Would Create History Last Seen in 1880s",
+      "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/10/62311021/sp-500-dominated-by-ai-stocks-adding-spacex-would-create-history-last-seen-in-1880s",
+      "ts": 1791835253,
+      "tickers": [
+        "SPY",
+        "TSLA",
+        "AAPL",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.408
+    },
+    {
+      "title": "Intel Demonstrates New Xeon-Based Rack Designs To Meet Rising Compute Demands Of Agentic AI",
+      "url": "https://www.benzinga.com/news/26/10/62310373/intel-demonstrates-new-xeon-based-rack-designs-meet-rising-compute-demands-agentic-ai",
+      "ts": 1791833684,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.53
+    },
+    {
+      "title": "JPMorgan Chase Could Swing $28 Billion After Earnings",
+      "url": "https://www.benzinga.com/markets/options/26/10/62310288/jpmorgan-chase-could-swing-28-billion-after-earnings",
+      "ts": 1791833412,
+      "tickers": [
+        "JPM",
+        "GS",
+        "WFC",
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.354
+    },
     {
       "title": "Google Comes for Apple’s Health Data Advantage. Here’s What Changes",
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62309603/google-apple-health-data",
@@ -699,7 +815,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.499
+      "relevance": 0.5
     },
     {
       "title": "Apple Stock Nears Record High As iPhone Market Share Hits 22% Despite 20% Smartphone Market Slump",
@@ -725,102 +841,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.468
-    },
-    {
-      "title": "Dow Jones Industrial Average Gets Spotlight: 5 Earnings Reports Representing 25% of ETF’s Assets On Deck",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/10/62305174/dow-jones-industrial-average-gets-spotlight-5-earnings-reports-representing-25-of-etfs-assets-on-deck",
-      "ts": 1791822259,
-      "tickers": [
-        "JPM",
-        "GS",
-        "JNJ",
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.45
-    },
-    {
-      "title": "$100 Invested In Visa 10 Years Ago Would Be Worth This Much Today",
-      "url": "https://www.benzinga.com/news/26/10/62304953/100-invested-visa-10-years-ago-would-be-worth-much-today",
-      "ts": 1791821721,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.344
-    },
-    {
-      "title": "AST SpaceMobile Stock Upgraded: Is it Time to Buy the Dip?",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/10/62304532/ast-spacemobile-stock-upgraded",
-      "ts": 1791821223,
-      "tickers": [
-        "ASTS",
-        "TMUS",
-        "VZ",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.384
-    },
-    {
-      "title": "LVMH Q3 Sales +1% Organically To €18.50 Billion; Q3 Fashion & Leather Goods Sales -5% Organically To €8.25 Billion; Says Fashion & Leather Goods Affected In Q3 By Slowdown In Demand In China; Fashion & Leather Goods Continued To Benefit From Buoyant U.S. Market; Says Economic, Geopolitical Environment Remains Uncertain; Says Will Focus On Enhancing Desirability Of Brands",
-      "url": "https://www.benzinga.com/news/earnings/26/10/62303977/lvmh-q3-sales-1-organically-18-50-billion-q3-fashion-leather-goods-sales-5-organically-8-25-billion-",
-      "ts": 1791820307,
-      "tickers": [
-        "LVMUY",
-        "LVMHF",
-        "CPRI",
-        "TPR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.414
-    },
-    {
-      "title": "Microsoft Stock Moves Higher Monday: What's Happening?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62303851/microsoft-stock-moves-higher-monday-whats-happening",
-      "ts": 1791820054,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.548
-    },
-    {
-      "title": "Salesforce Gets Rare Double Upgrade From Bank of America: ‘AI Should Deepen Dependence,’ Analyst Says",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62303548/salesforce-double-upgrade-bank-of-america",
-      "ts": 1791819628,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.408
-    },
-    {
-      "title": "Boeing ‘Holds the Keys to the Future of US Tactical Aircraft,’ Says Bullish Analyst",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/10/62303476/boeing-holds-the-keys-to-the-future-of-us-tactical-aircraft-says-bullish-analyst",
-      "ts": 1791819453,
-      "tickers": [
-        "BA",
-        "LMT",
-        "NOC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.307
+      "relevance": 0.467
     }
   ],
   "portfolio_brief": {
