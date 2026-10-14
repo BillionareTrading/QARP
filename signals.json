@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "Oct 14, 11:51am ET",
+  "generated_at": "Oct 14, 4:33pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -124,17 +124,24 @@
   "risk_asof": "2026-07-05",
   "sectors": [
     {
-      "sector": "Health Insurance",
-      "dir": "up",
-      "driver": "The U.S",
-      "note": "The U.S. CMS awarded five- and four-star ratings to plans offered by UnitedHealth Group, Clover, and Humana among others. Also, Humana reaffirmed its FY26 adjusted EPS guidance and issued optimistic comments about FY27 and FY28.",
+      "sector": "Banks & Financial Services",
+      "dir": "down",
+      "driver": "U.S. core inflation data bolstered the case for more Fed monetary tighte…",
+      "note": "After U.S. core inflation data bolstered the case for more Fed monetary tightening, which may slow lending and limit interest margins. Also, weak Q3 segment results from Bank of America and Morgan Stanley may dent confidence in the broader sector.",
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Semiconductor & Chip",
       "dir": "down",
-      "driver": "Reports suggesting that OpenAI's annualized revenue is approximately $20…",
-      "note": "After reports suggesting that OpenAI's annualized revenue is approximately $20 billion less than previously indicated, which may weaken demand and pricing sentiment in sectors exposed to compute buildout.",
+      "driver": "Elevated expectations for Fed rate hikes due to broader inflation and en…",
+      "note": "Amid elevated expectations for Fed rate hikes due to broader inflation and energy challenges. Higher borrowing costs may affect the sector's ambitious capex plans while also creating risks for customers, which may be reflected in lower demand.",
+      "src": "Benzinga WIIM · price-confirmed"
+    },
+    {
+      "sector": "Health Insurance",
+      "dir": "up",
+      "driver": "The U.S",
+      "note": "The U.S. CMS awarded five- and four-star ratings to plans offered by UnitedHealth Group, Clover, and Humana among others. Also, Humana reaffirmed its FY26 adjusted EPS guidance and issued optimistic comments about FY27 and FY28.",
       "src": "Benzinga WIIM · price-confirmed"
     },
     {
@@ -150,27 +157,20 @@
       "driver": "Sympathy with Accenture after that company reported better-than-expected…",
       "note": "Amid sympathy with Accenture after that company reported better-than-expected Q4 financial results and issued FY27 sales guidance above estimates.",
       "src": "Benzinga WIIM · flags a divergence vs our prices"
-    },
-    {
-      "sector": "Mobile & Broadband Communications",
-      "dir": "down",
-      "driver": "SpaceX announced that it would purchase Grain Management's 800 MHz spect…",
-      "note": "After SpaceX announced that it would purchase Grain Management's 800 MHz spectrum, which will put the satellite communications developer in competition with legacy terrestrial carriers, leading to lower sales and margins.",
-      "src": "Benzinga WIIM · market-wide"
     }
   ],
   "holding_news": {
-    "AVGO": {
-      "title": "Shares of semiconductor and chip-related companies are trading lower after reports suggesting that OpenAI's annualized revenue is approximately $20 billion less than previously indicated, which may weaken demand and pricing sentiment in sectors exposed to compute buildout.",
-      "ts": 1791483488,
-      "url": "https://www.benzinga.com/quote/IONQ",
+    "NVDA": {
+      "title": "Shares of semiconductor and chip companies are trading lower amid elevated expectations for Fed rate hikes due to broader inflation and energy challenges. Higher borrowing costs may affect the sector's ambitious capex plans while also creating risks for customers, which may be reflected in lower demand.",
+      "ts": 1792002515,
+      "url": "https://www.benzinga.com/quote/SITM",
       "wiim": true
     },
-    "NVDA": {
-      "title": "Honeywell Technologies Rolls Out AI And Simulation Platform Forge Cognition Developed With Nvidia, Dell",
-      "ts": 1791983238,
-      "url": "https://www.benzinga.com/news/26/10/62352657/honeywell-technologies-rolls-out-ai-and-simulation-platform-forge-cognition-developed-nvidia-dell",
-      "wiim": false
+    "AVGO": {
+      "title": "Shares of semiconductor and chip companies are trading lower amid elevated expectations for Fed rate hikes due to broader inflation and energy challenges. Higher borrowing costs may affect the sector's ambitious capex plans while also creating risks for customers, which may be reflected in lower demand.",
+      "ts": 1792002515,
+      "url": "https://www.benzinga.com/quote/SITM",
+      "wiim": true
     }
   },
   "ratings": [
@@ -182,8 +182,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$177",
-      "price": 145.87,
-      "upside": 21.3,
+      "price": 147.35,
+      "upside": 20.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -196,8 +196,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$287",
-      "price": 252.27,
-      "upside": 13.8,
+      "price": 253.93,
+      "upside": 13.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -210,8 +210,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$235",
-      "price": 220.76,
-      "upside": 6.5,
+      "price": 222.14,
+      "upside": 5.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -224,8 +224,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$145",
-      "price": 145.87,
-      "upside": -0.6,
+      "price": 147.35,
+      "upside": -1.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -238,8 +238,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$185",
-      "price": 163.34,
-      "upside": 13.3,
+      "price": 164.47,
+      "upside": 12.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -252,8 +252,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$145",
-      "price": 145.87,
-      "upside": -0.6,
+      "price": 147.35,
+      "upside": -1.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -266,8 +266,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "price": 345.76,
-      "upside": 4.1,
+      "price": 342.96,
+      "upside": 5.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -280,8 +280,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$225",
-      "price": 220.76,
-      "upside": 1.9,
+      "price": 222.14,
+      "upside": 1.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -294,8 +294,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$145",
-      "price": 145.87,
-      "upside": -0.6,
+      "price": 147.35,
+      "upside": -1.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -308,8 +308,36 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$285",
-      "price": 234.63,
-      "upside": 21.5,
+      "price": 236.0,
+      "upside": 20.8,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
+    },
+    {
+      "date": "2026-10-14",
+      "ticker": "KO",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$102",
+      "price": 91.8,
+      "upside": 11.1,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
+    },
+    {
+      "date": "2026-10-14",
+      "ticker": "PG",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$180",
+      "price": 156.53,
+      "upside": 15.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -322,8 +350,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$275",
-      "price": 252.27,
-      "upside": 9.0,
+      "price": 253.93,
+      "upside": 8.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -336,14 +364,32 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$280",
-      "price": 252.27,
-      "upside": 11.0,
+      "price": 253.93,
+      "upside": 10.3,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "PG": {
+      "date": "2026-10-14",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$180",
+      "upside": 15.0
+    },
+    "KO": {
+      "date": "2026-10-14",
+      "firm": "Citigroup",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$102",
+      "upside": 11.1
+    },
     "JNJ": {
       "date": "2026-10-14",
       "firm": "Wells Fargo",
@@ -351,7 +397,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$275",
-      "upside": 9.0
+      "upside": 8.3
     },
     "MRK": {
       "date": "2026-10-12",
@@ -360,7 +406,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$145",
-      "upside": -0.6
+      "upside": -1.6
     },
     "CRM": {
       "date": "2026-10-12",
@@ -369,7 +415,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$285",
-      "upside": 21.5
+      "upside": 20.8
     },
     "CVX": {
       "date": "2026-10-12",
@@ -378,7 +424,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$225",
-      "upside": 1.9
+      "upside": 1.3
     },
     "AAPL": {
       "date": "2026-10-12",
@@ -387,7 +433,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "upside": 4.1
+      "upside": 5.0
     },
     "MMM": {
       "date": "2026-10-09",
@@ -396,16 +442,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$185",
-      "upside": 13.3
-    },
-    "PG": {
-      "date": "2026-10-06",
-      "firm": "Evercore ISI Group",
-      "action": "Upgrades",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$166",
-      "upside": 6.9
+      "upside": 12.5
     },
     "NKE": {
       "date": "2026-10-05",
@@ -414,16 +451,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$37",
-      "upside": 6.0
-    },
-    "KO": {
-      "date": "2026-10-05",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$90",
-      "upside": -1.4
+      "upside": 4.8
     },
     "CSCO": {
       "date": "2026-09-30",
@@ -432,47 +460,55 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$110",
-      "upside": -4.9
+      "upside": -3.2
     }
   },
   "bz_news": [
     {
-      "title": "Nasdaq 100 Drops 1% on Hot CPI, SOXX Falls 7th Day: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62360140/nasdaq-100-drops-1-on-hot-cpi-soxx-falls-7th-day-stock-market-today",
-      "ts": 1791992394,
+      "title": "OpenAI Accuses Apple Hire Of Taking 100+ Confidential Files Tied to Unreleased Product",
+      "url": "https://www.benzinga.com/markets/private-markets/26/10/62369689/openai-accuses-apple-hire-of-taking-100-confidential-files-tied-to-unreleased-product",
+      "ts": 1792009384,
       "tickers": [
-        "TSLA",
-        "AAPL",
-        "META",
-        "AVGO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.475
-    },
-    {
-      "title": "Apple Has Found No Evidence To Support OpenAI's Allegations; Says Apple Has Searched For The One File That OpenAI Has Identified, But Has Not Found It On Any Apple System; Co Has Strict Policies & Procedures In Place To Help Ensure That New Employees Don't Use Any Confidential Information From Prior Employer; Says OpenAI Has Failed To Respond To Apple’s Request For More Information That Would Aid In Its Investigation",
-      "url": "https://www.benzinga.com/news/26/10/62359944/apple-has-found-no-evidence-support-openai-s-allegations-says-apple-has-searched-one-file-openai-has",
-      "ts": 1791992105,
-      "tickers": [
-        "MSFT",
         "AAPL"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.251
+      "relevance": 0.291
     },
     {
-      "title": "Banks Are Putting Deposits On Blockchain As Stablecoins Face A New Rival",
-      "url": "https://www.benzinga.com/Opinion/26/10/62359664/banks-are-putting-deposits-on-blockchain-as-stablecoins-face-a-new-rival",
-      "ts": 1791991689,
+      "title": "'Apple Prepares To Debut First AI Features In China In December' - Bloomberg News",
+      "url": "https://www.benzinga.com/news/26/10/62368689/apple-prepares-debut-first-ai-features-china-december-bloomberg-news",
+      "ts": 1792007695,
       "tickers": [
-        "COIN",
-        "JPM",
-        "CRCL",
-        "C"
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.351
+    },
+    {
+      "title": "'Eight U.S. States Sue OpenAI, Claiming ChatGPT Harms Children' - Reuters News",
+      "url": "https://www.benzinga.com/news/26/10/62366831/eight-u-s-states-sue-openai-claiming-chatgpt-harms-children-reuters-news",
+      "ts": 1792003803,
+      "tickers": [
+        "MSFT",
+        "SPY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.226
+    },
+    {
+      "title": "Netflix Hasn't Cut This Many Jobs Since Its Subscriber Scare. So Why Now?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/10/62366651/netflix-hasnt-cut-this-many-jobs-since-its-subscriber-scare-so-why-now",
+      "ts": 1792003422,
+      "tickers": [
+        "NFLX",
+        "DIS",
+        "SKYD"
       ],
       "source": "Benzinga",
       "wiim": false,
@@ -480,86 +516,76 @@
       "relevance": 0.268
     },
     {
-      "title": "UnitedHealth Stock Moves Higher: What's Happening?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62359518/unitedhealth-stock-moves-higher-whats-happening",
-      "ts": 1791991465,
+      "title": "Citigroup Maintains Buy on Coca-Cola, Raises Price Target to $102",
+      "url": "https://www.benzinga.com/news/26/10/62366611/citigroup-maintains-buy-coca-cola-raises-price-target-102",
+      "ts": 1792003355,
       "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.413
-    },
-    {
-      "title": "JPMorgan Chase Q2 Results Were ‘Best-In-Class,’ Analyst Highlights CIB As Standout Segment",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/10/62359417/jpmorgan-chase-q2-results",
-      "ts": 1791991303,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.358
-    },
-    {
-      "title": "OpenAI Brief In Apple Vs OpenAI Lawsuit Say Files Leaked Include Detailed Unreleased Device Images, Engineering Data, Supplier Info; Says Apple Has Not Assured It Is Not In Possession Of & Has Not Used OpenAI Confidential Data; Files Leaked By Employee Also Include Manufacturing Data About Devices",
-      "url": "https://www.benzinga.com/news/26/10/62359383/openai-brief-apple-vs-openai-lawsuit-say-files-leaked-include-detailed-unreleased-device-images-engi",
-      "ts": 1791991258,
-      "tickers": [
-        "MSFT",
-        "AAPL"
+        "KO"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.29
+      "relevance": 0.426
     },
     {
-      "title": "8 Of 11 Sectors Fall Wednesday As Defensives Lead",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62359155/8-of-11-sectors-fall-wednesday-as-defensives-lead",
-      "ts": 1791990893,
+      "title": "Why Is AMD Stock Falling on Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62366533/why-is-amd-stock-falling-on-wednesday",
+      "ts": 1792003189,
       "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA",
-        "IWM"
+        "AMD",
+        "INTC",
+        "AVGO"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.407
+      "relevance": 0.376
     },
     {
-      "title": "OpenAI Brief In Apple Vs OpenAI Lawsuit Say OpenAI Employee Who Left For Apple Sent Over 100 Files About Unrelased OpenAI Product To Personal Accounts; Employee Who Left For Apple Gave Senior Apple Leaders Presentation About Unreleased OpenAI Product",
-      "url": "https://www.benzinga.com/news/26/10/62359122/openai-brief-apple-vs-openai-lawsuit-say-openai-employee-who-left-apple-sent-over-100-files-about-un",
-      "ts": 1791990873,
+      "title": "Shares of semiconductor and chip companies are trading lower amid elevated expectations for Fed rate hikes due to broader inflation and energy challenges. Higher borrowing costs may affect the sector's ambitious capex plans while also creating risks for customers, which may be reflected in lower demand.",
+      "url": "https://www.benzinga.com/quote/SITM",
+      "ts": 1792002515,
       "tickers": [
-        "MSFT",
-        "AAPL"
+        "NVDA",
+        "TSM",
+        "AVGO",
+        "SKHY"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.483
+    },
+    {
+      "title": "Citigroup Maintains Buy on Procter & Gamble, Raises Price Target to $180",
+      "url": "https://www.benzinga.com/news/26/10/62366111/citigroup-maintains-buy-procter-gamble-raises-price-target-180",
+      "ts": 1792002374,
+      "tickers": [
+        "PG"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.246
+      "relevance": 0.426
     },
     {
-      "title": "Intel Announces Inference Microservices: Tuned LLM Inference On Intel Processors, Eliminating Days Of Complex, Manual Hardware Optimization",
-      "url": "https://www.benzinga.com/news/26/10/62358866/intel-announces-inference-microservices-tuned-llm-inference-intel-processors-eliminating-days-comple",
-      "ts": 1791990642,
+      "title": "JPMorgan Addresses 'Rogue Agents' as AI Gives Banks New Security Problems",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62365501/banks-ai-security-risk",
+      "ts": 1792001258,
       "tickers": [
-        "INTC"
+        "JPM",
+        "BAC",
+        "C"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.422
+      "relevance": 0.321
     },
     {
-      "title": "Wells Fargo Maintains Overweight on Johnson & Johnson, Lowers Price Target to $275",
-      "url": "https://www.benzinga.com/news/26/10/62358451/wells-fargo-maintains-overweight-johnson-johnson-lowers-price-target-275",
-      "ts": 1791989963,
+      "title": "Johnson & Johnson Q3 Sets 'Negative Tone For Broader Pharma Sector': Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62364655/johnson-johnson-q3-sets-negative-tone-for-broader-pharma-sector-analysts",
+      "ts": 1791999955,
       "tickers": [
         "JNJ"
       ],
@@ -569,197 +595,198 @@
       "relevance": 0.415
     },
     {
-      "title": "What's Going On With Docusign Stock Wednesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62358283/whats-going-on-with-docusign-stock-wednesday",
-      "ts": 1791989686,
+      "title": "Walmart Stock Moves Higher: What's Happening?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62364387/walmart-stock-moves-higher-whats-happening",
+      "ts": 1791999544,
       "tickers": [
-        "DOCU",
-        "CRM",
-        "AZTD",
-        "SFLO"
+        "WMT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.434
+    },
+    {
+      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
+      "url": "https://www.benzinga.com/markets/options/26/10/62364243/10-information-technology-stocks-whale-activity-today-s-session",
+      "ts": 1791999311,
+      "tickers": [
+        "NVDA",
+        "CRWV",
+        "INTC",
+        "IREN"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.382
+      "relevance": 0.394
     },
     {
-      "title": "Apple Stock Hits 52-Week High — What's Going On?",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62357730/apple-stock-hits-52-week-high-whats-going-on",
-      "ts": 1791988931,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.418
-    },
-    {
-      "title": "Here's How Much $1000 Invested In Travelers Companies 5 Years Ago Would Be Worth Today",
-      "url": "https://www.benzinga.com/news/26/10/62357200/here-s-how-much-1000-invested-travelers-companies-5-years-ago-would-be-worth-today",
-      "ts": 1791988227,
-      "tickers": [
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.305
-    },
-    {
-      "title": "IBM, Siemens Join Forces On 3D Chip Tech To Support AI",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62357158/ibm-siemens-join-forces-on-3d-chip-tech-to-support-ai",
-      "ts": 1791988190,
-      "tickers": [
-        "IBM",
-        "SMERY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.557
-    },
-    {
-      "title": "U.S. Diplomat In Riyadh, Microsoft Arabia President Ayman Al-Ghamdi Discussion Expansion Of U.S.-Saudi Partnership In Super Intelligence, Cloud Computing",
-      "url": "https://www.benzinga.com/news/26/10/62356862/u-s-diplomat-riyadh-microsoft-arabia-president-ayman-al-ghamdi-discussion-expansion-u-s-saudi-partne",
-      "ts": 1791987894,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.302
-    },
-    {
-      "title": "UnitedHealth Analysts Slash Their Forecasts Following Q3 Results",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62356817/unitedhealth-analysts-slash-their-forecasts-following-q3-results",
-      "ts": 1791987847,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.487
-    },
-    {
-      "title": "Google DeepMind’s Demis Hassabis Calls AI Hacking Incidents ‘Early Warning Shots,’ Warns of More Major Threats Ahead Without Stronger Safeguards",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62356712/google-deepminds-demis-hassabis-calls-ai-hacking-incidents-early-warning-shots-warns-of-more-major-threats-ahead-without-stronger-safeguards",
-      "ts": 1791987732,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "MSFT",
-        "PANW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.368
-    },
-    {
-      "title": "Barclays Maintains Overweight on UnitedHealth Group, Lowers Price Target to $440",
-      "url": "https://www.benzinga.com/news/26/10/62355495/barclays-maintains-overweight-unitedhealth-group-lowers-price-target-440",
-      "ts": 1791986507,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.46
-    },
-    {
-      "title": "RBC Capital Maintains Outperform on Honeywell Intl, Lowers Price Target to $270",
-      "url": "https://www.benzinga.com/news/26/10/62355260/rbc-capital-maintains-outperform-honeywell-intl-lowers-price-target-270",
-      "ts": 1791986311,
-      "tickers": [
-        "HON"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.471
-    },
-    {
-      "title": "Mexico President Says She Will Sign Decree On Wednesday To Order Digital Platforms To Protect Minors From Violent And Sexual Content; Mexico To Give Platforms One Month To Come Into Compliance With Decree",
-      "url": "https://www.benzinga.com/news/26/10/62355234/mexico-president-says-she-will-sign-decree-on-wednesday-to-order-digital-platforms-to-protect-minors-from-violent-and-sexual-content",
-      "ts": 1791986293,
-      "tickers": [
-        "META",
-        "SNAP",
-        "PINS",
-        "EWW"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.164
-    },
-    {
-      "title": "Barclays Maintains Overweight on JPMorgan Chase, Raises Price Target to $425",
-      "url": "https://www.benzinga.com/news/26/10/62355044/barclays-maintains-overweight-jpmorgan-chase-raises-price-target-425",
-      "ts": 1791986070,
+      "title": "Truist Securities Maintains Hold on JPMorgan Chase, Raises Price Target to $361",
+      "url": "https://www.benzinga.com/news/26/10/62364232/truist-securities-maintains-hold-jpmorgan-chase-raises-price-target-361",
+      "ts": 1791999297,
       "tickers": [
         "JPM"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.461
+      "relevance": 0.457
     },
     {
-      "title": "RBC Capital Maintains Sector Perform on Goldman Sachs Group, Lowers Price Target to $1010",
-      "url": "https://www.benzinga.com/news/26/10/62354390/rbc-capital-maintains-sector-perform-goldman-sachs-group-lowers-price-target-1010",
-      "ts": 1791985403,
+      "title": "Why Is Goldman Sachs Stock Falling Wednesday?",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/10/62363755/why-is-goldman-sachs-stock-falling-wednesday",
+      "ts": 1791998467,
       "tickers": [
         "GS"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.504
+      "relevance": 0.381
     },
     {
-      "title": "RBC Capital Maintains Outperform on Johnson & Johnson, Lowers Price Target to $280",
-      "url": "https://www.benzinga.com/news/26/10/62353704/rbc-capital-maintains-outperform-johnson-johnson-lowers-price-target-280",
-      "ts": 1791984932,
+      "title": "These Analysts Lower Their Forecasts On Goldman Sachs After Q3 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62363583/these-analysts-lower-their-forecasts-on-goldman-sachs-after-q3-results",
+      "ts": 1791998168,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.45
+    },
+    {
+      "title": "These Analysts Cut Their Forecasts On Johnson & Johnson After Q3 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62363208/these-analysts-cut-their-forecasts-on-johnson-johnson-after-q3-results",
+      "ts": 1791997561,
       "tickers": [
         "JNJ"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.45
+      "relevance": 0.41
     },
     {
-      "title": "RBC Capital Reiterates Outperform on JPMorgan Chase, Maintains $370 Price Target",
-      "url": "https://www.benzinga.com/news/26/10/62353613/rbc-capital-reiterates-outperform-jpmorgan-chase-maintains-370-price-target",
-      "ts": 1791984848,
+      "title": "Oppenheimer Maintains Outperform on Caterpillar, Lowers Price Target to $1009",
+      "url": "https://www.benzinga.com/news/26/10/62363085/oppenheimer-maintains-outperform-caterpillar-lowers-price-target-1009",
+      "ts": 1791997338,
       "tickers": [
-        "JPM"
+        "CAT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.459
+      "relevance": 0.47
     },
     {
-      "title": "What's Going On With Caterpillar Stock Wednesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62353386/whats-going-on-with-caterpillar-stock-wednesday",
-      "ts": 1791984547,
+      "title": "Piper Sandler Maintains Overweight on UnitedHealth Group, Raises Price Target to $504",
+      "url": "https://www.benzinga.com/news/26/10/62362488/piper-sandler-maintains-overweight-unitedhealth-group-raises-price-target-504",
+      "ts": 1791996056,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.438
+    },
+    {
+      "title": "ASML Earnings Signal Strong AI Demand Yet Stock Falls, Emphasizing Market Character Shift—CPI Squashes Hopium",
+      "url": "https://www.benzinga.com/Opinion/26/10/62362386/asml-earnings-signal-strong-ai-demand-yet-stock-falls-emphasizing-market-character-shift-cpi-squashes-hopium",
+      "ts": 1791995944,
+      "tickers": [
+        "USO",
+        "SPY",
+        "NVDA",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.543
+    },
+    {
+      "title": "Shares of machinery-related companies are trading lower as rising oil prices and stronger-than-expected inflation data have reinforced expectations that U.S. interest rates will remain elevated. Elevated borrowing costs could pressure capital spending and reduce demand for heavy equipment and other large industrial purchases.",
+      "url": "https://www.benzinga.com/quote/WFF",
+      "ts": 1791995588,
       "tickers": [
         "CAT",
-        "DIA",
-        "XLI",
-        "TRUI"
+        "SYM",
+        "ELMT",
+        "GHM"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.409
+    },
+    {
+      "title": "If You Invested $100 In Home Depot Stock 15 Years Ago, You Would Have This Much Today",
+      "url": "https://www.benzinga.com/news/26/10/62362130/if-you-invested-100-home-depot-stock-15-years-ago-you-would-have-much-today",
+      "ts": 1791995435,
+      "tickers": [
+        "HD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.264
+    },
+    {
+      "title": "3M Likely To Report Higher Q3 Earnings; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62361943/3m-likely-to-report-higher-q3-earnings-these-most-accurate-analysts-revise-forecasts-ahead-of-earnings-call",
+      "ts": 1791995108,
+      "tickers": [
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.521
+    },
+    {
+      "title": "What's Going On With Boeing Stock Wednesday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/10/62361894/whats-going-on-with-boeing-stock-wednesday-3",
+      "ts": 1791994999,
+      "tickers": [
+        "BA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.322
+      "relevance": 0.389
+    },
+    {
+      "title": "ASML's Next Big Chipmaking Cycle Has a Timeline—Intel, Samsung and TSMC Set It",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62361863/asml-high-na-euv-timeline",
+      "ts": 1791994926,
+      "tickers": [
+        "ASML",
+        "TSM",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.471
+    },
+    {
+      "title": "Shares of banks and financial services companies are trading lower after U.S. core inflation data bolstered the case for more Fed monetary tightening, which may slow lending and limit interest margins. Also, weak Q3 segment results from Bank of America and Morgan Stanley may dent confidence in the broader sector.",
+      "url": "https://www.benzinga.com/quote/PAYP",
+      "ts": 1791989189,
+      "tickers": [
+        "COIN",
+        "RKT",
+        "GS",
+        "HOOD"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.439
     }
   ],
   "portfolio_brief": {
@@ -876,10 +903,10 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Honeywell Technologies Rolls Out AI And Simulation Platform Forge Cognition Developed With Nvidia, Dell",
-        "ts": 1791983238,
-        "url": "https://www.benzinga.com/news/26/10/62352657/honeywell-technologies-rolls-out-ai-and-simulation-platform-forge-cognition-developed-nvidia-dell",
-        "wiim": false
+        "title": "Shares of semiconductor and chip companies are trading lower amid elevated expectations for Fed rate hikes due to broader inflation and energy challenges. Higher borrowing costs may affect the sector's ambitious capex plans while also creating risks for customers, which may be reflected in lower demand.",
+        "ts": 1792002515,
+        "url": "https://www.benzinga.com/quote/SITM",
+        "wiim": true
       },
       "filings": {
         "latest8k": {
@@ -1194,7 +1221,7 @@
     },
     "AVGO": {
       "name": "Broadcom",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 17,
         "buy": 35,
@@ -1209,9 +1236,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Shares of semiconductor and chip-related companies are trading lower after reports suggesting that OpenAI's annualized revenue is approximately $20 billion less than previously indicated, which may weaken demand and pricing sentiment in sectors exposed to compute buildout.",
-        "ts": 1791483488,
-        "url": "https://www.benzinga.com/quote/IONQ",
+        "title": "Shares of semiconductor and chip companies are trading lower amid elevated expectations for Fed rate hikes due to broader inflation and energy challenges. Higher borrowing costs may affect the sector's ambitious capex plans while also creating risks for customers, which may be reflected in lower demand.",
+        "ts": 1792002515,
+        "url": "https://www.benzinga.com/quote/SITM",
         "wiim": true
       },
       "filings": {
