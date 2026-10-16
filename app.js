@@ -2633,9 +2633,19 @@ function leadLagLabel(b) {
 }
 // The lead column's markup, built from the column's fields at PAINT time — one builder for the fresh
 // fetch and the cached repaint (2026-10-02 review), so the kicker can never be frozen at cache time.
+// After the bell, a column written DURING that session (Midday, Before the Bell) says so until the closing
+// report replaces it — about half an hour after the close since the watchdog's evening gate (2026-10-06,
+// owner: "the market's been closed for almost an hour and a half and it still shows midday").
+function leadClosedLabel(b) {
+  if (!b || !b.date || /After the Bell|Week Ahead/i.test(String(b.kicker || ""))) return "";
+  const c = etClock();
+  // same ET day only: on a weekend / the next morning no closing report is "following shortly"
+  if (b.date !== c.iso || sessionPhase(c.iso, c.mins) !== "post") return "";
+  return `${fullDayName(b.date)}’s ${String(b.kicker || "").trim() || "market"} report · the closing report follows shortly`;
+}
 function leadHtml(b) {
-  const lag = leadLagLabel(b);
-  const kicker = lag ? `${lag} · today’s report is not written yet` : (b.kicker || "The Market Today");
+  const lag = leadLagLabel(b), closed = lag ? "" : leadClosedLabel(b);
+  const kicker = lag ? `${lag} · today’s report is not written yet` : closed || (b.kicker || "The Market Today");
   return `<div class="lead-kicker">${esc(kicker)}</div>`
     + `<h2 class="lead-head">${esc(b.headline || "")}</h2>`
     + `<div class="lead-byline">By The Market Desk${lag ? ` · ${/close$/.test(lag) ? "as of" : "from"} ${esc(lag)}` : (b.generated_at ? " · " + esc(b.generated_at) : "")}</div>`
