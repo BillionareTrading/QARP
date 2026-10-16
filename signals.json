@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "Oct 16, 5:59am ET",
+  "generated_at": "Oct 16, 10:36am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -49,7 +49,7 @@
       "sub": "+ NBIX, VRTX",
       "tag": "Drug-pricing policy",
       "detail": "Trump MFN pricing deals (Gilead, Novartis signed) + import tariffs put a pricing-pressure overhang on the whole pharma cluster.",
-      "next": "Oct 22"
+      "next": "Ongoing"
     },
     {
       "ticker": "ABT",
@@ -77,19 +77,19 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Oct 22",
-      "what": "GILD earnings",
-      "affects": "GILD",
-      "dir": "two-sided",
-      "why": "Q-results for Gilead Sciences — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Oct 27",
       "what": "EXE earnings",
       "affects": "EXE",
       "dir": "two-sided",
       "why": "Q-results for Expand Energy — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Oct 27",
+      "what": "SPGI earnings",
+      "affects": "SPGI",
+      "dir": "two-sided",
+      "why": "Q-results for S&P Global — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
@@ -114,7 +114,7 @@
     "EXE": "2026-10-27",
     "LULU": "2026-12-09",
     "SPGI": "2026-10-27",
-    "GILD": "2026-10-22",
+    "AOS": "2026-10-29",
     "NVS": "2026-10-27",
     "AVGO": "2026-12-09",
     "NBIX": "2026-11-02",
@@ -139,24 +139,24 @@
     },
     {
       "sector": "Enterprise Software",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "An investor rotation from highly leveraged AI-exposed names into the leg…",
       "note": "Amid an investor rotation from highly leveraged AI-exposed names into the legacy tech services sector. Fears of persistently high inflation and interest rates may increase the appeal of the industry's proven business models.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Health Insurance",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "The U.S",
       "note": "The U.S. CMS awarded five- and four-star ratings to plans offered by UnitedHealth Group, Clover, and Humana among others. Also, Humana reaffirmed its FY26 adjusted EPS guidance and issued optimistic comments about FY27 and FY28.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "Multiple catalysts including renewed Iranian focus on striking vessels i…",
       "note": "Amid multiple catalysts including renewed Iranian focus on striking vessels in the Strait of Hormuz, Tehran's hardline stance on nuclear enrichment limits, and Houthi rebel strikes on Saudi Arabia. Also, elevated refined product prices, refining margins, and tanker day rates are benefiting the wider sector.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     }
   ],
   "holding_news": {
@@ -185,9 +185,9 @@
       "wiim": true
     },
     "RKLB": {
-      "title": "Dow Jones Climbs to 52,000 While Chips Bleed on Rate-Hike Fears: Stock Market Today",
-      "ts": 1792084625,
-      "url": "https://www.benzinga.com/news/26/10/62393393/dow-52000-chip-carnage-rate-hike-bets-stock-market-today",
+      "title": "Space Stock Watch: SpaceX Spectrum Deal, Rocket Lab Delays, Tesla Merger Chatter",
+      "ts": 1792158119,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62409843/space-stock-watch-spacex-spectrum-deal-rocket-lab-delays-tesla-merger-chatter",
       "wiim": false
     }
   },
@@ -200,8 +200,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$185",
-      "price": 165.33,
-      "upside": 11.9,
+      "price": 166.98,
+      "upside": 10.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -214,8 +214,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$145",
-      "price": 145.19,
-      "upside": -0.1,
+      "price": 147.14,
+      "upside": -1.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -228,8 +228,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "price": 342.0,
-      "upside": 5.3,
+      "price": 344.51,
+      "upside": 4.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -242,8 +242,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$225",
-      "price": 219.32,
-      "upside": 2.6,
+      "price": 222.46,
+      "upside": 1.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -256,8 +256,8 @@
       "rating": "Sector Perform",
       "stance": "neutral",
       "pt": "$145",
-      "price": 145.19,
-      "upside": -0.1,
+      "price": 147.14,
+      "upside": -1.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -270,8 +270,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$285",
-      "price": 246.74,
-      "upside": 15.5,
+      "price": 243.09,
+      "upside": 17.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -284,8 +284,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$272",
-      "price": 253.28,
-      "upside": 7.4,
+      "price": 257.0,
+      "upside": 5.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -298,8 +298,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$102",
-      "price": 92.0,
-      "upside": 10.9,
+      "price": 93.38,
+      "upside": 9.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -312,8 +312,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$180",
-      "price": 157.08,
-      "upside": 14.6,
+      "price": 159.69,
+      "upside": 12.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -326,8 +326,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$275",
-      "price": 253.28,
-      "upside": 8.6,
+      "price": 257.0,
+      "upside": 7.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -340,8 +340,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$280",
-      "price": 253.28,
-      "upside": 10.5,
+      "price": 257.0,
+      "upside": 8.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -354,8 +354,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$292",
-      "price": 253.28,
-      "upside": 15.3,
+      "price": 257.0,
+      "upside": 13.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -368,8 +368,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$226",
-      "price": 219.32,
-      "upside": 3.0,
+      "price": 222.46,
+      "upside": 1.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -383,7 +383,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$292",
-      "upside": 15.3
+      "upside": 13.6
     },
     "CVX": {
       "date": "2026-10-15",
@@ -392,7 +392,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$226",
-      "upside": 3.0
+      "upside": 1.6
     },
     "PG": {
       "date": "2026-10-14",
@@ -401,7 +401,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$180",
-      "upside": 14.6
+      "upside": 12.7
     },
     "KO": {
       "date": "2026-10-14",
@@ -410,7 +410,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$102",
-      "upside": 10.9
+      "upside": 9.2
     },
     "MRK": {
       "date": "2026-10-12",
@@ -419,7 +419,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$145",
-      "upside": -0.1
+      "upside": -1.5
     },
     "CRM": {
       "date": "2026-10-12",
@@ -428,7 +428,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$285",
-      "upside": 15.5
+      "upside": 17.2
     },
     "AAPL": {
       "date": "2026-10-12",
@@ -437,7 +437,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$360",
-      "upside": 5.3
+      "upside": 4.5
     },
     "MMM": {
       "date": "2026-10-09",
@@ -446,7 +446,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$185",
-      "upside": 11.9
+      "upside": 10.8
     },
     "NKE": {
       "date": "2026-10-05",
@@ -455,10 +455,336 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$37",
-      "upside": -0.4
+      "upside": -1.5
     }
   },
   "bz_news": [
+    {
+      "title": "Trump’s $330 Million White House Ballroom Donor List Reveals Nvidia, Apple and Google Among Top Tech Contributors: Report (UPDATED)",
+      "url": "https://www.benzinga.com/news/26/10/62409115/trumps-330-million-white-house-ballroom-donor-list-reveals-nvidia-apple-and-google-among-top-tech-contributors-report",
+      "ts": 1792160909,
+      "tickers": [
+        "AAPL",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.372
+    },
+    {
+      "title": "Travelers Companies Q3 2026 Earnings Call Transcript",
+      "url": "https://www.benzinga.com/news/26/10/62411494/travelers-companies-q3-2026-earnings-call-transcript",
+      "ts": 1792160030,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.516
+    },
+    {
+      "title": "NVDA-Led AI Boom Looks a Lot Like the Railroad Bubble of 1873, Pulitzer-Winning Historian Warns",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62410507/ai-boom-railroad-bubble-1873-nvidia",
+      "ts": 1792158824,
+      "tickers": [
+        "NVDA",
+        "MSFT",
+        "CRWV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.546
+    },
+    {
+      "title": "Space Stock Watch: SpaceX Spectrum Deal, Rocket Lab Delays, Tesla Merger Chatter",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62409843/space-stock-watch-spacex-spectrum-deal-rocket-lab-delays-tesla-merger-chatter",
+      "ts": 1792158119,
+      "tickers": [
+        "SPCX",
+        "TSLA",
+        "TMUS",
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.434
+    },
+    {
+      "title": "StoneX Maintains Buy on Microsoft, Raises Price Target to $600",
+      "url": "https://www.benzinga.com/news/26/10/62409545/stonex-maintains-buy-microsoft-raises-price-target-600",
+      "ts": 1792157820,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.445
+    },
+    {
+      "title": "Apple Stock Hits Record High as iPhone Duo Pre-Orders Sell Out in Minutes",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62409013/apple-stock-hits-record-high-as-iphone-duo-pre-orders-sell-out-in-minutes",
+      "ts": 1792156475,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.32
+    },
+    {
+      "title": "Netflix Needs Another 'Squid Game' Moment As Growth Pressure Mounts",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62408896/netflix-needs-another-squid-game-moment-as-growth-pressure-mounts",
+      "ts": 1792156356,
+      "tickers": [
+        "NFLX",
+        "META",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.256
+    },
+    {
+      "title": "October Rate-Hike Odds Collapse as Warsh Keeps His Cards Close but AI Transition Looms",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62408879/fed-rate-hike-odds-warsh-ai",
+      "ts": 1792156284,
+      "tickers": [
+        "SPY",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.374
+    },
+    {
+      "title": "Committee For Medicinal Products For Human Use Recommends Approval Of Indication Extension Of Johnson & Johnson's TALVEY To Treat Adults With Relapsed Or Refractory Multiple Myeloma",
+      "url": "https://www.benzinga.com/news/26/10/62408629/committee-medicinal-products-human-use-recommends-approval-indication-extension-johnson-johnson-s-ta",
+      "ts": 1792155477,
+      "tickers": [
+        "JNJ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.313
+    },
+    {
+      "title": "Reported October 15, 'DeepSeek offers user refunds after suffering another major outage' - SCMP",
+      "url": "https://www.benzinga.com/news/26/10/62408610/reported-october-15-deepseek-offers-user-refunds-after-suffering-another-major-outage-scmp",
+      "ts": 1792155351,
+      "tickers": [
+        "BABA",
+        "META",
+        "GOOG",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.263
+    },
+    {
+      "title": "Apple’s $1,999 iPhone Duo Preorders Begin Today: Trade-Ins, Monthly Payments and Deals to Cut the Hefty Price",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62408305/apples-1999-iphone-duo-preorders-begin-today-trade-ins-monthly-payments-and-deals-to-cut-the-hefty-price",
+      "ts": 1792154328,
+      "tickers": [
+        "AAPL",
+        "TMUS",
+        "VZ",
+        "T"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.244
+    },
+    {
+      "title": "'iPhone Duo sells out moments after pre-orders begin' - Apple Insider",
+      "url": "https://www.benzinga.com/news/26/10/62408021/iphone-duo-sells-out-moments-after-pre-orders-begin-apple-insider",
+      "ts": 1792153708,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.243
+    },
+    {
+      "title": "'Goldman Sachs CEO to chair Business Council' - Axios Exclusive",
+      "url": "https://www.benzinga.com/news/26/10/62407967/goldman-sachs-ceo-chair-business-council-axios-exclusive",
+      "ts": 1792153502,
+      "tickers": [
+        "GS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.271
+    },
+    {
+      "title": "Nvidia Announces RTX Spark AI Laptops Available Today From ASUS, Dell, HP, Lenovo, Microsoft, And MSI",
+      "url": "https://www.benzinga.com/quote/TTWO",
+      "ts": 1792152402,
+      "tickers": [
+        "NVDA",
+        "DELL",
+        "MSFT",
+        "LNVGY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.474
+    },
+    {
+      "title": "Travelers shares are trading lower despite better-than-expected Q3 EPS and revenue, as flat premium growth, weaker Personal Insurance results and lower book value weighed on results.",
+      "url": "https://www.benzinga.com/quote/TRV",
+      "ts": 1792151899,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.405
+    },
+    {
+      "title": "Quantum X Labs' QuantumQ Security Achieves Technological Milestone On Three Operational IBM Quantum Processors",
+      "url": "https://www.benzinga.com/news/26/10/62407220/quantum-x-labs-quantumq-security-achieves-technological-milestone-three-operational-ibm-quantum-proc",
+      "ts": 1792151873,
+      "tickers": [
+        "QXL",
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.368
+    },
+    {
+      "title": "KFC Had Pepsi for Nearly 40 Years. Coca-Cola Stock Is Trending After Winning It Over",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62406875/kfc-had-pepsi-for-nearly-40-years-coca-cola-stock-is-trending-after-winning-it-over",
+      "ts": 1792150791,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.217
+    },
+    {
+      "title": "Jim Cramer: Reddit Is 'Inexpensive' While SiTime Is ‘Expensive’",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62406812/jim-cramer-reddit-is-inexpensive-while-sitime-is-expensive",
+      "ts": 1792150641,
+      "tickers": [
+        "RDDT",
+        "XOM",
+        "CVX",
+        "COHR"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.305
+    },
+    {
+      "title": "Wall Street's Most Accurate Analysts Spotlight On 3 Tech And Telecom Stocks Delivering High-Dividend Yields",
+      "url": "https://www.benzinga.com/trading-ideas/dividends/26/10/62406613/wall-streets-most-accurate-analysts-spotlight-on-3-tech-and-telecom-stocks-delivering-high-dividend-yields-11",
+      "ts": 1792150086,
+      "tickers": [
+        "VZ",
+        "RCI",
+        "BCE"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.369
+    },
+    {
+      "title": "Coca-Cola Deals Pepsi a Stinging Blow, Snatches KFC After Nearly 40 Years",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62406564/coca-cola-deals-pepsi-a-stinging-blow-snatches-kfc-after-nearly-40-years",
+      "ts": 1792149813,
+      "tickers": [
+        "KO",
+        "PEP",
+        "YUM",
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.242
+    },
+    {
+      "title": "Dan Ives Says Apple-Meta AI Partnership Could Help Unlock $75 Per Share in AI Value for AAPL Stock — 'Start of What Could Be Just a Massive Collaboration'",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62406512/dan-ives-says-apple-meta-ai-partnership-could-help-unlock-75-per-share-in-ai-value-for-aapl-stock-start-of-what-could-be-just-a-massive-collaboration",
+      "ts": 1792149492,
+      "tickers": [
+        "AAPL",
+        "META",
+        "CRWV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.355
+    },
+    {
+      "title": "Earnings Scheduled For October 16, 2026",
+      "url": "https://www.benzinga.com/news/earnings/26/10/62406332/earnings-scheduled-october-16-2026",
+      "ts": 1792149063,
+      "tickers": [
+        "TRV",
+        "TFC",
+        "CFG",
+        "RF"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.471
+    },
+    {
+      "title": "Travelers Companies Q3 Adj. EPS $9.18 Beats $7.42 Estimate, Sales $12.412B Beat $11.376B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/10/62405965/travelers-companies-q3-adj-eps-9-18-beats-7-42-estimate-sales-12-412b-beat-11-376b-estimate",
+      "ts": 1792148255,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.458
+    },
+    {
+      "title": "GameStop CEO Ryan Cohen Warns Humans Could Attack Smarter Robots — ‘Whether That Ends Up Being World War III, I Don’t Know’",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62405671/gamestop-ceo-ryan-cohen-man-versus-machine-fight-ai",
+      "ts": 1792147042,
+      "tickers": [
+        "GME",
+        "GOOGL",
+        "GOOG",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.253
+    },
     {
       "title": "Understanding Apple's Position In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors",
       "url": "https://www.benzinga.com/news/26/10/62404821/understanding-apple-s-position-technology-hardware-storage-amp-peripherals-industry-compared-competi",
@@ -470,337 +796,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.35
-    },
-    {
-      "title": "Taiwan Semiconductor Holds the Cards As NVIDIA, Apple and AMD Battle for Limited AI Chip Capacity",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62404541/taiwan-semiconductor-holds-the-cards-as-nvidia-apple-and-amd-battle-for-limited-ai-chip-capacity",
-      "ts": 1792143315,
-      "tickers": [
-        "TSM",
-        "AAPL",
-        "INTC",
-        "AVGO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.578
-    },
-    {
-      "title": "CMA Proposes Designating Microsoft With Strategic Market Status In Business Software, Publishes Intervention Roadmap; Microsoft, Amazon Taking Material Steps To Promote Cloud Choice",
-      "url": "https://www.benzinga.com/news/26/10/62404456/cma-proposes-designating-microsoft-strategic-market-status-business-software-publishes-intervention-",
-      "ts": 1792142514,
-      "tickers": [
-        "AMZN",
-        "EWU",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.372
-    },
-    {
-      "title": "Anthropic IPO Could Come in ‘Weeks, Not Months’ — Top Hedge Fund Manager Sees $500 Billion Demand, Draws Parallels With SpaceX",
-      "url": "https://www.benzinga.com/markets/ipos/26/10/62404056/anthropic-ipo-could-come-in-weeks-not-months-top-hedge-fund-manager-sees-500-billion-demand-draws-parallels-with-spacex",
-      "ts": 1792139162,
-      "tickers": [
-        "SPCX",
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.323
-    },
-    {
-      "title": "Dow Jumps Over 550 Points Following Economic Data: Investor Sentiment Improves, But Fear & Greed Index Remains in ‘Fear’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/10/62403453/dow-jumps-over-550-points-following-economic-data-investor-sentiment-improves-but-fear-greed-index-remains-in-fear-zone",
-      "ts": 1792132892,
-      "tickers": [
-        "MTB",
-        "SCHW",
-        "TFC",
-        "TRV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.477
-    },
-    {
-      "title": "M&T Bank, Travelers Companies and 3 Stocks to Watch Heading Into Friday",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62403418/mt-bank-travelers-companies-and-3-stocks-to-watch-heading-into-friday",
-      "ts": 1792132595,
-      "tickers": [
-        "TRV",
-        "TFC",
-        "MTB",
-        "AA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.354
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62403366/stock-market-will-sp-500-open-up-or-down-today-59",
-      "ts": 1792131854,
-      "tickers": [
-        "SPY",
-        "TSM",
-        "QQQ",
-        "CFG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Mark Zuckerberg Opens Meta's Massive Muse Spark AI Model, Says It Runs Great on Apple's New Mac Studios Thanks to John Ternus",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62403354/meta-muse-spark-open-weight-apple-mac-studio",
-      "ts": 1792131710,
-      "tickers": [
-        "META",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.296
-    },
-    {
-      "title": "Jamie Dimon Warns AI Agents That Make Payments on Your Behalf ‘May Not’ Act Properly: AI Revolution Like a ‘Tsunami’ That Must Be Managed",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62403249/jamie-dimon-warns-ai-agents-making-payments-could-be-treacherous-for-banks",
-      "ts": 1792130854,
-      "tickers": [
-        "JPM",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.32
-    },
-    {
-      "title": "Recursion Pharmaceuticals (RXRX) Stock is Trending After Hours: Here’s What You Should Know",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62403142/recursion-pharmaceuticals-shares-stock-offering-sanofi-milestone",
-      "ts": 1792127987,
-      "tickers": [
-        "GS",
-        "MS",
-        "RXRX",
-        "SNY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.442
-    },
-    {
-      "title": "Google’s Quantum Breakthrough Puts Bitcoin in Trouble? Analyst Says Not Today, but ‘Gap Is Getting Smaller’",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62403061/google-quantum-computing-bitcoin-security-prediction-market-polymarket",
-      "ts": 1792126511,
-      "tickers": [
-        "$BTC",
-        "IBM",
-        "$ZEC",
-        "$POL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.329
-    },
-    {
-      "title": "Netflix Replaces Content Chief Bela Bajaria With Ex-Disney Exec Peter Rice, a Day After Announcing 6% Layoffs",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62402991/netflix-taps-peter-rice-replace-content-chief-bela-bajaria",
-      "ts": 1792124761,
-      "tickers": [
-        "NFLX",
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.273
-    },
-    {
-      "title": "Zohran Mamdani Says Quantum Is Poised to Become a ‘Multi-Trillion Dollar Industry’ and New Yorkers Should ‘Share in That Profit’",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62402629/zohran-mamdani-says-nyc-will-get-cut-quantum-facility",
-      "ts": 1792115194,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "IBM",
-        "GFS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.278
-    },
-    {
-      "title": "Nike, FMC Corp., Alcoa, Interactive Brokers and Kimberly-Clark: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/news/26/10/62402538/nike-fmc-corp-alcoa-interactive-brokers-and-kimberly-clark-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1792113261,
-      "tickers": [
-        "NKE",
-        "KMB",
-        "AA",
-        "FMC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.39
-    },
-    {
-      "title": "UBS Maintains Buy on Microsoft, Raises Price Target to $675",
-      "url": "https://www.benzinga.com/news/26/10/62401758/ubs-maintains-buy-microsoft-raises-price-target-675",
-      "ts": 1792101734,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.456
-    },
-    {
-      "title": "'Investors temper Anthropic IPO valuation expectations over revenue growth slowdown, sources say'- Reuters Exclusive",
-      "url": "https://www.benzinga.com/news/26/10/62401077/investors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-slowdown-sources-say-reute",
-      "ts": 1792098427,
-      "tickers": [
-        "AMZN",
-        "GOOG",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.419
-    },
-    {
-      "title": "P&G Files For Debt Shelf Offering, Size Not Disclosed",
-      "url": "https://www.benzinga.com/news/26/10/62400604/p-g-files-debt-shelf-offering-size-not-disclosed",
-      "ts": 1792096971,
-      "tickers": [
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.451
-    },
-    {
-      "title": "$100 Invested In UnitedHealth Group 20 Years Ago Would Be Worth This Much Today",
-      "url": "https://www.benzinga.com/news/26/10/62400110/100-invested-unitedhealth-group-20-years-ago-would-be-worth-much-today",
-      "ts": 1792096261,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.333
-    },
-    {
-      "title": "Citigroup Maintains Buy on Microsoft, Raises Price Target to $636",
-      "url": "https://www.benzinga.com/news/26/10/62398568/citigroup-maintains-buy-microsoft-raises-price-target-636",
-      "ts": 1792094035,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.448
-    },
-    {
-      "title": "'KFC Is Moving to Ditch Pepsi for Coke in Thousands of Restaurants' - WSJ Exclusive",
-      "url": "https://www.benzinga.com/news/26/10/62397689/kfc-moving-ditch-pepsi-coke-thousands-restaurants-wsj-exclusive",
-      "ts": 1792091996,
-      "tickers": [
-        "YUM",
-        "PEP",
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.214
-    },
-    {
-      "title": "Citigroup Maintains Neutral on JPMorgan Chase, Lowers Price Target to $350",
-      "url": "https://www.benzinga.com/news/26/10/62397153/citigroup-maintains-neutral-jpmorgan-chase-lowers-price-target-350",
-      "ts": 1792090982,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.47
-    },
-    {
-      "title": "Intel Shares Rise Over 3% After Key Trading Signal",
-      "url": "https://www.benzinga.com/Opinion/26/10/62396879/intel-shares-rise-over-3-percent-after-key-trading-signal-2",
-      "ts": 1792090439,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.409
-    },
-    {
-      "title": "Anthropic Needs Nearly $2.7B in Additional Monthly Revenue to Reach $100B Run Rate by Year-End",
-      "url": "https://www.benzinga.com/Opinion/26/10/62396265/anthropic-needs-nearly-2700-million-in-additional-monthly-revenue-to-reach-100b-run-rate-by-year-end",
-      "ts": 1792089236,
-      "tickers": [
-        "USO",
-        "SPY",
-        "NVDA",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.318
-    },
-    {
-      "title": "'OpenAI’s Accelerates Ad Sprint With Meta Hires, Slashed Prices' - The Information",
-      "url": "https://www.benzinga.com/news/26/10/62396208/openai-s-accelerates-ad-sprint-meta-hires-slashed-prices-information",
-      "ts": 1792089166,
-      "tickers": [
-        "MSFT",
-        "META"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.357
-    },
-    {
-      "title": "Shares of banks and financial services companies are trading higher as Treasury yields retreat and investors rotate out of AI-exposed stocks into sectors with more established cash flows and dividend prospects.",
-      "url": "https://www.benzinga.com/quote/BAFN",
-      "ts": 1792089043,
-      "tickers": [
-        "COIN",
-        "RKT",
-        "UWMC",
-        "SOFI"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.424
     }
   ],
   "portfolio_brief": {
@@ -963,7 +958,7 @@
     },
     "AZO": {
       "name": "AutoZone",
-      "qarp": "STRONG BUY",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 9,
         "buy": 17,
@@ -1010,9 +1005,9 @@
         "period": "2026-09-01"
       },
       "news": {
-        "title": "Dow Jones Climbs to 52,000 While Chips Bleed on Rate-Hike Fears: Stock Market Today",
-        "ts": 1792084625,
-        "url": "https://www.benzinga.com/news/26/10/62393393/dow-52000-chip-carnage-rate-hike-bets-stock-market-today",
+        "title": "Space Stock Watch: SpaceX Spectrum Deal, Rocket Lab Delays, Tesla Merger Chatter",
+        "ts": 1792158119,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62409843/space-stock-watch-spacex-spectrum-deal-rocket-lab-delays-tesla-merger-chatter",
         "wiim": false
       },
       "filings": {
@@ -1192,37 +1187,37 @@
       },
       "explain": "34 analysts cover it — 29 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "GILD": {
-      "name": "Gilead Sciences",
-      "qarp": "HOLD-QUAL",
+    "AOS": {
+      "name": "A. O. Smith",
+      "qarp": "STRONG BUY",
       "consensus": {
-        "strongBuy": 9,
-        "buy": 21,
-        "hold": 7,
-        "sell": 0,
+        "strongBuy": 4,
+        "buy": 4,
+        "hold": 8,
+        "sell": 2,
         "strongSell": 0,
-        "total": 37,
-        "bullish": 30,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.05,
+        "total": 18,
+        "bullish": 8,
+        "bearish": 2,
+        "label": "Buy",
+        "score": 0.56,
         "period": "2026-09-01"
       },
       "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-08-04",
-          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000028/gild-20260804.htm"
+          "date": "2026-07-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/91142/000009114226000096/aos-20260730.htm"
         },
         "periodic": {
           "form": "10-Q",
-          "date": "2026-08-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm"
+          "date": "2026-07-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/91142/000009114226000098/aos-20260630.htm"
         },
-        "insider30d": 4
+        "insider30d": 0
       },
-      "explain": "37 analysts cover it — 30 bullish, 7 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "18 analysts cover it — 8 bullish, 8 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "NVS": {
       "name": "Novartis",
@@ -1565,24 +1560,24 @@
       "margin": null,
       "summary": "Q3 FY2018 — revenue $1.5B (+2.2% YoY). (as reported, GAAP)"
     },
-    "GILD": {
+    "AOS": {
       "period": "Q2 FY2026",
-      "filed": "2026-08-06",
+      "filed": "2026-07-30",
       "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/91142/000009114226000098/aos-20260630.htm",
       "revenue": {
-        "fmt": "$7.8B",
-        "yoy": 10.2
+        "fmt": "$1.0B",
+        "yoy": -0.7
       },
       "eps": {
-        "val": -8.45,
-        "yoy": -641.7
+        "val": 0.91,
+        "yoy": -15.0
       },
       "net_income": {
-        "fmt": "$-10.5B"
+        "fmt": "$125M"
       },
-      "margin": -134.5,
-      "summary": "Q2 FY2026 — revenue $7.8B (+10.2% YoY), diluted EPS $-8.45 (-641.7% YoY), net margin -134%. (as reported, GAAP)"
+      "margin": 12.4,
+      "summary": "Q2 FY2026 — revenue $1.0B (-0.7% YoY), diluted EPS $0.91 (-15.0% YoY), net margin 12%. (as reported, GAAP)"
     },
     "NVS": null,
     "AVGO": {
