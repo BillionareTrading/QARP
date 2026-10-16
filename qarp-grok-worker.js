@@ -4,9 +4,19 @@
 //   (default)          "Social Pulse"  — live X sentiment for the drawer + cloud refresh job.
 //   mode: "catalyst"   "Catalyst Desk" — live web+X search for the nearest DATED catalyst;
 //                      called once per market day by the build for holdings + unheld SBs.
-// DEPLOY: Cloudflare -> Workers -> qarp-grok -> paste this -> Deploy. Secret unchanged.
+// DEPLOY: Cloudflare -> Workers -> qarp-grok -> paste this -> Deploy.
+// LOCK (2026-10-16, user GO — the URL is visible in the public site code and the worker had no
+// gate, so anyone could spend the xAI credits): a request is served only if
+//   (a) it carries header x-qarp-key == secret BUILD_KEY (the cloud build; GitHub secret QARP_GROK_KEY), or
+//   (b) its Origin is the QARP site (or a localhost preview) AND it asks for the pulse — catalyst
+//       mode is build-only.
+// Add the BUILD_KEY secret (Settings -> Variables and Secrets) BEFORE pasting this, or builds get 403.
+// GET returns the version only (no xAI call) so a deploy can be checked for free.
 
 const MODEL = "grok-4.3";
+const VERSION = "2026-10-16a";
+const SITE_ORIGINS = ["https://billionaretrading.github.io"];
+const isLocal = (o) => /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(o);
 
 export default {
   async fetch(request, env) {
@@ -15,10 +25,16 @@ export default {
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
     };
+    const J = (o, s = 200) => new Response(JSON.stringify(o), { status: s, headers: { ...cors, "content-type": "application/json" } });
     if (request.method === "OPTIONS") return new Response(null, { headers: cors });
+    if (request.method === "GET") return J({ version: VERSION });
     if (request.method !== "POST") return new Response("POST only", { status: 405, headers: cors });
     if (!env.XAI_API_KEY) return new Response("Worker missing XAI_API_KEY secret", { status: 500, headers: cors });
-    const J = (o, s = 200) => new Response(JSON.stringify(o), { status: s, headers: { ...cors, "content-type": "application/json" } });
+
+    const origin = request.headers.get("Origin") || "";
+    const keyOk = !!env.BUILD_KEY && request.headers.get("x-qarp-key") === env.BUILD_KEY;
+    const siteOk = SITE_ORIGINS.includes(origin) || isLocal(origin);
+    if (!keyOk && !siteOk) return J({ error: "forbidden" }, 403);
 
     let body;
     try { body = await request.json(); } catch (e) { return J({ error: "bad json" }, 400); }
@@ -28,6 +44,7 @@ export default {
 
     const context = String(body.context || "").slice(0, 400);   // optional: day move, headline, sector
     const mode = String(body.mode || "pulse");
+    if (mode === "catalyst" && !keyOk) return J({ error: "forbidden" }, 403);
 
     let prompt, tools;
     if (mode === "catalyst") {
