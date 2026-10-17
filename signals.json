@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-16",
-  "generated_at": "Oct 16, 4:44pm ET",
+  "date": "2026-10-17",
+  "generated_at": "Oct 17, 6:45am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Oct 16",
+      "when": "Oct 17",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid multiple catalysts including renewed Iranian focus on striking vessels in the Strait of Hormuz, Tehran's hardline stance on nuclear enrichment limits, and Houthi rebel strikes on Saudi Arabia. Also, elevated refined product prices, refining margins, and tanker day rates are benefiting the wider sector.",
       "affects": "Energy · growth",
@@ -192,20 +192,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-10-09",
-      "ticker": "MMM",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$185",
-      "price": 164.75,
-      "upside": 12.3,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-10-12",
       "ticker": "MRK",
@@ -488,6 +474,80 @@
   },
   "bz_news": [
     {
+      "title": "Disney to Spend $60 Million a Year on Character.AI Talent After Its Own Layoffs as AI Startup Faces Bankruptcy",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62427403/disney-60-million-character-ai-employees-ai-strategy",
+      "ts": 1792229617,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.346
+    },
+    {
+      "title": "UK Watchdog Proposes Strategic Market Tag for Microsoft, Puts Excel and Copilot AI Under Competition Scrutiny",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62427164/uk-watchdog-microsoft-competition-scrutiny",
+      "ts": 1792213806,
+      "tickers": [
+        "MSFT",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.363
+    },
+    {
+      "title": "The Moment Jensen Huang Realized Nvidia 'Won't Have to Die' Came After a Call From This CEO: 'For the Whole Time, 30 Years…'",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62426900/the-moment-jensen-huang-realized-nvidia-wont-have-to-die-came-after-a-call-from-this-ceo-for-the-whole-time-30-years",
+      "ts": 1792199920,
+      "tickers": [
+        "TSM",
+        "INTC",
+        "NVDA",
+        "UMC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.411
+    },
+    {
+      "title": "Trump’s $330 Million White House Ballroom Donor List Reveals Nvidia, Apple and Google Among Top Tech Contributors: Report (UPDATED)",
+      "url": "https://www.benzinga.com/news/26/10/62409115/trumps-330-million-white-house-ballroom-donor-list-reveals-nvidia-apple-and-google-among-top-tech-contributors-report",
+      "ts": 1792197640,
+      "tickers": [
+        "AAPL",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.372
+    },
+    {
+      "title": "'Anthropic quietly pitches its own AI safety bill to lawmakers'- Politico",
+      "url": "https://www.benzinga.com/news/26/10/62426440/anthropic-quietly-pitches-its-own-ai-safety-bill-lawmakers-politico",
+      "ts": 1792187866,
+      "tickers": [
+        "AMZN",
+        "GOOG",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.312
+    },
+    {
       "title": "Citigroup Maintains Buy on Walt Disney, Raises Price Target to $140",
       "url": "https://www.benzinga.com/news/26/10/62425419/citigroup-maintains-buy-walt-disney-raises-price-target-140",
       "ts": 1792183014,
@@ -497,7 +557,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.43
+      "relevance": 0.431
     },
     {
       "title": "Chip Stocks Endure Longest Losing Streak Since 2006 as CoreWeave Credit Concerns Mount: This Week on Wall Street",
@@ -551,7 +611,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.249
+      "relevance": 0.25
     },
     {
       "title": "SpaceX Will Target Rural America Before Big Cities, Telecom Analyst Predicts",
@@ -677,7 +737,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.27
+      "relevance": 0.269
     },
     {
       "title": "Travelers Companies Stock Is Gaining Friday: What's Going On?",
@@ -752,77 +812,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.263
-    },
-    {
-      "title": "'Disney agreed to pay $60 million to 66 employees from an AI startup that filed for bankruptcy, weeks after tech layoffs' - Business Insider",
-      "url": "https://www.benzinga.com/news/26/10/62414333/disney-agreed-pay-60-million-66-employees-ai-startup-filed-bankruptcy-weeks-after-tech-layoffs-busin",
-      "ts": 1792163670,
-      "tickers": [
-        "DIS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.34
-    },
-    {
-      "title": "Nvidia, Micron and Broadcom Already Trade Like Cisco Post Dot-Com Burst: Bank of America",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62414052/nvidia-micron-broadcom-cisco-dot-com-bank-of-america",
-      "ts": 1792163246,
-      "tickers": [
-        "CSCO",
-        "AVGO",
-        "MU",
-        "SOXQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.505
-    },
-    {
-      "title": "9 Of 11 Sectors Rise In Friday Trading As Cyclicals Lead",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62413716/9-of-11-sectors-rise-in-friday-trading-as-cyclicals-lead",
-      "ts": 1792162820,
-      "tickers": [
-        "SPY",
-        "QQQ",
-        "DIA",
-        "IWM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.418
-    },
-    {
-      "title": "Rep. David Taylor Has Bought Up to $45K Worth Of AT&T Stock: Here’s What You Should Know",
-      "url": "https://www.benzinga.com/government/26/10/62413699/rep-david-taylor-has-bought-45k-worth-t-stock-here-s-what-you-should-know",
-      "ts": 1792162810,
-      "tickers": [
-        "T",
-        "MSFT",
-        "PG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.305
-    },
-    {
-      "title": "Circle Eyes 40 New Markets as Stablecoin Demand Booms, AI Payments Gain Traction",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/10/62413025/circle-eyes-40-new-markets-as-stablecoin-demand-booms-ai-payments-gain-traction",
-      "ts": 1792161899,
-      "tickers": [
-        "CRCL",
-        "BLK",
-        "SCBFF",
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.423
     }
   ],
   "portfolio_brief": {
@@ -1141,7 +1130,7 @@
           "date": "2026-07-28",
           "url": "https://www.sec.gov/Archives/edgar/data/895126/000089512626000047/exe-20260630.htm"
         },
-        "insider30d": 0
+        "insider30d": 1
       },
       "explain": "30 analysts cover it — 24 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
