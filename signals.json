@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-18",
-  "generated_at": "Oct 18, 6:43am ET",
+  "date": "2026-10-19",
+  "generated_at": "Oct 19, 5:24am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Oct 18",
+      "when": "Oct 19",
       "what": "Energy & geopolitics — today's read",
       "why": "Amid multiple catalysts including renewed Iranian focus on striking vessels in the Strait of Hormuz, Tehran's hardline stance on nuclear enrichment limits, and Houthi rebel strikes on Saudi Arabia. Also, elevated refined product prices, refining margins, and tanker day rates are benefiting the wider sector.",
       "affects": "Energy · growth",
@@ -183,6 +183,12 @@
       "ts": 1792002515,
       "url": "https://www.benzinga.com/quote/SITM",
       "wiim": true
+    },
+    "EFX": {
+      "title": "Earnings Volatility Watch: Bloom Energy and Other 11 Stocks Are Priced For Double-Digit Swings",
+      "ts": 1792326616,
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62429217/earnings-volatility-watch-bloom-energy-and-other-11-stocks-are-priced-for-double-digit-swings",
+      "wiim": false
     },
     "RKLB": {
       "title": "Benzinga Bulls and Bears: Palantir, Apple, Six Flags",
@@ -474,6 +480,158 @@
   },
   "bz_news": [
     {
+      "title": "Peter Schiff Says AI Could Rewrite the Rules of Starting a Business: ‘Don’t Look for a Job’",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62431563/peter-schiff-says-ai-could-rewrite-the-rules-of-starting-a-business-dont-look-for-a-job",
+      "ts": 1792398217,
+      "tickers": [
+        "CRM",
+        "ABNB"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.287
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/news/26/10/62430827/stock-market-will-sp-500-open-up-or-down-today-60",
+      "ts": 1792391787,
+      "tickers": [
+        "SPY",
+        "TSLA",
+        "META",
+        "NFLX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Tesla Stock Falls as Options Market Signals Jump to $370 After Earnings",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62429795/tesla-stock-falls-as-options-market-signals-a-jump-to-370-after-earnings",
+      "ts": 1792356919,
+      "tickers": [
+        "TSLA",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.49
+    },
+    {
+      "title": "Calm Before the Storm for IBM Stock? Options Market Eyes Volatility Move After Earnings",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62429780/calm-before-the-storm-for-ibm-stock-options-market-eyes-a-volatility-move-after-earnings",
+      "ts": 1792356691,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.454
+    },
+    {
+      "title": "3M Stock Struggles in a Correction Before Earnings",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62429754/3m-stock-struggles-in-a-correction-before-earnings-buy-hold-or-wait",
+      "ts": 1792355706,
+      "tickers": [
+        "MMM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.433
+    },
+    {
+      "title": "Dow Jones, Nasdaq 100, S&P 500 Outlook: Top Catalysts to Move US Stocks This Week",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62429604/dow-jones-nasdaq-100-and-sp-500-outlook-top-catalysts-to-move-us-stocks-this-week",
+      "ts": 1792345523,
+      "tickers": [
+        "META",
+        "XOM",
+        "SPCX",
+        "TSLA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.541
+    },
+    {
+      "title": "Trump’s Russia Tariff Waiver Helps Apple, Eliminates Tariff Advantage for CF and CVR Partners",
+      "url": "https://www.benzinga.com/markets/commodities/26/10/62429536/trumps-russia-tariff-waiver-helps-apple-eliminates-tariff-advantage-for-cf-and-cvr-partners",
+      "ts": 1792342509,
+      "tickers": [
+        "AAPL",
+        "UAN",
+        "MPC",
+        "VLO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.32
+    },
+    {
+      "title": "IREN Stock Drops Below Key Support as AI Pivot Faces Major Headwinds",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62429524/iren-stock-drops-below-key-support-as-ai-pivot-faces-major-headwinds",
+      "ts": 1792341928,
+      "tickers": [
+        "IREN",
+        "SPCX",
+        "$BTC",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.399
+    },
+    {
+      "title": "UK's Telegraph Reported Sunday, Microsoft Pulls Plug On Deal To Lease Computing Capacity From UK Start-Up Nscale At Essex Data Centre",
+      "url": "https://www.benzinga.com/news/26/10/62429404/uk-s-telegraph-reported-sunday-microsoft-pulls-plug-deal-lease-computing-capacity-uk-start-nscale-es",
+      "ts": 1792335608,
+      "tickers": [
+        "MSFT",
+        "EWU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.319
+    },
+    {
+      "title": "Earnings Volatility Watch: Bloom Energy and Other 11 Stocks Are Priced For Double-Digit Swings",
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62429217/earnings-volatility-watch-bloom-energy-and-other-11-stocks-are-priced-for-double-digit-swings",
+      "ts": 1792326616,
+      "tickers": [
+        "META",
+        "MU",
+        "IBM",
+        "LRCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.403
+    },
+    {
+      "title": "iPhone Duo Preorders, AAPL Crosses $5 Trillion and More: This Week in Appleverse",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62429143/apple-iphone-duo-preorders-5-trillion-ai-china",
+      "ts": 1792321217,
+      "tickers": [
+        "AAPL",
+        "META",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.328
+    },
+    {
       "title": "Chamath Palihapitiya Says 6% Treasury Yield Could ‘Run Over’ AI Businesses",
       "url": "https://www.benzinga.com/markets/tech/26/10/62428751/chamath-palihapitiya-bond-yield-warning",
       "ts": 1792290191,
@@ -676,156 +834,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.401
-    },
-    {
-      "title": "Barclays Maintains Overweight on Coca-Cola, Raises Price Target to $98",
-      "url": "https://www.benzinga.com/news/26/10/62423092/barclays-maintains-overweight-coca-cola-raises-price-target-98",
-      "ts": 1792178317,
-      "tickers": [
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.438
-    },
-    {
-      "title": "Reuters Reported Federal Aviation Administration Set To Approve Boeing 737 MAX 10 As Soon As Next Week",
-      "url": "https://www.benzinga.com/quote/BA",
-      "ts": 1792174030,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.25
-    },
-    {
-      "title": "SpaceX Will Target Rural America Before Big Cities, Telecom Analyst Predicts",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62419606/spacex-mobile-network-rural-america",
-      "ts": 1792172231,
-      "tickers": [
-        "SPCX",
-        "TMUS",
-        "VZ",
-        "T"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.278
-    },
-    {
-      "title": "4 Consumer Discretionary Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62419490/4-consumer-discretionary-stocks-whale-activity-today-s-session",
-      "ts": 1792172108,
-      "tickers": [
-        "NKE",
-        "NCLH",
-        "QS",
-        "MELI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.388
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62419489/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1792172107,
-      "tickers": [
-        "CRWV",
-        "IREN",
-        "S",
-        "FIG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "Bernstein Maintains Outperform on UnitedHealth Group, Lowers Price Target to $500",
-      "url": "https://www.benzinga.com/news/26/10/62418178/bernstein-maintains-outperform-unitedhealth-group-lowers-price-target-500",
-      "ts": 1792170326,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.467
-    },
-    {
-      "title": "CNBC Halftime Report Final Trades: ServiceNow, Eaton, SentinelOne, JP Morgan Chase",
-      "url": "https://www.benzinga.com/quote/S",
-      "ts": 1792170061,
-      "tickers": [
-        "NOW",
-        "JPM",
-        "ETN",
-        "S"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.407
-    },
-    {
-      "title": "Shares of software companies are trading lower amid a rotation out of technology and AI-related stocks. Rising inflation concerns and elevated oil prices are fueling expectations for further Fed tightening, while elevated borrowing costs could weigh on demand, valuations and debt metrics.",
-      "url": "https://www.benzinga.com/quote/IOND",
-      "ts": 1792169139,
-      "tickers": [
-        "PLTR",
-        "PANW",
-        "FTNT",
-        "CRWD"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.419
-    },
-    {
-      "title": "Wells Fargo Maintains Overweight on Johnson & Johnson, Raises Price Target to $287",
-      "url": "https://www.benzinga.com/news/26/10/62416275/wells-fargo-maintains-overweight-johnson-johnson-raises-price-target-287",
-      "ts": 1792166864,
-      "tickers": [
-        "JNJ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.426
-    },
-    {
-      "title": "Shares of semiconductor and chip companies are trading lower as rising inflation concerns and elevated energy prices fuel expectations for further Fed rate hikes. Elevated borrowing costs could pressure semiconductor manufacturing and AI infrastructure investments while straining customer budgets. The Philadelphia Semiconductor Index (SOX) has declined for seven consecutive trading sessions, matching its longest losing streak since the 2008 financial crisis.",
-      "url": "https://www.benzinga.com/quote/CBRS",
-      "ts": 1792166553,
-      "tickers": [
-        "INTC",
-        "AVGO",
-        "AMD",
-        "IONQ"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.553
-    },
-    {
-      "title": "Here’s How Much You Would Have Made Owning Walmart Stock In The Last 20 Years",
-      "url": "https://www.benzinga.com/news/26/10/62415937/here-s-how-much-you-would-have-made-owning-walmart-stock-last-20-years",
-      "ts": 1792166449,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.269
     }
   ],
   "portfolio_brief": {
@@ -857,7 +865,7 @@
           "date": "2026-08-06",
           "url": "https://www.sec.gov/Archives/edgar/data/1555280/000155528026000040/zts-20260630.htm"
         },
-        "insider30d": 10
+        "insider30d": 9
       },
       "explain": "24 analysts cover it — 12 bullish, 12 hold, 0 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -958,7 +966,7 @@
           "date": "2026-08-26",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
         },
-        "insider30d": 8
+        "insider30d": 3
       },
       "explain": "69 analysts cover it — 65 bullish, 3 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1088,7 +1096,7 @@
           "date": "2026-09-22",
           "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000156/adbe-20260828.htm"
         },
-        "insider30d": 1
+        "insider30d": 0
       },
       "explain": "46 analysts cover it — 18 bullish, 23 hold, 5 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1390,7 +1398,12 @@
         "score": 0.97,
         "period": "2026-09-01"
       },
-      "news": null,
+      "news": {
+        "title": "Earnings Volatility Watch: Bloom Energy and Other 11 Stocks Are Priced For Double-Digit Swings",
+        "ts": 1792326616,
+        "url": "https://www.benzinga.com/markets/market-summary/26/10/62429217/earnings-volatility-watch-bloom-energy-and-other-11-stocks-are-priced-for-double-digit-swings",
+        "wiim": false
+      },
       "filings": {
         "latest8k": {
           "form": "8-K",
