@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "generated_at": "Oct 20, 4:01pm ET",
+  "generated_at": "Oct 20, 4:28pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -91,18 +91,9 @@
       "dir": "two-sided",
       "why": "Q-results for S&P Global — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
-      "when": "Oct 5",
-      "what": "NKE — Barclays maintains",
-      "affects": "NKE",
-      "dir": "two-sided",
-      "why": "Now rated <b>Overweight</b>, PT $37.",
-      "src": "Benzinga ratings"
     }
   ],
   "earnings_next": {
-    "NKE": "2026-12-17",
     "ZTS": "2026-11-05",
     "ABT": "2026-10-21",
     "BSX": "2026-10-28",
@@ -126,10 +117,10 @@
   "sectors": [
     {
       "sector": "Semiconductor & Chip",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "The sector rebounds from last week's weakness",
       "note": "As the sector rebounds from last week's weakness, with CoreWeave, the bellwether, rising on a Goldman Sachs upgrade. The Philadelphia Semiconductor Index is expected to end its longest losing streak since the 2008 financial crisis.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Software",
@@ -213,8 +204,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$272",
-      "price": 258.95,
-      "upside": 5.0,
+      "price": 259.42,
+      "upside": 4.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -227,8 +218,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$102",
-      "price": 93.27,
-      "upside": 9.4,
+      "price": 93.5,
+      "upside": 9.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -241,8 +232,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$180",
-      "price": 159.07,
-      "upside": 13.2,
+      "price": 159.38,
+      "upside": 12.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -255,8 +246,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$275",
-      "price": 258.95,
-      "upside": 6.2,
+      "price": 259.42,
+      "upside": 6.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -269,8 +260,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$280",
-      "price": 258.95,
-      "upside": 8.1,
+      "price": 259.42,
+      "upside": 7.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -283,8 +274,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$292",
-      "price": 258.95,
-      "upside": 12.8,
+      "price": 259.42,
+      "upside": 12.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -297,8 +288,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$226",
-      "price": 225.12,
-      "upside": 0.4,
+      "price": 225.78,
+      "upside": 0.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -311,8 +302,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$98",
-      "price": 93.27,
-      "upside": 5.1,
+      "price": 93.5,
+      "upside": 4.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -325,8 +316,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$287",
-      "price": 258.95,
-      "upside": 10.8,
+      "price": 259.42,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -339,7 +330,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$283",
-      "price": 339.14,
+      "price": 339.5,
       "upside": -16.6,
       "held": false,
       "uni": true,
@@ -353,8 +344,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "price": 159.07,
-      "upside": 4.4,
+      "price": 159.38,
+      "upside": 4.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -367,8 +358,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$330",
-      "price": 339.14,
-      "upside": -2.7,
+      "price": 339.5,
+      "upside": -2.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -382,7 +373,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "upside": 4.4
+      "upside": 4.2
     },
     "AAPL": {
       "date": "2026-10-20",
@@ -400,7 +391,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$98",
-      "upside": 5.1
+      "upside": 4.8
     },
     "JNJ": {
       "date": "2026-10-16",
@@ -409,7 +400,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.8
+      "upside": 10.6
     },
     "CVX": {
       "date": "2026-10-15",
@@ -418,7 +409,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$226",
-      "upside": 0.4
+      "upside": 0.1
     },
     "MRK": {
       "date": "2026-10-12",
@@ -427,7 +418,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$145",
-      "upside": -2.1
+      "upside": -2.2
     },
     "CRM": {
       "date": "2026-10-12",
@@ -445,7 +436,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$185",
-      "upside": 8.6
+      "upside": 7.9
     }
   },
   "bz_news": [
@@ -473,7 +464,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.209
+      "relevance": 0.201
     },
     {
       "title": "'Anthropic S-1 Shows Red-Hot Growth, Risks and Massive Computing Costs; In A New Draft Prospectus Viewed By The Journal, The AI Giant Disclosed An $80.7 Billion Net Loss For The First Half Of 2026 And A Long List Of Risk Factors' - WSJ Exclusive",
@@ -733,7 +724,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.443
+      "relevance": 0.442
     },
     {
       "title": "Live On CNBC, Kevin Simpson Announces Bought More UnitedHealth Group",
@@ -789,93 +780,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.411
-    },
-    {
-      "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62448003/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
-      "ts": 1792431312,
-      "tickers": [
-        "AMZN",
-        "NKE",
-        "MAT",
-        "CCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.363
-    },
-    {
-      "title": "4 Consumer Discretionary Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62419490/4-consumer-discretionary-stocks-whale-activity-today-s-session",
-      "ts": 1792172108,
-      "tickers": [
-        "NKE",
-        "NCLH",
-        "QS",
-        "MELI"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.388
-    },
-    {
-      "title": "Nike, FMC Corp., Alcoa, Interactive Brokers and Kimberly-Clark: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/news/26/10/62402538/nike-fmc-corp-alcoa-interactive-brokers-and-kimberly-clark-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1792113261,
-      "tickers": [
-        "NKE",
-        "KMB",
-        "AA",
-        "FMC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.501
-    },
-    {
-      "title": "Nike, Moderna, Walmart Get a Lift as Traders Flee AI Stocks",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62395717/nike-moderna-walmart-get-a-lift-as-traders-flee-ai-stocks",
-      "ts": 1792088124,
-      "tickers": [
-        "WMT",
-        "MRNA",
-        "NKE",
-        "AVGO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.441
-    },
-    {
-      "title": "Nike And FC Barcelona Unveil An Exclusive Collection With Tyler, The Creator Ahead Of El Clásico",
-      "url": "https://www.benzinga.com/news/26/10/62393731/nike-and-fc-barcelona-unveil-exclusive-collection-tyler-creator-ahead-el-cl-sico",
-      "ts": 1792085067,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.358
-    },
-    {
-      "title": "LVMH Q3 Sales +1% Organically To €18.50 Billion; Q3 Fashion & Leather Goods Sales -5% Organically To €8.25 Billion; Says Fashion & Leather Goods Affected In Q3 By Slowdown In Demand In China; Fashion & Leather Goods Continued To Benefit From Buoyant U.S. Market; Says Economic, Geopolitical Environment Remains Uncertain; Says Will Focus On Enhancing Desirability Of Brands",
-      "url": "https://www.benzinga.com/news/earnings/26/10/62303977/lvmh-q3-sales-1-organically-18-50-billion-q3-fashion-leather-goods-sales-5-organically-8-25-billion-",
-      "ts": 1791820307,
-      "tickers": [
-        "LVMUY",
-        "LVMHF",
-        "CPRI",
-        "TPR"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.414
     }
   ],
   "portfolio_brief": {
@@ -1397,38 +1301,6 @@
       },
       "explain": "37 analysts cover it — 32 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
-    "NKE": {
-      "name": "Nike",
-      "qarp": "AVOID",
-      "consensus": {
-        "strongBuy": 9,
-        "buy": 7,
-        "hold": 26,
-        "sell": 6,
-        "strongSell": 0,
-        "total": 48,
-        "bullish": 16,
-        "bearish": 6,
-        "label": "Buy",
-        "score": 0.4,
-        "period": "2026-10-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-10-01",
-          "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000184/nke-20261001.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-10-02",
-          "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000193/nke-20260831.htm"
-        },
-        "insider30d": 1
-      },
-      "explain": "48 analysts cover it — 16 bullish, 26 hold, 6 bearish (consensus <b>Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
-    },
     "VRTX": {
       "name": "Vertex Pharma",
       "qarp": "BUY",
@@ -1449,8 +1321,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-09-01",
-          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000264/vrtx-20260827.htm"
+          "date": "2026-10-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000278/vrtx-20261020.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -1491,8 +1363,8 @@
         },
         "periodic": {
           "form": "10-Q",
-          "date": "2026-07-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000028/efx-20260630.htm"
+          "date": "2026-10-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000044/efx-20260930.htm"
         },
         "insider30d": 2
       },
@@ -1740,25 +1612,6 @@
       "margin": 15.1,
       "summary": "Q2 FY2026 — revenue $959M (+39.5% YoY), diluted EPS $1.39 (+31.1% YoY), net margin 15%. (as reported, GAAP)"
     },
-    "NKE": {
-      "period": "Q1 FY2027",
-      "filed": "2026-10-02",
-      "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000193/nke-20260831.htm",
-      "revenue": {
-        "fmt": "$11.2B",
-        "yoy": -4.3
-      },
-      "eps": {
-        "val": 0.48,
-        "yoy": -2.0
-      },
-      "net_income": {
-        "fmt": "$712M"
-      },
-      "margin": 6.3,
-      "summary": "Q1 FY2027 — revenue $11.2B (-4.3% YoY), diluted EPS $0.48 (-2.0% YoY), net margin 6%. (as reported, GAAP)"
-    },
     "VRTX": {
       "period": "Q2 FY2026",
       "filed": "2026-08-04",
@@ -1779,23 +1632,23 @@
       "summary": "Q2 FY2026 — revenue $3.3B (+12.5% YoY), diluted EPS $4.31 (+8.0% YoY), net margin 33%. (as reported, GAAP)"
     },
     "EFX": {
-      "period": "Q2 FY2026",
-      "filed": "2026-07-21",
+      "period": "Q3 FY2026",
+      "filed": "2026-10-20",
       "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000028/efx-20260630.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/33185/000003318526000044/efx-20260930.htm",
       "revenue": {
         "fmt": "$1.7B",
-        "yoy": 10.6
+        "yoy": 9.6
       },
       "eps": {
-        "val": 1.54,
-        "yoy": 0.7
+        "val": 1.79,
+        "yoy": 38.8
       },
       "net_income": {
-        "fmt": "$184M"
+        "fmt": "$212M"
       },
-      "margin": 10.8,
-      "summary": "Q2 FY2026 — revenue $1.7B (+10.6% YoY), diluted EPS $1.54 (+0.7% YoY), net margin 11%. (as reported, GAAP)"
+      "margin": 12.5,
+      "summary": "Q3 FY2026 — revenue $1.7B (+9.6% YoY), diluted EPS $1.79 (+38.8% YoY), net margin 12%. (as reported, GAAP)"
     }
   }
 }
