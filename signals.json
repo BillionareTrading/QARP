@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "generated_at": "Oct 20, 5:34am ET",
+  "generated_at": "Oct 20, 6:00am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -317,9 +317,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-10-20",
+      "ticker": "AAPL",
+      "firm": "Loop Capital",
+      "action": "Downgrades",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$330",
+      "price": 342.94,
+      "upside": -3.8,
+      "held": false,
+      "uni": true,
+      "qarp": "AVOID"
     }
   ],
   "rating_moves": {
+    "AAPL": {
+      "date": "2026-10-20",
+      "firm": "Loop Capital",
+      "action": "Downgrades",
+      "rating": "Hold",
+      "stance": "neutral",
+      "pt": "$330",
+      "upside": -3.8
+    },
     "KO": {
       "date": "2026-10-16",
       "firm": "Barclays",
@@ -374,15 +397,6 @@
       "pt": "$285",
       "upside": 17.6
     },
-    "AAPL": {
-      "date": "2026-10-12",
-      "firm": "JP Morgan",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$360",
-      "upside": 5.0
-    },
     "MMM": {
       "date": "2026-10-09",
       "firm": "JP Morgan",
@@ -394,6 +408,42 @@
     }
   },
   "bz_news": [
+    {
+      "title": "Comparing Apple With Industry Competitors In Technology Hardware, Storage &amp; Peripherals Industry",
+      "url": "https://www.benzinga.com/news/26/10/62459425/comparing-apple-industry-competitors-technology-hardware-storage-amp-peripherals-industry",
+      "ts": 1792490343,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.379
+    },
+    {
+      "title": "Loop Capital Downgrades Apple to Hold, Lowers Price Target to $330",
+      "url": "https://www.benzinga.com/news/26/10/62459303/loop-capital-downgrades-apple-hold-lowers-price-target-330",
+      "ts": 1792489702,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.531
+    },
+    {
+      "title": "Keefe, Bruyette & Woods Maintains Market Perform on Travelers Companies, Raises Price Target to $382",
+      "url": "https://www.benzinga.com/news/26/10/62459146/keefe-bruyette-woods-maintains-market-perform-travelers-companies-raises-price-target-382",
+      "ts": 1792488977,
+      "tickers": [
+        "TRV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.469
+    },
     {
       "title": "Poland’s Competition Office Orders Apple To Change App Tracking Transparency Policy With Neutral Consent Notices, Fair Terms For Polish Developers And Liaison Officer Within Two Months Of Final Decision",
       "url": "https://www.benzinga.com/news/26/10/62458781/poland-s-competition-office-orders-apple-change-app-tracking-transparency-policy-neutral-consent-not",
@@ -674,7 +724,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.474
+      "relevance": 0.473
     },
     {
       "title": "Microsoft Walks Away From AI Data Center Deal, but SemiAnalysis Predicts 50-GW Boom in 2027",
@@ -688,48 +738,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.488
-    },
-    {
-      "title": "BMO Capital Maintains Market Perform on Goldman Sachs Group, Lowers Price Target to $950",
-      "url": "https://www.benzinga.com/news/26/10/62448316/bmo-capital-maintains-market-perform-goldman-sachs-group-lowers-price-target-950",
-      "ts": 1792431919,
-      "tickers": [
-        "GS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.502
-    },
-    {
-      "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62448003/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
-      "ts": 1792431312,
-      "tickers": [
-        "AMZN",
-        "NKE",
-        "MAT",
-        "CCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.363
-    },
-    {
-      "title": "Shares of semiconductor and chip companies are trading higher as the sector rebounds from last week's weakness, with CoreWeave, the bellwether, rising on a Goldman Sachs upgrade. The Philadelphia Semiconductor Index is expected to end its longest losing streak since the 2008 financial crisis.",
-      "url": "https://www.benzinga.com/quote/Q",
-      "ts": 1792420571,
-      "tickers": [
-        "INTC",
-        "AMD",
-        "LRCX",
-        "AMAT"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.469
     }
   ],
   "portfolio_brief": {
