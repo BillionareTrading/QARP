@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-20",
-  "generated_at": "Oct 20, 4:28pm ET",
+  "date": "2026-10-21",
+  "generated_at": "Oct 21, 3:31am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,14 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Oct 20",
-      "what": "EFX earnings",
-      "affects": "EFX",
-      "dir": "two-sided",
-      "why": "Q-results for Equifax — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Oct 21",
       "what": "ABT earnings",
       "affects": "ABT",
@@ -91,6 +83,14 @@
       "dir": "two-sided",
       "why": "Q-results for S&P Global — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Oct 27",
+      "what": "NVS earnings",
+      "affects": "NVS",
+      "dir": "two-sided",
+      "why": "Q-results for Novartis — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
     }
   ],
   "earnings_next": {
@@ -102,7 +102,7 @@
     "AZO": "2026-12-07",
     "ADBE": "2026-12-09",
     "RKLB": "2026-11-09",
-    "ONON": "2026-11-10",
+    "ONON": "2026-11-17",
     "EXE": "2026-10-27",
     "LULU": "2026-12-09",
     "SPGI": "2026-10-27",
@@ -111,7 +111,7 @@
     "AVGO": "2026-12-09",
     "NBIX": "2026-11-02",
     "VRTX": "2026-11-02",
-    "EFX": "2026-10-20"
+    "EFX": "2027-02-02"
   },
   "risk_asof": "2026-07-05",
   "sectors": [
@@ -189,9 +189,9 @@
       "wiim": false
     },
     "AZN": {
-      "title": "AstraZeneca And Amgen's TEZSPIRE Met Co-Primary Endpoints In Phase III EoE Trial",
-      "ts": 1792501581,
-      "url": "https://www.benzinga.com/news/26/10/62465629/astrazeneca-and-amgen-s-tezspire-met-co-primary-endpoints-phase-iii-eoe-trial",
+      "title": "AstraZeneca/Amgen Drug Shows Significant Remission in Eosinophilic Esophagitis Study",
+      "ts": 1792515094,
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62475524/astrazeneca-amgen-drug-shows-significant-remission-in-eosinophilic-esophagitis-study",
       "wiim": false
     }
   },
@@ -204,8 +204,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$272",
-      "price": 259.42,
-      "upside": 4.8,
+      "price": 259.36,
+      "upside": 4.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -218,7 +218,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$102",
-      "price": 93.5,
+      "price": 93.49,
       "upside": 9.1,
       "held": false,
       "uni": true,
@@ -232,8 +232,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$180",
-      "price": 159.38,
-      "upside": 12.9,
+      "price": 159.32,
+      "upside": 13.0,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -246,7 +246,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$275",
-      "price": 259.42,
+      "price": 259.36,
       "upside": 6.0,
       "held": false,
       "uni": true,
@@ -260,8 +260,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$280",
-      "price": 259.42,
-      "upside": 7.9,
+      "price": 259.36,
+      "upside": 8.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -274,7 +274,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$292",
-      "price": 259.42,
+      "price": 259.36,
       "upside": 12.6,
       "held": false,
       "uni": true,
@@ -288,7 +288,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$226",
-      "price": 225.78,
+      "price": 225.71,
       "upside": 0.1,
       "held": false,
       "uni": true,
@@ -302,7 +302,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$98",
-      "price": 93.5,
+      "price": 93.49,
       "upside": 4.8,
       "held": false,
       "uni": true,
@@ -316,8 +316,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$287",
-      "price": 259.42,
-      "upside": 10.6,
+      "price": 259.36,
+      "upside": 10.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -344,7 +344,7 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "price": 159.38,
+      "price": 159.32,
       "upside": 4.2,
       "held": false,
       "uni": true,
@@ -400,7 +400,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 10.6
+      "upside": 10.7
     },
     "CVX": {
       "date": "2026-10-15",
@@ -436,10 +436,96 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$185",
-      "upside": 7.9
+      "upside": 8.0
     }
   },
   "bz_news": [
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62486943/stock-market-will-sp-500-open-up-or-down-today-62",
+      "ts": 1792567044,
+      "tickers": [
+        "SPY",
+        "TSLA",
+        "META",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Dow Surges Over 500 Points As Oil Prices Fall: Investor Sentiment Improves, Greed Index Moves To ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62486787/dow-surges-over-500-points-as-oil-prices-fall-investor-sentiment-improves-greed-index-moves-to-fear-zone",
+      "ts": 1792566007,
+      "tickers": [
+        "MMM",
+        "TSLA",
+        "META",
+        "NOC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.491
+    },
+    {
+      "title": "‘I Watch Something on YouTube Every Day’ but Netflix a ‘Dormant Subscription,’ Says Chamath Palihapitiya Underlining a Financial Lesson",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62486375/chamath-palihapitiya-youtube-netflix-dormant-subscription-financial-lesson",
+      "ts": 1792562955,
+      "tickers": [
+        "NFLX",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.262
+    },
+    {
+      "title": "UK Watchdog Proposes Strategic Market Tag for Microsoft, Puts Excel and Copilot AI Under Competition Scrutiny (UPDATED)",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62427164/uk-watchdog-microsoft-competition-scrutiny",
+      "ts": 1792561191,
+      "tickers": [
+        "MSFT",
+        "AMZN",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.369
+    },
+    {
+      "title": "Meta Pauses Muse AI Sharing After Researchers Say 6,800 Chats Were Exposed ‘Like a Table Of Contents’",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62485859/meta-muse-ai-chat-privacy-flaw",
+      "ts": 1792553835,
+      "tickers": [
+        "META",
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.225
+    },
+    {
+      "title": "Jamie Dimon Once Called Bitcoin a 'Fraud'—Now JP Morgan Projects 10% Annualized Returns",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/10/62482863/jamie-dimon-once-called-bitcoin-a-fraud-now-jp-morgan-projects-10-annualized-returns",
+      "ts": 1792528228,
+      "tickers": [
+        "$BTC",
+        "JPM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.269
+    },
     {
       "title": "After Braze, Could Klaviyo Be Big Tech’s Next Billion-Dollar Bet?",
       "url": "https://www.benzinga.com/m-a/26/10/62481410/klaviyo-stock-braze-acquisition",
@@ -697,89 +783,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.568
-    },
-    {
-      "title": "Qualcomm Plans Global Layoffs Starting November",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62474577/qualcomm-plans-global-layoffs-starting-november",
-      "ts": 1792513674,
-      "tickers": [
-        "QCOM",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.358
-    },
-    {
-      "title": "408x Oversubscribed AI IPO Crashes 32%—Democratic Sweep Prospects Trigger Selling in Data Center Stocks",
-      "url": "https://www.benzinga.com/Opinion/26/10/62474366/408x-oversubscribed-ai-ipo-crashes-32-democratic-sweep-prospects-trigger-selling-in-data-center-stocks",
-      "ts": 1792513271,
-      "tickers": [
-        "SLV",
-        "GLD",
-        "USO",
-        "SPY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.442
-    },
-    {
-      "title": "Live On CNBC, Kevin Simpson Announces Bought More UnitedHealth Group",
-      "url": "https://www.benzinga.com/quote/UNH",
-      "ts": 1792513221,
-      "tickers": [
-        "UNH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.369
-    },
-    {
-      "title": "AMD And Intel Collaborate To Combine x86 CPU Optimization Work For PyTorch In oneDNN, Open-Source Deep Learning Library Governed By Unified Acceleration Foundation",
-      "url": "https://www.benzinga.com/news/26/10/62474006/amd-and-intel-collaborate-combine-x86-cpu-optimization-work-pytorch-onednn-open-source-deep-learning",
-      "ts": 1792512629,
-      "tickers": [
-        "INTC",
-        "AMD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.326
-    },
-    {
-      "title": "Nasdaq Rises Over 100 Points; 3M Earnings Top Views",
-      "url": "https://www.benzinga.com/markets/market-summary/26/10/62473694/nasdaq-rises-over-100-points-3m-earnings-top-views",
-      "ts": 1792512114,
-      "tickers": [
-        "MMM",
-        "BRZE",
-        "MYGN",
-        "HTZ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.4
-    },
-    {
-      "title": "Michael Burry Sees a 2000-Style Rotation Out of the Market's Winners",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62473108/michael-burry-sees-a-2000-style-rotation-out-of-the-markets-winners",
-      "ts": 1792511126,
-      "tickers": [
-        "META",
-        "MSFT",
-        "NVDA",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.411
     }
   ],
   "portfolio_brief": {
@@ -920,22 +923,22 @@
       "name": "AstraZeneca",
       "qarp": "BUY",
       "consensus": {
-        "strongBuy": 13,
-        "buy": 15,
+        "strongBuy": 12,
+        "buy": 16,
         "hold": 6,
-        "sell": 1,
+        "sell": 0,
         "strongSell": 0,
-        "total": 35,
+        "total": 34,
         "bullish": 28,
-        "bearish": 1,
+        "bearish": 0,
         "label": "Strong Buy",
-        "score": 1.14,
-        "period": "2026-09-01"
+        "score": 1.18,
+        "period": "2026-10-01"
       },
       "news": {
-        "title": "AstraZeneca And Amgen's TEZSPIRE Met Co-Primary Endpoints In Phase III EoE Trial",
-        "ts": 1792501581,
-        "url": "https://www.benzinga.com/news/26/10/62465629/astrazeneca-and-amgen-s-tezspire-met-co-primary-endpoints-phase-iii-eoe-trial",
+        "title": "AstraZeneca/Amgen Drug Shows Significant Remission in Eosinophilic Esophagitis Study",
+        "ts": 1792515094,
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62475524/astrazeneca-amgen-drug-shows-significant-remission-in-eosinophilic-esophagitis-study",
         "wiim": false
       },
       "filings": {
@@ -943,7 +946,7 @@
         "periodic": null,
         "insider30d": 1
       },
-      "explain": "35 analysts cover it — 28 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "34 analysts cover it — 28 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "AZO": {
       "name": "AutoZone",
@@ -1214,15 +1217,15 @@
       "consensus": {
         "strongBuy": 6,
         "buy": 10,
-        "hold": 14,
-        "sell": 4,
+        "hold": 16,
+        "sell": 2,
         "strongSell": 0,
         "total": 34,
         "bullish": 16,
-        "bearish": 4,
+        "bearish": 2,
         "label": "Buy",
-        "score": 0.53,
-        "period": "2026-09-01"
+        "score": 0.59,
+        "period": "2026-10-01"
       },
       "news": null,
       "filings": {
@@ -1230,7 +1233,7 @@
         "periodic": null,
         "insider30d": 0
       },
-      "explain": "34 analysts cover it — 16 bullish, 14 hold, 4 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "34 analysts cover it — 16 bullish, 16 hold, 2 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "AVGO": {
       "name": "Broadcom",
