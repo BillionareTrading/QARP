@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-21",
-  "generated_at": "Oct 21, 4:46pm ET",
+  "date": "2026-10-22",
+  "generated_at": "Oct 22, 5:21am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -56,18 +56,10 @@
       "sev": "mild",
       "tag": "EPS outlook trimmed",
       "detail": "FY EPS guide cut on deal financing + a weak flu season; revenue raised. Defensive — a yellow flag, not a red one.",
-      "next": "Oct 21"
+      "next": "Jan 20"
     }
   ],
   "catalysts": [
-    {
-      "when": "Oct 21",
-      "what": "ABT earnings",
-      "affects": "ABT",
-      "dir": "two-sided",
-      "why": "Q-results for Abbott Laboratories — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
     {
       "when": "Oct 27",
       "what": "EXE earnings",
@@ -91,11 +83,19 @@
       "dir": "two-sided",
       "why": "Q-results for Novartis — guidance is the catalyst.",
       "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Oct 28",
+      "what": "BSX earnings",
+      "affects": "BSX",
+      "dir": "two-sided",
+      "why": "Q-results for Boston Scientific — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
     }
   ],
   "earnings_next": {
     "ZTS": "2026-11-05",
-    "ABT": "2026-10-21",
+    "ABT": "2027-01-20",
     "BSX": "2026-10-28",
     "NVDA": "2026-11-17",
     "AZN": "2026-10-30",
@@ -190,76 +190,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-10-14",
-      "ticker": "JNJ",
-      "firm": "Leerink Partners",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$272",
-      "price": 257.78,
-      "upside": 5.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-10-14",
-      "ticker": "KO",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$102",
-      "price": 92.68,
-      "upside": 10.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-10-14",
-      "ticker": "PG",
-      "firm": "Citigroup",
-      "action": "Maintains",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$180",
-      "price": 156.84,
-      "upside": 14.8,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-10-14",
-      "ticker": "JNJ",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$275",
-      "price": 257.78,
-      "upside": 6.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-10-14",
-      "ticker": "JNJ",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$280",
-      "price": 257.78,
-      "upside": 8.6,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-10-15",
       "ticker": "JNJ",
@@ -519,6 +449,142 @@
   },
   "bz_news": [
     {
+      "title": "Anthropic Could Take Major IPO Step as Soon as Friday: What Investors Need to Know",
+      "url": "https://www.benzinga.com/markets/ipos/26/10/62517881/anthropic-could-take-major-ipo-step-as-soon-as-friday-what-investors-need-to-know",
+      "ts": 1792658450,
+      "tickers": [
+        "AMZN",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.346
+    },
+    {
+      "title": "Nasdaq Surges Over 1% As SpaceX Shares Gain: Investor Sentiment Improves, But Greed Index Remains In ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62517652/nasdaq-surges-over-1-as-spacex-shares-gain-investor-sentiment-improves-but-greed-index-remains-in-fear-zone",
+      "ts": 1792656248,
+      "tickers": [
+        "AAL",
+        "LMT",
+        "PG",
+        "TMO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.428
+    },
+    {
+      "title": "Tesla, Lockheed Martin And 3 Stocks To Watch Heading Into Thursday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62517623/tesla-lockheed-martin-and-3-stocks-to-watch-heading-into-thursday",
+      "ts": 1792656021,
+      "tickers": [
+        "LMT",
+        "TSLA",
+        "META",
+        "AAL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.424
+    },
+    {
+      "title": "IBM CEO Says Open AI Models Are 90% as Good as Frontier Models: ‘Why Pay 10x More?’",
+      "url": "https://www.benzinga.com/markets/earnings/26/10/62517559/ibm-ceo-says-open-ai-models-are-90-as-good-as-frontier-models-why-pay-10x-more",
+      "ts": 1792655662,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.353
+    },
+    {
+      "title": "Top Wall Street Forecasters Revamp Honeywell Expectations Ahead Of Q3 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62517234/top-wall-street-forecasters-revamp-honeywell-expectations-ahead-of-q3-earnings",
+      "ts": 1792653726,
+      "tickers": [
+        "HON"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.504
+    },
+    {
+      "title": "Procter & Gamble Gears Up For Q1 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62517223/procter-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts",
+      "ts": 1792653704,
+      "tickers": [
+        "PG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.461
+    },
+    {
+      "title": "Reported Earlier, Australian Court Orders Apple To Allow Alternative App Distribution, Payments For Australian Users From March 1, 2027; Rejects Epic’s Global Relief",
+      "url": "https://www.benzinga.com/quote/EWA",
+      "ts": 1792650072,
+      "tickers": [
+        "AAPL",
+        "EWA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.263
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62516693/stock-market-will-sp-500-open-up-or-down-today-63",
+      "ts": 1792649339,
+      "tickers": [
+        "SPY",
+        "TSLA",
+        "LMT",
+        "SPOT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Meta, IBM, Texas Instruments, LAM Research and Tesla: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62515722/meta-ibm-texas-instruments-lam-research-and-tesla-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1792631864,
+      "tickers": [
+        "META",
+        "TSLA",
+        "IBM",
+        "LRCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.448
+    },
+    {
+      "title": "Here’s How Much You Would Have Made Owning Visa Stock In The Last 15 Years",
+      "url": "https://www.benzinga.com/news/26/10/62515305/here-s-how-much-you-would-have-made-owning-visa-stock-last-15-years",
+      "ts": 1792624520,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.366
+    },
+    {
       "title": "IBM Stock Jumps After Q3 Results Top Expectations",
       "url": "https://www.benzinga.com/markets/earnings/26/10/62512362/ibm-stock-jumps-after-q3-results-top-expectations",
       "ts": 1792614667,
@@ -699,155 +765,19 @@
       "relevance": 0.478
     },
     {
-      "title": "What's Driving Zscaler Stock Higher Wednesday?",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62505913/whats-driving-zscaler-stock-higher-wednesday",
-      "ts": 1792604253,
+      "title": "Eric Schmidt Wrote a Check to Anthropic Before the AI Boom: Here’s How Big the Payoff Could Get (UPDATED)",
+      "url": "https://www.benzinga.com/markets/ipos/26/10/62457427/former-google-ceo-eric-schmidt-reportedly-owns-1-percent-anthropic",
+      "ts": 1792470827,
       "tickers": [
-        "ZS",
-        "NVDA",
-        "IHAK",
-        "BUG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.424
-    },
-    {
-      "title": "9 Consumer Discretionary Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62505789/9-consumer-discretionary-stocks-whale-activity-today-s-session",
-      "ts": 1792604115,
-      "tickers": [
-        "TSLA",
-        "AMZN",
-        "STLA",
-        "FUN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.385
-    },
-    {
-      "title": "10 Industrials Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62505788/10-industrials-stocks-whale-activity-today-s-session",
-      "ts": 1792604114,
-      "tickers": [
-        "KTOS",
-        "RKLB",
-        "UPS",
-        "GEV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.416
-    },
-    {
-      "title": "10 Information Technology Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62505787/10-information-technology-stocks-whale-alerts-today-s-session",
-      "ts": 1792604114,
-      "tickers": [
-        "AAPL",
-        "MSTR",
-        "INTC",
-        "ORCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.375
-    },
-    {
-      "title": "SpaceX Jumps 10%, Nasdaq 100 Rises as AI Trade Returns: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62504696/spacex-jumps-nasdaq-100-ai-trade-netflix-att-stock-market-today",
-      "ts": 1792602139,
-      "tickers": [
-        "SPCX",
-        "TSLA",
-        "$BTC",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.456
-    },
-    {
-      "title": "DA Davidson Maintains Neutral on Salesforce, Raises Price Target to $250",
-      "url": "https://www.benzinga.com/news/26/10/62502847/da-davidson-maintains-neutral-salesforce-raises-price-target-250",
-      "ts": 1792599144,
-      "tickers": [
-        "CRM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.499
-    },
-    {
-      "title": "3M Analysts Boost Their Forecasts Following Strong Q3 Earnings",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62502617/3m-analysts-boost-their-forecasts-following-strong-q3-earnings",
-      "ts": 1792598934,
-      "tickers": [
-        "MMM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.498
-    },
-    {
-      "title": "Alaska Air Exec Says Expect Deliveries Of 22 737 Max 10 Jets Next Year",
-      "url": "https://www.benzinga.com/news/26/10/62502397/alaska-air-exec-says-expect-deliveries-of-22-737-max-10-jets-next-year",
-      "ts": 1792598520,
-      "tickers": [
-        "ALK",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.226
-    },
-    {
-      "title": "Bernstein Maintains Market Perform on 3M, Raises Price Target to $197",
-      "url": "https://www.benzinga.com/news/26/10/62502334/bernstein-maintains-market-perform-3m-raises-price-target-197",
-      "ts": 1792598446,
-      "tickers": [
-        "MMM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.477
-    },
-    {
-      "title": "'JPMorgan’s Turkey Securities Unit Plans to Cease Operations' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/10/62501996/jpmorgan-s-turkey-securities-unit-plans-cease-operations-bloomberg",
-      "ts": 1792597965,
-      "tickers": [
-        "JPM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.318
-    },
-    {
-      "title": "Trump to Tout Crypto Scam Crackdown at White House Event Wednesday",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/10/62501746/trump-to-tout-crypto-scam-crackdown-at-white-house-event-wednesday",
-      "ts": 1792597490,
-      "tickers": [
-        "COIN",
-        "META",
         "GOOGL",
+        "AMZN",
+        "GOOG",
         "MSFT"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": false,
-      "relevance": 0.235
+      "rel": true,
+      "relevance": 0.292
     }
   ],
   "portfolio_brief": {
@@ -909,7 +839,7 @@
         "latest8k": {
           "form": "8-K",
           "date": "2026-10-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026066601/abt-20261021.htm"
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000110465926117587/tm2627971d1_8k.htm"
         },
         "periodic": {
           "form": "10-Q",
