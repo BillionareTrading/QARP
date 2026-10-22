@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "generated_at": "Oct 22, 5:21am ET",
+  "generated_at": "Oct 22, 5:50am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -449,6 +449,36 @@
   },
   "bz_news": [
     {
+      "title": "Stock Market Today: S&P 500, Dow Futures Drop Following Asian Market Sell-off, Middle East Tensions — NFLX, SPCX, SMCI in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62518477/stock-market-today-sp-500-dow-futures-drop-following-asian-market-sell-off-middle-east-tensions-nflx-spcx-smci-in-focus",
+      "ts": 1792662193,
+      "tickers": [
+        "SPY",
+        "TSLA",
+        "$BTC",
+        "META"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.545
+    },
+    {
+      "title": "Axios Reported Morgan Stanley, Bank Of America, JPMorgan, Wells Fargo, Other Major U.S. Banks Race To Block Unauthorized Third-Party AI Agents Accessing Customer Accounts, Some Acting Independently Of User Instructions",
+      "url": "https://www.benzinga.com/news/26/10/62518341/axios-reported-morgan-stanley-bank-america-jpmorgan-wells-fargo-other-major-u-s-banks-race-block-una",
+      "ts": 1792661841,
+      "tickers": [
+        "BAC",
+        "MS",
+        "JPM",
+        "WFC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.325
+    },
+    {
       "title": "Anthropic Could Take Major IPO Step as Soon as Friday: What Investors Need to Know",
       "url": "https://www.benzinga.com/markets/ipos/26/10/62517881/anthropic-could-take-major-ipo-step-as-soon-as-friday-what-investors-need-to-know",
       "ts": 1792658450,
@@ -736,33 +766,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.246
-    },
-    {
-      "title": "Anthropic Has Over $600 Billion in Compute Contracts — And It's Not Enough",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62508469/anthropic-has-over-600-billion-in-compute-contracts-and-its-not-enough",
-      "ts": 1792608925,
-      "tickers": [
-        "AMZN",
-        "GOOGL",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.373
-    },
-    {
-      "title": "Citigroup Maintains Neutral on 3M, Raises Price Target to $188",
-      "url": "https://www.benzinga.com/news/26/10/62507274/citigroup-maintains-neutral-3m-raises-price-target-188",
-      "ts": 1792606678,
-      "tickers": [
-        "MMM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.478
     },
     {
       "title": "Eric Schmidt Wrote a Check to Anthropic Before the AI Boom: Here’s How Big the Payoff Could Get (UPDATED)",
