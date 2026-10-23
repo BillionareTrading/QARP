@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-22",
-  "generated_at": "Oct 22, 4:46pm ET",
+  "date": "2026-10-23",
+  "generated_at": "Oct 23, 5:21am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -184,34 +184,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-10-15",
-      "ticker": "JNJ",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$292",
-      "price": 267.61,
-      "upside": 9.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-10-15",
-      "ticker": "CVX",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$226",
-      "price": 226.68,
-      "upside": -0.3,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-10-16",
       "ticker": "KO",
@@ -508,6 +480,160 @@
   },
   "bz_news": [
     {
+      "title": "OpenAI Signs Agreement With Poland’s NASK To Explore Collaboration On AI Safety, Security And Technical Research, Strengthening Safeguards Against Emerging Risks",
+      "url": "https://www.benzinga.com/quote/MSFT",
+      "ts": 1792739499,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.291
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62551350/stock-market-will-sp-500-open-up-or-down-today-64",
+      "ts": 1792737368,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "AXP",
+        "DIA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "American Express Gears Up For Q3 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62551069/american-express-gears-up-for-q3-print-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts-2",
+      "ts": 1792735746,
+      "tickers": [
+        "AXP"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.477
+    },
+    {
+      "title": "SLB, American Express And 3 Stocks To Watch Heading Into Friday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62550985/slb-american-express-and-3-stocks-to-watch-heading-into-friday-2",
+      "ts": 1792735192,
+      "tickers": [
+        "SLB",
+        "AXP",
+        "RHI",
+        "BAH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.421
+    },
+    {
+      "title": "Nasdaq Records Worst Session Since June: Investor Sentiment Weakens, Greed Index Moves To ‘Extreme Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62550969/nasdaq-records-worst-session-since-june-investor-sentiment-weakens-greed-index-moves-to-extreme-fear-zone",
+      "ts": 1792734846,
+      "tickers": [
+        "META",
+        "TSLA",
+        "AMD",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.462
+    },
+    {
+      "title": "Crown Castle Stock Jumps as SpaceX Eyes 80,000 Cell Sites for Wireless Network: ‘We’re Talking to All Parties’",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62550649/crown-castle-shares-surge-spacex-cell-site-talks",
+      "ts": 1792729565,
+      "tickers": [
+        "CCI",
+        "AMZN",
+        "TMUS",
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.324
+    },
+    {
+      "title": "American Express, Eni On Deck Friday As Spending, Energy Demand Face Test",
+      "url": "https://www.benzinga.com/news/26/10/62550616/american-express-eni-on-deck-friday-as-spending-energy-demand-face-test",
+      "ts": 1792728746,
+      "tickers": [
+        "AXP",
+        "E",
+        "SLB",
+        "INFY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.405
+    },
+    {
+      "title": "Verizon Stock Sinks After Hours as SpaceX Eyes 80,000 US Cell Sites for Fourth Wireless Carrier Push",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62550435/verizon-shares-after-hours-spacex-cell",
+      "ts": 1792724074,
+      "tickers": [
+        "VZ",
+        "TMUS",
+        "T",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.415
+    },
+    {
+      "title": "AI Sell-Off Spreads to Industrials: Caterpillar, GE Vernova, Vertiv Trapped in Bear Market",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62548779/ai-sell-off-spreads-to-industrials-caterpillar-ge-vernova-vertiv-trapped-in-bear-market",
+      "ts": 1792704464,
+      "tickers": [
+        "CAT",
+        "VRT",
+        "GEV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.417
+    },
+    {
+      "title": "The Federal Communications Commission Said On Thursday It Has Granted A Waiver To Intel From Its Ban On Some Foreign-Made Advanced Robotics; FCC Said It Would Grant A One-Year Waiver Of Its Rules In Order To Prevent \"Potential Disruptions In The Availability Of Domestic Semiconductor Manufacturing Services For Intel’s Customers.\"",
+      "url": "https://www.benzinga.com/news/26/10/62548308/federal-communications-commission-said-thursday-it-has-granted-waiver-intel-its-ban-some-foreign-mad",
+      "ts": 1792703025,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.399
+    },
+    {
+      "title": "Coca-Cola To Retain WPP Open X As Its Media Partner Globally, With Exception Of North America, Japan And South Korea; Coca-Cola Selects Omnicom As Media Partner In North America",
+      "url": "https://www.benzinga.com/news/26/10/62548021/coca-cola-retain-wpp-open-x-its-media-partner-globally-exception-north-america-japan-and-south-korea",
+      "ts": 1792702090,
+      "tickers": [
+        "KO",
+        "WPP",
+        "OMC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.266
+    },
+    {
       "title": "Jefferies Maintains Buy on IBM, Raises Price Target to $280",
       "url": "https://www.benzinga.com/news/26/10/62547139/jefferies-maintains-buy-ibm-raises-price-target-280",
       "ts": 1792701002,
@@ -691,160 +817,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.316
-    },
-    {
-      "title": "Why Is Moderna Stock Sinking Thursday?",
-      "url": "https://www.benzinga.com/markets/biotech/26/10/62542283/why-is-moderna-stock-sinking-thursday",
-      "ts": 1792694856,
-      "tickers": [
-        "MRNA",
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.387
-    },
-    {
-      "title": "Shares of semiconductor and chip companies are trading lower amid concerns that mounting AI infrastructure costs could slow future spending and weigh on chip demand. Nvidia CEO Jensen Huang highlighted a scarcity of capital to fund AI expansion, raising concerns that companies could scale back chip purchases, while Lam Research warned that supply chain constraints could delay equipment shipments until March, potentially limiting chipmakers' ability to increase production.",
-      "url": "https://www.benzinga.com/quote/COHU",
-      "ts": 1792694814,
-      "tickers": [
-        "QCOM",
-        "MCHP",
-        "AVGO",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.629
-    },
-    {
-      "title": "Shares of enterprise software companies are trading higher as investors rotate out of highly leveraged AI-exposed stocks and into established technology services companies. Also, SAP and IBM reported better-than-expected Q3 financial results, supporting sentiment toward the sector.",
-      "url": "https://www.benzinga.com/quote/ACN",
-      "ts": 1792694219,
-      "tickers": [
-        "SAGT",
-        "ZSQR",
-        "ROP",
-        "BL"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.417
-    },
-    {
-      "title": "These Analysts Boost Their Forecasts On IBM Following Upbeat Q3 Results",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62541796/these-analysts-boost-their-forecasts-on-ibm-following-upbeat-q3-results",
-      "ts": 1792694032,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.476
-    },
-    {
-      "title": "PepsiCo Strikes Back After KFC Loss, Locks In Taco Bell Beverage Deal Through 2036",
-      "url": "https://www.benzinga.com/news/restaurants/26/10/62541775/pepsico-strikes-back-after-kfc-loss-locks-in-taco-bell-beverage-deal-through-2036",
-      "ts": 1792694004,
-      "tickers": [
-        "PEP",
-        "YUM",
-        "MCD",
-        "KO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.29
-    },
-    {
-      "title": "'Salesforce Customers Brace For New Fees to Use Claude in Its Apps' - The Information",
-      "url": "https://www.benzinga.com/news/26/10/62541117/salesforce-customers-brace-new-fees-use-claude-its-apps-information",
-      "ts": 1792692893,
-      "tickers": [
-        "CRM",
-        "AMZN",
-        "GOOG",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.304
-    },
-    {
-      "title": "Guggenheim Reiterates Buy on Nike, Maintains $50 Price Target",
-      "url": "https://www.benzinga.com/news/26/10/62540918/guggenheim-reiterates-buy-nike-maintains-50-price-target",
-      "ts": 1792692637,
-      "tickers": [
-        "NKE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.405
-    },
-    {
-      "title": "'Intel Plus Elon' Could Pose Bigger Threat to TSMC Than Musk Alone, Chip Analyst Says",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62539826/intel-elon-terafab-tsmc-threat",
-      "ts": 1792690982,
-      "tickers": [
-        "TSLA",
-        "TSM",
-        "INTC",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.417
-    },
-    {
-      "title": "Morgan Stanley Maintains Equal-Weight on IBM, Raises Price Target to $240",
-      "url": "https://www.benzinga.com/news/26/10/62539420/morgan-stanley-maintains-equal-weight-ibm-raises-price-target-240",
-      "ts": 1792690529,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.481
-    },
-    {
-      "title": "10 Industrials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62539413/10-industrials-stocks-whale-alerts-today-s-session",
-      "ts": 1792690512,
-      "tickers": [
-        "JBLU",
-        "UAL",
-        "WCN",
-        "PH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.398
-    },
-    {
-      "title": "10 Consumer Discretionary Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62539412/10-consumer-discretionary-stocks-whale-activity-today-s-session",
-      "ts": 1792690512,
-      "tickers": [
-        "AMZN",
-        "TSLA",
-        "SGHC",
-        "RH"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.387
     }
   ],
   "portfolio_brief": {
@@ -1001,7 +973,7 @@
           "date": "2026-08-26",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
         },
-        "insider30d": 3
+        "insider30d": 2
       },
       "explain": "69 analysts cover it — 66 bullish, 2 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
