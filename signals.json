@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-23",
-  "generated_at": "Oct 23, 4:46pm ET",
+  "date": "2026-10-24",
+  "generated_at": "Oct 24, 6:54am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Oct 23",
+      "when": "Oct 24",
       "what": "Energy & geopolitics — today's read",
       "why": "As oil prices rise amid growing expectations that the U.S. could resume strikes on Iran in the coming weeks. Reports of U.S. and Israeli plans for renewed strikes following next month’s midterm elections, coupled with Iran’s military warning that it is prepared for “asymmetric warfare,” are fueling concerns over prolonged supply disruptions and potentially sustaining higher energy prices, which could benefit the sector.",
       "affects": "Energy · growth",
@@ -186,34 +186,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-10-16",
-      "ticker": "KO",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$98",
-      "price": 92.71,
-      "upside": 5.7,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-10-16",
-      "ticker": "JNJ",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$287",
-      "price": 263.81,
-      "upside": 8.8,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-10-20",
       "ticker": "AAPL",
@@ -622,6 +594,43 @@
   },
   "bz_news": [
     {
+      "title": "Apple’s iPhone Duo Launch Lines Surprise Gene Munster, Who Sees 20 Million Units and $8 Billion Revenue Boost; Tim Cook Says, ‘Welcome to the World’",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62577354/apple-duo-iphone-sales-revenue",
+      "ts": 1792826915,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.307
+    },
+    {
+      "title": "Here’s How Much You Would Have Made Owning Apple Stock In The Last 15 Years",
+      "url": "https://www.benzinga.com/news/26/10/62576407/here-s-how-much-you-would-have-made-owning-apple-stock-last-15-years",
+      "ts": 1792791014,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.287
+    },
+    {
+      "title": "Allegiant Travel Says Allegiant Air Exercises Six Boeing 737-8 Options Under 2021 Purchase Agreement;  Six Boeing 737-8 Aircraft Scheduled For Delivery In 2028;  List Price Of Six Aircraft Totals Over $720M, Subject To Discounts And Escalations",
+      "url": "https://www.benzinga.com/news/26/10/62575750/allegiant-travel-says-allegiant-air-exercises-six-boeing-737-8-options-under-2021-purchase-agreement",
+      "ts": 1792788804,
+      "tickers": [
+        "ALGT",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.277
+    },
+    {
       "title": "Reported October 22, 2026: CTIA Sends Letter To FCC To Exclude 2.5 GHz And 3.45 GHz Bands From Satellite-To-Device Rules, Protect Terrestrial 5G Networks And Spectrum Rights",
       "url": "https://www.benzinga.com/economics/macro-economic-events/26/10/62574751/reported-october-22-2026-ctia-sends-letter-fcc-exclude-2-5-ghz-and-3-45-ghz-bands-satellite-device-r",
       "ts": 1792786334,
@@ -799,7 +808,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.216
+      "relevance": 0.217
     },
     {
       "title": "BNP Paribas Maintains Outperform on Procter & Gamble, Raises Price Target to $189",
@@ -894,48 +903,6 @@
       "wiim": false,
       "rel": false,
       "relevance": 0.48
-    },
-    {
-      "title": "Oil Tops $100 on Iran Fears, Energy ETF XLE Hits New Record: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62568689/oil-tops-100-iran-energy-etf-record-stock-market-today",
-      "ts": 1792775748,
-      "tickers": [
-        "XLE",
-        "$BTC",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.382
-    },
-    {
-      "title": "Chevron Stock Moves Higher: What's Going On?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62568618/chevron-stock-moves-higher-whats-going-on",
-      "ts": 1792775643,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.397
-    },
-    {
-      "title": "S&P 500 Near Record Highs, But 60% of Stocks Are in a Bear Market. Is SPY Hiding a Bigger Problem?",
-      "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/10/62568378/sp500-near-record-highs-but-60-of-stocks-are-in-a-bear-market-is-spy-hiding-a-bigger-problem",
-      "ts": 1792775210,
-      "tickers": [
-        "SPY",
-        "AAPL",
-        "MSFT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.461
     }
   ],
   "portfolio_brief": {
@@ -1092,7 +1059,7 @@
           "date": "2026-08-26",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
         },
-        "insider30d": 2
+        "insider30d": 1
       },
       "explain": "69 analysts cover it — 66 bullish, 2 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
@@ -1217,7 +1184,7 @@
       "filings": {
         "latest8k": null,
         "periodic": null,
-        "insider30d": 8
+        "insider30d": 3
       },
       "explain": "38 analysts cover it — 31 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
