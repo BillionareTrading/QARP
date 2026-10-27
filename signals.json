@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "Oct 27, 5:23am ET",
+  "generated_at": "Oct 27, 5:50am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -179,9 +179,9 @@
       "wiim": true
     },
     "NVS": {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "ts": 1793081077,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62609196/stock-market-will-sp-500-open-up-or-down-today-66",
+      "title": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as Fed Begins Its Two-Day Meet — NVS, HSBC, WELL in Focus",
+      "ts": 1793093624,
+      "url": "https://www.benzinga.com/markets/equities/26/10/62610784/stock-market-today-dow-jones-sp-500-futures-trade-mixed-as-fed-begins-its-two-day-meet-nvs-hsbc-well-in-focus",
       "wiim": false
     },
     "SPGI": {
@@ -697,6 +697,34 @@
   },
   "bz_news": [
     {
+      "title": "'I No Longer Believe That': Satya Nadella Says He Was Wrong About AI Alignment — Microsoft CEO Warns Keeping Future AI Systems Safe May Be a ‘Harder, Different Problem’",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62610933/i-no-longer-believe-that-satya-nadella-says-he-was-wrong-about-ai-alignment-microsoft-ceo-warns-keeping-future-ai-systems-safe-may-be-a-harder-different-problem",
+      "ts": 1793094311,
+      "tickers": [
+        "MSFT",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.306
+    },
+    {
+      "title": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as Fed Begins Its Two-Day Meet — NVS, HSBC, WELL in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62610784/stock-market-today-dow-jones-sp-500-futures-trade-mixed-as-fed-begins-its-two-day-meet-nvs-hsbc-well-in-focus",
+      "ts": 1793093624,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "QQQ",
+        "HSBC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.493
+    },
+    {
       "title": "'We're Trading Them Like Baseball Cards': Mark Cuban Warns ‘Everything’s a Meme Stock’ as AAPL, GOOGL and MU Fuel Market Bubble Fears",
       "url": "https://www.benzinga.com/markets/equities/26/10/62610386/mark-cuban-warns-everything-meme-stock-aapl-googl-mu-ai-bubble-baseball-cards",
       "ts": 1793090694,
@@ -930,7 +958,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.319
+      "relevance": 0.318
     },
     {
       "title": "Visa, Coca-Cola On Deck Tuesday As Payments Growth, Global Demand Face Test",
@@ -999,35 +1027,6 @@
       "relevance": 0.286
     },
     {
-      "title": "Shares of server-related companies are trading higher in response to Anthropic's IPO Form S-1 filing, which indicates a need for hardware growth.",
-      "url": "https://www.benzinga.com/quote/DELL",
-      "ts": 1793039826,
-      "tickers": [
-        "HPE",
-        "CSCO",
-        "DELL"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.425
-    },
-    {
-      "title": "Visa Analyst Sees AI Agents Strengthening its Digital Payments Business",
-      "url": "https://www.benzinga.com/markets/large-cap/26/10/62601038/visa-analyst-sees-ai-agents-strengthening-its-digital-payments-business",
-      "ts": 1793039446,
-      "tickers": [
-        "V",
-        "XLF",
-        "VFH",
-        "KYC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.401
-    },
-    {
       "title": "Neoclouds Face Guppy-Level Death; 36% Of S&P 500 Earnings This Week; Brazil Stocks Plunge On Election Outcome",
       "url": "https://www.benzinga.com/opinion/26/10/62598577/neoclouds-face-guppy-level-death-36-of-sp500-earnings-this-week-brazil-stocks-plunge-on-election-outcome",
       "ts": 1793035022,
@@ -1040,7 +1039,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.409
+      "relevance": 0.41
     }
   ],
   "portfolio_brief": {
@@ -1491,9 +1490,9 @@
         "period": "2026-10-01"
       },
       "news": {
-        "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-        "ts": 1793081077,
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62609196/stock-market-will-sp-500-open-up-or-down-today-66",
+        "title": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as Fed Begins Its Two-Day Meet — NVS, HSBC, WELL in Focus",
+        "ts": 1793093624,
+        "url": "https://www.benzinga.com/markets/equities/26/10/62610784/stock-market-today-dow-jones-sp-500-futures-trade-mixed-as-fed-begins-its-two-day-meet-nvs-hsbc-well-in-focus",
         "wiim": false
       },
       "filings": {
