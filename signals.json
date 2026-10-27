@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-26",
-  "generated_at": "Oct 26, 4:45pm ET",
+  "date": "2026-10-27",
+  "generated_at": "Oct 27, 5:23am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -34,7 +34,7 @@
       "sev": "watch",
       "tag": "Export controls + AI-capex doubt",
       "detail": "China export-license tightening + Senate scrutiny; the memory/chip complex swings on AI-spending sentiment.",
-      "next": "Nov 17"
+      "next": "Nov 25"
     },
     {
       "ticker": "NOW",
@@ -93,7 +93,7 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Oct 26",
+      "when": "Oct 27",
       "what": "Energy & geopolitics — today's read",
       "why": "As oil prices rise amid growing expectations that the U.S. could resume strikes on Iran in the coming weeks. Reports of U.S. and Israeli plans for renewed strikes following next month’s midterm elections, coupled with Iran’s military warning that it is prepared for “asymmetric warfare,” are fueling concerns over prolonged supply disruptions and potentially sustaining higher energy prices, which could benefit the sector.",
       "affects": "Energy · growth",
@@ -105,7 +105,7 @@
     "ZTS": "2026-11-05",
     "ABT": "2027-01-20",
     "BSX": "2026-10-28",
-    "NVDA": "2026-11-17",
+    "NVDA": "2026-11-25",
     "AZN": "2026-10-30",
     "AZO": "2026-12-07",
     "RKLB": "2026-11-09",
@@ -179,15 +179,15 @@
       "wiim": true
     },
     "NVS": {
-      "title": "Visa, Coca-Cola On Deck Tuesday As Payments Growth, Global Demand Face Test",
-      "ts": 1793043024,
-      "url": "https://www.benzinga.com/news/26/10/62602650/visa-coca-cola-on-deck-tuesday-as-payments-growth-global-demand-face-test",
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "ts": 1793081077,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62609196/stock-market-will-sp-500-open-up-or-down-today-66",
       "wiim": false
     },
     "SPGI": {
-      "title": "Visa, Coca-Cola On Deck Tuesday As Payments Growth, Global Demand Face Test",
-      "ts": 1793043024,
-      "url": "https://www.benzinga.com/news/26/10/62602650/visa-coca-cola-on-deck-tuesday-as-payments-growth-global-demand-face-test",
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "ts": 1793081077,
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62609196/stock-market-will-sp-500-open-up-or-down-today-66",
       "wiim": false
     },
     "EXE": {
@@ -697,6 +697,201 @@
   },
   "bz_news": [
     {
+      "title": "'We're Trading Them Like Baseball Cards': Mark Cuban Warns ‘Everything’s a Meme Stock’ as AAPL, GOOGL and MU Fuel Market Bubble Fears",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62610386/mark-cuban-warns-everything-meme-stock-aapl-googl-mu-ai-bubble-baseball-cards",
+      "ts": 1793090694,
+      "tickers": [
+        "AAPL",
+        "$BTC",
+        "AMZN",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.352
+    },
+    {
+      "title": "Elizabeth Warren Sees 2008-Style Warning Signs in AI Boom — ‘Trump’s Regulators Are Choosing to Look the Other Way’",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62610077/elizabeth-warren-warns-ai-bubble",
+      "ts": 1793088210,
+      "tickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.341
+    },
+    {
+      "title": "Anthropic’s IPO Filing Reveals Over $500 Billion AI Compute Spending Across AMZN, GOOGL, MSFT, AVGO and SPCX: Top Analyst Says It Has ‘Barely Started’",
+      "url": "https://www.benzinga.com/markets/ipos/26/10/62609946/anthropics-ipo-filing-reveals-over-500-billion-ai-compute-spending-across-amzn-googl-msft-avgo-and-spcx-top-analyst-says-it-has-barely-started",
+      "ts": 1793087281,
+      "tickers": [
+        "GOOGL",
+        "AMZN",
+        "MSFT",
+        "AVGO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.471
+    },
+    {
+      "title": "Disney And Channel 4 Announce Agreement To Offer Linear Channel, On-Demand Catalogue And Day-And-Date Shows On Disney+ In UK And Ireland From Early 2027 At No Extra Cost",
+      "url": "https://www.benzinga.com/news/26/10/62609475/disney-and-channel-4-announce-agreement-offer-linear-channel-demand-catalogue-and-day-and-date-shows",
+      "ts": 1793084257,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.231
+    },
+    {
+      "title": "Chevron Inks Long-Term Gas Supply Deal With South32 For 55 Petajoules Over Five Years From 2028, Following Horizon Power, Alinta Energy Deals",
+      "url": "https://www.benzinga.com/quote/CVX",
+      "ts": 1793084019,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.293
+    },
+    {
+      "title": "Nasdaq Gains Over 200 Points As Chip Stocks Rise: Investor Sentiment Improves, Fear & Greed Index Moves to ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62609312/nasdaq-gains-over-200-points-as-chip-stocks-rise-investor-sentiment-improves-fear-greed-index-moves-to-fear-zone",
+      "ts": 1793081994,
+      "tickers": [
+        "JNJ",
+        "KO",
+        "BA",
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.489
+    },
+    {
+      "title": "Coca-Cola, Boeing and 3 Stocks to Watch Heading Into Tuesday",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62609300/coca-cola-boeing-and-3-stocks-to-watch-heading-into-tuesday",
+      "ts": 1793081808,
+      "tickers": [
+        "KO",
+        "BA",
+        "JNJ",
+        "CLS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.345
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62609196/stock-market-will-sp-500-open-up-or-down-today-66",
+      "ts": 1793081077,
+      "tickers": [
+        "SPY",
+        "KO",
+        "BA",
+        "QQQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Trump's Oil Holdings Could Top $81 Million, New Report Says — Gavin Newsom Says President Swore ‘Oath’ to Big Oil",
+      "url": "https://www.benzinga.com/news/politics/26/10/62609122/trumps-oil-investments-top-81-million-new-report-says-gavin-newsom-warns-president-swore-oath-to-big-oil-stocks-have-gone-up-43",
+      "ts": 1793080781,
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.202
+    },
+    {
+      "title": "IBM Unveils Verified Identities, Least-Privilege Access And Real-Time Revocation For AI Agents Through HashiCorp Vault And Watsonx Orchestrate At TechXchange 2026",
+      "url": "https://www.benzinga.com/news/26/10/62609013/ibm-unveils-verified-identities-least-privilege-access-and-real-time-revocation-ai-agents-through-ha",
+      "ts": 1793079502,
+      "tickers": [
+        "IBM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.315
+    },
+    {
+      "title": "Verizon CEO Open to Working With Elon Musk's Starlink, But There’s One Deal He Won’t Touch: ‘No Benefit Whatsoever’",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62608967/verizon-starlink-spacex-mvno",
+      "ts": 1793079314,
+      "tickers": [
+        "VZ",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.321
+    },
+    {
+      "title": "‘Aware of an Issue’: Apple Offers Replacements for iPhone Duo Display Defects After Users Report Cracks Near Hinge",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62608801/apple-iphone-duo-display-defects-hinge-cracks-replacements",
+      "ts": 1793074347,
+      "tickers": [
+        "AAPL",
+        "SSNFL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.224
+    },
+    {
+      "title": "Chuck Schumer Says Americans Paid ‘Billions More for Gas’ as Trump Profited From Oil Stocks; White House Insists Low Prices Are ‘Priority’",
+      "url": "https://www.benzinga.com/markets/economic-data/26/10/62608535/schumer-trump-oil-stocks-gas-prices-obscene-hold-trump-accountable",
+      "ts": 1793067180,
+      "tickers": [
+        "USO",
+        "XOM",
+        "CVX",
+        "OXY"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.198
+    },
+    {
+      "title": "Tesla, Celestica, Nu Holdings, XP Inc. and Microsoft: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62608353/tesla-celestica-nu-holdings-xp-inc-and-microsoft-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1793063351,
+      "tickers": [
+        "CLS",
+        "TSLA",
+        "MSFT",
+        "NU"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.455
+    },
+    {
       "title": "'Intel to Buy Israeli Startup Classiq in Quantum Computing Push' - Bloomberg Exclusive",
       "url": "https://www.benzinga.com/m/26/10/62605180/intel-buy-israeli-startup-classiq-quantum-computing-push-bloomberg-exclusive",
       "ts": 1793046317,
@@ -735,7 +930,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.318
+      "relevance": 0.319
     },
     {
       "title": "Visa, Coca-Cola On Deck Tuesday As Payments Growth, Global Demand Face Test",
@@ -789,7 +984,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.481
+      "relevance": 0.48
     },
     {
       "title": "Siri AI Is Available In More Languages Starting Today; Expanding To More People Around World, With Availability In French, Japanese, Korean, Portuguese, And Spanish Languages; Siri AI Currently Unavailable In EU; Working With EU On Path Forward",
@@ -833,165 +1028,6 @@
       "relevance": 0.401
     },
     {
-      "title": "Boeing Q3 Preview: Stock Down 26% From 52-Week Highs, Could Strong Backlog Kickstart Another Rally?",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/10/62601007/boeing-q3-preview-stock-down-26-from-52-week-highs-could-strong-backlog-kickstart-another-rally",
-      "ts": 1793039394,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.383
-    },
-    {
-      "title": "OpenAI Rolls Out GPT-6.1 Terra To All Plus, Pro, Enterprise, And Edu Users In ChatGPT Work, Codex",
-      "url": "https://www.benzinga.com/news/26/10/62600498/openai-rolls-out-gpt-6-1-terra-all-plus-pro-enterprise-and-edu-users-chatgpt-work-codex",
-      "ts": 1793038300,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.201
-    },
-    {
-      "title": "Michael Burry Eyes the Exit on Walmart, Alphabet and Valero",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62600475/michael-burry-eyes-the-exit-on-walmart-alphabet-and-valero",
-      "ts": 1793038247,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "WMT",
-        "LULU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.373
-    },
-    {
-      "title": "'Stripe’s AI Shopping Lead Puts Card Giants On Edge; Stripe Is Emerging As A Powerful Middleman In AI Shopping, Raising Concerns At Visa And MasterCard. Its Virtual Card Technology Could Give Stripe Greater Control Over Payments And More Insight Into Consumers’ Purchases.' - The Information",
-      "url": "https://www.benzinga.com/news/26/10/62600252/stripe-s-ai-shopping-lead-puts-card-giants-edge-stripe-emerging-powerful-middleman-ai-shopping-raisi",
-      "ts": 1793037822,
-      "tickers": [
-        "V",
-        "MA",
-        "AXP",
-        "COF"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.37
-    },
-    {
-      "title": "Microsoft’s Copilot, Azure Demand Signals Stronger AI Monetization: Analyst",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62600012/microsofts-copilot-azure-demand-signals-stronger-ai-monetization-analyst",
-      "ts": 1793037536,
-      "tickers": [
-        "MSFT",
-        "AMZN",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.498
-    },
-    {
-      "title": "Oppenheimer Maintains Outperform on Microsoft, Raises Price Target to $625",
-      "url": "https://www.benzinga.com/news/26/10/62599445/oppenheimer-maintains-outperform-microsoft-raises-price-target-625",
-      "ts": 1793036727,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.442
-    },
-    {
-      "title": "AmEx CEO Says AI Could Make Credit Card Rewards Easier to Game",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62599370/amex-ai-credit-card-rewards",
-      "ts": 1793036571,
-      "tickers": [
-        "AXP"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.389
-    },
-    {
-      "title": "9 Industrials Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62599144/9-industrials-stocks-whale-alerts-today-s-session",
-      "ts": 1793036114,
-      "tickers": [
-        "RKLB",
-        "PL",
-        "KRMN",
-        "GEV"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.403
-    },
-    {
-      "title": "10 Information Technology Stocks Whale Activity In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62599141/10-information-technology-stocks-whale-activity-today-s-session",
-      "ts": 1793036113,
-      "tickers": [
-        "MU",
-        "MSFT",
-        "RIOT",
-        "NVDA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.394
-    },
-    {
-      "title": "'Apple Responds to iPhone Duo Display Cracking Reports' - MacRumors",
-      "url": "https://www.benzinga.com/news/26/10/62599061/apple-responds-iphone-duo-display-cracking-reports-macrumors",
-      "ts": 1793036021,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.265
-    },
-    {
-      "title": "Apple’s iPhone Duo Buyers Face a Wait That Could Stretch Into January",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62599048/apples-iphone-duo-buyers-face-a-wait-that-could-stretch-into-january",
-      "ts": 1793035986,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.211
-    },
-    {
-      "title": "Merck Endometrial Cancer Studies Show Significant Survival Gains",
-      "url": "https://www.benzinga.com/news/health-care/26/10/62599012/merck-endometrial-cancer-studies-show-significant-survival-gains",
-      "ts": 1793035933,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.331
-    },
-    {
       "title": "Neoclouds Face Guppy-Level Death; 36% Of S&P 500 Earnings This Week; Brazil Stocks Plunge On Election Outcome",
       "url": "https://www.benzinga.com/opinion/26/10/62598577/neoclouds-face-guppy-level-death-36-of-sp500-earnings-this-week-brazil-stocks-plunge-on-election-outcome",
       "ts": 1793035022,
@@ -1005,36 +1041,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.409
-    },
-    {
-      "title": "Nasdaq 100 Rallies on Chip Rebound; Brazil ETF Sinks 21%: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62598326/nasdaq-100-chip-rebound-brazil-etf-ewz-stock-market-today",
-      "ts": 1793034541,
-      "tickers": [
-        "TSLA",
-        "$BTC",
-        "AAPL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.512
-    },
-    {
-      "title": "Elon Musk Says Happiness Peaks Fast Once You're a Billionaire — 'You Hit That Saturation Point Pretty Fast'",
-      "url": "https://www.benzinga.com/news/space/26/10/62597959/elon-musk-says-happiness-peaks-fast-once-youre-a-billionaire-you-hit-that-saturation-point-pretty-fast",
-      "ts": 1793034028,
-      "tickers": [
-        "TSLA",
-        "MSFT",
-        "SPCX",
-        "BRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.189
     }
   ],
   "portfolio_brief": {
@@ -1416,9 +1422,9 @@
         "period": "2026-10-01"
       },
       "news": {
-        "title": "Visa, Coca-Cola On Deck Tuesday As Payments Growth, Global Demand Face Test",
-        "ts": 1793043024,
-        "url": "https://www.benzinga.com/news/26/10/62602650/visa-coca-cola-on-deck-tuesday-as-payments-growth-global-demand-face-test",
+        "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+        "ts": 1793081077,
+        "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62609196/stock-market-will-sp-500-open-up-or-down-today-66",
         "wiim": false
       },
       "filings": {
@@ -1485,9 +1491,9 @@
         "period": "2026-10-01"
       },
       "news": {
-        "title": "Visa, Coca-Cola On Deck Tuesday As Payments Growth, Global Demand Face Test",
-        "ts": 1793043024,
-        "url": "https://www.benzinga.com/news/26/10/62602650/visa-coca-cola-on-deck-tuesday-as-payments-growth-global-demand-face-test",
+        "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+        "ts": 1793081077,
+        "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62609196/stock-market-will-sp-500-open-up-or-down-today-66",
         "wiim": false
       },
       "filings": {
