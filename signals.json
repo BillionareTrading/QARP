@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "Oct 27, 5:50am ET",
+  "generated_at": "Oct 27, 11:47am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -125,17 +125,17 @@
   "sectors": [
     {
       "sector": "Oil & Gas",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Oil prices rise amid growing expectations that the U.S. could resume str…",
       "note": "As oil prices rise amid growing expectations that the U.S. could resume strikes on Iran in the coming weeks. Reports of U.S. and Israeli plans for renewed strikes following next month’s midterm elections, coupled with Iran’s military warning that it is prepared for “asymmetric warfare,” are fueling concerns over prolonged supply disruptions and potentially sustaining higher energy prices, which could benefit the sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Homebuilders & Housing",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "The 10-year Treasury yield falls below 5% for the first time since Sept.…",
       "note": "As the 10-year Treasury yield falls below 5% for the first time since Sept. 23. Sentiment is also supported by proposed Treasury Department regulations aimed at making homeownership more affordable.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Semiconductor & Chip",
@@ -146,10 +146,10 @@
     },
     {
       "sector": "Enterprise Software",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Investors rotate out of highly leveraged AI-exposed stocks and into esta…",
       "note": "As investors rotate out of highly leveraged AI-exposed stocks and into established technology services companies. Also, SAP and IBM reported better-than-expected Q3 financial results, supporting sentiment toward the sector.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Banks & Financial Services",
@@ -179,33 +179,9 @@
       "wiim": true
     },
     "NVS": {
-      "title": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as Fed Begins Its Two-Day Meet — NVS, HSBC, WELL in Focus",
-      "ts": 1793093624,
+      "title": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 10 Futures Gain as Fed Begins Its Two-Day Meet— Novartis, HSBC, Welltower in Focus (UPDATED)",
+      "ts": 1793105113,
       "url": "https://www.benzinga.com/markets/equities/26/10/62610784/stock-market-today-dow-jones-sp-500-futures-trade-mixed-as-fed-begins-its-two-day-meet-nvs-hsbc-well-in-focus",
-      "wiim": false
-    },
-    "SPGI": {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "ts": 1793081077,
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62609196/stock-market-will-sp-500-open-up-or-down-today-66",
-      "wiim": false
-    },
-    "EXE": {
-      "title": "Visa, Coca-Cola On Deck Tuesday As Payments Growth, Global Demand Face Test",
-      "ts": 1793043024,
-      "url": "https://www.benzinga.com/news/26/10/62602650/visa-coca-cola-on-deck-tuesday-as-payments-growth-global-demand-face-test",
-      "wiim": false
-    },
-    "LULU": {
-      "title": "Michael Burry Eyes the Exit on Walmart, Alphabet and Valero",
-      "ts": 1793038247,
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62600475/michael-burry-eyes-the-exit-on-walmart-alphabet-and-valero",
-      "wiim": false
-    },
-    "RKLB": {
-      "title": "9 Industrials Stocks With Whale Alerts In Today’s Session",
-      "ts": 1793036114,
-      "url": "https://www.benzinga.com/markets/options/26/10/62599144/9-industrials-stocks-whale-alerts-today-s-session",
       "wiim": false
     }
   },
@@ -218,8 +194,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$283",
-      "price": 343.91,
-      "upside": -17.7,
+      "price": 347.57,
+      "upside": -18.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -232,8 +208,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$166",
-      "price": 159.92,
-      "upside": 3.8,
+      "price": 159.14,
+      "upside": 4.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -246,8 +222,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$330",
-      "price": 343.91,
-      "upside": -4.0,
+      "price": 347.57,
+      "upside": -5.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -260,8 +236,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$188",
-      "price": 172.79,
-      "upside": 8.8,
+      "price": 171.88,
+      "upside": 9.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -274,8 +250,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$250",
-      "price": 247.61,
-      "upside": 1.0,
+      "price": 243.19,
+      "upside": 2.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -288,8 +264,8 @@
       "rating": "Market Perform",
       "stance": "neutral",
       "pt": "$197",
-      "price": 172.79,
-      "upside": 14.0,
+      "price": 171.88,
+      "upside": 14.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -302,8 +278,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$191",
-      "price": 172.79,
-      "upside": 10.5,
+      "price": 171.88,
+      "upside": 11.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -316,8 +292,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$135",
-      "price": 172.79,
-      "upside": -21.9,
+      "price": 171.88,
+      "upside": -21.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -330,8 +306,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$300",
-      "price": 247.61,
-      "upside": 21.2,
+      "price": 243.19,
+      "upside": 23.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -344,8 +320,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$50",
-      "price": 37.91,
-      "upside": 31.9,
+      "price": 37.59,
+      "upside": 33.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -358,8 +334,8 @@
       "rating": "Underperform",
       "stance": "bearish",
       "pt": "$28",
-      "price": 37.91,
-      "upside": -26.1,
+      "price": 37.59,
+      "upside": -25.5,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -372,8 +348,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$45",
-      "price": 37.91,
-      "upside": 18.7,
+      "price": 37.59,
+      "upside": 19.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -386,8 +362,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$50",
-      "price": 37.91,
-      "upside": 31.9,
+      "price": 37.59,
+      "upside": 33.0,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -400,8 +376,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$176",
-      "price": 159.92,
-      "upside": 10.1,
+      "price": 159.14,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -414,8 +390,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$190",
-      "price": 159.92,
-      "upside": 18.8,
+      "price": 159.14,
+      "upside": 19.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -428,8 +404,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$187",
-      "price": 159.92,
-      "upside": 16.9,
+      "price": 159.14,
+      "upside": 17.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -442,8 +418,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$189",
-      "price": 159.92,
-      "upside": 18.2,
+      "price": 159.14,
+      "upside": 18.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -456,8 +432,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 159.92,
-      "upside": 12.6,
+      "price": 159.14,
+      "upside": 13.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -470,8 +446,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$180",
-      "price": 159.92,
-      "upside": 12.6,
+      "price": 159.14,
+      "upside": 13.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -484,8 +460,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$169",
-      "price": 159.92,
-      "upside": 5.7,
+      "price": 159.14,
+      "upside": 6.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -498,8 +474,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 159.92,
-      "upside": 12.6,
+      "price": 159.14,
+      "upside": 13.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -512,8 +488,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$166",
-      "price": 159.92,
-      "upside": 3.8,
+      "price": 159.14,
+      "upside": 4.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -526,8 +502,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$185",
-      "price": 159.92,
-      "upside": 15.7,
+      "price": 159.14,
+      "upside": 16.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -540,7 +516,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$322",
-      "price": 319.38,
+      "price": 319.57,
       "upside": 0.8,
       "held": false,
       "uni": true,
@@ -554,8 +530,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$165",
-      "price": 159.92,
-      "upside": 3.2,
+      "price": 159.14,
+      "upside": 3.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -568,8 +544,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 140.61,
-      "upside": 28.0,
+      "price": 142.41,
+      "upside": 26.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -582,8 +558,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$167",
-      "price": 159.92,
-      "upside": 4.4,
+      "price": 159.14,
+      "upside": 4.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -596,8 +572,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$102",
-      "price": 92.7,
-      "upside": 10.0,
+      "price": 92.2,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -611,7 +587,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$165",
-      "upside": 3.2
+      "upside": 3.7
     },
     "MRK": {
       "date": "2026-10-26",
@@ -620,7 +596,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "upside": 28.0
+      "upside": 26.4
     },
     "HD": {
       "date": "2026-10-26",
@@ -638,7 +614,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$102",
-      "upside": 10.0
+      "upside": 10.6
     },
     "NKE": {
       "date": "2026-10-22",
@@ -647,7 +623,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$50",
-      "upside": 31.9
+      "upside": 33.0
     },
     "MMM": {
       "date": "2026-10-21",
@@ -656,7 +632,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$188",
-      "upside": 8.8
+      "upside": 9.4
     },
     "CRM": {
       "date": "2026-10-21",
@@ -665,7 +641,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$250",
-      "upside": 1.0
+      "upside": 2.8
     },
     "AAPL": {
       "date": "2026-10-20",
@@ -674,7 +650,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$283",
-      "upside": -17.7
+      "upside": -18.6
     },
     "JNJ": {
       "date": "2026-10-16",
@@ -683,7 +659,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 7.8
+      "upside": 6.9
     },
     "CVX": {
       "date": "2026-10-15",
@@ -692,121 +668,296 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$226",
-      "upside": -2.6
+      "upside": -1.1
     }
   },
   "bz_news": [
     {
-      "title": "'I No Longer Believe That': Satya Nadella Says He Was Wrong About AI Alignment — Microsoft CEO Warns Keeping Future AI Systems Safe May Be a ‘Harder, Different Problem’",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62610933/i-no-longer-believe-that-satya-nadella-says-he-was-wrong-about-ai-alignment-microsoft-ceo-warns-keeping-future-ai-systems-safe-may-be-a-harder-different-problem",
-      "ts": 1793094311,
+      "title": "Boeing Q3 2026 Earnings Call Transcript",
+      "url": "https://www.benzinga.com/news/26/10/62625658/boeing-q3-2026-earnings-call-transcript",
+      "ts": 1793115455,
       "tickers": [
-        "MSFT",
-        "SPCX"
+        "BA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.306
+      "relevance": 0.504
     },
     {
-      "title": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as Fed Begins Its Two-Day Meet — NVS, HSBC, WELL in Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62610784/stock-market-today-dow-jones-sp-500-futures-trade-mixed-as-fed-begins-its-two-day-meet-nvs-hsbc-well-in-focus",
-      "ts": 1793093624,
+      "title": "Boeing are trading lower after the company reported mixed Q3 financial results. The company's 737 production wont reach 2018 levels by 2029 and it does not have FAA authorization complete 777x flight test certification.",
+      "url": "https://www.benzinga.com/quote/BA",
+      "ts": 1793115328,
       "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.372
+    },
+    {
+      "title": "Boeing CEO Says Still Don't Have FAA Authorization To Complete 777x Flight Test Certification",
+      "url": "https://www.benzinga.com/news/26/10/62624772/boeing-ceo-says-still-don-t-have-faa-authorization-complete-777x-flight-test-certification",
+      "ts": 1793114245,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.237
+    },
+    {
+      "title": "Boeing CFO Says 737 Production Won't Reach 2018 Levels By 2029",
+      "url": "https://www.benzinga.com/news/26/10/62624718/boeing-cfo-says-737-production-won-t-reach-2018-levels-2029",
+      "ts": 1793114172,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.281
+    },
+    {
+      "title": "Microsoft Q1 Preview: AI, Cloud Key As Company Eyes 15th Straight Double Beat",
+      "url": "https://www.benzinga.com/trading-ideas/previews/26/10/62624589/microsoft-q1-preview-ai-cloud-key-as-company-eyes-15th-straight-double-beat",
+      "ts": 1793114006,
+      "tickers": [
+        "MSFT",
         "SPY",
-        "$BTC",
         "QQQ",
-        "HSBC"
+        "DIA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.413
+    },
+    {
+      "title": "Boeing CEO Says First 737-10 Rolled Out Of New Everett Production Line",
+      "url": "https://www.benzinga.com/news/26/10/62624454/boeing-ceo-says-first-737-10-rolled-out-new-everett-production-line",
+      "ts": 1793113816,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.221
+    },
+    {
+      "title": "Strategic Exercise: Shailesh Jejurikar Decides To Exercise Options Worth $2.83M At Procter & Gamble",
+      "url": "https://www.benzinga.com/news/26/10/62623965/strategic-exercise-shailesh-jejurikar-decides-exercise-options-worth-2-83m-procter-gamble",
+      "ts": 1793113233,
+      "tickers": [
+        "PG"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.493
+      "relevance": 0.372
     },
     {
-      "title": "'We're Trading Them Like Baseball Cards': Mark Cuban Warns ‘Everything’s a Meme Stock’ as AAPL, GOOGL and MU Fuel Market Bubble Fears",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62610386/mark-cuban-warns-everything-meme-stock-aapl-googl-mu-ai-bubble-baseball-cards",
-      "ts": 1793090694,
+      "title": "Growth Leads Sectors In Tuesday Trading As Defensives Trail",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62623952/growth-leads-sectors-in-tuesday-trading-as-defensives-trail",
+      "ts": 1793113223,
       "tickers": [
-        "AAPL",
-        "$BTC",
-        "AMZN",
-        "GOOGL"
+        "QQQ",
+        "IWM",
+        "SPY",
+        "DIA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.352
+      "relevance": 0.407
     },
     {
-      "title": "Elizabeth Warren Sees 2008-Style Warning Signs in AI Boom — ‘Trump’s Regulators Are Choosing to Look the Other Way’",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62610077/elizabeth-warren-warns-ai-bubble",
-      "ts": 1793088210,
+      "title": "‘I Hate Being the Bearer of Concerning News’ — Bill Gates Warns Even the Best Case for AI Means a 20-Year Transition With Winners and Losers",
+      "url": "https://www.benzinga.com/news/gaming/26/10/62623939/i-hate-being-the-bearer-of-concerning-news-bill-gates-warns-even-the-best-case-for-ai-means-a-20-year-transition-with-winners-and-losers",
+      "ts": 1793113219,
       "tickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
         "MSFT"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.341
+      "relevance": 0.283
     },
     {
-      "title": "Anthropic’s IPO Filing Reveals Over $500 Billion AI Compute Spending Across AMZN, GOOGL, MSFT, AVGO and SPCX: Top Analyst Says It Has ‘Barely Started’",
-      "url": "https://www.benzinga.com/markets/ipos/26/10/62609946/anthropics-ipo-filing-reveals-over-500-billion-ai-compute-spending-across-amzn-googl-msft-avgo-and-spcx-top-analyst-says-it-has-barely-started",
-      "ts": 1793087281,
+      "title": "Boeing CEO Says Currently Producing 777X Airplanes At A Rate Of About One Per Month And Expect To Stay At That Level For Most Of 2027; Expect 777-9 Certification By Mid-2027; 2027 FCF Will Be Lower Due To Legacy Cash Drags",
+      "url": "https://www.benzinga.com/news/26/10/62623646/boeing-ceo-says-currently-producing-777x-airplanes-rate-about-one-month-and-expect-stay-level-most-2",
+      "ts": 1793112812,
       "tickers": [
-        "GOOGL",
-        "AMZN",
-        "MSFT",
-        "AVGO"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.471
-    },
-    {
-      "title": "Disney And Channel 4 Announce Agreement To Offer Linear Channel, On-Demand Catalogue And Day-And-Date Shows On Disney+ In UK And Ireland From Early 2027 At No Extra Cost",
-      "url": "https://www.benzinga.com/news/26/10/62609475/disney-and-channel-4-announce-agreement-offer-linear-channel-demand-catalogue-and-day-and-date-shows",
-      "ts": 1793084257,
-      "tickers": [
-        "DIS"
+        "BA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.231
+      "relevance": 0.288
     },
     {
-      "title": "Chevron Inks Long-Term Gas Supply Deal With South32 For 55 Petajoules Over Five Years From 2028, Following Horizon Power, Alinta Energy Deals",
-      "url": "https://www.benzinga.com/quote/CVX",
-      "ts": 1793084019,
+      "title": "Boeing CEO Says Financial Uncertainty Is Narrowing Despite Wider-Than-Expected Loss",
+      "url": "https://www.benzinga.com/markets/earnings/26/10/62623312/boeing-ceo-says-financial-uncertainty-is-narrowing-despite-wider-than-expected-loss",
+      "ts": 1793112291,
       "tickers": [
-        "CVX"
+        "BA"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true,
-      "relevance": 0.293
+      "rel": false,
+      "relevance": 0.359
     },
     {
-      "title": "Nasdaq Gains Over 200 Points As Chip Stocks Rise: Investor Sentiment Improves, Fear & Greed Index Moves to ‘Fear’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/10/62609312/nasdaq-gains-over-200-points-as-chip-stocks-rise-investor-sentiment-improves-fear-greed-index-moves-to-fear-zone",
-      "ts": 1793081994,
+      "title": "Boeing CEO Says Expecting It'll Take Us Into Next Year To Get Fully Stable At 47/ Month 737 Production Rate; Still Expect 787 To Reach 10/Month This Year; Co.'s Financial Plan Will Target Rate 52/Month 737 Production In The Back Half Of 2027; Expect To Generate Approximately $2B Of Free Cash Flow In 2026",
+      "url": "https://www.benzinga.com/news/26/10/62623274/boeing-ceo-says-expecting-it-ll-take-us-next-year-get-fully-stable-47-month-737-production-rate-stil",
+      "ts": 1793112225,
       "tickers": [
-        "JNJ",
-        "KO",
-        "BA",
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.321
+    },
+    {
+      "title": "Visa Earnings Prediction Market Preview: What Will Ryan McInerney Say?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62622891/visa-earnings-preview",
+      "ts": 1793111847,
+      "tickers": [
+        "V",
+        "MA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.4
+    },
+    {
+      "title": "TD Cowen Maintains Buy on Verizon Communications, Lowers Price Target to $55",
+      "url": "https://www.benzinga.com/news/26/10/62622407/td-cowen-maintains-buy-verizon-communications-lowers-price-target-55",
+      "ts": 1793111247,
+      "tickers": [
         "VZ"
       ],
       "source": "Benzinga",
       "wiim": false,
+      "rel": false,
+      "relevance": 0.437
+    },
+    {
+      "title": "Wells Fargo Maintains Overweight on UnitedHealth Group, Lowers Price Target to $487",
+      "url": "https://www.benzinga.com/news/26/10/62622315/wells-fargo-maintains-overweight-unitedhealth-group-lowers-price-target-487",
+      "ts": 1793111115,
+      "tickers": [
+        "UNH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.446
+    },
+    {
+      "title": "'Don't Be Stupid. Go To Work For Google'—Scott Galloway Says People 'Romanticize Entrepreneurship,' But Underestimate Corporate Jobs",
+      "url": "https://www.benzinga.com/personal-finance/entrepreneurship/26/10/62621023/dont-be-stupid-go-to-work-for-google-scott-galloway-says-people-romanticize-entrepreneurship-but-underestimate-corporate-jobs",
+      "ts": 1793109612,
+      "tickers": [
+        "JPM",
+        "MS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.211
+    },
+    {
+      "title": "Nasdaq Gains Over 150 Points; Coca-Cola Posts Upbeat Earnings",
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62620602/nasdaq-gains-over-150-points-coca-cola-posts-upbeat-earnings",
+      "ts": 1793109175,
+      "tickers": [
+        "KO",
+        "NEXR",
+        "AIOK",
+        "BRAI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
       "rel": true,
-      "relevance": 0.489
+      "relevance": 0.403
+    },
+    {
+      "title": "Coca-Cola Q3 2026 Earnings Call Transcript",
+      "url": "https://www.benzinga.com/news/26/10/62620071/coca-cola-q3-2026-earnings-call-transcript",
+      "ts": 1793108556,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.506
+    },
+    {
+      "title": "Verizon Analysts Cut Their Forecasts Following Q3 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62619824/verizon-analysts-cut-their-forecasts-following-q3-earnings",
+      "ts": 1793108294,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.48
+    },
+    {
+      "title": "Barclays Maintains Equal-Weight on Verizon Communications, Lowers Price Target to $44",
+      "url": "https://www.benzinga.com/news/26/10/62619255/barclays-maintains-equal-weight-verizon-communications-lowers-price-target-44",
+      "ts": 1793107685,
+      "tickers": [
+        "VZ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.461
+    },
+    {
+      "title": "Wedbush Reiterates Neutral on Intel, Maintains $98 Price Target",
+      "url": "https://www.benzinga.com/news/26/10/62619064/wedbush-reiterates-neutral-intel-maintains-98-price-target",
+      "ts": 1793107405,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.448
+    },
+    {
+      "title": "Coca-Cola Exec Says Anticipating Court Decision In Coming Months On U.S. Internal Revenue Service",
+      "url": "https://www.benzinga.com/news/26/10/62618976/coca-cola-exec-says-anticipating-court-decision-coming-months-u-s-internal-revenue-service",
+      "ts": 1793107278,
+      "tickers": [
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.303
+    },
+    {
+      "title": "Live On CNBC, Boeing CEO Says Financial Uncertainty In Portfolio Narrowing; Will Have Larger Growth Numbers Out Of Defense Portfolio",
+      "url": "https://www.benzinga.com/quote/BA",
+      "ts": 1793107056,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.403
     },
     {
       "title": "Coca-Cola, Boeing and 3 Stocks to Watch Heading Into Tuesday",
@@ -815,231 +966,13 @@
       "tickers": [
         "KO",
         "BA",
-        "JNJ",
-        "CLS"
+        "CLS",
+        "WHR"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
       "relevance": 0.345
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62609196/stock-market-will-sp-500-open-up-or-down-today-66",
-      "ts": 1793081077,
-      "tickers": [
-        "SPY",
-        "KO",
-        "BA",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Trump's Oil Holdings Could Top $81 Million, New Report Says — Gavin Newsom Says President Swore ‘Oath’ to Big Oil",
-      "url": "https://www.benzinga.com/news/politics/26/10/62609122/trumps-oil-investments-top-81-million-new-report-says-gavin-newsom-warns-president-swore-oath-to-big-oil-stocks-have-gone-up-43",
-      "ts": 1793080781,
-      "tickers": [
-        "XOM",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.202
-    },
-    {
-      "title": "IBM Unveils Verified Identities, Least-Privilege Access And Real-Time Revocation For AI Agents Through HashiCorp Vault And Watsonx Orchestrate At TechXchange 2026",
-      "url": "https://www.benzinga.com/news/26/10/62609013/ibm-unveils-verified-identities-least-privilege-access-and-real-time-revocation-ai-agents-through-ha",
-      "ts": 1793079502,
-      "tickers": [
-        "IBM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.315
-    },
-    {
-      "title": "Verizon CEO Open to Working With Elon Musk's Starlink, But There’s One Deal He Won’t Touch: ‘No Benefit Whatsoever’",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62608967/verizon-starlink-spacex-mvno",
-      "ts": 1793079314,
-      "tickers": [
-        "VZ",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.321
-    },
-    {
-      "title": "‘Aware of an Issue’: Apple Offers Replacements for iPhone Duo Display Defects After Users Report Cracks Near Hinge",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62608801/apple-iphone-duo-display-defects-hinge-cracks-replacements",
-      "ts": 1793074347,
-      "tickers": [
-        "AAPL",
-        "SSNFL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.224
-    },
-    {
-      "title": "Chuck Schumer Says Americans Paid ‘Billions More for Gas’ as Trump Profited From Oil Stocks; White House Insists Low Prices Are ‘Priority’",
-      "url": "https://www.benzinga.com/markets/economic-data/26/10/62608535/schumer-trump-oil-stocks-gas-prices-obscene-hold-trump-accountable",
-      "ts": 1793067180,
-      "tickers": [
-        "USO",
-        "XOM",
-        "CVX",
-        "OXY"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.198
-    },
-    {
-      "title": "Tesla, Celestica, Nu Holdings, XP Inc. and Microsoft: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62608353/tesla-celestica-nu-holdings-xp-inc-and-microsoft-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1793063351,
-      "tickers": [
-        "CLS",
-        "TSLA",
-        "MSFT",
-        "NU"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.455
-    },
-    {
-      "title": "'Intel to Buy Israeli Startup Classiq in Quantum Computing Push' - Bloomberg Exclusive",
-      "url": "https://www.benzinga.com/m/26/10/62605180/intel-buy-israeli-startup-classiq-quantum-computing-push-bloomberg-exclusive",
-      "ts": 1793046317,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.413
-    },
-    {
-      "title": "CoreWeave Debt Fears Hit a Record — Some Are Whispering 'Lehman'",
-      "url": "https://www.benzinga.com/markets/bonds/26/10/62603452/coreweave-cds-record-lehman-default-risk",
-      "ts": 1793044690,
-      "tickers": [
-        "CRWV",
-        "META",
-        "AMZN",
-        "GOOGL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.315
-    },
-    {
-      "title": "Capital-Light Expansion Isn't a Golden Ticket—How To Stress-Test Valuations",
-      "url": "https://www.benzinga.com/opinion/26/10/62603124/capital-light-expansion-is-not-a-golden-ticket-how-to-stress-test-valuations",
-      "ts": 1793044078,
-      "tickers": [
-        "DIS",
-        "WBD",
-        "FUN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.318
-    },
-    {
-      "title": "Visa, Coca-Cola On Deck Tuesday As Payments Growth, Global Demand Face Test",
-      "url": "https://www.benzinga.com/news/26/10/62602650/visa-coca-cola-on-deck-tuesday-as-payments-growth-global-demand-face-test",
-      "ts": 1793043024,
-      "tickers": [
-        "KO",
-        "HSBC",
-        "NVS",
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.334
-    },
-    {
-      "title": "VISA Could Swing $24.8 Billion In Value After Earnings",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62602644/visa-could-swing-24-8-billion-in-value-after-earnings",
-      "ts": 1793043008,
-      "tickers": [
-        "KO",
-        "BA",
-        "V",
-        "STX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.424
-    },
-    {
-      "title": "Verizon Communications shares are trading lower after the company reported worse-than-expected Q3 sales results.",
-      "url": "https://www.benzinga.com/quote/VZ",
-      "ts": 1793042028,
-      "tickers": [
-        "VZ"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.389
-    },
-    {
-      "title": "UBS Maintains Neutral on Caterpillar, Lowers Price Target to $750",
-      "url": "https://www.benzinga.com/news/26/10/62601457/ubs-maintains-neutral-caterpillar-lowers-price-target-750",
-      "ts": 1793040323,
-      "tickers": [
-        "CAT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.48
-    },
-    {
-      "title": "Siri AI Is Available In More Languages Starting Today; Expanding To More People Around World, With Availability In French, Japanese, Korean, Portuguese, And Spanish Languages; Siri AI Currently Unavailable In EU; Working With EU On Path Forward",
-      "url": "https://www.benzinga.com/news/26/10/62601321/siri-ai-available-more-languages-starting-today-expanding-more-people-around-world-availability-fren",
-      "ts": 1793040067,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.286
-    },
-    {
-      "title": "Neoclouds Face Guppy-Level Death; 36% Of S&P 500 Earnings This Week; Brazil Stocks Plunge On Election Outcome",
-      "url": "https://www.benzinga.com/opinion/26/10/62598577/neoclouds-face-guppy-level-death-36-of-sp500-earnings-this-week-brazil-stocks-plunge-on-election-outcome",
-      "ts": 1793035022,
-      "tickers": [
-        "SPY",
-        "NVDA",
-        "TSLA",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.41
     }
   ],
   "portfolio_brief": {
@@ -1248,12 +1181,7 @@
         "score": 1.07,
         "period": "2026-10-01"
       },
-      "news": {
-        "title": "9 Industrials Stocks With Whale Alerts In Today’s Session",
-        "ts": 1793036114,
-        "url": "https://www.benzinga.com/markets/options/26/10/62599144/9-industrials-stocks-whale-alerts-today-s-session",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1308,7 +1236,7 @@
     },
     "ONON": {
       "name": "On Holding",
-      "qarp": "BUY",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 10,
         "buy": 21,
@@ -1346,12 +1274,7 @@
         "score": 1.12,
         "period": "2026-10-01"
       },
-      "news": {
-        "title": "Visa, Coca-Cola On Deck Tuesday As Payments Growth, Global Demand Face Test",
-        "ts": 1793043024,
-        "url": "https://www.benzinga.com/news/26/10/62602650/visa-coca-cola-on-deck-tuesday-as-payments-growth-global-demand-face-test",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1383,12 +1306,7 @@
         "score": -0.17,
         "period": "2026-10-01"
       },
-      "news": {
-        "title": "Michael Burry Eyes the Exit on Walmart, Alphabet and Valero",
-        "ts": 1793038247,
-        "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62600475/michael-burry-eyes-the-exit-on-walmart-alphabet-and-valero",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
@@ -1420,17 +1338,12 @@
         "score": 1.18,
         "period": "2026-10-01"
       },
-      "news": {
-        "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-        "ts": 1793081077,
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62609196/stock-market-will-sp-500-open-up-or-down-today-66",
-        "wiim": false
-      },
+      "news": null,
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-10-23",
-          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000049/spgi-20261023.htm"
+          "date": "2026-10-27",
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000053/spgi-20261027.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -1490,8 +1403,8 @@
         "period": "2026-10-01"
       },
       "news": {
-        "title": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as Fed Begins Its Two-Day Meet — NVS, HSBC, WELL in Focus",
-        "ts": 1793093624,
+        "title": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 10 Futures Gain as Fed Begins Its Two-Day Meet— Novartis, HSBC, Welltower in Focus (UPDATED)",
+        "ts": 1793105113,
         "url": "https://www.benzinga.com/markets/equities/26/10/62610784/stock-market-today-dow-jones-sp-500-futures-trade-mixed-as-fed-begins-its-two-day-meet-nvs-hsbc-well-in-focus",
         "wiim": false
       },
