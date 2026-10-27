@@ -59,7 +59,27 @@ function verdictBadge(v) {
 // badge with no sign of it. Small tag under the badge; the full sentence is the hover + the drawer.
 function reviewTag(x) {
   const t = x && x.under_review;
-  return t ? `<span class="rv-tag" title="${esc(t)}">under review</span>` : "";
+  if (t) return `<span class="rv-tag" title="${esc(t)}">under review</span>`;
+  return freshTag(x);
+}
+// 2026-10-27 (owner: "i need a way to know which are fresh"): every rating row ships
+// fresh = {rev: last re-read, rep: last report, ok}. ok = re-read AFTER the latest report.
+function freshOf(x) {
+  if (!x) return null;
+  if (x.fresh !== undefined) return x.fresh;
+  const u = x.ticker && DATA && DATA.universe ? DATA.universe.find((r) => r.ticker === x.ticker) : null;
+  return u ? u.fresh : null;
+}
+function freshShort(iso) {
+  if (!iso) return "";
+  const d = new Date(iso + "T12:00:00");
+  return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+function freshTag(x) {
+  const f = freshOf(x);
+  if (!f || !f.ok || !f.rev) return "";
+  const tip = `Fresh: re-read on ${f.rev}` + (f.rep ? `, after the company's latest report (${f.rep}).` : ".");
+  return `<span class="fr-tag" title="${esc(tip)}">✓ re-read ${freshShort(f.rev)}</span>`;
 }
 
 /* ---------- header tooltips (tap the ⓘ) ---------- */
@@ -1139,7 +1159,7 @@ function openDrawer(ticker) {
       <button class="drawer-close" aria-label="Close">×</button>
     </div>
     <div class="drawer-tags">
-      ${verdict ? verdictBadge(verdict) : ""}${reviewTag({ under_review: ur })}
+      ${verdict ? verdictBadge(verdict) : ""}${reviewTag({ under_review: ur, ticker })}
       ${has(d.qarp) ? `<span class="chip">QARP ${fmtNum(d.qarp, 1)}</span>` : ""}
       ${has(d.dcf) ? `<span class="chip">DCF ${fmtNum(d.dcf, 1)}/5</span>` : ""}
       ${has(d.mech) ? `<span class="chip">Quality ${d.mech}/105</span>` : ""}
