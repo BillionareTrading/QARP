@@ -10,6 +10,43 @@ let DATA = null;
 // and fetchQuote maps it back so the live feed still asks for the real symbol.
 const TICKER_ALIAS = { "2222.SR": "ARAMCO" };
 const TICKER_REAL = Object.fromEntries(Object.entries(TICKER_ALIAS).map(([k, v]) => [v, k]));
+// 2026-10-28 (owner: "i thought we werent gonna show a strong buy when its not re-read?"): the build's
+// stale-print guard only runs when the site is rebuilt, and builds can lag hours (BSX reported before the
+// open on 10-28 and the 06:36 ET build still showed STRONG BUY). This repeats the rule in the BROWSER from the
+// calendar on every load: once a company's report date has arrived (US Eastern) and the rating has not been
+// re-read since, no buy is shown for it, whatever the build says. Calls (the track record) are left alone.
+function etToday() {
+  return new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+}
+function clientStaleGuard(o) {
+  if (!o || !Array.isArray(o.universe)) return o;
+  const today = etToday();
+  const BUY = new Set(["STRONGEST", "STRONG BUY", "BUY"]);
+  const held = {};
+  let added = 0;
+  o.universe.forEach((r) => {
+    const np = r.next_print, f = r.fresh;
+    if (!np || np > today || r.stale_print) return;
+    if (f && f.rev && f.rev >= np) return;
+    const was = r.verdict, isBuy = BUY.has(was);
+    if (isBuy) { r.verdict = "HOLD-QUAL"; held[r.ticker] = was; }
+    r.stale_print = { reported: np, reviewed: f ? f.rev : null, verdict_before: was, held: isBuy, client: true };
+    if (f) f.ok = false;
+    r.under_review = isBuy
+      ? `Not a buy until re-read: the company's report date (${np}) has arrived and the rating has not been re-read since. It showed ${was} before this hold.`
+      : `Re-read owed: the company's report date (${np}) has arrived and the rating has not been re-read since.`;
+    added++;
+  });
+  const fix = (x) => { if (x && held[x.ticker]) { x.verdict = "HOLD-QUAL"; x.under_review = o.universe.find((r) => r.ticker === x.ticker).under_review; } };
+  (o.portfolio || []).forEach(fix);
+  ((o.estimates && o.estimates.docket) || []).forEach(fix);
+  if (added && o.meta && o.meta.stale_guard) {
+    const g = o.meta.stale_guard;
+    g.print_due = (g.print_due || 0) + added;
+    g.held = (g.held || []).concat(Object.keys(held));
+  }
+  return o;
+}
 function applyTickerAliases(o) {
   const swap = (str) => { for (const [k, v] of Object.entries(TICKER_ALIAS)) str = str.split(k).join(v); return str; };
   if (Array.isArray(o)) return o.map(applyTickerAliases);
@@ -4190,7 +4227,7 @@ async function softRefresh() {
   try {
     const p = await (await fetch("payload.enc", { cache: "no-store" })).json();
     if (p && p.iv && p.iv === lastPayloadIv) return;   // identical ciphertext -> no new build, skip
-    const fresh = applyTickerAliases(await decryptPayload(p, pw));
+    const fresh = clientStaleGuard(applyTickerAliases(await decryptPayload(p, pw)));
     // 2026-10-02 (review): two caches die with the old payload — the Calls grouping (it kept the first
     // payload's call list, so a re-scored name showed its old open call against the new price) and the
     // holdings-live flag (the baked numbers are back until the next live tick).
@@ -4330,7 +4367,7 @@ async function boot() {
       btn.disabled = false; btn.textContent = "Unlock"; return;
     }
     try {
-      DATA = applyTickerAliases(await decryptPayload(payload, pw)); _callsByTk = null;   // same reset as softRefresh (2026-10-02)
+      DATA = clientStaleGuard(applyTickerAliases(await decryptPayload(payload, pw))); _callsByTk = null;   // same reset as softRefresh (2026-10-02)
       lastPayloadIv = payload.iv;
       gate.hidden = true; app.hidden = false;
       sessionStorage.setItem("jc_pw", pw);   // remember within this tab session only
