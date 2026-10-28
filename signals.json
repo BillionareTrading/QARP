@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-27",
-  "generated_at": "Oct 27, 5:18pm ET",
+  "date": "2026-10-28",
+  "generated_at": "Oct 28, 6:01am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,30 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Oct 27",
-      "what": "EXE earnings",
-      "affects": "EXE",
-      "dir": "two-sided",
-      "why": "Q-results for Expand Energy — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
-      "when": "Oct 27",
-      "what": "SPGI earnings",
-      "affects": "SPGI",
-      "dir": "two-sided",
-      "why": "Q-results for S&P Global — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
-      "when": "Oct 27",
-      "what": "NVS earnings",
-      "affects": "NVS",
-      "dir": "two-sided",
-      "why": "Q-results for Novartis — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Oct 28",
       "what": "BSX earnings",
       "affects": "BSX",
@@ -93,7 +69,31 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Oct 27",
+      "when": "Oct 29",
+      "what": "AOS earnings",
+      "affects": "AOS",
+      "dir": "two-sided",
+      "why": "Q-results for A. O. Smith — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Oct 30",
+      "what": "AZN earnings",
+      "affects": "AZN",
+      "dir": "two-sided",
+      "why": "Q-results for AstraZeneca — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Nov 2",
+      "what": "NBIX earnings",
+      "affects": "NBIX",
+      "dir": "two-sided",
+      "why": "Q-results for Neurocrine Biosciences — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Oct 28",
       "what": "Energy & geopolitics — today's read",
       "why": "As oil prices rise amid growing expectations that the U.S. could resume strikes on Iran in the coming weeks. Reports of U.S. and Israeli plans for renewed strikes following next month’s midterm elections, coupled with Iran’s military warning that it is prepared for “asymmetric warfare,” are fueling concerns over prolonged supply disruptions and potentially sustaining higher energy prices, which could benefit the sector.",
       "affects": "Energy · growth",
@@ -111,11 +111,11 @@
     "RKLB": "2026-11-09",
     "ADBE": "2026-12-09",
     "ONON": "2026-11-17",
-    "EXE": "2026-10-27",
+    "EXE": "2027-02-15",
     "LULU": "2026-12-09",
-    "SPGI": "2026-10-27",
+    "SPGI": "2027-02-08",
     "AOS": "2026-10-29",
-    "NVS": "2026-10-27",
+    "NVS": "2027-02-02",
     "AVGO": "2026-12-09",
     "NBIX": "2026-11-02",
     "VRTX": "2026-11-02",
@@ -167,10 +167,10 @@
       "wiim": true
     },
     "NVDA": {
-      "title": "Shares of semiconductor and chip companies are trading lower amid concerns that mounting AI infrastructure costs could slow future spending and weigh on chip demand. Nvidia CEO Jensen Huang highlighted a scarcity of capital to fund AI expansion, raising concerns that companies could scale back chip purchases, while Lam Research warned that supply chain constraints could delay equipment shipments until March, potentially limiting chipmakers' ability to increase production.",
-      "ts": 1792694814,
-      "url": "https://www.benzinga.com/quote/COHU",
-      "wiim": true
+      "title": "Kevin O'Leary Warns Investors Could Get 'Slaughtered' by Ignoring Diversification, Shares His 5% Stock and 20% Sector Rule",
+      "ts": 1793174782,
+      "url": "https://www.benzinga.com/markets/tech/26/10/62644518/kevin-oleary-warns-investors-could-get-slaughtered-by-ignoring-diversification-shares-his-5-stock-and-20-sector-rule",
+      "wiim": false
     },
     "ADBE": {
       "title": "Shares of enterprise software companies are trading higher as investors rotate out of highly leveraged AI-exposed stocks and into established technology services companies. Also, SAP and IBM reported better-than-expected Q3 financial results, supporting sentiment toward the sector.",
@@ -192,48 +192,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-10-20",
-      "ticker": "AAPL",
-      "firm": "MoffettNathanson",
-      "action": "Maintains",
-      "rating": "Neutral",
-      "stance": "neutral",
-      "pt": "$283",
-      "price": 347.1,
-      "upside": -18.5,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-10-20",
-      "ticker": "PG",
-      "firm": "RBC Capital",
-      "action": "Reiterates",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$166",
-      "price": 159.23,
-      "upside": 4.3,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-10-20",
-      "ticker": "AAPL",
-      "firm": "Loop Capital",
-      "action": "Downgrades",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$330",
-      "price": 347.1,
-      "upside": -4.9,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-10-21",
       "ticker": "MMM",
@@ -260,7 +218,7 @@
       "upside": 3.8,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "BUY"
     },
     {
       "date": "2026-10-21",
@@ -316,7 +274,7 @@
       "upside": 24.5,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "BUY"
     },
     {
       "date": "2026-10-22",
@@ -526,7 +484,7 @@
       "upside": 1.1,
       "held": false,
       "uni": true,
-      "qarp": "AVOID"
+      "qarp": "HOLD-QUAL"
     },
     {
       "date": "2026-10-26",
@@ -679,6 +637,241 @@
   },
   "bz_news": [
     {
+      "title": "Stock Market Today: S&P 500, Dow Jones Futures Trade Mixed Ahead of Federal Reserve Interest Rate Decision — SKHY, STX, V, GOOGL in Focus",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62645441/stock-market-today-sp-500-dow-jones-futures-trade-mixed-ahead-of-federal-reserve-interest-rate-decision-skhy-stx-v-googl-in-focus",
+      "ts": 1793180835,
+      "tickers": [
+        "SPY",
+        "$BTC",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.499
+    },
+    {
+      "title": "Bernie Sanders Slams Microsoft Over 60,000 Workers Facing Buyouts and Trump-Era Tax Breaks Amid Billions in Profits: ‘A Total Scam’",
+      "url": "https://www.benzinga.com/news/politics/26/10/62644909/bernie-sanders-slams-microsoft-over-60000-workers-facing-buyouts-and-trump-era-tax-breaks-amid-billions-in-profits-a-total-scam",
+      "ts": 1793177630,
+      "tickers": [
+        "AMZN",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.264
+    },
+    {
+      "title": "Kevin O'Leary Warns Investors Could Get 'Slaughtered' by Ignoring Diversification, Shares His 5% Stock and 20% Sector Rule",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62644518/kevin-oleary-warns-investors-could-get-slaughtered-by-ignoring-diversification-shares-his-5-stock-and-20-sector-rule",
+      "ts": 1793174782,
+      "tickers": [
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.329
+    },
+    {
+      "title": "Korea Media And Communications Commission Orders Google And Apple To Allow External Payments, Improve Commission Structures; Imposes KRW 42.9B (~$32M) Penalty On Google, KRW 20.81B On Apple",
+      "url": "https://www.benzinga.com/quote/GOOGL",
+      "ts": 1793174618,
+      "tickers": [
+        "AAPL",
+        "GOOG",
+        "GOOGL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.271
+    },
+    {
+      "title": "Jeff Bezos Just Got a New Boost in His Rivalry With Elon Musk — Amazon Wins FCC Approval for $11.5 Billion Globalstar Deal to Expand Satellite Connectivity",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62644373/jeff-bezos-rivalry-elon-musk-amazon-fcc-approval-11-5-billion-globalstar-deal",
+      "ts": 1793173803,
+      "tickers": [
+        "AMZN",
+        "AAPL",
+        "GSAT",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.298
+    },
+    {
+      "title": "Trump Says Iran Wants a Deal as 1 Million Barrels of Venezuelan Oil Arrive in Texas Ahead of Midterms: 'It's a Question of When Do I Want to End It'",
+      "url": "https://www.benzinga.com/news/politics/26/10/62644224/trump-says-iran-wants-a-deal-as-1-million-barrels-of-venezuelan-oil-arrive-in-texas-ahead-of-midterms-its-a-question-of-when-do-i-want-to-end-it",
+      "ts": 1793173071,
+      "tickers": [
+        "CVX",
+        "XOM",
+        "USO",
+        "UCO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.194
+    },
+    {
+      "title": "TotalEnergies Acquires 25% Working Interest In 26 Chevron-Operated Offshore U.S. Exploration Leases; Chevron Gains 75% Operated Interest In Two Adjacent Leases",
+      "url": "https://www.benzinga.com/quote/CVX",
+      "ts": 1793172166,
+      "tickers": [
+        "TTE",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.408
+    },
+    {
+      "title": "Microsoft Stock Gained Nearly 22% in July Earnings Week; Will It Rally Again This Time? Polymarket Traders Weigh In",
+      "url": "https://www.benzinga.com/markets/earnings/26/10/62643954/microsoft-earnings-preview-polymarket-traders-say-july-size-jump-unlikely",
+      "ts": 1793171266,
+      "tickers": [
+        "MSFT",
+        "$POL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.483
+    },
+    {
+      "title": "Nasdaq Jumps Over 300 Points Amid Surge In Chip Stocks: Investor Sentiment Improves, Greed Index Remains In ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62643930/nasdaq-jumps-over-300-points-amid-surge-in-chip-stocks-investor-sentiment-improves-greed-index-remains-in-fear-zone",
+      "ts": 1793170928,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "MSFT",
+        "KO"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.493
+    },
+    {
+      "title": "Caterpillar Gears Up For Q3 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62643903/caterpillar-gears-up-for-q3-print-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts-2",
+      "ts": 1793170879,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.465
+    },
+    {
+      "title": "Robinhood, Microsoft And 3 Stocks To Watch Heading Into Wednesday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62643874/robinhood-microsoft-and-3-stocks-to-watch-heading-into-wednesday",
+      "ts": 1793170776,
+      "tickers": [
+        "HOOD",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.408
+    },
+    {
+      "title": "Apple Is Breaking Away From Big Tech in a Way Wall Street Has Rarely Seen: ‘Unprecedented’",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62643849/apple-is-breaking-away-from-big-tech-in-a-way-wall-street-has-rarely-seen-unprecedented",
+      "ts": 1793169991,
+      "tickers": [
+        "AAPL",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.314
+    },
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62643298/stock-market-will-sp-500-open-up-or-down-today-67",
+      "ts": 1793165780,
+      "tickers": [
+        "SPY",
+        "GOOGL",
+        "GOOG",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Jim Cramer Says Boeing’s ‘Kitchen Sink’ Quarter May Have Reset Expectations Amid Stock Sell-Off, Production Woes",
+      "url": "https://www.benzinga.com/markets/earnings/26/10/62643135/jim-cramer-says-boeings-kitchen-sink-quarter-may-have-reset-expectations-amid-stock-sell-off-production-woes",
+      "ts": 1793163236,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.337
+    },
+    {
+      "title": "Steve Jobs Thought They Were ‘Ergonomically Terrible,’ but Apple Is Reportedly Betting You’ll Pay a Premium for the Touchscreen MacBook Pro",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62643060/steve-jobs-touchscreen-macbook-pro-apple-premium-pricing",
+      "ts": 1793161836,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.288
+    },
+    {
+      "title": "SK Hynix, Boeing, SoFi, Seagate and Robinhood: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62642461/sk-hynix-boeing-sofi-seagate-and-robinhood-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1793149955,
+      "tickers": [
+        "SKHY",
+        "BA",
+        "HOOD",
+        "SOFI"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.375
+    },
+    {
+      "title": "Visa Q4 2026 Earnings Call Transcript",
+      "url": "https://www.benzinga.com/news/26/10/62641564/visa-q4-2026-earnings-call-transcript",
+      "ts": 1793139204,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.551
+    },
+    {
       "title": "Visa Raises Quarterly Dividend From $0.67 To $0.78 Per Share",
       "url": "https://www.benzinga.com/trading-ideas/dividends/26/10/62638924/visa-raises-quarterly-dividend-0-67-0-78-share",
       "ts": 1793133661,
@@ -736,7 +929,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.446
+      "relevance": 0.447
     },
     {
       "title": "Visa Q4 Adj. EPS $3.48 Beats $3.44 Estimate, Sales $12.139B Beat $12.084B Estimate",
@@ -748,82 +941,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.494
-    },
-    {
-      "title": "Microsoft, Alphabet On Deck Wednesday As AI Spending, Cloud Growth Face Test",
-      "url": "https://www.benzinga.com/news/26/10/62634379/microsoft-alphabet-on-deck-wednesday-as-ai-spending-cloud-growth-face-test",
-      "ts": 1793129444,
-      "tickers": [
-        "GEV",
-        "APH",
-        "SAN",
-        "UBS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.541
-    },
-    {
-      "title": "Microsoft Could Swing By $184 Billion After Earnings",
-      "url": "https://www.benzinga.com/markets/options/26/10/62634374/microsoft-could-swing-by-184-billion-after-earnings",
-      "ts": 1793129435,
-      "tickers": [
-        "GOOGL",
-        "GOOG",
-        "MSFT",
-        "TMUS"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.393
-    },
-    {
-      "title": "'Trump To Announce Relaxed Rules On Oil Firms’ Methane Leaks; Oil Executives, Including Some Top Trump Donors, Have Worked To Roll Back Rules They Say Are Overly Costly' - Washington Post",
-      "url": "https://www.benzinga.com/news/26/10/62633930/trump-to-announce-relaxed-rules-on-oil-firms-methane-leaks-oil-executives-including-some-top-trump-donors-have-worked-to-roll-back-rules-they-say-are-overly-costly-washington-post",
-      "ts": 1793128717,
-      "tickers": [
-        "CNX",
-        "SLB",
-        "AR",
-        "EQT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.243
-    },
-    {
-      "title": "'Washington discusses Russian deals for US oil majors in Ukraine peace talks' - Financial Times",
-      "url": "https://www.benzinga.com/government/26/10/62633830/washington-discusses-russian-deals-us-oil-majors-ukraine-peace-talks-financial-times",
-      "ts": 1793128558,
-      "tickers": [
-        "SPY",
-        "VGK",
-        "XOM",
-        "SHEL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.269
-    },
-    {
-      "title": "Shares of data center infrastructure-related companies are trading higher amid sympathy with Johnson Controls International after the company reported better-than-expected fourth-quarter financial results. Easing oil prices and improving inflation expectations are also easing concerns that interest rates will remain elevated, potentially supporting investment in data centers and power infrastructure.",
-      "url": "https://www.benzinga.com/quote/WCC",
-      "ts": 1793127425,
-      "tickers": [
-        "VRT",
-        "BE",
-        "FIX",
-        "ETN"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.41
+      "relevance": 0.496
     },
     {
       "title": "AI's Biggest Constraint Could Be Capital Availability—Anthropic, Meta And SpaceX Put Markets To The Test",
@@ -839,171 +957,6 @@
       "wiim": false,
       "rel": true,
       "relevance": 0.416
-    },
-    {
-      "title": "'A Rivian Commercial Van Wrapped In Walmart+ Branding Was Spotted On A Car Hauler On Tuesday, The Latest In A String Of Sightings Of The Vans In Other Companies’ Colors That Neither Rivian Nor The Brands Involved Have Confirmed' - EV",
-      "url": "https://www.benzinga.com/news/26/10/62632618/a-rivian-commercial-van-wrapped-in-walmart-branding-was-spotted-on-a-car-hauler-on-tuesday-the-latest-in-a-string-of-sightings-of-the-vans-in-other-companies-colors-that-neither-rivian-nor",
-      "ts": 1793126286,
-      "tickers": [
-        "RIVN",
-        "WMT",
-        "GM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.263
-    },
-    {
-      "title": "Boeing Announces During Nine Months Ended Sept. 30, Received About $420M In Refunds Related To Prior Tariff Assessments",
-      "url": "https://www.benzinga.com/news/26/10/62631561/boeing-announces-during-nine-months-ended-sept-30-received-about-420m-refunds-related-prior-tariff-a",
-      "ts": 1793124143,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.363
-    },
-    {
-      "title": "Boeing Announces During Q3 Experienced Supplier Shortages Which Have Disrupted Factory Operations, Adversely Affecting Kc-46a Tanker & 777 Freighter Programs; Expect Supplier Shortages Disruption To Continue Into 2027 & Result In Abnormal Production Costs, Which Are Expensed As Incurred; First Delivery Of 777-8 Passenger Aircraft Is Not Expected To Occur Before 2030",
-      "url": "https://www.benzinga.com/news/26/10/62631404/boeing-announces-during-q3-experienced-supplier-shortages-which-have-disrupted-factory-operations-ad",
-      "ts": 1793123911,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.247
-    },
-    {
-      "title": "Verizon CEO Says SpaceX Could Spend $500 Billion to Enter Wireless. Is That the Real Barrier?",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62631224/verizon-ceo-spacex-wireless-network-cost-500-billion",
-      "ts": 1793123555,
-      "tickers": [
-        "VZ",
-        "SPCX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.333
-    },
-    {
-      "title": "FDA's Office Of Prescription Drug Promotion Reviews Amgen's Submitted Video For VECTIBIX Injection For Intravenous Use; FDA Determines Video Is False Or Misleading And Breaches Federal Food, Drug, And Cosmetic Act",
-      "url": "https://www.benzinga.com/news/26/10/62631018/fda-s-office-prescription-drug-promotion-reviews-amgen-s-submitted-video-vectibix-injection-intraven",
-      "ts": 1793123136,
-      "tickers": [
-        "AMGN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.41
-    },
-    {
-      "title": "Shares of semiconductor and chip companies are trading higher after Anthropic’s IPO filing renewed AI optimism and triggered a rally across major Asian tech stocks. Easing oil prices and the Federal Reserve’s two-day policy meeting are also in focus as investors assess the interest rate outlook.",
-      "url": "https://www.benzinga.com/quote/KLAC",
-      "ts": 1793122954,
-      "tickers": [
-        "TE",
-        "ALMU",
-        "AEHR",
-        "LEDS"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.52
-    },
-    {
-      "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62630579/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
-      "ts": 1793122511,
-      "tickers": [
-        "NIO",
-        "HRB",
-        "BABA",
-        "TSLA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.363
-    },
-    {
-      "title": "Nasdaq 100 Climbs on Chip Rally, Boeing Sinks 10%: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62629254/stock-market-today-nasdaq-100-chip-rally-meta-boeing-737-delay",
-      "ts": 1793120495,
-      "tickers": [
-        "TSLA",
-        "$BTC",
-        "META",
-        "AMZN"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.495
-    },
-    {
-      "title": "CNBC Halftime Report Final Trades: Apple, UnitedHealth Group, Delta Air Lines, American Tower",
-      "url": "https://www.benzinga.com/quote/AAPL",
-      "ts": 1793120479,
-      "tickers": [
-        "DAL",
-        "AMT",
-        "UNH",
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.407
-    },
-    {
-      "title": "What Is Going On With Apple Stock on Tuesday?",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62629051/what-is-going-on-with-apple-stock-on-tuesday",
-      "ts": 1793120227,
-      "tickers": [
-        "AAPL",
-        "SPMO",
-        "FNGU",
-        "USMC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.43
-    },
-    {
-      "title": "Walmart And Care Access Plan Three Additional Clinical Trial Centers To Expand Access To Medical Research",
-      "url": "https://www.benzinga.com/general/biotech/26/10/62628716/walmart-and-care-access-plan-three-additional-clinical-trial-centers-expand-access-medical-research",
-      "ts": 1793119747,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.332
-    },
-    {
-      "title": "Anthropic’s $750B Compute Ambition Puts SOXX, SMH and AI Infrastructure ETFs in Focus",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62628518/anthropic-750b-compute-ambition-puts-soxx-smh-and-ai-infrastructure-etfs-in-focus",
-      "ts": 1793119442,
-      "tickers": [
-        "SMH",
-        "AMZN",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.485
     }
   ],
   "portfolio_brief": {
@@ -1125,10 +1078,10 @@
         "period": "2026-10-01"
       },
       "news": {
-        "title": "Shares of semiconductor and chip companies are trading lower amid concerns that mounting AI infrastructure costs could slow future spending and weigh on chip demand. Nvidia CEO Jensen Huang highlighted a scarcity of capital to fund AI expansion, raising concerns that companies could scale back chip purchases, while Lam Research warned that supply chain constraints could delay equipment shipments until March, potentially limiting chipmakers' ability to increase production.",
-        "ts": 1792694814,
-        "url": "https://www.benzinga.com/quote/COHU",
-        "wiim": true
+        "title": "Kevin O'Leary Warns Investors Could Get 'Slaughtered' by Ignoring Diversification, Shares His 5% Stock and 20% Sector Rule",
+        "ts": 1793174782,
+        "url": "https://www.benzinga.com/markets/tech/26/10/62644518/kevin-oleary-warns-investors-could-get-slaughtered-by-ignoring-diversification-shares-his-5-stock-and-20-sector-rule",
+        "wiim": false
       },
       "filings": {
         "latest8k": {
@@ -1296,7 +1249,7 @@
     },
     "EXE": {
       "name": "Expand Energy",
-      "qarp": "HOLD-QUAL",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 10,
         "buy": 16,
@@ -1329,7 +1282,7 @@
         },
         "insider30d": 2
       },
-      "explain": "32 analysts cover it — 26 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "32 analysts cover it — 26 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "LULU": {
       "name": "Lululemon",
