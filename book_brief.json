@@ -1,31 +1,31 @@
 {
-  "your_book": "<p>Jaleel's book slipped about 0.4% on a weighted basis today (Tuesday), and its unrealized result stands at -0.84%. The damage came from the big defensive names. Zoetis, the largest weight at 11.1%, fell 3.38%, Abbott fell 1.66% and Boston Scientific fell 1.11%. Adobe (-3.98%) and On Holding (-3.01%) also dragged. No headline explains the Zoetis drop, so treat it as unexplained. Rocket Lab's 8.39% jump cushioned the day, and Broadcom (+4.0%) and Nvidia (+0.95%) helped too.</p><p>The drift is in what is rising and what is falling. Rocket Lab (6.3% of the book) and Lululemon (4.1%) are both rated AVOID, and they are down 25.6% and 18.2% on the position. Together that is 10.4% of the book in names the framework rejects, and one strong day for Rocket Lab doesn't change that. Adobe fell while the headline says enterprise software rose on a rotation, so it is lagging its sector, which fits the AI-disruption narrative flag. The chip headline says semis fell on AI-capex worries, yet Nvidia and Broadcom both rose, so don't read much into that gap.</p><p>Next up: Boston Scientific reports on Wednesday, Oct 28. It is rated STRONG BUY but carries a slashed-guidance flag and management has guided flat through Q3. It is 9.3% of the book and down 8.0%.</p>",
+  "your_book": "<p>Jaleel's book slipped today (Wednesday), roughly 0.8% on position weights, and Boston Scientific did most of the damage. BSX fell 5.84% at an 8.8% weight, which alone cost about half a point. The risk flags show its Oct 28 date as the next event, on top of a slashed FY26 growth guide (10.5% cut to 7-8.5%) and management guiding flat through Q3. The headline data doesn't say why it fell, so treat the cause as unconfirmed. The position is down 13.4% and rated HOLD-QUAL. Expand Energy (-3.22%) and A. O. Smith (-1.93%) added to the drag, and neither has a headline explaining the move. NVIDIA (-1.17%) fell with chips on worries that AI-capex funding is scarce. Broadcom rose 2.77% on the same news, so that read-through wasn't uniform.</p><p>The drift is in the AVOID-rated names. Abbott (10.7%), Rocket Lab (6.4%) and Lululemon (4.1%) together make up 21.2% of the book. Rocket Lab is down 25.2% and Lululemon 17.7%, and Lululemon's guidance cut is still unresolved. Abbott is up 18.7%, but its QARP score is 56.7 and it is the second-largest weight. For a capital-preservation book, that is the biggest gap between how the positions are held and how they are rated. Watch the BSX follow-through on Thursday, Oct 29, and whether Expand Energy keeps sliding.</p>",
   "attention": [
     {
       "ticker": "BSX",
+      "severity": "act",
+      "headline": "Down 5.84% on a flagged Oct 28 date",
+      "note": "An 8.8% weight, already down 13.4% with a slashed FY26 growth guide, fell hardest today, so the thesis needs rechecking against whatever was reported."
+    },
+    {
+      "ticker": "ABT",
       "severity": "watch",
-      "headline": "Earnings land Wednesday, Oct 28",
-      "note": "A 9.3% weight rated STRONG BUY carries an elevated guidance-cut flag, and management has guided flat through Q3, so the print tests whether the rating still holds."
+      "headline": "Second-largest weight rated AVOID",
+      "note": "At 10.7% with a QARP of 56.7, it is a large position the model rates AVOID, even with an 18.7% gain and only a mild EPS-trim flag."
     },
     {
       "ticker": "RKLB",
-      "severity": "act",
-      "headline": "AVOID-rated name bounced 8.4%",
-      "note": "At a 6.3% weight, still -25.6% on the position and with a 40.3 QARP score, the bounce is a chance to decide whether to keep holding a name the framework rejects."
+      "severity": "watch",
+      "headline": "AVOID name down 25.2%",
+      "note": "A 6.4% weight with a QARP of 40.2, the lowest in the book, so price and thesis are both weak."
     },
     {
-      "ticker": "LULU",
-      "severity": "watch",
-      "headline": "AVOID name, guidance cut, -18.2%",
-      "note": "The cut guide, fifth straight decline in Americas comps and tariff margin pressure are unresolved, and the next catalyst isn't until Dec 9."
-    },
-    {
-      "ticker": "ADBE",
-      "severity": "watch",
-      "headline": "Fell 3.98% against a rising software tape",
-      "note": "Sector headlines were positive yet Adobe sold off, which suggests AI-moat fear is driving the stock rather than its numbers."
+      "ticker": "EXE",
+      "severity": "note",
+      "headline": "STRONG BUY fell 3.22% with no stated cause",
+      "note": "No headline explains the drop in this 4.4% position, so check whether it is sector-wide or specific to the company."
     }
   ],
-  "date": "2026-10-27",
-  "generated_at": "Oct 27, 4:24pm ET"
+  "date": "2026-10-28",
+  "generated_at": "Oct 28, 4:47pm ET"
 }
