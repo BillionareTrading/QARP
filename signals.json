@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generated_at": "Oct 28, 6:01am ET",
+  "generated_at": "Oct 28, 6:36am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -941,7 +941,7 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.496
+      "relevance": 0.494
     },
     {
       "title": "AI's Biggest Constraint Could Be Capital Availability—Anthropic, Meta And SpaceX Put Markets To The Test",
@@ -1049,8 +1049,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-10-07",
-          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000064/bsx-20261001.htm"
+          "date": "2026-10-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/885725/000088572526000066/bsx-20261028.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -1341,8 +1341,8 @@
         },
         "periodic": {
           "form": "10-Q",
-          "date": "2026-07-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm"
+          "date": "2026-10-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000058/spgi-20260930.htm"
         },
         "insider30d": 1
       },
@@ -1368,8 +1368,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-07-30",
-          "url": "https://www.sec.gov/Archives/edgar/data/91142/000009114226000096/aos-20260730.htm"
+          "date": "2026-10-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/91142/000009114226000100/aos-20261027.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -1708,18 +1708,23 @@
       "summary": "Q2 FY2026 — revenue $2.4B (-4.3% YoY), diluted EPS $2.92 (-5.8% YoY), net margin 14%. (as reported, GAAP)"
     },
     "SPGI": {
-      "period": "Q3 FY2018",
-      "filed": "2018-10-26",
+      "period": "Q3 FY2026",
+      "filed": "2026-10-28",
       "form": "10-Q",
-      "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000058/spgi-20260930.htm",
       "revenue": {
-        "fmt": "$1.5B",
-        "yoy": 2.2
+        "fmt": "$3.7B",
+        "yoy": 6.8
       },
-      "eps": null,
-      "net_income": null,
-      "margin": null,
-      "summary": "Q3 FY2018 — revenue $1.5B (+2.2% YoY). (as reported, GAAP)"
+      "eps": {
+        "val": 4.25,
+        "yoy": 10.1
+      },
+      "net_income": {
+        "fmt": "$1.2B"
+      },
+      "margin": 33.7,
+      "summary": "Q3 FY2026 — revenue $3.7B (+6.8% YoY), diluted EPS $4.25 (+10.1% YoY), net margin 34%. (as reported, GAAP)"
     },
     "AOS": {
       "period": "Q2 FY2026",
