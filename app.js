@@ -18,6 +18,13 @@ const TICKER_REAL = Object.fromEntries(Object.entries(TICKER_ALIAS).map(([k, v])
 function etToday() {
   return new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
 }
+let HOLDS = null;   // Website/holds.json — latest material headline per name (published by holds.yml)
+async function loadHolds() {
+  try {
+    const r = await fetch("holds.json", { cache: "no-store" });
+    if (r.ok) HOLDS = (await r.json()).news || {};
+  } catch (e) { /* no holds file yet — the build's own guard still applies */ }
+}
 function clientStaleGuard(o) {
   if (!o || !Array.isArray(o.universe)) return o;
   const today = etToday();
@@ -25,19 +32,30 @@ function clientStaleGuard(o) {
   const held = {};
   let added = 0;
   o.universe.forEach((r) => {
-    const np = r.next_print, f = r.fresh;
-    if (!np || np > today || r.stale_print) return;
-    if (f && f.rev && f.rev >= np) return;
+    if (r.stale_print) return;                       // the build already holds it
+    const f = r.fresh, rev = f && f.rev, np = r.next_print;
+    let why = null, date = null;
+    if (np && np <= today && !(rev && rev >= np)) {
+      why = `the company's report date (${np}) has arrived and the rating has not been re-read since`; date = np;
+    } else {
+      // 2026-10-28 (owner: "IF ANY NEWS HAPPENS ON A STOCK ... THAT SHOULD TRIGGER AN AUTOMATIC REREAD"):
+      // material news newer than the last re-read holds the rating until the re-read is published.
+      const nw = HOLDS && HOLDS[r.ticker];
+      if (nw && nw.date && !(rev && rev >= nw.date)) {
+        why = `news on ${nw.date}${nw.title ? `: “${nw.title}”` : ""}, not yet re-read`; date = nw.date;
+      }
+    }
+    if (!why) return;
     const was = r.verdict, isBuy = BUY.has(was);
     if (isBuy) { r.verdict = "HOLD-QUAL"; held[r.ticker] = was; }
-    r.stale_print = { reported: np, reviewed: f ? f.rev : null, verdict_before: was, held: isBuy, client: true };
+    r.stale_print = { reported: date, reviewed: rev || null, verdict_before: was, held: isBuy, client: true };
     if (f) f.ok = false;
-    r.under_review = isBuy
-      ? `Not a buy until re-read: the company's report date (${np}) has arrived and the rating has not been re-read since. It showed ${was} before this hold.`
-      : `Re-read owed: the company's report date (${np}) has arrived and the rating has not been re-read since.`;
+    r.under_review = isBuy ? `Not a buy until re-read: ${why}. It showed ${was} before this hold.` : `Re-read owed: ${why}.`;
     added++;
   });
-  const fix = (x) => { if (x && held[x.ticker]) { x.verdict = "HOLD-QUAL"; x.under_review = o.universe.find((r) => r.ticker === x.ticker).under_review; } };
+  const byTk = {};
+  o.universe.forEach((r) => { byTk[r.ticker] = r; });
+  const fix = (x) => { if (x && held[x.ticker]) { x.verdict = "HOLD-QUAL"; x.under_review = byTk[x.ticker].under_review; } };
   (o.portfolio || []).forEach(fix);
   ((o.estimates && o.estimates.docket) || []).forEach(fix);
   if (added && o.meta && o.meta.stale_guard) {
@@ -4226,7 +4244,12 @@ async function softRefresh() {
   if (!pw) return;
   try {
     const p = await (await fetch("payload.enc", { cache: "no-store" })).json();
-    if (p && p.iv && p.iv === lastPayloadIv) return;   // identical ciphertext -> no new build, skip
+    const hBefore = JSON.stringify(HOLDS);
+    await loadHolds();
+    if (p && p.iv && p.iv === lastPayloadIv) {          // identical ciphertext -> no new build ...
+      if (DATA && JSON.stringify(HOLDS) !== hBefore) { clientStaleGuard(DATA); rerenderFromData(); }   // ... but new news holds
+      return;
+    }
     const fresh = clientStaleGuard(applyTickerAliases(await decryptPayload(p, pw)));
     // 2026-10-02 (review): two caches die with the old payload — the Calls grouping (it kept the first
     // payload's call list, so a re-scored name showed its old open call against the new price) and the
@@ -4367,6 +4390,7 @@ async function boot() {
       btn.disabled = false; btn.textContent = "Unlock"; return;
     }
     try {
+      await loadHolds();
       DATA = clientStaleGuard(applyTickerAliases(await decryptPayload(payload, pw))); _callsByTk = null;   // same reset as softRefresh (2026-10-02)
       lastPayloadIv = payload.iv;
       gate.hidden = true; app.hidden = false;
