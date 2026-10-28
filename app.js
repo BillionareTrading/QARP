@@ -75,19 +75,34 @@ function freshShort(iso) {
   const d = new Date(iso + "T12:00:00");
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
-// 2026-10-28: "re-read Aug 4" read as stale to the owner when it was current (no report since) — the tag
-// now says CURRENT, and the hover/drawer give both dates plus the next report.
+// 2026-10-28 (owner: "I dont like ... that it shows re-read on this date. THE whole point of the site is that
+// it should be up to date"): every name is now re-checked at least weekly, so an up-to-date rating shows NO
+// tag; only a rating waiting on a new report is flagged ("under review"). One line above each table says how
+// much of the universe was checked this week (freshLine). The drawer keeps one plain sentence.
 function freshSentence(x) {
   const f = freshOf(x);
-  if (!f || !f.ok || !f.rev) return "";
+  if (!f || !f.ok) return "";
   const u = x && x.ticker && DATA && DATA.universe ? DATA.universe.find((r) => r.ticker === x.ticker) : null;
   const nx = (x && x.next_print) || (u && u.next_print);
-  return `Current: rated on ${freshShort(f.rev)}` + (f.rep ? `, after the company's latest report (${freshShort(f.rep)})` : "")
-    + `. No report since.` + (nx ? ` Next report ${freshShort(nx)}, re-read within hours of it.` : "");
+  const head = f.week ? "Up to date: checked this week, and no new earnings report since."
+                      : "No new earnings report since this was rated; its weekly check is next in line.";
+  return head + (nx ? ` Next report ${freshShort(nx)} — re-read within hours of it.` : "");
 }
 function freshTag(x) {
-  const t = freshSentence(x);
-  return t ? `<span class="fr-tag" title="${esc(t)}">✓ current</span>` : "";
+  return "";
+}
+function freshLine() {
+  const g = DATA && DATA.meta && DATA.meta.stale_guard;
+  if (!g || !g.universe) return "";
+  if (g.ok === false) return `<div class="fresh-line warn">The freshness check failed on this update, so no stock is shown as a buy until it runs again.</div>`;
+  const wait = g.print_due || 0;
+  return `<div class="fresh-line">Ratings: <b>${g.checked_7d} of ${g.universe}</b> checked in the last 7 days — every stock is re-checked at least weekly, and within hours of each earnings report.`
+    + (wait ? ` ${wait} ${wait === 1 ? "is" : "are"} waiting on a new report (marked “under review”, never shown as a buy until re-read).` : "")
+    + ` Prices update with every refresh.</div>`;
+}
+function paintFreshLines() {
+  const h = freshLine();
+  ["u-fresh", "p-fresh"].forEach((id) => { const el = document.getElementById(id); if (el) el.innerHTML = h; });
 }
 
 /* ---------- header tooltips (tap the ⓘ) ---------- */
@@ -848,6 +863,7 @@ function renderUniverseTable() {
       `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
 
   document.getElementById("u-count").textContent = `${rows.length} of ${list.length}`;
+  paintFreshLines();
   document.querySelectorAll("#u-table thead th").forEach((th) =>
     th.addEventListener("click", (e) => {
       if (e.target.closest(".info-btn")) return; // tapping the ⓘ shouldn't sort
@@ -1091,6 +1107,7 @@ function renderPortfolioTable() {
     const arrow = pSort.key === c.key ? `<span class="arrow">${pSort.dir > 0 ? "▲" : "▼"}</span>` : "";
     return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${typeof c.label === "function" ? c.label() : c.label}${arrow}${infoBtn(c.key)}</th>`;
   }).join("")}</tr>`;
+  paintFreshLines();
   document.querySelector("#p-table tbody").innerHTML = rows.map((x) => `
     <tr data-ticker="${x.ticker}" class="${moveRowCls(x)}"${moveRowTitle(x) ? ` title="${moveRowTitle(x)}"` : ""}>${pCols.map((c) =>
       `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
