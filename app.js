@@ -75,11 +75,19 @@ function freshShort(iso) {
   const d = new Date(iso + "T12:00:00");
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
-function freshTag(x) {
+// 2026-10-28: "re-read Aug 4" read as stale to the owner when it was current (no report since) — the tag
+// now says CURRENT, and the hover/drawer give both dates plus the next report.
+function freshSentence(x) {
   const f = freshOf(x);
   if (!f || !f.ok || !f.rev) return "";
-  const tip = `Fresh: re-read on ${f.rev}` + (f.rep ? `, after the company's latest report (${f.rep}).` : ".");
-  return `<span class="fr-tag" title="${esc(tip)}">✓ re-read ${freshShort(f.rev)}</span>`;
+  const u = x && x.ticker && DATA && DATA.universe ? DATA.universe.find((r) => r.ticker === x.ticker) : null;
+  const nx = (x && x.next_print) || (u && u.next_print);
+  return `Current: rated on ${freshShort(f.rev)}` + (f.rep ? `, after the company's latest report (${freshShort(f.rep)})` : "")
+    + `. No report since.` + (nx ? ` Next report ${freshShort(nx)}, re-read within hours of it.` : "");
+}
+function freshTag(x) {
+  const t = freshSentence(x);
+  return t ? `<span class="fr-tag" title="${esc(t)}">✓ current</span>` : "";
 }
 
 /* ---------- header tooltips (tap the ⓘ) ---------- */
@@ -1149,7 +1157,8 @@ function openDrawer(ticker) {
   // 2026-10-02 (review): under-review flag next to the badge + the build's own sentence. A price-reset
   // row already carries that sentence as the "[UNDER REVIEW: …]" prefix of its DCF note — not twice.
   const ur = d.under_review || (p && p.under_review) || "";
-  const urNote = ur && !(d.corp_action && has(d.dcf_note)) ? `<div class="rv-note"><b>Under review.</b> ${esc(ur)}</div>` : "";
+  const urNote = ur && !(d.corp_action && has(d.dcf_note)) ? `<div class="rv-note"><b>Under review.</b> ${esc(ur)}</div>`
+    : (freshSentence({ ticker }) ? `<div class="rv-note fr-note">${esc(freshSentence({ ticker }))}</div>` : "");
   document.getElementById("drawer-panel").innerHTML = `
     <div class="drawer-head">
       <div>

@@ -296,6 +296,7 @@ button { font-family: inherit; cursor: pointer; }
 .fr-tag { display: block; margin-top: 3px; font: 700 9px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--pos); white-space: nowrap; cursor: help; }
 .drawer-tags .fr-tag { display: inline-block; margin: 0; padding: 4px 9px; border: 1px solid currentColor; border-radius: 8px; font-size: 11px; }
 .rv-note { font-size: 13px; color: var(--ink); line-height: 1.55; background: var(--surface-2); border-left: 4px solid var(--brass); border-radius: 10px; padding: 11px 14px; margin: 10px 0; }
+.rv-note.fr-note { border-left-color: var(--pos); }
 
 /* ===== Controls ===== */
 .controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
