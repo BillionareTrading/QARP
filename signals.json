@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "Oct 29, 5:51am ET",
+  "generated_at": "Oct 29, 12:10pm ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -105,8 +105,8 @@
     "ZTS": "2026-11-05",
     "ABT": "2027-01-20",
     "BSX": "2027-02-02",
-    "NVDA": "2026-11-17",
     "AZN": "2026-10-30",
+    "NVDA": "2026-11-17",
     "AZO": "2026-12-07",
     "RKLB": "2026-11-09",
     "ADBE": "2026-12-09",
@@ -125,10 +125,10 @@
   "sectors": [
     {
       "sector": "Data Center Infrastructure",
-      "dir": "up",
+      "dir": "mixed",
       "driver": "Sympathy with Johnson Controls International after the company reported …",
       "note": "Amid sympathy with Johnson Controls International after the company reported better-than-expected fourth-quarter financial results. Easing oil prices and improving inflation expectations are also easing concerns that interest rates will remain elevated, potentially supporting investment in data centers and power infrastructure.",
-      "src": "Benzinga WIIM · price-confirmed"
+      "src": "Benzinga WIIM · flags a divergence vs our prices"
     },
     {
       "sector": "Oil & Gas",
@@ -139,10 +139,10 @@
     },
     {
       "sector": "Homebuilders & Housing",
-      "dir": "mixed",
+      "dir": "up",
       "driver": "The 10-year Treasury yield falls below 5% for the first time since Sept.…",
       "note": "As the 10-year Treasury yield falls below 5% for the first time since Sept. 23. Sentiment is also supported by proposed Treasury Department regulations aimed at making homeownership more affordable.",
-      "src": "Benzinga WIIM · flags a divergence vs our prices"
+      "src": "Benzinga WIIM · price-confirmed"
     },
     {
       "sector": "Enterprise Software",
@@ -188,50 +188,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$50",
-      "price": 37.15,
-      "upside": 34.6,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-10-22",
-      "ticker": "NKE",
-      "firm": "Wolfe Research",
-      "action": "Initiates Coverage On",
-      "rating": "Underperform",
-      "stance": "bearish",
-      "pt": "$28",
-      "price": 37.15,
-      "upside": -24.6,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-10-22",
-      "ticker": "NKE",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$45",
-      "price": 37.15,
-      "upside": 21.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
-    {
-      "date": "2026-10-22",
-      "ticker": "NKE",
-      "firm": "BTIG",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$50",
-      "price": 37.15,
-      "upside": 34.6,
+      "price": 38.34,
+      "upside": 30.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -244,8 +202,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$176",
-      "price": 158.26,
-      "upside": 11.2,
+      "price": 159.13,
+      "upside": 10.6,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -258,8 +216,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$190",
-      "price": 158.26,
-      "upside": 20.1,
+      "price": 159.13,
+      "upside": 19.4,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -272,8 +230,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$187",
-      "price": 158.26,
-      "upside": 18.2,
+      "price": 159.13,
+      "upside": 17.5,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -286,8 +244,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$189",
-      "price": 158.26,
-      "upside": 19.4,
+      "price": 159.13,
+      "upside": 18.8,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -300,8 +258,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 158.26,
-      "upside": 13.7,
+      "price": 159.13,
+      "upside": 13.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -314,8 +272,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$180",
-      "price": 158.26,
-      "upside": 13.7,
+      "price": 159.13,
+      "upside": 13.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -328,8 +286,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$169",
-      "price": 158.26,
-      "upside": 6.8,
+      "price": 159.13,
+      "upside": 6.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -342,8 +300,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 158.26,
-      "upside": 13.7,
+      "price": 159.13,
+      "upside": 13.1,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -356,8 +314,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$166",
-      "price": 158.26,
-      "upside": 4.9,
+      "price": 159.13,
+      "upside": 4.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -370,8 +328,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$185",
-      "price": 158.26,
-      "upside": 16.9,
+      "price": 159.13,
+      "upside": 16.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -384,11 +342,11 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$322",
-      "price": 317.56,
-      "upside": 1.4,
+      "price": 325.62,
+      "upside": -1.1,
       "held": false,
       "uni": true,
-      "qarp": "HOLD-QUAL"
+      "qarp": "AVOID"
     },
     {
       "date": "2026-10-26",
@@ -398,8 +356,8 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$165",
-      "price": 158.26,
-      "upside": 4.3,
+      "price": 159.13,
+      "upside": 3.7,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -412,8 +370,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "price": 140.93,
-      "upside": 27.7,
+      "price": 147.21,
+      "upside": 22.3,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -426,8 +384,8 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$167",
-      "price": 158.26,
-      "upside": 5.5,
+      "price": 159.13,
+      "upside": 4.9,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -440,8 +398,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$102",
-      "price": 91.73,
-      "upside": 11.2,
+      "price": 92.12,
+      "upside": 10.7,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -454,8 +412,8 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$89",
-      "price": 91.73,
-      "upside": -3.0,
+      "price": 92.12,
+      "upside": -3.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -468,8 +426,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$106",
-      "price": 91.73,
-      "upside": 15.6,
+      "price": 92.12,
+      "upside": 15.1,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -482,8 +440,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$103",
-      "price": 91.73,
-      "upside": 12.3,
+      "price": 92.12,
+      "upside": 11.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -496,8 +454,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$98",
-      "price": 91.73,
-      "upside": 6.8,
+      "price": 92.12,
+      "upside": 6.4,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -510,8 +468,8 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$104",
-      "price": 91.73,
-      "upside": 13.4,
+      "price": 92.12,
+      "upside": 12.9,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -524,8 +482,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$103",
-      "price": 91.73,
-      "upside": 12.3,
+      "price": 92.12,
+      "upside": 11.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -538,8 +496,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$100",
-      "price": 91.73,
-      "upside": 9.0,
+      "price": 92.12,
+      "upside": 8.6,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -552,8 +510,8 @@
       "rating": "Outperform",
       "stance": "bullish",
       "pt": "$96",
-      "price": 91.73,
-      "upside": 4.7,
+      "price": 92.12,
+      "upside": 4.2,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -566,8 +524,8 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$103",
-      "price": 91.73,
-      "upside": 12.3,
+      "price": 92.12,
+      "upside": 11.8,
       "held": false,
       "uni": true,
       "qarp": "AVOID"
@@ -581,7 +539,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$89",
-      "upside": -3.0
+      "upside": -3.4
     },
     "PG": {
       "date": "2026-10-26",
@@ -590,7 +548,7 @@
       "rating": "Equal-Weight",
       "stance": "neutral",
       "pt": "$165",
-      "upside": 4.3
+      "upside": 3.7
     },
     "MRK": {
       "date": "2026-10-26",
@@ -599,7 +557,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$180",
-      "upside": 27.7
+      "upside": 22.3
     },
     "HD": {
       "date": "2026-10-26",
@@ -608,7 +566,7 @@
       "rating": "Hold",
       "stance": "neutral",
       "pt": "$322",
-      "upside": 1.4
+      "upside": -1.1
     },
     "NKE": {
       "date": "2026-10-22",
@@ -617,7 +575,7 @@
       "rating": "Buy",
       "stance": "bullish",
       "pt": "$50",
-      "upside": 34.6
+      "upside": 30.4
     },
     "CRM": {
       "date": "2026-10-21",
@@ -626,7 +584,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$250",
-      "upside": 3.3
+      "upside": 9.3
     },
     "MMM": {
       "date": "2026-10-21",
@@ -635,7 +593,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$188",
-      "upside": 8.8
+      "upside": 6.6
     },
     "AAPL": {
       "date": "2026-10-20",
@@ -644,7 +602,7 @@
       "rating": "Neutral",
       "stance": "neutral",
       "pt": "$283",
-      "upside": -17.7
+      "upside": -18.9
     },
     "JNJ": {
       "date": "2026-10-16",
@@ -653,7 +611,7 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$287",
-      "upside": 5.9
+      "upside": 4.3
     },
     "CVX": {
       "date": "2026-10-15",
@@ -662,19 +620,47 @@
       "rating": "Overweight",
       "stance": "bullish",
       "pt": "$226",
-      "upside": -1.4
+      "upside": -1.6
     }
   },
   "bz_news": [
     {
-      "title": "Why Is Microsoft Stock Gaining Thursday?",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62684857/why-is-microsoft-stock-gaining-thursday",
-      "ts": 1793267436,
+      "title": "Walmart+ Launches In Mexico With Shopping, Entertainment, Connectivity, Rewards, And Healthcare Benefits;  Walmart+ Membership In Mexico Priced At MXN$89 Monthly Or MXN$890 Annually; Walmart+ Mexico Offers Free Shipping And Delivery With No Minimum Through November 30, 2026",
+      "url": "https://www.benzinga.com/news/26/10/62705990/walmart-launches-mexico-shopping-entertainment-connectivity-rewards-and-healthcare-benefits-walmart-",
+      "ts": 1793289919,
       "tickers": [
-        "MSFT",
-        "AMZN",
+        "WMT",
+        "EWW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.279
+    },
+    {
+      "title": "Why Is Salesforce Stock Falling on Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62705757/why-is-salesforce-stock-falling-on-thursday",
+      "ts": 1793289651,
+      "tickers": [
+        "CRM",
         "GOOGL",
-        "GOOG"
+        "GOOG",
+        "NOW"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.379
+    },
+    {
+      "title": "Alphabet Bulls Dig in After Messy Q3: 'AI Stack Keeps Us Bullish' Cantor Says",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62705724/alphabet-bulls-dig-in-after-messy-q3-ai-stack-keeps-us-bullish-cantor-says",
+      "ts": 1793289626,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "MSFT",
+        "SPCX"
       ],
       "source": "Benzinga",
       "wiim": false,
@@ -682,171 +668,70 @@
       "relevance": 0.385
     },
     {
-      "title": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed After Fed Keeps Rates Unchanged — MSFT, GOOG, TMUS in Focus",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62684592/stock-market-today-dow-jones-sp-500-futures-trade-mixed-after-fed-keeps-rates-unchanged-msft-goog-tmus-in-focus",
-      "ts": 1793266403,
+      "title": "DA Davidson Maintains Buy on Microsoft, Raises Price Target to $650",
+      "url": "https://www.benzinga.com/news/26/10/62705315/da-davidson-maintains-buy-microsoft-raises-price-target-650",
+      "ts": 1793288971,
       "tickers": [
-        "SPY",
-        "$BTC",
-        "AMZN",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.459
+    },
+    {
+      "title": "TD Cowen Maintains Buy on Microsoft, Raises Price Target to $650",
+      "url": "https://www.benzinga.com/news/26/10/62705235/td-cowen-maintains-buy-microsoft-raises-price-target-650",
+      "ts": 1793288826,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.45
+    },
+    {
+      "title": "$1000 Invested In Microsoft 10 Years Ago Would Be Worth This Much Today",
+      "url": "https://www.benzinga.com/news/26/10/62705158/1000-invested-microsoft-10-years-ago-would-be-worth-much-today",
+      "ts": 1793288727,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.311
+    },
+    {
+      "title": "Scotiabank Maintains Sector Outperform on Microsoft, Raises Price Target to $650",
+      "url": "https://www.benzinga.com/news/26/10/62705126/scotiabank-maintains-sector-outperform-microsoft-raises-price-target-650",
+      "ts": 1793288683,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.473
+    },
+    {
+      "title": "Microsoft's $28 Billion Cash Flow Edge Over Google Gives It an AI Advantage, Analyst Says",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62704431/microsoft-google-cash-flow",
+      "ts": 1793287839,
+      "tickers": [
+        "MSFT",
         "GOOGL"
       ],
       "source": "Benzinga",
       "wiim": false,
-      "rel": true,
-      "relevance": 0.478
-    },
-    {
-      "title": "Piper Sandler Reiterates Overweight on Microsoft, Raises Price Target to $650",
-      "url": "https://www.benzinga.com/news/26/10/62684472/piper-sandler-reiterates-overweight-microsoft-raises-price-target-650",
-      "ts": 1793265600,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
       "rel": false,
-      "relevance": 0.457
+      "relevance": 0.422
     },
     {
-      "title": "Kevin Warsh Admits Rising Oil Prices Are Fueling Inflation Expectations as Trump's Energy Holdings Reportedly Soar 3X Amid Iran War",
-      "url": "https://www.benzinga.com/news/politics/26/10/62684420/kevin-warsh-admits-rising-oil-prices-are-fueling-inflation-expectations-as-trumps-energy-holdings-reportedly-soar-3x-amid-iran-war",
-      "ts": 1793265080,
-      "tickers": [
-        "CVX",
-        "XOM"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.252
-    },
-    {
-      "title": "MSFT Stock Eyes Best Day In Over 3 Months After Earnings Beat — Gene Munster Says 'Software Is Alive And Well, At Least For Now'",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62683953/msft-stock-eyes-best-day-in-over-3-months-after-earnings-beat-gene-munster-says-software-is-alive-and-well-at-least-for-now",
-      "ts": 1793261613,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.35
-    },
-    {
-      "title": "Microsoft Has a Tool That 'Governs and Contains Agents,' Says Satya Nadella — Meta's Muse, OpenAI, Anthropic Are Lining Up",
-      "url": "https://www.benzinga.com/markets/earnings/26/10/62683384/microsoft-ai-agents-gatekeeper-mxc-openai-anthropic-meta",
-      "ts": 1793257987,
-      "tickers": [
-        "MSFT",
-        "META",
-        "CRWD"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.295
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62682843/stock-market-will-sp-500-open-up-or-down-today-68",
-      "ts": 1793253857,
-      "tickers": [
-        "SPY",
-        "AMZN",
-        "INTC",
-        "QQQ"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Dow Gains For Third Session Following Fed Decision: Investor Sentiment Improves, Greed Index Remains In ‘Fear’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/10/62682622/dow-gains-for-third-session-following-fed-decision-investor-sentiment-improves-greed-index-remains-in-fear-zone",
-      "ts": 1793252000,
-      "tickers": [
-        "AMZN",
-        "LLY",
-        "CAT",
-        "VRT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.475
-    },
-    {
-      "title": "Amazon, Alphabet and 3 Stocks to Watch Heading Into Thursday",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62682401/amazon-alphabet-and-3-stocks-to-watch-heading-into-thursday",
-      "ts": 1793247521,
-      "tickers": [
-        "AMZN",
-        "GOOGL",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.39
-    },
-    {
-      "title": "Alphabet, Microsoft, ServiceNow, Lumentum Holdings and Oracle: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62681846/alphabet-microsoft-servicenow-lumentum-holdings-and-oracle-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1793236123,
-      "tickers": [
-        "GOOG",
-        "GOOGL",
-        "MSFT",
-        "ORCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.436
-    },
-    {
-      "title": "Jefferies Maintains Buy on Boeing, Lowers Price Target to $230",
-      "url": "https://www.benzinga.com/news/26/10/62680648/jefferies-maintains-buy-boeing-lowers-price-target-230",
-      "ts": 1793225736,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.415
-    },
-    {
-      "title": "Microsoft Q1 2027 Earnings Call Transcript",
-      "url": "https://www.benzinga.com/news/26/10/62680566/microsoft-q1-2027-earnings-call-transcript",
-      "ts": 1793225530,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.537
-    },
-    {
-      "title": "Microsoft Sees Q2 Sales $96.000B-$97.100B vs $95.616B Est",
-      "url": "https://www.benzinga.com/news/26/10/62680302/microsoft-sees-q2-sales-96-000b-97-100b-vs-95-616b-est",
-      "ts": 1793224885,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.41
-    },
-    {
-      "title": "Microsoft CFO Says Q2 Agents And Infra Revenue Expected To Be $80.1B To $80.7B; Q2 Azure Growth Expected To Be 49%",
-      "url": "https://www.benzinga.com/news/26/10/62680277/microsoft-cfo-says-q2-agents-and-infra-revenue-expected-be-80-1b-80-7b-q2-azure-growth-expected-be-4",
-      "ts": 1793224832,
+      "title": "Citizens Maintains Market Outperform on Microsoft, Raises Price Target to $625",
+      "url": "https://www.benzinga.com/news/26/10/62704418/citizens-maintains-market-outperform-microsoft-raises-price-target-625",
+      "ts": 1793287826,
       "tickers": [
         "MSFT"
       ],
@@ -856,127 +741,215 @@
       "relevance": 0.448
     },
     {
-      "title": "Microsoft CFO Says Paid M365 Commercial Seats Grew 5%, With Some Impact From Weaker Sales Execution",
-      "url": "https://www.benzinga.com/news/26/10/62680237/microsoft-cfo-says-paid-m365-commercial-seats-grew-5-some-impact-weaker-sales-execution",
-      "ts": 1793224649,
+      "title": "Tech's 20 Beaten-Down Stocks Have Sunk up to 65%: Which ETFs Could Ride an AI Rebound?",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62704347/techs-20-beaten-down-stocks-have-sunk-up-to-65-which-etfs-could-ride-an-ai-rebound",
+      "ts": 1793287753,
       "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.365
-    },
-    {
-      "title": "Microsoft CFO Says Roughly 30% Of Cloud Business RPO Will Be Recognized In Revenue In The Next 12 Months",
-      "url": "https://www.benzinga.com/news/26/10/62680174/microsoft-cfo-says-roughly-30-cloud-business-rpo-will-be-recognized-revenue-next-12-months",
-      "ts": 1793224476,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.413
-    },
-    {
-      "title": "Microsoft CFO Says Roughly Three Quarters Of Capex Was For Short-Lived Assets, Primarily CPUs And GPUs, Including Higher Memory And Storage Costs",
-      "url": "https://www.benzinga.com/news/26/10/62680161/microsoft-cfo-says-roughly-three-quarters-capex-was-short-lived-assets-primarily-cpus-and-gpus-inclu",
-      "ts": 1793224418,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.443
-    },
-    {
-      "title": "Microsoft CFO Says Capital Expenditures Were Lower Than Guidance In Q1 As Some Third-Party Capacity Deliveries We Expected In Q1 Were Delayed",
-      "url": "https://www.benzinga.com/news/26/10/62680131/microsoft-cfo-says-capital-expenditures-were-lower-guidance-q1-some-third-party-capacity-deliveries-",
-      "ts": 1793224306,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.492
-    },
-    {
-      "title": "Microsoft CEO Says Accelerating Demand Led to Us Adding 24 New Data Centers Across Five Continents This Quarter",
-      "url": "https://www.benzinga.com/news/26/10/62680068/microsoft-ceo-says-accelerating-demand-led-us-adding-24-new-data-centers-across-five-continents-quar",
-      "ts": 1793224147,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.433
-    },
-    {
-      "title": "If You Invested $1000 In Walmart Stock 20 Years Ago, You Would Have This Much Today",
-      "url": "https://www.benzinga.com/news/26/10/62679475/if-you-invested-1000-walmart-stock-20-years-ago-you-would-have-much-today",
-      "ts": 1793223027,
-      "tickers": [
-        "WMT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.239
-    },
-    {
-      "title": "UBS Maintains Buy on Coca-Cola, Raises Price Target to $106",
-      "url": "https://www.benzinga.com/news/26/10/62679372/ubs-maintains-buy-coca-cola-raises-price-target-106",
-      "ts": 1793222837,
-      "tickers": [
-        "KO"
+        "SOXX",
+        "COIN",
+        "INTC",
+        "HOOD"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.454
+      "relevance": 0.443
     },
     {
-      "title": "UBS Maintains Buy on Boeing, Lowers Price Target to $240",
-      "url": "https://www.benzinga.com/news/26/10/62679024/ubs-maintains-buy-boeing-lowers-price-target-240",
-      "ts": 1793222182,
+      "title": "Truist Securities Reiterates Buy on Microsoft, Raises Price Target to $630",
+      "url": "https://www.benzinga.com/news/26/10/62704196/truist-securities-reiterates-buy-microsoft-raises-price-target-630",
+      "ts": 1793287584,
       "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.432
+    },
+    {
+      "title": "Barclays Maintains Overweight on Microsoft, Raises Price Target to $610",
+      "url": "https://www.benzinga.com/news/26/10/62703837/barclays-maintains-overweight-microsoft-raises-price-target-610",
+      "ts": 1793287069,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.479
+    },
+    {
+      "title": "Rivian Working on Vans for Walmart? Investors Could Get Their Answer Thursday",
+      "url": "https://www.benzinga.com/trading-ideas/previews/26/10/62703305/rivian-working-on-vans-for-walmart-investors-could-get-their-answer-thursday",
+      "ts": 1793286604,
+      "tickers": [
+        "RIVN",
+        "AMZN",
+        "WMT",
+        "GM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.332
+    },
+    {
+      "title": "FCC Aims To Auction 25 Megahertz Of Prime, Mid-Band Spectrum",
+      "url": "https://www.benzinga.com/news/26/10/62703275/fcc-aims-auction-25-megahertz-prime-mid-band-spectrum",
+      "ts": 1793286595,
+      "tickers": [
+        "VZ",
+        "T",
+        "TMUS",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.27
+    },
+    {
+      "title": "8 Of 11 Sectors Rise Thursday As Defensives Lead",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62702630/8-of-11-sectors-rise-thursday-as-defensives-lead",
+      "ts": 1793286028,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "DIA",
+        "IWM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.412
+    },
+    {
+      "title": "Merck shares are trading higher after reporting better-than-expected Q3 financial results and raising its FY26 guidance above estimates.",
+      "url": "https://www.benzinga.com/quote/MRK",
+      "ts": 1793285402,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": true,
+      "relevance": 0.463
+    },
+    {
+      "title": "ServiceNow Stock Plunges on Worst Day in Company’s History: AI Wins Can’t Hide a Bookings Slowdown",
+      "url": "https://www.benzinga.com/markets/earnings/26/10/62702000/servicenow-stock-worst-day-history-bookings-slowdown",
+      "ts": 1793285354,
+      "tickers": [
+        "NOW",
+        "CRM",
+        "WDAY",
+        "IGV"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.35
+    },
+    {
+      "title": "Wells Fargo Maintains Overweight on Microsoft, Raises Price Target to $750",
+      "url": "https://www.benzinga.com/news/26/10/62701797/wells-fargo-maintains-overweight-microsoft-raises-price-target-750",
+      "ts": 1793285122,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.455
+    },
+    {
+      "title": "Wells Fargo Maintains Overweight on Visa, Raises Price Target to $463",
+      "url": "https://www.benzinga.com/news/26/10/62701389/wells-fargo-maintains-overweight-visa-raises-price-target-463",
+      "ts": 1793284782,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.428
+    },
+    {
+      "title": "Steve Eisman Says AI Giants Have 'No Moats.' Morningstar's $57 Billion Math Says Otherwise",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62701119/eisman-ai-moats",
+      "ts": 1793284443,
+      "tickers": [
+        "AMZN",
+        "GOOGL",
+        "MSFT",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.337
+    },
+    {
+      "title": "StoneX Maintains Buy on Microsoft, Raises Price Target to $630",
+      "url": "https://www.benzinga.com/news/26/10/62700950/stonex-maintains-buy-microsoft-raises-price-target-630",
+      "ts": 1793284256,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.438
+    },
+    {
+      "title": "Howmet Aerospace Exec Says Co Expects Volume Increases For Boeing 737, 787 And Airbus A320, A350 To Be Healthy; Says F-35 Fighter Jet Spares Demand Continues To Be Healthy With An Expanding Fleet Of Aircraft",
+      "url": "https://www.benzinga.com/news/26/10/62700608/howmet-aerospace-exec-says-co-expects-volume-increases-boeing-737-787-and-airbus-a320-a350-be-health",
+      "ts": 1793283939,
+      "tickers": [
+        "HWM",
         "BA"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.458
+      "relevance": 0.332
     },
     {
-      "title": "Shares of enterprise software-related companies are trading lower, possibly in response to ServiceNow's Q3 financial results, which could weigh on peers. Alphabet's Q3 financial results may spark concerns and pressure the broader tech sector.",
-      "url": "https://www.benzinga.com/quote/MNDY",
-      "ts": 1793221551,
-      "tickers": [
-        "TEAM",
-        "CRM",
-        "INTU",
-        "ORCL"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.418
-    },
-    {
-      "title": "Microsoft shares are trading higher after the company reported better-than-expected Q1 financial results.",
-      "url": "https://www.benzinga.com/quote/MSFT",
-      "ts": 1793218850,
+      "title": "Guggenheim Maintains Buy on Microsoft, Raises Price Target to $595",
+      "url": "https://www.benzinga.com/news/26/10/62700169/guggenheim-maintains-buy-microsoft-raises-price-target-595",
+      "ts": 1793283566,
       "tickers": [
         "MSFT"
       ],
       "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.431
+    },
+    {
+      "title": "Caterpillar shares are trading lower despite reporting better-than-expected Q3 financial results. Company management noted headwinds from disrupted Middle East markets, tariffs, cost inflation, and moderate Q4 sales growth.",
+      "url": "https://www.benzinga.com/quote/CAT",
+      "ts": 1793283535,
+      "tickers": [
+        "CAT"
+      ],
+      "source": "Benzinga",
       "wiim": true,
       "rel": false,
-      "relevance": 0.449
+      "relevance": 0.443
+    },
+    {
+      "title": "Apple Stock Heads Toward All-Time High: What's Going On?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62699888/apple-stock-heads-toward-all-time-high-whats-going-on",
+      "ts": 1793283301,
+      "tickers": [
+        "AAPL"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.411
     }
   ],
   "portfolio_brief": {
@@ -1076,6 +1049,30 @@
       },
       "explain": "37 analysts cover it — 29 bullish, 8 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
+    "AZN": {
+      "name": "AstraZeneca",
+      "qarp": "BUY",
+      "consensus": {
+        "strongBuy": 12,
+        "buy": 16,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 34,
+        "bullish": 28,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.18,
+        "period": "2026-10-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": null,
+        "periodic": null,
+        "insider30d": 1
+      },
+      "explain": "34 analysts cover it — 28 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+    },
     "NVDA": {
       "name": "NVIDIA",
       "qarp": "STRONG BUY",
@@ -1112,30 +1109,6 @@
         "insider30d": 1
       },
       "explain": "69 analysts cover it — 66 bullish, 2 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
-    },
-    "AZN": {
-      "name": "AstraZeneca",
-      "qarp": "BUY",
-      "consensus": {
-        "strongBuy": 12,
-        "buy": 16,
-        "hold": 6,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 34,
-        "bullish": 28,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.18,
-        "period": "2026-10-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": null,
-        "periodic": null,
-        "insider30d": 1
-      },
-      "explain": "34 analysts cover it — 28 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "AZO": {
       "name": "AutoZone",
@@ -1360,7 +1333,7 @@
     },
     "AOS": {
       "name": "A. O. Smith",
-      "qarp": "HOLD-QUAL",
+      "qarp": "BUY",
       "consensus": {
         "strongBuy": 4,
         "buy": 4,
@@ -1378,8 +1351,8 @@
       "filings": {
         "latest8k": {
           "form": "8-K",
-          "date": "2026-10-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/91142/000009114226000100/aos-20261027.htm"
+          "date": "2026-10-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/91142/000009114226000102/aos-20261029.htm"
         },
         "periodic": {
           "form": "10-Q",
@@ -1388,7 +1361,7 @@
         },
         "insider30d": 0
       },
-      "explain": "18 analysts cover it — 8 bullish, 8 hold, 2 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "18 analysts cover it — 8 bullish, 8 hold, 2 bearish (consensus <b>Buy</b>). Wall Street and our framework both lean positive."
     },
     "NVS": {
       "name": "Novartis",
@@ -1601,6 +1574,7 @@
       "margin": null,
       "summary": "Q2 FY2026 — revenue $5.4B (+7.5% YoY), diluted EPS $0.61 (+15.1% YoY). (as reported, GAAP)"
     },
+    "AZN": null,
     "NVDA": {
       "period": "Q2 FY2027",
       "filed": "2026-08-26",
@@ -1620,7 +1594,6 @@
       "margin": 62.0,
       "summary": "Q2 FY2027 — revenue $96.2B (+105.9% YoY), diluted EPS $2.46 (+127.8% YoY), net margin 62%. (as reported, GAAP)"
     },
-    "AZN": null,
     "AZO": {
       "period": "FY2026",
       "filed": "2026-10-26",
