@@ -19,10 +19,11 @@ function etToday() {
   return new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
 }
 let HOLDS = null;   // Website/holds.json — latest material headline per name (published by holds.yml)
+let HOLDS_HB = null; // holds.json.heartbeat — the re-read desk's last run / next due (Track A §1c, 2026-10-30)
 async function loadHolds() {
   try {
     const r = await fetch("holds.json", { cache: "no-store" });
-    if (r.ok) HOLDS = (await r.json()).news || {};
+    if (r.ok) { const j = await r.json(); HOLDS = j.news || {}; HOLDS_HB = j.heartbeat || null; }
   } catch (e) { /* no holds file yet — the build's own guard still applies */ }
 }
 function clientStaleGuard(o) {
@@ -53,6 +54,21 @@ function clientStaleGuard(o) {
     r.under_review = isBuy ? `Not a buy until re-read: ${why}. It showed ${was} before this hold.` : `Re-read owed: ${why}.`;
     added++;
   });
+  // Track A §1c (2026-10-30): the re-read desk writes a heartbeat every run (holds.json.heartbeat, within a minute of
+  // the run). If it is more than 90 minutes past due, nothing has been re-read since — no buy is shown, whatever
+  // the last bake said. The build applies the same rule at bake time; this repeats it between bakes.
+  const hb = HOLDS_HB && HOLDS_HB.next_due ? Date.parse(HOLDS_HB.next_due) : NaN;
+  if (!isNaN(hb) && Date.now() > hb + 90 * 60 * 1000) {
+    const when = HOLDS_HB.last_run ? new Date(HOLDS_HB.last_run).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) : "unknown";
+    const msg = `Not a buy right now: the re-read desk missed its scheduled run (last run ${when}); every buy is held until it runs.`;
+    o.universe.forEach((r) => {
+      if (!BUY.has(r.verdict)) return;
+      held[r.ticker] = r.verdict;
+      r.stale_print = r.stale_print || { reported: null, reviewed: (r.fresh && r.fresh.rev) || null, verdict_before: r.verdict, held: true, kind: "heartbeat", client: true };
+      r.verdict = "HOLD-QUAL"; r.under_review = msg + (r.under_review ? " " + r.under_review : ""); added++;
+    });
+    if (o.meta && o.meta.stale_guard) o.meta.stale_guard.heartbeat = { ok: false, client: true, last_run: HOLDS_HB.last_run, next_due: HOLDS_HB.next_due };
+  }
   const byTk = {};
   o.universe.forEach((r) => { byTk[r.ticker] = r; });
   const fix = (x) => { if (x && held[x.ticker]) { x.verdict = "HOLD-QUAL"; x.under_review = byTk[x.ticker].under_review; } };
@@ -113,9 +129,91 @@ function verdictBadge(v) {
 // level (a 35%+ fall from the scoring price, or a one-session price reset) — the site showed a plain
 // badge with no sign of it. Small tag under the badge; the full sentence is the hover + the drawer.
 function reviewTag(x) {
+  // Track A phase 2 (2026-10-30): the tag names WHY, in two words — the full sentence stays the hover + drawer.
   const t = x && x.under_review;
+  const kind = x && x.stale_print && x.stale_print.kind;
+  if (t && kind === "cooling") return `<span class="rv-tag rv-cool" title="${esc(t)}">cooling off</span>`;
+  if (t && kind === "heartbeat") return `<span class="rv-tag rv-late" title="${esc(t)}">desk late</span>`;
+  if (t && /^Data check/.test(t)) return `<span class="rv-tag rv-data" title="${esc(t)}">data check</span>`;
+  if (t && /^Price check/.test(t) && !(x.stale_print && x.stale_print.held)) return `<span class="rv-tag rv-price" title="${esc(t)}">price check</span>`;
   if (t) return `<span class="rv-tag" title="${esc(t)}">under review</span>`;
+  if (x && x.pending) return `<span class="rv-tag rv-price" title="${esc(pendingText(x))}">proposed</span>`;
+  if (x && x.reads_split) return `<span class="rv-tag rv-price" title="The skeptic and the analyst disagreed on the direction of this rating; the stricter read is shown.">reads split</span>`;
   return freshTag(x);
+}
+// ---- Track A phase 2 helpers (2026-10-30): trigger words, pending proposals, "chance this is wrong" chip ----
+const TRIG_WORDS = { filing: "a new filing", call: "the earnings call", guidance: "a guidance change", "8k": "an 8-K", regulator: "a regulator decision",
+  analyst: "an analyst note", price: "a price move", news: "a headline", weekly: "the weekly check" };
+function trigWords(t) {
+  if (!t) return "";
+  return String(t).split("+").map((k) => TRIG_WORDS[k.trim().toLowerCase()] || k.trim()).join(" and ");
+}
+const PRIMARY_TRIGS = new Set(["filing", "call", "guidance", "8k", "regulator"]);
+function trigIsPrimary(t) {
+  if (!t) return false;
+  const parts = String(t).toLowerCase().split("+").map((x) => x.trim());
+  return parts.some((x) => PRIMARY_TRIGS.has(x)) || (parts.length === 2 && parts[0] !== parts[1]);
+}
+function pendingText(x) {
+  const pd = x && x.pending;
+  if (!pd) return "";
+  const dir = pd.dir === "cut" ? "a cut to" : pd.dir === "raise" ? "a move up to" : "a change to";
+  return `Proposed on ${pd.date || "—"} from ${trigWords(pd.trig) || "a weak input"}: ${dir} ${pd.tier || "another tier"}. It counts only if a primary-source re-read confirms it` + (pd.expires ? ` (the proposal lapses ${pd.expires}).` : ".");
+}
+function pendingNote(d) {
+  if (!d || !d.pending) return "";
+  const pd = d.pending;
+  return `<div class="rv-note"><b>Proposed, not applied.</b> ${esc(pendingText(d))}${pd.rs ? ` <span class="muted">${esc(pd.rs)}</span>` : ""}</div>`;
+}
+function pwChip(d) {
+  if (!d || d.p_wrong == null) return "";
+  const pct = Math.round(Number(d.p_wrong) * 100);
+  return `<span class="chip pw-chip" title="The desk's own stated chance that this rating is wrong: for a buy tier, that the stock fails to beat SPUS over the next 63 trading days; for any other tier, that it does beat it. Graded afterwards in the track record.">${pct}% chance this is wrong</span>`;
+}
+function trackAKv(d, kv) {
+  const f = d && d.fresh;
+  if (f && (f.rev || f.rep)) {
+    kv.push(["Last re-read", f.rev ? `${f.rev}${f.rep ? ` <span class="muted">· latest report ${f.rep}</span>` : ""}` : "—"]);
+  }
+  if (f && f.ev && f.ev.date) {
+    kv.push(["Newest filing", `${esc(f.ev.form || "filing")} of ${esc(f.ev.date)} <span class="${f.ev.read ? "pos" : "muted"}">· ${f.ev.read ? "read by the desk" : "not yet read"}</span>`]);
+  }
+  if (d && d.trig) {
+    kv.push(["Re-read trigger", `${esc(trigWords(d.trig))}${trigIsPrimary(d.trig) ? "" : ' <span class="muted">(weak input — a tier change from it is only a proposal)</span>'}${d.reads_split ? ' <span class="muted">· the two reads split; stricter shown</span>' : ""}`]);
+  }
+}
+function fmtHbTime(iso) {
+  if (!iso) return "unknown";
+  const dt = new Date(iso);
+  return isNaN(dt) ? String(iso) : dt.toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+}
+// ---- Track A §5 (2026-10-30): how often the ratings were right, graded against SPUS ----
+function renderCalibration() {
+  const c = DATA && DATA.calibration;
+  if (!c || !c.ok || !c.graded_windows) return "";
+  const H = (c.horizons || [21, 63, 126]).map(String);
+  const cell = (o) => (o && o.n ? `<td>${o.n}</td><td><b>${Number(o.hit).toFixed(0)}%</b>${o.n_brier ? ` <span class="muted">· odds error ${Number(o.brier).toFixed(2)}</span>` : ""}</td>` : `<td class="muted">—</td><td class="muted">—</td>`);
+  const order = (typeof VERDICT_ORDER !== "undefined" && VERDICT_ORDER) || ["STRONGEST", "STRONG BUY", "BUY", "HOLD-QUAL", "AVOID", "STRONG AVOID"];
+  const tiers = order.filter((t) => c.by_tier && c.by_tier[t]);
+  const byH = c.by_horizon || {};
+  const trigs = Object.keys(c.by_trig || {}).filter((k) => k !== "legacy");
+  const rec = (c.recent_90d && c.recent_90d.by_tier) || {};
+  const recLine = tiers.map((t) => (rec[t] && rec[t]["21"] && rec[t]["21"].n ? `${t} ${Number(rec[t]["21"].hit).toFixed(0)}% of ${rec[t]["21"].n}` : null)).filter(Boolean).join(" · ");
+  return `<div class="card cal-card">
+    <h3>How often the ratings are right <span class="fw-sub">every rating graded against SPUS after 21, 63 and 126 trading days</span></h3>
+    <p class="dca-intro">A buy-tier rating counts as <b>right</b> when the stock beat SPUS over the window; a HOLD or AVOID counts as right when it did not.
+      <b>${c.calls}</b> ratings, <b>${c.graded_windows}</b> windows graded so far (as of ${esc(c.bench_asof || c.asof || "")}); ${c.open_windows || 0} windows are still open.</p>
+    <div class="cal-grid">
+      <table class="cal-table"><thead><tr><th>Window</th><th>Graded</th><th>Right</th></tr></thead><tbody>
+        ${H.map((h) => `<tr><td>${h} days</td>${cell(byH[h])}</tr>`).join("")}</tbody></table>
+      <table class="cal-table"><thead><tr><th>Rating</th><th>21d graded</th><th>Right</th><th>63d graded</th><th>Right</th></tr></thead><tbody>
+        ${tiers.map((t) => `<tr><td>${esc(t)}</td>${cell(c.by_tier[t]["21"])}${cell(c.by_tier[t]["63"])}</tr>`).join("")}</tbody></table>
+    </div>
+    ${trigs.length ? `<table class="cal-table"><thead><tr><th>Re-read trigger</th><th>21d graded</th><th>Right</th><th>63d graded</th><th>Right</th></tr></thead><tbody>
+        ${trigs.map((t) => `<tr><td>${esc(trigWords(t) || t)}</td>${cell(c.by_trig[t]["21"])}${cell(c.by_trig[t]["63"])}</tr>`).join("")}</tbody></table>`
+      : `<p class="cal-note">Grading by re-read trigger and by the desk's stated odds (the "chance this is wrong" chip) starts with the ratings opened after October 30, 2026; older ratings carry no stated odds.</p>`}
+    ${recLine ? `<p class="cal-note">Last 90 days, 21-day windows: ${esc(recLine)}.</p>` : ""}
+  </div>`;
 }
 // 2026-10-27 (owner: "i need a way to know which are fresh"): every rating row ships
 // fresh = {rev: last re-read, rep: last report, ok}. ok = re-read AFTER the latest report.
@@ -151,8 +249,18 @@ function freshLine() {
   if (!g || !g.universe) return "";
   if (g.ok === false) return `<div class="fresh-line warn">The freshness check failed on this update, so no stock is shown as a buy until it runs again.</div>`;
   const wait = g.print_due || 0;
+  // Track A phase 2 (2026-10-30): the desk heartbeat, filings not yet read, cooling-off holds and data checks.
+  const hb = g.heartbeat;
+  const ev = (g.by_evidence || []).length, cool = (g.cooling || []).length, dc = ((DATA.meta && DATA.meta.data_check) || []).length;
+  if (hb && hb.ok === false) {
+    return `<div class="fresh-line warn">The re-read desk missed its scheduled run (last run ${esc(fmtHbTime(hb.last_run))}), so no stock is shown as a buy until it runs again. Ratings: <b>${g.checked_7d} of ${g.universe}</b> checked in the last 7 days.</div>`;
+  }
   return `<div class="fresh-line">Ratings: <b>${g.checked_7d} of ${g.universe}</b> checked in the last 7 days — every stock is re-checked at least weekly, and within hours of each earnings report.`
     + (wait ? ` ${wait} ${wait === 1 ? "is" : "are"} waiting on a new report (marked “under review”, never shown as a buy until re-read).` : "")
+    + (ev ? ` ${ev} ${ev === 1 ? "has" : "have"} a new filing the desk has not read yet.` : "")
+    + (cool ? ` ${cool} ${cool === 1 ? "is" : "are"} cooling off after a proposed cut.` : "")
+    + (dc ? ` ${dc} ${dc === 1 ? "has" : "have"} a data check (price history and quote on different bases; since-call figures blank).` : "")
+    + (hb && hb.last_run ? ` Re-read desk last ran ${esc(fmtHbTime(hb.last_run))}.` : "")
     + ` Prices update with every refresh.</div>`;
 }
 function paintFreshLines() {
@@ -1216,6 +1324,7 @@ function openDrawer(ticker) {
   // 2026-10-02 (review): a rating held after a 35%+ fall shows the per-share price it was scored at
   if (d.fall_hold && has(d.fall_hold.anchor_price)) kv.push(["Scored at", `${fmtUSD(d.fall_hold.anchor_price, 2)}${has(d.fall_hold.fall_pct) ? ` <span class="muted">· price now ${Number(d.fall_hold.fall_pct).toFixed(0)}% lower</span>` : ""}`]);
   if (has(d.confidence)) kv.push(["Confidence", d.confidence]);
+  trackAKv(d, kv);   // Track A phase 2 (2026-10-30): last re-read, newest filing, trigger
   // catalyst renders as its own card below the dims (2026-09-07) — no kv line any more
   if (has(d.insider)) kv.push(["Insider (6-mo Form 4)", d.insider]);
   if (has(d.buzz)) kv.push(["Buzz", `${d.buzz} — ${d.buzz_signal || ""}`]);
@@ -1240,7 +1349,7 @@ function openDrawer(ticker) {
       <button class="drawer-close" aria-label="Close">×</button>
     </div>
     <div class="drawer-tags">
-      ${verdict ? verdictBadge(verdict) : ""}${reviewTag({ under_review: ur, ticker })}
+      ${verdict ? verdictBadge(verdict) : ""}${reviewTag(Object.assign({}, d, { under_review: ur, ticker }))}${pwChip(d)}
       ${has(d.qarp) ? `<span class="chip">QARP ${fmtNum(d.qarp, 1)}</span>` : ""}
       ${has(d.dcf) ? `<span class="chip">DCF ${fmtNum(d.dcf, 1)}/5</span>` : ""}
       ${has(d.mech) ? `<span class="chip">Quality ${d.mech}/105</span>` : ""}
@@ -1263,7 +1372,7 @@ function openDrawer(ticker) {
         <span class="fin-src">${d.sec_fin.url ? `<a href="${esc(safeUrl(d.sec_fin.url))}" target="_blank" rel="noopener noreferrer" onclick="openSecDoc(event, this)">${esc(d.sec_fin.form || "")} filed ${esc(d.sec_fin.filed || "")} · EDGAR</a>` : esc(d.sec_fin.period || "")}</span>
       </div>` : ""}
     ${ab && ab.desc ? `<h4>What the company does</h4><div class="dcf-note">${esc(ab.desc)}</div>` : ""}
-    ${urNote}
+    ${urNote}${pendingNote(d)}
     ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${d.dcf_note}</div>` : ""}
     ${bzHoldingNewsHtml(ticker)}
     <section id="drawer-pulse" class="drawer-pulse"></section>
@@ -1610,7 +1719,8 @@ function renderScorecard() {
     </div>
     ${renderTrend(sc.history)}
     <div class="sc-grid">${cards}</div>
-    ${renderDcaSim()}`;
+    ${renderDcaSim()}
+    ${renderCalibration()}`;
 }
 
 /* ---------- the $1,000 test: plain-English proof under the track record ---------- */

@@ -1966,3 +1966,20 @@ tr.mv2-up .cell-day { background: var(--pos); }
 .pulse-case { margin-top: 9px; background: var(--surface-2); border-radius: 9px; padding: 9px 11px; }
 .pulse-case-h { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; font-weight: 800; margin-bottom: 3px; }
 .pulse-case-t { font-size: 13px; line-height: 1.55; }
+
+/* ---- Track A phase 2 (2026-10-30): review-tag kinds, odds chip, calibration card ---- */
+.rv-tag.rv-price { color: var(--ink-3); }
+.rv-tag.rv-cool { color: var(--brass); }
+.rv-tag.rv-data, .rv-tag.rv-late { color: var(--neg); }
+.drawer-tags .rv-tag.rv-price { border-color: var(--ink-3); }
+.drawer-tags .rv-tag.rv-data, .drawer-tags .rv-tag.rv-late { border-color: var(--neg); }
+.pw-chip { color: var(--ink-2); border-style: dashed; cursor: help; }
+.cal-card h3 .fw-sub { font-weight: 400; color: var(--ink-3); font-size: 12.5px; margin-left: 8px; }
+.cal-grid { display: grid; grid-template-columns: minmax(200px, 1fr) minmax(300px, 2fr); gap: 14px; margin: 10px 0 6px; }
+.cal-table { width: 100%; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; }
+.cal-table th, .cal-table td { padding: 6px 9px; border-bottom: 1px solid var(--line-2); text-align: right; white-space: nowrap; }
+.cal-table th:first-child, .cal-table td:first-child { text-align: left; }
+.cal-table th { font: 700 10.5px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); background: var(--surface-2); }
+.cal-table tr:last-child td { border-bottom: 0; }
+.cal-note { font-size: 12.5px; color: var(--ink-3); line-height: 1.5; margin: 8px 0 0; }
+@media (max-width: 900px) { .cal-grid { grid-template-columns: 1fr; } .cal-table { display: block; overflow-x: auto; } }
