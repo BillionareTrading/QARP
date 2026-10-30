@@ -4591,7 +4591,7 @@ async function botSend(text) {
   const bubble = botAppend("assistant", "…");
   try {
     const res = await fetch(BOT_PROXY, {
-      method: "POST", headers: { "content-type": "application/json" },
+      method: "POST", headers: botHeaders(),
       body: JSON.stringify({ system: buildBotContext(text), messages: botHistory }),
     });
     if (!res.ok || !res.body) { bubble.textContent = `Bot error (${res.status}). Check the Worker + API key.`; return; }
