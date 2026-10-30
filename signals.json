@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-29",
-  "generated_at": "Oct 29, 4:46pm ET",
+  "date": "2026-10-30",
+  "generated_at": "Oct 30, 5:22am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -61,14 +61,6 @@
   ],
   "catalysts": [
     {
-      "when": "Oct 29",
-      "what": "AOS earnings",
-      "affects": "AOS",
-      "dir": "two-sided",
-      "why": "Q-results for A. O. Smith — guidance is the catalyst.",
-      "src": "earnings calendar (Benzinga + Finnhub)"
-    },
-    {
       "when": "Oct 30",
       "what": "AZN earnings",
       "affects": "AZN",
@@ -93,7 +85,15 @@
       "src": "earnings calendar (Benzinga + Finnhub)"
     },
     {
-      "when": "Oct 29",
+      "when": "Nov 5",
+      "what": "ZTS earnings",
+      "affects": "ZTS",
+      "dir": "two-sided",
+      "why": "Q-results for Zoetis — guidance is the catalyst.",
+      "src": "earnings calendar (Benzinga + Finnhub)"
+    },
+    {
+      "when": "Oct 30",
       "what": "Energy & geopolitics — today's read",
       "why": "As oil prices rise amid growing expectations that the U.S. could resume strikes on Iran in the coming weeks. Reports of U.S. and Israeli plans for renewed strikes following next month’s midterm elections, coupled with Iran’s military warning that it is prepared for “asymmetric warfare,” are fueling concerns over prolonged supply disruptions and potentially sustaining higher energy prices, which could benefit the sector.",
       "affects": "Energy · growth",
@@ -110,11 +110,11 @@
     "AZO": "2026-12-07",
     "RKLB": "2026-11-09",
     "ADBE": "2026-12-09",
-    "ONON": "2026-11-17",
+    "ONON": "2026-11-10",
     "EXE": "2027-02-15",
     "LULU": "2026-12-09",
     "SPGI": "2027-02-08",
-    "AOS": "2026-10-29",
+    "AOS": "2027-01-27",
     "NVS": "2027-02-02",
     "AVGO": "2026-12-09",
     "NBIX": "2026-11-02",
@@ -204,20 +204,6 @@
     }
   },
   "ratings": [
-    {
-      "date": "2026-10-22",
-      "ticker": "NKE",
-      "firm": "Guggenheim",
-      "action": "Reiterates",
-      "rating": "Buy",
-      "stance": "bullish",
-      "pt": "$50",
-      "price": 38.42,
-      "upside": 30.1,
-      "held": false,
-      "uni": true,
-      "qarp": "AVOID"
-    },
     {
       "date": "2026-10-23",
       "ticker": "PG",
@@ -636,111 +622,75 @@
       "stance": "bullish",
       "pt": "$287",
       "upside": 4.3
-    },
-    "CVX": {
-      "date": "2026-10-15",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$226",
-      "upside": -2.4
     }
   },
   "bz_news": [
     {
-      "title": "Intel CFO Tells Reuters Kiryat Gat Fab Did Not Operate For Two Weeks After Explosion; Expects To Begin Ramping Production By End Of This Week, Still Assessing Which Wafers Are Salvageable",
-      "url": "https://www.benzinga.com/quote/INTC",
-      "ts": 1793306270,
+      "title": "B of A Securities Downgrades Intel to Neutral, Lowers Price Target to $100",
+      "url": "https://www.benzinga.com/news/26/10/62729606/b-securities-downgrades-intel-neutral-lowers-price-target-100",
+      "ts": 1793352149,
       "tickers": [
         "INTC"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.357
+      "relevance": 0.527
     },
     {
-      "title": "Intel CFO Tells Reuters Company Expects Similar Revenue Impact From Israel Fab Explosion In Q1; Still Assessing Whether Impact Extends Beyond Current Estimates",
-      "url": "https://www.benzinga.com/quote/INTC",
-      "ts": 1793306260,
+      "title": "Why Civeo Shares Are Trading Higher By 20%; Here Are 20 Stocks Moving Premarket",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62729382/why-civeo-shares-are-trading-higher-by-20-here-are-20-stocks-moving-premarket",
+      "ts": 1793350987,
       "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.436
-    },
-    {
-      "title": "Intel CFO David Zinsner Tells Reuters Israel Fab Explosion Cut Q4 Revenue Outlook By About $300M, Gross Margin By About 200 Basis Points",
-      "url": "https://www.benzinga.com/quote/INTC",
-      "ts": 1793306249,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.434
-    },
-    {
-      "title": "RBC Capital Reiterates Outperform on Microsoft, Maintains $640 Price Target",
-      "url": "https://www.benzinga.com/news/26/10/62719574/rbc-capital-reiterates-outperform-microsoft-maintains-640-price-target",
-      "ts": 1793305296,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.462
-    },
-    {
-      "title": "Intel Stock Crashes After Q3 Earnings: What You Need to Know",
-      "url": "https://www.benzinga.com/markets/earnings/26/10/62718733/intel-stock-crashes-after-q3-earnings-what-you-need-to-know",
-      "ts": 1793304956,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.467
-    },
-    {
-      "title": "Intel shares are trading lower after the company reported Q3 financial results and issued Q4 guidance below estimates.",
-      "url": "https://www.benzinga.com/quote/INTC",
-      "ts": 1793304702,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.55
-    },
-    {
-      "title": "Oil Stocks in Spotlight Friday: Chevron, ExxonMobil, BP Could Show Impact of Higher Gas Prices",
-      "url": "https://www.benzinga.com/trading-ideas/previews/26/10/62718149/oil-stocks-in-spotlight-friday-chevron-exxonmobil-bp-could-show-impact-of-higher-gas-prices",
-      "ts": 1793304691,
-      "tickers": [
-        "XOM",
-        "CVX",
-        "BP"
+        "CVEO",
+        "INTC",
+        "TWLO",
+        "RBLX"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.343
+      "relevance": 0.387
     },
     {
-      "title": "Symbotic Inks ~$6B Commercial Deal With Walmart To Roll Out Additional Automation Tools To 25 U.S. Regional Distribution Centers",
-      "url": "https://www.benzinga.com/news/26/10/62718020/symbotic-inks-6b-commercial-deal-walmart-roll-out-additional-automation-tools-25-u-s-regional-distri",
-      "ts": 1793304639,
+      "title": "SK Hynix, Samsung Tumble in South Korea as Wall Street's AI Sell-Off Rattles Asian Markets — KOSPI Triggers Rare Sell-Side Trading Halt",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62729331/sk-hynix-samsung-tumble-in-south-korea-as-wall-streets-ai-sell-off-rattles-asian-markets-kospi-triggers-rare-sell-side-trading-halt",
+      "ts": 1793350805,
       "tickers": [
-        "SYM",
-        "WMT"
+        "AMZN",
+        "GOOGL",
+        "GOOG",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.422
+    },
+    {
+      "title": "S&P 500 Ends Three-Day Surge as Alphabet Shares Plunge: Greed Index Remains in ‘Fear’ Zone",
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62728869/sp-500-ends-three-day-surge-as-alphabet-shares-plunge-greed-index-remains-in-fear-zone",
+      "ts": 1793347186,
+      "tickers": [
+        "XOM",
+        "GOOGL",
+        "GOOG",
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.482
+    },
+    {
+      "title": "ExxonMobil, Amazon and 3 Stocks to Watch Heading Into Friday",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62728306/exxonmobil-amazon-and-3-stocks-to-watch-heading-into-friday",
+      "ts": 1793344667,
+      "tickers": [
+        "AMZN",
+        "XOM",
+        "COIN",
+        "CVX"
       ],
       "source": "Benzinga",
       "wiim": false,
@@ -748,33 +698,128 @@
       "relevance": 0.369
     },
     {
-      "title": "Intel CEO Says Despite Near-Term Headwinds In The PC Industry, Demand For Our CPUs Remains Robust, Reinforcing Confidence In Long-Term Growth Opportunities",
-      "url": "https://www.benzinga.com/news/26/10/62717201/intel-ceo-says-despite-near-term-headwinds-pc-industry-demand-our-cpus-remains-robust-reinforcing-co",
-      "ts": 1793304383,
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62727776/stock-market-will-sp-500-open-up-or-down-today-69",
+      "ts": 1793341283,
+      "tickers": [
+        "SPY",
+        "XOM",
+        "GOOGL",
+        "GOOG"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.465
+    },
+    {
+      "title": "Chevron Gears Up For Q3 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62727754/chevron-gears-up-for-q3-print-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts",
+      "ts": 1793340965,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.473
+    },
+    {
+      "title": "Intel Stock Crashes 23% Overnight and Gets Jim Cramer 'Furious': 'I Am Actually Disappointed'",
+      "url": "https://www.benzinga.com/markets/earnings/26/10/62726869/intel-stock-sinks-after-hours-weak-outlook-cramer-newman",
+      "ts": 1793330899,
+      "tickers": [
+        "INTC",
+        "AMD",
+        "NVDA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.406
+    },
+    {
+      "title": "Amazon, SanDisk, Reddit, Rivian and Intel: Why These 5 Stocks Are on Investors' Radars Today",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62726348/amazon-sandisk-reddit-rivian-and-intel-why-these-5-stocks-are-on-investors-radars-today",
+      "ts": 1793322914,
+      "tickers": [
+        "INTC",
+        "AMZN",
+        "RIVN",
+        "RDDT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.43
+    },
+    {
+      "title": "Macquarie Maintains Outperform on Visa, Raises Price Target to $465",
+      "url": "https://www.benzinga.com/news/26/10/62725553/macquarie-maintains-outperform-visa-raises-price-target-465",
+      "ts": 1793313784,
+      "tickers": [
+        "V"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.449
+    },
+    {
+      "title": "Intel Q3 2026 Earnings Call Transcript",
+      "url": "https://www.benzinga.com/news/26/10/62725076/intel-q3-2026-earnings-call-transcript",
+      "ts": 1793312055,
       "tickers": [
         "INTC"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.487
+      "relevance": 0.584
     },
     {
-      "title": "Intel Sees Q4 Adj EPS $0.25 vs $0.43 Est; Sees Sales $15.000B-$16.000B vs $17.045B Est",
-      "url": "https://www.benzinga.com/news/26/10/62716447/intel-sees-q4-adj-eps-0-25-vs-0-43-est-sees-sales-15-000b-16-000b-vs-17-045b-est",
-      "ts": 1793304143,
+      "title": "Intel CFO Says We Have A Significant Ramp In Equipment Spend This Quarter, And It's Expected To Be Even More Significant Next Quarter",
+      "url": "https://www.benzinga.com/news/26/10/62724776/intel-cfo-says-we-have-significant-ramp-equipment-spend-quarter-and-it-s-expected-be-even-more-signi",
+      "ts": 1793311479,
       "tickers": [
         "INTC"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.507
+      "relevance": 0.483
     },
     {
-      "title": "Intel Q3 Adj. EPS $0.52 Beats $0.40 Estimate, Sales $16.513B Beat $16.467B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/10/62716420/intel-q3-adj-eps-0-52-beats-0-40-estimate-sales-16-513b-beat-16-467b-estimate",
-      "ts": 1793304135,
+      "title": "El-Sayed Leads Michigan Senate Poll by 7 Points, Wants 50% Public Ownership of OpenAI, Anthropic",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62724648/el-sayed-ai-ownership",
+      "ts": 1793311230,
+      "tickers": [
+        "AMZN",
+        "META",
+        "GOOGL",
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.261
+    },
+    {
+      "title": "Bernstein Maintains Outperform on Boeing, Lowers Price Target to $223",
+      "url": "https://www.benzinga.com/news/26/10/62724396/bernstein-maintains-outperform-boeing-lowers-price-target-223",
+      "ts": 1793310876,
+      "tickers": [
+        "BA"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.474
+    },
+    {
+      "title": "Intel Q3 Data Center & AI Rev $7.3B, Up 78% Y/Y; Foundry Rev $6.7B, Up 58%",
+      "url": "https://www.benzinga.com/quote/INTC",
+      "ts": 1793310322,
       "tickers": [
         "INTC"
       ],
@@ -784,182 +829,128 @@
       "relevance": 0.532
     },
     {
-      "title": "ExxonMobil, AbbVie On Deck Friday As Energy, Drug Growth Face Test",
-      "url": "https://www.benzinga.com/news/26/10/62714742/exxonmobil-abbvie-on-deck-friday-as-energy-drug-growth-face-test",
-      "ts": 1793302240,
+      "title": "Intel CFO Says Expect The 2026 PC Unit TAM To Decline ~12%, With Second-Half Units Down More Than 20%;  Says I Don't Think That This Will Be A Year In Which We See Positive Cash Flow\"",
+      "url": "https://www.benzinga.com/news/26/10/62724084/intel-cfo-says-expect-2026-pc-unit-tam-decline-12-second-half-units-down-more-20-says-i-don-t-think-",
+      "ts": 1793310252,
       "tickers": [
-        "XOM",
-        "ABBV",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.412
+    },
+    {
+      "title": "Intel CFO Says Expect Non-Controlling Interest To Be ~$250M In Q4; 2026 Gross Capital Expenditures Remains On Track To Be $20B, And We Expect 2027 Gross Capital Spending To Be Up Strongly",
+      "url": "https://www.benzinga.com/news/26/10/62723999/intel-cfo-says-expect-non-controlling-interest-be-250m-q4-2026-gross-capital-expenditures-remains-tr",
+      "ts": 1793310179,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.443
+    },
+    {
+      "title": "Intel CFO Says Expect Non-GAAP Operating Expenses Of  ~$4.4B In Q4 And ~$16.3B For The Full Year",
+      "url": "https://www.benzinga.com/news/26/10/62723789/intel-cfo-says-expect-non-gaap-operating-expenses-4-4b-q4-and-16-3b-full-year",
+      "ts": 1793310042,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.464
+    },
+    {
+      "title": "Intel CEO Says By Our Estimates, Server CPU TAM Could Increase As Much As Five Times From Where It Is Today, From $40B To More Than $200B Over 5 Years",
+      "url": "https://www.benzinga.com/news/26/10/62723730/intel-ceo-says-our-estimates-server-cpu-tam-could-increase-much-five-times-where-it-today-40b-more-2",
+      "ts": 1793309971,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.46
+    },
+    {
+      "title": "Intel CEO Says Co Is Engaged With 'A Couple' Of 'Highly Strategic' External Customers For 18a-p Chipmaking Technology",
+      "url": "https://www.benzinga.com/news/26/10/62723697/intel-ceo-says-co-engaged-couple-highly-strategic-external-customers-18a-p-chipmaking-technology",
+      "ts": 1793309939,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.454
+    },
+    {
+      "title": "Bernstein Maintains Outperform on Microsoft, Raises Price Target to $722",
+      "url": "https://www.benzinga.com/news/26/10/62723680/bernstein-maintains-outperform-microsoft-raises-price-target-722",
+      "ts": 1793309927,
+      "tickers": [
+        "MSFT"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.475
+    },
+    {
+      "title": "Intel CEO Says Industry-Wide Shortage Of Advanced Organic Substrates For Our Emib Packaging Is Also Impacting Our Ability To Scale Output",
+      "url": "https://www.benzinga.com/news/26/10/62723664/intel-ceo-says-industry-wide-shortage-advanced-organic-substrates-our-emib-packaging-also-impacting-",
+      "ts": 1793309903,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.427
+    },
+    {
+      "title": "Intel CEO Says Diamond Rapids, Our First Intel 18AP Server Product, Is Sampling And On Track To Ramp In 2027; Says The Pace Of This PC Correction Has Accelerated Over The Last Two Months, As Our OEM Partners Are Aggressively Managing Inventory To Match The Softer Sell-through",
+      "url": "https://www.benzinga.com/news/26/10/62723625/intel-ceo-says-diamond-rapids-our-first-intel-18ap-server-product-sampling-and-track-ramp-2027-says-",
+      "ts": 1793309859,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.467
+    },
+    {
+      "title": "'Greek PM calls Turkey-Libya maritime deal 'void;' calls for global truce after Black Sea attacks' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/10/62722973/greek-pm-calls-turkey-libya-maritime-deal-void-calls-global-truce-after-black-sea-attacks-reuters-ex",
+      "ts": 1793308987,
+      "tickers": [
         "CVX",
-        "AZN"
+        "USO"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.466
+      "relevance": 0.189
     },
     {
-      "title": "Citigroup Maintains Buy on Microsoft, Raises Price Target to $680",
-      "url": "https://www.benzinga.com/news/26/10/62714097/citigroup-maintains-buy-microsoft-raises-price-target-680",
-      "ts": 1793301452,
+      "title": "12 Information Technology Stocks Moving In Thursday's After-Market Session",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62722464/12-information-technology-stocks-moving-thursday-s-after-market-session",
+      "ts": 1793308532,
       "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.45
-    },
-    {
-      "title": "Crude Oil Moves Lower; Caterpillar Shares Fall Following Q3 Results",
-      "url": "https://www.benzinga.com/markets/market-summary/26/10/62712256/crude-oil-moves-lower-caterpillar-shares-fall-following-q3-results",
-      "ts": 1793298673,
-      "tickers": [
-        "CAT",
-        "TDOC",
-        "PRCH",
-        "CROX"
+        "OSPN",
+        "RMNI",
+        "CETX",
+        "GENVR"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.351
-    },
-    {
-      "title": "Caterpillar—The Earnings Rundown",
-      "url": "https://www.benzinga.com/opinion/26/10/62710801/caterpillar-the-earnings-rundown",
-      "ts": 1793296678,
-      "tickers": [
-        "CAT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.435
-    },
-    {
-      "title": "Why Is Micron Stock Falling on Thursday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62710546/why-is-micron-stock-falling-on-thursday-2",
-      "ts": 1793296348,
-      "tickers": [
-        "MU",
-        "GOOGL",
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.356
-    },
-    {
-      "title": "Shares of apparel and footwear-related stocks are trading higher in sympathy with Boot Barn and Crocs after both companies reported better-than-expected financial results, boosting sentiment across the sector.",
-      "url": "https://www.benzinga.com/quote/TPR",
-      "ts": 1793296326,
-      "tickers": [
-        "DKS",
-        "CAL",
-        "LULU",
-        "AS"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": true,
-      "relevance": 0.383
-    },
-    {
-      "title": "Merck's Keytruda Franchise Expands, Signals 'Modest' Revenue Growth in 2027",
-      "url": "https://www.benzinga.com/markets/earnings/26/10/62710413/mercks-keytruda-franchise-expands-signals-modest-revenue-growth-in-2027",
-      "ts": 1793296155,
-      "tickers": [
-        "MRK"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.445
-    },
-    {
-      "title": "10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session",
-      "url": "https://www.benzinga.com/markets/options/26/10/62709901/10-consumer-discretionary-stocks-whale-alerts-today-s-session",
-      "ts": 1793295467,
-      "tickers": [
-        "TSLA",
-        "AMZN",
-        "CVNA",
-        "SHOE"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.363
-    },
-    {
-      "title": "Microsoft And Alphabet's Two Different Market Stories—AI Keeps Building",
-      "url": "https://www.benzinga.com/opinion/26/10/62709569/microsoft-and-alphabet-two-different-market-stories-ai-keeps-building",
-      "ts": 1793294908,
-      "tickers": [
-        "GOOG",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.434
-    },
-    {
-      "title": "Apple Cuts Taiwan App Store Commission Rate In Taiwan From 30% To 26%, Effective Oct. 31",
-      "url": "https://www.benzinga.com/news/26/10/62709327/apple-cuts-taiwan-app-store-commission-rate-taiwan-30-26-effective-oct-31",
-      "ts": 1793294586,
-      "tickers": [
-        "AAPL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.29
-    },
-    {
-      "title": "Reported Earlier, 'Venezuelan Leader Commits to Elections Ahead of Machado Speech' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/10/62709189/reported-earlier-venezuelan-leader-commits-elections-ahead-machado-speech-bloomberg",
-      "ts": 1793294342,
-      "tickers": [
-        "USO",
-        "UGA",
-        "CVX",
-        "SLB"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.184
-    },
-    {
-      "title": "Shares of restaurant companies are trading higher in sympathy with Chipotle Mexican Grill after the company reported better-than-expected Q3 sales results, boosting sentiment across the sector.",
-      "url": "https://www.benzinga.com/quote/JMKE",
-      "ts": 1793293635,
-      "tickers": [
-        "JACK",
-        "CAVA",
-        "SG",
-        "CAKE"
-      ],
-      "source": "Benzinga",
-      "wiim": true,
-      "rel": false,
-      "relevance": 0.391
-    },
-    {
-      "title": "Microsoft Stock Slips Despite Strong Azure Growth: Analysts Debate AI Spending",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62708494/microsoft-stock-slips-despite-strong-azure-growth-analysts-debate-ai-spending",
-      "ts": 1793293308,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.493
+      "relevance": 0.452
     }
   ],
   "portfolio_brief": {
@@ -1061,7 +1052,7 @@
     },
     "AZN": {
       "name": "AstraZeneca",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 12,
         "buy": 16,
@@ -1086,7 +1077,7 @@
         "periodic": null,
         "insider30d": 1
       },
-      "explain": "34 analysts cover it — 28 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "34 analysts cover it — 28 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "NVDA": {
       "name": "NVIDIA",
@@ -1153,7 +1144,7 @@
           "date": "2026-10-26",
           "url": "https://www.sec.gov/Archives/edgar/data/866787/000110465926118791/azo-20260829x10k.htm"
         },
-        "insider30d": 17
+        "insider30d": 16
       },
       "explain": "33 analysts cover it — 27 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
