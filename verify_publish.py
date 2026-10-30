@@ -60,11 +60,29 @@ def _check_live(local_ver):
         except Exception as e:
             fails.append("LIVE %s fetch failed: %s" % (a, str(e)[:60]))
     try:
-        bz = json.loads(_fetch("signals.json?cb=v")).get("bz_news", [])
+        # 2026-10-30: the feed is published encrypted (signals.enc, site password) — decrypt to check it.
+        import base64, gzip
+        from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+        from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+        from cryptography.hazmat.primitives import hashes
+        import encrypt_data as _ed
+        env = json.loads(_fetch("signals.enc?cb=v"))
+        key = PBKDF2HMAC(algorithm=hashes.SHA256(), length=32, salt=base64.b64decode(env["salt"]),
+                         iterations=int(env["iterations"])).derive(_ed.get_password().encode())
+        pt = AESGCM(key).decrypt(base64.b64decode(env["iv"]), base64.b64decode(env["ct"]), None)
+        if pt[:2] == b"\x1f\x8b":
+            pt = gzip.decompress(pt)
+        bz = json.loads(pt).get("bz_news", [])
         if bz and not any("relevance" in n for n in bz):
-            fails.append("LIVE signals.json has NO relevance scores (news enrichment lost)")
+            fails.append("LIVE signals.enc has NO relevance scores (news enrichment lost)")
     except Exception:
         pass
+    for leak in ("signals.json", "book_brief.json"):
+        try:
+            _fetch(leak + "?cb=v")
+            fails.append("LIVE %s is still published in plain text (holdings leak)" % leak)
+        except Exception:
+            pass
     # PRIVACY SPLIT (2026-08-09): the owner blob must ride every publish. The LIVE pair is
     # writer-agnostic (cloud/local race safely), so check date skew between the two blobs.
     # Tolerance 2 days: a cloud without the OWNER_PASSWORD secret skips the refresh (client
