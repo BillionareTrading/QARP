@@ -2821,10 +2821,27 @@ const SEV_LABEL = { elevated: "Elevated", watch: "Watch", policy: "Policy", mild
 const DIR_ICON = { up: "ti-trending-up", down: "ti-trending-down", "two-sided": "ti-arrows-up-down", mixed: "ti-arrows-up-down" };
 const DIR_LABEL = { up: "Tailwind", down: "Headwind", "two-sided": "Two-sided", mixed: "Mixed" };
 
+// 2026-10-30 (privacy): feeds that name holdings are published ENCRYPTED with the site password
+// (signals.enc), like the payload. Tries the .enc first and falls back to the plain .json only while
+// the build still publishes it.
+async function fetchFeed(name) {
+  const pw = sessionStorage.getItem("jc_pw");
+  if (pw) {
+    try {
+      const r = await fetch(`${name}.enc?cb=${Date.now()}`, { cache: "no-store" });
+      if (r.ok) {
+        const env = await r.json();
+        if (env && env.ct && env.salt) return await decryptPayload(env, pw);
+      }
+    } catch (e) { /* fall through to the plain file */ }
+  }
+  const r2 = await fetch(`${name}.json?cb=${Date.now()}`, { cache: "no-store" });
+  if (!r2.ok) throw new Error(`${name}: ${r2.status}`);
+  return await r2.json();
+}
 async function loadSignals() {
   try {
-    const res = await fetch(`signals.json?cb=${Date.now()}`, { cache: "no-store" });
-    if (res.ok) SIGNALS = await res.json();
+    SIGNALS = await fetchFeed("signals");
   } catch (e) { /* fall back gracefully */ }
   renderSignals();
   renderSectorSignals();
@@ -4207,7 +4224,7 @@ function renderAll() {
   renderVenture();
   renderPortfolio();
   loadSignals();         // fetch signals.json + live trigger prices, then render the Signals card
-  loadBookBrief();       // fetch book_brief.json — Claude's daily "your book" read + attention digest
+  // loadBookBrief() removed 2026-10-30: the feature was disabled 2026-07-01 and the plain file named holdings.
   enterDaily();          // Daily is the landing tab — render it + start its refresh
   initTabs();
   initGuide();
@@ -4703,7 +4720,7 @@ async function crLoadBars(tkr) {
 }
 async function crSignals() {
   if (CR.signals) return CR.signals;
-  try { CR.signals = await (await fetch("signals.json", { cache: "no-store" })).json(); }
+  try { CR.signals = await fetchFeed("signals"); }
   catch (e) { CR.signals = {}; }
   return CR.signals;
 }
