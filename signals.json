@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "Oct 30, 5:47am ET",
+  "generated_at": "Oct 30, 9:25am ET",
   "sources": "Benzinga (news/WIIM) + Finnhub (analyst consensus) + SEC EDGAR (filings) + live prices + Jaleel Capital framework",
   "macro": {
     "tone": "caution",
@@ -103,12 +103,12 @@
   ],
   "earnings_next": {
     "ZTS": "2026-11-05",
-    "ABT": "2027-01-20",
     "BSX": "2027-02-02",
     "AZN": "2026-10-30",
     "NVDA": "2026-11-17",
     "AZO": "2026-12-07",
     "RKLB": "2026-11-09",
+    "ABT": "2027-01-20",
     "ADBE": "2026-12-09",
     "ONON": "2026-11-10",
     "EXE": "2027-02-15",
@@ -197,9 +197,9 @@
       "wiim": true
     },
     "AZN": {
-      "title": "ExxonMobil, AbbVie On Deck Friday As Energy, Drug Growth Face Test",
-      "ts": 1793302240,
-      "url": "https://www.benzinga.com/news/26/10/62714742/exxonmobil-abbvie-on-deck-friday-as-energy-drug-growth-face-test",
+      "title": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed as AMZN, INTC Slide After Q3 Earnings—DELL, LLY, AZN in Focus (UPDATED)",
+      "ts": 1793364193,
+      "url": "https://www.benzinga.com/markets/equities/26/10/62729872/stock-market-today-dow-jones-sp-500-futures-trade-mixed-as-amzn-intc-slide-after-q3-earnings-dell-lly-azn-in-focus",
       "wiim": false
     }
   },
@@ -270,76 +270,6 @@
       "pt": "$180",
       "price": 160.59,
       "upside": 12.1,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-10-23",
-      "ticker": "PG",
-      "firm": "Evercore ISI Group",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$180",
-      "price": 160.59,
-      "upside": 12.1,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-10-23",
-      "ticker": "PG",
-      "firm": "RBC Capital",
-      "action": "Maintains",
-      "rating": "Outperform",
-      "stance": "bullish",
-      "pt": "$169",
-      "price": 160.59,
-      "upside": 5.2,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-10-23",
-      "ticker": "PG",
-      "firm": "Wells Fargo",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$180",
-      "price": 160.59,
-      "upside": 12.1,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-10-23",
-      "ticker": "PG",
-      "firm": "TD Cowen",
-      "action": "Maintains",
-      "rating": "Hold",
-      "stance": "neutral",
-      "pt": "$166",
-      "price": 160.59,
-      "upside": 3.4,
-      "held": false,
-      "uni": true,
-      "qarp": "HOLD-QUAL"
-    },
-    {
-      "date": "2026-10-23",
-      "ticker": "PG",
-      "firm": "Morgan Stanley",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$185",
-      "price": 160.59,
-      "upside": 15.2,
       "held": false,
       "uni": true,
       "qarp": "HOLD-QUAL"
@@ -539,9 +469,32 @@
       "held": false,
       "uni": true,
       "qarp": "AVOID"
+    },
+    {
+      "date": "2026-10-30",
+      "ticker": "MRK",
+      "firm": "Guggenheim",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$171",
+      "price": 146.33,
+      "upside": 16.9,
+      "held": false,
+      "uni": true,
+      "qarp": "HOLD-QUAL"
     }
   ],
   "rating_moves": {
+    "MRK": {
+      "date": "2026-10-30",
+      "firm": "Guggenheim",
+      "action": "Maintains",
+      "rating": "Buy",
+      "stance": "bullish",
+      "pt": "$171",
+      "upside": 16.9
+    },
     "KO": {
       "date": "2026-10-28",
       "firm": "Freedom Broker",
@@ -559,15 +512,6 @@
       "stance": "neutral",
       "pt": "$165",
       "upside": 2.7
-    },
-    "MRK": {
-      "date": "2026-10-26",
-      "firm": "Barclays",
-      "action": "Maintains",
-      "rating": "Overweight",
-      "stance": "bullish",
-      "pt": "$180",
-      "upside": 23.0
     },
     "HD": {
       "date": "2026-10-26",
@@ -626,9 +570,48 @@
   },
   "bz_news": [
     {
-      "title": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as AMZN, INTC Slide After Q3 Earnings—DELL, LLY, AZN in Focus",
+      "title": "Dell, HP Stocks Tumble As Intel Flags Deepening PC Slump, Memory Shortages",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62737659/dell-hp-stocks-tumble-as-intel-flags-deepening-pc-slump-memory-shortages",
+      "ts": 1793365987,
+      "tickers": [
+        "DELL",
+        "AAPL",
+        "INTC",
+        "HPQ"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.479
+    },
+    {
+      "title": "Guggenheim Maintains Buy on Merck & Co, Raises Price Target to $171",
+      "url": "https://www.benzinga.com/news/26/10/62737588/guggenheim-maintains-buy-merck-co-raises-price-target-171",
+      "ts": 1793365888,
+      "tickers": [
+        "MRK"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.424
+    },
+    {
+      "title": "Susquehanna Maintains Neutral on Intel, Lowers Price Target to $75",
+      "url": "https://www.benzinga.com/news/26/10/62737249/susquehanna-maintains-neutral-intel-lowers-price-target-75",
+      "ts": 1793365466,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.489
+    },
+    {
+      "title": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed as AMZN, INTC Slide After Q3 Earnings—DELL, LLY, AZN in Focus (UPDATED)",
       "url": "https://www.benzinga.com/markets/equities/26/10/62729872/stock-market-today-dow-jones-sp-500-futures-trade-mixed-as-amzn-intc-slide-after-q3-earnings-dell-lly-azn-in-focus",
-      "ts": 1793353458,
+      "ts": 1793364193,
       "tickers": [
         "SPY",
         "$BTC",
@@ -638,321 +621,289 @@
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.496
+      "relevance": 0.5
     },
     {
-      "title": "INTC Stock Heads for Worst Single-Day Drop in Over 2 Years, but CEO Lip-Bu Tan Says AI Agents Could Drive Server CPU Market to $200 Billion",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62729704/intc-stock-heads-for-worst-single-day-drop-in-over-2-years-but-ceo-lip-bu-tan-says-ai-agents-could-drive-server-cpu-market-to-200-billion",
-      "ts": 1793352684,
-      "tickers": [
-        "INTC",
-        "AMD",
-        "NVDA",
-        "ORCL"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.512
-    },
-    {
-      "title": "B of A Securities Downgrades Intel to Neutral, Lowers Price Target to $100",
-      "url": "https://www.benzinga.com/news/26/10/62729606/b-securities-downgrades-intel-neutral-lowers-price-target-100",
-      "ts": 1793352149,
+      "title": "Evercore ISI Group Maintains Outperform on Intel, Lowers Price Target to $131",
+      "url": "https://www.benzinga.com/news/26/10/62735987/evercore-isi-group-maintains-outperform-intel-lowers-price-target-131",
+      "ts": 1793363869,
       "tickers": [
         "INTC"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.527
+      "relevance": 0.484
     },
     {
-      "title": "Why Civeo Shares Are Trading Higher By 20%; Here Are 20 Stocks Moving Premarket",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62729382/why-civeo-shares-are-trading-higher-by-20-here-are-20-stocks-moving-premarket",
-      "ts": 1793350987,
+      "title": "Keybanc Maintains Overweight on Intel, Lowers Price Target to $140",
+      "url": "https://www.benzinga.com/news/26/10/62735491/keybanc-maintains-overweight-intel-lowers-price-target-140",
+      "ts": 1793363525,
       "tickers": [
-        "CVEO",
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.481
+    },
+    {
+      "title": "Alphabet's $482B Wipeout Sparks AI Spending Fears: Is QQQ's Big Tech Exposure Becoming a Risk?",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62735418/alphabets-482b-wipeout-sparks-ai-spending-fears-is-qqqs-big-tech-exposure-becoming-a-risk",
+      "ts": 1793363427,
+      "tickers": [
+        "QQQ",
+        "META",
+        "SPY",
+        "AMZN"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.399
+    },
+    {
+      "title": "Intel Stock Eyes One of Its Worst Days Since 1974: 'Houston, We Have a Problem,' Analyst Says",
+      "url": "https://www.benzinga.com/markets/earnings/26/10/62735265/intel-stock-worst-day-since-1974-cantor-houston-we-have-a-problem",
+      "ts": 1793363033,
+      "tickers": [
         "INTC",
-        "TWLO",
+        "AMD",
+        "HPQ",
+        "SMH"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.399
+    },
+    {
+      "title": "Apple, Samsung Dodge Worst of Smartphone Chip Meltdown",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62735077/apple-samsung-dodge-worst-of-smartphone-chip-meltdown",
+      "ts": 1793362685,
+      "tickers": [
+        "AAPL",
+        "TSM",
+        "SSNLF",
+        "QCOM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.35
+    },
+    {
+      "title": "Seaport Global Downgrades Intel to Neutral",
+      "url": "https://www.benzinga.com/news/26/10/62735041/seaport-global-downgrades-intel-neutral",
+      "ts": 1793362594,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.468
+    },
+    {
+      "title": "KGI Securities Upgrades Intel to Outperform, Announces $95 Price Target",
+      "url": "https://www.benzinga.com/news/26/10/62734995/kgi-securities-upgrades-intel-outperform-announces-95-price-target",
+      "ts": 1793362437,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.438
+    },
+    {
+      "title": "Incyte To Rally More Than 23%? Here Are 10 Top Analyst Forecasts For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62734910/incyte-to-rally-more-than-23-here-are-10-top-analyst-forecasts-for-friday",
+      "ts": 1793362207,
+      "tickers": [
+        "INCY",
+        "AMZN",
+        "INTC",
         "RBLX"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.387
+      "relevance": 0.42
     },
     {
-      "title": "SK Hynix, Samsung Tumble in South Korea as Wall Street's AI Sell-Off Rattles Asian Markets — KOSPI Triggers Rare Sell-Side Trading Halt",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62729331/sk-hynix-samsung-tumble-in-south-korea-as-wall-streets-ai-sell-off-rattles-asian-markets-kospi-triggers-rare-sell-side-trading-halt",
-      "ts": 1793350805,
+      "title": "12 Information Technology Stocks Moving In Friday's Pre-Market Session",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62734791/12-information-technology-stocks-moving-friday-s-pre-market-session",
+      "ts": 1793361929,
       "tickers": [
+        "HUBC",
+        "OSPN",
+        "RMNI",
+        "DTSS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.437
+    },
+    {
+      "title": "Pinterest Posts Downbeat Q3 Results, Joins Intel, Roblox, Twilio And Other Big Stocks Moving Lower In Friday’s Pre-Market Session",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62734634/pinterest-posts-downbeat-q3-results-joins-intel-roblox-twilio-and-other-big-stocks-moving-lower-in-fridays-pre-market-session",
+      "ts": 1793361848,
+      "tickers": [
+        "PINS",
         "AMZN",
-        "GOOGL",
-        "GOOG",
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.422
-    },
-    {
-      "title": "S&P 500 Ends Three-Day Surge as Alphabet Shares Plunge: Greed Index Remains in ‘Fear’ Zone",
-      "url": "https://www.benzinga.com/markets/market-summary/26/10/62728869/sp-500-ends-three-day-surge-as-alphabet-shares-plunge-greed-index-remains-in-fear-zone",
-      "ts": 1793347186,
-      "tickers": [
-        "XOM",
-        "GOOGL",
-        "GOOG",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.482
-    },
-    {
-      "title": "ExxonMobil, Amazon and 3 Stocks to Watch Heading Into Friday",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62728306/exxonmobil-amazon-and-3-stocks-to-watch-heading-into-friday",
-      "ts": 1793344667,
-      "tickers": [
-        "AMZN",
-        "XOM",
-        "COIN",
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.369
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62727776/stock-market-will-sp-500-open-up-or-down-today-69",
-      "ts": 1793341283,
-      "tickers": [
-        "SPY",
-        "XOM",
-        "GOOGL",
-        "GOOG"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.465
-    },
-    {
-      "title": "Chevron Gears Up For Q3 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62727754/chevron-gears-up-for-q3-print-here-are-the-recent-forecast-changes-from-wall-streets-most-accurate-analysts",
-      "ts": 1793340965,
-      "tickers": [
-        "CVX"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.473
-    },
-    {
-      "title": "Intel Stock Crashes 23% Overnight and Gets Jim Cramer 'Furious': 'I Am Actually Disappointed'",
-      "url": "https://www.benzinga.com/markets/earnings/26/10/62726869/intel-stock-sinks-after-hours-weak-outlook-cramer-newman",
-      "ts": 1793330899,
-      "tickers": [
         "INTC",
-        "AMD",
-        "NVDA"
+        "TWLO"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": true,
-      "relevance": 0.406
-    },
-    {
-      "title": "Amazon, SanDisk, Reddit, Rivian and Intel: Why These 5 Stocks Are on Investors' Radars Today",
-      "url": "https://www.benzinga.com/markets/equities/26/10/62726348/amazon-sandisk-reddit-rivian-and-intel-why-these-5-stocks-are-on-investors-radars-today",
-      "ts": 1793322914,
-      "tickers": [
-        "INTC",
-        "AMZN",
-        "RIVN",
-        "RDDT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": true,
-      "relevance": 0.43
-    },
-    {
-      "title": "Macquarie Maintains Outperform on Visa, Raises Price Target to $465",
-      "url": "https://www.benzinga.com/news/26/10/62725553/macquarie-maintains-outperform-visa-raises-price-target-465",
-      "ts": 1793313784,
-      "tickers": [
-        "V"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.449
-    },
-    {
-      "title": "Intel Q3 2026 Earnings Call Transcript",
-      "url": "https://www.benzinga.com/news/26/10/62725076/intel-q3-2026-earnings-call-transcript",
-      "ts": 1793312055,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.584
-    },
-    {
-      "title": "Intel CFO Says We Have A Significant Ramp In Equipment Spend This Quarter, And It's Expected To Be Even More Significant Next Quarter",
-      "url": "https://www.benzinga.com/news/26/10/62724776/intel-cfo-says-we-have-significant-ramp-equipment-spend-quarter-and-it-s-expected-be-even-more-signi",
-      "ts": 1793311479,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.483
-    },
-    {
-      "title": "El-Sayed Leads Michigan Senate Poll by 7 Points, Wants 50% Public Ownership of OpenAI, Anthropic",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62724648/el-sayed-ai-ownership",
-      "ts": 1793311230,
-      "tickers": [
-        "AMZN",
-        "META",
-        "GOOGL",
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.261
-    },
-    {
-      "title": "Bernstein Maintains Outperform on Boeing, Lowers Price Target to $223",
-      "url": "https://www.benzinga.com/news/26/10/62724396/bernstein-maintains-outperform-boeing-lowers-price-target-223",
-      "ts": 1793310876,
-      "tickers": [
-        "BA"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.474
-    },
-    {
-      "title": "Intel Q3 Data Center & AI Rev $7.3B, Up 78% Y/Y; Foundry Rev $6.7B, Up 58%",
-      "url": "https://www.benzinga.com/quote/INTC",
-      "ts": 1793310322,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.532
-    },
-    {
-      "title": "Intel CFO Says Expect The 2026 PC Unit TAM To Decline ~12%, With Second-Half Units Down More Than 20%;  Says I Don't Think That This Will Be A Year In Which We See Positive Cash Flow\"",
-      "url": "https://www.benzinga.com/news/26/10/62724084/intel-cfo-says-expect-2026-pc-unit-tam-decline-12-second-half-units-down-more-20-says-i-don-t-think-",
-      "ts": 1793310252,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.412
-    },
-    {
-      "title": "Intel CFO Says Expect Non-Controlling Interest To Be ~$250M In Q4; 2026 Gross Capital Expenditures Remains On Track To Be $20B, And We Expect 2027 Gross Capital Spending To Be Up Strongly",
-      "url": "https://www.benzinga.com/news/26/10/62723999/intel-cfo-says-expect-non-controlling-interest-be-250m-q4-2026-gross-capital-expenditures-remains-tr",
-      "ts": 1793310179,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.443
-    },
-    {
-      "title": "Intel CFO Says Expect Non-GAAP Operating Expenses Of  ~$4.4B In Q4 And ~$16.3B For The Full Year",
-      "url": "https://www.benzinga.com/news/26/10/62723789/intel-cfo-says-expect-non-gaap-operating-expenses-4-4b-q4-and-16-3b-full-year",
-      "ts": 1793310042,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.464
-    },
-    {
-      "title": "Intel CEO Says By Our Estimates, Server CPU TAM Could Increase As Much As Five Times From Where It Is Today, From $40B To More Than $200B Over 5 Years",
-      "url": "https://www.benzinga.com/news/26/10/62723730/intel-ceo-says-our-estimates-server-cpu-tam-could-increase-much-five-times-where-it-today-40b-more-2",
-      "ts": 1793309971,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.46
-    },
-    {
-      "title": "Intel CEO Says Co Is Engaged With 'A Couple' Of 'Highly Strategic' External Customers For 18a-p Chipmaking Technology",
-      "url": "https://www.benzinga.com/news/26/10/62723697/intel-ceo-says-co-engaged-couple-highly-strategic-external-customers-18a-p-chipmaking-technology",
-      "ts": 1793309939,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.454
-    },
-    {
-      "title": "Bernstein Maintains Outperform on Microsoft, Raises Price Target to $722",
-      "url": "https://www.benzinga.com/news/26/10/62723680/bernstein-maintains-outperform-microsoft-raises-price-target-722",
-      "ts": 1793309927,
-      "tickers": [
-        "MSFT"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
-      "relevance": 0.475
-    },
-    {
-      "title": "Intel CEO Says Industry-Wide Shortage Of Advanced Organic Substrates For Our Emib Packaging Is Also Impacting Our Ability To Scale Output",
-      "url": "https://www.benzinga.com/news/26/10/62723664/intel-ceo-says-industry-wide-shortage-advanced-organic-substrates-our-emib-packaging-also-impacting-",
-      "ts": 1793309903,
-      "tickers": [
-        "INTC"
-      ],
-      "source": "Benzinga",
-      "wiim": false,
-      "rel": false,
       "relevance": 0.427
     },
     {
-      "title": "Intel CEO Says Diamond Rapids, Our First Intel 18AP Server Product, Is Sampling And On Track To Ramp In 2027; Says The Pace Of This PC Correction Has Accelerated Over The Last Two Months, As Our OEM Partners Are Aggressively Managing Inventory To Match The Softer Sell-through",
-      "url": "https://www.benzinga.com/news/26/10/62723625/intel-ceo-says-diamond-rapids-our-first-intel-18ap-server-product-sampling-and-track-ramp-2027-says-",
-      "ts": 1793309859,
+      "title": "This Honeywell Aerospace Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/10/62734333/this-honeywell-aerospace-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-friday",
+      "ts": 1793361406,
+      "tickers": [
+        "HONA",
+        "INTC",
+        "ALNY",
+        "CART"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.472
+    },
+    {
+      "title": "Needham Reiterates Hold on Intelto Hold",
+      "url": "https://www.benzinga.com/news/26/10/62734285/needham-reiterates-hold-intelto-hold",
+      "ts": 1793361287,
       "tickers": [
         "INTC"
       ],
       "source": "Benzinga",
       "wiim": false,
       "rel": false,
-      "relevance": 0.467
+      "relevance": 0.493
+    },
+    {
+      "title": "SpaceX Hits Back at T-Mobile’s ‘Misplaced Desire’ to Harm Starlink by Opposing ‘Modernized’ Spectrum Rules",
+      "url": "https://www.benzinga.com/news/space/26/10/62734270/spacex-hits-back-at-t-mobiles-misplaced-desire-to-harm-starlink-by-opposing-modernized-spectrum-rules",
+      "ts": 1793361172,
+      "tickers": [
+        "TMUS",
+        "VZ",
+        "SPCX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.273
+    },
+    {
+      "title": "Mizuho Maintains Neutral on McDonald's, Lowers Price Target to $260",
+      "url": "https://www.benzinga.com/news/26/10/62733984/mizuho-maintains-neutral-mcdonald-s-lowers-price-target-260",
+      "ts": 1793360457,
+      "tickers": [
+        "MCD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.438
+    },
+    {
+      "title": "PUBLISH 10.30: Epic Games' Private-Market Shares Drop 21% As Fortnite Maker Faces Growth Challenges",
+      "url": "https://www.benzinga.com/markets/private-markets/26/10/62733446/publish-10-30-epic-games-private-market-shares-drop-21-as-fortnite-maker-faces-growth-challenges",
+      "ts": 1793359808,
+      "tickers": [
+        "DIS"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.306
+    },
+    {
+      "title": "Intel shares are trading lower after the company reported Q3 financial results and issued Q4 guidance below estimates. Multiple firms lowered their respective price targets on the stock.",
+      "url": "https://www.benzinga.com/quote/INTC",
+      "ts": 1793359663,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": true,
+      "rel": false,
+      "relevance": 0.526
+    },
+    {
+      "title": "Cantor Fitzgerald Maintains Neutral on Intel, Lowers Price Target to $90",
+      "url": "https://www.benzinga.com/news/26/10/62732966/cantor-fitzgerald-maintains-neutral-intel-lowers-price-target-90",
+      "ts": 1793358578,
+      "tickers": [
+        "INTC"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.471
+    },
+    {
+      "title": "Chevron Increasing FY26 Exploration Spend 50% YoY Relative To 2025; On Track To Reach Around ~300Kb/d Of Venezuela Output By Year End; Q3 Production Lower YoY Due To Lower Entitlements From Higher Prices And Impacts From Middle East Conflict; Expect Q4 Capex Increase, Will Still End Year At Low End Of FY26 Guidance - Prepared Remarks",
+      "url": "https://www.benzinga.com/news/26/10/62731985/increasing-fy26-exploration-spend-50-yoy-relative-to-2025-on-track-to-reach-around-300kb-d-of-venezuela-output-by-year-end-q3-production-lower-yoy-due-to-lower-entitlements-from-higher-prices-and-i",
+      "ts": 1793357431,
+      "tickers": [
+        "CVX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.355
+    },
+    {
+      "title": "Nvidia Shares Drop Amid Chip Selloff: What's Happening?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62731938/nvidia-shares-drop-amid-chip-selloff-whats-happening",
+      "ts": 1793357308,
+      "tickers": [
+        "NVDA",
+        "INTC",
+        "AVGO",
+        "AMD"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.523
+    },
+    {
+      "title": "A Mega-Mine Pause Fails to Lift Copper As the AI Trade Cracks",
+      "url": "https://www.benzinga.com/markets/commodities/26/10/62731825/a-mega-mine-pause-fails-to-lift-copper-as-the-ai-trade-cracks",
+      "ts": 1793356889,
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "INTC",
+        "COPX"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": false,
+      "relevance": 0.218
+    },
+    {
+      "title": "Why Is Intel Stock Sinking Friday?",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62731810/why-is-intel-stock-sinking-friday",
+      "ts": 1793356807,
+      "tickers": [
+        "INTC",
+        "TSM"
+      ],
+      "source": "Benzinga",
+      "wiim": false,
+      "rel": true,
+      "relevance": 0.389
     }
   ],
   "portfolio_brief": {
@@ -987,38 +938,6 @@
         "insider30d": 9
       },
       "explain": "23 analysts cover it — 11 bullish, 12 hold, 0 bearish (consensus <b>Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
-    },
-    "ABT": {
-      "name": "Abbott Laboratories",
-      "qarp": "AVOID",
-      "consensus": {
-        "strongBuy": 12,
-        "buy": 14,
-        "hold": 6,
-        "sell": 0,
-        "strongSell": 0,
-        "total": 32,
-        "bullish": 26,
-        "bearish": 0,
-        "label": "Strong Buy",
-        "score": 1.19,
-        "period": "2026-10-01"
-      },
-      "news": null,
-      "filings": {
-        "latest8k": {
-          "form": "8-K",
-          "date": "2026-10-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000110465926117587/tm2627971d1_8k.htm"
-        },
-        "periodic": {
-          "form": "10-Q",
-          "date": "2026-07-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
-        },
-        "insider30d": 5
-      },
-      "explain": "32 analysts cover it — 26 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
     "BSX": {
       "name": "Boston Scientific",
@@ -1069,9 +988,9 @@
         "period": "2026-10-01"
       },
       "news": {
-        "title": "ExxonMobil, AbbVie On Deck Friday As Energy, Drug Growth Face Test",
-        "ts": 1793302240,
-        "url": "https://www.benzinga.com/news/26/10/62714742/exxonmobil-abbvie-on-deck-friday-as-energy-drug-growth-face-test",
+        "title": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed as AMZN, INTC Slide After Q3 Earnings—DELL, LLY, AZN in Focus (UPDATED)",
+        "ts": 1793364193,
+        "url": "https://www.benzinga.com/markets/equities/26/10/62729872/stock-market-today-dow-jones-sp-500-futures-trade-mixed-as-amzn-intc-slide-after-q3-earnings-dell-lly-azn-in-focus",
         "wiim": false
       },
       "filings": {
@@ -1083,7 +1002,7 @@
     },
     "NVDA": {
       "name": "NVIDIA",
-      "qarp": "HOLD-QUAL",
+      "qarp": "STRONG BUY",
       "consensus": {
         "strongBuy": 25,
         "buy": 41,
@@ -1116,7 +1035,7 @@
         },
         "insider30d": 1
       },
-      "explain": "69 analysts cover it — 66 bullish, 2 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
+      "explain": "69 analysts cover it — 66 bullish, 2 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
     },
     "AZO": {
       "name": "AutoZone",
@@ -1186,6 +1105,38 @@
         "insider30d": 1
       },
       "explain": "28 analysts cover it — 23 bullish, 5 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
+    },
+    "ABT": {
+      "name": "Abbott Laboratories",
+      "qarp": "AVOID",
+      "consensus": {
+        "strongBuy": 12,
+        "buy": 14,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 0,
+        "total": 32,
+        "bullish": 26,
+        "bearish": 0,
+        "label": "Strong Buy",
+        "score": 1.19,
+        "period": "2026-10-01"
+      },
+      "news": null,
+      "filings": {
+        "latest8k": {
+          "form": "8-K",
+          "date": "2026-10-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000110465926117587/tm2627971d1_8k.htm"
+        },
+        "periodic": {
+          "form": "10-Q",
+          "date": "2026-07-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
+        },
+        "insider30d": 5
+      },
+      "explain": "32 analysts cover it — 26 bullish, 6 hold, 0 bearish (consensus <b>Strong Buy</b>). Wall Street is more bullish than our conservative QARP view — a gap worth noting."
     },
     "ADBE": {
       "name": "Adobe",
@@ -1481,7 +1432,7 @@
     },
     "VRTX": {
       "name": "Vertex Pharma",
-      "qarp": "BUY",
+      "qarp": "HOLD-QUAL",
       "consensus": {
         "strongBuy": 12,
         "buy": 20,
@@ -1509,7 +1460,7 @@
         },
         "insider30d": 3
       },
-      "explain": "39 analysts cover it — 32 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street and our framework both lean positive."
+      "explain": "39 analysts cover it — 32 bullish, 6 hold, 1 bearish (consensus <b>Strong Buy</b>). Wall Street is bullish; our QARP sees quality but limited margin of safety."
     },
     "EFX": {
       "name": "Equifax",
@@ -1563,20 +1514,6 @@
       },
       "margin": 28.0,
       "summary": "Q2 FY2026 — revenue $2.5B (-0.2% YoY), diluted EPS $1.65 (+1.2% YoY), net margin 28%. (as reported, GAAP)"
-    },
-    "ABT": {
-      "period": "FY2017",
-      "filed": "2018-02-16",
-      "form": "10-K",
-      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
-      "revenue": {
-        "fmt": "$7.6B",
-        "yoy": 42.3
-      },
-      "eps": null,
-      "net_income": null,
-      "margin": null,
-      "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
     },
     "BSX": {
       "period": "Q2 FY2026",
@@ -1654,6 +1591,20 @@
       },
       "margin": -21.0,
       "summary": "Q2 FY2026 — revenue $234M (+62.0% YoY), diluted EPS $-0.08 (+38.5% YoY), net margin -21%. (as reported, GAAP)"
+    },
+    "ABT": {
+      "period": "FY2017",
+      "filed": "2018-02-16",
+      "form": "10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
+      "revenue": {
+        "fmt": "$7.6B",
+        "yoy": 42.3
+      },
+      "eps": null,
+      "net_income": null,
+      "margin": null,
+      "summary": "FY2017 — revenue $7.6B (+42.3% YoY). (as reported, GAAP)"
     },
     "ADBE": {
       "period": "Q3 FY2026",
