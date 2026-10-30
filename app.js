@@ -1485,7 +1485,7 @@ async function fetchClaudeRead(ticker) {
   const system = "You are a sharp, skeptical equity analyst for an informed investor whose rule is to challenge the consensus and triangulate sources. Using ONLY the data provided, write a tight read: a BULL case, a BEAR case, and the SINGLE most important thing that would change the call. 2-3 sentences each, concrete and grounded — NEVER invent a number, fact, or event not in the data. Translate scores into plain investment reasoning; no jargon dumps. Informational only, not advice. Return ONLY a JSON object, no prose or code fences: {\"bull\":\"\",\"bear\":\"\",\"change\":\"\"}.";
   const user = `Write the read for ${ticker}.\n\nDATA:\n${buildCreadContext(ticker)}`;
   try {
-    const res = await fetch(BOT_PROXY, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ system, messages: [{ role: "user", content: user }] }) });
+    const res = await fetch(BOT_PROXY, { method: "POST", headers: botHeaders(), body: JSON.stringify({ system, messages: [{ role: "user", content: user }] }) });
     if (!res.ok || !res.body) return fail();
     const reader = res.body.getReader(), dec = new TextDecoder();
     let buf = "", acc = "";
@@ -4484,6 +4484,14 @@ function initFrameworkCalc() {
 // Worker adds the API key and streams Claude's reply. Until BOT_PROXY is set, the
 // widget explains how to connect it.
 const BOT_PROXY = "https://qarp-bot.murshidjaleel-990.workers.dev";   // deployed Cloudflare Worker (proxies to Anthropic; key server-side)
+// 2026-10-30 (site audit): the Worker now accepts only the site's origin AND a shared secret that
+// travels inside the encrypted payload (meta.bot_key, from the build's QARP_BOT_KEY secret).
+function botHeaders() {
+  const h = { "content-type": "application/json" };
+  const k = DATA && DATA.meta && DATA.meta.bot_key;
+  if (k) h["x-qarp-bot"] = k;
+  return h;
+}
 let botHistory = [];
 
 /* full dossier for one name — the bot's retrieval unit (everything the drawer knows) */

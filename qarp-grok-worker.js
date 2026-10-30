@@ -14,7 +14,7 @@
 // GET returns the version only (no xAI call) so a deploy can be checked for free.
 
 const MODEL = "grok-4.3";
-const VERSION = "2026-10-16a";
+const VERSION = "2026-10-30a";   // 2026-10-30: the forgeable localhost allowance is gone
 const SITE_ORIGINS = ["https://billionaretrading.github.io"];
 const isLocal = (o) => /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(o);
 
@@ -33,7 +33,7 @@ export default {
 
     const origin = request.headers.get("Origin") || "";
     const keyOk = !!env.BUILD_KEY && request.headers.get("x-qarp-key") === env.BUILD_KEY;
-    const siteOk = SITE_ORIGINS.includes(origin) || isLocal(origin);
+    const siteOk = SITE_ORIGINS.includes(origin);   // 2026-10-30: no localhost allowance (any client could claim it)
     if (!keyOk && !siteOk) return J({ error: "forbidden" }, 403);
 
     let body;

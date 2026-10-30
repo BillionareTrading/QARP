@@ -142,6 +142,11 @@ def main() -> None:
     fk = load_finnhub_key()
     if fk:
         data.setdefault("meta", {})["finnhub_key"] = fk
+    # 2026-10-30: the chat helper's shared secret rides INSIDE the encrypted payload too (GitHub secret
+    # QARP_BOT_KEY on the build; the Cloudflare Worker holds the same value as BOT_KEY). Never a public file.
+    bk = os.environ.get("QARP_BOT_KEY")
+    if bk:
+        data.setdefault("meta", {})["bot_key"] = bk
     # v2: gzip before encrypting — the payload carries full company profiles now, and
     # compressed JSON is ~3-4x smaller. crypto.js auto-detects: decrypted bytes starting
     # with the gzip magic (0x1f 0x8b) are inflated first; old v1 payloads (raw JSON,
