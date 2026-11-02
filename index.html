@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=08acb895" />
+  <link rel="stylesheet" href="styles.css?v=292c22eb" />
 </head>
 <body>
 
@@ -57,6 +57,7 @@
       <button class="tab" data-tab="charts">Charts</button>
       <button class="tab" data-tab="estimates">Estimates</button>
       <button class="tab" data-tab="portfolio">Jaleel&rsquo;s Portfolio</button>
+      <button class="tab" data-tab="control" id="tab-btn-control" hidden>Control Center</button>
     </nav>
 
     <!-- Daily: newspaper-style market front page -->
@@ -715,6 +716,12 @@
       </div>
     </section>
 
+    <!-- Control Center: owner-only (shown when the owner passcode is unlocked on this device), 2026-11-02 -->
+    <section id="tab-control" class="tabpanel">
+      <p class="tab-intro">Owner view. The desk's working state lives here and never on the public pages: which ratings are held until a re-read and why, price checks, proposals, data checks, filings not yet read, and when the re-read desk last ran. Tap a row to open the stock.</p>
+      <div id="cc-body"></div>
+    </section>
+
     <section id="tab-estimates" class="tabpanel">
       <div class="cr-mast">
         <div>
@@ -753,8 +760,8 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=08acb895"></script>
-  <script src="app.js?v=08acb895"></script>
+  <script src="crypto.js?v=292c22eb"></script>
+  <script src="app.js?v=292c22eb"></script>
 <!-- edge-nudge 20260807-0345Z -->
 </body>
 </html>

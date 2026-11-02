@@ -1983,3 +1983,26 @@ tr.mv2-up .cell-day { background: var(--pos); }
 .cal-table tr:last-child td { border-bottom: 0; }
 .cal-note { font-size: 12.5px; color: var(--ink-3); line-height: 1.5; margin: 8px 0 0; }
 @media (max-width: 900px) { .cal-grid { grid-template-columns: 1fr; } .cal-table { display: block; overflow-x: auto; } }
+
+/* ---- Control Center (owner-only tab, 2026-11-02) ---- */
+.tab[hidden] { display: none !important; }
+#tab-control { padding-bottom: 32px; }
+.cc-kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; margin: 0 0 18px; }
+.cc-kpi { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--line); border-radius: var(--radius); padding: 10px 12px; }
+.cc-kpi.ok { border-left-color: var(--pos); }
+.cc-kpi.warn { border-left-color: var(--brass); }
+.cc-kpi .k { font: 700 10px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.cc-kpi .v { font: 700 18px var(--sans); color: var(--ink); margin-top: 4px; }
+.cc-kpi .s { font-size: 12px; color: var(--ink-2); margin-top: 3px; line-height: 1.45; overflow-wrap: anywhere; }
+.cc-h { font-size: 14px; margin: 4px 0 10px; }
+table.cc-table { min-width: 900px; }
+table.cc-table th { font: 700 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+table.cc-table td { padding: 9px 10px; border-bottom: 1px solid var(--line-2); vertical-align: top; color: var(--ink); text-align: left; }
+table.cc-table tr[data-ticker] { cursor: pointer; }
+table.cc-table tr[data-ticker]:hover td { background: var(--surface-2); }
+table.cc-table td.cc-why { min-width: 300px; max-width: 460px; white-space: normal; color: var(--ink-2); font-size: 12.5px; line-height: 1.45; }
+.cc-flag { font: 700 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); white-space: nowrap; }
+.cc-own { font: 700 9px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brand); border: 1px solid var(--brand); border-radius: 6px; padding: 1px 5px; margin-left: 4px; }
+.cc-n { font-size: 11.5px; margin-top: 2px; }
+table.cc-table thead th { cursor: default; position: static; }
+table.cc-table.cc-small { min-width: 420px; }

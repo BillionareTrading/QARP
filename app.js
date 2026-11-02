@@ -120,17 +120,33 @@ function verdictBadge(v) {
 // 2026-10-02 (review): the build ships under_review on a row whose rating is HELD at its earlier
 // level (a 35%+ fall from the scoring price, or a one-session price reset) — the site showed a plain
 // badge with no sign of it. Small tag under the badge; the full sentence is the hover + the drawer.
-function reviewTag(x) {
-  // Track A phase 2 (2026-10-30): the tag names WHY, in two words — the full sentence stays the hover + drawer.
+// 2026-11-02 (owner: "under review", "price check" ... "should NOT show on the main page ... have a backend or a
+// developer mode ... and a control center ... it makes it look like the whole site is under progress and not live"):
+// the main pages carry NO process tags. The same flags, with their full sentences, live in the owner-only Control
+// Center tab (controlFlag + renderControlCenter). Never re-add a process tag to a public view.
+function reviewTag(x) { return ""; }
+// The build stamps the thesis note with the desk's process labels. Public views drop the purely procedural ones
+// (a proposal not applied, an "under review" hold, "re-score halted") and give dated reviews a plain label.
+function publicNote(html) {
+  return String(html || "")
+    .replace(/\[PROPOSED [^\]]*\]\s*/g, "")
+    .replace(/\[UNDER REVIEW:[^\]]*\]\s*/g, "")
+    .replace(/\s*RE-SCORE DELIBERATELY HALTED[^.\]]*\.?/g, "")
+    .replace(/\[REVIEWED (\d{4}-\d\d-\d\d)[^:\]]*:\s*([^\]]*)\]/g, "<b>Reviewed $1:</b> $2")
+    .replace(/\[RE-?SCORED (\d{4}-\d\d-\d\d)[^:\]]*:\s*([^\]]*)\]/g, "<b>Re-scored $1:</b> $2")
+    .trim();
+}
+function controlFlag(x) {
+  // Track A phase 2 (2026-10-30) logic, now for the Control Center only.
   const t = x && x.under_review;
-  const kind = x && x.stale_print && x.stale_print.kind;
-  if (t && kind === "cooling") return `<span class="rv-tag rv-cool" title="${esc(t)}">cooling off</span>`;
-  if (t && /^Data check/.test(t)) return `<span class="rv-tag rv-data" title="${esc(t)}">data check</span>`;
-  if (t && /^Price check/.test(t) && !(x.stale_print && x.stale_print.held)) return `<span class="rv-tag rv-price" title="${esc(t)}">price check</span>`;
-  if (t) return `<span class="rv-tag" title="${esc(t)}">under review</span>`;
-  if (x && x.pending) return `<span class="rv-tag rv-price" title="${esc(pendingText(x))}">proposed</span>`;
-  if (x && x.reads_split) return `<span class="rv-tag rv-price" title="The skeptic and the analyst disagreed on the direction of this rating; the stricter read is shown.">reads split</span>`;
-  return freshTag(x);
+  const sp = (x && x.stale_print) || {};
+  if (t && sp.kind === "cooling") return { label: "Cooling off", text: t };
+  if (t && /^Data check/.test(t)) return { label: "Data check", text: t };
+  if (t && /^Price check/.test(t) && !sp.held) return { label: "Price check", text: t };
+  if (t) return { label: sp.held ? "Held until re-read" : "Re-read owed", text: t };
+  if (x && x.pending) return { label: "Proposed", text: pendingText(x) };
+  if (x && x.reads_split) return { label: "Reads split", text: "The skeptic and the analyst disagreed on the direction of this rating; the stricter read is shown." };
+  return null;
 }
 // ---- Track A phase 2 helpers (2026-10-30): trigger words, pending proposals, "chance this is wrong" chip ----
 const TRIG_WORDS = { filing: "a new filing", call: "the earnings call", guidance: "a guidance change", "8k": "an 8-K", regulator: "a regulator decision",
@@ -200,9 +216,6 @@ function renderCalibration() {
       <table class="cal-table"><thead><tr><th>Rating</th><th>21d graded</th><th>Right</th><th>63d graded</th><th>Right</th></tr></thead><tbody>
         ${tiers.map((t) => `<tr><td>${esc(t)}</td>${cell(c.by_tier[t]["21"])}${cell(c.by_tier[t]["63"])}</tr>`).join("")}</tbody></table>
     </div>
-    ${trigs.length ? `<table class="cal-table"><thead><tr><th>Re-read trigger</th><th>21d graded</th><th>Right</th><th>63d graded</th><th>Right</th></tr></thead><tbody>
-        ${trigs.map((t) => `<tr><td>${esc(trigWords(t) || t)}</td>${cell(c.by_trig[t]["21"])}${cell(c.by_trig[t]["63"])}</tr>`).join("")}</tbody></table>`
-      : `<p class="cal-note">Grading by re-read trigger and by the desk's stated odds (the "chance this is wrong" chip) starts with the ratings opened after October 30, 2026; older ratings carry no stated odds.</p>`}
     ${recLine ? `<p class="cal-note">Last 90 days, 21-day windows: ${esc(recLine)}.</p>` : ""}
   </div>`;
 }
@@ -236,23 +249,86 @@ function freshTag(x) {
   return "";
 }
 function freshLine() {
-  const g = DATA && DATA.meta && DATA.meta.stale_guard;
-  if (!g || !g.universe) return "";
-  if (g.ok === false) return `<div class="fresh-line warn">The freshness check failed on this update.</div>`;
-  const wait = g.print_due || 0;
-  // Track A phase 2 (2026-10-30): the desk heartbeat, filings not yet read, cooling-off holds and data checks.
-  const hb = g.heartbeat;
-  const ev = (g.by_evidence || []).length, cool = (g.cooling || []).length, dc = ((DATA.meta && DATA.meta.data_check) || []).length;
-  return `<div class="fresh-line">Ratings: <b>${g.checked_7d} of ${g.universe}</b> checked in the last 7 days — every stock is re-checked at least weekly, and within hours of each earnings report.`
-    + (wait ? ` ${wait} ${wait === 1 ? "is" : "are"} waiting on a new report (marked “under review”, never shown as a buy until re-read).` : "")
-    + (ev ? ` ${ev} ${ev === 1 ? "has" : "have"} a new filing the desk has not read yet.` : "")
-    + (cool ? ` ${cool} ${cool === 1 ? "is" : "are"} cooling off after a proposed cut.` : "")
-    + (dc ? ` ${dc} ${dc === 1 ? "has" : "have"} a data check (price history and quote on different bases; since-call figures blank).` : "")
-    + (hb && hb.last_run ? (hb.ok === false
-        ? ` Re-read desk last ran ${esc(fmtHbTime(hb.last_run))} and is behind schedule; ratings stay as last reviewed.`
-        : ` Re-read desk last ran ${esc(fmtHbTime(hb.last_run))}.`) : "")
-    + ` Prices update with every refresh.</div>`;
+  return "";   // 2026-11-02 (owner): no status line on the main pages; the Control Center carries it
 }
+// ---- CONTROL CENTER (owner-only tab, 2026-11-02) ---------------------------------------------------------------
+// Everything the desk is working on (ratings held until a re-read and why, price checks, cooling-off proposals, data
+// checks, filings not yet read, the re-read desk's schedule) lives here and never on the public pages. The tab shows
+// only on a device where the owner passcode is unlocked.
+function renderControlCenter() {
+  const el = document.getElementById("cc-body");
+  if (!el || !DATA || !privUnlocked()) return;
+  const m = DATA.meta || {}, g = m.stale_guard || {};
+  // the heartbeat in holds.json lands within a minute of each desk run; the payload's copy is as old as the build
+  let hb = g.heartbeat || {};
+  if (HOLDS_HB && HOLDS_HB.last_run && (!hb.last_run || Date.parse(HOLDS_HB.last_run) > Date.parse(hb.last_run))) hb = HOLDS_HB;
+  const due = hb.next_due ? Date.parse(hb.next_due) : NaN;
+  const known = !!hb.last_run && !isNaN(due);
+  const late = known ? Date.now() > due + 90 * 60 * 1000 : true;
+  const lateH = late && !isNaN(due) ? Math.max(1, Math.round((Date.now() - due) / 3600000)) : null;
+  const names = (a) => (a && a.length ? a.map((t) => `<b>${esc(String(t).split(":")[0])}</b>`).join(", ") : "none");
+  const kpi = (k, v, sub, cls) => `<div class="cc-kpi${cls ? " " + cls : ""}"><div class="k">${k}</div><div class="v">${v}</div>${sub ? `<div class="s">${sub}</div>` : ""}</div>`;
+  const owned = new Set((DATA.portfolio || []).map((x) => x.ticker));
+  const rows = [], seen = new Set();
+  const add = (x) => {
+    if (!x || !x.ticker || seen.has(x.ticker)) return;
+    const f = controlFlag(x); if (!f) return;
+    seen.add(x.ticker);
+    const sp = x.stale_print || {}, fr = x.fresh || {};
+    rows.push({ t: x.ticker, n: x.name || x.ticker, v: x.verdict, before: sp.verdict_before, held: !!sp.held, owned: owned.has(x.ticker),
+      label: f.label, text: f.text, rev: fr.rev, rep: fr.rep, ev: fr.ev, pw: x.p_wrong, trig: x.trig });
+  };
+  (DATA.universe || []).forEach(add);
+  (DATA.portfolio || []).forEach(add);
+  rows.sort((a, b) => (b.held - a.held) || (b.owned - a.owned) || a.label.localeCompare(b.label) || a.t.localeCompare(b.t));
+  const asOf = new Date(asOfDate(m.date) + "T12:00:00");
+  const oldSh = (DATA.universe || []).filter((u) => u.shariah_asof && (asOf - new Date(u.shariah_asof + "T12:00:00")) / 86400000 > 120).map((u) => u.ticker);
+  const df = m.drift && m.drift.flagged, driftN = Array.isArray(df) ? df.length : (Number(df) || 0);
+  const c = DATA.calibration || {}, trigs = Object.keys(c.by_trig || {}).filter((k) => k !== "legacy");
+  const cal = (o) => (o && o.n ? `${o.n} graded · <b>${Number(o.hit).toFixed(0)}%</b> right` : "—");
+  const kpis = [
+    kpi("Re-read desk", !known ? "Unknown" : late ? "Behind schedule" : "On schedule",
+      `Last ran ${esc(fmtHbTime(hb.last_run))} · next due ${esc(fmtHbTime(hb.next_due))}${lateH ? ` · ${lateH} h late` : ""}`, late ? "warn" : "ok"),
+    kpi("Checked in 7 days", `${g.checked_7d != null ? g.checked_7d : "—"} of ${g.universe != null ? g.universe : "—"}`, `${g.weekly_due || 0} weekly checks due`),
+    kpi("Held until re-read", String((g.held || []).length), names(g.held), (g.held || []).length ? "warn" : "ok"),
+    kpi("Waiting on a new report", String(g.print_due || 0), "rated before the company's newest report"),
+    kpi("New filing not read", String((g.by_evidence || []).length), names(g.by_evidence)),
+    kpi("Cooling off", String((g.cooling || []).length), names(g.cooling)),
+    kpi("Data checks", String((m.data_check || []).length), names(m.data_check), (m.data_check || []).length ? "warn" : ""),
+    kpi("Shariah table mismatches", String((m.gate1_mismatch || []).length), names(m.gate1_mismatch), (m.gate1_mismatch || []).length ? "warn" : ""),
+    kpi("Shariah verdicts > 120 days", String(oldSh.length), names(oldSh.slice(0, 30)) + (oldSh.length > 30 ? ` +${oldSh.length - 30} more` : ""), oldSh.length ? "warn" : ""),
+    kpi("Drift re-score queue", String(driftN), m.drift && m.drift.date ? `weekly check of ${esc(m.drift.date)}` : ""),
+    kpi("Freshness check", g.ok === false ? "Failed" : "Ran", g.ok === false ? esc(g.error || "") : `build ${esc(String(m.built_at || "").replace("T", " ").slice(0, 16))} UTC`, g.ok === false ? "warn" : "ok"),
+  ];
+  const fil = (ev) => (ev && ev.date ? `${esc(ev.form || "filing")} ${esc(ev.date)} <span class="${ev.read ? "pos" : "muted"}">${ev.read ? "read" : "not read"}</span>` : "—");
+  el.innerHTML = `<div class="cc-kpis">${kpis.join("")}</div>
+    <h3 class="cc-h">Flagged ratings <span class="muted">(${rows.length})</span></h3>
+    ${rows.length ? `<div class="table-wrap"><table class="cc-table"><thead><tr><th>Stock</th><th>Rating shown</th><th>Flag</th><th>Why</th><th>Last re-read</th><th>Latest report</th><th>Newest filing</th><th>Odds wrong</th></tr></thead><tbody>
+    ${rows.map((r) => `<tr data-ticker="${esc(r.t)}"><td><b>${esc(r.t)}</b>${r.owned ? ' <span class="cc-own">owned</span>' : ""}<div class="muted cc-n">${esc(r.n)}</div></td>
+      <td>${verdictBadge(r.v)}${r.before && r.before !== r.v ? `<div class="muted cc-n">was ${esc(r.before)}</div>` : ""}</td>
+      <td><span class="cc-flag">${esc(r.label)}</span>${r.trig ? `<div class="muted cc-n">${esc(trigWords(r.trig))}</div>` : ""}</td>
+      <td class="cc-why">${esc(r.text)}</td><td>${esc(r.rev || "—")}</td><td>${esc(r.rep || "—")}</td><td>${fil(r.ev)}</td>
+      <td>${r.pw != null ? Math.round(Number(r.pw) * 100) + "%" : "—"}</td></tr>`).join("")}
+    </tbody></table></div>` : `<p class="tab-intro">Nothing flagged: every rating is up to date.</p>`}
+    <h3 class="cc-h">Grading by re-read trigger</h3>
+    ${trigs.length ? `<div class="table-wrap"><table class="cc-table cc-small"><thead><tr><th>Trigger</th><th>21 days</th><th>63 days</th></tr></thead><tbody>
+      ${trigs.map((t) => `<tr><td>${esc(trigWords(t) || t)}</td><td>${cal(c.by_trig[t]["21"])}</td><td>${cal(c.by_trig[t]["63"])}</td></tr>`).join("")}</tbody></table></div>`
+      : `<p class="tab-intro">Starts with the ratings opened after October 30, 2026; older ratings carry no stated odds.</p>`}`;
+  el.querySelectorAll("tr[data-ticker]").forEach((tr) => tr.addEventListener("click", () => openDrawer(tr.dataset.ticker)));
+}
+function syncControlTab() {
+  const btn = document.getElementById("tab-btn-control");
+  if (!btn) return;
+  const on = privUnlocked();
+  btn.hidden = !on;
+  if (!on) {
+    if (btn.classList.contains("active")) { const d = document.querySelector('.tab[data-tab="daily"]'); if (d) d.click(); }
+    return;
+  }
+  renderControlCenter();
+  if (!_ccHashUsed && location.hash === "#control") { _ccHashUsed = true; if (!btn.classList.contains("active")) btn.click(); }
+}
+let _ccHashUsed = false;
 function paintFreshLines() {
   const h = freshLine();
   ["u-fresh", "p-fresh"].forEach((id) => { const el = document.getElementById(id); if (el) el.innerHTML = h; });
@@ -765,6 +841,8 @@ function renderAdditions() {
 function renderDeskDiscipline() {
   const host = document.getElementById("desk-discipline");
   if (!host || !DATA.meta) return;
+  // 2026-11-02 (owner): no desk queue on the public pages; the Control Center shows the drift count.
+  host.innerHTML = ""; host.hidden = true; return;
   const parts = [];
   const drift = DATA.meta.drift;
   if (drift && drift.flagged && drift.flagged.length) {
@@ -1305,16 +1383,15 @@ function openDrawer(ticker) {
     let sh = d.shariah_grade;
     if (has(d.shariah_asof)) {
       const ageDays = Math.round((new Date(asOfDate(DATA.meta.date) + "T12:00:00") - new Date(d.shariah_asof + "T12:00:00")) / 86400000);
-      sh += ` <span class="muted">· as of ${d.shariah_asof}</span>` +
-            (ageDays > 120 ? ` <span class="stale-flag" title="Verdict older than 120 days — re-verify on Musaffa">⚠ stale</span>` : "");
+      sh += ` <span class="muted">· as of ${d.shariah_asof}</span>`;   // 2026-11-02: the >120-day flag lives in the Control Center
     }
     kv.push(["Shariah (Musaffa)", sh]);
   }
   if (has(d.first_date)) kv.push(["Scored / re-scored", `${d.first_date} <span class="muted">(current call opened)</span>`]);
   // 2026-10-02 (review): a rating held after a 35%+ fall shows the per-share price it was scored at
-  if (d.fall_hold && has(d.fall_hold.anchor_price)) kv.push(["Scored at", `${fmtUSD(d.fall_hold.anchor_price, 2)}${has(d.fall_hold.fall_pct) ? ` <span class="muted">· price now ${Number(d.fall_hold.fall_pct).toFixed(0)}% lower</span>` : ""}`]);
+  // 2026-11-02 (owner): the fall-hold "Scored at" row moved to the Control Center (its reason text).
   if (has(d.confidence)) kv.push(["Confidence", d.confidence]);
-  trackAKv(d, kv);   // Track A phase 2 (2026-10-30): last re-read, newest filing, trigger
+  // 2026-11-02 (owner): the desk's working rows (last re-read, newest filing, trigger) moved to the Control Center.
   // catalyst renders as its own card below the dims (2026-09-07) — no kv line any more
   if (has(d.insider)) kv.push(["Insider (6-mo Form 4)", d.insider]);
   if (has(d.buzz)) kv.push(["Buzz", `${d.buzz} — ${d.buzz_signal || ""}`]);
@@ -1325,11 +1402,7 @@ function openDrawer(ticker) {
   }
 
   const verdict = d.verdict || (p && p.verdict);
-  // 2026-10-02 (review): under-review flag next to the badge + the build's own sentence. A price-reset
-  // row already carries that sentence as the "[UNDER REVIEW: …]" prefix of its DCF note — not twice.
-  const ur = d.under_review || (p && p.under_review) || "";
-  const urNote = ur && !(d.corp_action && has(d.dcf_note)) ? `<div class="rv-note"><b>Under review.</b> ${esc(ur)}</div>`
-    : (freshSentence({ ticker }) ? `<div class="rv-note fr-note">${esc(freshSentence({ ticker }))}</div>` : "");
+  // 2026-11-02 (owner): no review sentence in the drawer; the Control Center lists every flag with its reason.
   document.getElementById("drawer-panel").innerHTML = `
     <div class="drawer-head">
       <div>
@@ -1339,7 +1412,7 @@ function openDrawer(ticker) {
       <button class="drawer-close" aria-label="Close">×</button>
     </div>
     <div class="drawer-tags">
-      ${verdict ? verdictBadge(verdict) : ""}${reviewTag(Object.assign({}, d, { under_review: ur, ticker }))}${pwChip(d)}
+      ${verdict ? verdictBadge(verdict) : ""}
       ${has(d.qarp) ? `<span class="chip">QARP ${fmtNum(d.qarp, 1)}</span>` : ""}
       ${has(d.dcf) ? `<span class="chip">DCF ${fmtNum(d.dcf, 1)}/5</span>` : ""}
       ${has(d.mech) ? `<span class="chip">Quality ${d.mech}/105</span>` : ""}
@@ -1362,8 +1435,8 @@ function openDrawer(ticker) {
         <span class="fin-src">${d.sec_fin.url ? `<a href="${esc(safeUrl(d.sec_fin.url))}" target="_blank" rel="noopener noreferrer" onclick="openSecDoc(event, this)">${esc(d.sec_fin.form || "")} filed ${esc(d.sec_fin.filed || "")} · EDGAR</a>` : esc(d.sec_fin.period || "")}</span>
       </div>` : ""}
     ${ab && ab.desc ? `<h4>What the company does</h4><div class="dcf-note">${esc(ab.desc)}</div>` : ""}
-    ${urNote}${pendingNote(d)}
-    ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${d.dcf_note}</div>` : ""}
+
+    ${has(d.dcf_note) ? `<h4>DCF / thesis note</h4><div class="dcf-note">${publicNote(d.dcf_note)}</div>` : ""}
     ${bzHoldingNewsHtml(ticker)}
     <section id="drawer-pulse" class="drawer-pulse"></section>
     <section id="drawer-cread" class="drawer-pulse"></section>`;
@@ -2021,7 +2094,7 @@ const FG = (() => {
       tip.innerHTML = `<h4>${esc(x.n)} <span style="font:600 12px var(--mono);opacity:.75">${esc(x.t)}</span></h4><div style="opacity:.75;margin-bottom:4px">${esc(x.group)}${x.g !== x.group ? " (drawn under Other)" : ""}</div>`
         + (v != null ? r(esc(fd(utc(HIST.dates[state.day]))), sgn(v)) : "")
         + r("Move on " + esc(fd(utc(x.held ? S.hsess : S.sess))), x.day == null ? "" : sgn(x.day, 2)) + r("Since scored", x.since == null ? "" : sgn(x.since))
-        + r("QARP score", x.qarp != null ? `${x.qarp} \u00b7 ${esc(x.verdict || "")}${x.review ? " (under review)" : ""}` : "")
+        + r("QARP score", x.qarp != null ? `${x.qarp} \u00b7 ${esc(x.verdict || "")}` : "")
         + r("Company value", x.cap >= 1000 ? "$" + (x.cap / 1000).toFixed(2) + " trillion" : "$" + (x.cap >= 10 ? Math.round(x.cap) : x.cap.toFixed(1)) + " billion")
         + r("Against its 50-day average", x.vs50 == null ? "" : sgn(x.vs50)) + r("Next report", x.next ? esc(fd(utc(x.next))) : "")
         + (x.held ? `<div class="r mine"><span>In your book</span><b>${x.weight != null ? x.weight + "% of it" : "yes"}</b></div>` : "")
@@ -4327,6 +4400,7 @@ function renderAll() {
   // loadBookBrief() removed 2026-10-30: the feature was disabled 2026-07-01 and the plain file named holdings.
   enterDaily();          // Daily is the landing tab — render it + start its refresh
   initTabs();
+  try { syncControlTab(); } catch (e) { console.error("control center", e); }   // owner-only (2026-11-02)
   initGuide();
   startLive();
   startAutoRefresh();
@@ -4352,6 +4426,7 @@ function rerenderFromData() {
   loadSignals();
   loadBookBrief();
   enterDaily();   // re-renders the front page (sidebars + the as-of label) and resets its own timer
+  try { syncControlTab(); } catch (e) { console.error("control center", e); }   // owner-only (2026-11-02)
 }
 // While the market is open, re-pull payload.enc; if the cloud has published a newer build (new IV),
 // swap it in and re-render so an already-open tab updates within minutes — no manual reload needed.
