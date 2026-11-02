@@ -54,20 +54,12 @@ function clientStaleGuard(o) {
     r.under_review = isBuy ? `Not a buy until re-read: ${why}. It showed ${was} before this hold.` : `Re-read owed: ${why}.`;
     added++;
   });
-  // Track A §1c (2026-10-30): the re-read desk writes a heartbeat every run (holds.json.heartbeat, within a minute of
-  // the run). If it is more than 90 minutes past due, nothing has been re-read since — no buy is shown, whatever
-  // the last bake said. The build applies the same rule at bake time; this repeats it between bakes.
+  // Track A §1c (2026-10-30): the re-read desk writes a heartbeat every run (holds.json.heartbeat). 2026-11-02 (owner
+  // ruling): a late desk is only REPORTED in the notice line, it NEVER holds a rating — not for hours, not for days.
+  // Stocks with news the desk has not read are still held one by one (the news holds above + the build's guards).
   const hb = HOLDS_HB && HOLDS_HB.next_due ? Date.parse(HOLDS_HB.next_due) : NaN;
-  if (!isNaN(hb) && Date.now() > hb + 90 * 60 * 1000) {
-    const when = HOLDS_HB.last_run ? new Date(HOLDS_HB.last_run).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) : "unknown";
-    const msg = `Not a buy right now: the re-read desk missed its scheduled run (last run ${when}); every buy is held until it runs.`;
-    o.universe.forEach((r) => {
-      if (!BUY.has(r.verdict)) return;
-      held[r.ticker] = r.verdict;
-      r.stale_print = r.stale_print || { reported: null, reviewed: (r.fresh && r.fresh.rev) || null, verdict_before: r.verdict, held: true, kind: "heartbeat", client: true };
-      r.verdict = "HOLD-QUAL"; r.under_review = msg + (r.under_review ? " " + r.under_review : ""); added++;
-    });
-    if (o.meta && o.meta.stale_guard) o.meta.stale_guard.heartbeat = { ok: false, client: true, last_run: HOLDS_HB.last_run, next_due: HOLDS_HB.next_due };
+  if (!isNaN(hb) && Date.now() > hb + 90 * 60 * 1000 && o.meta && o.meta.stale_guard) {
+    o.meta.stale_guard.heartbeat = { ok: false, client: true, last_run: HOLDS_HB.last_run, next_due: HOLDS_HB.next_due };
   }
   const byTk = {};
   o.universe.forEach((r) => { byTk[r.ticker] = r; });
@@ -133,7 +125,6 @@ function reviewTag(x) {
   const t = x && x.under_review;
   const kind = x && x.stale_print && x.stale_print.kind;
   if (t && kind === "cooling") return `<span class="rv-tag rv-cool" title="${esc(t)}">cooling off</span>`;
-  if (t && kind === "heartbeat") return `<span class="rv-tag rv-late" title="${esc(t)}">desk late</span>`;
   if (t && /^Data check/.test(t)) return `<span class="rv-tag rv-data" title="${esc(t)}">data check</span>`;
   if (t && /^Price check/.test(t) && !(x.stale_print && x.stale_print.held)) return `<span class="rv-tag rv-price" title="${esc(t)}">price check</span>`;
   if (t) return `<span class="rv-tag" title="${esc(t)}">under review</span>`;
@@ -247,20 +238,19 @@ function freshTag(x) {
 function freshLine() {
   const g = DATA && DATA.meta && DATA.meta.stale_guard;
   if (!g || !g.universe) return "";
-  if (g.ok === false) return `<div class="fresh-line warn">The freshness check failed on this update, so no stock is shown as a buy until it runs again.</div>`;
+  if (g.ok === false) return `<div class="fresh-line warn">The freshness check failed on this update.</div>`;
   const wait = g.print_due || 0;
   // Track A phase 2 (2026-10-30): the desk heartbeat, filings not yet read, cooling-off holds and data checks.
   const hb = g.heartbeat;
   const ev = (g.by_evidence || []).length, cool = (g.cooling || []).length, dc = ((DATA.meta && DATA.meta.data_check) || []).length;
-  if (hb && hb.ok === false) {
-    return `<div class="fresh-line warn">The re-read desk missed its scheduled run (last run ${esc(fmtHbTime(hb.last_run))}), so no stock is shown as a buy until it runs again. Ratings: <b>${g.checked_7d} of ${g.universe}</b> checked in the last 7 days.</div>`;
-  }
   return `<div class="fresh-line">Ratings: <b>${g.checked_7d} of ${g.universe}</b> checked in the last 7 days — every stock is re-checked at least weekly, and within hours of each earnings report.`
     + (wait ? ` ${wait} ${wait === 1 ? "is" : "are"} waiting on a new report (marked “under review”, never shown as a buy until re-read).` : "")
     + (ev ? ` ${ev} ${ev === 1 ? "has" : "have"} a new filing the desk has not read yet.` : "")
     + (cool ? ` ${cool} ${cool === 1 ? "is" : "are"} cooling off after a proposed cut.` : "")
     + (dc ? ` ${dc} ${dc === 1 ? "has" : "have"} a data check (price history and quote on different bases; since-call figures blank).` : "")
-    + (hb && hb.last_run ? ` Re-read desk last ran ${esc(fmtHbTime(hb.last_run))}.` : "")
+    + (hb && hb.last_run ? (hb.ok === false
+        ? ` Re-read desk last ran ${esc(fmtHbTime(hb.last_run))} and is behind schedule; ratings stay as last reviewed.`
+        : ` Re-read desk last ran ${esc(fmtHbTime(hb.last_run))}.`) : "")
     + ` Prices update with every refresh.</div>`;
 }
 function paintFreshLines() {
