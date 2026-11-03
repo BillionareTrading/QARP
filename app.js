@@ -200,9 +200,10 @@ function trackAKv(d, kv) {
   }
 }
 function fmtHbTime(iso) {
+  // Control Center times are the owner's clock (Riyadh, UTC+3, no daylight change), whatever device he reads on.
   if (!iso) return "unknown";
   const dt = new Date(iso);
-  return isNaN(dt) ? String(iso) : dt.toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+  return isNaN(dt) ? String(iso) : dt.toLocaleString("en-US", { timeZone: "Asia/Riyadh", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
 }
 // ---- Track A §5 (2026-10-30): how often the ratings were right, graded against SPUS ----
 function renderCalibration() {
@@ -303,13 +304,12 @@ function renderControlCenter() {
   const oldSh = (DATA.universe || []).filter((u) => u.shariah_asof && (asOf - new Date(u.shariah_asof + "T12:00:00")) / 86400000 > 120).map((u) => u.ticker);
   const df = m.drift && m.drift.flagged, driftN = Array.isArray(df) ? df.length : (Number(df) || 0);
   const c = DATA.calibration || {}, trigs = Object.keys(c.by_trig || {}).filter((k) => k !== "legacy");
-  const built = String(m.built_at || "").replace("T", " ").slice(0, 16);
   // 1. status strip: is the desk running and on time?
   const strip = [
     ["Desk", !known ? "Unknown" : late ? "Behind schedule" : "On schedule", !known ? "warn" : late ? "warn" : "ok"],
     ["Last run", esc(fmtHbTime(hb.last_run)), ""],
     ["Next due", esc(fmtHbTime(hb.next_due)) + (lateH ? ` · ${lateH} h late` : ""), lateH ? "warn" : ""],
-    ["Build", built ? `${esc(built)} UTC` : "—", ""],
+    ["Build", m.built_at ? esc(fmtHbTime(m.built_at)) : "—", ""],
     ["Freshness check", g.ok === false ? "Failed" : "Ran", g.ok === false ? "warn" : "ok"],
     ["Data as of", esc(asOfDate(m.date) || m.date || "—"), ""],
   ].map(([k, v, cls]) => `<div><div class="cc-l">${k}</div><div class="cc-v${cls ? " " + cls : ""}">${v}</div></div>`).join("");
@@ -349,7 +349,7 @@ function renderControlCenter() {
       ${trigs.map((t) => { const o = c.by_trig[t] || {}; return `<tr><td>${esc(trigWords(t) || t)}</td><td class="num">${cn(o["21"])}</td><td class="num"><b>${ch(o["21"])}</b></td><td class="num">${cn(o["63"])}</td><td class="num"><b>${ch(o["63"])}</b></td></tr>`; }).join("")}</tbody></table></div>`
     : `<div class="cc-empty">Starts with the ratings opened after October 30, 2026; older ratings carry no stated odds.</div>`;
   el.innerHTML = `<div class="cc">
-    <div class="cc-kick"><div><b>Control Center</b> · owner view</div><div>Nothing here appears on the public pages · tap a row to open the stock</div></div>
+    <div class="cc-kick"><div><b>Control Center</b> · owner view · times in Riyadh</div><div>Nothing here appears on the public pages · tap a row to open the stock</div></div>
     <div class="cc-strip">${strip}</div>
     <div class="cc-ledger">${ledgerHtml}</div>
     <div class="cc-sec"><h3>Flagged ratings · ${rows.length}</h3><span>${flagLine || "none"}</span></div>
