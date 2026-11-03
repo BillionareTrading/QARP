@@ -5802,7 +5802,7 @@ const ED_HELP = {
   surprise: "Reported EPS vs that consensus, in %. On a near-zero consensus the dollar gap is shown instead.",
   result: "BEAT / IN LINE / MISS vs the pre-report consensus. In line = within ±2% (±$0.01 when the consensus is under $0.10).",
   rev_vs: "Reported revenue vs the pre-report revenue consensus, in %. Blank until the figure is in.",
-  guidance: "What the company did to its outlook with the report: RAISED, MAINTAINED or LOWERED. \"pending\" until it has been read.",
+  guidance: "What the company did to its outlook with the report: RAISED, MAINTAINED, LOWERED, or NONE when the release gave no outlook. Read from the company's press release the morning after the report, then confirmed or overridden by the analyst's re-read. \"pending\" until it has been read.",
   reaction: "Stock move on the first session after the numbers (close to close).",
   ret5: "Stock move over the 5 sessions after the report, from the close before the reaction. Blank until 5 sessions have passed.",
   ret21: "Stock move over the 21 sessions after the report. Blank until 21 sessions have passed.",
@@ -5823,6 +5823,7 @@ const ED_LABEL_HELP = {
   "RAISED": "The company raised its outlook with the report.",
   "MAINTAINED": "The company kept (or narrowed) its outlook with the report.",
   "LOWERED": "The company cut or withdrew its outlook with the report.",
+  "NONE": "The release gave no forward outlook: the company does not guide, or said nothing quantitative about the year ahead.",
   "ADD": "Beat, guidance raised, stock closed up, and the rating is BUY or better: in the record such names kept beating the market for a month (+10 points over 21 sessions, 7 cases). Add within two sessions.",
   "TRIM": "Missed consensus on a held name: in the record misses kept falling (-17 points vs the market over 21 sessions). Trim or exit.",
   "AVOID ADDS": "Missed consensus on a name not held: do not add until the next report.",
@@ -5863,6 +5864,12 @@ function edSurprise(actual, cons, pct) {
   return edPct(pct);
 }
 function edLab(t) { return t ? `<span class="ed-lab" title="${esc(ED_LABEL_HELP[t] || "")}">${esc(t)}</span>` : edNA; }
+/* guidance cell: the label, with the release's own sentence in the tooltip when the morning-after reader supplied it */
+function edGuide(r) {
+  if (!r.guidance || r.guidance === "pending") return `<span class="ed-pend" title="${esc(ED_HELP.guidance)}">pending</span>`;
+  const tip = (ED_LABEL_HELP[r.guidance] || "") + (r.guide_quote ? ` From the release: “${r.guide_quote}”` : "");
+  return `<span class="ed-lab" title="${esc(tip)}">${esc(r.guidance)}</span>`;
+}
 function edRating(tk, fallback) {
   // the live row wins (the client stale guard may have held a buy); the badge is the score's tier
   const row = (DATA.portfolio || []).find((h) => h.ticker === tk) || (DATA.universe || []).find((u) => u.ticker === tk);
@@ -5943,7 +5950,7 @@ function edUpDetail(e) {
 /* ---- Table B: reported ---- */
 function edRepRow(r) {
   const cons = r.consensus == null ? edNA : `${edEps(r.consensus)}<span class="ed-n">(${r.eps_n == null ? "?" : r.eps_n})</span>`;
-  const guide = r.guidance && r.guidance !== "pending" ? edLab(r.guidance) : `<span class="ed-pend" title="${esc(ED_HELP.guidance)}">pending</span>`;
+  const guide = edGuide(r);
   return `<tr class="ed-r" data-tk="${esc(r.tk)}" onclick="edToggle(this)">
     <td${edT("tk")}><span class="ed-tk">${esc(r.tk)}</span></td>
     <td${edT("rdate")}>${edShort(r.print_date)}${r.hour ? `<span class="ed-n">${esc(r.hour.toUpperCase())}</span>` : ""}</td>
@@ -5963,7 +5970,8 @@ function edRepRow(r) {
 }
 function edRepDetail(r) {
   const fyChg = (r.fy_frozen && r.fy_now != null) ? ((r.fy_now - r.fy_frozen) / Math.abs(r.fy_frozen)) * 100 : null;
-  const gsrc = r.guidance_src === "note" ? "company guidance, read after the report"
+  const gsrc = r.guidance_src === "note" ? "company guidance, read by the analyst after the report"
+    : r.guidance_src === "release" ? "the company's press release, read the morning after the report"
     : r.guidance_src === "consensus" ? "Street FY estimate, 7 sessions after the report, vs the freeze"
     : "not yet available";
   const cons = `<div class="ed-blk"><h4>Consensus before the report${r.period ? ` · quarter to ${esc(edShort(r.period, true))}` : ""}</h4>
@@ -5977,8 +5985,9 @@ function edRepDetail(r) {
     ${edKv("Actual EPS", `${edEps(r.actual)}${r.result ? `<span class="ed-n">${esc(r.result)}</span>` : ""}`)}
     ${edKv("EPS surprise", edSurprise(r.actual, r.consensus, r.surprise_pct))}
     ${edKv("Revenue, actual vs consensus", r.rev_actual ? `${edMoney(r.rev_actual)}<span class="ed-n">vs ${edMoney(r.rev_consensus)}</span> ${edPct(r.rev_surprise_pct)}` : edNA)}
-    ${edKv("Guidance", r.guidance && r.guidance !== "pending" ? edLab(r.guidance) : `<span class="ed-pend" title="${esc(ED_HELP.guidance)}">pending</span>`)}
+    ${edKv("Guidance", edGuide(r))}
     ${edKv("Guidance source", `<span class="ed-n" style="margin:0">${gsrc}</span>`)}
+    ${r.guide_quote ? edKv("From the release", `<span class="ed-n" style="margin:0">“${esc(r.guide_quote)}”</span>`) : ""}
   </div>`;
   const px = `<div class="ed-blk"><h4>Price</h4>
     ${edKv("Before the report", edNum(r.px_frozen, 2))}
