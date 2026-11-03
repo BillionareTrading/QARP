@@ -276,9 +276,17 @@ function renderControlCenter() {
   const known = !!hb.last_run && !isNaN(due);
   const late = known ? Date.now() > due + 90 * 60 * 1000 : true;
   const lateH = late && !isNaN(due) ? Math.max(1, Math.round((Date.now() - due) / 3600000)) : null;
-  const names = (a) => (a && a.length ? a.map((t) => `<b>${esc(String(t).split(":")[0])}</b>`).join(", ") : "none");
-  const kpi = (k, v, sub, cls) => `<div class="cc-kpi${cls ? " " + cls : ""}"><div class="k">${k}</div><div class="v">${v}</div>${sub ? `<div class="s">${sub}</div>` : ""}</div>`;
   const owned = new Set((DATA.portfolio || []).map((x) => x.ticker));
+  // Redesign 2026-11-03 (owner: no tiles, no empty space): one flat sheet — a status strip, a two-column ledger of
+  // the counts with the names behind each one, the flagged table in its own scroll pane, the grading table.
+  const names = (a, cap) => {
+    const l = (a || []).map((t) => String(t).split(":")[0]);
+    if (!l.length) return `<span class="cc-none">none</span>`;
+    const show = cap ? l.slice(0, cap) : l;
+    return show.map((t) => `<span class="cc-t${owned.has(t) ? " own" : ""}">${esc(t)}</span>`).join("") +
+      (l.length > show.length ? `<span class="cc-more">+${l.length - show.length} more</span>` : "");
+  };
+  const n = (a) => (Array.isArray(a) ? a.length : 0);
   const rows = [], seen = new Set();
   const add = (x) => {
     if (!x || !x.ticker || seen.has(x.ticker)) return;
@@ -295,35 +303,60 @@ function renderControlCenter() {
   const oldSh = (DATA.universe || []).filter((u) => u.shariah_asof && (asOf - new Date(u.shariah_asof + "T12:00:00")) / 86400000 > 120).map((u) => u.ticker);
   const df = m.drift && m.drift.flagged, driftN = Array.isArray(df) ? df.length : (Number(df) || 0);
   const c = DATA.calibration || {}, trigs = Object.keys(c.by_trig || {}).filter((k) => k !== "legacy");
-  const cal = (o) => (o && o.n ? `${o.n} graded · <b>${Number(o.hit).toFixed(0)}%</b> right` : "—");
-  const kpis = [
-    kpi("Re-read desk", !known ? "Unknown" : late ? "Behind schedule" : "On schedule",
-      `Last ran ${esc(fmtHbTime(hb.last_run))} · next due ${esc(fmtHbTime(hb.next_due))}${lateH ? ` · ${lateH} h late` : ""}`, late ? "warn" : "ok"),
-    kpi("Checked in 7 days", `${g.checked_7d != null ? g.checked_7d : "—"} of ${g.universe != null ? g.universe : "—"}`, `${g.weekly_due || 0} weekly checks due`),
-    kpi("Held until re-read", String((g.held || []).length), names(g.held), (g.held || []).length ? "warn" : "ok"),
-    kpi("Waiting on a new report", String(g.print_due || 0), "rated before the company's newest report"),
-    kpi("New filing not read", String((g.by_evidence || []).length), names(g.by_evidence)),
-    kpi("Cooling off", String((g.cooling || []).length), names(g.cooling)),
-    kpi("Data checks", String((m.data_check || []).length), names(m.data_check), (m.data_check || []).length ? "warn" : ""),
-    kpi("Shariah table mismatches", String((m.gate1_mismatch || []).length), names(m.gate1_mismatch), (m.gate1_mismatch || []).length ? "warn" : ""),
-    kpi("Shariah verdicts > 120 days", String(oldSh.length), names(oldSh.slice(0, 30)) + (oldSh.length > 30 ? ` +${oldSh.length - 30} more` : ""), oldSh.length ? "warn" : ""),
-    kpi("Drift re-score queue", String(driftN), m.drift && m.drift.date ? `weekly check of ${esc(m.drift.date)}` : ""),
-    kpi("Freshness check", g.ok === false ? "Failed" : "Ran", g.ok === false ? esc(g.error || "") : `build ${esc(String(m.built_at || "").replace("T", " ").slice(0, 16))} UTC`, g.ok === false ? "warn" : "ok"),
+  const built = String(m.built_at || "").replace("T", " ").slice(0, 16);
+  // 1. status strip: is the desk running and on time?
+  const strip = [
+    ["Desk", !known ? "Unknown" : late ? "Behind schedule" : "On schedule", !known ? "warn" : late ? "warn" : "ok"],
+    ["Last run", esc(fmtHbTime(hb.last_run)), ""],
+    ["Next due", esc(fmtHbTime(hb.next_due)) + (lateH ? ` · ${lateH} h late` : ""), lateH ? "warn" : ""],
+    ["Build", built ? `${esc(built)} UTC` : "—", ""],
+    ["Freshness check", g.ok === false ? "Failed" : "Ran", g.ok === false ? "warn" : "ok"],
+    ["Data as of", esc(asOfDate(m.date) || m.date || "—"), ""],
+  ].map(([k, v, cls]) => `<div><div class="cc-l">${k}</div><div class="cc-v${cls ? " " + cls : ""}">${v}</div></div>`).join("");
+  // 2. the ledger: what is being held back, and what needs a human. Same eleven counts as before, same flags.
+  const vcls = (k, warn) => (k ? (warn ? "warn" : "") : "zero");
+  const ledger = [
+    ["Checked in 7 days", `${g.checked_7d != null ? g.checked_7d : "—"} of ${g.universe != null ? g.universe : "—"}`, `${g.weekly_due || 0} weekly checks due`, ""],
+    ["Waiting on a new report", String(g.print_due || 0), "rated before the company's newest report", vcls(g.print_due, false)],
+    ["Drift re-score queue", String(driftN), m.drift && m.drift.date ? `weekly check of ${esc(m.drift.date)}` : "", vcls(driftN, false)],
+    ["Held until re-read", String(n(g.held)), names(g.held), vcls(n(g.held), true)],
+    ["Cooling off", String(n(g.cooling)), names(g.cooling), vcls(n(g.cooling), false)],
+    ["New filing not read", String(n(g.by_evidence)), names(g.by_evidence), vcls(n(g.by_evidence), false)],
+    ["Data checks", String(n(m.data_check)), names(m.data_check), vcls(n(m.data_check), true)],
+    ["Shariah table mismatches", String(n(m.gate1_mismatch)), names(m.gate1_mismatch), vcls(n(m.gate1_mismatch), true)],
+    ["Shariah verdicts > 120 days", String(oldSh.length), names(oldSh, 40), vcls(oldSh.length, true)],
   ];
-  const fil = (ev) => (ev && ev.date ? `${esc(ev.form || "filing")} ${esc(ev.date)} <span class="${ev.read ? "pos" : "muted"}">${ev.read ? "read" : "not read"}</span>` : "—");
-  el.innerHTML = `<div class="cc-kpis">${kpis.join("")}</div>
-    <h3 class="cc-h">Flagged ratings <span class="muted">(${rows.length})</span></h3>
-    ${rows.length ? `<div class="table-wrap"><table class="cc-table"><thead><tr><th>Stock</th><th>Rating shown</th><th>Flag</th><th>Why</th><th>Last re-read</th><th>Latest report</th><th>Newest filing</th><th>Odds wrong</th></tr></thead><tbody>
-    ${rows.map((r) => `<tr data-ticker="${esc(r.t)}"><td><b>${esc(r.t)}</b>${r.owned ? ' <span class="cc-own">owned</span>' : ""}<div class="muted cc-n">${esc(r.n)}</div></td>
-      <td>${verdictBadge(r.v)}${r.before && r.before !== r.v ? `<div class="muted cc-n">was ${esc(r.before)}</div>` : ""}</td>
-      <td><span class="cc-flag">${esc(r.label)}</span>${r.trig ? `<div class="muted cc-n">${esc(trigWords(r.trig))}</div>` : ""}</td>
-      <td class="cc-why">${esc(r.text)}</td><td>${esc(r.rev || "—")}</td><td>${esc(r.rep || "—")}</td><td>${fil(r.ev)}</td>
-      <td>${r.pw != null ? Math.round(Number(r.pw) * 100) + "%" : "—"}</td></tr>`).join("")}
-    </tbody></table></div>` : `<p class="tab-intro">Nothing flagged: every rating is up to date.</p>`}
-    <h3 class="cc-h">Grading by re-read trigger</h3>
-    ${trigs.length ? `<div class="table-wrap"><table class="cc-table cc-small"><thead><tr><th>Trigger</th><th>21 days</th><th>63 days</th></tr></thead><tbody>
-      ${trigs.map((t) => `<tr><td>${esc(trigWords(t) || t)}</td><td>${cal(c.by_trig[t]["21"])}</td><td>${cal(c.by_trig[t]["63"])}</td></tr>`).join("")}</tbody></table></div>`
-      : `<p class="tab-intro">Starts with the ratings opened after October 30, 2026; older ratings carry no stated odds.</p>`}`;
+  if (g.ok === false) ledger.unshift(["Freshness check", "Failed", esc(g.error || ""), "warn"]);
+  const ledgerHtml = ledger.map(([k, v, d, cls]) => `<div class="cc-row"><div class="cc-l">${k}</div><div class="cc-v${cls ? " " + cls : ""}">${v}</div><div class="cc-d">${d}</div></div>`).join("");
+  // 3. every flagged rating with its reason; the count line breaks the total down by flag
+  const byFlag = {};
+  rows.forEach((r) => { byFlag[r.label] = (byFlag[r.label] || 0) + 1; });
+  const flagLine = Object.keys(byFlag).sort((a, b) => byFlag[b] - byFlag[a]).map((k) => `${byFlag[k]} ${esc(k.toLowerCase())}`).join(" · ");
+  const strong = (l) => /^(Held|Re-read owed|Data check|Reads split)/.test(l);
+  const fil = (ev) => (ev && ev.date ? `${esc(ev.form || "filing")} ${esc(ev.date)} <span class="${ev.read ? "pos" : "cc-dim"}">${ev.read ? "read" : "not read"}</span>` : "—");
+  const badge = (v) => verdictBadge(v).replace('class="badge ', 'class="badge sm ');
+  const flagged = rows.length ? `<div class="cc-pane"><table class="cc-table"><thead><tr><th>Stock</th><th>Rating shown</th><th>Flag</th><th>Why</th><th class="num">Last re-read</th><th class="num">Latest report</th><th class="num">Newest filing</th><th class="num">Odds wrong</th></tr></thead><tbody>
+    ${rows.map((r) => `<tr data-ticker="${esc(r.t)}"><td class="cc-stk"><b>${esc(r.t)}</b>${r.owned ? '<span class="cc-own">owned</span>' : ""}<span class="cc-nm">${esc(r.n)}</span></td>
+      <td>${badge(r.v)}${r.before && r.before !== r.v ? `<span class="cc-was">was ${esc(r.before)}</span>` : ""}</td>
+      <td><span class="cc-flag${strong(r.label) ? " strong" : ""}">${esc(r.label)}</span>${r.trig ? `<div class="cc-sub">${esc(trigWords(r.trig))}</div>` : ""}</td>
+      <td class="cc-why"><div class="cc-clip" title="${esc(r.text)}">${esc(r.text)}</div></td>
+      <td class="num">${esc(r.rev || "—")}</td><td class="num">${esc(r.rep || "—")}</td><td class="num">${fil(r.ev)}</td>
+      <td class="num">${r.pw != null ? Math.round(Number(r.pw) * 100) + "%" : "—"}</td></tr>`).join("")}
+    </tbody></table></div>` : `<div class="cc-empty">Nothing flagged: every rating is up to date.</div>`;
+  // 4. how right the re-reads have been, by what triggered them
+  const cn = (o) => (o && o.n ? String(o.n) : "—"), ch = (o) => (o && o.n ? `${Number(o.hit).toFixed(0)}%` : "—");
+  const grading = trigs.length ? `<div class="cc-pane"><table class="cc-table cc-grade"><thead><tr><th>Trigger</th><th class="num">21 days graded</th><th class="num">Right</th><th class="num">63 days graded</th><th class="num">Right</th></tr></thead><tbody>
+      ${trigs.map((t) => { const o = c.by_trig[t] || {}; return `<tr><td>${esc(trigWords(t) || t)}</td><td class="num">${cn(o["21"])}</td><td class="num"><b>${ch(o["21"])}</b></td><td class="num">${cn(o["63"])}</td><td class="num"><b>${ch(o["63"])}</b></td></tr>`; }).join("")}</tbody></table></div>`
+    : `<div class="cc-empty">Starts with the ratings opened after October 30, 2026; older ratings carry no stated odds.</div>`;
+  el.innerHTML = `<div class="cc">
+    <div class="cc-kick"><div><b>Control Center</b> · owner view</div><div>Nothing here appears on the public pages · tap a row to open the stock</div></div>
+    <div class="cc-strip">${strip}</div>
+    <div class="cc-ledger">${ledgerHtml}</div>
+    <div class="cc-sec"><h3>Flagged ratings · ${rows.length}</h3><span>${flagLine || "none"}</span></div>
+    ${flagged}
+    <div class="cc-sec"><h3>Grading by re-read trigger</h3><span>every re-read graded against SPUS after 21 and 63 trading days</span></div>
+    ${grading}
+  </div>`;
   el.querySelectorAll("tr[data-ticker]").forEach((tr) => tr.addEventListener("click", () => openDrawer(tr.dataset.ticker)));
 }
 function syncControlTab() {
