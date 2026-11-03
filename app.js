@@ -5779,6 +5779,59 @@ function crDeskPlan(tkr, view, feats) {
    GUIDE / TAPE calls no longer ship: over 80 graded prints they sat below their base rates
    (studies/estimates_desk_2026-11-03). Nothing here reads `calls`. */
 
+/* hover text: what each column, label and figure means (owner, 2026-11-03: "a brief description of
+   what each cell / column / number / box means when I hover over it") */
+const ED_HELP = {
+  tk: "Ticker. Tap the row to open the detail: consensus, surprise history, price.",
+  company: "Company name.",
+  date: "Scheduled report date (confirmed by the company or its calendar).",
+  session: "When the numbers come out: BMO = before the market opens, AMC = after the market closes.",
+  rating: "QARP rating of the stock today: the score's tier.",
+  position: "\"held\" = the stock is in the portfolio right now.",
+  price: "Last price in this build.",
+  cons_eps: "Street consensus EPS for the quarter being reported, with the number of analysts in the pool.",
+  yoy: "Consensus EPS vs the same quarter a year ago, in %.",
+  revenue: "Street consensus revenue for the quarter; the small figure is its growth vs a year ago.",
+  revisions: "Analysts who raised (↑) vs cut (↓) their EPS estimate in the last 30 days. Green = more raises, red = more cuts.",
+  ratio: "Revision ratio = raises ÷ (raises + cuts) over 30 days. 1.0 = every change was a raise, 0.0 = every change was a cut. Blank when nothing moved.",
+  dd60: "Where the price sits vs its highest close of the last 60 sessions. 0.0% = at the high; -20% = a fifth below it.",
+  setup: "The desk's pre-report label, from the revisions and the distance from the 60-session high. Hover the label for its meaning.",
+  rdate: "Report date; BMO / AMC = before the open / after the close.",
+  actual: "EPS the company reported.",
+  consensus: "Street consensus EPS at the last check before the report, with the analyst count. This is what the result is judged against.",
+  surprise: "Reported EPS vs that consensus, in %. On a near-zero consensus the dollar gap is shown instead.",
+  result: "BEAT / IN LINE / MISS vs the pre-report consensus. In line = within ±2% (±$0.01 when the consensus is under $0.10).",
+  rev_vs: "Reported revenue vs the pre-report revenue consensus, in %. Blank until the figure is in.",
+  guidance: "What the company did to its outlook with the report: RAISED, MAINTAINED or LOWERED. \"pending\" until it has been read.",
+  reaction: "Stock move on the first session after the numbers (close to close).",
+  ret5: "Stock move over the 5 sessions after the report, from the close before the reaction. Blank until 5 sessions have passed.",
+  ret21: "Stock move over the 21 sessions after the report. Blank until 21 sessions have passed.",
+  action: "The desk's rule for this name after the report. Hover the label for its meaning.",
+  this_week: "Names on the calendar that report this week (Monday to Sunday).",
+  reported: "Names that reported in the last 10 trading sessions and are in the table below.",
+  asof: "The date the consensus and revision figures were last refreshed.",
+};
+const ED_LABEL_HELP = {
+  "POSITIVE REVISIONS": "More analysts raised their estimate than cut it in the last 30 days. In the record so far such names beat consensus 80-92% of the time.",
+  "POSITIVE · OFF HIGHS": "Estimates rising AND the price is 15% or more below its 60-session high: the strongest setup in the record (beat 92% of the time, 12 cases).",
+  "NEGATIVE REVISIONS": "More analysts cut their estimate than raised it in the last 30 days. Such names beat only about half the time and carried nearly every miss.",
+  "NO REVISIONS": "No net change to estimates in the last 30 days (none moved, or raises and cuts cancelled). Beat rate about a coin flip in the record.",
+  "AT HIGHS": "Price within 5% of its 60-session high: the good news may already be paid for (such names beat often but trailed the market afterwards).",
+  "BEAT": "Reported EPS above the pre-report consensus by more than the in-line band.",
+  "IN LINE": "Reported EPS within ±2% of the pre-report consensus (±$0.01 on a near-zero base).",
+  "MISS": "Reported EPS below the pre-report consensus by more than the in-line band.",
+  "RAISED": "The company raised its outlook with the report.",
+  "MAINTAINED": "The company kept (or narrowed) its outlook with the report.",
+  "LOWERED": "The company cut or withdrew its outlook with the report.",
+  "ADD": "Beat, guidance raised, stock closed up, and the rating is BUY or better: in the record such names kept beating the market for a month (+10 points over 21 sessions, 7 cases). Add within two sessions.",
+  "TRIM": "Missed consensus on a held name: in the record misses kept falling (-17 points vs the market over 21 sessions). Trim or exit.",
+  "AVOID ADDS": "Missed consensus on a name not held: do not add until the next report.",
+  "NO ACTION": "Beat but the stock closed down (the market disagreed; such names lagged -8 points afterwards), or an in-line print. Nothing to do.",
+  "HOLD": "Every other case, including guidance not yet read. Keep the position as it is.",
+  "held": "In the portfolio right now.",
+};
+const edT = (k) => ` title="${esc(ED_HELP[k] || "")}"`;
+
 function edMoney(n) {
   if (n == null || n === 0) return "—";  // 0 = Yahoo's empty-pool placeholder, never real revenue
   const a = Math.abs(n);
@@ -5809,15 +5862,15 @@ function edSurprise(actual, cons, pct) {
   if (Math.abs(cons) < 0.10) return edUsdDelta(actual - cons);
   return edPct(pct);
 }
-function edLab(t) { return t ? `<span class="ed-lab">${esc(t)}</span>` : edNA; }
+function edLab(t) { return t ? `<span class="ed-lab" title="${esc(ED_LABEL_HELP[t] || "")}">${esc(t)}</span>` : edNA; }
 function edRating(tk, fallback) {
   // the live row wins (the client stale guard may have held a buy); the badge is the score's tier
   const row = (DATA.portfolio || []).find((h) => h.ticker === tk) || (DATA.universe || []).find((u) => u.ticker === tk);
   const v = (row && row.verdict) || fallback;
   if (!v) return edNA;
-  return verdictBadge(v).replace('class="badge ', 'class="badge sm ');
+  return verdictBadge(v).replace('class="badge ', `title="${esc(ED_HELP.rating)}" class="badge sm `);
 }
-const edHeld = (h) => (h ? `<span class="ed-held">held</span>` : "");
+const edHeld = (h) => (h ? `<span class="ed-held" title="${esc(ED_LABEL_HELP.held)}">held</span>` : "");
 function edRevisions(rv) {
   const up = (rv && rv.up30) || 0, dn = (rv && rv.dn30) || 0;
   if (!up && !dn) return `<span class="ed-na">0 ↑ 0 ↓</span>`;
@@ -5848,19 +5901,19 @@ function edUpRow(e) {
   const date = `${edShort(e.print_date)}${e.days_to_print === 0 ? `<span class="ed-n">today</span>` : ""}`;
   const cons = eps.avg == null ? edNA : `${edEps(eps.avg)}<span class="ed-n">(${eps.n == null ? "?" : eps.n})</span>`;
   const revenue = rev.avg ? `${edMoney(rev.avg)}${e.rev_yoy == null ? "" : `<span class="ed-n ${signClass(e.rev_yoy)}">${fmtPct(e.rev_yoy, 0)}</span>`}` : edNA;
-  const setup = e.setup ? `${edLab(e.setup)}${e.at_highs ? `<span class="ed-mark">AT HIGHS</span>` : ""}` : (e.at_highs ? `<span class="ed-mark">AT HIGHS</span>` : edNA);
+  const setup = e.setup ? `${edLab(e.setup)}${e.at_highs ? `<span class="ed-mark" title="${esc(ED_LABEL_HELP["AT HIGHS"])}">AT HIGHS</span>` : ""}` : (e.at_highs ? `<span class="ed-mark" title="${esc(ED_LABEL_HELP["AT HIGHS"])}">AT HIGHS</span>` : edNA);
   return `<tr class="ed-r" data-tk="${esc(e.tk)}" onclick="edToggle(this)">
-    <td><span class="ed-tk">${esc(e.tk)}</span></td>
+    <td${edT("tk")}><span class="ed-tk">${esc(e.tk)}</span></td>
     <td class="ed-nm" title="${esc(e.name || "")}">${esc(e.name || "")}</td>
-    <td>${date}</td><td>${esc(sess)}</td>
+    <td${edT("date")}>${date}</td><td${edT("session")}>${esc(sess)}</td>
     <td>${edRating(e.tk, e.verdict)}</td><td>${edHeld(e.held)}</td>
-    <td class="num">${edNum(e.px, 2)}</td>
-    <td class="num">${cons}</td>
-    <td class="num">${edPct(e.eps_yoy)}</td>
-    <td class="num">${revenue}</td>
-    <td class="num">${edRevisions(e.revisions)}</td>
-    <td class="num">${e.rev_ratio == null ? "" : fmtNum(e.rev_ratio, 1)}</td>
-    <td class="num">${edPct(e.dd60)}</td>
+    <td class="num"${edT("price")}>${edNum(e.px, 2)}</td>
+    <td class="num"${edT("cons_eps")}>${cons}</td>
+    <td class="num"${edT("yoy")}>${edPct(e.eps_yoy)}</td>
+    <td class="num"${edT("revenue")}>${revenue}</td>
+    <td class="num"${edT("revisions")}>${edRevisions(e.revisions)}</td>
+    <td class="num"${edT("ratio")}>${e.rev_ratio == null ? "" : fmtNum(e.rev_ratio, 1)}</td>
+    <td class="num"${edT("dd60")}>${edPct(e.dd60)}</td>
     <td>${setup}</td>
   </tr>
   <tr class="ed-x" hidden><td colspan="14"><div class="ed-xw">${edUpDetail(e)}</div></td></tr>`;
@@ -5880,7 +5933,7 @@ function edUpDetail(e) {
   const px = `<div class="ed-blk"><h4>Price</h4>
     ${edKv("Last", edNum(e.px, 2))}
     ${edKv("Run-up 5d / 20d / 60d", ru.d5 == null ? edNA : `${edPct(ru.d5)} / ${edPct(ru.d20)} / ${edPct(ru.d60)}`)}
-    ${edKv("vs 60-session high", `${edPct(e.dd60)}${e.at_highs ? `<span class="ed-mark">AT HIGHS</span>` : ""}`)}
+    ${edKv("vs 60-session high", `${edPct(e.dd60)}${e.at_highs ? `<span class="ed-mark" title="${esc(ED_LABEL_HELP["AT HIGHS"])}">AT HIGHS</span>` : ""}`)}
     ${rx.median_abs != null ? edKv("Median reaction, prior prints", `±${fmtNum(rx.median_abs, 1)}%<span class="ed-n">n=${rx.n || (rx.rows || []).length}</span>`) : ""}
     ${edReactionRows(rx) ? `<h4 style="margin-top:6px">Prior reactions</h4>${edReactionRows(rx)}` : ""}
   </div>`;
@@ -5890,20 +5943,20 @@ function edUpDetail(e) {
 /* ---- Table B: reported ---- */
 function edRepRow(r) {
   const cons = r.consensus == null ? edNA : `${edEps(r.consensus)}<span class="ed-n">(${r.eps_n == null ? "?" : r.eps_n})</span>`;
-  const guide = r.guidance && r.guidance !== "pending" ? edLab(r.guidance) : `<span class="ed-pend">pending</span>`;
+  const guide = r.guidance && r.guidance !== "pending" ? edLab(r.guidance) : `<span class="ed-pend" title="${esc(ED_HELP.guidance)}">pending</span>`;
   return `<tr class="ed-r" data-tk="${esc(r.tk)}" onclick="edToggle(this)">
-    <td><span class="ed-tk">${esc(r.tk)}</span></td>
-    <td>${edShort(r.print_date)}${r.hour ? `<span class="ed-n">${esc(r.hour.toUpperCase())}</span>` : ""}</td>
+    <td${edT("tk")}><span class="ed-tk">${esc(r.tk)}</span></td>
+    <td${edT("rdate")}>${edShort(r.print_date)}${r.hour ? `<span class="ed-n">${esc(r.hour.toUpperCase())}</span>` : ""}</td>
     <td>${edRating(r.tk, r.verdict)}</td><td>${edHeld(r.held)}</td>
-    <td class="num">${edEps(r.actual)}</td>
-    <td class="num">${cons}</td>
-    <td class="num">${edSurprise(r.actual, r.consensus, r.surprise_pct)}</td>
+    <td class="num"${edT("actual")}>${edEps(r.actual)}</td>
+    <td class="num"${edT("consensus")}>${cons}</td>
+    <td class="num"${edT("surprise")}>${edSurprise(r.actual, r.consensus, r.surprise_pct)}</td>
     <td>${r.result ? edLab(r.result) : edNA}</td>
-    <td class="num">${edPct(r.rev_surprise_pct)}</td>
+    <td class="num"${edT("rev_vs")}>${edPct(r.rev_surprise_pct)}</td>
     <td>${guide}</td>
-    <td class="num">${edPct(r.reaction)}</td>
-    <td class="num">${edPct(r.ret5)}</td>
-    <td class="num">${edPct(r.ret21)}</td>
+    <td class="num"${edT("reaction")}>${edPct(r.reaction)}</td>
+    <td class="num"${edT("ret5")}>${edPct(r.ret5)}</td>
+    <td class="num"${edT("ret21")}>${edPct(r.ret21)}</td>
     <td>${r.action ? edLab(r.action) : edNA}</td>
   </tr>
   <tr class="ed-x" hidden><td colspan="14"><div class="ed-xw">${edRepDetail(r)}</div></td></tr>`;
@@ -5924,7 +5977,7 @@ function edRepDetail(r) {
     ${edKv("Actual EPS", `${edEps(r.actual)}${r.result ? `<span class="ed-n">${esc(r.result)}</span>` : ""}`)}
     ${edKv("EPS surprise", edSurprise(r.actual, r.consensus, r.surprise_pct))}
     ${edKv("Revenue, actual vs consensus", r.rev_actual ? `${edMoney(r.rev_actual)}<span class="ed-n">vs ${edMoney(r.rev_consensus)}</span> ${edPct(r.rev_surprise_pct)}` : edNA)}
-    ${edKv("Guidance", r.guidance && r.guidance !== "pending" ? edLab(r.guidance) : `<span class="ed-pend">pending</span>`)}
+    ${edKv("Guidance", r.guidance && r.guidance !== "pending" ? edLab(r.guidance) : `<span class="ed-pend" title="${esc(ED_HELP.guidance)}">pending</span>`)}
     ${edKv("Guidance source", `<span class="ed-n" style="margin:0">${gsrc}</span>`)}
   </div>`;
   const px = `<div class="ed-blk"><h4>Price</h4>
@@ -5997,15 +6050,16 @@ function renderEstimates() {
   }
   const up = est.upcoming || [], rep = est.reported || [];
   const c = est.counts || {};
-  const head = `<div class="ed-head"><span>Earnings calendar · consensus as of ${esc(edShort(est.consensus_asof || est.asof, true))} · <b>${c.this_week == null ? up.filter((u) => u.days_to_print != null && u.days_to_print <= 6).length : c.this_week}</b> names this week · <b>${c.reported == null ? rep.length : c.reported}</b> printed in the last ${est.reported_sessions || 10} sessions</span>
+  const head = `<div class="ed-head"><span>Earnings calendar · <span${edT("asof")}>consensus as of ${esc(edShort(est.consensus_asof || est.asof, true))}</span> · <span${edT("this_week")}><b>${c.this_week == null ? up.filter((u) => u.days_to_print != null && u.days_to_print <= 6).length : c.this_week}</b> names this week</span> · <span${edT("reported")}><b>${c.reported == null ? rep.length : c.reported}</b> printed in the last ${est.reported_sessions || 10} sessions</span></span>
     <span class="ed-src">Consensus and revisions: Yahoo Finance analyst pool · timing: Finnhub · reactions: QARP bars</span></div>`;
-  const thA = `<thead><tr><th>Ticker</th><th>Company</th><th>Date</th><th>Session</th><th>Rating</th><th>Position</th><th class="num">Price</th><th class="num">Consensus EPS</th><th class="num">YoY</th><th class="num">Revenue</th><th class="num">Revisions 30d</th><th class="num">Ratio</th><th class="num">vs 60d high</th><th>Setup</th></tr></thead>`;
-  const thB = `<thead><tr><th>Ticker</th><th>Date</th><th>Rating</th><th>Position</th><th class="num">Actual EPS</th><th class="num">Consensus</th><th class="num">Surprise</th><th>Result</th><th class="num">Revenue vs cons.</th><th>Guidance</th><th class="num">Reaction</th><th class="num">5d</th><th class="num">21d</th><th>Action</th></tr></thead>`;
+  const th = (label, k, num) => `<th${num ? ' class="num"' : ""}${edT(k)}>${label}</th>`;
+  const thA = `<thead><tr>${th("Ticker", "tk")}${th("Company", "company")}${th("Date", "date")}${th("Session", "session")}${th("Rating", "rating")}${th("Position", "position")}${th("Price", "price", 1)}${th("Consensus EPS", "cons_eps", 1)}${th("YoY", "yoy", 1)}${th("Revenue", "revenue", 1)}${th("Revisions 30d", "revisions", 1)}${th("Ratio", "ratio", 1)}${th("vs 60d high", "dd60", 1)}${th("Setup", "setup")}</tr></thead>`;
+  const thB = `<thead><tr>${th("Ticker", "tk")}${th("Date", "rdate")}${th("Rating", "rating")}${th("Position", "position")}${th("Actual EPS", "actual", 1)}${th("Consensus", "consensus", 1)}${th("Surprise", "surprise", 1)}${th("Result", "result")}${th("Revenue vs cons.", "rev_vs", 1)}${th("Guidance", "guidance")}${th("Reaction", "reaction", 1)}${th("5d", "ret5", 1)}${th("21d", "ret21", 1)}${th("Action", "action")}</tr></thead>`;
   el.innerHTML = `<div class="ed-sheet">${head}
-    <div class="ed-sec"><h3>Upcoming · ${up.length}</h3><p>${ED_TEXT_A}</p></div>
+    <div class="ed-sec"><h3 title="Names on the calendar with a confirmed report date inside the next ${est.window_days || 21} days, soonest first.">Upcoming · ${up.length}</h3><p>${ED_TEXT_A}</p></div>
     ${up.length ? `<div class="ed-wrap"><table class="ed-t ed-ta">${thA}<tbody>${up.map(edUpRow).join("")}</tbody></table></div>`
       : `<div class="ed-empty">No confirmed prints inside the next ${est.window_days || 21} days.</div>`}
-    <div class="ed-sec"><h3>Reported · ${rep.length}</h3><p>${ED_TEXT_B}</p></div>
+    <div class="ed-sec"><h3 title="Names that reported in the last ${est.reported_sessions || 10} trading sessions, newest first, judged against the consensus frozen before the report.">Reported · ${rep.length}</h3><p>${ED_TEXT_B}</p></div>
     ${rep.length ? `<div class="ed-wrap"><table class="ed-t ed-tb">${thB}<tbody>${rep.map(edRepRow).join("")}</tbody></table></div>`
       : `<div class="ed-empty">No names reported in the last ${est.reported_sessions || 10} sessions.</div>`}
   </div>`;
