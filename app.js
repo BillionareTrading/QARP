@@ -1255,7 +1255,6 @@ const R_COLS = [
   { key: "ticker", label: "Company", align: "left", sortVal: (r) => r.ticker },
   { key: "date_bought", label: "Bought", sortVal: (r) => r.date_bought || "" },
   { key: "date_sold", label: "Sold", sortVal: (r) => r.date_sold || "" },
-  { key: "held", label: "Held", sortVal: (r) => (r.date_bought && r.date_sold) ? (new Date(r.date_sold) - new Date(r.date_bought)) : -1 },
   { key: "gain", label: "Gain", sortVal: (r) => (r.gain != null ? r.gain : r.gain_pct || 0) },
   { key: "gain_pct", label: "Return", sortVal: (r) => r.gain_pct == null ? -1e9 : r.gain_pct },
 ];
@@ -1322,13 +1321,8 @@ function renderRealized() {
     if (typeof va === "string") return rSort.dir * va.localeCompare(vb);
     return rSort.dir * (va - vb);
   });
-  const d = (iso) => iso ? new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: iso.slice(0,4) !== String(new Date().getFullYear()) ? "2-digit" : undefined }) : "—";
-  const held = (r) => {
-    if (!r.date_bought || !r.date_sold) return "—";
-    const days = Math.round((new Date(r.date_sold) - new Date(r.date_bought)) / 86400000);
-    const t = days < 21 ? `${days} d` : days < 70 ? `${Math.round(days / 7)} w` : `${Math.round(days / 30.4)} mo`;
-    return r.buy_est ? `~${t}` : t;
-  };
+  // 2026-11-03 (owner: "remove the held column, for bought and sold just have the price, I don't need the dates,
+  // it looks messy"): the two cells carry the price only; the Bought / Sold headers still sort by date.
   document.querySelector("#realized-table thead").innerHTML = `<tr>${R_COLS.map((c) => {
     const arrow = rSort.key === c.key ? `<span class="arrow">${rSort.dir > 0 ? "▲" : "▼"}</span>` : "";
     return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}</th>`;
@@ -1337,9 +1331,8 @@ function renderRealized() {
     <tr>
       <td class="left"><b>${r.ticker}</b> <span class="realized-name">${r.name}</span>
         <span class="realized-sh">${r.shares == null ? lockSH() : fmtShares(+r.shares) + " sh"}</span></td>
-      <td>${r.buy_est ? '<span class="realized-approx">~</span>' : ""}${d(r.date_bought)} · $${r.buy_px.toFixed(2)}</td>
-      <td>${d(r.date_sold)} · $${r.sell_px.toFixed(2)}</td>
-      <td>${held(r)}</td>
+      <td>$${r.buy_px.toFixed(2)}</td>
+      <td>$${r.sell_px.toFixed(2)}</td>
       <td>${r.gain == null ? lockUSD() : `<span class="${r.gain >= 0 ? "rz-gain" : "rz-loss"}">${r.gain >= 0 ? "+" : "−"}$${Math.abs(r.gain).toFixed(2)}</span>`}</td>
       <td><span class="${(r.gain != null ? r.gain : r.gain_pct || 0) >= 0 ? "rz-gain" : "rz-loss"}">${r.gain_pct == null ? "—" : (r.gain_pct >= 0 ? "+" : "−") + Math.abs(r.gain_pct).toFixed(1) + "%"}</span></td>
     </tr>`).join("");
