@@ -1998,3 +1998,34 @@ table.cc-table td.cc-why { white-space: normal; min-width: 280px; max-width: 680
   .cc-sec span { text-align: left; }
   .cc-pane { max-height: 58vh; }
 }
+
+/* ===== Performance — Portfolio tab (2026-11-04; spec = prompts/portfolio_performance_chart_mock.html) =====
+   One number, one line, a sentence. Site tokens only; nothing inside is boxed; the sentence is the readout. */
+.perf { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 20px 22px 14px; margin-bottom: 16px; }
+.perf-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+.perf-big { font-family: var(--mono); font-size: 40px; font-weight: 600; letter-spacing: -.01em; line-height: 1; font-variant-numeric: tabular-nums; }
+.perf-sub { margin-top: 8px; font-size: 13.5px; color: var(--ink-2); }
+.perf-sub b { font-family: var(--mono); font-weight: 500; color: var(--ink); }
+.perf-ctl { display: flex; gap: 18px; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); user-select: none; flex-wrap: wrap; align-items: baseline; }
+.perf-ctl span { cursor: pointer; padding-bottom: 3px; border-bottom: 1px solid transparent; white-space: nowrap; }
+.perf-ctl span.on { color: var(--ink); border-bottom-color: var(--ink); }
+.perf-ctl .perf-cmp { margin-left: 10px; padding-left: 18px; border-left: 1px solid var(--line); }
+.perf-fig { position: relative; margin-top: 18px; touch-action: none; cursor: crosshair; }
+.perf-fig svg { display: block; width: 100%; height: auto; overflow: visible; }
+.perf-zero { stroke: var(--line); }
+.perf-area.pos { fill: var(--pos); fill-opacity: .06; }
+.perf-area.neg { fill: var(--neg); fill-opacity: .06; }
+.perf-line { fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linejoin: round; }
+.perf-cmp-line { fill: none; stroke: var(--ink-3); stroke-width: 1.2; stroke-dasharray: 4 3; }
+.perf-hair { stroke: var(--ink-3); stroke-width: 1; }
+.perf-dot { fill: var(--ink); }
+.perf-dot-cmp { fill: var(--surface); stroke: var(--ink-3); stroke-width: 1.2; }
+.perf-ax { font-family: var(--mono); font-size: 10.5px; fill: var(--ink-3); }
+.perf-foot { display: flex; justify-content: space-between; gap: 12px; font-size: 11px; color: var(--ink-3); margin-top: 10px; flex-wrap: wrap; }
+@media (max-width: 560px) {
+  .perf { padding: 16px 14px 12px; }
+  .perf-big { font-size: 32px; }
+  .perf-top { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .perf-ctl { gap: 14px; row-gap: 8px; }
+  .perf-ctl .perf-cmp { margin-left: 0; padding-left: 0; border-left: 0; }   /* wraps to its own line under the periods */
+}

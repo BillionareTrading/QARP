@@ -1204,6 +1204,7 @@ function renderTopHoldings() {
 
 function renderPortfolio() {
   renderKpis(); // KPI strip lives inside this panel now
+  renderPerformance();   // earned since 3 Jun — one number, one line (2026-11-04)
   renderTopHoldings();
 
   // allocation donut by broad sector (from the daily snapshot)
@@ -6086,4 +6087,144 @@ function openEstimates(tk) {
     if (tr.nextElementSibling && tr.nextElementSibling.hasAttribute("hidden")) edToggle(tr);
     tr.scrollIntoView({ behavior: "smooth", block: "center" });
   }, 60);
+}
+
+/* ---------- PERFORMANCE CHART — Portfolio tab (2026-11-04; spec = prompts/portfolio_performance_chart_mock.html) ----------
+   One number (earned = what the account is worth minus everything deposited, withdrawals added back),
+   one line, a sentence under the number, a hover/touch readout per day, periods 1M / 3M / since 3 Jun /
+   all, and "Compare with SPUS". The bake computes everything (book_performance.py): every percent arrives
+   computed with the period's own money-put-in as the denominator, so a deposit or a withdrawal can never
+   move the line. The page re-bases only the owner's dollar series (PRIV.performance). Locked viewers see
+   the percent in place of every dollar — no dollar, balance or share count renders in that branch. */
+const PERF_WORDS = { "1M": "in the last month", "3M": "in the last 3 months", S: "since 3 Jun", ALL: "all time" };
+const perfState = { period: null, cmp: false, hover: null, bound: false, drawnW: 0 };
+function perfFmtUSD(v) { return (v < 0 ? "−" : "+") + "$" + Math.abs(Math.round(v)).toLocaleString("en-US"); }
+function perfFmtPct(v) { return v == null ? "—" : (v < 0 ? "−" : "+") + Math.abs(v).toFixed(1) + "%"; }
+function perfDay(iso) { const [y, m, d] = iso.split("-"); return new Date(+y, +m - 1, +d).toLocaleDateString("en-GB", { day: "numeric", month: "short" }); }
+// The series for the chosen period: dollars when the owner blob is unlocked, else the percent series.
+function perfSeries() {
+  const P = DATA && DATA.performance;
+  if (!P || !Array.isArray(P.dates) || !P.periods) return null;
+  const per = P.periods[perfState.period] || P.periods.S;
+  if (!per || !Array.isArray(per.pct)) return null;
+  const i0 = per.i0 | 0, i1 = P.dates.length - 1, n = i1 - i0 + 1;
+  if (n < 2 || per.pct.length !== n) return null;
+  const V = privUnlocked() && PRIV && PRIV.performance && Array.isArray(PRIV.performance.earned)
+    && PRIV.performance.earned.length === P.dates.length ? PRIV.performance : null;
+  const ps = Array.isArray(per.spus_pct) && per.spus_pct.length === n ? per.spus_pct : null;
+  const e = V ? V.earned.slice(i0, i1 + 1).map((v) => +(v - V.earned[i0]).toFixed(2)) : per.pct.map((v) => v == null ? 0 : v);
+  const twin = V && Array.isArray(V.spus_earned) && V.spus_earned.length === P.dates.length ? V.spus_earned : null;
+  const s = V ? (twin ? twin.slice(i0, i1 + 1).map((v) => +(v - twin[i0]).toFixed(2)) : null) : (ps ? ps.map((v) => v == null ? 0 : v) : null);
+  return { P, i0, i1, n, dollars: !!V, e, s, pe: per.pct, ps };
+}
+function perfIndexAt(ev) {
+  const fig = document.getElementById("perf-fig"), S = perfSeries();
+  if (!fig || !S) return null;
+  const r = fig.getBoundingClientRect();
+  const cx = ev.touches && ev.touches.length ? ev.touches[0].clientX : ev.clientX;
+  const x = cx - r.left, PL = 8, PR = 8;
+  return Math.max(0, Math.min(S.n - 1, Math.round((x - PL) / ((r.width - PL - PR) / (S.n - 1)))));
+}
+function perfDraw() {
+  const fig = document.getElementById("perf-fig"), S = perfSeries();
+  if (!fig || !S) return;
+  const { P, i0, i1, n, dollars, e, s } = S;
+  const cmp = perfState.cmp && !!s;
+  const W = Math.max(300, Math.round(fig.clientWidth || 1000));   // 0 while the tab is hidden: the observer below redraws it
+  const H = W < 600 ? 200 : Math.min(300, Math.round(W * 0.28));
+  perfState.drawnW = W;
+  const PL = 8, PR = 8, PT = 14, PB = 26;
+  const vals = cmp ? e.concat(s) : e;
+  let lo = Math.min(0, ...vals), hi = Math.max(0, ...vals);
+  const pad = (hi - lo) * 0.08 || (dollars ? 100 : 1);
+  lo -= pad; hi += pad;
+  const X = (i) => PL + i * (W - PL - PR) / (n - 1), Y = (v) => PT + (hi - v) / (hi - lo) * (H - PT - PB);
+  const path = (a) => "M" + a.map((v, i) => X(i).toFixed(1) + "," + Y(v).toFixed(1)).join(" L");
+  const k = perfState.hover == null ? n - 1 : Math.max(0, Math.min(n - 1, perfState.hover));
+  const up = e[k] >= 0, z = Y(0).toFixed(1);
+  let o = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">`;
+  o += `<line class="perf-zero" x1="${PL}" x2="${W - PR}" y1="${z}" y2="${z}"/>`;
+  o += `<path class="perf-area ${up ? "pos" : "neg"}" d="${path(e)} L${X(n - 1).toFixed(1)},${z} L${PL},${z} Z"/>`;
+  if (cmp) o += `<path class="perf-cmp-line" d="${path(s)}"/>`;
+  o += `<path class="perf-line" d="${path(e)}"/>`;
+  // dates along the bottom only: the first day, each month start, the last day
+  const lab = [];
+  for (let i = 0; i < n; i++) if (i === 0 || P.dates[i0 + i].slice(0, 7) !== P.dates[i0 + i - 1].slice(0, 7)) lab.push(i);
+  const gap = W < 600 ? 46 : 60;   // a label is ~40px wide; the first is start-anchored, the last end-anchored
+  let lastX = -1e9;
+  lab.forEach((i) => {
+    const x = X(i);
+    if (i > 0 && x - lastX < gap) return;
+    if (X(n - 1) - x < gap + 22) return;
+    o += `<text class="perf-ax" x="${x.toFixed(1)}" y="${H - 6}" text-anchor="${i === 0 ? "start" : "middle"}">${perfDay(P.dates[i0 + i])}</text>`;
+    lastX = i === 0 ? x + 30 : x;
+  });
+  o += `<text class="perf-ax" x="${W - PR}" y="${H - 6}" text-anchor="end">${perfDay(P.dates[i1])}</text>`;
+  if (perfState.hover != null) {
+    o += `<line class="perf-hair" x1="${X(k).toFixed(1)}" x2="${X(k).toFixed(1)}" y1="${PT}" y2="${H - PB}"/>`;
+    if (cmp) o += `<circle class="perf-dot-cmp" cx="${X(k).toFixed(1)}" cy="${Y(s[k]).toFixed(1)}" r="3.5"/>`;
+  }
+  o += `<circle class="perf-dot" cx="${X(k).toFixed(1)}" cy="${Y(e[k]).toFixed(1)}" r="4"/></svg>`;
+  fig.innerHTML = o;
+  // the number and the sentence become the chosen day's
+  const pe = S.pe[k], ps = S.ps ? S.ps[k] : null, words = PERF_WORDS[perfState.period] || PERF_WORDS.S;
+  const big = document.getElementById("perf-big"), sub = document.getElementById("perf-sub");
+  big.textContent = dollars ? perfFmtUSD(e[k]) : perfFmtPct(pe);
+  big.className = "perf-big " + (up ? "pos" : "neg");
+  const day = perfDay(P.dates[i0 + k]);
+  if (perfState.hover == null) {
+    sub.innerHTML = dollars
+      ? `Earned ${words} · <b>${perfFmtPct(pe)}</b> on the money you put in${cmp ? ` · if in SPUS <b>${perfFmtUSD(s[k])}</b>` : ""}`
+      : `Earned ${words} on the money you put in${cmp ? ` · if in SPUS <b>${perfFmtPct(ps)}</b>` : ""}`;
+  } else {
+    sub.innerHTML = dollars
+      ? `On <b>${day}</b> you had earned <b>${perfFmtUSD(e[k])}</b> ${words}${cmp ? ` · in SPUS it would have been <b>${perfFmtUSD(s[k])}</b>` : ""}`
+      : `On <b>${day}</b> <b>${perfFmtPct(pe)}</b> ${words}${cmp ? ` · in SPUS <b>${perfFmtPct(ps)}</b>` : ""}`;
+  }
+  document.getElementById("perf-asof").textContent = "Daily record to " + perfDay(P.dates[i1]);
+  document.querySelectorAll("#perf-ctl span[data-p]").forEach((x) => x.classList.toggle("on", x.dataset.p === perfState.period));
+  document.getElementById("perf-cmp").classList.toggle("on", perfState.cmp);
+}
+function renderPerformance() {
+  const el = document.getElementById("perf");
+  if (!el) return;
+  if (!perfState.period) {
+    try { perfState.period = localStorage.getItem("jc_perf_period") || "S"; } catch (e) { perfState.period = "S"; }
+  }
+  if (!(DATA && DATA.performance && DATA.performance.periods && DATA.performance.periods[perfState.period])) perfState.period = "S";
+  const S = perfSeries();
+  if (!S) { el.hidden = true; return; }
+  el.hidden = false;
+  if (!el.dataset.built) {
+    el.dataset.built = "1";
+    el.innerHTML = `
+      <div class="perf-top">
+        <div class="perf-lead"><div class="perf-big" id="perf-big"></div><div class="perf-sub" id="perf-sub"></div></div>
+        <div class="perf-ctl" id="perf-ctl"><span data-p="1M">1M</span><span data-p="3M">3M</span><span data-p="S">Since 3 Jun</span><span data-p="ALL">All</span><span class="perf-cmp" id="perf-cmp">Compare with SPUS</span></div>
+      </div>
+      <div class="perf-fig" id="perf-fig"></div>
+      <div class="perf-foot"><span>Earned = what the account is worth minus everything you deposited. Deposits and withdrawals never move the line.</span><span id="perf-asof"></span></div>`;
+    const fig = document.getElementById("perf-fig");
+    fig.addEventListener("mousemove", (ev) => { perfState.hover = perfIndexAt(ev); perfDraw(); });
+    fig.addEventListener("mouseleave", () => { perfState.hover = null; perfDraw(); });
+    fig.addEventListener("touchstart", (ev) => { perfState.hover = perfIndexAt(ev); perfDraw(); ev.preventDefault(); }, { passive: false });
+    fig.addEventListener("touchmove", (ev) => { perfState.hover = perfIndexAt(ev); perfDraw(); ev.preventDefault(); }, { passive: false });
+    const end = () => { perfState.hover = null; perfDraw(); };
+    fig.addEventListener("touchend", end); fig.addEventListener("touchcancel", end);
+    el.querySelectorAll("#perf-ctl span[data-p]").forEach((x) => x.addEventListener("click", () => {
+      perfState.period = x.dataset.p; perfState.hover = null;
+      try { localStorage.setItem("jc_perf_period", perfState.period); } catch (e) {}
+      perfDraw();
+    }));
+    document.getElementById("perf-cmp").addEventListener("click", () => { perfState.cmp = !perfState.cmp; perfDraw(); });
+  }
+  if (!perfState.bound) {
+    perfState.bound = true;
+    // The figure is drawn in viewBox units equal to its pixel width, so it must redraw whenever that
+    // width changes — a window resize, or the Portfolio tab becoming visible (width 0 while hidden).
+    const redraw = () => { const f = document.getElementById("perf-fig"); if (f && f.clientWidth && Math.round(f.clientWidth) !== perfState.drawnW) perfDraw(); };
+    window.addEventListener("resize", redraw);
+    if (typeof ResizeObserver === "function") new ResizeObserver(redraw).observe(document.getElementById("perf-fig"));
+  }
+  perfDraw();
 }
