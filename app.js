@@ -5958,17 +5958,53 @@ function edSizeWraps() {
 const ED_TEXT_A = "Point-in-time record, 80 prints since Aug 2026: names with positive revisions beat consensus 80-92% of the time (1 miss in 30); negative or no revisions beat 50% and carried every other miss. The label describes the print, not the reaction: positive-revision names closed up on reaction day 35% of the time.";
 const ED_TEXT_B = "Post-earnings drift, 21 sessions vs SPUS, same record: beat + raised + up close +10.0 pp (n=7); beat but down close -8.1 pp (n=6); miss -17.4 pp (n=4). Small samples from one season; re-graded after the February reports.";
 
+/* A payload baked before the 2026-11-03 rebuild carries only the old docket + scorecard. Until the
+   next bake lands, build the two tables from that shape in the browser (setup from the revision
+   counts alone — the distance from the 60-session high needs bars the page does not have). */
+function edFromLegacy(est) {
+  const port = new Set((DATA.portfolio || []).map((h) => h.ticker));
+  const rowOf = (tk) => (DATA.portfolio || []).find((h) => h.ticker === tk) || (DATA.universe || []).find((u) => u.ticker === tk) || {};
+  const today = new Date().toISOString().slice(0, 10);
+  const upcoming = (est.docket || []).filter((e) => e.print_date && (e.days_to_print == null || e.days_to_print >= 0)).map((e) => {
+    const rv = e.revisions || {}, up = rv.up30 || 0, dn = rv.dn30 || 0, eps = e.eps || {}, rev = e.rev || {}, r = rowOf(e.tk);
+    const setup = e.skip ? null : up > dn ? "POSITIVE REVISIONS" : dn > up ? "NEGATIVE REVISIONS" : "NO REVISIONS";
+    return Object.assign({}, e, { verdict: r.verdict || e.verdict, held: port.has(e.tk) || !!e.held, px: r.price || e.px,
+      eps_yoy: (eps.avg != null && eps.year_ago > 0) ? (eps.avg / eps.year_ago - 1) * 100 : null,
+      rev_yoy: rev.growth == null ? null : rev.growth * 100,
+      rev_ratio: (up + dn) ? Math.round(10 * up / (up + dn)) / 10 : null, dd60: null, setup, at_highs: false,
+      surprises: (e.surprises || []).slice(-4) });
+  });
+  const cutoff = new Date(Date.now() - 15 * 86400000).toISOString().slice(0, 10);
+  const RES = { BEAT: "BEAT", INLINE: "IN LINE", MISS: "MISS" }, GD = { RAISE: "RAISED", CUT: "LOWERED", HOLD: "MAINTAINED" };
+  const reported = (((est.scorecard || {}).rows) || []).filter((x) => x.print_date >= cutoff && x.print_date <= today).map((x) => {
+    const g = x.grades || {}, p = g.print || {}, t = g.tape || {}, gd = g.guide || {}, r = rowOf(x.tk), held = port.has(x.tk);
+    const result = RES[p.outcome] || null, guidance = GD[gd.outcome] || "pending", reaction = t.move == null ? null : t.move;
+    let action = null;
+    if (result === "MISS") action = held ? "TRIM" : "AVOID ADDS";
+    else if (result === "IN LINE") action = "NO ACTION";
+    else if (result === "BEAT") action = (reaction != null && reaction < 0) ? "NO ACTION"
+      : (guidance === "RAISED" && reaction > 0 && ["BUY", "STRONG BUY", "STRONGEST"].includes(r.verdict || "")) ? "ADD" : "HOLD";
+    return { tk: x.tk, name: r.name || x.tk, print_date: x.print_date, hour: x.hour, verdict: r.verdict, held,
+      actual: p.actual == null ? null : p.actual, consensus: p.frozen_est == null ? null : p.frozen_est, eps_n: null,
+      surprise_pct: (p.actual != null && p.frozen_est) ? (p.actual - p.frozen_est) / Math.abs(p.frozen_est) * 100 : null,
+      result, guidance, guidance_src: gd.outcome ? "consensus" : null, reaction, ret5: null, ret21: null, action,
+      px: r.price, fy_frozen: gd.fy_frozen, fy_now: gd.fy_now, fy_chg_pct: gd.chg_pct, frozen_at: x.frozen_at, revisions: {} };
+  });
+  return Object.assign({}, est, { upcoming, reported, consensus_asof: est.asof, counts: { reported: reported.length } });
+}
+
 function renderEstimates() {
   const el = document.getElementById("ed-body");
   if (!el || typeof DATA === "undefined" || !DATA) return;
-  const est = DATA.estimates;
+  let est = DATA.estimates;
+  if (est && !est.upcoming && !est.reported && (est.docket || []).length) est = edFromLegacy(est);
   if (!est || (!(est.upcoming || []).length && !(est.reported || []).length)) {
     el.innerHTML = `<p class="muted" style="padding:24px 0">No earnings data in this build.</p>`;
     return;
   }
   const up = est.upcoming || [], rep = est.reported || [];
   const c = est.counts || {};
-  const head = `<div class="ed-head"><span>Earnings calendar · consensus as of ${esc(edShort(est.consensus_asof || est.asof, true))} · <b>${c.this_week == null ? up.length : c.this_week}</b> names this week · <b>${c.reported == null ? rep.length : c.reported}</b> printed in the last ${est.reported_sessions || 10} sessions</span>
+  const head = `<div class="ed-head"><span>Earnings calendar · consensus as of ${esc(edShort(est.consensus_asof || est.asof, true))} · <b>${c.this_week == null ? up.filter((u) => u.days_to_print != null && u.days_to_print <= 6).length : c.this_week}</b> names this week · <b>${c.reported == null ? rep.length : c.reported}</b> printed in the last ${est.reported_sessions || 10} sessions</span>
     <span class="ed-src">Consensus and revisions: Yahoo Finance analyst pool · timing: Finnhub · reactions: QARP bars</span></div>`;
   const thA = `<thead><tr><th>Ticker</th><th>Company</th><th>Date</th><th>Session</th><th>Rating</th><th>Position</th><th class="num">Price</th><th class="num">Consensus EPS</th><th class="num">YoY</th><th class="num">Revenue</th><th class="num">Revisions 30d</th><th class="num">Ratio</th><th class="num">vs 60d high</th><th>Setup</th></tr></thead>`;
   const thB = `<thead><tr><th>Ticker</th><th>Date</th><th>Rating</th><th>Position</th><th class="num">Actual EPS</th><th class="num">Consensus</th><th class="num">Surprise</th><th>Result</th><th class="num">Revenue vs cons.</th><th>Guidance</th><th class="num">Reaction</th><th class="num">5d</th><th class="num">21d</th><th>Action</th></tr></thead>`;
