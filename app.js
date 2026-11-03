@@ -1431,6 +1431,9 @@ function openDrawer(ticker) {
     kv.push(["Shariah (Musaffa)", sh]);
   }
   if (has(d.first_date)) kv.push(["Scored / re-scored", `${d.first_date} <span class="muted">(current call opened)</span>`]);
+  // 2026-11-03 (owner, BUY-bar display rule; studies/calibration_buy_tier_2026-11-03): a BUY-band name below the
+  // valuation / capital-allocation bar ships verdict HOLD-QUAL + tier_note; the drawer says why. Not a process tag.
+  if (has(d.tier_note)) kv.push(["Why HOLD-QUAL", esc(d.tier_note)]);
   // 2026-10-02 (review): a rating held after a 35%+ fall shows the per-share price it was scored at
   // 2026-11-02 (owner): the fall-hold "Scored at" row moved to the Control Center (its reason text).
   if (has(d.confidence)) kv.push(["Confidence", d.confidence]);
