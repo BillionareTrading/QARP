@@ -6,6 +6,12 @@ name: Deploy site to GitHub Pages
 # stale content for 30+ minutes. Here, a newer push CANCELS the in-flight deploy quietly
 # (concurrency below), failures are visible in this repo's Actions tab, and the deploy
 # is a deterministic file copy of the tracked tree (secrets are gitignored, never tracked).
+#
+# 2026-10-30 (site audit): deploy ONLY the files the page needs. The build scripts, both
+# Cloudflare helper sources, DEPLOY.md and .gitignore used to be served live. Plain feeds
+# that could name holdings (signals.json, book_brief.json) are excluded even if tracked.
+# Stage-one checks run before every deploy: JS syntax, JSON validity, a leak + plain-words
+# scan over the public prose feeds; a failure stops the deploy and shows in Actions.
 on:
   push:
     branches: [main]
@@ -28,9 +34,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Stage only the site files
+        run: |
+          set -e
+          rm -rf _site && mkdir -p _site
+          for f in index.html app.js styles.css crypto.js .nojekyll payload.enc private.enc holds.json signals.enc daily_brief.json gurus.json 404.html favicon.ico favicon.svg apple-touch-icon.png manifest.webmanifest sw.js; do
+            [ -f "$f" ] && cp "$f" _site/ || true
+          done
+          [ -d charts ] && cp -r charts _site/charts
+          [ -d icons ] && cp -r icons _site/icons
+          echo "staged:"; ls -la _site | sed 's/^/  /'
+      - name: Stage-one checks (syntax, JSON validity, leak + plain-words scan)
+        run: |
+          set -e
+          node --check _site/app.js && node --check _site/crypto.js
+          python3 - <<'PY'
+          import json, re, glob, sys
+          bad = []
+          for f in glob.glob("_site/*.json") + glob.glob("_site/charts/*.json"):
+              try: json.load(open(f))
+              except Exception as e: bad.append(f"{f}: invalid JSON ({e})")
+          for f in ("_site/signals.json", "_site/book_brief.json"):
+              import os
+              if os.path.exists(f): bad.append(f"{f}: plain holdings feed must not deploy")
+          leak = re.compile(r"\b\d+(?:\.\d+)? (?:sh|shares)\b|\b\d+ of \d+ shares\b|\bbreadth\b", re.I)
+          for f in ("_site/daily_brief.json", "_site/holds.json"):
+              try: txt = open(f, encoding="utf-8").read()
+              except FileNotFoundError: continue
+              for m in leak.finditer(txt):
+                  bad.append(f"{f}: '{txt[max(0,m.start()-40):m.end()+20]}'")
+          if bad:
+              print("\n".join(bad)); sys.exit("stage-one checks FAILED — deploy stopped")
+          print("stage-one checks passed")
+          PY
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
