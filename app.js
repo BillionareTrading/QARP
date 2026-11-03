@@ -3594,12 +3594,18 @@ async function liveTick() {
   if (!marketOpenNow()) {
     // extended-hours honesty (2026-08-11): when the payload carries a fresh pre/post quote,
     // the pill says which session the numbers are from instead of a bare "closed"
-    const _eh = DATA.portfolio.find((x) => x.ext && x.ext.t && Date.now() - x.ext.t * 1000 <= 90 * 60000);
-    if (_eh) {
-      const _e = _eh.ext;
+    // 2026-11-03 (owner: "it shows 7:54 when it is 8:54"): the pill used to print the FIRST holding's quote
+    // time — a thin name's last pre-market trade (BSX, 7:54) while others were stamped 8:23. Use the NEWEST
+    // extended-hours quote across the holdings and the universe, and say "as of" so it reads as a quote
+    // time, not a clock. The quotes themselves come from the bake; the page does not refresh them live.
+    let _e = null;
+    for (const x of [].concat(DATA.portfolio || [], DATA.universe || [])) {
+      if (x.ext && x.ext.t && Date.now() - x.ext.t * 1000 <= 90 * 60000 && (!_e || x.ext.t > _e.t)) _e = x.ext;
+    }
+    if (_e) {
       const _clk = new Date(_e.t * 1000).toLocaleTimeString("en-US",
         { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" });
-      setLivePill("closed", `${_e.s === "pre" ? "Pre-market" : "After hours"} · quotes ${_clk} ET`);
+      setLivePill("closed", `${_e.s === "pre" ? "Pre-market" : "After hours"} · quotes as of ${_clk} ET`);
     } else setLivePill("closed", "Market closed");
     return;
   }
