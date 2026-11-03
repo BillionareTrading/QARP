@@ -3299,6 +3299,14 @@ function holdingCall(tk) {
     }
   }
   // HOLD-QUAL (qpts 0): always HOLD — flags and catalysts annotate, never flip the badge alone
+  // 2026-11-03 (owner: "I know both are non-compliant - but I won't sell at a loss"): a holding off the Shariah list
+  // keeps its score's rating, but the call never adds to it and never sells it below cost. Above cost the exit
+  // goes into strength (the UBER precedent, Aug 2026).
+  if (h.shariah === "NON-COMPLIANT" || h.shariah === "DOUBTFUL") {
+    dca = false;
+    if (inProfit) { call = "TRIM"; extra = " Not on the Shariah list and above your cost: exit into strength."; }
+    else { call = "HOLD"; extra = " Not on the Shariah list: no adds, and no sale below your cost."; }
+  }
   // 2026-10-02 (review): a holding whose rating is UNDER REVIEW (held at its earlier level after a
   // 35%+ fall or a one-session price reset) could still print ADD off that held rating. Turning the
   // ADD into a HOLD changes the daily-call METHOD, so it ships switched OFF (see the constant) until
