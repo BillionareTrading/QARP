@@ -2001,7 +2001,7 @@ table.cc-table td.cc-why { white-space: normal; min-width: 280px; max-width: 680
 
 /* ===== Performance — Portfolio tab (2026-11-04; spec = prompts/portfolio_performance_chart_mock.html) =====
    One number, one line, a sentence. Site tokens only; nothing inside is boxed; the sentence is the readout. */
-.perf { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 20px 22px 14px; margin-bottom: 16px; }
+.perf { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 20px 22px 14px; margin: 18px 0 16px; }
 .perf-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
 .perf-big { font-family: var(--mono); font-size: 40px; font-weight: 600; letter-spacing: -.01em; line-height: 1; font-variant-numeric: tabular-nums; }
 .perf-sub { margin-top: 8px; font-size: 13.5px; color: var(--ink-2); }
