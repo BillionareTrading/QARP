@@ -26,6 +26,16 @@ async function loadHolds() {
     if (r.ok) { const j = await r.json(); HOLDS = j.news || {}; HOLDS_HB = j.heartbeat || null; }
   } catch (e) { /* no holds file yet — the build's own guard still applies */ }
 }
+// 2026-11-03 (owner: a stock that reports after the close keeps its rating until the report is out): a same-day
+// report counts only once it is released, the build's own rule (print_dates.last_report): before the open ("bmo")
+// all day, after the close ("amc") from 16:00 ET, unknown hour from 4:00 ET.
+function printReleased(np, hour, today) {
+  if (!np || np > today) return false;
+  if (np < today) return true;
+  const p = nyParts(); let h = parseInt(p.hour, 10); if (h === 24) h = 0;
+  const now = h + parseInt(p.minute, 10) / 60;
+  return now >= (hour === "bmo" ? 0 : hour === "amc" ? 16 : 4);
+}
 function clientStaleGuard(o) {
   if (!o || !Array.isArray(o.universe)) return o;
   const today = etToday();
@@ -36,8 +46,8 @@ function clientStaleGuard(o) {
     if (r.stale_print) return;                       // the build already holds it
     const f = r.fresh, rev = f && f.rev, np = r.next_print;
     let why = null, date = null;
-    if (np && np <= today && !(rev && rev >= np)) {
-      why = `the company's report date (${np}) has arrived and the rating has not been re-read since`; date = np;
+    if (np && printReleased(np, r.next_print_hour, today) && !(rev && rev >= np)) {
+      why = `the company's report of ${np} is out and the rating has not been re-read since`; date = np;
     } else {
       // 2026-10-28 (owner: "IF ANY NEWS HAPPENS ON A STOCK ... THAT SHOULD TRIGGER AN AUTOMATIC REREAD"):
       // material news newer than the last re-read holds the rating until the re-read is published.
@@ -3496,6 +3506,14 @@ function repaintOnSessionFlip() {
   const flipped = _phaseKey !== null && _phaseKey !== k;
   _phaseKey = k;
   if (!flipped) return false;
+  // 2026-11-03: the close is when an after-the-close report comes out; re-run the guard so a tab left open
+  // stops showing that buy without waiting for the next build.
+  try {
+    const g0 = DATA && DATA.meta && DATA.meta.stale_guard, before = g0 ? (g0.held || []).length : 0;
+    clientStaleGuard(DATA);
+    const g1 = DATA && DATA.meta && DATA.meta.stale_guard;
+    if (g1 && (g1.held || []).length !== before) { rerenderFromData(); return true; }
+  } catch (e) { console.error("session-flip guard", e); }
   const asof = document.getElementById("asof-date");
   if (asof) asof.textContent = asOfDate(DATA.meta.date);   // same statement as rerenderFromData
   renderPortfolio();                  // KPI card label
