@@ -6093,7 +6093,7 @@ function openEstimates(tk) {
    One number (earned = what the account is worth minus everything deposited, withdrawals added back),
    one line, a sentence under the number, a hover/touch readout per day, periods 1M / 3M / since 3 Jun /
    all, and "Compare with SPUS". The bake computes everything (book_performance.py): every percent arrives
-   computed with the period's own money-put-in as the denominator, so a deposit or a withdrawal can never
+   computed on the period's opening balance plus its net deposits, so a deposit or a withdrawal can never
    move the line. The page re-bases only the owner's dollar series (PRIV.performance). Locked viewers see
    the percent in place of every dollar — no dollar, balance or share count renders in that branch. */
 const PERF_WORDS = { "1M": "in the last month", "3M": "in the last 3 months", S: "since 3 Jun", ALL: "all time" };
@@ -6174,8 +6174,8 @@ function perfDraw() {
   const day = perfDay(P.dates[i0 + k]);
   if (perfState.hover == null) {
     sub.innerHTML = dollars
-      ? `Earned ${words} · <b>${perfFmtPct(pe)}</b> on the money you put in${cmp ? ` · if in SPUS <b>${perfFmtUSD(s[k])}</b>` : ""}`
-      : `Earned ${words} on the money you put in${cmp ? ` · if in SPUS <b>${perfFmtPct(ps)}</b>` : ""}`;
+      ? `Earned ${words} · <b>${perfFmtPct(pe)}</b> return${cmp ? ` · if in SPUS <b>${perfFmtUSD(s[k])}</b>` : ""}`
+      : `Return ${words}${cmp ? ` · if in SPUS <b>${perfFmtPct(ps)}</b>` : ""}`;
   } else {
     sub.innerHTML = dollars
       ? `On <b>${day}</b> you had earned <b>${perfFmtUSD(e[k])}</b> ${words}${cmp ? ` · in SPUS it would have been <b>${perfFmtUSD(s[k])}</b>` : ""}`
@@ -6203,7 +6203,7 @@ function renderPerformance() {
         <div class="perf-ctl" id="perf-ctl"><span data-p="1M">1M</span><span data-p="3M">3M</span><span data-p="S">Since 3 Jun</span><span data-p="ALL">All</span><span class="perf-cmp" id="perf-cmp">Compare with SPUS</span></div>
       </div>
       <div class="perf-fig" id="perf-fig"></div>
-      <div class="perf-foot"><span>Earned = what the account is worth minus everything you deposited. Deposits and withdrawals never move the line.</span><span id="perf-asof"></span></div>`;
+      <div class="perf-foot"><span>Earned = what the account is worth minus everything you deposited. Return = earned divided by the opening balance plus net deposits over the period. Deposits and withdrawals never move the line.</span><span id="perf-asof"></span></div>`;
     const fig = document.getElementById("perf-fig");
     fig.addEventListener("mousemove", (ev) => { perfState.hover = perfIndexAt(ev); perfDraw(); });
     fig.addEventListener("mouseleave", () => { perfState.hover = null; perfDraw(); });
