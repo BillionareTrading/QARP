@@ -1953,6 +1953,7 @@ tr.mv2-up .cell-day { background: var(--pos); }
 .cc-v { font: 600 13px/1.35 var(--mono); color: var(--ink); white-space: nowrap; margin-top: 1px; }
 .cc-v.ok { color: var(--pos); }
 .cc-v.warn { color: var(--brass); font-weight: 700; }
+.cc-v.bad { color: var(--neg); font-weight: 700; }
 .cc-v.zero { color: var(--ink-3); font-weight: 500; }
 .cc-ledger { columns: 2; column-gap: 0; column-rule: 1px solid var(--line-2); border-bottom: 1px solid var(--line); }
 .cc-row { display: grid; grid-template-columns: 184px 78px minmax(0, 1fr); gap: 0 10px; align-items: baseline; padding: 4px 10px; border-bottom: 1px solid var(--line-2); break-inside: avoid; }

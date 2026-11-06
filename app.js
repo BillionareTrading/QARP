@@ -310,7 +310,19 @@ function renderControlCenter() {
     ["Last run", esc(fmtHbTime(hb.last_run)), ""],
     ["Next due", esc(fmtHbTime(hb.next_due)) + (lateH ? ` · ${lateH} h late` : ""), lateH ? "warn" : ""],
     ["Build", m.built_at ? esc(fmtHbTime(m.built_at)) : "—", ""],
-    ["Freshness check", g.ok === false ? "Failed" : "Ran", g.ok === false ? "warn" : "ok"],
+    (() => {
+      // 2026-11-06 (owner: the board showed the previous close two hours into the session while this strip said
+      // everything was on time): the strip now says which session the payload's prices come from, and turns red
+      // when the US session is open and the payload still carries an earlier session or is over 90 minutes old.
+      const sess = m.price_session ? String(m.price_session) : "", open = marketOpenNow();
+      const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+      const ageMin = m.built_at ? Math.round((Date.now() - Date.parse(m.built_at)) / 60000) : NaN;
+      if (open && sess && sess !== today) return ["Prices", `Session open · still the ${esc(sess)} close`, "bad"];
+      if (open && !isNaN(ageMin) && ageMin > 90) return ["Prices", `Session open · ${ageMin} min old`, "bad"];
+      if (open) return ["Prices", `Today's session · ${isNaN(ageMin) ? "age unknown" : ageMin + " min old"}`, "ok"];
+      return ["Prices", sess ? `Close of ${esc(sess)}` : "—", ""];
+    })(),
+    ["Ratings check", g.ok === false ? "Failed" : "Ran", g.ok === false ? "warn" : "ok"],
     ["Data as of", esc(asOfDate(m.date) || m.date || "—"), ""],
   ].map(([k, v, cls]) => `<div><div class="cc-l">${k}</div><div class="cc-v${cls ? " " + cls : ""}">${v}</div></div>`).join("");
   // 2. the ledger: what is being held back, and what needs a human. Same eleven counts as before, same flags.
@@ -369,9 +381,12 @@ function syncControlTab() {
     return;
   }
   renderControlCenter();
+  // 2026-11-06: the Prices line ages with the clock, so the sheet re-renders once a minute while unlocked.
+  if (!_ccTick) _ccTick = setInterval(() => { try { if (privUnlocked()) renderControlCenter(); } catch (e) { console.error("control center", e); } }, 60000);
   if (!_ccHashUsed && location.hash === "#control") { _ccHashUsed = true; if (!btn.classList.contains("active")) btn.click(); }
 }
 let _ccHashUsed = false;
+let _ccTick = null;
 function paintFreshLines() {
   const h = freshLine();
   ["u-fresh", "p-fresh"].forEach((id) => { const el = document.getElementById(id); if (el) el.innerHTML = h; });
