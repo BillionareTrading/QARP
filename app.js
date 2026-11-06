@@ -323,7 +323,7 @@ function renderControlCenter() {
       return ["Prices", sess ? `Close of ${esc(sess)}` : "—", ""];
     })(),
     ["Ratings check", g.ok === false ? "Failed" : "Ran", g.ok === false ? "warn" : "ok"],
-    ["Data as of", esc(asOfDate(m.date) || m.date || "—"), ""],
+    ["Data as of", esc(pricesAsOf()), ""],   // 2026-11-06: the prices' session, same as the top bar; never contradicts the Prices line
   ].map(([k, v, cls]) => `<div><div class="cc-l">${k}</div><div class="cc-v${cls ? " " + cls : ""}">${v}</div></div>`).join("");
   // 2. the ledger: what is being held back, and what needs a human. Same eleven counts as before, same flags.
   const vcls = (k, warn) => (k ? (warn ? "warn" : "") : "zero");
@@ -849,6 +849,17 @@ function dataSession() {
   if (pre) { const d = new Date(iso + "T12:00:00"); d.setDate(d.getDate() - 1); iso = lastTradingDate(isoOf(d)); }
   return iso;
 }
+// 2026-11-06 (owner: two hours into the session the board showed the previous close under a header that read
+// "as of 2026-11-06"): the top bar and the Control Center's "Data as of" print the session the PRICES belong to
+// (dataSession), never the build's calendar date. While the US session is open and the payload is still an earlier
+// close, the stamp says so in the bank-statement word: "2026-11-05 close". It corrects itself at the first refresh
+// that pulls an in-session payload. meta.date is untouched elsewhere (publish commit, verify, age checks).
+function pricesAsOf() {
+  const sess = dataSession();
+  const c = etClock();
+  const open = sessionPhase(c.iso, c.mins) === "open";
+  return (open && sess && sess !== c.iso) ? `${sess} close` : (sess || "—");
+}
 
 // Is a cloud-written column/brief recent enough to SHOW (vs the generic data-driven fallback)?
 // The cloud feeds (column, briefs, signals) can trail a freshly-priced payload by a session —
@@ -1139,6 +1150,15 @@ function renderUniverseTable() {
     if (typeof va === "string") return uSort.dir * va.localeCompare(vb);
     return uSort.dir * (va - vb);
   });
+  // 2026-11-06 (owner typed "mu" at 10:56 ET and saw MU, rank 370, still at the previous close: the quote
+  // pump walks the universe in rank order, one name per 2.4 s, so a searched or filtered row could wait
+  // 15 min). The rows on screen now go to the FRONT of the pump queue, in the order shown; the rest follow.
+  try {
+    if (Array.isArray(uniQueue) && uniQueue.length) {
+      const shown = rows.map((x) => x.ticker), inQ = new Set(uniQueue), first = shown.filter((t) => inQ.has(t));
+      if (first.length) { const fs = new Set(first); uniQueue = first.concat(uniQueue.filter((t) => !fs.has(t))); uniIdx = 0; }
+    }
+  } catch (e) { /* the pump keeps its rank order */ }
 
   // dynamic columns (2026-08-12): a column with when() renders only while it's on —
   // the Pre-Mkt/After-Hrs column exists only during a fresh extended session
@@ -3564,7 +3584,7 @@ function repaintOnSessionFlip() {
     if (g1 && (g1.held || []).length !== before) { rerenderFromData(); return true; }
   } catch (e) { console.error("session-flip guard", e); }
   const asof = document.getElementById("asof-date");
-  if (asof) asof.textContent = asOfDate(DATA.meta.date);   // same statement as rerenderFromData
+  if (asof) asof.textContent = pricesAsOf();   // same statement as rerenderFromData (2026-11-06: the prices' session)
   renderPortfolio();                  // KPI card label
   if (dailyTimer) renderDaily();      // Daily tab open: folio line + sidebars + lead kicker
   return true;
@@ -4461,7 +4481,7 @@ function renderBookBrief(el, b) {
 }
 
 function renderAll() {
-  document.getElementById("asof-date").textContent = asOfDate(DATA.meta.date);
+  document.getElementById("asof-date").textContent = pricesAsOf();   // 2026-11-06: the prices' session, not the build date
   renderVerdictSummary(); renderDeskDiscipline();
   renderUniverseControls();
   renderUniverseTable();
@@ -4480,15 +4500,38 @@ function renderAll() {
 }
 
 let refreshTimer = null, lastPayloadIv = null;
-const REFRESH_INTERVAL_MS = 7 * 60000;   // mid-session poll: pull the cloud's freshest build into an open tab
+const REFRESH_INTERVAL_MS = 7 * 60000;   // mid-session full pull (payload iv compare + holds) — the fallback since 2026-11-06
+// 2026-11-06 (owner: the board showed the previous close two hours into the session): a fresh payload reached an
+// open tab only at the next 7-minute tick, and a backgrounded tab's timer may not fire at all. GitHub Pages purges
+// its edge when a deploy lands and Last-Modified is the deploy time, so a cheap HEAD on payload.enc (no body) sees
+// a new build within a minute; the body is pulled only when Last-Modified moved. No Last-Modified -> inert (the
+// 7-minute pull still runs). Returning to a backgrounded tab probes at once.
+const PROBE_INTERVAL_MS = 60000;
+let probeTimer = null, lastPayloadLm = NaN, _probeWired = false;
+function notePayloadLm(r) { const lm = Date.parse((r && r.headers && r.headers.get("last-modified")) || ""); if (isFinite(lm)) lastPayloadLm = lm; }
+async function probeFresh() {
+  if (!marketOpenNow() || !sessionStorage.getItem("jc_pw")) return;
+  try {
+    const r = await fetch("payload.enc", { method: "HEAD", cache: "no-store" });
+    const lm = Date.parse((r && r.headers && r.headers.get("last-modified")) || "");
+    if (isFinite(lm) && isFinite(lastPayloadLm) && lm > lastPayloadLm + 2000) await softRefresh();
+    else if (isFinite(lm) && !isFinite(lastPayloadLm)) lastPayloadLm = lm;
+  } catch (e) { /* offline or blocked: the 7-minute pull still runs */ }
+}
 function startAutoRefresh() {
   if (refreshTimer) clearInterval(refreshTimer);
   refreshTimer = setInterval(softRefresh, REFRESH_INTERVAL_MS);
+  if (probeTimer) clearInterval(probeTimer);
+  probeTimer = setInterval(probeFresh, PROBE_INTERVAL_MS);
+  if (!_probeWired) {
+    _probeWired = true;
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") { probeFresh(); try { liveTick(); } catch (e) {} } });
+  }
 }
 // Re-render every payload-driven view from the current DATA, WITHOUT re-binding tab/guide handlers
 // or restarting the live ticker — those are wired once at unlock.
 function rerenderFromData() {
-  document.getElementById("asof-date").textContent = asOfDate(DATA.meta.date);
+  document.getElementById("asof-date").textContent = pricesAsOf();   // 2026-11-06: the prices' session, not the build date
   renderVerdictSummary(); renderDeskDiscipline();
   renderUniverseControls();
   renderUniverseTable();
@@ -4508,7 +4551,9 @@ async function softRefresh() {
   const pw = sessionStorage.getItem("jc_pw");
   if (!pw) return;
   try {
-    const p = await (await fetch("payload.enc", { cache: "no-store" })).json();
+    const r0 = await fetch("payload.enc", { cache: "no-store" });
+    notePayloadLm(r0);   // 2026-11-06: the probe compares against the copy this tab last pulled
+    const p = await r0.json();
     const hBefore = JSON.stringify(HOLDS);
     await loadHolds();
     if (p && p.iv && p.iv === lastPayloadIv) {          // identical ciphertext -> no new build ...
