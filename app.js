@@ -330,7 +330,7 @@ function renderControlCenter() {
   const ledger = [
     ["Checked in 7 days", `${g.checked_7d != null ? g.checked_7d : "—"} of ${g.universe != null ? g.universe : "—"}`, `${g.weekly_due || 0} weekly checks due`, ""],
     ["Waiting on a new report", String(g.print_due || 0), "rated before the company's newest report", vcls(g.print_due, false)],
-    ["Drift re-score queue", String(driftN), m.drift && m.drift.date ? `weekly check of ${esc(m.drift.date)}` : "", vcls(driftN, false)],
+    ["Fundamentals drift since last read", String(driftN), m.drift && m.drift.date ? `weekly scan of ${esc(m.drift.date)}; the re-read desk clears it` : "", vcls(driftN, false)],
     ["Held until re-read", String(n(g.held)), names(g.held), vcls(n(g.held), true)],
     ["Cooling off", String(n(g.cooling)), names(g.cooling), vcls(n(g.cooling), false)],
     ["New filing not read", String(n(g.by_evidence)), names(g.by_evidence), vcls(n(g.by_evidence), false)],
@@ -923,10 +923,10 @@ function renderDeskDiscipline() {
         title="${esc((f.reasons || []).join("; "))}">${f.ticker}<span class="dw">${f.weight}</span></button>`).join("");
     const more = drift.flagged.length > 12 ? `<span class="muted">+${drift.flagged.length - 12} more</span>` : "";
     parts.push(`<div class="drift-card${overdue ? " overdue" : ""}">
-      <div class="drift-head"><b>Re-score queue</b> — ${drift.flagged.length} name${drift.flagged.length > 1 ? "s" : ""} drifted
-        (weekly check, ${drift.date}) <span class="drift-sla">${overdue ? "SLA OVERDUE — re-score within 5 trading days" : "SLA: re-score within 5 trading days"}</span></div>
+      <div class="drift-head"><b>Fundamentals drift</b> — ${drift.flagged.length} name${drift.flagged.length > 1 ? "s" : ""} moved since their last read
+        (weekly scan, ${drift.date}) <span class="drift-sla">${overdue ? "SLA OVERDUE — re-score within 5 trading days" : "SLA: re-score within 5 trading days"}</span></div>
       <div class="drift-chips">${chips}${more}</div>
-      <div class="drift-note">Fundamentals moved since the hand-score (earnings, targets, margins) — the daily price re-rank can't see this. Tap a name, read "what drifted" on hover.</div>
+      <div class="drift-note">Fundamentals moved since the name was last read (earnings, targets, margins) — the daily price re-rank can't see this; the re-read desk's next dated review clears the name. Tap a name, read "what drifted" on hover.</div>
     </div>`);
   }
   host.innerHTML = parts.join("");
