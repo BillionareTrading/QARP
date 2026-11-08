@@ -331,6 +331,9 @@ function renderControlCenter() {
     ["Checked in 7 days", `${g.checked_7d != null ? g.checked_7d : "—"} of ${g.universe != null ? g.universe : "—"}`, `${g.weekly_due || 0} weekly checks due`, ""],
     ["Waiting on a new report", String(g.print_due || 0), "rated before the company's newest report", vcls(g.print_due, false)],
     ["Fundamentals drift since last read", String(driftN), m.drift && m.drift.date ? `weekly scan of ${esc(m.drift.date)}; the re-read desk clears it` : "", vcls(driftN, false)],
+    ["Waiting on a read after a price move", String(n(g.price_due)),
+      (g.price_late && g.price_late.length ? `late: ${names(g.price_late)}` : (n(g.price_due) ? `queued for the desk's next run: ${names(g.price_due)}` : "")),
+      (g.price_late && g.price_late.length ? "bad" : vcls(n(g.price_due), false))],   // 2026-11-08: the badge disagrees with the live score; red once a full session passed unread
     ["Held until re-read", String(n(g.held)), names(g.held), vcls(n(g.held), true)],
     ["Cooling off", String(n(g.cooling)), names(g.cooling), vcls(n(g.cooling), false)],
     ["New filing not read", String(n(g.by_evidence)), names(g.by_evidence), vcls(n(g.by_evidence), false)],
