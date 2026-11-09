@@ -317,6 +317,11 @@ function renderControlCenter() {
       const sess = m.price_session ? String(m.price_session) : "", open = marketOpenNow();
       const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
       const ageMin = m.built_at ? Math.round((Date.now() - Date.parse(m.built_at)) / 60000) : NaN;
+      // 2026-11-09: the bell bake starts 09:37 ET and lands ~09:45 ET. Until 09:55 ET the earlier close is expected, so
+      // say when today's prices are due; past that it is a real miss and turns red.
+      const etMin = (() => { const p = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date());
+        return +p.find((x) => x.type === "hour").value * 60 + +p.find((x) => x.type === "minute").value; })();
+      if (open && sess && sess !== today && etMin < 9 * 60 + 55) return ["Prices", `Session open · today's prices due by 9:55 ET`, "warn"];
       if (open && sess && sess !== today) return ["Prices", `Session open · still the ${esc(sess)} close`, "bad"];
       if (open && !isNaN(ageMin) && ageMin > 90) return ["Prices", `Session open · ${ageMin} min old`, "bad"];
       if (open) return ["Prices", `Today's session · ${isNaN(ageMin) ? "age unknown" : ageMin + " min old"}`, "ok"];
