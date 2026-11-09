@@ -6241,8 +6241,81 @@ function edReactionRows(rx) {
     `<tr><td>${edShort(r.date)}</td><td>${esc(r.timing === "UNK" ? "—" : (r.timing || "—"))}</td><td>${edPct(r.close)}</td></tr>`).join("")}</table>`;
 }
 
+/* per-cell hover text (owner, 2026-11-09: the same column text on every row told him nothing). The column
+   header keeps the general definition; each cell says what THIS stock's numbers are. */
+const edTip = (t) => ` title="${esc(t)}"`;
+const edD = (n, dp = 2) => (n == null ? "?" : `${n < 0 ? "−" : ""}$${Math.abs(Number(n)).toFixed(Math.abs(n) < 0.10 ? 3 : dp)}`);
+const edP = (n, dp = 1) => (n == null ? "?" : `${n >= 0 ? "+" : "−"}${Math.abs(n).toFixed(dp)}%`);
+const edAn = (k) => `${k} analyst${k === 1 ? "" : "s"}`;
+function edFull(iso) { return iso ? `${edDateTxt(iso)}, ${iso.slice(0, 4)}` : "?"; }
+function edUpTips(e) {
+  const eps = e.eps || {}, rev = e.rev || {}, rv = e.revisions || {}, l = e.ladder || {};
+  const up = rv.up30 || 0, dn = rv.dn30 || 0, u7 = rv.up7 || 0, d7 = rv.dn7 || 0, tk = e.tk;
+  const t = {};
+  t.tk = `${tk}: tap the row for its consensus, surprise history and price.`;
+  t.date = e.print_date ? `${e.name || tk} reports on ${edFull(e.print_date)}` +
+    (e.days_to_print === 0 ? ", today." : e.days_to_print != null ? `, in ${e.days_to_print} day${e.days_to_print === 1 ? "" : "s"}.` : ".") : ED_HELP.date;
+  const h = (e.hour || "").toLowerCase();
+  t.session = h === "bmo" ? `${tk} reports before the market opens on ${edFull(e.print_date)}.`
+    : h === "amc" ? `${tk} reports after the market closes on ${edFull(e.print_date)}; the price reacts the next session.`
+    : `${tk} has not said what time of day it reports.`;
+  t.price = e.px == null ? ED_HELP.price : `${tk} last traded at ${edD(e.px)} in this build.`;
+  t.cons_eps = eps.avg == null ? `No EPS consensus on file for ${tk}.` :
+    `${edAn(eps.n || 0)} expect ${tk} to earn ${edD(eps.avg)} a share this quarter` +
+    (eps.low != null && eps.high != null ? `, ranging from ${edD(eps.low)} to ${edD(eps.high)}.` : ".");
+  t.yoy = e.eps_yoy == null || eps.year_ago == null ? `No year-ago EPS on file for ${tk}.` :
+    `${edD(eps.avg)} expected vs ${edD(eps.year_ago)} in the same quarter a year ago: ${edP(e.eps_yoy)}.`;
+  t.revenue = !rev.avg ? `No revenue consensus on file for ${tk}.` :
+    `Analysts expect revenue of ${edMoney(rev.avg)}` + (e.rev_yoy == null ? "." : `, ${edP(e.rev_yoy)} on the same quarter a year ago.`);
+  let r = (!up && !dn) ? `No analyst changed their ${tk} EPS estimate in the last 30 days.`
+    : `In the last 30 days ${up} analyst${up === 1 ? "" : "s"} raised and ${dn} cut their ${tk} EPS estimate` +
+      (up > dn ? ": more raises than cuts." : dn > up ? ": more cuts than raises." : ": raises and cuts cancel out.");
+  if (up || dn || u7 || d7) r += ` Last 7 days: ${u7} up, ${d7} down.`;
+  if (l.d30 != null && l.now != null) {
+    const ch = l.d30 > 0.10 ? (l.now - l.d30) / l.d30 * 100 : null;
+    r += ch != null && Math.abs(ch) < 0.5 ? ` The average estimate barely moved: ${edD(l.d30, 3)} to ${edD(l.now, 3)}.`
+      : ` The average estimate moved from ${edD(l.d30)} to ${edD(l.now)}${ch == null ? "" : ` (${edP(ch)})`}.`;
+  }
+  t.revisions = r;
+  t.ratio = e.rev_ratio == null ? `Nothing moved on ${tk} in 30 days, so there is no ratio.` :
+    `${up} raise${up === 1 ? "" : "s"} out of ${up + dn} change${up + dn === 1 ? "" : "s"} = ${fmtNum(e.rev_ratio, 2)}. ` +
+    (e.rev_ratio >= 0.5 ? "0.5 or more: most changes were raises." : "Below 0.5: most changes were cuts.");
+  if (e.dd60 == null) t.dd60 = ED_HELP.dd60;
+  else {
+    const hi = e.px != null ? e.px / (1 + e.dd60 / 100) : null;
+    t.dd60 = Math.abs(e.dd60) < 0.05 ? `${tk} closed at its highest level of the last 60 sessions.`
+      : `${tk} is ${Math.abs(e.dd60).toFixed(1)}% below its 60-session high` + (hi ? ` of about ${edD(hi)}.` : ".");
+  }
+  return t;
+}
+function edRepTips(r) {
+  const tk = r.tk, t = {}, h = (r.hour || "").toLowerCase();
+  t.tk = `${tk}: tap the row for guidance, the full-year estimate and price.`;
+  t.rdate = `${tk} reported on ${edFull(r.print_date)}` + (h === "bmo" ? ", before the open." : h === "amc" ? ", after the close." : ".");
+  t.actual = r.actual == null ? `${tk}'s reported EPS is not in yet.` : `${tk} reported EPS of ${edD(r.actual)} a share.`;
+  t.consensus = r.consensus == null ? `No pre-report consensus on file for ${tk}.` :
+    `Before the report, ${edAn(r.eps_n || 0)} expected ${edD(r.consensus)} a share. The result is judged against this.`;
+  if (r.actual == null || r.consensus == null) t.surprise = `No surprise yet for ${tk}.`;
+  else {
+    const gap = r.actual - r.consensus, word = gap > 0 ? "above" : gap < 0 ? "below" : "level with";
+    t.surprise = `${edD(r.actual)} reported vs ${edD(r.consensus)} expected: ` +
+      (Math.abs(r.consensus) < 0.10 || r.surprise_pct == null ? `$${Math.abs(gap).toFixed(3)} ${word} the estimate.`
+        : `${Math.abs(r.surprise_pct).toFixed(1)}% ${word} the estimate.`);
+  }
+  t.rev_vs = r.rev_surprise_pct == null ? `${tk}'s revenue vs consensus is not in yet.` :
+    `${tk}'s revenue came in ${Math.abs(r.rev_surprise_pct).toFixed(1)}% ${r.rev_surprise_pct >= 0 ? "above" : "below"} the consensus.`;
+  t.reaction = r.reaction == null ? `${tk}'s first session after the report has not closed yet.` :
+    `${tk} ${r.reaction >= 0 ? "rose" : "fell"} ${Math.abs(r.reaction).toFixed(1)}% on the first session after the report.`;
+  t.ret5 = r.ret5 == null ? `5 sessions have not passed since ${tk}'s report.` :
+    `${tk} is ${edP(r.ret5)} over the 5 sessions after the report.`;
+  t.ret21 = r.ret21 == null ? `21 sessions have not passed since ${tk}'s report.` :
+    `${tk} is ${edP(r.ret21)} over the 21 sessions after the report.`;
+  return t;
+}
+
 /* ---- Table A: upcoming ---- */
 function edUpRow(e) {
+  const tp = edUpTips(e);
   const eps = e.eps || {}, rev = e.rev || {};
   const sess = e.hour ? e.hour.toUpperCase() : "—";
   const date = `${edShort(e.print_date)}${e.days_to_print === 0 ? `<span class="ed-n">today</span>` : ""}`;
@@ -6250,17 +6323,17 @@ function edUpRow(e) {
   const revenue = rev.avg ? `${edMoney(rev.avg)}${e.rev_yoy == null ? "" : `<span class="ed-n ${signClass(e.rev_yoy)}">${fmtPct(e.rev_yoy, 0)}</span>`}` : edNA;
   const setup = e.setup ? `${edLab(e.setup)}${e.at_highs ? `<span class="ed-mark" title="${esc(ED_LABEL_HELP["AT HIGHS"])}">AT HIGHS</span>` : ""}` : (e.at_highs ? `<span class="ed-mark" title="${esc(ED_LABEL_HELP["AT HIGHS"])}">AT HIGHS</span>` : edNA);
   return `<tr class="ed-r" data-tk="${esc(e.tk)}" onclick="edToggle(this)">
-    <td${edT("tk")}><span class="ed-tk">${esc(e.tk)}</span></td>
+    <td${edTip(tp.tk)}><span class="ed-tk">${esc(e.tk)}</span></td>
     <td class="ed-nm" title="${esc(e.name || "")}">${esc(e.name || "")}</td>
-    <td${edT("date")}>${date}</td><td${edT("session")}>${esc(sess)}</td>
+    <td${edTip(tp.date)}>${date}</td><td${edTip(tp.session)}>${esc(sess)}</td>
     <td>${edRating(e.tk, e.verdict)}</td><td>${edHeld(e.held)}</td>
-    <td class="num"${edT("price")}>${edNum(e.px, 2)}</td>
-    <td class="num"${edT("cons_eps")}>${cons}</td>
-    <td class="num"${edT("yoy")}>${edPct(e.eps_yoy)}</td>
-    <td class="num"${edT("revenue")}>${revenue}</td>
-    <td class="num"${edT("revisions")}>${edRevisions(e.revisions)}</td>
-    <td class="num"${edT("ratio")}>${e.rev_ratio == null ? "" : fmtNum(e.rev_ratio, 1)}</td>
-    <td class="num"${edT("dd60")}>${edPct(e.dd60)}</td>
+    <td class="num"${edTip(tp.price)}>${edNum(e.px, 2)}</td>
+    <td class="num"${edTip(tp.cons_eps)}>${cons}</td>
+    <td class="num"${edTip(tp.yoy)}>${edPct(e.eps_yoy)}</td>
+    <td class="num"${edTip(tp.revenue)}>${revenue}</td>
+    <td class="num"${edTip(tp.revisions)}>${edRevisions(e.revisions)}</td>
+    <td class="num"${edTip(tp.ratio)}>${e.rev_ratio == null ? "" : fmtNum(e.rev_ratio, 1)}</td>
+    <td class="num"${edTip(tp.dd60)}>${edPct(e.dd60)}</td>
     <td>${setup}</td>
   </tr>
   <tr class="ed-x" hidden><td colspan="14"><div class="ed-xw">${edUpDetail(e)}</div></td></tr>`;
@@ -6289,21 +6362,22 @@ function edUpDetail(e) {
 
 /* ---- Table B: reported ---- */
 function edRepRow(r) {
+  const tp = edRepTips(r);
   const cons = r.consensus == null ? edNA : `${edEps(r.consensus)}<span class="ed-n">(${r.eps_n == null ? "?" : r.eps_n})</span>`;
   const guide = edGuide(r);
   return `<tr class="ed-r" data-tk="${esc(r.tk)}" onclick="edToggle(this)">
-    <td${edT("tk")}><span class="ed-tk">${esc(r.tk)}</span></td>
-    <td${edT("rdate")}>${edShort(r.print_date)}${r.hour ? `<span class="ed-n">${esc(r.hour.toUpperCase())}</span>` : ""}</td>
+    <td${edTip(tp.tk)}><span class="ed-tk">${esc(r.tk)}</span></td>
+    <td${edTip(tp.rdate)}>${edShort(r.print_date)}${r.hour ? `<span class="ed-n">${esc(r.hour.toUpperCase())}</span>` : ""}</td>
     <td>${edRating(r.tk, r.verdict)}</td><td>${edHeld(r.held)}</td>
-    <td class="num"${edT("actual")}>${edEps(r.actual)}</td>
-    <td class="num"${edT("consensus")}>${cons}</td>
-    <td class="num"${edT("surprise")}>${edSurprise(r.actual, r.consensus, r.surprise_pct)}</td>
+    <td class="num"${edTip(tp.actual)}>${edEps(r.actual)}</td>
+    <td class="num"${edTip(tp.consensus)}>${cons}</td>
+    <td class="num"${edTip(tp.surprise)}>${edSurprise(r.actual, r.consensus, r.surprise_pct)}</td>
     <td>${r.result ? edLab(r.result) : edNA}</td>
-    <td class="num"${edT("rev_vs")}>${edPct(r.rev_surprise_pct)}</td>
+    <td class="num"${edTip(tp.rev_vs)}>${edPct(r.rev_surprise_pct)}</td>
     <td>${guide}</td>
-    <td class="num"${edT("reaction")}>${edPct(r.reaction)}</td>
-    <td class="num"${edT("ret5")}>${edPct(r.ret5)}</td>
-    <td class="num"${edT("ret21")}>${edPct(r.ret21)}</td>
+    <td class="num"${edTip(tp.reaction)}>${edPct(r.reaction)}</td>
+    <td class="num"${edTip(tp.ret5)}>${edPct(r.ret5)}</td>
+    <td class="num"${edTip(tp.ret21)}>${edPct(r.ret21)}</td>
     <td>${r.action ? edLab(r.action) : edNA}</td>
   </tr>
   <tr class="ed-x" hidden><td colspan="14"><div class="ed-xw">${edRepDetail(r)}</div></td></tr>`;
