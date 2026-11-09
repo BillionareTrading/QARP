@@ -3199,9 +3199,9 @@ function deskLine(h) {
 }
 
 // Where the next dollar goes: holdings first (gap to full weight), then unheld names.
-// 2026-11-09 (owner's main KPI: beat the S&P 500): only BUY-or-better names at fair-value band 4+, ranked by expected
-// lead over the S&P 500. On the desk's own record (sp_record.py) the lead rises with the band (band 3 +2.5 pts per
-// 3 months, band 4 +6.0) and the QARP score adds nothing inside band 4, so: band, then the model's odds, then score.
+// 2026-11-09 (owner's main KPI: beat the S&P 500; then "Yes, do both"): every BUY-or-better name, band 4+ ranked first,
+// then the model's odds, then score. Band is no longer a filter: on LIVE calls only (sp_record.py excludes the 387
+// rebuilt Jun-Jul calls whose band was filled in later) band 4 has not yet shown a clear edge over band 3.
 const DESK_MIN_BAND = 3.5;
 const deskBandOf = (tk) => { const u = deskUni(tk); return u && u.dcf != null ? Number(u.dcf) : null; };
 const deskOdds = (u) => (u && u.p_wrong != null ? 1 - u.p_wrong : 0.5);
@@ -3215,11 +3215,6 @@ function deskCandidates() {
     const L = deskLine(h); const v = h.verdict || "";
     if (!DESK_BUY.has(v) && L.gate !== "hold") return;
     if (L.gate) { blocked.push({ h, why: L.text, score: h.qarp || 0 }); return; }
-    const band = deskBandOf(h.ticker);
-    if (band == null || band < DESK_MIN_BAND) {
-      blocked.push({ h, why: `fair-value band ${band == null ? "unknown" : fmtNum(band, 1)}, below 4: on the record band-3 buys only matched the S&P 500`, score: h.qarp || 0 });
-      return;
-    }
     const fw = deskFw(h) || 0;
     const usd = privUnlocked() ? Math.max(0, fullWeightUsd(v) - (h.value || 0)) : null;
     const pctBook = (1 - fw) * ((v === "STRONG BUY" || v === "STRONGEST") ? 8 : 6);
@@ -3229,7 +3224,6 @@ function deskCandidates() {
   const fresh = [], waiting = [];
   (DATA.universe || []).forEach((u) => {
     if (held.has(u.ticker) || !DESK_BUY.has(u.verdict)) return;
-    if (u.dcf == null || Number(u.dcf) < DESK_MIN_BAND) return;
     // 2026-11-09 (owner: "shouldn't it just adjust to have all buys/strong buys with that criteria?"): every
     // qualifying name is shown; one that only waits on timing is listed with the reason instead of hidden.
     const s = deskSessionsTo(u.next_print);
@@ -3356,11 +3350,11 @@ function deskNextDollar() {
     : `${fmtNum(c.pctBook, 1)}% of the account`;
   const R = deskD().sp_record || null;
   const spTxt = (c) => {
-    const s = R && R.buy_band4;
     const band = deskBandOf(c.h.ticker);
+    const s = R && (band != null && band >= DESK_MIN_BAND ? R.buy_band4 : R.buy_band_le3);
     if (!s || !s.n) return `<span class="pd-exp">Band ${band == null ? "?" : fmtNum(band, 1)} · no graded record against the S&P 500 yet</span>`;
     return `<span class="pd-exp"><b>vs S&amp;P 500: ${s.avg >= 0 ? "+" : ""}${fmtNum(s.avg, 1)} pts over 3 months expected</b> · band ${fmtNum(band, 1)}
-      · BUYs at band 4+ beat the S&amp;P ${fmtNum(s.beat, 0)}% of the time (${s.n} graded calls)</span>`;
+      · BUYs at band ${band != null && band >= DESK_MIN_BAND ? "4+" : "3 or lower"} beat the S&amp;P ${fmtNum(s.beat, 0)}% of the time (${s.n} live calls${s.n < 30 ? ", few so far" : ""})</span>`;
   };
   const row = (c, i) => `<div class="pd-nd" data-ticker="${esc(c.h.ticker)}">
       <span class="pd-n">${i + 1}</span>
@@ -3371,14 +3365,14 @@ function deskNextDollar() {
   let html = `<h3 class="pd-h">Where the next dollar goes <span class="pd-sub">ranked by expected lead over the S&amp;P 500</span></h3>`;
   if (C.held.length) html += `<div class="pd-ndg">Holdings below full weight</div>` + C.held.map(row).join("");
   else html += `<p class="pd-none">No holding passes every rule today.${C.blocked.length ? " What blocks the top names: " + C.blocked.map((b) => `<b>${esc(b.h.ticker)}</b>: ${esc(b.why)}`).join("; ") + "." : ""}</p>`;
-  if (C.fresh.length) html += `<div class="pd-ndg">Not held: every BUY or better at fair-value band 4+, best expected lead over the S&amp;P 500 first</div>` + C.fresh.map(row).join("");
-  else html += `<p class="pd-none">No name outside the book is a BUY or better at fair-value band 4+ and ready today. Cash waits; it is not spent on band-3 buys.</p>`;
+  if (C.fresh.length) html += `<div class="pd-ndg">Not held: every BUY or better that passes every rule, fair-value band 4+ first</div>` + C.fresh.map(row).join("");
+  else html += `<p class="pd-none">No name outside the book is a BUY or better and ready today.</p>`;
   if (C.waiting && C.waiting.length) html += `<p class="pd-cash">Qualify but not yet: ${C.waiting.map((w) => `<b>${esc(w.h.ticker)}</b> ${verdictBadge(w.h.verdict)} band ${fmtNum(w.h.dcf, 1)}, ${esc(w.why)}`).join("; ")}.</p>`;
   if (C.held.length && C.blocked.length) html += `<p class="pd-cash">Held but not added to: ${C.blocked.map((b) => `<b>${esc(b.h.ticker)}</b>: ${esc(b.why)}`).join("; ")}.</p>`;
   if (C.watch && C.watch.length) {
-    const h4 = R && R.hold_band4;
+    const h4 = R && R.hold_band4;  // live calls only
     html += `<p class="pd-cash">Watching, not buying: ${C.watch.slice(0, 6).map((u) => `<b>${esc(u.ticker)}</b> (band ${fmtNum(u.dcf, 1)})`).join(", ")}${C.watch.length > 6 ? ` and ${C.watch.length - 6} more` : ""}.
-      HOLD-QUAL names at band 4+${h4 && h4.n ? ` beat the S&amp;P 500 ${fmtNum(h4.beat, 0)}% of the time on ${h4.n} graded calls` : ""}, too few to buy on yet.</p>`;
+      HOLD-QUAL names at band 4+${h4 && h4.n ? ` beat the S&amp;P 500 ${fmtNum(h4.beat, 0)}% of the time on ${h4.n} live calls` : " have no live record yet"}, too few to buy on yet.</p>`;
   }
   if (privUnlocked()) {
     const need = C.held.reduce((a, c) => a + (c.usd || 0), 0);
@@ -3386,8 +3380,9 @@ function deskNextDollar() {
     html += `<p class="pd-cash">Cash available ${fmtUSD(cash, 0)}. Bringing every holding above to full weight needs ${fmtUSD(need, 0)}${need > cash
       ? `: ${fmtUSD(need - cash, 0)} short, which would come from a deposit or a swap (never from selling a name below cost).` : "."}</p>`;
   }
-  html += `<p class="pd-foot">Rules: on the Shariah list; rating BUY or better and not on hold; fair-value band 4 or higher (the goal is
-    beating the S&amp;P 500, and on the record band-3 buys only matched it); no news or report waiting on a re-read;
+  html += `<p class="pd-foot">Rules: on the Shariah list; rating BUY or better and not on hold; ranked fair-value band 4+ first, the goal
+    being to beat the S&amp;P 500 (record from live calls only${R && R.rebuilt_excluded ? `; ${R.rebuilt_excluded} rebuilt Jun-Jul calls left out` : ""});
+    no news or report waiting on a re-read;
     no report within 5 sessions; below full weight. ${esc(D.gates_study || "")} Expectations come from the Estimates Desk
     and are shown, not ranked on: on 23 graded reports so far, the change in the full-year estimate did not predict the next month.</p>`;
   return html;
