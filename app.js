@@ -3307,7 +3307,8 @@ function deskNextDollar() {
   };
   // Expectations from the Estimates Desk (2026-11-09): shown, not ranked on (the stored reports did not support it)
   const exp = (tk) => {
-    const x = (D.expectations || {})[tk];
+    if (!D.expectations) return "";   // feed predates the expectations field
+    const x = D.expectations[tk];
     if (!x) return `<span class="pd-exp muted">Expectations: not on the Estimates Desk</span>`;
     const parts = [];
     if (x.last) {
