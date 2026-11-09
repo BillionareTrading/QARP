@@ -3199,6 +3199,14 @@ function deskLine(h) {
 }
 
 // Where the next dollar goes: holdings first (gap to full weight), then unheld names.
+// 2026-11-09 (owner's main KPI: beat the S&P 500): only BUY-or-better names at fair-value band 4+, ranked by expected
+// lead over the S&P 500. On the desk's own record (sp_record.py) the lead rises with the band (band 3 +2.5 pts per
+// 3 months, band 4 +6.0) and the QARP score adds nothing inside band 4, so: band, then the model's odds, then score.
+const DESK_MIN_BAND = 3.5;
+const deskBandOf = (tk) => { const u = deskUni(tk); return u && u.dcf != null ? Number(u.dcf) : null; };
+const deskOdds = (u) => (u && u.p_wrong != null ? 1 - u.p_wrong : 0.5);
+const deskSpRank = (a, b) => (deskBandOf(b.h.ticker) || 0) - (deskBandOf(a.h.ticker) || 0)
+  || deskOdds(deskUni(b.h.ticker)) - deskOdds(deskUni(a.h.ticker)) || b.score - a.score;
 function deskCandidates() {
   const held = new Set((DATA.portfolio || []).map((h) => h.ticker));
   const book = privUnlocked() ? bookValueUsd() : null;
@@ -3207,12 +3215,17 @@ function deskCandidates() {
     const L = deskLine(h); const v = h.verdict || "";
     if (!DESK_BUY.has(v) && L.gate !== "hold") return;
     if (L.gate) { blocked.push({ h, why: L.text, score: h.qarp || 0 }); return; }
+    const band = deskBandOf(h.ticker);
+    if (band == null || band < DESK_MIN_BAND) {
+      blocked.push({ h, why: `fair-value band ${band == null ? "unknown" : fmtNum(band, 1)}, below 4: on the record band-3 buys only matched the S&P 500`, score: h.qarp || 0 });
+      return;
+    }
     const fw = deskFw(h) || 0;
     const usd = privUnlocked() ? Math.max(0, fullWeightUsd(v) - (h.value || 0)) : null;
     const pctBook = (1 - fw) * ((v === "STRONG BUY" || v === "STRONGEST") ? 8 : 6);
     out.push({ h, held: true, fw, usd, pctBook, sh: usd != null && h.price ? Math.floor(usd / h.price) : null, score: h.qarp || 0 });
   });
-  out.sort((a, b) => (b.usd ?? b.pctBook) - (a.usd ?? a.pctBook) || b.score - a.score);
+  out.sort(deskSpRank);
   const fresh = [];
   (DATA.universe || []).forEach((u) => {
     if (held.has(u.ticker) || !DESK_BUY.has(u.verdict)) return;
@@ -3220,12 +3233,16 @@ function deskCandidates() {
     const s = deskSessionsTo(u.next_print);
     if (s != null && s <= 5) return;
     if (u.fresh && u.fresh.ok === false) return;
+    if (u.dcf == null || Number(u.dcf) < DESK_MIN_BAND) return;
     const usd = privUnlocked() ? fullWeightUsd(u.verdict) : null;
     fresh.push({ h: u, held: false, fw: 0, usd, pctBook: (u.verdict === "STRONG BUY" || u.verdict === "STRONGEST") ? 8 : 6,
       sh: usd != null && u.price ? Math.floor(usd / u.price) : null, score: u.qarp || 0 });
   });
-  fresh.sort((a, b) => b.score - a.score);
-  return { held: out, fresh: fresh.slice(0, 5), blocked: blocked.sort((a, b) => b.score - a.score).slice(0, 3), book };
+  fresh.sort(deskSpRank);
+  // watch only: HOLD-QUAL at band 4+ (beat the S&P 500 on a small record; not bought until the record is larger)
+  const watch = (DATA.universe || []).filter((u) => u.verdict === "HOLD-QUAL" && u.dcf != null && Number(u.dcf) >= DESK_MIN_BAND
+    && !u.stale_print && !u.under_review).sort((a, b) => Number(b.dcf) - Number(a.dcf) || (b.qarp || 0) - (a.qarp || 0));
+  return { held: out, fresh: fresh.slice(0, 5), blocked: blocked.sort((a, b) => b.score - a.score).slice(0, 3), book, watch };
 }
 
 function deskHeader() {
@@ -3333,23 +3350,38 @@ function deskNextDollar() {
   const amt = (c) => privUnlocked()
     ? `${fmtUSD(c.usd, 0)}${c.sh == null ? "" : c.sh > 0 ? ` · ${c.sh} sh at ${fmtUSD(c.h.price, 2)}` : ` · less than one share (${fmtUSD(c.h.price, 2)} a share)`}`
     : `${fmtNum(c.pctBook, 1)}% of the account`;
+  const R = deskD().sp_record || null;
+  const spTxt = (c) => {
+    const s = R && R.buy_band4;
+    const band = deskBandOf(c.h.ticker);
+    if (!s || !s.n) return `<span class="pd-exp">Band ${band == null ? "?" : fmtNum(band, 1)} · no graded record against the S&P 500 yet</span>`;
+    return `<span class="pd-exp"><b>vs S&amp;P 500: ${s.avg >= 0 ? "+" : ""}${fmtNum(s.avg, 1)} pts over 3 months expected</b> · band ${fmtNum(band, 1)}
+      · BUYs at band 4+ beat the S&amp;P ${fmtNum(s.beat, 0)}% of the time (${s.n} graded calls)</span>`;
+  };
   const row = (c, i) => `<div class="pd-nd" data-ticker="${esc(c.h.ticker)}">
       <span class="pd-n">${i + 1}</span>
       <span class="pd-ndt"><b>${esc(c.h.ticker)}</b> ${verdictBadge(c.h.verdict)} <span class="muted">${fmtNum(c.score, 1)}</span></span>
       <span class="pd-nda">${c.held ? `to full weight: ${amt(c)}${c.fw ? ` (now ${fmtNum(c.fw, 2)}×)` : ""}` : `new position at full weight: ${amt(c)}`}</span>
-      <span class="pd-ndw">${ev(c.h.ticker)}${exp(c.h.ticker)}</span>
+      <span class="pd-ndw">${spTxt(c)}${ev(c.h.ticker)}${exp(c.h.ticker)}</span>
     </div>`;
-  let html = `<h3 class="pd-h">Where the next dollar goes <span class="pd-sub">your rules, applied</span></h3>`;
+  let html = `<h3 class="pd-h">Where the next dollar goes <span class="pd-sub">ranked by expected lead over the S&amp;P 500</span></h3>`;
   if (C.held.length) html += `<div class="pd-ndg">Holdings below full weight</div>` + C.held.map(row).join("");
   else html += `<p class="pd-none">No holding passes every rule today.${C.blocked.length ? " What blocks the top names: " + C.blocked.map((b) => `<b>${esc(b.h.ticker)}</b>: ${esc(b.why)}`).join("; ") + "." : ""}</p>`;
-  if (C.fresh.length) html += `<div class="pd-ndg">Not held, top scores that pass every rule</div>` + C.fresh.map(row).join("");
+  if (C.fresh.length) html += `<div class="pd-ndg">Not held, best expected lead over the S&amp;P 500 that pass every rule</div>` + C.fresh.map(row).join("");
+  else html += `<p class="pd-none">No name outside the book passes every rule today (BUY or better at fair-value band 4+). Cash waits; it is not spent on band-3 buys.</p>`;
+  if (C.watch && C.watch.length) {
+    const h4 = R && R.hold_band4;
+    html += `<p class="pd-cash">Watching, not buying: ${C.watch.slice(0, 6).map((u) => `<b>${esc(u.ticker)}</b> (band ${fmtNum(u.dcf, 1)})`).join(", ")}${C.watch.length > 6 ? ` and ${C.watch.length - 6} more` : ""}.
+      HOLD-QUAL names at band 4+${h4 && h4.n ? ` beat the S&amp;P 500 ${fmtNum(h4.beat, 0)}% of the time on ${h4.n} graded calls` : ""}, too few to buy on yet.</p>`;
+  }
   if (privUnlocked()) {
     const need = C.held.reduce((a, c) => a + (c.usd || 0), 0);
     const cash = t.cash || 0;
     html += `<p class="pd-cash">Cash available ${fmtUSD(cash, 0)}. Bringing every holding above to full weight needs ${fmtUSD(need, 0)}${need > cash
       ? `: ${fmtUSD(need - cash, 0)} short, which would come from a deposit or a swap (never from selling a name below cost).` : "."}</p>`;
   }
-  html += `<p class="pd-foot">Rules: on the Shariah list; rating BUY or better and not on hold; no news or report waiting on a re-read;
+  html += `<p class="pd-foot">Rules: on the Shariah list; rating BUY or better and not on hold; fair-value band 4 or higher (the goal is
+    beating the S&amp;P 500, and on the record band-3 buys only matched it); no news or report waiting on a re-read;
     no report within 5 sessions; below full weight. ${esc(D.gates_study || "")} Expectations come from the Estimates Desk
     and are shown, not ranked on: on 23 graded reports so far, the change in the full-year estimate did not predict the next month.</p>`;
   return html;
