@@ -2030,3 +2030,78 @@ table.cc-table td.cc-why { white-space: normal; min-width: 280px; max-width: 680
   .perf-ctl { gap: 14px; row-gap: 8px; }
   .perf-ctl .perf-cmp { margin-left: 0; padding-left: 0; border-left: 0; }   /* wraps to its own line under the periods */
 }
+
+/* ---------- Position desk (Signals subtab, 2026-11-09) ---------- */
+.pdesk { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px 14px; }
+.pd-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; border-bottom: 2px solid var(--ink); padding-bottom: 8px; }
+.pd-kicker { font: 700 13px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--brand); }
+.pd-stamps { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.pd-stamp { font-size: 12px; color: var(--ink-3); }
+.pd-stamp.bad { color: var(--neg); font-weight: 600; }
+.pd-book { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 1px solid var(--line); margin: 0 0 6px; }
+.pd-bk { padding: 10px 18px 10px 0; margin-right: 18px; }
+.pd-l { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-3); }
+.pd-v { font: 600 15px var(--sans); font-variant-numeric: tabular-nums; margin-top: 2px; }
+.pd-h { font: 700 16px var(--serif); margin: 18px 0 6px; color: var(--ink); }
+.pd-sub { font: 400 12.5px var(--sans); color: var(--ink-3); margin-left: 6px; }
+.pd-wrap { margin: 0; }
+.pd-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.pd-table th { text-align: left; font-size: 11px; font-weight: 600; color: var(--ink-3); border-bottom: 1px solid var(--ink-2); padding: 6px 8px; white-space: nowrap; }
+.pd-table td { border-bottom: 1px solid var(--line-2); padding: 7px 8px; vertical-align: top; }
+.pd-table .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pd-table td, .pd-table th { text-align: left; }
+.pd-table td.num, .pd-table th.num { text-align: right; }
+.pd-tk b { display: block; font-family: var(--mono); font-size: 13px; }
+.pd-tk span { display: block; color: var(--ink-3); font-size: 11px; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pd-table tbody tr:first-child td:first-child, .pd-table thead th:first-child { position: sticky; left: 0; background: var(--surface); }
+.pd-table td.pd-tk { position: sticky; left: 0; background: var(--surface); }
+.pd-line { min-width: 240px; color: var(--ink-2); }
+.pd-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; background: var(--ink-3); vertical-align: 1px; }
+.pd-dot.add { background: var(--pos); } .pd-dot.trim { background: var(--brass); } .pd-dot.hold { background: var(--ink-3); }
+.pd-r.add .pd-line { color: var(--pos); font-weight: 600; }
+.pd-foot { font-size: 11.5px; color: var(--ink-3); margin: 8px 0 0; line-height: 1.5; }
+.pd-last { border-top: 1px solid var(--line); padding-top: 8px; margin-top: 18px; }
+.pd-none { color: var(--ink-2); font-size: 13px; margin: 4px 0; }
+.pd-ndg { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-3); margin: 10px 0 2px; }
+.pd-nd { display: grid; grid-template-columns: 22px minmax(140px, 200px) minmax(180px, 1fr) 2fr; gap: 4px 12px; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--line-2); font-size: 13px; }
+.pd-n { font: 700 13px var(--mono); color: var(--brand); }
+.pd-ndt b { font-family: var(--mono); }
+.pd-nda { font-variant-numeric: tabular-nums; }
+.pd-ndw { color: var(--ink-3); font-size: 12px; }
+.pd-cash { font-size: 13px; margin: 8px 0 0; }
+.pd-nw { padding: 8px 0; border-bottom: 1px solid var(--line-2); }
+.pd-nwt b { font-family: var(--mono); font-size: 13px; }
+.pd-mat { font-size: 12px; color: var(--brass); margin-left: 6px; }
+.pd-nw ul { list-style: none; margin: 4px 0 0; padding: 0; }
+.pd-nw li { font-size: 12.5px; padding: 2px 0; line-height: 1.45; }
+.pd-nw li.commentary a { color: var(--ink-2); }
+.pd-nw a { color: var(--ink); text-decoration: none; } .pd-nw a:hover { text-decoration: underline; }
+.pd-nwd { display: inline-block; width: 48px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.pd-src { color: var(--ink-3); font-size: 11.5px; margin-left: 6px; }
+.pd-cats, .pd-bds { border-top: 1px solid var(--line-2); }
+.pd-cat, .pd-bd { display: grid; grid-template-columns: 58px 1fr auto; gap: 4px 12px; padding: 7px 0; border-bottom: 1px solid var(--line-2); font-size: 13px; }
+.pd-bd { grid-template-columns: 58px 130px 1fr; }
+.pd-cd { font-variant-numeric: tabular-nums; color: var(--ink-2); font-weight: 600; }
+.pd-sch { font-weight: 400; font-size: 11px; color: var(--brand); }
+.pd-cx, .pd-reach { display: block; color: var(--ink-3); font-size: 12px; margin-top: 2px; }
+.pd-reach b { font-family: var(--mono); color: var(--ink-2); }
+.pd-bda { font-size: 11.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .03em; }
+.pd-sum { font: 14px/1.5 var(--serif); margin: 2px 0 8px; }
+@media (max-width: 640px) {
+  .pd-table thead { display: none; }
+  .pd-table, .pd-table tbody { display: block; }
+  .pd-table tr.pd-r { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .pd-table td { border: 0; padding: 0; position: static !important; text-align: left !important; white-space: normal; }
+  .pd-table td[data-l]::before { content: attr(data-l); display: block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-3); }
+  .pd-table td.pd-tk { grid-column: 1 / span 2; }
+  .pd-table td { order: 3; } .pd-table td.pd-tk, .pd-table td.pd-tk + td { order: 1; }
+  .pd-table td.pd-line { grid-column: 1 / -1; order: 2; min-width: 0; font-size: 13px; }
+  .pd-table td.pd-tk + td { justify-self: end; }
+  .pd-wrap { overflow: visible; border: 0; }
+  .pdesk { padding: 14px 12px 10px; border-radius: 0; border-left: 0; border-right: 0; }
+  .pd-bk { padding: 8px 12px 8px 0; margin-right: 8px; }
+  .pd-nd { grid-template-columns: 22px 1fr; }
+  .pd-nda, .pd-ndw { grid-column: 2; }
+  .pd-cat { grid-template-columns: 52px 1fr; } .pd-cat .pd-src { grid-column: 2; margin-left: 0; }
+  .pd-bd { grid-template-columns: 52px 1fr; } .pd-bd .pd-bda { grid-column: 2; } .pd-bd .pd-cw { grid-column: 2; }
+}

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=636c485e" />
+  <link rel="stylesheet" href="styles.css?v=ee8a3548" />
 </head>
 <body>
 
@@ -360,10 +360,9 @@
 
       <!-- Signals: simple Add/Hold/Trim per holding, then the detail (risk + catalysts) -->
       <div id="psub-signals" class="psub">
-        <p class="tab-intro"><b>The daily call</b> on each holding — <b>Add · Hold · Trim</b> — combining three independent inputs: this site's <b>QARP verdict</b> (quality + value), <b>analyst consensus</b>, and any <b>news risk flag</b>. It's a transparent rule, not anyone's opinion. <b>Not financial advice.</b></p>
-        <div id="calls-list" class="calls-list"></div>
-        <section id="signals-card" class="card signals-card"></section>
-        <section id="additions-desk"></section>
+        <!-- 2026-11-09: the position desk replaces the daily-call list, the old Signals card and the additions desk
+             (their code stays in app.js; their elements are gone, so they render nothing). -->
+        <section id="pdesk" class="pdesk"></section>
       </div>
 
       <!-- Briefing: per-holding triangulated card -->
@@ -753,8 +752,8 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=636c485e"></script>
-  <script src="app.js?v=636c485e"></script>
+  <script src="crypto.js?v=ee8a3548"></script>
+  <script src="app.js?v=ee8a3548"></script>
 <!-- edge-nudge 20260807-0345Z -->
 </body>
 </html>

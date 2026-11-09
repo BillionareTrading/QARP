@@ -1255,6 +1255,7 @@ function renderPortfolio() {
   renderPortfolioTable();
   renderEtfSleeve();
   renderRealized();
+  if (SIGNALS) renderDesk();   // position desk follows live prices and the owner unlock (2026-11-09)
 }
 
 // ETF sleeve — satellite positions below the book (user order 2026-09-02): performance
@@ -3091,6 +3092,7 @@ async function loadSignals() {
     SIGNALS = await fetchFeed("signals");
   } catch (e) { /* fall back gracefully */ }
   renderSignals();
+  renderDesk();
   renderSectorSignals();
   renderRatings();
   renderBriefing();
@@ -3119,6 +3121,259 @@ function renderSignals() {
     <div class="sig-sec-label up"><i class="ti ti-calendar-event" aria-hidden="true"></i> Catalysts ahead — the news that could move it</div>
     <div class="sig-rows">${catRows || `<div class="muted sig-empty">No catalysts queued.</div>`}</div>
     <div class="sig-foot"><i class="ti ti-info-circle" aria-hidden="true"></i> Every signal is tied to a real news event or geopolitical factor — informational, not predictions or advice. No price targets.${s.sources ? ` <span class="sig-src">Sources: ${esc(s.sources)}.</span>` : ""}</div>`;
+}
+
+/* ---------- Position desk (Signals subtab, owner 2026-11-09) ----------
+   One screen: the book, every holding against its rating / price / cost / weight / news / next
+   event, where the next dollar goes by the owner's own rules, company news, catalysts, and the
+   US / China / policy backdrop. Rules here are code (no model): Shariah, rating live and not on
+   hold, no unread news, no report within 5 sessions, below full weight (sizing doctrine v2).
+   The 'WAIT' tape gate is NOT a rule here: studies/signals_desk_2026-11-09 found it worked
+   backwards. Dollars and share counts render only when the owner blob is unlocked. */
+const DESK_BUY = new Set(["STRONGEST", "STRONG BUY", "BUY"]);
+const DESK_SLEEVE_DATES = [["Day 30", "2026-12-09"], ["Day 60", "2027-01-08"]];
+function deskD() { return (SIGNALS && SIGNALS.desk) || {}; }
+function deskDate(iso) {
+  if (!iso) return "—";
+  const d = new Date(iso + "T12:00:00");
+  return isNaN(d) ? esc(iso) : d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+function deskEtToday() {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+}
+// trading sessions from today (ET) to iso: 0 = today, 1 = next session ...
+function deskSessionsTo(iso) {
+  if (!iso) return null;
+  const a = new Date(deskEtToday() + "T12:00:00"), b = new Date(iso + "T12:00:00");
+  if (isNaN(b) || b < a) return null;
+  let n = 0;
+  while (a < b) { a.setDate(a.getDate() + 1); if (!isClosedDay(a)) n++; }
+  return n;
+}
+function deskFw(h) {
+  if (privUnlocked() && typeof h.value === "number") return h.value / fullWeightUsd(h.verdict);
+  return typeof h.fw_x === "number" ? h.fw_x : null;
+}
+function deskUni(tk) { return (DATA.universe || []).find((x) => x.ticker === tk) || null; }
+function deskHalal(h) { return h.shariah ? h.shariah === "SHARIAH-COMPLIANT" : !!deskUni(h.ticker); }
+function deskAvg(h) { return h.avg_cost != null ? h.avg_cost : (h.shares ? h.cost / h.shares : null); }
+
+// The rule line for one holding + the gate it hits. Order = what needs attention first.
+function deskLine(h) {
+  const u = deskUni(h.ticker) || {};
+  const v = h.verdict || u.verdict || "";
+  const sp = h.stale_print || u.stale_print;
+  const fw = deskFw(h);
+  const avg = deskAvg(h);
+  const inProfit = avg != null && h.price != null && h.price >= avg;
+  const nxt = h.next_print || u.next_print;
+  const s = deskSessionsTo(nxt);
+  const soon = s != null && s <= 5;
+  const fwTxt = fw != null ? `${fmtNum(fw, 2)}× full weight` : "weight not known";
+  if (!deskHalal(h)) return inProfit
+    ? { rank: 4, cls: "trim", gate: "shariah", text: "Not on the Shariah list, above your cost: selling into strength is allowed" }
+    : { rank: 4, cls: "hold", gate: "shariah", text: "Not on the Shariah list: no adds, and no sale below your cost" };
+  if (sp && (sp.client || sp.held)) {
+    const was = sp.verdict_before && sp.verdict_before !== v ? ` It showed ${sp.verdict_before} before the hold.` : "";
+    if (sp.kind === "cooling") {   // a proposed cut from a price move, waiting on a primary-source re-read
+      const ur = h.under_review || u.under_review || "";
+      return { rank: 0, cls: "hold", gate: "hold", text: `Hold: ${ur ? ur.replace(/^Cooling off:\s*/i, "") : "a proposed cut is waiting on a re-read."}${was}` };
+    }
+    const why = sp.client && (HOLDS || {})[h.ticker] ? `news on ${deskDate(sp.reported)}` : `the report of ${deskDate(sp.reported)}`;
+    return { rank: 0, cls: "hold", gate: "hold", text: `Hold: ${why} not yet re-read.${was}` };
+  }
+  if (DESK_BUY.has(v)) {
+    if (soon) return { rank: 1, cls: "hold", gate: "report", text: `Hold: report ${s === 0 ? "today" : `on ${deskDate(nxt)}`}, adds wait until it clears` };
+    if (fw != null && fw >= 1) return { rank: 5, cls: "hold", gate: "full", text: `At full weight (${fwTxt}): hold` };
+    return { rank: 2, cls: "add", gate: null, text: `Add window open: ${fwTxt}, ${v}, no report within 5 sessions` };
+  }
+  if (v === "AVOID" || v === "STRONG AVOID") return inProfit
+    ? { rank: 3, cls: "trim", gate: "avoid", text: `In profit on an ${v}: selling into strength is allowed` }
+    : { rank: 6, cls: "hold", gate: "avoid", text: `Below cost on an ${v}: hold (no loss trims)` };
+  return { rank: 7, cls: "hold", gate: "rating", text: `${v || "Unrated"}: hold, no adds (adds need BUY or better)` };
+}
+
+// Where the next dollar goes: holdings first (gap to full weight), then unheld names.
+function deskCandidates() {
+  const held = new Set((DATA.portfolio || []).map((h) => h.ticker));
+  const book = privUnlocked() ? bookValueUsd() : null;
+  const out = [], blocked = [];
+  (DATA.portfolio || []).forEach((h) => {
+    const L = deskLine(h); const v = h.verdict || "";
+    if (!DESK_BUY.has(v) && L.gate !== "hold") return;
+    if (L.gate) { blocked.push({ h, why: L.text, score: h.qarp || 0 }); return; }
+    const fw = deskFw(h) || 0;
+    const usd = privUnlocked() ? Math.max(0, fullWeightUsd(v) - (h.value || 0)) : null;
+    const pctBook = (1 - fw) * ((v === "STRONG BUY" || v === "STRONGEST") ? 8 : 6);
+    out.push({ h, held: true, fw, usd, pctBook, sh: usd != null && h.price ? Math.floor(usd / h.price) : null, score: h.qarp || 0 });
+  });
+  out.sort((a, b) => (b.usd ?? b.pctBook) - (a.usd ?? a.pctBook) || b.score - a.score);
+  const fresh = [];
+  (DATA.universe || []).forEach((u) => {
+    if (held.has(u.ticker) || !DESK_BUY.has(u.verdict)) return;
+    if (u.stale_print || u.under_review) return;
+    const s = deskSessionsTo(u.next_print);
+    if (s != null && s <= 5) return;
+    if (u.fresh && u.fresh.ok === false) return;
+    const usd = privUnlocked() ? fullWeightUsd(u.verdict) : null;
+    fresh.push({ h: u, held: false, fw: 0, usd, pctBook: (u.verdict === "STRONG BUY" || u.verdict === "STRONGEST") ? 8 : 6,
+      sh: usd != null && u.price ? Math.floor(usd / u.price) : null, score: u.qarp || 0 });
+  });
+  fresh.sort((a, b) => b.score - a.score);
+  return { held: out, fresh: fresh.slice(0, 5), blocked: blocked.sort((a, b) => b.score - a.score).slice(0, 3), book };
+}
+
+function deskHeader() {
+  const D = deskD();
+  const sess = dataSession(), last = lastSessionDate();
+  const live = holdingsLive() && marketOpenNow();
+  const stale = !live && sess !== last;
+  const built = DATA.meta && DATA.meta.built_at ? new Date(DATA.meta.built_at) : null;
+  const age = built && !isNaN(built) ? Math.max(0, Math.round((Date.now() - built) / 60000)) : null;
+  const ageTxt = age == null ? "" : age < 90 ? `${age} min ago` : `${Math.round(age / 60)} h ago`;
+  const priceTxt = live ? `live, ${deskDate(last)} session` : `${fullDayName(sess)} ${deskDate(sess)} close`;
+  return `<div class="pd-head">
+    <div class="pd-kicker">Position desk</div>
+    <div class="pd-stamps">
+      <span class="pd-stamp ${stale ? "bad" : ""}">Prices: ${priceTxt}${stale ? " (an earlier session)" : ""}${ageTxt ? ` · baked ${ageTxt}` : ""}</span>
+      <span class="pd-stamp">News: ${esc(D.news_at || "not yet run")}</span>
+      <span class="pd-stamp">Updates before the open, with the session's prices, and after the close</span>
+    </div>
+  </div>`;
+}
+
+function deskBook() {
+  const t = DATA.meta.portfolio_totals || {};
+  const { pct: dayPct } = portfolioDayPnl();
+  const sleeve = fundRows().reduce((a, r) => a + (r.weight_pct || 0), 0);
+  const nextTranche = DESK_SLEEVE_DATES.find(([, d]) => d >= deskEtToday());
+  const cells = [
+    ["Account", pUSD(t.account, 0)],
+    [holdingsLive() && marketOpenNow() ? "Today" : `${lastCloseName(dataSession())} close`, `<span class="${signClass(dayPct)}">${fmtPct(dayPct, 2)}</span>`],
+    ["On your cost", `<span class="${signClass(t.gain_pct)}">${fmtPct(t.gain_pct, 1)}</span>`],
+    ["Cash", pUSD(t.cash, 0)],
+    ["Funds (ETF sleeve)", `${fmtNum(sleeve, 1)}% of the account`],
+  ];
+  if (nextTranche) cells.push([`Sleeve ${nextTranche[0]}`, `${deskDate(nextTranche[1])}, kept apart`]);
+  return `<div class="pd-book">${cells.map(([l, v]) => `<div class="pd-bk"><div class="pd-l">${l}</div><div class="pd-v">${v}</div></div>`).join("")}</div>`;
+}
+
+function deskHoldings() {
+  const D = deskD();
+  const rows = (DATA.portfolio || []).map((h) => ({ h, L: deskLine(h) }))
+    .sort((a, b) => a.L.rank - b.L.rank || (b.h.weight_pct || 0) - (a.h.weight_pct || 0));
+  const body = rows.map(({ h, L }) => {
+    const u = deskUni(h.ticker) || {};
+    const avg = deskAvg(h);
+    const fw = deskFw(h);
+    const rev = (u.fresh && u.fresh.rev) || (h.fresh && h.fresh.rev);
+    const cat = (D.catalysts || []).find((c) => c.tickers.includes(h.ticker));
+    const nxt = cat ? `${deskDate(cat.date)} · ${esc(cat.kind === "report" ? "report" : cat.kind)}` : (h.next_print ? `${deskDate(h.next_print)} · report` : "—");
+    const gainUsd = privUnlocked() && typeof h.gain === "number" ? `<span class="${signClass(h.gain)}">${fmtUSD(h.gain, 0)}</span> ` : "";
+    return `<tr class="pd-r ${L.cls}" data-ticker="${esc(h.ticker)}">
+      <td class="pd-tk"><b>${esc(h.ticker)}</b><span>${esc(h.name || "")}</span></td>
+      <td data-l="Rating">${verdictBadge(h.verdict)}</td>
+      <td class="num" data-l="Score">${h.qarp != null ? fmtNum(h.qarp, 1) : "—"}</td>
+      <td class="num" data-l="Price · day">${fmtUSD(h.price, 2)}<br><span class="${signClass(h.day_pct)}">${fmtPct(h.day_pct, 2)}</span></td>
+      <td class="num" data-l="Shares">${privUnlocked() && h.shares != null ? fmtShares(h.shares) : lockSH()}</td>
+      <td class="num" data-l="Avg cost">${avg != null ? fmtUSD(avg, 2) : "—"}</td>
+      <td class="num" data-l="Gain / loss">${gainUsd}<span class="${signClass(h.gain_pct)}">${fmtPct(h.gain_pct, 1)}</span></td>
+      <td class="num" data-l="Weight · × full">${fmtNum(h.weight_pct, 1)}%<br><span class="muted">${fw != null ? fmtNum(fw, 2) + "×" : "—"}</span></td>
+      <td class="num" data-l="Valuation">${u.dcf != null ? `${fmtNum(u.dcf, 1)} / 5` : "—"}</td>
+      <td data-l="Last read">${rev ? deskDate(rev) : "—"}</td>
+      <td data-l="Next event">${nxt}</td>
+      <td class="pd-line"><span class="pd-dot ${L.cls}"></span>${esc(L.text)}</td>
+    </tr>`;
+  }).join("");
+  return `<h3 class="pd-h">Holdings <span class="pd-sub">sorted by what needs attention first</span></h3>
+    <div class="table-wrap pd-wrap"><table class="pd-table">
+      <thead><tr><th>Ticker</th><th>Rating</th><th class="num">Score</th><th class="num">Price · day</th><th class="num">Shares</th>
+        <th class="num">Avg cost</th><th class="num">Gain / loss</th><th class="num">Weight · × full</th><th class="num">Valuation</th>
+        <th>Last read</th><th>Next event</th><th>Desk line (your rules)</th></tr></thead>
+      <tbody>${body}</tbody></table></div>
+    <p class="pd-foot">Full weight: 8% of the account for STRONG BUY, 6% for BUY and below, at least $1,000. Valuation is the DCF band (5 = cheapest against fair value).
+      Average cost and gain/loss are for information only; being below cost is not by itself a reason to add.</p>`;
+}
+
+function deskNextDollar() {
+  const D = deskD();
+  const C = deskCandidates();
+  const t = DATA.meta.portfolio_totals || {};
+  const ev = (tk) => {
+    const n = ((D.news || {})[tk] || []).find((x) => x.kind === "event");
+    const u = deskUni(tk) || {};
+    const rev = u.fresh && u.fresh.rev;
+    return [rev ? `last read ${deskDate(rev)}` : "", n ? `${deskDate(n.date)}: ${esc(n.title)}` : ""].filter(Boolean).join(" · ");
+  };
+  const amt = (c) => privUnlocked()
+    ? `${fmtUSD(c.usd, 0)}${c.sh == null ? "" : c.sh > 0 ? ` · ${c.sh} sh at ${fmtUSD(c.h.price, 2)}` : ` · less than one share (${fmtUSD(c.h.price, 2)} a share)`}`
+    : `${fmtNum(c.pctBook, 1)}% of the account`;
+  const row = (c, i) => `<div class="pd-nd" data-ticker="${esc(c.h.ticker)}">
+      <span class="pd-n">${i + 1}</span>
+      <span class="pd-ndt"><b>${esc(c.h.ticker)}</b> ${verdictBadge(c.h.verdict)} <span class="muted">${fmtNum(c.score, 1)}</span></span>
+      <span class="pd-nda">${c.held ? `to full weight: ${amt(c)}${c.fw ? ` (now ${fmtNum(c.fw, 2)}×)` : ""}` : `new position at full weight: ${amt(c)}`}</span>
+      <span class="pd-ndw">${ev(c.h.ticker)}</span>
+    </div>`;
+  let html = `<h3 class="pd-h">Where the next dollar goes <span class="pd-sub">your rules, applied</span></h3>`;
+  if (C.held.length) html += `<div class="pd-ndg">Holdings below full weight</div>` + C.held.map(row).join("");
+  else html += `<p class="pd-none">No holding passes every rule today.${C.blocked.length ? " What blocks the top names: " + C.blocked.map((b) => `<b>${esc(b.h.ticker)}</b>: ${esc(b.why)}`).join("; ") + "." : ""}</p>`;
+  if (C.fresh.length) html += `<div class="pd-ndg">Not held, top scores that pass every rule</div>` + C.fresh.map(row).join("");
+  if (privUnlocked()) {
+    const need = C.held.reduce((a, c) => a + (c.usd || 0), 0);
+    const cash = t.cash || 0;
+    html += `<p class="pd-cash">Cash available ${fmtUSD(cash, 0)}. Bringing every holding above to full weight needs ${fmtUSD(need, 0)}${need > cash
+      ? `: ${fmtUSD(need - cash, 0)} short, which would come from a deposit or a swap (never from selling a name below cost).` : "."}</p>`;
+  }
+  html += `<p class="pd-foot">Rules: on the Shariah list; rating BUY or better and not on hold; no news or report waiting on a re-read;
+    no report within 5 sessions; below full weight. ${esc(D.gates_study || "")}</p>`;
+  return html;
+}
+
+function deskNews() {
+  const D = deskD();
+  const news = D.news || {}, mat = D.material || {};
+  const order = (DATA.portfolio || []).map((h) => h.ticker).filter((t) => (news[t] || []).length || mat[t]);
+  if (!order.length) return "";
+  return `<h3 class="pd-h">Company news <span class="pd-sub">last 5 sessions</span></h3>` + order.map((t) => {
+    const m = mat[t];
+    const items = (news[t] || []).map((n) => `<li class="${n.kind}"><span class="pd-nwd">${deskDate(n.date)}</span>
+      ${n.url ? `<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>` : esc(n.title)}
+      <span class="pd-src">${esc(n.source || "")}${n.kind === "commentary" ? " · commentary" : ""}</span></li>`).join("");
+    return `<div class="pd-nw"><div class="pd-nwt"><b>${esc(t)}</b>${m ? ` <span class="pd-mat">Material: ${deskDate(m.date)}, ${esc(m.title)}${m.reread ? ` · re-read in ${esc(m.reread.replace("sweep_reports/", ""))}` : " · re-read pending"}</span>` : ""}</div>
+      <ul>${items || "<li class='muted'>No company news in the last 5 sessions.</li>"}</ul></div>`;
+  }).join("");
+}
+
+function deskCatalysts() {
+  const cats = deskD().catalysts || [];
+  if (!cats.length) return "";
+  return `<h3 class="pd-h">Catalysts ahead <span class="pd-sub">next 30 days</span></h3>
+    <div class="pd-cats">${cats.map((c) => `<div class="pd-cat"><span class="pd-cd">${deskDate(c.date)}</span>
+      <span class="pd-cw">${esc(c.what)}<span class="pd-cx">${esc(c.detail || "")}</span></span>
+      <span class="pd-src">${esc(c.source || "")}</span></div>`).join("")}</div>`;
+}
+
+function deskBackdrop() {
+  const B = deskD().backdrop;
+  if (!B || !(B.items || []).length) return `<h3 class="pd-h">US, China and policy</h3><p class="pd-none">The backdrop has not been written yet; it runs once a day before the open.</p>`;
+  const items = B.items.map((it) => `<div class="pd-bd ${it.status}">
+      <span class="pd-cd">${deskDate(it.date)}${it.status === "scheduled" ? "<br><span class='pd-sch'>scheduled</span>" : ""}</span>
+      <span class="pd-bda">${esc(it.area || "")}</span>
+      <span class="pd-cw">${esc(it.what)} <a class="pd-src" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.source || "source")}</a>
+        ${(it.reaches || []).length ? `<span class="pd-reach">${it.reaches.map((r) => `<b>${esc(r.ticker)}</b> ${esc(r.basis)}`).join(" · ")}</span>` : ""}</span>
+    </div>`).join("");
+  return `<h3 class="pd-h">US, China and policy <span class="pd-sub">written ${esc(B.generated_at || B.date)}</span></h3>
+    ${B.summary ? `<p class="pd-sum">${esc(B.summary)}</p>` : ""}<div class="pd-bds">${items}</div>
+    <p class="pd-foot">Each item comes from a search of ${esc((B.outlets || []).slice(0, 6).join(", "))} and others; an item is kept only if its link is one the search returned and its date is in range${B.dropped ? ` (${B.dropped} dropped today)` : ""}. A holding is named only where a stated link exists.</p>`;
+}
+
+function renderDesk() {
+  const el = document.getElementById("pdesk");
+  if (!el || !DATA) return;
+  if (!SIGNALS) { el.innerHTML = `${deskHeader()}<div class="muted pd-none">The desk loads with the Signals feed; check back shortly.</div>`; return; }
+  const D = deskD();
+  el.innerHTML = deskHeader() + deskBook() + deskHoldings() + deskNextDollar() + deskNews() + deskCatalysts() + deskBackdrop() +
+    `<p class="pd-foot pd-last">Sources: prices and ratings from the QARP payload (${esc(D.price_session || dataSession())}); news from Finnhub's company feeds and the desk's re-read log; catalysts from the Estimates Desk, Benzinga's dividend calendar and the QARP catalyst log; the backdrop from named outlets via web search. Rules output from your sizing and Shariah rules; every order is placed by you in the Abyan app.</p>`;
 }
 
 function sigRiskRow(r) {
@@ -4146,7 +4401,7 @@ function initPortfolioSubtabs() {
       document.querySelectorAll("#tab-portfolio .psub").forEach((x) => x.classList.remove("active"));
       b.classList.add("active");
       document.getElementById("psub-" + b.dataset.psub).classList.add("active");
-      if (b.dataset.psub === "signals") { renderCalls(); renderSignals(); renderAdditions(); }
+      if (b.dataset.psub === "signals") { renderCalls(); renderSignals(); renderDesk(); renderAdditions(); }
       if (b.dataset.psub === "briefing") renderBriefing();
       if (b.dataset.psub === "earnings") renderEarnings();
       if (b.dataset.psub === "news" && !pNewsLoaded) { pNewsLoaded = true; loadPortfolioNews(); }
