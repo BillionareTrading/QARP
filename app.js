@@ -3305,6 +3305,25 @@ function deskNextDollar() {
     const rev = u.fresh && u.fresh.rev;
     return [rev ? `last read ${deskDate(rev)}` : "", n ? `${deskDate(n.date)}: ${esc(n.title)}` : ""].filter(Boolean).join(" · ");
   };
+  // Expectations from the Estimates Desk (2026-11-09): shown, not ranked on (the stored reports did not support it)
+  const exp = (tk) => {
+    const x = (D.expectations || {})[tk];
+    if (!x) return `<span class="pd-exp muted">Expectations: not on the Estimates Desk</span>`;
+    const parts = [];
+    if (x.last) {
+      const L = x.last, word = { BEAT: "beat", INLINE: "in line", MISS: "missed" }[L.outcome] || (L.outcome || "").toLowerCase();
+      let s = `${deskDate(L.date)} report: EPS ${word}${L.surprise_pct != null ? ` (${fmtPct(L.surprise_pct, 1)})` : ""}`;
+      if (L.rev_pct != null) s += `, revenue ${L.rev_pct >= 0 ? "beat" : "missed"} (${fmtPct(L.rev_pct, 1)})`;
+      if (L.guidance) s += `, guidance ${({ HOLD: "held", RAISE: "raised", RAISED: "raised", CUT: "cut", LOWERED: "cut", MAINTAINED: "maintained" })[String(L.guidance).toUpperCase()] || String(L.guidance).toLowerCase()}`;
+      if (L.fy_chg_pct != null) s += `; full-year estimate <span class="${signClass(L.fy_chg_pct)}">${fmtPct(L.fy_chg_pct, 1)}</span> since`;
+      parts.push(s);
+    }
+    if (x.next && x.next.date) {
+      const N = x.next;
+      parts.push(`next report ${deskDate(N.date)}: consensus EPS ${fmtNum(N.eps, 2)} (${N.n})${N.dn30 != null ? `, ${N.up30 || 0} raised / ${N.dn30} cut in 30 days` : ""}${N.chg90_pct != null ? `, <span class="${signClass(N.chg90_pct)}">${fmtPct(N.chg90_pct, 1)}</span> in 90 days` : ""}`);
+    }
+    return `<span class="pd-exp">Expectations: ${parts.join(" · ")}</span>`;
+  };
   const amt = (c) => privUnlocked()
     ? `${fmtUSD(c.usd, 0)}${c.sh == null ? "" : c.sh > 0 ? ` · ${c.sh} sh at ${fmtUSD(c.h.price, 2)}` : ` · less than one share (${fmtUSD(c.h.price, 2)} a share)`}`
     : `${fmtNum(c.pctBook, 1)}% of the account`;
@@ -3312,7 +3331,7 @@ function deskNextDollar() {
       <span class="pd-n">${i + 1}</span>
       <span class="pd-ndt"><b>${esc(c.h.ticker)}</b> ${verdictBadge(c.h.verdict)} <span class="muted">${fmtNum(c.score, 1)}</span></span>
       <span class="pd-nda">${c.held ? `to full weight: ${amt(c)}${c.fw ? ` (now ${fmtNum(c.fw, 2)}×)` : ""}` : `new position at full weight: ${amt(c)}`}</span>
-      <span class="pd-ndw">${ev(c.h.ticker)}</span>
+      <span class="pd-ndw">${ev(c.h.ticker)}${exp(c.h.ticker)}</span>
     </div>`;
   let html = `<h3 class="pd-h">Where the next dollar goes <span class="pd-sub">your rules, applied</span></h3>`;
   if (C.held.length) html += `<div class="pd-ndg">Holdings below full weight</div>` + C.held.map(row).join("");
@@ -3325,7 +3344,8 @@ function deskNextDollar() {
       ? `: ${fmtUSD(need - cash, 0)} short, which would come from a deposit or a swap (never from selling a name below cost).` : "."}</p>`;
   }
   html += `<p class="pd-foot">Rules: on the Shariah list; rating BUY or better and not on hold; no news or report waiting on a re-read;
-    no report within 5 sessions; below full weight. ${esc(D.gates_study || "")}</p>`;
+    no report within 5 sessions; below full weight. ${esc(D.gates_study || "")} Expectations come from the Estimates Desk
+    and are shown, not ranked on: on 23 graded reports so far, the change in the full-year estimate did not predict the next month.</p>`;
   return html;
 }
 
