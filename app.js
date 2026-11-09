@@ -3226,23 +3226,27 @@ function deskCandidates() {
     out.push({ h, held: true, fw, usd, pctBook, sh: usd != null && h.price ? Math.floor(usd / h.price) : null, score: h.qarp || 0 });
   });
   out.sort(deskSpRank);
-  const fresh = [];
+  const fresh = [], waiting = [];
   (DATA.universe || []).forEach((u) => {
     if (held.has(u.ticker) || !DESK_BUY.has(u.verdict)) return;
-    if (u.stale_print || u.under_review) return;
-    const s = deskSessionsTo(u.next_print);
-    if (s != null && s <= 5) return;
-    if (u.fresh && u.fresh.ok === false) return;
     if (u.dcf == null || Number(u.dcf) < DESK_MIN_BAND) return;
+    // 2026-11-09 (owner: "shouldn't it just adjust to have all buys/strong buys with that criteria?"): every
+    // qualifying name is shown; one that only waits on timing is listed with the reason instead of hidden.
+    const s = deskSessionsTo(u.next_print);
+    const why = (u.stale_print || u.under_review) ? "waiting on a re-read after news or a report"
+      : (s != null && s <= 5) ? `reports in ${s} session${s === 1 ? "" : "s"}${u.next_print ? ` (${deskDate(u.next_print)})` : ""}`
+      : (u.fresh && u.fresh.ok === false) ? "its last review is out of date" : null;
+    if (why) { waiting.push({ h: u, why, score: u.qarp || 0 }); return; }
     const usd = privUnlocked() ? fullWeightUsd(u.verdict) : null;
     fresh.push({ h: u, held: false, fw: 0, usd, pctBook: (u.verdict === "STRONG BUY" || u.verdict === "STRONGEST") ? 8 : 6,
       sh: usd != null && u.price ? Math.floor(usd / u.price) : null, score: u.qarp || 0 });
   });
   fresh.sort(deskSpRank);
+  waiting.sort(deskSpRank);
   // watch only: HOLD-QUAL at band 4+ (beat the S&P 500 on a small record; not bought until the record is larger)
   const watch = (DATA.universe || []).filter((u) => u.verdict === "HOLD-QUAL" && u.dcf != null && Number(u.dcf) >= DESK_MIN_BAND
     && !u.stale_print && !u.under_review).sort((a, b) => Number(b.dcf) - Number(a.dcf) || (b.qarp || 0) - (a.qarp || 0));
-  return { held: out, fresh: fresh.slice(0, 5), blocked: blocked.sort((a, b) => b.score - a.score).slice(0, 3), book, watch };
+  return { held: out, fresh, waiting, blocked: blocked.sort((a, b) => b.score - a.score), book, watch };
 }
 
 function deskHeader() {
@@ -3367,8 +3371,10 @@ function deskNextDollar() {
   let html = `<h3 class="pd-h">Where the next dollar goes <span class="pd-sub">ranked by expected lead over the S&amp;P 500</span></h3>`;
   if (C.held.length) html += `<div class="pd-ndg">Holdings below full weight</div>` + C.held.map(row).join("");
   else html += `<p class="pd-none">No holding passes every rule today.${C.blocked.length ? " What blocks the top names: " + C.blocked.map((b) => `<b>${esc(b.h.ticker)}</b>: ${esc(b.why)}`).join("; ") + "." : ""}</p>`;
-  if (C.fresh.length) html += `<div class="pd-ndg">Not held, best expected lead over the S&amp;P 500 that pass every rule</div>` + C.fresh.map(row).join("");
-  else html += `<p class="pd-none">No name outside the book passes every rule today (BUY or better at fair-value band 4+). Cash waits; it is not spent on band-3 buys.</p>`;
+  if (C.fresh.length) html += `<div class="pd-ndg">Not held: every BUY or better at fair-value band 4+, best expected lead over the S&amp;P 500 first</div>` + C.fresh.map(row).join("");
+  else html += `<p class="pd-none">No name outside the book is a BUY or better at fair-value band 4+ and ready today. Cash waits; it is not spent on band-3 buys.</p>`;
+  if (C.waiting && C.waiting.length) html += `<p class="pd-cash">Qualify but not yet: ${C.waiting.map((w) => `<b>${esc(w.h.ticker)}</b> ${verdictBadge(w.h.verdict)} band ${fmtNum(w.h.dcf, 1)}, ${esc(w.why)}`).join("; ")}.</p>`;
+  if (C.held.length && C.blocked.length) html += `<p class="pd-cash">Held but not added to: ${C.blocked.map((b) => `<b>${esc(b.h.ticker)}</b>: ${esc(b.why)}`).join("; ")}.</p>`;
   if (C.watch && C.watch.length) {
     const h4 = R && R.hold_band4;
     html += `<p class="pd-cash">Watching, not buying: ${C.watch.slice(0, 6).map((u) => `<b>${esc(u.ticker)}</b> (band ${fmtNum(u.dcf, 1)})`).join(", ")}${C.watch.length > 6 ? ` and ${C.watch.length - 6} more` : ""}.
