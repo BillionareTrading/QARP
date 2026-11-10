@@ -1041,6 +1041,25 @@ function extLead() {
   const u = ((typeof DATA !== "undefined" && DATA && DATA.universe) || []).find((x) => extFresh(x));
   return u ? extFresh(u) : null;
 }
+// Day column header (2026-11-10, owner: "for the day, i want it to show (as of ____) as it is yesterdays. and directly when
+// the market opens, the same second, it should take that out and just say Day"). While the market is closed the day
+// moves belong to the last session the prices are from, so the header names that session; while it is open it is "Day".
+function dayColLabel() {
+  if (marketOpenNow()) return "Day";
+  let iso = null; try { iso = dataSession(); } catch (e) { iso = null; }
+  if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return "Day";
+  const d = new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" }).replace(",", "");
+  return `Day <span class="day-asof">as of ${d}</span>`;
+}
+// The header follows the bell to the second: a one-second check that repaints only when open/closed actually changes.
+let _dayColOpen = null;
+setInterval(() => {
+  let o; try { o = marketOpenNow(); } catch (e) { return; }
+  if (_dayColOpen !== null && o !== _dayColOpen && typeof DATA !== "undefined" && DATA) {
+    [renderPortfolioTable, renderUniverseTable, renderEtfs, renderVenture].forEach((f) => { try { f(); } catch (e) { /* that table is not on screen */ } });
+  }
+  _dayColOpen = o;
+}, 1000);
 function extColOn() { return !!extLead(); }
 function extColLabel() { const e = extLead(); return e && e.s === "post" ? "After Hrs" : "Pre-Mkt"; }
 function extCell(x) {
@@ -1061,7 +1080,7 @@ const U_COLS = [
   { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}${cTag(x)}<span class="name">${x.name}</span></span>` },
   { key: "sector", label: "Sector", align: "left", fmt: (x) => `<span class="muted" title="${esc(x.sector || "")}">${sectorGroup(x.sector)}</span>`, sortVal: (x) => sectorGroup(x.sector) },
   { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
-  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "day_pct", label: () => dayColLabel(), fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
   { key: "ext", label: () => extColLabel(), when: () => extColOn(), fmt: (x) => extCell(x), sortVal: (x) => extSort(x) },
   { key: "div", label: "Dividends", fmt: (x) => x.div_rate
       ? `<span class="div-rate">${fmtUSD(x.div_rate, 2)}<span class="div-unit">/sh</span></span><span class="div-yld">${x.div_yield != null ? x.div_yield + "%" : ""}</span>`
@@ -1216,7 +1235,7 @@ const P_COLS = [
   // avg cost is PER-SHARE (scale-free) — published as avg_cost so it survives the privacy
   // split; the shares/cost fallback keeps working after the owner unlock merges them in.
   { key: "avgcost", label: "Avg Cost", fmt: (x) => `<span class="muted">${fmtUSD(x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : null), 2)}</span>`, sortVal: (x) => (x.avg_cost != null ? x.avg_cost : (x.shares ? x.cost / x.shares : 0)) },
-  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "day_pct", label: () => dayColLabel(), fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
   { key: "ext", label: () => extColLabel(), when: () => extColOn(), fmt: (x) => extCell(x), sortVal: (x) => extSort(x) },
   { key: "shares", label: "Shares", fmt: (x) => (x.shares == null && !privUnlocked() ? lockSH() : fmtShares(x.shares)), sortVal: (x) => (x.shares != null ? x.shares : x.weight_pct || 0) },
   { key: "value", label: "Value", fmt: (x) => pUSD(x.value, 0), sortVal: (x) => (x.value != null ? x.value : x.weight_pct || 0) },
@@ -1384,7 +1403,7 @@ function renderRealized() {
   // it looks messy"): the two cells carry the price only; the Bought / Sold headers still sort by date.
   document.querySelector("#realized-table thead").innerHTML = `<tr>${R_COLS.map((c) => {
     const arrow = rSort.key === c.key ? `<span class="arrow">${rSort.dir > 0 ? "▲" : "▼"}</span>` : "";
-    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}</th>`;
+    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${typeof c.label === "function" ? c.label() : c.label}${arrow}</th>`;
   }).join("")}</tr>`;
   document.querySelector("#realized-table tbody").innerHTML = rows.map((r) => `
     <tr>
@@ -4689,7 +4708,7 @@ const ETF_COLS = [
   { key: "expense", label: "Expense", fmt: (x) => x.expense != null ? x.expense.toFixed(2) + "%" : "—" },
   { key: "aum", label: "AUM", fmt: (x) => fmtAUM(x.aum) },
   { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
-  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "day_pct", label: () => dayColLabel(), fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
   { key: "yield", label: "Yield", fmt: (x) => x.yield != null ? x.yield.toFixed(2) + "%" : "—", sortVal: (x) => x.yield ?? -1 },
   { key: "ytd", label: "YTD", fmt: (x) => `<span class="${signClass(x.ytd)}">${x.ytd != null ? (x.ytd > 0 ? "+" : "") + x.ytd.toFixed(1) + "%" : "—"}</span>`, sortVal: (x) => x.ytd ?? -999 },
 ];
@@ -4716,7 +4735,7 @@ function renderEtfs() {
   });
   document.querySelector("#etf-table thead").innerHTML = `<tr>${ETF_COLS.map((c) => {
     const arrow = etfSort.key === c.key ? `<span class="arrow">${etfSort.dir > 0 ? "▲" : "▼"}</span>` : "";
-    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}</th>`;
+    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${typeof c.label === "function" ? c.label() : c.label}${arrow}</th>`;
   }).join("")}</tr>`;
   document.querySelector("#etf-table tbody").innerHTML = rows.map((x) =>
     `<tr>${ETF_COLS.map((c) => `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
@@ -4741,7 +4760,7 @@ const VEN_COLS = [
   { key: "moat", label: "Moat", fmt: (x) => `${x.moat}/5`, sortVal: (x) => x.moat ?? 0 },
   { key: "vscore", label: "Venture Score", fmt: (x) => `<span class="qarp-cell">${fmtNum(x.vscore, 1)}</span>` },
   { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
-  { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+  { key: "day_pct", label: () => dayColLabel(), fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
 ];
 let venSort = { key: "vscore", dir: -1 };
 
@@ -4762,7 +4781,7 @@ function renderVenture() {
   });
   document.querySelector("#ven-table thead").innerHTML = `<tr>${VEN_COLS.map((c) => {
     const arrow = venSort.key === c.key ? `<span class="arrow">${venSort.dir > 0 ? "▲" : "▼"}</span>` : "";
-    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${c.label}${arrow}</th>`;
+    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${typeof c.label === "function" ? c.label() : c.label}${arrow}</th>`;
   }).join("")}</tr>`;
   document.querySelector("#ven-table tbody").innerHTML = rows.map((x) =>
     `<tr>${VEN_COLS.map((c) => `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");

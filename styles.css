@@ -2118,3 +2118,6 @@ table.cc-table td.cc-why { white-space: normal; min-width: 280px; max-width: 680
 .ctag:hover::after { content: attr(data-c); position: absolute; left: calc(100% + 6px); top: 50%; transform: translateY(-50%); z-index: 60;
   padding: 4px 8px; border-radius: 6px; background: var(--brand-ink); color: #fff; font: 500 11.5px/1.2 var(--sans); letter-spacing: 0;
   white-space: nowrap; box-shadow: var(--shadow-sm); pointer-events: none; }
+
+/* Day column: the session its moves belong to, shown while the market is closed (2026-11-10) */
+.day-asof { display: block; font-weight: 500; font-size: 9.5px; letter-spacing: .02em; text-transform: none; color: var(--ink-3); white-space: nowrap; }
