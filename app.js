@@ -881,8 +881,16 @@ function leadFresh(d) {
 }
 
 /* ---------- which index list is showing (US Equities | Global) ---------- */
-let uIndex = "US Equities";
-const uList = () => DATA.universe.filter((x) => (x.index || "US Equities") === uIndex);
+let uIndex = "All";   // All | US | World  (one stock list; the buttons above the table narrow it)
+const isWorld = (x) => !!(x.country && x.country !== "USA" && x.country !== "United States");
+const uList = () => DATA.universe.filter((x) => uIndex === "All" || (uIndex === "World") === isWorld(x));
+const C_CODE = { "Canada": "CA", "United Kingdom": "UK", "Israel": "IL", "Switzerland": "CH", "Netherlands": "NL", "China": "CN",
+  "Denmark": "DK", "Taiwan": "TW", "Bermuda": "BM", "Ireland": "IE", "Uruguay": "UY", "Germany": "DE", "Japan": "JP", "France": "FR",
+  "Australia": "AU", "India": "IN", "Indonesia": "ID", "Saudi Arabia": "SA", "South Korea": "KR", "Sweden": "SE", "Brazil": "BR",
+  "Singapore": "SG", "Luxembourg": "LU", "Italy": "IT", "Spain": "ES", "Belgium": "BE", "Norway": "NO", "Finland": "FI",
+  "South Africa": "ZA", "Mexico": "MX", "Argentina": "AR", "Hong Kong": "HK", "Monaco": "MC", "Greece": "GR", "Vietnam": "VN",
+  "United Arab Emirates": "AE", "Ukraine": "UA", "Kazakhstan": "KZ", "Cayman Islands": "KY", "British Virgin Islands": "VG", "UK": "UK", "Jersey": "JE", "Peru": "PE", "Chile": "CL" };
+const cTag = (x) => isWorld(x) ? `<span class="ctag" data-c="${esc(x.country === "UK" ? "United Kingdom" : x.country)}" aria-label="${esc(x.country)}">${C_CODE[x.country] || esc(String(x.country).slice(0, 3).toUpperCase())}</span>` : "";
 
 /* ---------- render: Overview ---------- */
 /* ---------- Additions desk: where new money could go (event-hooked, never momentum) ---------- */
@@ -1050,7 +1058,7 @@ function extChip(x) {
 
 const U_COLS = [
   { key: "rank", label: "#", align: "left", fmt: (x) => `<span class="muted">${x.rank}</span>` },
-  { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name}</span></span>` },
+  { key: "ticker", label: "Name", align: "left", fmt: (x) => `<span class="tick">${x.ticker}${cTag(x)}<span class="name">${x.name}</span></span>` },
   { key: "sector", label: "Sector", align: "left", fmt: (x) => `<span class="muted" title="${esc(x.sector || "")}">${sectorGroup(x.sector)}</span>`, sortVal: (x) => sectorGroup(x.sector) },
   { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
   { key: "day_pct", label: "Day", fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
@@ -1077,9 +1085,15 @@ function renderUniverseControls() {
   const list = uList();
   // intro copy reflects the active list (US Equities vs Global)
   const intro = document.getElementById("u-intro");
-  if (intro) intro.innerHTML = uIndex === "Global"
-    ? `<b>Global</b> names outside the S&amp;P 1500, screened for Shariah compliance — the compliant ones are scored on <b>QARP</b> (quality + value) and ranked below. This list grows as we add more global companies.`
-    : `Every company in the <b>S&amp;P 1500</b> (large, mid &amp; small cap) was screened for Shariah compliance — the ones that pass are scored on <b>QARP</b> (quality + value) and ranked below. Sort, filter, or tap any name for its full breakdown.`;
+  const nWorld = DATA.universe.filter(isWorld).length, nAll = DATA.universe.length;
+  if (intro) intro.innerHTML = `Every Shariah-compliant stock the desk scores, <b>US and world in one ranking</b> (${nAll} names). Companies based outside the US carry a small country tag next to the ticker (${nWorld} of them). Sort, filter, or tap any name for its full breakdown.`;
+  document.querySelectorAll("#u-scope button").forEach((b) => {
+    const n = b.dataset.scope === "All" ? nAll : b.dataset.scope === "World" ? nWorld : nAll - nWorld;
+    b.textContent = `${b.dataset.scope === "All" ? "All" : b.dataset.scope} ${n}`;
+    b.classList.toggle("on", b.dataset.scope === uIndex);
+    if (!b._wired) { b._wired = true; b.addEventListener("click", () => {
+      uIndex = b.dataset.scope; renderVerdictSummary(); renderDeskDiscipline(); renderUniverseControls(); renderUniverseTable(); }); }
+  });
   // repopulate filters for THIS list (idempotent — keep each select's first "All" option)
   const verdSel = document.getElementById("u-verdict");
   const secSel = document.getElementById("u-sector");
@@ -4513,7 +4527,6 @@ function setSpView(view) {
     renderFilings();
     pauseUniverseCycler();
   } else {
-    uIndex = "US Equities";
     renderVerdictSummary(); renderDeskDiscipline();
     renderUniverseControls();
     renderUniverseTable();

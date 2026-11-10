@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=b0c1db23" />
+  <link rel="stylesheet" href="styles.css?v=d8fe014b" />
 </head>
 <body>
 
@@ -202,8 +202,7 @@
     <!-- Shariah-Compliant universe -->
     <section id="tab-universe" class="tabpanel">
       <nav class="subtabs" id="u-subtabs">
-        <button class="subtab active" type="button" data-usub="sp500">US Equities</button>
-        <button class="subtab" type="button" data-usub="global">Global</button>
+        <button class="subtab active" type="button" data-usub="sp500">Stocks</button>
         <button class="subtab" type="button" data-usub="etfs">ETFs</button>
         <button class="subtab" type="button" data-usub="venture">Venture</button>
       </nav>
@@ -223,6 +222,9 @@
         </div>
         <div id="desk-discipline"></div>
         <div class="controls">
+          <span class="seg" id="u-scope" role="group" aria-label="Which stocks">
+            <button type="button" data-scope="All" class="on">All</button><button type="button" data-scope="US">US</button><button type="button" data-scope="World">World</button>
+          </span>
           <input id="u-search" type="search" placeholder="Search ticker or name…" />
           <select id="u-verdict">
             <option value="">All verdicts</option>
@@ -752,8 +754,8 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=b0c1db23"></script>
-  <script src="app.js?v=b0c1db23"></script>
+  <script src="crypto.js?v=d8fe014b"></script>
+  <script src="app.js?v=d8fe014b"></script>
 <!-- edge-nudge 20260807-0345Z -->
 </body>
 </html>

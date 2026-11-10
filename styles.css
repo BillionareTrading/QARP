@@ -2106,3 +2106,15 @@ table.cc-table td.cc-why { white-space: normal; min-width: 280px; max-width: 680
   .pd-cat { grid-template-columns: 52px 1fr; } .pd-cat .pd-src { grid-column: 2; margin-left: 0; }
   .pd-bd { grid-template-columns: 52px 1fr; } .pd-bd .pd-bda { grid-column: 2; } .pd-bd .pd-cw { grid-column: 2; }
 }
+
+/* ===== one stock list (2026-11-10): country tag on world names + All / US / World ===== */
+.ctag { display: inline-block; margin-left: 6px; padding: 1px 5px; border: 1px solid var(--line); border-radius: 4px;
+  font: 600 9.5px/1.3 var(--mono); letter-spacing: .04em; color: var(--brass); background: var(--surface-2); vertical-align: 1px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 9px; overflow: hidden; background: var(--surface); }
+.seg button { border: 0; background: transparent; padding: 9px 12px; font: 600 12.5px var(--sans); color: var(--ink-2); cursor: pointer; white-space: nowrap; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button.on { background: var(--brand); color: #fff; }
+.ctag { position: relative; cursor: help; }
+.ctag:hover::after { content: attr(data-c); position: absolute; left: calc(100% + 6px); top: 50%; transform: translateY(-50%); z-index: 60;
+  padding: 4px 8px; border-radius: 6px; background: var(--brand-ink); color: #fff; font: 500 11.5px/1.2 var(--sans); letter-spacing: 0;
+  white-space: nowrap; box-shadow: var(--shadow-sm); pointer-events: none; }
