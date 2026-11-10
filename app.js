@@ -3180,7 +3180,6 @@ function renderSignals() {
    The 'WAIT' tape gate is NOT a rule here: studies/signals_desk_2026-11-09 found it worked
    backwards. Dollars and share counts render only when the owner blob is unlocked. */
 const DESK_BUY = new Set(["STRONGEST", "STRONG BUY", "BUY"]);
-const DESK_SLEEVE_DATES = [["Day 30", "2026-12-09"], ["Day 60", "2027-01-08"]];
 function deskD() { return (SIGNALS && SIGNALS.desk) || {}; }
 function deskDate(iso) {
   if (!iso) return "—";
@@ -3310,7 +3309,6 @@ function deskBook() {
   const t = DATA.meta.portfolio_totals || {};
   const { pct: dayPct } = portfolioDayPnl();
   const sleeve = fundRows().reduce((a, r) => a + (r.weight_pct || 0), 0);
-  const nextTranche = DESK_SLEEVE_DATES.find(([, d]) => d >= deskEtToday());
   const cells = [
     ["Account", pUSD(t.account, 0)],
     [holdingsLive() && marketOpenNow() ? "Today" : `${lastCloseName(dataSession())} close`, `<span class="${signClass(dayPct)}">${fmtPct(dayPct, 2)}</span>`],
@@ -3318,7 +3316,6 @@ function deskBook() {
     ["Cash", pUSD(t.cash, 0)],
     ["Funds (ETF sleeve)", `${fmtNum(sleeve, 1)}% of the account`],
   ];
-  if (nextTranche) cells.push([`Sleeve ${nextTranche[0]}`, `${deskDate(nextTranche[1])}, kept apart`]);
   return `<div class="pd-book">${cells.map(([l, v]) => `<div class="pd-bk"><div class="pd-l">${l}</div><div class="pd-v">${v}</div></div>`).join("")}</div>`;
 }
 
