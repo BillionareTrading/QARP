@@ -4152,6 +4152,57 @@ function startLive() {
   uniIdx = 0;
   liveTick();
   liveTimer = setInterval(liveTick, LIVE_INTERVAL_MS);
+  startExtPolling();
+}
+/* ---------- live pre-market / after-hours quotes (2026-11-10) ----------
+   Owner: the Pre-Mkt / After Hrs column "is not showing". It only ever had the extended quotes a bake captured, hidden
+   once 90 minutes old, and since the clocks changed the morning bake runs before pre-market trading starts. The page
+   now asks the quote Worker's /ext endpoint itself while the US market is in its pre-market (4:00-9:30 ET) or
+   after-hours (close-8:00 pm ET) session: every holding, plus the first rows on screen in the Stocks table, about
+   every two minutes. Each answer is written to the row's `ext`, which the existing column, chips and pill read. */
+const EXT_POLL_MS = 120000, EXT_GAP_MS = 350, EXT_SCREEN_ROWS = 25;
+let extTimer = null, extBusy = false, extBackoffUntil = 0;
+function extSessionNow() {
+  const c = etClock();
+  if (isClosedDay(new Date(c.iso + "T12:00:00"))) return null;
+  if (c.mins >= 240 && c.mins < 570) return "pre";
+  const cl = closeMins(c.iso);
+  return c.mins >= cl && c.mins < 1200 ? "post" : null;
+}
+async function extPoll() {
+  const base = DATA && DATA.meta && DATA.meta.quote_proxy;
+  if (!base || extBusy || document.hidden || Date.now() < extBackoffUntil || !extSessionNow()) return;
+  extBusy = true;
+  try {
+    const rows = {};
+    [].concat(DATA.portfolio || [], DATA.universe || []).forEach((x) => { (rows[x.ticker] = rows[x.ticker] || []).push(x); });
+    const want = (DATA.portfolio || []).map((x) => x.ticker);
+    const uniOn = !!document.querySelector("#tab-universe.active #usub-universe.active");
+    if (uniOn) document.querySelectorAll("#u-table tbody tr").forEach((tr, i) => { if (i < EXT_SCREEN_ROWS) want.push(tr.dataset.ticker); });
+    const colWas = extColOn();
+    let changed = false;
+    for (const t of [...new Set(want)]) {
+      if (!t) continue;
+      try {
+        const r = await fetch(`${base}/ext?symbol=${encodeURIComponent(t)}`, { cache: "no-store" });
+        if (r.status === 429 || r.status >= 500) { extBackoffUntil = Date.now() + 5 * 60000; break; }   // the source is refusing: rest 5 min
+        const q = await r.json();
+        if (q && (q.s === "pre" || q.s === "post") && typeof q.p === "number" && q.t) {
+          (rows[t] || []).forEach((x) => { x.ext = { s: q.s, p: q.p, dp: q.dp, t: q.t }; });
+          changed = true;
+        }
+      } catch (e) { /* one name failing never stops the rest */ }
+      await new Promise((res) => setTimeout(res, EXT_GAP_MS));
+    }
+    if (changed) {
+      try { renderPortfolioTable(); } catch (e) { /* portfolio not on screen */ }
+      if (uniOn || extColOn() !== colWas) { try { renderUniverseTable(); } catch (e) { /* table not on screen */ } }
+    }
+  } finally { extBusy = false; }
+}
+function startExtPolling() {
+  if (!extTimer) extTimer = setInterval(extPoll, EXT_POLL_MS);
+  setTimeout(extPoll, 1500);
 }
 function pauseUniverseCycler() { if (uniTimer) { clearInterval(uniTimer); uniTimer = null; } }
 function resumeUniverseCycler() {
