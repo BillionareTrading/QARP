@@ -1025,7 +1025,12 @@ function extFresh(x) {
   const e = x && x.ext;
   if (!e || !e.p || !e.t) return null;
   if (marketOpenNow()) return null;                    // RTH: live day% owns the cells
-  if (Date.now() - e.t * 1000 > 90 * 60000) return null; // stale quote: fall back to the close
+  // stale quote: fall back to the close. 2026-11-10: with live polling a thinly traded holding's last pre-market
+  // trade can be hours old and is still the latest there is, so a quote from the session we are in now stays up
+  // (its hover gives the time); anything from another session keeps the 90-minute rule.
+  const age = Date.now() - e.t * 1000;
+  let cur = null; try { cur = extSessionNow(); } catch (err) { cur = null; }
+  if (age > 90 * 60000 && !(cur && cur === e.s && age < 6.5 * 3600000)) return null;
   return e;
 }
 function extClock(e) {
@@ -4189,6 +4194,7 @@ async function extPoll() {
         const q = await r.json();
         if (q && (q.s === "pre" || q.s === "post") && typeof q.p === "number" && q.t) {
           (rows[t] || []).forEach((x) => { x.ext = { s: q.s, p: q.p, dp: q.dp, t: q.t }; });
+          if (!changed) { try { renderPortfolioTable(); } catch (e) { /* not on screen */ } }   // first quote in: show the column at once
           changed = true;
         }
       } catch (e) { /* one name failing never stops the rest */ }
@@ -4202,7 +4208,7 @@ async function extPoll() {
 }
 function startExtPolling() {
   if (!extTimer) extTimer = setInterval(extPoll, EXT_POLL_MS);
-  setTimeout(extPoll, 1500);
+  setTimeout(extPoll, 300);
 }
 function pauseUniverseCycler() { if (uniTimer) { clearInterval(uniTimer); uniTimer = null; } }
 function resumeUniverseCycler() {
