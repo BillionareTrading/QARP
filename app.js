@@ -1069,7 +1069,8 @@ function extColOn() { return !!extLead(); }
 function extColLabel() { const e = extLead(); return e && e.s === "post" ? "After Hrs" : "Pre-Mkt"; }
 function extCell(x) {
   const e = extFresh(x);
-  if (!e) return `<span class="muted">—</span>`;
+  if (!e) { let ses = null; try { ses = extSessionNow(); } catch (err) { ses = null; }
+    return `<span class="muted" title="${ses ? "No " + (ses === "pre" ? "pre-market" : "after-hours") + " trade in this stock yet today" : "No extended-hours quote"}">—</span>`; }
   return `<span class="cell-ext" title="${extWord(e)} quote ${extClock(e)} ET · vs the ${fmtUSD(x.price, 2)} close">${fmtUSD(e.p, 2)} <span class="${signClass(e.dp)}">${fmtPct(e.dp)}</span></span>`;
 }
 function extSort(x) { const e = extFresh(x); return e ? e.dp : -1e9; }
@@ -4163,9 +4164,8 @@ function startLive() {
    Owner: the Pre-Mkt / After Hrs column "is not showing". It only ever had the extended quotes a bake captured, hidden
    once 90 minutes old, and since the clocks changed the morning bake runs before pre-market trading starts. The page
    now asks the quote Worker's /ext endpoint itself while the US market is in its pre-market (4:00-9:30 ET) or
-   after-hours (close-8:00 pm ET) session: every holding, plus the first rows on screen in the Stocks table, about
-   every two minutes. Each answer is written to the row's `ext`, which the existing column, chips and pill read. */
-const EXT_POLL_MS = 120000, EXT_GAP_MS = 350, EXT_SCREEN_ROWS = 25;
+   after-hours (close-8:00 pm ET) session: every holding and every stock in the list, about every two minutes. Each answer is written to the row's `ext`, which the existing column, chips and pill read. */
+const EXT_POLL_MS = 120000, EXT_GAP_MS = 350, EXT_CHUNK = 170;
 let extTimer = null, extBusy = false, extBackoffUntil = 0;
 function extSessionNow() {
   const c = etClock();
@@ -4181,28 +4181,43 @@ async function extPoll() {
   try {
     const rows = {};
     [].concat(DATA.portfolio || [], DATA.universe || []).forEach((x) => { (rows[x.ticker] = rows[x.ticker] || []).push(x); });
-    const want = (DATA.portfolio || []).map((x) => x.ticker);
-    const uniOn = !!document.querySelector("#tab-universe.active #usub-universe.active");
-    if (uniOn) document.querySelectorAll("#u-table tbody tr").forEach((tr, i) => { if (i < EXT_SCREEN_ROWS) want.push(tr.dataset.ticker); });
-    const colWas = extColOn();
-    let changed = false;
-    for (const t of [...new Set(want)]) {
-      if (!t) continue;
+    const held = (DATA.portfolio || []).map((x) => x.ticker);
+    // 2026-11-10b (owner: "pre mkt only shows for a handful of stocks -- and the universe -- literally none"): every
+    // holding AND every stock in the list, in bulk: /extall answers ~170 names per call, so the whole list is 4 calls.
+    const all = [...new Set(held.concat((DATA.universe || []).map((x) => x.ticker)))].filter(Boolean);
+    let changed = false, bulk = true;
+    const take = (t, q) => {
+      if (q && (q.s === "pre" || q.s === "post") && typeof q.p === "number" && q.t) {
+        (rows[t] || []).forEach((x) => { x.ext = { s: q.s, p: q.p, dp: q.dp, t: q.t }; });
+        return true;
+      }
+      return false;
+    };
+    for (let i = 0; i < all.length && bulk; i += EXT_CHUNK) {
       try {
-        const r = await fetch(`${base}/ext?symbol=${encodeURIComponent(t)}`, { cache: "no-store" });
+        const r = await fetch(`${base}/extall?symbols=${encodeURIComponent(all.slice(i, i + EXT_CHUNK).join(","))}`, { cache: "no-store" });
         if (r.status === 429 || r.status >= 500) { extBackoffUntil = Date.now() + 5 * 60000; break; }   // the source is refusing: rest 5 min
-        const q = await r.json();
-        if (q && (q.s === "pre" || q.s === "post") && typeof q.p === "number" && q.t) {
-          (rows[t] || []).forEach((x) => { x.ext = { s: q.s, p: q.p, dp: q.dp, t: q.t }; });
-          if (!changed) { try { renderPortfolioTable(); } catch (e) { /* not on screen */ } }   // first quote in: show the column at once
-          changed = true;
-        }
-      } catch (e) { /* one name failing never stops the rest */ }
-      await new Promise((res) => setTimeout(res, EXT_GAP_MS));
+        const j = await r.json();
+        if (!j || !j.q) { bulk = false; break; }           // an older Worker without /extall: fall back below
+        let got = false;
+        Object.keys(j.q).forEach((t) => { if (take(t, j.q[t])) got = true; });
+        if (got && i === 0) { try { renderPortfolioTable(); } catch (e) { /* not on screen */ } }   // holdings ride the first call
+        changed = changed || got;
+      } catch (e) { /* one chunk failing never stops the rest */ }
+    }
+    if (!bulk) {                                           // older Worker: holdings one at a time
+      for (const t of held) {
+        try {
+          const r = await fetch(`${base}/ext?symbol=${encodeURIComponent(t)}`, { cache: "no-store" });
+          if (r.status === 429 || r.status >= 500) { extBackoffUntil = Date.now() + 5 * 60000; break; }
+          if (take(t, await r.json())) changed = true;
+        } catch (e) { /* skip this name */ }
+        await new Promise((res) => setTimeout(res, EXT_GAP_MS));
+      }
     }
     if (changed) {
       try { renderPortfolioTable(); } catch (e) { /* portfolio not on screen */ }
-      if (uniOn || extColOn() !== colWas) { try { renderUniverseTable(); } catch (e) { /* table not on screen */ } }
+      try { renderUniverseTable(); } catch (e) { /* table not on screen */ }   // always: the tab may be opened later
     }
   } finally { extBusy = false; }
 }
