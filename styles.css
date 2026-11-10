@@ -2114,7 +2114,7 @@ table.cc-table td.cc-why { white-space: normal; min-width: 280px; max-width: 680
 .seg button { border: 0; background: transparent; padding: 9px 12px; font: 600 12.5px var(--sans); color: var(--ink-2); cursor: pointer; white-space: nowrap; }
 .seg button + button { border-left: 1px solid var(--line); }
 .seg button.on { background: var(--brand); color: #fff; }
-.ctag { position: relative; cursor: help; }
+.ctag { position: relative; }
 .ctag:hover::after { content: attr(data-c); position: absolute; left: calc(100% + 6px); top: 50%; transform: translateY(-50%); z-index: 60;
   padding: 4px 8px; border-radius: 6px; background: var(--brand-ink); color: #fff; font: 500 11.5px/1.2 var(--sans); letter-spacing: 0;
   white-space: nowrap; box-shadow: var(--shadow-sm); pointer-events: none; }
