@@ -3357,75 +3357,47 @@ function deskHoldings() {
 }
 
 function deskNextDollar() {
-  const D = deskD();
-  const C = deskCandidates();
-  const t = DATA.meta.portfolio_totals || {};
-  const ev = (tk) => {
-    const n = ((D.news || {})[tk] || []).find((x) => x.kind === "event");
-    const u = deskUni(tk) || {};
-    const rev = u.fresh && u.fresh.rev;
-    return [rev ? `last read ${deskDate(rev)}` : "", n ? `${deskDate(n.date)}: ${esc(n.title)}` : ""].filter(Boolean).join(" · ");
-  };
-  // Expectations from the Estimates Desk (2026-11-09): shown, not ranked on (the stored reports did not support it)
-  const exp = (tk) => {
-    if (!D.expectations) return "";   // feed predates the expectations field
-    const x = D.expectations[tk];
-    if (!x) return `<span class="pd-exp muted">Expectations: not on the Estimates Desk</span>`;
+  // 2026-11-10 (owner: "just the verdict, the rationale behind it"; the site is public, so every line must explain
+  // itself to a reader who has never seen the desk). No position sizes, share counts, cash, ranks or desk shorthand.
+  // The reason is written here from the five scores and the price against fair value, in plain words.
+  const DIMS = [["val", 25, "valuation"], ["grw", 20, "growth"], ["qual", 20, "competitive strength and returns on capital"],
+                ["bs", 20, "balance sheet"], ["cap", 20, "capital allocation"]];
+  const priceLine = (d) => d == null ? "" : d >= 4.5 ? "The share price is more than 30% below our estimate of fair value."
+    : d >= 3.5 ? "The share price is roughly 15% to 30% below our estimate of fair value."
+    : d >= 2.5 ? "The share price is close to our estimate of fair value."
+    : d >= 1.5 ? "The share price is roughly 10% to 30% above our estimate of fair value."
+    : "The share price is more than 30% above our estimate of fair value.";
+  const reason = (u, offList) => {
     const parts = [];
-    if (x.last) {
-      const L = x.last, word = { BEAT: "beat", INLINE: "in line", MISS: "missed" }[L.outcome] || (L.outcome || "").toLowerCase();
-      let s = `${deskDate(L.date)} report: EPS ${word}${L.surprise_pct != null ? ` (${fmtPct(L.surprise_pct, 1)})` : ""}`;
-      if (L.rev_pct != null) s += `, revenue ${L.rev_pct >= 0 ? "beat" : "missed"} (${fmtPct(L.rev_pct, 1)})`;
-      if (L.guidance) s += `, guidance ${({ HOLD: "held", RAISE: "raised", RAISED: "raised", CUT: "cut", LOWERED: "cut", MAINTAINED: "maintained" })[String(L.guidance).toUpperCase()] || String(L.guidance).toLowerCase()}`;
-      if (L.fy_chg_pct != null) s += `; full-year estimate <span class="${signClass(L.fy_chg_pct)}">${fmtPct(L.fy_chg_pct, 1)}</span> since`;
-      parts.push(s);
+    const ds = DIMS.filter(([k]) => typeof u[k] === "number").map(([k, max, name]) => ({ name, v: u[k], max, r: u[k] / max })).sort((x, y) => y.r - x.r);
+    if (ds.length === DIMS.length) {
+      const say = (x) => `${x.name} (${x.v} out of ${x.max})`;
+      parts.push(`Strongest on ${say(ds[0])} and ${say(ds[1])}; weakest on ${say(ds[ds.length - 1])}.`);
     }
-    if (x.next && x.next.date) {
-      const N = x.next;
-      parts.push(`next report ${deskDate(N.date)}: consensus EPS ${fmtNum(N.eps, 2)} (${N.n})${N.dn30 != null ? `, ${N.up30 || 0} raised / ${N.dn30} cut in 30 days` : ""}${N.chg90_pct != null ? `, <span class="${signClass(N.chg90_pct)}">${fmtPct(N.chg90_pct, 1)}</span> in 90 days` : ""}`);
-    }
-    return `<span class="pd-exp">Expectations: ${parts.join(" · ")}</span>`;
+    const p = priceLine(u.dcf != null ? Number(u.dcf) : null);
+    if (p) parts.push(p);
+    if (offList) parts.push("It is not on the Shariah-compliant list.");
+    const rev = u.fresh && u.fresh.rev;
+    if (rev) parts.push(`<span class="muted">Last reviewed ${deskDate(rev)}.</span>`);
+    return parts.join(" ") || `<span class="muted">The scores behind this rating are not published for this stock.</span>`;
   };
-  const amt = (c) => privUnlocked()
-    ? `${fmtUSD(c.usd, 0)}${c.sh == null ? "" : c.sh > 0 ? ` · ${c.sh} sh at ${fmtUSD(c.h.price, 2)}` : ` · less than one share (${fmtUSD(c.h.price, 2)} a share)`}`
-    : `${fmtNum(c.pctBook, 1)}% of the account`;
-  const R = deskD().sp_record || null;
-  const spTxt = (c) => {
-    const band = deskBandOf(c.h.ticker);
-    const s = R && (band != null && band >= DESK_MIN_BAND ? R.buy_band4 : R.buy_band_le3);
-    if (!s || !s.n) return `<span class="pd-exp">Band ${band == null ? "?" : fmtNum(band, 1)} · no graded record against the S&P 500 yet</span>`;
-    return `<span class="pd-exp"><b>vs S&amp;P 500: ${s.avg >= 0 ? "+" : ""}${fmtNum(s.avg, 1)} pts over 3 months expected</b> · band ${fmtNum(band, 1)}
-      · BUYs at band ${band != null && band >= DESK_MIN_BAND ? "4+" : "3 or lower"} beat the S&amp;P ${fmtNum(s.beat, 0)}% of the time (${s.n} live calls${s.n < 30 ? ", few so far" : ""})</span>`;
-  };
-  const row = (c, i) => `<div class="pd-nd" data-ticker="${esc(c.h.ticker)}">
-      <span class="pd-n">${i + 1}</span>
-      <span class="pd-ndt"><b>${esc(c.h.ticker)}</b> ${verdictBadge(c.h.verdict)} <span class="muted">${fmtNum(c.score, 1)}</span></span>
-      <span class="pd-nda">${c.held ? `to full weight: ${amt(c)}${c.fw ? ` (now ${fmtNum(c.fw, 2)}×)` : ""}` : `new position at full weight: ${amt(c)}`}</span>
-      <span class="pd-ndw">${spTxt(c)}${ev(c.h.ticker)}${exp(c.h.ticker)}</span>
+  const row = (x, u, offList) => `<div class="pd-nd pd-nd2" data-ticker="${esc(x.ticker)}">
+      <span class="pd-ndt"><b>${esc(x.ticker)}</b> ${verdictBadge(x.verdict)}<br><span class="muted">${esc(x.name || "")}${x.qarp != null ? ` · score ${fmtNum(x.qarp, 1)} out of 100` : ""}</span></span>
+      <span class="pd-ndw">${reason(u, offList)}</span>
     </div>`;
-  let html = `<h3 class="pd-h">Where the next dollar goes <span class="pd-sub">ranked by expected lead over the S&amp;P 500</span></h3>`;
-  if (C.held.length) html += `<div class="pd-ndg">Holdings below full weight</div>` + C.held.map(row).join("");
-  else html += `<p class="pd-none">No holding passes every rule today.${C.blocked.length ? " What blocks the top names: " + C.blocked.map((b) => `<b>${esc(b.h.ticker)}</b>: ${esc(b.why)}`).join("; ") + "." : ""}</p>`;
-  if (C.fresh.length) html += `<div class="pd-ndg">Not held: every BUY or better that passes every rule, fair-value band 4+ first</div>` + C.fresh.map(row).join("");
-  else html += `<p class="pd-none">No name outside the book is a BUY or better and ready today.</p>`;
-  if (C.waiting && C.waiting.length) html += `<p class="pd-cash">Qualify but not yet: ${C.waiting.map((w) => `<b>${esc(w.h.ticker)}</b> ${verdictBadge(w.h.verdict)} band ${fmtNum(w.h.dcf, 1)}, ${esc(w.why)}`).join("; ")}.</p>`;
-  if (C.held.length && C.blocked.length) html += `<p class="pd-cash">Held but not added to: ${C.blocked.map((b) => `<b>${esc(b.h.ticker)}</b>: ${esc(b.why)}`).join("; ")}.</p>`;
-  if (C.watch && C.watch.length) {
-    const h4 = R && R.hold_band4;  // live calls only
-    html += `<p class="pd-cash">Watching, not buying: ${C.watch.slice(0, 6).map((u) => `<b>${esc(u.ticker)}</b> (band ${fmtNum(u.dcf, 1)})`).join(", ")}${C.watch.length > 6 ? ` and ${C.watch.length - 6} more` : ""}.
-      HOLD-QUAL names at band 4+${h4 && h4.n ? ` beat the S&amp;P 500 ${fmtNum(h4.beat, 0)}% of the time on ${h4.n} live calls` : " have no live record yet"}, too few to buy on yet.</p>`;
-  }
-  if (privUnlocked()) {
-    const need = C.held.reduce((a, c) => a + (c.usd || 0), 0);
-    const cash = t.cash || 0;
-    html += `<p class="pd-cash">Cash available ${fmtUSD(cash, 0)}. Bringing every holding above to full weight needs ${fmtUSD(need, 0)}${need > cash
-      ? `: ${fmtUSD(need - cash, 0)} short, which would come from a deposit or a swap (never from selling a name below cost).` : "."}</p>`;
-  }
-  html += `<p class="pd-foot">Rules: on the Shariah list; rating BUY or better and not on hold; ranked fair-value band 4+ first, the goal
-    being to beat the S&amp;P 500 (record from live calls only${R && R.rebuilt_excluded ? `; ${R.rebuilt_excluded} rebuilt Jun-Jul calls left out` : ""});
-    no news or report waiting on a re-read;
-    no report within 5 sessions; below full weight. ${esc(D.gates_study || "")} Expectations come from the Estimates Desk
-    and are shown, not ranked on: on 23 graded reports so far, the change in the full-year estimate did not predict the next month.</p>`;
+  const byScore = (a, b) => (b.qarp || 0) - (a.qarp || 0);
+  const heldSet = new Set((DATA.portfolio || []).map((h) => h.ticker));
+  const held = (DATA.portfolio || []).filter((h) => DESK_BUY.has(h.verdict)).sort(byScore);
+  const fresh = (DATA.universe || []).filter((u) => DESK_BUY.has(u.verdict) && !heldSet.has(u.ticker)).sort(byScore);
+  let html = `<h3 class="pd-h">Stocks rated BUY or STRONG BUY <span class="pd-sub">the rating and the reason for it</span></h3>
+    <p class="pd-cash">Every stock gets a score from 0 to 100. The score combines how strong the business is with how the share price compares
+      with our estimate of fair value. A score of 66 or higher is a BUY; 72 or higher is a STRONG BUY.</p>`;
+  html += `<div class="pd-ndg">In the portfolio</div>` + (held.length
+    ? held.map((h) => row(h, deskUni(h.ticker) || h, !deskHalal(h))).join("")
+    : `<p class="pd-none">No stock in the portfolio is rated BUY or STRONG BUY today.</p>`);
+  html += `<div class="pd-ndg">Not in the portfolio</div>` + (fresh.length
+    ? fresh.map((u) => row(u, u, false)).join("")
+    : `<p class="pd-none">No stock outside the portfolio is rated BUY or STRONG BUY today.</p>`);
   return html;
 }
 
