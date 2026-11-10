@@ -1187,7 +1187,7 @@ function renderUniverseTable() {
   };
   const list = uList();
   let rows = list.filter((x) =>
-    (!q || x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q)) &&
+    (!q || x.ticker.toLowerCase().includes(q) || (x.name || "").toLowerCase().includes(q)) &&
     (!fv || x.verdict === fv) && (!fs || sectorGroup(x.sector) === fs) && pulseMatch(x));
 
   const col = U_COLS.find((c) => c.key === uSort.key);
@@ -3356,10 +3356,8 @@ function deskHoldings() {
       Average cost and gain/loss are for information only; being below cost is not by itself a reason to add.</p>`;
 }
 
-function deskNextDollar() {
-  // 2026-11-10 (owner: "just the verdict, the rationale behind it"; the site is public, so every line must explain
-  // itself to a reader who has never seen the desk). No position sizes, share counts, cash, ranks or desk shorthand.
-  // The reason is written here from the five scores and the price against fair value, in plain words.
+// Plain-word reason for a rating, built from the five scores and the price against fair value (2026-11-10).
+function plainReason(u, offList) {
   const DIMS = [["val", 25, "valuation"], ["grw", 20, "growth"], ["qual", 20, "competitive strength and returns on capital"],
                 ["bs", 20, "balance sheet"], ["cap", 20, "capital allocation"]];
   const priceLine = (d) => d == null ? "" : d >= 4.5 ? "The share price is more than 30% below our estimate of fair value."
@@ -3367,7 +3365,6 @@ function deskNextDollar() {
     : d >= 2.5 ? "The share price is close to our estimate of fair value."
     : d >= 1.5 ? "The share price is roughly 10% to 30% above our estimate of fair value."
     : "The share price is more than 30% above our estimate of fair value.";
-  const reason = (u, offList) => {
     const parts = [];
     const ds = DIMS.filter(([k]) => typeof u[k] === "number").map(([k, max, name]) => ({ name, v: u[k], max, r: u[k] / max })).sort((x, y) => y.r - x.r);
     if (ds.length === DIMS.length) {
@@ -3380,10 +3377,15 @@ function deskNextDollar() {
     const rev = u.fresh && u.fresh.rev;
     if (rev) parts.push(`<span class="muted">Last reviewed ${deskDate(rev)}.</span>`);
     return parts.join(" ") || `<span class="muted">The scores behind this rating are not published for this stock.</span>`;
-  };
+  }
+
+function deskNextDollar() {
+  // 2026-11-10 (owner: "just the verdict, the rationale behind it"; the site is public, so every line must explain
+  // itself to a reader who has never seen the desk). No position sizes, share counts, cash, ranks or desk shorthand.
+  // The reason is written here from the five scores and the price against fair value, in plain words.
   const row = (x, u, offList) => `<div class="pd-nd pd-nd2" data-ticker="${esc(x.ticker)}">
       <span class="pd-ndt"><b>${esc(x.ticker)}</b> ${verdictBadge(x.verdict)}<br><span class="muted">${esc(x.name || "")}${x.qarp != null ? ` · score ${fmtNum(x.qarp, 1)} out of 100` : ""}</span></span>
-      <span class="pd-ndw">${reason(u, offList)}</span>
+      <span class="pd-ndw">${plainReason(u, offList)}</span>
     </div>`;
   const byScore = (a, b) => (b.qarp || 0) - (a.qarp || 0);
   const heldSet = new Set((DATA.portfolio || []).map((h) => h.ticker));
@@ -4766,7 +4768,7 @@ function renderEtfs() {
   const q = document.getElementById("etf-search").value.trim().toLowerCase();
   const fc = document.getElementById("etf-class").value;
   let rows = data.filter((x) =>
-    (!q || x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q)) && (!fc || x.asset_class === fc));
+    (!q || x.ticker.toLowerCase().includes(q) || (x.name || "").toLowerCase().includes(q)) && (!fc || x.asset_class === fc));
   const col = ETF_COLS.find((c) => c.key === etfSort.key);
   const val = col.sortVal || ((x) => x[etfSort.key]);
   rows.sort((a, b) => {
@@ -4790,50 +4792,77 @@ function renderEtfs() {
     }));
 }
 
-/* ---------- render: Venture directory (Musaffa-HALAL high-risk small-caps, NOT QARP-scored) ---------- */
-const VEN_COLS = [
-  { key: "ticker", label: "Company", align: "left", fmt: (x) => `<span class="tick">${x.ticker}<span class="name">${x.name} · ${x.desc}</span></span>` },
-  { key: "grade", label: "Musaffa", align: "left", fmt: (x) => `<span class="chip" style="font-size:11px">${x.grade || "—"}</span>` },
-  { key: "mc", label: "Mkt Cap", fmt: (x) => x.mc != null ? "$" + x.mc.toFixed(1) + "B" : "—" },
-  { key: "rg", label: "Rev g", fmt: (x) => `<span class="${signClass(x.rg)}">${x.rg != null ? (x.rg > 0 ? "+" : "") + Math.round(x.rg) + "%" : "—"}</span>`, sortVal: (x) => x.rg ?? -999 },
-  { key: "gm", label: "Gross M", fmt: (x) => x.gm != null ? Math.round(x.gm) + "%" : "—" },
-  { key: "prof", label: "Profit", fmt: (x) => x.prof ? `<span class="pos">✓</span>` : `<span class="muted">—</span>`, sortVal: (x) => x.prof ? 1 : 0 },
-  { key: "moat", label: "Moat", fmt: (x) => `${x.moat}/5`, sortVal: (x) => x.moat ?? 0 },
-  { key: "vscore", label: "Venture Score", fmt: (x) => `<span class="qarp-cell">${fmtNum(x.vscore, 1)}</span>` },
-  { key: "price", label: "Price", fmt: (x) => `<span class="cell-px">${fmtUSD(x.price, 2)}</span>` },
-  { key: "day_pct", label: () => dayColLabel(), fmt: (x) => `<span class="cell-day ${signClass(x.day_pct)}">${fmtPct(x.day_pct)}</span>` },
+/* ---------- render: High-risk stocks (replaces the Venture list, 2026-11-10). A watchlist, not picks: the most
+   volatile fifth of the Shariah-compliant list under $10B. Rows come from DATA.high_risk (built by the bake) joined
+   to the main list for the rating. One block per stock: who it is, five figures with their labels, one sentence on
+   the rating. Every label is written for a reader who has never seen the site. ---------- */
+const hrPct = (v, sign) => v == null ? "—" : `${sign && v > 0 ? "+" : ""}${Math.round(v)}%`;
+const HR_SORTS = [
+  ["qarp", "Highest score first", (x) => x.qarp ?? 0],
+  ["tgt_pct", "Highest analysts' target first", (x) => x.tgt_pct ?? -999],
+  ["vol", "Biggest price swings first", (x) => x.vol ?? 0],
+  ["chg_12m", "Best past 12 months first", (x) => x.chg_12m ?? -999],
+  ["off_high", "Furthest below 12-month high first", (x) => -(x.off_high ?? 0)],
+  ["mktcap_b", "Largest company first", (x) => x.mktcap_b ?? 0],
 ];
-let venSort = { key: "vscore", dir: -1 };
-
 function renderVenture() {
-  const data = DATA.venture || [];
+  const HR = DATA.high_risk || {};
+  const uniBy = {}; (DATA.universe || []).forEach((u) => { uniBy[u.ticker] = u; });
+  const data = (HR.rows || []).filter((r) => uniBy[r.ticker]).map((r) => Object.assign({}, uniBy[r.ticker], r));
+  const head = document.getElementById("hr-head"), list = document.getElementById("hr-list");
+  const search = document.getElementById("ven-search"), sortEl = document.getElementById("hr-sort");
+  if (!head || !list) return;
   if (!renderVenture._wired) {
-    document.getElementById("ven-search").addEventListener("input", renderVenture);
+    sortEl.innerHTML = HR_SORTS.map(([k, label]) => `<option value="${k}">${label}</option>`).join("");
+    search.addEventListener("input", renderVenture);
+    sortEl.addEventListener("change", renderVenture);
+    list.addEventListener("click", (e) => { const r = e.target.closest("[data-ticker]"); if (r && typeof openDrawer === "function") openDrawer(r.dataset.ticker); });
     renderVenture._wired = true;
   }
-  const q = document.getElementById("ven-search").value.trim().toLowerCase();
-  let rows = data.filter((x) => !q || x.ticker.toLowerCase().includes(q) || x.name.toLowerCase().includes(q));
-  const col = VEN_COLS.find((c) => c.key === venSort.key);
-  const val = col.sortVal || ((x) => x[venSort.key]);
-  rows.sort((a, b) => {
-    const va = val(a), vb = val(b);
-    if (typeof va === "string") return venSort.dir * va.localeCompare(vb);
-    return venSort.dir * ((va ?? 0) - (vb ?? 0));
-  });
-  document.querySelector("#ven-table thead").innerHTML = `<tr>${VEN_COLS.map((c) => {
-    const arrow = venSort.key === c.key ? `<span class="arrow">${venSort.dir > 0 ? "▲" : "▼"}</span>` : "";
-    return `<th class="${c.align === "left" ? "left" : ""}" data-key="${c.key}">${typeof c.label === "function" ? c.label() : c.label}${arrow}</th>`;
-  }).join("")}</tr>`;
-  document.querySelector("#ven-table tbody").innerHTML = rows.map((x) =>
-    `<tr>${VEN_COLS.map((c) => `<td class="${c.align === "left" ? "left" : ""}">${c.fmt(x)}</td>`).join("")}</tr>`).join("");
-  document.getElementById("ven-count").textContent = `${rows.length} name${rows.length === 1 ? "" : "s"}`;
-  document.querySelectorAll("#ven-table thead th").forEach((th) =>
-    th.addEventListener("click", () => {
-      const k = th.dataset.key;
-      if (venSort.key === k) venSort.dir *= -1;
-      else venSort = { key: k, dir: ["ticker", "grade"].includes(k) ? 1 : -1 };
-      renderVenture();
-    }));
+  const withT = data.filter((x) => x.tgt_pct != null);
+  const above = withT.length ? Math.round(withT.filter((x) => x.tgt_pct > 0).length / withT.length * 100) : null;
+  head.innerHTML = `
+    <h2 class="hr-title">High-risk stocks</h2>
+    <p class="hr-lead">The stocks on our Shariah-compliant list whose prices move the most: the most volatile fifth of the list,
+      with a company value under $10 billion. <b>This is a list to watch, not a list of recommendations.</b></p>
+    <div class="hr-panel">
+      <div class="hr-panel-h">What happened to stocks like these <span>2022 to early 2026, over the six months after they met the same test</span></div>
+      <div class="hr-facts">
+        <div class="hr-fact"><b class="neg">7 points behind</b><span>the S&amp;P 500, typically</span></div>
+        <div class="hr-fact"><b>42%</b><span>did better than the S&amp;P 500</span></div>
+        <div class="hr-fact"><b class="pos">1 in 9</b><span>rose 50% or more</span></div>
+        <div class="hr-fact"><b class="neg">1 in 7</b><span>fell 30% or more</span></div>
+      </div>
+      <p class="hr-note">We tested 17 ways of choosing among them. None did reliably better.</p>
+    </div>`;
+  const q = search.value.trim().toLowerCase();
+  const sortBy = HR_SORTS.find(([k]) => k === sortEl.value) || HR_SORTS[0];
+  const rows = data.filter((x) => !q || x.ticker.toLowerCase().includes(q) || (x.name || "").toLowerCase().includes(q))
+    .sort((a, b) => sortBy[2](b) - sortBy[2](a));
+  const TIP = {
+    "Price swings in a year": `How far the price typically moves up or down over a year.${HR.sp500_vol ? ` For the S&P 500 it is about ±${Math.round(HR.sp500_vol)}%.` : ""}`,
+    "Analysts' price target": `The average price the analysts covering the stock expect in about a year, against today's price. Their opinion, not ours, and not tested here.${above != null ? ` It is above today's price for ${above}% of these stocks.` : ""}`,
+  };
+  const stat = (label, value, sub) => `<div class="hr-stat"><span class="hr-l${TIP[label] ? " hr-tip" : ""}"${TIP[label] ? ` data-tip="${esc(TIP[label])}"` : ""}>${label}</span><span class="hr-v">${value}</span>${sub ? `<span class="hr-s">${sub}</span>` : ""}</div>`;
+  list.innerHTML = rows.map((x) => `<article class="hr-row" data-ticker="${esc(x.ticker)}">
+      <div class="hr-id">
+        <div class="hr-tk">${esc(x.ticker)} ${verdictBadge(x.verdict)}</div>
+        <div class="hr-name">${esc(x.name || "")}</div>
+        <div class="hr-score">Score ${x.qarp != null ? fmtNum(x.qarp, 1) : "—"} out of 100</div>
+      </div>
+      <div class="hr-body">
+        <div class="hr-stats">
+          ${stat("Company value", x.mktcap_b != null ? "$" + x.mktcap_b.toFixed(1) + "B" : "—")}
+          ${stat("Price swings in a year", x.vol != null ? `±${Math.round(x.vol)}%` : "—")}
+          ${stat("Below 12-month high", x.off_high == null ? "—" : x.off_high >= -0.5 ? "At the high" : `${Math.round(-x.off_high)}%`)}
+          ${stat("Past 12 months", `<span class="${signClass(x.chg_12m)}">${hrPct(x.chg_12m, true)}</span>`)}
+          ${stat("Analysts' price target", x.tgt_pct == null ? "—" : `<span class="${signClass(x.tgt_pct)}">${hrPct(x.tgt_pct, true)}</span>`,
+            x.tgt_pct == null ? "" : `${x.tgt_n} analyst${x.tgt_n === 1 ? "" : "s"}${x.tgt_lo != null && x.tgt_hi != null ? ` · ${hrPct(x.tgt_lo, true)} to ${hrPct(x.tgt_hi, true)}` : ""}`)}
+        </div>
+        <p class="hr-why">${plainReason(x, false)}</p>
+      </div>
+    </article>`).join("") || `<p class="muted" style="padding:18px 0">No stock matches.</p>`;
+  document.getElementById("ven-count").textContent = `${rows.length} stock${rows.length === 1 ? "" : "s"}`;
 }
 
 /* ---------- "Your book" daily read + "Needs your attention" digest (Claude, cloud-written) ---------- */

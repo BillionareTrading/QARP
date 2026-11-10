@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=eb91caff" />
+  <link rel="stylesheet" href="styles.css?v=497adeef" />
 </head>
 <body>
 
@@ -124,7 +124,7 @@
             </button>
             <button type="button" class="rg-row" data-goto="universe">
               <span class="rg-row-name">Shariah-Compliant</span>
-              <span class="rg-row-desc">Every screened name ranked by QARP, plus the track record of past calls, ETFs, and venture ideas.</span>
+              <span class="rg-row-desc">Every screened name ranked by QARP, plus the track record of past calls, ETFs, and high-risk stocks.</span>
               <svg class="rg-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
             </button>
             <button type="button" class="rg-row" data-goto="charts">
@@ -204,7 +204,7 @@
       <nav class="subtabs" id="u-subtabs">
         <button class="subtab active" type="button" data-usub="sp500">Stocks</button>
         <button class="subtab" type="button" data-usub="etfs">ETFs</button>
-        <button class="subtab" type="button" data-usub="venture">Venture</button>
+        <button class="subtab" type="button" data-usub="venture">High-risk stocks</button>
       </nav>
       <!-- secondary views under S&P 500 only -->
       <nav class="subtabs subtabs-2" id="sp-views">
@@ -286,19 +286,15 @@
         </div>
       </div>
 
-      <!-- Venture sub-tab: Musaffa-HALAL high-risk small-cap growth -->
+      <!-- High-risk stocks sub-tab (was Venture until 2026-11-10); the intro text is written by app.js -->
       <div id="usub-venture" class="usub">
-        <p class="tab-intro" id="ven-intro"><b style="color:#e74c3c">⚠ HIGH RISK — speculative small-caps.</b> A separate <b>venture</b> track from the QARP universe: Musaffa-screened <b>HALAL</b> small-cap growth names, scored on a <b>Venture rubric</b> (growth · unit economics · cash runway · moat) — <b>NOT</b> QARP, and <b>NOT</b> capital-preservation. Treat as a <b>small, diversified basket</b> — most will lag, a few may win big. Shariah via Musaffa (AAOIFI); Muslim-Xchange cross-check pending. Tap any column to sort.</p>
+        <div id="hr-head"></div>
         <div class="controls">
           <input id="ven-search" type="search" placeholder="Search ticker or name…" />
+          <select id="hr-sort" aria-label="Sort the list"></select>
           <span id="ven-count" class="count"></span>
         </div>
-        <div class="table-wrap">
-          <table id="ven-table">
-            <thead></thead>
-            <tbody></tbody>
-          </table>
-        </div>
+        <div id="hr-list" class="hr-list"></div>
       </div>
     </section>
 
@@ -754,8 +750,8 @@
     <div class="bot-foot">Informational only — not financial advice.</div>
   </div>
 
-  <script src="crypto.js?v=eb91caff"></script>
-  <script src="app.js?v=eb91caff"></script>
+  <script src="crypto.js?v=497adeef"></script>
+  <script src="app.js?v=497adeef"></script>
 <!-- edge-nudge 20260807-0345Z -->
 </body>
 </html>
