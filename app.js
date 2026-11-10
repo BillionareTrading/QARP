@@ -2285,6 +2285,9 @@ const FG = (() => {
     .tkb i{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:3px}.tkb i.nd{box-shadow:inset 0 0 0 1px var(--mute)}
     .tkb em{font:italic 400 11px var(--serif);color:var(--ink2);letter-spacing:0}
     .tkb.cur{color:var(--navy);text-decoration:underline;text-underline-offset:2px}
+    .tkb[data-tip]{position:relative}
+    .tkb[data-tip]:hover::after,.tkb[data-tip]:focus-visible::after{content:attr(data-tip);position:absolute;left:0;top:calc(100% + 5px);z-index:40;width:max-content;max-width:250px;white-space:normal;padding:6px 9px;border-radius:6px;background:#0b1120;color:#fff;font:400 11.5px/1.4 var(--sans);letter-spacing:0;text-align:left;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.2);pointer-events:none}
+    .ag-row:hover,.ag-row:focus-within{z-index:5}
     .dmh{width:6px;height:6px;border:1.5px solid var(--brass);transform:rotate(45deg);display:inline-block;margin:0 5px 1px 1px}.dmh.f{background:var(--brass)}
     .ev-t{font:400 11px var(--serif);color:var(--ink2);letter-spacing:0}
     .ag-note{font:italic 11.5px/1.4 var(--serif);color:var(--ink2);margin:6px 0 0}
@@ -2346,7 +2349,9 @@ const FG = (() => {
       </div>
     </section>`;
   /* dated events: [short plain label, 1 = it has a yes-or-no outcome] */
-  const EV_TYPE = { regulatory: ["ruling", 1], "deal-close": ["deal close", 1], clinical: ["clinical date", 0], product: ["event", 0], "investor-day": ["investor day", 0], macro: ["policy date", 0], other: ["company date", 0], "earnings-loaded": ["earnings", 0] };
+  const EV_TYPE = { regulatory: ["ruling", 1], "deal-close": ["deal close", 1], clinical: ["clinical date", 0], product: ["event", 0], "investor-day": ["investor day", 0], conference: ["conference", 0], macro: ["policy date", 0], other: ["company date", 0], "earnings-loaded": ["earnings", 0] };
+  /* what a dated event IS, in plain words, for the hover (2026-11-10, owner: "what do they mean ... is it news/conference/earnings") */
+  const EV_KIND = { ruling: "Ruling or regulatory decision", "deal close": "Deal closing date", "clinical date": "Clinical trial date", event: "Company or product event", "investor day": "Investor day", conference: "Investor conference appearance", "dated event": "Dated event", "policy date": "Policy or economic date", "company date": "Company date", earnings: "Earnings" };
   const dcol = (d) => (d === null ? null : d <= -1.5 ? "#be123c" : d < -0.25 ? "#e58fa0" : d <= 0.25 ? "#cdc7b3" : d < 1.5 ? "#86c09b" : "#15803d");
   const norm = (a) => { a = a % 360; return a < 0 ? a + 360 : a; };
   const strip = (s) => String(s).replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
@@ -2446,14 +2451,14 @@ const FG = (() => {
       const o = ['<h3>The approach list <i>same dates, in order</i></h3>'];
       if (dlist.length) { o.push('<div class="ag-head"><span>Date</span><span>Days</span><span>Who</span><span>% book</span></div>');
         dlist.forEach((s) => { const who = [];
-          s.reps.forEach((h) => { const c = dcol(h.day); who.push(`<button type="button" class="tkb" data-t="${esc(h.t)}" title="${esc(h.n + " reports earnings " + fd(s.date) + (h.repNote ? " \u2014 " + h.repNote : ""))}"><i${c ? ` style="background:${c}"` : ' class="nd"'}></i>${esc(h.t)}</button>`); });
-          s.evs.forEach((x) => { who.push(`<button type="button" class="tkb" data-t="${esc(x.h.t)}" title="${esc(x.m.title + (x.m.risk ? " \u2014 the catch: " + x.m.risk : ""))}"><span class="dmh${x.m.hard ? " f" : ""}"></span>${esc(x.h.t)} <em>${esc(x.m.short)}</em></button>`); });
+          s.reps.forEach((h) => { const c = dcol(h.day); who.push(`<button type="button" class="tkb" data-t="${esc(h.t)}" data-tip="${esc("Earnings report. " + h.n + " reports its quarter on " + fd(s.date) + "." + (h.repNote ? " " + h.repNote + "." : "") + (typeof h.day === "number" ? " Dot colour is its move on " + ML + ": " + (h.day >= 0 ? "+" : "") + h.day.toFixed(2) + "%." : ""))}"><i${c ? ` style="background:${c}"` : ' class="nd"'}></i>${esc(h.t)}</button>`); });
+          s.evs.forEach((x) => { who.push(`<button type="button" class="tkb" data-t="${esc(x.h.t)}" data-tip="${esc((EV_KIND[x.m.short] || "Dated event") + ", not an earnings report" + (x.m.title && x.m.title !== x.m.short ? ": " + x.m.title : "") + "." + (x.m.risk ? " The catch: " + x.m.risk + "." : ""))}"><span class="dmh${x.m.hard ? " f" : ""}"></span>${esc(x.h.t)} <em>${esc(x.m.short)}</em></button>`); });
           o.push(`<div class="ag-row"><div class="ag-d">${fd(s.date)}</div><div class="ag-n">${s.td === 0 ? "now" : s.td}</div><div class="ag-w">${who.join("")}</div><div class="ag-p">${s.w > 0 ? s.w.toFixed(1) + "%" : ""}</div>${s.w > 0 && maxDayW > 0 ? `<span class="ag-bar" style="width:${(s.w / maxDayW * 100).toFixed(1)}%"></span>` : ""}</div>`); }); }
       const undated = H.filter((h) => !h.rep && !h.marks.length);
       if (undated.length) o.push(`<p class="ag-note">No date on the calendar yet: ${undated.map((h) => `<button type="button" class="tkb" data-t="${esc(h.t)}">${esc(h.t)}</button>`).join(", ")}</p>`);
       const beyond = H.filter((h) => h.rep && h.rep.td > LIM).map((h) => h.t);
       if (beyond.length) o.push(`<p class="ag-note">More than three months out, drawn on the outer ring: ${esc(beyond.join(", "))}.</p>`);
-      if (dlist.length) o.push(`<p class="ag-foot">Days = trading days from ${DL}. Navy bar = share of your book reporting that day.</p>`);
+      if (dlist.length) o.push(`<p class="ag-foot">Days = trading days from ${DL}. Navy bar = share of your book reporting that day. A round dot is an earnings report; a diamond is another dated event. Hover any name to see what it is.</p>`);
       R.agenda.innerHTML = o.join("");
       /* keys */
       const kSize = '<svg width="38" height="16" viewBox="0 0 38 16"><circle cx="3" cy="8" r="2.5" fill="#cdc7b3"/><circle cx="13" cy="8" r="4.5" fill="#cdc7b3"/><circle cx="28" cy="8" r="7.5" fill="#cdc7b3"/></svg>';
