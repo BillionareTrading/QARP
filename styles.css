@@ -1885,6 +1885,7 @@ tr.mv2-up .cell-day { background: var(--pos); }
   font-variant-numeric: tabular-nums; background: #f4efe0; border: 1px solid #cdc7b6;
   padding: 8px 12px; margin-bottom: 12px; }
 .ledger-vitals .pos { color: #1a6b39; }
+.ledger-vitals .neg { color: #a82e1e; }
 .ledger-body { font-size: 14px; line-height: 1.62; margin: 0 0 9px; text-align: justify; hyphens: auto; color: #221f18; }
 .ledger-body::first-letter { font-family: "Playfair Display", Georgia, serif; font-size: 3.1em;
   font-weight: 900; float: left; line-height: .78; padding: 5px 7px 0 0; }

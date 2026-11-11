@@ -1351,13 +1351,17 @@ function ledgerDispatchesHtml() {
   return `<div class="ledger">
     <div class="ledger-head">The Ledger <span class="ledger-sub">— every exit, on the record</span></div>
     <div class="ledger-stories">
-    ${stories.map((s) => {
-      const r = (DATA.realized || []).find((x) => x.ticker === s.ticker && x.date_sold === s.exit_date) || {};
+    ${(() => { const _seen = {}; return stories.map((s) => {
+      // 2026-11-11: two sales of one stock on one day (Abbott, Oct 30) each have a write-up. The k-th write-up for a
+      // ticker and date takes the k-th sale row for that ticker and date; both lists are newest first.
+      const _k = s.ticker + "|" + s.exit_date, _c = (DATA.realized || []).filter((x) => x.ticker === s.ticker && x.date_sold === s.exit_date);
+      _seen[_k] = (_seen[_k] == null ? -1 : _seen[_k]) + 1;
+      const r = _c[_seen[_k]] || _c[0] || {};
       const vit = [];
       if (r.date_bought) vit.push(`<span><b>In</b> ${paperDate(r.date_bought)} · ${fmtUSD(r.buy_px, 2)}</span>`);
       if (r.date_sold) vit.push(`<span><b>Out</b> ${paperDate(r.date_sold)} · ${fmtUSD(r.sell_px, 2)}</span>`);
       vit.push(`<span>${r.shares != null ? fmtShares(r.shares) + " sh" : lockSH()}</span>`);
-      vit.push(`<span class="pos"><b>${fmtPct(r.gain_pct)}</b>${unlocked && r.gain != null ? ` · ${fmtUSD(r.gain, 2)} gross` : ""}</span>`);
+      vit.push(`<span class="${r.gain_pct < 0 ? "neg" : "pos"}"><b>${fmtPct(r.gain_pct)}</b>${unlocked && r.gain != null ? ` · ${fmtUSD(r.gain, 2)} gross` : ""}</span>`);
       return `<article class="ledger-story">
         <div class="ledger-kicker">${esc(s.kicker || "")}</div>
         <h3 class="ledger-hl">${esc(s.headline || "")}</h3>
@@ -1365,7 +1369,7 @@ function ledgerDispatchesHtml() {
         <p class="ledger-body">${esc(s.story || "")}</p>
         <div class="ledger-lesson">${esc(s.lesson || "")}</div>
       </article>`;
-    }).join("")}
+    }); })().join("")}
     </div>
   </div>`;
 }
@@ -1874,8 +1878,8 @@ function renderScorecard() {
       <div class="sc-main-sub">avg return since called</div>
       <div class="sc-row"><span>vs S&amp;P (alpha)</span><b class="${signClass(t.avg_alpha)}">${t.avg_alpha == null ? "—" : fmtPct(t.avg_alpha, 2)}</b></div>
       <div class="sc-row"><span>${hitLabel}</span><b>${t.hit_rate == null ? "—" : t.hit_rate + "%"}</b></div>
-      <div class="sc-row"><span>Best</span><b class="pos">${t.best.ticker} ${fmtPct(t.best.since, 0)}</b></div>
-      <div class="sc-row"><span>Worst</span><b class="neg">${t.worst.ticker} ${fmtPct(t.worst.since, 0)}</b></div>
+      <div class="sc-row"><span>Best</span><b class="${t.best.since < 0 ? "neg" : "pos"}">${t.best.ticker} ${fmtPct(t.best.since, 0)}</b></div>
+      <div class="sc-row"><span>Worst</span><b class="${t.worst.since < 0 ? "neg" : "pos"}">${t.worst.ticker} ${fmtPct(t.worst.since, 0)}</b></div>
     </div>`;
   }).join("");
   const spreadTxt = sc.spread == null ? "" :
