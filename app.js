@@ -1305,6 +1305,7 @@ function renderPortfolio() {
 // ETF sleeve — satellite positions below the book (user order 2026-09-02): performance
 // columns ONLY. No verdict, no gate, no Shariah row — unscored by design, so QARP fields
 // never render here. Absolutes (shares/value/P&L $) are owner-tier like everywhere else.
+// No "Bought" column (owner 2026-11-13): he adds to these funds now and then, so one date is wrong.
 function renderEtfSleeve() {
   const el = document.getElementById("etf-sleeve");
   if (!el) return;
@@ -1314,7 +1315,6 @@ function renderEtfSleeve() {
   const unlocked = privUnlocked();
   const cols = [
     { label: "Company", left: true, fmt: (s) => `<b>${s.ticker}</b> <span class="muted">${esc(s.name || "")}</span>` },
-    { label: "Bought", fmt: (s) => s.buy_date || "—" },
     { label: "Shares", fmt: (s) => (unlocked ? (s.shares == null ? "—" : (s.shares % 1 ? s.shares.toFixed(2) : s.shares)) : lockUSD()) },
     { label: "Avg cost", fmt: (s) => (s.avg_cost == null ? "—" : fmtUSD(s.avg_cost, 2)) },
     { label: "Price", fmt: (s) => (s.price == null ? "—" : `<span${s.price_asof ? ` title="last quote ${esc(String(s.price_asof))}"` : ""}>${fmtUSD(s.price, 2)}</span>`) },
