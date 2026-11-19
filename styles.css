@@ -287,6 +287,8 @@ button { font-family: inherit; cursor: pointer; }
 .badge.v-strongavoid { background: var(--v-strongavoid); }
 /* non-compliant / unscored: outlined neutral, visually distinct from the scored verdicts */
 .badge.v-noncompliant { background: #f1f5f9; color: #64748b; border: 1px solid #cbd5e1; }
+/* A holding the desk has never screened or scored (2026-11-19): same neutral outline, the words say NOT RATED. */
+.badge.v-notrated { background: #f1f5f9; color: #64748b; border: 1px solid #cbd5e1; }
 /* Under-review tag (2026-10-02): the rating is HELD at its earlier level until a re-score. In the
    tables it sits on its own line under the badge so the Verdict column does not widen; in the
    drawer it is a brass-outlined chip beside the badge, with the build's sentence in .rv-note. */
