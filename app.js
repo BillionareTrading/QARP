@@ -2852,19 +2852,20 @@ function balanceFront() {
   const bottom = (col) => { const top = col.getBoundingClientRect().top; let b = 0;
     for (const c of col.children) { if (c.hidden || !c.offsetHeight) continue; b = Math.max(b, c.getBoundingClientRect().bottom - top); } return b; };
   const target = bottom(lead); if (target < 300) { rail.style.justifyContent = ""; return; }   // the lead has not painted yet
+  const what = sig.querySelector(".smove") ? "sector" : "sector signal";   // the rows are plain sector moves when the news feed has no cards
   const more = document.createElement("button"); more.type = "button"; more.className = "ssig-more";
   more.addEventListener("click", () => { _sigOpen = true; balanceFront(); });
   let shown = cards.length;
   while (shown > 3 && bottom(rail) > target + 44) {
     shown--; cards[shown].hidden = true;
-    const cut = cards.length - shown; more.textContent = "Show " + cut + " more sector signal" + (cut === 1 ? "" : "s") + " \u2193";
+    const cut = cards.length - shown; more.textContent = "Show " + cut + " more " + what + (cut === 1 ? "" : "s") + " \u2193";
     if (!more.isConnected) { const grid = sig.querySelector(".ssig-grid"); if (grid) grid.after(more); }
   }
   // a whole card too many, but room to spare: bring the next one back as a one-line brief
   if (shown < cards.length && target - bottom(rail) > 64) {
     const c = cards[shown]; c.hidden = false; c.classList.add("ssig-brief");
     if (bottom(rail) > target + 44) { c.hidden = true; c.classList.remove("ssig-brief"); }
-    else { const cut = cards.length - shown - 1; if (cut) more.textContent = "Show " + cut + " more sector signal" + (cut === 1 ? "" : "s") + " \u2193"; else more.remove(); }
+    else { const cut = cards.length - shown - 1; if (cut) more.textContent = "Show " + cut + " more " + what + (cut === 1 ? "" : "s") + " \u2193"; else more.remove(); }
   }
   rail.style.justifyContent = "";
 }
@@ -3640,12 +3641,45 @@ function sigCatalystRow(c) {
   </div>`;
 }
 
+// 2026-11-24 (owner: "WHY THE FUCK IS THE RIGHT SIDE LIKE THAT"): the news feed behind Sector Signals was
+// refused on Nov 23 2026 (Benzinga 401), the build wrote no cards, and the rail was blank paper with a lone
+// ornament. With no cards from the feed the rail shows the day's sector moves from the site's own prices:
+// same groups as The Map (sectorGroup), so the two always agree. Rows carry .ssig-card so balanceFront trims them.
+function renderSectorMoves(el) {
+  const num = (v) => (typeof v === "number" && isFinite(v) ? v : null);
+  const cls = (v) => (v == null || v === 0 ? "" : v > 0 ? "pos" : "neg");
+  const by = {};
+  for (const u of (DATA && DATA.universe) || []) {
+    const d = num(u.day_pct); if (d == null) continue;
+    const g = sectorGroup(u.sector);
+    (by[g] = by[g] || []).push({ n: String(u.name || u.ticker).replace(/,?\s+(Inc\.?|Corp\.?|Corporation|Ltd\.?|Limited|plc|Holdings)$/i, ""), d });
+  }
+  const rows = Object.keys(by).filter((g) => by[g].length >= 5 && g !== "Other" && g !== "—").map((g) => {
+    const v = by[g], a = v.reduce((p, c) => p + c.d, 0) / v.length;
+    const lead = v.slice().sort((x, y) => (a < 0 ? x.d - y.d : y.d - x.d)).slice(0, 2);
+    return { g, a, n: v.length, up: v.filter((x) => x.d > 0).length, dn: v.filter((x) => x.d < 0).length, lead };
+  }).sort((x, y) => y.a - x.a);
+  const dk = document.querySelector(".rail-dinkus");
+  if (dk) dk.hidden = !rows.length;
+  if (!rows.length) { el.innerHTML = ""; return; }
+  const pct = (d, dp) => `${d > 0 ? "+" : d < 0 ? "−" : ""}${Math.abs(d).toFixed(dp)}%`;
+  const cards = rows.map((r) => `<article class="ssig-card smove">
+      <div class="smove-top"><span class="smove-name">${esc(r.g)}</span><span class="smove-pct ${cls(r.a)}">${r.a > 0 ? "▲ " : r.a < 0 ? "▼ " : ""}${Math.abs(r.a).toFixed(2)}%</span></div>
+      <div class="smove-sub">${r.up} rose \u00b7 ${r.dn} fell</div>
+      <div class="smove-lead">${r.lead.map((x) => `${esc(x.n)} <b class="${cls(x.d)}">${pct(x.d, 1)}</b>`).join(" \u00b7 ")}</div>
+    </article>`).join("");
+  el.innerHTML = `<div class="side-head">Sectors ${sessionSub()}</div>`
+    + `<div class="ssig-grid smove-grid">${cards}</div>`
+    + `<div class="ssig-foot">Average move of the stocks on this site in each sector, with its two largest moves.</div>`;
+  balanceFront(); scheduleBalance();
+}
+
 // Daily page: sector-level signals, each driven by a news / geopolitical factor.
 function renderSectorSignals() {
   const el = document.getElementById("paper-signals");
   if (!el) return;
   const secs = (SIGNALS && SIGNALS.sectors) || [];
-  if (!secs.length) { el.innerHTML = ""; return; }
+  if (!secs.length) { renderSectorMoves(el); return; }
   // 2026-10-02: when the driver is only a cut-off copy of the note, print the note once (it read as the same sentence twice).
   const flat = (x) => String(x || "").toLowerCase().replace(/^amid\s+/, "").replace(/(\.\.\.|\u2026)\s*$/, "").replace(/\s+/g, " ").trim();
   const cards = secs.map((s) => {
@@ -3659,6 +3693,7 @@ function renderSectorSignals() {
     </article>`;
   }).join("");
   const src = (SIGNALS && SIGNALS.sources) ? `<div class="ssig-foot">${esc(SIGNALS.sources)}</div>` : "";
+  { const dk = document.querySelector(".rail-dinkus"); if (dk) dk.hidden = false; }
   el.innerHTML = `<div class="side-head">Sector Signals <span class="side-sub">why, not just how much</span></div>`
     + `<div class="ssig-grid">${cards}</div>${src}`;
   balanceFront(); scheduleBalance();   // trim in the same task as the repaint, so no frame shows the full list
