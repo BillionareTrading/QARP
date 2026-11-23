@@ -1361,9 +1361,8 @@ function renderPulse() {
       ${left == null ? "" : `<div class="mkt-row"><span class="mkt-level">${left}</span><span class="mkt-chg ${rightCls || ""}">${right}</span></div>`}
     </div>`;
   };
-  const when = sessionLive
-    ? `<span class="mkt-when live" title="${pulseFresh() ? "Refreshed every " + Math.round(PULSE_MS / 1000) + " seconds" : "Refreshed about once a minute"}"><i></i>live</span>`
-    : `<span class="mkt-when">${lastCloseName(sessIso)} close</span>`;
+  // 2026-11-23 owner: no "live" tag beside the name (the whole page is live); only a closed session is named
+  const when = sessionLive ? "" : `<span class="mkt-when">${lastCloseName(sessIso)} close</span>`;
   const ix = (x, fund) => !x ? ["&nbsp;", "", ""]
     : x.real ? [fmtNum(x.level, 2), signed(x.d, 2), cls(x.d)]
     : [`${fund} ${fmtNum(x.level, 2)}`, signed(x.d, 2), cls(x.d)];

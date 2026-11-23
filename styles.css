@@ -2182,8 +2182,6 @@ table.cc-table td.cc-why { white-space: normal; min-width: 280px; max-width: 680
 .mkt-pct.pos, .mkt-chg.pos { color: var(--pos); }
 .mkt-pct.neg, .mkt-chg.neg { color: var(--neg); }
 .mkt-when { margin-left: 6px; font-size: 10.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--ink-3); }
-.mkt-when i { display: inline-block; width: 6px; height: 6px; margin-right: 4px; border-radius: 50%; background: var(--pos); vertical-align: 1px; }
-.mkt-when.live { color: var(--pos); }
 .mkt-pct.tick-up { animation: mkt-tick-up .9s ease-out; }
 .mkt-pct.tick-dn { animation: mkt-tick-dn .9s ease-out; }
 @keyframes mkt-tick-up { 0% { background: rgba(21,128,61,.22); } 100% { background: transparent; } }
