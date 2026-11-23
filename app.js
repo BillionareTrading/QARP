@@ -691,7 +691,20 @@ function retotalAccount() {
   (DATA.portfolio || []).forEach((h) => { if (h.value != null) h.weight_pct = +(h.value / t.account * 100).toFixed(1); });
   fundRows().forEach((r) => { if (r.value != null) r.weight_pct = +(r.value / t.account * 100).toFixed(1); });
 }
+// A holding's share of the book at the PREVIOUS close, for the public view (no dollar values there).
+// weight_pct and day_pct are read ONCE per payload row, before any live quote overwrites day_pct: a row baked during
+// today's session carries today's move, so its previous-close weight is w / (1 + d); a row baked before the open
+// carries the prior session's close, and that weight already IS the previous-close weight. 2026-11-23: the old
+// code divided the baked weight by the LIVE move, which understated the book's move on a big day (NVDA +30% on a
+// weight baked at the prior close counted as 11.5% of the book, not 15%).
+function prevWeight(h) {
+  if (!h._pw0) h._pw0 = { w: h.weight_pct, d: h.day_pct, sess: dataSession() };
+  const o = h._pw0;
+  if (typeof o.w !== "number") return 0;
+  return (o.sess === lastSessionDate() && typeof o.d === "number") ? o.w / (1 + o.d / 100) : o.w;
+}
 function portfolioDayPnl() {
+  (DATA.portfolio || []).concat(fundRows()).forEach(prevWeight);   // stamp new rows before live quotes land
   if (!privUnlocked()) {
     // Locked: dollar values are absent, but the SAME exact math survives in weight space —
     // prev_i ∝ w_i/(1+d_i), so pct = Σ(wPrev·d)/ΣwPrev is identical to the $ version
@@ -699,7 +712,7 @@ function portfolioDayPnl() {
     let acc = 0, wsum = 0;
     (DATA.portfolio || []).concat(fundRows()).forEach((h) => {
       if (typeof h.day_pct !== "number" || typeof h.weight_pct !== "number") return;
-      const wPrev = h.weight_pct / (1 + h.day_pct / 100);
+      const wPrev = prevWeight(h);
       acc += wPrev * h.day_pct; wsum += wPrev;
     });
     return { usd: null, pct: wsum ? acc / wsum : 0 };
@@ -1271,20 +1284,169 @@ function renderTopHoldings() {
   // exactly — and it survives the privacy split (values are owner-tier).
   const holds = [...DATA.portfolio].sort((a, b) => (b.weight_pct || 0) - (a.weight_pct || 0));
   const total = holds.reduce((s, h) => s + (h.weight_pct || 0), 0) || 1;
-  const shown = holds.slice(0, 6);
+  const shown = holds.slice(0, 8);    // eight slim rows since 2026-11-23: the logo cluster under the bars was removed
   const ws = shown.map((h) => (h.weight_pct || 0) / total * 100);
   const maxW = Math.max(...ws, 1);                 // biggest holding fills the bar; rest scale down
   const bars = shown.map((h, i) =>
     `<div class="hbar-row"><span class="hbar-tk">${esc(h.ticker)}</span><span class="hbar-track"><span class="hbar-fill" style="width:${Math.max(4, ws[i] / maxW * 100).toFixed(1)}%;background:${SECTOR_COLORS[i % SECTOR_COLORS.length]}"></span></span><span class="hbar-pct">${ws[i].toFixed(1)}%</span></div>`
   ).join("");
-  // faded company logos in two straight, evenly-spread rows
-  const logos = shown.map((h) =>
-    `<img class="hbar-logo" src="https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/${encodeURIComponent(h.ticker)}.png" alt="" loading="lazy" onerror="this.remove()">`
-  ).join("");
-  el.innerHTML = `<div class="hbar-list">${bars}</div><div class="hbar-logos">${logos}</div>`;
+  el.innerHTML = `<div class="hbar-list">${bars}</div>`;
+}
+
+/* ---------- three live boxes at the top of Holdings (2026-11-23, owner): portfolio, S&P 500, Nasdaq ----------
+   One number each: the move since the previous close, green when up, red when down. During the US session the
+   Worker's /pulse endpoint answers every holding plus both indexes in one call kept 4 seconds, so the boxes follow
+   the market every 5 seconds. Without it (an older Worker) they follow the once-a-minute holdings tick and show the
+   SPY and QQQ funds in place of the indexes, and the line under the boxes says which. */
+const PULSE_MS = 5000;
+const PULSE_IDLE_MS = 30000;          // nobody has touched the page for 30 minutes: one call every 30 seconds
+const PULSE_FRESH_MS = 20000;         // the fast feed counts as live while its last good answer is this recent
+let pulseTimer = null, pulseBusy = false, pulseFails = 0, pulseRetryAt = 0, pulseGoodTs = 0, pulseLastTry = 0, pulseFundTs = 0, pulseSeen = Date.now();
+const pulseIx = {};                   // "spx" / "ndq" -> { p, d, dp, t }: the real index quotes from /pulse
+const pulseShown = {};                // cell -> the % last painted (a changed quote blinks once, green up, red down)
+function pulseFresh() { return Date.now() - pulseGoodTs < PULSE_FRESH_MS; }
+["pointerdown", "keydown", "scroll", "pointermove"].forEach((ev) =>
+  window.addEventListener(ev, () => { pulseSeen = Date.now(); }, { passive: true, capture: true }));
+function etDateOf(tsSec) {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(tsSec * 1000));
+}
+// One live quote onto one holdings row: the same bookkeeping as the once-a-minute tick.
+function applyLiveQuote(h, price, dp) {
+  const u = (DATA.universe || []).find((x) => x.ticker === h.ticker);
+  const okDp = liveDayOk(h, dp) && liveDayOk(u, dp);
+  h.price = price;
+  if (okDp) h.day_pct = +dp.toFixed(2);
+  if (h.shares != null && h.cost) {
+    h.value = +(h.shares * price).toFixed(2);
+    h.gain = +(h.value - h.cost).toFixed(2);
+    h.gain_pct = +((h.gain / h.cost) * 100).toFixed(2);
+  } else if (h.avg_cost) {
+    h.gain_pct = +((price / h.avg_cost - 1) * 100).toFixed(2);
+  }
+  if (u) { u.price = price; if (okDp) u.day_pct = +dp.toFixed(2); }
+}
+function pulseIndex(k, sym) {
+  // the real index when the fast feed has it and it belongs to the session the boxes show; else the fund that tracks it
+  const sess = marketOpenNow() ? lastSessionDate() : (holdingsLive() ? lastSessionDate() : dataSession());
+  const p = pulseIx[k];
+  if (p && typeof p.dp === "number" && p.t && etDateOf(p.t) === sess) return { dp: p.dp, level: p.p, d: p.d, real: true };
+  const baked = (DATA.meta && DATA.meta.index_quotes) || {};
+  const q = lastIdxQuote[sym] || baked[sym];
+  if (q && typeof q.dp === "number" && (!q.t || etDateOf(q.t) === sess)) return { dp: q.dp, level: q.c, d: q.d, real: false };
+  return null;
+}
+function renderPulse() {
+  const el = document.getElementById("p-mkt");
+  if (!el || !DATA || !DATA.portfolio) return;
+  const open = marketOpenNow();
+  const live = holdingsLive();
+  const sessionLive = open && (live || dataSession() === lastSessionDate());
+  const sessIso = sessionLive || live ? lastSessionDate() : dataSession();
+  const port = portfolioDayPnl().pct;
+  const spx = pulseIndex("spx", "SPY"), ndq = pulseIndex("ndq", "QQQ");
+  const num = (v) => (typeof v === "number" && isFinite(v) ? Math.round(v * 100) / 100 : null);
+  const cls = (v) => (v == null || v === 0 ? "" : v > 0 ? "pos" : "neg");
+  const signed = (v, dp) => (v > 0 ? "+" : v < 0 ? "−" : "") + fmtNum(Math.abs(v), dp);
+  // one quote cell, laid out like a market quote: name and % on the first line, level and change on the second.
+  // The portfolio cell has one line only: its gap to the S&P 500 was printed there until the owner pointed out
+  // that the S&P 500 is the next cell (2026-11-23).
+  const cell = (key, name, v, left, right, rightCls) => {
+    const r = num(v);
+    const pct = r == null ? "—" : `${r > 0 ? "▲ " : r < 0 ? "▼ " : ""}${Math.abs(r).toFixed(2)}%`;
+    const was = pulseShown[key];
+    const tick = was != null && r != null && r !== was ? (r > was ? " tick-up" : " tick-dn") : "";   // a changed quote blinks once
+    if (r != null) pulseShown[key] = r;
+    return `<div class="mkt-cell">
+      <div class="mkt-row"><span class="mkt-name">${name}</span><span class="mkt-pct ${cls(r)}${tick}">${pct}</span></div>
+      ${left == null ? "" : `<div class="mkt-row"><span class="mkt-level">${left}</span><span class="mkt-chg ${rightCls || ""}">${right}</span></div>`}
+    </div>`;
+  };
+  const when = sessionLive
+    ? `<span class="mkt-when live" title="${pulseFresh() ? "Refreshed every " + Math.round(PULSE_MS / 1000) + " seconds" : "Refreshed about once a minute"}"><i></i>live</span>`
+    : `<span class="mkt-when">${lastCloseName(sessIso)} close</span>`;
+  const ix = (x, fund) => !x ? ["&nbsp;", "", ""]
+    : x.real ? [fmtNum(x.level, 2), signed(x.d, 2), cls(x.d)]
+    : [`${fund} ${fmtNum(x.level, 2)}`, signed(x.d, 2), cls(x.d)];
+  const s = ix(spx, "SPY"), n = ix(ndq, "QQQ");
+  el.innerHTML = cell("me", `Jaleel's portfolio ${when}`, port, null)
+    + cell("spx", "S&amp;P 500", spx ? spx.dp : null, s[0], s[1], s[2])
+    + cell("ndq", "Nasdaq", ndq ? ndq.dp : null, n[0], n[1], n[2]);
+  el.hidden = false;
+}
+async function pulseTick() {
+  const base = DATA && DATA.meta && DATA.meta.quote_proxy;
+  const host = document.getElementById("p-mkt");
+  if (!base || !host || pulseBusy || document.visibilityState !== "visible") return;
+  const now = Date.now(), open = marketOpenNow();
+  if (now < pulseRetryAt) {
+    // waiting to retry the fast feed: keep the two fund quotes fresh meanwhile (once a minute)
+    if (open && now - pulseFundTs > 55000 && now >= throttleUntil) {
+      pulseFundTs = now; pulseBusy = true;
+      try {
+        for (const sym of ["SPY", "QQQ"]) {
+          try { const q = await fetchQuote(sym); if (q && typeof q.c === "number" && q.c > 0) lastIdxQuote[sym] = q; } catch (e2) { /* keep the last one */ }
+        }
+        renderPulse();
+      } finally { pulseBusy = false; }
+    }
+    return;
+  }
+  // closed market: one call every 5 minutes keeps the two index closes on the boxes; open and idle: every 30 seconds
+  const gap = !open ? 300000 : (now - pulseSeen > 30 * 60000 || host.offsetParent === null ? PULSE_IDLE_MS : 0);
+  if (gap && now - pulseLastTry < gap) return;
+  pulseLastTry = now; pulseBusy = true;
+  const _d0 = DATA;
+  try {
+    const rows = (DATA.portfolio || []).concat(fundRows());
+    rows.forEach(prevWeight);
+    const real = (t) => TICKER_REAL[t] || t;
+    const syms = [...new Set(rows.map((h) => real(h.ticker)))].filter((t) => /^[A-Z0-9.\-]{1,12}$/.test(t));
+    const r = await fetch(`${base}/pulse?symbols=${encodeURIComponent(syms.join(","))}`, { cache: "no-store" });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const j = await r.json();
+    if (!j || !j.q) throw new Error("no quotes");
+    if (DATA !== _d0) return;                       // a new payload was swapped in mid-flight: the next tick patches it
+    ["spx", "ndq"].forEach((k) => { if (j.ix && j.ix[k] && j.ix[k].p > 0) pulseIx[k] = j.ix[k]; });
+    let ok = 0;
+    if (open) {
+      const today = lastSessionDate();
+      const fresh = (q) => q && q.p > 0 && typeof q.dp === "number" && q.t && etDateOf(q.t) === today;   // traded this session
+      (DATA.portfolio || []).forEach((h) => { const q = j.q[real(h.ticker)]; if (fresh(q)) { applyLiveQuote(h, q.p, q.dp); ok++; } });
+      fundRows().forEach((f) => { const q = j.q[real(f.ticker)]; if (fresh(q)) { f.price = q.p; f.price_asof = null; f.day_pct = +q.dp.toFixed(2); repriceFund(f); } });
+    }
+    pulseFails = 0;
+    if (ok) {
+      pulseGoodTs = Date.now();
+      holdingsLiveDay = lastSessionDate();
+      lastGoodTs = Date.now(); lastGoodClock = nyClock();
+      if (privUnlocked()) { retotalAccount(); flashAccount(DATA.meta.portfolio_totals.account); }
+      renderKpis();
+      setLivePill("live", `LIVE · ${lastGoodClock}`);
+    }
+    renderPulse();
+  } catch (e) {
+    pulseFails++;
+    if (pulseFails >= 3) pulseRetryAt = Date.now() + 60000;   // an older Worker (no /pulse) or Yahoo not answering: try once a minute
+    // Without the fast feed the two index boxes ride the SPY and QQQ funds. Fetch them here, at most once a minute:
+    // the baked quote can be an hour old, and "live" over an hour-old figure would be wrong.
+    if (open && Date.now() - pulseFundTs > 55000 && Date.now() >= throttleUntil) {
+      pulseFundTs = Date.now();
+      for (const sym of ["SPY", "QQQ"]) {
+        try { const q = await fetchQuote(sym); if (q && typeof q.c === "number" && q.c > 0) lastIdxQuote[sym] = q; } catch (e2) { /* keep the last one */ }
+      }
+      renderPulse();
+    }
+  } finally { pulseBusy = false; }
+}
+function startPulse() {
+  if (pulseTimer) clearInterval(pulseTimer);
+  pulseFails = 0; pulseRetryAt = 0; pulseLastTry = 0;
+  pulseTick();
+  pulseTimer = setInterval(pulseTick, PULSE_MS);
 }
 
 function renderPortfolio() {
+  renderPulse(); // the three boxes sit first in the Holdings view
   renderKpis(); // KPI strip lives inside this panel now
   renderPerformance();   // earned since 3 Jun — one number, one line (2026-11-04)
   renderTopHoldings();
@@ -3978,6 +4140,17 @@ async function liveTick() {
     return;
   }
 
+  if (pulseFresh()) {
+    // 2026-11-23: the 5-second feed already put this session's quotes on the holdings — repaint the table from
+    // them. One source for the boxes, the KPI strip and the table, and no Finnhub calls spent on the holdings.
+    lastGoodClock = nyClock();
+    renderPortfolio();
+    if (dailyTimer) FG.render();
+    patchLivePrices();
+    setLivePill("live", `LIVE · ${lastGoodClock}`);
+    return;
+  }
+
   let ok = 0, fail = 0;
   const _d0 = DATA;   // the payload these quotes are patched into (softRefresh can swap DATA mid-await)
   await Promise.all(DATA.portfolio.map(async (h) => {
@@ -4133,6 +4306,7 @@ function startLive() {
   uniIdx = 0;
   liveTick();
   liveTimer = setInterval(liveTick, LIVE_INTERVAL_MS);
+  startPulse();
   startExtPolling();
 }
 /* ---------- live pre-market / after-hours quotes (2026-11-10) ----------

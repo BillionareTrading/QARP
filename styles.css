@@ -546,16 +546,14 @@ tbody tr:hover { background: var(--surface-2); }
 /* mini table (overview top names) */
 .mini-table table { font-size: 13px; }
 
-/* ===== Top holdings (proportional bars + messy logo cluster) ===== */
-.hbars { flex: 1; display: flex; flex-direction: column; margin-top: 14px; }
-.hbar-list { display: flex; flex-direction: column; gap: 12px; }
-.hbar-row { display: grid; grid-template-columns: 54px 1fr 44px; align-items: center; gap: 11px; }
-.hbar-tk { font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.hbar-track { height: 11px; border-radius: 6px; overflow: hidden; }
-.hbar-fill { display: block; height: 100%; border-radius: 6px; background: var(--brand); }
-.hbar-pct { font-size: 12.5px; font-weight: 600; text-align: right; color: var(--ink-2); font-variant-numeric: tabular-nums; }
-.hbar-logos { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); align-content: space-evenly; align-items: center; justify-items: center; gap: 14px 14px; margin-top: 16px; padding-top: 18px; border-top: 1px solid var(--line-2); }
-.hbar-logo { height: 40px; width: auto; max-width: 78px; object-fit: contain; opacity: .42; filter: grayscale(15%); }
+/* ===== Top holdings (proportional bars; the logo cluster was removed 2026-11-23) ===== */
+.hbars { display: flex; flex-direction: column; margin-top: 12px; }
+.hbar-list { display: flex; flex-direction: column; gap: 9px; }
+.hbar-row { display: grid; grid-template-columns: 46px 1fr 40px; align-items: center; gap: 9px; }
+.hbar-tk { font-size: 12.5px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hbar-track { height: 8px; border-radius: 4px; overflow: hidden; }
+.hbar-fill { display: block; height: 100%; border-radius: 4px; background: var(--brand); }
+.hbar-pct { font-size: 12px; font-weight: 600; text-align: right; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 
 /* the two allocation cards become equal-height flex columns; their content fills/centers
    so the shorter one never shows an empty box */
@@ -2166,3 +2164,38 @@ table.cc-table td.cc-why { white-space: normal; min-width: 280px; max-width: 680
   .hr-l { white-space: normal; }
   .hr-list { padding: 0 12px; }
 }
+
+/* ===== Market strip at the top of Holdings (2026-11-23): portfolio, S&P 500, Nasdaq =====
+   One slim bar of three quote cells, like an index bar on a market screen. Owner: no big boxes, no coloured line on
+   top, "have it like the stock market". Green or red digits carry the direction; nothing else is decorated. */
+.mkt-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 14px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius); }
+.mkt-strip[hidden] { display: none; }
+.mkt-cell { display: flex; flex-direction: column; justify-content: center; padding: 9px 16px 8px; min-width: 0; }
+.mkt-cell + .mkt-cell { border-left: 1px solid var(--line); }
+.mkt-row { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; white-space: nowrap; }
+.mkt-row + .mkt-row { margin-top: 2px; }
+.mkt-name { font-size: 12.5px; font-weight: 700; color: var(--ink); overflow: hidden; text-overflow: ellipsis; }
+.mkt-pct { font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--ink-2); border-radius: 3px; padding: 0 3px; margin-right: -3px; }
+.mkt-level { font-size: 12px; color: var(--ink-2); font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; }
+.mkt-chg { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink-3); }
+.mkt-pct.pos, .mkt-chg.pos { color: var(--pos); }
+.mkt-pct.neg, .mkt-chg.neg { color: var(--neg); }
+.mkt-when { margin-left: 6px; font-size: 10.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--ink-3); }
+.mkt-when i { display: inline-block; width: 6px; height: 6px; margin-right: 4px; border-radius: 50%; background: var(--pos); vertical-align: 1px; }
+.mkt-when.live { color: var(--pos); }
+.mkt-pct.tick-up { animation: mkt-tick-up .9s ease-out; }
+.mkt-pct.tick-dn { animation: mkt-tick-dn .9s ease-out; }
+@keyframes mkt-tick-up { 0% { background: rgba(21,128,61,.22); } 100% { background: transparent; } }
+@keyframes mkt-tick-dn { 0% { background: rgba(190,18,60,.20); } 100% { background: transparent; } }
+@media (prefers-reduced-motion: reduce) { .mkt-pct.tick-up, .mkt-pct.tick-dn { animation: none; } }
+@media (max-width: 760px) {
+  .mkt-strip { grid-template-columns: 1fr; }
+  .mkt-cell { padding: 8px 13px 7px; }
+  .mkt-cell + .mkt-cell { border-left: 0; border-top: 1px solid var(--line); }
+}
+/* the three cards under the KPI strip: compact, equal height, no stretching of their contents */
+.p-alloc { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr) minmax(0, 1fr); }
+.p-alloc > .card { padding-bottom: 14px; }
+@media (max-width: 1100px) { .p-alloc { grid-template-columns: 1fr 1fr; } .p-alloc > .card:first-child { grid-column: 1 / -1; } }
+@media (max-width: 760px) { .p-alloc { grid-template-columns: 1fr; } }
